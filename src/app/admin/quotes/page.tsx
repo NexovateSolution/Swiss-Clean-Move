@@ -331,8 +331,8 @@ export default function QuotesPage() {
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Additional Details</label>
                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-                                                        {Object.entries(parseDetails(selectedQuote.details)).map(([key, value]) => (
-                                                            value && (
+                                                        {Object.entries(parseDetails(selectedQuote.details)).map(([key, value]) => 
+                                                            value ? (
                                                                 <div key={key} className="space-y-1">
                                                                     <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider block">
                                                                         {key.replace(/([A-Z])/g, ' $1').trim()}
@@ -341,8 +341,8 @@ export default function QuotesPage() {
                                                                         {Array.isArray(value) ? value.join(', ') : String(value)}
                                                                     </span>
                                                                 </div>
-                                                            )
-                                                        ))}
+                                                            ) : null
+                                                        )}
                                                     </div>
                                                 </div>
                                                 <div className="space-y-2">

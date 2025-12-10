@@ -87,6 +87,8 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
   }
 
   const generateInvoicePDF = (invoice: any) => {
+    if (!client) return
+    
     // Create a simple HTML invoice for printing/PDF
     const invoiceHTML = `
       <!DOCTYPE html>

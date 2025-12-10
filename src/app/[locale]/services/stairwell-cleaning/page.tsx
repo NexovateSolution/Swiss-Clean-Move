@@ -13,7 +13,7 @@ import {
   Phone,
   Mail,
   Users,
-  Stairs
+  ArrowUpDown
 } from 'lucide-react';
 
 export default function StairwellCleaningPage({ params: { locale } }: { params: { locale: string } }) {

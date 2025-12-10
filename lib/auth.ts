@@ -3,16 +3,21 @@ import jwt from 'jsonwebtoken'
 import { NextRequest } from 'next/server'
 
 // Validate JWT_SECRET exists and is strong
-const JWT_SECRET = process.env.JWT_SECRET
-if (!JWT_SECRET) {
-  throw new Error('JWT_SECRET environment variable is required. Please set it in .env.local')
+const getJWTSecret = (): string => {
+  const secret = process.env.JWT_SECRET
+  if (!secret) {
+    throw new Error('JWT_SECRET environment variable is required. Please set it in .env.local')
+  }
+  if (secret.length < 32) {
+    throw new Error('JWT_SECRET must be at least 32 characters long for security')
+  }
+  if (secret.includes('change-in-production') || secret.includes('your-secret')) {
+    throw new Error('JWT_SECRET is using a default/weak value. Please generate a strong random secret')
+  }
+  return secret
 }
-if (JWT_SECRET.length < 32) {
-  throw new Error('JWT_SECRET must be at least 32 characters long for security')
-}
-if (JWT_SECRET.includes('change-in-production') || JWT_SECRET.includes('your-secret')) {
-  throw new Error('JWT_SECRET is using a default/weak value. Please generate a strong random secret')
-}
+
+const JWT_SECRET = getJWTSecret()
 
 export async function hashPassword(password: string): Promise<string> {
   return bcrypt.hash(password, 12)

@@ -108,7 +108,7 @@ export default function ServiceFormsPage() {
     return colors[serviceName] || 'bg-gray-100 text-gray-800'
   }
 
-  const uniqueServices = [...new Set(submissions.map(s => s.serviceName))]
+  const uniqueServices = Array.from(new Set(submissions.map(s => s.serviceName)))
 
   if (loading) {
     return (
