@@ -4,7 +4,6 @@ const withNextIntl = require('next-intl/plugin')(
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
   images: {
     domains: ['images.unsplash.com'],
     formats: ['image/avif', 'image/webp'],
@@ -14,10 +13,6 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-  },
-  // Optimize page loading
-  experimental: {
-    optimizeCss: false,
   },
   // Security headers
   async headers() {
