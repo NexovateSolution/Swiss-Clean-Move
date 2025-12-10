@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://swisscleanmove.ch/</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swisscleanmove.ch/de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swisscleanmove.ch/fr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swisscleanmove.ch/en"/>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://swisscleanmove.ch/about</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swisscleanmove.ch/de/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swisscleanmove.ch/fr/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swisscleanmove.ch/en/about"/>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://swisscleanmove.ch/services</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swisscleanmove.ch/de/services"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swisscleanmove.ch/fr/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swisscleanmove.ch/en/services"/>
+  </url>
+
+  <!-- Individual Service Pages -->
+  <url>
+    <loc>https://swisscleanmove.ch/services/final-cleaning</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://swisscleanmove.ch/services/house-cleaning</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://swisscleanmove.ch/services/apartment-cleaning</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://swisscleanmove.ch/services/office-cleaning</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://swisscleanmove.ch/services/window-cleaning</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://swisscleanmove.ch/services/stairwell-cleaning</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://swisscleanmove.ch/services/disposal</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://swisscleanmove.ch/services/relocation</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://swisscleanmove.ch/contact</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swisscleanmove.ch/de/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swisscleanmove.ch/fr/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swisscleanmove.ch/en/contact"/>
+  </url>
+
+  <!-- Free Offer Page -->
+  <url>
+    <loc>https://swisscleanmove.ch/free-offer</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swisscleanmove.ch/de/free-offer"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swisscleanmove.ch/fr/free-offer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swisscleanmove.ch/en/free-offer"/>
+  </url>
+
+  <!-- Pricing Page -->
+  <url>
+    <loc>https://swisscleanmove.ch/pricing</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swisscleanmove.ch/de/pricing"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swisscleanmove.ch/fr/pricing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swisscleanmove.ch/en/pricing"/>
+  </url>
+
+  <!-- FAQ Page -->
+  <url>
+    <loc>https://swisscleanmove.ch/faq</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swisscleanmove.ch/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swisscleanmove.ch/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swisscleanmove.ch/en/faq"/>
+  </url>
+
+  <!-- Regions Page -->
+  <url>
+    <loc>https://swisscleanmove.ch/regions</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swisscleanmove.ch/de/regions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swisscleanmove.ch/fr/regions"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swisscleanmove.ch/en/regions"/>
+  </url>
+
+  <!-- Legal Page -->
+  <url>
+    <loc>https://swisscleanmove.ch/legal</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swisscleanmove.ch/de/legal"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swisscleanmove.ch/fr/legal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swisscleanmove.ch/en/legal"/>
+  </url>
+
+</urlset>

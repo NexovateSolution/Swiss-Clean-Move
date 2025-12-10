@@ -1,0 +1,778 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "regions": "Regionen",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "freeOffer": "Kostenloses Angebot",
+    "contact": "Kontakt",
+    "legal": "Impressum",
+    "login": "Anmelden",
+    "language": "Sprache"
+  },
+  "home": {
+    "hero": {
+      "title": "Professionelle Reinigung & Umzug in der Schweiz",
+      "subtitle": "Zuverlässige Reinigungsdienstleistungen und Umzugshilfe mit 100% Abnahmegarantie",
+      "cta": "Kostenloses Angebot anfordern",
+      "phone": "Jetzt anrufen"
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen",
+      "subtitle": "Professionelle Lösungen für alle Ihre Reinigungs- und Umzugsbedürfnisse",
+      "houseCleaning": {
+        "title": "Hausreinigung",
+        "description": "Umfassende Hausreinigungsdienstleistungen für Wohnimmobilien mit Liebe zum Detail"
+      },
+      "apartmentCleaning": {
+        "title": "Wohnungsreinigung",
+        "description": "Professionelle Wohnungsreinigungsdienstleistungen einschließlich Endreinigung mit Abnahmegarantie"
+      },
+      "stairwellCleaning": {
+        "title": "Treppenhausreinigung",
+        "description": "Regelmäßige Treppenhausreinigung für Mehrfamilienhäuser"
+      },
+      "officeCleaning": {
+        "title": "Büroreinigung",
+        "description": "Professionelle Büroreinigung für ein sauberes Arbeitsumfeld"
+      },
+      "finalCleaning": {
+        "title": "Endreinigung",
+        "description": "Professionelle Endreinigung für Wohnungen und Häuser mit 100% Abnahmegarantie"
+      },
+      "windowCleaning": {
+        "title": "Fensterreinigung",
+        "description": "Professionelle Fenster- und Glasreinigungsdienstleistungen"
+      },
+      "relocation": {
+        "title": "Umzug",
+        "description": "Komplette Umzugsdienstleistungen mit erfahrenem Team"
+      },
+      "disposal": {
+        "title": "Entsorgung",
+        "description": "Fachgerechte Entsorgung von Möbeln und Haushaltsgegenständen"
+      },
+      "umzugsreinigung": {
+        "title": "Umzugsreinigung",
+        "description": "Professionelle Endreinigung für Wohnungen und Häuser mit 100% Abnahmegarantie"
+      },
+      "gastronomie": {
+        "title": "Gastronomie Reinigung",
+        "description": "Spezialisierte Reinigung für Restaurants und Gastronomiebetriebe"
+      },
+      "buero": {
+        "title": "Büro Reinigung",
+        "description": "Regelmässige und gründliche Büroreinigung für ein professionelles Arbeitsumfeld"
+      },
+      "hauswartung": {
+        "title": "Hauswartung",
+        "description": "Umfassende Hauswartungsdienstleistungen für Immobilien"
+      },
+      "entsorgung": {
+        "title": "Entsorgung",
+        "description": "Fachgerechte Entsorgung von Möbeln und Haushaltsgegenständen"
+      },
+      "umzug": {
+        "title": "Umzug",
+        "description": "Komplette Umzugsdienstleistungen mit erfahrenem Team"
+      }
+    },
+    "testimonials": {
+      "title": "Was unsere Kunden sagen",
+      "subtitle": "Vertrauen Sie auf die Erfahrung zufriedener Kunden"
+    },
+    "cta": {
+      "title": "Bereit für eine professionelle Reinigung?",
+      "subtitle": "Kontaktieren Sie uns noch heute für ein kostenloses Angebot",
+      "button": "Kostenloses Angebot"
+    },
+    "servicesCta": {
+      "title": "Bereit für professionelle Reinigung?",
+      "subtitle": "Kontaktieren Sie uns noch heute für ein kostenloses und unverbindliches Angebot"
+    },
+    "trustIndicators": {
+      "guarantee": "100% Abnahmegarantie",
+      "nationwide": "Schweizweit verfügbar",
+      "professional": "Professionelles Team"
+    }
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Professionelle Lösungen für alle Ihre Reinigungs- und Umzugsbedürfnisse",
+    "featuresTitle": "Leistungen",
+    "benefitsSection": {
+      "title": "Warum SwissCleanMove?",
+      "subtitle": "Ihre Vorteile bei unserem professionellen Service"
+    },
+    "features": {
+      "umzugsreinigung": [
+        "Komplette Wohnungsreinigung",
+        "Küche und Badezimmer gründlich",
+        "Fenster innen und außen",
+        "Böden und Teppiche",
+        "100% Abnahmegarantie"
+      ],
+      "gastronomie": [
+        "Küchen- und Gerätereingung",
+        "Hygienische Desinfektion",
+        "Abzugshauben und Filter",
+        "Böden und Arbeitsflächen",
+        "HACCP-konforme Reinigung"
+      ],
+      "buero": [
+        "Büroräume und Arbeitsplätze",
+        "Sanitäranlagen",
+        "Gemeinschaftsbereiche",
+        "Müllentsorgung",
+        "Regelmäßige Termine"
+      ],
+      "hauswartung": [
+        "Treppenhausreinigung",
+        "Außenanlagen pflege",
+        "Kleine Reparaturen",
+        "Winterdienst",
+        "Objektbetreuung"
+      ],
+      "entsorgung": [
+        "Möbel und Hausrat",
+        "Elektronikgeräte",
+        "Sperrmüll",
+        "Fachgerechte Entsorgung",
+        "Umweltfreundlich"
+      ],
+      "umzug": [
+        "Kompletter Umzugsservice",
+        "Verpackung und Transport",
+        "Möbelmontage",
+        "Versicherungsschutz",
+        "Schweizweite Umzüge"
+      ]
+    },
+    "pricingUnits": {
+      "perHour": "pro Stunde",
+      "perSquareMeter": "pro m²",
+      "byArrangement": "Nach Vereinbarung",
+      "byVolume": "Nach Volumen",
+      "byEffort": "Nach Aufwand"
+    },
+    "benefits": {
+      "guarantee": {
+        "title": "100% Garantie",
+        "description": "Vollständige Abnahmegarantie für alle Reinigungsarbeiten"
+      },
+      "punctual": {
+        "title": "Pünktlich",
+        "description": "Zuverlässige Termine und schnelle Ausführung"
+      },
+      "professional": {
+        "title": "Professionell",
+        "description": "Erfahrenes Team mit hochwertiger Ausrüstung"
+      },
+      "insured": {
+        "title": "Versichert",
+        "description": "Vollständig versichert für Ihren Schutz"
+      }
+    },
+    "pricingSection": {
+      "title": "Transparente Preise",
+      "subtitle": "Faire und wettbewerbsfähige Preise für alle Dienstleistungen",
+      "officeCleaningTitle": "Büroreinigung",
+      "gastronomyTitle": "Gastronomie",
+      "windowCleaningTitle": "Fensterreinigung"
+    },
+    "pricing": {
+      "houseCleaning": "CHF 35/Stunde",
+      "apartmentCleaning": "CHF 280",
+      "stairwellCleaning": "CHF 45/Stunde",
+      "officeCleaning": "CHF 30/Stunde",
+      "finalCleaning": "CHF 320",
+      "windowCleaning": "CHF 25/Stunde",
+      "relocation": "CHF 120/Stunde",
+      "disposal": "CHF 80/Stunde"
+    }
+  },
+  "about": {
+    "title": "Über SwissCleanMove",
+    "subtitle": "Ihr vertrauensvoller Partner für Reinigung und Umzug",
+    "description": "Mit jahrelanger Erfahrung bieten wir professionelle Reinigungsdienstleistungen und Umzugshilfe in der ganzen Schweiz. Unser engagiertes Team sorgt für höchste Qualität und Kundenzufriedenheit.",
+    "values": {
+      "reliability": {
+        "title": "Zuverlässigkeit",
+        "description": "Wir stehen zu unserem Wort und bieten 100% Abnahmegarantie für alle unsere Dienstleistungen."
+      },
+      "customerFocus": {
+        "title": "Kundenorientierung",
+        "description": "Ihre Zufriedenheit steht im Mittelpunkt unseres Handelns. Wir hören zu und finden individuelle Lösungen."
+      },
+      "sustainability": {
+        "title": "Nachhaltigkeit",
+        "description": "Wir verwenden umweltfreundliche Reinigungsmittel und achten auf nachhaltige Arbeitsmethoden."
+      },
+      "quality": {
+        "title": "Qualität",
+        "description": "Höchste Qualitätsstandards und professionelle Ausrüstung für erstklassige Ergebnisse."
+      }
+    },
+    "stats": {
+      "satisfiedCustomers": "Zufriedene Kunden",
+      "yearsExperience": "Jahre Erfahrung",
+      "depositGuarantee": "Abnahmegarantie",
+      "responseTime": "Reaktionszeit"
+    },
+    "team": {
+      "title": "Unser Team",
+      "subtitle": "Lernen Sie die Profis hinter SwissCleanMove kennen",
+      "members": {
+        "marco": {
+          "name": "Marco Müller",
+          "position": "Geschäftsführer",
+          "description": "Mit über 10 Jahren Erfahrung in der Reinigungsbranche führt Marco unser Team mit Leidenschaft und Expertise."
+        },
+        "sarah": {
+          "name": "Sarah Weber",
+          "position": "Qualitätsmanagerin",
+          "description": "Sarah sorgt dafür, dass jeder Auftrag unseren hohen Qualitätsstandards entspricht."
+        },
+        "thomas": {
+          "name": "Thomas Schneider",
+          "position": "Teamleiter Reinigung",
+          "description": "Thomas koordiniert unsere Reinigungsteams und sorgt für reibungslose Abläufe."
+        }
+      }
+    },
+    "story": {
+      "title": "Unsere Geschichte",
+      "description": "Gegründet im Jahr 2019, hat sich SwissCleanMove zu einem der vertrauenswürdigsten Anbieter für Reinigungsdienstleistungen und Umzugshilfe in der Schweiz entwickelt. Unser Erfolg basiert auf der Kombination aus traditionellen Schweizer Werten wie Präzision und Zuverlässigkeit mit modernen, effizienten Arbeitsmethoden.",
+      "qualityBadge": "Schweizer Qualität seit 2019",
+      "teamImage": "Unser professionelles Team"
+    },
+    "statsSection": {
+      "title": "SwissCleanMove in Zahlen",
+      "subtitle": "Vertrauen Sie auf unsere Erfahrung und Expertise"
+    },
+    "valuesSection": {
+      "title": "Unsere Werte",
+      "subtitle": "Was uns antreibt und auszeichnet"
+    },
+    "cta": {
+      "title": "Werden Sie Teil unserer Erfolgsgeschichte",
+      "subtitle": "Lassen Sie uns gemeinsam Ihre Reinigungs- und Umzugsherausforderungen lösen",
+      "freeOffer": "Kostenloses Angebot",
+      "contact": "Kontakt aufnehmen"
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Wir möchten Ihnen das Leben erleichtern, indem wir Ihnen professionelle Reinigungsdienstleistungen und Umzugshilfe anbieten, die höchsten Qualitätsstandards entsprechen. Unser Ziel ist es, Ihre Erwartungen nicht nur zu erfüllen, sondern zu übertreffen.",
+      "values": {
+        "excellence": {
+          "title": "Exzellenz",
+          "description": "Höchste Qualitätsstandards in allem was wir tun"
+        },
+        "efficiency": {
+          "title": "Effizienz",
+          "description": "Schnelle und zuverlässige Dienstleistungen"
+        },
+        "trust": {
+          "title": "Vertrauen",
+          "description": "Langfristige Partnerschaften mit unseren Kunden"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Nehmen Sie Kontakt mit uns auf",
+    "success": {
+      "title": "Nachricht erfolgreich gesendet!",
+      "subtitle": "Vielen Dank für Ihre Nachricht. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+      "actions": {
+        "homepage": "Zur Startseite",
+        "call": "Sofort anrufen"
+      }
+    },
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "service": "Dienstleistung",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "title": "Nachricht senden",
+      "subtitle": "Haben Sie Fragen oder benötigen Sie ein Angebot? Kontaktieren Sie uns gerne!",
+      "subject": "Betreff",
+      "selectPlaceholder": "Bitte wählen...",
+      "messagePlaceholder": "Beschreiben Sie Ihr Anliegen...",
+      "subjects": {
+        "quote": "Angebot anfordern",
+        "cleaning": "Reinigungsservice",
+        "moving": "Umzugsservice",
+        "maintenance": "Hauswartung",
+        "emergency": "Notfall",
+        "other": "Andere"
+      }
+    },
+    "info": {
+      "address": "Adresse",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "hours": "Geschäftszeiten"
+    },
+    "businessHours": {
+      "title": "Öffnungszeiten",
+      "mondayFriday": "Montag - Freitag",
+      "saturday": "Samstag",
+      "sunday": "Sonntag",
+      "emergencyOnly": "Nur Notfälle",
+      "note": "Termine außerhalb der Geschäftszeiten nach Vereinbarung möglich."
+    },
+    "quickContact": {
+      "title": "Schneller Kontakt",
+      "call": "Anrufen",
+      "whatsapp": "WhatsApp",
+      "email": "E-Mail"
+    },
+    "location": {
+      "title": "Unser Standort",
+      "mapPlaceholder": "Google Maps Integration"
+    },
+    "serviceAreas": {
+      "title": "Unsere Servicegebiete",
+      "subtitle": "Wir sind in der ganzen Schweiz für Sie da:",
+      "notListed": "Ihr Ort ist nicht dabei? Kontaktieren Sie uns trotzdem - wir finden eine Lösung!"
+    },
+    "emergency": {
+      "title": "Notfall-Service",
+      "subtitle": "Benötigen Sie sofortige Hilfe? Unser Notfall-Service ist 24/7 erreichbar.",
+      "call": "Notfall: +41 79 123 45 67"
+    }
+  },
+  "freeOffer": {
+    "title": "Kostenloses Angebot anfordern",
+    "subtitle": "Erhalten Sie ein unverbindliches Angebot für Ihre Reinigung oder Ihren Umzug",
+    "success": {
+      "title": "Vielen Dank für Ihre Anfrage!",
+      "subtitle": "Wir haben Ihre Anfrage erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+      "nextSteps": {
+        "title": "Was passiert als nächstes?",
+        "step1": "Wir prüfen Ihre Anfrage und erstellen ein individuelles Angebot",
+        "step2": "Sie erhalten das Angebot per E-Mail oder Telefon",
+        "step3": "Bei Bedarf vereinbaren wir einen Besichtigungstermin"
+      },
+      "actions": {
+        "homepage": "Zur Startseite",
+        "call": "Sofort anrufen"
+      }
+    },
+    "form": {
+      "personalInfo": "Persönliche Informationen",
+      "serviceDetails": "Service Details",
+      "propertyType": "Immobilientyp",
+      "rooms": "Anzahl Zimmer",
+      "area": "Fläche (m²)",
+      "serviceType": "Art der Dienstleistung",
+      "date": "Gewünschtes Datum",
+      "additionalInfo": "Zusätzliche Informationen",
+      "submit": "Angebot anfordern",
+      "submitting": "Wird gesendet...",
+      "fields": {
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "address": "Adresse",
+        "postalCode": "PLZ",
+        "city": "Ort",
+        "selectPlaceholder": "Bitte wählen...",
+        "additionalServices": "Zusätzliche Dienstleistungen",
+        "specialRequests": "Besondere Wünsche oder Anmerkungen",
+        "placeholder": "Beschreiben Sie hier besondere Anforderungen, Zugangsmöglichkeiten oder andere wichtige Informationen..."
+      },
+      "propertyTypes": {
+        "apartment": "Wohnung",
+        "house": "Haus",
+        "office": "Büro",
+        "restaurant": "Restaurant",
+        "other": "Andere"
+      },
+      "additionalServices": {
+        "windowCleaning": "Fensterreinigung",
+        "carpetCleaning": "Teppichreinigung",
+        "furnitureTransport": "Möbeltransport",
+        "packingService": "Verpackungsservice",
+        "disposal": "Entsorgung",
+        "emergencyCleaning": "Notfallreinigung"
+      },
+      "agreement": {
+        "privacy": "Ich stimme der Verarbeitung meiner Daten gemäß der",
+        "privacyLink": "Datenschutzerklärung",
+        "contact": "zu und erkläre mich damit einverstanden, dass SwissCleanMove mich bezüglich meiner Anfrage kontaktiert.",
+        "newsletter": "Ich möchte gelegentlich Informationen über neue Dienstleistungen und Angebote erhalten."
+      }
+    }
+  },
+  "legal": {
+    "title": "Impressum & Datenschutz",
+    "subtitle": "Transparenz und Vertrauen sind uns wichtig",
+    "navigation": {
+      "impressum": "Impressum",
+      "datenschutz": "Datenschutz",
+      "agb": "AGB",
+      "cookies": "Cookie-Richtlinie"
+    },
+    "sections": {
+      "impressum": "Impressum",
+      "datenschutz": "Datenschutzerklärung",
+      "agb": "Allgemeine Geschäftsbedingungen",
+      "cookies": "Cookie-Richtlinie"
+    },
+    "impressum": {
+      "companyInfo": "Firmeninformationen",
+      "legalInfo": "Rechtliche Angaben",
+      "liability": "Haftungsausschluss",
+      "copyright": "Urheberrecht",
+      "companyName": "Firmenname",
+      "address": "Adresse",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "website": "Website",
+      "commercialRegister": "Handelsregister",
+      "uid": "UID",
+      "manager": "Geschäftsführer",
+      "authority": "Aufsichtsbehörde",
+      "liabilityText1": "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
+      "liabilityText2": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen.",
+      "copyrightText": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+    },
+    "privacy": {
+      "generalInfo": "Allgemeine Hinweise",
+      "dataCollection": "Datenerfassung auf unserer Website",
+      "yourRights": "Ihre Rechte",
+      "contactForm": "Kontaktformular",
+      "generalText": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.",
+      "whoResponsible": "Wer ist verantwortlich für die Datenerfassung?",
+      "whoResponsibleText": "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.",
+      "howCollect": "Wie erfassen wir Ihre Daten?",
+      "howCollectText": "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.",
+      "whyUse": "Wofür nutzen wir Ihre Daten?",
+      "whyUseText": "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.",
+      "rightsText": "Sie haben jederzeit das Recht:",
+      "rightsList": [
+        "unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten",
+        "Berichtigung oder Löschung dieser Daten zu verlangen",
+        "eine Einschränkung der Datenverarbeitung zu verlangen",
+        "der Datenverarbeitung zu widersprechen",
+        "Datenübertragbarkeit zu verlangen"
+      ],
+      "contactFormText": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert."
+    },
+    "terms": {
+      "scope": "§ 1 Geltungsbereich",
+      "contract": "§ 2 Vertragsabschluss",
+      "services": "§ 3 Leistungsumfang",
+      "pricing": "§ 4 Preise und Zahlungsbedingungen",
+      "warranty": "§ 5 Gewährleistung",
+      "liability": "§ 6 Haftung",
+      "scopeText": "Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen SwissCleanMove GmbH und ihren Kunden über die Erbringung von Reinigungs- und Umzugsdienstleistungen.",
+      "contractText": "Der Vertrag kommt durch die Annahme des Angebots durch den Kunden zustande. Die Annahme kann schriftlich, mündlich oder durch konkludentes Verhalten erfolgen.",
+      "servicesText": "Unsere Dienstleistungen umfassen:",
+      "servicesList": [
+        "Umzugsreinigung und Endreinigung",
+        "Büro- und Gewerbereinigung",
+        "Gastronomiereinigung",
+        "Hauswartungsdienstleistungen",
+        "Umzugsdienstleistungen",
+        "Entsorgungsdienstleistungen"
+      ],
+      "pricingText1": "Die Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer. Die Zahlung erfolgt nach Rechnungsstellung innerhalb von 30 Tagen netto.",
+      "pricingText2": "Bei Zahlungsverzug werden Verzugszinsen in Höhe von 5% über dem Basiszinssatz berechnet.",
+      "warrantyText": "Wir gewährleisten die ordnungsgemäße Ausführung unserer Dienstleistungen. Bei Mängeln haben Sie das Recht auf kostenlose Nachbesserung. Für Umzugsreinigungen bieten wir eine 100%ige Abnahmegarantie.",
+      "liabilityText": "Wir haften für Schäden nur bei Vorsatz und grober Fahrlässigkeit. Die Haftung ist auf die Höhe der Versicherungssumme begrenzt. Alle unsere Mitarbeiter sind vollständig versichert."
+    },
+    "cookies": {
+      "whatAre": "Was sind Cookies?",
+      "whichUse": "Welche Cookies verwenden wir?",
+      "manage": "Cookie-Einstellungen verwalten",
+      "whatAreText": "Cookies sind kleine Textdateien, die von Ihrem Webbrowser auf Ihrem Endgerät zur Speicherung bestimmter Informationen abgelegt werden. Durch die gespeicherten und zurückgesandten Informationen erkennt die jeweilige Website, dass Sie diese mit dem Browser Ihres Endgeräts bereits aufgerufen und besucht haben.",
+      "necessary": "Technisch notwendige Cookies",
+      "necessaryText": "Diese Cookies sind für die Grundfunktionen der Website erforderlich und können nicht deaktiviert werden. Sie werden normalerweise nur als Reaktion auf von Ihnen getätigte Aktionen gesetzt.",
+      "functional": "Funktionale Cookies",
+      "functionalText": "Diese Cookies ermöglichen es der Website, erweiterte Funktionalität und Personalisierung zu bieten, wie z.B. die Speicherung Ihrer Spracheinstellungen.",
+      "manageText": "Sie können Ihre Cookie-Einstellungen jederzeit in Ihrem Browser ändern. Beachten Sie jedoch, dass die Deaktivierung bestimmter Cookies die Funktionalität unserer Website beeinträchtigen kann."
+    }
+  },
+  "footer": {
+    "company": "SwissCleanMove",
+    "description": "Professionelle Reinigung und Umzug in der Schweiz",
+    "quickLinks": "Schnelllinks",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt",
+    "legal": "Rechtliches",
+    "followUs": "Folgen Sie uns"
+  },
+  "whatsapp": {
+    "message": "Hallo! Ich interessiere mich für Ihre Dienstleistungen."
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "readMore": "Weiterlesen",
+    "getQuote": "Angebot erhalten",
+    "contactUs": "Kontakt aufnehmen",
+    "requestFreeQuote": "Kostenloses Angebot anfordern",
+    "getFreeQuote": "Kostenloses Angebot erhalten",
+    "freeQuote": "Kostenloses Angebot"
+  },
+  "regions": {
+    "title": "Serviceregionen",
+    "subtitle": "Wir bieten professionelle Reinigungs- und Umzugsdienstleistungen in der ganzen Schweiz",
+    "coverageAreas": "Unsere Abdeckungsgebiete",
+    "citiesCount": "50+ Städte",
+    "citiesDesc": "Wir bedienen über 50 Städte in der ganzen Schweiz",
+    "sameDayService": "Taggleicher Service",
+    "sameDayDesc": "Schnelle Reaktionszeiten in allen Servicegebieten",
+    "localTeams": "Lokale Teams",
+    "localTeamsDesc": "Engagierte lokale Teams in jeder Region",
+    "ourRegions": "Unsere Serviceregionen",
+    "professionalServices": "Professionelle Reinigungs- und Umzugsdienstleistungen in Ihrer Nähe",
+    "serviceAreas": "Servicegebiete:",
+    "phone": "Telefon",
+    "coverage": "Abdeckung",
+    "servicesAvailable": "Verfügbare Dienstleistungen in allen Regionen",
+    "completeRange": "Komplettes Angebot an Reinigungs- und Umzugsdienstleistungen",
+    "notSureArea": "Unsicher über Ihr Gebiet?",
+    "contactCheck": "Kontaktieren Sie uns, um zu prüfen, ob wir Ihren Standort bedienen",
+    "contactUs": "Kontaktieren Sie uns",
+    "callNow": "Jetzt anrufen",
+    "cities": {
+      "zurich": "Zürich",
+      "geneva": "Genf",
+      "basel": "Basel",
+      "bern": "Bern",
+      "lausanne": "Lausanne",
+      "winterthur": "Winterthur",
+      "lucerne": "Luzern",
+      "stgallen": "St. Gallen"
+    },
+    "regionData": {
+      "zurich": {
+        "name": "Zürich",
+        "description": "Komplette Reinigungs- und Umzugsdienstleistungen im Großraum Zürich",
+        "coverage": "Volle Abdeckung inklusive Vororte und Umgebung",
+        "areas": [
+          "Stadt Zürich",
+          "Winterthur",
+          "Uster",
+          "Dübendorf",
+          "Kloten"
+        ]
+      },
+      "basel": {
+        "name": "Basel",
+        "description": "Professionelle Dienstleistungen in der Region Basel",
+        "coverage": "Basel-Stadt und Basel-Landschaft",
+        "areas": [
+          "Stadt Basel",
+          "Allschwil",
+          "Binningen",
+          "Bottmingen",
+          "Münchenstein"
+        ]
+      },
+      "bern": {
+        "name": "Bern",
+        "description": "Zuverlässige Reinigungs- und Umzugsdienstleistungen in der Hauptstadtregion",
+        "coverage": "Kanton Bern und Umgebung",
+        "areas": [
+          "Stadt Bern",
+          "Thun",
+          "Biel/Bienne",
+          "Burgdorf",
+          "Langenthal"
+        ]
+      },
+      "geneva": {
+        "name": "Genf",
+        "description": "Premium-Dienstleistungen im Großraum Genf",
+        "coverage": "Kanton Genf und grenznahe Gebiete",
+        "areas": [
+          "Stadt Genf",
+          "Carouge",
+          "Vernier",
+          "Lancy",
+          "Meyrin"
+        ]
+      },
+      "lausanne": {
+        "name": "Lausanne",
+        "description": "Professionelle Reinigung und Umzug in der Region Waadt",
+        "coverage": "Genferseeregion und Kanton Waadt",
+        "areas": [
+          "Lausanne",
+          "Montreux",
+          "Vevey",
+          "Yverdon-les-Bains",
+          "Nyon"
+        ]
+      },
+      "lucerne": {
+        "name": "Luzern",
+        "description": "Qualitätsdienstleistungen in der Zentralschweiz",
+        "coverage": "Region Zentralschweiz",
+        "areas": [
+          "Stadt Luzern",
+          "Kriens",
+          "Emmen",
+          "Horw",
+          "Meggen"
+        ]
+      }
+    },
+    "services": {
+      "houseCleaning": "Hausreinigung",
+      "apartmentCleaning": "Wohnungsreinigung",
+      "officeCleaning": "Büroreinigung",
+      "finalCleaning": "Endreinigung",
+      "windowCleaning": "Fensterreinigung",
+      "relocation": "Umzug",
+      "disposal": "Entsorgung",
+      "stairwellCleaning": "Treppenhausreinigung"
+    }
+  },
+  "pricing": {
+    "title": "Transparente Preise",
+    "subtitle": "Faire und wettbewerbsfähige Preise für alle unsere Dienstleistungen",
+    "choosePlan": "Wählen Sie Ihren Service-Plan",
+    "priceDisclaimer": "Alle Preise sind Schätzungen und können je nach spezifischen Anforderungen, Standort und Komplexität des Auftrags variieren.",
+    "mostPopular": "Am beliebtesten",
+    "getQuote": "Angebot erhalten",
+    "additionalServices": "Zusätzliche Dienstleistungen",
+    "enhancePackage": "Erweitern Sie Ihr Reinigungs- oder Umzugspaket mit diesen optionalen Dienstleistungen",
+    "factorsAffecting": "Preisbeeinflussende Faktoren",
+    "factorsInfluence": "Mehrere Faktoren beeinflussen die endgültigen Kosten unserer Dienstleistungen",
+    "timeRequired": "Benötigte Zeit",
+    "timeRequiredDesc": "Die Dauer hängt von der Raumgröße und der erforderlichen Reinigungstiefe ab",
+    "serviceType": "Art der Dienstleistung",
+    "serviceTypeDesc": "Verschiedene Dienstleistungen haben unterschiedliche Komplexität und Anforderungen",
+    "location": "Standort",
+    "locationDesc": "Entfernung und Erreichbarkeit beeinflussen die Preisgestaltung",
+    "urgency": "Dringlichkeit",
+    "urgencyDesc": "Taggleiche oder Notfalldienste können Aufpreise haben",
+    "readyQuote": "Bereit für Ihr kostenloses Angebot?",
+    "contactToday": "Kontaktieren Sie uns heute für ein personalisiertes Angebot basierend auf Ihren spezifischen Bedürfnissen",
+    "getFreeQuote": "Kostenloses Angebot erhalten",
+    "additionalServicesList": {
+      "windowCleaning": "Fensterreinigung",
+      "carpetCleaning": "Teppichreinigung",
+      "applianceCleaning": "Gerätereinigung",
+      "garageBasement": "Garagen-/Kellerreinigung",
+      "disposalServices": "Entsorgungsdienstleistungen",
+      "storageSolutions": "Lagerlösungen"
+    },
+    "additionalPrices": {
+      "windowCleaning": "CHF 8-15 pro Fenster",
+      "carpetCleaning": "CHF 25-40 pro m²",
+      "applianceCleaning": "CHF 50-80 pro Gerät",
+      "garageBasement": "CHF 150-300 pro Raum",
+      "disposalServices": "CHF 100-500 pro Ladung",
+      "storageSolutions": "CHF 80-200 pro Monat"
+    },
+    "plans": {
+      "basic": {
+        "title": "Grundreinigung",
+        "description": "Wesentliche Reinigungsdienstleistungen für kleine Räume",
+        "price": "CHF 120",
+        "features": [
+          "Bis zu 2 Zimmer",
+          "Grundlegende Reinigungsmittel",
+          "2-3 Stunden Service",
+          "Qualitätsgarantie"
+        ]
+      },
+      "standard": {
+        "title": "Standard Reinigung",
+        "description": "Umfassende Reinigung für mittelgroße Immobilien",
+        "price": "CHF 280",
+        "features": [
+          "Bis zu 4 Zimmer",
+          "Professionelle Ausrüstung",
+          "4-6 Stunden Service",
+          "Tiefenreinigung inklusive",
+          "Zufriedenheitsgarantie"
+        ]
+      },
+      "premium": {
+        "title": "Premium Reinigung",
+        "description": "Komplette Reinigungslösung für große Immobilien",
+        "price": "CHF 450",
+        "features": [
+          "Unbegrenzte Zimmer",
+          "Premium Reinigungsprodukte",
+          "Ganztägiger Service",
+          "Auszugsgarantie",
+          "Versicherungsschutz",
+          "Nachkontrolle"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu unseren Dienstleistungen",
+    "quickFacts": "Schnelle Fakten zu unseren Dienstleistungen",
+    "keyInfo": "Wichtige Informationen, die Sie über SwissCleanMove wissen sollten",
+    "responseTime": "Antwortzeit",
+    "responseTimeDesc": "Innerhalb von 2 Stunden während der Geschäftszeiten",
+    "insurance": "Versicherung",
+    "insuranceDesc": "Vollständig versichert und lizenziert",
+    "guarantee": "Garantie",
+    "guaranteeDesc": "100% Zufriedenheitsgarantie",
+    "support": "Support",
+    "supportDesc": "24/7 Kundensupport",
+    "stillQuestions": "Haben Sie noch Fragen?",
+    "teamHelp": "Unser freundliches Team hilft Ihnen gerne. Kontaktieren Sie uns über einen dieser Kanäle.",
+    "callUs": "Rufen Sie uns an",
+    "emailUs": "E-Mail senden",
+    "contactForm": "Kontaktformular",
+    "sendMessage": "Senden Sie uns eine Nachricht",
+    "categories": {
+      "general": "Allgemeine Fragen",
+      "cleaning": "Reinigungsdienstleistungen",
+      "moving": "Umzugsdienstleistungen",
+      "pricing": "Preise & Zahlung"
+    },
+    "questions": {
+      "general": [
+        {
+          "question": "Welche Gebiete bedienen Sie?",
+          "answer": "Wir bieten Dienstleistungen in der ganzen Schweiz, einschließlich Großstädten wie Zürich, Genf, Basel, Bern und Lausanne."
+        },
+        {
+          "question": "Sind Sie versichert?",
+          "answer": "Ja, wir sind vollständig versichert und gebunden. Alle unsere Mitarbeiter sind durch eine umfassende Versicherung abgedeckt."
+        }
+      ],
+      "cleaning": [
+        {
+          "question": "Stellen Sie Reinigungsmittel zur Verfügung?",
+          "answer": "Ja, wir bringen alle notwendigen Reinigungsmittel und professionelle Ausrüstung zu jedem Auftrag mit."
+        },
+        {
+          "question": "Was ist Ihre Kautionsgarantie?",
+          "answer": "Wir bieten eine 100%ige Kautionsrückgarantie für Auszugsreinigungen. Wenn die Immobilie nicht akzeptiert wird, reinigen wir kostenlos nach."
+        }
+      ],
+      "moving": [
+        {
+          "question": "Stellen Sie Verpackungsmaterialien zur Verfügung?",
+          "answer": "Ja, wir können alle notwendigen Verpackungsmaterialien einschließlich Kartons, Luftpolsterfolie und Schutzabdeckungen bereitstellen."
+        }
+      ],
+      "pricing": [
+        {
+          "question": "Wie berechnen Sie die Preise?",
+          "answer": "Die Preise basieren auf der Größe der Immobilie, der Art der Dienstleistung und den spezifischen Anforderungen. Wir bieten kostenlose Kostenvoranschläge."
+        }
+      ]
+    }
+  }
+}

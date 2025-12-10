@@ -1,0 +1,746 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "regions": "Régions",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "freeOffer": "Devis gratuit",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "login": "Se connecter",
+    "language": "Langue"
+  },
+  "home": {
+    "hero": {
+      "title": "Nettoyage professionnel & Déménagement en Suisse",
+      "subtitle": "Services de nettoyage fiables et aide au déménagement avec garantie de reprise à 100%",
+      "cta": "Demander un devis gratuit",
+      "phone": "Appeler maintenant"
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Solutions professionnelles pour tous vos besoins de nettoyage et déménagement",
+      "umzugsreinigung": {
+        "title": "Nettoyage de déménagement",
+        "description": "Nettoyage final professionnel pour appartements et maisons avec garantie de reprise à 100%"
+      },
+      "gastronomie": {
+        "title": "Nettoyage gastronomie",
+        "description": "Nettoyage spécialisé pour restaurants et établissements de restauration"
+      },
+      "buero": {
+        "title": "Nettoyage de bureau",
+        "description": "Nettoyage régulier et approfondi des bureaux pour un environnement de travail professionnel"
+      },
+      "hauswartung": {
+        "title": "Conciergerie",
+        "description": "Services complets de conciergerie pour les propriétés immobilières"
+      },
+      "entsorgung": {
+        "title": "Évacuation",
+        "description": "Évacuation professionnelle de meubles et objets ménagers"
+      },
+      "umzug": {
+        "title": "Déménagement",
+        "description": "Services complets de déménagement avec équipe expérimentée"
+      }
+    },
+    "testimonials": {
+      "title": "Ce que disent nos clients",
+      "subtitle": "Faites confiance à l'expérience de clients satisfaits"
+    },
+    "cta": {
+      "title": "Prêt pour un nettoyage professionnel?",
+      "subtitle": "Contactez-nous dès aujourd'hui pour un devis gratuit",
+      "button": "Devis gratuit"
+    },
+    "servicesCta": {
+      "title": "Prêt pour un nettoyage professionnel?",
+      "subtitle": "Contactez-nous dès aujourd'hui pour un devis gratuit et sans engagement"
+    },
+    "trustIndicators": {
+      "guarantee": "Garantie de satisfaction à 100%",
+      "nationwide": "Disponible dans toute la Suisse",
+      "professional": "Équipe professionnelle"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions professionnelles pour tous vos besoins de nettoyage et de déménagement",
+    "featuresTitle": "Caractéristiques",
+    "benefitsSection": {
+      "title": "Pourquoi SwissCleanMove?",
+      "subtitle": "Vos avantages avec notre service professionnel"
+    },
+    "features": {
+      "umzugsreinigung": [
+        "Nettoyage complet d'appartement",
+        "Cuisine et salle de bain en profondeur",
+        "Fenêtres intérieur et extérieur",
+        "Sols et tapis",
+        "Garantie de dépôt à 100%"
+      ],
+      "gastronomie": [
+        "Nettoyage de cuisine et équipements",
+        "Désinfection hygiénique",
+        "Hottes et filtres",
+        "Sols et surfaces de travail",
+        "Nettoyage conforme HACCP"
+      ],
+      "buero": [
+        "Espaces de bureau et postes de travail",
+        "Installations sanitaires",
+        "Espaces communs",
+        "Élimination des déchets",
+        "Rendez-vous réguliers"
+      ],
+      "hauswartung": [
+        "Nettoyage des cages d'escalier",
+        "Entretien des espaces extérieurs",
+        "Petites réparations",
+        "Service hivernal",
+        "Gestion de propriété"
+      ],
+      "entsorgung": [
+        "Meubles et articles ménagers",
+        "Appareils électroniques",
+        "Déchets encombrants",
+        "Élimination professionnelle",
+        "Respectueux de l'environnement"
+      ],
+      "umzug": [
+        "Service de déménagement complet",
+        "Emballage et transport",
+        "Montage de meubles",
+        "Couverture d'assurance",
+        "Déménagements dans toute la Suisse"
+      ]
+    },
+    "pricingUnits": {
+      "perHour": "par heure",
+      "perSquareMeter": "par m²",
+      "byArrangement": "Sur arrangement",
+      "byVolume": "Par volume",
+      "byEffort": "Selon l'effort"
+    },
+    "benefits": {
+      "guarantee": {
+        "title": "Garantie 100%",
+        "description": "Garantie complète de dépôt pour tous les travaux de nettoyage"
+      },
+      "punctual": {
+        "title": "Ponctuel",
+        "description": "Rendez-vous fiables et exécution rapide"
+      },
+      "professional": {
+        "title": "Professionnel",
+        "description": "Équipe expérimentée avec équipement de haute qualité"
+      },
+      "insured": {
+        "title": "Assuré",
+        "description": "Entièrement assuré pour votre protection"
+      }
+    },
+    "pricingSection": {
+      "title": "Prix Transparents",
+      "subtitle": "Tarifs équitables et compétitifs pour tous les services",
+      "officeCleaningTitle": "Nettoyage de Bureau",
+      "gastronomyTitle": "Nettoyage de Restaurant",
+      "windowCleaningTitle": "Nettoyage de Vitres"
+    },
+    "pricing": {
+      "houseCleaning": "CHF 35/heure",
+      "apartmentCleaning": "CHF 280",
+      "stairwellCleaning": "CHF 45/heure",
+      "officeCleaning": "CHF 30/heure",
+      "finalCleaning": "CHF 320",
+      "windowCleaning": "CHF 25/heure",
+      "relocation": "CHF 120/heure",
+      "disposal": "CHF 80/heure"
+    }
+  },
+  "about": {
+    "title": "À propos de SwissCleanMove",
+    "subtitle": "Votre partenaire de confiance pour le nettoyage et le déménagement",
+    "description": "Avec des années d'expérience, nous offrons des services de nettoyage professionnels et d'aide au déménagement dans toute la Suisse. Notre équipe dévouée assure la plus haute qualité et satisfaction client.",
+    "values": {
+      "reliability": {
+        "title": "Fiabilité",
+        "description": "Nous respectons notre parole et offrons une garantie de dépôt à 100% pour tous nos services."
+      },
+      "customerFocus": {
+        "title": "Orientation Client",
+        "description": "Votre satisfaction est au centre de nos actions. Nous écoutons et trouvons des solutions individuelles."
+      },
+      "sustainability": {
+        "title": "Durabilité",
+        "description": "Nous utilisons des produits de nettoyage respectueux de l'environnement et prêtons attention aux méthodes de travail durables."
+      },
+      "quality": {
+        "title": "Qualité",
+        "description": "Standards de qualité les plus élevés et équipement professionnel pour des résultats de première classe."
+      }
+    },
+    "stats": {
+      "satisfiedCustomers": "Clients Satisfaits",
+      "yearsExperience": "Années d'Expérience",
+      "depositGuarantee": "Garantie de Dépôt",
+      "responseTime": "Temps de Réponse"
+    },
+    "team": {
+      "title": "Notre Équipe",
+      "subtitle": "Rencontrez les professionnels derrière SwissCleanMove",
+      "members": {
+        "marco": {
+          "name": "Marco Müller",
+          "position": "Directeur Général",
+          "description": "Avec plus de 10 ans d'expérience dans l'industrie du nettoyage, Marco dirige notre équipe avec passion et expertise."
+        },
+        "sarah": {
+          "name": "Sarah Weber",
+          "position": "Responsable Qualité",
+          "description": "Sarah s'assure que chaque travail répond à nos standards de qualité élevés."
+        },
+        "thomas": {
+          "name": "Thomas Schneider",
+          "position": "Chef d'Équipe Nettoyage",
+          "description": "Thomas coordonne nos équipes de nettoyage et assure des opérations fluides."
+        }
+      }
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "description": "Fondée en 2019, SwissCleanMove s'est développée pour devenir l'un des fournisseurs les plus fiables de services de nettoyage et d'aide au déménagement en Suisse. Notre succès repose sur la combinaison des valeurs suisses traditionnelles telles que la précision et la fiabilité avec des méthodes de travail modernes et efficaces.",
+      "qualityBadge": "Qualité suisse depuis 2019",
+      "teamImage": "Notre équipe professionnelle"
+    },
+    "statsSection": {
+      "title": "SwissCleanMove en Chiffres",
+      "subtitle": "Faites confiance à notre expérience et expertise"
+    },
+    "valuesSection": {
+      "title": "Nos Valeurs",
+      "subtitle": "Ce qui nous motive et nous distingue"
+    },
+    "cta": {
+      "title": "Devenez Partie de Notre Histoire de Succès",
+      "subtitle": "Laissez-nous résoudre ensemble vos défis de nettoyage et de déménagement",
+      "freeOffer": "Devis Gratuit",
+      "contact": "Nous Contacter"
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Fournir des services de nettoyage et de déménagement exceptionnels qui dépassent les attentes tout en maintenant les plus hauts standards de professionnalisme et de responsabilité environnementale.",
+      "values": {
+        "excellence": {
+          "title": "Excellence",
+          "description": "Standards de qualité les plus élevés dans tout ce que nous faisons"
+        },
+        "efficiency": {
+          "title": "Efficacité",
+          "description": "Services rapides et fiables"
+        },
+        "trust": {
+          "title": "Confiance",
+          "description": "Partenariats à long terme avec nos clients"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Prenez contact avec nous",
+    "success": {
+      "title": "Message envoyé avec succès!",
+      "subtitle": "Merci pour votre message. Nous vous recontacterons dès que possible.",
+      "actions": {
+        "homepage": "Retour à l'accueil",
+        "call": "Appeler maintenant"
+      }
+    },
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "service": "Service",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "title": "Envoyer un message",
+      "subtitle": "Avez-vous des questions ou besoin d'un devis? N'hésitez pas à nous contacter!",
+      "subject": "Sujet",
+      "selectPlaceholder": "Veuillez sélectionner...",
+      "messagePlaceholder": "Décrivez votre demande...",
+      "subjects": {
+        "quote": "Demander un devis",
+        "cleaning": "Service de nettoyage",
+        "moving": "Service de déménagement",
+        "maintenance": "Gestion immobilière",
+        "emergency": "Urgence",
+        "other": "Autre"
+      }
+    },
+    "info": {
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "hours": "Heures d'ouverture"
+    },
+    "businessHours": {
+      "title": "Heures d'ouverture",
+      "mondayFriday": "Lundi - Vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche",
+      "emergencyOnly": "Urgences seulement",
+      "note": "Rendez-vous en dehors des heures d'ouverture possibles sur arrangement."
+    },
+    "quickContact": {
+      "title": "Contact Rapide",
+      "call": "Appeler",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail"
+    },
+    "location": {
+      "title": "Notre Emplacement",
+      "mapPlaceholder": "Intégration Google Maps"
+    },
+    "serviceAreas": {
+      "title": "Nos Zones de Service",
+      "subtitle": "Nous sommes là pour vous dans toute la Suisse:",
+      "notListed": "Votre lieu n'est pas listé? Contactez-nous quand même - nous trouverons une solution!"
+    },
+    "emergency": {
+      "title": "Service d'Urgence",
+      "subtitle": "Besoin d'aide immédiate? Notre service d'urgence est disponible 24h/24 et 7j/7.",
+      "call": "Urgence: +41 79 123 45 67"
+    }
+  },
+  "freeOffer": {
+    "title": "Demander un devis gratuit",
+    "subtitle": "Recevez un devis sans engagement pour votre nettoyage ou déménagement",
+    "success": {
+      "title": "Merci pour votre demande!",
+      "subtitle": "Nous avons reçu votre demande et vous contacterons dans les 24 heures.",
+      "nextSteps": {
+        "title": "Que se passe-t-il ensuite?",
+        "step1": "Nous examinons votre demande et créons une offre individuelle",
+        "step2": "Vous recevez l'offre par e-mail ou téléphone",
+        "step3": "Si nécessaire, nous organisons un rendez-vous d'inspection"
+      },
+      "actions": {
+        "homepage": "Retour à l'accueil",
+        "call": "Appeler maintenant"
+      }
+    },
+    "form": {
+      "personalInfo": "Informations personnelles",
+      "serviceDetails": "Détails du service",
+      "propertyType": "Type de propriété",
+      "rooms": "Nombre de pièces",
+      "area": "Surface (m²)",
+      "serviceType": "Type de service",
+      "date": "Date souhaitée",
+      "additionalInfo": "Informations supplémentaires",
+      "submit": "Demander un devis",
+      "submitting": "Envoi en cours...",
+      "fields": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "address": "Adresse",
+        "postalCode": "Code postal",
+        "city": "Ville",
+        "selectPlaceholder": "Veuillez sélectionner...",
+        "additionalServices": "Services supplémentaires",
+        "specialRequests": "Demandes spéciales ou commentaires",
+        "placeholder": "Décrivez ici les exigences spéciales, les possibilités d'accès ou d'autres informations importantes..."
+      },
+      "propertyTypes": {
+        "apartment": "Appartement",
+        "house": "Maison",
+        "office": "Bureau",
+        "restaurant": "Restaurant",
+        "other": "Autre"
+      },
+      "additionalServices": {
+        "windowCleaning": "Nettoyage de vitres",
+        "carpetCleaning": "Nettoyage de tapis",
+        "furnitureTransport": "Transport de meubles",
+        "packingService": "Service d'emballage",
+        "disposal": "Élimination",
+        "emergencyCleaning": "Nettoyage d'urgence"
+      },
+      "agreement": {
+        "privacy": "J'accepte le traitement de mes données selon la",
+        "privacyLink": "Politique de confidentialité",
+        "contact": "et consens à ce que SwissCleanMove me contacte concernant ma demande.",
+        "newsletter": "Je souhaite recevoir occasionnellement des informations sur les nouveaux services et offres."
+      }
+    }
+  },
+  "legal": {
+    "title": "Mentions Légales & Confidentialité",
+    "subtitle": "La transparence et la confiance sont importantes pour nous",
+    "navigation": {
+      "impressum": "Mentions Légales",
+      "datenschutz": "Confidentialité",
+      "agb": "CGV",
+      "cookies": "Politique des Cookies"
+    },
+    "sections": {
+      "impressum": "Mentions Légales",
+      "datenschutz": "Politique de Confidentialité",
+      "agb": "Conditions Générales de Vente",
+      "cookies": "Politique des Cookies"
+    },
+    "impressum": {
+      "companyInfo": "Informations sur l'entreprise",
+      "legalInfo": "Informations légales",
+      "liability": "Clause de non-responsabilité",
+      "copyright": "Droits d'auteur",
+      "companyName": "Nom de l'entreprise",
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "website": "Site web",
+      "commercialRegister": "Registre du commerce",
+      "uid": "UID",
+      "manager": "Directeur général",
+      "authority": "Autorité de surveillance",
+      "liabilityText1": "Le contenu de nos pages a été créé avec le plus grand soin. Cependant, nous ne pouvons garantir l'exactitude, l'exhaustivité et l'actualité du contenu.",
+      "liabilityText2": "En tant que prestataire de services, nous sommes responsables de notre propre contenu sur ces pages selon les lois générales conformément à la section 7, para. 1 du TMG. Cependant, selon les sections 8 à 10 du TMG, nous ne sommes pas obligés en tant que prestataire de services de surveiller les informations tierces transmises ou stockées.",
+      "copyrightText": "Le contenu et les œuvres créés par les exploitants du site sur ces pages sont soumis au droit d'auteur suisse. La reproduction, l'édition, la distribution et tout type d'exploitation en dehors des limites du droit d'auteur nécessitent le consentement écrit de l'auteur ou du créateur respectif."
+    },
+    "privacy": {
+      "generalInfo": "Informations générales",
+      "dataCollection": "Collecte de données sur notre site web",
+      "yourRights": "Vos droits",
+      "contactForm": "Formulaire de contact",
+      "generalText": "Les informations suivantes fournissent un aperçu simple de ce qui arrive à vos données personnelles lorsque vous visitez notre site web. Les données personnelles sont toutes les données qui peuvent être utilisées pour vous identifier personnellement.",
+      "whoResponsible": "Qui est responsable de la collecte des données?",
+      "whoResponsibleText": "Le traitement des données sur ce site web est effectué par l'exploitant du site web. Vous pouvez trouver leurs coordonnées dans les mentions légales de ce site web.",
+      "howCollect": "Comment collectons-nous vos données?",
+      "howCollectText": "Vos données sont collectées d'une part en nous les fournissant. Il peut s'agir de données que vous saisissez dans un formulaire de contact, par exemple.",
+      "whyUse": "À quoi utilisons-nous vos données?",
+      "whyUseText": "Une partie des données est collectée pour assurer une fourniture sans erreur du site web. D'autres données peuvent être utilisées pour analyser votre comportement d'utilisateur.",
+      "rightsText": "Vous avez le droit à tout moment:",
+      "rightsList": [
+        "de recevoir gratuitement des informations sur l'origine, le destinataire et l'objectif de vos données personnelles stockées",
+        "de demander la correction ou la suppression de ces données",
+        "de demander une restriction du traitement des données",
+        "de vous opposer au traitement des données",
+        "de demander la portabilité des données"
+      ],
+      "contactFormText": "Si vous nous envoyez des demandes via le formulaire de contact, vos détails du formulaire de demande, y compris les données de contact que vous y avez fournies, seront stockés chez nous dans le but de traiter la demande et en cas de questions de suivi."
+    },
+    "terms": {
+      "scope": "§ 1 Portée",
+      "contract": "§ 2 Conclusion du contrat",
+      "services": "§ 3 Portée des services",
+      "pricing": "§ 4 Prix et conditions de paiement",
+      "warranty": "§ 5 Garantie",
+      "liability": "§ 6 Responsabilité",
+      "scopeText": "Ces conditions générales s'appliquent à tous les contrats entre SwissCleanMove GmbH et ses clients pour la fourniture de services de nettoyage et de déménagement.",
+      "contractText": "Le contrat est conclu par l'acceptation de l'offre par le client. L'acceptation peut être faite par écrit, oralement ou par un comportement concluant.",
+      "servicesText": "Nos services comprennent:",
+      "servicesList": [
+        "Nettoyage de déménagement et nettoyage final",
+        "Nettoyage de bureaux et commerciaux",
+        "Nettoyage de restaurants",
+        "Services de gestion immobilière",
+        "Services de déménagement",
+        "Services d'élimination"
+      ],
+      "pricingText1": "Les prix incluent la TVA légale. Le paiement est dû dans les 30 jours nets après facturation.",
+      "pricingText2": "En cas de retard de paiement, des intérêts de retard de 5% au-dessus du taux de base seront facturés.",
+      "warrantyText": "Nous garantissons l'exécution correcte de nos services. En cas de défauts, vous avez le droit à une rectification gratuite. Pour le nettoyage de déménagement, nous offrons une garantie d'acceptation à 100%.",
+      "liabilityText": "Nous ne sommes responsables des dommages qu'en cas d'intention et de négligence grave. La responsabilité est limitée au montant de la somme d'assurance. Tous nos employés sont entièrement assurés."
+    },
+    "cookies": {
+      "whatAre": "Que sont les cookies?",
+      "whichUse": "Quels cookies utilisons-nous?",
+      "manage": "Gérer les paramètres des cookies",
+      "whatAreText": "Les cookies sont de petits fichiers texte qui sont stockés par votre navigateur web sur votre appareil pour stocker certaines informations. Grâce aux informations stockées et renvoyées, le site web respectif reconnaît que vous l'avez déjà appelé et visité avec le navigateur de votre appareil.",
+      "necessary": "Cookies techniquement nécessaires",
+      "necessaryText": "Ces cookies sont requis pour les fonctions de base du site web et ne peuvent pas être désactivés. Ils ne sont généralement définis qu'en réponse aux actions que vous entreprenez.",
+      "functional": "Cookies fonctionnels",
+      "functionalText": "Ces cookies permettent au site web de fournir des fonctionnalités améliorées et une personnalisation, comme la mémorisation de vos paramètres de langue.",
+      "manageText": "Vous pouvez modifier vos paramètres de cookies dans votre navigateur à tout moment. Cependant, veuillez noter que la désactivation de certains cookies peut affecter la fonctionnalité de notre site web."
+    }
+  },
+  "footer": {
+    "company": "SwissCleanMove",
+    "description": "Nettoyage professionnel et déménagement en Suisse",
+    "quickLinks": "Liens rapides",
+    "services": "Services",
+    "contact": "Contact",
+    "legal": "Légal",
+    "followUs": "Suivez-nous"
+  },
+  "whatsapp": {
+    "message": "Bonjour! Je suis intéressé par vos services."
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "readMore": "Lire la suite",
+    "getQuote": "Obtenir un devis",
+    "contactUs": "Nous contacter",
+    "requestFreeQuote": "Demander un devis gratuit",
+    "getFreeQuote": "Obtenir un devis gratuit",
+    "freeQuote": "Devis gratuit"
+  },
+  "regions": {
+    "title": "Régions de Service",
+    "subtitle": "Nous fournissons des services professionnels de nettoyage et de déménagement dans toute la Suisse",
+    "coverageAreas": "Nos Zones de Couverture",
+    "citiesCount": "50+ Villes",
+    "citiesDesc": "Nous desservons plus de 50 villes à travers la Suisse",
+    "sameDayService": "Service le Jour Même",
+    "sameDayDesc": "Temps de réponse rapides dans toutes les zones de service",
+    "localTeams": "Équipes Locales",
+    "localTeamsDesc": "Équipes locales dédiées dans chaque région",
+    "ourRegions": "Nos Régions de Service",
+    "professionalServices": "Services professionnels de nettoyage et de déménagement dans votre région",
+    "serviceAreas": "Zones de Service:",
+    "phone": "Téléphone",
+    "coverage": "Couverture",
+    "servicesAvailable": "Services Disponibles dans Toutes les Régions",
+    "completeRange": "Gamme complète de services de nettoyage et de déménagement",
+    "notSureArea": "Pas Sûr de Votre Zone?",
+    "contactCheck": "Contactez-nous pour vérifier si nous desservons votre emplacement",
+    "contactUs": "Contactez-nous",
+    "callNow": "Appelez Maintenant",
+    "cities": {
+      "zurich": "Zurich",
+      "geneva": "Genève",
+      "basel": "Bâle",
+      "bern": "Berne",
+      "lausanne": "Lausanne",
+      "winterthur": "Winterthur",
+      "lucerne": "Lucerne",
+      "stgallen": "Saint-Gall"
+    },
+    "regionData": {
+      "zurich": {
+        "name": "Zurich",
+        "description": "Services complets de nettoyage et de déménagement dans la région métropolitaine de Zurich",
+        "coverage": "Couverture complète incluant les banlieues et les environs",
+        "areas": [
+          "Ville de Zurich",
+          "Winterthur",
+          "Uster",
+          "Dübendorf",
+          "Kloten"
+        ]
+      },
+      "basel": {
+        "name": "Bâle",
+        "description": "Services professionnels dans toute la région de Bâle",
+        "coverage": "Bâle-Ville et Bâle-Campagne",
+        "areas": [
+          "Ville de Bâle",
+          "Allschwil",
+          "Binningen",
+          "Bottmingen",
+          "Münchenstein"
+        ]
+      },
+      "bern": {
+        "name": "Berne",
+        "description": "Services fiables de nettoyage et de déménagement dans la région de la capitale",
+        "coverage": "Canton de Berne et environs",
+        "areas": [
+          "Ville de Berne",
+          "Thun",
+          "Biel/Bienne",
+          "Burgdorf",
+          "Langenthal"
+        ]
+      },
+      "geneva": {
+        "name": "Genève",
+        "description": "Services premium dans la région métropolitaine de Genève",
+        "coverage": "Canton de Genève et zones frontalières",
+        "areas": [
+          "Ville de Genève",
+          "Carouge",
+          "Vernier",
+          "Lancy",
+          "Meyrin"
+        ]
+      },
+      "lausanne": {
+        "name": "Lausanne",
+        "description": "Nettoyage et déménagement professionnels dans la région vaudoise",
+        "coverage": "Région du Léman et canton de Vaud",
+        "areas": [
+          "Lausanne",
+          "Montreux",
+          "Vevey",
+          "Yverdon-les-Bains",
+          "Nyon"
+        ]
+      },
+      "lucerne": {
+        "name": "Lucerne",
+        "description": "Services de qualité en Suisse centrale",
+        "coverage": "Région de Suisse centrale",
+        "areas": [
+          "Ville de Lucerne",
+          "Kriens",
+          "Emmen",
+          "Horw",
+          "Meggen"
+        ]
+      }
+    },
+    "services": {
+      "houseCleaning": "Nettoyage de maison",
+      "apartmentCleaning": "Nettoyage d'appartement",
+      "officeCleaning": "Nettoyage de bureau",
+      "finalCleaning": "Nettoyage final",
+      "windowCleaning": "Nettoyage de vitres",
+      "relocation": "Déménagement",
+      "disposal": "Élimination",
+      "stairwellCleaning": "Nettoyage de cage d'escalier"
+    }
+  },
+  "pricing": {
+    "title": "Prix Transparents",
+    "subtitle": "Tarifs équitables et compétitifs pour tous nos services",
+    "choosePlan": "Choisissez Votre Plan de Service",
+    "priceDisclaimer": "Tous les prix sont des estimations et peuvent varier selon les exigences spécifiques, l'emplacement et la complexité du travail.",
+    "mostPopular": "Le Plus Populaire",
+    "getQuote": "Obtenir un Devis",
+    "additionalServices": "Services Supplémentaires",
+    "enhancePackage": "Améliorez votre forfait de nettoyage ou de déménagement avec ces services optionnels",
+    "factorsAffecting": "Facteurs Affectant le Prix",
+    "factorsInfluence": "Plusieurs facteurs influencent le coût final de nos services",
+    "timeRequired": "Temps Requis",
+    "timeRequiredDesc": "La durée dépend de la taille de l'espace et de la profondeur de nettoyage nécessaire",
+    "serviceType": "Type de Service",
+    "serviceTypeDesc": "Différents services ont des complexités et exigences variables",
+    "location": "Emplacement",
+    "locationDesc": "La distance de déplacement et l'accessibilité affectent la tarification",
+    "urgency": "Urgence",
+    "urgencyDesc": "Les services le jour même ou d'urgence peuvent avoir des tarifs premium",
+    "readyQuote": "Prêt à Obtenir Votre Devis Gratuit?",
+    "contactToday": "Contactez-nous aujourd'hui pour un devis personnalisé basé sur vos besoins spécifiques",
+    "getFreeQuote": "Obtenir un Devis Gratuit",
+    "additionalServicesList": {
+      "windowCleaning": "Nettoyage de Vitres",
+      "carpetCleaning": "Nettoyage de Tapis",
+      "applianceCleaning": "Nettoyage d'Appareils",
+      "garageBasement": "Nettoyage Garage/Sous-sol",
+      "disposalServices": "Services d'Élimination",
+      "storageSolutions": "Solutions de Stockage"
+    },
+    "additionalPrices": {
+      "windowCleaning": "CHF 8-15 par fenêtre",
+      "carpetCleaning": "CHF 25-40 par m²",
+      "applianceCleaning": "CHF 50-80 par appareil",
+      "garageBasement": "CHF 150-300 par espace",
+      "disposalServices": "CHF 100-500 par chargement",
+      "storageSolutions": "CHF 80-200 par mois"
+    },
+    "plans": {
+      "basic": {
+        "title": "Nettoyage de Base",
+        "description": "Services de nettoyage essentiels pour petits espaces",
+        "price": "CHF 120",
+        "features": [
+          "Jusqu'à 2 pièces",
+          "Produits de nettoyage de base",
+          "Service de 2-3 heures",
+          "Garantie qualité"
+        ]
+      },
+      "standard": {
+        "title": "Nettoyage Standard",
+        "description": "Nettoyage complet pour propriétés de taille moyenne",
+        "price": "CHF 280",
+        "features": [
+          "Jusqu'à 4 pièces",
+          "Équipement professionnel",
+          "Service de 4-6 heures",
+          "Nettoyage en profondeur inclus",
+          "Garantie de satisfaction"
+        ]
+      },
+      "premium": {
+        "title": "Nettoyage Premium",
+        "description": "Solution de nettoyage complète pour grandes propriétés",
+        "price": "CHF 450",
+        "features": [
+          "Pièces illimitées",
+          "Produits de nettoyage premium",
+          "Service toute la journée",
+          "Garantie de déménagement",
+          "Couverture d'assurance",
+          "Inspection de suivi"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Trouvez des réponses aux questions courantes sur nos services",
+    "quickFacts": "Faits Rapides sur Nos Services",
+    "keyInfo": "Informations clés que vous devriez connaître sur SwissCleanMove",
+    "responseTime": "Temps de Réponse",
+    "responseTimeDesc": "Dans les 2 heures pendant les heures d'ouverture",
+    "insurance": "Assurance",
+    "insuranceDesc": "Entièrement assuré et licencié",
+    "guarantee": "Garantie",
+    "guaranteeDesc": "Garantie de satisfaction à 100%",
+    "support": "Support",
+    "supportDesc": "Support client 24/7",
+    "stillQuestions": "Vous Avez Encore des Questions?",
+    "teamHelp": "Notre équipe amicale est là pour vous aider. Contactez-nous par l'un de ces canaux.",
+    "callUs": "Appelez-nous",
+    "emailUs": "Envoyez-nous un E-mail",
+    "contactForm": "Formulaire de Contact",
+    "sendMessage": "Envoyez-nous un message",
+    "categories": {
+      "general": "Questions Générales",
+      "cleaning": "Services de Nettoyage",
+      "moving": "Services de Déménagement",
+      "pricing": "Prix et Paiement"
+    },
+    "questions": {
+      "general": [
+        {
+          "question": "Quelles zones desservez-vous?",
+          "answer": "Nous fournissons des services dans toute la Suisse, y compris les grandes villes comme Zurich, Genève, Bâle, Berne et Lausanne."
+        },
+        {
+          "question": "Êtes-vous assurés?",
+          "answer": "Oui, nous sommes entièrement assurés et cautionnés. Tous nos employés sont couverts par une assurance complète."
+        }
+      ],
+      "cleaning": [
+        {
+          "question": "Fournissez-vous les produits de nettoyage?",
+          "answer": "Oui, nous apportons tous les produits de nettoyage nécessaires et l'équipement professionnel à chaque travail."
+        },
+        {
+          "question": "Quelle est votre garantie de dépôt?",
+          "answer": "Nous offrons une garantie de remboursement de dépôt à 100% pour le nettoyage de fin de bail. Si la propriété n'est pas acceptée, nous nettoyons à nouveau sans frais."
+        }
+      ],
+      "moving": [
+        {
+          "question": "Fournissez-vous les matériaux d'emballage?",
+          "answer": "Oui, nous pouvons fournir tous les matériaux d'emballage nécessaires, y compris les boîtes, le papier bulle et les housses de protection."
+        }
+      ],
+      "pricing": [
+        {
+          "question": "Comment calculez-vous les prix?",
+          "answer": "Les prix sont basés sur la taille de la propriété, le type de service et les exigences spécifiques. Nous fournissons des devis gratuits."
+        }
+      ]
+    }
+  }
+}

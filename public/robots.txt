@@ -1,0 +1,17 @@
+# robots.txt for SwissCleanMove
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /admin/
+Disallow: /api/
+Disallow: /uploads/
+Disallow: /submissions/
+
+# Sitemap location
+Sitemap: https://swisscleanmove.ch/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1

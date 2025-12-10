@@ -1,0 +1,52 @@
+{
+  "name": "swiss-clean-move",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:backup": "node scripts/backup-sqlite-data.js",
+    "db:restore": "node scripts/restore-to-postgres.js",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@prisma/client": "^5.6.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^2.30.0",
+    "framer-motion": "^10.16.4",
+    "jsonwebtoken": "^9.0.2",
+    "jspdf": "^3.0.4",
+    "jspdf-autotable": "^5.0.2",
+    "lucide-react": "^0.292.0",
+    "multer": "^1.4.5-lts.1",
+    "next": "^14.2.33",
+    "next-intl": "^3.0.0",
+    "nodemailer": "^7.0.11",
+    "postcss": "^8",
+    "prisma": "^5.6.0",
+    "puppeteer": "^21.11.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.48.2",
+    "react-hot-toast": "^2.4.1",
+    "recharts": "^2.8.0",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.0",
+    "tsx": "^4.20.6"
+  }
+}
