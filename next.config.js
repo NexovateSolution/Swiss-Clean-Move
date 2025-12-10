@@ -4,6 +4,7 @@ const withNextIntl = require('next-intl/plugin')(
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   images: {
     domains: ['images.unsplash.com'],
     formats: ['image/avif', 'image/webp'],
@@ -16,7 +17,7 @@ const nextConfig = {
   },
   // Optimize page loading
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
   },
   // Security headers
   async headers() {
