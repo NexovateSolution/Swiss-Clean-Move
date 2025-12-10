@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
-import { join } from 'path';
-import { existsSync } from 'fs';
+import { put } from '@vercel/blob';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -38,33 +36,26 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create uploads directory if it doesn't exist
-    const uploadsDir = join(process.cwd(), 'public', 'uploads', 'clients', clientId);
-    if (!existsSync(uploadsDir)) {
-      await mkdir(uploadsDir, { recursive: true });
-    }
-
     const uploadedPhotos = [];
 
     for (const file of files) {
-      const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-
       // Generate unique filename
       const timestamp = Date.now();
       const originalName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
-      const filename = `${timestamp}_${originalName}`;
-      const filepath = join(uploadsDir, filename);
+      const filename = `clients/${clientId}/${timestamp}_${originalName}`;
 
-      // Save file
-      await writeFile(filepath, buffer);
+      // Upload to Vercel Blob
+      const blob = await put(filename, file, {
+        access: 'public',
+        addRandomSuffix: false,
+      });
 
       // Create database record
       const photo = await prisma.photo.create({
         data: {
           filename: filename,
           originalName: file.name,
-          url: `/uploads/clients/${clientId}/${filename}`,
+          url: blob.url,
           size: file.size,
           mimeType: file.type,
           clientId: clientId,

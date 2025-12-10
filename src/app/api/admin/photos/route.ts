@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '../../../../../lib/db'
 import { authenticateRequest } from '../../../../../lib/auth'
-import { writeFile, mkdir } from 'fs/promises'
-import { join } from 'path'
+import { put } from '@vercel/blob'
 
 export async function POST(request: NextRequest) {
   try {
@@ -30,24 +29,16 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'File too large' }, { status: 400 })
     }
 
-    // Create upload directory if it doesn't exist
-    const uploadDir = join(process.cwd(), 'public', 'uploads', 'photos')
-    try {
-      await mkdir(uploadDir, { recursive: true })
-    } catch (error) {
-      // Directory might already exist
-    }
-
     // Generate unique filename
     const timestamp = Date.now()
     const extension = file.name.split('.').pop()
-    const filename = `${clientId}_${timestamp}.${extension}`
-    const filepath = join(uploadDir, filename)
+    const filename = `clients/${clientId}/${timestamp}.${extension}`
 
-    // Save file
-    const bytes = await file.arrayBuffer()
-    const buffer = Buffer.from(bytes)
-    await writeFile(filepath, buffer)
+    // Upload to Vercel Blob
+    const blob = await put(filename, file, {
+      access: 'public',
+      addRandomSuffix: false,
+    })
 
     // Save to database
     const photo = await prisma.photo.create({
@@ -55,7 +46,7 @@ export async function POST(request: NextRequest) {
         clientId,
         filename,
         originalName: file.name,
-        url: `/uploads/photos/${filename}`,
+        url: blob.url,
         size: file.size,
         mimeType: file.type
       }

@@ -21,6 +21,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vercel/blob": "^2.0.0",
     "autoprefixer": "^10",
     "bcryptjs": "^2.4.3",
     "date-fns": "^2.30.0",
