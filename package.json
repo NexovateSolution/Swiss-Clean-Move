@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "db:seed": "tsx prisma/seed.ts",
@@ -12,7 +12,8 @@
     "db:restore": "node scripts/restore-to-postgres.js",
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
