@@ -6,6 +6,7 @@ Your email system is now integrated with **Gmail** using Nodemailer - completely
 
 ---
 
+
 ## 🚀 Quick Setup (5 minutes)
 
 ### Step 1: Get Gmail App Password

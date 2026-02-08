@@ -3,7 +3,9 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Lock, Mail, Eye, EyeOff, Loader2 } from 'lucide-react'
+import { Lock, Mail, Eye, EyeOff, Loader2, ArrowLeft } from 'lucide-react'
+import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
 import toast, { Toaster } from 'react-hot-toast'
 
@@ -16,6 +18,9 @@ export default function AdminLogin() {
   const [loading, setLoading] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const router = useRouter()
+  const locale = useLocale()
+  const t = useTranslations('admin.login')
+  const tAdmin = useTranslations('admin')
 
   const {
     register,
@@ -37,7 +42,7 @@ export default function AdminLogin() {
 
       if (!response.ok) {
         const error = await response.json()
-        throw new Error(error.error || 'Login failed')
+        throw new Error(error.error || t('errors.loginFailed'))
       }
 
       const result = await response.json()
@@ -45,10 +50,10 @@ export default function AdminLogin() {
       // Store user data in localStorage
       localStorage.setItem('user', JSON.stringify(result.user))
       
-      toast.success('Login successful!')
-      router.push('/admin')
+      toast.success(tAdmin('toast.loginSuccess'))
+      router.push(`/${locale}/admin`)
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : 'Login failed')
+      toast.error(error instanceof Error ? error.message : tAdmin('toast.loginFailed'))
     } finally {
       setLoading(false)
     }
@@ -66,29 +71,29 @@ export default function AdminLogin() {
           <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
             <Lock className="w-8 h-8 text-blue-600" />
           </div>
-          <h1 className="text-2xl font-bold text-white">Admin Login</h1>
-          <p className="text-blue-100 mt-2">SwissCleanMove Dashboard</p>
+          <h1 className="text-2xl font-bold text-white">{t('title')}</h1>
+          <p className="text-blue-100 mt-2">{t('subtitle')}</p>
         </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="p-8 space-y-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Email Address
+              {t('fields.email')}
             </label>
             <div className="relative">
               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="email"
                 {...register('email', { 
-                  required: 'Email is required',
+                  required: t('validation.emailRequired'),
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: 'Invalid email address'
+                    message: t('validation.emailInvalid')
                   }
                 })}
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                placeholder="admin@swisscleanmove.ch"
+                placeholder={t('placeholders.email')}
               />
             </div>
             {errors.email && (
@@ -98,21 +103,21 @@ export default function AdminLogin() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Password
+              {t('fields.password')}
             </label>
             <div className="relative">
               <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type={showPassword ? 'text' : 'password'}
                 {...register('password', { 
-                  required: 'Password is required',
+                  required: t('validation.passwordRequired'),
                   minLength: {
                     value: 6,
-                    message: 'Password must be at least 6 characters'
+                    message: t('validation.passwordMinLength', { count: 6 })
                   }
                 })}
                 className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                placeholder="Enter your password"
+                placeholder={t('placeholders.password')}
               />
               <button
                 type="button"
@@ -137,15 +142,25 @@ export default function AdminLogin() {
             ) : (
               <Lock className="w-5 h-5" />
             )}
-            <span>{loading ? 'Signing in...' : 'Sign In'}</span>
+            <span>{loading ? t('actions.signingIn') : t('actions.signIn')}</span>
           </button>
+
+          <div className="flex justify-center">
+            <Link
+              href={`/${locale}`}
+              className="inline-flex items-center gap-2 rounded-lg border border-swiss-red/20 bg-swiss-red/10 px-3 py-2 text-sm font-medium text-swiss-red hover:bg-swiss-red/15 hover:text-swiss-red/90 transition-colors focus:outline-none focus:ring-2 focus:ring-swiss-red/30"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>{t('returnToSite')}</span>
+            </Link>
+          </div>
 
           {/* Demo Credentials */}
           <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-sm font-medium text-gray-700 mb-2">Demo Credentials:</h3>
+            <h3 className="text-sm font-medium text-gray-700 mb-2">{t('demo.title')}</h3>
             <div className="text-sm text-gray-600 space-y-1">
-              <p><strong>Email:</strong> admin@swisscleanmove.ch</p>
-              <p><strong>Password:</strong> admin123</p>
+              <p><strong>{t('demo.emailLabel')}</strong> admin@swisscleanmove.ch</p>
+              <p><strong>{t('demo.passwordLabel')}</strong> admin123</p>
             </div>
           </div>
         </form>

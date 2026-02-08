@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 import { Menu, X, Phone, Globe, ChevronDown, LogIn } from 'lucide-react';
 
@@ -49,30 +48,32 @@ export default function Header() {
   }, [pathname, locale, router]);
 
   return (
-    <header className="bg-white shadow-lg fixed top-0 w-full z-50 border-b border-gray-100">
+    <header className="bg-white shadow-lg fixed top-0 w-full z-50 border-b border-swiss-red/15">
       <div className="container-max">
-        <div className={`flex justify-between items-center py-4 px-4 ${locale === 'de' ? 'lg:px-4 gap-2' : 'lg:px-6 gap-4'
+        <div className={`flex justify-between items-center py-1.5 px-4 ${locale === 'de' ? 'lg:px-4 gap-2' : 'lg:px-6 gap-4'
           }`}>
-          {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center space-x-2 flex-shrink-0 min-w-fit" prefetch={true}>
-            <Image
+          {/* Logo (image only) */}
+          <Link href={`/${locale}`} className="flex items-center flex-shrink-0 min-w-fit" prefetch={true}>
+            <img
               src="/images/logo.jpg"
               alt="SwissCleanMove Logo"
-              width={40}
-              height={40}
-              className="rounded-lg object-cover"
-              priority
+              width={200}
+              height={64}
+              className="h-16 w-auto object-contain drop-shadow-sm bg-transparent"
+              onError={(e) => {
+                const img = e.currentTarget as HTMLImageElement;
+                if (!img.dataset.fallback) {
+                  img.dataset.fallback = 'jpg';
+                  img.src = '/images/logo.jpg';
+                }
+              }}
             />
-            <div>
-              <h1 className="text-xl font-bold text-swiss-gray-800">SwissCleanMove</h1>
-              <p className="text-xs text-swiss-gray-500">Professional Services</p>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className={`hidden lg:flex items-center flex-1 justify-center ml-4 ${locale === 'de'
-            ? 'space-x-0.5 xl:space-x-1 2xl:space-x-2 max-w-4xl'
-            : 'space-x-0.5 lg:space-x-1 xl:space-x-2 2xl:space-x-3 max-w-5xl'
+            ? 'space-x-0.5 xl:space-x-1 2xl:space-x-1.5 max-w-4xl'
+            : 'space-x-0.5 lg:space-x-1 xl:space-x-1.5 2xl:space-x-2 max-w-5xl'
             }`}>
             {navigation.map((item) => {
               const isActive = pathname === item.href;
@@ -81,21 +82,21 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   prefetch={true}
-                  className={`relative py-2 rounded-lg transition-all duration-150 whitespace-nowrap group font-medium ${locale === 'de'
-                    ? 'px-1.5 lg:px-2 text-xs lg:text-sm'
-                    : 'px-1.5 lg:px-2 xl:px-3 text-xs lg:text-sm xl:text-base'
+                  className={`relative py-1.5 rounded-lg transition-all duration-150 whitespace-nowrap group font-medium ${locale === 'de'
+                    ? 'px-1.5 lg:px-2 text-xs'
+                    : 'px-1.5 lg:px-2 xl:px-2.5 text-xs lg:text-sm'
                     } ${isActive
-                      ? 'text-swiss-blue bg-swiss-blue/10 shadow-sm'
-                      : 'text-swiss-gray-600 hover:text-swiss-blue hover:bg-swiss-blue/5'
+                      ? 'text-swiss-red bg-swiss-red/10 shadow-sm'
+                      : 'text-swiss-gray-700 hover:text-swiss-red hover:bg-swiss-red/5'
                     }`}
                 >
                   <span className="relative z-10">{item.name}</span>
                   {/* Hover effect background */}
-                  <div className={`absolute inset-0 rounded-lg bg-gradient-to-r from-swiss-blue/5 to-swiss-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ${isActive ? 'opacity-100' : ''
+                  <div className={`absolute inset-0 rounded-lg bg-gradient-to-r from-swiss-red/5 to-swiss-red/10 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ${isActive ? 'opacity-100' : ''
                     }`}></div>
                   {/* Active indicator */}
                   {isActive && (
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-swiss-blue rounded-full"></div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-swiss-red rounded-full"></div>
                   )}
                 </Link>
               );
@@ -103,12 +104,12 @@ export default function Header() {
           </nav>
 
           {/* Right Side Actions */}
-          <div className={`hidden lg:flex items-center ${locale === 'de' ? 'space-x-2' : 'space-x-2 xl:space-x-3'
+          <div className={`hidden lg:flex items-center ${locale === 'de' ? 'space-x-1.5' : 'space-x-1.5 xl:space-x-2'
             }`}>
             {/* Phone */}
             <a
               href="tel:+41123456789"
-              className={`flex items-center space-x-1 xl:space-x-2 bg-swiss-blue/5 hover:bg-swiss-blue/10 text-swiss-blue hover:text-swiss-blue/90 rounded-lg transition-all duration-150 whitespace-nowrap group ${locale === 'de' ? 'px-2 py-1.5' : 'px-2 xl:px-3 py-1.5 xl:py-2'
+              className={`flex items-center space-x-1 xl:space-x-2 bg-swiss-red/5 hover:bg-swiss-red/10 text-swiss-red hover:text-swiss-red/90 rounded-lg transition-all duration-150 whitespace-nowrap group ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                 }`}
             >
               <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -119,7 +120,7 @@ export default function Header() {
             <div className="relative" ref={langDropdownRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                className={`flex items-center space-x-1 xl:space-x-2 bg-swiss-gray-50 hover:bg-swiss-gray-100 border border-swiss-gray-200 hover:border-swiss-gray-300 rounded-lg transition-all duration-150 group ${locale === 'de' ? 'px-2 py-1.5' : 'px-2 xl:px-3 py-1.5 xl:py-2'
+                className={`flex items-center space-x-1 xl:space-x-2 bg-swiss-gray-50 hover:bg-swiss-gray-100 border border-swiss-gray-200 hover:border-swiss-gray-300 rounded-lg transition-all duration-150 group ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                   }`}
               >
                 <Globe className="w-4 h-4 text-swiss-gray-500" />
@@ -166,7 +167,7 @@ export default function Header() {
             {/* Admin Login Button */}
             <Link
               href="/admin/login"
-              className={`flex items-center space-x-1 xl:space-x-2 bg-swiss-red/10 hover:bg-swiss-red/20 text-swiss-red hover:text-swiss-red/90 rounded-lg transition-all duration-150 whitespace-nowrap group ${locale === 'de' ? 'px-2 py-1.5' : 'px-2 xl:px-3 py-1.5 xl:py-2'
+              className={`flex items-center space-x-1 xl:space-x-2 bg-swiss-red/10 hover:bg-swiss-red/20 text-swiss-red hover:text-swiss-red/90 rounded-lg transition-all duration-150 whitespace-nowrap group ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                 }`}
               title="Admin Login"
             >

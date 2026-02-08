@@ -99,7 +99,7 @@ export default function ApartmentCleaningPage({ params: { locale } }: { params: 
                 ))}
               </div>
               <div className="bg-swiss-blue/10 p-6 rounded-lg">
-                <div className="text-2xl font-bold text-swiss-blue mb-2">CHF 25-45 per hour</div>
+                <div className="text-2xl font-bold text-swiss-blue mb-2">CHF 45–65 / hour / staff</div>
                 <p className="text-swiss-gray-600">Professional apartment cleaning with guarantee</p>
               </div>
             </div>

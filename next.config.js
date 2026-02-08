@@ -23,6 +23,14 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  // Route rewrites for missing static assets
+  async rewrites() {
+    return [
+      // Ensure legacy references to transportation.jpg resolve to the existing PNG
+      { source: '/images/transportation.jpg', destination: '/images/transportation.png' },
+      { source: '/images/transportation.jpeg', destination: '/images/transportation.png' },
+    ];
+  },
   // Security headers
   async headers() {
     return [

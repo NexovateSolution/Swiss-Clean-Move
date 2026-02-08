@@ -22,6 +22,30 @@
     "services": {
       "title": "Nos Services",
       "subtitle": "Solutions professionnelles pour tous vos besoins de nettoyage et déménagement",
+      "houseCleaning": {
+        "title": "Nettoyage de maison",
+        "description": "Services complets de nettoyage pour maisons avec attention aux détails"
+      },
+      "apartmentCleaning": {
+        "title": "Nettoyage d'appartement",
+        "description": "Nettoyage professionnel d'appartements incluant nettoyage final avec garantie de reprise"
+      },
+      "stairwellCleaning": {
+        "title": "Nettoyage de cage d'escalier",
+        "description": "Entretien régulier et nettoyage approfondi des cages d'escalier et espaces communs"
+      },
+      "officeCleaning": {
+        "title": "Nettoyage de bureau",
+        "description": "Services de nettoyage pour un environnement de travail propre et productif"
+      },
+      "finalCleaning": {
+        "title": "Nettoyage final",
+        "description": "Nettoyage de fin de bail avec garantie de dépôt à 100% pour appartements et maisons"
+      },
+      "windowCleaning": {
+        "title": "Nettoyage de vitres",
+        "description": "Nettoyage professionnel des vitres pour propriétés résidentielles et commerciales"
+      },
       "umzugsreinigung": {
         "title": "Nettoyage de déménagement",
         "description": "Nettoyage final professionnel pour appartements et maisons avec garantie de reprise à 100%"
@@ -45,6 +69,38 @@
       "umzug": {
         "title": "Déménagement",
         "description": "Services complets de déménagement avec équipe expérimentée"
+      },
+      "relocation": {
+        "title": "Déménagement",
+        "description": "Services complets de déménagement avec équipe expérimentée"
+      },
+      "disposal": {
+        "title": "Élimination",
+        "description": "Services professionnels d'élimination pour meubles, objets et déchets"
+      },
+      "gastronomyCleaning": {
+        "title": "Nettoyage gastronomie",
+        "description": "Nettoyage spécialisé pour restaurants et cuisines selon les normes d'hygiène"
+      },
+      "medicalCleaning": {
+        "title": "Nettoyage de cabinet médical",
+        "description": "Nettoyage hygiénique pour cabinets médicaux et cliniques"
+      },
+      "constructionCleaning": {
+        "title": "Nettoyage de chantier",
+        "description": "Nettoyage après construction ou rénovation pour une remise sans poussière"
+      },
+      "propertyMaintenance": {
+        "title": "Conciergerie / Gestion immobilière",
+        "description": "Entretien complet des propriétés et services de facility management"
+      },
+      "specialCleaning": {
+        "title": "Nettoyage spécial",
+        "description": "Nettoyages spécialisés pour des besoins uniques"
+      },
+      "comboService": {
+        "title": "Déménagement + Nettoyage (Combo)",
+        "description": "Service combiné de déménagement avec nettoyage final et garantie de reprise"
       }
     },
     "testimonials": {
@@ -116,6 +172,48 @@
         "Montage de meubles",
         "Couverture d'assurance",
         "Déménagements dans toute la Suisse"
+      ],
+      "gastronomyCleaning": [
+        "Nettoyage de cuisine et équipements",
+        "Désinfection hygiénique",
+        "Hottes et filtres",
+        "Sols et surfaces de travail",
+        "Nettoyage conforme HACCP"
+      ],
+      "medicalCleaning": [
+        "Salles de traitement et salles d'attente",
+        "Désinfection sanitaire",
+        "Surfaces de contact",
+        "Élimination des déchets",
+        "Support au concept d'hygiène"
+      ],
+      "constructionCleaning": [
+        "Élimination de la poussière et des débris",
+        "Nettoyage des fenêtres et des cadres",
+        "Balayage et lavage des sols",
+        "Nettoyage final pour la remise",
+        "Élimination des déchets de chantier"
+      ],
+      "propertyMaintenance": [
+        "Nettoyage des cages d'escalier",
+        "Entretien des espaces extérieurs",
+        "Petites réparations",
+        "Service hivernal",
+        "Gestion de propriété"
+      ],
+      "specialCleaning": [
+        "Nettoyage en profondeur",
+        "Élimination des allergènes",
+        "Matériaux délicats",
+        "Élimination des odeurs",
+        "Solutions sur mesure"
+      ],
+      "comboService": [
+        "Équipe de déménagement professionnelle",
+        "Emballage et transport",
+        "Nettoyage final avec garantie",
+        "Couverture d'assurance",
+        "Interlocuteur unique"
       ]
     },
     "pricingUnits": {
@@ -151,14 +249,14 @@
       "windowCleaningTitle": "Nettoyage de Vitres"
     },
     "pricing": {
-      "houseCleaning": "CHF 35/heure",
-      "apartmentCleaning": "CHF 280",
-      "stairwellCleaning": "CHF 45/heure",
-      "officeCleaning": "CHF 30/heure",
-      "finalCleaning": "CHF 320",
-      "windowCleaning": "CHF 25/heure",
-      "relocation": "CHF 120/heure",
-      "disposal": "CHF 80/heure"
+      "houseCleaning": "CHF 45–65 / heure / employé",
+      "apartmentCleaning": "CHF 45–65 / heure / employé",
+      "stairwellCleaning": "forfait à partir de CHF 120",
+      "officeCleaning": "CHF 0.80–1.50 / m²",
+      "finalCleaning": "à partir de CHF 250",
+      "windowCleaning": "CHF 8–15 par fenêtre",
+      "relocation": "à partir de CHF 160 / heure",
+      "disposal": "à partir de CHF 30 / m³"
     }
   },
   "about": {
@@ -246,6 +344,65 @@
           "title": "Confiance",
           "description": "Partenariats à long terme avec nos clients"
         }
+      }
+    }
+    ,
+    "calendar": {
+      "title": "Calendrier",
+      "subtitle": "Gérer les rendez-vous et plannings de nettoyage",
+      "actions": {
+        "newAppointment": "Nouveau rendez-vous",
+        "edit": "Modifier",
+        "cancel": "Annuler"
+      },
+      "viewModes": {
+        "month": "mois",
+        "week": "semaine",
+        "day": "jour"
+      },
+      "search": {
+        "placeholder": "Rechercher des rendez-vous..."
+      },
+      "filters": {
+        "allStatus": "Tous les statuts"
+      },
+      "status": {
+        "scheduled": "Planifié",
+        "inProgress": "En cours",
+        "completed": "Terminé",
+        "cancelled": "Annulé"
+      },
+      "days": {
+        "sun": "Dim",
+        "mon": "Lun",
+        "tue": "Mar",
+        "wed": "Mer",
+        "thu": "Jeu",
+        "fri": "Ven",
+        "sat": "Sam"
+      },
+      "months": {
+        "0": "Janvier",
+        "1": "Février",
+        "2": "Mars",
+        "3": "Avril",
+        "4": "Mai",
+        "5": "Juin",
+        "6": "Juillet",
+        "7": "Août",
+        "8": "Septembre",
+        "9": "Octobre",
+        "10": "Novembre",
+        "11": "Décembre"
+      },
+      "modal": {
+        "title": "Détails du rendez-vous",
+        "serviceDetails": "Détails du service",
+        "clientInformation": "Informations client",
+        "notes": "Notes"
+      },
+      "errors": {
+        "loadAppointments": "Impossible de charger les rendez-vous"
       }
     }
   },
@@ -354,7 +511,9 @@
         "selectPlaceholder": "Veuillez sélectionner...",
         "additionalServices": "Services supplémentaires",
         "specialRequests": "Demandes spéciales ou commentaires",
-        "placeholder": "Décrivez ici les exigences spéciales, les possibilités d'accès ou d'autres informations importantes..."
+        "placeholder": "Décrivez ici les exigences spéciales, les possibilités d'accès ou d'autres informations importantes...",
+        "startDate": "Date de début",
+        "finishDate": "Date de fin"
       },
       "propertyTypes": {
         "apartment": "Appartement",
@@ -481,9 +640,802 @@
   "whatsapp": {
     "message": "Bonjour! Je suis intéressé par vos services."
   },
+  "admin": {
+    "sidebar": {
+      "dashboard": "Tableau de bord",
+      "newProject": "Nouveau projet",
+      "clients": "Clients",
+      "quoteRequests": "Demandes de devis",
+      "contactMessages": "Messages de contact",
+      "serviceForms": "Formulaires de service",
+      "emailCommunication": "Communication e-mail",
+      "gallery": "Galerie",
+      "calendar": "Calendrier"
+    },
+    "topbar": {
+      "searchPlaceholder": "Recherche rapide...",
+      "language": "Langue",
+      "switchTheme": "Passer en mode {mode}",
+      "dark": "sombre",
+      "light": "clair"
+    },
+    "user": {
+      "admin": "Admin",
+      "signOut": "Déconnexion"
+    },
+    "toast": {
+      "loggedOut": "Déconnecté avec succès",
+      "logoutFailed": "Échec de la déconnexion",
+      "loginSuccess": "Connexion réussie!",
+      "loginFailed": "Échec de la connexion"
+    },
+    "login": {
+      "title": "Connexion admin",
+      "subtitle": "Tableau de bord SwissCleanMove",
+      "fields": {
+        "email": "Adresse e-mail",
+        "password": "Mot de passe"
+      },
+      "placeholders": {
+        "email": "admin@swisscleanmove.ch",
+        "password": "Saisissez votre mot de passe"
+      },
+      "validation": {
+        "emailRequired": "L'e-mail est requis",
+        "emailInvalid": "Adresse e-mail invalide",
+        "passwordRequired": "Le mot de passe est requis",
+        "passwordMinLength": "Le mot de passe doit contenir au moins {count} caractères"
+      },
+      "actions": {
+        "signIn": "Se connecter",
+        "signingIn": "Connexion..."
+      },
+      "returnToSite": "Retour au site",
+      "demo": {
+        "title": "Identifiants de démonstration :",
+        "emailLabel": "E-mail :",
+        "passwordLabel": "Mot de passe :"
+      },
+      "errors": {
+        "loginFailed": "Échec de la connexion"
+      }
+    },
+    "dashboard": {
+      "title": "Tableau de bord analytique",
+      "subtitle": "Aperçu complet des performances et indicateurs",
+      "filters": {
+        "monthlyView": "Vue mensuelle",
+        "annualView": "Vue annuelle",
+        "year": "{year}"
+      },
+      "kpi": {
+        "totalRevenue": "Chiffre d'affaires total",
+        "totalClients": "Total clients",
+        "completionRate": "Taux de réalisation",
+        "pendingAmount": "Montant en attente",
+        "vsLastMonth": "vs mois dernier",
+        "excellent": "Excellent",
+        "needsAttention": "Nécessite une attention"
+      },
+      "charts": {
+        "revenueTrend": {
+          "title": "Tendance du chiffre d'affaires",
+          "subtitle": "Performance mensuelle du chiffre d'affaires",
+          "revenue": "Chiffre d'affaires"
+        },
+        "paymentStatus": {
+          "title": "Statut de paiement",
+          "subtitle": "Répartition des statuts de paiement",
+          "clients": "Clients",
+          "status": {
+            "paid": "Payé",
+            "partial": "Partiel",
+            "unpaid": "Impayé",
+            "completed": "Terminé",
+            "cancelled": "Annulé",
+            "unknown": "Inconnu"
+          }
+        }
+      },
+      "errors": {
+        "fetchAnalytics": "Impossible de récupérer les analyses",
+        "fetchAnalyticsToast": "Impossible de charger les données d'analyse"
+      },
+      "sections": {
+        "serviceDistribution": {
+          "title": "Répartition des services",
+          "subtitle": "Services de nettoyage les plus populaires",
+          "clientsCount": "{count} clients"
+        },
+        "clientGrowth": {
+          "title": "Croissance des clients",
+          "subtitle": "Acquisition mensuelle de clients",
+          "newClients": "Nouveaux clients"
+        }
+      },
+      "report": {
+        "monthly": "Mensuel",
+        "annual": "Annuel",
+        "performanceReport": "Rapport de performance",
+        "subtitle": "Analyse complète des performances de l'entreprise",
+        "revenueGrowth": "Croissance du chiffre d'affaires",
+        "clientGrowth": "Croissance des clients",
+        "avgProjectValue": "Valeur moyenne du projet"
+      }
+    },
+    "quotes": {
+      "title": "Demandes de devis",
+      "subtitle": "Gérer les demandes de devis gratuits",
+      "filter": {
+        "allStatus": "Tous les statuts"
+      },
+      "status": {
+        "new": "Nouveau",
+        "contacted": "Contacté",
+        "converted": "Converti",
+        "rejected": "Rejeté"
+      },
+      "stats": {
+        "totalRequests": "Demandes totales"
+      },
+      "table": {
+        "client": "Client",
+        "contact": "Contact",
+        "service": "Service",
+        "date": "Date",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "fields": {
+        "name": "Nom",
+        "email": "E-mail",
+        "phone": "Téléphone",
+        "submitted": "Soumis",
+        "serviceType": "Type de service",
+        "additionalDetails": "Détails supplémentaires",
+        "status": "Statut"
+      },
+      "actions": {
+        "viewDetails": "Voir les détails",
+        "downloadPdf": "Télécharger en PDF",
+        "downloadPdfButton": "Télécharger PDF",
+        "close": "Fermer"
+      },
+      "modal": {
+        "title": "Détails de la demande de devis",
+        "contactInfo": "Informations de contact",
+        "serviceDetails": "Détails du service"
+      },
+      "toast": {
+        "statusUpdated": "Statut mis à jour"
+      },
+      "errors": {
+        "fetch": "Impossible de récupérer les devis",
+        "load": "Impossible de charger les demandes de devis",
+        "updateStatus": "Impossible de mettre à jour le statut"
+      }
+    },
+    "contacts": {
+      "title": "Messages de contact",
+      "subtitle": "Gérer les soumissions du formulaire de contact",
+      "filter": {
+        "allStatus": "Tous les statuts"
+      },
+      "status": {
+        "new": "Nouveau",
+        "read": "Lu",
+        "replied": "Répondu",
+        "archived": "Archivé"
+      },
+      "stats": {
+        "totalMessages": "Messages totaux"
+      },
+      "table": {
+        "name": "Nom",
+        "contact": "Contact",
+        "subject": "Objet",
+        "date": "Date",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "fields": {
+        "name": "Nom",
+        "email": "E-mail",
+        "phone": "Téléphone",
+        "submitted": "Soumis",
+        "subject": "Objet",
+        "message": "Message",
+        "status": "Statut"
+      },
+      "actions": {
+        "viewDetails": "Voir les détails",
+        "downloadPdf": "Télécharger en PDF",
+        "downloadPdfButton": "Télécharger PDF",
+        "close": "Fermer"
+      },
+      "modal": {
+        "title": "Détails du message de contact",
+        "contactInfo": "Informations de contact",
+        "messageDetails": "Détails du message"
+      },
+      "toast": {
+        "statusUpdated": "Statut mis à jour"
+      },
+      "errors": {
+        "fetch": "Impossible de récupérer les contacts",
+        "load": "Impossible de charger les messages de contact",
+        "updateStatus": "Impossible de mettre à jour le statut"
+      }
+    },
+    "clients": {
+      "title": "Gestion des clients",
+      "subtitle": "Gérer tous vos clients de services de nettoyage",
+      "search": {
+        "placeholder": "Rechercher des clients par nom, e-mail, téléphone ou lieu..."
+      },
+      "filters": {
+        "allStatus": "Tous les statuts",
+        "allServices": "Tous les services"
+      },
+      "status": {
+        "paid": "Payé",
+        "partial": "Partiel",
+        "unpaid": "Impayé",
+        "completed": "Terminé",
+        "cancelled": "Annulé"
+      },
+      "services": {
+        "maintenanceCleaning": "Nettoyage d'entretien",
+        "houseCleaning": "Nettoyage de maison",
+        "apartmentCleaning": "Nettoyage d'appartement",
+        "stairwellCleaning": "Nettoyage de cage d'escalier",
+        "officeCleaning": "Nettoyage de bureau",
+        "finalCleaning": "Nettoyage de fin de bail",
+        "windowCleaning": "Nettoyage de vitres",
+        "relocation": "Déménagement",
+        "disposal": "Évacuation",
+        "gastronomyCleaning": "Nettoyage restauration",
+        "medicalCleaning": "Nettoyage médical",
+        "constructionCleaning": "Nettoyage de chantier",
+        "propertyMaintenance": "Entretien de propriété",
+        "specialCleaning": "Nettoyage spécial",
+        "comboService": "Service combiné"
+      },
+      "actions": {
+        "addNewClient": "Ajouter un nouveau client",
+        "export": "Exporter",
+        "exportExcel": "Exporter en Excel",
+        "exportPdf": "Exporter en PDF",
+        "actions": "Actions",
+        "clientActionsTitle": "Actions client",
+        "editClient": "Modifier le client",
+        "addPayment": "Ajouter un paiement",
+        "createInvoice": "Créer une facture",
+        "addPhotos": "Ajouter des photos",
+        "deleteClient": "Supprimer le client",
+        "cancel": "Annuler"
+      },
+      "table": {
+        "client": "Client",
+        "contact": "Contact",
+        "service": "Service",
+        "schedule": "Planning",
+        "payment": "Paiement",
+        "status": "Statut",
+        "actions": "Actions",
+        "to": "au {date}",
+        "paymentLine": "Payé : CHF {paid} • Solde : CHF {balance}"
+      },
+      "empty": "Aucun client trouvé",
+      "pagination": {
+        "previous": "Précédent",
+        "next": "Suivant",
+        "showingPageOf": "Page {page} sur {totalPages}"
+      },
+      "invoiceLanguage": {
+        "title": "Choisir la langue de la facture",
+        "subtitle": "Choisissez la langue pour la facture",
+        "german": "Allemand",
+        "french": "Français",
+        "english": "Anglais"
+      },
+      "toast": {
+        "fetchFailed": "Impossible de récupérer les clients",
+        "fetchError": "Erreur lors du chargement des clients",
+        "sendingInvoice": "Envoi de la facture au client...",
+        "invoiceOpenedAndSent": "Facture ouverte et envoyée au client par e-mail!",
+        "invoiceOpened": "Facture ouverte pour impression!",
+        "sendEmailFailed": "Échec de l'envoi de l'e-mail au client",
+        "noEmail": "Le client n'a pas d'adresse e-mail",
+        "generateInvoiceFailed": "Impossible de générer la facture",
+        "generateInvoiceError": "Erreur lors de la génération de la facture"
+      },
+      "export": {
+        "totalClients": "Total clients",
+        "totalRevenue": "Chiffre d'affaires total",
+        "excel": {
+          "headers": {
+            "name": "Nom",
+            "email": "E-mail",
+            "phone": "Téléphone",
+            "address": "Adresse",
+            "location": "Lieu",
+            "serviceType": "Type de service",
+            "buildingType": "Type de bâtiment",
+            "squareMeters": "Mètres carrés",
+            "fromDate": "Date de début",
+            "untilDate": "Date de fin",
+            "totalPrice": "Prix total (CHF)",
+            "paidAmount": "Montant payé (CHF)",
+            "balance": "Solde (CHF)",
+            "status": "Statut",
+            "createdDate": "Date de création"
+          },
+          "toast": {
+            "none": "Aucun client à exporter",
+            "success": "Fichier Excel exporté avec succès! ({count} clients)",
+            "failed": "Échec de l'export Excel"
+          }
+        },
+        "pdf": {
+          "documentTitle": "Rapport clients",
+          "reportTitle": "Rapport clients",
+          "generatedOn": "Généré le {date}",
+          "to": "au {date}",
+          "paymentLine": "Payé : CHF {paid} • Solde : CHF {balance}",
+          "footerCompanyLine": "SwissClean Move - Services de nettoyage professionnels",
+          "table": {
+            "name": "Nom",
+            "contact": "Contact",
+            "service": "Service",
+            "schedule": "Planning",
+            "payment": "Paiement",
+            "status": "Statut"
+          },
+          "toast": {
+            "none": "Aucun client à exporter",
+            "allowPopups": "Veuillez autoriser les popups pour exporter le PDF"
+          }
+        },
+        "toast": {
+          "pdfOpened": "Rapport PDF ouvert pour impression! ({count} clients)",
+          "pdfFailed": "Échec de l'export PDF"
+        }
+      }
+    },
+    "serviceForms": {
+      "title": "Soumissions de formulaires de service",
+      "subtitle": "Gérer et consulter les demandes de service",
+      "totalSubmissions": "Total : {count} soumissions",
+      "search": {
+        "placeholder": "Rechercher par nom, e-mail ou service..."
+      },
+      "filters": {
+        "allServices": "Tous les services"
+      },
+      "table": {
+        "customer": "Client",
+        "service": "Service",
+        "contact": "Contact",
+        "submitted": "Soumis",
+        "actions": "Actions"
+      },
+      "empty": "Aucune soumission trouvée",
+      "actions": {
+        "viewDetails": "Voir les détails",
+        "view": "Voir",
+        "downloadPdf": "Télécharger PDF",
+        "downloadPdfButton": "Télécharger PDF",
+        "pdf": "PDF"
+      },
+      "modal": {
+        "title": "Détails de la soumission",
+        "customerInformation": "Informations client",
+        "serviceDetails": "Détails du service",
+        "relocationDetails": "Détails de déménagement",
+        "cleaningDetails": "Détails de nettoyage",
+        "disposalDetails": "Détails d'évacuation",
+        "storageDetails": "Détails de stockage",
+        "completeFormDetails": "Détails complets du formulaire",
+        "additionalRemarks": "Remarques supplémentaires"
+      },
+      "fields": {
+        "salutation": "Civilité",
+        "name": "Nom",
+        "email": "E-mail",
+        "phone": "Téléphone",
+        "address": "Adresse",
+        "service": "Service",
+        "formType": "Type de formulaire",
+        "submissionDate": "Date de soumission",
+        "preferredContact": "Contact préféré",
+        "viewingWelcome": "Visite bienvenue",
+        "movingDate": "Date de déménagement",
+        "numberOfRooms": "Nombre de pièces",
+        "livingSpace": "Surface habitable",
+        "floors": "Étages",
+        "unloadingAddress": "Adresse de déchargement",
+        "additionalServices": "Services supplémentaires",
+        "services": "Services",
+        "assemblyLiftDetails": "Détails montage & ascenseur",
+        "assembly": "Montage",
+        "lift": "Ascenseur",
+        "liftDisassembly": "Démontage",
+        "pathToFrontDoor": "Chemin jusqu'à la porte",
+        "pathDistanceM": "Chemin jusqu'à la porte (m)",
+        "heavyLoad": "Charge lourde",
+        "apartmentType": "Type d'appartement",
+        "area": "Surface",
+        "awningType": "Type de store",
+        "cleaningDate": "Date de nettoyage",
+        "submissionDeadline": "Date limite",
+        "additionalAreas": "Zones supplémentaires",
+        "specialServices": "Services spéciaux",
+        "disposalType": "Type d'évacuation",
+        "volume": "Volume",
+        "collectionDate": "Date de collecte",
+        "specialItems": "Objets spéciaux",
+        "storageDuration": "Durée de stockage",
+        "storageSize": "Taille du stockage",
+        "startDate": "Date de début",
+        "specialRequirements": "Exigences particulières"
+      },
+      "services": {
+        "pack": "Emballage",
+        "cellar": "Cave",
+        "garage": "Garage",
+        "screed": "Chape",
+        "craftRoom": "Atelier",
+        "unpacking": "Déballage",
+        "cleaning": "Nettoyage",
+        "disposal": "Évacuation",
+        "carpetShampooing": "Shampooing moquette",
+        "conservatory": "Véranda",
+        "outdoorSeating": "Espace extérieur",
+        "parquet": "Parquet",
+        "stairPolish": "Polissage des escaliers"
+      },
+      "categories": {
+        "basicInformation": "Informations de base",
+        "contactDetails": "Coordonnées",
+        "addressInformation": "Informations d'adresse",
+        "serviceDetails": "Détails du service",
+        "additionalServices": "Services supplémentaires",
+        "notesRemarks": "Notes & remarques"
+      },
+      "allFields": {
+        "serviceName": "Nom du service",
+        "formType": "Type de formulaire",
+        "salutation": "Civilité",
+        "lastName": "Nom",
+        "firstName": "Prénom",
+        "emailAddress": "Adresse e-mail",
+        "telephone": "Téléphone",
+        "preferredContactMethod": "Méthode de contact préférée",
+        "streetAndNumber": "Rue & numéro",
+        "postalCodeAndCity": "Code postal & ville",
+        "unloadingStreetAndNumber": "Rue & numéro (déchargement)",
+        "unloadingPostalCodeAndCity": "Code postal & ville (déchargement)",
+        "movingDate": "Date de déménagement",
+        "viewingWelcome": "Visite bienvenue",
+        "numberOfFloors": "Nombre d'étages",
+        "numberOfRooms": "Nombre de pièces",
+        "livingSpaceM2": "Surface habitable (m²)",
+        "assemblyRequired": "Montage requis",
+        "liftAvailable": "Ascenseur disponible",
+        "liftDisassembly": "Démontage ascenseur",
+        "pathToFrontDoor": "Chemin jusqu'à la porte",
+        "pathDistanceM": "Distance (m)",
+        "heavyLoad": "Charge lourde",
+        "unpackingService": "Service de déballage",
+        "cleaningService": "Service de nettoyage",
+        "disposalService": "Service d'évacuation",
+        "packingService": "Service d'emballage",
+        "screedProtection": "Protection de chape",
+        "garage": "Garage",
+        "additionalRemarks": "Remarques supplémentaires"
+      },
+      "common": {
+        "yes": "Oui",
+        "no": "Non",
+        "included": "Inclus",
+        "notSpecified": "Non spécifié",
+        "noneSpecified": "Aucun",
+        "generalDisposal": "Évacuation générale"
+      },
+      "toast": {
+        "pdfDownloaded": "PDF téléchargé avec succès"
+      },
+      "errors": {
+        "fetchSubmissions": "Impossible de récupérer les soumissions",
+        "generatePdf": "Impossible de générer le PDF"
+      }
+    }
+    ,
+    "email": {
+      "title": "Communication par e-mail",
+      "subtitle": "Envoyer des e-mails aux clients et gérer la communication",
+      "tabs": {
+        "contacts": "Contacts ({count})",
+        "clients": "Clients ({count})"
+      },
+      "search": {
+        "contactsPlaceholder": "Rechercher des contacts...",
+        "clientsPlaceholder": "Rechercher des clients..."
+      },
+      "filters": {
+        "all": "Tous",
+        "new": "Nouveau",
+        "replied": "Répondu"
+      },
+      "loading": "Chargement...",
+      "source": {
+        "contact": "Contact",
+        "quote": "Devis",
+        "client": "Client"
+      },
+      "subjects": {
+        "quoteRequest": "Demande de devis : {service}",
+        "client": "Client : {service}"
+      },
+      "messageDetails": {
+        "address": "Adresse",
+        "city": "Ville",
+        "propertyType": "Type de bien",
+        "rooms": "Pièces",
+        "area": "Surface",
+        "preferredDate": "Date souhaitée",
+        "urgency": "Urgence",
+        "additionalServices": "Services supplémentaires",
+        "message": "Message"
+      },
+      "composer": {
+        "title": "Rédiger un e-mail",
+        "to": "À",
+        "phone": "Téléphone",
+        "service": "Service"
+      },
+      "originalMessage": {
+        "title": "Message original :"
+      },
+      "form": {
+        "subjectLabel": "Objet",
+        "subjectPlaceholder": "Objet de l'e-mail",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Tapez votre message ici..."
+      },
+      "actions": {
+        "sending": "Envoi...",
+        "sendEmail": "Envoyer l'e-mail",
+        "cancel": "Annuler"
+      },
+      "empty": {
+        "noMessage": "Aucun message",
+        "noContacts": "Aucun contact trouvé",
+        "noClients": "Aucun client trouvé",
+        "noSelectionTitle": "Aucun contact sélectionné",
+        "noSelectionSubtitle": "Sélectionnez un contact dans la liste pour rédiger un e-mail"
+      },
+      "toast": {
+        "emailSent": "E-mail envoyé avec succès !"
+      },
+      "errors": {
+        "loadContacts": "Impossible de charger les contacts",
+        "loadClients": "Impossible de charger les clients",
+        "fillAllFields": "Veuillez remplir tous les champs",
+        "sendFailed": "Impossible d'envoyer l'e-mail",
+        "sendException": "Erreur lors de l'envoi de l'e-mail : {message}",
+        "clientNoEmail": "Ce client n'a pas d'adresse e-mail"
+      },
+      "status": {
+        "contact": {
+          "new": "Nouveau",
+          "replied": "Répondu",
+          "other": "Autre"
+        },
+        "client": {
+          "paid": "Payé",
+          "unpaid": "Impayé",
+          "other": "Autre"
+        }
+      },
+      "common": {
+        "na": "N/A",
+        "unknownError": "Erreur inconnue"
+      }
+    }
+    ,
+    "gallery": {
+      "title": "Galerie clients",
+      "subtitle": "Télécharger et gérer les photos des profils clients",
+      "clientsCount": "{count} clients",
+      "search": {
+        "placeholder": "Rechercher des clients par nom, e-mail, téléphone ou service..."
+      },
+      "empty": {
+        "noClientsTitle": "Aucun client trouvé",
+        "noClientsSearchHint": "Essayez d'ajuster vos critères de recherche",
+        "noClientsDefaultHint": "Les clients apparaîtront ici une fois ajoutés au système"
+      },
+      "photos": {
+        "title": "Photos ({count})",
+        "emptyTitle": "Aucune photo pour l'instant",
+        "emptySubtitle": "Cliquez sur \"Ajouter des photos\" pour télécharger"
+      },
+      "actions": {
+        "uploading": "Téléchargement...",
+        "addPhotos": "Ajouter des photos"
+      },
+      "confirm": {
+        "deletePhoto": "Êtes-vous sûr de vouloir supprimer cette photo ?"
+      },
+      "toast": {
+        "uploaded": "{count} photo(s) téléchargée(s) avec succès !",
+        "deleted": "Photo supprimée avec succès"
+      },
+      "errors": {
+        "loadClients": "Impossible de charger les clients",
+        "uploadFailed": "Échec du téléchargement des photos",
+        "uploadError": "Erreur lors du téléchargement des photos",
+        "deleteFailed": "Échec de la suppression de la photo",
+        "deleteError": "Erreur lors de la suppression de la photo"
+      },
+      "status": {
+        "paid": "Payé",
+        "unpaid": "Impayé",
+        "other": "Autre"
+      }
+    }
+    ,
+    "newProject": {
+      "title": "Créer un nouveau projet",
+      "subtitle": "Suivez les étapes pour créer un nouveau projet de nettoyage",
+      "stepLabel": "ÉTAPE {step}",
+      "steps": {
+        "service": "Service",
+        "schedule": "Planification",
+        "building": "Bâtiment",
+        "customer": "Client",
+        "pricing": "Tarification"
+      },
+      "actions": {
+        "previous": "Précédent",
+        "next": "Suivant",
+        "creating": "Création...",
+        "createProject": "Créer le projet"
+      },
+      "toast": {
+        "fillRequired": "Veuillez remplir tous les champs obligatoires avant de continuer",
+        "created": "Projet créé avec succès !",
+        "createFailed": "Échec de la création du projet",
+        "errorOccurred": "Une erreur s'est produite"
+      },
+      "validation": {
+        "required": "Ce champ est obligatoire"
+      },
+      "common": {
+        "yes": "Oui",
+        "no": "Non",
+        "notSelected": "Non sélectionné"
+      },
+      "step1": {
+        "title": "Choisissez votre service",
+        "subtitle": "Sélectionnez le type de service de nettoyage dont vous avez besoin",
+        "selectedTitle": "✓ Service sélectionné",
+        "requiredTitle": "⚠ Service requis",
+        "requiredText": "Veuillez sélectionner un service pour continuer"
+      },
+      "services": {
+        "maintenanceCleaning": "Nettoyage d'entretien",
+        "houseCleaning": "Nettoyage de maison",
+        "apartmentCleaning": "Nettoyage d'appartement",
+        "stairwellCleaning": "Nettoyage des escaliers",
+        "officeCleaning": "Nettoyage de bureau",
+        "finalCleaning": "Nettoyage final",
+        "windowCleaning": "Nettoyage des vitres",
+        "relocation": "Déménagement",
+        "disposal": "Évacuation",
+        "gastronomyCleaning": "Nettoyage restauration",
+        "medicalCleaning": "Nettoyage médical",
+        "constructionCleaning": "Nettoyage de chantier",
+        "propertyMaintenance": "Entretien immobilier",
+        "specialCleaning": "Nettoyage spécial",
+        "comboService": "Service combiné"
+      },
+      "step2": {
+        "title": "Planifier le service",
+        "subtitle": "Quand souhaitez-vous que le service soit effectué ?",
+        "fromDate": "Date de début",
+        "untilDate": "Date de fin",
+        "confirmedTitle": "Planification confirmée",
+        "summaryFrom": "De",
+        "summaryUntil": "Jusqu'à"
+      },
+      "step3": {
+        "title": "Informations sur le bâtiment",
+        "subtitle": "Parlez-nous du bien à nettoyer",
+        "buildingType": "Type de bâtiment",
+        "selectBuildingType": "Sélectionner le type de bâtiment",
+        "rooms": "Nombre de pièces",
+        "selectRooms": "Sélectionner le nombre de pièces",
+        "floor": "Étage",
+        "selectFloor": "Sélectionner l'étage",
+        "squareMeters": "Mètres carrés",
+        "squareMetersPlaceholder": "Saisir les mètres carrés",
+        "elevator": "Ascenseur disponible"
+      },
+      "buildingTypes": {
+        "apartment": "Appartement",
+        "house": "Maison",
+        "office": "Bureau",
+        "restaurant": "Restaurant",
+        "commercial": "Commercial"
+      },
+      "roomsOptions": {
+        "one": "1 pièce",
+        "two": "2 pièces",
+        "three": "3 pièces",
+        "four": "4 pièces",
+        "fivePlus": "5+ pièces"
+      },
+      "floorOptions": {
+        "ground": "Rez-de-chaussée",
+        "first": "1er étage",
+        "second": "2e étage",
+        "third": "3e étage",
+        "fourth": "4e étage",
+        "fivePlus": "5e+ étage"
+      },
+      "step4": {
+        "title": "Informations client",
+        "subtitle": "Veuillez fournir les coordonnées du client",
+        "prefix": "Civilité",
+        "selectPrefix": "Sélectionner",
+        "firstName": "Prénom",
+        "firstNamePlaceholder": "Saisir le prénom",
+        "lastName": "Nom",
+        "lastNamePlaceholder": "Saisir le nom",
+        "address": "Adresse",
+        "addressPlaceholder": "Saisir l'adresse complète",
+        "phone": "Téléphone",
+        "phonePlaceholder": "Saisir le numéro de téléphone",
+        "email": "E-mail",
+        "emailPlaceholder": "Saisir l'adresse e-mail",
+        "location": "Localité",
+        "locationPlaceholder": "Saisir la ville/localité",
+        "postalCode": "Code postal",
+        "postalCodePlaceholder": "Saisir le code postal"
+      },
+      "prefixOptions": {
+        "mr": "M.",
+        "mrs": "Mme",
+        "ms": "Mx",
+        "dr": "Dr"
+      },
+      "step5": {
+        "title": "Tarification et détails finaux",
+        "subtitle": "Définissez le prix et ajoutez des remarques",
+        "totalPrice": "Prix total (CHF)",
+        "advancePayment": "Acompte (CHF)",
+        "summaryTitle": "Résumé du paiement",
+        "summaryTotal": "Prix total",
+        "summaryAdvance": "Acompte",
+        "summaryRemaining": "Solde restant",
+        "remarks1": "Remarques 1",
+        "remarks2": "Remarques 2",
+        "remarks3": "Remarques 3",
+        "remarksPlaceholder": "Notes supplémentaires ou instructions spéciales...",
+        "projectSummaryTitle": "Résumé du projet",
+        "summaryService": "Service",
+        "summaryBuilding": "Bâtiment",
+        "summaryCustomer": "Client",
+        "summaryTotalLabel": "Total"
+      }
+    }
+  },
   "common": {
     "learnMore": "En savoir plus",
-    "readMore": "Lire la suite",
+    "readMore": "Lire plus",
     "getQuote": "Obtenir un devis",
     "contactUs": "Nous contacter",
     "requestFreeQuote": "Demander un devis gratuit",
@@ -593,6 +1545,42 @@
           "Horw",
           "Meggen"
         ]
+      },
+      "biel": {
+        "name": "Biel/Bienne",
+        "description": "Services professionnels dans la région bilingue de Bienne",
+        "coverage": "Ville de Biel/Bienne et environs",
+        "areas": [
+          "Biel/Bienne",
+          "Nidau",
+          "Port",
+          "Ipsach",
+          "Evilard/Leubringen"
+        ]
+      },
+      "solothurn": {
+        "name": "Soleure",
+        "description": "Nettoyage et déménagement fiables dans la région de Soleure",
+        "coverage": "Canton de Soleure et environs",
+        "areas": [
+          "Soleure",
+          "Olten",
+          "Granges (Grenchen)",
+          "Zuchwil",
+          "Derendingen"
+        ]
+      },
+      "jura": {
+        "name": "Jura",
+        "description": "Services professionnels dans tout le canton du Jura",
+        "coverage": "Canton du Jura et régions voisines",
+        "areas": [
+          "Delémont",
+          "Porrentruy",
+          "Saignelégier",
+          "Courgenay",
+          "Bassecourt"
+        ]
       }
     },
     "services": {
@@ -638,47 +1626,44 @@
     },
     "additionalPrices": {
       "windowCleaning": "CHF 8-15 par fenêtre",
-      "carpetCleaning": "CHF 25-40 par m²",
-      "applianceCleaning": "CHF 50-80 par appareil",
-      "garageBasement": "CHF 150-300 par espace",
-      "disposalServices": "CHF 100-500 par chargement",
-      "storageSolutions": "CHF 80-200 par mois"
+      "carpetCleaning": "à partir de CHF 8–15 / m²",
+      "applianceCleaning": "CHF 45–65 / heure",
+      "garageBasement": "à partir de CHF 80",
+      "disposalServices": "à partir de CHF 30 / m³",
+      "storageSolutions": "à partir de CHF 70"
     },
     "plans": {
       "basic": {
-        "title": "Nettoyage de Base",
-        "description": "Services de nettoyage essentiels pour petits espaces",
-        "price": "CHF 120",
+        "title": "Nettoyage d'entretien",
+        "description": "Nettoyage régulier appartement & maison (horaire)",
+        "price": "CHF 45–65 / heure / employé",
         "features": [
-          "Jusqu'à 2 pièces",
-          "Produits de nettoyage de base",
-          "Service de 2-3 heures",
-          "Garantie qualité"
+          "Nettoyage d'entretien",
+          "Horaires flexibles",
+          "Tarifs horaires transparents",
+          "Équipe professionnelle"
         ]
       },
       "standard": {
-        "title": "Nettoyage Standard",
-        "description": "Nettoyage complet pour propriétés de taille moyenne",
-        "price": "CHF 280",
+        "title": "Nettoyage de fin de bail",
+        "description": "Avec garantie d'acceptation",
+        "price": "à partir de CHF 250",
         "features": [
-          "Jusqu'à 4 pièces",
-          "Équipement professionnel",
-          "Service de 4-6 heures",
-          "Nettoyage en profondeur inclus",
-          "Garantie de satisfaction"
+          "Appartements: à partir de CHF 250",
+          "Maisons: à partir de CHF 900",
+          "Suppléments disponibles",
+          "Garantie d'acceptation"
         ]
       },
       "premium": {
-        "title": "Nettoyage Premium",
-        "description": "Solution de nettoyage complète pour grandes propriétés",
-        "price": "CHF 450",
+        "title": "Service combo",
+        "description": "Déménagement + nettoyage de fin de bail",
+        "price": "à partir de CHF 650",
         "features": [
-          "Pièces illimitées",
-          "Produits de nettoyage premium",
-          "Service toute la journée",
-          "Garantie de déménagement",
-          "Couverture d'assurance",
-          "Inspection de suivi"
+          "Appartements: à partir de CHF 650",
+          "Maisons: à partir de CHF 1,950",
+          "Add-ons disponibles",
+          "Prix sur demande pour grandes propriétés"
         ]
       }
     }

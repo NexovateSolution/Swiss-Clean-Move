@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import AdminLayout from '@/components/admin/AdminLayout';
 import { Mail, Send, User, Search, Filter, Inbox, Trash2, Archive } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import toast from 'react-hot-toast';
 
 interface Contact {
@@ -41,6 +42,7 @@ interface Client {
 }
 
 export default function EmailCommunicationPage() {
+  const t = useTranslations('admin.email');
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [clients, setClients] = useState<Client[]>([]);
   const [selectedContact, setSelectedContact] = useState<Contact | null>(null);
@@ -84,7 +86,7 @@ export default function EmailCommunicationPage() {
           name: q.name,
           email: q.email,
           phone: q.phone,
-          subject: `Quote Request: ${q.service}`,
+          subject: t('subjects.quoteRequest', { service: q.service }),
           message: q.details,
           status: q.status,
           createdAt: q.createdAt,
@@ -98,8 +100,8 @@ export default function EmailCommunicationPage() {
             name: `${c.firstName} ${c.lastName}`,
             email: c.email!,
             phone: c.phone,
-            subject: `Client: ${c.serviceType}`,
-            message: `Address: ${c.address}`,
+            subject: t('subjects.client', { service: c.serviceType }),
+            message: `${t('messageDetails.address')}: ${c.address}`,
             status: c.status,
             createdAt: c.createdAt,
             source: 'client' as const
@@ -109,7 +111,7 @@ export default function EmailCommunicationPage() {
       setContacts(allContacts);
     } catch (error) {
       console.error('Error fetching contacts:', error);
-      toast.error('Failed to load contacts');
+      toast.error(t('errors.loadContacts'));
     } finally {
       setLoading(false);
     }
@@ -122,28 +124,28 @@ export default function EmailCommunicationPage() {
       setClients(data.clients || []);
     } catch (error) {
       console.error('Error fetching clients:', error);
-      toast.error('Failed to load clients');
+      toast.error(t('errors.loadClients'));
     }
   };
 
   // Helper function to format message display
   const formatMessage = (message: string, source?: string) => {
-    if (!message) return 'No message';
+    if (!message) return t('empty.noMessage');
     
     // If it's a quote, try to parse the JSON details
     if (source === 'quote') {
       try {
         const details = typeof message === 'string' ? JSON.parse(message) : message;
         return `
-Address: ${details.address || 'N/A'}
-City: ${details.city || 'N/A'}, ${details.postalCode || 'N/A'}
-Property Type: ${details.propertyType || 'N/A'}
-Rooms: ${details.rooms || 'N/A'}
-Area: ${details.area || 'N/A'} m²
-Preferred Date: ${details.preferredDate || 'N/A'}
-Urgency: ${details.urgency || 'N/A'}
-${details.additionalServices?.length > 0 ? `Additional Services: ${details.additionalServices.join(', ')}` : ''}
-${details.message ? `\nMessage: ${details.message}` : ''}
+${t('messageDetails.address')}: ${details.address || t('common.na')}
+${t('messageDetails.city')}: ${details.city || t('common.na')}, ${details.postalCode || t('common.na')}
+${t('messageDetails.propertyType')}: ${details.propertyType || t('common.na')}
+${t('messageDetails.rooms')}: ${details.rooms || t('common.na')}
+${t('messageDetails.area')}: ${details.area || t('common.na')} m²
+${t('messageDetails.preferredDate')}: ${details.preferredDate || t('common.na')}
+${t('messageDetails.urgency')}: ${details.urgency || t('common.na')}
+${details.additionalServices?.length > 0 ? `${t('messageDetails.additionalServices')}: ${details.additionalServices.join(', ')}` : ''}
+${details.message ? `\n${t('messageDetails.message')}: ${details.message}` : ''}
         `.trim();
       } catch (e) {
         return message;
@@ -153,11 +155,27 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
     return message;
   };
 
+  const getContactStatusLabel = (status: string) => {
+    const normalized = (status || '').toUpperCase();
+
+    if (normalized === 'NEW') return t('status.contact.new');
+    if (normalized === 'REPLIED') return t('status.contact.replied');
+    return t('status.contact.other');
+  };
+
+  const getClientStatusLabel = (status: string) => {
+    const normalized = (status || '').toUpperCase();
+
+    if (normalized === 'PAID') return t('status.client.paid');
+    if (normalized === 'UNPAID') return t('status.client.unpaid');
+    return t('status.client.other');
+  };
+
   const handleSendEmail = async () => {
     const recipientEmail = selectedContact?.email || selectedClient?.email;
     
     if (!recipientEmail || !emailSubject || !emailBody) {
-      toast.error('Please fill in all fields');
+      toast.error(t('errors.fillAllFields'));
       return;
     }
 
@@ -181,7 +199,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
       
       if (response.ok) {
         const data = await response.json();
-        toast.success('Email sent successfully!');
+        toast.success(t('toast.emailSent'));
         setEmailSubject('');
         setEmailBody('');
         // Refresh the lists to update status
@@ -190,11 +208,11 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
         }
       } else {
         const errorData = await response.json();
-        toast.error(errorData.error || 'Failed to send email');
+        toast.error(errorData.error || t('errors.sendFailed'));
       }
     } catch (error) {
       console.error('💥 Exception:', error);
-      toast.error('Error sending email: ' + (error instanceof Error ? error.message : 'Unknown error'));
+      toast.error(t('errors.sendException', { message: error instanceof Error ? error.message : t('common.unknownError') }));
     } finally {
       setSending(false);
     }
@@ -202,7 +220,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
 
   const handleSelectClient = (client: Client) => {
     if (!client.email) {
-      toast.error('This client has no email address');
+      toast.error(t('errors.clientNoEmail'));
       return;
     }
     setSelectedClient(client);
@@ -248,10 +266,10 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
             <Mail className="w-8 h-8 text-blue-600" />
-            Email Communication
+            {t('title')}
           </h1>
           <p className="text-gray-600 dark:text-gray-400 mt-2">
-            Send emails to customers and manage communication
+            {t('subtitle')}
           </p>
         </div>
 
@@ -269,7 +287,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                   }`}
                 >
-                  Contacts ({contacts.length})
+                  {t('tabs.contacts', { count: contacts.length })}
                 </button>
                 <button
                   onClick={() => setActiveTab('clients')}
@@ -279,7 +297,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                   }`}
                 >
-                  Clients ({filteredClients.length})
+                  {t('tabs.clients', { count: filteredClients.length })}
                 </button>
               </div>
 
@@ -287,7 +305,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
-                  placeholder={activeTab === 'contacts' ? 'Search contacts...' : 'Search clients...'}
+                  placeholder={activeTab === 'contacts' ? t('search.contactsPlaceholder') : t('search.clientsPlaceholder')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
@@ -304,7 +322,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                     }`}
                   >
-                    All
+                    {t('filters.all')}
                   </button>
                   <button
                     onClick={() => setFilterStatus('new')}
@@ -314,7 +332,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                     }`}
                   >
-                    New
+                    {t('filters.new')}
                   </button>
                   <button
                     onClick={() => setFilterStatus('replied')}
@@ -324,7 +342,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
                     }`}
                   >
-                    Replied
+                    {t('filters.replied')}
                   </button>
                 </div>
               )}
@@ -332,10 +350,10 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
 
             <div className="overflow-y-auto max-h-[600px]">
               {loading ? (
-                <div className="p-8 text-center text-gray-500">Loading...</div>
+                <div className="p-8 text-center text-gray-500">{t('loading')}</div>
               ) : activeTab === 'contacts' ? (
                 filteredContacts.length === 0 ? (
-                  <div className="p-8 text-center text-gray-500">No contacts found</div>
+                  <div className="p-8 text-center text-gray-500">{t('empty.noContacts')}</div>
                 ) : (
                   filteredContacts.map((contact) => (
                   <div
@@ -356,7 +374,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                               contact.source === 'quote' ? 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200' :
                               'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200'
                             }`}>
-                              {contact.source === 'contact' ? '📧 Contact' : contact.source === 'quote' ? '💰 Quote' : '👤 Client'}
+                              {contact.source === 'contact' ? `📧 ${t('source.contact')}` : contact.source === 'quote' ? `💰 ${t('source.quote')}` : `👤 ${t('source.client')}`}
                             </span>
                           )}
                         </div>
@@ -380,7 +398,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                             : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
                         }`}
                       >
-                        {contact.status}
+                        {getContactStatusLabel(contact.status)}
                       </span>
                     </div>
                   </div>
@@ -388,7 +406,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                 )
               ) : (
                 filteredClients.length === 0 ? (
-                  <div className="p-8 text-center text-gray-500">No clients found</div>
+                  <div className="p-8 text-center text-gray-500">{t('empty.noClients')}</div>
                 ) : (
                   filteredClients.map((client) => (
                     <div
@@ -424,7 +442,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                               : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
                           }`}
                         >
-                          {client.status}
+                          {getClientStatusLabel(client.status)}
                         </span>
                       </div>
                     </div>
@@ -440,30 +458,30 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
               <div className="p-6">
                 <div className="mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    Compose Email
+                    {t('composer.title')}
                   </h2>
                   <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
                     {selectedContact ? (
                       <>
                         <p className="text-sm text-gray-700 dark:text-gray-300">
-                          <strong>To:</strong> {selectedContact.name} ({selectedContact.email})
+                          <strong>{t('composer.to')}:</strong> {selectedContact.name} ({selectedContact.email})
                         </p>
                         {selectedContact.phone && (
                           <p className="text-sm text-gray-700 dark:text-gray-300 mt-1">
-                            <strong>Phone:</strong> {selectedContact.phone}
+                            <strong>{t('composer.phone')}:</strong> {selectedContact.phone}
                           </p>
                         )}
                       </>
                     ) : selectedClient && (
                       <>
                         <p className="text-sm text-gray-700 dark:text-gray-300">
-                          <strong>To:</strong> {selectedClient.firstName} {selectedClient.lastName} ({selectedClient.email})
+                          <strong>{t('composer.to')}:</strong> {selectedClient.firstName} {selectedClient.lastName} ({selectedClient.email})
                         </p>
                         <p className="text-sm text-gray-700 dark:text-gray-300 mt-1">
-                          <strong>Phone:</strong> {selectedClient.phone}
+                          <strong>{t('composer.phone')}:</strong> {selectedClient.phone}
                         </p>
                         <p className="text-sm text-gray-700 dark:text-gray-300 mt-1">
-                          <strong>Service:</strong> {selectedClient.serviceType}
+                          <strong>{t('composer.service')}:</strong> {selectedClient.serviceType}
                         </p>
                       </>
                     )}
@@ -474,7 +492,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                 {selectedContact && (
                   <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                      Original Message:
+                      {t('originalMessage.title')}
                     </h3>
                     <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">
                       {formatMessage(selectedContact.message, selectedContact.source)}
@@ -486,27 +504,27 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Subject
+                      {t('form.subjectLabel')}
                     </label>
                     <input
                       type="text"
                       value={emailSubject}
                       onChange={(e) => setEmailSubject(e.target.value)}
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-                      placeholder="Email subject"
+                      placeholder={t('form.subjectPlaceholder')}
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Message
+                      {t('form.messageLabel')}
                     </label>
                     <textarea
                       value={emailBody}
                       onChange={(e) => setEmailBody(e.target.value)}
                       rows={12}
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
-                      placeholder="Type your message here..."
+                      placeholder={t('form.messagePlaceholder')}
                     />
                   </div>
 
@@ -517,7 +535,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                       className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors"
                     >
                       <Send className="w-5 h-5" />
-                      {sending ? 'Sending...' : 'Send Email'}
+                      {sending ? t('actions.sending') : t('actions.sendEmail')}
                     </button>
                     <button
                       onClick={() => {
@@ -528,7 +546,7 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
                       }}
                       className="px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-lg font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                     >
-                      Cancel
+                      {t('actions.cancel')}
                     </button>
                   </div>
                 </div>
@@ -537,10 +555,10 @@ ${details.message ? `\nMessage: ${details.message}` : ''}
               <div className="p-12 text-center">
                 <Inbox className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  No Contact Selected
+                  {t('empty.noSelectionTitle')}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Select a contact from the list to compose an email
+                  {t('empty.noSelectionSubtitle')}
                 </p>
               </div>
             )}

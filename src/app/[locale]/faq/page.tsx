@@ -45,8 +45,14 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
-        <div className="container-max">
+      <section className="relative bg-swiss-red text-white overflow-hidden">
+        {/* Swiss-flag inspired overlay */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
+        </div>
+        <div className="relative container-max py-20">
           <div className="text-center space-y-6">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium">
               <HelpCircle className="w-4 h-4 text-yellow-400" />
@@ -151,8 +157,14 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
-        <div className="container-max">
+      <section className="relative py-20 bg-swiss-red text-white overflow-hidden">
+        {/* Swiss-flag inspired overlay */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
+        </div>
+        <div className="container-max relative">
           <div className="text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">
               {t('faq.stillQuestions')}

@@ -98,7 +98,7 @@ export default function HouseCleaningPage({ params: { locale } }: { params: { lo
                 ))}
               </div>
               <div className="bg-swiss-blue/10 p-6 rounded-lg">
-                <div className="text-2xl font-bold text-swiss-blue mb-2">CHF 35-55 per hour</div>
+                <div className="text-2xl font-bold text-swiss-blue mb-2">CHF 45–65 / hour / staff</div>
                 <p className="text-swiss-gray-600">Competitive rates with transparent pricing</p>
               </div>
             </div>

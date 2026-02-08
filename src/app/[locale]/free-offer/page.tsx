@@ -14,6 +14,7 @@ import {
   UtensilsCrossed,
   Briefcase,
   Wrench,
+  Shield,
   Trash2,
   Truck,
   CheckCircle,
@@ -39,6 +40,8 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
     rooms: '',
     area: '',
     preferredDate: '',
+    startDate: '',
+    finishDate: '',
     urgency: '',
 
     // Additional Info
@@ -61,7 +64,13 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
     { value: 'stairwell-cleaning', label: t('home.services.stairwellCleaning.title'), icon: Building2 },
     { value: 'window-cleaning', label: t('home.services.windowCleaning.title'), icon: Home },
     { value: 'relocation', label: t('home.services.relocation.title'), icon: Truck },
-    { value: 'disposal', label: t('home.services.disposal.title'), icon: Trash2 }
+    { value: 'disposal', label: t('home.services.disposal.title'), icon: Trash2 },
+    { value: 'gastronomy-cleaning', label: t('home.services.gastronomyCleaning.title'), icon: UtensilsCrossed },
+    { value: 'medical-cleaning', label: t('home.services.medicalCleaning.title'), icon: Shield },
+    { value: 'construction-cleaning', label: t('home.services.constructionCleaning.title'), icon: Building2 },
+    { value: 'property-maintenance', label: t('home.services.propertyMaintenance.title'), icon: Wrench },
+    { value: 'special-cleaning', label: t('home.services.specialCleaning.title'), icon: CheckCircle },
+    { value: 'combo-service', label: t('home.services.comboService.title'), icon: Truck }
   ];
 
   const propertyTypes = [
@@ -180,8 +189,13 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-swiss-blue to-swiss-green text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative bg-swiss-red text-white overflow-hidden">
+        {/* Swiss-flag inspired overlay */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
+        </div>
         <div className="relative container-max py-24">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold">
@@ -406,6 +420,32 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                         value={formData.preferredDate}
                         onChange={handleInputChange}
                         min={new Date().toISOString().split('T')[0]}
+                        className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-swiss-gray-700 mb-2">
+                        {t('freeOffer.form.fields.startDate')}
+                      </label>
+                      <input
+                        type="date"
+                        name="startDate"
+                        value={formData.startDate}
+                        onChange={handleInputChange}
+                        min={new Date().toISOString().split('T')[0]}
+                        className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-swiss-gray-700 mb-2">
+                        {t('freeOffer.form.fields.finishDate')}
+                      </label>
+                      <input
+                        type="date"
+                        name="finishDate"
+                        value={formData.finishDate}
+                        onChange={handleInputChange}
+                        min={formData.startDate || new Date().toISOString().split('T')[0]}
                         className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
                       />
                     </div>

@@ -19,14 +19,20 @@ export default function Footer() {
   ];
 
   const services = [
-    { name: t('home.services.houseCleaning.title'), href: `/${locale}/services/house-cleaning` },
-    { name: t('home.services.apartmentCleaning.title'), href: `/${locale}/services/apartment-cleaning` },
-    { name: t('home.services.finalCleaning.title'), href: `/${locale}/services/final-cleaning` },
-    { name: t('home.services.officeCleaning.title'), href: `/${locale}/services/office-cleaning` },
-    { name: t('home.services.stairwellCleaning.title'), href: `/${locale}/services/stairwell-cleaning` },
-    { name: t('home.services.windowCleaning.title'), href: `/${locale}/services/window-cleaning` },
-    { name: t('home.services.relocation.title'), href: `/${locale}/services/relocation` },
-    { name: t('home.services.disposal.title'), href: `/${locale}/services/disposal` },
+    { name: t('home.services.houseCleaning.title'), href: `/${locale}/services#houseCleaning` },
+    { name: t('home.services.apartmentCleaning.title'), href: `/${locale}/services#apartmentCleaning` },
+    { name: t('home.services.stairwellCleaning.title'), href: `/${locale}/services#stairwellCleaning` },
+    { name: t('home.services.officeCleaning.title'), href: `/${locale}/services#officeCleaning` },
+    { name: t('home.services.finalCleaning.title'), href: `/${locale}/services#finalCleaning` },
+    { name: t('home.services.windowCleaning.title'), href: `/${locale}/services#windowCleaning` },
+    { name: t('home.services.relocation.title'), href: `/${locale}/services#relocation` },
+    { name: t('home.services.disposal.title'), href: `/${locale}/services#disposal` },
+    { name: t('home.services.gastronomyCleaning.title'), href: `/${locale}/services#gastronomyCleaning` },
+    { name: t('home.services.medicalCleaning.title'), href: `/${locale}/services#medicalCleaning` },
+    { name: t('home.services.constructionCleaning.title'), href: `/${locale}/services#constructionCleaning` },
+    { name: t('home.services.propertyMaintenance.title'), href: `/${locale}/services#propertyMaintenance` },
+    { name: t('home.services.specialCleaning.title'), href: `/${locale}/services#specialCleaning` },
+    { name: t('home.services.comboService.title'), href: `/${locale}/services#comboService` },
   ];
 
   const legalLinks = [

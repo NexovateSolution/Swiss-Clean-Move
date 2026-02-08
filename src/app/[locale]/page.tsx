@@ -39,6 +39,11 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   // Slideshow images data
   const slideImages = [
     {
+      url: '/images/transportation.jpg',
+      title: 'Transport & Moving',
+      description: 'Private and commercial moves handled with care'
+    },
+    {
       url: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
       title: 'Professional House Cleaning',
       description: 'Spotless results with Swiss precision'
@@ -74,57 +79,99 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       icon: HomeIcon,
       title: t('home.services.houseCleaning.title'),
       description: t('home.services.houseCleaning.description'),
-      href: `/${locale}/services/house-cleaning`,
+      href: `/${locale}/services#houseCleaning`,
       color: 'bg-blue-500'
     },
     {
       icon: Building2,
       title: t('home.services.apartmentCleaning.title'),
       description: t('home.services.apartmentCleaning.description'),
-      href: `/${locale}/services/apartment-cleaning`,
+      href: `/${locale}/services#apartmentCleaning`,
       color: 'bg-green-500'
     },
     {
       icon: Building2,
       title: t('home.services.stairwellCleaning.title'),
       description: t('home.services.stairwellCleaning.description'),
-      href: `/${locale}/services/stairwell-cleaning`,
+      href: `/${locale}/services#stairwellCleaning`,
       color: 'bg-purple-500'
     },
     {
       icon: Briefcase,
       title: t('home.services.officeCleaning.title'),
       description: t('home.services.officeCleaning.description'),
-      href: `/${locale}/services/office-cleaning`,
+      href: `/${locale}/services#officeCleaning`,
       color: 'bg-orange-500'
     },
     {
       icon: CheckCircle,
       title: t('home.services.finalCleaning.title'),
       description: t('home.services.finalCleaning.description'),
-      href: `/${locale}/services/final-cleaning`,
+      href: `/${locale}/services#finalCleaning`,
       color: 'bg-teal-500'
     },
     {
       icon: HomeIcon,
       title: t('home.services.windowCleaning.title'),
       description: t('home.services.windowCleaning.description'),
-      href: `/${locale}/services/window-cleaning`,
+      href: `/${locale}/services#windowCleaning`,
       color: 'bg-cyan-500'
     },
     {
       icon: Truck,
       title: t('home.services.relocation.title'),
       description: t('home.services.relocation.description'),
-      href: `/${locale}/services/relocation`,
+      href: `/${locale}/services#relocation`,
       color: 'bg-indigo-500'
     },
     {
       icon: Trash2,
       title: t('home.services.disposal.title'),
       description: t('home.services.disposal.description'),
-      href: `/${locale}/services/disposal`,
+      href: `/${locale}/services#disposal`,
       color: 'bg-red-500'
+    },
+    {
+      icon: UtensilsCrossed,
+      title: t('home.services.gastronomyCleaning.title'),
+      description: t('home.services.gastronomyCleaning.description'),
+      href: `/${locale}/services#gastronomyCleaning`,
+      color: 'bg-rose-500'
+    },
+    {
+      icon: Shield,
+      title: t('home.services.medicalCleaning.title'),
+      description: t('home.services.medicalCleaning.description'),
+      href: `/${locale}/services#medicalCleaning`,
+      color: 'bg-emerald-500'
+    },
+    {
+      icon: Building2,
+      title: t('home.services.constructionCleaning.title'),
+      description: t('home.services.constructionCleaning.description'),
+      href: `/${locale}/services#constructionCleaning`,
+      color: 'bg-yellow-500'
+    },
+    {
+      icon: Wrench,
+      title: t('home.services.propertyMaintenance.title'),
+      description: t('home.services.propertyMaintenance.description'),
+      href: `/${locale}/services#propertyMaintenance`,
+      color: 'bg-sky-500'
+    },
+    {
+      icon: Star,
+      title: t('home.services.specialCleaning.title'),
+      description: t('home.services.specialCleaning.description'),
+      href: `/${locale}/services#specialCleaning`,
+      color: 'bg-fuchsia-500'
+    },
+    {
+      icon: Truck,
+      title: t('home.services.comboService.title'),
+      description: t('home.services.comboService.description'),
+      href: `/${locale}/services#comboService`,
+      color: 'bg-indigo-700'
     }
   ];
 
@@ -151,13 +198,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
   return (
     <Layout>
-      {/* Enhanced Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white overflow-hidden">
-        {/* Animated Background Elements */}
+      {/* Swiss-themed Hero Section */}
+      <section className="relative min-h-screen bg-swiss-red text-white overflow-hidden">
+        {/* Swiss flag inspired background */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-green-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-green-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
+          {/* Swiss cross */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
         </div>
         
         {/* Grid Pattern Overlay */}
@@ -262,6 +310,16 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                             src={slide.url}
                             alt={slide.title}
                             className="w-full h-full object-cover"
+                            onError={(e) => {
+                              const img = e.currentTarget as HTMLImageElement;
+                              if (!img.dataset.fallback) {
+                                img.dataset.fallback = 'png';
+                                img.src = '/images/transportation.png';
+                                return;
+                              }
+                              img.onerror = null;
+                              img.src = 'https://images.unsplash.com/photo-1569152811536-7f17e9f1c989?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
+                            }}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         </div>
@@ -349,6 +407,16 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                         src={slide.url}
                         alt={slide.title}
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const img = e.currentTarget as HTMLImageElement;
+                          if (!img.dataset.fallback) {
+                            img.dataset.fallback = 'png';
+                            img.src = '/images/transportation.png';
+                            return;
+                          }
+                          img.onerror = null;
+                          img.src = 'https://images.unsplash.com/photo-1569152811536-7f17e9f1c989?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
+                        }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     </div>
@@ -484,25 +552,22 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* Statistics Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white relative overflow-hidden">
-        {/* Background Elements */}
+      <section className="relative py-20 bg-swiss-red text-white overflow-hidden">
+        {/* Swiss-flag inspired overlay */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-green-400/10 rounded-full blur-2xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
         </div>
-        
+
         <div className="container-max relative">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium mb-6">
               <Award className="w-4 h-4 text-yellow-400" />
               <span>Trusted by Thousands</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Numbers That Speak
-            </h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Our commitment to excellence is reflected in every project we complete
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Numbers That Speak</h2>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">Our commitment to excellence is reflected in every project we complete</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -651,11 +716,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white relative overflow-hidden">
-        {/* Background Elements */}
+      <section className="relative py-20 bg-swiss-red text-white overflow-hidden">
+        {/* Swiss-flag inspired overlay */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-green-400/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 left-10 w-48 h-48 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
         </div>
         
         <div className="container-max relative">

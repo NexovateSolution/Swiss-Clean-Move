@@ -2,7 +2,7 @@ import {notFound} from 'next/navigation';
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 
-const locales = ['en', 'de', 'fr'];
+const locales = ['en', 'de', 'fr', 'nl'];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({locale}));

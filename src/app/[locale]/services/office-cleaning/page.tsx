@@ -99,7 +99,7 @@ export default function OfficeCleaningPage({ params: { locale } }: { params: { l
                 ))}
               </div>
               <div className="bg-swiss-blue/10 p-6 rounded-lg">
-                <div className="text-2xl font-bold text-swiss-blue mb-2">CHF 35-65 per hour</div>
+                <div className="text-2xl font-bold text-swiss-blue mb-2">CHF 0.80–1.50 / m²</div>
                 <p className="text-swiss-gray-600">Professional commercial cleaning rates</p>
               </div>
             </div>

@@ -1,0 +1,1601 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "Over ons",
+    "services": "Diensten",
+    "regions": "Regio's",
+    "pricing": "Prijzen",
+    "faq": "FAQ",
+    "freeOffer": "Gratis offerte",
+    "contact": "Contact",
+    "legal": "Juridische kennisgeving",
+    "login": "Inloggen",
+    "language": "Taal"
+  },
+  "home": {
+    "hero": {
+      "title": "Professional Cleaning & Moving Services in Switzerland",
+      "subtitle": "Reliable cleaning services and moving assistance with 100% satisfaction guarantee",
+      "cta": "Request Free Quote",
+      "phone": "Call Now"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Professional solutions for all your cleaning and moving needs",
+      "houseCleaning": {
+        "title": "House Cleaning",
+        "description": "Comprehensive house cleaning services for residential properties with attention to every detail"
+      },
+      "apartmentCleaning": {
+        "title": "Apartment Cleaning",
+        "description": "Professional apartment cleaning services including final cleaning with deposit guarantee"
+      },
+      "stairwellCleaning": {
+        "title": "Stairwell Cleaning",
+        "description": "Regular maintenance and thorough cleaning of building stairwells and common areas"
+      },
+      "officeCleaning": {
+        "title": "Office Cleaning",
+        "description": "Professional office cleaning services for a clean and productive work environment"
+      },
+      "finalCleaning": {
+        "title": "Final Cleaning",
+        "description": "End-of-tenancy cleaning with 100% deposit guarantee for apartments and houses"
+      },
+      "windowCleaning": {
+        "title": "Window Cleaning",
+        "description": "Professional window cleaning services for residential and commercial properties"
+      },
+      "relocation": {
+        "title": "Relocation",
+        "description": "Complete relocation services with experienced team and professional equipment"
+      },
+      "disposal": {
+        "title": "Disposal",
+        "description": "Professional disposal services for furniture, household items, and waste materials"
+      },
+      "gastronomyCleaning": {
+        "title": "Gastronomy Cleaning",
+        "description": "Specialized restaurant and kitchen cleaning with hygiene standards"
+      },
+      "medicalCleaning": {
+        "title": "Medical Practice Cleaning",
+        "description": "Hygienic cleaning for medical practices and clinics"
+      },
+      "constructionCleaning": {
+        "title": "Construction Cleaning",
+        "description": "Post-construction and renovation cleaning for dust-free handover"
+      },
+      "propertyMaintenance": {
+        "title": "Property Maintenance",
+        "description": "Comprehensive property maintenance and facility services"
+      },
+      "specialCleaning": {
+        "title": "Special Cleaning",
+        "description": "Specialized cleaning for unique needs and situations"
+      },
+      "comboService": {
+        "title": "Moving + Cleaning (Combo)",
+        "description": "Combined moving service with final cleaning and handover guarantee"
+      }
+    },
+    "testimonials": {
+      "title": "What Our Customers Say",
+      "subtitle": "Trust the experience of satisfied customers"
+    },
+    "cta": {
+      "title": "Ready for Professional Cleaning?",
+      "subtitle": "Contact us today for a free quote",
+      "button": "Free Quote"
+    },
+    "servicesCta": {
+      "title": "Ready for Professional Cleaning?",
+      "subtitle": "Contact us today for a free and non-binding quote"
+    },
+    "trustIndicators": {
+      "guarantee": "100% Satisfaction Guarantee",
+      "nationwide": "Available Nationwide",
+      "professional": "Professional Team"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional solutions for all your cleaning and moving needs",
+    "featuresTitle": "Features",
+    "benefitsSection": {
+      "title": "Why SwissCleanMove?",
+      "subtitle": "Your advantages with our professional service"
+    },
+    "features": {
+      "houseCleaning": [
+        "Complete house cleaning",
+        "Kitchen and bathroom deep cleaning",
+        "Living areas and bedrooms",
+        "Floors and surfaces",
+        "Professional equipment"
+      ],
+      "apartmentCleaning": [
+        "Complete apartment cleaning",
+        "Kitchen and bathroom thorough cleaning",
+        "Windows inside and outside",
+        "Floors and carpets",
+        "100% deposit guarantee"
+      ],
+      "stairwellCleaning": [
+        "Stairwell and hallway cleaning",
+        "Common area maintenance",
+        "Floor cleaning and mopping",
+        "Window and glass cleaning",
+        "Regular service schedules"
+      ],
+      "officeCleaning": [
+        "Office spaces and workstations",
+        "Sanitary facilities",
+        "Common areas",
+        "Waste disposal",
+        "Regular appointments"
+      ],
+      "finalCleaning": [
+        "End-of-tenancy cleaning",
+        "Kitchen and bathroom deep clean",
+        "Windows inside and outside",
+        "Floor cleaning and polishing",
+        "100% deposit guarantee"
+      ],
+      "windowCleaning": [
+        "Interior and exterior windows",
+        "Window frames and sills",
+        "Glass doors and surfaces",
+        "Professional squeegee technique",
+        "Streak-free results"
+      ],
+      "relocation": [
+        "Complete moving service",
+        "Packing and transport",
+        "Furniture assembly",
+        "Insurance coverage",
+        "Switzerland-wide moves"
+      ],
+      "disposal": [
+        "Furniture and household items",
+        "Electronic devices",
+        "Bulky waste",
+        "Professional disposal",
+        "Environmentally friendly"
+      ],
+      "gastronomyCleaning": [
+        "Kitchen and equipment cleaning",
+        "Hygienic disinfection",
+        "Exhaust hoods and filters",
+        "Floors and work surfaces",
+        "HACCP-compliant cleaning"
+      ],
+      "medicalCleaning": [
+        "Treatment rooms and waiting areas",
+        "Sanitary disinfection",
+        "Contact surfaces",
+        "Waste disposal",
+        "Hygiene concept support"
+      ],
+      "constructionCleaning": [
+        "Dust and debris removal",
+        "Window and frame cleaning",
+        "Floor sweeping and mopping",
+        "Final cleaning for handover",
+        "Construction site waste disposal"
+      ],
+      "propertyMaintenance": [
+        "Stairwell cleaning",
+        "Outdoor area care",
+        "Small repairs",
+        "Winter service",
+        "Property supervision"
+      ],
+      "specialCleaning": [
+        "Deep cleaning",
+        "Allergen removal",
+        "Delicate materials",
+        "Odor removal",
+        "Custom solutions"
+      ],
+      "comboService": [
+        "Professional moving team",
+        "Packing and transport",
+        "Final cleaning with guarantee",
+        "Insurance coverage",
+        "Single point of contact"
+      ]
+    },
+    "pricingUnits": {
+      "perHour": "per hour",
+      "perSquareMeter": "per m²",
+      "byArrangement": "By arrangement",
+      "byVolume": "By volume",
+      "byEffort": "By effort"
+    },
+    "benefits": {
+      "guarantee": {
+        "title": "100% Guarantee",
+        "description": "Complete deposit guarantee for all cleaning work"
+      },
+      "punctual": {
+        "title": "Punctual",
+        "description": "Reliable appointments and fast execution"
+      },
+      "professional": {
+        "title": "Professional",
+        "description": "Experienced team with high-quality equipment"
+      },
+      "insured": {
+        "title": "Insured",
+        "description": "Fully insured for your protection"
+      }
+    },
+    "pricingSection": {
+      "title": "Transparent Pricing",
+      "subtitle": "Fair and competitive rates for all services",
+      "officeCleaningTitle": "Office Cleaning",
+      "gastronomyTitle": "Restaurant Cleaning",
+      "windowCleaningTitle": "Window Cleaning"
+    },
+    "pricing": {
+      "houseCleaning": "CHF 45–65 / hour / staff",
+      "apartmentCleaning": "CHF 45–65 / hour / staff",
+      "stairwellCleaning": "flat rate from CHF 120",
+      "officeCleaning": "CHF 0.80–1.50 / m²",
+      "finalCleaning": "from CHF 250",
+      "windowCleaning": "CHF 8–15 per window",
+      "relocation": "from CHF 160 / hour",
+      "disposal": "from CHF 30 / m³"
+    }
+  },
+  "about": {
+    "title": "About SwissCleanMove",
+    "subtitle": "Your trusted partner for cleaning and moving",
+    "description": "With years of experience, we provide professional cleaning services and moving assistance throughout Switzerland. Our dedicated team ensures the highest quality and customer satisfaction.",
+    "values": {
+      "reliability": {
+        "title": "Reliability",
+        "description": "We stand by our word and offer 100% deposit guarantee for all our services."
+      },
+      "customerFocus": {
+        "title": "Customer Focus",
+        "description": "Your satisfaction is at the center of our actions. We listen and find individual solutions."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "We use environmentally friendly cleaning products and pay attention to sustainable working methods."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Highest quality standards and professional equipment for first-class results."
+      }
+    },
+    "stats": {
+      "satisfiedCustomers": "Satisfied Customers",
+      "yearsExperience": "Years Experience",
+      "depositGuarantee": "Deposit Guarantee",
+      "responseTime": "Response Time"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Meet the professionals behind SwissCleanMove",
+      "members": {
+        "marco": {
+          "name": "Marco Müller",
+          "position": "Managing Director",
+          "description": "With over 10 years of experience in the cleaning industry, Marco leads our team with passion and expertise."
+        },
+        "sarah": {
+          "name": "Sarah Weber",
+          "position": "Quality Manager",
+          "description": "Sarah ensures that every job meets our high quality standards."
+        },
+        "thomas": {
+          "name": "Thomas Schneider",
+          "position": "Cleaning Team Leader",
+          "description": "Thomas coordinates our cleaning teams and ensures smooth operations."
+        }
+      }
+    },
+    "story": {
+      "title": "Our Story",
+      "description": "Founded in 2019, SwissCleanMove has developed into one of the most trusted providers of cleaning services and moving assistance in Switzerland. Our success is based on the combination of traditional Swiss values such as precision and reliability with modern, efficient working methods.",
+      "qualityBadge": "Swiss Quality since 2019",
+      "teamImage": "Our professional team"
+    },
+    "statsSection": {
+      "title": "SwissCleanMove in Numbers",
+      "subtitle": "Trust our experience and expertise"
+    },
+    "valuesSection": {
+      "title": "Our Values",
+      "subtitle": "What drives and distinguishes us"
+    },
+    "cta": {
+      "title": "Become Part of Our Success Story",
+      "subtitle": "Let us solve your cleaning and moving challenges together",
+      "freeOffer": "Free Quote",
+      "contact": "Get in Touch"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide exceptional cleaning and moving services that exceed expectations while maintaining the highest standards of professionalism and environmental responsibility.",
+      "values": {
+        "excellence": {
+          "title": "Excellence",
+          "description": "Highest quality standards in everything we do"
+        },
+        "efficiency": {
+          "title": "Efficiency",
+          "description": "Fast and reliable services"
+        },
+        "trust": {
+          "title": "Trust",
+          "description": "Long-term partnerships with our customers"
+        }
+      }
+    }
+    ,
+    "calendar": {
+      "title": "Kalender",
+      "subtitle": "Beheer schoonmaakafspraken en planningen",
+      "actions": {
+        "newAppointment": "Nieuwe afspraak",
+        "edit": "Bewerken",
+        "cancel": "Annuleren"
+      },
+      "viewModes": {
+        "month": "maand",
+        "week": "week",
+        "day": "dag"
+      },
+      "search": {
+        "placeholder": "Afspraken zoeken..."
+      },
+      "filters": {
+        "allStatus": "Alle statussen"
+      },
+      "status": {
+        "scheduled": "Gepland",
+        "inProgress": "Bezig",
+        "completed": "Voltooid",
+        "cancelled": "Geannuleerd"
+      },
+      "days": {
+        "sun": "Zo",
+        "mon": "Ma",
+        "tue": "Di",
+        "wed": "Wo",
+        "thu": "Do",
+        "fri": "Vr",
+        "sat": "Za"
+      },
+      "months": {
+        "0": "Januari",
+        "1": "Februari",
+        "2": "Maart",
+        "3": "April",
+        "4": "Mei",
+        "5": "Juni",
+        "6": "Juli",
+        "7": "Augustus",
+        "8": "September",
+        "9": "Oktober",
+        "10": "November",
+        "11": "December"
+      },
+      "modal": {
+        "title": "Afspraakdetails",
+        "serviceDetails": "Servicedetails",
+        "clientInformation": "Klantinformatie",
+        "notes": "Notities"
+      },
+      "errors": {
+        "loadAppointments": "Afspraken laden mislukt"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with us",
+    "success": {
+      "title": "Message sent successfully!",
+      "subtitle": "Thank you for your message. We will get back to you as soon as possible.",
+      "actions": {
+        "homepage": "Back to Homepage",
+        "call": "Call Now"
+      }
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service",
+      "message": "Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "title": "Send Message",
+      "subtitle": "Do you have questions or need a quote? Feel free to contact us!",
+      "subject": "Subject",
+      "selectPlaceholder": "Please select...",
+      "messagePlaceholder": "Describe your request...",
+      "subjects": {
+        "quote": "Request Quote",
+        "cleaning": "Cleaning Service",
+        "moving": "Moving Service",
+        "maintenance": "Property Management",
+        "emergency": "Emergency",
+        "other": "Other"
+      }
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Business Hours"
+    },
+    "businessHours": {
+      "title": "Opening Hours",
+      "mondayFriday": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "emergencyOnly": "Emergency Only",
+      "note": "Appointments outside business hours possible by arrangement."
+    },
+    "quickContact": {
+      "title": "Quick Contact",
+      "call": "Call",
+      "whatsapp": "WhatsApp",
+      "email": "Email"
+    },
+    "location": {
+      "title": "Our Location",
+      "mapPlaceholder": "Google Maps Integration"
+    },
+    "serviceAreas": {
+      "title": "Our Service Areas",
+      "subtitle": "We are there for you throughout Switzerland:",
+      "notListed": "Your location is not listed? Contact us anyway - we will find a solution!"
+    },
+    "emergency": {
+      "title": "Emergency Service",
+      "subtitle": "Need immediate help? Our emergency service is available 24/7.",
+      "call": "Emergency: +41 79 123 45 67"
+    }
+  },
+  "freeOffer": {
+    "title": "Request Free Quote",
+    "subtitle": "Get a non-binding quote for your cleaning or moving needs",
+    "success": {
+      "title": "Thank you for your inquiry!",
+      "subtitle": "We have received your request and will contact you within 24 hours.",
+      "nextSteps": {
+        "title": "What happens next?",
+        "step1": "We review your request and create an individual offer",
+        "step2": "You receive the offer by email or phone",
+        "step3": "If needed, we arrange an inspection appointment"
+      },
+      "actions": {
+        "homepage": "Back to Homepage",
+        "call": "Call Now"
+      }
+    },
+    "form": {
+      "personalInfo": "Personal Information",
+      "serviceDetails": "Service Details",
+      "propertyType": "Property Type",
+      "rooms": "Number of Rooms",
+      "area": "Area (m²)",
+      "serviceType": "Service Type",
+      "date": "Preferred Date",
+      "additionalInfo": "Additional Information",
+      "submit": "Request Quote",
+      "submitting": "Sending...",
+      "fields": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "address": "Address",
+        "postalCode": "Postal Code",
+        "city": "City",
+        "selectPlaceholder": "Please select...",
+        "additionalServices": "Additional Services",
+        "specialRequests": "Special requests or comments",
+        "placeholder": "Describe here special requirements, access possibilities or other important information...",
+        "startDate": "Starting Date",
+        "finishDate": "Finishing Date"
+      },
+      "propertyTypes": {
+        "apartment": "Apartment",
+        "house": "House",
+        "office": "Office",
+        "restaurant": "Restaurant",
+        "other": "Other"
+      },
+      "additionalServices": {
+        "windowCleaning": "Window Cleaning",
+        "carpetCleaning": "Carpet Cleaning",
+        "furnitureTransport": "Furniture Transport",
+        "packingService": "Packing Service",
+        "disposal": "Disposal",
+        "emergencyCleaning": "Emergency Cleaning"
+      },
+      "agreement": {
+        "privacy": "I agree to the processing of my data according to the",
+        "privacyLink": "Privacy Policy",
+        "contact": "and consent to SwissCleanMove contacting me regarding my inquiry.",
+        "newsletter": "I would like to occasionally receive information about new services and offers."
+      }
+    }
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "subtitle": "Important legal information and privacy policy",
+    "datenschutz": "Privacy Policy",
+    "impressum": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "website": "Website",
+      "commercialRegister": "Commercial Register",
+      "uid": "UID",
+      "manager": "Managing Director",
+      "authority": "Supervisory Authority",
+      "liabilityText1": "The contents of our pages have been created with the greatest care. However, we cannot guarantee the accuracy, completeness and timeliness of the content.",
+      "liabilityText2": "As a service provider, we are responsible for our own content on these pages according to general laws pursuant to Section 7, Para. 1 of the TMG. However, according to Sections 8 to 10 of the TMG, we are not obligated as a service provider to monitor transmitted or stored third-party information.",
+      "copyrightText": "The content and works created by the site operators on these pages are subject to Swiss copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator."
+    },
+    "privacy": {
+      "generalInfo": "General Information",
+      "dataCollection": "Data Collection on Our Website",
+      "yourRights": "Your Rights",
+      "contactForm": "Contact Form",
+      "generalText": "The following information provides a simple overview of what happens to your personal data when you visit our website. Personal data is all data that can be used to identify you personally.",
+      "whoResponsible": "Who is responsible for data collection?",
+      "whoResponsibleText": "Data processing on this website is carried out by the website operator. You can find their contact details in the legal notice of this website.",
+      "howCollect": "How do we collect your data?",
+      "howCollectText": "Your data is collected on the one hand by you providing it to us. This can be data that you enter in a contact form, for example.",
+      "whyUse": "What do we use your data for?",
+      "whyUseText": "Part of the data is collected to ensure error-free provision of the website. Other data may be used to analyze your user behavior.",
+      "rightsText": "You have the right at any time:",
+      "rightsList": [
+        "to receive free information about the origin, recipient and purpose of your stored personal data",
+        "to request correction or deletion of this data",
+        "to request a restriction of data processing",
+        "to object to data processing",
+        "to request data portability"
+      ],
+      "contactFormText": "If you send us inquiries via contact form, your details from the inquiry form including the contact data you provided there will be stored with us for the purpose of processing the inquiry and in case of follow-up questions."
+    },
+    "terms": {
+      "scope": "§ 1 Scope",
+      "contract": "§ 2 Contract Conclusion",
+      "services": "§ 3 Scope of Services",
+      "pricing": "§ 4 Prices and Payment Terms",
+      "warranty": "§ 5 Warranty",
+      "liability": "§ 6 Liability",
+      "scopeText": "These General Terms and Conditions apply to all contracts between SwissCleanMove GmbH and its customers for the provision of cleaning and moving services.",
+      "contractText": "The contract is concluded by the customer's acceptance of the offer. Acceptance can be made in writing, orally or through conclusive behavior.",
+      "servicesText": "Our services include:",
+      "servicesList": [
+        "Move-out cleaning and final cleaning",
+        "Office and commercial cleaning",
+        "Restaurant cleaning",
+        "Property management services",
+        "Moving services",
+        "Disposal services"
+      ],
+      "pricingText1": "Prices include statutory VAT. Payment is due within 30 days net after invoicing.",
+      "pricingText2": "In case of payment delay, default interest of 5% above the base rate will be charged.",
+      "warrantyText": "We guarantee the proper execution of our services. In case of defects, you have the right to free rectification. For move-out cleaning, we offer a 100% acceptance guarantee.",
+      "liabilityText": "We are only liable for damages in cases of intent and gross negligence. Liability is limited to the amount of the insurance sum. All our employees are fully insured."
+    },
+    "cookies": {
+      "whatAre": "What are Cookies?",
+      "whichUse": "Which Cookies do we use?",
+      "manage": "Manage Cookie Settings",
+      "whatAreText": "Cookies are small text files that are stored by your web browser on your device to store certain information. Through the stored and returned information, the respective website recognizes that you have already called and visited it with the browser of your device.",
+      "necessary": "Technically Necessary Cookies",
+      "necessaryText": "These cookies are required for the basic functions of the website and cannot be deactivated. They are usually only set in response to actions you take.",
+      "functional": "Functional Cookies",
+      "functionalText": "These cookies enable the website to provide enhanced functionality and personalization, such as storing your language settings.",
+      "manageText": "You can change your cookie settings in your browser at any time. However, please note that deactivating certain cookies may affect the functionality of our website."
+    }
+  },
+  "footer": {
+    "company": "SwissCleanMove",
+    "description": "Professional cleaning and moving services in Switzerland",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "legal": "Legal",
+    "followUs": "Follow Us"
+  },
+  "whatsapp": {
+    "message": "Hello! I'm interested in your services."
+  },
+  "admin": {
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "newProject": "Nieuw project",
+      "clients": "Klanten",
+      "quoteRequests": "Offerteaanvragen",
+      "contactMessages": "Contactberichten",
+      "serviceForms": "Serviceformulieren",
+      "emailCommunication": "E-mailcommunicatie",
+      "gallery": "Galerij",
+      "calendar": "Kalender"
+    },
+    "topbar": {
+      "searchPlaceholder": "Snel zoeken...",
+      "language": "Taal",
+      "switchTheme": "Overschakelen naar {mode}-modus",
+      "dark": "donker",
+      "light": "licht"
+    },
+    "user": {
+      "admin": "Admin",
+      "signOut": "Uitloggen"
+    },
+    "toast": {
+      "loggedOut": "Succesvol uitgelogd",
+      "logoutFailed": "Uitloggen mislukt",
+      "loginSuccess": "Succesvol ingelogd!",
+      "loginFailed": "Inloggen mislukt"
+    },
+    "login": {
+      "title": "Admin login",
+      "subtitle": "SwissCleanMove Dashboard",
+      "fields": {
+        "email": "E-mailadres",
+        "password": "Wachtwoord"
+      },
+      "placeholders": {
+        "email": "admin@swisscleanmove.ch",
+        "password": "Voer je wachtwoord in"
+      },
+      "validation": {
+        "emailRequired": "E-mail is verplicht",
+        "emailInvalid": "Ongeldig e-mailadres",
+        "passwordRequired": "Wachtwoord is verplicht",
+        "passwordMinLength": "Wachtwoord moet minimaal {count} tekens zijn"
+      },
+      "actions": {
+        "signIn": "Inloggen",
+        "signingIn": "Bezig met inloggen..."
+      },
+      "returnToSite": "Terug naar de website",
+      "demo": {
+        "title": "Demo-inloggegevens:",
+        "emailLabel": "E-mail:",
+        "passwordLabel": "Wachtwoord:"
+      },
+      "errors": {
+        "loginFailed": "Inloggen mislukt"
+      }
+    },
+    "dashboard": {
+      "title": "Analytics Dashboard",
+      "subtitle": "Overzicht van prestaties en bedrijfsinzichten",
+      "filters": {
+        "monthlyView": "Maandweergave",
+        "annualView": "Jaarweergave",
+        "year": "{year}"
+      },
+      "kpi": {
+        "totalRevenue": "Totale omzet",
+        "totalClients": "Totaal klanten",
+        "completionRate": "Voltooiingspercentage",
+        "pendingAmount": "Openstaand bedrag",
+        "vsLastMonth": "t.o.v. vorige maand",
+        "excellent": "Uitstekend",
+        "needsAttention": "Aandacht nodig"
+      },
+      "charts": {
+        "revenueTrend": {
+          "title": "Omzettrend",
+          "subtitle": "Maandelijkse omzetprestaties",
+          "revenue": "Omzet"
+        },
+        "paymentStatus": {
+          "title": "Betaalstatus",
+          "subtitle": "Verdeling van betaalstatussen",
+          "clients": "Klanten",
+          "status": {
+            "paid": "Betaald",
+            "partial": "Gedeeltelijk",
+            "unpaid": "Onbetaald",
+            "completed": "Voltooid",
+            "cancelled": "Geannuleerd",
+            "unknown": "Onbekend"
+          }
+        }
+      },
+      "errors": {
+        "fetchAnalytics": "Analytics ophalen mislukt",
+        "fetchAnalyticsToast": "Analytics-gegevens laden mislukt"
+      },
+      "sections": {
+        "serviceDistribution": {
+          "title": "Serviceverdeling",
+          "subtitle": "Meest populaire schoonmaakdiensten",
+          "clientsCount": "{count} klanten"
+        },
+        "clientGrowth": {
+          "title": "Klantengroei",
+          "subtitle": "Maandelijkse klantenwerving",
+          "newClients": "Nieuwe klanten"
+        }
+      },
+      "report": {
+        "monthly": "Maandelijks",
+        "annual": "Jaarlijks",
+        "performanceReport": "Prestatierapport",
+        "subtitle": "Uitgebreide analyse van bedrijfsprestaties",
+        "revenueGrowth": "Omzetgroei",
+        "clientGrowth": "Klantengroei",
+        "avgProjectValue": "Gem. projectwaarde"
+      }
+    },
+    "quotes": {
+      "title": "Offerteaanvragen",
+      "subtitle": "Beheer gratis offerteaanvragen",
+      "filter": {
+        "allStatus": "Alle statussen"
+      },
+      "status": {
+        "new": "Nieuw",
+        "contacted": "Gecontacteerd",
+        "converted": "Geconverteerd",
+        "rejected": "Afgewezen"
+      },
+      "stats": {
+        "totalRequests": "Totaal aanvragen"
+      },
+      "table": {
+        "client": "Klant",
+        "contact": "Contact",
+        "service": "Service",
+        "date": "Datum",
+        "status": "Status",
+        "actions": "Acties"
+      },
+      "fields": {
+        "name": "Naam",
+        "email": "E-mail",
+        "phone": "Telefoon",
+        "submitted": "Ingediend",
+        "serviceType": "Servicetype",
+        "additionalDetails": "Extra details",
+        "status": "Status"
+      },
+      "actions": {
+        "viewDetails": "Details bekijken",
+        "downloadPdf": "Download als PDF",
+        "downloadPdfButton": "PDF downloaden",
+        "close": "Sluiten"
+      },
+      "modal": {
+        "title": "Details van offerteaanvraag",
+        "contactInfo": "Contactinformatie",
+        "serviceDetails": "Servicedetails"
+      },
+      "toast": {
+        "statusUpdated": "Status bijgewerkt"
+      },
+      "errors": {
+        "fetch": "Offertes ophalen mislukt",
+        "load": "Offerteaanvragen laden mislukt",
+        "updateStatus": "Status bijwerken mislukt"
+      }
+    },
+    "contacts": {
+      "title": "Contactberichten",
+      "subtitle": "Beheer contactformulierinzendingen",
+      "filter": {
+        "allStatus": "Alle statussen"
+      },
+      "status": {
+        "new": "Nieuw",
+        "read": "Gelezen",
+        "replied": "Beantwoord",
+        "archived": "Gearchiveerd"
+      },
+      "stats": {
+        "totalMessages": "Totaal berichten"
+      },
+      "table": {
+        "name": "Naam",
+        "contact": "Contact",
+        "subject": "Onderwerp",
+        "date": "Datum",
+        "status": "Status",
+        "actions": "Acties"
+      },
+      "fields": {
+        "name": "Naam",
+        "email": "E-mail",
+        "phone": "Telefoon",
+        "submitted": "Ingediend",
+        "subject": "Onderwerp",
+        "message": "Bericht",
+        "status": "Status"
+      },
+      "actions": {
+        "viewDetails": "Details bekijken",
+        "downloadPdf": "Download als PDF",
+        "downloadPdfButton": "PDF downloaden",
+        "close": "Sluiten"
+      },
+      "modal": {
+        "title": "Details van contactbericht",
+        "contactInfo": "Contactinformatie",
+        "messageDetails": "Berichtdetails"
+      },
+      "toast": {
+        "statusUpdated": "Status bijgewerkt"
+      },
+      "errors": {
+        "fetch": "Contacten ophalen mislukt",
+        "load": "Contactberichten laden mislukt",
+        "updateStatus": "Status bijwerken mislukt"
+      }
+    },
+    "clients": {
+      "title": "Klantenbeheer",
+      "subtitle": "Beheer al je klanten voor schoonmaakdiensten",
+      "search": {
+        "placeholder": "Zoek klanten op naam, e-mail, telefoon of locatie..."
+      },
+      "filters": {
+        "allStatus": "Alle statussen",
+        "allServices": "Alle services"
+      },
+      "status": {
+        "paid": "Betaald",
+        "partial": "Gedeeltelijk",
+        "unpaid": "Onbetaald",
+        "completed": "Voltooid",
+        "cancelled": "Geannuleerd"
+      },
+      "services": {
+        "maintenanceCleaning": "Onderhoudsschoonmaak",
+        "houseCleaning": "Huisschoonmaak",
+        "apartmentCleaning": "Appartement schoonmaak",
+        "stairwellCleaning": "Trappenhuis schoonmaak",
+        "officeCleaning": "Kantoor schoonmaak",
+        "finalCleaning": "Eindschoonmaak",
+        "windowCleaning": "Ramen wassen",
+        "relocation": "Verhuizing",
+        "disposal": "Afvoer",
+        "gastronomyCleaning": "Horeca schoonmaak",
+        "medicalCleaning": "Medische schoonmaak",
+        "constructionCleaning": "Bouwschoonmaak",
+        "propertyMaintenance": "Vastgoedonderhoud",
+        "specialCleaning": "Speciale schoonmaak",
+        "comboService": "Combi-service"
+      },
+      "actions": {
+        "addNewClient": "Nieuwe klant toevoegen",
+        "export": "Exporteren",
+        "exportExcel": "Exporteren als Excel",
+        "exportPdf": "Exporteren als PDF",
+        "actions": "Acties",
+        "clientActionsTitle": "Klantacties",
+        "editClient": "Klant bewerken",
+        "addPayment": "Betaling toevoegen",
+        "createInvoice": "Factuur maken",
+        "addPhotos": "Foto's toevoegen",
+        "deleteClient": "Klant verwijderen",
+        "cancel": "Annuleren"
+      },
+      "table": {
+        "client": "Klant",
+        "contact": "Contact",
+        "service": "Service",
+        "schedule": "Planning",
+        "payment": "Betaling",
+        "status": "Status",
+        "actions": "Acties",
+        "to": "tot {date}",
+        "paymentLine": "Betaald: CHF {paid} • Saldo: CHF {balance}"
+      },
+      "empty": "Geen klanten gevonden",
+      "pagination": {
+        "previous": "Vorige",
+        "next": "Volgende",
+        "showingPageOf": "Pagina {page} van {totalPages}"
+      },
+      "invoiceLanguage": {
+        "title": "Selecteer factuurtaal",
+        "subtitle": "Kies de taal voor de factuur",
+        "german": "Duits",
+        "french": "Frans",
+        "english": "Engels"
+      },
+      "toast": {
+        "fetchFailed": "Klanten ophalen mislukt",
+        "fetchError": "Fout bij het ophalen van klanten",
+        "sendingInvoice": "Factuur naar klant verzenden...",
+        "invoiceOpenedAndSent": "Factuur geopend en per e-mail naar de klant verzonden!",
+        "invoiceOpened": "Factuur geopend om te printen!",
+        "sendEmailFailed": "E-mail naar klant verzenden mislukt",
+        "noEmail": "Klant heeft geen e-mailadres",
+        "generateInvoiceFailed": "Factuur genereren mislukt",
+        "generateInvoiceError": "Fout bij het genereren van de factuur"
+      },
+      "export": {
+        "totalClients": "Totaal klanten",
+        "totalRevenue": "Totale omzet",
+        "excel": {
+          "headers": {
+            "name": "Naam",
+            "email": "E-mail",
+            "phone": "Telefoon",
+            "address": "Adres",
+            "location": "Locatie",
+            "serviceType": "Servicetype",
+            "buildingType": "Gebouwtype",
+            "squareMeters": "Vierkante meters",
+            "fromDate": "Vanaf datum",
+            "untilDate": "Tot datum",
+            "totalPrice": "Totaalprijs (CHF)",
+            "paidAmount": "Betaald bedrag (CHF)",
+            "balance": "Saldo (CHF)",
+            "status": "Status",
+            "createdDate": "Aanmaakdatum"
+          },
+          "toast": {
+            "none": "Geen klanten om te exporteren",
+            "success": "Excel-bestand succesvol geëxporteerd! ({count} klanten)",
+            "failed": "Excel exporteren mislukt"
+          }
+        },
+        "pdf": {
+          "documentTitle": "Klantenrapport",
+          "reportTitle": "Klantenrapport",
+          "generatedOn": "Gegenereerd op {date}",
+          "to": "tot {date}",
+          "paymentLine": "Betaald: CHF {paid} • Saldo: CHF {balance}",
+          "footerCompanyLine": "SwissClean Move - Professionele schoonmaakdiensten",
+          "table": {
+            "name": "Naam",
+            "contact": "Contact",
+            "service": "Service",
+            "schedule": "Planning",
+            "payment": "Betaling",
+            "status": "Status"
+          },
+          "toast": {
+            "none": "Geen klanten om te exporteren",
+            "allowPopups": "Sta pop-ups toe om PDF te exporteren"
+          }
+        },
+        "toast": {
+          "pdfOpened": "PDF-rapport geopend om te printen! ({count} klanten)",
+          "pdfFailed": "PDF exporteren mislukt"
+        }
+      }
+    },
+    "serviceForms": {
+      "title": "Serviceformulier-inzendingen",
+      "subtitle": "Beheer en bekijk serviceaanvragen",
+      "totalSubmissions": "Totaal: {count} inzendingen",
+      "search": {
+        "placeholder": "Zoek op naam, e-mail of service..."
+      },
+      "filters": {
+        "allServices": "Alle services"
+      },
+      "table": {
+        "customer": "Klant",
+        "service": "Service",
+        "contact": "Contact",
+        "submitted": "Ingediend",
+        "actions": "Acties"
+      },
+      "empty": "Geen inzendingen gevonden",
+      "actions": {
+        "viewDetails": "Details bekijken",
+        "view": "Bekijken",
+        "downloadPdf": "PDF downloaden",
+        "downloadPdfButton": "PDF downloaden",
+        "pdf": "PDF"
+      },
+      "modal": {
+        "title": "Inzendingsdetails",
+        "customerInformation": "Klantinformatie",
+        "serviceDetails": "Servicedetails",
+        "relocationDetails": "Verhuisdetails",
+        "cleaningDetails": "Schoonmaakdetails",
+        "disposalDetails": "Afvoerdetails",
+        "storageDetails": "Opslagdetails",
+        "completeFormDetails": "Volledige formulierdetails",
+        "additionalRemarks": "Extra opmerkingen"
+      },
+      "fields": {
+        "salutation": "Aanhef",
+        "name": "Naam",
+        "email": "E-mail",
+        "phone": "Telefoon",
+        "address": "Adres",
+        "service": "Service",
+        "formType": "Formuliertype",
+        "submissionDate": "Inzenddatum",
+        "preferredContact": "Voorkeurscontact",
+        "viewingWelcome": "Bezichtiging welkom",
+        "movingDate": "Verhuisdatum",
+        "numberOfRooms": "Aantal kamers",
+        "livingSpace": "Woonoppervlakte",
+        "floors": "Verdiepingen",
+        "unloadingAddress": "Losadres",
+        "additionalServices": "Extra services",
+        "services": "Services",
+        "assemblyLiftDetails": "Montage & lift-details",
+        "assembly": "Montage",
+        "lift": "Lift",
+        "liftDisassembly": "Demontage",
+        "pathToFrontDoor": "Pad naar voordeur",
+        "pathDistanceM": "Pad naar voordeur (m)",
+        "heavyLoad": "Zware last",
+        "apartmentType": "Appartementtype",
+        "area": "Oppervlakte",
+        "awningType": "Luifeltype",
+        "cleaningDate": "Schoonmaakdatum",
+        "submissionDeadline": "Deadline",
+        "additionalAreas": "Extra ruimtes",
+        "specialServices": "Speciale services",
+        "disposalType": "Afvoertype",
+        "volume": "Volume",
+        "collectionDate": "Ophaaldatum",
+        "specialItems": "Speciale items",
+        "storageDuration": "Opslagduur",
+        "storageSize": "Opslaggrootte",
+        "startDate": "Startdatum",
+        "specialRequirements": "Speciale vereisten"
+      },
+      "services": {
+        "pack": "Inpakken",
+        "cellar": "Kelder",
+        "garage": "Garage",
+        "screed": "Dekvloer",
+        "craftRoom": "Hobbyruimte",
+        "unpacking": "Uitpakken",
+        "cleaning": "Schoonmaken",
+        "disposal": "Afvoer",
+        "carpetShampooing": "Tapijtshampoo",
+        "conservatory": "Serre",
+        "outdoorSeating": "Buitenruimte",
+        "parquet": "Parket",
+        "stairPolish": "Trap-polish"
+      },
+      "categories": {
+        "basicInformation": "Basisinformatie",
+        "contactDetails": "Contactgegevens",
+        "addressInformation": "Adresinformatie",
+        "serviceDetails": "Servicedetails",
+        "additionalServices": "Extra services",
+        "notesRemarks": "Notities & opmerkingen"
+      },
+      "allFields": {
+        "serviceName": "Servicenaam",
+        "formType": "Formuliertype",
+        "salutation": "Aanhef",
+        "lastName": "Achternaam",
+        "firstName": "Voornaam",
+        "emailAddress": "E-mailadres",
+        "telephone": "Telefoon",
+        "preferredContactMethod": "Voorkeurscontactmethode",
+        "streetAndNumber": "Straat & nummer",
+        "postalCodeAndCity": "Postcode & plaats",
+        "unloadingStreetAndNumber": "Losstraat & nummer",
+        "unloadingPostalCodeAndCity": "Los-postcode & plaats",
+        "movingDate": "Verhuisdatum",
+        "viewingWelcome": "Bezichtiging welkom",
+        "numberOfFloors": "Aantal verdiepingen",
+        "numberOfRooms": "Aantal kamers",
+        "livingSpaceM2": "Woonoppervlakte (m²)",
+        "assemblyRequired": "Montage vereist",
+        "liftAvailable": "Lift beschikbaar",
+        "liftDisassembly": "Lift demontage",
+        "pathToFrontDoor": "Pad naar voordeur",
+        "pathDistanceM": "Afstand (m)",
+        "heavyLoad": "Zware last",
+        "unpackingService": "Uitpakservice",
+        "cleaningService": "Schoonmaakservice",
+        "disposalService": "Afvoerservice",
+        "packingService": "Inpakservice",
+        "screedProtection": "Dekvloerbescherming",
+        "garage": "Garage",
+        "additionalRemarks": "Extra opmerkingen"
+      },
+      "common": {
+        "yes": "Ja",
+        "no": "Nee",
+        "included": "Inbegrepen",
+        "notSpecified": "Niet opgegeven",
+        "noneSpecified": "Niet opgegeven",
+        "generalDisposal": "Algemene afvoer"
+      },
+      "toast": {
+        "pdfDownloaded": "PDF succesvol gedownload"
+      },
+      "errors": {
+        "fetchSubmissions": "Inzendingen ophalen mislukt",
+        "generatePdf": "PDF genereren mislukt"
+      }
+    }
+    ,
+    "email": {
+      "title": "E-mailcommunicatie",
+      "subtitle": "Stuur e-mails naar klanten en beheer communicatie",
+      "tabs": {
+        "contacts": "Contacten ({count})",
+        "clients": "Klanten ({count})"
+      },
+      "search": {
+        "contactsPlaceholder": "Contacten zoeken...",
+        "clientsPlaceholder": "Klanten zoeken..."
+      },
+      "filters": {
+        "all": "Alles",
+        "new": "Nieuw",
+        "replied": "Beantwoord"
+      },
+      "loading": "Laden...",
+      "source": {
+        "contact": "Contact",
+        "quote": "Offerte",
+        "client": "Klant"
+      },
+      "subjects": {
+        "quoteRequest": "Offerteaanvraag: {service}",
+        "client": "Klant: {service}"
+      },
+      "messageDetails": {
+        "address": "Adres",
+        "city": "Plaats",
+        "propertyType": "Type woning",
+        "rooms": "Kamers",
+        "area": "Oppervlakte",
+        "preferredDate": "Gewenste datum",
+        "urgency": "Urgentie",
+        "additionalServices": "Extra services",
+        "message": "Bericht"
+      },
+      "composer": {
+        "title": "E-mail opstellen",
+        "to": "Aan",
+        "phone": "Telefoon",
+        "service": "Service"
+      },
+      "originalMessage": {
+        "title": "Origineel bericht:"
+      },
+      "form": {
+        "subjectLabel": "Onderwerp",
+        "subjectPlaceholder": "E-mailonderwerp",
+        "messageLabel": "Bericht",
+        "messagePlaceholder": "Typ je bericht hier..."
+      },
+      "actions": {
+        "sending": "Verzenden...",
+        "sendEmail": "E-mail verzenden",
+        "cancel": "Annuleren"
+      },
+      "empty": {
+        "noMessage": "Geen bericht",
+        "noContacts": "Geen contacten gevonden",
+        "noClients": "Geen klanten gevonden",
+        "noSelectionTitle": "Geen contact geselecteerd",
+        "noSelectionSubtitle": "Selecteer een contact uit de lijst om een e-mail op te stellen"
+      },
+      "toast": {
+        "emailSent": "E-mail succesvol verzonden!"
+      },
+      "errors": {
+        "loadContacts": "Contacten laden mislukt",
+        "loadClients": "Klanten laden mislukt",
+        "fillAllFields": "Vul alle velden in",
+        "sendFailed": "E-mail verzenden mislukt",
+        "sendException": "Fout bij het verzenden van e-mail: {message}",
+        "clientNoEmail": "Deze klant heeft geen e-mailadres"
+      },
+      "status": {
+        "contact": {
+          "new": "Nieuw",
+          "replied": "Beantwoord",
+          "other": "Overig"
+        },
+        "client": {
+          "paid": "Betaald",
+          "unpaid": "Onbetaald",
+          "other": "Overig"
+        }
+      },
+      "common": {
+        "na": "N.v.t.",
+        "unknownError": "Onbekende fout"
+      }
+    }
+    ,
+    "gallery": {
+      "title": "Klantengalerij",
+      "subtitle": "Upload en beheer foto's voor klantprofielen",
+      "clientsCount": "{count} klanten",
+      "search": {
+        "placeholder": "Zoek klanten op naam, e-mail, telefoon of service..."
+      },
+      "empty": {
+        "noClientsTitle": "Geen klanten gevonden",
+        "noClientsSearchHint": "Probeer je zoekcriteria aan te passen",
+        "noClientsDefaultHint": "Klanten verschijnen hier zodra ze aan het systeem zijn toegevoegd"
+      },
+      "photos": {
+        "title": "Foto's ({count})",
+        "emptyTitle": "Nog geen foto's",
+        "emptySubtitle": "Klik op \"Foto's toevoegen\" om te uploaden"
+      },
+      "actions": {
+        "uploading": "Uploaden...",
+        "addPhotos": "Foto's toevoegen"
+      },
+      "confirm": {
+        "deletePhoto": "Weet je zeker dat je deze foto wilt verwijderen?"
+      },
+      "toast": {
+        "uploaded": "{count} foto(s) succesvol geüpload!",
+        "deleted": "Foto succesvol verwijderd"
+      },
+      "errors": {
+        "loadClients": "Klanten laden mislukt",
+        "uploadFailed": "Foto's uploaden mislukt",
+        "uploadError": "Fout bij het uploaden van foto's",
+        "deleteFailed": "Foto verwijderen mislukt",
+        "deleteError": "Fout bij het verwijderen van foto"
+      },
+      "status": {
+        "paid": "Betaald",
+        "unpaid": "Onbetaald",
+        "other": "Overig"
+      }
+    }
+    ,
+    "newProject": {
+      "title": "Nieuw project aanmaken",
+      "subtitle": "Volg de stappen om een nieuw schoonmaakproject te maken",
+      "stepLabel": "STAP {step}",
+      "steps": {
+        "service": "Service",
+        "schedule": "Planning",
+        "building": "Gebouw",
+        "customer": "Klant",
+        "pricing": "Prijs"
+      },
+      "actions": {
+        "previous": "Vorige",
+        "next": "Volgende",
+        "creating": "Aanmaken...",
+        "createProject": "Project aanmaken"
+      },
+      "toast": {
+        "fillRequired": "Vul alle verplichte velden in voordat je doorgaat",
+        "created": "Project succesvol aangemaakt!",
+        "createFailed": "Project aanmaken mislukt",
+        "errorOccurred": "Er is een fout opgetreden"
+      },
+      "validation": {
+        "required": "Dit veld is verplicht"
+      },
+      "common": {
+        "yes": "Ja",
+        "no": "Nee",
+        "notSelected": "Niet geselecteerd"
+      },
+      "step1": {
+        "title": "Kies je service",
+        "subtitle": "Selecteer het type schoonmaakservice dat je nodig hebt",
+        "selectedTitle": "✓ Service geselecteerd",
+        "requiredTitle": "⚠ Service vereist",
+        "requiredText": "Selecteer een service om door te gaan"
+      },
+      "services": {
+        "maintenanceCleaning": "Onderhoudsschoonmaak",
+        "houseCleaning": "Huisschoonmaak",
+        "apartmentCleaning": "Appartementreiniging",
+        "stairwellCleaning": "Trappenhuisreiniging",
+        "officeCleaning": "Kantoorreiniging",
+        "finalCleaning": "Eindschoonmaak",
+        "windowCleaning": "Ramen wassen",
+        "relocation": "Verhuizing",
+        "disposal": "Afvoer",
+        "gastronomyCleaning": "Horecareiniging",
+        "medicalCleaning": "Medische reiniging",
+        "constructionCleaning": "Bouwschoonmaak",
+        "propertyMaintenance": "Onderhoud van vastgoed",
+        "specialCleaning": "Speciale reiniging",
+        "comboService": "Combi-service"
+      },
+      "step2": {
+        "title": "Service plannen",
+        "subtitle": "Wanneer wil je dat de service wordt uitgevoerd?",
+        "fromDate": "Vanaf",
+        "untilDate": "Tot",
+        "confirmedTitle": "Planning bevestigd",
+        "summaryFrom": "Vanaf",
+        "summaryUntil": "Tot"
+      },
+      "step3": {
+        "title": "Gebouwinformatie",
+        "subtitle": "Vertel ons over het pand dat schoongemaakt moet worden",
+        "buildingType": "Type gebouw",
+        "selectBuildingType": "Selecteer type gebouw",
+        "rooms": "Aantal kamers",
+        "selectRooms": "Selecteer kamers",
+        "floor": "Verdieping",
+        "selectFloor": "Selecteer verdieping",
+        "squareMeters": "Vierkante meters",
+        "squareMetersPlaceholder": "Vul het aantal m² in",
+        "elevator": "Lift aanwezig"
+      },
+      "buildingTypes": {
+        "apartment": "Appartement",
+        "house": "Huis",
+        "office": "Kantoor",
+        "restaurant": "Restaurant",
+        "commercial": "Commercieel"
+      },
+      "roomsOptions": {
+        "one": "1 kamer",
+        "two": "2 kamers",
+        "three": "3 kamers",
+        "four": "4 kamers",
+        "fivePlus": "5+ kamers"
+      },
+      "floorOptions": {
+        "ground": "Begane grond",
+        "first": "1e verdieping",
+        "second": "2e verdieping",
+        "third": "3e verdieping",
+        "fourth": "4e verdieping",
+        "fivePlus": "5e+ verdieping"
+      },
+      "step4": {
+        "title": "Klantinformatie",
+        "subtitle": "Vul de contactgegevens van de klant in",
+        "prefix": "Aanhef",
+        "selectPrefix": "Selecteren",
+        "firstName": "Voornaam",
+        "firstNamePlaceholder": "Vul voornaam in",
+        "lastName": "Achternaam",
+        "lastNamePlaceholder": "Vul achternaam in",
+        "address": "Adres",
+        "addressPlaceholder": "Vul het volledige adres in",
+        "phone": "Telefoon",
+        "phonePlaceholder": "Vul telefoonnummer in",
+        "email": "E-mail",
+        "emailPlaceholder": "Vul e-mailadres in",
+        "location": "Plaats",
+        "locationPlaceholder": "Vul plaats/stad in",
+        "postalCode": "Postcode",
+        "postalCodePlaceholder": "Vul postcode in"
+      },
+      "prefixOptions": {
+        "mr": "Dhr.",
+        "mrs": "Mevr.",
+        "ms": "Mx",
+        "dr": "Dr."
+      },
+      "step5": {
+        "title": "Prijs en afronding",
+        "subtitle": "Stel de prijs in en voeg opmerkingen toe",
+        "totalPrice": "Totaalprijs (CHF)",
+        "advancePayment": "Aanbetaling (CHF)",
+        "summaryTitle": "Betalingssamenvatting",
+        "summaryTotal": "Totaalprijs",
+        "summaryAdvance": "Aanbetaling",
+        "summaryRemaining": "Resterend saldo",
+        "remarks1": "Opmerkingen 1",
+        "remarks2": "Opmerkingen 2",
+        "remarks3": "Opmerkingen 3",
+        "remarksPlaceholder": "Extra notities of speciale instructies...",
+        "projectSummaryTitle": "Projectsamenvatting",
+        "summaryService": "Service",
+        "summaryBuilding": "Gebouw",
+        "summaryCustomer": "Klant",
+        "summaryTotalLabel": "Totaal"
+      }
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "getQuote": "Get Quote",
+    "contactUs": "Contact Us",
+    "requestFreeQuote": "Request Free Quote",
+    "getFreeQuote": "Get Free Quote",
+    "freeQuote": "Free Quote"
+  },
+  "regions": {
+    "title": "Service Regions",
+    "subtitle": "We provide professional cleaning and moving services throughout Switzerland",
+    "coverageAreas": "Our Coverage Areas",
+    "citiesCount": "50+ Cities",
+    "citiesDesc": "We serve over 50 cities across Switzerland",
+    "sameDayService": "Same Day Service",
+    "sameDayDesc": "Quick response times in all service areas",
+    "localTeams": "Local Teams",
+    "localTeamsDesc": "Dedicated local teams in each region",
+    "ourRegions": "Our Service Regions",
+    "professionalServices": "Professional cleaning and moving services in your area",
+    "serviceAreas": "Service Areas:",
+    "phone": "Phone",
+    "coverage": "Coverage",
+    "servicesAvailable": "Services Available in All Regions",
+    "completeRange": "Complete range of cleaning and moving services",
+    "notSureArea": "Not Sure About Your Area?",
+    "contactCheck": "Contact us to check if we serve your location",
+    "contactUs": "Contact Us",
+    "callNow": "Call Now",
+    "cities": {
+      "zurich": "Zurich",
+      "geneva": "Geneva",
+      "basel": "Basel",
+      "bern": "Bern",
+      "lausanne": "Lausanne",
+      "winterthur": "Winterthur",
+      "lucerne": "Lucerne",
+      "stgallen": "St. Gallen"
+    },
+    "regionData": {
+      "zurich": {
+        "name": "Zurich",
+        "description": "Complete cleaning and moving services in the Zurich metropolitan area",
+        "coverage": "Full coverage including suburbs and surrounding areas",
+        "areas": [
+          "Zurich City",
+          "Winterthur",
+          "Uster",
+          "Dübendorf",
+          "Kloten"
+        ]
+      }
+    },
+    "services": {
+      "houseCleaning": "House Cleaning",
+      "apartmentCleaning": "Apartment Cleaning",
+      "officeCleaning": "Office Cleaning",
+      "finalCleaning": "Final Cleaning",
+      "windowCleaning": "Window Cleaning",
+      "relocation": "Relocation",
+      "disposal": "Disposal",
+      "stairwellCleaning": "Stairwell Cleaning"
+    }
+  },
+  "pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "Fair and competitive rates for all our services",
+    "choosePlan": "Choose Your Service Plan",
+    "priceDisclaimer": "All prices are estimates and may vary based on specific requirements, location, and complexity of the job.",
+    "mostPopular": "Most Popular",
+    "getQuote": "Get Quote",
+    "additionalServices": "Additional Services",
+    "enhancePackage": "Enhance your cleaning or moving package with these optional services",
+    "factorsAffecting": "Factors Affecting Price",
+    "factorsInfluence": "Several factors influence the final cost of our services",
+    "timeRequired": "Time Required",
+    "timeRequiredDesc": "Duration depends on space size and cleaning depth needed",
+    "serviceType": "Service Type",
+    "serviceTypeDesc": "Different services have varying complexity and requirements",
+    "location": "Location",
+    "locationDesc": "Travel distance and accessibility affect pricing",
+    "urgency": "Urgency",
+    "urgencyDesc": "Same-day or emergency services may have premium rates",
+    "readyQuote": "Ready to Get Your Free Quote?",
+    "contactToday": "Contact us today for a personalized quote based on your specific needs",
+    "getFreeQuote": "Get Free Quote",
+    "additionalServicesList": {
+      "windowCleaning": "Window Cleaning",
+      "carpetCleaning": "Carpet Cleaning",
+      "applianceCleaning": "Appliance Cleaning",
+      "garageBasement": "Garage/Basement Cleaning",
+      "disposalServices": "Disposal Services",
+      "storageSolutions": "Storage Solutions"
+    },
+    "additionalPrices": {
+      "windowCleaning": "CHF 8–15 per window",
+      "carpetCleaning": "from CHF 8–15 / m²",
+      "applianceCleaning": "CHF 45–65 / hour",
+      "garageBasement": "from CHF 80",
+      "disposalServices": "from CHF 30 / m³",
+      "storageSolutions": "from CHF 70"
+    },
+    "plans": {
+      "basic": {
+        "title": "Maintenance Cleaning",
+        "description": "Regular apartment & house cleaning (hourly)",
+        "price": "CHF 45–65 / hour / staff",
+        "features": [
+          "Maintenance cleaning",
+          "Flexible schedule",
+          "Transparent hourly rates",
+          "Professional team"
+        ]
+      },
+      "standard": {
+        "title": "End-of-Tenancy Cleaning",
+        "description": "With acceptance / deposit guarantee",
+        "price": "from CHF 250",
+        "features": [
+          "Apartments: from CHF 250",
+          "Houses: from CHF 900",
+          "Optional surcharges available",
+          "Acceptance guarantee"
+        ]
+      },
+      "premium": {
+        "title": "Combo Service",
+        "description": "Moving + End-of-Tenancy Cleaning",
+        "price": "from CHF 650",
+        "features": [
+          "Apartments: from CHF 650",
+          "Houses: from CHF 1,950",
+          "Add-ons available",
+          "Price on request for large properties"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our services",
+    "quickFacts": "Quick Facts About Our Services",
+    "keyInfo": "Key information you should know about SwissCleanMove",
+    "responseTime": "Response Time",
+    "responseTimeDesc": "Within 2 hours during business hours",
+    "insurance": "Insurance",
+    "insuranceDesc": "Fully insured and licensed",
+    "guarantee": "Guarantee",
+    "guaranteeDesc": "100% satisfaction guarantee",
+    "support": "Support",
+    "supportDesc": "24/7 customer support",
+    "stillQuestions": "Still Have Questions?",
+    "teamHelp": "Our friendly team is here to help. Contact us through any of these channels.",
+    "callUs": "Call Us",
+    "emailUs": "Email Us",
+    "contactForm": "Contact Form",
+    "sendMessage": "Send us a message",
+    "categories": {
+      "general": "General Questions",
+      "cleaning": "Cleaning Services",
+      "moving": "Moving Services",
+      "pricing": "Pricing & Payment"
+    },
+    "questions": {
+      "general": [
+        {
+          "question": "What areas do you serve?",
+          "answer": "We provide services throughout Switzerland, including major cities like Zurich, Geneva, Basel, Bern, and Lausanne."
+        }
+      ],
+      "cleaning": [
+        {
+          "question": "Do you provide cleaning supplies?",
+          "answer": "Yes, we bring all necessary cleaning supplies and professional equipment to every job."
+        }
+      ],
+      "moving": [
+        {
+          "question": "Do you provide packing materials?",
+          "answer": "Yes, we can provide all necessary packing materials including boxes, bubble wrap, and protective covers."
+        }
+      ],
+      "pricing": [
+        {
+          "question": "How do you calculate prices?",
+          "answer": "Prices are based on the size of the property, type of service, and specific requirements. We provide free quotes."
+        }
+      ]
+    }
+  }
+}

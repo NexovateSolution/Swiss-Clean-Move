@@ -17,6 +17,7 @@ import {
   Eye,
   Plus
 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import toast from 'react-hot-toast';
 import AdminLayout from '@/components/admin/AdminLayout';
 
@@ -41,6 +42,7 @@ interface Client {
 }
 
 export default function GalleryPage() {
+  const t = useTranslations('admin.gallery');
   const [clients, setClients] = useState<Client[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -59,10 +61,18 @@ export default function GalleryPage() {
       setClients(data.clients || []);
     } catch (error) {
       console.error('Failed to fetch clients:', error);
-      toast.error('Failed to load clients');
+      toast.error(t('errors.loadClients'));
     } finally {
       setLoading(false);
     }
+  };
+
+  const getClientStatusLabel = (status: string) => {
+    const normalized = (status || '').toUpperCase();
+
+    if (normalized === 'PAID') return t('status.paid');
+    if (normalized === 'UNPAID') return t('status.unpaid');
+    return t('status.other');
   };
 
   const filteredClients = clients.filter((client) => {
@@ -100,14 +110,14 @@ export default function GalleryPage() {
       });
 
       if (response.ok) {
-        toast.success(`${files.length} photo(s) uploaded successfully!`);
+        toast.success(t('toast.uploaded', { count: files.length }));
         fetchClients(); // Refresh to show new photos
       } else {
-        toast.error('Failed to upload photos');
+        toast.error(t('errors.uploadFailed'));
       }
     } catch (error) {
       console.error('Upload error:', error);
-      toast.error('Error uploading photos');
+      toast.error(t('errors.uploadError'));
     } finally {
       setUploading(false);
       setSelectedClient(null);
@@ -118,7 +128,7 @@ export default function GalleryPage() {
   };
 
   const handleDeletePhoto = async (clientId: string, photoId: string) => {
-    if (!confirm('Are you sure you want to delete this photo?')) return;
+    if (!confirm(t('confirm.deletePhoto'))) return;
 
     try {
       const response = await fetch(`/api/admin/photos/${photoId}`, {
@@ -126,14 +136,14 @@ export default function GalleryPage() {
       });
 
       if (response.ok) {
-        toast.success('Photo deleted successfully');
+        toast.success(t('toast.deleted'));
         fetchClients();
       } else {
-        toast.error('Failed to delete photo');
+        toast.error(t('errors.deleteFailed'));
       }
     } catch (error) {
       console.error('Delete error:', error);
-      toast.error('Error deleting photo');
+      toast.error(t('errors.deleteError'));
     }
   };
 
@@ -155,15 +165,15 @@ export default function GalleryPage() {
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
               <Camera className="w-8 h-8 text-blue-600" />
-              Client Gallery
+              {t('title')}
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mt-1">
-              Upload and manage photos for client profiles
+              {t('subtitle')}
             </p>
           </div>
           <div className="flex items-center space-x-2 mt-4 md:mt-0">
             <span className="text-sm text-gray-500 dark:text-gray-400">
-              {filteredClients.length} clients
+              {t('clientsCount', { count: filteredClients.length })}
             </span>
           </div>
         </div>
@@ -174,7 +184,7 @@ export default function GalleryPage() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
-              placeholder="Search clients by name, email, phone, or service..."
+              placeholder={t('search.placeholder')}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-12 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
@@ -197,12 +207,12 @@ export default function GalleryPage() {
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-12 text-center">
             <User className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-              No clients found
+              {t('empty.noClientsTitle')}
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
               {searchTerm
-                ? 'Try adjusting your search criteria'
-                : 'Clients will appear here once they are added to the system'}
+                ? t('empty.noClientsSearchHint')
+                : t('empty.noClientsDefaultHint')}
             </p>
           </div>
         ) : (
@@ -239,7 +249,7 @@ export default function GalleryPage() {
                           : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
                       }`}
                     >
-                      {client.status}
+                      {getClientStatusLabel(client.status)}
                     </span>
                   </div>
 
@@ -271,7 +281,7 @@ export default function GalleryPage() {
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
                       <ImageIcon className="w-4 h-4" />
-                      Photos ({client.photos?.length || 0})
+                      {t('photos.title', { count: client.photos?.length || 0 })}
                     </h4>
                     <button
                       onClick={() => handleFileSelect(client)}
@@ -280,8 +290,8 @@ export default function GalleryPage() {
                     >
                       <Upload className="w-4 h-4" />
                       {uploading && selectedClient?.id === client.id
-                        ? 'Uploading...'
-                        : 'Add Photos'}
+                        ? t('actions.uploading')
+                        : t('actions.addPhotos')}
                     </button>
                   </div>
 
@@ -321,10 +331,10 @@ export default function GalleryPage() {
                     <div className="text-center py-8 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                       <ImageIcon className="w-12 h-12 text-gray-400 mx-auto mb-2" />
                       <p className="text-sm text-gray-500 dark:text-gray-400">
-                        No photos yet
+                        {t('photos.emptyTitle')}
                       </p>
                       <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
-                        Click "Add Photos" to upload
+                        {t('photos.emptySubtitle')}
                       </p>
                     </div>
                   )}

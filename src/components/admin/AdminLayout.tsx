@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { useLocale, useTranslations } from 'next-intl'
 import {
   LayoutDashboard,
   Users,
@@ -17,6 +18,8 @@ import {
   Plus,
   Moon,
   Sun,
+  Globe,
+  ChevronDown,
   MessageSquare,
   ClipboardList,
   Mail
@@ -31,33 +34,36 @@ interface AdminLayoutProps {
   children: React.ReactNode
 }
 
-const navigation = [
-  { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
-  { name: 'New Project', href: '/admin/new-project', icon: Plus },
-  { name: 'Clients', href: '/admin/clients', icon: Users },
-  { name: 'Quote Requests', href: '/admin/quotes', icon: ClipboardList },
-  { name: 'Contact Messages', href: '/admin/contacts', icon: MessageSquare },
-  { name: 'Service Forms', href: '/admin/service-forms', icon: FileText },
-  { name: 'Email Communication', href: '/admin/email', icon: Mail },
-  { name: 'Gallery', href: '/admin/gallery', icon: Camera },
-  { name: 'Calendar', href: '/admin/calendar', icon: Calendar },
-]
-
 export default function AdminLayout({ children }: AdminLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
   const { theme, toggleTheme } = useTheme()
+  const locale = useLocale()
+  const t = useTranslations('admin')
+
+  const navigation = [
+    { name: t('sidebar.dashboard'), href: `/${locale}/admin`, icon: LayoutDashboard },
+    { name: t('sidebar.newProject'), href: `/${locale}/admin/new-project`, icon: Plus },
+    { name: t('sidebar.clients'), href: `/${locale}/admin/clients`, icon: Users },
+    { name: t('sidebar.quoteRequests'), href: `/${locale}/admin/quotes`, icon: ClipboardList },
+    { name: t('sidebar.contactMessages'), href: `/${locale}/admin/contacts`, icon: MessageSquare },
+    { name: t('sidebar.serviceForms'), href: `/${locale}/admin/service-forms`, icon: FileText },
+    { name: t('sidebar.emailCommunication'), href: `/${locale}/admin/email`, icon: Mail },
+    { name: t('sidebar.gallery'), href: `/${locale}/admin/gallery`, icon: Camera },
+    { name: t('sidebar.calendar'), href: `/${locale}/admin/calendar`, icon: Calendar },
+  ]
 
   const handleLogout = async () => {
     try {
       await fetch('/api/auth/logout', { method: 'POST' })
       localStorage.removeItem('user')
-      toast.success('Logged out successfully')
-      router.push('/admin/login')
+      toast.success(t('toast.loggedOut'))
+      router.push(`/${locale}/admin/login`)
     } catch (error) {
-      toast.error('Logout failed')
+      toast.error(t('toast.logoutFailed'))
     }
   }
 
@@ -73,31 +79,35 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
       {/* Sidebar */}
       <div className={`fixed inset-y-0 left-0 z-50 bg-white dark:bg-gray-800 shadow-lg transform transition-all duration-300 ease-in-out lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } ${sidebarCollapsed ? 'w-16' : 'w-64'}`}>
-        <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200 dark:border-gray-700">
-          <div className="flex items-center space-x-3">
-            <Image
-              src="/images/logo.jpg"
-              alt="SwissCleanMove Logo"
-              width={32}
-              height={32}
-              className="rounded-lg object-cover"
-            />
-            {!sidebarCollapsed && (
-              <span className="text-xl font-bold text-gray-900 dark:text-white">SwissCleanMove</span>
-            )}
+        <div className="relative flex items-center h-32 px-4 border-b border-gray-200 dark:border-gray-700">
+          <div className={`${sidebarCollapsed ? 'w-full flex justify-center' : 'flex-1 flex justify-center'}`}>
+            <div className={`${sidebarCollapsed ? 'w-10' : 'w-full max-w-[260px]'} h-24 relative`}
+            >
+              <Image
+                src="/images/logo.jpg"
+                alt="SwissCleanMove Logo"
+                fill
+                sizes={sidebarCollapsed ? '40px' : '260px'}
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
-          <button
-            onClick={() => sidebarCollapsed ? setSidebarCollapsed(false) : setSidebarOpen(false)}
-            className="p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 lg:hidden"
-          >
-            <X className="w-5 h-5" />
-          </button>
-          <button
-            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-            className="hidden lg:block p-1 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700"
-          >
-            <Menu className="w-4 h-4" />
-          </button>
+
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
+            <button
+              onClick={() => sidebarCollapsed ? setSidebarCollapsed(false) : setSidebarOpen(false)}
+              className="p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 lg:hidden"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+              className="hidden lg:block p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <Menu className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
         <nav className="mt-8 px-2 space-y-2 pb-32">
@@ -128,7 +138,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                 <span className="text-xs font-medium text-gray-600">AD</span>
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-900 dark:text-white truncate">Admin</p>
+                <p className="text-sm font-medium text-gray-900 dark:text-white truncate">{t('user.admin')}</p>
                 <p className="text-xs text-gray-500 dark:text-gray-400 truncate">admin@swissclean.com</p>
               </div>
             </div>
@@ -137,10 +147,10 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
             onClick={handleLogout}
             className={`flex items-center w-full py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors ${sidebarCollapsed ? 'justify-center px-2' : 'space-x-3 px-4'
               }`}
-            title={sidebarCollapsed ? 'Sign out' : ''}
+            title={sidebarCollapsed ? t('user.signOut') : ''}
           >
             <LogOut className="w-4 h-4" />
-            {!sidebarCollapsed && <span>Sign out</span>}
+            {!sidebarCollapsed && <span>{t('user.signOut')}</span>}
           </button>
         </div>
       </div>
@@ -163,7 +173,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input
                     type="text"
-                    placeholder="Quick search..."
+                    placeholder={t('topbar.searchPlaceholder')}
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   />
                 </div>
@@ -171,10 +181,46 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
             </div>
 
             <div className="flex items-center space-x-4 ml-4">
+              <div className="relative">
+                <button
+                  onClick={() => setLangOpen(!langOpen)}
+                  className="p-2 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors flex items-center gap-2"
+                  title={t('topbar.language')}
+                >
+                  <Globe className="w-5 h-5" />
+                  <span className="hidden sm:inline text-xs font-medium uppercase text-gray-500 dark:text-gray-400">{locale}</span>
+                  <ChevronDown className={`hidden sm:inline w-4 h-4 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {langOpen && (
+                  <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50">
+                    {([
+                      { code: 'en', label: 'English' },
+                      { code: 'de', label: 'Deutsch' },
+                      { code: 'fr', label: 'Français' },
+                      { code: 'nl', label: 'Nederlands' },
+                    ] as const).map((l) => (
+                      <button
+                        key={l.code}
+                        onClick={() => {
+                          const currentPath = pathname.replace(`/${locale}`, '')
+                          router.push(`/${l.code}${currentPath}`)
+                          setLangOpen(false)
+                        }}
+                        className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${locale === l.code ? 'text-swiss-blue font-medium' : 'text-gray-700 dark:text-gray-200'
+                          }`}
+                      >
+                        {l.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <button
                 onClick={toggleTheme}
                 className="p-2 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-                title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+                title={t('topbar.switchTheme', { mode: theme === 'light' ? t('topbar.dark') : t('topbar.light') })}
               >
                 {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
               </button>

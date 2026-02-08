@@ -1,9 +1,10 @@
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'SwissCleanMove - Professional Cleaning & Moving Services Switzerland',
   description: 'Reliable cleaning services and moving assistance in Switzerland with 100% satisfaction guarantee. Move-out cleaning, office cleaning, restaurant cleaning and more.',
   keywords: 'Cleaning Switzerland, Moving Switzerland, End of tenancy cleaning, Office cleaning, Restaurant cleaning, Property maintenance, Disposal',
@@ -18,8 +19,12 @@ export const metadata = {
     index: true,
     follow: true,
   },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#0066CC',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0066CC'
 };
 
 export default async function RootLayout({

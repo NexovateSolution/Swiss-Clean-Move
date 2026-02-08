@@ -99,7 +99,7 @@ export default function WindowCleaningPage({ params: { locale } }: { params: { l
                 ))}
               </div>
               <div className="bg-swiss-blue/10 p-6 rounded-lg">
-                <div className="text-2xl font-bold text-swiss-blue mb-2">CHF 8-15 per m²</div>
+                <div className="text-2xl font-bold text-swiss-blue mb-2">CHF 8–15 per window (+ CHF 3–6 frames & shutters)</div>
                 <p className="text-swiss-gray-600">Professional window cleaning rates</p>
               </div>
             </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -51,7 +52,7 @@ interface AnalyticsData {
   clients: Client[]
   monthlyData: any[]
   serviceData: any[]
-  statusData: any[]
+  statusData: { status: 'PAID' | 'PARTIAL' | 'UNPAID' | 'COMPLETED' | 'CANCELLED' | 'UNKNOWN'; value: number; color: string }[]
   metrics: {
     totalClients: number
     totalRevenue: number
@@ -65,32 +66,33 @@ interface AnalyticsData {
 }
 
 export default function AdminDashboard() {
+  const t = useTranslations('admin.dashboard')
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null)
   const [loading, setLoading] = useState(true)
   const [timeRange, setTimeRange] = useState<'monthly' | 'annual'>('monthly')
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth())
-  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear())
+  const currentYear = new Date().getFullYear()
 
   const fetchAnalyticsData = async () => {
     try {
       setLoading(true)
       const params = new URLSearchParams({
         timeRange,
-        year: selectedYear.toString(),
+        year: currentYear.toString(),
         month: selectedMonth.toString()
       })
       
       const response = await fetch(`/api/admin/analytics?${params}`)
-      if (!response.ok) throw new Error('Failed to fetch analytics')
+      if (!response.ok) throw new Error(t('errors.fetchAnalytics'))
       
       const result = await response.json()
       if (result.success) {
         setAnalyticsData(result.data)
       } else {
-        throw new Error(result.error || 'Failed to fetch analytics')
+        throw new Error(result.error || t('errors.fetchAnalytics'))
       }
     } catch (error) {
-      toast.error('Failed to fetch analytics data')
+      toast.error(t('errors.fetchAnalyticsToast'))
       console.error(error)
     } finally {
       setLoading(false)
@@ -99,7 +101,7 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     fetchAnalyticsData()
-  }, [timeRange, selectedMonth, selectedYear])
+  }, [timeRange, selectedMonth])
 
   // Use real analytics data or fallback to empty data
   const monthlyData = analyticsData?.monthlyData || []
@@ -114,6 +116,25 @@ export default function AdminDashboard() {
     revenueGrowth: 0,
     clientGrowth: 0,
     averageProjectValue: 0
+  }
+
+  const getPaymentStatusLabel = (
+    status: 'PAID' | 'PARTIAL' | 'UNPAID' | 'COMPLETED' | 'CANCELLED' | 'UNKNOWN'
+  ) => {
+    switch (status) {
+      case 'PAID':
+        return t('charts.paymentStatus.status.paid')
+      case 'PARTIAL':
+        return t('charts.paymentStatus.status.partial')
+      case 'UNPAID':
+        return t('charts.paymentStatus.status.unpaid')
+      case 'COMPLETED':
+        return t('charts.paymentStatus.status.completed')
+      case 'CANCELLED':
+        return t('charts.paymentStatus.status.cancelled')
+      default:
+        return t('charts.paymentStatus.status.unknown')
+    }
   }
 
   if (loading) {
@@ -132,8 +153,8 @@ export default function AdminDashboard() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Analytics Dashboard</h1>
-            <p className="text-gray-600 dark:text-gray-300">Comprehensive business insights and performance metrics</p>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{t('title')}</h1>
+            <p className="text-gray-600 dark:text-gray-300">{t('subtitle')}</p>
           </div>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <select
@@ -141,20 +162,9 @@ export default function AdminDashboard() {
               onChange={(e) => setTimeRange(e.target.value as 'monthly' | 'annual')}
               className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
             >
-              <option value="monthly">Monthly View</option>
-              <option value="annual">Annual View</option>
+              <option value="monthly">{t('filters.monthlyView')}</option>
+              <option value="annual">{t('filters.annualView')}</option>
             </select>
-            {timeRange === 'monthly' && (
-              <select
-                value={selectedYear}
-                onChange={(e) => setSelectedYear(parseInt(e.target.value))}
-                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-              >
-                <option value={2024}>2024</option>
-                <option value={2023}>2023</option>
-                <option value={2022}>2022</option>
-              </select>
-            )}
           </div>
         </div>
 
@@ -167,7 +177,7 @@ export default function AdminDashboard() {
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Total Revenue</p>
+                <p className="text-sm font-medium text-gray-600">{t('kpi.totalRevenue')}</p>
                 <p className="text-2xl font-bold text-gray-900">CHF {metrics.totalRevenue.toLocaleString()}</p>
                 <div className="flex items-center mt-2">
                   {metrics.revenueGrowth >= 0 ? (
@@ -178,7 +188,7 @@ export default function AdminDashboard() {
                   <span className={`text-sm font-medium ${metrics.revenueGrowth >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {metrics.revenueGrowth >= 0 ? '+' : ''}{metrics.revenueGrowth}%
                   </span>
-                  <span className="text-sm text-gray-500 ml-1">vs last month</span>
+                  <span className="text-sm text-gray-500 ml-1">{t('kpi.vsLastMonth')}</span>
                 </div>
               </div>
               <div className="bg-green-100 p-3 rounded-lg">
@@ -195,7 +205,7 @@ export default function AdminDashboard() {
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Total Clients</p>
+                <p className="text-sm font-medium text-gray-600">{t('kpi.totalClients')}</p>
                 <p className="text-2xl font-bold text-gray-900">{metrics.totalClients}</p>
                 <div className="flex items-center mt-2">
                   {metrics.clientGrowth >= 0 ? (
@@ -206,7 +216,7 @@ export default function AdminDashboard() {
                   <span className={`text-sm font-medium ${metrics.clientGrowth >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {metrics.clientGrowth >= 0 ? '+' : ''}{metrics.clientGrowth}%
                   </span>
-                  <span className="text-sm text-gray-500 ml-1">vs last month</span>
+                  <span className="text-sm text-gray-500 ml-1">{t('kpi.vsLastMonth')}</span>
                 </div>
               </div>
               <div className="bg-blue-100 p-3 rounded-lg">
@@ -223,11 +233,11 @@ export default function AdminDashboard() {
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Completion Rate</p>
+                <p className="text-sm font-medium text-gray-600">{t('kpi.completionRate')}</p>
                 <p className="text-2xl font-bold text-gray-900">{metrics.completionRate}%</p>
                 <div className="flex items-center mt-2">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-1" />
-                  <span className="text-sm text-green-600 font-medium">Excellent</span>
+                  <span className="text-sm text-green-600 font-medium">{t('kpi.excellent')}</span>
                 </div>
               </div>
               <div className="bg-purple-100 p-3 rounded-lg">
@@ -244,11 +254,11 @@ export default function AdminDashboard() {
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Pending Amount</p>
+                <p className="text-sm font-medium text-gray-600">{t('kpi.pendingAmount')}</p>
                 <p className="text-2xl font-bold text-gray-900">CHF {metrics.pendingAmount.toLocaleString()}</p>
                 <div className="flex items-center mt-2">
                   <Clock className="w-4 h-4 text-orange-500 mr-1" />
-                  <span className="text-sm text-orange-600 font-medium">Needs attention</span>
+                  <span className="text-sm text-orange-600 font-medium">{t('kpi.needsAttention')}</span>
                 </div>
               </div>
               <div className="bg-orange-100 p-3 rounded-lg">
@@ -268,8 +278,8 @@ export default function AdminDashboard() {
           >
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">Revenue Trend</h3>
-                <p className="text-sm text-gray-600">Monthly revenue performance</p>
+                <h3 className="text-lg font-semibold text-gray-900">{t('charts.revenueTrend.title')}</h3>
+                <p className="text-sm text-gray-600">{t('charts.revenueTrend.subtitle')}</p>
               </div>
               <div className="flex items-center space-x-2">
                 <BarChart3 className="w-5 h-5 text-blue-600" />
@@ -281,7 +291,7 @@ export default function AdminDashboard() {
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="month" />
                   <YAxis />
-                  <Tooltip formatter={(value) => [`CHF ${value}`, 'Revenue']} />
+                  <Tooltip formatter={(value) => [`CHF ${value}`, t('charts.revenueTrend.revenue')]} />
                   <Area type="monotone" dataKey="revenue" stroke="#3B82F6" fill="#3B82F6" fillOpacity={0.1} />
                 </AreaChart>
               </ResponsiveContainer>
@@ -296,8 +306,8 @@ export default function AdminDashboard() {
           >
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">Payment Status</h3>
-                <p className="text-sm text-gray-600">Distribution of payment statuses</p>
+                <h3 className="text-lg font-semibold text-gray-900">{t('charts.paymentStatus.title')}</h3>
+                <p className="text-sm text-gray-600">{t('charts.paymentStatus.subtitle')}</p>
               </div>
               <div className="flex items-center space-x-2">
                 <PieChart className="w-5 h-5 text-green-600" />
@@ -310,8 +320,11 @@ export default function AdminDashboard() {
                     data={statusData}
                     cx="50%"
                     cy="45%"
+                    nameKey="status"
                     labelLine={true}
-                    label={({ name, percent }) => percent > 0 ? `${name}: ${(percent * 100).toFixed(0)}%` : ''}
+                    label={({ status, percent }: { status: 'PAID' | 'PARTIAL' | 'UNPAID' | 'COMPLETED' | 'CANCELLED' | 'UNKNOWN'; percent: number }) =>
+                      percent > 0 ? `${getPaymentStatusLabel(status)}: ${(percent * 100).toFixed(0)}%` : ''
+                    }
                     outerRadius={90}
                     fill="#8884d8"
                     dataKey="value"
@@ -320,8 +333,15 @@ export default function AdminDashboard() {
                       <Cell key={`cell-${index}`} fill={entry.color} />
                     ))}
                   </Pie>
-                  <Tooltip formatter={(value) => [value, 'Clients']} />
-                  <Legend verticalAlign="bottom" height={36} />
+                  <Tooltip formatter={(value) => [value, t('charts.paymentStatus.clients')]} />
+                  <Legend
+                    verticalAlign="bottom"
+                    height={36}
+                    formatter={(value) => {
+                      if (typeof value !== 'string') return value
+                      return getPaymentStatusLabel(value as any)
+                    }}
+                  />
                 </RechartsPieChart>
               </ResponsiveContainer>
             </div>
@@ -338,8 +358,8 @@ export default function AdminDashboard() {
           >
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">Service Distribution</h3>
-                <p className="text-sm text-gray-600">Most popular cleaning services</p>
+                <h3 className="text-lg font-semibold text-gray-900">{t('sections.serviceDistribution.title')}</h3>
+                <p className="text-sm text-gray-600">{t('sections.serviceDistribution.subtitle')}</p>
               </div>
               <div className="flex items-center space-x-2">
                 <Activity className="w-5 h-5 text-purple-600" />
@@ -353,7 +373,7 @@ export default function AdminDashboard() {
                     <span className="text-sm font-medium text-gray-900">{service.name}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <span className="text-sm text-gray-600">{service.value} clients</span>
+                    <span className="text-sm text-gray-600">{t('sections.serviceDistribution.clientsCount', { count: service.value })}</span>
                     <span className="text-xs text-gray-500">({service.percentage}%)</span>
                   </div>
                 </div>
@@ -369,8 +389,8 @@ export default function AdminDashboard() {
           >
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">Client Growth</h3>
-                <p className="text-sm text-gray-600">Monthly client acquisition</p>
+                <h3 className="text-lg font-semibold text-gray-900">{t('sections.clientGrowth.title')}</h3>
+                <p className="text-sm text-gray-600">{t('sections.clientGrowth.subtitle')}</p>
               </div>
               <div className="flex items-center space-x-2">
                 <TrendingUp className="w-5 h-5 text-green-600" />
@@ -382,7 +402,7 @@ export default function AdminDashboard() {
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="month" />
                   <YAxis />
-                  <Tooltip formatter={(value) => [value, 'New Clients']} />
+                  <Tooltip formatter={(value) => [value, t('sections.clientGrowth.newClients')]} />
                   <Bar dataKey="clients" fill="#10B981" />
                 </BarChart>
               </ResponsiveContainer>
@@ -400,10 +420,10 @@ export default function AdminDashboard() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <h3 className="text-lg font-semibold text-gray-900">
-                {timeRange === 'monthly' ? 'Monthly' : 'Annual'} Performance Report
+                {timeRange === 'monthly' ? t('report.monthly') : t('report.annual')} {t('report.performanceReport')}
               </h3>
               <p className="text-sm text-gray-600">
-                Comprehensive business performance analysis
+                {t('report.subtitle')}
               </p>
             </div>
             <div className="flex items-center space-x-2">
@@ -415,7 +435,7 @@ export default function AdminDashboard() {
             <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-blue-700">Revenue Growth</p>
+                  <p className="text-sm font-medium text-blue-700">{t('report.revenueGrowth')}</p>
                   <p className="text-2xl font-bold text-blue-900">{metrics.revenueGrowth >= 0 ? '+' : ''}{metrics.revenueGrowth}%</p>
                 </div>
                 <TrendingUp className="w-8 h-8 text-blue-600" />
@@ -425,7 +445,7 @@ export default function AdminDashboard() {
             <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-green-700">Client Growth</p>
+                  <p className="text-sm font-medium text-green-700">{t('report.clientGrowth')}</p>
                   <p className="text-2xl font-bold text-green-900">{metrics.clientGrowth >= 0 ? '+' : ''}{metrics.clientGrowth}%</p>
                 </div>
                 <Users className="w-8 h-8 text-green-600" />
@@ -435,7 +455,7 @@ export default function AdminDashboard() {
             <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-purple-700">Avg. Project Value</p>
+                  <p className="text-sm font-medium text-purple-700">{t('report.avgProjectValue')}</p>
                   <p className="text-2xl font-bold text-purple-900">CHF {metrics.averageProjectValue}</p>
                 </div>
                 <DollarSign className="w-8 h-8 text-purple-600" />

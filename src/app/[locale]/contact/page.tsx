@@ -60,7 +60,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+41782158030';
+    const phoneNumber = '41123456789';
     const message = encodeURIComponent('Hello! I am interested in your services and would like to know more about it. Could you send me more information? Thank you!');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
@@ -133,9 +133,13 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-swiss-blue to-swiss-green text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container-max py-24">
+      <section className="relative bg-swiss-red text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
+        </div>
+        <div className="relative container-max py-20">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold">
               {t('contact.title')}

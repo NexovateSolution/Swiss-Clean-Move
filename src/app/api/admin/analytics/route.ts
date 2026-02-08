@@ -100,11 +100,11 @@ export async function GET(request: NextRequest) {
     }, {} as Record<string, number>)
 
     const statusData = [
-      { name: 'Paid', value: statusCounts.PAID || 0, color: '#10B981' },
-      { name: 'Partial', value: statusCounts.PARTIAL || 0, color: '#F59E0B' },
-      { name: 'Unpaid', value: statusCounts.UNPAID || 0, color: '#EF4444' },
-      { name: 'Completed', value: statusCounts.COMPLETED || 0, color: '#3B82F6' },
-      { name: 'Cancelled', value: statusCounts.CANCELLED || 0, color: '#6B7280' }
+      { status: 'PAID', value: statusCounts.PAID || 0, color: '#10B981' },
+      { status: 'PARTIAL', value: statusCounts.PARTIAL || 0, color: '#F59E0B' },
+      { status: 'UNPAID', value: statusCounts.UNPAID || 0, color: '#EF4444' },
+      { status: 'COMPLETED', value: statusCounts.COMPLETED || 0, color: '#3B82F6' },
+      { status: 'CANCELLED', value: statusCounts.CANCELLED || 0, color: '#6B7280' }
     ]
 
     // Calculate key metrics

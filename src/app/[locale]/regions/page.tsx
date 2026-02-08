@@ -40,6 +40,18 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
     {
       id: 'lucerne',
       phone: '+41 41 123 45 67',
+    },
+    {
+      id: 'biel',
+      phone: '+41 32 123 45 67',
+    },
+    {
+      id: 'solothurn',
+      phone: '+41 32 234 56 78',
+    },
+    {
+      id: 'jura',
+      phone: '+41 32 345 67 89',
     }
   ];
 
@@ -57,9 +69,14 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-swiss-blue to-swiss-green text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container-max py-24">
+      <section className="relative bg-swiss-red text-white overflow-hidden">
+        {/* Swiss-flag inspired overlay */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
+        </div>
+        <div className="relative container-max py-20">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <MapPin className="w-16 h-16 mx-auto text-blue-100" />
             <h1 className="text-4xl md:text-5xl font-bold">
@@ -203,8 +220,14 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding bg-swiss-blue text-white">
-        <div className="container-max">
+      <section className="relative py-20 bg-swiss-red text-white overflow-hidden">
+        {/* Swiss-flag inspired overlay */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
+        </div>
+        <div className="container-max relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">
               {t('regions.notSureArea')}

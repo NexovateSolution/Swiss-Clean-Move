@@ -53,6 +53,30 @@
       "disposal": {
         "title": "Disposal",
         "description": "Professional disposal services for furniture, household items, and waste materials"
+      },
+      "gastronomyCleaning": {
+        "title": "Gastronomy Cleaning",
+        "description": "Specialized restaurant and kitchen cleaning with hygiene standards"
+      },
+      "medicalCleaning": {
+        "title": "Medical Practice Cleaning",
+        "description": "Hygienic cleaning for medical practices and clinics"
+      },
+      "constructionCleaning": {
+        "title": "Construction Cleaning",
+        "description": "Post-construction and renovation cleaning for dust-free handover"
+      },
+      "propertyMaintenance": {
+        "title": "Property Maintenance",
+        "description": "Comprehensive property maintenance and facility services"
+      },
+      "specialCleaning": {
+        "title": "Special Cleaning",
+        "description": "Specialized cleaning for unique needs and situations"
+      },
+      "comboService": {
+        "title": "Moving + Cleaning (Combo)",
+        "description": "Combined moving service with final cleaning and handover guarantee"
       }
     },
     "testimonials": {
@@ -138,6 +162,48 @@
         "Bulky waste",
         "Professional disposal",
         "Environmentally friendly"
+      ],
+      "gastronomyCleaning": [
+        "Kitchen and equipment cleaning",
+        "Hygienic disinfection",
+        "Exhaust hoods and filters",
+        "Floors and work surfaces",
+        "HACCP-compliant cleaning"
+      ],
+      "medicalCleaning": [
+        "Treatment rooms and waiting areas",
+        "Sanitary disinfection",
+        "Contact surfaces",
+        "Waste disposal",
+        "Hygiene concept support"
+      ],
+      "constructionCleaning": [
+        "Dust and debris removal",
+        "Window and frame cleaning",
+        "Floor sweeping and mopping",
+        "Final cleaning for handover",
+        "Construction site waste disposal"
+      ],
+      "propertyMaintenance": [
+        "Stairwell cleaning",
+        "Outdoor area care",
+        "Small repairs",
+        "Winter service",
+        "Property supervision"
+      ],
+      "specialCleaning": [
+        "Deep cleaning",
+        "Allergen removal",
+        "Delicate materials",
+        "Odor removal",
+        "Custom solutions"
+      ],
+      "comboService": [
+        "Professional moving team",
+        "Packing and transport",
+        "Final cleaning with guarantee",
+        "Insurance coverage",
+        "Single point of contact"
       ]
     },
     "pricingUnits": {
@@ -173,14 +239,14 @@
       "windowCleaningTitle": "Window Cleaning"
     },
     "pricing": {
-      "houseCleaning": "CHF 35/hour",
-      "apartmentCleaning": "CHF 280",
-      "stairwellCleaning": "CHF 45/hour",
-      "officeCleaning": "CHF 30/hour",
-      "finalCleaning": "CHF 320",
-      "windowCleaning": "CHF 25/hour",
-      "relocation": "CHF 120/hour",
-      "disposal": "CHF 80/hour"
+      "houseCleaning": "CHF 45–65 / hour / staff",
+      "apartmentCleaning": "CHF 45–65 / hour / staff",
+      "stairwellCleaning": "flat rate from CHF 120",
+      "officeCleaning": "CHF 0.80–1.50 / m²",
+      "finalCleaning": "from CHF 250",
+      "windowCleaning": "CHF 8–15 per window",
+      "relocation": "from CHF 160 / hour",
+      "disposal": "from CHF 30 / m³"
     }
   },
   "about": {
@@ -268,6 +334,65 @@
           "title": "Trust",
           "description": "Long-term partnerships with our customers"
         }
+      }
+    }
+    ,
+    "calendar": {
+      "title": "Calendar",
+      "subtitle": "Manage cleaning appointments and schedules",
+      "actions": {
+        "newAppointment": "New Appointment",
+        "edit": "Edit",
+        "cancel": "Cancel"
+      },
+      "viewModes": {
+        "month": "month",
+        "week": "week",
+        "day": "day"
+      },
+      "search": {
+        "placeholder": "Search appointments..."
+      },
+      "filters": {
+        "allStatus": "All Status"
+      },
+      "status": {
+        "scheduled": "Scheduled",
+        "inProgress": "In Progress",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      },
+      "days": {
+        "sun": "Sun",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat"
+      },
+      "months": {
+        "0": "January",
+        "1": "February",
+        "2": "March",
+        "3": "April",
+        "4": "May",
+        "5": "June",
+        "6": "July",
+        "7": "August",
+        "8": "September",
+        "9": "October",
+        "10": "November",
+        "11": "December"
+      },
+      "modal": {
+        "title": "Appointment Details",
+        "serviceDetails": "Service Details",
+        "clientInformation": "Client Information",
+        "notes": "Notes"
+      },
+      "errors": {
+        "loadAppointments": "Failed to load appointments"
       }
     }
   },
@@ -376,7 +501,9 @@
         "selectPlaceholder": "Please select...",
         "additionalServices": "Additional Services",
         "specialRequests": "Special requests or comments",
-        "placeholder": "Describe here special requirements, access possibilities or other important information..."
+        "placeholder": "Describe here special requirements, access possibilities or other important information...",
+        "startDate": "Starting Date",
+        "finishDate": "Finishing Date"
       },
       "propertyTypes": {
         "apartment": "Apartment",
@@ -486,6 +613,799 @@
   },
   "whatsapp": {
     "message": "Hello! I'm interested in your services."
+  },
+  "admin": {
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "newProject": "New Project",
+      "clients": "Clients",
+      "quoteRequests": "Quote Requests",
+      "contactMessages": "Contact Messages",
+      "serviceForms": "Service Forms",
+      "emailCommunication": "Email Communication",
+      "gallery": "Gallery",
+      "calendar": "Calendar"
+    },
+    "topbar": {
+      "searchPlaceholder": "Quick search...",
+      "language": "Language",
+      "switchTheme": "Switch to {mode} mode",
+      "dark": "dark",
+      "light": "light"
+    },
+    "user": {
+      "admin": "Admin",
+      "signOut": "Sign out"
+    },
+    "toast": {
+      "loggedOut": "Logged out successfully",
+      "logoutFailed": "Logout failed",
+      "loginSuccess": "Login successful!",
+      "loginFailed": "Login failed"
+    },
+    "login": {
+      "title": "Admin Login",
+      "subtitle": "SwissCleanMove Dashboard",
+      "fields": {
+        "email": "Email Address",
+        "password": "Password"
+      },
+      "placeholders": {
+        "email": "admin@swisscleanmove.ch",
+        "password": "Enter your password"
+      },
+      "validation": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email address",
+        "passwordRequired": "Password is required",
+        "passwordMinLength": "Password must be at least {count} characters"
+      },
+      "actions": {
+        "signIn": "Sign In",
+        "signingIn": "Signing in..."
+      },
+      "returnToSite": "Return to site",
+      "demo": {
+        "title": "Demo Credentials:",
+        "emailLabel": "Email:",
+        "passwordLabel": "Password:"
+      },
+      "errors": {
+        "loginFailed": "Login failed"
+      }
+    },
+    "dashboard": {
+      "title": "Analytics Dashboard",
+      "subtitle": "Comprehensive business insights and performance metrics",
+      "filters": {
+        "monthlyView": "Monthly View",
+        "annualView": "Annual View",
+        "year": "{year}"
+      },
+      "kpi": {
+        "totalRevenue": "Total Revenue",
+        "totalClients": "Total Clients",
+        "completionRate": "Completion Rate",
+        "pendingAmount": "Pending Amount",
+        "vsLastMonth": "vs last month",
+        "excellent": "Excellent",
+        "needsAttention": "Needs attention"
+      },
+      "charts": {
+        "revenueTrend": {
+          "title": "Revenue Trend",
+          "subtitle": "Monthly revenue performance",
+          "revenue": "Revenue"
+        },
+        "paymentStatus": {
+          "title": "Payment Status",
+          "subtitle": "Distribution of payment statuses",
+          "clients": "Clients",
+          "status": {
+            "paid": "Paid",
+            "partial": "Partial",
+            "unpaid": "Unpaid",
+            "completed": "Completed",
+            "cancelled": "Cancelled",
+            "unknown": "Unknown"
+          }
+        }
+      },
+      "errors": {
+        "fetchAnalytics": "Failed to fetch analytics",
+        "fetchAnalyticsToast": "Failed to fetch analytics data"
+      },
+      "sections": {
+        "serviceDistribution": {
+          "title": "Service Distribution",
+          "subtitle": "Most popular cleaning services",
+          "clientsCount": "{count} clients"
+        },
+        "clientGrowth": {
+          "title": "Client Growth",
+          "subtitle": "Monthly client acquisition",
+          "newClients": "New Clients"
+        }
+      },
+      "report": {
+        "monthly": "Monthly",
+        "annual": "Annual",
+        "performanceReport": "Performance Report",
+        "subtitle": "Comprehensive business performance analysis",
+        "revenueGrowth": "Revenue Growth",
+        "clientGrowth": "Client Growth",
+        "avgProjectValue": "Avg. Project Value"
+      }
+    },
+    "quotes": {
+      "title": "Quote Requests",
+      "subtitle": "Manage free quote submissions",
+      "filter": {
+        "allStatus": "All Status"
+      },
+      "status": {
+        "new": "New",
+        "contacted": "Contacted",
+        "converted": "Converted",
+        "rejected": "Rejected"
+      },
+      "stats": {
+        "totalRequests": "Total Requests"
+      },
+      "table": {
+        "client": "Client",
+        "contact": "Contact",
+        "service": "Service",
+        "date": "Date",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "submitted": "Submitted",
+        "serviceType": "Service Type",
+        "additionalDetails": "Additional Details",
+        "status": "Status"
+      },
+      "actions": {
+        "viewDetails": "View Details",
+        "downloadPdf": "Download as PDF",
+        "downloadPdfButton": "Download PDF",
+        "close": "Close"
+      },
+      "modal": {
+        "title": "Quote Request Details",
+        "contactInfo": "Contact Information",
+        "serviceDetails": "Service Details"
+      },
+      "toast": {
+        "statusUpdated": "Status updated"
+      },
+      "errors": {
+        "fetch": "Failed to fetch quotes",
+        "load": "Failed to load quote requests",
+        "updateStatus": "Failed to update status"
+      }
+    },
+    "contacts": {
+      "title": "Contact Messages",
+      "subtitle": "Manage contact form submissions",
+      "filter": {
+        "allStatus": "All Status"
+      },
+      "status": {
+        "new": "New",
+        "read": "Read",
+        "replied": "Replied",
+        "archived": "Archived"
+      },
+      "stats": {
+        "totalMessages": "Total Messages"
+      },
+      "table": {
+        "name": "Name",
+        "contact": "Contact",
+        "subject": "Subject",
+        "date": "Date",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "submitted": "Submitted",
+        "subject": "Subject",
+        "message": "Message",
+        "status": "Status"
+      },
+      "actions": {
+        "viewDetails": "View Details",
+        "downloadPdf": "Download as PDF",
+        "downloadPdfButton": "Download PDF",
+        "close": "Close"
+      },
+      "modal": {
+        "title": "Contact Message Details",
+        "contactInfo": "Contact Information",
+        "messageDetails": "Message Details"
+      },
+      "toast": {
+        "statusUpdated": "Status updated"
+      },
+      "errors": {
+        "fetch": "Failed to fetch contacts",
+        "load": "Failed to load contact messages",
+        "updateStatus": "Failed to update status"
+      }
+    },
+    "clients": {
+      "title": "Clients Management",
+      "subtitle": "Manage all your cleaning service clients",
+      "search": {
+        "placeholder": "Search clients by name, email, phone, or location..."
+      },
+      "filters": {
+        "allStatus": "All Status",
+        "allServices": "All Services"
+      },
+      "status": {
+        "paid": "Paid",
+        "partial": "Partial",
+        "unpaid": "Unpaid",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      },
+      "services": {
+        "maintenanceCleaning": "Maintenance Cleaning",
+        "houseCleaning": "House Cleaning",
+        "apartmentCleaning": "Apartment Cleaning",
+        "stairwellCleaning": "Stairwell Cleaning",
+        "officeCleaning": "Office Cleaning",
+        "finalCleaning": "Final Cleaning",
+        "windowCleaning": "Window Cleaning",
+        "relocation": "Relocation",
+        "disposal": "Disposal",
+        "gastronomyCleaning": "Gastronomy Cleaning",
+        "medicalCleaning": "Medical Cleaning",
+        "constructionCleaning": "Construction Cleaning",
+        "propertyMaintenance": "Property Maintenance",
+        "specialCleaning": "Special Cleaning",
+        "comboService": "Combo Service"
+      },
+      "actions": {
+        "addNewClient": "Add New Client",
+        "export": "Export",
+        "exportExcel": "Export as Excel",
+        "exportPdf": "Export as PDF",
+        "actions": "Actions",
+        "clientActionsTitle": "Client actions",
+        "editClient": "Edit Client",
+        "addPayment": "Add Payment",
+        "createInvoice": "Create Invoice",
+        "addPhotos": "Add Photos",
+        "deleteClient": "Delete Client",
+        "cancel": "Cancel"
+      },
+      "table": {
+        "client": "Client",
+        "contact": "Contact",
+        "service": "Service",
+        "schedule": "Schedule",
+        "payment": "Payment",
+        "status": "Status",
+        "actions": "Actions",
+        "to": "to {date}",
+        "paymentLine": "Paid: CHF {paid} • Balance: CHF {balance}"
+      },
+      "empty": "No clients found",
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next",
+        "showingPageOf": "Showing page {page} of {totalPages}"
+      },
+      "invoiceLanguage": {
+        "title": "Select Invoice Language",
+        "subtitle": "Choose the language for the invoice",
+        "german": "German",
+        "french": "French",
+        "english": "English"
+      },
+      "toast": {
+        "fetchFailed": "Failed to fetch clients",
+        "fetchError": "Error fetching clients",
+        "sendingInvoice": "Sending invoice to client...",
+        "invoiceOpenedAndSent": "Invoice opened and sent to client via email!",
+        "invoiceOpened": "Invoice opened for printing!",
+        "sendEmailFailed": "Failed to send email to client",
+        "noEmail": "Client has no email address",
+        "generateInvoiceFailed": "Failed to generate invoice",
+        "generateInvoiceError": "Error generating invoice"
+      },
+      "export": {
+        "totalClients": "Total Clients",
+        "totalRevenue": "Total Revenue",
+        "excel": {
+          "headers": {
+            "name": "Name",
+            "email": "Email",
+            "phone": "Phone",
+            "address": "Address",
+            "location": "Location",
+            "serviceType": "Service Type",
+            "buildingType": "Building Type",
+            "squareMeters": "Square Meters",
+            "fromDate": "From Date",
+            "untilDate": "Until Date",
+            "totalPrice": "Total Price (CHF)",
+            "paidAmount": "Paid Amount (CHF)",
+            "balance": "Balance (CHF)",
+            "status": "Status",
+            "createdDate": "Created Date"
+          },
+          "toast": {
+            "none": "No clients to export",
+            "success": "Excel file exported successfully! ({count} clients)",
+            "failed": "Failed to export Excel file"
+          }
+        },
+        "pdf": {
+          "documentTitle": "Clients Report",
+          "reportTitle": "Clients Report",
+          "generatedOn": "Generated on {date}",
+          "to": "to {date}",
+          "paymentLine": "Paid: CHF {paid} • Balance: CHF {balance}",
+          "footerCompanyLine": "SwissClean Move - Professional Cleaning Services",
+          "table": {
+            "name": "Name",
+            "contact": "Contact",
+            "service": "Service",
+            "schedule": "Schedule",
+            "payment": "Payment",
+            "status": "Status"
+          },
+          "toast": {
+            "none": "No clients to export",
+            "allowPopups": "Please allow popups to export PDF"
+          }
+        },
+        "toast": {
+          "pdfOpened": "PDF report opened for printing! ({count} clients)",
+          "pdfFailed": "Failed to export PDF"
+        }
+      }
+    },
+    "serviceForms": {
+      "title": "Service Form Submissions",
+      "subtitle": "Manage and review service requests",
+      "totalSubmissions": "Total: {count} submissions",
+      "search": {
+        "placeholder": "Search by name, email, or service..."
+      },
+      "filters": {
+        "allServices": "All Services"
+      },
+      "table": {
+        "customer": "Customer",
+        "service": "Service",
+        "contact": "Contact",
+        "submitted": "Submitted",
+        "actions": "Actions"
+      },
+      "empty": "No submissions found",
+      "actions": {
+        "viewDetails": "View Details",
+        "view": "View",
+        "downloadPdf": "Download PDF",
+        "downloadPdfButton": "Download PDF",
+        "pdf": "PDF"
+      },
+      "modal": {
+        "title": "Submission Details",
+        "customerInformation": "Customer Information",
+        "serviceDetails": "Service Details",
+        "relocationDetails": "Relocation Details",
+        "cleaningDetails": "Cleaning Details",
+        "disposalDetails": "Disposal Details",
+        "storageDetails": "Storage Details",
+        "completeFormDetails": "Complete Form Details",
+        "additionalRemarks": "Additional Remarks"
+      },
+      "fields": {
+        "salutation": "Salutation",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "service": "Service",
+        "formType": "Form Type",
+        "submissionDate": "Submission Date",
+        "preferredContact": "Preferred Contact",
+        "viewingWelcome": "Viewing Welcome",
+        "movingDate": "Moving Date",
+        "numberOfRooms": "Number of Rooms",
+        "livingSpace": "Living Space",
+        "floors": "Floors",
+        "unloadingAddress": "Unloading Address",
+        "additionalServices": "Additional Services",
+        "services": "Services",
+        "assemblyLiftDetails": "Assembly & Lift Details",
+        "assembly": "Assembly",
+        "lift": "Lift",
+        "liftDisassembly": "Disassembly",
+        "pathToFrontDoor": "Path to front door",
+        "pathDistanceM": "Path to front door (m)",
+        "heavyLoad": "Heavy load",
+        "apartmentType": "Apartment Type",
+        "area": "Area",
+        "awningType": "Awning Type",
+        "cleaningDate": "Cleaning Date",
+        "submissionDeadline": "Submission Deadline",
+        "additionalAreas": "Additional Areas",
+        "specialServices": "Special Services",
+        "disposalType": "Disposal Type",
+        "volume": "Volume",
+        "collectionDate": "Collection Date",
+        "specialItems": "Special Items",
+        "storageDuration": "Storage Duration",
+        "storageSize": "Storage Size",
+        "startDate": "Start Date",
+        "specialRequirements": "Special Requirements"
+      },
+      "services": {
+        "pack": "Pack",
+        "cellar": "Cellar",
+        "garage": "Garage",
+        "screed": "Screed",
+        "craftRoom": "Craft Room",
+        "unpacking": "Unpacking",
+        "cleaning": "Cleaning",
+        "disposal": "Disposal",
+        "carpetShampooing": "Carpet Shampooing",
+        "conservatory": "Conservatory",
+        "outdoorSeating": "Outdoor Seating",
+        "parquet": "Parquet",
+        "stairPolish": "Stair Polish"
+      },
+      "categories": {
+        "basicInformation": "Basic Information",
+        "contactDetails": "Contact Details",
+        "addressInformation": "Address Information",
+        "serviceDetails": "Service Details",
+        "additionalServices": "Additional Services",
+        "notesRemarks": "Notes & Remarks"
+      },
+      "allFields": {
+        "serviceName": "Service Name",
+        "formType": "Form Type",
+        "salutation": "Salutation",
+        "lastName": "Last Name",
+        "firstName": "First Name",
+        "emailAddress": "Email Address",
+        "telephone": "Telephone",
+        "preferredContactMethod": "Preferred Contact Method",
+        "streetAndNumber": "Street & Number",
+        "postalCodeAndCity": "Postal Code & City",
+        "unloadingStreetAndNumber": "Unloading Street & Number",
+        "unloadingPostalCodeAndCity": "Unloading Postal Code & City",
+        "movingDate": "Moving Date",
+        "viewingWelcome": "Viewing Welcome",
+        "numberOfFloors": "Number of Floors",
+        "numberOfRooms": "Number of Rooms",
+        "livingSpaceM2": "Living Space (m²)",
+        "assemblyRequired": "Assembly Required",
+        "liftAvailable": "Lift Available",
+        "liftDisassembly": "Lift Disassembly",
+        "pathToFrontDoor": "Path to Front Door",
+        "pathDistanceM": "Path Distance (m)",
+        "heavyLoad": "Heavy Load",
+        "unpackingService": "Unpacking Service",
+        "cleaningService": "Cleaning Service",
+        "disposalService": "Disposal Service",
+        "packingService": "Packing Service",
+        "screedProtection": "Screed Protection",
+        "garage": "Garage",
+        "additionalRemarks": "Additional Remarks"
+      },
+      "common": {
+        "yes": "Yes",
+        "no": "No",
+        "included": "Included",
+        "notSpecified": "Not specified",
+        "noneSpecified": "None specified",
+        "generalDisposal": "General disposal"
+      },
+      "toast": {
+        "pdfDownloaded": "PDF downloaded successfully"
+      },
+      "errors": {
+        "fetchSubmissions": "Failed to fetch submissions",
+        "generatePdf": "Failed to generate PDF"
+      }
+    }
+    ,
+    "email": {
+      "title": "Email Communication",
+      "subtitle": "Send emails to customers and manage communication",
+      "tabs": {
+        "contacts": "Contacts ({count})",
+        "clients": "Clients ({count})"
+      },
+      "search": {
+        "contactsPlaceholder": "Search contacts...",
+        "clientsPlaceholder": "Search clients..."
+      },
+      "filters": {
+        "all": "All",
+        "new": "New",
+        "replied": "Replied"
+      },
+      "loading": "Loading...",
+      "source": {
+        "contact": "Contact",
+        "quote": "Quote",
+        "client": "Client"
+      },
+      "subjects": {
+        "quoteRequest": "Quote Request: {service}",
+        "client": "Client: {service}"
+      },
+      "messageDetails": {
+        "address": "Address",
+        "city": "City",
+        "propertyType": "Property Type",
+        "rooms": "Rooms",
+        "area": "Area",
+        "preferredDate": "Preferred Date",
+        "urgency": "Urgency",
+        "additionalServices": "Additional Services",
+        "message": "Message"
+      },
+      "composer": {
+        "title": "Compose Email",
+        "to": "To",
+        "phone": "Phone",
+        "service": "Service"
+      },
+      "originalMessage": {
+        "title": "Original Message:"
+      },
+      "form": {
+        "subjectLabel": "Subject",
+        "subjectPlaceholder": "Email subject",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Type your message here..."
+      },
+      "actions": {
+        "sending": "Sending...",
+        "sendEmail": "Send Email",
+        "cancel": "Cancel"
+      },
+      "empty": {
+        "noMessage": "No message",
+        "noContacts": "No contacts found",
+        "noClients": "No clients found",
+        "noSelectionTitle": "No Contact Selected",
+        "noSelectionSubtitle": "Select a contact from the list to compose an email"
+      },
+      "toast": {
+        "emailSent": "Email sent successfully!"
+      },
+      "errors": {
+        "loadContacts": "Failed to load contacts",
+        "loadClients": "Failed to load clients",
+        "fillAllFields": "Please fill in all fields",
+        "sendFailed": "Failed to send email",
+        "sendException": "Error sending email: {message}",
+        "clientNoEmail": "This client has no email address"
+      },
+      "status": {
+        "contact": {
+          "new": "New",
+          "replied": "Replied",
+          "other": "Other"
+        },
+        "client": {
+          "paid": "Paid",
+          "unpaid": "Unpaid",
+          "other": "Other"
+        }
+      },
+      "common": {
+        "na": "N/A",
+        "unknownError": "Unknown error"
+      }
+    }
+    ,
+    "gallery": {
+      "title": "Client Gallery",
+      "subtitle": "Upload and manage photos for client profiles",
+      "clientsCount": "{count} clients",
+      "search": {
+        "placeholder": "Search clients by name, email, phone, or service..."
+      },
+      "empty": {
+        "noClientsTitle": "No clients found",
+        "noClientsSearchHint": "Try adjusting your search criteria",
+        "noClientsDefaultHint": "Clients will appear here once they are added to the system"
+      },
+      "photos": {
+        "title": "Photos ({count})",
+        "emptyTitle": "No photos yet",
+        "emptySubtitle": "Click \"Add Photos\" to upload"
+      },
+      "actions": {
+        "uploading": "Uploading...",
+        "addPhotos": "Add Photos"
+      },
+      "confirm": {
+        "deletePhoto": "Are you sure you want to delete this photo?"
+      },
+      "toast": {
+        "uploaded": "{count} photo(s) uploaded successfully!",
+        "deleted": "Photo deleted successfully"
+      },
+      "errors": {
+        "loadClients": "Failed to load clients",
+        "uploadFailed": "Failed to upload photos",
+        "uploadError": "Error uploading photos",
+        "deleteFailed": "Failed to delete photo",
+        "deleteError": "Error deleting photo"
+      },
+      "status": {
+        "paid": "Paid",
+        "unpaid": "Unpaid",
+        "other": "Other"
+      }
+    }
+    ,
+    "newProject": {
+      "title": "Create New Project",
+      "subtitle": "Follow the steps to create a new cleaning project",
+      "stepLabel": "STEP {step}",
+      "steps": {
+        "service": "Service",
+        "schedule": "Schedule",
+        "building": "Building",
+        "customer": "Customer",
+        "pricing": "Pricing"
+      },
+      "actions": {
+        "previous": "Previous",
+        "next": "Next",
+        "creating": "Creating...",
+        "createProject": "Create Project"
+      },
+      "toast": {
+        "fillRequired": "Please fill in all required fields before proceeding",
+        "created": "Project created successfully!",
+        "createFailed": "Failed to create project",
+        "errorOccurred": "An error occurred"
+      },
+      "validation": {
+        "required": "This field is required"
+      },
+      "common": {
+        "yes": "Yes",
+        "no": "No",
+        "notSelected": "Not selected"
+      },
+      "step1": {
+        "title": "Choose Your Service",
+        "subtitle": "Select the type of cleaning service you need",
+        "selectedTitle": "✓ Service Selected",
+        "requiredTitle": "⚠ Service Required",
+        "requiredText": "Please select a service to continue"
+      },
+      "services": {
+        "maintenanceCleaning": "Maintenance Cleaning",
+        "houseCleaning": "House Cleaning",
+        "apartmentCleaning": "Apartment Cleaning",
+        "stairwellCleaning": "Stairwell Cleaning",
+        "officeCleaning": "Office Cleaning",
+        "finalCleaning": "Final Cleaning",
+        "windowCleaning": "Window Cleaning",
+        "relocation": "Relocation",
+        "disposal": "Disposal",
+        "gastronomyCleaning": "Gastronomy Cleaning",
+        "medicalCleaning": "Medical Cleaning",
+        "constructionCleaning": "Construction Cleaning",
+        "propertyMaintenance": "Property Maintenance",
+        "specialCleaning": "Special Cleaning",
+        "comboService": "Combo Service"
+      },
+      "step2": {
+        "title": "Schedule Service",
+        "subtitle": "When would you like the service to be performed?",
+        "fromDate": "From Date",
+        "untilDate": "Until Date",
+        "confirmedTitle": "Schedule Confirmed",
+        "summaryFrom": "From",
+        "summaryUntil": "Until"
+      },
+      "step3": {
+        "title": "Building Information",
+        "subtitle": "Tell us about the property to be cleaned",
+        "buildingType": "Building Type",
+        "selectBuildingType": "Select building type",
+        "rooms": "Number of Rooms",
+        "selectRooms": "Select rooms",
+        "floor": "Floor",
+        "selectFloor": "Select floor",
+        "squareMeters": "Square Meters",
+        "squareMetersPlaceholder": "Enter square meters",
+        "elevator": "Elevator Available"
+      },
+      "buildingTypes": {
+        "apartment": "Apartment",
+        "house": "House",
+        "office": "Office",
+        "restaurant": "Restaurant",
+        "commercial": "Commercial"
+      },
+      "roomsOptions": {
+        "one": "1 Room",
+        "two": "2 Rooms",
+        "three": "3 Rooms",
+        "four": "4 Rooms",
+        "fivePlus": "5+ Rooms"
+      },
+      "floorOptions": {
+        "ground": "Ground floor",
+        "first": "1st floor",
+        "second": "2nd floor",
+        "third": "3rd floor",
+        "fourth": "4th floor",
+        "fivePlus": "5+ floor"
+      },
+      "step4": {
+        "title": "Customer Information",
+        "subtitle": "Please provide customer contact details",
+        "prefix": "Prefix",
+        "selectPrefix": "Select",
+        "firstName": "First Name",
+        "firstNamePlaceholder": "Enter first name",
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Enter last name",
+        "address": "Address",
+        "addressPlaceholder": "Enter full address",
+        "phone": "Phone",
+        "phonePlaceholder": "Enter phone number",
+        "email": "Email",
+        "emailPlaceholder": "Enter email address",
+        "location": "Location",
+        "locationPlaceholder": "Enter city/location",
+        "postalCode": "Postal Code",
+        "postalCodePlaceholder": "Enter postal code"
+      },
+      "prefixOptions": {
+        "mr": "Mr.",
+        "mrs": "Mrs.",
+        "ms": "Ms.",
+        "dr": "Dr."
+      },
+      "step5": {
+        "title": "Pricing & Final Details",
+        "subtitle": "Set pricing and add any additional remarks",
+        "totalPrice": "Total Price (CHF)",
+        "advancePayment": "Advance Payment (CHF)",
+        "summaryTitle": "Payment Summary",
+        "summaryTotal": "Total Price",
+        "summaryAdvance": "Advance Payment",
+        "summaryRemaining": "Remaining Balance",
+        "remarks1": "Remarks 1",
+        "remarks2": "Remarks 2",
+        "remarks3": "Remarks 3",
+        "remarksPlaceholder": "Additional notes or special instructions...",
+        "projectSummaryTitle": "Project Summary",
+        "summaryService": "Service",
+        "summaryBuilding": "Building",
+        "summaryCustomer": "Customer",
+        "summaryTotalLabel": "Total"
+      }
+    }
   },
   "common": {
     "learnMore": "Learn More",
@@ -599,6 +1519,42 @@
           "Horw",
           "Meggen"
         ]
+      },
+      "biel": {
+        "name": "Biel/Bienne",
+        "description": "Professional services in the bilingual Biel/Bienne region",
+        "coverage": "City of Biel/Bienne and surrounding areas",
+        "areas": [
+          "Biel/Bienne",
+          "Nidau",
+          "Port",
+          "Ipsach",
+          "Evilard/Leubringen"
+        ]
+      },
+      "solothurn": {
+        "name": "Solothurn",
+        "description": "Reliable cleaning and moving in the Solothurn region",
+        "coverage": "Canton of Solothurn and nearby areas",
+        "areas": [
+          "Solothurn",
+          "Olten",
+          "Grenchen",
+          "Zuchwil",
+          "Derendingen"
+        ]
+      },
+      "jura": {
+        "name": "Jura",
+        "description": "Professional services across the Jura canton",
+        "coverage": "Canton Jura and neighboring areas",
+        "areas": [
+          "Delémont",
+          "Porrentruy",
+          "Saignelégier",
+          "Courgenay",
+          "Bassecourt"
+        ]
       }
     },
     "services": {
@@ -643,48 +1599,45 @@
       "storageSolutions": "Storage Solutions"
     },
     "additionalPrices": {
-      "windowCleaning": "CHF 8-15 per window",
-      "carpetCleaning": "CHF 25-40 per m²",
-      "applianceCleaning": "CHF 50-80 per appliance",
-      "garageBasement": "CHF 150-300 per space",
-      "disposalServices": "CHF 100-500 per load",
-      "storageSolutions": "CHF 80-200 per month"
+      "windowCleaning": "CHF 8–15 per window",
+      "carpetCleaning": "from CHF 8–15 / m²",
+      "applianceCleaning": "CHF 45–65 / hour",
+      "garageBasement": "from CHF 80",
+      "disposalServices": "from CHF 30 / m³",
+      "storageSolutions": "from CHF 70"
     },
     "plans": {
       "basic": {
-        "title": "Basic Cleaning",
-        "description": "Essential cleaning services for small spaces",
-        "price": "CHF 120",
+        "title": "Maintenance Cleaning",
+        "description": "Regular apartment & house cleaning (hourly)",
+        "price": "CHF 45–65 / hour / staff",
         "features": [
-          "Up to 2 rooms",
-          "Basic cleaning supplies",
-          "2-3 hours service",
-          "Quality guarantee"
+          "Maintenance cleaning",
+          "Flexible schedule",
+          "Transparent hourly rates",
+          "Professional team"
         ]
       },
       "standard": {
-        "title": "Standard Cleaning",
-        "description": "Comprehensive cleaning for medium-sized properties",
-        "price": "CHF 280",
+        "title": "End-of-Tenancy Cleaning",
+        "description": "With acceptance / deposit guarantee",
+        "price": "from CHF 250",
         "features": [
-          "Up to 4 rooms",
-          "Professional equipment",
-          "4-6 hours service",
-          "Deep cleaning included",
-          "Satisfaction guarantee"
+          "Apartments: from CHF 250",
+          "Houses: from CHF 900",
+          "Optional surcharges available",
+          "Acceptance guarantee"
         ]
       },
       "premium": {
-        "title": "Premium Cleaning",
-        "description": "Complete cleaning solution for large properties",
-        "price": "CHF 450",
+        "title": "Combo Service",
+        "description": "Moving + End-of-Tenancy Cleaning",
+        "price": "from CHF 650",
         "features": [
-          "Unlimited rooms",
-          "Premium cleaning products",
-          "Full day service",
-          "Move-out guarantee",
-          "Insurance coverage",
-          "Follow-up inspection"
+          "Apartments: from CHF 650",
+          "Houses: from CHF 1,950",
+          "Add-ons available",
+          "Price on request for large properties"
         ]
       }
     }
