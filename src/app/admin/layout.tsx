@@ -1,3 +1,6 @@
+import { NextIntlClientProvider } from 'next-intl'
+import messages from '../../../messages/en.json'
+
 export const dynamic = 'force-dynamic'
 
 export default function AdminRootLayout({
@@ -5,5 +8,9 @@ export default function AdminRootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <NextIntlClientProvider locale="en" messages={messages as any}>
+      {children}
+    </NextIntlClientProvider>
+  )
 }
