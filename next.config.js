@@ -69,6 +69,17 @@ const nextConfig = {
       }
     ]
   },
+
+  webpack: (config, { isServer }) => {
+    // Workaround for intermittent missing `.next/server/vendor-chunks/*` modules on Windows
+    // (e.g. `Cannot find module './vendor-chunks/@formatjs.js'`) by avoiding server vendor chunk splitting.
+    if (isServer) {
+      config.optimization = config.optimization || {}
+      config.optimization.splitChunks = false
+    }
+
+    return config
+  },
 }
 
 module.exports = withNextIntl(nextConfig);

@@ -420,65 +420,6 @@
         }
       }
     }
-    ,
-    "calendar": {
-      "title": "Kalender",
-      "subtitle": "Reinigungstermine und Zeitpläne verwalten",
-      "actions": {
-        "newAppointment": "Neuer Termin",
-        "edit": "Bearbeiten",
-        "cancel": "Stornieren"
-      },
-      "viewModes": {
-        "month": "Monat",
-        "week": "Woche",
-        "day": "Tag"
-      },
-      "search": {
-        "placeholder": "Termine suchen..."
-      },
-      "filters": {
-        "allStatus": "Alle Status"
-      },
-      "status": {
-        "scheduled": "Geplant",
-        "inProgress": "In Bearbeitung",
-        "completed": "Abgeschlossen",
-        "cancelled": "Storniert"
-      },
-      "days": {
-        "sun": "So",
-        "mon": "Mo",
-        "tue": "Di",
-        "wed": "Mi",
-        "thu": "Do",
-        "fri": "Fr",
-        "sat": "Sa"
-      },
-      "months": {
-        "0": "Januar",
-        "1": "Februar",
-        "2": "März",
-        "3": "April",
-        "4": "Mai",
-        "5": "Juni",
-        "6": "Juli",
-        "7": "August",
-        "8": "September",
-        "9": "Oktober",
-        "10": "November",
-        "11": "Dezember"
-      },
-      "modal": {
-        "title": "Termindetails",
-        "serviceDetails": "Servicedetails",
-        "clientInformation": "Kundeninformationen",
-        "notes": "Notizen"
-      },
-      "errors": {
-        "loadAppointments": "Termine konnten nicht geladen werden"
-      }
-    }
   },
   "contact": {
     "title": "Kontakt",
@@ -1134,6 +1075,64 @@
       "emailCommunication": "E-Mail-Kommunikation",
       "gallery": "Galerie",
       "calendar": "Kalender"
+    },
+    "calendar": {
+      "title": "Kalender",
+      "subtitle": "Reinigungstermine und Zeitpläne verwalten",
+      "actions": {
+        "newAppointment": "Neuer Termin",
+        "edit": "Bearbeiten",
+        "cancel": "Stornieren"
+      },
+      "viewModes": {
+        "month": "Monat",
+        "week": "Woche",
+        "day": "Tag"
+      },
+      "search": {
+        "placeholder": "Termine suchen..."
+      },
+      "filters": {
+        "allStatus": "Alle Status"
+      },
+      "status": {
+        "scheduled": "Geplant",
+        "inProgress": "In Bearbeitung",
+        "completed": "Abgeschlossen",
+        "cancelled": "Storniert"
+      },
+      "days": {
+        "sun": "So",
+        "mon": "Mo",
+        "tue": "Di",
+        "wed": "Mi",
+        "thu": "Do",
+        "fri": "Fr",
+        "sat": "Sa"
+      },
+      "months": {
+        "0": "Januar",
+        "1": "Februar",
+        "2": "März",
+        "3": "April",
+        "4": "Mai",
+        "5": "Juni",
+        "6": "Juli",
+        "7": "August",
+        "8": "September",
+        "9": "Oktober",
+        "10": "November",
+        "11": "Dezember"
+      },
+      "modal": {
+        "title": "Termindetails",
+        "serviceDetails": "Servicedetails",
+        "clientInformation": "Kundeninformationen",
+        "notes": "Notizen"
+      },
+      "errors": {
+        "loadAppointments": "Termine konnten nicht geladen werden"
+      }
     },
     "topbar": {
       "searchPlaceholder": "Schnellsuche...",

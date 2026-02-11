@@ -420,65 +420,6 @@
         }
       }
     }
-    ,
-    "calendar": {
-      "title": "Calendrier",
-      "subtitle": "Gérer les rendez-vous et plannings de nettoyage",
-      "actions": {
-        "newAppointment": "Nouveau rendez-vous",
-        "edit": "Modifier",
-        "cancel": "Annuler"
-      },
-      "viewModes": {
-        "month": "mois",
-        "week": "semaine",
-        "day": "jour"
-      },
-      "search": {
-        "placeholder": "Rechercher des rendez-vous..."
-      },
-      "filters": {
-        "allStatus": "Tous les statuts"
-      },
-      "status": {
-        "scheduled": "Planifié",
-        "inProgress": "En cours",
-        "completed": "Terminé",
-        "cancelled": "Annulé"
-      },
-      "days": {
-        "sun": "Dim",
-        "mon": "Lun",
-        "tue": "Mar",
-        "wed": "Mer",
-        "thu": "Jeu",
-        "fri": "Ven",
-        "sat": "Sam"
-      },
-      "months": {
-        "0": "Janvier",
-        "1": "Février",
-        "2": "Mars",
-        "3": "Avril",
-        "4": "Mai",
-        "5": "Juin",
-        "6": "Juillet",
-        "7": "Août",
-        "8": "Septembre",
-        "9": "Octobre",
-        "10": "Novembre",
-        "11": "Décembre"
-      },
-      "modal": {
-        "title": "Détails du rendez-vous",
-        "serviceDetails": "Détails du service",
-        "clientInformation": "Informations client",
-        "notes": "Notes"
-      },
-      "errors": {
-        "loadAppointments": "Impossible de charger les rendez-vous"
-      }
-    }
   },
   "contact": {
     "title": "Contact",
@@ -1134,6 +1075,64 @@
       "emailCommunication": "Communication e-mail",
       "gallery": "Galerie",
       "calendar": "Calendrier"
+    },
+    "calendar": {
+      "title": "Calendrier",
+      "subtitle": "Gérer les rendez-vous et plannings de nettoyage",
+      "actions": {
+        "newAppointment": "Nouveau rendez-vous",
+        "edit": "Modifier",
+        "cancel": "Annuler"
+      },
+      "viewModes": {
+        "month": "mois",
+        "week": "semaine",
+        "day": "jour"
+      },
+      "search": {
+        "placeholder": "Rechercher des rendez-vous..."
+      },
+      "filters": {
+        "allStatus": "Tous les statuts"
+      },
+      "status": {
+        "scheduled": "Planifié",
+        "inProgress": "En cours",
+        "completed": "Terminé",
+        "cancelled": "Annulé"
+      },
+      "days": {
+        "sun": "Dim",
+        "mon": "Lun",
+        "tue": "Mar",
+        "wed": "Mer",
+        "thu": "Jeu",
+        "fri": "Ven",
+        "sat": "Sam"
+      },
+      "months": {
+        "0": "Janvier",
+        "1": "Février",
+        "2": "Mars",
+        "3": "Avril",
+        "4": "Mai",
+        "5": "Juin",
+        "6": "Juillet",
+        "7": "Août",
+        "8": "Septembre",
+        "9": "Octobre",
+        "10": "Novembre",
+        "11": "Décembre"
+      },
+      "modal": {
+        "title": "Détails du rendez-vous",
+        "serviceDetails": "Détails du service",
+        "clientInformation": "Informations client",
+        "notes": "Notes"
+      },
+      "errors": {
+        "loadAppointments": "Impossible de charger les rendez-vous"
+      }
     },
     "topbar": {
       "searchPlaceholder": "Recherche rapide...",

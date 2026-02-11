@@ -410,65 +410,6 @@
         }
       }
     }
-    ,
-    "calendar": {
-      "title": "Kalender",
-      "subtitle": "Beheer schoonmaakafspraken en planningen",
-      "actions": {
-        "newAppointment": "Nieuwe afspraak",
-        "edit": "Bewerken",
-        "cancel": "Annuleren"
-      },
-      "viewModes": {
-        "month": "maand",
-        "week": "week",
-        "day": "dag"
-      },
-      "search": {
-        "placeholder": "Afspraken zoeken..."
-      },
-      "filters": {
-        "allStatus": "Alle statussen"
-      },
-      "status": {
-        "scheduled": "Gepland",
-        "inProgress": "Bezig",
-        "completed": "Voltooid",
-        "cancelled": "Geannuleerd"
-      },
-      "days": {
-        "sun": "Zo",
-        "mon": "Ma",
-        "tue": "Di",
-        "wed": "Wo",
-        "thu": "Do",
-        "fri": "Vr",
-        "sat": "Za"
-      },
-      "months": {
-        "0": "Januari",
-        "1": "Februari",
-        "2": "Maart",
-        "3": "April",
-        "4": "Mei",
-        "5": "Juni",
-        "6": "Juli",
-        "7": "Augustus",
-        "8": "September",
-        "9": "Oktober",
-        "10": "November",
-        "11": "December"
-      },
-      "modal": {
-        "title": "Afspraakdetails",
-        "serviceDetails": "Servicedetails",
-        "clientInformation": "Klantinformatie",
-        "notes": "Notities"
-      },
-      "errors": {
-        "loadAppointments": "Afspraken laden mislukt"
-      }
-    }
   },
   "contact": {
     "title": "Contact",
@@ -1108,6 +1049,64 @@
       "emailCommunication": "E-mailcommunicatie",
       "gallery": "Galerij",
       "calendar": "Kalender"
+    },
+    "calendar": {
+      "title": "Kalender",
+      "subtitle": "Beheer schoonmaakafspraken en planningen",
+      "actions": {
+        "newAppointment": "Nieuwe afspraak",
+        "edit": "Bewerken",
+        "cancel": "Annuleren"
+      },
+      "viewModes": {
+        "month": "maand",
+        "week": "week",
+        "day": "dag"
+      },
+      "search": {
+        "placeholder": "Afspraken zoeken..."
+      },
+      "filters": {
+        "allStatus": "Alle statussen"
+      },
+      "status": {
+        "scheduled": "Gepland",
+        "inProgress": "Bezig",
+        "completed": "Voltooid",
+        "cancelled": "Geannuleerd"
+      },
+      "days": {
+        "sun": "Zo",
+        "mon": "Ma",
+        "tue": "Di",
+        "wed": "Wo",
+        "thu": "Do",
+        "fri": "Vr",
+        "sat": "Za"
+      },
+      "months": {
+        "0": "Januari",
+        "1": "Februari",
+        "2": "Maart",
+        "3": "April",
+        "4": "Mei",
+        "5": "Juni",
+        "6": "Juli",
+        "7": "Augustus",
+        "8": "September",
+        "9": "Oktober",
+        "10": "November",
+        "11": "December"
+      },
+      "modal": {
+        "title": "Afspraakdetails",
+        "serviceDetails": "Servicedetails",
+        "clientInformation": "Klantinformatie",
+        "notes": "Notities"
+      },
+      "errors": {
+        "loadAppointments": "Afspraken laden mislukt"
+      }
     },
     "topbar": {
       "searchPlaceholder": "Snel zoeken...",

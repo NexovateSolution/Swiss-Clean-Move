@@ -59,6 +59,19 @@ export default function CalendarPage() {
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState<string>('all')
+  const [newAppointment, setNewAppointment] = useState<Omit<Appointment, 'id'>>({
+    title: '',
+    clientName: '',
+    clientPhone: '',
+    clientEmail: '',
+    serviceType: '',
+    address: '',
+    startTime: '09:00',
+    endTime: '12:00',
+    date: new Date().toISOString().split('T')[0],
+    status: 'scheduled',
+    notes: ''
+  })
 
   useEffect(() => {
     fetchAppointments()
@@ -186,6 +199,51 @@ export default function CalendarPage() {
     
     return matchesSearch && matchesStatus
   })
+
+  const resetNewAppointment = () => {
+    setNewAppointment({
+      title: '',
+      clientName: '',
+      clientPhone: '',
+      clientEmail: '',
+      serviceType: '',
+      address: '',
+      startTime: '09:00',
+      endTime: '12:00',
+      date: new Date().toISOString().split('T')[0],
+      status: 'scheduled',
+      notes: ''
+    })
+  }
+
+  const handleCreateAppointment = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const requiredMissing =
+      !newAppointment.title.trim() ||
+      !newAppointment.clientName.trim() ||
+      !newAppointment.serviceType.trim() ||
+      !newAppointment.address.trim() ||
+      !newAppointment.date ||
+      !newAppointment.startTime ||
+      !newAppointment.endTime
+
+    if (requiredMissing) {
+      toast.error('Please fill in all required fields')
+      return
+    }
+
+    const created: Appointment = {
+      id: `${Date.now()}`,
+      ...newAppointment,
+      notes: newAppointment.notes?.trim() || undefined
+    }
+
+    setAppointments(prev => [...prev, created])
+    toast.success('Appointment created')
+    setShowAppointmentModal(false)
+    resetNewAppointment()
+  }
 
   if (loading) {
     return (
@@ -441,6 +499,190 @@ export default function CalendarPage() {
                       </button>
                     </div>
                   </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* New Appointment Modal */}
+        <AnimatePresence>
+          {showAppointmentModal && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+              onClick={() => {
+                setShowAppointmentModal(false)
+                resetNewAppointment()
+              }}
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="bg-white rounded-xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-2xl font-bold text-gray-900">{t('actions.newAppointment')}</h3>
+                    <button
+                      onClick={() => {
+                        setShowAppointmentModal(false)
+                        resetNewAppointment()
+                      }}
+                      className="text-gray-400 hover:text-gray-600 transition-colors"
+                    >
+                      <X className="w-6 h-6" />
+                    </button>
+                  </div>
+
+                  <form onSubmit={handleCreateAppointment} className="space-y-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Title *</label>
+                        <input
+                          value={newAppointment.title}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, title: e.target.value }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="e.g. Apartment Cleaning"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Type *</label>
+                        <input
+                          value={newAppointment.serviceType}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, serviceType: e.target.value }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="e.g. Apartment cleaning"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Client *</label>
+                        <input
+                          value={newAppointment.clientName}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, clientName: e.target.value }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="Client name"
+                          list="clientNames"
+                        />
+                        <datalist id="clientNames">
+                          {clients.map((c) => (
+                            <option key={c.id} value={`${c.firstName} ${c.lastName}`} />
+                          ))}
+                        </datalist>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Address *</label>
+                        <input
+                          value={newAppointment.address}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, address: e.target.value }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="Street, postal code, city"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Date *</label>
+                        <input
+                          type="date"
+                          value={newAppointment.date}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, date: e.target.value }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Start *</label>
+                        <input
+                          type="time"
+                          value={newAppointment.startTime}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, startTime: e.target.value }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">End *</label>
+                        <input
+                          type="time"
+                          value={newAppointment.endTime}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, endTime: e.target.value }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                        <input
+                          value={newAppointment.clientPhone}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, clientPhone: e.target.value }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="Phone"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input
+                          type="email"
+                          value={newAppointment.clientEmail}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, clientEmail: e.target.value }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="Email"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
+                        <select
+                          value={newAppointment.status}
+                          onChange={(e) => setNewAppointment(prev => ({ ...prev, status: e.target.value as Appointment['status'] }))}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                          <option value="scheduled">{t('status.scheduled')}</option>
+                          <option value="in-progress">{t('status.inProgress')}</option>
+                          <option value="completed">{t('status.completed')}</option>
+                          <option value="cancelled">{t('status.cancelled')}</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
+                      <textarea
+                        value={newAppointment.notes ?? ''}
+                        onChange={(e) => setNewAppointment(prev => ({ ...prev, notes: e.target.value }))}
+                        rows={3}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Optional notes"
+                      />
+                    </div>
+
+                    <div className="flex justify-end gap-3 pt-4 border-t">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setShowAppointmentModal(false)
+                          resetNewAppointment()
+                        }}
+                        className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50"
+                      >
+                        {t('actions.cancel')}
+                      </button>
+                      <button
+                        type="submit"
+                        className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                      >
+                        {t('actions.newAppointment')}
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </motion.div>
             </motion.div>
