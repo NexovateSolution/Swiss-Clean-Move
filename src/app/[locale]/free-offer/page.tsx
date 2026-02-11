@@ -127,13 +127,13 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit form');
+        throw new Error(t('freeOffer.errors.submitFailed'));
       }
 
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Failed to submit form. Please try again.');
+      alert(t('freeOffer.errors.submitFailedRetry'));
     } finally {
       setIsSubmitting(false);
     }

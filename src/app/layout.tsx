@@ -1,5 +1,3 @@
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/contexts/ThemeContext';
@@ -29,26 +27,11 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({
   children,
-  params
 }: {
   children: React.ReactNode;
-  params?: {locale?: string};
 }) {
-  // For admin routes, params might be undefined
-  const locale = params?.locale || 'en';
-  
-  // Only get messages for non-admin routes
-  let messages = {};
-  try {
-    if (params?.locale) {
-      messages = await getMessages();
-    }
-  } catch (error) {
-    // Ignore message loading errors for admin routes
-  }
-
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -59,13 +42,7 @@ export default async function RootLayout({
       </head>
       <body className="font-inter antialiased">
         <ThemeProvider>
-          {params?.locale ? (
-            <NextIntlClientProvider messages={messages}>
-              {children}
-            </NextIntlClientProvider>
-          ) : (
-            children
-          )}
+          {children}
         </ThemeProvider>
       </body>
     </html>

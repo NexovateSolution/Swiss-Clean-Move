@@ -40,28 +40,28 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   const slideImages = [
     {
       url: '/images/transportation.jpg',
-      title: 'Transport & Moving',
-      description: 'Private and commercial moves handled with care'
+      title: t('home.hero.slides.transport.title'),
+      description: t('home.hero.slides.transport.description')
     },
     {
       url: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      title: 'Professional House Cleaning',
-      description: 'Spotless results with Swiss precision'
+      title: t('home.hero.slides.houseCleaning.title'),
+      description: t('home.hero.slides.houseCleaning.description')
     },
     {
       url: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      title: 'Expert Moving Services',
-      description: 'Safe and reliable relocation across Switzerland'
+      title: t('home.hero.slides.expertMoving.title'),
+      description: t('home.hero.slides.expertMoving.description')
     },
     {
       url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      title: 'Office Cleaning Excellence',
-      description: 'Maintaining professional work environments'
+      title: t('home.hero.slides.office.title'),
+      description: t('home.hero.slides.office.description')
     },
     {
       url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      title: 'Final Cleaning Guarantee',
-      description: 'Get your full deposit back with our service'
+      title: t('home.hero.slides.final.title'),
+      description: t('home.hero.slides.final.description')
     }
   ];
   
@@ -221,7 +221,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 {/* Badge */}
                 <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium">
                   <Sparkles className="w-4 h-4 text-yellow-400" />
-                  <span>Switzerland's Premier Cleaning & Moving Service</span>
+                  <span>{t('home.hero.badge')}</span>
                 </div>
                 
                 {/* Main Heading */}
@@ -266,28 +266,28 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                       <Shield className="w-5 h-5" />
                       <span className="font-semibold">100%</span>
                     </div>
-                    <span className="text-sm text-blue-100">Guarantee</span>
+                    <span className="text-sm text-blue-100">{t('home.hero.trust.guarantee')}</span>
                   </div>
                   <div className="flex flex-col items-center lg:items-start space-y-2">
                     <div className="flex items-center space-x-2 text-green-400">
                       <MapPin className="w-5 h-5" />
                       <span className="font-semibold">26</span>
                     </div>
-                    <span className="text-sm text-blue-100">Cantons</span>
+                    <span className="text-sm text-blue-100">{t('home.hero.trust.cantons')}</span>
                   </div>
                   <div className="flex flex-col items-center lg:items-start space-y-2">
                     <div className="flex items-center space-x-2 text-green-400">
                       <Users className="w-5 h-5" />
                       <span className="font-semibold">5000+</span>
                     </div>
-                    <span className="text-sm text-blue-100">Happy Clients</span>
+                    <span className="text-sm text-blue-100">{t('home.hero.trust.happyClients')}</span>
                   </div>
                   <div className="flex flex-col items-center lg:items-start space-y-2">
                     <div className="flex items-center space-x-2 text-green-400">
                       <Clock className="w-5 h-5" />
                       <span className="font-semibold">24/7</span>
                     </div>
-                    <span className="text-sm text-blue-100">Support</span>
+                    <span className="text-sm text-blue-100">{t('home.hero.trust.support')}</span>
                   </div>
                 </div>
               </div>
@@ -374,7 +374,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                         <Sparkles className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <p className="font-bold text-gray-900 text-sm">Swiss Quality</p>
+                        <p className="font-bold text-gray-900 text-sm">{t('home.hero.qualityBadge.title')}</p>
                         <div className="flex space-x-1">
                           {[...Array(5)].map((_, i) => (
                             <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
@@ -524,7 +524,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                       
                       {/* CTA */}
                       <div className="flex items-center text-blue-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
-                        <span className="text-sm">Learn More</span>
+                        <span className="text-sm">{t('common.learnMore')}</span>
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
@@ -539,12 +539,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           
           {/* Bottom CTA */}
           <div className="text-center mt-16">
-            <p className="text-gray-600 mb-6">Need a custom solution? We're here to help!</p>
+            <p className="text-gray-600 mb-6">{t('home.services.customSolution')}</p>
             <Link 
               href={`/${locale}/services`} 
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              <span>View All Services</span>
+              <span>{t('home.services.viewAll')}</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -564,10 +564,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium mb-6">
               <Award className="w-4 h-4 text-yellow-400" />
-              <span>Trusted by Thousands</span>
+              <span>{t('home.numbers.badge')}</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Numbers That Speak</h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">Our commitment to excellence is reflected in every project we complete</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('home.numbers.title')}</h2>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">{t('home.numbers.subtitle')}</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -577,7 +577,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <Users className="w-8 h-8 text-green-400" />
                 </div>
                 <div className="text-4xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">5000+</div>
-                <div className="text-blue-100 font-medium">Happy Clients</div>
+                <div className="text-blue-100 font-medium">{t('home.numbers.items.happyClients')}</div>
               </div>
             </div>
             
@@ -587,7 +587,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
                 <div className="text-4xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">15000+</div>
-                <div className="text-blue-100 font-medium">Projects Completed</div>
+                <div className="text-blue-100 font-medium">{t('home.numbers.items.projectsCompleted')}</div>
               </div>
             </div>
             
@@ -597,7 +597,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <MapPin className="w-8 h-8 text-green-400" />
                 </div>
                 <div className="text-4xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">26</div>
-                <div className="text-blue-100 font-medium">Swiss Cantons</div>
+                <div className="text-blue-100 font-medium">{t('home.numbers.items.swissCantons')}</div>
               </div>
             </div>
             
@@ -607,7 +607,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <Clock className="w-8 h-8 text-green-400" />
                 </div>
                 <div className="text-4xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">10+</div>
-                <div className="text-blue-100 font-medium">Years Experience</div>
+                <div className="text-blue-100 font-medium">{t('home.numbers.items.yearsExperience')}</div>
               </div>
             </div>
           </div>
@@ -621,7 +621,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <div className="text-center space-y-6 mb-20">
             <div className="inline-flex items-center space-x-2 bg-green-100 text-green-800 rounded-full px-4 py-2 text-sm font-medium">
               <Heart className="w-4 h-4" />
-              <span>Customer Love</span>
+              <span>{t('home.testimonials.badge')}</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
               {t('home.testimonials.title')}
@@ -674,40 +674,40 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           {/* Trust Badges */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Trusted & Certified</h3>
-              <p className="text-gray-600">Our certifications and partnerships ensure the highest quality service</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('home.trustBadges.title')}</h3>
+              <p className="text-gray-600">{t('home.trustBadges.subtitle')}</p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
               <div className="text-center group">
                 <div className="bg-gray-50 rounded-xl p-6 group-hover:bg-blue-50 transition-colors duration-300">
                   <Shield className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <p className="font-semibold text-gray-900">ISO Certified</p>
-                  <p className="text-sm text-gray-600">Quality Management</p>
+                  <p className="font-semibold text-gray-900">{t('home.trustBadges.iso.title')}</p>
+                  <p className="text-sm text-gray-600">{t('home.trustBadges.iso.subtitle')}</p>
                 </div>
               </div>
               
               <div className="text-center group">
                 <div className="bg-gray-50 rounded-xl p-6 group-hover:bg-green-50 transition-colors duration-300">
                   <Award className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                  <p className="font-semibold text-gray-900">Swiss Quality</p>
-                  <p className="text-sm text-gray-600">Premium Standards</p>
+                  <p className="font-semibold text-gray-900">{t('home.trustBadges.swissQuality.title')}</p>
+                  <p className="text-sm text-gray-600">{t('home.trustBadges.swissQuality.subtitle')}</p>
                 </div>
               </div>
               
               <div className="text-center group">
                 <div className="bg-gray-50 rounded-xl p-6 group-hover:bg-purple-50 transition-colors duration-300">
                   <Users className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                  <p className="font-semibold text-gray-900">Trained Staff</p>
-                  <p className="text-sm text-gray-600">Professional Team</p>
+                  <p className="font-semibold text-gray-900">{t('home.trustBadges.trainedStaff.title')}</p>
+                  <p className="text-sm text-gray-600">{t('home.trustBadges.trainedStaff.subtitle')}</p>
                 </div>
               </div>
               
               <div className="text-center group">
                 <div className="bg-gray-50 rounded-xl p-6 group-hover:bg-orange-50 transition-colors duration-300">
                   <CheckCircle className="w-8 h-8 text-orange-600 mx-auto mb-2" />
-                  <p className="font-semibold text-gray-900">Insured</p>
-                  <p className="text-sm text-gray-600">Full Coverage</p>
+                  <p className="font-semibold text-gray-900">{t('home.trustBadges.insured.title')}</p>
+                  <p className="text-sm text-gray-600">{t('home.trustBadges.insured.subtitle')}</p>
                 </div>
               </div>
             </div>
@@ -729,7 +729,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium">
               <Sparkles className="w-4 h-4 text-yellow-400" />
-              <span>Ready to Get Started?</span>
+              <span>{t('home.cta.badge')}</span>
             </div>
             
             {/* Heading */}
@@ -768,15 +768,15 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             <div className="flex flex-wrap justify-center items-center gap-8 pt-8 text-blue-100">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
-                <span className="text-sm">Free Quote</span>
+                <span className="text-sm">{t('home.cta.trust.freeQuote')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
-                <span className="text-sm">No Hidden Fees</span>
+                <span className="text-sm">{t('home.cta.trust.noHiddenFees')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
-                <span className="text-sm">Same Day Response</span>
+                <span className="text-sm">{t('home.cta.trust.sameDayResponse')}</span>
               </div>
             </div>
           </div>

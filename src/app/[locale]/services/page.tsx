@@ -249,7 +249,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
                         )) : (
                           <li className="flex items-center space-x-2">
                             <CheckCircle className="w-4 h-4 text-swiss-green flex-shrink-0" />
-                            <span className="text-swiss-gray-600">Professional service features</span>
+                            <span className="text-swiss-gray-600">{t('services.featuresFallback')}</span>
                           </li>
                         )}
                       </ul>
@@ -278,10 +278,10 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
         <div className="container-max">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
-              Calculate Your Price
+              {t('services.priceCalculator.title')}
             </h2>
             <p className="text-xl text-swiss-gray-600">
-              Get an instant estimate for all our services
+              {t('services.priceCalculator.subtitle')}
             </p>
           </div>
 

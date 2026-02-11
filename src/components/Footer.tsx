@@ -12,9 +12,9 @@ export default function Footer() {
     { name: t('navigation.home'), href: `/${locale}` },
     { name: t('navigation.about'), href: `/${locale}/about` },
     { name: t('navigation.services'), href: `/${locale}/services` },
-    { name: 'Regions', href: `/${locale}/regions` },
-    { name: 'Pricing', href: `/${locale}/pricing` },
-    { name: 'FAQ', href: `/${locale}/faq` },
+    { name: t('navigation.regions'), href: `/${locale}/regions` },
+    { name: t('navigation.pricing'), href: `/${locale}/pricing` },
+    { name: t('navigation.faq'), href: `/${locale}/faq` },
     { name: t('navigation.contact'), href: `/${locale}/contact` },
   ];
 
@@ -58,7 +58,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="w-4 h-4 text-swiss-blue" />
-                <span>Schweiz, Bern</span>
+                <span>{t('footer.location')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="w-4 h-4 text-swiss-blue" />
@@ -161,12 +161,12 @@ export default function Footer() {
         <div className="border-t border-swiss-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-swiss-gray-400 text-sm">
-              © {new Date().getFullYear()} SwissCleanMove. Alle Rechte vorbehalten.
+              {t('footer.copyright', { year: new Date().getFullYear() })}
             </p>
             <div className="flex items-center space-x-4 text-sm text-swiss-gray-400">
-              <span>🇨🇭 Made in Switzerland</span>
+              <span>🇨🇭 {t('footer.madeInSwitzerland')}</span>
               <span>•</span>
-              <span>100% Abnahmegarantie</span>
+              <span>{t('footer.acceptanceGuarantee')}</span>
             </div>
           </div>
         </div>

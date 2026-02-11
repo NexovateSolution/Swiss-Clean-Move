@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { Calculator } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export default function PriceCalculator() {
+    const t = useTranslations('priceCalculator')
     const [mounted, setMounted] = useState(false)
     const [serviceCategory, setServiceCategory] = useState<'cleaning' | 'moving' | 'maintenance' | 'disposal' | 'combo'>('cleaning')
     const [serviceType, setServiceType] = useState('endOfTenancyApartment')
@@ -19,42 +21,42 @@ export default function PriceCalculator() {
     // Service options by category
     const serviceOptions = {
         cleaning: [
-            { id: 'endOfTenancyApartment', name: 'End-of-Tenancy Cleaning (Apartment)', unit: 'rooms' },
-            { id: 'endOfTenancyHouse', name: 'End-of-Tenancy Cleaning (House)', unit: 'fixed' },
-            { id: 'apartmentHouseCleaning', name: 'Apartment & House Cleaning (Maintenance)', unit: 'hourlyRange' },
-            { id: 'deepCleaning', name: 'Apartment & House Cleaning (Deep Cleaning)', unit: 'sqmRange' },
-            { id: 'constructionCleaning', name: 'Construction Cleaning', unit: 'construction' },
-            { id: 'gastronomyKitchenDeep', name: 'Gastronomy Cleaning (Kitchen Deep Cleaning)', unit: 'fixedRange' },
-            { id: 'gastronomyRegular', name: 'Gastronomy Cleaning (Regular)', unit: 'fixedFrom' },
-            { id: 'gastronomySanitary', name: 'Gastronomy Cleaning (Sanitary Facilities)', unit: 'fixedFrom' },
-            { id: 'windowCleaning', name: 'Window Cleaning', unit: 'perWindowRange' }
+            { id: 'endOfTenancyApartment', name: t('services.cleaning.endOfTenancyApartment'), unit: 'rooms' },
+            { id: 'endOfTenancyHouse', name: t('services.cleaning.endOfTenancyHouse'), unit: 'fixed' },
+            { id: 'apartmentHouseCleaning', name: t('services.cleaning.apartmentHouseCleaning'), unit: 'hourlyRange' },
+            { id: 'deepCleaning', name: t('services.cleaning.deepCleaning'), unit: 'sqmRange' },
+            { id: 'constructionCleaning', name: t('services.cleaning.constructionCleaning'), unit: 'construction' },
+            { id: 'gastronomyKitchenDeep', name: t('services.cleaning.gastronomyKitchenDeep'), unit: 'fixedRange' },
+            { id: 'gastronomyRegular', name: t('services.cleaning.gastronomyRegular'), unit: 'fixedFrom' },
+            { id: 'gastronomySanitary', name: t('services.cleaning.gastronomySanitary'), unit: 'fixedFrom' },
+            { id: 'windowCleaning', name: t('services.cleaning.windowCleaning'), unit: 'perWindowRange' }
         ],
         moving: [
-            { id: 'movingAssistant', name: 'Moving assistant', unit: 'hourlyRangePerPerson' },
-            { id: 'movingTeam2', name: 'Moving team (2 people)', unit: 'hourlyFrom' },
-            { id: 'vanWithDriver', name: 'Van incl. driver', unit: 'hourlyFrom' },
-            { id: 'assembly', name: 'Furniture assembly / disassembly', unit: 'hourlyRange' }
+            { id: 'movingAssistant', name: t('services.moving.movingAssistant'), unit: 'hourlyRangePerPerson' },
+            { id: 'movingTeam2', name: t('services.moving.movingTeam2'), unit: 'hourlyFrom' },
+            { id: 'vanWithDriver', name: t('services.moving.vanWithDriver'), unit: 'hourlyFrom' },
+            { id: 'assembly', name: t('services.moving.assembly'), unit: 'hourlyRange' }
         ],
         maintenance: [
-            { id: 'residentialBuildings', name: 'Residential buildings (per area)', unit: 'sqmRange' },
-            { id: 'officesPractices', name: 'Offices / practices (per area)', unit: 'sqmRange' },
-            { id: 'stairwellsFlat', name: 'Stairwells (flat rate)', unit: 'fixedFrom' },
-            { id: 'hourlyRate', name: 'Hourly rate', unit: 'hourlyRange' }
+            { id: 'residentialBuildings', name: t('services.maintenance.residentialBuildings'), unit: 'sqmRange' },
+            { id: 'officesPractices', name: t('services.maintenance.officesPractices'), unit: 'sqmRange' },
+            { id: 'stairwellsFlat', name: t('services.maintenance.stairwellsFlat'), unit: 'fixedFrom' },
+            { id: 'hourlyRate', name: t('services.maintenance.hourlyRate'), unit: 'hourlyRange' }
         ],
         disposal: [
-            { id: 'disposalPerM3', name: 'Disposal services', unit: 'perM3From' }
+            { id: 'disposalPerM3', name: t('services.disposal.disposalPerM3'), unit: 'perM3From' }
         ],
         combo: [
-            { id: 'comboApartment', name: 'Combo (Moving + End-of-Tenancy) - Apartment', unit: 'rooms' },
-            { id: 'comboHouse', name: 'Combo (Moving + End-of-Tenancy) - House', unit: 'fixed' }
+            { id: 'comboApartment', name: t('services.combo.comboApartment'), unit: 'rooms' },
+            { id: 'comboHouse', name: t('services.combo.comboHouse'), unit: 'fixed' }
         ]
     }
 
     // Add-on options (optional extras)
     const addOnOptions = [
-        { id: 'addonBasementAttic', label: 'Basement / attic (from CHF 80)', priceFrom: 80 },
-        { id: 'addonBalconyTerrace', label: 'Balcony / terrace (from CHF 70)', priceFrom: 70 },
-        { id: 'addonDisposalM3', label: 'Disposal (from CHF 30 / m³)', priceFrom: 30 },
+        { id: 'addonBasementAttic', label: t('addons.basementAttic'), priceFrom: 80 },
+        { id: 'addonBalconyTerrace', label: t('addons.balconyTerrace'), priceFrom: 70 },
+        { id: 'addonDisposalM3', label: t('addons.disposalPerM3'), priceFrom: 30 },
     ] as const
 
     // Price calculation logic
@@ -65,111 +67,111 @@ export default function PriceCalculator() {
         if (serviceCategory === 'cleaning') {
             switch (serviceType) {
                 case 'endOfTenancyApartment': {
-                    if (rooms <= 1) { basePriceMin = 250; display = 'from CHF 250' }
-                    else if (rooms <= 2) { basePriceMin = 350; display = 'from CHF 350' }
-                    else if (rooms <= 3) { basePriceMin = 480; display = 'from CHF 480' }
-                    else if (rooms <= 4) { basePriceMin = 620; display = 'from CHF 620' }
-                    else if (rooms <= 5) { basePriceMin = 780; display = 'from CHF 780' }
-                    else { display = 'Price on request' }
+                    if (rooms <= 1) { basePriceMin = 250; display = t('display.fromChf', { amount: 250 }) }
+                    else if (rooms <= 2) { basePriceMin = 350; display = t('display.fromChf', { amount: 350 }) }
+                    else if (rooms <= 3) { basePriceMin = 480; display = t('display.fromChf', { amount: 480 }) }
+                    else if (rooms <= 4) { basePriceMin = 620; display = t('display.fromChf', { amount: 620 }) }
+                    else if (rooms <= 5) { basePriceMin = 780; display = t('display.fromChf', { amount: 780 }) }
+                    else { display = t('display.priceOnRequest') }
                     break
                 }
                 case 'endOfTenancyHouse':
                     basePriceMin = 900
-                    display = 'from CHF 900'
+                    display = t('display.fromChf', { amount: 900 })
                     break
                 case 'apartmentHouseCleaning':
                     basePriceMin = 45 * hours
-                    display = `CHF 45–65 / hour / staff (min: CHF ${basePriceMin})`
+                    display = t('display.hourlyRangePerStaff', { min: 45, max: 65, base: basePriceMin })
                     break
                 case 'deepCleaning':
                     basePriceMin = 8 * squareMeters
-                    display = `from CHF 8–15 / m² (min: CHF ${basePriceMin})`
+                    display = t('display.sqmRangeFrom', { min: 8, max: 15, base: basePriceMin })
                     break
                 case 'constructionCleaning':
                     basePriceMin = 5 * squareMeters
-                    display = `from CHF 5–8 / m² (min: CHF ${basePriceMin})`
+                    display = t('display.sqmRangeFrom', { min: 5, max: 8, base: basePriceMin })
                     break
                 case 'gastronomyKitchenDeep':
                     basePriceMin = 400
-                    display = 'CHF 400–1,200'
+                    display = t('display.chfRange', { min: 400, max: 1200 })
                     break
                 case 'gastronomyRegular':
                     basePriceMin = 150
-                    display = 'from CHF 150 per service'
+                    display = t('display.fromChfPerService', { amount: 150 })
                     break
                 case 'gastronomySanitary':
                     basePriceMin = 120
-                    display = 'from CHF 120'
+                    display = t('display.fromChf', { amount: 120 })
                     break
                 case 'windowCleaning':
                     basePriceMin = 8
-                    display = 'CHF 8–15 per window (+ CHF 3–6 frames & shutters)'
+                    display = t('display.perWindow', { min: 8, max: 15, framesMin: 3, framesMax: 6 })
                     break
             }
         } else if (serviceCategory === 'moving') {
             switch (serviceType) {
                 case 'movingAssistant':
                     basePriceMin = 70 * hours
-                    display = `CHF 70–95 / hour / person (min: CHF ${basePriceMin})`
+                    display = t('display.hourlyRangePerPerson', { min: 70, max: 95, base: basePriceMin })
                     break
                 case 'movingTeam2':
                     basePriceMin = 160 * hours
-                    display = `from CHF 160 / hour (min: CHF ${basePriceMin})`
+                    display = t('display.fromChfPerHourMin', { amount: 160, base: basePriceMin })
                     break
                 case 'vanWithDriver':
                     basePriceMin = 140 * hours
-                    display = `from CHF 140 / hour (min: CHF ${basePriceMin})`
+                    display = t('display.fromChfPerHourMin', { amount: 140, base: basePriceMin })
                     break
                 case 'assembly':
                     basePriceMin = 70 * hours
-                    display = `CHF 70–90 / hour (min: CHF ${basePriceMin})`
+                    display = t('display.hourlyRange', { min: 70, max: 90, base: basePriceMin })
                     break
             }
         } else if (serviceCategory === 'maintenance') {
             switch (serviceType) {
                 case 'residentialBuildings':
                     basePriceMin = 0.6 * squareMeters
-                    display = `CHF 0.60–1.20 / m² (min: CHF ${Math.round(basePriceMin)})`
+                    display = t('display.sqmRange', { min: 0.6, max: 1.2, base: Math.round(basePriceMin) })
                     break
                 case 'officesPractices':
                     basePriceMin = 0.8 * squareMeters
-                    display = `CHF 0.80–1.50 / m² (min: CHF ${Math.round(basePriceMin)})`
+                    display = t('display.sqmRange', { min: 0.8, max: 1.5, base: Math.round(basePriceMin) })
                     break
                 case 'stairwellsFlat':
                     basePriceMin = 120
-                    display = 'flat rate from CHF 120'
+                    display = t('display.flatRateFrom', { amount: 120 })
                     break
                 case 'hourlyRate':
                     basePriceMin = 45 * hours
-                    display = `CHF 45–65 / hour (min: CHF ${basePriceMin})`
+                    display = t('display.hourlyRange', { min: 45, max: 65, base: basePriceMin })
                     break
             }
         } else if (serviceCategory === 'disposal') {
             switch (serviceType) {
                 case 'disposalPerM3':
                     basePriceMin = 30
-                    display = 'from CHF 30 / m³'
+                    display = t('display.fromChfPerM3', { amount: 30 })
                     break
             }
         } else if (serviceCategory === 'combo') {
             switch (serviceType) {
                 case 'comboApartment': {
-                    if (rooms <= 1) { basePriceMin = 650; display = 'from CHF 650' }
-                    else if (rooms <= 2) { basePriceMin = 850; display = 'from CHF 850' }
-                    else if (rooms <= 3) { basePriceMin = 1150; display = 'from CHF 1,150' }
-                    else if (rooms <= 4) { basePriceMin = 1450; display = 'from CHF 1,450' }
-                    else if (rooms <= 5) { basePriceMin = 1750; display = 'from CHF 1,750' }
-                    else { display = 'Price on request' }
+                    if (rooms <= 1) { basePriceMin = 650; display = t('display.fromChf', { amount: 650 }) }
+                    else if (rooms <= 2) { basePriceMin = 850; display = t('display.fromChf', { amount: 850 }) }
+                    else if (rooms <= 3) { basePriceMin = 1150; display = t('display.fromChf', { amount: '1,150' }) }
+                    else if (rooms <= 4) { basePriceMin = 1450; display = t('display.fromChf', { amount: '1,450' }) }
+                    else if (rooms <= 5) { basePriceMin = 1750; display = t('display.fromChf', { amount: '1,750' }) }
+                    else { display = t('display.priceOnRequest') }
                     break
                 }
                 case 'comboHouse':
                     basePriceMin = 1950
-                    display = 'from CHF 1,950'
+                    display = t('display.fromChf', { amount: '1,950' })
                     break
             }
         }
 
-        return { basePriceMin: Math.round(basePriceMin), display: display ?? 'Price on request' }
+        return { basePriceMin: Math.round(basePriceMin), display: display ?? t('display.priceOnRequest') }
     }
 
     const price = calculatePrice()
@@ -202,27 +204,27 @@ export default function PriceCalculator() {
                     <Calculator className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                    <h3 className="text-2xl font-bold text-gray-900">Price Calculator</h3>
-                    <p className="text-sm text-gray-600">Get an instant estimate</p>
+                    <h3 className="text-2xl font-bold text-gray-900">{t('title')}</h3>
+                    <p className="text-sm text-gray-600">{t('subtitle')}</p>
                 </div>
             </div>
 
             <div className="bg-white rounded-xl p-6 mb-6 shadow-sm">
                 <div className="text-center mb-4">
-                    <p className="text-sm font-medium text-gray-600 mb-2">Estimated Cost</p>
+                    <p className="text-sm font-medium text-gray-600 mb-2">{t('estimatedCost')}</p>
                     <div className="flex flex-col items-center space-y-1">
                         <div className="text-2xl md:text-3xl font-bold text-swiss-red text-center">
                             {price.display}
                         </div>
                         <div className="text-xs text-gray-500">
-                            + add-ons (min) CHF {addOnsTotal} = <span className="font-semibold text-gray-700">CHF {totalWithAddOns}</span>
+                            {t('addonsLine', { addOnsTotal, totalWithAddOns })}
                         </div>
                     </div>
                     {(currentService?.unit === 'hourlyRange' || currentService?.unit === 'hourlyRangePerPerson' || currentService?.unit === 'hourlyFrom') && (
-                        <p className="text-xs text-gray-500 mt-2">for {hours} hour{hours > 1 ? 's' : ''}</p>
+                        <p className="text-xs text-gray-500 mt-2">{t('forHours', { hours })}</p>
                     )}
                     {currentService?.unit === 'monthly' && (
-                        <p className="text-xs text-gray-500 mt-2">per month</p>
+                        <p className="text-xs text-gray-500 mt-2">{t('perMonth')}</p>
                     )}
                 </div>
             </div>
@@ -231,25 +233,25 @@ export default function PriceCalculator() {
                 {/* Service Category */}
                 <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Service Category
+                        {t('fields.serviceCategory')}
                     </label>
                     <select
                         value={serviceCategory}
                         onChange={(e) => handleCategoryChange(e.target.value as typeof serviceCategory)}
                         className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg font-medium cursor-pointer hover:border-red-500 transition-colors focus:ring-2 focus:ring-red-500 focus:border-transparent"
                     >
-                        <option value="cleaning">Cleaning Services</option>
-                        <option value="moving">Moving & Transport</option>
-                        <option value="maintenance">Facility Management</option>
-                        <option value="disposal">Disposal & Clearance</option>
-                        <option value="combo">Combo Service</option>
+                        <option value="cleaning">{t('categories.cleaning')}</option>
+                        <option value="moving">{t('categories.moving')}</option>
+                        <option value="maintenance">{t('categories.maintenance')}</option>
+                        <option value="disposal">{t('categories.disposal')}</option>
+                        <option value="combo">{t('categories.combo')}</option>
                     </select>
                 </div>
 
                 {/* Service Type */}
                 <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Service Type
+                        {t('fields.serviceType')}
                     </label>
                     <select
                         value={serviceType}
@@ -266,19 +268,19 @@ export default function PriceCalculator() {
                 {currentService?.unit === 'rooms' && (
                     <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-2">
-                            Rooms
+                            {t('fields.rooms')}
                         </label>
                         <select
                             value={rooms}
                             onChange={(e) => setRooms(parseFloat(e.target.value))}
                             className="w-full px-4 py-3 bg-swiss-red text-white rounded-lg font-medium cursor-pointer hover:bg-swiss-red/90 transition-colors"
                         >
-                            <option value={1}>1 room</option>
-                            <option value={2}>2 rooms</option>
-                            <option value={3}>3 rooms</option>
-                            <option value={4}>4 rooms</option>
-                            <option value={5}>5 rooms</option>
-                            <option value={6}>6+ rooms / maisonette</option>
+                            <option value={1}>{t('roomsOptions.one')}</option>
+                            <option value={2}>{t('roomsOptions.two')}</option>
+                            <option value={3}>{t('roomsOptions.three')}</option>
+                            <option value={4}>{t('roomsOptions.four')}</option>
+                            <option value={5}>{t('roomsOptions.five')}</option>
+                            <option value={6}>{t('roomsOptions.sixPlus')}</option>
                         </select>
                     </div>
                 )}
@@ -287,9 +289,9 @@ export default function PriceCalculator() {
                     <div>
                         <div className="flex justify-between items-center mb-3">
                             <label className="text-sm font-semibold text-gray-700">
-                                Estimated Hours
+                                {t('fields.estimatedHours')}
                             </label>
-                            <span className="text-lg font-bold text-red-600">{hours} hrs</span>
+                            <span className="text-lg font-bold text-red-600">{t('hoursShort', { hours })}</span>
                         </div>
                         <input
                             type="range"
@@ -306,7 +308,7 @@ export default function PriceCalculator() {
                     <div>
                         <div className="flex justify-between items-center mb-3">
                             <label className="text-sm font-semibold text-gray-700">
-                                Area in m²
+                                {t('fields.areaM2')}
                             </label>
                             <span className="text-lg font-bold text-red-600">{squareMeters} m²</span>
                         </div>
@@ -324,7 +326,7 @@ export default function PriceCalculator() {
                 {/* Add-ons */}
                 <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Add-ons
+                        {t('fields.addons')}
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {addOnOptions.map(a => (
@@ -338,7 +340,7 @@ export default function PriceCalculator() {
                                     />
                                     <span className="text-sm text-gray-700">{a.label}</span>
                                 </div>
-                                <span className="text-sm font-medium text-gray-900">+ from CHF {a.priceFrom}</span>
+                                <span className="text-sm font-medium text-gray-900">{t('addonPriceFrom', { amount: a.priceFrom })}</span>
                             </label>
                         ))}
                     </div>
@@ -347,7 +349,7 @@ export default function PriceCalculator() {
 
             <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
                 <p className="text-xs text-gray-600 text-center">
-                    * This is an estimated price. Final price may vary based on specific requirements and conditions.
+                    {t('disclaimer')}
                 </p>
             </div>
         </div>

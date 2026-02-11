@@ -27,17 +27,21 @@ export default getRequestConfig(async ({requestLocale}) => {
   // Validate that the incoming `locale` parameter is valid
   if (!locale || !locales.includes(locale as any)) notFound();
 
-  if (locale === 'nl') {
-    const enMessages = (await import('../messages/en.json')).default;
-    const nlOverrides = (await import('../messages/nl.json')).default;
+  const enMessages = (await import('../messages/en.json')).default;
+
+  // Use English as a complete base and override with locale-specific strings.
+  // This prevents untranslated keys from rendering as raw message IDs.
+  if (locale === 'en') {
     return {
       locale,
-      messages: deepMerge(enMessages, nlOverrides) as any
+      messages: enMessages as any
     };
   }
 
+  const localeMessages = (await import(`../messages/${locale}.json`)).default;
+
   return {
     locale,
-    messages: (await import(`../messages/${locale}.json`)).default
+    messages: deepMerge(enMessages, localeMessages) as any
   };
 });

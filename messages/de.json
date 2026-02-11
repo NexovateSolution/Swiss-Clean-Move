@@ -14,14 +14,47 @@
   },
   "home": {
     "hero": {
+      "badge": "Schweizer Premium-Service",
       "title": "Professionelle Reinigung & Umzug in der Schweiz",
       "subtitle": "Zuverlässige Reinigungsdienstleistungen und Umzugshilfe mit 100% Abnahmegarantie",
+      "slides": {
+        "transport": {
+          "title": "Professioneller Umzug & Transport",
+          "description": "Sicher, pünktlich und stressfrei in der ganzen Schweiz"
+        },
+        "houseCleaning": {
+          "title": "Strahlend saubere Zuhause",
+          "description": "Gründliche Reinigung für Wohnungen und Häuser mit Liebe zum Detail"
+        },
+        "expertMoving": {
+          "title": "Erfahrenes Umzugsteam",
+          "description": "Geschultes Personal, sorgfältiger Umgang und transparente Preise"
+        },
+        "office": {
+          "title": "Büro- & Gewerbereinigung",
+          "description": "Flexible Termine für ein stets sauberes Arbeitsumfeld"
+        },
+        "final": {
+          "title": "Endreinigung mit Garantie",
+          "description": "Umzugsreinigung mit 100% Abnahmegarantie"
+        }
+      },
+      "trust": {
+        "guarantee": "Abnahmegarantie",
+        "cantons": "Schweizer Kantone",
+        "happyClients": "Zufriedene Kunden",
+        "support": "24/7 Support"
+      },
+      "qualityBadge": {
+        "title": "Vertrauenswürdig & zertifiziert"
+      },
       "cta": "Kostenloses Angebot anfordern",
       "phone": "Jetzt anrufen"
     },
     "services": {
       "title": "Unsere Dienstleistungen",
       "subtitle": "Professionelle Lösungen für alle Ihre Reinigungs- und Umzugsbedürfnisse",
+      "viewAll": "Alle Services ansehen",
       "houseCleaning": {
         "title": "Hausreinigung",
         "description": "Umfassende Hausreinigungsdienstleistungen für Wohnimmobilien mit Liebe zum Detail"
@@ -103,14 +136,51 @@
         "description": "Komplette Umzugsdienstleistungen mit erfahrenem Team"
       }
     },
+    "numbers": {
+      "badge": "Zahlen, die überzeugen",
+      "title": "Zahlen, die für sich sprechen",
+      "subtitle": "Bewährte Ergebnisse in der ganzen Schweiz",
+      "items": {
+        "happyClients": "Zufriedene Kunden",
+        "projectsCompleted": "Abgeschlossene Projekte",
+        "swissCantons": "Schweizer Kantone",
+        "yearsExperience": "Jahre Erfahrung"
+      }
+    },
+    "trustBadges": {
+      "title": "Vertrauenswürdig & zertifiziert",
+      "subtitle": "Professionelle Standards, auf die Sie zählen können",
+      "iso": {
+        "title": "Qualitätsmanagement",
+        "subtitle": "Prozesse nach bewährten Branchenstandards"
+      },
+      "swissQuality": {
+        "title": "Swiss Quality",
+        "subtitle": "Hohe Standards, zuverlässiger Service"
+      },
+      "trainedStaff": {
+        "title": "Geschultes Personal",
+        "subtitle": "Erfahrene und geprüfte Teams"
+      },
+      "insured": {
+        "title": "Versichert",
+        "subtitle": "Abgedeckt für Ihre Sicherheit"
+      }
+    },
     "testimonials": {
       "title": "Was unsere Kunden sagen",
       "subtitle": "Vertrauen Sie auf die Erfahrung zufriedener Kunden"
     },
     "cta": {
+      "badge": "Jetzt starten",
       "title": "Bereit für eine professionelle Reinigung?",
       "subtitle": "Kontaktieren Sie uns noch heute für ein kostenloses Angebot",
-      "button": "Kostenloses Angebot"
+      "button": "Kostenloses Angebot",
+      "trust": {
+        "freeQuote": "Kostenloses Angebot",
+        "noHiddenFees": "Keine versteckten Kosten",
+        "sameDayResponse": "Antwort am selben Tag"
+      }
     },
     "servicesCta": {
       "title": "Bereit für professionelle Reinigung?",
@@ -126,6 +196,10 @@
     "title": "Unsere Dienstleistungen",
     "subtitle": "Professionelle Lösungen für alle Ihre Reinigungs- und Umzugsbedürfnisse",
     "featuresTitle": "Leistungen",
+    "priceCalculator": {
+      "title": "Preisrechner",
+      "subtitle": "Wählen Sie eine Leistung und erhalten Sie sofort eine Schätzung"
+    },
     "benefitsSection": {
       "title": "Warum SwissCleanMove?",
       "subtitle": "Ihre Vorteile bei unserem professionellen Service"
@@ -409,6 +483,13 @@
   "contact": {
     "title": "Kontakt",
     "subtitle": "Nehmen Sie Kontakt mit uns auf",
+    "errors": {
+      "submitFailed": "Formular konnte nicht gesendet werden",
+      "submitFailedRetry": "Formular konnte nicht gesendet werden. Bitte versuche es erneut."
+    },
+    "whatsapp": {
+      "prefill": "Hallo! Ich interessiere mich für Ihre Dienstleistungen und möchte gerne mehr darüber erfahren. Können Sie mir bitte weitere Informationen senden? Vielen Dank!"
+    },
     "success": {
       "title": "Nachricht erfolgreich gesendet!",
       "subtitle": "Vielen Dank für Ihre Nachricht. Wir werden uns so schnell wie möglich bei Ihnen melden.",
@@ -477,6 +558,10 @@
   "freeOffer": {
     "title": "Kostenloses Angebot anfordern",
     "subtitle": "Erhalten Sie ein unverbindliches Angebot für Ihre Reinigung oder Ihren Umzug",
+    "errors": {
+      "submitFailed": "Formular konnte nicht gesendet werden",
+      "submitFailedRetry": "Formular konnte nicht gesendet werden. Bitte versuche es erneut."
+    },
     "success": {
       "title": "Vielen Dank für Ihre Anfrage!",
       "subtitle": "Wir haben Ihre Anfrage erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.",
@@ -631,14 +716,412 @@
   "footer": {
     "company": "SwissCleanMove",
     "description": "Professionelle Reinigung und Umzug in der Schweiz",
+    "location": "Schweiz, Bern",
     "quickLinks": "Schnelllinks",
     "services": "Dienstleistungen",
     "contact": "Kontakt",
     "legal": "Rechtliches",
-    "followUs": "Folgen Sie uns"
+    "followUs": "Folgen Sie uns",
+    "copyright": "© {year} SwissCleanMove. Alle Rechte vorbehalten.",
+    "madeInSwitzerland": "Made in Switzerland",
+    "acceptanceGuarantee": "100% Abnahmegarantie"
   },
   "whatsapp": {
     "message": "Hallo! Ich interessiere mich für Ihre Dienstleistungen."
+  },
+  "serviceForm": {
+    "common": {
+      "yes": "Ja",
+      "no": "Nein"
+    },
+    "title": {
+      "quote": "Offerte",
+      "offer": "Angebot"
+    },
+    "sections": {
+      "chargingAddress": "Beladeadresse",
+      "address": "Adresse",
+      "unloadingAddress": "Entladeadresse",
+      "special": "Spezial",
+      "miscellaneous": "Verschiedenes",
+      "apartmentDetails": "Wohnungsdetails"
+    },
+    "toasts": {
+      "submitted": "Formular erfolgreich gesendet!",
+      "submitFailed": "Formular konnte nicht gesendet werden",
+      "submitFailedRetry": "Formular konnte nicht gesendet werden. Bitte versuche es erneut."
+    },
+    "fields": {
+      "salutation": {
+        "label": "Anrede",
+        "options": {
+          "mister": "Herr",
+          "woman": "Frau"
+        }
+      },
+      "name": {
+        "label": "Name",
+        "placeholder": "Name eingeben"
+      },
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Vornamen eingeben"
+      },
+      "streetAndNumber": {
+        "label": "Strasse und Nummer",
+        "placeholder": "Strasse und Nummer eingeben"
+      },
+      "postalCodeAndCity": {
+        "label": "PLZ und Ort",
+        "placeholder": "PLZ und Ort eingeben"
+      },
+      "telephone": {
+        "label": "Telefon",
+        "placeholder": "Telefonnummer eingeben"
+      },
+      "emailAddress": {
+        "label": "E-Mail-Adresse",
+        "placeholder": "E-Mail-Adresse eingeben"
+      },
+      "movingDate": {
+        "label": "Umzugsdatum"
+      },
+      "floors": {
+        "label": "Stockwerke"
+      },
+      "assembly": {
+        "label": "Montage"
+      },
+      "pathToFrontDoor": {
+        "label": "Weg zur Haustür"
+      },
+      "lift": {
+        "label": "Lift"
+      },
+      "numberOfRooms": {
+        "label": "Anzahl Zimmer"
+      },
+      "heavyLoad": {
+        "label": "Schwerlast"
+      },
+      "livingSpaceInM2": {
+        "label": "Wohnfläche (m²)"
+      },
+      "liftDisassembly": {
+        "label": "Lift-Demontage"
+      },
+      "pathToFrontDoorM": {
+        "label": "Weg zur Haustür (m)"
+      },
+      "pack": {
+        "label": "Einpacken"
+      },
+      "cellar": {
+        "label": "Keller"
+      },
+      "garage": {
+        "label": "Garage"
+      },
+      "screed": {
+        "label": "Estrich"
+      },
+      "craftRoom": {
+        "label": "Bastelraum"
+      },
+      "unpacking": {
+        "label": "Auspacken"
+      },
+      "cleaning": {
+        "label": "Reinigung"
+      },
+      "disposal": {
+        "label": "Entsorgung"
+      },
+      "apartment": {
+        "numberOfRooms": {
+          "label": "Anzahl Zimmer"
+        },
+        "type": {
+          "label": "Wohnungstyp",
+          "options": {
+            "rentalApartment": "Mietwohnung",
+            "ownApartment": "Eigentumswohnung",
+            "house": "Haus"
+          }
+        },
+        "areaInM2": {
+          "label": "Fläche (m²)"
+        },
+        "awningType": {
+          "label": "Markisentyp"
+        },
+        "cellar": {
+          "label": "Keller"
+        },
+        "garage": {
+          "label": "Garage"
+        }
+      },
+      "cleaningAppointment": {
+        "label": "Reinigungstermin"
+      },
+      "submissionDeadline": {
+        "label": "Abgabefrist"
+      },
+      "carpetShampooing": {
+        "label": "Teppich-Shampoonierung"
+      },
+      "conservatory": {
+        "label": "Wintergarten"
+      },
+      "outdoorSeating": {
+        "label": "Aussenbestuhlung"
+      },
+      "parquet": {
+        "label": "Parkett"
+      },
+      "stairpolish": {
+        "label": "Treppenpolitur"
+      },
+      "contactPreferredVia": {
+        "label": "Kontakt bevorzugt via",
+        "options": {
+          "email": "E-Mail",
+          "phone": "Telefon"
+        }
+      },
+      "viewingIsWelcome": {
+        "label": "Besichtigung ist willkommen.",
+        "options": {
+          "and": "Und"
+        }
+      },
+      "remark": {
+        "label": "Bemerkung",
+        "placeholder": "Bemerkung eingeben"
+      }
+    },
+    "buttons": {
+      "close": "Schliessen",
+      "submitting": "Wird gesendet...",
+      "submit": "Senden"
+    }
+  },
+  "priceCalculator": {
+    "title": "Preisrechner",
+    "subtitle": "Erhalte sofort eine Preis-Schätzung",
+    "estimatedCost": "Geschätzte Kosten",
+    "addonsLine": "Zusatzleistungen: CHF {addOnsTotal} · Total ab: CHF {totalWithAddOns}",
+    "forHours": "Für {hours} Stunde(n)",
+    "perMonth": "Pro Monat",
+    "fields": {
+      "serviceCategory": "Kategorie",
+      "serviceType": "Leistung",
+      "rooms": "Zimmer",
+      "estimatedHours": "Geschätzte Stunden",
+      "areaM2": "Fläche (m²)",
+      "addons": "Zusatzleistungen"
+    },
+    "categories": {
+      "cleaning": "Reinigung",
+      "moving": "Umzug",
+      "maintenance": "Liegenschaftsunterhalt",
+      "disposal": "Entsorgung",
+      "combo": "Kombi"
+    },
+    "roomsOptions": {
+      "one": "1 Zimmer",
+      "two": "2 Zimmer",
+      "three": "3 Zimmer",
+      "four": "4 Zimmer",
+      "five": "5 Zimmer",
+      "sixPlus": "6+ Zimmer"
+    },
+    "hoursShort": "{hours}h",
+    "services": {
+      "cleaning": {
+        "endOfTenancyApartment": "Endreinigung (Wohnung)",
+        "endOfTenancyHouse": "Endreinigung (Haus)",
+        "apartmentHouseCleaning": "Wohnungs-/Hausreinigung",
+        "deepCleaning": "Grundreinigung",
+        "constructionCleaning": "Baureinigung",
+        "gastronomyKitchenDeep": "Gastronomie Küche (Tiefenreinigung)",
+        "gastronomyRegular": "Gastronomie (regelmässig)",
+        "gastronomySanitary": "Gastronomie Sanitär",
+        "windowCleaning": "Fensterreinigung"
+      },
+      "moving": {
+        "movingAssistant": "Umzugshelfer",
+        "movingTeam2": "Umzugsteam (2 Personen)",
+        "vanWithDriver": "Transporter mit Fahrer",
+        "assembly": "Montage / Demontage"
+      },
+      "maintenance": {
+        "residentialBuildings": "Wohngebäude",
+        "officesPractices": "Büros & Praxen",
+        "stairwellsFlat": "Treppenhäuser (Pauschale)",
+        "hourlyRate": "Stundenansatz"
+      },
+      "disposal": {
+        "disposalPerM3": "Entsorgung pro m³"
+      },
+      "combo": {
+        "comboApartment": "Kombi: Reinigung + Umzug (Wohnung)",
+        "comboHouse": "Kombi: Reinigung + Umzug (Haus)"
+      }
+    },
+    "addons": {
+      "basementAttic": "Keller / Estrich",
+      "balconyTerrace": "Balkon / Terrasse",
+      "disposalPerM3": "Entsorgung pro m³"
+    },
+    "addonPriceFrom": "ab CHF {amount}",
+    "disclaimer": "Alle Preise sind Richtwerte. Der Endpreis hängt vom Aufwand, Zugang und Objektzustand ab.",
+    "display": {
+      "fromChf": "Ab CHF {amount}",
+      "priceOnRequest": "Preis auf Anfrage",
+      "hourlyRangePerStaff": "CHF {min}–{max}/h pro Person (ab CHF {base})",
+      "sqmRangeFrom": "CHF {min}–{max}/m² (ab CHF {base})",
+      "chfRange": "CHF {min}–{max}",
+      "fromChfPerService": "Ab CHF {amount} pro Einsatz",
+      "perWindow": "CHF {min}–{max} pro Fenster ({framesMin}–{framesMax} Rahmen)",
+      "hourlyRangePerPerson": "CHF {min}–{max}/h pro Person (ab CHF {base})",
+      "fromChfPerHourMin": "Ab CHF {amount}/h (ab CHF {base})",
+      "hourlyRange": "CHF {min}–{max}/h (ab CHF {base})",
+      "sqmRange": "CHF {min}–{max}/m² (ab CHF {base})",
+      "flatRateFrom": "Pauschale ab CHF {amount}",
+      "fromChfPerM3": "Ab CHF {amount} pro m³"
+    }
+  },
+  "servicesPages": {
+    "common": {
+      "requestQuote": "Angebot anfordern",
+      "callNow": "Jetzt anrufen",
+      "emailUs": "E-Mail senden",
+      "ourServicesInclude": "Unsere Leistungen umfassen:"
+    },
+    "officeCleaning": {
+      "hero": {
+        "title": "Büroreinigung",
+        "subtitle": "Professionelle Büroreinigung für ein sauberes und produktives Arbeitsumfeld"
+      },
+      "details": {
+        "title": "Professionelles Büroumfeld",
+        "description": "Ein sauberes Büro steigert die Produktivität und hinterlässt einen professionellen Eindruck bei Kunden und Mitarbeitenden. Unser Gewerbe-Reinigungsservice sorgt dafür, dass Ihr Arbeitsplatz stets sauber und hygienisch bleibt.",
+        "rateNote": "Professionelle Preise für Gewerbereinigung",
+        "imageLabel": "Professionelle Büroreinigung"
+      },
+      "benefitsSection": {
+        "title": "Warum unsere Büroreinigung?",
+        "subtitle": "Professionelle Reinigung, auf die Sie sich verlassen können"
+      },
+      "benefits": {
+        "professionalTeam": {
+          "title": "Professionelles Team",
+          "description": "Erfahrene Spezialisten für Gewerbereinigung"
+        },
+        "flexibleHours": {
+          "title": "Flexible Zeiten",
+          "description": "Reinigung außerhalb der Geschäftszeiten ohne Unterbrechungen"
+        },
+        "fullyInsured": {
+          "title": "Voll versichert",
+          "description": "Umfassender Versicherungsschutz für Gewerbeobjekte"
+        }
+      },
+      "solutions": {
+        "title": "Komplette Lösungen für Büroreinigung",
+        "subtitle": "Alles, was Ihr Büro braucht, um sauber und professionell zu bleiben",
+        "items": {
+          "dailyCleaning": {
+            "title": "Tägliche Reinigung",
+            "description": "Regelmäßige Unterhaltsreinigung für Büros"
+          },
+          "deepCleaning": {
+            "title": "Intensivreinigung",
+            "description": "Gründliche Reinigung für besondere Anlässe"
+          },
+          "carpetCleaning": {
+            "title": "Teppichreinigung",
+            "description": "Professionelle Teppich- und Polsterreinigung"
+          },
+          "windowCleaning": {
+            "title": "Fensterreinigung",
+            "description": "Innen- und Außenfensterreinigung"
+          },
+          "sanitization": {
+            "title": "Desinfektion",
+            "description": "Desinfektions- und Hygieneservices"
+          },
+          "wasteManagement": {
+            "title": "Abfallmanagement",
+            "description": "Professionelle Entsorgung und Recycling"
+          }
+        }
+      },
+      "cta": {
+        "title": "Bereit für professionelle Büroreinigung?",
+        "subtitle": "Schaffen Sie ein produktives Arbeitsumfeld mit unseren Reinigungsservices",
+        "primaryButton": "Gewerbe-Angebot erhalten"
+      }
+    },
+    "relocation": {
+      "hero": {
+        "title": "Professioneller Umzugsservice",
+        "subtitle": "Kompletter Umzugsservice mit erfahrenem Team und professioneller Ausrüstung"
+      },
+      "details": {
+        "title": "Stressfreies Umzugserlebnis",
+        "description": "Ein Umzug muss nicht stressig sein. Unser professionelles Umzugsteam übernimmt jeden Schritt – vom sorgfältigen Verpacken bis zum sicheren Transport und der Einrichtung am neuen Ort.",
+        "rateNote": "Individuelle Preise basierend auf Ihren Bedürfnissen",
+        "imageLabel": "Professionelle Umzugsdienstleistungen"
+      },
+      "benefitsSection": {
+        "title": "Warum unseren Umzugsservice wählen?",
+        "subtitle": "Professioneller Umzug, dem Sie vertrauen können"
+      },
+      "benefits": {
+        "fullyInsured": {
+          "title": "Voll versichert",
+          "description": "Umfassender Versicherungsschutz für Ihr Umzugsgut"
+        },
+        "experiencedTeam": {
+          "title": "Erfahrenes Team",
+          "description": "Professionelle Umzugshelfer mit jahrelanger Erfahrung"
+        },
+        "fullService": {
+          "title": "Rundum-Service",
+          "description": "Von Verpacken bis Auspacken – wir übernehmen alles"
+        }
+      },
+      "processSection": {
+        "title": "Unser Umzugsprozess",
+        "subtitle": "Organisiert, effizient und sorgfältig",
+        "steps": {
+          "planning": {
+            "title": "Planung & Besichtigung",
+            "description": "Wir analysieren Ihre Anforderungen und erstellen einen Plan"
+          },
+          "packing": {
+            "title": "Verpackung",
+            "description": "Professionelles Verpacken mit hochwertigem Material"
+          },
+          "transport": {
+            "title": "Transport",
+            "description": "Sicherer Transport an den neuen Standort"
+          },
+          "setup": {
+            "title": "Einrichtung",
+            "description": "Auspacken und Möbelmontage am Zielort"
+          }
+        }
+      },
+      "cta": {
+        "title": "Bereit umzuziehen – mit Profis?",
+        "subtitle": "Holen Sie sich noch heute Ihr persönliches Umzugsangebot",
+        "primaryButton": "Umzugsangebot erhalten"
+      }
+    }
   },
   "admin": {
     "sidebar": {

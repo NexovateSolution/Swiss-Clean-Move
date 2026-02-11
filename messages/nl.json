@@ -14,14 +14,47 @@
   },
   "home": {
     "hero": {
+      "badge": "Swiss Premium Service",
       "title": "Professional Cleaning & Moving Services in Switzerland",
       "subtitle": "Reliable cleaning services and moving assistance with 100% satisfaction guarantee",
+      "slides": {
+        "transport": {
+          "title": "Professional Moving & Transport",
+          "description": "Safe, punctual and stress-free moving across Switzerland"
+        },
+        "houseCleaning": {
+          "title": "Sparkling Clean Homes",
+          "description": "Thorough cleaning for apartments and houses with attention to detail"
+        },
+        "expertMoving": {
+          "title": "Expert Moving Team",
+          "description": "Experienced staff, careful handling, and transparent pricing"
+        },
+        "office": {
+          "title": "Office & Commercial Cleaning",
+          "description": "Keep your workplace spotless with flexible schedules"
+        },
+        "final": {
+          "title": "End of Tenancy Cleaning",
+          "description": "Move-out cleaning with a 100% handover guarantee"
+        }
+      },
+      "trust": {
+        "guarantee": "Deposit guarantee",
+        "cantons": "Swiss cantons",
+        "happyClients": "Happy clients",
+        "support": "24/7 support"
+      },
+      "qualityBadge": {
+        "title": "Trusted & Certified"
+      },
       "cta": "Request Free Quote",
       "phone": "Call Now"
     },
     "services": {
       "title": "Our Services",
       "subtitle": "Professional solutions for all your cleaning and moving needs",
+      "viewAll": "View all services",
       "houseCleaning": {
         "title": "House Cleaning",
         "description": "Comprehensive house cleaning services for residential properties with attention to every detail"
@@ -79,14 +112,51 @@
         "description": "Combined moving service with final cleaning and handover guarantee"
       }
     },
+    "numbers": {
+      "badge": "Numbers that speak",
+      "title": "Numbers That Speak",
+      "subtitle": "A proven track record across Switzerland",
+      "items": {
+        "happyClients": "Happy Clients",
+        "projectsCompleted": "Projects Completed",
+        "swissCantons": "Swiss Cantons",
+        "yearsExperience": "Years Experience"
+      }
+    },
+    "trustBadges": {
+      "title": "Trusted & Certified",
+      "subtitle": "Professional standards you can rely on",
+      "iso": {
+        "title": "Quality Management",
+        "subtitle": "Processes aligned with industry best practices"
+      },
+      "swissQuality": {
+        "title": "Swiss Quality",
+        "subtitle": "High standards, reliable service"
+      },
+      "trainedStaff": {
+        "title": "Trained Staff",
+        "subtitle": "Experienced and vetted teams"
+      },
+      "insured": {
+        "title": "Insured",
+        "subtitle": "Covered for peace of mind"
+      }
+    },
     "testimonials": {
       "title": "What Our Customers Say",
       "subtitle": "Trust the experience of satisfied customers"
     },
     "cta": {
+      "badge": "Get started",
       "title": "Ready for Professional Cleaning?",
       "subtitle": "Contact us today for a free quote",
-      "button": "Free Quote"
+      "button": "Free Quote",
+      "trust": {
+        "freeQuote": "Free quote",
+        "noHiddenFees": "No hidden fees",
+        "sameDayResponse": "Same-day response"
+      }
     },
     "servicesCta": {
       "title": "Ready for Professional Cleaning?",
@@ -102,6 +172,10 @@
     "title": "Our Services",
     "subtitle": "Professional solutions for all your cleaning and moving needs",
     "featuresTitle": "Features",
+    "priceCalculator": {
+      "title": "Price Calculator",
+      "subtitle": "Choose a service and get an instant estimate"
+    },
     "benefitsSection": {
       "title": "Why SwissCleanMove?",
       "subtitle": "Your advantages with our professional service"
@@ -399,6 +473,13 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Get in touch with us",
+    "errors": {
+      "submitFailed": "Formulier verzenden mislukt",
+      "submitFailedRetry": "Formulier verzenden mislukt. Probeer het opnieuw."
+    },
+    "whatsapp": {
+      "prefill": "Hallo! Ik ben geïnteresseerd in jullie diensten en wil graag meer informatie. Kunnen jullie mij meer informatie sturen? Alvast bedankt!"
+    },
     "success": {
       "title": "Message sent successfully!",
       "subtitle": "Thank you for your message. We will get back to you as soon as possible.",
@@ -467,6 +548,10 @@
   "freeOffer": {
     "title": "Request Free Quote",
     "subtitle": "Get a non-binding quote for your cleaning or moving needs",
+    "errors": {
+      "submitFailed": "Formulier verzenden mislukt",
+      "submitFailedRetry": "Formulier verzenden mislukt. Probeer het opnieuw."
+    },
     "success": {
       "title": "Thank you for your inquiry!",
       "subtitle": "We have received your request and will contact you within 24 hours.",
@@ -605,14 +690,412 @@
   "footer": {
     "company": "SwissCleanMove",
     "description": "Professional cleaning and moving services in Switzerland",
+    "location": "Zwitserland, Bern",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contact": "Contact",
     "legal": "Legal",
-    "followUs": "Follow Us"
+    "followUs": "Follow Us",
+    "copyright": "© {year} SwissCleanMove. Alle rechten voorbehouden.",
+    "madeInSwitzerland": "Made in Switzerland",
+    "acceptanceGuarantee": "100% Oplevergarantie"
   },
   "whatsapp": {
     "message": "Hello! I'm interested in your services."
+  },
+  "serviceForm": {
+    "common": {
+      "yes": "Ja",
+      "no": "Nee"
+    },
+    "title": {
+      "quote": "Offerte",
+      "offer": "Aanbod"
+    },
+    "sections": {
+      "chargingAddress": "Laadadres",
+      "address": "Adres",
+      "unloadingAddress": "Losadres",
+      "special": "Speciaal",
+      "miscellaneous": "Overig",
+      "apartmentDetails": "Appartementdetails"
+    },
+    "toasts": {
+      "submitted": "Formulier succesvol verzonden!",
+      "submitFailed": "Formulier verzenden mislukt",
+      "submitFailedRetry": "Formulier verzenden mislukt. Probeer het opnieuw."
+    },
+    "fields": {
+      "salutation": {
+        "label": "Aanhef",
+        "options": {
+          "mister": "Dhr.",
+          "woman": "Mevr."
+        }
+      },
+      "name": {
+        "label": "Naam",
+        "placeholder": "Vul je naam in"
+      },
+      "firstName": {
+        "label": "Voornaam",
+        "placeholder": "Vul je voornaam in"
+      },
+      "streetAndNumber": {
+        "label": "Straat en nummer",
+        "placeholder": "Vul straat en nummer in"
+      },
+      "postalCodeAndCity": {
+        "label": "Postcode en plaats",
+        "placeholder": "Vul postcode en plaats in"
+      },
+      "telephone": {
+        "label": "Telefoon",
+        "placeholder": "Vul je telefoonnummer in"
+      },
+      "emailAddress": {
+        "label": "E-mailadres",
+        "placeholder": "Vul je e-mailadres in"
+      },
+      "movingDate": {
+        "label": "Verhuisdatum"
+      },
+      "floors": {
+        "label": "Verdiepingen"
+      },
+      "assembly": {
+        "label": "Montage"
+      },
+      "pathToFrontDoor": {
+        "label": "Pad naar de voordeur"
+      },
+      "lift": {
+        "label": "Lift"
+      },
+      "numberOfRooms": {
+        "label": "Aantal kamers"
+      },
+      "heavyLoad": {
+        "label": "Zware lading"
+      },
+      "livingSpaceInM2": {
+        "label": "Woonoppervlakte (m²)"
+      },
+      "liftDisassembly": {
+        "label": "Lift demontage"
+      },
+      "pathToFrontDoorM": {
+        "label": "Pad naar de voordeur (m)"
+      },
+      "pack": {
+        "label": "Inpakken"
+      },
+      "cellar": {
+        "label": "Kelder"
+      },
+      "garage": {
+        "label": "Garage"
+      },
+      "screed": {
+        "label": "Zolder"
+      },
+      "craftRoom": {
+        "label": "Hobbyruimte"
+      },
+      "unpacking": {
+        "label": "Uitpakken"
+      },
+      "cleaning": {
+        "label": "Schoonmaak"
+      },
+      "disposal": {
+        "label": "Afvoer"
+      },
+      "apartment": {
+        "numberOfRooms": {
+          "label": "Aantal kamers"
+        },
+        "type": {
+          "label": "Type appartement",
+          "options": {
+            "rentalApartment": "Huurappartement",
+            "ownApartment": "Eigen appartement",
+            "house": "Huis"
+          }
+        },
+        "areaInM2": {
+          "label": "Oppervlakte (m²)"
+        },
+        "awningType": {
+          "label": "Type zonnescherm"
+        },
+        "cellar": {
+          "label": "Kelder"
+        },
+        "garage": {
+          "label": "Garage"
+        }
+      },
+      "cleaningAppointment": {
+        "label": "Schoonmaakafspraak"
+      },
+      "submissionDeadline": {
+        "label": "Inleverdeadline"
+      },
+      "carpetShampooing": {
+        "label": "Tapijtshampoo"
+      },
+      "conservatory": {
+        "label": "Serre"
+      },
+      "outdoorSeating": {
+        "label": "Buitenmeubilair"
+      },
+      "parquet": {
+        "label": "Parket"
+      },
+      "stairpolish": {
+        "label": "Trap polish"
+      },
+      "contactPreferredVia": {
+        "label": "Contact bij voorkeur via",
+        "options": {
+          "email": "E-mail",
+          "phone": "Telefoon"
+        }
+      },
+      "viewingIsWelcome": {
+        "label": "Bezichtiging is welkom.",
+        "options": {
+          "and": "En"
+        }
+      },
+      "remark": {
+        "label": "Opmerking",
+        "placeholder": "Vul je opmerking in"
+      }
+    },
+    "buttons": {
+      "close": "Sluiten",
+      "submitting": "Verzenden...",
+      "submit": "Verzenden"
+    }
+  },
+  "priceCalculator": {
+    "title": "Prijscalculator",
+    "subtitle": "Krijg direct een prijsindicatie",
+    "estimatedCost": "Geschatte kosten",
+    "addonsLine": "Extra’s: CHF {addOnsTotal} · Totaal vanaf: CHF {totalWithAddOns}",
+    "forHours": "Voor {hours} uur",
+    "perMonth": "Per maand",
+    "fields": {
+      "serviceCategory": "Categorie",
+      "serviceType": "Type service",
+      "rooms": "Kamers",
+      "estimatedHours": "Geschatte uren",
+      "areaM2": "Oppervlakte (m²)",
+      "addons": "Extra’s"
+    },
+    "categories": {
+      "cleaning": "Schoonmaak",
+      "moving": "Verhuizing",
+      "maintenance": "Vastgoedonderhoud",
+      "disposal": "Afvoer",
+      "combo": "Combi"
+    },
+    "roomsOptions": {
+      "one": "1 kamer",
+      "two": "2 kamers",
+      "three": "3 kamers",
+      "four": "4 kamers",
+      "five": "5 kamers",
+      "sixPlus": "6+ kamers"
+    },
+    "hoursShort": "{hours}u",
+    "services": {
+      "cleaning": {
+        "endOfTenancyApartment": "Eindschoonmaak (appartement)",
+        "endOfTenancyHouse": "Eindschoonmaak (huis)",
+        "apartmentHouseCleaning": "Appartement-/huisschoonmaak",
+        "deepCleaning": "Dieptereiniging",
+        "constructionCleaning": "Bouwschoonmaak",
+        "gastronomyKitchenDeep": "Horecakeuken dieptereiniging",
+        "gastronomyRegular": "Horeca periodieke schoonmaak",
+        "gastronomySanitary": "Horeca sanitair",
+        "windowCleaning": "Ramen wassen"
+      },
+      "moving": {
+        "movingAssistant": "Verhuisassistent",
+        "movingTeam2": "Verhuisteam (2 personen)",
+        "vanWithDriver": "Bus met chauffeur",
+        "assembly": "Montage / demontage"
+      },
+      "maintenance": {
+        "residentialBuildings": "Woongebouwen",
+        "officesPractices": "Kantoren & praktijken",
+        "stairwellsFlat": "Trappenhuizen (vaste prijs)",
+        "hourlyRate": "Uurtarief"
+      },
+      "disposal": {
+        "disposalPerM3": "Afvoer per m³"
+      },
+      "combo": {
+        "comboApartment": "Combi: schoonmaak + verhuizing (appartement)",
+        "comboHouse": "Combi: schoonmaak + verhuizing (huis)"
+      }
+    },
+    "addons": {
+      "basementAttic": "Kelder / zolder",
+      "balconyTerrace": "Balkon / terras",
+      "disposalPerM3": "Afvoer per m³"
+    },
+    "addonPriceFrom": "vanaf CHF {amount}",
+    "disclaimer": "Alle prijzen zijn indicatief. De definitieve prijs hangt af van de scope, toegang en staat van het pand.",
+    "display": {
+      "fromChf": "Vanaf CHF {amount}",
+      "priceOnRequest": "Prijs op aanvraag",
+      "hourlyRangePerStaff": "CHF {min}–{max}/u per medewerker (vanaf CHF {base})",
+      "sqmRangeFrom": "CHF {min}–{max}/m² (vanaf CHF {base})",
+      "chfRange": "CHF {min}–{max}",
+      "fromChfPerService": "Vanaf CHF {amount} per service",
+      "perWindow": "CHF {min}–{max} per raam ({framesMin}–{framesMax} kozijnen)",
+      "hourlyRangePerPerson": "CHF {min}–{max}/u per persoon (vanaf CHF {base})",
+      "fromChfPerHourMin": "Vanaf CHF {amount}/u (vanaf CHF {base})",
+      "hourlyRange": "CHF {min}–{max}/u (vanaf CHF {base})",
+      "sqmRange": "CHF {min}–{max}/m² (vanaf CHF {base})",
+      "flatRateFrom": "Vast tarief vanaf CHF {amount}",
+      "fromChfPerM3": "Vanaf CHF {amount} per m³"
+    }
+  },
+  "servicesPages": {
+    "common": {
+      "requestQuote": "Offerte aanvragen",
+      "callNow": "Nu bellen",
+      "emailUs": "E-mail ons",
+      "ourServicesInclude": "Onze diensten omvatten:"
+    },
+    "officeCleaning": {
+      "hero": {
+        "title": "Kantoor schoonmaakdiensten",
+        "subtitle": "Professionele kantoorschoonmaak voor een schone en productieve werkomgeving"
+      },
+      "details": {
+        "title": "Professionele kantooromgeving",
+        "description": "Een schoon kantoor verhoogt de productiviteit en geeft een professionele indruk aan klanten en medewerkers. Onze commerciële schoonmaakservice zorgt ervoor dat je werkplek altijd hygiënisch en brandschoon is.",
+        "rateNote": "Professionele tarieven voor commerciële schoonmaak",
+        "imageLabel": "Professionele kantoorschoonmaak"
+      },
+      "benefitsSection": {
+        "title": "Waarom kiezen voor onze kantoorschoonmaak?",
+        "subtitle": "Betrouwbare commerciële schoonmaak waar je op kunt rekenen"
+      },
+      "benefits": {
+        "professionalTeam": {
+          "title": "Professioneel team",
+          "description": "Ervaren specialisten in commerciële schoonmaak"
+        },
+        "flexibleHours": {
+          "title": "Flexibele uren",
+          "description": "Schoonmaak buiten kantooruren om verstoring te voorkomen"
+        },
+        "fullyInsured": {
+          "title": "Volledig verzekerd",
+          "description": "Volledige verzekeringsdekking voor commerciële panden"
+        }
+      },
+      "solutions": {
+        "title": "Complete kantoorschoonmaakoplossingen",
+        "subtitle": "Alles wat je kantoor nodig heeft om schoon en professioneel te blijven",
+        "items": {
+          "dailyCleaning": {
+            "title": "Dagelijkse schoonmaak",
+            "description": "Regelmatige onderhoudsschoonmaak voor kantoren"
+          },
+          "deepCleaning": {
+            "title": "Dieptereiniging",
+            "description": "Grondige schoonmaak voor speciale gelegenheden"
+          },
+          "carpetCleaning": {
+            "title": "Tapijtreiniging",
+            "description": "Professionele tapijt- en meubelreiniging"
+          },
+          "windowCleaning": {
+            "title": "Ramen wassen",
+            "description": "Binnen- en buitenramen schoonmaken"
+          },
+          "sanitization": {
+            "title": "Desinfectie",
+            "description": "Desinfectie- en sanitatie diensten"
+          },
+          "wasteManagement": {
+            "title": "Afvalbeheer",
+            "description": "Professionele afvalverwerking en recycling"
+          }
+        }
+      },
+      "cta": {
+        "title": "Klaar voor professionele kantoorschoonmaak?",
+        "subtitle": "Creëer een productieve werkomgeving met onze schoonmaakdiensten",
+        "primaryButton": "Commerciële offerte aanvragen"
+      }
+    },
+    "relocation": {
+      "hero": {
+        "title": "Professionele verhuisdiensten",
+        "subtitle": "Complete verhuisservice met ervaren team en professionele apparatuur"
+      },
+      "details": {
+        "title": "Stressvrije verhuiservaring",
+        "description": "Verhuizen hoeft niet stressvol te zijn. Ons professionele verhuisteam verzorgt elke stap, van zorgvuldig inpakken tot veilig transport en het installeren op je nieuwe locatie.",
+        "rateNote": "Prijs op maat op basis van jouw behoeften",
+        "imageLabel": "Professionele verhuisdiensten"
+      },
+      "benefitsSection": {
+        "title": "Waarom kiezen voor onze verhuisservice?",
+        "subtitle": "Professioneel verhuizen waar je op kunt vertrouwen"
+      },
+      "benefits": {
+        "fullyInsured": {
+          "title": "Volledig verzekerd",
+          "description": "Volledige verzekeringsdekking voor je bezittingen"
+        },
+        "experiencedTeam": {
+          "title": "Ervaren team",
+          "description": "Professionele verhuizers met jarenlange ervaring"
+        },
+        "fullService": {
+          "title": "Full service",
+          "description": "Van inpakken tot uitpakken: wij regelen alles"
+        }
+      },
+      "processSection": {
+        "title": "Ons verhuisproces",
+        "subtitle": "Georganiseerd, efficiënt en zorgvuldig",
+        "steps": {
+          "planning": {
+            "title": "Planning & inventarisatie",
+            "description": "We beoordelen je verhuisbehoeften en maken een plan"
+          },
+          "packing": {
+            "title": "Inpakken",
+            "description": "Professioneel inpakken met kwaliteitsmaterialen"
+          },
+          "transport": {
+            "title": "Transport",
+            "description": "Veilig vervoer naar je nieuwe locatie"
+          },
+          "setup": {
+            "title": "Installatie",
+            "description": "Uitpakken en meubelmontage op locatie"
+          }
+        }
+      },
+      "cta": {
+        "title": "Klaar om te verhuizen met professionals?",
+        "subtitle": "Vraag vandaag nog je persoonlijke verhuisofferte aan",
+        "primaryButton": "Verhuisofferte aanvragen"
+      }
+    }
   },
   "admin": {
     "sidebar": {

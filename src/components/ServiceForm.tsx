@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { X } from 'lucide-react'
 import toast from 'react-hot-toast'
+import { useTranslations } from 'next-intl'
 
 interface ServiceFormProps {
   serviceName: string
@@ -63,6 +64,7 @@ interface FormData {
 }
 
 export default function ServiceForm({ serviceName, isOpen, onClose, formType }: ServiceFormProps) {
+  const t = useTranslations('serviceForm')
   const [formData, setFormData] = useState<FormData>({
     salutation: 'Mister',
     name: '',
@@ -100,7 +102,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
       })
 
       if (response.ok) {
-        toast.success('Form submitted successfully!')
+        toast.success(t('toasts.submitted'))
         onClose()
         // Reset form
         setFormData({
@@ -116,10 +118,10 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
           remark: ''
         })
       } else {
-        throw new Error('Failed to submit form')
+        throw new Error(t('toasts.submitFailed'))
       }
     } catch (error) {
-      toast.error('Failed to submit form. Please try again.')
+      toast.error(t('toasts.submitFailedRetry'))
     } finally {
       setIsSubmitting(false)
     }
@@ -132,7 +134,8 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
       <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <h2 className="text-2xl font-bold text-gray-900 capitalize">
-            {serviceName} {formType === 'relocation' ? 'Quote' : formType === 'disposal' ? 'Offer' : formType === 'storage' ? 'Offer' : 'Offer'}
+            {serviceName}{' '}
+            {formType === 'relocation' ? t('title.quote') : t('title.offer')}
           </h2>
           <button
             onClick={onClose}
@@ -148,13 +151,13 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
             <div className="space-y-6">
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-red-800 mb-4">
-                  {formType === 'relocation' ? 'Charging address' : 'Address'}
+                  {formType === 'relocation' ? t('sections.chargingAddress') : t('sections.address')}
                 </h3>
                 
                 {/* Salutation */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Salutation
+                    {t('fields.salutation.label')}
                   </label>
                   <div className="flex space-x-4">
                     <label className="flex items-center">
@@ -166,7 +169,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('salutation', e.target.value as 'Mister' | 'Woman')}
                         className="mr-2"
                       />
-                      Mister
+                      {t('fields.salutation.options.mister')}
                     </label>
                     <label className="flex items-center">
                       <input
@@ -177,7 +180,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('salutation', e.target.value as 'Mister' | 'Woman')}
                         className="mr-2"
                       />
-                      Woman
+                      {t('fields.salutation.options.woman')}
                     </label>
                   </div>
                 </div>
@@ -185,7 +188,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                 {/* Name */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
+                    {t('fields.name.label')} *
                   </label>
                   <input
                     type="text"
@@ -193,14 +196,14 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Name"
+                    placeholder={t('fields.name.placeholder')}
                   />
                 </div>
 
                 {/* First Name */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    First name *
+                    {t('fields.firstName.label')} *
                   </label>
                   <input
                     type="text"
@@ -208,14 +211,14 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                     value={formData.firstName}
                     onChange={(e) => handleInputChange('firstName', e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="First name"
+                    placeholder={t('fields.firstName.placeholder')}
                   />
                 </div>
 
                 {/* Street and Number */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Street and number *
+                    {t('fields.streetAndNumber.label')} *
                   </label>
                   <input
                     type="text"
@@ -223,14 +226,14 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                     value={formData.streetAndNumber}
                     onChange={(e) => handleInputChange('streetAndNumber', e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Street and number"
+                    placeholder={t('fields.streetAndNumber.placeholder')}
                   />
                 </div>
 
                 {/* Postal Code and City */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Postal code and city *
+                    {t('fields.postalCodeAndCity.label')} *
                   </label>
                   <input
                     type="text"
@@ -238,14 +241,14 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                     value={formData.postalCodeAndCity}
                     onChange={(e) => handleInputChange('postalCodeAndCity', e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Postal code and city"
+                    placeholder={t('fields.postalCodeAndCity.placeholder')}
                   />
                 </div>
 
                 {/* Telephone */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Telephone *
+                    {t('fields.telephone.label')} *
                   </label>
                   <input
                     type="tel"
@@ -253,14 +256,14 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                     value={formData.telephone}
                     onChange={(e) => handleInputChange('telephone', e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Telephone"
+                    placeholder={t('fields.telephone.placeholder')}
                   />
                 </div>
 
                 {/* Email Address */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
+                    {t('fields.emailAddress.label')} *
                   </label>
                   <input
                     type="email"
@@ -268,7 +271,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                     value={formData.emailAddress}
                     onChange={(e) => handleInputChange('emailAddress', e.target.value)}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Email Address"
+                    placeholder={t('fields.emailAddress.placeholder')}
                   />
                 </div>
 
@@ -276,7 +279,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                 {formType === 'relocation' && (
                   <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Moving date *
+                      {t('fields.movingDate.label')} *
                     </label>
                     <input
                       type="date"
@@ -292,11 +295,11 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
               {/* Relocation Unloading Address */}
               {formType === 'relocation' && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-red-800 mb-4">Unloading address</h3>
+                  <h3 className="text-lg font-semibold text-red-800 mb-4">{t('sections.unloadingAddress')}</h3>
                   
                   <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Street and number *
+                      {t('fields.streetAndNumber.label')} *
                     </label>
                     <input
                       type="text"
@@ -304,13 +307,13 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                       value={formData.unloadingStreetAndNumber || ''}
                       onChange={(e) => handleInputChange('unloadingStreetAndNumber', e.target.value)}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Street and number"
+                      placeholder={t('fields.streetAndNumber.placeholder')}
                     />
                   </div>
 
                   <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Postal code and city *
+                      {t('fields.postalCodeAndCity.label')} *
                     </label>
                     <input
                       type="text"
@@ -318,13 +321,13 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                       value={formData.unloadingPostalCodeAndCity || ''}
                       onChange={(e) => handleInputChange('unloadingPostalCodeAndCity', e.target.value)}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Postal code and city"
+                      placeholder={t('fields.postalCodeAndCity.placeholder')}
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Floors</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.floors.label')}</label>
                       <select
                         value={formData.floors || 'UF'}
                         onChange={(e) => handleInputChange('floors', e.target.value)}
@@ -339,45 +342,45 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Assembly</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.assembly.label')}</label>
                       <select
                         value={formData.assembly || 'no'}
                         onChange={(e) => handleInputChange('assembly', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
+                        <option value="no">{t('common.no')}</option>
+                        <option value="yes">{t('common.yes')}</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 mt-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Path to the front door</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.pathToFrontDoor.label')}</label>
                       <select
                         value={formData.pathToFrontDoor || 'no'}
                         onChange={(e) => handleInputChange('pathToFrontDoor', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
+                        <option value="no">{t('common.no')}</option>
+                        <option value="yes">{t('common.yes')}</option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Lift</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.lift.label')}</label>
                       <select
                         value={formData.lift || 'no'}
                         onChange={(e) => handleInputChange('lift', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
+                        <option value="no">{t('common.no')}</option>
+                        <option value="yes">{t('common.yes')}</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="mt-4">
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Number of Rooms</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.numberOfRooms.label')}</label>
                     <select
                       value={formData.numberOfRooms || '1'}
                       onChange={(e) => handleInputChange('numberOfRooms', e.target.value)}
@@ -394,18 +397,18 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
 
                   <div className="grid grid-cols-2 gap-4 mt-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Heavy load</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.heavyLoad.label')}</label>
                       <select
                         value={formData.heavyLoad || 'No'}
                         onChange={(e) => handleInputChange('heavyLoad', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="No">No</option>
-                        <option value="Yes">Yes</option>
+                        <option value="No">{t('common.no')}</option>
+                        <option value="Yes">{t('common.yes')}</option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Living space in m2</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.livingSpaceInM2.label')}</label>
                       <select
                         value={formData.livingSpaceInM2 || 'approx. 10 m2'}
                         onChange={(e) => handleInputChange('livingSpaceInM2', e.target.value)}
@@ -424,25 +427,25 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
 
                   <div className="grid grid-cols-2 gap-4 mt-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Disassembly</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.liftDisassembly.label')}</label>
                       <select
                         value={formData.liftDisassembly || 'no'}
                         onChange={(e) => handleInputChange('liftDisassembly', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
+                        <option value="no">{t('common.no')}</option>
+                        <option value="yes">{t('common.yes')}</option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Path to front door (m)</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.pathToFrontDoorM.label')}</label>
                       <select
                         value={formData.pathToFrontDoorM || 'no'}
                         onChange={(e) => handleInputChange('pathToFrontDoorM', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
+                        <option value="no">{t('common.no')}</option>
+                        <option value="yes">{t('common.yes')}</option>
                       </select>
                     </div>
                   </div>
@@ -457,7 +460,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('pack', e.target.checked)}
                         className="mr-2"
                       />
-                      <label htmlFor="pack" className="text-sm text-gray-700">Pack</label>
+                      <label htmlFor="pack" className="text-sm text-gray-700">{t('fields.pack.label')}</label>
                     </div>
                     <div className="flex items-center">
                       <input
@@ -467,7 +470,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('cellar', e.target.checked)}
                         className="mr-2"
                       />
-                      <label htmlFor="cellar" className="text-sm text-gray-700">Cellar</label>
+                      <label htmlFor="cellar" className="text-sm text-gray-700">{t('fields.cellar.label')}</label>
                     </div>
                     <div className="flex items-center">
                       <input
@@ -477,7 +480,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('garage', e.target.checked)}
                         className="mr-2"
                       />
-                      <label htmlFor="garage" className="text-sm text-gray-700">Garage</label>
+                      <label htmlFor="garage" className="text-sm text-gray-700">{t('fields.garage.label')}</label>
                     </div>
                     <div className="flex items-center">
                       <input
@@ -487,7 +490,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('screed', e.target.checked)}
                         className="mr-2"
                       />
-                      <label htmlFor="screed" className="text-sm text-gray-700">Screed</label>
+                      <label htmlFor="screed" className="text-sm text-gray-700">{t('fields.screed.label')}</label>
                     </div>
                     <div className="flex items-center">
                       <input
@@ -497,14 +500,14 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('craftRoom', e.target.checked)}
                         className="mr-2"
                       />
-                      <label htmlFor="craftRoom" className="text-sm text-gray-700">Craft room</label>
+                      <label htmlFor="craftRoom" className="text-sm text-gray-700">{t('fields.craftRoom.label')}</label>
                     </div>
                   </div>
 
                   {/* Service options */}
                   <div className="mt-6 space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Unpacking</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.unpacking.label')}</label>
                       <div className="flex space-x-4">
                         <label className="flex items-center">
                           <input
@@ -515,7 +518,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                             onChange={(e) => handleInputChange('unpacking', e.target.value as 'And' | 'No')}
                             className="mr-2"
                           />
-                          Yes
+                          {t('common.yes')}
                         </label>
                         <label className="flex items-center">
                           <input
@@ -526,13 +529,13 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                             onChange={(e) => handleInputChange('unpacking', e.target.value as 'And' | 'No')}
                             className="mr-2"
                           />
-                          No
+                          {t('common.no')}
                         </label>
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Cleaning</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.cleaning.label')}</label>
                       <div className="flex space-x-4">
                         <label className="flex items-center">
                           <input
@@ -543,7 +546,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                             onChange={(e) => handleInputChange('cleaning', e.target.value as 'And' | 'No')}
                             className="mr-2"
                           />
-                          Yes
+                          {t('common.yes')}
                         </label>
                         <label className="flex items-center">
                           <input
@@ -554,13 +557,13 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                             onChange={(e) => handleInputChange('cleaning', e.target.value as 'And' | 'No')}
                             className="mr-2"
                           />
-                          No
+                          {t('common.no')}
                         </label>
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Disposal</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.disposal.label')}</label>
                       <div className="flex space-x-4">
                         <label className="flex items-center">
                           <input
@@ -571,7 +574,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                             onChange={(e) => handleInputChange('disposal', e.target.value as 'And' | 'No')}
                             className="mr-2"
                           />
-                          Yes
+                          {t('common.yes')}
                         </label>
                         <label className="flex items-center">
                           <input
@@ -582,7 +585,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                             onChange={(e) => handleInputChange('disposal', e.target.value as 'And' | 'No')}
                             className="mr-2"
                           />
-                          No
+                          {t('common.no')}
                         </label>
                       </div>
                     </div>
@@ -593,11 +596,11 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
               {/* Apartment Details for Cleaning */}
               {formType === 'cleaning' && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-red-800 mb-4">Apartment details</h3>
+                  <h3 className="text-lg font-semibold text-red-800 mb-4">{t('sections.apartmentDetails')}</h3>
                   
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Number of Rooms</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.apartment.numberOfRooms.label')}</label>
                       <select
                         value={formData.numberOfRoomsApartment || '1 Zimmer'}
                         onChange={(e) => handleInputChange('numberOfRoomsApartment', e.target.value)}
@@ -611,22 +614,22 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Apartment type</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.apartment.type.label')}</label>
                       <select
                         value={formData.apartmentType || 'Rental apartment'}
                         onChange={(e) => handleInputChange('apartmentType', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="Rental apartment">Rental apartment</option>
-                        <option value="Own apartment">Own apartment</option>
-                        <option value="House">House</option>
+                        <option value="Rental apartment">{t('fields.apartment.type.options.rentalApartment')}</option>
+                        <option value="Own apartment">{t('fields.apartment.type.options.ownApartment')}</option>
+                        <option value="House">{t('fields.apartment.type.options.house')}</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Area in m2</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.apartment.areaInM2.label')}</label>
                       <select
                         value={formData.areaInM2 || 'ca 10 m2'}
                         onChange={(e) => handleInputChange('areaInM2', e.target.value)}
@@ -642,14 +645,14 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Awning type</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.apartment.awningType.label')}</label>
                       <select
                         value={formData.awningType || 'no'}
                         onChange={(e) => handleInputChange('awningType', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
+                        <option value="no">{t('common.no')}</option>
+                        <option value="yes">{t('common.yes')}</option>
                       </select>
                     </div>
                   </div>
@@ -664,7 +667,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('cellarCleaning', e.target.checked)}
                         className="mr-2"
                       />
-                      <label htmlFor="cellarCleaning" className="text-sm text-gray-700">Cellar</label>
+                      <label htmlFor="cellarCleaning" className="text-sm text-gray-700">{t('fields.apartment.cellar.label')}</label>
                     </div>
                     <div className="flex items-center">
                       <input
@@ -674,13 +677,13 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('garageCleaning', e.target.checked)}
                         className="mr-2"
                       />
-                      <label htmlFor="garageCleaning" className="text-sm text-gray-700">Garage</label>
+                      <label htmlFor="garageCleaning" className="text-sm text-gray-700">{t('fields.apartment.garage.label')}</label>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 mt-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Cleaning appointment *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.cleaningAppointment.label')} *</label>
                       <input
                         type="date"
                         required
@@ -690,7 +693,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Submission deadline *</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('fields.submissionDeadline.label')} *</label>
                       <input
                         type="date"
                         required
@@ -708,7 +711,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
             <div className="space-y-6">
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-red-800 mb-4">
-                  {formType === 'cleaning' ? 'Special' : 'Miscellaneous'}
+                  {formType === 'cleaning' ? t('sections.special') : t('sections.miscellaneous')}
                 </h3>
 
                 {/* Cleaning Special Services */}
@@ -721,7 +724,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('carpetShampooing', e.target.checked)}
                         className="mr-3"
                       />
-                      Carpet shampooing
+                      {t('fields.carpetShampooing.label')}
                     </label>
                     <label className="flex items-center">
                       <input
@@ -730,7 +733,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('conservatory', e.target.checked)}
                         className="mr-3"
                       />
-                      Conservatory
+                      {t('fields.conservatory.label')}
                     </label>
                     <label className="flex items-center">
                       <input
@@ -739,7 +742,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('outdoorSeating', e.target.checked)}
                         className="mr-3"
                       />
-                      Outdoor seating
+                      {t('fields.outdoorSeating.label')}
                     </label>
                     <label className="flex items-center">
                       <input
@@ -748,7 +751,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('parquet', e.target.checked)}
                         className="mr-3"
                       />
-                      Parquet
+                      {t('fields.parquet.label')}
                     </label>
                     <label className="flex items-center">
                       <input
@@ -757,7 +760,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('stairpolish', e.target.checked)}
                         className="mr-3"
                       />
-                      Stairpolish
+                      {t('fields.stairpolish.label')}
                     </label>
                   </div>
                 )}
@@ -765,22 +768,22 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                 {/* Contact Preference */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Contact preferred via
+                    {t('fields.contactPreferredVia.label')}
                   </label>
                   <select
                     value={formData.contactPreferredVia}
                     onChange={(e) => handleInputChange('contactPreferredVia', e.target.value as 'E-mail' | 'Phone')}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
-                    <option value="E-mail">E-mail</option>
-                    <option value="Phone">Phone</option>
+                    <option value="E-mail">{t('fields.contactPreferredVia.options.email')}</option>
+                    <option value="Phone">{t('fields.contactPreferredVia.options.phone')}</option>
                   </select>
                 </div>
 
                 {/* Viewing Welcome */}
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Viewing is welcome.
+                    {t('fields.viewingIsWelcome.label')}
                   </label>
                   <div className="flex space-x-4">
                     <label className="flex items-center">
@@ -792,7 +795,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('viewingIsWelcome', e.target.value as 'And' | 'No')}
                         className="mr-2"
                       />
-                      And
+                      {t('fields.viewingIsWelcome.options.and')}
                     </label>
                     <label className="flex items-center">
                       <input
@@ -803,7 +806,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('viewingIsWelcome', e.target.value as 'And' | 'No')}
                         className="mr-2"
                       />
-                      No
+                      {t('common.no')}
                     </label>
                   </div>
                 </div>
@@ -811,14 +814,14 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                 {/* Remarks */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Remark
+                    {t('fields.remark.label')}
                   </label>
                   <textarea
                     value={formData.remark}
                     onChange={(e) => handleInputChange('remark', e.target.value)}
                     rows={4}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Additional remarks or special requests..."
+                    placeholder={t('fields.remark.placeholder')}
                   />
                 </div>
               </div>
@@ -832,14 +835,14 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
               onClick={onClose}
               className="px-6 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors"
             >
-              Close
+              {t('buttons.close')}
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
               className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              {isSubmitting ? 'Submitting...' : 'Submit'}
+              {isSubmitting ? t('buttons.submitting') : t('buttons.submit')}
             </button>
           </div>
         </form>

@@ -46,14 +46,14 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit form');
+        throw new Error(t('contact.errors.submitFailed'));
       }
 
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Failed to submit form. Please try again.');
+      alert(t('contact.errors.submitFailedRetry'));
     } finally {
       setIsSubmitting(false);
     }
@@ -61,7 +61,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
 
   const handleWhatsAppClick = () => {
     const phoneNumber = '41123456789';
-    const message = encodeURIComponent('Hello! I am interested in your services and would like to know more about it. Could you send me more information? Thank you!');
+    const message = encodeURIComponent(t('contact.whatsapp.prefill'));
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
