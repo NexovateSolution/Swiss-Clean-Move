@@ -3,14 +3,26 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
+import SwissHero from '@/components/SwissHero';
 import { 
   MapPin, 
   Phone, 
-  Mail, 
   Clock,
   CheckCircle,
   Star,
-  Users
+  Users,
+  Home as HomeIcon,
+  Building2,
+  Briefcase,
+  Sparkles,
+  Truck,
+  Trash2,
+  UtensilsCrossed,
+  Shield,
+  HardHat,
+  Wrench,
+  RotateCcw,
+  Layers
 } from 'lucide-react';
 
 export default function RegionsPage({ params: { locale } }: { params: { locale: string } }) {
@@ -56,85 +68,84 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
   ];
 
   const services = [
-    { id: 'houseCleaning', icon: '🏠' },
-    { id: 'apartmentCleaning', icon: '🏢' },
-    { id: 'officeCleaning', icon: '💼' },
-    { id: 'finalCleaning', icon: '✨' },
-    { id: 'windowCleaning', icon: '🪟' },
-    { id: 'relocation', icon: '📦' },
-    { id: 'disposal', icon: '♻️' },
-    { id: 'stairwellCleaning', icon: '🪜' }
+    { id: 'houseCleaning', icon: HomeIcon, href: `/${locale}/services/house-cleaning` },
+    { id: 'apartmentCleaning', icon: Building2, href: `/${locale}/services/apartment-cleaning` },
+    { id: 'officeCleaning', icon: Briefcase, href: `/${locale}/services/office-cleaning` },
+    { id: 'finalCleaning', icon: Sparkles, href: `/${locale}/services/final-cleaning` },
+    { id: 'windowCleaning', icon: Layers, href: `/${locale}/services/window-cleaning` },
+    { id: 'stairwellCleaning', icon: Building2, href: `/${locale}/services/stairwell-cleaning` },
+    { id: 'relocation', icon: Truck, href: `/${locale}/services/relocation` },
+    { id: 'disposal', icon: Trash2, href: `/${locale}/services/disposal` },
+    { id: 'gastronomyCleaning', icon: UtensilsCrossed, href: `/${locale}/services#gastronomyCleaning` },
+    { id: 'medicalCleaning', icon: Shield, href: `/${locale}/services#medicalCleaning` },
+    { id: 'constructionCleaning', icon: HardHat, href: `/${locale}/services#constructionCleaning` },
+    { id: 'propertyMaintenance', icon: Wrench, href: `/${locale}/services#propertyMaintenance` },
+    { id: 'specialCleaning', icon: Star, href: `/${locale}/services#specialCleaning` },
+    { id: 'comboService', icon: RotateCcw, href: `/${locale}/services#comboService` }
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-swiss-red text-white overflow-hidden">
-        {/* Swiss-flag inspired overlay */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
-        </div>
-        <div className="relative container-max py-20">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <MapPin className="w-16 h-16 mx-auto text-blue-100" />
-            <h1 className="text-4xl md:text-5xl font-bold">
-              {t('regions.title')}
-            </h1>
-            <p className="text-xl text-blue-100">
-              {t('regions.subtitle')}
-            </p>
-          </div>
-        </div>
-      </section>
+      <SwissHero
+        badge={t('regions.title')}
+        title={t('regions.title')}
+        subtitle={t('regions.subtitle')}
+        right={
+          <img
+            src="/images/transportation.png"
+            alt={t('regions.title')}
+            className="w-full h-[340px] md:h-[420px] object-cover"
+          />
+        }
+      />
 
       {/* Coverage Overview */}
       <section className="section-padding">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
               {t('regions.coverageAreas')}
             </h2>
-            <p className="text-xl text-swiss-gray-600">
+            <p className="text-xl text-swiss-body">
               {t('regions.subtitle')}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="card p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-swiss-blue rounded-full flex items-center justify-center mx-auto">
-                <Users className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-swiss-gray-50 border border-swiss-border rounded-full flex items-center justify-center mx-auto">
+                <Users className="w-8 h-8 text-swiss-body" />
               </div>
-              <h3 className="text-xl font-semibold text-swiss-gray-800">{t('regions.citiesCount')}</h3>
-              <p className="text-swiss-gray-600">{t('regions.citiesDesc')}</p>
+              <h3 className="text-xl font-semibold text-swiss-text">{t('regions.citiesCount')}</h3>
+              <p className="text-swiss-body">{t('regions.citiesDesc')}</p>
             </div>
             <div className="card p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-swiss-green rounded-full flex items-center justify-center mx-auto">
-                <Clock className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-swiss-gray-50 border border-swiss-border rounded-full flex items-center justify-center mx-auto">
+                <Clock className="w-8 h-8 text-swiss-body" />
               </div>
-              <h3 className="text-xl font-semibold text-swiss-gray-800">{t('regions.sameDayService')}</h3>
-              <p className="text-swiss-gray-600">{t('regions.sameDayDesc')}</p>
+              <h3 className="text-xl font-semibold text-swiss-text">{t('regions.sameDayService')}</h3>
+              <p className="text-swiss-body">{t('regions.sameDayDesc')}</p>
             </div>
             <div className="card p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-swiss-red rounded-full flex items-center justify-center mx-auto">
-                <Star className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-swiss-gray-50 border border-swiss-border rounded-full flex items-center justify-center mx-auto">
+                <Star className="w-8 h-8 text-swiss-body" />
               </div>
-              <h3 className="text-xl font-semibold text-swiss-gray-800">{t('regions.localTeams')}</h3>
-              <p className="text-swiss-gray-600">{t('regions.localTeamsDesc')}</p>
+              <h3 className="text-xl font-semibold text-swiss-text">{t('regions.localTeams')}</h3>
+              <p className="text-swiss-body">{t('regions.localTeamsDesc')}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Regional Services */}
-      <section className="section-padding bg-swiss-gray-50">
+      <section className="section-padding bg-swiss-section">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
               {t('regions.ourRegions')}
             </h2>
-            <p className="text-xl text-swiss-gray-600">
+            <p className="text-xl text-swiss-body">
               {t('regions.professionalServices')}
             </p>
           </div>
@@ -144,24 +155,24 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
               <div key={index} className="card p-8 space-y-6">
                 <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="text-2xl font-bold text-swiss-gray-800 mb-2">
+                    <h3 className="text-2xl font-bold text-swiss-text mb-2">
                       {t(`regions.regionData.${region.id}.name`)}
                     </h3>
-                    <p className="text-swiss-gray-600">
+                    <p className="text-swiss-body">
                       {t(`regions.regionData.${region.id}.description`)}
                     </p>
                   </div>
-                  <MapPin className="w-8 h-8 text-swiss-blue flex-shrink-0" />
+                  <MapPin className="w-8 h-8 text-swiss-red flex-shrink-0" />
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-swiss-gray-800 mb-2">{t('regions.serviceAreas')}</h4>
+                    <h4 className="font-semibold text-swiss-text mb-2">{t('regions.serviceAreas')}</h4>
                     <div className="flex flex-wrap gap-2">
                       {(t.raw(`regions.regionData.${region.id}.areas`) as string[]).map((area, areaIndex) => (
                         <span 
                           key={areaIndex}
-                          className="bg-swiss-blue/10 text-swiss-blue px-3 py-1 rounded-full text-sm font-medium"
+                          className="bg-white border border-swiss-border text-swiss-body px-3 py-1 rounded-full text-sm font-medium"
                         >
                           {area}
                         </span>
@@ -171,17 +182,17 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-gray-200">
                     <div className="flex items-center space-x-3">
-                      <Phone className="w-5 h-5 text-swiss-blue" />
+                      <Phone className="w-5 h-5 text-swiss-red" />
                       <div>
-                        <p className="text-sm font-medium text-swiss-gray-800">{t('regions.phone')}</p>
-                        <p className="text-sm text-swiss-gray-600">{region.phone}</p>
+                        <p className="text-sm font-medium text-swiss-text">{t('regions.phone')}</p>
+                        <p className="text-sm text-swiss-body">{region.phone}</p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-swiss-green" />
+                      <CheckCircle className="w-5 h-5 text-swiss-red" />
                       <div>
-                        <p className="text-sm font-medium text-swiss-gray-800">{t('regions.coverage')}</p>
-                        <p className="text-sm text-swiss-gray-600">
+                        <p className="text-sm font-medium text-swiss-text">{t('regions.coverage')}</p>
+                        <p className="text-sm text-swiss-body">
                           {t(`regions.regionData.${region.id}.coverage`)}
                         </p>
                       </div>
@@ -197,50 +208,55 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
       {/* Available Services */}
       <section className="section-padding">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
               {t('regions.servicesAvailable')}
             </h2>
-            <p className="text-xl text-swiss-gray-600">
+            <p className="text-xl text-swiss-body">
               {t('regions.completeRange')}
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="card p-6 text-center space-y-4 hover:shadow-lg transition-shadow">
-                <div className="text-4xl">{service.icon}</div>
-                <h3 className="font-semibold text-swiss-gray-800">
+              (() => {
+                const IconComponent = service.icon;
+                return (
+              <Link
+                key={index}
+                href={service.href}
+                className="card p-6 text-center space-y-4 group focus:outline-none focus:ring-2 focus:ring-swiss-red/20"
+              >
+                <div className="w-14 h-14 bg-swiss-gray-50 border border-swiss-border rounded-2xl flex items-center justify-center mx-auto">
+                  <IconComponent className="w-7 h-7 text-swiss-body group-hover:text-swiss-red transition-colors" />
+                </div>
+                <h3 className="font-semibold text-swiss-text group-hover:text-swiss-red transition-colors">
                   {t(`regions.services.${service.id}`)}
                 </h3>
-              </div>
+              </Link>
+                );
+              })()
             ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="relative py-20 bg-swiss-red text-white overflow-hidden">
-        {/* Swiss-flag inspired overlay */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
-        </div>
-        <div className="container-max relative">
+      <section className="section-padding bg-swiss-section">
+        <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
               {t('regions.notSureArea')}
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-swiss-body">
               {t('regions.contactCheck')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={`/${locale}/contact`} className="btn-secondary text-lg px-8 py-4">
+              <Link href={`/${locale}/contact`} className="btn-primary text-lg px-8 py-4">
                 {t('regions.contactUs')}
               </Link>
-              <a href="tel:+41123456789" className="flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 border border-white/20">
-                <Phone className="w-5 h-5" />
+              <a href="tel:+41764883689" className="flex items-center justify-center space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 border border-swiss-border shadow-subtle">
+                <Phone className="w-5 h-5 text-swiss-red" />
                 <span>{t('regions.callNow')}</span>
               </a>
             </div>

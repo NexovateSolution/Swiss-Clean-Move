@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
+import { prisma } from '../../../../lib/db';
 import nodemailer from 'nodemailer';
-
-const prisma = new PrismaClient();
 
 export async function POST(request: Request) {
   try {
@@ -44,8 +42,8 @@ export async function POST(request: Request) {
             <div style="background: #f5f5f5; padding: 20px; text-align: center; border-top: 3px solid #0066CC;">
               <p style="color: #666; font-size: 12px; margin: 0;">
                 <strong>SwissCleanMove</strong><br>
-                Musterstrasse 123, 8000 Zürich<br>
-                📞 +41 12 345 67 89 | 📧 info@swisscleanmove.ch<br>
+                Orpundstrasse 31, 2504 Biel/Bienne<br>
+                📞 +41 76 488 36 89 / +41 78 215 80 30 | 📧 info@swisscleanmove.ch<br>
                 <span style="color: #999; font-size: 11px;">Sent on ${new Date().toLocaleString('en-CH', { timeZone: 'Europe/Zurich' })}</span>
               </p>
             </div>

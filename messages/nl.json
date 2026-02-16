@@ -55,6 +55,7 @@
       "title": "Our Services",
       "subtitle": "Professional solutions for all your cleaning and moving needs",
       "viewAll": "View all services",
+      "customSolution": "Need a custom solution? We tailor our service to your needs.",
       "houseCleaning": {
         "title": "House Cleaning",
         "description": "Comprehensive house cleaning services for residential properties with attention to every detail"
@@ -144,6 +145,7 @@
       }
     },
     "testimonials": {
+      "badge": "Testimonials",
       "title": "What Our Customers Say",
       "subtitle": "Trust the experience of satisfied customers"
     },
@@ -648,6 +650,233 @@
     "common": {
       "yes": "Ja",
       "no": "Nee"
+    },
+    "wizard": {
+      "badge": "Offerte berekenen",
+      "stepCounter": "Stap {current} van {total}",
+      "validation": {
+        "required": "Vul alle verplichte velden in deze stap in"
+      },
+      "common": {
+        "select": "Selecteer a.u.b.",
+        "yes": "Ja",
+        "no": "Nee"
+      },
+      "buttons": {
+        "back": "Terug",
+        "next": "Volgende",
+        "submit": "Verzenden"
+      },
+      "steps": {
+        "cleaningService": "Service & locatie",
+        "propertyDetails": "Woningdetails",
+        "areas": "Te reinigen ruimtes",
+        "windowDetails": "Raamdetails",
+        "datesAndRequests": "Datum & wensen",
+        "relocationFrom": "Verhuizen van",
+        "relocationTo": "Verhuizen naar",
+        "boxesAndSupplies": "Dozen & materiaal",
+        "disposalBasic": "Afvoer basis",
+        "disposalWaste": "Afvaldetails",
+        "contact": "Contactgegevens"
+      },
+      "fields": {
+        "location": {
+          "label": "Locatie",
+          "placeholder": "Stad / adres"
+        },
+        "objectType": {
+          "label": "Objecttype",
+          "options": {
+            "apartment": "Appartement",
+            "house": "Huis",
+            "office": "Kantoor"
+          }
+        },
+        "floorsCount": {
+          "label": "Hoeveel verdiepingen?"
+        },
+        "roomsCount": {
+          "label": "Aantal kamers"
+        },
+        "livingSpaceM2": {
+          "label": "Woonoppervlakte (m²)",
+          "placeholder": "bijv. 80"
+        },
+        "cleaningAreas": {
+          "label": "Welke ruimtes moeten worden schoongemaakt?",
+          "options": {
+            "complete": "Volledige reiniging van alle kamers (incl. keuken, badkamer & toilet)",
+            "cellar": "Kelder",
+            "attic": "Zolder",
+            "garage": "Garage",
+            "conservatory": "Serre",
+            "individualRooms": "Alleen individuele kamers"
+          }
+        },
+        "desiredCleaningDate": {
+          "label": "Gewenste schoonmaakdatum"
+        },
+        "handoverDate": {
+          "label": "Oplever-/overdrachtsdatum"
+        },
+        "comments": {
+          "label": "Extra wensen / opmerkingen",
+          "placeholder": "Toegang, speciale wensen, enz."
+        },
+        "window": {
+          "normalWindows": {
+            "label": "Normale ramen (aantal)"
+          },
+          "frenchDoors": {
+            "label": "Balkon-/terrasdeuren"
+          },
+          "otherGlass": {
+            "label": "Andere grote glasoppervlakken"
+          },
+          "blindsAndShutters": {
+            "label": "Jaloezieën & rolluiken",
+            "options": {
+              "venetian": "Jaloezieën",
+              "roller": "Rolluiken",
+              "shutters": "Luiken",
+              "other": "Overig / speciaal",
+              "none": "Geen"
+            }
+          },
+          "windowFeatures": {
+            "label": "Bijzondere kenmerken",
+            "options": {
+              "heavilySoiled": "Sterk vervuild (nicotine, vet, stof)",
+              "mold": "Schimmel op raamkozijnen",
+              "manySmall": "Veel kleine ramen",
+              "roofWindow": "Dakraam / moeilijk bereikbaar",
+              "safetyFilm": "Veiligheidsfolie / speciale beglazing",
+              "none": "Geen bijzondere kenmerken"
+            }
+          }
+        },
+        "relocation": {
+          "movingFromAddress": {
+            "label": "Verhuizen van - Postcode / Stad / Adres",
+            "placeholder": "Huidig adres"
+          },
+          "currentFloor": {
+            "label": "Op welke verdieping woont u nu?"
+          },
+          "currentElevator": {
+            "label": "Is er momenteel een lift beschikbaar?"
+          },
+          "movingToAddress": {
+            "label": "Verhuizen naar - Postcode / Stad / Adres",
+            "placeholder": "Bestemmingsadres"
+          },
+          "destinationElevator": {
+            "label": "Is er een lift beschikbaar op bestemming?"
+          },
+          "movingPeople": {
+            "label": "Hoeveel mensen verhuizen?"
+          },
+          "boxesCount": {
+            "label": "Hoeveel verhuisdozen moeten worden vervoerd?"
+          },
+          "movingSupplies": {
+            "label": "Extra verhuismateriaal nodig?",
+            "options": {
+              "movingBox": "Verhuisdoos (10 stuks)",
+              "wardrobeBox": "Garderobedoos",
+              "bottleCarton": "Flessendoos",
+              "tapeDispenser": "Tape + dispenser"
+            }
+          }
+        },
+        "disposal": {
+          "disposalType": {
+            "label": "Maak een keuze",
+            "options": {
+              "disposal": "Afvoer",
+              "eviction": "Ontruiming",
+              "disposalClearance": "Afvoer + Ontruiming"
+            }
+          },
+          "location": {
+            "label": "Locatie"
+          },
+          "elevator": {
+            "label": "Is er momenteel een lift beschikbaar?"
+          },
+          "waste": {
+            "label": "Afval",
+            "options": {
+              "furniture": "Meubels (kast, bed, tafel, etc.)",
+              "electrical": "Elektrische apparaten (TV, koelkast, PC)",
+              "cardboard": "Karton / papier / kleine onderdelen",
+              "constructionDebris": "Bouwafval / hout / metaal",
+              "gardenWaste": "Tuin afval / planten / aarde",
+              "textiles": "Textiel / tapijten / matrassen"
+            }
+          },
+          "otherItems": {
+            "label": "Andere items"
+          },
+          "disassemblyNeeded": {
+            "label": "Moeten items gedemonteerd worden?"
+          },
+          "amount": {
+            "label": "Hoeveel moet er afgevoerd worden?",
+            "options": {
+              "little": "Weinig (kleine ruimte)",
+              "medium": "Gemiddeld (1-2 kamers)",
+              "lots": "Veel (hele woning / huis / magazijn)"
+            }
+          }
+        },
+        "contact": {
+          "salutation": {
+            "label": "Aanhef",
+            "options": {
+              "mister": "Dhr.",
+              "woman": "Mevr."
+            }
+          },
+          "firstName": {
+            "label": "Voornaam"
+          },
+          "lastName": {
+            "label": "Achternaam"
+          },
+          "email": {
+            "label": "E-mailadres"
+          },
+          "phone": {
+            "label": "Telefoonnummer"
+          },
+          "postalCodeAndCity": {
+            "label": "Postcode / Plaats"
+          },
+          "streetAndNumber": {
+            "label": "Straat, nr."
+          },
+          "contactPreferredVia": {
+            "label": "Voorkeur contact",
+            "options": {
+              "email": "E-mail",
+              "phone": "Telefoon"
+            }
+          },
+          "viewingIsWelcome": {
+            "label": "Bezichtiging welkom",
+            "options": {
+              "yes": "Ja",
+              "no": "Nee"
+            }
+          },
+          "remark": {
+            "label": "Opmerking",
+            "placeholder": "Extra notitie"
+          }
+        }
+      }
     },
     "title": {
       "quote": "Offerte",
@@ -1890,13 +2119,14 @@
     }
   },
   "common": {
-    "learnMore": "Learn More",
-    "readMore": "Read More",
-    "getQuote": "Get Quote",
-    "contactUs": "Contact Us",
-    "requestFreeQuote": "Request Free Quote",
-    "getFreeQuote": "Get Free Quote",
-    "freeQuote": "Free Quote"
+    "learnMore": "Meer informatie",
+    "readMore": "Lees meer",
+    "formLink": "Formulier",
+    "getQuote": "Offerte",
+    "contactUs": "Contact",
+    "requestFreeQuote": "Gratis offerte aanvragen",
+    "getFreeQuote": "Gratis offerte krijgen",
+    "freeQuote": "Gratis offerte"
   },
   "regions": {
     "title": "Service Regions",
@@ -1944,14 +2174,20 @@
       }
     },
     "services": {
-      "houseCleaning": "House Cleaning",
-      "apartmentCleaning": "Apartment Cleaning",
-      "officeCleaning": "Office Cleaning",
-      "finalCleaning": "Final Cleaning",
-      "windowCleaning": "Window Cleaning",
-      "relocation": "Relocation",
-      "disposal": "Disposal",
-      "stairwellCleaning": "Stairwell Cleaning"
+      "houseCleaning": "Huisreiniging",
+      "apartmentCleaning": "Appartementreiniging",
+      "officeCleaning": "Kantoorreiniging",
+      "finalCleaning": "Eindreiniging",
+      "windowCleaning": "Ramen wassen",
+      "relocation": "Verhuizing",
+      "disposal": "Afvoer",
+      "stairwellCleaning": "Trappenhuisreiniging",
+      "gastronomyCleaning": "Horecareiniging",
+      "medicalCleaning": "Medische reiniging",
+      "constructionCleaning": "Bouwschoonmaak",
+      "propertyMaintenance": "Vastgoedonderhoud",
+      "specialCleaning": "Speciale reiniging",
+      "comboService": "Schoonmaak + Verhuizing Combo"
     }
   },
   "pricing": {

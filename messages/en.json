@@ -55,6 +55,7 @@
       "title": "Our Services",
       "subtitle": "Professional solutions for all your cleaning and moving needs",
       "viewAll": "View all services",
+      "customSolution": "Need a custom solution? We tailor our service to your needs.",
       "houseCleaning": {
         "title": "House Cleaning",
         "description": "Comprehensive house cleaning services for residential properties with attention to every detail"
@@ -144,6 +145,7 @@
       }
     },
     "testimonials": {
+      "badge": "Testimonials",
       "title": "What Our Customers Say",
       "subtitle": "Trust the experience of satisfied customers"
     },
@@ -648,6 +650,233 @@
     "common": {
       "yes": "Yes",
       "no": "No"
+    },
+    "wizard": {
+      "badge": "Calculate offer",
+      "stepCounter": "Step {current} of {total}",
+      "validation": {
+        "required": "Please fill all required fields in this step"
+      },
+      "common": {
+        "select": "Please select",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "buttons": {
+        "back": "Back",
+        "next": "Next",
+        "submit": "Submit"
+      },
+      "steps": {
+        "cleaningService": "Service & location",
+        "propertyDetails": "Property details",
+        "areas": "Areas to clean",
+        "windowDetails": "Window details",
+        "datesAndRequests": "Dates & requests",
+        "relocationFrom": "Moving from",
+        "relocationTo": "Moving to",
+        "boxesAndSupplies": "Boxes & supplies",
+        "disposalBasic": "Disposal basics",
+        "disposalWaste": "Waste details",
+        "contact": "Contact details"
+      },
+      "fields": {
+        "location": {
+          "label": "Location",
+          "placeholder": "City / address"
+        },
+        "objectType": {
+          "label": "Object type",
+          "options": {
+            "apartment": "Apartment",
+            "house": "House",
+            "office": "Office"
+          }
+        },
+        "floorsCount": {
+          "label": "How many floors?"
+        },
+        "roomsCount": {
+          "label": "Number of rooms"
+        },
+        "livingSpaceM2": {
+          "label": "Living space (m²)",
+          "placeholder": "e.g. 80"
+        },
+        "cleaningAreas": {
+          "label": "Which areas need cleaning?",
+          "options": {
+            "complete": "Complete cleaning of all rooms (including kitchen, bathroom & toilet)",
+            "cellar": "Cellar",
+            "attic": "Attic / screed",
+            "garage": "Garage",
+            "conservatory": "Conservatory",
+            "individualRooms": "Only individual rooms"
+          }
+        },
+        "desiredCleaningDate": {
+          "label": "Desired cleaning date"
+        },
+        "handoverDate": {
+          "label": "Date of delivery / handover"
+        },
+        "comments": {
+          "label": "Further requests / comments",
+          "placeholder": "Tell us anything important (access, special requests, etc.)"
+        },
+        "window": {
+          "normalWindows": {
+            "label": "Normal windows (number)"
+          },
+          "frenchDoors": {
+            "label": "French doors (balcony/terrace)"
+          },
+          "otherGlass": {
+            "label": "Other large glass surfaces"
+          },
+          "blindsAndShutters": {
+            "label": "Blinds & shutters",
+            "options": {
+              "venetian": "Venetian blinds",
+              "roller": "Roller shutters",
+              "shutters": "Shutters",
+              "other": "Other / special systems",
+              "none": "No"
+            }
+          },
+          "windowFeatures": {
+            "label": "Special features of windows",
+            "options": {
+              "heavilySoiled": "Heavily soiled (e.g. nicotine, grease, dust)",
+              "mold": "Mold on window frames",
+              "manySmall": "Many small casement windows",
+              "roofWindow": "Roof window / difficult to access",
+              "safetyFilm": "Windows with safety film or special glazing",
+              "none": "No special features"
+            }
+          }
+        },
+        "relocation": {
+          "movingFromAddress": {
+            "label": "Moving from - Postcode / City / Address",
+            "placeholder": "Enter your current address"
+          },
+          "currentFloor": {
+            "label": "On which floor do you live now?"
+          },
+          "currentElevator": {
+            "label": "Is there currently an elevator available?"
+          },
+          "movingToAddress": {
+            "label": "Moving to - Postcode / City / Address",
+            "placeholder": "Enter destination address"
+          },
+          "destinationElevator": {
+            "label": "Is there an elevator available at destination?"
+          },
+          "movingPeople": {
+            "label": "How many people are moving?"
+          },
+          "boxesCount": {
+            "label": "How many moving boxes need to be moved?"
+          },
+          "movingSupplies": {
+            "label": "Do you need additional moving supplies?",
+            "options": {
+              "movingBox": "Moving box (10 pieces)",
+              "wardrobeBox": "Wardrobe box",
+              "bottleCarton": "Bottle carton (wine carton)",
+              "tapeDispenser": "Adhesive tape + dispenser"
+            }
+          }
+        },
+        "disposal": {
+          "disposalType": {
+            "label": "Please choose",
+            "options": {
+              "disposal": "Disposal",
+              "eviction": "Eviction",
+              "disposalClearance": "Disposal + Clearance"
+            }
+          },
+          "location": {
+            "label": "Location"
+          },
+          "elevator": {
+            "label": "Is there currently an elevator available?"
+          },
+          "waste": {
+            "label": "Waste",
+            "options": {
+              "furniture": "Furniture (wardrobe, bed, table, etc.)",
+              "electrical": "Electrical appliances (TV, refrigerator, PC)",
+              "cardboard": "Cardboard / Paper / Small parts",
+              "constructionDebris": "Construction debris / wood / metal",
+              "gardenWaste": "Garden waste / plants / soil",
+              "textiles": "Textiles / Carpets / Mattresses"
+            }
+          },
+          "otherItems": {
+            "label": "Other items for disposal"
+          },
+          "disassemblyNeeded": {
+            "label": "Do items need to be disassembled?"
+          },
+          "amount": {
+            "label": "How much material needs to be disposed of?",
+            "options": {
+              "little": "Little (e.g., small space)",
+              "medium": "Medium (1-2 rooms)",
+              "lots": "Lots (entire apartment / house / warehouse)"
+            }
+          }
+        },
+        "contact": {
+          "salutation": {
+            "label": "Salutation",
+            "options": {
+              "mister": "Mr.",
+              "woman": "Ms."
+            }
+          },
+          "firstName": {
+            "label": "First name"
+          },
+          "lastName": {
+            "label": "Last name"
+          },
+          "email": {
+            "label": "E-mail address"
+          },
+          "phone": {
+            "label": "Telephone number"
+          },
+          "postalCodeAndCity": {
+            "label": "ZIP / City"
+          },
+          "streetAndNumber": {
+            "label": "Street, No."
+          },
+          "contactPreferredVia": {
+            "label": "Preferred contact",
+            "options": {
+              "email": "E-mail",
+              "phone": "Phone"
+            }
+          },
+          "viewingIsWelcome": {
+            "label": "Viewing is welcome",
+            "options": {
+              "yes": "Yes",
+              "no": "No"
+            }
+          },
+          "remark": {
+            "label": "Remark",
+            "placeholder": "Additional note"
+          }
+        }
+      }
     },
     "title": {
       "quote": "Quote",
@@ -1892,6 +2121,7 @@
   "common": {
     "learnMore": "Learn More",
     "readMore": "Read More",
+    "formLink": "Form",
     "getQuote": "Get Quote",
     "contactUs": "Contact Us",
     "requestFreeQuote": "Request Free Quote",
@@ -2047,7 +2277,13 @@
       "windowCleaning": "Window Cleaning",
       "relocation": "Relocation",
       "disposal": "Disposal",
-      "stairwellCleaning": "Stairwell Cleaning"
+      "stairwellCleaning": "Stairwell Cleaning",
+      "gastronomyCleaning": "Gastronomy Cleaning",
+      "medicalCleaning": "Medical Cleaning",
+      "constructionCleaning": "Construction Cleaning",
+      "propertyMaintenance": "Property Maintenance",
+      "specialCleaning": "Special Cleaning",
+      "comboService": "Cleaning + Moving Combo"
     }
   },
   "pricing": {

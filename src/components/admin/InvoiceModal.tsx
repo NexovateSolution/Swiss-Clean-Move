@@ -119,9 +119,9 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
           </div>
           <div class="company-info">
             <div><strong>SwissCleanMove GmbH</strong></div>
-            <div>Musterstrasse 123</div>
-            <div>3000 Bern, Switzerland</div>
-            <div>Phone: +41 12 345 67 89</div>
+            <div>Orpundstrasse 31</div>
+            <div>2504 Biel/Bienne, Switzerland</div>
+            <div>Phone: +41 76 488 36 89 / +41 78 215 80 30</div>
             <div>Email: info@swisscleanmove.ch</div>
           </div>
         </div>

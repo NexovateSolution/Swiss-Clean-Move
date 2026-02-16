@@ -3,16 +3,19 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Layout from '@/components/Layout';
+import SwissHero from '@/components/SwissHero';
 import {
   MapPin,
   Phone,
   Mail,
   Clock,
   Send,
-  MessageCircle,
   CheckCircle,
   User,
-  Building2
+  Building2,
+  Facebook,
+  Instagram,
+  MessageCircle
 } from 'lucide-react';
 
 export default function ContactPage({ params: { locale } }: { params: { locale: string } }) {
@@ -59,31 +62,24 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
     }
   };
 
-  const handleWhatsAppClick = () => {
-    const phoneNumber = '41123456789';
-    const message = encodeURIComponent(t('contact.whatsapp.prefill'));
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
   const contactInfo = [
     {
       icon: MapPin,
       title: t('contact.info.address'),
-      details: ['Orpundstrasse 31', '2504 Biel', 'Switzerland'],
+      details: ['Orpundstrasse 31', '2504 Biel/Bienne', 'Switzerland'],
       color: 'text-red-500'
     },
     {
       icon: Phone,
       title: t('contact.info.phone'),
-      details: ['+41 12 345 67 89'],
+      details: ['+41 76 488 36 89', '+41 78 215 80 30'],
       color: 'text-blue-500',
-      action: 'tel:+41123456789'
+      action: 'tel:+41764883689'
     },
     {
       icon: Mail,
       title: t('contact.info.email'),
-      details: ['info@swisscleanmove.ch', 'angebot@swisscleanmove.ch'],
+      details: ['info@swisscleanmove.ch'],
       color: 'text-green-500',
       action: 'mailto:info@swisscleanmove.ch'
     },
@@ -100,13 +96,34 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
     'Luzern', 'St. Gallen', 'Lugano', 'Biel/Bienne', 'Thun', 'Köniz'
   ];
 
+  const socialLinks = [
+    {
+      name: 'WhatsApp',
+      href: 'https://wa.me/c/41782158030',
+      Icon: MessageCircle,
+      className: 'bg-[#25D366] hover:bg-[#25D366]/80'
+    },
+    {
+      name: 'Facebook',
+      href: 'https://www.facebook.com/share/16e3oArupP/',
+      Icon: Facebook,
+      className: 'bg-[#1877F2] hover:bg-[#1877F2]/80'
+    },
+    {
+      name: 'Instagram',
+      href: 'https://www.instagram.com/swisscleanmove?igsh=MTlzdDBuMTB6YWlvNg==',
+      Icon: Instagram,
+      className: 'bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#515BD4] hover:opacity-90'
+    }
+  ] as const;
+
   if (isSubmitted) {
     return (
       <Layout>
         <section className="section-padding">
           <div className="container-max">
             <div className="max-w-2xl mx-auto text-center space-y-8">
-              <div className="w-20 h-20 bg-swiss-green rounded-full flex items-center justify-center mx-auto">
+              <div className="w-20 h-20 bg-swiss-softRed border border-swiss-border rounded-full flex items-center justify-center mx-auto shadow-subtle">
                 <CheckCircle className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
@@ -119,7 +136,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                 <a href={`/${locale}`} className="btn-primary">
                   {t('contact.success.actions.homepage')}
                 </a>
-                <a href="tel:+41123456789" className="btn-secondary">
+                <a href="tel:+41764883689" className="btn-secondary">
                   {t('contact.success.actions.call')}
                 </a>
               </div>
@@ -133,26 +150,21 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-swiss-red text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
-        </div>
-        <div className="relative container-max py-20">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold">
-              {t('contact.title')}
-            </h1>
-            <p className="text-xl text-blue-100">
-              {t('contact.subtitle')}
-            </p>
-          </div>
-        </div>
-      </section>
+      <SwissHero
+        badge={t('contact.title')}
+        title={t('contact.title')}
+        subtitle={t('contact.subtitle')}
+        right={
+          <img
+            src="/images/story.png"
+            alt={t('contact.title')}
+            className="w-full h-[340px] md:h-[420px] object-cover"
+          />
+        }
+      />
 
       {/* Contact Info Cards */}
-      <section className="section-padding bg-swiss-gray-50">
+      <section className="section-padding bg-swiss-section">
         <div className="container-max">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => {
@@ -162,14 +174,14 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                   <div className={`w-12 h-12 ${info.color} bg-current bg-opacity-10 rounded-full flex items-center justify-center mx-auto`}>
                     <IconComponent className={`w-6 h-6 ${info.color}`} />
                   </div>
-                  <h3 className="text-lg font-semibold text-swiss-gray-800">
+                  <h3 className="text-lg font-semibold text-swiss-text">
                     {info.title}
                   </h3>
                   <div className="space-y-1">
                     {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-swiss-gray-600">
+                      <p key={detailIndex} className="text-swiss-body">
                         {info.action && detailIndex === 0 ? (
-                          <a href={info.action} className="hover:text-swiss-blue transition-colors">
+                          <a href={info.action} className="hover:text-swiss-text transition-colors">
                             {detail}
                           </a>
                         ) : (
@@ -192,10 +204,10 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
             {/* Contact Form */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-swiss-gray-800 mb-4">
+                <h2 className="text-3xl font-bold text-swiss-text mb-4">
                   {t('contact.form.title')}
                 </h2>
-                <p className="text-swiss-gray-600">
+                <p className="text-swiss-body">
                   {t('contact.form.subtitle')}
                 </p>
               </div>
@@ -211,7 +223,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                    className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                   />
                 </div>
 
@@ -226,7 +238,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     />
                   </div>
 
@@ -239,7 +251,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     />
                   </div>
                 </div>
@@ -253,7 +265,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                    className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                   >
                     <option value="">{t('contact.form.selectPlaceholder')}</option>
                     <option value="quote">{t('contact.form.subjects.quote')}</option>
@@ -275,7 +287,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                    className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     placeholder={t('contact.form.messagePlaceholder')}
                   />
                 </div>
@@ -299,35 +311,26 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                 </button>
               </form>
 
-              {/* Quick Contact Options */}
-              <div className="border-t pt-8">
-                <h3 className="text-lg font-semibold text-swiss-gray-800 mb-4">
-                  {t('contact.quickContact.title')}
-                </h3>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="tel:+41123456789"
-                    className="flex items-center justify-center space-x-2 bg-swiss-blue text-white px-6 py-3 rounded-lg hover:bg-swiss-blue/90 transition-colors"
-                  >
-                    <Phone className="w-5 h-5" />
-                    <span>{t('contact.quickContact.call')}</span>
-                  </a>
-                  <button
-                    onClick={handleWhatsAppClick}
-                    className="flex items-center justify-center space-x-2 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    <span>{t('contact.quickContact.whatsapp')}</span>
-                  </button>
-                  <a
-                    href="mailto:info@swisscleanmove.ch"
-                    className="flex items-center justify-center space-x-2 bg-swiss-gray-600 text-white px-6 py-3 rounded-lg hover:bg-swiss-gray-700 transition-colors"
-                  >
-                    <Mail className="w-5 h-5" />
-                    <span>{t('contact.quickContact.email')}</span>
-                  </a>
+              <div className="card p-6">
+                <h3 className="text-lg font-semibold text-swiss-text mb-3">{t('footer.followUs')}</h3>
+                <p className="text-sm text-swiss-body mb-4">{t('contact.whatsapp.message')}</p>
+                <div className="flex items-center gap-3">
+                  {socialLinks.map(({ name, href, Icon, className }) => (
+                    <a
+                      key={name}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={name}
+                      title={name}
+                      className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all shadow-subtle focus:outline-none focus:ring-2 focus:ring-swiss-red/30 ${className}`}
+                    >
+                      <Icon className="w-6 h-6 text-white" />
+                    </a>
+                  ))}
                 </div>
               </div>
+
             </div>
 
             {/* Map and Additional Info */}
@@ -337,7 +340,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                 <h3 className="text-xl font-semibold text-swiss-gray-800 mb-4">
                   {t('contact.location.title')}
                 </h3>
-                <div className="rounded-lg overflow-hidden h-64 shadow-lg">
+                <div className="rounded-2xl overflow-hidden h-64 shadow-soft border border-swiss-border">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.3!2d7.2474!3d47.1391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39c0d43a1b77%3A0x9b5b5b5b5b5b5b5b!2sOrpundstrasse%2031%2C%202504%20Biel%2C%20Switzerland!5e0!3m2!1sen!2s!4v1234567890"
                     width="100%"
@@ -353,7 +356,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
               {/* Service Areas */}
               <div className="card p-6">
                 <h3 className="text-xl font-semibold text-swiss-gray-800 mb-4 flex items-center space-x-2">
-                  <Building2 className="w-5 h-5 text-swiss-blue" />
+                  <Building2 className="w-5 h-5 text-swiss-red" />
                   <span>{t('contact.serviceAreas.title')}</span>
                 </h3>
                 <p className="text-swiss-gray-600 mb-4">
@@ -362,7 +365,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                   {serviceAreas.map((area, index) => (
                     <div key={index} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-swiss-green" />
+                      <CheckCircle className="w-4 h-4 text-swiss-red" />
                       <span className="text-sm text-swiss-gray-700">{area}</span>
                     </div>
                   ))}
@@ -373,26 +376,26 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
               </div>
 
               {/* Emergency Contact */}
-              <div className="card p-6 bg-red-50 border-red-200">
-                <h3 className="text-xl font-semibold text-red-800 mb-4">
+              <div className="card p-6 bg-swiss-softRed border border-swiss-border">
+                <h3 className="text-xl font-semibold text-swiss-text mb-4">
                   {t('contact.emergency.title')}
                 </h3>
-                <p className="text-red-700 mb-4">
+                <p className="text-swiss-body">
                   {t('contact.emergency.subtitle')}
                 </p>
                 <a
-                  href="tel:+41123456789"
-                  className="inline-flex items-center space-x-2 bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors"
+                  href="tel:+41764883689"
+                  className="inline-flex items-center space-x-2 bg-swiss-red text-white px-6 py-3 rounded-xl hover:bg-swiss-red/90 transition-colors shadow-subtle"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>{t('contact.emergency.call')}: +41 12 345 67 89</span>
+                  <span>{t('contact.emergency.callNow')}</span>
                 </a>
               </div>
 
               {/* Business Hours */}
               <div className="card p-6">
                 <h3 className="text-xl font-semibold text-swiss-gray-800 mb-4 flex items-center space-x-2">
-                  <Clock className="w-5 h-5 text-swiss-blue" />
+                  <Clock className="w-5 h-5 text-swiss-red" />
                   <span>{t('contact.businessHours.title')}</span>
                 </h3>
                 <div className="space-y-2">

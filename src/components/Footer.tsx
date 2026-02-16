@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   const t = useTranslations();
@@ -40,6 +40,27 @@ export default function Footer() {
     { name: t('legal.datenschutz'), href: `/${locale}/legal#datenschutz` },
   ];
 
+  const socialLinks = [
+    {
+      name: 'WhatsApp',
+      href: 'https://wa.me/c/41782158030',
+      Icon: MessageCircle,
+      className: 'bg-[#25D366] hover:bg-[#25D366]/80'
+    },
+    {
+      name: 'Facebook',
+      href: 'https://www.facebook.com/share/16e3oArupP/',
+      Icon: Facebook,
+      className: 'bg-[#1877F2] hover:bg-[#1877F2]/80'
+    },
+    {
+      name: 'Instagram',
+      href: 'https://www.instagram.com/swisscleanmove?igsh=MTlzdDBuMTB6YWlvNg==',
+      Icon: Instagram,
+      className: 'bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#515BD4] hover:opacity-90'
+    }
+  ] as const;
+
   return (
     <footer className="bg-swiss-gray-900 text-white">
       <div className="container-max section-padding">
@@ -58,13 +79,18 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="w-4 h-4 text-swiss-blue" />
-                <span>{t('footer.location')}</span>
+                <span>Orpundstrasse 31, 2504 Biel/Bienne</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="w-4 h-4 text-swiss-blue" />
-                <a href="tel:+41123456789" className="hover:text-swiss-blue transition-colors">
-                  +41 12 345 67 89
-                </a>
+                <div className="flex flex-col leading-relaxed">
+                  <a href="tel:+41764883689" className="hover:text-swiss-blue transition-colors">
+                    +41 76 488 36 89
+                  </a>
+                  <a href="tel:+41782158030" className="hover:text-swiss-blue transition-colors">
+                    +41 78 215 80 30
+                  </a>
+                </div>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="w-4 h-4 text-swiss-blue" />
@@ -127,31 +153,20 @@ export default function Footer() {
             
             <div className="pt-4">
               <h5 className="font-semibold mb-3">{t('footer.followUs')}</h5>
-              <div className="flex space-x-3">
-                <a
-                  href="https://facebook.com/swisscleanmove"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 bg-swiss-blue rounded-lg flex items-center justify-center hover:bg-swiss-blue/80 transition-colors"
-                >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://instagram.com/swisscleanmove"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 bg-swiss-blue rounded-lg flex items-center justify-center hover:bg-swiss-blue/80 transition-colors"
-                >
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://linkedin.com/company/swisscleanmove"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 bg-swiss-blue rounded-lg flex items-center justify-center hover:bg-swiss-blue/80 transition-colors"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
+              <div className="flex items-center gap-3">
+                {socialLinks.map(({ name, href, Icon, className }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={name}
+                    title={name}
+                    className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all shadow-subtle focus:outline-none focus:ring-2 focus:ring-white/40 ${className}`}
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                ))}
               </div>
             </div>
           </div>

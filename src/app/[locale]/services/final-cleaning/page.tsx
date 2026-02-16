@@ -1,9 +1,9 @@
 'use client'
 
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import Layout from '@/components/Layout';
-import ServiceForm from '@/components/ServiceForm';
-import { useState } from 'react';
+import SwissHero from '@/components/SwissHero';
 import { 
   CheckCircle, 
   Clock, 
@@ -17,63 +17,56 @@ import {
 
 export default function FinalCleaningPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations();
-  const [showForm, setShowForm] = useState(false);
 
-  const features = [
-    'End-of-tenancy cleaning',
-    'Kitchen and bathroom deep clean',
-    'Windows inside and outside',
-    'Floor cleaning and polishing',
-    '100% deposit guarantee'
-  ];
+  const features = (t.raw('services.features.finalCleaning') as string[]) || [];
 
   const benefits = [
     {
-      icon: Award,
-      title: '100% Deposit Guarantee',
-      description: 'We guarantee you get your full deposit back'
+      icon: Shield,
+      title: t('services.benefits.guarantee.title'),
+      description: t('services.benefits.guarantee.description')
     },
     {
       icon: Clock,
-      title: 'Quick Turnaround',
-      description: 'Fast service to meet your moving deadlines'
+      title: t('services.benefits.punctual.title'),
+      description: t('services.benefits.punctual.description')
     },
     {
       icon: Star,
-      title: 'Professional Results',
-      description: 'Thorough cleaning that meets landlord standards'
+      title: t('services.benefits.professional.title'),
+      description: t('services.benefits.professional.description')
     }
   ];
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-500 to-teal-600 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container-max py-24">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <CheckCircle className="w-16 h-16 mx-auto text-teal-100" />
-            <h1 className="text-4xl md:text-5xl font-bold">
-              Final Cleaning Services
-            </h1>
-            <p className="text-xl text-teal-100">
-              End-of-tenancy cleaning with 100% deposit guarantee for apartments and houses
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => setShowForm(true)}
-                className="btn-secondary text-lg px-8 py-4"
-              >
-                Request Quote
-              </button>
-              <a href="tel:+41123456789" className="flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 border border-white/20">
-                <Phone className="w-5 h-5" />
-                <span>Call Now</span>
-              </a>
+      <SwissHero
+        badge={t('home.services.finalCleaning.title')}
+        title={t('home.services.finalCleaning.title')}
+        subtitle={t('home.services.finalCleaning.description')}
+        cta={
+          <div className="flex flex-col sm:flex-row gap-4 justify-start">
+            <Link href={`/${locale}/form?service=final-cleaning`} className="btn-secondary text-lg px-8 py-4">
+              {t('servicesPages.common.requestQuote')}
+            </Link>
+            <a
+              href="tel:+41764883689"
+              className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
+            >
+              <Phone className="w-5 h-5 text-swiss-red" />
+              <span>{t('servicesPages.common.callNow')}</span>
+            </a>
+          </div>
+        }
+        right={
+          <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center">
+            <div className="w-20 h-20 bg-swiss-softRed rounded-3xl flex items-center justify-center mx-auto border border-swiss-border shadow-subtle">
+              <CheckCircle className="w-10 h-10 text-swiss-red" />
             </div>
           </div>
-        </div>
-      </section>
+        }
+      />
 
       {/* Service Details */}
       <section className="section-padding">
@@ -81,15 +74,13 @@ export default function FinalCleaningPage({ params: { locale } }: { params: { lo
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-swiss-gray-800">
-                Get Your Deposit Back Guaranteed
+                {t('home.services.finalCleaning.title')}
               </h2>
               <p className="text-lg text-swiss-gray-700">
-                Our final cleaning service ensures your property meets the highest 
-                standards required by landlords. We guarantee you'll receive your 
-                full deposit back or we'll return to fix any issues at no extra cost.
+                {t('home.services.finalCleaning.description')}
               </p>
               <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-swiss-gray-800">What's Included:</h3>
+                <h3 className="text-xl font-semibold text-swiss-gray-800">{t('servicesPages.common.ourServicesInclude')}</h3>
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-swiss-green flex-shrink-0" />
@@ -98,15 +89,14 @@ export default function FinalCleaningPage({ params: { locale } }: { params: { lo
                 ))}
               </div>
               <div className="bg-swiss-blue/10 p-6 rounded-lg">
-                <div className="text-2xl font-bold text-swiss-blue mb-2">from CHF 250</div>
-                <p className="text-swiss-gray-600">Professional final cleaning with guarantee</p>
+                <div className="text-2xl font-bold text-swiss-blue mb-2">{t('services.pricing.finalCleaning')}</div>
               </div>
             </div>
             <div className="relative">
               <div className="bg-swiss-gray-200 rounded-2xl h-96 flex items-center justify-center">
                 <div className="text-center space-y-4">
                   <Home className="w-16 h-16 text-swiss-blue mx-auto" />
-                  <p className="text-swiss-gray-600">Final Cleaning Service</p>
+                  <p className="text-swiss-gray-600">{t('home.services.finalCleaning.title')}</p>
                 </div>
               </div>
             </div>
@@ -117,12 +107,12 @@ export default function FinalCleaningPage({ params: { locale } }: { params: { lo
       {/* Benefits Section */}
       <section className="section-padding bg-swiss-gray-50">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
-              Why Choose Our Final Cleaning?
+              {t('services.benefitsSection.title')}
             </h2>
             <p className="text-xl text-swiss-gray-600">
-              Guaranteed results for your move-out
+              {t('services.benefitsSection.subtitle')}
             </p>
           </div>
 
@@ -131,8 +121,8 @@ export default function FinalCleaningPage({ params: { locale } }: { params: { lo
               const IconComponent = benefit.icon;
               return (
                 <div key={index} className="card p-6 text-center space-y-4">
-                  <div className="w-16 h-16 bg-swiss-blue rounded-full flex items-center justify-center mx-auto">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-swiss-softRed border border-swiss-border rounded-full flex items-center justify-center mx-auto">
+                    <IconComponent className="w-8 h-8 text-swiss-red" />
                   </div>
                   <h3 className="text-xl font-semibold text-swiss-gray-800">
                     {benefit.title}
@@ -148,38 +138,32 @@ export default function FinalCleaningPage({ params: { locale } }: { params: { lo
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-swiss-blue text-white">
+      <section className="section-padding bg-white">
         <div className="container-max">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Ready for Your Final Cleaning?
-            </h2>
-            <p className="text-xl text-blue-100">
-              Get your deposit back with our guaranteed service
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => setShowForm(true)}
-                className="btn-secondary text-lg px-8 py-4"
-              >
-                Get Guarantee Quote
-              </button>
-              <a href={`mailto:info@swisscleanmove.ch`} className="flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 border border-white/20">
-                <Mail className="w-5 h-5" />
-                <span>Email Us</span>
-              </a>
+          <div className="max-w-4xl mx-auto">
+            <div className="card p-8 md:p-10 bg-swiss-softRed border border-swiss-border text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
+                {t('servicesCta.title')}
+              </h2>
+              <p className="text-xl text-swiss-body">
+                {t('servicesCta.subtitle')}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href={`/${locale}/form?service=final-cleaning`} className="btn-secondary text-lg px-8 py-4">
+                  {t('common.freeQuote')}
+                </Link>
+                <a
+                  href={`mailto:info@swisscleanmove.ch`}
+                  className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
+                >
+                  <Mail className="w-5 h-5 text-swiss-red" />
+                  <span>{t('servicesPages.common.emailUs')}</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Service Form Modal */}
-      <ServiceForm
-        serviceName="Final Cleaning"
-        isOpen={showForm}
-        onClose={() => setShowForm(false)}
-        formType="cleaning"
-      />
     </Layout>
   );
 }

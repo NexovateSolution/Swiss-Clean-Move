@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
+import SwissHero from '@/components/SwissHero'
 import { Truck, CheckCircle, ArrowRight } from 'lucide-react'
 
 export default function MovingPage({ params: { locale } }: { params: { locale: string } }) {
@@ -9,20 +10,18 @@ export default function MovingPage({ params: { locale } }: { params: { locale: s
 
   return (
     <Layout>
-      <section className="relative bg-gradient-to-br from-swiss-blue to-swiss-green text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container-max py-24">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Truck className="w-16 h-16 mx-auto text-blue-100" />
-            <h1 className="text-4xl md:text-5xl font-bold">
-              {t('home.services.relocation.title')}
-            </h1>
-            <p className="text-xl text-blue-100">
-              {t('home.services.relocation.description')}
-            </p>
+      <SwissHero
+        badge={t('home.services.relocation.title')}
+        title={t('home.services.relocation.title')}
+        subtitle={t('home.services.relocation.description')}
+        right={
+          <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center">
+            <div className="w-20 h-20 bg-swiss-softRed rounded-3xl flex items-center justify-center mx-auto border border-swiss-border shadow-subtle">
+              <Truck className="w-10 h-10 text-swiss-red" />
+            </div>
           </div>
-        </div>
-      </section>
+        }
+      />
 
       <section className="section-padding">
         <div className="container-max">
@@ -33,7 +32,7 @@ export default function MovingPage({ params: { locale } }: { params: { locale: s
                 <ul className="space-y-3">
                   {features.map((f, i) => (
                     <li key={i} className="flex items-center space-x-2 text-swiss-gray-700">
-                      <CheckCircle className="w-5 h-5 text-swiss-green" />
+                      <CheckCircle className="w-5 h-5 text-swiss-red" />
                       <span>{f}</span>
                     </li>
                   ))}

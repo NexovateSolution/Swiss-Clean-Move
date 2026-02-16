@@ -5,7 +5,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 248, 249, 250;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -25,12 +25,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
 }
 
 a {
@@ -48,25 +43,29 @@ a {
 
 @layer components {
   .btn-primary {
-    @apply bg-swiss-blue hover:bg-swiss-blue/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-150 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-swiss-red hover:bg-swiss-red/90 text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 shadow-soft hover:shadow-soft;
     will-change: transform, box-shadow;
   }
   
   .btn-secondary {
-    @apply bg-swiss-green hover:bg-swiss-green/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-150 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-transparent hover:bg-swiss-gray-50 text-swiss-text font-semibold py-3.5 px-6 rounded-xl border border-swiss-border transition-all duration-150;
     will-change: transform, box-shadow;
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 border border-swiss-gray-200;
+    @apply bg-white rounded-2xl shadow-subtle hover:shadow-soft transition-all duration-200 transform hover:-translate-y-0.5 border border-swiss-border;
     will-change: transform, box-shadow;
+  }
+
+  .hero-surface {
+    @apply bg-swiss-section border-b border-swiss-border;
   }
   
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-8 md:py-12 px-4 sm:px-6 lg:px-8;
   }
   
   .container-max {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-[1200px] mx-auto;
   }
 }

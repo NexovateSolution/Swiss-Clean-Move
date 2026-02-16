@@ -1,9 +1,9 @@
 'use client'
 
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import Layout from '@/components/Layout';
-import ServiceForm from '@/components/ServiceForm';
-import { useState } from 'react';
+import SwissHero from '@/components/SwissHero';
 import { 
   Truck, 
   CheckCircle, 
@@ -18,7 +18,6 @@ import {
 
 export default function RelocationPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations();
-  const [showForm, setShowForm] = useState(false);
 
   const features = t.raw('services.features.relocation') as string[];
 
@@ -43,32 +42,32 @@ export default function RelocationPage({ params: { locale } }: { params: { local
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-500 to-indigo-600 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container-max py-24">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Truck className="w-16 h-16 mx-auto text-indigo-100" />
-            <h1 className="text-4xl md:text-5xl font-bold">
-              {t('servicesPages.relocation.hero.title')}
-            </h1>
-            <p className="text-xl text-indigo-100">
-              {t('servicesPages.relocation.hero.subtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => setShowForm(true)}
-                className="btn-secondary text-lg px-8 py-4"
-              >
-                {t('servicesPages.common.requestQuote')}
-              </button>
-              <a href="tel:+41123456789" className="flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 border border-white/20">
-                <Phone className="w-5 h-5" />
-                <span>{t('servicesPages.common.callNow')}</span>
-              </a>
+      <SwissHero
+        badge={t('servicesPages.relocation.hero.title')}
+        title={t('servicesPages.relocation.hero.title')}
+        subtitle={t('servicesPages.relocation.hero.subtitle')}
+        cta={
+          <div className="flex flex-col sm:flex-row gap-4 justify-start">
+            <Link href={`/${locale}/form?service=relocation`} className="btn-secondary text-lg px-8 py-4">
+              {t('servicesPages.common.requestQuote')}
+            </Link>
+            <a
+              href="tel:+41764883689"
+              className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
+            >
+              <Phone className="w-5 h-5 text-swiss-red" />
+              <span>{t('servicesPages.common.callNow')}</span>
+            </a>
+          </div>
+        }
+        right={
+          <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center">
+            <div className="w-20 h-20 bg-swiss-softRed rounded-3xl flex items-center justify-center mx-auto border border-swiss-border shadow-subtle">
+              <Truck className="w-10 h-10 text-swiss-red" />
             </div>
           </div>
-        </div>
-      </section>
+        }
+      />
 
       {/* Service Details */}
       <section className="section-padding">
@@ -110,7 +109,7 @@ export default function RelocationPage({ params: { locale } }: { params: { local
       {/* Benefits Section */}
       <section className="section-padding bg-swiss-gray-50">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
               {t('servicesPages.relocation.benefitsSection.title')}
             </h2>
@@ -124,8 +123,8 @@ export default function RelocationPage({ params: { locale } }: { params: { local
               const IconComponent = benefit.icon;
               return (
                 <div key={index} className="card p-6 text-center space-y-4">
-                  <div className="w-16 h-16 bg-swiss-blue rounded-full flex items-center justify-center mx-auto">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-swiss-softRed border border-swiss-border rounded-full flex items-center justify-center mx-auto">
+                    <IconComponent className="w-8 h-8 text-swiss-red" />
                   </div>
                   <h3 className="text-xl font-semibold text-swiss-gray-800">
                     {benefit.title}
@@ -143,7 +142,7 @@ export default function RelocationPage({ params: { locale } }: { params: { local
       {/* Process Section */}
       <section className="section-padding">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
               {t('servicesPages.relocation.processSection.title')}
             </h2>
@@ -160,7 +159,7 @@ export default function RelocationPage({ params: { locale } }: { params: { local
               { step: '4', title: t('servicesPages.relocation.processSection.steps.setup.title'), description: t('servicesPages.relocation.processSection.steps.setup.description') }
             ].map((item, index) => (
               <div key={index} className="text-center space-y-4">
-                <div className="w-16 h-16 bg-swiss-blue text-white rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
+                <div className="w-16 h-16 bg-swiss-softRed text-swiss-text border border-swiss-border rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
                   {item.step}
                 </div>
                 <h3 className="text-lg font-semibold text-swiss-gray-800">{item.title}</h3>
@@ -172,38 +171,32 @@ export default function RelocationPage({ params: { locale } }: { params: { local
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-swiss-blue text-white">
+      <section className="section-padding bg-white">
         <div className="container-max">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              {t('servicesPages.relocation.cta.title')}
-            </h2>
-            <p className="text-xl text-blue-100">
-              {t('servicesPages.relocation.cta.subtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => setShowForm(true)}
-                className="btn-secondary text-lg px-8 py-4"
-              >
-                {t('servicesPages.relocation.cta.primaryButton')}
-              </button>
-              <a href={`mailto:info@swisscleanmove.ch`} className="flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 border border-white/20">
-                <Mail className="w-5 h-5" />
-                <span>{t('servicesPages.common.emailUs')}</span>
-              </a>
+          <div className="max-w-4xl mx-auto">
+            <div className="card p-8 md:p-10 bg-swiss-softRed border border-swiss-border text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
+                {t('servicesPages.relocation.cta.title')}
+              </h2>
+              <p className="text-xl text-swiss-body">
+                {t('servicesPages.relocation.cta.subtitle')}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href={`/${locale}/form?service=relocation`} className="btn-secondary text-lg px-8 py-4">
+                  {t('servicesPages.relocation.cta.primaryButton')}
+                </Link>
+                <a
+                  href={`mailto:info@swisscleanmove.ch`}
+                  className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
+                >
+                  <Mail className="w-5 h-5 text-swiss-red" />
+                  <span>{t('servicesPages.common.emailUs')}</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Service Form Modal */}
-      <ServiceForm
-        serviceName={t('home.services.relocation.title')}
-        isOpen={showForm}
-        onClose={() => setShowForm(false)}
-        formType="relocation"
-      />
     </Layout>
   );
 }

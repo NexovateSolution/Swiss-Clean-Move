@@ -60,8 +60,8 @@ const translations: InvoiceTranslations = {
     thankYou: 'Wir stehen Ihnen gerne für Fragen zur Verfügung.',
     regards: 'Mit freundlichen Grüßen',
     companyName: 'SwissCleanMove',
-    address: 'Musterstrasse 123, 8000 Zürich',
-    phone: '076 488 36 89',
+    address: 'Orpundstrasse 31, 2504 Biel/Bienne',
+    phone: '+41 76 488 36 89 / +41 78 215 80 30',
     email: 'info@swisscleanmove.ch',
     uid: 'UID: CHE-123.456.789',
     room: 'Zimmer',
@@ -104,8 +104,8 @@ const translations: InvoiceTranslations = {
     thankYou: 'Nous sommes à votre disposition pour répondre à vos questions.',
     regards: 'Cordialement, merci',
     companyName: 'SwissCleanMove',
-    address: 'Musterstrasse 123, 8000 Zürich',
-    phone: '076 488 36 89',
+    address: 'Orpundstrasse 31, 2504 Biel/Bienne',
+    phone: '+41 76 488 36 89 / +41 78 215 80 30',
     email: 'info@swisscleanmove.ch',
     uid: 'UID: CHE-123.456.789',
     room: 'Chambre',
@@ -148,8 +148,8 @@ const translations: InvoiceTranslations = {
     thankYou: 'We are at your disposal to answer your questions.',
     regards: 'Best regards, thank you',
     companyName: 'SwissCleanMove',
-    address: 'Musterstrasse 123, 8000 Zürich',
-    phone: '076 488 36 89',
+    address: 'Orpundstrasse 31, 2504 Biel/Bienne',
+    phone: '+41 76 488 36 89 / +41 78 215 80 30',
     email: 'info@swisscleanmove.ch',
     uid: 'UID: CHE-123.456.789',
     room: 'Room',
@@ -209,6 +209,12 @@ export async function POST(request: NextRequest) {
     const t = translations[language] || translations.de
     const orderNumber = `#FE-${String(Date.now()).slice(-6)}`
     const currentDate = new Date().toLocaleDateString()
+
+    const paymentSlip = {
+      account: 'CH86 0900 0000 1636 3866 5',
+      payableTo: ['SwissCleanMove Gebrekristos', 'Orpundstrasse 31', 'CH-2504 Biel/Bienne'],
+      reference: '00 00000 00000 00000 00000 00000'
+    }
 
     // Generate HTML for PDF
     const html = `
@@ -395,6 +401,70 @@ export async function POST(request: NextRequest) {
                 font-size: 10px;
                 color: #666;
             }
+            .payment-slip {
+                margin-top: 40px;
+                border: 2px solid #111;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .payment-slip-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .payment-slip-table td {
+                vertical-align: top;
+                padding: 16px;
+            }
+            .payment-slip-left {
+                width: 35%;
+                border-right: 1px solid #111;
+            }
+            .payment-slip-right {
+                width: 65%;
+            }
+            .payment-slip-title {
+                margin: 0 0 14px 0;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 0.2px;
+            }
+            .payment-slip-label {
+                display: block;
+                font-size: 11px;
+                font-weight: bold;
+                color: #111;
+                margin-bottom: 3px;
+                text-transform: none;
+            }
+            .payment-slip-value {
+                font-size: 11px;
+                color: #111;
+            }
+            .payment-slip-block {
+                margin-bottom: 14px;
+            }
+            .payment-slip-amount-box {
+                border: 1px solid #111;
+                border-radius: 6px;
+                padding: 10px;
+                text-align: left;
+                width: 170px;
+            }
+            .payment-slip-amount-row {
+                display: flex;
+                justify-content: space-between;
+                gap: 12px;
+                align-items: flex-start;
+            }
+            .payment-slip-amount {
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 0.2px;
+            }
+            .payment-slip-currency {
+                font-size: 12px;
+                font-weight: bold;
+            }
             @media print {
                 body {
                     margin: 0;
@@ -440,10 +510,10 @@ export async function POST(request: NextRequest) {
             </div>
             <div class="company-info">
                 <strong>SwissCleanMove</strong><br>
-                Musterstrasse 123<br>
-                8000 Zürich<br>
+                Orpundstrasse 31<br>
+                2504 Biel/Bienne<br>
                 info@swisscleanmove.ch<br>
-                📞 +41 12 345 67 89<br>
+                📞 +41 76 488 36 89 / +41 78 215 80 30<br>
                 UID: CHE-123.456.789
             </div>
         </div>
@@ -550,83 +620,80 @@ export async function POST(request: NextRequest) {
             </div>
             <div class="company-info">
                 <strong>SwissCleanMove</strong><br>
-                Musterstrasse 123<br>
-                8000 Zürich<br>
+                Orpundstrasse 31<br>
+                2504 Biel/Bienne<br>
                 info@swisscleanmove.ch<br>
-                📞 +41 12 345 67 89<br>
+                📞 +41 76 488 36 89 / +41 78 215 80 30<br>
                 UID: CHE-123.456.789
             </div>
         </div>
 
         <!-- Swiss Payment Slip Layout -->
-        <div style="margin-top: 50px; border: 2px solid #000; height: 400px;">
-            <table style="width: 100%; height: 100%; border-collapse: collapse;">
+        <div class="payment-slip">
+            <table class="payment-slip-table">
                 <tr>
                     <!-- Receipt Section -->
-                    <td style="width: 35%; border-right: 1px solid #000; padding: 15px; vertical-align: top;">
-                        <h3 style="margin: 0 0 15px 0; font-size: 14px; font-weight: bold;">${t.receiptSlip}</h3>
-                        
-                        <div style="margin-bottom: 15px;">
-                            <strong style="font-size: 11px;">${t.accountPayableTo}</strong><br>
-                            <span style="font-size: 11px;">CH86 0900 0000 1636 3866 5</span><br>
-                            <span style="font-size: 11px;">${t.companyName}</span><br>
-                            <span style="font-size: 11px;">Musterstrasse 123</span><br>
-                            <span style="font-size: 11px;">8000 Zürich</span>
+                    <td class="payment-slip-left">
+                        <div class="payment-slip-title">Payment Slip</div>
+
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.accountPayableTo}</span>
+                            <div class="payment-slip-value">${paymentSlip.account}</div>
+                            <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
                         </div>
 
-                        <div style="margin-bottom: 15px;">
-                            <strong style="font-size: 11px;">${t.reference}</strong><br>
-                            <span style="font-size: 11px;">${orderNumber}</span>
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.reference}</span>
+                            <div class="payment-slip-value">${paymentSlip.reference}</div>
                         </div>
 
-                        <div style="margin-bottom: 15px;">
-                            <strong style="font-size: 11px;">${t.payableBy}</strong><br>
-                            <span style="font-size: 11px;">${client.firstName} ${client.lastName}</span><br>
-                            <span style="font-size: 11px;">${client.address}</span>
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.currency.replace(' CHF', '').replace('CHF', 'Currency')}</span>
+                            <div class="payment-slip-value">CHF</div>
                         </div>
 
-                        <div style="position: absolute; bottom: 20px;">
-                            <strong style="font-size: 12px;">CHF ${client.totalPrice || 900}</strong>
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.amount}</span>
+                            <div class="payment-slip-value">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
+                        </div>
+
+                        <div class="payment-slip-block" style="margin-bottom: 0;">
+                            <span class="payment-slip-label">${t.payableBy}</span>
+                            <div class="payment-slip-value">${client.firstName} ${client.lastName}</div>
+                            <div class="payment-slip-value">${client.address}</div>
+                            <div class="payment-slip-value">${client.postalCode} ${client.location}</div>
                         </div>
                     </td>
 
                     <!-- Payment Section -->
-                    <td style="width: 65%; padding: 15px; vertical-align: top;">
-                        <h3 style="margin: 0 0 15px 0; font-size: 14px; font-weight: bold;">${t.paymentPart}</h3>
-                        
-                        <div style="display: flex; justify-content: space-between;">
-                            <div style="width: 60%;">
-                                <div style="margin-bottom: 15px;">
-                                    <strong style="font-size: 11px;">${t.accountPayableTo}</strong><br>
-                                    <span style="font-size: 11px;">CH86 0900 0000 1636 3866 5</span><br>
-                                    <span style="font-size: 11px;">${t.companyName}</span><br>
-                                    <span style="font-size: 11px;">Musterstrasse 123</span><br>
-                                    <span style="font-size: 11px;">8000 Zürich</span>
+                    <td class="payment-slip-right">
+                        <div class="payment-slip-title">Payment Slip</div>
+
+                        <div class="payment-slip-amount-row">
+                            <div style="flex: 1;">
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.accountPayableTo}</span>
+                                    <div class="payment-slip-value">${paymentSlip.account}</div>
+                                    <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
                                 </div>
 
-                                <div style="margin-bottom: 15px;">
-                                    <strong style="font-size: 11px;">${t.additionalInformation}</strong><br>
-                                    <span style="font-size: 11px;">${t.billingAccount}: ${orderNumber}</span><br>
-                                    <span style="font-size: 11px;">${t.month}:</span><br>
-                                    <span style="font-size: 11px;">${t.payableUntil}:</span>
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.reference}</span>
+                                    <div class="payment-slip-value">${paymentSlip.reference}</div>
                                 </div>
 
-                                <div style="margin-bottom: 15px;">
-                                    <strong style="font-size: 11px;">${t.reference}</strong><br>
-                                    <span style="font-size: 11px;">${orderNumber}</span>
-                                </div>
-
-                                <div>
-                                    <strong style="font-size: 11px;">${t.payableBy}</strong><br>
-                                    <span style="font-size: 11px;">${client.firstName} ${client.lastName}</span><br>
-                                    <span style="font-size: 11px;">${client.address}</span>
+                                <div class="payment-slip-block" style="margin-bottom: 0;">
+                                    <span class="payment-slip-label">${t.payableBy}</span>
+                                    <div class="payment-slip-value">${client.firstName} ${client.lastName}</div>
+                                    <div class="payment-slip-value">${client.address}</div>
+                                    <div class="payment-slip-value">${client.postalCode} ${client.location}</div>
                                 </div>
                             </div>
 
-                            <div style="width: 35%; text-align: right;">
-                                <div style="border: 1px solid #000; padding: 10px; text-align: center; margin-bottom: 20px;">
-                                    <strong style="font-size: 14px;">${t.currency}</strong><br>
-                                    <strong style="font-size: 16px;">${t.amount} ${client.totalPrice || 900}</strong>
+                            <div>
+                                <div class="payment-slip-amount-box">
+                                    <div class="payment-slip-currency">CHF</div>
+                                    <div class="payment-slip-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
                                 </div>
                             </div>
                         </div>

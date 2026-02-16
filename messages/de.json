@@ -55,6 +55,7 @@
       "title": "Unsere Dienstleistungen",
       "subtitle": "Professionelle Lösungen für alle Ihre Reinigungs- und Umzugsbedürfnisse",
       "viewAll": "Alle Services ansehen",
+      "customSolution": "Sie benötigen eine individuelle Lösung? Wir passen unseren Service an Ihre Bedürfnisse an.",
       "houseCleaning": {
         "title": "Hausreinigung",
         "description": "Umfassende Hausreinigungsdienstleistungen für Wohnimmobilien mit Liebe zum Detail"
@@ -168,6 +169,7 @@
       }
     },
     "testimonials": {
+      "badge": "Bewertungen",
       "title": "Was unsere Kunden sagen",
       "subtitle": "Vertrauen Sie auf die Erfahrung zufriedener Kunden"
     },
@@ -205,6 +207,62 @@
       "subtitle": "Ihre Vorteile bei unserem professionellen Service"
     },
     "features": {
+      "houseCleaning": [
+        "Komplette Hausreinigung",
+        "Küche und Badezimmer gründlich",
+        "Wohnbereiche und Schlafzimmer",
+        "Böden und Oberflächen",
+        "Professionelle Ausrüstung"
+      ],
+      "apartmentCleaning": [
+        "Komplette Wohnungsreinigung",
+        "Küche und Badezimmer gründlich",
+        "Fenster innen und außen",
+        "Böden und Teppiche",
+        "100% Abnahmegarantie"
+      ],
+      "stairwellCleaning": [
+        "Treppenhaus- und Flurreinigung",
+        "Pflege von Gemeinschaftsflächen",
+        "Böden reinigen und wischen",
+        "Glas- und Fensterreinigung",
+        "Regelmäßige Servicepläne"
+      ],
+      "officeCleaning": [
+        "Büroräume und Arbeitsplätze",
+        "Sanitäranlagen",
+        "Gemeinschaftsbereiche",
+        "Müllentsorgung",
+        "Regelmäßige Termine"
+      ],
+      "finalCleaning": [
+        "Endreinigung / Wohnungsabgabe",
+        "Küche und Badezimmer tiefenrein",
+        "Fenster innen und außen",
+        "Böden reinigen und pflegen",
+        "100% Abnahmegarantie"
+      ],
+      "windowCleaning": [
+        "Fenster innen und außen",
+        "Rahmen und Fensterbänke",
+        "Glastüren und Glasflächen",
+        "Professionelle Abziehtechnik",
+        "Streifenfreie Ergebnisse"
+      ],
+      "relocation": [
+        "Kompletter Umzugsservice",
+        "Verpackung und Transport",
+        "Möbelmontage",
+        "Versicherungsschutz",
+        "Schweizweite Umzüge"
+      ],
+      "disposal": [
+        "Möbel und Hausrat",
+        "Elektronikgeräte",
+        "Sperrmüll",
+        "Fachgerechte Entsorgung",
+        "Umweltfreundlich"
+      ],
       "umzugsreinigung": [
         "Komplette Wohnungsreinigung",
         "Küche und Badezimmer gründlich",
@@ -328,7 +386,7 @@
       "stairwellCleaning": "Pauschale ab CHF 120",
       "officeCleaning": "CHF 0.80–1.50 / m²",
       "finalCleaning": "ab CHF 250",
-      "windowCleaning": "CHF 8–15 pro Fenster",
+      "windowCleaning": "CHF 8–15 / Fenster",
       "relocation": "ab CHF 160 / Stunde",
       "disposal": "ab CHF 30 / m³"
     }
@@ -674,6 +732,233 @@
     "common": {
       "yes": "Ja",
       "no": "Nein"
+    },
+    "wizard": {
+      "badge": "Offerte berechnen",
+      "stepCounter": "Schritt {current} von {total}",
+      "validation": {
+        "required": "Bitte fülle alle Pflichtfelder in diesem Schritt aus"
+      },
+      "common": {
+        "select": "Bitte auswählen",
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "buttons": {
+        "back": "Zurück",
+        "next": "Weiter",
+        "submit": "Senden"
+      },
+      "steps": {
+        "cleaningService": "Service & Ort",
+        "propertyDetails": "Objektdetails",
+        "areas": "Zu reinigende Bereiche",
+        "windowDetails": "Fensterdetails",
+        "datesAndRequests": "Datum & Wünsche",
+        "relocationFrom": "Umzug von",
+        "relocationTo": "Umzug nach",
+        "boxesAndSupplies": "Kisten & Material",
+        "disposalBasic": "Entsorgung Basis",
+        "disposalWaste": "Abfalldetails",
+        "contact": "Kontaktdaten"
+      },
+      "fields": {
+        "location": {
+          "label": "Ort",
+          "placeholder": "Stadt / Adresse"
+        },
+        "objectType": {
+          "label": "Objekttyp",
+          "options": {
+            "apartment": "Wohnung",
+            "house": "Haus",
+            "office": "Büro"
+          }
+        },
+        "floorsCount": {
+          "label": "Wie viele Stockwerke?"
+        },
+        "roomsCount": {
+          "label": "Anzahl Zimmer"
+        },
+        "livingSpaceM2": {
+          "label": "Wohnfläche (m²)",
+          "placeholder": "z.B. 80"
+        },
+        "cleaningAreas": {
+          "label": "Welche Bereiche müssen gereinigt werden?",
+          "options": {
+            "complete": "Komplette Reinigung aller Räume (inkl. Küche, Bad & WC)",
+            "cellar": "Keller",
+            "attic": "Estrich / Dachboden",
+            "garage": "Garage",
+            "conservatory": "Wintergarten",
+            "individualRooms": "Nur einzelne Räume"
+          }
+        },
+        "desiredCleaningDate": {
+          "label": "Gewünschtes Reinigungsdatum"
+        },
+        "handoverDate": {
+          "label": "Übergabe / Abgabedatum"
+        },
+        "comments": {
+          "label": "Weitere Wünsche / Bemerkungen",
+          "placeholder": "Zugang, Besonderheiten, etc."
+        },
+        "window": {
+          "normalWindows": {
+            "label": "Normale Fenster (Anzahl)"
+          },
+          "frenchDoors": {
+            "label": "Fenstertüren (Balkon/Terrasse)"
+          },
+          "otherGlass": {
+            "label": "Andere große Glasflächen"
+          },
+          "blindsAndShutters": {
+            "label": "Storen & Rollläden",
+            "options": {
+              "venetian": "Jalousien",
+              "roller": "Rollläden",
+              "shutters": "Läden",
+              "other": "Andere / Spezial",
+              "none": "Keine"
+            }
+          },
+          "windowFeatures": {
+            "label": "Besondere Fenstereigenschaften",
+            "options": {
+              "heavilySoiled": "Stark verschmutzt (z.B. Nikotin, Fett, Staub)",
+              "mold": "Schimmel an Fensterrahmen",
+              "manySmall": "Viele kleine Fenster",
+              "roofWindow": "Dachfenster / schwer zugänglich",
+              "safetyFilm": "Sicherheitsfolie / Spezialverglasung",
+              "none": "Keine Besonderheiten"
+            }
+          }
+        },
+        "relocation": {
+          "movingFromAddress": {
+            "label": "Umzug von - PLZ / Ort / Adresse",
+            "placeholder": "Aktuelle Adresse eingeben"
+          },
+          "currentFloor": {
+            "label": "Auf welchem Stock wohnen Sie aktuell?"
+          },
+          "currentElevator": {
+            "label": "Ist aktuell ein Lift vorhanden?"
+          },
+          "movingToAddress": {
+            "label": "Umzug nach - PLZ / Ort / Adresse",
+            "placeholder": "Zieladresse eingeben"
+          },
+          "destinationElevator": {
+            "label": "Ist am Ziel ein Lift vorhanden?"
+          },
+          "movingPeople": {
+            "label": "Wie viele Personen ziehen um?"
+          },
+          "boxesCount": {
+            "label": "Wie viele Umzugskisten müssen transportiert werden?"
+          },
+          "movingSupplies": {
+            "label": "Benötigen Sie zusätzliches Umzugsmaterial?",
+            "options": {
+              "movingBox": "Umzugskarton (10 Stück)",
+              "wardrobeBox": "Kleiderkarton",
+              "bottleCarton": "Flaschenkarton",
+              "tapeDispenser": "Klebeband + Abroller"
+            }
+          }
+        },
+        "disposal": {
+          "disposalType": {
+            "label": "Bitte wählen",
+            "options": {
+              "disposal": "Entsorgung",
+              "eviction": "Räumung",
+              "disposalClearance": "Entsorgung + Räumung"
+            }
+          },
+          "location": {
+            "label": "Ort"
+          },
+          "elevator": {
+            "label": "Ist aktuell ein Lift vorhanden?"
+          },
+          "waste": {
+            "label": "Abfall",
+            "options": {
+              "furniture": "Möbel (Schrank, Bett, Tisch, etc.)",
+              "electrical": "Elektrogeräte (TV, Kühlschrank, PC)",
+              "cardboard": "Karton / Papier / Kleinteile",
+              "constructionDebris": "Bauschutt / Holz / Metall",
+              "gardenWaste": "Gartenabfall / Pflanzen / Erde",
+              "textiles": "Textilien / Teppiche / Matratzen"
+            }
+          },
+          "otherItems": {
+            "label": "Weitere Gegenstände"
+          },
+          "disassemblyNeeded": {
+            "label": "Müssen Gegenstände demontiert werden?"
+          },
+          "amount": {
+            "label": "Wie viel Material muss entsorgt werden?",
+            "options": {
+              "little": "Wenig (z.B. kleiner Raum)",
+              "medium": "Mittel (1-2 Zimmer)",
+              "lots": "Viel (ganze Wohnung / Haus / Lager)"
+            }
+          }
+        },
+        "contact": {
+          "salutation": {
+            "label": "Anrede",
+            "options": {
+              "mister": "Herr",
+              "woman": "Frau"
+            }
+          },
+          "firstName": {
+            "label": "Vorname"
+          },
+          "lastName": {
+            "label": "Nachname"
+          },
+          "email": {
+            "label": "E-Mail-Adresse"
+          },
+          "phone": {
+            "label": "Telefonnummer"
+          },
+          "postalCodeAndCity": {
+            "label": "PLZ / Ort"
+          },
+          "streetAndNumber": {
+            "label": "Strasse, Nr."
+          },
+          "contactPreferredVia": {
+            "label": "Bevorzugter Kontakt",
+            "options": {
+              "email": "E-Mail",
+              "phone": "Telefon"
+            }
+          },
+          "viewingIsWelcome": {
+            "label": "Besichtigung willkommen",
+            "options": {
+              "yes": "Ja",
+              "no": "Nein"
+            }
+          },
+          "remark": {
+            "label": "Bemerkung",
+            "placeholder": "Zusätzliche Notiz"
+          }
+        }
+      }
     },
     "title": {
       "quote": "Offerte",
@@ -1918,8 +2203,9 @@
   "common": {
     "learnMore": "Mehr erfahren",
     "readMore": "Weiterlesen",
-    "getQuote": "Angebot erhalten",
-    "contactUs": "Kontakt aufnehmen",
+    "formLink": "Formular",
+    "getQuote": "Angebot",
+    "contactUs": "Kontakt",
     "requestFreeQuote": "Kostenloses Angebot anfordern",
     "getFreeQuote": "Kostenloses Angebot erhalten",
     "freeQuote": "Kostenloses Angebot"
@@ -2073,7 +2359,13 @@
       "windowCleaning": "Fensterreinigung",
       "relocation": "Umzug",
       "disposal": "Entsorgung",
-      "stairwellCleaning": "Treppenhausreinigung"
+      "stairwellCleaning": "Treppenhausreinigung",
+      "gastronomyCleaning": "Gastronomie-Reinigung",
+      "medicalCleaning": "Medizinische Reinigung",
+      "constructionCleaning": "Baureinigung",
+      "propertyMaintenance": "Hauswartung",
+      "specialCleaning": "Spezialreinigung",
+      "comboService": "Reinigung + Umzug Kombi"
     }
   },
   "pricing": {

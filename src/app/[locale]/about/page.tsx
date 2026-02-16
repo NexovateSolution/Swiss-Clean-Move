@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
+import SwissHero from '@/components/SwissHero';
 import {
   Users,
   Award,
@@ -69,24 +70,18 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-swiss-red text-white overflow-hidden">
-        {/* Swiss-flag inspired overlay */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
-        </div>
-        <div className="relative container-max py-20">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold">
-              {t('about.title')}
-            </h1>
-            <p className="text-xl text-blue-100">
-              {t('about.subtitle')}
-            </p>
-          </div>
-        </div>
-      </section>
+      <SwissHero
+        badge={t('about.title')}
+        title={t('about.title')}
+        subtitle={t('about.subtitle')}
+        right={
+          <img
+            src="/images/story.png"
+            alt={t('about.title')}
+            className="w-full h-[340px] md:h-[420px] object-cover"
+          />
+        }
+      />
 
       {/* Company Story */}
       <section className="section-padding">
@@ -94,22 +89,22 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-swiss-gray-800">
+                <h2 className="text-3xl font-bold text-swiss-text">
                   {t('about.story.title')}
                 </h2>
-                <p className="text-lg text-swiss-gray-700">
+                <p className="text-lg text-swiss-body">
                   {t('about.description')}
                 </p>
-                <p className="text-swiss-gray-600">
+                <p className="text-swiss-body">
                   {t('about.story.description')}
                 </p>
                 <div className="flex items-center space-x-4">
-                  <CheckCircle className="w-6 h-6 text-swiss-green" />
-                  <span className="font-semibold text-swiss-gray-800">{t('about.story.qualityBadge')}</span>
+                  <CheckCircle className="w-6 h-6 text-swiss-red" />
+                  <span className="font-semibold text-swiss-text">{t('about.story.qualityBadge')}</span>
                 </div>
               </div>
               <div className="relative">
-                <div className="rounded-2xl overflow-hidden h-96 relative shadow-xl">
+                <div className="rounded-2xl overflow-hidden h-96 relative shadow-soft border border-swiss-border">
                   <img
                     src="/images/story.png"
                     alt={t('about.story.teamImage')}
@@ -123,13 +118,13 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-swiss-gray-50">
+      <section className="section-padding bg-swiss-section">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
               {t('about.statsSection.title')}
             </h2>
-            <p className="text-xl text-swiss-gray-600">
+            <p className="text-xl text-swiss-body">
               {t('about.statsSection.subtitle')}
             </p>
           </div>
@@ -137,10 +132,11 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-swiss-blue">
+                <div className="text-4xl md:text-5xl font-bold text-swiss-text">
                   {stat.number}
                 </div>
-                <div className="text-swiss-gray-600 font-medium">
+                <div className="mx-auto h-0.5 w-10 bg-swiss-red rounded-full"></div>
+                <div className="text-swiss-body font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -152,11 +148,11 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
       {/* Values Section */}
       <section className="section-padding">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
               {t('about.valuesSection.title')}
             </h2>
-            <p className="text-xl text-swiss-gray-600">
+            <p className="text-xl text-swiss-body">
               {t('about.valuesSection.subtitle')}
             </p>
           </div>
@@ -166,13 +162,13 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
               const IconComponent = value.icon;
               return (
                 <div key={index} className="card p-6 text-center space-y-4">
-                  <div className="w-16 h-16 bg-swiss-blue rounded-full flex items-center justify-center mx-auto">
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-swiss-gray-50 border border-swiss-border rounded-full flex items-center justify-center mx-auto">
+                    <IconComponent className="w-8 h-8 text-swiss-body" />
                   </div>
-                  <h3 className="text-xl font-semibold text-swiss-gray-800">
+                  <h3 className="text-xl font-semibold text-swiss-text">
                     {value.title}
                   </h3>
-                  <p className="text-swiss-gray-600">
+                  <p className="text-swiss-body">
                     {value.description}
                   </p>
                 </div>
@@ -183,13 +179,13 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
       </section>
 
       {/* Team Section */}
-      <section className="section-padding bg-swiss-gray-50">
+      <section className="section-padding bg-swiss-section">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
               {t('about.team.title')}
             </h2>
-            <p className="text-xl text-swiss-gray-600">
+            <p className="text-xl text-swiss-body">
               {t('about.team.subtitle')}
             </p>
           </div>
@@ -206,14 +202,14 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
                 </div>
                 <div className="p-6 space-y-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-swiss-gray-800">
+                    <h3 className="text-xl font-semibold text-swiss-text">
                       {member.name}
                     </h3>
-                    <p className="text-swiss-blue font-medium">
+                    <p className="text-swiss-red font-medium">
                       {member.position}
                     </p>
                   </div>
-                  <p className="text-swiss-gray-600">
+                  <p className="text-swiss-body">
                     {member.description}
                   </p>
                 </div>
@@ -227,27 +223,27 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
       <section className="section-padding">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
+            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
               {t('about.mission.title')}
             </h2>
-            <p className="text-xl text-swiss-gray-700">
+            <p className="text-xl text-swiss-body">
               {t('about.mission.description')}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="space-y-4">
-                <Award className="w-12 h-12 text-swiss-blue mx-auto" />
-                <h3 className="text-lg font-semibold">{t('about.mission.values.excellence.title')}</h3>
-                <p className="text-swiss-gray-600">{t('about.mission.values.excellence.description')}</p>
+                <Award className="w-12 h-12 text-swiss-red mx-auto" />
+                <h3 className="text-lg font-semibold text-swiss-text">{t('about.mission.values.excellence.title')}</h3>
+                <p className="text-swiss-body">{t('about.mission.values.excellence.description')}</p>
               </div>
               <div className="space-y-4">
-                <Clock className="w-12 h-12 text-swiss-blue mx-auto" />
-                <h3 className="text-lg font-semibold">{t('about.mission.values.efficiency.title')}</h3>
-                <p className="text-swiss-gray-600">{t('about.mission.values.efficiency.description')}</p>
+                <Clock className="w-12 h-12 text-swiss-red mx-auto" />
+                <h3 className="text-lg font-semibold text-swiss-text">{t('about.mission.values.efficiency.title')}</h3>
+                <p className="text-swiss-body">{t('about.mission.values.efficiency.description')}</p>
               </div>
               <div className="space-y-4">
-                <Heart className="w-12 h-12 text-swiss-blue mx-auto" />
-                <h3 className="text-lg font-semibold">{t('about.mission.values.trust.title')}</h3>
-                <p className="text-swiss-gray-600">{t('about.mission.values.trust.description')}</p>
+                <Heart className="w-12 h-12 text-swiss-red mx-auto" />
+                <h3 className="text-lg font-semibold text-swiss-text">{t('about.mission.values.trust.title')}</h3>
+                <p className="text-swiss-body">{t('about.mission.values.trust.description')}</p>
               </div>
             </div>
           </div>
@@ -255,26 +251,20 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 bg-swiss-red text-white overflow-hidden">
-        {/* Swiss-flag inspired overlay */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
-        </div>
-        <div className="container-max relative">
+      <section className="section-padding bg-swiss-red text-white">
+        <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">
               {t('about.cta.title')}
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-white/80">
               {t('about.cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={`/${locale}/free-offer`} className="btn-secondary text-lg px-8 py-4">
+              <Link href={`/${locale}/free-offer`} className="inline-flex items-center justify-center bg-white text-swiss-red font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 shadow-soft hover:shadow-soft">
                 {t('about.cta.freeOffer')}
               </Link>
-              <Link href={`/${locale}/contact`} className="flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 border border-white/20">
+              <Link href={`/${locale}/contact`} className="flex items-center justify-center space-x-2 bg-transparent hover:bg-white/10 text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 border border-white/40">
                 {t('about.cta.contact')}
               </Link>
             </div>

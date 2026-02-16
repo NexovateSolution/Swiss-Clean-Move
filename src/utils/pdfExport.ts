@@ -12,9 +12,9 @@ declare module 'jspdf' {
 const COMPANY_INFO = {
     name: 'SwissCleanMove',
     tagline: 'Umzug & Reinigung',
-    address: 'Musterstrasse 123',
-    city: '8000 Zürich',
-    phone: '+41 12 345 67 89',
+    address: 'Orpundstrasse 31',
+    city: '2504 Biel/Bienne',
+    phone: '+41 76 488 36 89',
     email: 'info@swisscleanmove.ch',
     website: 'swisscleanmove.ch',
     uid: 'CHE-123.456.789'

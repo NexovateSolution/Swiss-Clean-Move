@@ -95,7 +95,14 @@ function generateInvoiceHTML(client: any, language: string): string {
       notes: 'Notes',
       thankYou: 'Thank you for your business!',
       contact: 'Contact Us',
-      status: 'Status'
+      status: 'Status',
+      receiptSlip: 'Payment Slip',
+      paymentPart: 'Payment Slip',
+      accountPayableTo: 'Account / Payable to',
+      reference: 'Reference',
+      payableBy: 'Payable by',
+      currency: 'Currency',
+      chf: 'CHF'
     },
     de: {
       invoice: 'RECHNUNG',
@@ -113,7 +120,14 @@ function generateInvoiceHTML(client: any, language: string): string {
       notes: 'Notizen',
       thankYou: 'Vielen Dank für Ihr Vertrauen!',
       contact: 'Kontakt',
-      status: 'Status'
+      status: 'Status',
+      receiptSlip: 'Empfangsschein',
+      paymentPart: 'Zahlteil',
+      accountPayableTo: 'Konto / Zahlbar an',
+      reference: 'Referenz',
+      payableBy: 'Zahlbar durch',
+      currency: 'Währung',
+      chf: 'CHF'
     },
     fr: {
       invoice: 'FACTURE',
@@ -131,7 +145,14 @@ function generateInvoiceHTML(client: any, language: string): string {
       notes: 'Notes',
       thankYou: 'Merci pour votre confiance!',
       contact: 'Contact',
-      status: 'Statut'
+      status: 'Statut',
+      receiptSlip: 'Reçu',
+      paymentPart: 'Partie paiement',
+      accountPayableTo: 'Compte / Payable à',
+      reference: 'Référence',
+      payableBy: 'Payable par',
+      currency: 'Devise',
+      chf: 'CHF'
     }
   }
 
@@ -144,6 +165,14 @@ function generateInvoiceHTML(client: any, language: string): string {
   }
 
   const statusColor = statusColors[client.status as keyof typeof statusColors] || '#6b7280'
+
+  const paymentSlip = {
+    account: 'CH86 0900 0000 1636 3866 5',
+    payableTo: ['SwissCleanMove Gebrekristos', 'Orpundstrasse 31', 'CH-2504 Biel/Bienne'],
+    reference: '00 00000 00000 00000 00000 00000'
+  }
+
+  const slipAmount = typeof client.balance === 'number' ? client.balance : client.totalPrice
 
   return `
     <!DOCTYPE html>
@@ -255,6 +284,70 @@ function generateInvoiceHTML(client: any, language: string): string {
         .payment-history {
           margin-top: 30px;
         }
+        .payment-slip {
+          margin-top: 40px;
+          border: 2px solid #111;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        .payment-slip-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        .payment-slip-table td {
+          vertical-align: top;
+          padding: 16px;
+        }
+        .payment-slip-left {
+          width: 35%;
+          border-right: 1px solid #111;
+        }
+        .payment-slip-right {
+          width: 65%;
+        }
+        .payment-slip-title {
+          margin: 0 0 14px 0;
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 0.2px;
+        }
+        .payment-slip-label {
+          display: block;
+          font-size: 11px;
+          font-weight: bold;
+          color: #111;
+          margin-bottom: 3px;
+          text-transform: none;
+        }
+        .payment-slip-value {
+          font-size: 11px;
+          color: #111;
+        }
+        .payment-slip-block {
+          margin-bottom: 14px;
+        }
+        .payment-slip-amount-box {
+          border: 1px solid #111;
+          border-radius: 6px;
+          padding: 10px;
+          text-align: left;
+          width: 170px;
+        }
+        .payment-slip-amount-row {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          align-items: flex-start;
+        }
+        .payment-slip-amount {
+          font-size: 14px;
+          font-weight: bold;
+          letter-spacing: 0.2px;
+        }
+        .payment-slip-currency {
+          font-size: 12px;
+          font-weight: bold;
+        }
       </style>
     </head>
     <body>
@@ -339,13 +432,84 @@ function generateInvoiceHTML(client: any, language: string): string {
         </div>
       ` : ''}
 
+      <div class="payment-slip">
+        <table class="payment-slip-table">
+          <tr>
+            <td class="payment-slip-left">
+              <div class="payment-slip-title">${t.receiptSlip}</div>
+
+              <div class="payment-slip-block">
+                <span class="payment-slip-label">${t.accountPayableTo}</span>
+                <div class="payment-slip-value">${paymentSlip.account}</div>
+                <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+              </div>
+
+              <div class="payment-slip-block">
+                <span class="payment-slip-label">${t.reference}</span>
+                <div class="payment-slip-value">${paymentSlip.reference}</div>
+              </div>
+
+              <div class="payment-slip-block">
+                <span class="payment-slip-label">${t.currency}</span>
+                <div class="payment-slip-value">${t.chf}</div>
+              </div>
+
+              <div class="payment-slip-block">
+                <span class="payment-slip-label">${t.amount}</span>
+                <div class="payment-slip-value">${t.chf} ${Number(slipAmount || 0).toFixed(2)}</div>
+              </div>
+
+              <div class="payment-slip-block" style="margin-bottom: 0;">
+                <span class="payment-slip-label">${t.payableBy}</span>
+                <div class="payment-slip-value">${client.firstName} ${client.lastName}</div>
+                <div class="payment-slip-value">${client.address || ''}</div>
+                <div class="payment-slip-value">${client.postalCode || ''} ${client.location || ''}</div>
+              </div>
+            </td>
+
+            <td class="payment-slip-right">
+              <div class="payment-slip-title">${t.paymentPart}</div>
+
+              <div class="payment-slip-amount-row">
+                <div style="flex: 1;">
+                  <div class="payment-slip-block">
+                    <span class="payment-slip-label">${t.accountPayableTo}</span>
+                    <div class="payment-slip-value">${paymentSlip.account}</div>
+                    <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+                  </div>
+
+                  <div class="payment-slip-block">
+                    <span class="payment-slip-label">${t.reference}</span>
+                    <div class="payment-slip-value">${paymentSlip.reference}</div>
+                  </div>
+
+                  <div class="payment-slip-block" style="margin-bottom: 0;">
+                    <span class="payment-slip-label">${t.payableBy}</span>
+                    <div class="payment-slip-value">${client.firstName} ${client.lastName}</div>
+                    <div class="payment-slip-value">${client.address || ''}</div>
+                    <div class="payment-slip-value">${client.postalCode || ''} ${client.location || ''}</div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="payment-slip-amount-box">
+                    <div class="payment-slip-currency">${t.chf}</div>
+                    <div class="payment-slip-amount">${t.chf} ${Number(slipAmount || 0).toFixed(2)}</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
       <div class="footer">
         <p style="font-size: 18px; color: #059669; font-weight: bold;">${t.thankYou}</p>
         <p style="margin-top: 20px;">
           <strong>${t.contact}:</strong><br>
           SwissCleanMove<br>
-          Musterstrasse 123, 8000 Zürich<br>
-          Tel: +41 12 345 67 89<br>
+          Orpundstrasse 31, 2504 Biel/Bienne<br>
+          Tel: +41 76 488 36 89 / +41 78 215 80 30<br>
           Email: info@swisscleanmove.ch<br>
           UID: CHE-123.456.789
         </p>

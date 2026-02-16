@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import Layout from '@/components/Layout';
+import SwissHero from '@/components/SwissHero';
 import { 
   User, 
   FileText, 
@@ -61,19 +62,18 @@ export default function DashboardPage({ params: { locale } }: { params: { locale
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-swiss-blue to-swiss-green text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container-max py-16">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Kunden Dashboard
-            </h1>
-            <p className="text-xl text-blue-100">
-              Verwalten Sie Ihre Verträge, Rechnungen und Dokumente
-            </p>
+      <SwissHero
+        badge="Dashboard"
+        title="Kunden Dashboard"
+        subtitle="Verwalten Sie Ihre Verträge, Rechnungen und Dokumente"
+        right={
+          <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center">
+            <div className="w-20 h-20 bg-swiss-softRed rounded-3xl flex items-center justify-center mx-auto border border-swiss-border shadow-subtle">
+              <FileText className="w-10 h-10 text-swiss-red" />
+            </div>
           </div>
-        </div>
-      </section>
+        }
+      />
 
       {/* Coming Soon Notice */}
       <section className="section-padding bg-yellow-50 border-b border-yellow-200">

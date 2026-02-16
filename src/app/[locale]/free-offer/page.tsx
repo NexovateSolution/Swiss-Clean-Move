@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Layout from '@/components/Layout';
+import SwissHero from '@/components/SwissHero';
 import {
   User,
   Mail,
@@ -145,8 +146,8 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
         <section className="section-padding">
           <div className="container-max">
             <div className="max-w-2xl mx-auto text-center space-y-8">
-              <div className="w-20 h-20 bg-swiss-green rounded-full flex items-center justify-center mx-auto">
-                <CheckCircle className="w-10 h-10 text-white" />
+              <div className="w-20 h-20 bg-swiss-softRed border border-swiss-border rounded-full flex items-center justify-center mx-auto shadow-subtle">
+                <CheckCircle className="w-10 h-10 text-swiss-red" />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-swiss-gray-800">
                 {t('freeOffer.success.title')}
@@ -154,19 +155,19 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
               <p className="text-xl text-swiss-gray-600">
                 {t('freeOffer.success.subtitle')}
               </p>
-              <div className="bg-swiss-gray-50 rounded-lg p-6 space-y-4">
+              <div className="bg-swiss-section rounded-xl p-6 space-y-4 border border-swiss-border shadow-subtle">
                 <h3 className="font-semibold text-swiss-gray-800">{t('freeOffer.success.nextSteps.title')}</h3>
                 <ul className="space-y-2 text-left">
                   <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-swiss-green" />
+                    <CheckCircle className="w-4 h-4 text-swiss-red" />
                     <span>{t('freeOffer.success.nextSteps.step1')}</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-swiss-green" />
+                    <CheckCircle className="w-4 h-4 text-swiss-red" />
                     <span>{t('freeOffer.success.nextSteps.step2')}</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-swiss-green" />
+                    <CheckCircle className="w-4 h-4 text-swiss-red" />
                     <span>{t('freeOffer.success.nextSteps.step3')}</span>
                   </li>
                 </ul>
@@ -175,7 +176,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                 <a href={`/${locale}`} className="btn-primary">
                   {t('freeOffer.success.actions.homepage')}
                 </a>
-                <a href="tel:+41123456789" className="btn-secondary">
+                <a href="tel:+41764883689" className="btn-secondary">
                   {t('freeOffer.success.actions.call')}
                 </a>
               </div>
@@ -189,34 +190,28 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-swiss-red text-white overflow-hidden">
-        {/* Swiss-flag inspired overlay */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-700/60 via-red-600/60 to-red-700/60"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-8 bg-white/15 rounded-sm"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-[60%] bg-white/15 rounded-sm"></div>
-        </div>
-        <div className="relative container-max py-24">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold">
-              {t('freeOffer.title')}
-            </h1>
-            <p className="text-xl text-blue-100">
-              {t('freeOffer.subtitle')}
-            </p>
-          </div>
-        </div>
-      </section>
+      <SwissHero
+        badge={t('freeOffer.title')}
+        title={t('freeOffer.title')}
+        subtitle={t('freeOffer.subtitle')}
+        right={
+          <img
+            src="/images/transportation.png"
+            alt={t('freeOffer.title')}
+            className="w-full h-[340px] md:h-[420px] object-cover"
+          />
+        }
+      />
 
       {/* Form Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-swiss-section">
         <div className="container-max">
           <div className="max-w-4xl mx-auto">
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Personal Information */}
               <div className="card p-8">
                 <h2 className="text-2xl font-bold text-swiss-gray-800 mb-6 flex items-center space-x-2">
-                  <User className="w-6 h-6 text-swiss-blue" />
+                  <User className="w-6 h-6 text-swiss-red" />
                   <span>{t('freeOffer.form.personalInfo')}</span>
                 </h2>
 
@@ -231,7 +226,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     />
                   </div>
 
@@ -245,7 +240,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     />
                   </div>
 
@@ -259,7 +254,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     />
                   </div>
 
@@ -273,7 +268,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     />
                   </div>
 
@@ -287,7 +282,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       value={formData.address}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     />
                   </div>
 
@@ -301,7 +296,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       value={formData.postalCode}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     />
                   </div>
 
@@ -315,7 +310,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       value={formData.city}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                      className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     />
                   </div>
                 </div>
@@ -324,7 +319,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
               {/* Service Selection */}
               <div className="card p-8">
                 <h2 className="text-2xl font-bold text-swiss-gray-800 mb-6 flex items-center space-x-2">
-                  <Briefcase className="w-6 h-6 text-swiss-blue" />
+                  <Briefcase className="w-6 h-6 text-swiss-red" />
                   <span>{t('freeOffer.form.serviceDetails')}</span>
                 </h2>
 
@@ -342,14 +337,14 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                             type="button"
                             onClick={() => handleServiceTypeChange(service.value)}
                             className={`p-4 border-2 rounded-lg transition-all duration-200 ${formData.serviceType === service.value
-                                ? 'border-swiss-blue bg-swiss-blue/5'
-                                : 'border-swiss-gray-300 hover:border-swiss-blue/50'
+                                ? 'border-swiss-red bg-swiss-softRed'
+                                : 'border-swiss-border hover:border-swiss-red/40'
                               }`}
                           >
                             <div className="flex flex-col items-center space-y-2">
-                              <IconComponent className={`w-8 h-8 ${formData.serviceType === service.value ? 'text-swiss-blue' : 'text-swiss-gray-500'
+                              <IconComponent className={`w-8 h-8 ${formData.serviceType === service.value ? 'text-swiss-red' : 'text-swiss-gray-500'
                                 }`} />
-                              <span className={`text-sm font-medium ${formData.serviceType === service.value ? 'text-swiss-blue' : 'text-swiss-gray-700'
+                              <span className={`text-sm font-medium ${formData.serviceType === service.value ? 'text-swiss-red' : 'text-swiss-gray-700'
                                 }`}>
                                 {service.label}
                               </span>
@@ -370,7 +365,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                         value={formData.propertyType}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                        className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                       >
                         <option value="">{t('freeOffer.form.fields.selectPlaceholder')}</option>
                         {propertyTypes.map((type) => (
@@ -392,7 +387,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                         onChange={handleInputChange}
                         min="1"
                         max="20"
-                        className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                        className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                       />
                     </div>
 
@@ -406,7 +401,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                         value={formData.area}
                         onChange={handleInputChange}
                         min="1"
-                        className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                        className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                       />
                     </div>
 
@@ -420,7 +415,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                         value={formData.preferredDate}
                         onChange={handleInputChange}
                         min={new Date().toISOString().split('T')[0]}
-                        className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                        className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                       />
                     </div>
                     <div>
@@ -433,7 +428,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                         value={formData.startDate}
                         onChange={handleInputChange}
                         min={new Date().toISOString().split('T')[0]}
-                        className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                        className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                       />
                     </div>
                     <div>
@@ -446,7 +441,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                         value={formData.finishDate}
                         onChange={handleInputChange}
                         min={formData.startDate || new Date().toISOString().split('T')[0]}
-                        className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                        className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                       />
                     </div>
                   </div>
@@ -462,7 +457,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                             type="checkbox"
                             checked={formData.additionalServices.includes(service)}
                             onChange={() => handleAdditionalServiceChange(service)}
-                            className="w-4 h-4 text-swiss-blue border-swiss-gray-300 rounded focus:ring-swiss-blue"
+                            className="w-4 h-4 text-swiss-red border-swiss-border rounded focus:ring-swiss-red/20"
                           />
                           <span className="text-sm text-swiss-gray-700">{service}</span>
                         </label>
@@ -475,7 +470,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
               {/* Additional Information */}
               <div className="card p-8">
                 <h2 className="text-2xl font-bold text-swiss-gray-800 mb-6 flex items-center space-x-2">
-                  <FileText className="w-6 h-6 text-swiss-blue" />
+                  <FileText className="w-6 h-6 text-swiss-red" />
                   <span>{t('freeOffer.form.additionalInfo')}</span>
                 </h2>
 
@@ -488,7 +483,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-swiss-gray-300 rounded-lg focus:ring-2 focus:ring-swiss-blue focus:border-transparent"
+                    className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
                     placeholder={t('freeOffer.form.fields.placeholder')}
                   />
                 </div>
@@ -504,11 +499,11 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       checked={formData.agreement}
                       onChange={handleInputChange}
                       required
-                      className="w-5 h-5 text-swiss-blue border-swiss-gray-300 rounded focus:ring-swiss-blue mt-0.5"
+                      className="w-5 h-5 text-swiss-red border-swiss-border rounded focus:ring-swiss-red/20 mt-0.5"
                     />
                     <span className="text-sm text-swiss-gray-700">
                       {t('freeOffer.form.agreement.privacy')}{' '}
-                      <a href={`/${locale}/legal#datenschutz`} className="text-swiss-blue hover:underline">
+                      <a href={`/${locale}/legal#datenschutz`} className="text-swiss-red hover:underline">
                         {t('freeOffer.form.agreement.privacyLink')}
                       </a>{' '}
                       {t('freeOffer.form.agreement.contact')} *
@@ -521,7 +516,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       name="newsletter"
                       checked={formData.newsletter}
                       onChange={handleInputChange}
-                      className="w-5 h-5 text-swiss-blue border-swiss-gray-300 rounded focus:ring-swiss-blue mt-0.5"
+                      className="w-5 h-5 text-swiss-red border-swiss-border rounded focus:ring-swiss-red/20 mt-0.5"
                     />
                     <span className="text-sm text-swiss-gray-700">
                       {t('freeOffer.form.agreement.newsletter')}

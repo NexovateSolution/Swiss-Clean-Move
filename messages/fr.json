@@ -53,11 +53,12 @@
     },
     "services": {
       "title": "Nos Services",
-      "subtitle": "Solutions professionnelles pour tous vos besoins de nettoyage et déménagement",
+      "subtitle": "Solutions professionnelles pour tous vos besoins de nettoyage et de déménagement",
       "viewAll": "Voir tous les services",
+      "customSolution": "Besoin d'une solution sur mesure ? Nous adaptons notre service à vos besoins.",
       "houseCleaning": {
         "title": "Nettoyage de maison",
-        "description": "Services complets de nettoyage pour maisons avec attention aux détails"
+        "description": "Services complets de nettoyage de maison pour les propriétés résidentielles avec une attention à chaque détail"
       },
       "apartmentCleaning": {
         "title": "Nettoyage d'appartement",
@@ -168,6 +169,7 @@
       }
     },
     "testimonials": {
+      "badge": "Témoignages",
       "title": "Ce que disent nos clients",
       "subtitle": "Faites confiance à l'expérience de clients satisfaits"
     },
@@ -205,49 +207,70 @@
       "subtitle": "Vos avantages avec notre service professionnel"
     },
     "features": {
-      "umzugsreinigung": [
+      "houseCleaning": [
+        "Nettoyage complet de la maison",
+        "Cuisine et salle de bain en profondeur",
+        "Pièces de vie et chambres",
+        "Sols et surfaces",
+        "Équipement professionnel"
+      ],
+      "apartmentCleaning": [
         "Nettoyage complet d'appartement",
         "Cuisine et salle de bain en profondeur",
         "Fenêtres intérieur et extérieur",
-        "Sols et tapis",
-        "Garantie de dépôt à 100%"
+        "Sols et moquettes",
+        "Garantie de restitution à 100%"
       ],
-      "gastronomie": [
-        "Nettoyage de cuisine et équipements",
-        "Désinfection hygiénique",
-        "Hottes et filtres",
-        "Sols et surfaces de travail",
-        "Nettoyage conforme HACCP"
+      "stairwellCleaning": [
+        "Nettoyage des escaliers et couloirs",
+        "Entretien des parties communes",
+        "Nettoyage et lavage des sols",
+        "Nettoyage des vitres et surfaces vitrées",
+        "Plans de service réguliers"
       ],
-      "buero": [
+      "officeCleaning": [
         "Espaces de bureau et postes de travail",
         "Installations sanitaires",
-        "Espaces communs",
-        "Élimination des déchets",
+        "Zones communes",
+        "Évacuation des déchets",
         "Rendez-vous réguliers"
       ],
-      "hauswartung": [
-        "Nettoyage des cages d'escalier",
-        "Entretien des espaces extérieurs",
-        "Petites réparations",
-        "Service hivernal",
-        "Gestion de propriété"
+      "finalCleaning": [
+        "Nettoyage de fin de bail",
+        "Cuisine et salle de bain en profondeur",
+        "Fenêtres intérieur et extérieur",
+        "Nettoyage et polissage des sols",
+        "Garantie de restitution à 100%"
       ],
-      "entsorgung": [
-        "Meubles et articles ménagers",
-        "Appareils électroniques",
-        "Déchets encombrants",
-        "Élimination professionnelle",
-        "Respectueux de l'environnement"
+      "windowCleaning": [
+        "Fenêtres intérieur et extérieur",
+        "Cadres et rebords",
+        "Portes vitrées et surfaces en verre",
+        "Technique de raclette professionnelle",
+        "Résultats sans traces"
       ],
-      "umzug": [
+      "relocation": [
         "Service de déménagement complet",
         "Emballage et transport",
         "Montage de meubles",
         "Couverture d'assurance",
         "Déménagements dans toute la Suisse"
       ],
-      "gastronomyCleaning": [
+      "disposal": [
+        "Meubles et effets ménagers",
+        "Appareils électroniques",
+        "Déchets encombrants",
+        "Évacuation professionnelle",
+        "Respectueux de l'environnement"
+      ],
+      "umzugsreinigung": [
+        "Nettoyage complet d'appartement",
+        "Cuisine et salle de bain en profondeur",
+        "Fenêtres intérieur et extérieur",
+        "Sols et moquettes",
+        "Garantie de restitution à 100%"
+      ],
+      "gastronomie": [
         "Nettoyage de cuisine et équipements",
         "Désinfection hygiénique",
         "Hottes et filtres",
@@ -323,14 +346,14 @@
       "windowCleaningTitle": "Nettoyage de Vitres"
     },
     "pricing": {
-      "houseCleaning": "CHF 45–65 / heure / employé",
-      "apartmentCleaning": "CHF 45–65 / heure / employé",
-      "stairwellCleaning": "forfait à partir de CHF 120",
+      "houseCleaning": "CHF 45–65 / heure / personne",
+      "apartmentCleaning": "CHF 45–65 / heure / personne",
+      "stairwellCleaning": "forfait dès CHF 120",
       "officeCleaning": "CHF 0.80–1.50 / m²",
-      "finalCleaning": "à partir de CHF 250",
-      "windowCleaning": "CHF 8–15 par fenêtre",
-      "relocation": "à partir de CHF 160 / heure",
-      "disposal": "à partir de CHF 30 / m³"
+      "finalCleaning": "dès CHF 250",
+      "windowCleaning": "CHF 8–15 / fenêtre",
+      "relocation": "dès CHF 160 / heure",
+      "disposal": "dès CHF 30 / m³"
     }
   },
   "about": {
@@ -674,6 +697,233 @@
     "common": {
       "yes": "Oui",
       "no": "Non"
+    },
+    "wizard": {
+      "badge": "Calculer une offre",
+      "stepCounter": "Étape {current} sur {total}",
+      "validation": {
+        "required": "Veuillez remplir tous les champs obligatoires de cette étape"
+      },
+      "common": {
+        "select": "Veuillez sélectionner",
+        "yes": "Oui",
+        "no": "Non"
+      },
+      "buttons": {
+        "back": "Retour",
+        "next": "Suivant",
+        "submit": "Envoyer"
+      },
+      "steps": {
+        "cleaningService": "Service & lieu",
+        "propertyDetails": "Détails du bien",
+        "areas": "Zones à nettoyer",
+        "windowDetails": "Détails des fenêtres",
+        "datesAndRequests": "Dates & demandes",
+        "relocationFrom": "Déménager de",
+        "relocationTo": "Déménager vers",
+        "boxesAndSupplies": "Cartons & matériel",
+        "disposalBasic": "Évacuation - base",
+        "disposalWaste": "Détails des déchets",
+        "contact": "Coordonnées"
+      },
+      "fields": {
+        "location": {
+          "label": "Lieu",
+          "placeholder": "Ville / adresse"
+        },
+        "objectType": {
+          "label": "Type de bien",
+          "options": {
+            "apartment": "Appartement",
+            "house": "Maison",
+            "office": "Bureau"
+          }
+        },
+        "floorsCount": {
+          "label": "Combien d'étages ?"
+        },
+        "roomsCount": {
+          "label": "Nombre de pièces"
+        },
+        "livingSpaceM2": {
+          "label": "Surface (m²)",
+          "placeholder": "ex. 80"
+        },
+        "cleaningAreas": {
+          "label": "Quelles zones doivent être nettoyées ?",
+          "options": {
+            "complete": "Nettoyage complet de toutes les pièces (y compris cuisine, salle de bain & WC)",
+            "cellar": "Cave",
+            "attic": "Grenier",
+            "garage": "Garage",
+            "conservatory": "Véranda",
+            "individualRooms": "Uniquement certaines pièces"
+          }
+        },
+        "desiredCleaningDate": {
+          "label": "Date souhaitée"
+        },
+        "handoverDate": {
+          "label": "Date de remise / livraison"
+        },
+        "comments": {
+          "label": "Demandes / commentaires",
+          "placeholder": "Accès, demandes spéciales, etc."
+        },
+        "window": {
+          "normalWindows": {
+            "label": "Fenêtres normales (nombre)"
+          },
+          "frenchDoors": {
+            "label": "Portes-fenêtres (balcon/terrasse)"
+          },
+          "otherGlass": {
+            "label": "Autres grandes surfaces vitrées"
+          },
+          "blindsAndShutters": {
+            "label": "Stores & volets",
+            "options": {
+              "venetian": "Stores vénitiens",
+              "roller": "Volets roulants",
+              "shutters": "Volets",
+              "other": "Autre / spécial",
+              "none": "Non"
+            }
+          },
+          "windowFeatures": {
+            "label": "Caractéristiques particulières",
+            "options": {
+              "heavilySoiled": "Très encrassé (nicotine, graisse, poussière)",
+              "mold": "Moisissure sur cadres",
+              "manySmall": "Nombreuses petites fenêtres",
+              "roofWindow": "Fenêtre de toit / difficile d'accès",
+              "safetyFilm": "Film de sécurité / vitrage spécial",
+              "none": "Aucune"
+            }
+          }
+        },
+        "relocation": {
+          "movingFromAddress": {
+            "label": "Déménagement de - Code postal / Ville / Adresse",
+            "placeholder": "Adresse actuelle"
+          },
+          "currentFloor": {
+            "label": "À quel étage habitez-vous actuellement ?"
+          },
+          "currentElevator": {
+            "label": "Ascenseur disponible actuellement ?"
+          },
+          "movingToAddress": {
+            "label": "Déménagement vers - Code postal / Ville / Adresse",
+            "placeholder": "Adresse de destination"
+          },
+          "destinationElevator": {
+            "label": "Ascenseur disponible à destination ?"
+          },
+          "movingPeople": {
+            "label": "Combien de personnes déménagent ?"
+          },
+          "boxesCount": {
+            "label": "Combien de cartons à déménager ?"
+          },
+          "movingSupplies": {
+            "label": "Besoin de matériel supplémentaire ?",
+            "options": {
+              "movingBox": "Carton (10 pièces)",
+              "wardrobeBox": "Carton penderie",
+              "bottleCarton": "Carton bouteilles",
+              "tapeDispenser": "Ruban adhésif + dévidoir"
+            }
+          }
+        },
+        "disposal": {
+          "disposalType": {
+            "label": "Veuillez choisir",
+            "options": {
+              "disposal": "Évacuation",
+              "eviction": "Débarras",
+              "disposalClearance": "Évacuation + Débarras"
+            }
+          },
+          "location": {
+            "label": "Lieu"
+          },
+          "elevator": {
+            "label": "Ascenseur disponible ?"
+          },
+          "waste": {
+            "label": "Déchets",
+            "options": {
+              "furniture": "Meubles (armoire, lit, table, etc.)",
+              "electrical": "Appareils électriques (TV, frigo, PC)",
+              "cardboard": "Carton / papier / petites pièces",
+              "constructionDebris": "Déchets de chantier / bois / métal",
+              "gardenWaste": "Déchets verts / plantes / terre",
+              "textiles": "Textiles / tapis / matelas"
+            }
+          },
+          "otherItems": {
+            "label": "Autres objets"
+          },
+          "disassemblyNeeded": {
+            "label": "Faut-il démonter des objets ?"
+          },
+          "amount": {
+            "label": "Quelle quantité à évacuer ?",
+            "options": {
+              "little": "Peu (petit volume)",
+              "medium": "Moyen (1-2 pièces)",
+              "lots": "Beaucoup (appartement/maison/entrepôt)"
+            }
+          }
+        },
+        "contact": {
+          "salutation": {
+            "label": "Civilité",
+            "options": {
+              "mister": "M.",
+              "woman": "Mme"
+            }
+          },
+          "firstName": {
+            "label": "Prénom"
+          },
+          "lastName": {
+            "label": "Nom"
+          },
+          "email": {
+            "label": "Adresse e-mail"
+          },
+          "phone": {
+            "label": "Numéro de téléphone"
+          },
+          "postalCodeAndCity": {
+            "label": "NPA / Ville"
+          },
+          "streetAndNumber": {
+            "label": "Rue, N°"
+          },
+          "contactPreferredVia": {
+            "label": "Contact préféré",
+            "options": {
+              "email": "E-mail",
+              "phone": "Téléphone"
+            }
+          },
+          "viewingIsWelcome": {
+            "label": "Visite bienvenue",
+            "options": {
+              "yes": "Oui",
+              "no": "Non"
+            }
+          },
+          "remark": {
+            "label": "Remarque",
+            "placeholder": "Note supplémentaire"
+          }
+        }
+      }
     },
     "title": {
       "quote": "Devis",
@@ -1918,6 +2168,7 @@
   "common": {
     "learnMore": "En savoir plus",
     "readMore": "Lire plus",
+    "formLink": "Formulaire",
     "getQuote": "Obtenir un devis",
     "contactUs": "Nous contacter",
     "requestFreeQuote": "Demander un devis gratuit",
@@ -2069,11 +2320,17 @@
       "houseCleaning": "Nettoyage de maison",
       "apartmentCleaning": "Nettoyage d'appartement",
       "officeCleaning": "Nettoyage de bureau",
-      "finalCleaning": "Nettoyage final",
+      "finalCleaning": "Nettoyage de fin de bail",
       "windowCleaning": "Nettoyage de vitres",
       "relocation": "Déménagement",
-      "disposal": "Élimination",
-      "stairwellCleaning": "Nettoyage de cage d'escalier"
+      "disposal": "Débarras",
+      "stairwellCleaning": "Nettoyage de cage d'escalier",
+      "gastronomyCleaning": "Nettoyage restauration",
+      "medicalCleaning": "Nettoyage médical",
+      "constructionCleaning": "Nettoyage de chantier",
+      "propertyMaintenance": "Entretien d'immeuble",
+      "specialCleaning": "Nettoyage spécial",
+      "comboService": "Pack nettoyage + déménagement"
     }
   },
   "pricing": {

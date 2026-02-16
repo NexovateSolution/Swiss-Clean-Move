@@ -9,7 +9,7 @@ export default function WhatsAppButton() {
   const t = useTranslations();
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '41123456789'; // WhatsApp number without + or spaces (site-wide number)
+    const phoneNumber = '41764883689'; // WhatsApp number without + or spaces (site-wide number)
     const message = encodeURIComponent('Hello! I am interested in your services and would like to know more about it. Could you send me more information? Thank you!');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');

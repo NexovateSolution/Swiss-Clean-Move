@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import Layout from '@/components/Layout'
+import SwissHero from '@/components/SwissHero'
 import { Sparkles, CheckCircle, ArrowRight, Home as HomeIcon, Building2, Briefcase } from 'lucide-react'
 
 export default function CleaningPage({ params: { locale } }: { params: { locale: string } }) {
@@ -15,20 +16,18 @@ export default function CleaningPage({ params: { locale } }: { params: { locale:
 
   return (
     <Layout>
-      <section className="relative bg-gradient-to-br from-swiss-blue to-swiss-green text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container-max py-24">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Sparkles className="w-16 h-16 mx-auto text-blue-100" />
-            <h1 className="text-4xl md:text-5xl font-bold">
-              {t('services.title')}
-            </h1>
-            <p className="text-xl text-blue-100">
-              {t('services.subtitle')}
-            </p>
+      <SwissHero
+        badge={t('services.title')}
+        title={t('services.title')}
+        subtitle={t('services.subtitle')}
+        right={
+          <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center">
+            <div className="w-20 h-20 bg-swiss-softRed rounded-3xl flex items-center justify-center mx-auto border border-swiss-border shadow-subtle">
+              <Sparkles className="w-10 h-10 text-swiss-red" />
+            </div>
           </div>
-        </div>
-      </section>
+        }
+      />
 
       <section className="section-padding">
         <div className="container-max">
@@ -36,13 +35,13 @@ export default function CleaningPage({ params: { locale } }: { params: { locale:
             {cleaningServices.map(({ key, icon: Icon }) => (
               <div key={key} className="card p-8">
                 <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-10 h-10 bg-swiss-blue rounded-lg flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-swiss-gray-50 border border-swiss-border rounded-xl flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-swiss-body" />
                   </div>
-                  <h3 className="text-xl font-semibold">{t(`home.services.${key}.title`)}</h3>
+                  <h3 className="text-xl font-semibold text-swiss-text">{t(`home.services.${key}.title`)}</h3>
                 </div>
-                <p className="text-swiss-gray-600 mb-4">{t(`home.services.${key}.description`)}</p>
-                <Link href={`/${locale}/free-offer`} className="inline-flex items-center text-swiss-blue font-medium">
+                <p className="text-swiss-body mb-4">{t(`home.services.${key}.description`)}</p>
+                <Link href={`/${locale}/free-offer`} className="inline-flex items-center text-swiss-red font-medium">
                   <span>{t('common.getFreeQuote')}</span>
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>

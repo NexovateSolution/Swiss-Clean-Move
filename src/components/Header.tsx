@@ -48,7 +48,7 @@ export default function Header() {
   }, [pathname, locale, router]);
 
   return (
-    <header className="bg-white shadow-lg fixed top-0 w-full z-50 border-b border-swiss-red/15">
+    <header className="bg-white shadow-subtle fixed top-0 w-full z-50 border-b border-swiss-border">
       <div className="container-max">
         <div className={`flex justify-between items-center py-1.5 px-4 ${locale === 'de' ? 'lg:px-4 gap-2' : 'lg:px-6 gap-4'
           }`}>
@@ -82,22 +82,19 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   prefetch={true}
-                  className={`relative py-1.5 rounded-lg transition-all duration-150 whitespace-nowrap group font-medium ${locale === 'de'
+                  className={`relative py-2 transition-colors duration-150 whitespace-nowrap group font-medium ${locale === 'de'
                     ? 'px-1.5 lg:px-2 text-xs'
                     : 'px-1.5 lg:px-2 xl:px-2.5 text-xs lg:text-sm'
                     } ${isActive
-                      ? 'text-swiss-red bg-swiss-red/10 shadow-sm'
-                      : 'text-swiss-gray-700 hover:text-swiss-red hover:bg-swiss-red/5'
+                      ? 'text-swiss-text'
+                      : 'text-swiss-body hover:text-swiss-text'
                     }`}
                 >
                   <span className="relative z-10">{item.name}</span>
-                  {/* Hover effect background */}
-                  <div className={`absolute inset-0 rounded-lg bg-gradient-to-r from-swiss-red/5 to-swiss-red/10 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ${isActive ? 'opacity-100' : ''
-                    }`}></div>
                   {/* Active indicator */}
-                  {isActive && (
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-swiss-red rounded-full"></div>
-                  )}
+                  <div
+                    className={`absolute -bottom-0.5 left-0 right-0 h-0.5 bg-swiss-red rounded-full transition-opacity duration-150 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-60'}`}
+                  ></div>
                 </Link>
               );
             })}
@@ -108,23 +105,23 @@ export default function Header() {
             }`}>
             {/* Phone */}
             <a
-              href="tel:+41123456789"
-              className={`flex items-center space-x-1 xl:space-x-2 bg-swiss-red/5 hover:bg-swiss-red/10 text-swiss-red hover:text-swiss-red/90 rounded-lg transition-all duration-150 whitespace-nowrap group ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
+              href="tel:+41764883689"
+              className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text rounded-lg transition-all duration-150 whitespace-nowrap group border border-swiss-border ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                 }`}
             >
-              <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              <span className={`font-medium ${locale === 'de' ? 'text-xs' : 'text-xs xl:text-sm'}`}>+41 12 345 67 89</span>
+              <Phone className="w-4 h-4 text-swiss-red" />
+              <span className={`font-medium ${locale === 'de' ? 'text-xs' : 'text-xs xl:text-sm'}`}>+41 76 488 36 89</span>
             </a>
 
             {/* Language Dropdown */}
             <div className="relative" ref={langDropdownRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                className={`flex items-center space-x-1 xl:space-x-2 bg-swiss-gray-50 hover:bg-swiss-gray-100 border border-swiss-gray-200 hover:border-swiss-gray-300 rounded-lg transition-all duration-150 group ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
+                className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-lg transition-all duration-150 group ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                   }`}
               >
                 <Globe className="w-4 h-4 text-swiss-gray-500" />
-                <span className="text-xs xl:text-sm font-medium text-swiss-gray-700 uppercase">{locale}</span>
+                <span className="text-xs xl:text-sm font-medium text-swiss-text uppercase">{locale}</span>
                 <ChevronDown className={`w-4 h-4 text-swiss-gray-500 transition-transform ${isLangDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -167,11 +164,11 @@ export default function Header() {
             {/* Admin Login Button */}
             <Link
               href="/admin/login"
-              className={`flex items-center space-x-1 xl:space-x-2 bg-swiss-red/10 hover:bg-swiss-red/20 text-swiss-red hover:text-swiss-red/90 rounded-lg transition-all duration-150 whitespace-nowrap group ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
+              className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text rounded-lg transition-all duration-150 whitespace-nowrap group border border-swiss-border ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                 }`}
               title="Admin Login"
             >
-              <LogIn className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              <LogIn className="w-4 h-4 text-swiss-red" />
               <span className={`font-medium ${locale === 'de' ? 'text-xs' : 'text-xs xl:text-sm'}`}>Admin</span>
             </Link>
           </div>
@@ -179,7 +176,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg bg-swiss-gray-50 hover:bg-swiss-gray-100 text-swiss-gray-700 hover:text-swiss-blue transition-all duration-300 border border-swiss-gray-200"
+            className="lg:hidden p-2 rounded-lg bg-white hover:bg-swiss-gray-50 text-swiss-text transition-all duration-300 border border-swiss-border"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -187,7 +184,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-swiss-gray-200 bg-white">
+          <div className="lg:hidden py-4 border-t border-swiss-border bg-white">
             <nav className="flex flex-col space-y-1">
               {navigation.map((item) => {
                 const isActive = pathname === item.href;
@@ -196,15 +193,14 @@ export default function Header() {
                     key={item.name}
                     href={item.href}
                     prefetch={true}
-                    className={`relative font-medium py-3 px-4 rounded-xl transition-all duration-150 group ${isActive
-                      ? 'text-swiss-blue bg-gradient-to-r from-swiss-blue/10 to-swiss-blue/5 shadow-sm border-l-4 border-swiss-blue'
-                      : 'text-swiss-gray-700 hover:text-swiss-blue hover:bg-gradient-to-r hover:from-swiss-blue/5 hover:to-transparent'
+                    className={`relative font-medium py-3 px-4 rounded-xl transition-all duration-150 group border ${isActive
+                      ? 'text-swiss-text bg-swiss-gray-50 border-swiss-border'
+                      : 'text-swiss-body hover:text-swiss-text hover:bg-swiss-gray-50 border-transparent'
                       }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span className="relative z-10">{item.name}</span>
-                    {/* Mobile hover effect */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-swiss-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-150"></div>
+                    <div className={`absolute left-4 right-4 bottom-2 h-0.5 bg-swiss-red rounded-full transition-opacity duration-150 ${isActive ? 'opacity-100' : 'opacity-0'}`}></div>
                   </Link>
                 );
               })}
@@ -222,8 +218,8 @@ export default function Header() {
                       setIsMenuOpen(false);
                     }}
                     className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-all ${locale === 'en'
-                      ? 'bg-swiss-blue text-white shadow-sm'
-                      : 'text-swiss-gray-600 hover:text-swiss-blue hover:bg-white'
+                      ? 'bg-swiss-red text-white shadow-subtle'
+                      : 'text-swiss-body hover:text-swiss-text hover:bg-white'
                       }`}
                   >
                     🇺🇸 EN
@@ -234,8 +230,8 @@ export default function Header() {
                       setIsMenuOpen(false);
                     }}
                     className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-all ${locale === 'de'
-                      ? 'bg-swiss-blue text-white shadow-sm'
-                      : 'text-swiss-gray-600 hover:text-swiss-blue hover:bg-white'
+                      ? 'bg-swiss-red text-white shadow-subtle'
+                      : 'text-swiss-body hover:text-swiss-text hover:bg-white'
                       }`}
                   >
                     🇩🇪 DE
@@ -246,8 +242,8 @@ export default function Header() {
                       setIsMenuOpen(false);
                     }}
                     className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-all ${locale === 'fr'
-                      ? 'bg-swiss-blue text-white shadow-sm'
-                      : 'text-swiss-gray-600 hover:text-swiss-blue hover:bg-white'
+                      ? 'bg-swiss-red text-white shadow-subtle'
+                      : 'text-swiss-body hover:text-swiss-text hover:bg-white'
                       }`}
                   >
                     🇫🇷 FR
@@ -258,18 +254,18 @@ export default function Header() {
               {/* Mobile Actions */}
               <div className="flex flex-col space-y-3 pt-4 px-4 border-t border-swiss-gray-200">
                 <a
-                  href="tel:+41123456789"
-                  className="flex items-center space-x-2 text-swiss-blue hover:text-swiss-blue/80 py-2"
+                  href="tel:+41764883689"
+                  className="flex items-center space-x-2 text-swiss-text hover:text-swiss-text/80 py-2"
                 >
-                  <Phone className="w-4 h-4" />
-                  <span className="font-medium">+41 12 345 67 89</span>
+                  <Phone className="w-4 h-4 text-swiss-red" />
+                  <span className="font-medium">+41 76 488 36 89</span>
                 </a>
                 <Link
                   href="/admin/login"
-                  className="flex items-center space-x-2 text-swiss-red hover:text-swiss-red/80 py-2"
+                  className="flex items-center space-x-2 text-swiss-text hover:text-swiss-text/80 py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <LogIn className="w-4 h-4" />
+                  <LogIn className="w-4 h-4 text-swiss-red" />
                   <span className="font-medium">Admin Login</span>
                 </Link>
               </div>

@@ -11,8 +11,14 @@ const config: Config = {
     extend: {
       colors: {
         swiss: {
-          red: '#FF0000',
+          red: '#E31E24',
+          softRed: '#FFE9EA',
           white: '#FFFFFF',
+          bg: '#FFFFFF',
+          section: '#F7F9FB',
+          text: '#111111',
+          body: '#5A5F66',
+          border: '#E6E8EC',
           blue: '#0066CC',
           green: '#00AA44',
           gray: {
@@ -32,6 +38,14 @@ const config: Config = {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
+      },
+      borderRadius: {
+        xl: '12px',
+        '2xl': '16px'
+      },
+      boxShadow: {
+        soft: '0 8px 24px rgba(17, 17, 17, 0.06)',
+        subtle: '0 1px 2px rgba(17, 17, 17, 0.06)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
