@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '../../../../../lib/db'
 import { authenticateRequest } from '../../../../../lib/auth'
 import nodemailer from 'nodemailer'
+import puppeteer from 'puppeteer'
 
 export async function POST(request: NextRequest) {
   try {
@@ -33,6 +34,9 @@ export async function POST(request: NextRequest) {
     // Generate invoice HTML
     const invoiceHtml = generateInvoiceHTML(client, language)
 
+    const invoicePdf = await renderPdfFromHtml(invoiceHtml)
+    const pdfFilename = `invoice-${client.firstName}-${client.lastName}.pdf`
+
     // Configure email transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -61,7 +65,14 @@ export async function POST(request: NextRequest) {
       to: client.email,
       subject: subjects[language as keyof typeof subjects] || subjects.en,
       text: messages[language as keyof typeof messages] || messages.en,
-      html: invoiceHtml
+      html: invoiceHtml,
+      attachments: [
+        {
+          filename: pdfFilename,
+          content: invoicePdf,
+          contentType: 'application/pdf'
+        }
+      ]
     })
 
     return NextResponse.json({ 
@@ -74,6 +85,26 @@ export async function POST(request: NextRequest) {
       error: 'Failed to send invoice',
       details: error.message 
     }, { status: 500 })
+  }
+}
+
+async function renderPdfFromHtml(html: string): Promise<Buffer> {
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  })
+
+  try {
+    const page = await browser.newPage()
+    await page.setContent(html, { waitUntil: 'networkidle0' })
+    const pdf = await page.pdf({
+      format: 'A4',
+      printBackground: true,
+      margin: { top: '12mm', right: '12mm', bottom: '12mm', left: '12mm' }
+    })
+    return Buffer.from(pdf)
+  } finally {
+    await browser.close()
   }
 }
 

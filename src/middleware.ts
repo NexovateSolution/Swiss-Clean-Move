@@ -4,10 +4,10 @@ import type { NextRequest } from 'next/server';
 
 const intlMiddleware = createMiddleware({
   // A list of all locales that are supported
-  locales: ['en', 'de', 'fr', 'nl'],
+  locales: ['de', 'fr', 'en', 'nl'],
 
   // Used when no locale matches
-  defaultLocale: 'en'
+  defaultLocale: 'de'
 });
 
 export default function middleware(request: NextRequest) {
@@ -15,7 +15,7 @@ export default function middleware(request: NextRequest) {
 
   if (pathname === '/admin' || pathname.startsWith('/admin/')) {
     const url = request.nextUrl.clone();
-    url.pathname = `/en${pathname}`;
+    url.pathname = `/de${pathname}`;
     return NextResponse.redirect(url);
   }
 
@@ -23,5 +23,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(en|de|fr|nl)/:path*', '/admin/:path*', '/admin']
+  matcher: ['/', '/(de|fr|en|nl)/:path*', '/admin/:path*', '/admin']
 };

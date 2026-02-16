@@ -2,7 +2,7 @@ import {notFound} from 'next/navigation';
 import {getRequestConfig} from 'next-intl/server';
 
 // Can be imported from a shared config
-export const locales = ['en', 'de', 'fr', 'nl'];
+export const locales = ['de', 'fr', 'en', 'nl'];
 
 function isPlainObject(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
