@@ -259,7 +259,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <div className="flex flex-col items-start space-y-2">
                 <div className="flex items-center space-x-2 text-swiss-text">
                   <Users className="w-5 h-5" />
-                  <span className="font-semibold">5000+</span>
+                  <span className="font-semibold">500+</span>
                 </div>
                 <span className="text-sm text-swiss-body">{t('home.hero.trust.happyClients')}</span>
               </div>
@@ -449,12 +449,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center px-6 py-8">
-              <div className="text-4xl font-bold text-swiss-text">5000+</div>
+              <div className="text-4xl font-bold text-swiss-text">500+</div>
               <div className="mx-auto mt-3 h-0.5 w-10 bg-swiss-red rounded-full"></div>
               <div className="mt-4 text-swiss-body font-medium">{t('home.numbers.items.happyClients')}</div>
             </div>
             <div className="text-center px-6 py-8 md:border-l md:border-swiss-border">
-              <div className="text-4xl font-bold text-swiss-text">15000+</div>
+              <div className="text-4xl font-bold text-swiss-text">500+</div>
               <div className="mx-auto mt-3 h-0.5 w-10 bg-swiss-red rounded-full"></div>
               <div className="mt-4 text-swiss-body font-medium">{t('home.numbers.items.projectsCompleted')}</div>
             </div>
