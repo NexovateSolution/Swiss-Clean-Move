@@ -1142,12 +1142,19 @@
       "fromChfPerM3": "From CHF {amount} per m³"
     }
   },
+  "servicesCta": {
+    "title": "Ready for Professional Cleaning?",
+    "subtitle": "Contact us today for a free and non-binding quote"
+  },
   "servicesPages": {
     "common": {
-      "requestQuote": "Request Quote",
+      "requestQuote": "Request Free Quote",
       "callNow": "Call Now",
+      "ourServicesInclude": "Our Services Include",
       "emailUs": "Email Us",
-      "ourServicesInclude": "Our Services Include:"
+      "backToServices": "Back to Services",
+      "guaranteeTitle": "Handover Guarantee",
+      "guaranteeDesc": "100% acceptance guarantee for your peace of mind"
     },
     "officeCleaning": {
       "hero": {

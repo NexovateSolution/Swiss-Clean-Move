@@ -1370,12 +1370,19 @@
       "fromChfPerM3": "Dès CHF {amount} par m³"
     }
   },
+  "servicesCta": {
+    "title": "Prêt pour un nettoyage professionnel?",
+    "subtitle": "Contactez-nous dès aujourd'hui pour un devis gratuit et sans engagement"
+  },
   "servicesPages": {
     "common": {
       "requestQuote": "Demander un devis",
       "callNow": "Appeler maintenant",
-      "emailUs": "Nous écrire",
-      "ourServicesInclude": "Nos services incluent :"
+      "ourServicesInclude": "Nos services comprennent",
+      "emailUs": "Contactez-nous par e-mail",
+      "backToServices": "Retour aux services",
+      "guaranteeTitle": "Garantie de remise",
+      "guaranteeDesc": "Garantie de remise à 100% pour votre tranquillité d'esprit"
     },
     "officeCleaning": {
       "hero": {

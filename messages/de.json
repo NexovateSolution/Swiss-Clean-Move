@@ -1405,12 +1405,19 @@
       "fromChfPerM3": "Ab CHF {amount} pro m³"
     }
   },
+  "servicesCta": {
+    "title": "Bereit für professionelle Reinigung?",
+    "subtitle": "Kontaktieren Sie uns noch heute für ein kostenloses und unverbindliches Angebot"
+  },
   "servicesPages": {
     "common": {
-      "requestQuote": "Angebot anfordern",
+      "requestQuote": "Kostenloses Angebot",
       "callNow": "Jetzt anrufen",
-      "emailUs": "E-Mail senden",
-      "ourServicesInclude": "Unsere Leistungen umfassen:"
+      "ourServicesInclude": "Unsere Leistungen umfassen",
+      "emailUs": "E-Mail schreiben",
+      "backToServices": "Zurück zu Dienstleistungen",
+      "guaranteeTitle": "Abnahmegarantie",
+      "guaranteeDesc": "100% Abnahmegarantie für Ihre Sicherheit"
     },
     "officeCleaning": {
       "hero": {
