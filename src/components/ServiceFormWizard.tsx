@@ -33,14 +33,14 @@ interface WizardData {
   hasBasement?: boolean; hasAttic?: boolean; hasBalcony?: boolean
   rentalHandover?: string; windowsInsideOutside?: boolean
   kitchenAppliances?: boolean; bulkyWasteDisposal?: boolean
-  buildingType?: string; stairwellArea?: string; residentialUnits?: string
+  buildingType?: string; stairwellArea?: string; unitCount?: string
   handrailsExtra?: boolean; lightSwitchesMailboxes?: boolean; windowCleaningStairwell?: boolean
   officeAreaM2?: string; workstationCount?: string; sanitaryFacilityCount?: string
   kitchenetteCount?: string; disinfectionWCKitchen?: boolean
   carpetCareOffice?: boolean; windowCleaningOffice?: boolean
   practiceType?: string; treatmentRoomCount?: string
   disinfectionTreatment?: boolean; medicalWasteDisposal?: boolean
-  gastronomyAreaM2?: string; hasKitchen?: string; seatCount?: string; staffRoomCount?: string
+  gastronomyAreaM2?: string; hasKitchen?: string; seatsCount?: string; staffRoomCount?: string
   greaseFilterCleaning?: boolean; intensiveFloorCleaning?: boolean; windowsGastro?: boolean
   constructionAreaM2?: string; constructionType?: string; constructionCondition?: string
   fineCleaningOpt?: boolean; dustProtection?: boolean; windowCleaningConstruction?: boolean
@@ -249,7 +249,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
               <FS selectLabel={selectLabel} label={t('wizard.labels.buildingType')} value={v('buildingType')} onChange={x => set('buildingType', x)} required options={[{ value: 'commercial-building', label: t('wizard.options.buildingTypes.commercial-building') }, { value: 'apartment-building', label: t('wizard.options.propertyTypes.apartment-building') }]} />
               <FI label={t('wizard.labels.floorCount')} value={v('floorCount')} onChange={x => set('floorCount', x)} required type="number" placeholder="e.g. 4" />
               <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.elevator')} value={v('hasElevator')} onChange={x => set('hasElevator', x)} />
-              <FI label={t('wizard.labels.stairwellArea')} value={v('livingAreaM2')} onChange={x => set('livingAreaM2', x)} type="number" placeholder={t('wizard.placeholders.areaM2')} />
+              <FI label={t('wizard.labels.stairwellArea')} value={v('stairwellArea')} onChange={x => set('stairwellArea', x)} type="number" placeholder={t('wizard.placeholders.areaM2')} />
               <FI label={t('wizard.labels.units')} value={v('unitCount')} onChange={x => set('unitCount', x)} type="number" placeholder="e.g. 8" />
             </div>
           </>}
