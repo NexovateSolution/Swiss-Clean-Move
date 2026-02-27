@@ -3,7 +3,7 @@ import { writeFile, mkdir } from 'fs/promises'
 import { join } from 'path'
 import { existsSync } from 'fs'
 import { sendEmailNotification, formatServiceFormEmail } from '@/lib/email'
-import { prisma } from '@/lib/db'
+import { prisma } from '../../../../lib/db'
 
 // Simple PDF generation function (you can replace with a proper PDF library like jsPDF or Puppeteer)
 function generatePDFContent(data: any): string {
