@@ -113,3 +113,23 @@ model ContactSubmission {
   updatedAt DateTime @updatedAt
 }
 
+model ServiceFormSubmission {
+  id                  String   @id @default(cuid())
+  serviceName         String
+  formType            String
+  firstName           String
+  name                String
+  emailAddress        String
+  telephone          String
+  streetAndNumber     String
+  postalCodeAndCity   String
+  submissionDate      DateTime @default(now())
+  pdfPath             String?
+  contactPreferredVia String?
+  viewingIsWelcome    String?
+  remark              String?  @db.Text
+  data                Json     // Store all wizard data as JSON for flexibility
+  status              String   @default("NEW")
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
