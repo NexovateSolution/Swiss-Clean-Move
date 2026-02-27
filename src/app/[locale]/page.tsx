@@ -5,13 +5,13 @@ import Link from 'next/link';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
 import { useState, useEffect } from 'react';
-import { 
-  Home as HomeIcon, 
-  Building2, 
-  UtensilsCrossed, 
-  Briefcase, 
-  Wrench, 
-  Trash2, 
+import {
+  Home as HomeIcon,
+  Building2,
+  UtensilsCrossed,
+  Briefcase,
+  Wrench,
+  Trash2,
   Truck,
   Star,
   CheckCircle,
@@ -33,10 +33,10 @@ import {
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations();
-  
+
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   // Slideshow images data
   const slideImages = [
     {
@@ -65,13 +65,13 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       description: t('home.hero.slides.final.description')
     }
   ];
-  
+
   // Auto-advance slideshow
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slideImages.length);
     }, 5000); // Change slide every 5 seconds
-    
+
     return () => clearInterval(timer);
   }, [slideImages.length]);
 
@@ -279,9 +279,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               {slideImages.map((slide, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentSlide ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+                    }`}
                 >
                   <img
                     src={slide.url}
@@ -326,9 +325,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentSlide ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/70'
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/70'
+                      }`}
                   />
                 ))}
               </div>
@@ -422,12 +420,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               );
             })}
           </div>
-          
+
           {/* Bottom CTA */}
           <div className="text-center mt-16">
             <p className="text-swiss-body mb-6">{t('home.services.customSolution')}</p>
-            <Link 
-              href={`/${locale}/services`} 
+            <Link
+              href={`/${locale}/services`}
               className="btn-primary inline-flex items-center space-x-2"
             >
               <span>{t('home.services.viewAll')}</span>
@@ -448,7 +446,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-swiss-text">{t('home.numbers.title')}</h2>
             <p className="text-xl text-swiss-body max-w-2xl mx-auto">{t('home.numbers.subtitle')}</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center px-6 py-8">
               <div className="text-4xl font-bold text-swiss-text">5000+</div>
@@ -498,7 +496,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 <div className="bg-white rounded-2xl p-8 shadow-subtle hover:shadow-soft transition-all duration-300 transform hover:-translate-y-0.5 border border-swiss-border relative overflow-hidden">
                   {/* Quote Icon */}
                   <div className="absolute top-6 right-6 text-6xl text-swiss-gray-100 font-serif">"</div>
-                  
+
                   <div className="relative space-y-6">
                     {/* Stars */}
                     <div className="flex items-center space-x-1">
@@ -506,12 +504,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    
+
                     {/* Testimonial Text */}
                     <p className="text-swiss-body leading-relaxed text-lg italic">
                       "{testimonial.text}"
                     </p>
-                    
+
                     {/* Customer Info */}
                     <div className="flex items-center space-x-4 pt-4 border-t border-swiss-border">
                       <div className="w-12 h-12 bg-swiss-softRed rounded-full flex items-center justify-center text-swiss-red font-bold text-lg">
@@ -530,14 +528,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </div>
             ))}
           </div>
-          
+
           {/* Trust Badges */}
           <div className="bg-swiss-section rounded-2xl p-8 shadow-subtle border border-swiss-border">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-swiss-text mb-2">{t('home.trustBadges.title')}</h3>
               <p className="text-swiss-body">{t('home.trustBadges.subtitle')}</p>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
               <div className="text-center group">
                 <div className="bg-white rounded-xl p-6 transition-all duration-300 border border-swiss-border shadow-subtle group-hover:shadow-soft">
@@ -546,7 +544,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <p className="text-sm text-swiss-body">{t('home.trustBadges.iso.subtitle')}</p>
                 </div>
               </div>
-              
+
               <div className="text-center group">
                 <div className="bg-white rounded-xl p-6 transition-all duration-300 border border-swiss-border shadow-subtle group-hover:shadow-soft">
                   <Award className="w-8 h-8 text-swiss-red mx-auto mb-2" />
@@ -554,7 +552,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <p className="text-sm text-swiss-body">{t('home.trustBadges.swissQuality.subtitle')}</p>
                 </div>
               </div>
-              
+
               <div className="text-center group">
                 <div className="bg-white rounded-xl p-6 transition-all duration-300 border border-swiss-border shadow-subtle group-hover:shadow-soft">
                   <Users className="w-8 h-8 text-swiss-red mx-auto mb-2" />
@@ -562,7 +560,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <p className="text-sm text-swiss-body">{t('home.trustBadges.trainedStaff.subtitle')}</p>
                 </div>
               </div>
-              
+
               <div className="text-center group">
                 <div className="bg-white rounded-xl p-6 transition-all duration-300 border border-swiss-border shadow-subtle group-hover:shadow-soft">
                   <CheckCircle className="w-8 h-8 text-swiss-red mx-auto mb-2" />
@@ -576,7 +574,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="section-padding bg-swiss-red text-white">
+      <section className="section-padding bg-gradient-to-br from-swiss-blue via-blue-600 to-blue-800 text-white">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Badge */}
@@ -584,21 +582,21 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <Sparkles className="w-4 h-4 text-yellow-400" />
               <span>{t('home.cta.badge')}</span>
             </div>
-            
+
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
               {t('home.cta.title')}
             </h2>
-            
+
             {/* Subtitle */}
             <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
               {t('home.cta.subtitle')}
             </p>
-            
+
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                href={`/${locale}/free-offer`} 
+              <Link
+                href={`/${locale}/free-offer`}
                 className="inline-flex items-center justify-center bg-white text-swiss-red font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 shadow-soft hover:shadow-soft"
               >
                 <span className="flex items-center justify-center space-x-2">
@@ -607,16 +605,16 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
-              
-              <a 
-                href="tel:+41764883689" 
+
+              <a
+                href="tel:+41764883689"
                 className="inline-flex items-center justify-center space-x-2 bg-transparent hover:bg-white/10 text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 border border-white/40"
               >
                 <Phone className="w-5 h-5 group-hover:animate-pulse" />
                 <span>+41 76 488 36 89</span>
               </a>
             </div>
-            
+
             {/* Trust Elements */}
             <div className="flex flex-wrap justify-center items-center gap-8 pt-8 text-white/80">
               <div className="flex items-center space-x-2">

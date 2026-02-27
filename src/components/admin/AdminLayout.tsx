@@ -80,15 +80,15 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
       <div className={`fixed inset-y-0 left-0 z-50 bg-white dark:bg-gray-800 shadow-lg transform transition-all duration-300 ease-in-out lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } ${sidebarCollapsed ? 'w-16' : 'w-64'}`}>
         <div className="flex h-full flex-col">
-          <div className="relative flex items-center h-32 px-4 border-b border-gray-200 dark:border-gray-700 flex-shrink-0">
+          <div className="relative flex items-center h-40 px-4 border-b border-gray-200 dark:border-gray-700 flex-shrink-0">
             <div className={`${sidebarCollapsed ? 'w-full flex justify-center' : 'flex-1 flex justify-center'}`}>
-              <div className={`${sidebarCollapsed ? 'w-10' : 'w-full max-w-[260px]'} h-24 relative`}
+              <div className={`${sidebarCollapsed ? 'w-12' : 'w-full max-w-[280px]'} h-32 relative`}
               >
                 <Image
                   src="/images/logo.jpg"
                   alt="SwissCleanMove Logo"
                   fill
-                  sizes={sidebarCollapsed ? '40px' : '260px'}
+                  sizes={sidebarCollapsed ? '460px' : '260px'}
                   className="object-contain"
                   priority
                 />
@@ -112,23 +112,23 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           </div>
 
           <nav className="mt-8 px-2 space-y-2 flex-1 overflow-y-auto min-h-0">
-          {navigation.map((item) => {
-            const isActive = pathname === item.href
-            return (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`flex items-center ${sidebarCollapsed ? 'justify-center px-2' : 'space-x-3 px-4'} py-3 rounded-lg text-sm font-medium transition-colors ${isActive
+            {navigation.map((item) => {
+              const isActive = pathname === item.href
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`flex items-center ${sidebarCollapsed ? 'justify-center px-2' : 'space-x-3 px-4'} py-3 rounded-lg text-sm font-medium transition-colors ${isActive
                     ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 border-r-2 border-blue-700 dark:border-blue-400'
                     : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
-                  }`}
-                title={sidebarCollapsed ? item.name : ''}
-              >
-                <item.icon className={`w-5 h-5 ${isActive ? 'text-blue-700 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`} />
-                {!sidebarCollapsed && <span>{item.name}</span>}
-              </Link>
-            )
-          })}
+                    }`}
+                  title={sidebarCollapsed ? item.name : ''}
+                >
+                  <item.icon className={`w-5 h-5 ${isActive ? 'text-blue-700 dark:text-blue-400' : 'text-gray-400 dark:text-gray-500'}`} />
+                  {!sidebarCollapsed && <span>{item.name}</span>}
+                </Link>
+              )
+            })}
           </nav>
 
           {/* User section */}

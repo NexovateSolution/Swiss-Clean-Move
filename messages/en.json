@@ -1,4 +1,14 @@
 {
+  "common": {
+    "learnMore": "Learn More",
+    "formLink": "Free Quote",
+    "freeQuote": "Free Quote",
+    "getFreeQuote": "Get Free Quote",
+    "requestFreeQuote": "Request Free Quote",
+    "yes": "Yes",
+    "no": "No",
+    "notSpecified": "Not specified"
+  },
   "navigation": {
     "home": "Home",
     "about": "About",
@@ -10,7 +20,8 @@
     "contact": "Contact",
     "legal": "Legal Notice",
     "login": "Login",
-    "language": "Language"
+    "language": "Language",
+    "gallery": "Gallery"
   },
   "home": {
     "hero": {
@@ -630,6 +641,11 @@
       "manageText": "You can change your cookie settings in your browser at any time. However, please note that deactivating certain cookies may affect the functionality of our website."
     }
   },
+  "gallery": {
+    "title": "Our Gallery",
+    "description": "See our professional cleaning and moving teams in action.",
+    "imageAlt": "SwissCleanMove Project Image"
+  },
   "footer": {
     "company": "SwissCleanMove",
     "description": "Professional cleaning and moving services in Switzerland",
@@ -647,409 +663,398 @@
     "message": "Hello! I'm interested in your services."
   },
   "serviceForm": {
-    "common": {
-      "yes": "Yes",
-      "no": "No"
+    "toasts": {
+      "submitted": "Your request has been submitted successfully!",
+      "submitFailedRetry": "Failed to submit request. Please try again."
     },
     "wizard": {
-      "badge": "Calculate offer",
+      "badge": "Request Quote",
+      "subtitle": "Get a free, no-obligation quote for our professional services",
       "stepCounter": "Step {current} of {total}",
-      "validation": {
-        "required": "Please fill all required fields in this step"
+      "stepTitles": {
+        "property": "Property Details",
+        "date_frequency": "Schedule & Frequency",
+        "additional": "Additional Services",
+        "hygiene": "Hygiene Standards",
+        "moving_old": "Current Property",
+        "moving_new": "New Property",
+        "moving_details": "Moving Details",
+        "special_bg": "Service Requirements",
+        "contact": "Contact Details"
       },
-      "common": {
-        "select": "Please select",
-        "yes": "Yes",
-        "no": "No"
+      "placeholders": {
+        "areaM2": "e.g. 120",
+        "rooms": "e.g. 3",
+        "zipCity": "3000 Bern",
+        "address": "Street 12",
+        "phone": "+41 XX XXX XX XX",
+        "email": "you@example.com",
+        "message": "Any additional information...",
+        "specialRequest": "e.g. Carpet, Upholstery, Disinfection",
+        "firstName": "Your first name",
+        "lastName": "Your last name"
+      },
+      "labels": {
+        "propertyType": "Property Type",
+        "livingArea": "Living Area (m²)",
+        "roomCount": "Number of Rooms",
+        "bathroomCount": "Number of Bathrooms",
+        "hasPets": "Pets?",
+        "specialFeatures": "Special Features",
+        "buildingType": "Building Type",
+        "floorCount": "Number of Floors",
+        "elevator": "Elevator Available?",
+        "stairwellArea": "Stairwell Area (m²)",
+        "units": "Residential Units",
+        "officeArea": "Office Area (m²)",
+        "workstations": "Workstations / Rooms",
+        "sanitary": "Sanitary Facilities",
+        "kitchenettes": "Kitchenettes / Break Rooms",
+        "practiceType": "Type of Practice",
+        "treatmentRooms": "Treatment Rooms",
+        "gastroArea": "Gastronomy Area (m²)",
+        "hasKitchen": "Kitchen Available?",
+        "seats": "Number of Seats",
+        "staffRooms": "Staff Rooms / Sanitary",
+        "constructionArea": "Area (m²)",
+        "constructionType": "Construction Type",
+        "soiling": "Soiling Condition",
+        "windowCount": "Number of Windows",
+        "windowFloors": "Number of Floors",
+        "cleaningScope": "Cleaning Scope",
+        "balconyGlazing": "Balcony Glazing?",
+        "pickupAddress": "Pickup Address",
+        "itemType": "Type of Items",
+        "volume": "Estimated Volume (m³)",
+        "unitCount": "Number of Units",
+        "startDate": "Desired Start Date",
+        "cleaningDate": "Desired Cleaning Date",
+        "frequency": "Frequency",
+        "movingDate": "Desired Moving Date",
+        "preferredDate": "Preferred Date",
+        "preferredTime": "Preferred Time",
+        "message": "Message / Notes",
+        "currentAddress": "Current Address",
+        "newAddress": "New Address",
+        "floor": "Floor",
+        "accessNotes": "Access Notes",
+        "bulkyItems": "Bulky / Special Items",
+        "packingService": "Packing Service?",
+        "assemblyService": "Furniture Assembly?",
+        "salutation": "Salutation",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address (Street & Number)",
+        "zipCity": "ZIP Code & City",
+        "preferredContact": "Preferred Contact",
+        "siteViewing": "On-Site Viewing?",
+        "remarks": "Additional Remarks",
+        "winterService": "Winter Service?",
+        "minorRepairs": "Minor Repairs?",
+        "gardenMaintenance": "Garden Maintenance?",
+        "specialRequestType": "Type of Special Request",
+        "areaQuantity": "Area / Quantity",
+        "contractType": "Contract Type / Frequency",
+        "serviceFrequency": "Service Frequency",
+        "cleaningFrequency": "Cleaning Frequency"
+      },
+      "options": {
+        "propertyTypes": {
+          "single-family": "Single-Family House",
+          "row-house": "Row House",
+          "apartment-building": "Apartment Building",
+          "house": "House",
+          "apartment": "Apartment",
+          "commercial": "Commercial",
+          "residential": "Residential",
+          "mixed": "Mixed Use"
+        },
+        "frequency": {
+          "one-time": "One-Time",
+          "weekly": "Weekly",
+          "bi-weekly": "Bi-Weekly",
+          "monthly": "Monthly",
+          "daily": "Daily",
+          "2-3x-week": "2–3× per Week",
+          "quarterly": "Quarterly",
+          "annual": "Annual",
+          "on-demand": "On Demand"
+        },
+        "cleaningScope": {
+          "inside": "Inside Only",
+          "outside": "Outside Only",
+          "both": "Inside & Outside"
+        },
+        "constructionTypes": {
+          "new-build": "New Build",
+          "renovation": "Renovation"
+        },
+        "buildingTypes": {
+          "commercial-building": "Commercial Building"
+        },
+        "practiceTypes": {
+          "doctor": "Doctor's Practice",
+          "dentist": "Dental Practice",
+          "therapy": "Therapy Center",
+          "laboratory": "Laboratory"
+        },
+        "soiling": {
+          "light": "Light",
+          "medium": "Medium",
+          "heavy": "Heavy"
+        },
+        "salutations": {
+          "mister": "Mr.",
+          "woman": "Ms.",
+          "other": "Other"
+        },
+        "contactVia": {
+          "email": "Email",
+          "phone": "Phone"
+        },
+        "common": {
+          "yes": "Yes",
+          "no": "No",
+          "select": "Please select..."
+        }
+      },
+      "additional": {
+        "title": "Additional Services",
+        "largeWindows": "Large Windows",
+        "terrace": "Terrace",
+        "garage": "Garage",
+        "garden": "Garden",
+        "fireplace": "Fireplace",
+        "windowCleaning": "Window Cleaning",
+        "kitchenExtra": "Kitchen Extra (Oven / Refrigerator)",
+        "carpetCare": "Carpet Care",
+        "gardenMaintenance": "Garden Maintenance",
+        "basement": "Basement",
+        "attic": "Attic",
+        "balcony": "Balcony",
+        "rentalHandover": "Final cleaning for rental handover?",
+        "insideOutside": "Windows Inside & Outside",
+        "bulkyWaste": "Disposal of Bulky Waste",
+        "handrails": "Handrails Extra",
+        "lightSwitches": "Light Switches & Mailboxes",
+        "disinfection": "Disinfection (WC / Kitchen)",
+        "greaseFilter": "Grease Filter Cleaning",
+        "intensiveFloor": "Intensive Floor Cleaning",
+        "fineCleaning": "Fine Cleaning",
+        "dustProtection": "Dust Protection",
+        "cleaningType": "Cleaning Type",
+        "hygieneTitle": "Hygiene & Compliance",
+        "disinfectionTreatment": "Disinfection Treatment Required",
+        "medicalWaste": "Medical Waste Disposal Service"
       },
       "buttons": {
         "back": "Back",
         "next": "Next",
-        "submit": "Submit"
-      },
-      "steps": {
-        "cleaningService": "Service & location",
-        "propertyDetails": "Property details",
-        "areas": "Areas to clean",
-        "windowDetails": "Window details",
-        "datesAndRequests": "Dates & requests",
-        "relocationFrom": "Moving from",
-        "relocationTo": "Moving to",
-        "boxesAndSupplies": "Boxes & supplies",
-        "disposalBasic": "Disposal basics",
-        "disposalWaste": "Waste details",
-        "contact": "Contact details"
-      },
-      "fields": {
-        "location": {
-          "label": "Location",
-          "placeholder": "City / address"
-        },
-        "objectType": {
-          "label": "Object type",
-          "options": {
-            "apartment": "Apartment",
-            "house": "House",
-            "office": "Office"
-          }
-        },
-        "floorsCount": {
-          "label": "How many floors?"
-        },
-        "roomsCount": {
-          "label": "Number of rooms"
-        },
-        "livingSpaceM2": {
-          "label": "Living space (m²)",
-          "placeholder": "e.g. 80"
-        },
-        "cleaningAreas": {
-          "label": "Which areas need cleaning?",
-          "options": {
-            "complete": "Complete cleaning of all rooms (including kitchen, bathroom & toilet)",
-            "cellar": "Cellar",
-            "attic": "Attic / screed",
-            "garage": "Garage",
-            "conservatory": "Conservatory",
-            "individualRooms": "Only individual rooms"
-          }
-        },
-        "desiredCleaningDate": {
-          "label": "Desired cleaning date"
-        },
-        "handoverDate": {
-          "label": "Date of delivery / handover"
-        },
-        "comments": {
-          "label": "Further requests / comments",
-          "placeholder": "Tell us anything important (access, special requests, etc.)"
-        },
-        "window": {
-          "normalWindows": {
-            "label": "Normal windows (number)"
-          },
-          "frenchDoors": {
-            "label": "French doors (balcony/terrace)"
-          },
-          "otherGlass": {
-            "label": "Other large glass surfaces"
-          },
-          "blindsAndShutters": {
-            "label": "Blinds & shutters",
-            "options": {
-              "venetian": "Venetian blinds",
-              "roller": "Roller shutters",
-              "shutters": "Shutters",
-              "other": "Other / special systems",
-              "none": "No"
-            }
-          },
-          "windowFeatures": {
-            "label": "Special features of windows",
-            "options": {
-              "heavilySoiled": "Heavily soiled (e.g. nicotine, grease, dust)",
-              "mold": "Mold on window frames",
-              "manySmall": "Many small casement windows",
-              "roofWindow": "Roof window / difficult to access",
-              "safetyFilm": "Windows with safety film or special glazing",
-              "none": "No special features"
-            }
-          }
-        },
-        "relocation": {
-          "movingFromAddress": {
-            "label": "Moving from - Postcode / City / Address",
-            "placeholder": "Enter your current address"
-          },
-          "currentFloor": {
-            "label": "On which floor do you live now?"
-          },
-          "currentElevator": {
-            "label": "Is there currently an elevator available?"
-          },
-          "movingToAddress": {
-            "label": "Moving to - Postcode / City / Address",
-            "placeholder": "Enter destination address"
-          },
-          "destinationElevator": {
-            "label": "Is there an elevator available at destination?"
-          },
-          "movingPeople": {
-            "label": "How many people are moving?"
-          },
-          "boxesCount": {
-            "label": "How many moving boxes need to be moved?"
-          },
-          "movingSupplies": {
-            "label": "Do you need additional moving supplies?",
-            "options": {
-              "movingBox": "Moving box (10 pieces)",
-              "wardrobeBox": "Wardrobe box",
-              "bottleCarton": "Bottle carton (wine carton)",
-              "tapeDispenser": "Adhesive tape + dispenser"
-            }
-          }
-        },
-        "disposal": {
-          "disposalType": {
-            "label": "Please choose",
-            "options": {
-              "disposal": "Disposal",
-              "eviction": "Eviction",
-              "disposalClearance": "Disposal + Clearance"
-            }
-          },
-          "location": {
-            "label": "Location"
-          },
-          "elevator": {
-            "label": "Is there currently an elevator available?"
-          },
-          "waste": {
-            "label": "Waste",
-            "options": {
-              "furniture": "Furniture (wardrobe, bed, table, etc.)",
-              "electrical": "Electrical appliances (TV, refrigerator, PC)",
-              "cardboard": "Cardboard / Paper / Small parts",
-              "constructionDebris": "Construction debris / wood / metal",
-              "gardenWaste": "Garden waste / plants / soil",
-              "textiles": "Textiles / Carpets / Mattresses"
-            }
-          },
-          "otherItems": {
-            "label": "Other items for disposal"
-          },
-          "disassemblyNeeded": {
-            "label": "Do items need to be disassembled?"
-          },
-          "amount": {
-            "label": "How much material needs to be disposed of?",
-            "options": {
-              "little": "Little (e.g., small space)",
-              "medium": "Medium (1-2 rooms)",
-              "lots": "Lots (entire apartment / house / warehouse)"
-            }
-          }
-        },
-        "contact": {
-          "salutation": {
-            "label": "Salutation",
-            "options": {
-              "mister": "Mr.",
-              "woman": "Ms."
-            }
-          },
-          "firstName": {
-            "label": "First name"
-          },
-          "lastName": {
-            "label": "Last name"
-          },
-          "email": {
-            "label": "E-mail address"
-          },
-          "phone": {
-            "label": "Telephone number"
-          },
-          "postalCodeAndCity": {
-            "label": "ZIP / City"
-          },
-          "streetAndNumber": {
-            "label": "Street, No."
-          },
-          "contactPreferredVia": {
-            "label": "Preferred contact",
-            "options": {
-              "email": "E-mail",
-              "phone": "Phone"
-            }
-          },
-          "viewingIsWelcome": {
-            "label": "Viewing is welcome",
-            "options": {
-              "yes": "Yes",
-              "no": "No"
-            }
-          },
-          "remark": {
-            "label": "Remark",
-            "placeholder": "Additional note"
-          }
-        }
+        "submit": "Submit Request",
+        "submitting": "Submitting..."
+      }
+    }
+  },
+  "phone": {
+    "label": "Telephone number"
+  },
+  "postalCodeAndCity": {
+    "label": "ZIP / City"
+  },
+  "streetAndNumber": {
+    "label": "Street, No."
+  },
+  "contactPreferredVia": {
+    "label": "Preferred contact",
+    "options": {
+      "email": "E-mail",
+      "phone": "Phone"
+    }
+  },
+  "viewingIsWelcome": {
+    "label": "Viewing is welcome",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "remark": {
+    "label": "Remark",
+    "placeholder": "Additional note"
+  },
+  "title": {
+    "quote": "Quote",
+    "offer": "Offer"
+  },
+  "sections": {
+    "chargingAddress": "Charging address",
+    "address": "Address",
+    "unloadingAddress": "Unloading address",
+    "special": "Special",
+    "miscellaneous": "Miscellaneous",
+    "apartmentDetails": "Apartment details"
+  },
+  "toasts": {
+    "submitted": "Form submitted successfully!",
+    "submitFailed": "Failed to submit form",
+    "submitFailedRetry": "Failed to submit form. Please try again."
+  },
+  "fields": {
+    "salutation": {
+      "label": "Salutation",
+      "options": {
+        "mister": "Mr.",
+        "woman": "Ms."
       }
     },
-    "title": {
-      "quote": "Quote",
-      "offer": "Offer"
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter your name"
     },
-    "sections": {
-      "chargingAddress": "Charging address",
-      "address": "Address",
-      "unloadingAddress": "Unloading address",
-      "special": "Special",
-      "miscellaneous": "Miscellaneous",
-      "apartmentDetails": "Apartment details"
+    "firstName": {
+      "label": "First name",
+      "placeholder": "Enter your first name"
     },
-    "toasts": {
-      "submitted": "Form submitted successfully!",
-      "submitFailed": "Failed to submit form",
-      "submitFailedRetry": "Failed to submit form. Please try again."
+    "streetAndNumber": {
+      "label": "Street and number",
+      "placeholder": "Enter street and number"
     },
-    "fields": {
-      "salutation": {
-        "label": "Salutation",
-        "options": {
-          "mister": "Mr.",
-          "woman": "Ms."
-        }
-      },
-      "name": {
-        "label": "Name",
-        "placeholder": "Enter your name"
-      },
-      "firstName": {
-        "label": "First name",
-        "placeholder": "Enter your first name"
-      },
-      "streetAndNumber": {
-        "label": "Street and number",
-        "placeholder": "Enter street and number"
-      },
-      "postalCodeAndCity": {
-        "label": "Postal code and city",
-        "placeholder": "Enter postal code and city"
-      },
-      "telephone": {
-        "label": "Telephone",
-        "placeholder": "Enter your phone number"
-      },
-      "emailAddress": {
-        "label": "Email address",
-        "placeholder": "Enter your email address"
-      },
-      "movingDate": {
-        "label": "Moving date"
-      },
-      "floors": {
-        "label": "Floors"
-      },
-      "assembly": {
-        "label": "Assembly"
-      },
-      "pathToFrontDoor": {
-        "label": "Path to front door"
-      },
-      "lift": {
-        "label": "Lift"
-      },
+    "postalCodeAndCity": {
+      "label": "Postal code and city",
+      "placeholder": "Enter postal code and city"
+    },
+    "telephone": {
+      "label": "Telephone",
+      "placeholder": "Enter your phone number"
+    },
+    "emailAddress": {
+      "label": "Email address",
+      "placeholder": "Enter your email address"
+    },
+    "movingDate": {
+      "label": "Moving date"
+    },
+    "floors": {
+      "label": "Floors"
+    },
+    "assembly": {
+      "label": "Assembly"
+    },
+    "pathToFrontDoor": {
+      "label": "Path to front door"
+    },
+    "lift": {
+      "label": "Lift"
+    },
+    "numberOfRooms": {
+      "label": "Number of rooms"
+    },
+    "heavyLoad": {
+      "label": "Heavy load"
+    },
+    "livingSpaceInM2": {
+      "label": "Living space (m²)"
+    },
+    "liftDisassembly": {
+      "label": "Lift disassembly"
+    },
+    "pathToFrontDoorM": {
+      "label": "Path to front door (m)"
+    },
+    "pack": {
+      "label": "Pack"
+    },
+    "cellar": {
+      "label": "Cellar"
+    },
+    "garage": {
+      "label": "Garage"
+    },
+    "screed": {
+      "label": "Screed"
+    },
+    "craftRoom": {
+      "label": "Craft room"
+    },
+    "unpacking": {
+      "label": "Unpacking"
+    },
+    "cleaning": {
+      "label": "Cleaning"
+    },
+    "disposal": {
+      "label": "Disposal"
+    },
+    "apartment": {
       "numberOfRooms": {
         "label": "Number of rooms"
       },
-      "heavyLoad": {
-        "label": "Heavy load"
+      "type": {
+        "label": "Apartment type",
+        "options": {
+          "rentalApartment": "Rental apartment",
+          "ownApartment": "Own apartment",
+          "house": "House"
+        }
       },
-      "livingSpaceInM2": {
-        "label": "Living space (m²)"
+      "areaInM2": {
+        "label": "Area (m²)"
       },
-      "liftDisassembly": {
-        "label": "Lift disassembly"
-      },
-      "pathToFrontDoorM": {
-        "label": "Path to front door (m)"
-      },
-      "pack": {
-        "label": "Pack"
+      "awningType": {
+        "label": "Awning type"
       },
       "cellar": {
         "label": "Cellar"
       },
       "garage": {
         "label": "Garage"
-      },
-      "screed": {
-        "label": "Screed"
-      },
-      "craftRoom": {
-        "label": "Craft room"
-      },
-      "unpacking": {
-        "label": "Unpacking"
-      },
-      "cleaning": {
-        "label": "Cleaning"
-      },
-      "disposal": {
-        "label": "Disposal"
-      },
-      "apartment": {
-        "numberOfRooms": {
-          "label": "Number of rooms"
-        },
-        "type": {
-          "label": "Apartment type",
-          "options": {
-            "rentalApartment": "Rental apartment",
-            "ownApartment": "Own apartment",
-            "house": "House"
-          }
-        },
-        "areaInM2": {
-          "label": "Area (m²)"
-        },
-        "awningType": {
-          "label": "Awning type"
-        },
-        "cellar": {
-          "label": "Cellar"
-        },
-        "garage": {
-          "label": "Garage"
-        }
-      },
-      "cleaningAppointment": {
-        "label": "Cleaning appointment"
-      },
-      "submissionDeadline": {
-        "label": "Submission deadline"
-      },
-      "carpetShampooing": {
-        "label": "Carpet shampooing"
-      },
-      "conservatory": {
-        "label": "Conservatory"
-      },
-      "outdoorSeating": {
-        "label": "Outdoor seating"
-      },
-      "parquet": {
-        "label": "Parquet"
-      },
-      "stairpolish": {
-        "label": "Stair polish"
-      },
-      "contactPreferredVia": {
-        "label": "Contact preferred via",
-        "options": {
-          "email": "E-mail",
-          "phone": "Phone"
-        }
-      },
-      "viewingIsWelcome": {
-        "label": "Viewing is welcome.",
-        "options": {
-          "and": "And"
-        }
-      },
-      "remark": {
-        "label": "Remark",
-        "placeholder": "Enter your remark"
       }
     },
-    "buttons": {
-      "close": "Close",
-      "submitting": "Submitting...",
-      "submit": "Submit"
+    "cleaningAppointment": {
+      "label": "Cleaning appointment"
+    },
+    "submissionDeadline": {
+      "label": "Submission deadline"
+    },
+    "carpetShampooing": {
+      "label": "Carpet shampooing"
+    },
+    "conservatory": {
+      "label": "Conservatory"
+    },
+    "outdoorSeating": {
+      "label": "Outdoor seating"
+    },
+    "parquet": {
+      "label": "Parquet"
+    },
+    "stairpolish": {
+      "label": "Stair polish"
+    },
+    "contactPreferredVia": {
+      "label": "Contact preferred via",
+      "options": {
+        "email": "E-mail",
+        "phone": "Phone"
+      }
+    },
+    "viewingIsWelcome": {
+      "label": "Viewing is welcome.",
+      "options": {
+        "and": "And"
+      }
+    },
+    "remark": {
+      "label": "Remark",
+      "placeholder": "Enter your remark"
     }
+  },
+  "buttons": {
+    "close": "Close",
+    "submitting": "Submitting...",
+    "submit": "Submit"
   },
   "priceCalculator": {
     "title": "Price Calculator",
@@ -1835,8 +1840,7 @@
         "fetchSubmissions": "Failed to fetch submissions",
         "generatePdf": "Failed to generate PDF"
       }
-    }
-    ,
+    },
     "email": {
       "title": "Email Communication",
       "subtitle": "Send emails to customers and manage communication",
@@ -1928,8 +1932,7 @@
         "na": "N/A",
         "unknownError": "Unknown error"
       }
-    }
-    ,
+    },
     "gallery": {
       "title": "Client Gallery",
       "subtitle": "Upload and manage photos for client profiles",
@@ -1970,8 +1973,7 @@
         "unpaid": "Unpaid",
         "other": "Other"
       }
-    }
-    ,
+    },
     "newProject": {
       "title": "Create New Project",
       "subtitle": "Follow the steps to create a new cleaning project",
@@ -2116,17 +2118,151 @@
         "summaryCustomer": "Customer",
         "summaryTotalLabel": "Total"
       }
+    },
+    "common": {
+      "learnMore": "Learn More",
+      "readMore": "Read More",
+      "formLink": "Form",
+      "getQuote": "Get Quote",
+      "contactUs": "Contact Us",
+      "requestFreeQuote": "Request Free Quote",
+      "getFreeQuote": "Get Free Quote",
+      "freeQuote": "Free Quote"
     }
   },
-  "common": {
-    "learnMore": "Learn More",
-    "readMore": "Read More",
-    "formLink": "Form",
+  "pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "Fair and competitive rates for all our services",
+    "choosePlan": "Choose Your Service Plan",
+    "priceDisclaimer": "All prices are estimates and may vary based on specific requirements, location, and complexity of the job.",
+    "mostPopular": "Most Popular",
     "getQuote": "Get Quote",
-    "contactUs": "Contact Us",
-    "requestFreeQuote": "Request Free Quote",
+    "additionalServices": "Additional Services",
+    "enhancePackage": "Enhance your cleaning or moving package with these optional services",
+    "factorsAffecting": "Factors Affecting Price",
+    "factorsInfluence": "Several factors influence the final cost of our services",
+    "timeRequired": "Time Required",
+    "timeRequiredDesc": "Duration depends on space size and cleaning depth needed",
+    "serviceType": "Service Type",
+    "serviceTypeDesc": "Different services have varying complexity and requirements",
+    "location": "Location",
+    "locationDesc": "Travel distance and accessibility affect pricing",
+    "urgency": "Urgency",
+    "urgencyDesc": "Same-day or emergency services may have premium rates",
+    "readyQuote": "Ready to Get Your Free Quote?",
+    "contactToday": "Contact us today for a personalized quote based on your specific needs",
     "getFreeQuote": "Get Free Quote",
-    "freeQuote": "Free Quote"
+    "additionalServicesList": {
+      "windowCleaning": "Window Cleaning",
+      "carpetCleaning": "Carpet Cleaning",
+      "applianceCleaning": "Appliance Cleaning",
+      "garageBasement": "Garage/Basement Cleaning",
+      "disposalServices": "Disposal Services",
+      "storageSolutions": "Storage Solutions"
+    },
+    "additionalPrices": {
+      "windowCleaning": "CHF 8–15 per window",
+      "carpetCleaning": "from CHF 8–15 / m²",
+      "applianceCleaning": "CHF 45–65 / hour",
+      "garageBasement": "from CHF 80",
+      "disposalServices": "from CHF 30 / m³",
+      "storageSolutions": "from CHF 70"
+    },
+    "plans": {
+      "basic": {
+        "title": "Maintenance Cleaning",
+        "description": "Regular apartment & house cleaning (hourly)",
+        "price": "CHF 45–65 / hour / staff",
+        "features": [
+          "Maintenance cleaning",
+          "Flexible schedule",
+          "Transparent hourly rates",
+          "Professional team"
+        ]
+      },
+      "standard": {
+        "title": "End-of-Tenancy Cleaning",
+        "description": "With acceptance / deposit guarantee",
+        "price": "from CHF 250",
+        "features": [
+          "Apartments: from CHF 250",
+          "Houses: from CHF 900",
+          "Optional surcharges available",
+          "Acceptance guarantee"
+        ]
+      },
+      "premium": {
+        "title": "Combo Service",
+        "description": "Moving + End-of-Tenancy Cleaning",
+        "price": "from CHF 650",
+        "features": [
+          "Apartments: from CHF 650",
+          "Houses: from CHF 1,950",
+          "Add-ons available",
+          "Price on request for large properties"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our services",
+    "quickFacts": "Quick Facts About Our Services",
+    "keyInfo": "Key information you should know about SwissCleanMove",
+    "responseTime": "Response Time",
+    "responseTimeDesc": "Within 2 hours during business hours",
+    "insurance": "Insurance",
+    "insuranceDesc": "Fully insured and licensed",
+    "guarantee": "Guarantee",
+    "guaranteeDesc": "100% satisfaction guarantee",
+    "support": "Support",
+    "supportDesc": "24/7 customer support",
+    "stillQuestions": "Still Have Questions?",
+    "teamHelp": "Our friendly team is here to help. Contact us through any of these channels.",
+    "callUs": "Call Us",
+    "emailUs": "Email Us",
+    "contactForm": "Contact Form",
+    "sendMessage": "Send us a message",
+    "categories": {
+      "general": "General Questions",
+      "cleaning": "Cleaning Services",
+      "moving": "Moving Services",
+      "pricing": "Pricing & Payment"
+    },
+    "questions": {
+      "general": [
+        {
+          "question": "What areas do you serve?",
+          "answer": "We provide services throughout Switzerland, including major cities like Zurich, Geneva, Basel, Bern, and Lausanne."
+        },
+        {
+          "question": "Are you insured?",
+          "answer": "Yes, we are fully insured and bonded. All our employees are covered by comprehensive insurance."
+        }
+      ],
+      "cleaning": [
+        {
+          "question": "Do you provide cleaning supplies?",
+          "answer": "Yes, we bring all necessary cleaning supplies and professional equipment to every job."
+        },
+        {
+          "question": "What is your deposit guarantee?",
+          "answer": "We offer a 100% deposit back guarantee for move-out cleaning. If the property is not accepted, we will re-clean at no cost."
+        }
+      ],
+      "moving": [
+        {
+          "question": "Do you provide packing materials?",
+          "answer": "Yes, we can provide all necessary packing materials including boxes, bubble wrap, and protective covers."
+        }
+      ],
+      "pricing": [
+        {
+          "question": "How do you calculate prices?",
+          "answer": "Prices are based on the size of the property, type of service, and specific requirements. We provide free quotes."
+        }
+      ]
+    }
   },
   "regions": {
     "title": "Service Regions",
@@ -2267,6 +2403,18 @@
           "Courgenay",
           "Bassecourt"
         ]
+      },
+      "stgallen": {
+        "name": "St. Gallen",
+        "description": "Professional cleaning and moving services in the St. Gallen region",
+        "coverage": "Canton St. Gallen and surrounding areas",
+        "areas": [
+          "St. Gallen City",
+          "Wil",
+          "Gossau",
+          "Uzwil",
+          "Altstätten"
+        ]
       }
     },
     "services": {
@@ -2284,140 +2432,6 @@
       "propertyMaintenance": "Property Maintenance",
       "specialCleaning": "Special Cleaning",
       "comboService": "Cleaning + Moving Combo"
-    }
-  },
-  "pricing": {
-    "title": "Transparent Pricing",
-    "subtitle": "Fair and competitive rates for all our services",
-    "choosePlan": "Choose Your Service Plan",
-    "priceDisclaimer": "All prices are estimates and may vary based on specific requirements, location, and complexity of the job.",
-    "mostPopular": "Most Popular",
-    "getQuote": "Get Quote",
-    "additionalServices": "Additional Services",
-    "enhancePackage": "Enhance your cleaning or moving package with these optional services",
-    "factorsAffecting": "Factors Affecting Price",
-    "factorsInfluence": "Several factors influence the final cost of our services",
-    "timeRequired": "Time Required",
-    "timeRequiredDesc": "Duration depends on space size and cleaning depth needed",
-    "serviceType": "Service Type",
-    "serviceTypeDesc": "Different services have varying complexity and requirements",
-    "location": "Location",
-    "locationDesc": "Travel distance and accessibility affect pricing",
-    "urgency": "Urgency",
-    "urgencyDesc": "Same-day or emergency services may have premium rates",
-    "readyQuote": "Ready to Get Your Free Quote?",
-    "contactToday": "Contact us today for a personalized quote based on your specific needs",
-    "getFreeQuote": "Get Free Quote",
-    "additionalServicesList": {
-      "windowCleaning": "Window Cleaning",
-      "carpetCleaning": "Carpet Cleaning",
-      "applianceCleaning": "Appliance Cleaning",
-      "garageBasement": "Garage/Basement Cleaning",
-      "disposalServices": "Disposal Services",
-      "storageSolutions": "Storage Solutions"
-    },
-    "additionalPrices": {
-      "windowCleaning": "CHF 8–15 per window",
-      "carpetCleaning": "from CHF 8–15 / m²",
-      "applianceCleaning": "CHF 45–65 / hour",
-      "garageBasement": "from CHF 80",
-      "disposalServices": "from CHF 30 / m³",
-      "storageSolutions": "from CHF 70"
-    },
-    "plans": {
-      "basic": {
-        "title": "Maintenance Cleaning",
-        "description": "Regular apartment & house cleaning (hourly)",
-        "price": "CHF 45–65 / hour / staff",
-        "features": [
-          "Maintenance cleaning",
-          "Flexible schedule",
-          "Transparent hourly rates",
-          "Professional team"
-        ]
-      },
-      "standard": {
-        "title": "End-of-Tenancy Cleaning",
-        "description": "With acceptance / deposit guarantee",
-        "price": "from CHF 250",
-        "features": [
-          "Apartments: from CHF 250",
-          "Houses: from CHF 900",
-          "Optional surcharges available",
-          "Acceptance guarantee"
-        ]
-      },
-      "premium": {
-        "title": "Combo Service",
-        "description": "Moving + End-of-Tenancy Cleaning",
-        "price": "from CHF 650",
-        "features": [
-          "Apartments: from CHF 650",
-          "Houses: from CHF 1,950",
-          "Add-ons available",
-          "Price on request for large properties"
-        ]
-      }
-    }
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Find answers to common questions about our services",
-    "quickFacts": "Quick Facts About Our Services",
-    "keyInfo": "Key information you should know about SwissCleanMove",
-    "responseTime": "Response Time",
-    "responseTimeDesc": "Within 2 hours during business hours",
-    "insurance": "Insurance",
-    "insuranceDesc": "Fully insured and licensed",
-    "guarantee": "Guarantee",
-    "guaranteeDesc": "100% satisfaction guarantee",
-    "support": "Support",
-    "supportDesc": "24/7 customer support",
-    "stillQuestions": "Still Have Questions?",
-    "teamHelp": "Our friendly team is here to help. Contact us through any of these channels.",
-    "callUs": "Call Us",
-    "emailUs": "Email Us",
-    "contactForm": "Contact Form",
-    "sendMessage": "Send us a message",
-    "categories": {
-      "general": "General Questions",
-      "cleaning": "Cleaning Services",
-      "moving": "Moving Services",
-      "pricing": "Pricing & Payment"
-    },
-    "questions": {
-      "general": [
-        {
-          "question": "What areas do you serve?",
-          "answer": "We provide services throughout Switzerland, including major cities like Zurich, Geneva, Basel, Bern, and Lausanne."
-        },
-        {
-          "question": "Are you insured?",
-          "answer": "Yes, we are fully insured and bonded. All our employees are covered by comprehensive insurance."
-        }
-      ],
-      "cleaning": [
-        {
-          "question": "Do you provide cleaning supplies?",
-          "answer": "Yes, we bring all necessary cleaning supplies and professional equipment to every job."
-        },
-        {
-          "question": "What is your deposit guarantee?",
-          "answer": "We offer a 100% deposit back guarantee for move-out cleaning. If the property is not accepted, we will re-clean at no cost."
-        }
-      ],
-      "moving": [
-        {
-          "question": "Do you provide packing materials?",
-          "answer": "Yes, we can provide all necessary packing materials including boxes, bubble wrap, and protective covers."
-        }
-      ],
-      "pricing": [
-        {
-          "question": "How do you calculate prices?",
-          "answer": "Prices are based on the size of the property, type of service, and specific requirements. We provide free quotes."
-        }
-      ]
     }
   }
 }

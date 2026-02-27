@@ -1,7 +1,5 @@
-// Email notification utility
-// Note: This uses a simple fetch approach. For production, consider using:
-// - SendGrid, Mailgun, or AWS SES for better deliverability
-// - Or configure nodemailer with SMTP settings
+// Email notification utility using nodemailer with Gmail
+import nodemailer from 'nodemailer';
 
 interface EmailOptions {
   to: string;
@@ -12,28 +10,31 @@ interface EmailOptions {
 
 export async function sendEmailNotification(options: EmailOptions): Promise<boolean> {
   try {
-    // Email notification - configured in production with GMAIL_USER and GMAIL_APP_PASSWORD
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+      console.warn('⚠️ Gmail credentials not configured. Email not sent.');
+      return true; // Return true so form submission still succeeds
+    }
 
-    // TODO: Integrate with actual email service
-    // Example with SendGrid:
-    // const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Authorization': `Bearer ${process.env.SENDGRID_API_KEY}`,
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     personalizations: [{ to: [{ email: options.to }] }],
-    //     from: { email: 'noreply@swisscleanmove.ch', name: 'SwissCleanMove' },
-    //     subject: options.subject,
-    //     content: [{ type: 'text/html', value: options.html }],
-    //   }),
-    // });
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
+    });
 
-    // For development, return true to simulate success
+    await transporter.sendMail({
+      from: `"SwissCleanMove" <${process.env.GMAIL_USER}>`,
+      to: options.to,
+      subject: options.subject,
+      text: options.text || '',
+      html: options.html,
+    });
+
+    console.log(`✅ Email sent to ${options.to}: ${options.subject}`);
     return true;
   } catch (error) {
-    console.error('Failed to send email notification:', error);
+    console.error('❌ Failed to send email notification:', error);
     return false;
   }
 }
@@ -105,7 +106,7 @@ export function formatQuoteEmail(data: {
   details: any;
 }): string {
   const parsedDetails = typeof data.details === 'string' ? JSON.parse(data.details) : data.details;
-  
+
   return `
     <!DOCTYPE html>
     <html>

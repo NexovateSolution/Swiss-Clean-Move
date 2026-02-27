@@ -80,20 +80,20 @@ export default function FormPage({ params: { locale } }: { params: { locale: str
       <SwissHero
         badge={t('servicesPages.common.requestQuote')}
         title={t('servicesPages.common.requestQuote')}
-        subtitle={t('servicesCta.subtitle')}
+        subtitle={t('serviceForm.wizard.subtitle')}
         right={
           <div className="grid grid-cols-2 gap-4 p-6">
             <div className="card p-4 bg-swiss-softRed border border-swiss-border text-center">
               <div className="text-swiss-red font-bold text-lg">1</div>
-              <div className="text-swiss-body text-sm">{t('serviceForm.wizard.steps.cleaningService')}</div>
+              <div className="text-swiss-body text-sm">{t('serviceForm.wizard.stepTitles.property')}</div>
             </div>
             <div className="card p-4 bg-swiss-softRed border border-swiss-border text-center">
               <div className="text-swiss-red font-bold text-lg">2</div>
-              <div className="text-swiss-body text-sm">{t('serviceForm.wizard.steps.propertyDetails')}</div>
+              <div className="text-swiss-body text-sm">{t('serviceForm.wizard.stepTitles.date_frequency')}</div>
             </div>
             <div className="card p-4 bg-swiss-softRed border border-swiss-border text-center">
               <div className="text-swiss-red font-bold text-lg">3</div>
-              <div className="text-swiss-body text-sm">{t('serviceForm.wizard.steps.contact')}</div>
+              <div className="text-swiss-body text-sm">{t('serviceForm.wizard.stepTitles.contact')}</div>
             </div>
             <div className="card p-4 bg-swiss-softRed border border-swiss-border text-center">
               <div className="text-swiss-red font-bold text-lg">4</div>

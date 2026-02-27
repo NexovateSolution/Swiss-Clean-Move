@@ -10,7 +10,8 @@
     "contact": "Contact",
     "legal": "Mentions légales",
     "login": "Se connecter",
-    "language": "Langue"
+    "language": "Langue",
+    "gallery": "Galerie"
   },
   "home": {
     "hero": {
@@ -677,6 +678,11 @@
       "manageText": "Vous pouvez modifier vos paramètres de cookies dans votre navigateur à tout moment. Cependant, veuillez noter que la désactivation de certains cookies peut affecter la fonctionnalité de notre site web."
     }
   },
+  "gallery": {
+    "title": "Notre Galerie",
+    "description": "Découvrez nos équipes professionnelles de nettoyage et de déménagement en action.",
+    "imageAlt": "Image de projet SwissCleanMove"
+  },
   "footer": {
     "company": "SwissCleanMove",
     "description": "Nettoyage professionnel et déménagement en Suisse",
@@ -712,7 +718,187 @@
       "buttons": {
         "back": "Retour",
         "next": "Suivant",
-        "submit": "Envoyer"
+        "submit": "Envoyer",
+        "submitting": "Envoi en cours..."
+      },
+      "subtitle": "Recevez un devis gratuit et sans engagement pour nos services professionnels",
+      "stepTitles": {
+        "property": "Détails du bien",
+        "date_frequency": "Planning & fréquence",
+        "additional": "Services supplémentaires",
+        "hygiene": "Normes d'hygiène",
+        "moving_old": "Logement actuel",
+        "moving_new": "Nouveau logement",
+        "moving_details": "Détails du déménagement",
+        "special_bg": "Exigences du service",
+        "contact": "Coordonnées"
+      },
+      "placeholders": {
+        "areaM2": "ex. 120",
+        "rooms": "ex. 3",
+        "zipCity": "3000 Berne",
+        "address": "Rue 12",
+        "phone": "+41 XX XXX XX XX",
+        "email": "vous@exemple.ch",
+        "message": "Informations supplémentaires...",
+        "specialRequest": "ex. Tapis, Tapisserie, Désinfection",
+        "firstName": "Votre prénom",
+        "lastName": "Votre nom"
+      },
+      "labels": {
+        "propertyType": "Type de bien",
+        "livingArea": "Surface habitable (m²)",
+        "roomCount": "Nombre de pièces",
+        "bathroomCount": "Nombre de salles de bain",
+        "hasPets": "Animaux ?",
+        "specialFeatures": "Caractéristiques spéciales",
+        "buildingType": "Type de bâtiment",
+        "floorCount": "Nombre d'étages",
+        "elevator": "Ascenseur disponible ?",
+        "stairwellArea": "Surface cage d'escalier (m²)",
+        "units": "Unités résidentielles",
+        "officeArea": "Surface bureau (m²)",
+        "workstations": "Postes de travail / Pièces",
+        "sanitary": "Installations sanitaires",
+        "kitchenettes": "Cuisinettes / Salles de pause",
+        "practiceType": "Type de pratique",
+        "treatmentRooms": "Salles de traitement",
+        "gastroArea": "Surface gastronomie (m²)",
+        "hasKitchen": "Cuisine disponible ?",
+        "seats": "Nombre de places",
+        "staffRooms": "Vestiaires / Sanitaires",
+        "constructionArea": "Surface (m²)",
+        "constructionType": "Type de construction",
+        "soiling": "État de salissure",
+        "windowCount": "Nombre de fenêtres",
+        "windowFloors": "Nombre d'étages",
+        "cleaningScope": "Étendue du nettoyage",
+        "balconyGlazing": "Vitrage balcon ?",
+        "pickupAddress": "Adresse d'enlèvement",
+        "itemType": "Type d'objets",
+        "volume": "Volume estimé (m³)",
+        "unitCount": "Nombre d'unités",
+        "startDate": "Date de début souhaitée",
+        "cleaningDate": "Date de nettoyage souhaitée",
+        "frequency": "Fréquence",
+        "movingDate": "Date de déménagement souhaitée",
+        "preferredDate": "Date préférée",
+        "preferredTime": "Heure préférée",
+        "message": "Message / Remarques",
+        "currentAddress": "Adresse actuelle",
+        "newAddress": "Nouvelle adresse",
+        "floor": "Étage",
+        "accessNotes": "Notes d'accès",
+        "bulkyItems": "Objets volumineux / Spéciaux",
+        "packingService": "Service d'emballage ?",
+        "assemblyService": "Montage de meubles ?",
+        "salutation": "Civilité",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "phone": "Téléphone",
+        "email": "E-mail",
+        "address": "Adresse (rue & n°)",
+        "zipCity": "NPA & Localité",
+        "preferredContact": "Contact préféré",
+        "siteViewing": "Visite sur place ?",
+        "remarks": "Remarques supplémentaires",
+        "winterService": "Service hivernal ?",
+        "minorRepairs": "Petites réparations ?",
+        "gardenMaintenance": "Entretien du jardin ?",
+        "specialRequestType": "Type de demande spéciale",
+        "areaQuantity": "Surface / Quantité",
+        "contractType": "Type de contrat / Fréquence",
+        "serviceFrequency": "Fréquence du service",
+        "cleaningFrequency": "Fréquence de nettoyage"
+      },
+      "options": {
+        "propertyTypes": {
+          "single-family": "Maison individuelle",
+          "row-house": "Maison mitoyenne",
+          "apartment-building": "Immeuble",
+          "house": "Maison",
+          "apartment": "Appartement",
+          "commercial": "Commercial",
+          "residential": "Résidentiel",
+          "mixed": "Usage mixte"
+        },
+        "frequency": {
+          "one-time": "Ponctuel",
+          "weekly": "Hebdomadaire",
+          "bi-weekly": "Bimensuel",
+          "monthly": "Mensuel",
+          "daily": "Quotidien",
+          "2-3x-week": "2–3× par semaine",
+          "quarterly": "Trimestriel",
+          "annual": "Annuel",
+          "on-demand": "Sur demande"
+        },
+        "cleaningScope": {
+          "inside": "Intérieur seul",
+          "outside": "Extérieur seul",
+          "both": "Intérieur & Extérieur"
+        },
+        "constructionTypes": {
+          "new-build": "Construction neuve",
+          "renovation": "Rénovation"
+        },
+        "buildingTypes": {
+          "commercial-building": "Bâtiment commercial"
+        },
+        "practiceTypes": {
+          "doctor": "Cabinet médical",
+          "dentist": "Cabinet dentaire",
+          "therapy": "Centre de thérapie",
+          "laboratory": "Laboratoire"
+        },
+        "soiling": {
+          "light": "Léger",
+          "medium": "Moyen",
+          "heavy": "Important"
+        },
+        "salutations": {
+          "mister": "M.",
+          "woman": "Mme",
+          "other": "Autre"
+        },
+        "contactVia": {
+          "email": "E-mail",
+          "phone": "Téléphone"
+        },
+        "common": {
+          "yes": "Oui",
+          "no": "Non",
+          "select": "Veuillez sélectionner..."
+        }
+      },
+      "additional": {
+        "title": "Services supplémentaires",
+        "largeWindows": "Grandes fenêtres",
+        "terrace": "Terrasse",
+        "garage": "Garage",
+        "garden": "Jardin",
+        "fireplace": "Cheminée",
+        "windowCleaning": "Nettoyage des vitres",
+        "kitchenExtra": "Cuisine extra (four / réfrigérateur)",
+        "carpetCare": "Entretien des tapis",
+        "gardenMaintenance": "Entretien du jardin",
+        "basement": "Cave",
+        "attic": "Grenier",
+        "balcony": "Balcon",
+        "rentalHandover": "Nettoyage fin de bail ?",
+        "insideOutside": "Fenêtres intérieur & extérieur",
+        "bulkyWaste": "Évacuation des encombrants",
+        "handrails": "Rampes supplémentaires",
+        "lightSwitches": "Interrupteurs & Boîtes aux lettres",
+        "disinfection": "Désinfection (WC / Cuisine)",
+        "greaseFilter": "Nettoyage filtre à graisse",
+        "intensiveFloor": "Nettoyage intensif du sol",
+        "fineCleaning": "Nettoyage fin",
+        "dustProtection": "Protection anti-poussière",
+        "cleaningType": "Type de nettoyage",
+        "hygieneTitle": "Hygiène & Conformité",
+        "disinfectionTreatment": "Traitement de désinfection requis",
+        "medicalWaste": "Élimination des déchets médicaux"
       },
       "steps": {
         "cleaningService": "Service & lieu",
@@ -1882,8 +2068,7 @@
         "fetchSubmissions": "Impossible de récupérer les soumissions",
         "generatePdf": "Impossible de générer le PDF"
       }
-    }
-    ,
+    },
     "email": {
       "title": "Communication par e-mail",
       "subtitle": "Envoyer des e-mails aux clients et gérer la communication",
@@ -1975,8 +2160,7 @@
         "na": "N/A",
         "unknownError": "Erreur inconnue"
       }
-    }
-    ,
+    },
     "gallery": {
       "title": "Galerie clients",
       "subtitle": "Télécharger et gérer les photos des profils clients",
@@ -2017,8 +2201,7 @@
         "unpaid": "Impayé",
         "other": "Autre"
       }
-    }
-    ,
+    },
     "newProject": {
       "title": "Créer un nouveau projet",
       "subtitle": "Suivez les étapes pour créer un nouveau projet de nettoyage",
@@ -2313,6 +2496,18 @@
           "Saignelégier",
           "Courgenay",
           "Bassecourt"
+        ]
+      },
+      "stgallen": {
+        "name": "Saint-Gall",
+        "description": "Services professionnels de nettoyage et de déménagement dans la région de Saint-Gall",
+        "coverage": "Canton de Saint-Gall et environs",
+        "areas": [
+          "Ville de Saint-Gall",
+          "Wil",
+          "Gossau",
+          "Uzwil",
+          "Altstätten"
         ]
       }
     },

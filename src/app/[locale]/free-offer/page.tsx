@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 import { useTranslations } from 'next-intl';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
@@ -131,10 +132,11 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
         throw new Error(t('freeOffer.errors.submitFailed'));
       }
 
+      toast.success(t('freeOffer.success.title'));
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert(t('freeOffer.errors.submitFailedRetry'));
+      toast.error(t('freeOffer.errors.submitFailedRetry'));
     } finally {
       setIsSubmitting(false);
     }
@@ -196,7 +198,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
         subtitle={t('freeOffer.subtitle')}
         right={
           <img
-            src="/images/transportation.png"
+            src="/Gallary/4.jpeg"
             alt={t('freeOffer.title')}
             className="w-full h-[340px] md:h-[420px] object-cover"
           />
@@ -337,8 +339,8 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                             type="button"
                             onClick={() => handleServiceTypeChange(service.value)}
                             className={`p-4 border-2 rounded-lg transition-all duration-200 ${formData.serviceType === service.value
-                                ? 'border-swiss-red bg-swiss-softRed'
-                                : 'border-swiss-border hover:border-swiss-red/40'
+                              ? 'border-swiss-red bg-swiss-softRed'
+                              : 'border-swiss-border hover:border-swiss-red/40'
                               }`}
                           >
                             <div className="flex flex-col items-center space-y-2">
@@ -380,15 +382,18 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                       <label className="block text-sm font-medium text-swiss-gray-700 mb-2">
                         {t('freeOffer.form.rooms')}
                       </label>
-                      <input
-                        type="number"
+                      <select
                         name="rooms"
                         value={formData.rooms}
                         onChange={handleInputChange}
-                        min="1"
-                        max="20"
                         className="w-full px-4 py-3 border border-swiss-border rounded-lg focus:ring-2 focus:ring-swiss-red/20 focus:border-swiss-red"
-                      />
+                      >
+                        <option value="">Please select...</option>
+                        {['1', '1.5', '2', '2.5', '3', '3.5', '4', '4.5', '5', '5.5', '6', '6.5', '7'].map(r => (
+                          <option key={r} value={r}>{r}</option>
+                        ))}
+                        <option value="more">More</option>
+                      </select>
                     </div>
 
                     <div>

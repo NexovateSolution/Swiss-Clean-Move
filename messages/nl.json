@@ -10,7 +10,8 @@
     "contact": "Contact",
     "legal": "Juridische kennisgeving",
     "login": "Inloggen",
-    "language": "Taal"
+    "language": "Taal",
+    "gallery": "Galerij"
   },
   "home": {
     "hero": {
@@ -630,6 +631,11 @@
       "manageText": "You can change your cookie settings in your browser at any time. However, please note that deactivating certain cookies may affect the functionality of our website."
     }
   },
+  "gallery": {
+    "title": "Onze Galerij",
+    "description": "Bekijk onze professionele schoonmaak- en verhuisteams in actie.",
+    "imageAlt": "SwissCleanMove Project Afbeelding"
+  },
   "footer": {
     "company": "SwissCleanMove",
     "description": "Professional cleaning and moving services in Switzerland",
@@ -665,7 +671,187 @@
       "buttons": {
         "back": "Terug",
         "next": "Volgende",
-        "submit": "Verzenden"
+        "submit": "Verzenden",
+        "submitting": "Bezig met verzenden..."
+      },
+      "subtitle": "Ontvang een gratis, vrijblijvende offerte voor onze professionele diensten",
+      "stepTitles": {
+        "property": "Woninggegevens",
+        "date_frequency": "Planning & Frequentie",
+        "additional": "Extra diensten",
+        "hygiene": "Hygiëne normen",
+        "moving_old": "Huidige Woning",
+        "moving_new": "Nieuwe Woning",
+        "moving_details": "Verhuisdetails",
+        "special_bg": "Servicevereisten",
+        "contact": "Contactgegevens"
+      },
+      "placeholders": {
+        "areaM2": "bijv. 120",
+        "rooms": "bijv. 3",
+        "zipCity": "3000 Bern",
+        "address": "Straat 12",
+        "phone": "+41 XX XXX XX XX",
+        "email": "u@voorbeeld.nl",
+        "message": "Aanvullende informatie...",
+        "specialRequest": "bijv. Tapijt, Stoffering, Desinfectie",
+        "firstName": "Uw voornaam",
+        "lastName": "Uw achternaam"
+      },
+      "labels": {
+        "propertyType": "Woningtype",
+        "livingArea": "Woonoppervlakte (m²)",
+        "roomCount": "Aantal kamers",
+        "bathroomCount": "Aantal badkamers",
+        "hasPets": "Huisdieren?",
+        "specialFeatures": "Bijzondere kenmerken",
+        "buildingType": "Gebouwtype",
+        "floorCount": "Aantal verdiepingen",
+        "elevator": "Lift beschikbaar?",
+        "stairwellArea": "Trappenhuisoppervlakte (m²)",
+        "units": "Wooneenheden",
+        "officeArea": "Kantooroppervlakte (m²)",
+        "workstations": "Werkplekken / Kamers",
+        "sanitary": "Sanitaire voorzieningen",
+        "kitchenettes": "Pantry's / Pauseruimtes",
+        "practiceType": "Type praktijk",
+        "treatmentRooms": "Behandelkamers",
+        "gastroArea": "Horeca-oppervlakte (m²)",
+        "hasKitchen": "Keuken beschikbaar?",
+        "seats": "Aantal zitplaatsen",
+        "staffRooms": "Personeelsruimtes / Sanitair",
+        "constructionArea": "Oppervlakte (m²)",
+        "constructionType": "Bouwtype",
+        "soiling": "Vervuilingsgraad",
+        "windowCount": "Aantal ramen",
+        "windowFloors": "Aantal verdiepingen",
+        "cleaningScope": "Reinigingsomvang",
+        "balconyGlazing": "Balkonbeglazing?",
+        "pickupAddress": "Ophaaladres",
+        "itemType": "Type items",
+        "volume": "Geschat volume (m³)",
+        "unitCount": "Aantal eenheden",
+        "startDate": "Gewenste startdatum",
+        "cleaningDate": "Gewenste reinigingsdatum",
+        "frequency": "Frequentie",
+        "movingDate": "Gewenste verhuisdatum",
+        "preferredDate": "Voorkeursdatum",
+        "preferredTime": "Voorkeurstijd",
+        "message": "Bericht / Opmerkingen",
+        "currentAddress": "Huidig adres",
+        "newAddress": "Nieuw adres",
+        "floor": "Verdieping",
+        "accessNotes": "Toegangsnotities",
+        "bulkyItems": "Grote / Bijzondere items",
+        "packingService": "Inpakservice?",
+        "assemblyService": "Montage / Demontage?",
+        "salutation": "Aanhef",
+        "firstName": "Voornaam",
+        "lastName": "Achternaam",
+        "phone": "Telefoon",
+        "email": "E-mail",
+        "address": "Adres (straat & nummer)",
+        "zipCity": "Postcode & Plaats",
+        "preferredContact": "Voorkeur contact",
+        "siteViewing": "Bezichtiging ter plaatse?",
+        "remarks": "Overige opmerkingen",
+        "winterService": "Winterdienst?",
+        "minorRepairs": "Kleine reparaties?",
+        "gardenMaintenance": "Tuinonderhoud?",
+        "specialRequestType": "Type speciaal verzoek",
+        "areaQuantity": "Oppervlakte / Hoeveelheid",
+        "contractType": "Contracttype / Frequentie",
+        "serviceFrequency": "Servicefrequentie",
+        "cleaningFrequency": "Reinigingsfrequentie"
+      },
+      "options": {
+        "propertyTypes": {
+          "single-family": "Eengezinswoning",
+          "row-house": "Rijtjeshuis",
+          "apartment-building": "Appartementencomplex",
+          "house": "Huis",
+          "apartment": "Appartement",
+          "commercial": "Commercieel",
+          "residential": "Residentieel",
+          "mixed": "Gemengd gebruik"
+        },
+        "frequency": {
+          "one-time": "Eenmalig",
+          "weekly": "Wekelijks",
+          "bi-weekly": "Tweewekelijks",
+          "monthly": "Maandelijks",
+          "daily": "Dagelijks",
+          "2-3x-week": "2–3× per week",
+          "quarterly": "Per kwartaal",
+          "annual": "Jaarlijks",
+          "on-demand": "Op aanvraag"
+        },
+        "cleaningScope": {
+          "inside": "Alleen binnenkant",
+          "outside": "Alleen buitenkant",
+          "both": "Binnen & Buiten"
+        },
+        "constructionTypes": {
+          "new-build": "Nieuwbouw",
+          "renovation": "Renovatie"
+        },
+        "buildingTypes": {
+          "commercial-building": "Commercieel gebouw"
+        },
+        "practiceTypes": {
+          "doctor": "Artsenpraktijk",
+          "dentist": "Tandartspraktijk",
+          "therapy": "Therapiecentrum",
+          "laboratory": "Laboratorium"
+        },
+        "soiling": {
+          "light": "Licht",
+          "medium": "Gemiddeld",
+          "heavy": "Zwaar"
+        },
+        "salutations": {
+          "mister": "Dhr.",
+          "woman": "Mevr.",
+          "other": "Anders"
+        },
+        "contactVia": {
+          "email": "E-mail",
+          "phone": "Telefoon"
+        },
+        "common": {
+          "yes": "Ja",
+          "no": "Nee",
+          "select": "Selecteer a.u.b."
+        }
+      },
+      "additional": {
+        "title": "Extra diensten",
+        "largeWindows": "Grote ramen",
+        "terrace": "Terras",
+        "garage": "Garage",
+        "garden": "Tuin",
+        "fireplace": "Open haard",
+        "windowCleaning": "Ramen wassen",
+        "kitchenExtra": "Keuken extra (oven / koelkast)",
+        "carpetCare": "Tapijtverzorging",
+        "gardenMaintenance": "Tuinonderhoud",
+        "basement": "Kelder",
+        "attic": "Zolder",
+        "balcony": "Balkon",
+        "rentalHandover": "Eindschoonmaak voor huuroverdracht?",
+        "insideOutside": "Ramen binnen & buiten",
+        "bulkyWaste": "Afvoer grof vuil",
+        "handrails": "Leuningen extra",
+        "lightSwitches": "Lichtschakelaars & brievenbussen",
+        "disinfection": "Desinfectie (WC / keuken)",
+        "greaseFilter": "Vetfilter reiniging",
+        "intensiveFloor": "Intensieve vloerreinig.",
+        "fineCleaning": "Fijne reiniging",
+        "dustProtection": "Stofbescherming",
+        "cleaningType": "Reinigingstype",
+        "hygieneTitle": "Hygiëne & Compliance",
+        "disinfectionTreatment": "Desinfectiebehandeling vereist",
+        "medicalWaste": "Medische afvalverwerking"
       },
       "steps": {
         "cleaningService": "Service & locatie",
@@ -1835,8 +2021,7 @@
         "fetchSubmissions": "Inzendingen ophalen mislukt",
         "generatePdf": "PDF genereren mislukt"
       }
-    }
-    ,
+    },
     "email": {
       "title": "E-mailcommunicatie",
       "subtitle": "Stuur e-mails naar klanten en beheer communicatie",
@@ -1928,8 +2113,7 @@
         "na": "N.v.t.",
         "unknownError": "Onbekende fout"
       }
-    }
-    ,
+    },
     "gallery": {
       "title": "Klantengalerij",
       "subtitle": "Upload en beheer foto's voor klantprofielen",
@@ -1970,8 +2154,7 @@
         "unpaid": "Onbetaald",
         "other": "Overig"
       }
-    }
-    ,
+    },
     "newProject": {
       "title": "Nieuw project aanmaken",
       "subtitle": "Volg de stappen om een nieuw schoonmaakproject te maken",
@@ -2162,14 +2345,122 @@
     "regionData": {
       "zurich": {
         "name": "Zurich",
-        "description": "Complete cleaning and moving services in the Zurich metropolitan area",
-        "coverage": "Full coverage including suburbs and surrounding areas",
+        "description": "Complete schoonmaak- en verhuisdiensten in de grootstedelijke regio Zürich",
+        "coverage": "Volledige dekking inclusief buitenwijken en omliggende gebieden",
         "areas": [
           "Zurich City",
           "Winterthur",
           "Uster",
           "Dübendorf",
           "Kloten"
+        ]
+      },
+      "basel": {
+        "name": "Basel",
+        "description": "Professionele diensten in de hele regio Bazel",
+        "coverage": "Basel-Stadt en Basel-Landschaft",
+        "areas": [
+          "Basel City",
+          "Allschwil",
+          "Binningen",
+          "Bottmingen",
+          "Münchenstein"
+        ]
+      },
+      "bern": {
+        "name": "Bern",
+        "description": "Betrouwbare schoonmaak- en verhuisdiensten in de hoofdstedelijke regio",
+        "coverage": "Kanton Bern en omliggende gebieden",
+        "areas": [
+          "Bern City",
+          "Thun",
+          "Biel/Bienne",
+          "Burgdorf",
+          "Langenthal"
+        ]
+      },
+      "geneva": {
+        "name": "Geneva",
+        "description": "Premium diensten in de grootstedelijke regio Genève",
+        "coverage": "Kanton Genève en grensoverschrijdende gebieden",
+        "areas": [
+          "Geneva City",
+          "Carouge",
+          "Vernier",
+          "Lancy",
+          "Meyrin"
+        ]
+      },
+      "lausanne": {
+        "name": "Lausanne",
+        "description": "Professionele schoonmaak en verhuizing in de regio Vaud",
+        "coverage": "Regio Meer van Genève en kanton Vaud",
+        "areas": [
+          "Lausanne",
+          "Montreux",
+          "Vevey",
+          "Yverdon-les-Bains",
+          "Nyon"
+        ]
+      },
+      "lucerne": {
+        "name": "Lucerne",
+        "description": "Kwaliteitsdiensten in Centraal-Zwitserland",
+        "coverage": "Regio Centraal-Zwitserland",
+        "areas": [
+          "Lucerne City",
+          "Kriens",
+          "Emmen",
+          "Horw",
+          "Meggen"
+        ]
+      },
+      "biel": {
+        "name": "Biel/Bienne",
+        "description": "Professionele diensten in de tweetalige regio Biel/Bienne",
+        "coverage": "Stad Biel/Bienne en omliggende gebieden",
+        "areas": [
+          "Biel/Bienne",
+          "Nidau",
+          "Port",
+          "Ipsach",
+          "Evilard/Leubringen"
+        ]
+      },
+      "solothurn": {
+        "name": "Solothurn",
+        "description": "Betrouwbare schoonmaak en verhuizing in de regio Solothurn",
+        "coverage": "Kanton Solothurn en nabijgelegen gebieden",
+        "areas": [
+          "Solothurn",
+          "Olten",
+          "Grenchen",
+          "Zuchwil",
+          "Derendingen"
+        ]
+      },
+      "jura": {
+        "name": "Jura",
+        "description": "Professionele diensten in het hele kanton Jura",
+        "coverage": "Kanton Jura en aangrenzende gebieden",
+        "areas": [
+          "Delémont",
+          "Porrentruy",
+          "Saignelégier",
+          "Courgenay",
+          "Bassecourt"
+        ]
+      },
+      "stgallen": {
+        "name": "St. Gallen",
+        "description": "Professionele schoonmaak- en verhuisdiensten in de regio St. Gallen",
+        "coverage": "Kanton St. Gallen en omliggende gebieden",
+        "areas": [
+          "St. Gallen City",
+          "Wil",
+          "Gossau",
+          "Uzwil",
+          "Altstätten"
         ]
       }
     },

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import toast from 'react-hot-toast';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
 import {
@@ -52,11 +53,12 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
         throw new Error(t('contact.errors.submitFailed'));
       }
 
+      toast.success(t('contact.success.title'));
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert(t('contact.errors.submitFailedRetry'));
+      toast.error(t('contact.errors.submitFailedRetry'));
     } finally {
       setIsSubmitting(false);
     }
@@ -156,7 +158,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
         subtitle={t('contact.subtitle')}
         right={
           <img
-            src="/images/story.png"
+            src="/Gallary/6.jpeg"
             alt={t('contact.title')}
             className="w-full h-[340px] md:h-[420px] object-cover"
           />

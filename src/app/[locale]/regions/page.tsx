@@ -4,9 +4,9 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
-import { 
-  MapPin, 
-  Phone, 
+import {
+  MapPin,
+  Phone,
   Clock,
   CheckCircle,
   Star,
@@ -28,43 +28,17 @@ import {
 export default function RegionsPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations();
 
+  const companyPhone = '+41 76 488 36 89 / +41 78 215 80 30';
   const regions = [
-    {
-      id: 'zurich',
-      phone: '+41 44 123 45 67',
-    },
-    {
-      id: 'basel',
-      phone: '+41 61 123 45 67',
-    },
-    {
-      id: 'bern',
-      phone: '+41 31 123 45 67',
-    },
-    {
-      id: 'geneva',
-      phone: '+41 22 123 45 67',
-    },
-    {
-      id: 'lausanne',
-      phone: '+41 21 123 45 67',
-    },
-    {
-      id: 'lucerne',
-      phone: '+41 41 123 45 67',
-    },
-    {
-      id: 'biel',
-      phone: '+41 32 123 45 67',
-    },
-    {
-      id: 'solothurn',
-      phone: '+41 32 234 56 78',
-    },
-    {
-      id: 'jura',
-      phone: '+41 32 345 67 89',
-    }
+    { id: 'zurich', phone: companyPhone },
+    { id: 'basel', phone: companyPhone },
+    { id: 'bern', phone: companyPhone },
+    { id: 'geneva', phone: companyPhone },
+    { id: 'lausanne', phone: companyPhone },
+    { id: 'lucerne', phone: companyPhone },
+    { id: 'biel', phone: companyPhone },
+    { id: 'solothurn', phone: companyPhone },
+    { id: 'jura', phone: companyPhone },
   ];
 
   const services = [
@@ -93,7 +67,7 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
         subtitle={t('regions.subtitle')}
         right={
           <img
-            src="/images/transportation.png"
+            src="/Gallary/2.jpeg"
             alt={t('regions.title')}
             className="w-full h-[340px] md:h-[420px] object-cover"
           />
@@ -170,7 +144,7 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
                     <h4 className="font-semibold text-swiss-text mb-2">{t('regions.serviceAreas')}</h4>
                     <div className="flex flex-wrap gap-2">
                       {(t.raw(`regions.regionData.${region.id}.areas`) as string[]).map((area, areaIndex) => (
-                        <span 
+                        <span
                           key={areaIndex}
                           className="bg-white border border-swiss-border text-swiss-body px-3 py-1 rounded-full text-sm font-medium"
                         >
@@ -222,18 +196,18 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
               (() => {
                 const IconComponent = service.icon;
                 return (
-              <Link
-                key={index}
-                href={service.href}
-                className="card p-6 text-center space-y-4 group focus:outline-none focus:ring-2 focus:ring-swiss-red/20"
-              >
-                <div className="w-14 h-14 bg-swiss-gray-50 border border-swiss-border rounded-2xl flex items-center justify-center mx-auto">
-                  <IconComponent className="w-7 h-7 text-swiss-body group-hover:text-swiss-red transition-colors" />
-                </div>
-                <h3 className="font-semibold text-swiss-text group-hover:text-swiss-red transition-colors">
-                  {t(`regions.services.${service.id}`)}
-                </h3>
-              </Link>
+                  <Link
+                    key={index}
+                    href={service.href}
+                    className="card p-6 text-center space-y-4 group focus:outline-none focus:ring-2 focus:ring-swiss-red/20"
+                  >
+                    <div className="w-14 h-14 bg-swiss-gray-50 border border-swiss-border rounded-2xl flex items-center justify-center mx-auto">
+                      <IconComponent className="w-7 h-7 text-swiss-body group-hover:text-swiss-red transition-colors" />
+                    </div>
+                    <h3 className="font-semibold text-swiss-text group-hover:text-swiss-red transition-colors">
+                      {t(`regions.services.${service.id}`)}
+                    </h3>
+                  </Link>
                 );
               })()
             ))}

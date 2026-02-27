@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
 import {
-  Users,
   Award,
   Clock,
   Shield,
@@ -46,27 +45,6 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
     { number: '24h', label: t('about.stats.responseTime') }
   ];
 
-  const team = [
-    {
-      name: t('about.team.members.marco.name'),
-      position: t('about.team.members.marco.position'),
-      description: t('about.team.members.marco.description'),
-      image: '/team/placeholder.svg'
-    },
-    {
-      name: t('about.team.members.sarah.name'),
-      position: t('about.team.members.sarah.position'),
-      description: t('about.team.members.sarah.description'),
-      image: '/team/placeholder.svg'
-    },
-    {
-      name: t('about.team.members.thomas.name'),
-      position: t('about.team.members.thomas.position'),
-      description: t('about.team.members.thomas.description'),
-      image: '/team/placeholder.svg'
-    }
-  ];
-
   return (
     <Layout>
       {/* Hero Section */}
@@ -76,7 +54,7 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
         subtitle={t('about.subtitle')}
         right={
           <img
-            src="/images/story.png"
+            src="/Gallary/7.jpeg"
             alt={t('about.title')}
             className="w-full h-[340px] md:h-[420px] object-cover"
           />
@@ -106,7 +84,7 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden h-96 relative shadow-soft border border-swiss-border">
                   <img
-                    src="/images/story.png"
+                    src="/Gallary/8.jpeg"
                     alt={t('about.story.teamImage')}
                     className="w-full h-full object-cover"
                   />
@@ -178,47 +156,6 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="section-padding bg-swiss-section">
-        <div className="container-max">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
-              {t('about.team.title')}
-            </h2>
-            <p className="text-xl text-swiss-body">
-              {t('about.team.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="card overflow-hidden">
-                <div className="bg-swiss-gray-200 h-64 flex items-center justify-center relative">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6 space-y-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-swiss-text">
-                      {member.name}
-                    </h3>
-                    <p className="text-swiss-red font-medium">
-                      {member.position}
-                    </p>
-                  </div>
-                  <p className="text-swiss-body">
-                    {member.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Mission Section */}
       <section className="section-padding">
         <div className="container-max">
@@ -251,7 +188,7 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-swiss-red text-white">
+      <section className="section-padding bg-gradient-to-br from-swiss-blue via-blue-600 to-blue-800 text-white">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">

@@ -17,7 +17,7 @@ import {
   Shield,
   Star,
   ArrowRight,
-  
+
 } from 'lucide-react';
 
 export default function ServicesPage({ params: { locale } }: { params: { locale: string } }) {
@@ -199,7 +199,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
         subtitle={t('services.subtitle')}
         right={
           <img
-            src="/images/transportation.png"
+            src="/Gallary/1.jpeg"
             alt={t('services.title')}
             className="w-full h-[340px] md:h-[420px] object-cover"
           />
@@ -321,7 +321,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-swiss-red text-white">
+      <section className="section-padding bg-gradient-to-br from-swiss-blue via-blue-600 to-blue-800 text-white">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">

@@ -20,46 +20,45 @@ const COMPANY_INFO = {
     uid: 'CHE-123.456.789'
 };
 
-// Add professional header to PDF (matching FinishExpress style)
-function addProfessionalHeader(doc: jsPDF) {
-    // Green background box for logo and company name (left side)
-    doc.setFillColor(0, 153, 51); // Green color
-    doc.roundedRect(10, 10, 100, 20, 3, 3, 'F');
-    
-    // House icon (white)
-    doc.setFillColor(255, 255, 255);
-    // House roof
-    doc.triangle(18, 17, 23, 12, 28, 17, 'F');
-    // House body
-    doc.rect(20, 17, 6, 8, 'F');
-    // Door
-    doc.setFillColor(0, 153, 51);
-    doc.rect(22, 21, 2, 4, 'F');
-    
-    // Company name (white text on green)
-    doc.setTextColor(255, 255, 255);
-    doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
-    doc.text('SwissCleanMove', 32, 18);
-    
-    // Tagline (white text on green)
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'normal');
-    doc.text('REINIGUNG • UMZUG • ENTSORGUNG', 32, 26);
-    
-    // Company details (right side) - matching FinishExpress layout
+// Load logo as base64 for jsPDF
+async function loadLogoBase64(): Promise<string | null> {
+    try {
+        const response = await fetch('/images/logo.jpg');
+        const blob = await response.blob();
+        return new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result as string);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+        });
+    } catch {
+        return null;
+    }
+}
+
+async function addProfessionalHeader(doc: jsPDF) {
+    // Try to load and add the logo image
+    const logoBase64 = await loadLogoBase64();
+    if (logoBase64) {
+        // Significantly larger logo
+        doc.addImage(logoBase64, 'JPEG', 10, 5, 80, 30);
+    } else {
+        // Fallback: blue branded text if image fails
+        doc.setFillColor(0, 102, 204);
+        doc.roundedRect(10, 10, 60, 20, 3, 3, 'F');
+        doc.setTextColor(255, 255, 255);
+        doc.setFontSize(14);
+        doc.setFont('helvetica', 'bold');
+        doc.text('SwissCleanMove', 16, 22);
+    }
+
+    // Company details (right side)
     doc.setTextColor(60, 60, 60);
     doc.setFontSize(9);
     const rightX = 200;
     let rightY = 12;
-    
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(10);
-    doc.text('SwissCleanMove', rightX, rightY, { align: 'right' });
-    rightY += 5;
-    
+
     doc.setFont('helvetica', 'normal');
-    doc.setFontSize(9);
     doc.text(COMPANY_INFO.address, rightX, rightY, { align: 'right' });
     rightY += 4;
     doc.text(COMPANY_INFO.city, rightX, rightY, { align: 'right' });
@@ -69,16 +68,16 @@ function addProfessionalHeader(doc: jsPDF) {
     doc.text(`Tel: ${COMPANY_INFO.phone}`, rightX, rightY, { align: 'right' });
     rightY += 4;
     doc.text(`UID: ${COMPANY_INFO.uid}`, rightX, rightY, { align: 'right' });
-    
-    // Horizontal line separator
-    doc.setDrawColor(0, 153, 51);
+
+    // Horizontal line separator (blue)
+    doc.setDrawColor(0, 102, 204);
     doc.setLineWidth(0.8);
-    doc.line(10, 35, 200, 35);
-    
+    doc.line(10, 37, 200, 37);
+
     // Reset text color
     doc.setTextColor(0, 0, 0);
-    
-    return 42; // Return starting Y position for content
+
+    return 44; // Return starting Y position for content
 }
 
 interface ContactSubmission {
@@ -103,11 +102,11 @@ interface QuoteSubmission {
     createdAt: string;
 }
 
-export function exportContactToPDF(contact: ContactSubmission) {
+export async function exportContactToPDF(contact: ContactSubmission) {
     const doc = new jsPDF();
 
     // Add professional header
-    let yPos = addProfessionalHeader(doc);
+    let yPos = await addProfessionalHeader(doc);
 
     // Document title
     doc.setFontSize(18);
@@ -123,18 +122,18 @@ export function exportContactToPDF(contact: ContactSubmission) {
             doc.addPage();
             yPos = 20;
         }
-        
+
         doc.setFillColor(240, 248, 255);
         doc.roundedRect(12, yPos - 5, 186, 10, 2, 2, 'F');
-        
+
         doc.setFillColor(0, 102, 204);
         doc.circle(17, yPos, 2.5, 'F');
-        
+
         doc.setFontSize(8);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(255, 255, 255);
         doc.text(icon, 17, yPos + 1, { align: 'center' });
-        
+
         doc.setFontSize(12);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(0, 102, 204);
@@ -145,18 +144,18 @@ export function exportContactToPDF(contact: ContactSubmission) {
 
     const addField = (label: string, value: any, indent: number = 14) => {
         if (!value || value === '') return;
-        
+
         if (yPos > 270) {
             doc.addPage();
             yPos = 20;
         }
-        
+
         doc.setFontSize(9);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(100, 100, 100);
         doc.text(label.toUpperCase(), indent, yPos);
         yPos += 5;
-        
+
         doc.setFontSize(10);
         doc.setFont('helvetica', 'normal');
         doc.setTextColor(0, 0, 0);
@@ -182,11 +181,11 @@ export function exportContactToPDF(contact: ContactSubmission) {
     doc.save(`contact-${contact.id}.pdf`);
 }
 
-export function exportQuoteToPDF(quote: QuoteSubmission) {
+export async function exportQuoteToPDF(quote: QuoteSubmission) {
     const doc = new jsPDF();
 
     // Add professional header
-    let yPos = addProfessionalHeader(doc);
+    let yPos = await addProfessionalHeader(doc);
 
     // Document title
     doc.setFontSize(18);
@@ -202,18 +201,18 @@ export function exportQuoteToPDF(quote: QuoteSubmission) {
             doc.addPage();
             yPos = 20;
         }
-        
+
         doc.setFillColor(240, 248, 255);
         doc.roundedRect(12, yPos - 5, 186, 10, 2, 2, 'F');
-        
+
         doc.setFillColor(0, 102, 204);
         doc.circle(17, yPos, 2.5, 'F');
-        
+
         doc.setFontSize(8);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(255, 255, 255);
         doc.text(icon, 17, yPos + 1, { align: 'center' });
-        
+
         doc.setFontSize(12);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(0, 102, 204);
@@ -224,18 +223,18 @@ export function exportQuoteToPDF(quote: QuoteSubmission) {
 
     const addField = (label: string, value: any, indent: number = 14) => {
         if (!value || value === '') return;
-        
+
         if (yPos > 270) {
             doc.addPage();
             yPos = 20;
         }
-        
+
         doc.setFontSize(9);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(100, 100, 100);
         doc.text(label.toUpperCase(), indent, yPos);
         yPos += 5;
-        
+
         doc.setFontSize(10);
         doc.setFont('helvetica', 'normal');
         doc.setTextColor(0, 0, 0);
@@ -286,11 +285,11 @@ export function exportQuoteToPDF(quote: QuoteSubmission) {
     doc.save(`quote-${quote.id}.pdf`);
 }
 
-export function exportServiceFormToPDF(submission: any) {
+export async function exportServiceFormToPDF(submission: any) {
     const doc = new jsPDF();
 
     // Add professional header
-    let yPos = addProfessionalHeader(doc);
+    let yPos = await addProfessionalHeader(doc);
 
     // Document title
     doc.setFontSize(18);
@@ -306,21 +305,21 @@ export function exportServiceFormToPDF(submission: any) {
             doc.addPage();
             yPos = 20;
         }
-        
+
         // Background box for section header
         doc.setFillColor(240, 248, 255); // Light blue background
         doc.roundedRect(12, yPos - 5, 186, 10, 2, 2, 'F');
-        
+
         // Draw icon circle
         doc.setFillColor(0, 102, 204); // Blue color
         doc.circle(17, yPos, 2.5, 'F');
-        
+
         // Icon text (white on blue circle)
         doc.setFontSize(8);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(255, 255, 255);
         doc.text(icon, 17, yPos + 1, { align: 'center' });
-        
+
         // Section title
         doc.setFontSize(12);
         doc.setFont('helvetica', 'bold');
@@ -333,18 +332,18 @@ export function exportServiceFormToPDF(submission: any) {
     // Helper function to add a field
     const addField = (label: string, value: any, indent: number = 14) => {
         if (!value || value === 'Not specified' || value === 'None specified' || value === '') return;
-        
+
         if (yPos > 270) {
             doc.addPage();
             yPos = 20;
         }
-        
+
         doc.setFontSize(9);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(100, 100, 100);
         doc.text(label.toUpperCase(), indent, yPos);
         yPos += 5;
-        
+
         doc.setFontSize(10);
         doc.setFont('helvetica', 'normal');
         doc.setTextColor(0, 0, 0);
@@ -400,7 +399,7 @@ export function exportServiceFormToPDF(submission: any) {
 
     // Service Details Section
     addSectionHeader('Service Details', 'S');
-    
+
     if (submission.formType === 'relocation') {
         addField('Moving Date', submission.movingDate);
         addField('Viewing Welcome', submission.viewingIsWelcome === 'And' ? 'Yes' : submission.viewingIsWelcome);
@@ -431,16 +430,16 @@ export function exportServiceFormToPDF(submission: any) {
     }
 
     // Additional Services Section
-    const hasAdditionalServices = 
-        submission.pack || submission.garage || submission.screed || 
+    const hasAdditionalServices =
+        submission.pack || submission.garage || submission.screed ||
         submission.unpacking || submission.cleaning || submission.disposal ||
         submission.assembly || submission.lift || submission.heavyLoad ||
-        submission.cellarCleaning || submission.garageCleaning || 
+        submission.cellarCleaning || submission.garageCleaning ||
         submission.carpetShampooing || submission.conservatory;
 
     if (hasAdditionalServices) {
         addSectionHeader('Additional Services', '+');
-        
+
         // Relocation services
         addCheckbox('Packing Service', submission.pack);
         addCheckbox('Garage', submission.garage);
@@ -448,7 +447,7 @@ export function exportServiceFormToPDF(submission: any) {
         addCheckbox('Unpacking Service', submission.unpacking);
         addCheckbox('Cleaning Service', submission.cleaning);
         addCheckbox('Disposal Service', submission.disposal);
-        
+
         // Assembly and logistics
         addField('Assembly Required', submission.assembly);
         addField('Lift Available', submission.lift);
@@ -456,7 +455,7 @@ export function exportServiceFormToPDF(submission: any) {
         addField('Path to Front Door', submission.pathToFrontDoor);
         addField('Path Distance (m)', submission.pathToFrontDoorM);
         addField('Heavy Load', submission.heavyLoad);
-        
+
         // Cleaning services
         addCheckbox('Cellar Cleaning', submission.cellarCleaning);
         addCheckbox('Garage Cleaning', submission.garageCleaning);
@@ -465,7 +464,7 @@ export function exportServiceFormToPDF(submission: any) {
         addCheckbox('Outdoor Seating', submission.outdoorSeating);
         addCheckbox('Parquet', submission.parquet);
         addCheckbox('Stair Polish', submission.stairpolish);
-        
+
         yPos += 3;
     }
 

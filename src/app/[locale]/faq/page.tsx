@@ -4,9 +4,9 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
-import { 
-  ChevronDown, 
-  ChevronUp, 
+import {
+  ChevronDown,
+  ChevronUp,
   HelpCircle,
   Phone,
   Mail,
@@ -52,7 +52,7 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
         subtitle={t('faq.subtitle')}
         right={
           <img
-            src="/images/story.png"
+            src="/Gallary/5.jpeg"
             alt={t('faq.title')}
             className="w-full h-[340px] md:h-[420px] object-cover"
           />
@@ -157,9 +157,9 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
             <p className="text-xl text-swiss-body max-w-2xl mx-auto">
               {t('faq.teamHelp')}
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <a 
+              <a
                 href="tel:+41764883689"
                 className="bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-xl p-6 transition-all duration-200 shadow-subtle hover:shadow-soft"
               >
@@ -167,8 +167,8 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
                 <h3 className="font-semibold mb-2 text-swiss-text">{t('faq.callUs')}</h3>
                 <p className="text-swiss-body">+41 76 488 36 89</p>
               </a>
-              
-              <a 
+
+              <a
                 href="mailto:info@swisscleanmove.ch"
                 className="bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-xl p-6 transition-all duration-200 shadow-subtle hover:shadow-soft"
               >
@@ -176,8 +176,8 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
                 <h3 className="font-semibold mb-2 text-swiss-text">{t('faq.emailUs')}</h3>
                 <p className="text-swiss-body">info@swisscleanmove.ch</p>
               </a>
-              
-              <a 
+
+              <a
                 href={`/${locale}/contact`}
                 className="bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-xl p-6 transition-all duration-200 shadow-subtle hover:shadow-soft"
               >

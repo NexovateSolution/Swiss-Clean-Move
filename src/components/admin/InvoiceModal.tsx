@@ -53,7 +53,7 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
 
     try {
       setLoading(true)
-      
+
       const response = await fetch('/api/admin/invoices', {
         method: 'POST',
         headers: {
@@ -71,10 +71,10 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
 
       const invoice = await response.json()
       toast.success('Invoice created successfully')
-      
+
       // Generate and download PDF
       generateInvoicePDF(invoice)
-      
+
       onSuccess()
       onClose()
       reset()
@@ -88,7 +88,7 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
 
   const generateInvoicePDF = (invoice: any) => {
     if (!client) return
-    
+
     // Create a simple HTML invoice for printing/PDF
     const invoiceHTML = `
       <!DOCTYPE html>
@@ -114,8 +114,7 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
       <body>
         <div class="header">
           <div>
-            <div class="logo">SwissCleanMove</div>
-            <div>Professional Cleaning Services</div>
+            <img src="/images/logo.jpg" alt="SwissCleanMove" style="height:120px;width:auto;margin-bottom:8px;" onerror="this.style.display='none'">
           </div>
           <div class="company-info">
             <div><strong>SwissCleanMove GmbH</strong></div>
@@ -209,7 +208,7 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
               className="fixed inset-0 bg-gray-500 bg-opacity-75"
               onClick={onClose}
             />
-            
+
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -266,7 +265,7 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
               {/* Invoice Form */}
               <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-6">
                 <h3 className="text-lg font-medium text-gray-900">Invoice Details</h3>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -275,7 +274,7 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
                     <input
                       type="number"
                       step="0.01"
-                      {...register('amount', { 
+                      {...register('amount', {
                         required: 'Amount is required',
                         min: { value: 0.01, message: 'Amount must be greater than 0' }
                       })}

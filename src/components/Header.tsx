@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Menu, X, Phone, Globe, ChevronDown, LogIn } from 'lucide-react';
+import { Menu, X, Phone, Globe, ChevronDown } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,27 +39,33 @@ export default function Header() {
     { name: t('navigation.faq'), href: `/${locale}/faq` },
     { name: t('navigation.freeOffer'), href: `/${locale}/free-offer` },
     { name: t('navigation.contact'), href: `/${locale}/contact` },
+    { name: t('navigation.gallery'), href: `/${locale}/gallery` },
   ], [locale, t]);
 
   // Memoize locale switch function
   const switchLocale = useCallback((newLocale: string) => {
-    const currentPath = pathname.replace(`/${locale}`, '');
+    const segments = pathname.split('/');
+    // Check if the first segment is a locale
+    const currentPath = segments.length > 1 && ['de', 'fr', 'en', 'nl'].includes(segments[1])
+      ? '/' + segments.slice(2).join('/')
+      : pathname;
+
     router.push(`/${newLocale}${currentPath}`);
-  }, [pathname, locale, router]);
+  }, [pathname, router]);
 
   return (
     <header className="bg-white shadow-subtle fixed top-0 w-full z-50 border-b border-swiss-border">
       <div className="container-max">
-        <div className={`flex justify-between items-center py-1.5 px-4 ${locale === 'de' ? 'lg:px-4 gap-2' : 'lg:px-6 gap-4'
+        <div className={`flex justify-between items-center py-0.5 px-4 ${locale === 'de' ? 'lg:px-4 gap-2' : 'lg:px-6 gap-4'
           }`}>
           {/* Logo (image only) */}
           <Link href={`/${locale}`} className="flex items-center flex-shrink-0 min-w-fit" prefetch={true}>
             <img
               src="/images/logo.jpg"
               alt="SwissCleanMove Logo"
-              width={200}
-              height={64}
-              className="h-16 w-auto object-contain drop-shadow-sm bg-transparent"
+              width={350}
+              height={128}
+              className="h-36 md:h-44 w-auto object-contain drop-shadow-sm bg-transparent"
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
                 if (!img.dataset.fallback) {
@@ -157,20 +163,21 @@ export default function Header() {
                   >
                     🇫🇷 Français
                   </button>
+                  <button
+                    onClick={() => {
+                      switchLocale('nl');
+                      setIsLangDropdownOpen(false);
+                    }}
+                    className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${locale === 'nl' ? 'text-swiss-blue font-medium' : 'text-gray-700'
+                      }`}
+                  >
+                    🇳🇱 Nederlands
+                  </button>
                 </div>
               )}
             </div>
 
-            {/* Admin Login Button */}
-            <Link
-              href="/admin/login"
-              className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text rounded-lg transition-all duration-150 whitespace-nowrap group border border-swiss-border ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
-                }`}
-              title="Admin Login"
-            >
-              <LogIn className="w-4 h-4 text-swiss-red" />
-              <span className={`font-medium ${locale === 'de' ? 'text-xs' : 'text-xs xl:text-sm'}`}>Admin</span>
-            </Link>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -248,6 +255,18 @@ export default function Header() {
                   >
                     🇫🇷 FR
                   </button>
+                  <button
+                    onClick={() => {
+                      switchLocale('nl');
+                      setIsMenuOpen(false);
+                    }}
+                    className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-all ${locale === 'nl'
+                      ? 'bg-swiss-red text-white shadow-subtle'
+                      : 'text-swiss-body hover:text-swiss-text hover:bg-white'
+                      }`}
+                  >
+                    🇳🇱 NL
+                  </button>
                 </div>
               </div>
 
@@ -260,14 +279,7 @@ export default function Header() {
                   <Phone className="w-4 h-4 text-swiss-red" />
                   <span className="font-medium">+41 76 488 36 89</span>
                 </a>
-                <Link
-                  href="/admin/login"
-                  className="flex items-center space-x-2 text-swiss-text hover:text-swiss-text/80 py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <LogIn className="w-4 h-4 text-swiss-red" />
-                  <span className="font-medium">Admin Login</span>
-                </Link>
+
               </div>
             </nav>
           </div>

@@ -6,16 +6,16 @@ import { sendEmailNotification, formatServiceFormEmail } from '@/lib/email'
 
 // Simple PDF generation function (you can replace with a proper PDF library like jsPDF or Puppeteer)
 function generatePDFContent(data: any): string {
-  const currentDate = new Date().toLocaleString('en-CH', {
-    timeZone: 'Europe/Zurich',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit'
-  })
+    const currentDate = new Date().toLocaleString('en-CH', {
+        timeZone: 'Europe/Zurich',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit'
+    })
 
-  return `
+    return `
 <!DOCTYPE html>
 <html>
 <head>
@@ -101,8 +101,7 @@ function generatePDFContent(data: any): string {
 </head>
 <body>
     <div class="header">
-        <div class="logo">SwissCleanMove</div>
-        <div>Professional Cleaning & Moving Services</div>
+        <img src="/images/logo.jpg" alt="SwissCleanMove" style="height:120px;width:auto;margin-bottom:8px;" onerror="this.style.display='none'">
         <div class="service-title">${data.serviceName} - ${data.formType.charAt(0).toUpperCase() + data.formType.slice(1)} Request</div>
     </div>
 
@@ -238,65 +237,65 @@ function generatePDFContent(data: any): string {
 }
 
 export async function POST(request: NextRequest) {
-  try {
-    const data = await request.json()
-    
-    // Validate required fields
-    if (!data.serviceName || !data.name || !data.firstName || !data.emailAddress) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      )
+    try {
+        const data = await request.json()
+
+        // Validate required fields
+        if (!data.serviceName || !data.name || !data.firstName || !data.emailAddress) {
+            return NextResponse.json(
+                { error: 'Missing required fields' },
+                { status: 400 }
+            )
+        }
+
+        // Create submissions directory if it doesn't exist
+        const submissionsDir = join(process.cwd(), 'public', 'submissions')
+        if (!existsSync(submissionsDir)) {
+            await mkdir(submissionsDir, { recursive: true })
+        }
+
+        // Generate unique filename
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
+        const filename = `${data.serviceName.replace(/\s+/g, '-')}-${data.name}-${timestamp}`
+
+        // Generate PDF content (HTML)
+        const pdfContent = generatePDFContent(data)
+        const pdfPath = join(submissionsDir, `${filename}.html`)
+
+        // Save PDF file
+        await writeFile(pdfPath, pdfContent, 'utf8')
+
+        // Save JSON data for admin panel
+        const jsonData = {
+            ...data,
+            submissionDate: new Date().toISOString(),
+            pdfPath: `/submissions/${filename}.html`,
+            id: `${timestamp}-${Math.random().toString(36).substr(2, 9)}`
+        }
+
+        const jsonPath = join(submissionsDir, `${filename}.json`)
+        await writeFile(jsonPath, JSON.stringify(jsonData, null, 2), 'utf8')
+
+        // Send email notification to admin
+        const emailHtml = formatServiceFormEmail(data);
+        await sendEmailNotification({
+            to: 'info@swisscleanmove.ch',
+            subject: `New ${data.serviceName} ${data.formType} Request`,
+            html: emailHtml,
+            text: `New ${data.formType} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`
+        });
+
+        return NextResponse.json({
+            success: true,
+            message: 'Form submitted successfully',
+            submissionId: jsonData.id
+        })
+
+    } catch (error) {
+        console.error('Error processing form submission:', error)
+        return NextResponse.json(
+            { error: 'Internal server error' },
+            { status: 500 }
+        )
     }
-
-    // Create submissions directory if it doesn't exist
-    const submissionsDir = join(process.cwd(), 'public', 'submissions')
-    if (!existsSync(submissionsDir)) {
-      await mkdir(submissionsDir, { recursive: true })
-    }
-
-    // Generate unique filename
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
-    const filename = `${data.serviceName.replace(/\s+/g, '-')}-${data.name}-${timestamp}`
-    
-    // Generate PDF content (HTML)
-    const pdfContent = generatePDFContent(data)
-    const pdfPath = join(submissionsDir, `${filename}.html`)
-    
-    // Save PDF file
-    await writeFile(pdfPath, pdfContent, 'utf8')
-
-    // Save JSON data for admin panel
-    const jsonData = {
-      ...data,
-      submissionDate: new Date().toISOString(),
-      pdfPath: `/submissions/${filename}.html`,
-      id: `${timestamp}-${Math.random().toString(36).substr(2, 9)}`
-    }
-    
-    const jsonPath = join(submissionsDir, `${filename}.json`)
-    await writeFile(jsonPath, JSON.stringify(jsonData, null, 2), 'utf8')
-
-    // Send email notification to admin
-    const emailHtml = formatServiceFormEmail(data);
-    await sendEmailNotification({
-      to: 'info@swisscleanmove.ch',
-      subject: `New ${data.serviceName} ${data.formType} Request`,
-      html: emailHtml,
-      text: `New ${data.formType} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`
-    });
-
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Form submitted successfully',
-      submissionId: jsonData.id
-    })
-
-  } catch (error) {
-    console.error('Error processing form submission:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
-  }
 }

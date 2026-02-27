@@ -5,8 +5,8 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 229, 240, 255;
+  --background-end-rgb: 229, 240, 255;
 }
 
 * {
@@ -46,12 +46,17 @@ a {
     @apply bg-swiss-red hover:bg-swiss-red/90 text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 shadow-soft hover:shadow-soft;
     will-change: transform, box-shadow;
   }
-  
+
   .btn-secondary {
     @apply bg-transparent hover:bg-swiss-gray-50 text-swiss-text font-semibold py-3.5 px-6 rounded-xl border border-swiss-border transition-all duration-150;
     will-change: transform, box-shadow;
   }
-  
+
+  .btn-accent {
+    @apply bg-swiss-blue hover:bg-swiss-blue/90 text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 shadow-soft hover:shadow-soft;
+    will-change: transform, box-shadow;
+  }
+
   .card {
     @apply bg-white rounded-2xl shadow-subtle hover:shadow-soft transition-all duration-200 transform hover:-translate-y-0.5 border border-swiss-border;
     will-change: transform, box-shadow;
@@ -60,11 +65,11 @@ a {
   .hero-surface {
     @apply bg-swiss-section border-b border-swiss-border;
   }
-  
+
   .section-padding {
     @apply py-8 md:py-12 px-4 sm:px-6 lg:px-8;
   }
-  
+
   .container-max {
     @apply max-w-[1200px] mx-auto;
   }

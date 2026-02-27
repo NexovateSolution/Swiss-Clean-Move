@@ -75,15 +75,15 @@ export async function POST(request: NextRequest) {
       ]
     })
 
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Invoice sent successfully' 
+    return NextResponse.json({
+      success: true,
+      message: 'Invoice sent successfully'
     })
   } catch (error: any) {
     console.error('Error sending invoice:', error)
-    return NextResponse.json({ 
+    return NextResponse.json({
       error: 'Failed to send invoice',
-      details: error.message 
+      details: error.message
     }, { status: 500 })
   }
 }
@@ -109,26 +109,34 @@ async function renderPdfFromHtml(html: string): Promise<Buffer> {
 }
 
 function generateInvoiceHTML(client: any, language: string): string {
-  const translations = {
+  const translations: any = {
     en: {
       invoice: 'INVOICE',
-      invoiceNumber: 'Invoice Number',
+      orderNumber: 'Order Number',
       date: 'Date',
       billTo: 'Bill To',
       service: 'Service',
-      totalPrice: 'Total Price',
-      paidAmount: 'Paid Amount',
-      balance: 'Balance Due',
-      paymentHistory: 'Payment History',
-      paymentDate: 'Date',
+      details: 'Details',
       amount: 'Amount',
-      method: 'Method',
-      notes: 'Notes',
-      thankYou: 'Thank you for your business!',
-      contact: 'Contact Us',
-      status: 'Status',
-      receiptSlip: 'Payment Slip',
-      paymentPart: 'Payment Slip',
+      subtotal: 'Subtotal (excl. VAT)',
+      vat: 'VAT (8.1%)',
+      total: 'Total Amount',
+      paymentCondition: 'Payment Condition',
+      cashPayment: 'Payable by cash upon completion of work',
+      clientStartTime: 'Client Start Time',
+      cleaningCompleted: 'Work Completed',
+      thankYou: 'Thank you for your business and for your trust!',
+      regards: 'With best regards',
+      companyName: 'SwissCleanMove',
+      customerSignature: 'Customer Signature',
+      teamSignature: 'Team Signature',
+      page: 'Page',
+      guarantee: 'With handover guarantee Incl. 8.1% VAT flat rate',
+      location: 'Location/Address',
+      room: 'Rooms',
+      additionalInfo: 'Additional Information',
+      receiptSlip: 'Receipt Slip',
+      paymentPart: 'Payment Part',
       accountPayableTo: 'Account / Payable to',
       reference: 'Reference',
       payableBy: 'Payable by',
@@ -137,21 +145,29 @@ function generateInvoiceHTML(client: any, language: string): string {
     },
     de: {
       invoice: 'RECHNUNG',
-      invoiceNumber: 'Rechnungsnummer',
+      orderNumber: 'Auftragsnummer',
       date: 'Datum',
       billTo: 'Rechnung an',
       service: 'Dienstleistung',
-      totalPrice: 'Gesamtpreis',
-      paidAmount: 'Bezahlter Betrag',
-      balance: 'Offener Betrag',
-      paymentHistory: 'Zahlungshistorie',
-      paymentDate: 'Datum',
+      details: 'Details',
       amount: 'Betrag',
-      method: 'Methode',
-      notes: 'Notizen',
-      thankYou: 'Vielen Dank für Ihr Vertrauen!',
-      contact: 'Kontakt',
-      status: 'Status',
+      subtotal: 'Zwischensumme (exkl. MwSt)',
+      vat: 'MwSt (8.1%)',
+      total: 'Gesamtbetrag',
+      paymentCondition: 'Zahlungskonditionen',
+      cashPayment: 'Zahlbar in bar nach Abschluss der Arbeiten',
+      clientStartTime: 'Startzeit beim Kunden',
+      cleaningCompleted: 'Reinigung abgeschlossen',
+      thankYou: 'Vielen Dank für Ihren Auftrag und für Ihr Vertrauen!',
+      regards: 'Mit freundlichen Grüßen',
+      companyName: 'SwissCleanMove',
+      customerSignature: 'Unterschrift Kunde',
+      teamSignature: 'Unterschrift Team',
+      page: 'Seite',
+      guarantee: 'Mit Abnahmegarantie Inkl. 8.1% MwSt Pauschal',
+      location: 'Ort / Adresse',
+      room: 'Zimmer',
+      additionalInfo: 'Zusätzliche Informationen',
       receiptSlip: 'Empfangsschein',
       paymentPart: 'Zahlteil',
       accountPayableTo: 'Konto / Zahlbar an',
@@ -162,389 +178,429 @@ function generateInvoiceHTML(client: any, language: string): string {
     },
     fr: {
       invoice: 'FACTURE',
-      invoiceNumber: 'Numéro de facture',
+      orderNumber: 'Numéro de commande',
       date: 'Date',
       billTo: 'Facturer à',
       service: 'Service',
-      totalPrice: 'Prix total',
-      paidAmount: 'Montant payé',
-      balance: 'Solde dû',
-      paymentHistory: 'Historique des paiements',
-      paymentDate: 'Date',
+      details: 'Détails',
       amount: 'Montant',
-      method: 'Méthode',
-      notes: 'Notes',
-      thankYou: 'Merci pour votre confiance!',
-      contact: 'Contact',
-      status: 'Statut',
-      receiptSlip: 'Reçu',
+      subtotal: 'Sous-total (hors TVA)',
+      vat: 'TVA (8.1%)',
+      total: 'Montant total',
+      paymentCondition: 'Conditions de paiement',
+      cashPayment: 'Payable au comptant à la fin des travaux',
+      clientStartTime: 'Heure de début chez le client',
+      cleaningCompleted: 'Nettoyage terminé',
+      thankYou: 'Merci pour votre commande et pour votre confiance !',
+      regards: 'Avec nos meilleures salutations',
+      companyName: 'SwissCleanMove',
+      customerSignature: 'Signature du client',
+      teamSignature: 'Signature de l\'équipe',
+      page: 'Page',
+      guarantee: 'Avec garantie de remise incl. 8.1% TVA forfaitaire',
+      location: 'Lieu / Adresse',
+      room: 'Pièces',
+      additionalInfo: 'Informations complémentaires',
+      receiptSlip: 'Récépissé',
       paymentPart: 'Partie paiement',
       accountPayableTo: 'Compte / Payable à',
       reference: 'Référence',
       payableBy: 'Payable par',
-      currency: 'Devise',
+      currency: 'Monnaie',
       chf: 'CHF'
     }
   }
 
-  const t = translations[language as keyof typeof translations] || translations.en
-
-  const statusColors = {
-    PAID: '#10b981',
-    PARTIAL: '#f59e0b',
-    UNPAID: '#ef4444'
-  }
-
-  const statusColor = statusColors[client.status as keyof typeof statusColors] || '#6b7280'
-
-  const paymentSlip = {
-    account: 'CH86 0900 0000 1636 3866 5',
-    payableTo: ['SwissCleanMove Gebrekristos', 'Orpundstrasse 31', 'CH-2504 Biel/Bienne'],
-    reference: '00 00000 00000 00000 00000 00000'
-  }
-
-  const slipAmount = typeof client.balance === 'number' ? client.balance : client.totalPrice
+  const t = translations[language] || translations.en
+  const orderNumber = `#FE-${client.id.substring(0, 6).toUpperCase()}`
+  const currentDate = new Date().toLocaleDateString()
 
   return `
     <!DOCTYPE html>
     <html>
     <head>
-      <meta charset="UTF-8">
-      <style>
-        body {
-          font-family: Arial, sans-serif;
-          line-height: 1.6;
-          color: #333;
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 20px;
-        }
-        .header {
-          background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-          color: white;
-          padding: 30px;
-          border-radius: 10px 10px 0 0;
-          margin-bottom: 30px;
-        }
-        .company-name {
-          font-size: 28px;
-          font-weight: bold;
-          margin-bottom: 5px;
-        }
-        .company-tagline {
-          font-size: 14px;
-          opacity: 0.9;
-        }
-        .invoice-title {
-          font-size: 32px;
-          font-weight: bold;
-          text-align: center;
-          margin: 20px 0;
-          color: #059669;
-        }
-        .info-section {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 30px;
-        }
-        .info-box {
-          flex: 1;
-          padding: 15px;
-          background: #f9fafb;
-          border-radius: 8px;
-          margin: 0 10px;
-        }
-        .info-box h3 {
-          margin-top: 0;
-          color: #059669;
-          font-size: 14px;
-          text-transform: uppercase;
-        }
-        .info-box p {
-          margin: 5px 0;
-        }
-        .details-table {
-          width: 100%;
-          border-collapse: collapse;
-          margin: 20px 0;
-        }
-        .details-table th {
-          background: #059669;
-          color: white;
-          padding: 12px;
-          text-align: left;
-        }
-        .details-table td {
-          padding: 12px;
-          border-bottom: 1px solid #e5e7eb;
-        }
-        .total-section {
-          background: #f9fafb;
-          padding: 20px;
-          border-radius: 8px;
-          margin: 20px 0;
-        }
-        .total-row {
-          display: flex;
-          justify-content: space-between;
-          padding: 10px 0;
-          font-size: 16px;
-        }
-        .total-row.grand {
-          font-size: 20px;
-          font-weight: bold;
-          color: #059669;
-          border-top: 2px solid #059669;
-          padding-top: 15px;
-        }
-        .status-badge {
-          display: inline-block;
-          padding: 5px 15px;
-          border-radius: 20px;
-          color: white;
-          font-weight: bold;
-          font-size: 14px;
-        }
-        .footer {
-          text-align: center;
-          margin-top: 40px;
-          padding-top: 20px;
-          border-top: 2px solid #e5e7eb;
-          color: #6b7280;
-        }
-        .payment-history {
-          margin-top: 30px;
-        }
-        .payment-slip {
-          margin-top: 40px;
-          border: 2px solid #111;
-          border-radius: 8px;
-          overflow: hidden;
-        }
-        .payment-slip-table {
-          width: 100%;
-          border-collapse: collapse;
-        }
-        .payment-slip-table td {
-          vertical-align: top;
-          padding: 16px;
-        }
-        .payment-slip-left {
-          width: 35%;
-          border-right: 1px solid #111;
-        }
-        .payment-slip-right {
-          width: 65%;
-        }
-        .payment-slip-title {
-          margin: 0 0 14px 0;
-          font-size: 14px;
-          font-weight: bold;
-          letter-spacing: 0.2px;
-        }
-        .payment-slip-label {
-          display: block;
-          font-size: 11px;
-          font-weight: bold;
-          color: #111;
-          margin-bottom: 3px;
-          text-transform: none;
-        }
-        .payment-slip-value {
-          font-size: 11px;
-          color: #111;
-        }
-        .payment-slip-block {
-          margin-bottom: 14px;
-        }
-        .payment-slip-amount-box {
-          border: 1px solid #111;
-          border-radius: 6px;
-          padding: 10px;
-          text-align: left;
-          width: 170px;
-        }
-        .payment-slip-amount-row {
-          display: flex;
-          justify-content: space-between;
-          gap: 12px;
-          align-items: flex-start;
-        }
-        .payment-slip-amount {
-          font-size: 14px;
-          font-weight: bold;
-          letter-spacing: 0.2px;
-        }
-        .payment-slip-currency {
-          font-size: 12px;
-          font-weight: bold;
-        }
-      </style>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 40px;
+                background-color: white;
+                color: #333;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                border-bottom: 2px solid #0066CC;
+                padding-bottom: 15px;
+            }
+            .logo-section {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+            .company-info {
+                text-align: right;
+                font-size: 13px;
+                color: #333;
+                line-height: 1.8;
+            }
+            .title {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                color: #333;
+                margin: 30px 0;
+            }
+            .order-info {
+                margin: 20px 0;
+                font-size: 15px;
+            }
+            .client-info {
+                margin: 30px 0;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            .service-details {
+                margin: 30px 0;
+            }
+            .service-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            .service-table th {
+                background: #0066CC;
+                color: white;
+                padding: 12px;
+                text-align: left;
+            }
+            .service-table td {
+                padding: 12px;
+                border: 1px solid #eee;
+            }
+            .total-section {
+                float: right;
+                width: 300px;
+                margin-top: 20px;
+            }
+            .total-row {
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 0;
+                border-bottom: 1px solid #eee;
+            }
+            .total-row.final {
+                font-weight: bold;
+                font-size: 14px;
+                border-bottom: 2px solid #0066CC;
+                color: #0066CC;
+            }
+            .payment-info {
+                clear: both;
+                margin-top: 40px;
+                padding: 15px;
+                background: #f0f8ff;
+                border-left: 4px solid #0066CC;
+            }
+            .signatures {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 80px;
+            }
+            .signature-box {
+                width: 250px;
+                text-align: center;
+            }
+            .signature-line {
+                border-bottom: 1px solid #000;
+                margin-bottom: 10px;
+            }
+            .footer {
+                margin-top: 100px;
+                text-align: center;
+                font-size: 12px;
+                color: #666;
+                border-top: 1px solid #eee;
+                padding-top: 20px;
+            }
+            .page-number {
+                text-align: center;
+                font-size: 10px;
+                color: #999;
+                margin-top: 10px;
+            }
+
+            /* Payment Slip Styles */
+            .payment-slip {
+                margin-top: 40px;
+                border: 2px solid #111;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .payment-slip-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .payment-slip-table td {
+                vertical-align: top;
+                padding: 16px;
+            }
+            .payment-slip-left {
+                width: 35%;
+                border-right: 1px solid #111;
+            }
+            .payment-slip-right {
+                width: 65%;
+            }
+            .payment-slip-title {
+                margin: 0 0 14px 0;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 0.2px;
+            }
+            .payment-slip-label {
+                display: block;
+                font-size: 11px;
+                font-weight: bold;
+                color: #111;
+                margin-bottom: 3px;
+                text-transform: none;
+            }
+            .payment-slip-value {
+                font-size: 11px;
+                color: #111;
+            }
+            .payment-slip-block {
+                margin-bottom: 14px;
+            }
+            .payment-slip-amount-box {
+                border: 1px solid #111;
+                border-radius: 6px;
+                padding: 10px;
+                text-align: left;
+                width: 170px;
+            }
+            .payment-slip-amount-row {
+                display: flex;
+                justify-content: space-between;
+                gap: 12px;
+                align-items: flex-start;
+            }
+            @media print {
+                body {
+                    padding: 0;
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact;
+                }
+                .total-row.final {
+                    background-color: #f0f8ff !important;
+                    padding: 15px;
+                    -webkit-print-color-adjust: exact;
+                    color-adjust: exact;
+                }
+                .header {
+                    margin-bottom: 20px;
+                }
+                .service-table th {
+                    background: #0066CC !important;
+                    color: white !important;
+                }
+            }
+        </style>
     </head>
     <body>
-      <div class="header">
-        <div class="company-name">SwissCleanMove</div>
-        <div class="company-tagline">REINIGUNG • UMZUG • ENTSORGUNG</div>
-      </div>
-
-      <div class="invoice-title">${t.invoice}</div>
-
-      <div class="info-section">
-        <div class="info-box">
-          <h3>${t.invoiceNumber}</h3>
-          <p><strong>${client.id.substring(0, 8).toUpperCase()}</strong></p>
-          <h3 style="margin-top: 15px;">${t.date}</h3>
-          <p>${new Date(client.serviceDate || client.createdAt).toLocaleDateString()}</p>
+        <div class="header">
+            <div class="logo-section">
+                <img src="/images/logo.jpg" alt="SwissCleanMove" style="height:160px;width:auto;" onerror="this.style.display='none'">
+            </div>
+            <div class="company-info">
+                <strong>SwissCleanMove</strong><br>
+                Orpundstrasse 31<br>
+                2504 Biel/Bienne<br>
+                info@swisscleanmove.ch<br>
+                📞 +41 76 488 36 89 / +41 78 215 80 30<br>
+                UID: CHE-123.456.789
+            </div>
         </div>
-        <div class="info-box">
-          <h3>${t.billTo}</h3>
-          <p><strong>${client.firstName} ${client.lastName}</strong></p>
-          <p>${client.email || ''}</p>
-          <p>${client.phone}</p>
-          <p>${client.address || ''}</p>
-        </div>
-      </div>
 
-      <table class="details-table">
-        <thead>
-          <tr>
-            <th>${t.service}</th>
-            <th>${t.status}</th>
-            <th style="text-align: right;">${t.totalPrice}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>${client.serviceType}</strong></td>
-            <td><span class="status-badge" style="background: ${statusColor};">${client.status}</span></td>
-            <td style="text-align: right;"><strong>CHF ${client.totalPrice.toFixed(2)}</strong></td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="title">${t.invoice}</div>
 
-      <div class="total-section">
-        <div class="total-row">
-          <span>${t.totalPrice}:</span>
-          <span>CHF ${client.totalPrice.toFixed(2)}</span>
+        <div class="order-info">
+            <strong>${t.orderNumber}:</strong> ${orderNumber}<br>
+            <strong>Datum:</strong> ${currentDate}
         </div>
-        <div class="total-row">
-          <span>${t.paidAmount}:</span>
-          <span style="color: #10b981;">CHF ${(client.paidAmount || 0).toFixed(2)}</span>
-        </div>
-        <div class="total-row grand">
-          <span>${t.balance}:</span>
-          <span>CHF ${(client.balance || 0).toFixed(2)}</span>
-        </div>
-      </div>
 
-      ${client.payments && client.payments.length > 0 ? `
-        <div class="payment-history">
-          <h3 style="color: #059669;">${t.paymentHistory}</h3>
-          <table class="details-table">
-            <thead>
-              <tr>
-                <th>${t.paymentDate}</th>
-                <th>${t.amount}</th>
-                <th>${t.method}</th>
-                <th>${t.notes}</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${client.payments.map((payment: any) => `
+        <div class="client-info">
+            <strong>Herr ${client.firstName} ${client.lastName}</strong><br>
+            ${client.address}<br>
+            ${client.postalCode} ${client.location}
+        </div>
+
+        <div class="service-details">
+            <h3>Service Details</h3>
+            <table class="service-table">
+                <thead>
+                    <tr>
+                        <th>${t.service}</th>
+                        <th>${t.details}</th>
+                        <th>${t.amount}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>${client.serviceType}</strong></td>
+                        <td>
+                            ${client.buildingType || 'N/A'} • ${client.squareMeters || 0}m²<br>
+                            ${t.guarantee}
+                        </td>
+                        <td><strong>${client.totalPrice || 0} CHF</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="service-table" style="margin-top: 10px;">
+                <thead>
+                    <tr>
+                        <th colspan="2">${t.additionalInfo}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:40%;"><strong>${t.location}</strong></td>
+                        <td>${client.address}, ${client.postalCode} ${client.location}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tel</strong></td>
+                        <td>${client.phone || 'N/A'}</td>
+                    </tr>
+                    ${client.email ? `<tr><td><strong>Email</strong></td><td>${client.email}</td></tr>` : ''}
+                    <tr>
+                        <td><strong>${t.date}</strong></td>
+                        <td>${new Date(client.fromDate || Date.now()).toLocaleDateString()} - ${new Date(client.untilDate || Date.now()).toLocaleDateString()}</td>
+                    </tr>
+                    ${(client as any).numberOfRooms ? `<tr><td><strong>${t.room}</strong></td><td>${(client as any).numberOfRooms}</td></tr>` : ''}
+                    ${(client as any).notes ? `<tr><td><strong>${t.additionalInfo}</strong></td><td>${(client as any).notes}</td></tr>` : ''}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total-section">
+            <div class="total-row">
+                <span>${t.subtotal}:</span>
+                <span>${((client.totalPrice || 0) / 1.081).toFixed(2)} CHF</span>
+            </div>
+            <div class="total-row">
+                <span>${t.vat}:</span>
+                <span>${((client.totalPrice || 0) - ((client.totalPrice || 0) / 1.081)).toFixed(2)} CHF</span>
+            </div>
+            <div class="total-row final">
+                <span>${t.total}:</span>
+                <span>${client.totalPrice || 0} CHF</span>
+            </div>
+        </div>
+
+        <div class="payment-info">
+            <strong>${t.paymentCondition}:</strong> ${t.cashPayment}<br><br>
+            <strong>${t.date}:</strong> ${new Date(client.fromDate || Date.now()).toLocaleDateString()}<br>
+            <strong>${t.clientStartTime}:</strong> ${new Date(client.fromDate || Date.now()).toLocaleTimeString()}<br>
+            <strong>${t.cleaningCompleted}:</strong> ${new Date(client.untilDate || Date.now()).toLocaleTimeString()}
+        </div>
+
+        <div style="margin-top: 30px;">
+            <p>${t.thankYou}</p>
+            <p><strong>${t.regards}<br>${t.companyName}</strong></p>
+        </div>
+
+        <div class="signatures">
+            <div class="signature-box">
+                <div class="signature-line"></div>
+                <div>${t.customerSignature}</div>
+            </div>
+            <div class="signature-box">
+                <div class="signature-line"></div>
+                <div>${t.teamSignature}</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Copyright © ${t.companyName} ${new Date().getFullYear()}<br>
+            Designed by Saran Solutions
+        </div>
+
+        <div class="page-number">
+            ${t.page} 1 of 2
+        </div>
+
+        <!-- Page Break -->
+        <div style="page-break-before: always;"></div>
+
+        <!-- Second Page - Swiss Payment Slip Format -->
+        <div class="header">
+            <div class="logo-section">
+                <img src="/images/logo.jpg" alt="SwissCleanMove" style="height:160px;width:auto;" onerror="this.style.display='none'">
+            </div>
+            <div class="company-info">
+                <strong>SwissCleanMove</strong><br>
+                Orpundstrasse 31<br>
+                2504 Biel/Bienne<br>
+                info@swisscleanmove.ch<br>
+                📞 +41 76 488 36 89 / +41 78 215 80 30<br>
+                UID: CHE-123.456.789
+            </div>
+        </div>
+
+        <!-- Swiss Payment Slip Layout -->
+        <div class="payment-slip">
+            <table class="payment-slip-table">
                 <tr>
-                  <td>${new Date(payment.createdAt).toLocaleDateString()}</td>
-                  <td>CHF ${payment.amount.toFixed(2)}</td>
-                  <td>${payment.method}</td>
-                  <td>${payment.notes || '-'}</td>
+                    <td class="payment-slip-left">
+                        <div class="payment-slip-title">${t.receiptSlip}</div>
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.accountPayableTo}</span>
+                            <div class="payment-slip-value">CH86 0900 0000 1636 3866 5</div>
+                            <div class="payment-slip-value">SwissCleanMove Gebrekristos<br>Orpundstrasse 31<br>CH-2504 Biel/Bienne</div>
+                        </div>
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.reference}</span>
+                            <div class="payment-slip-value">00 00000 00000 00000 00000 00000</div>
+                        </div>
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.payableBy}</span>
+                            <div class="payment-slip-value">${client.firstName} ${client.lastName}<br>${client.address || ''}<br>${client.postalCode || ''} ${client.location || ''}</div>
+                        </div>
+                    </td>
+                    <td class="payment-slip-right">
+                        <div class="payment-slip-title">${t.paymentPart}</div>
+                        <div class="payment-slip-amount-row">
+                            <div style="flex: 1;">
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.accountPayableTo}</span>
+                                    <div class="payment-slip-value">CH86 0900 0000 1636 3866 5</div>
+                                    <div class="payment-slip-value">SwissCleanMove Gebrekristos<br>Orpundstrasse 31<br>CH-2504 Biel/Bienne</div>
+                                </div>
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.reference}</span>
+                                    <div class="payment-slip-value">00 00000 00000 00000 00000 00000</div>
+                                </div>
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.payableBy}</span>
+                                    <div class="payment-slip-value">${client.firstName} ${client.lastName}<br>${client.address || ''}<br>${client.postalCode || ''} ${client.location || ''}</div>
+                                </div>
+                            </div>
+                            <div class="payment-slip-amount-box">
+                                <div class="payment-slip-currency">${t.chf}</div>
+                                <div class="payment-slip-amount">${client.totalPrice.toFixed(2)}</div>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
-              `).join('')}
-            </tbody>
-          </table>
+            </table>
         </div>
-      ` : ''}
-
-      <div class="payment-slip">
-        <table class="payment-slip-table">
-          <tr>
-            <td class="payment-slip-left">
-              <div class="payment-slip-title">${t.receiptSlip}</div>
-
-              <div class="payment-slip-block">
-                <span class="payment-slip-label">${t.accountPayableTo}</span>
-                <div class="payment-slip-value">${paymentSlip.account}</div>
-                <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
-              </div>
-
-              <div class="payment-slip-block">
-                <span class="payment-slip-label">${t.reference}</span>
-                <div class="payment-slip-value">${paymentSlip.reference}</div>
-              </div>
-
-              <div class="payment-slip-block">
-                <span class="payment-slip-label">${t.currency}</span>
-                <div class="payment-slip-value">${t.chf}</div>
-              </div>
-
-              <div class="payment-slip-block">
-                <span class="payment-slip-label">${t.amount}</span>
-                <div class="payment-slip-value">${t.chf} ${Number(slipAmount || 0).toFixed(2)}</div>
-              </div>
-
-              <div class="payment-slip-block" style="margin-bottom: 0;">
-                <span class="payment-slip-label">${t.payableBy}</span>
-                <div class="payment-slip-value">${client.firstName} ${client.lastName}</div>
-                <div class="payment-slip-value">${client.address || ''}</div>
-                <div class="payment-slip-value">${client.postalCode || ''} ${client.location || ''}</div>
-              </div>
-            </td>
-
-            <td class="payment-slip-right">
-              <div class="payment-slip-title">${t.paymentPart}</div>
-
-              <div class="payment-slip-amount-row">
-                <div style="flex: 1;">
-                  <div class="payment-slip-block">
-                    <span class="payment-slip-label">${t.accountPayableTo}</span>
-                    <div class="payment-slip-value">${paymentSlip.account}</div>
-                    <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
-                  </div>
-
-                  <div class="payment-slip-block">
-                    <span class="payment-slip-label">${t.reference}</span>
-                    <div class="payment-slip-value">${paymentSlip.reference}</div>
-                  </div>
-
-                  <div class="payment-slip-block" style="margin-bottom: 0;">
-                    <span class="payment-slip-label">${t.payableBy}</span>
-                    <div class="payment-slip-value">${client.firstName} ${client.lastName}</div>
-                    <div class="payment-slip-value">${client.address || ''}</div>
-                    <div class="payment-slip-value">${client.postalCode || ''} ${client.location || ''}</div>
-                  </div>
-                </div>
-
-                <div>
-                  <div class="payment-slip-amount-box">
-                    <div class="payment-slip-currency">${t.chf}</div>
-                    <div class="payment-slip-amount">${t.chf} ${Number(slipAmount || 0).toFixed(2)}</div>
-                  </div>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="footer">
-        <p style="font-size: 18px; color: #059669; font-weight: bold;">${t.thankYou}</p>
-        <p style="margin-top: 20px;">
-          <strong>${t.contact}:</strong><br>
-          SwissCleanMove<br>
-          Orpundstrasse 31, 2504 Biel/Bienne<br>
-          Tel: +41 76 488 36 89 / +41 78 215 80 30<br>
-          Email: info@swisscleanmove.ch<br>
-          UID: CHE-123.456.789
-        </p>
-      </div>
     </body>
     </html>
   `

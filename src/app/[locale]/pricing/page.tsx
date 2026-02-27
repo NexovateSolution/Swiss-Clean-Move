@@ -3,10 +3,10 @@
 import { useTranslations } from 'next-intl';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
-import { 
-  CheckCircle, 
-  Star, 
-  Phone, 
+import {
+  CheckCircle,
+  Star,
+  Phone,
   Calendar,
   ArrowRight,
   Shield,
@@ -65,7 +65,7 @@ export default function PricingPage({ params: { locale } }: { params: { locale: 
         subtitle={t('pricing.subtitle')}
         right={
           <img
-            src="/images/transportation.png"
+            src="/Gallary/3.jpeg"
             alt={t('pricing.title')}
             className="w-full h-[340px] md:h-[420px] object-cover"
           />
@@ -94,7 +94,7 @@ export default function PricingPage({ params: { locale } }: { params: { locale: 
                     </div>
                   </div>
                 )}
-                
+
                 <div className="p-8">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-swiss-text mb-2">{plan.name}</h3>
@@ -104,7 +104,7 @@ export default function PricingPage({ params: { locale } }: { params: { locale: 
                       <span className="text-swiss-body ml-2">{plan.unit}</span>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature: string, featureIndex: number) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -113,12 +113,11 @@ export default function PricingPage({ params: { locale } }: { params: { locale: 
                       </li>
                     ))}
                   </ul>
-                  
-                  <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-                    plan.popular 
-                      ? 'bg-swiss-red hover:bg-swiss-red/90 text-white' 
+
+                  <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${plan.popular
+                      ? 'bg-swiss-red hover:bg-swiss-red/90 text-white'
                       : 'bg-white hover:bg-swiss-gray-50 text-swiss-text border border-swiss-border'
-                  }`}>
+                    }`}>
                     {t('pricing.getQuote')}
                   </button>
                 </div>
@@ -212,7 +211,7 @@ export default function PricingPage({ params: { locale } }: { params: { locale: 
               {t('pricing.contactToday')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href={`/${locale}/free-offer`}
                 className="btn-primary inline-flex items-center space-x-2"
               >
@@ -220,7 +219,7 @@ export default function PricingPage({ params: { locale } }: { params: { locale: 
                 <span>{t('pricing.getFreeQuote')}</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a 
+              <a
                 href="tel:+41764883689"
                 className="btn-secondary inline-flex items-center space-x-2"
               >

@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle, Settings } from 'lucide-react';
 
 export default function Footer() {
   const t = useTranslations();
@@ -150,7 +150,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            
+
             <div className="pt-4">
               <h5 className="font-semibold mb-3">{t('footer.followUs')}</h5>
               <div className="flex items-center gap-3">
@@ -182,6 +182,15 @@ export default function Footer() {
               <span>🇨🇭 {t('footer.madeInSwitzerland')}</span>
               <span>•</span>
               <span>{t('footer.acceptanceGuarantee')}</span>
+              <span>•</span>
+              <Link
+                href="/admin/login"
+                className="text-swiss-gray-600 hover:text-swiss-gray-400 transition-colors"
+                title="Admin"
+                aria-label="Admin Login"
+              >
+                <Settings className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
         </div>
