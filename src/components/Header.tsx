@@ -65,7 +65,7 @@ export default function Header() {
               alt="SwissCleanMove Logo"
               width={280}
               height={80}
-              className="h-36 md:h-40 w-auto object-contain drop-shadow-sm bg-transparent"
+              className="h-16 md:h-20 w-auto object-contain drop-shadow-sm bg-transparent"
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
                 if (!img.dataset.fallback) {
