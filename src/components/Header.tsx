@@ -36,10 +36,10 @@ export default function Header() {
     { name: t('navigation.services'), href: `/${locale}/services` },
     { name: t('navigation.regions'), href: `/${locale}/regions` },
     { name: t('navigation.pricing'), href: `/${locale}/pricing` },
+    { name: t('navigation.gallery'), href: `/${locale}/gallery` },
     { name: t('navigation.faq'), href: `/${locale}/faq` },
     { name: t('navigation.freeOffer'), href: `/${locale}/free-offer` },
     { name: t('navigation.contact'), href: `/${locale}/contact` },
-    { name: t('navigation.gallery'), href: `/${locale}/gallery` },
   ], [locale, t]);
 
   // Memoize locale switch function
@@ -63,9 +63,9 @@ export default function Header() {
             <img
               src="/images/logo.jpg"
               alt="SwissCleanMove Logo"
-              width={350}
-              height={128}
-              className="h-36 md:h-44 w-auto object-contain drop-shadow-sm bg-transparent"
+              width={280}
+              height={80}
+              className="h-36 md:h-40 w-auto object-contain drop-shadow-sm bg-transparent"
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
                 if (!img.dataset.fallback) {

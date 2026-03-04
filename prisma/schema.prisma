@@ -43,6 +43,15 @@ model Client {
   balance      Float
   status       String    @default("UNPAID")
   
+  // Additional Project details
+  prefix        String?
+  numberOfRooms String?
+  floor         String?
+  elevator      String?
+  remarks1      String?
+  remarks2      String?
+  remarks3      String?
+  
   // Relationships
   payments     Payment[]
   photos       Photo[]

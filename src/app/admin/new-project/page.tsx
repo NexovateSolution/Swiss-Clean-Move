@@ -2,10 +2,10 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  ArrowLeft, 
-  ArrowRight, 
-  Check, 
+import {
+  ArrowLeft,
+  ArrowRight,
+  Check,
   Calendar,
   User,
   Building,
@@ -20,18 +20,18 @@ import AdminLayout from '@/components/admin/AdminLayout'
 interface ProjectData {
   // Step 1: Service Selection
   serviceType: string
-  
+
   // Step 2: Schedule
   fromDate: string
   untilDate: string
-  
+
   // Step 3: Building Information
   buildingType: string
   rooms: string
   floor: string
   squareMeters: string
   hasElevator: string
-  
+
   // Step 4: Customer Information
   prefix: string
   firstName: string
@@ -41,7 +41,7 @@ interface ProjectData {
   location: string
   postalCode: string
   email: string
-  
+
   // Step 5: Pricing
   totalPrice: string
   advancePayment: string
@@ -101,11 +101,11 @@ export default function NewProjectPage() {
       case 2:
         return !!projectData.fromDate && !!projectData.untilDate
       case 3:
-        return !!(projectData.buildingType && projectData.rooms && projectData.floor && 
-                 projectData.squareMeters && projectData.hasElevator)
+        return !!(projectData.buildingType && projectData.rooms && projectData.floor &&
+          projectData.squareMeters && projectData.hasElevator)
       case 4:
-        return !!(projectData.firstName && projectData.lastName && projectData.phone && 
-                 projectData.address && projectData.location && projectData.postalCode)
+        return !!(projectData.firstName && projectData.lastName && projectData.phone &&
+          projectData.address && projectData.location && projectData.postalCode)
       case 5:
         return !!projectData.totalPrice
       default:
@@ -152,7 +152,13 @@ export default function NewProjectPage() {
           untilDate: projectData.untilDate,
           totalPrice: parseFloat(projectData.totalPrice) || 0,
           paidAmount: parseFloat(projectData.advancePayment) || 0,
-          balance: (parseFloat(projectData.totalPrice) || 0) - (parseFloat(projectData.advancePayment) || 0)
+          prefix: projectData.prefix === 'Other' ? '' : (projectData.prefix || ''),
+          numberOfRooms: projectData.rooms?.toString() || '',
+          floor: projectData.floor,
+          elevator: projectData.hasElevator,
+          remarks1: projectData.remarks1,
+          remarks2: projectData.remarks2,
+          remarks3: projectData.remarks3
         })
       })
 
@@ -200,13 +206,12 @@ export default function NewProjectPage() {
           <div className="flex items-center space-x-4">
             {steps.map((step, index) => (
               <div key={step.id} className="flex items-center">
-                <div className={`flex items-center justify-center w-12 h-12 rounded-lg border-2 transition-colors ${
-                  currentStep === step.id
-                    ? 'border-blue-600 bg-blue-600 text-white'
-                    : currentStep > step.id
+                <div className={`flex items-center justify-center w-12 h-12 rounded-lg border-2 transition-colors ${currentStep === step.id
+                  ? 'border-blue-600 bg-blue-600 text-white'
+                  : currentStep > step.id
                     ? 'border-green-600 bg-green-600 text-white'
                     : 'border-gray-300 bg-white text-gray-400'
-                }`}>
+                  }`}>
                   {currentStep > step.id ? (
                     <Check className="w-6 h-6" />
                   ) : (
@@ -214,21 +219,18 @@ export default function NewProjectPage() {
                   )}
                 </div>
                 <div className="ml-3 text-sm">
-                  <p className={`font-medium ${
-                    currentStep >= step.id ? 'text-gray-900' : 'text-gray-400'
-                  }`}>
+                  <p className={`font-medium ${currentStep >= step.id ? 'text-gray-900' : 'text-gray-400'
+                    }`}>
                     {t('stepLabel', { step: step.id })}
                   </p>
-                  <p className={`${
-                    currentStep >= step.id ? 'text-gray-600' : 'text-gray-400'
-                  }`}>
+                  <p className={`${currentStep >= step.id ? 'text-gray-600' : 'text-gray-400'
+                    }`}>
                     {step.name}
                   </p>
                 </div>
                 {index < steps.length - 1 && (
-                  <div className={`w-16 h-0.5 ml-6 ${
-                    currentStep > step.id ? 'bg-green-600' : 'bg-gray-300'
-                  }`} />
+                  <div className={`w-16 h-0.5 ml-6 ${currentStep > step.id ? 'bg-green-600' : 'bg-gray-300'
+                    }`} />
                 )}
               </div>
             ))}
@@ -255,11 +257,10 @@ export default function NewProjectPage() {
           <button
             onClick={prevStep}
             disabled={currentStep === 1}
-            className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-colors ${
-              currentStep === 1
-                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
+            className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-colors ${currentStep === 1
+              ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
           >
             <ArrowLeft className="w-4 h-4" />
             <span>{t('actions.previous')}</span>
@@ -269,11 +270,10 @@ export default function NewProjectPage() {
             <button
               onClick={handleSubmit}
               disabled={isSubmitting || !validateStep(5)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
-                validateStep(5) && !isSubmitting
-                  ? 'bg-green-600 text-white hover:bg-green-700'
-                  : 'bg-gray-400 text-gray-200'
-              }`}
+              className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${validateStep(5) && !isSubmitting
+                ? 'bg-green-600 text-white hover:bg-green-700'
+                : 'bg-gray-400 text-gray-200'
+                }`}
             >
               <span>{isSubmitting ? t('actions.creating') : t('actions.createProject')}</span>
               <Check className="w-4 h-4" />
@@ -282,11 +282,10 @@ export default function NewProjectPage() {
             <button
               onClick={nextStep}
               disabled={!validateStep(currentStep)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
-                validateStep(currentStep)
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
-                  : 'bg-gray-400 text-gray-200'
-              }`}
+              className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${validateStep(currentStep)
+                ? 'bg-blue-600 text-white hover:bg-blue-700'
+                : 'bg-gray-400 text-gray-200'
+                }`}
             >
               <span>{t('actions.next')}</span>
               <ArrowRight className="w-4 h-4" />
@@ -332,11 +331,10 @@ function Step1({ data, updateData }: { data: ProjectData; updateData: (field: ke
           <button
             key={service.value}
             onClick={() => updateData('serviceType', service.value)}
-            className={`p-4 border-2 rounded-lg text-left transition-colors ${
-              data.serviceType === service.value
-                ? 'border-blue-600 bg-blue-50 text-blue-900'
-                : 'border-gray-200 hover:border-gray-300'
-            }`}
+            className={`p-4 border-2 rounded-lg text-left transition-colors ${data.serviceType === service.value
+              ? 'border-blue-600 bg-blue-50 text-blue-900'
+              : 'border-gray-200 hover:border-gray-300'
+              }`}
           >
             <div className="font-medium">{service.label}</div>
           </button>
@@ -377,9 +375,8 @@ function Step2({ data, updateData }: { data: ProjectData; updateData: (field: ke
             type="datetime-local"
             value={data.fromDate}
             onChange={(e) => updateData('fromDate', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-              !data.fromDate ? 'border-red-300 bg-red-50' : 'border-gray-300'
-            }`}
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${!data.fromDate ? 'border-red-300 bg-red-50' : 'border-gray-300'
+              }`}
           />
           {!data.fromDate && (
             <p className="text-red-500 text-xs mt-1">{t('validation.required')}</p>
@@ -394,9 +391,8 @@ function Step2({ data, updateData }: { data: ProjectData; updateData: (field: ke
             type="datetime-local"
             value={data.untilDate}
             onChange={(e) => updateData('untilDate', e.target.value)}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-              !data.untilDate ? 'border-red-300 bg-red-50' : 'border-gray-300'
-            }`}
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${!data.untilDate ? 'border-red-300 bg-red-50' : 'border-gray-300'
+              }`}
           />
           {!data.untilDate && (
             <p className="text-red-500 text-xs mt-1">{t('validation.required')}</p>
@@ -503,21 +499,19 @@ function Step3({ data, updateData }: { data: ProjectData; updateData: (field: ke
           <div className="flex space-x-4">
             <button
               onClick={() => updateData('hasElevator', 'yes')}
-              className={`px-6 py-3 border-2 rounded-lg transition-colors ${
-                data.hasElevator === 'yes'
-                  ? 'border-blue-600 bg-blue-50 text-blue-900'
-                  : 'border-gray-200 hover:border-gray-300'
-              }`}
+              className={`px-6 py-3 border-2 rounded-lg transition-colors ${data.hasElevator === 'yes'
+                ? 'border-blue-600 bg-blue-50 text-blue-900'
+                : 'border-gray-200 hover:border-gray-300'
+                }`}
             >
               {t('common.yes')}
             </button>
             <button
               onClick={() => updateData('hasElevator', 'no')}
-              className={`px-6 py-3 border-2 rounded-lg transition-colors ${
-                data.hasElevator === 'no'
-                  ? 'border-blue-600 bg-blue-50 text-blue-900'
-                  : 'border-gray-200 hover:border-gray-300'
-              }`}
+              className={`px-6 py-3 border-2 rounded-lg transition-colors ${data.hasElevator === 'no'
+                ? 'border-blue-600 bg-blue-50 text-blue-900'
+                : 'border-gray-200 hover:border-gray-300'
+                }`}
             >
               {t('common.no')}
             </button>
@@ -551,8 +545,7 @@ function Step4({ data, updateData }: { data: ProjectData; updateData: (field: ke
             <option value="">{t('step4.selectPrefix')}</option>
             <option value="Mr.">{t('prefixOptions.mr')}</option>
             <option value="Mrs.">{t('prefixOptions.mrs')}</option>
-            <option value="Ms.">{t('prefixOptions.ms')}</option>
-            <option value="Dr.">{t('prefixOptions.dr')}</option>
+            <option value="Other">{t('prefixOptions.other') || 'Other'}</option>
           </select>
         </div>
 

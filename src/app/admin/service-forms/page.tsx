@@ -38,7 +38,23 @@ interface ServiceFormSubmission {
   contactPreferredVia: string
   viewingIsWelcome: string
   remark?: string
+  data?: Record<string, any>
 }
+
+// Pretty-print camelCase or snake_case keys into readable labels
+function prettifyKey(key: string): string {
+  return key
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/[_-]/g, ' ')
+    .replace(/\b\w/g, l => l.toUpperCase())
+    .trim()
+}
+
+// Internal fields to skip (already displayed elsewhere or meta)
+const SKIP_KEYS = new Set([
+  'id', 'serviceName', 'formType', 'status', 'pdfPath', 'submissionDate',
+  'createdAt', 'updatedAt', 'data'
+])
 
 export default function ServiceFormsPage() {
   const t = useTranslations('admin.serviceForms')
@@ -367,314 +383,70 @@ export default function ServiceFormsPage() {
                   </div>
                 </div>
 
-                {/* Relocation Specific Details */}
-                {selectedSubmission.formType === 'relocation' && (
-                  <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('modal.relocationDetails')}</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-3">
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.movingDate')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).movingDate || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.numberOfRooms')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).numberOfRooms || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.livingSpace')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).livingSpaceInM2 || t('common.notSpecified')} m²</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.floors')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).floors || t('common.notSpecified')}</p>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.unloadingAddress')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).unloadingStreetAndNumber || t('common.notSpecified')}</p>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).unloadingPostalCodeAndCity || ''}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.additionalServices')}</label>
-                          <div className="space-y-1">
-                            {(selectedSubmission as any).pack && <p className="text-gray-900 dark:text-white">✓ {t('services.pack')}</p>}
-                            {(selectedSubmission as any).cellar && <p className="text-gray-900 dark:text-white">✓ {t('services.cellar')}</p>}
-                            {(selectedSubmission as any).garage && <p className="text-gray-900 dark:text-white">✓ {t('services.garage')}</p>}
-                            {(selectedSubmission as any).screed && <p className="text-gray-900 dark:text-white">✓ {t('services.screed')}</p>}
-                            {(selectedSubmission as any).craftRoom && <p className="text-gray-900 dark:text-white">✓ {t('services.craftRoom')}</p>}
-                          </div>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.services')}</label>
-                          <div className="space-y-1">
-                            {(selectedSubmission as any).unpacking === 'And' && <p className="text-gray-900 dark:text-white">✓ {t('services.unpacking')}</p>}
-                            {(selectedSubmission as any).cleaning === 'And' && <p className="text-gray-900 dark:text-white">✓ {t('services.cleaning')}</p>}
-                            {(selectedSubmission as any).disposal === 'And' && <p className="text-gray-900 dark:text-white">✓ {t('services.disposal')}</p>}
-                          </div>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.assemblyLiftDetails')}</label>
-                          <div className="space-y-1">
-                            <p className="text-gray-900 dark:text-white">{t('fields.assembly')}: {(selectedSubmission as any).assembly || t('common.notSpecified')}</p>
-                            <p className="text-gray-900 dark:text-white">{t('fields.lift')}: {(selectedSubmission as any).lift || t('common.notSpecified')}</p>
-                            <p className="text-gray-900 dark:text-white">{t('fields.pathToFrontDoor')}: {(selectedSubmission as any).pathToFrontDoor || t('common.notSpecified')}</p>
-                            <p className="text-gray-900 dark:text-white">{t('fields.liftDisassembly')}: {(selectedSubmission as any).liftDisassembly || t('common.notSpecified')}</p>
-                            <p className="text-gray-900 dark:text-white">{t('fields.pathDistanceM')}: {(selectedSubmission as any).pathToFrontDoorM || t('common.notSpecified')}</p>
-                            <p className="text-gray-900 dark:text-white">{t('fields.heavyLoad')}: {(selectedSubmission as any).heavyLoad || t('common.notSpecified')}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Cleaning Specific Details */}
-                {selectedSubmission.formType === 'cleaning' && (
-                  <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('modal.cleaningDetails')}</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-3">
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.numberOfRooms')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).numberOfRoomsApartment || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.apartmentType')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).apartmentType || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.area')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).areaInM2 || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.awningType')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).awningType || t('common.notSpecified')}</p>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.cleaningDate')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).cleaningAppointment || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.submissionDeadline')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).submissionDeadline || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.additionalAreas')}</label>
-                          <div className="space-y-1">
-                            {(selectedSubmission as any).cellarCleaning && <p className="text-gray-900 dark:text-white">✓ {t('services.cellar')}</p>}
-                            {(selectedSubmission as any).garageCleaning && <p className="text-gray-900 dark:text-white">✓ {t('services.garage')}</p>}
-                          </div>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.specialServices')}</label>
-                          <div className="space-y-1">
-                            {(selectedSubmission as any).carpetShampooing && <p className="text-gray-900 dark:text-white">✓ {t('services.carpetShampooing')}</p>}
-                            {(selectedSubmission as any).conservatory && <p className="text-gray-900 dark:text-white">✓ {t('services.conservatory')}</p>}
-                            {(selectedSubmission as any).outdoorSeating && <p className="text-gray-900 dark:text-white">✓ {t('services.outdoorSeating')}</p>}
-                            {(selectedSubmission as any).parquet && <p className="text-gray-900 dark:text-white">✓ {t('services.parquet')}</p>}
-                            {(selectedSubmission as any).stairpolish && <p className="text-gray-900 dark:text-white">✓ {t('services.stairPolish')}</p>}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Disposal Specific Details */}
-                {selectedSubmission.formType === 'disposal' && (
-                  <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('modal.disposalDetails')}</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-3">
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.disposalType')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).disposalType || t('common.generalDisposal')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.volume')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).volume || t('common.notSpecified')}</p>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.collectionDate')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).collectionDate || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.specialItems')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).specialItems || t('common.noneSpecified')}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Storage Specific Details */}
-                {selectedSubmission.formType === 'storage' && (
-                  <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('modal.storageDetails')}</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-3">
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.storageDuration')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).storageDuration || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.storageSize')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).storageSize || t('common.notSpecified')}</p>
-                        </div>
-                      </div>
-                      <div className="space-y-3">
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.startDate')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).storageStartDate || t('common.notSpecified')}</p>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('fields.specialRequirements')}</label>
-                          <p className="text-gray-900 dark:text-white">{(selectedSubmission as any).specialRequirements || t('common.noneSpecified')}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* All Form Data Section - Shows all fields in a professional format */}
+                {/* Dynamic: ALL submitted form data */}
                 <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                     <FileText className="w-5 h-5 text-blue-600" />
-                    {t('modal.completeFormDetails')}
+                    All Submitted Form Data
                   </h3>
-                  <div className="space-y-6">
-                    {/* Group fields by category */}
-                    {(() => {
-                      const formData = selectedSubmission as any;
-                      
-                      // Define field categories
-                      const categories = [
-                        {
-                          title: t('categories.basicInformation'),
-                          icon: '👤',
-                          fields: [
-                            { key: 'serviceName', label: t('allFields.serviceName') },
-                            { key: 'formType', label: t('allFields.formType') },
-                            { key: 'salutation', label: t('allFields.salutation') },
-                            { key: 'name', label: t('allFields.lastName') },
-                            { key: 'firstName', label: t('allFields.firstName') },
-                          ]
-                        },
-                        {
-                          title: t('categories.contactDetails'),
-                          icon: '📞',
-                          fields: [
-                            { key: 'emailAddress', label: t('allFields.emailAddress') },
-                            { key: 'telephone', label: t('allFields.telephone') },
-                            { key: 'contactPreferredVia', label: t('allFields.preferredContactMethod') },
-                          ]
-                        },
-                        {
-                          title: t('categories.addressInformation'),
-                          icon: '📍',
-                          fields: [
-                            { key: 'streetAndNumber', label: t('allFields.streetAndNumber') },
-                            { key: 'postalCodeAndCity', label: t('allFields.postalCodeAndCity') },
-                            { key: 'unloadingStreetAndNumber', label: t('allFields.unloadingStreetAndNumber') },
-                            { key: 'unloadingPostalCodeAndCity', label: t('allFields.unloadingPostalCodeAndCity') },
-                          ]
-                        },
-                        {
-                          title: t('categories.serviceDetails'),
-                          icon: '🏠',
-                          fields: [
-                            { key: 'movingDate', label: t('allFields.movingDate') },
-                            { key: 'viewingIsWelcome', label: t('allFields.viewingWelcome') },
-                            { key: 'floors', label: t('allFields.numberOfFloors') },
-                            { key: 'numberOfRooms', label: t('allFields.numberOfRooms') },
-                            { key: 'livingSpaceInM2', label: t('allFields.livingSpaceM2') },
-                          ]
-                        },
-                        {
-                          title: t('categories.additionalServices'),
-                          icon: '✨',
-                          fields: [
-                            { key: 'assembly', label: t('allFields.assemblyRequired') },
-                            { key: 'lift', label: t('allFields.liftAvailable') },
-                            { key: 'liftDisassembly', label: t('allFields.liftDisassembly') },
-                            { key: 'pathToFrontDoor', label: t('allFields.pathToFrontDoor') },
-                            { key: 'pathToFrontDoorM', label: t('allFields.pathDistanceM') },
-                            { key: 'heavyLoad', label: t('allFields.heavyLoad') },
-                            { key: 'unpacking', label: t('allFields.unpackingService') },
-                            { key: 'cleaning', label: t('allFields.cleaningService') },
-                            { key: 'disposal', label: t('allFields.disposalService') },
-                            { key: 'pack', label: t('allFields.packingService') },
-                            { key: 'screed', label: t('allFields.screedProtection') },
-                            { key: 'garage', label: t('allFields.garage') },
-                          ]
-                        },
-                        {
-                          title: t('categories.notesRemarks'),
-                          icon: '📝',
-                          fields: [
-                            { key: 'remark', label: t('allFields.additionalRemarks') },
-                          ]
-                        }
-                      ];
+                  {(() => {
+                    // Merge: prefer the rich `data` JSON, fall back to top-level DB columns
+                    const raw: Record<string, any> = (selectedSubmission as any).data || selectedSubmission
+                    const allKeys = Object.keys(raw).filter(
+                      k => !SKIP_KEYS.has(k) && raw[k] !== null && raw[k] !== undefined && raw[k] !== ''
+                    )
+                    if (allKeys.length === 0) {
+                      return <p className="text-gray-500 dark:text-gray-400 italic">No additional data submitted.</p>
+                    }
+                    return (
+                      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+                        <div className="divide-y divide-gray-100 dark:divide-gray-700">
+                          {allKeys.map(key => {
+                            const val = raw[key]
+                            let display: React.ReactNode
 
-                      return categories.map((category, idx) => {
-                        // Filter out fields that don't exist or are empty
-                        const existingFields = category.fields.filter(
-                          field => formData[field.key] !== null && 
-                                  formData[field.key] !== undefined && 
-                                  formData[field.key] !== ''
-                        );
+                            if (Array.isArray(val)) {
+                              if (val.length === 0) return null
+                              display = (
+                                <div className="flex flex-wrap gap-1.5">
+                                  {val.map((item: any, i: number) => (
+                                    <span key={i} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                                      ✓ {String(item)}
+                                    </span>
+                                  ))}
+                                </div>
+                              )
+                            } else if (typeof val === 'boolean') {
+                              display = val ? (
+                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">✓ Yes</span>
+                              ) : (
+                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">✗ No</span>
+                              )
+                            } else if (val === 'And' || val === 'yes' || val === 'Yes') {
+                              display = <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">✓ Yes</span>
+                            } else if (val === 'no' || val === 'No') {
+                              display = <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">✗ No</span>
+                            } else if (typeof val === 'object') {
+                              display = <pre className="text-sm text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-700 rounded p-2 overflow-x-auto">{JSON.stringify(val, null, 2)}</pre>
+                            } else {
+                              display = <span className="text-gray-900 dark:text-white font-medium break-words">{String(val)}</span>
+                            }
 
-                        if (existingFields.length === 0) return null;
-
-                        return (
-                          <div key={idx} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
-                            <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 px-6 py-3 border-b border-gray-200 dark:border-gray-600">
-                              <h4 className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                                <span className="text-xl">{category.icon}</span>
-                                {category.title}
-                              </h4>
-                            </div>
-                            <div className="p-6">
-                              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {existingFields.map(field => {
-                                  let value = formData[field.key];
-                                  
-                                  // Format boolean values
-                                  if (typeof value === 'boolean') {
-                                    value = value ? `✓ ${t('common.yes')}` : `✗ ${t('common.no')}`;
-                                  } else if (value === 'yes' || value === 'Yes') {
-                                    value = `✓ ${t('common.yes')}`;
-                                  } else if (value === 'no' || value === 'No') {
-                                    value = `✗ ${t('common.no')}`;
-                                  } else if (value === 'And') {
-                                    value = `✓ ${t('common.included')}`;
-                                  }
-                                  
-                                  return (
-                                    <div key={field.key} className="space-y-2">
-                                      <label className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                                        {field.label}
-                                      </label>
-                                      <p className="text-base text-gray-900 dark:text-white font-medium break-words">
-                                        {value}
-                                      </p>
-                                    </div>
-                                  );
-                                })}
+                            return (
+                              <div key={key} className="flex items-start px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-750">
+                                <dt className="w-1/3 min-w-[160px] flex-shrink-0 text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider pt-0.5">
+                                  {prettifyKey(key)}
+                                </dt>
+                                <dd className="flex-1 ml-4">
+                                  {display}
+                                </dd>
                               </div>
-                            </div>
-                          </div>
-                        );
-                      });
-                    })()}
-                  </div>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    )
+                  })()}
                 </div>
 
                 {selectedSubmission.remark && (

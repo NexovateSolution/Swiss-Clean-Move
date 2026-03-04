@@ -164,6 +164,16 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
       pricing: t('services.pricingUnits.byArrangement'),
       color: 'bg-indigo-700',
       gradient: 'from-indigo-700 to-indigo-800'
+    },
+    {
+      id: 'householdHelping',
+      icon: Wrench,
+      title: t('home.services.householdHelping.title'),
+      description: t('home.services.householdHelping.description'),
+      features: t.raw('services.features.householdHelping'),
+      pricing: t('services.pricing.householdHelping'),
+      color: 'bg-emerald-500',
+      gradient: 'from-emerald-500 to-emerald-600'
     }
   ];
 
@@ -321,7 +331,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-swiss-blue via-blue-600 to-blue-800 text-white">
+      <section className="section-padding bg-gradient-to-br from-blue-400/80 via-blue-500/70 to-blue-600/80 text-white">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">

@@ -11,7 +11,8 @@
     "legal": "Impressum",
     "login": "Anmelden",
     "language": "Sprache",
-    "gallery": "Galerie"
+    "gallery": "Galerie",
+    "householdHelping": "Haushaltshilfe"
   },
   "home": {
     "hero": {
@@ -136,6 +137,10 @@
       "umzug": {
         "title": "Umzug",
         "description": "Komplette Umzugsdienstleistungen mit erfahrenem Team"
+      },
+      "householdHelping": {
+        "title": "Haushaltshilfe",
+        "description": "Professionelle Haushaltshilfe inkl. Reinigung, Kochen, Wäsche, Einkaufen und Betreuungsdienste"
       }
     },
     "numbers": {
@@ -193,6 +198,30 @@
       "guarantee": "100% Abnahmegarantie",
       "nationwide": "Schweizweit verfügbar",
       "professional": "Professionelles Team"
+    },
+    "serviceCategories": {
+      "title": "Unsere Servicekategorien",
+      "subtitle": "Wählen Sie eine Kategorie, um den passenden Service zu finden",
+      "cleaning": {
+        "title": "Reinigungsdienste",
+        "description": "Professionelle Reinigung für Häuser, Büros und mehr",
+        "selectService": "Reinigungsservice wählen"
+      },
+      "moving": {
+        "title": "Umzug & Zügeln",
+        "description": "Komplette Umzugs- und Zügelungslösungen",
+        "selectService": "Umzugsservice wählen"
+      },
+      "disposal": {
+        "title": "Entsorgung & Räumung",
+        "description": "Professionelle Entsorgungs- und Räumungsdienste",
+        "selectService": "Entsorgungsservice wählen"
+      },
+      "household": {
+        "title": "Haushaltshilfe & Unterhalt",
+        "description": "Haushaltshilfe und Liegenschaftsunterhalt",
+        "selectService": "Haushaltsservice wählen"
+      }
     }
   },
   "services": {
@@ -347,6 +376,14 @@
         "Möbelmontage",
         "Versicherungsschutz",
         "Schweizweite Umzüge"
+      ],
+      "householdHelping": [
+        "Routinereinigung (Staubsaugen, Wischen, Bad, Küche)",
+        "Bügelservice und Wäscheservice",
+        "Einkaufs- und Lieferservice",
+        "Kochen und Mahlzeiten vorbereiten",
+        "Tier- und Pflanzenpflege",
+        "Seniorenbetreuung und Besorgungen"
       ]
     },
     "pricingUnits": {
@@ -389,7 +426,8 @@
       "finalCleaning": "ab CHF 250",
       "windowCleaning": "CHF 8–15 / Fenster",
       "relocation": "ab CHF 160 / Stunde",
-      "disposal": "ab CHF 30 / m³"
+      "disposal": "ab CHF 30 / m³",
+      "householdHelping": "ab CHF 35 / Stunde"
     }
   },
   "about": {
@@ -743,7 +781,8 @@
       "badge": "Offerte berechnen",
       "stepCounter": "Schritt {current} von {total}",
       "validation": {
-        "required": "Bitte fülle alle Pflichtfelder in diesem Schritt aus"
+        "required": "Bitte füllen Sie alle Pflichtfelder aus",
+        "selectOption": "Bitte wählen Sie eine Option."
       },
       "common": {
         "select": "Bitte auswählen",
@@ -753,8 +792,8 @@
       "buttons": {
         "back": "Zurück",
         "next": "Weiter",
-        "submit": "Senden",
-        "submitting": "Wird gesendet..."
+        "submit": "Einreichen",
+        "submitting": "Wird eingereicht..."
       },
       "subtitle": "Erhalten Sie ein kostenloses, unverbindliches Angebot für unsere professionellen Dienstleistungen",
       "stepTitles": {
@@ -766,7 +805,16 @@
         "moving_new": "Neue Wohnung",
         "moving_details": "Umzugsdetails",
         "special_bg": "Serviceanforderungen",
-        "contact": "Kontaktdaten"
+        "contact": "Kontaktdaten",
+        "areas": "Bereiche zum Reinigen",
+        "windows": "Fenster & Glas",
+        "waste": "Abfall Details",
+        "supplies": "Zusätzliches Material",
+        "household_property": "Liegenschaft & Haushalt",
+        "household_services": "Dienste & Häufigkeit",
+        "disposal_type": "Entsorgungsart",
+        "disposal_items": "Gegenstände & Volumen",
+        "disposal_options": "Zusätzliche Optionen"
       },
       "placeholders": {
         "areaM2": "z.B. 120",
@@ -1144,6 +1192,216 @@
             "placeholder": "Zusätzliche Notiz"
           }
         }
+      },
+      "cleaning": {
+        "desiredService": "Gewünschte Leistung *",
+        "cleaningOnly": "Nur Reinigung",
+        "movingAndCleaning": "Umzug & Reinigung",
+        "cleaningLocation": "Reinigungsort",
+        "objectType": "Welche Art von Objekt muss gereinigt werden? *",
+        "objectTypes": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "wgRoom": "WG-Zimmer / Zimmer",
+          "office": "Büro",
+          "storageCellar": "Lager/Keller"
+        },
+        "floors": "Wie viele Stockwerke hat Ihr Haus/Ihre Wohnung?",
+        "numberOfRooms": "Anzahl Zimmer:",
+        "livingSpace": "Wohnfläche (m²):",
+        "areasTitle": "Welche Bereiche müssen gereinigt werden? *",
+        "areas": {
+          "completeAll": "Komplettreinigung aller Räume (inkl. Küche, Bad & WC)",
+          "cellar": "Keller",
+          "atticScreed": "Estrich / Dachboden",
+          "garage": "Garage",
+          "conservatory": "Wintergarten",
+          "individualRooms": "Nur einzelne Räume"
+        },
+        "windowsTitle": "Fenster & Glasflächen (bitte Anzahl angeben)",
+        "normalWindows": "Normale Fenster:",
+        "frenchDoors": "Fenstertüren (z.B. Balkon/Terrasse):",
+        "otherGlassSurfaces": "Andere grosse Glasflächen:",
+        "panoramicHint": "Panoramafenster (z.B. Wintergarten, Glasfronten):",
+        "blindsTitle": "Storen & Rollläden",
+        "blinds": {
+          "venetian": "Jalousien",
+          "rollerShutters": "Rollläden",
+          "shutters": "Fensterläden",
+          "otherSpecial": "Andere / Spezialsysteme",
+          "no": "Nein"
+        },
+        "specialFeaturesTitle": "Besonderheiten der Fenster",
+        "specialFeatures": {
+          "heavilySoiled": "Stark verschmutzt (z.B. Nikotin, Fett, Staub)",
+          "moldFrames": "Schimmel an Fensterrahmen",
+          "smallCasement": "Viele kleine Flügelfenster",
+          "roofWindow": "Dachfenster / schwer zugänglich",
+          "safetyFilm": "Fenster mit Sicherheitsfolie oder Spezialglas",
+          "noSpecial": "Keine Besonderheiten"
+        },
+        "furtherRequests": "Weitere Wünsche/Kommentare:",
+        "desiredCleaningDate": "Gewünschter Reinigungstermin",
+        "deliveryHandoverDate": "Datum der Übergabe *",
+        "nameFirstName": "Name Vorname: *",
+        "emailAddress": "E-Mail-Adresse: *",
+        "telephoneNumber": "Telefonnummer: *",
+        "zipCity": "PLZ / Ort: *",
+        "streetNo": "Strasse, Nr.: *"
+      },
+      "relocation": {
+        "movingFrom": "Umzug von - PLZ / Ort / Adresse *",
+        "currentLiving": "Wo wohnen Sie zurzeit? *",
+        "currentLivingOptions": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "wgRoom": "WG-Zimmer",
+          "studio": "Studio",
+          "office": "Büro"
+        },
+        "currentFloor": "In welchem Stock wohnen Sie jetzt? *",
+        "elevatorAvailable": "Ist ein Aufzug vorhanden? *",
+        "yes": "JA",
+        "no": "NEIN",
+        "currentLivingSpace": "Aktuelle Wohnfläche",
+        "currentRooms": "Wie viele Zimmer haben Sie derzeit? *",
+        "movingTo": "Wohin ziehen Sie um? *",
+        "movingToOptions": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "wgRoom": "WG-Zimmer",
+          "studio": "Studio",
+          "office": "Büro",
+          "storage": "Lager"
+        },
+        "movingToAddress": "Umzug nach - PLZ / Ort / Adresse *",
+        "newElevator": "Ist ein Aufzug vorhanden? *",
+        "newLivingSpace": "Wohnfläche neue Wohnung",
+        "newRooms": "Wie viele Zimmer hat Ihre neue Wohnung? *",
+        "peopleMoving": "Wie viele Personen ziehen um?",
+        "peopleMovingHint": "Diese Angabe hilft, den Umfang Ihres Umzugs besser einzuschätzen.",
+        "movingBoxes": "Wie viele Umzugskartons müssen transportiert werden?",
+        "movingBoxesHint": "Erwachsene benötigen durchschnittlich 20-30 Kartons, Kinder ca. 10.",
+        "additionalSuppliesTitle": "Benötigen Sie zusätzliches Umzugsmaterial?",
+        "supplies": {
+          "movingBox": "CHF 20.- / Umzugskarton (10 Stück)",
+          "wardrobeBox": "CHF 22.- / Kleiderbox",
+          "bottleCarton": "CHF 8.- / Flaschenkarton",
+          "adhesiveTape": "CHF 20.- / Klebeband, 6 Rollen mit Abroller"
+        },
+        "areasCleaningTitle": "Welche Bereiche müssen gereinigt werden?",
+        "otherAreasTitle": "Gibt es weitere Bereiche?",
+        "otherAreas": {
+          "cellar": "Keller",
+          "atticScreed": "Estrich / Dachboden",
+          "garageParkingSpace": "Garage / Parkplatz",
+          "conservatoryBalcony": "Wintergarten / Balkon"
+        },
+        "additionalAreasTitle": "Gibt es weitere Bereiche:",
+        "additionalAreas": {
+          "parking": "Parkplatz",
+          "stairs": "Treppen",
+          "corridor": "Korridor"
+        },
+        "furtherRequests": "Weitere Wünsche/Kommentare:",
+        "desiredCleaningDate": "Gewünschter Reinigungstermin",
+        "preferredMoveDate": "Gewünschtes Umzugsdatum",
+        "nameFirstName": "Name Vorname: *",
+        "company": "Firma: *",
+        "emailAddress": "E-Mail-Adresse: *",
+        "telephoneNumber": "Telefonnummer: *",
+        "zipCity": "PLZ / Ort: *",
+        "streetNo": "Strasse / Nr.: *"
+      },
+      "disposal": {
+        "pleaseChoose": "Bitte wählen: *",
+        "disposalTypes": {
+          "disposal": "Entsorgung",
+          "eviction": "Räumung",
+          "disposalClearance": "Entsorgung + Räumung"
+        },
+        "objectType": "Objekttyp *",
+        "location": "Standort *",
+        "floor": "In welchem Stockwerk befindet es sich? *",
+        "elevatorAvailable": "Ist ein Aufzug vorhanden? *",
+        "yes": "Ja",
+        "no": "Nein",
+        "wasteTitle": "Abfall",
+        "wasteItems": {
+          "furniture": "Möbel (Schrank, Bett, Tisch, etc.)",
+          "electrical": "Elektrogeräte (TV, Kühlschrank, PC)",
+          "cardboard": "Karton / Papier / Kleinteile",
+          "construction": "Bauschutt / Holz / Metall",
+          "garden": "Gartenabfall / Pflanzen / Erde",
+          "textiles": "Textilien / Teppiche / Matratzen"
+        },
+        "otherDisposalItems": "Andere Gegenstände zur Entsorgung",
+        "disassemblyNeeded": "Müssen Gegenstände demontiert werden?",
+        "materialAmount": "Wie viel Material muss entsorgt werden? *",
+        "materialAmounts": {
+          "little": "Wenig (z.B. kleiner Raum)",
+          "medium": "Mittel (1-2 Zimmer)",
+          "lots": "Viel (ganze Wohnung / Haus / Lager)"
+        },
+        "additionalOptionsTitle": "Zusätzliche Optionen",
+        "additionalOptions": {
+          "cleaningAfter": "Inkl. Reinigung nach der Räumung",
+          "broomCleaning": "Nur Besenreinigung",
+          "basicCleaning": "Grundreinigung",
+          "adhesiveTape": "CHF 20.- / Klebeband, 6 Rollen mit Abroller"
+        },
+        "movingSuppliesTitle": "Benötigen Sie zusätzliches Umzugsmaterial?",
+        "furtherWishes": "Weitere Wünsche / Hinweise: *",
+        "desiredDate": "Gewünschtes Datum *",
+        "nameFirstName": "Name / Vorname: *",
+        "company": "Firma: *",
+        "emailAddress": "E-Mail-Adresse: *",
+        "telephoneNumber": "Telefonnummer: *",
+        "zipCity": "PLZ / Ort: *",
+        "streetNo": "Strasse / Nr.: *"
+      },
+      "householdHelping": {
+        "floors": "Stockwerk *",
+        "elevatorAvailable": "Gibt es einen Aufzug?",
+        "yes": "Ja",
+        "no": "Nein",
+        "livingArea": "Wohnfläche: *",
+        "householdSituation": "Haushaltssituation",
+        "numberOfAdults": "Anzahl Erwachsene",
+        "numberOfChildren": "Anzahl Kinder",
+        "hasPets": "Haben Sie Haustiere?",
+        "desiredFrequency": "Gewünschte Einsatzhäufigkeit *",
+        "frequencyOptions": {
+          "weekly": "Wöchentlich",
+          "biweekly": "Alle 2 Wochen",
+          "monthly": "Monatlich",
+          "onDemand": "Auf Abruf"
+        },
+        "desiredHours": "Gewünschte Stunden pro Einsatz *",
+        "desiredServicesTitle": "Gewünschte Dienstleistungen *",
+        "desiredServices": {
+          "routineCleaning": "Routinereinigung (Staubsaugen, Wischen, Bad, Küche, etc.)",
+          "ironing": "Bügelservice",
+          "laundry": "Wäsche waschen und aufhängen",
+          "shopping": "Einkaufs-/Lieferservice",
+          "dishwashing": "Abwasch / Abwaschen",
+          "cooking": "Kochen / Mahlzeiten zubereiten",
+          "plantCare": "Pflanzenpflege im Haushalt",
+          "smallTasks": "Kleine Aufgaben (Müll entsorgen, Bettwäsche wechseln, etc.)",
+          "petCare": "Tierpflege",
+          "seniorCare": "Seniorenbetreuung",
+          "errands": "Besorgungen / Postweg"
+        },
+        "otherTasks": "Andere Aufgaben oder Wünsche:",
+        "furtherRequests": "Weitere Wünsche/Kommentare:",
+        "wishDay": "Wunschtag *",
+        "preferredTime": "Bevorzugte Uhrzeit:",
+        "nameFirstName": "Name Vorname: *",
+        "company": "Firma: *",
+        "emailAddress": "E-Mail-Adresse: *",
+        "telephoneNumber": "Telefonnummer: *",
+        "zipCity": "PLZ / Ort: *",
+        "streetNo": "Strasse, Nr.: *"
       }
     },
     "title": {
@@ -1552,7 +1810,8 @@
       "serviceForms": "Service-Formulare",
       "emailCommunication": "E-Mail-Kommunikation",
       "gallery": "Galerie",
-      "calendar": "Kalender"
+      "calendar": "Kalender",
+      "householdHelping": "Haushaltshilfe"
     },
     "calendar": {
       "title": "Kalender",
@@ -2367,7 +2626,8 @@
         "mr": "Herr",
         "mrs": "Frau",
         "ms": "Divers",
-        "dr": "Dr."
+        "dr": "Dr.",
+        "other": "Andere"
       },
       "step5": {
         "title": "Preis & Abschluss",
@@ -2567,7 +2827,8 @@
       "constructionCleaning": "Baureinigung",
       "propertyMaintenance": "Hauswartung",
       "specialCleaning": "Spezialreinigung",
-      "comboService": "Reinigung + Umzug Kombi"
+      "comboService": "Reinigung + Umzug Kombi",
+      "householdHelping": "Haushaltshilfe"
     }
   },
   "pricing": {

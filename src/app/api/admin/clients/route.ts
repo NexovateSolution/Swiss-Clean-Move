@@ -60,27 +60,61 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const data = await request.json()
-    
-    // Calculate balance
-    const balance = data.totalPrice - (data.paidAmount || 0)
-    
+    const rawData = await request.json()
+    console.log('Creating client with data:', JSON.stringify(rawData, null, 2))
+
+    // Ensure numeric values are correct
+    const totalPrice = parseFloat(rawData.totalPrice) || 0
+    const paidAmount = parseFloat(rawData.paidAmount || rawData.advancePayment) || 0
+    const balance = totalPrice - paidAmount
+
     // Determine status
     let status = 'UNPAID'
-    if (data.paidAmount > 0 && data.paidAmount < data.totalPrice) {
+    if (paidAmount > 0 && paidAmount < totalPrice) {
       status = 'PARTIAL'
-    } else if (data.paidAmount >= data.totalPrice) {
+    } else if (paidAmount >= totalPrice) {
       status = 'PAID'
     }
 
+    // Prepare data for Prisma, ensuring types match schema.prisma
+    const fromDate = new Date(rawData.fromDate)
+    const untilDate = new Date(rawData.untilDate)
+
+    if (isNaN(fromDate.getTime()) || isNaN(untilDate.getTime())) {
+      return NextResponse.json({
+        error: 'Invalid dates provided',
+        details: `From: ${rawData.fromDate}, Until: ${rawData.untilDate}`
+      }, { status: 400 })
+    }
+
+    const prismaData = {
+      firstName: rawData.firstName,
+      lastName: rawData.lastName,
+      email: rawData.email,
+      phone: rawData.phone,
+      address: rawData.address,
+      postalCode: rawData.postalCode,
+      location: rawData.location,
+      squareMeters: parseInt(rawData.squareMeters) || 0,
+      serviceType: rawData.serviceType,
+      buildingType: rawData.buildingType,
+      fromDate,
+      untilDate,
+      totalPrice,
+      paidAmount,
+      balance,
+      status,
+      prefix: rawData.prefix,
+      numberOfRooms: rawData.numberOfRooms?.toString() || '',
+      floor: rawData.floor,
+      elevator: rawData.elevator,
+      remarks1: rawData.remarks1,
+      remarks2: rawData.remarks2,
+      remarks3: rawData.remarks3
+    }
+
     const client = await prisma.client.create({
-      data: {
-        ...data,
-        balance,
-        status,
-        fromDate: new Date(data.fromDate),
-        untilDate: new Date(data.untilDate)
-      },
+      data: prismaData,
       include: {
         payments: true,
         photos: true,
@@ -89,8 +123,20 @@ export async function POST(request: NextRequest) {
     })
 
     return NextResponse.json(client, { status: 201 })
-  } catch (error) {
-    console.error('Error creating client:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  } catch (error: any) {
+    const fs = require('fs')
+    const logPath = 'prisma_error.log'
+    const errorMsg = `[${new Date().toISOString()}] Error: ${error.message}\nStack: ${error.stack}\nData: ${JSON.stringify(error.meta || {})}\n\n`
+    fs.appendFileSync(logPath, errorMsg)
+
+    console.error('Detailed error creating client:', {
+      message: error.message,
+      stack: error.stack,
+      code: error.code
+    })
+    return NextResponse.json({
+      error: 'Internal server error',
+      details: error.message
+    }, { status: 500 })
   }
 }

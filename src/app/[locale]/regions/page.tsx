@@ -22,7 +22,8 @@ import {
   HardHat,
   Wrench,
   RotateCcw,
-  Layers
+  Layers,
+  Heart
 } from 'lucide-react';
 
 export default function RegionsPage({ params: { locale } }: { params: { locale: string } }) {
@@ -55,7 +56,8 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
     { id: 'constructionCleaning', icon: HardHat, href: `/${locale}/services#constructionCleaning` },
     { id: 'propertyMaintenance', icon: Wrench, href: `/${locale}/services#propertyMaintenance` },
     { id: 'specialCleaning', icon: Star, href: `/${locale}/services#specialCleaning` },
-    { id: 'comboService', icon: RotateCcw, href: `/${locale}/services#comboService` }
+    { id: 'comboService', icon: RotateCcw, href: `/${locale}/services#comboService` },
+    { id: 'householdHelping', icon: Heart, href: `/${locale}/services/household-helping` }
   ];
 
   return (

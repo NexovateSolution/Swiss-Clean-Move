@@ -11,7 +11,8 @@
     "legal": "Juridische kennisgeving",
     "login": "Inloggen",
     "language": "Taal",
-    "gallery": "Galerij"
+    "gallery": "Galerij",
+    "householdHelping": "Huishoudelijke hulp"
   },
   "home": {
     "hero": {
@@ -112,6 +113,10 @@
       "comboService": {
         "title": "Moving + Cleaning (Combo)",
         "description": "Combined moving service with final cleaning and handover guarantee"
+      },
+      "householdHelping": {
+        "title": "Huishoudelijke hulp",
+        "description": "Professionele huishoudelijke hulp inclusief schoonmaken, koken, was, boodschappen en zorgdiensten"
       }
     },
     "numbers": {
@@ -169,6 +174,30 @@
       "guarantee": "100% Satisfaction Guarantee",
       "nationwide": "Available Nationwide",
       "professional": "Professional Team"
+    },
+    "serviceCategories": {
+      "title": "Onze servicecategorieën",
+      "subtitle": "Selecteer een categorie om de juiste service te vinden",
+      "cleaning": {
+        "title": "Schoonmaakdiensten",
+        "description": "Professionele reiniging voor woningen, kantoren en meer",
+        "selectService": "Schoonmaakservice kiezen"
+      },
+      "moving": {
+        "title": "Verhuizing & Relocatie",
+        "description": "Complete verhuis- en relocatieoplossingen",
+        "selectService": "Verhuisservice kiezen"
+      },
+      "disposal": {
+        "title": "Ontruiming & Afvoer",
+        "description": "Professionele ontruimings- en afvoerdiensten",
+        "selectService": "Ontruimingsservice kiezen"
+      },
+      "household": {
+        "title": "Huishoudelijke hulp & Onderhoud",
+        "description": "Huishoudelijke hulp en vastgoedonderhoud",
+        "selectService": "Huishoudservice kiezen"
+      }
     }
   },
   "services": {
@@ -281,6 +310,14 @@
         "Final cleaning with guarantee",
         "Insurance coverage",
         "Single point of contact"
+      ],
+      "householdHelping": [
+        "Routinematige schoonmaak (stofzuigen, dweilen, badkamer, keuken)",
+        "Strijkservice en wasservice",
+        "Boodschappen- en bezorgservice",
+        "Koken en maaltijden bereiden",
+        "Dier- en plantenverzorging",
+        "Ouderenzorg en boodschappen"
       ]
     },
     "pricingUnits": {
@@ -323,7 +360,8 @@
       "finalCleaning": "from CHF 250",
       "windowCleaning": "CHF 8–15 per window",
       "relocation": "from CHF 160 / hour",
-      "disposal": "from CHF 30 / m³"
+      "disposal": "from CHF 30 / m³",
+      "householdHelping": "vanaf CHF 35 / uur"
     }
   },
   "about": {
@@ -661,7 +699,8 @@
       "badge": "Offerte berekenen",
       "stepCounter": "Stap {current} van {total}",
       "validation": {
-        "required": "Vul alle verplichte velden in deze stap in"
+        "required": "Vul alle verplichte velden in",
+        "selectOption": "Selecteer een optie."
       },
       "common": {
         "select": "Selecteer a.u.b.",
@@ -670,9 +709,9 @@
       },
       "buttons": {
         "back": "Terug",
-        "next": "Volgende",
+        "next": "Verder",
         "submit": "Verzenden",
-        "submitting": "Bezig met verzenden..."
+        "submitting": "Wordt verzonden..."
       },
       "subtitle": "Ontvang een gratis, vrijblijvende offerte voor onze professionele diensten",
       "stepTitles": {
@@ -684,7 +723,16 @@
         "moving_new": "Nieuwe Woning",
         "moving_details": "Verhuisdetails",
         "special_bg": "Servicevereisten",
-        "contact": "Contactgegevens"
+        "contact": "Contactgegevens",
+        "areas": "Gebieden om schoon te maken",
+        "windows": "Ramen & Glas",
+        "waste": "Afvaldetails",
+        "supplies": "Extra benodigdheden",
+        "household_property": "Eigendom & Huishouden",
+        "household_services": "Diensten & Frequentie",
+        "disposal_type": "Type ontruiming",
+        "disposal_items": "Artikelen & Volume",
+        "disposal_options": "Extra opties"
       },
       "placeholders": {
         "areaM2": "bijv. 120",
@@ -1062,6 +1110,216 @@
             "placeholder": "Extra notitie"
           }
         }
+      },
+      "cleaning": {
+        "desiredService": "Gewenste dienst *",
+        "cleaningOnly": "Alleen schoonmaak",
+        "movingAndCleaning": "Verhuizing & Schoonmaak",
+        "cleaningLocation": "Schoonmaaklocatie",
+        "objectType": "Welk type object moet worden schoongemaakt? *",
+        "objectTypes": {
+          "apartment": "Appartement",
+          "house": "Huis",
+          "wgRoom": "Kamer / Gedeelde woning",
+          "office": "Kantoor",
+          "storageCellar": "Opslag/Kelder"
+        },
+        "floors": "Hoeveel verdiepingen heeft uw woning?",
+        "numberOfRooms": "Aantal kamers:",
+        "livingSpace": "Woonoppervlakte (m²):",
+        "areasTitle": "Welke gebieden moeten worden schoongemaakt? *",
+        "areas": {
+          "completeAll": "Volledige reiniging van alle kamers (incl. keuken, badkamer & toilet)",
+          "cellar": "Kelder",
+          "atticScreed": "Zolder / Vliering",
+          "garage": "Garage",
+          "conservatory": "Serre",
+          "individualRooms": "Alleen individuele kamers"
+        },
+        "windowsTitle": "Ramen & glasoppervlakken (geef het aantal aan)",
+        "normalWindows": "Normale ramen:",
+        "frenchDoors": "Openslaande deuren (bijv. balkon/terras):",
+        "otherGlassSurfaces": "Andere grote glasoppervlakken:",
+        "panoramicHint": "Panoramaramen (bijv. serre, glasgevels):",
+        "blindsTitle": "Jaloezieën & rolluiken",
+        "blinds": {
+          "venetian": "Jaloezieën",
+          "rollerShutters": "Rolluiken",
+          "shutters": "Luiken",
+          "otherSpecial": "Andere / speciale systemen",
+          "no": "Nee"
+        },
+        "specialFeaturesTitle": "Bijzonderheden van ramen",
+        "specialFeatures": {
+          "heavilySoiled": "Sterk vervuild (bijv. nicotine, vet, stof)",
+          "moldFrames": "Schimmel op kozijnen",
+          "smallCasement": "Veel kleine draairamen",
+          "roofWindow": "Dakraam / moeilijk toegankelijk",
+          "safetyFilm": "Ramen met veiligheidsfolie of speciaal glas",
+          "noSpecial": "Geen bijzonderheden"
+        },
+        "furtherRequests": "Verdere verzoeken/opmerkingen:",
+        "desiredCleaningDate": "Gewenste schoonmaakdatum",
+        "deliveryHandoverDate": "Datum van oplevering *",
+        "nameFirstName": "Naam Voornaam: *",
+        "emailAddress": "E-mailadres: *",
+        "telephoneNumber": "Telefoonnummer: *",
+        "zipCity": "Postcode / Plaats: *",
+        "streetNo": "Straat, Nr.: *"
+      },
+      "relocation": {
+        "movingFrom": "Verhuizing van - Postcode / Plaats / Adres *",
+        "currentLiving": "Waar woont u momenteel? *",
+        "currentLivingOptions": {
+          "apartment": "Appartement",
+          "house": "Huis",
+          "wgRoom": "Gedeelde woning",
+          "studio": "Studio",
+          "office": "Kantoor"
+        },
+        "currentFloor": "Op welke verdieping woont u nu? *",
+        "elevatorAvailable": "Is er een lift aanwezig? *",
+        "yes": "JA",
+        "no": "NEE",
+        "currentLivingSpace": "Huidige woonoppervlakte",
+        "currentRooms": "Hoeveel kamers heeft u momenteel? *",
+        "movingTo": "Waarheen verhuist u? *",
+        "movingToOptions": {
+          "apartment": "Appartement",
+          "house": "Huis",
+          "wgRoom": "Gedeelde woning",
+          "studio": "Studio",
+          "office": "Kantoor",
+          "storage": "Opslag"
+        },
+        "movingToAddress": "Verhuizing naar - Postcode / Plaats / Adres *",
+        "newElevator": "Is er een lift aanwezig? *",
+        "newLivingSpace": "Woonoppervlakte nieuw appartement",
+        "newRooms": "Hoeveel kamers heeft uw nieuwe appartement? *",
+        "peopleMoving": "Hoeveel personen verhuizen er?",
+        "peopleMovingHint": "Deze informatie helpt om de omvang van uw verhuizing beter in te schatten.",
+        "movingBoxes": "Hoeveel verhuisdozen moeten worden vervoerd?",
+        "movingBoxesHint": "Volwassenen hebben gemiddeld 20-30 dozen nodig, kinderen ongeveer 10.",
+        "additionalSuppliesTitle": "Heeft u extra verhuismateriaal nodig?",
+        "supplies": {
+          "movingBox": "CHF 20.- / verhuisdoos (10 stuks)",
+          "wardrobeBox": "CHF 22.- / kledingdoos",
+          "bottleCarton": "CHF 8.- / flessenkarton",
+          "adhesiveTape": "CHF 20.- / plakband, 6 rollen met dispenser"
+        },
+        "areasCleaningTitle": "Welke gebieden moeten worden schoongemaakt?",
+        "otherAreasTitle": "Zijn er andere gebieden?",
+        "otherAreas": {
+          "cellar": "Kelder",
+          "atticScreed": "Zolder / Vliering",
+          "garageParkingSpace": "Garage / Parkeerplaats",
+          "conservatoryBalcony": "Serre / Balkon"
+        },
+        "additionalAreasTitle": "Zijn er andere gebieden:",
+        "additionalAreas": {
+          "parking": "Parkeren",
+          "stairs": "Trappen",
+          "corridor": "Gang"
+        },
+        "furtherRequests": "Verdere verzoeken/opmerkingen:",
+        "desiredCleaningDate": "Gewenste schoonmaakdatum",
+        "preferredMoveDate": "Voorkeursdatum voor verhuizing",
+        "nameFirstName": "Naam Voornaam: *",
+        "company": "Bedrijf: *",
+        "emailAddress": "E-mailadres: *",
+        "telephoneNumber": "Telefoonnummer: *",
+        "zipCity": "Postcode / Plaats: *",
+        "streetNo": "Straat / Nr.: *"
+      },
+      "disposal": {
+        "pleaseChoose": "Kies alstublieft: *",
+        "disposalTypes": {
+          "disposal": "Ontruiming",
+          "eviction": "Uitzetting",
+          "disposalClearance": "Ontruiming + Opruiming"
+        },
+        "objectType": "Type object *",
+        "location": "Locatie *",
+        "floor": "Op welke verdieping bevindt het zich? *",
+        "elevatorAvailable": "Is er een lift aanwezig? *",
+        "yes": "Ja",
+        "no": "Nee",
+        "wasteTitle": "Afval",
+        "wasteItems": {
+          "furniture": "Meubels (kast, bed, tafel, etc.)",
+          "electrical": "Elektrische apparaten (TV, koelkast, PC)",
+          "cardboard": "Karton / Papier / Kleine onderdelen",
+          "construction": "Bouwafval / Hout / Metaal",
+          "garden": "Tuinafval / Planten / Aarde",
+          "textiles": "Textiel / Tapijten / Matrassen"
+        },
+        "otherDisposalItems": "Andere items voor ontruiming",
+        "disassemblyNeeded": "Moeten items worden gedemonteerd?",
+        "materialAmount": "Hoeveel materiaal moet worden afgevoerd? *",
+        "materialAmounts": {
+          "little": "Weinig (bijv. kleine ruimte)",
+          "medium": "Gemiddeld (1-2 kamers)",
+          "lots": "Veel (geheel appartement / huis / magazijn)"
+        },
+        "additionalOptionsTitle": "Extra opties",
+        "additionalOptions": {
+          "cleaningAfter": "Inclusief schoonmaak na ontruiming",
+          "broomCleaning": "Alleen bezem schoonmaak",
+          "basicCleaning": "Basisreiniging",
+          "adhesiveTape": "CHF 20.- / plakband, 6 rollen met dispenser"
+        },
+        "movingSuppliesTitle": "Heeft u extra verhuismateriaal nodig?",
+        "furtherWishes": "Verdere wensen / opmerkingen: *",
+        "desiredDate": "Gewenste datum *",
+        "nameFirstName": "Naam / Voornaam: *",
+        "company": "Bedrijf: *",
+        "emailAddress": "E-mailadres: *",
+        "telephoneNumber": "Telefoonnummer: *",
+        "zipCity": "Postcode / Plaats: *",
+        "streetNo": "Straat / Nr.: *"
+      },
+      "householdHelping": {
+        "floors": "Verdieping *",
+        "elevatorAvailable": "Is er een lift?",
+        "yes": "Ja",
+        "no": "Nee",
+        "livingArea": "Woonoppervlakte: *",
+        "householdSituation": "Huishoudelijke situatie",
+        "numberOfAdults": "Aantal volwassenen",
+        "numberOfChildren": "Aantal kinderen",
+        "hasPets": "Heeft u huisdieren?",
+        "desiredFrequency": "Gewenste inzetfrequentie *",
+        "frequencyOptions": {
+          "weekly": "Wekelijks",
+          "biweekly": "Om de 2 weken",
+          "monthly": "Maandelijks",
+          "onDemand": "Op aanvraag"
+        },
+        "desiredHours": "Gewenste uren per opdracht *",
+        "desiredServicesTitle": "Gewenste diensten *",
+        "desiredServices": {
+          "routineCleaning": "Routine schoonmaak (stofzuigen, dweilen, badkamer, keuken, etc.)",
+          "ironing": "Strijkservice",
+          "laundry": "Was wassen en ophangen",
+          "shopping": "Boodschappen- / Bezorgservice",
+          "dishwashing": "Afwassen / Opruimen",
+          "cooking": "Koken / Maaltijden bereiden",
+          "plantCare": "Plantenverzorging",
+          "smallTasks": "Kleine taken (afval buitenzetten, beddengoed verschonen, etc.)",
+          "petCare": "Dierenverzorging",
+          "seniorCare": "Ouderenzorg",
+          "errands": "Boodschappen / Postkantoor"
+        },
+        "otherTasks": "Andere taken of verzoeken:",
+        "furtherRequests": "Verdere verzoeken/opmerkingen:",
+        "wishDay": "Wensdag *",
+        "preferredTime": "Voorkeurstijd:",
+        "nameFirstName": "Naam Voornaam: *",
+        "company": "Bedrijf: *",
+        "emailAddress": "E-mailadres: *",
+        "telephoneNumber": "Telefoonnummer: *",
+        "zipCity": "Postcode / Plaats: *",
+        "streetNo": "Straat, Nr.: *"
       }
     },
     "title": {
@@ -1463,7 +1721,8 @@
       "serviceForms": "Serviceformulieren",
       "emailCommunication": "E-mailcommunicatie",
       "gallery": "Galerij",
-      "calendar": "Kalender"
+      "calendar": "Kalender",
+      "householdHelping": "Huishoudelijke hulp"
     },
     "calendar": {
       "title": "Kalender",
@@ -2278,7 +2537,8 @@
         "mr": "Dhr.",
         "mrs": "Mevr.",
         "ms": "Mx",
-        "dr": "Dr."
+        "dr": "Dr.",
+        "other": "Anders"
       },
       "step5": {
         "title": "Prijs en afronding",
@@ -2478,7 +2738,8 @@
       "constructionCleaning": "Bouwschoonmaak",
       "propertyMaintenance": "Vastgoedonderhoud",
       "specialCleaning": "Speciale reiniging",
-      "comboService": "Schoonmaak + Verhuizing Combo"
+      "comboService": "Schoonmaak + Verhuizing Combo",
+      "householdHelping": "Huishoudelijke hulp"
     }
   },
   "pricing": {

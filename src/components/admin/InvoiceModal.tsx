@@ -86,35 +86,54 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
     }
   }
 
-  const generateInvoicePDF = (invoice: any) => {
+  const generateInvoicePDF = async (invoice: any) => {
     if (!client) return
 
-    // Create a simple HTML invoice for printing/PDF
-    const invoiceHTML = `
+    try {
+      // Pre-fetch logo as base64 to ensure it renders instantly in the popup without network latency
+      const logoUrl = '/images/logo.jpg';
+      let logoBase64 = '';
+      try {
+        const response = await fetch(logoUrl);
+        const blob = await response.blob();
+        logoBase64 = await new Promise((resolve) => {
+          const reader = new FileReader();
+          reader.onloadend = () => resolve(reader.result as string);
+          reader.readAsDataURL(blob);
+        });
+      } catch (e) {
+        console.warn('Failed to preload logo', e);
+      }
+
+      const htmlContent = `
       <!DOCTYPE html>
-      <html>
+      <html lang="en">
       <head>
-        <meta charset="utf-8">
-        <title>Invoice ${invoice.invoiceNumber}</title>
+        <meta charset="UTF-8">
+        <title>Invoice - ${invoice.invoiceNumber}</title>
         <style>
-          body { font-family: Arial, sans-serif; margin: 40px; color: #333; }
-          .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; border-bottom: 2px solid #2563eb; padding-bottom: 20px; }
-          .logo { font-size: 24px; font-weight: bold; color: #2563eb; }
-          .invoice-title { font-size: 28px; font-weight: bold; color: #2563eb; }
+          body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #333; max-width: 800px; margin: 0 auto; padding: 40px; }
+          .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; border-bottom: 2px solid #0066CC; padding-bottom: 20px; }
           .company-info { text-align: right; }
-          .client-info { margin-bottom: 30px; }
-          .invoice-details { margin-bottom: 30px; }
-          .table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-          .table th, .table td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
-          .table th { background-color: #f8f9fa; font-weight: bold; }
-          .total { text-align: right; font-size: 18px; font-weight: bold; margin-top: 20px; }
-          .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
+          .invoice-title { font-size: 32px; font-weight: bold; color: #0066CC; margin-bottom: 30px; letter-spacing: 2px; }
+          .client-info, .invoice-details { margin-bottom: 40px; }
+          table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+          th { background-color: #f8f9fa; border-bottom: 2px solid #dee2e6; text-align: left; padding: 12px; font-weight: bold; }
+          td { border-bottom: 1px solid #dee2e6; padding: 12px; vertical-align: top; }
+          .total-row td { font-weight: bold; border-top: 2px solid #0066CC; font-size: 1.1em; }
+          .amount { text-align: right; }
+          .footer { margin-top: 50px; font-size: 14px; color: #666; border-top: 1px solid #dee2e6; padding-top: 20px; }
+          .bank-details { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 20px; }
+          @media print {
+            body { padding: 0; }
+            button { display: none; }
+          }
         </style>
       </head>
       <body>
         <div class="header">
           <div>
-            <img src="/images/logo.jpg" alt="SwissCleanMove" style="height:120px;width:auto;margin-bottom:8px;" onerror="this.style.display='none'">
+            <img src="${logoBase64}" alt="SwissCleanMove" style="height:120px;width:auto;margin-bottom:8px;">
           </div>
           <div class="company-info">
             <div><strong>SwissCleanMove GmbH</strong></div>
@@ -182,15 +201,18 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
       </html>
     `
 
-    // Open in new window for printing/saving as PDF
-    const printWindow = window.open('', '_blank')
-    if (printWindow) {
-      printWindow.document.write(invoiceHTML)
-      printWindow.document.close()
-      printWindow.focus()
-      setTimeout(() => {
-        printWindow.print()
-      }, 250)
+      // Open in new window for printing/saving as PDF
+      const printWindow = window.open('', '_blank')
+      if (printWindow) {
+        printWindow.document.write(htmlContent)
+        printWindow.document.close()
+        printWindow.focus()
+        setTimeout(() => {
+          printWindow.print()
+        }, 250)
+      }
+    } catch (error) {
+      console.error('Failed to pre-load logo or generate PDF:', error);
     }
   }
 

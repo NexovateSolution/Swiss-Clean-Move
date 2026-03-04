@@ -21,7 +21,8 @@ const allowedServices: ServiceSlug[] = [
   'construction-cleaning',
   'property-maintenance',
   'special-cleaning',
-  'combo-service'
+  'combo-service',
+  'household-helping'
 ]
 
 function isServiceSlug(value: string | null): value is ServiceSlug {
@@ -59,6 +60,8 @@ function getServiceName(t: ReturnType<typeof useTranslations>, service: ServiceS
       return t('home.services.specialCleaning.title')
     case 'combo-service':
       return t('home.services.comboService.title')
+    case 'household-helping':
+      return t('home.services.householdHelping.title')
     default:
       return t('services.title')
   }
@@ -78,8 +81,8 @@ export default function FormPage({ params: { locale } }: { params: { locale: str
   return (
     <Layout>
       <SwissHero
-        badge={t('servicesPages.common.requestQuote')}
-        title={t('servicesPages.common.requestQuote')}
+        badge={serviceName}
+        title={serviceName}
         subtitle={t('serviceForm.wizard.subtitle')}
         right={
           <div className="grid grid-cols-2 gap-4 p-6">

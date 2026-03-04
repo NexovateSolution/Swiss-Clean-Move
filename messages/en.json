@@ -1,7 +1,7 @@
 {
   "common": {
     "learnMore": "Learn More",
-    "formLink": "Free Quote",
+    "formLink": "Form",
     "freeQuote": "Free Quote",
     "getFreeQuote": "Get Free Quote",
     "requestFreeQuote": "Request Free Quote",
@@ -21,7 +21,8 @@
     "legal": "Legal Notice",
     "login": "Login",
     "language": "Language",
-    "gallery": "Gallery"
+    "gallery": "Gallery",
+    "householdHelping": "Household Helping"
   },
   "home": {
     "hero": {
@@ -122,6 +123,10 @@
       "comboService": {
         "title": "Moving + Cleaning (Combo)",
         "description": "Combined moving service with final cleaning and handover guarantee"
+      },
+      "householdHelping": {
+        "title": "Household Helping",
+        "description": "Professional household assistance including cleaning, cooking, laundry, shopping, and care services"
       }
     },
     "numbers": {
@@ -179,6 +184,30 @@
       "guarantee": "100% Satisfaction Guarantee",
       "nationwide": "Available Nationwide",
       "professional": "Professional Team"
+    },
+    "serviceCategories": {
+      "title": "Our Service Categories",
+      "subtitle": "Select a category to find the right service for you",
+      "cleaning": {
+        "title": "Cleaning Services",
+        "description": "Professional cleaning for homes, offices, and more",
+        "selectService": "Select Cleaning Service"
+      },
+      "moving": {
+        "title": "Moving & Relocation",
+        "description": "Complete moving and relocation solutions",
+        "selectService": "Select Moving Service"
+      },
+      "disposal": {
+        "title": "Disposal & Clearance",
+        "description": "Professional disposal and clearance services",
+        "selectService": "Select Disposal Service"
+      },
+      "household": {
+        "title": "Household & Maintenance",
+        "description": "Household help and property maintenance",
+        "selectService": "Select Household Service"
+      }
     }
   },
   "services": {
@@ -291,6 +320,14 @@
         "Final cleaning with guarantee",
         "Insurance coverage",
         "Single point of contact"
+      ],
+      "householdHelping": [
+        "Routine cleaning (vacuuming, mopping, bathroom, kitchen)",
+        "Ironing and laundry service",
+        "Shopping and delivery service",
+        "Cooking and meal preparation",
+        "Pet care and plant care",
+        "Senior care and errands"
       ]
     },
     "pricingUnits": {
@@ -333,7 +370,8 @@
       "finalCleaning": "from CHF 250",
       "windowCleaning": "CHF 8–15 per window",
       "relocation": "from CHF 160 / hour",
-      "disposal": "from CHF 30 / m³"
+      "disposal": "from CHF 30 / m³",
+      "householdHelping": "from CHF 35 / hour"
     }
   },
   "about": {
@@ -680,19 +718,236 @@
         "moving_new": "New Property",
         "moving_details": "Moving Details",
         "special_bg": "Service Requirements",
-        "contact": "Contact Details"
+        "contact": "Contact Details",
+        "areas": "Areas to Clean",
+        "windows": "Windows & Glass",
+        "waste": "Waste Details",
+        "supplies": "Additional Supplies",
+        "household_property": "Property & Household",
+        "household_services": "Services & Frequency",
+        "disposal_type": "Disposal Type",
+        "disposal_items": "Items & Volume",
+        "disposal_options": "Additional Options"
       },
-      "placeholders": {
-        "areaM2": "e.g. 120",
-        "rooms": "e.g. 3",
-        "zipCity": "3000 Bern",
-        "address": "Street 12",
-        "phone": "+41 XX XXX XX XX",
-        "email": "you@example.com",
-        "message": "Any additional information...",
-        "specialRequest": "e.g. Carpet, Upholstery, Disinfection",
-        "firstName": "Your first name",
-        "lastName": "Your last name"
+      "buttons": {
+        "back": "Back",
+        "next": "Further",
+        "submit": "Submit",
+        "submitting": "Submitting..."
+      },
+      "validation": {
+        "required": "Please fill in all required fields",
+        "selectOption": "Please select an option."
+      },
+      "cleaning": {
+        "desiredService": "Desired service *",
+        "cleaningOnly": "Cleaning only",
+        "movingAndCleaning": "Moving & Cleaning",
+        "cleaningLocation": "Cleaning location",
+        "objectType": "What type of object needs to be cleaned? *",
+        "objectTypes": {
+          "apartment": "Apartment",
+          "house": "House",
+          "wgRoom": "WG-Room / Room",
+          "office": "Office",
+          "storageCellar": "Storage/Cellar"
+        },
+        "floors": "How many floors does your house/apartment have?",
+        "numberOfRooms": "Number of Rooms:",
+        "livingSpace": "Living space (m²):",
+        "areasTitle": "Which areas need cleaning? *",
+        "areas": {
+          "completeAll": "Complete cleaning of all rooms (including kitchen, bathroom & toilet)",
+          "cellar": "Cellar",
+          "atticScreed": "Attic / screed",
+          "garage": "Garage",
+          "conservatory": "Conservatory",
+          "individualRooms": "Only individual rooms"
+        },
+        "windowsTitle": "Windows & glass surfaces (please specify number)",
+        "normalWindows": "Normal windows:",
+        "frenchDoors": "French doors (e.g. balcony/terrace):",
+        "otherGlassSurfaces": "Other large glass surfaces:",
+        "panoramicHint": "Panoramic windows (e.g., conservatory, glass fronts):",
+        "blindsTitle": "Blinds & shutters",
+        "blinds": {
+          "venetian": "Venetian blinds",
+          "rollerShutters": "Roller shutters",
+          "shutters": "Shutters",
+          "otherSpecial": "Other / special systems",
+          "no": "No"
+        },
+        "specialFeaturesTitle": "Special features of windows",
+        "specialFeatures": {
+          "heavilySoiled": "Heavily soiled (e.g. nicotine, grease, dust)",
+          "moldFrames": "Mold on window frames",
+          "smallCasement": "Many small casement windows",
+          "roofWindow": "Roof window / difficult to access",
+          "safetyFilm": "Windows with safety film or special glazing",
+          "noSpecial": "No special features"
+        },
+        "furtherRequests": "Further requests/comments:",
+        "desiredCleaningDate": "Desired cleaning date",
+        "deliveryHandoverDate": "Date of delivery / handover *",
+        "nameFirstName": "Name first Name: *",
+        "emailAddress": "E-mail address: *",
+        "telephoneNumber": "Telephone number: *",
+        "zipCity": "ZIP / City: *",
+        "streetNo": "Street, No.: *"
+      },
+      "relocation": {
+        "movingFrom": "Moving from - Postcode / City / Address *",
+        "currentLiving": "Where do you currently live? *",
+        "currentLivingOptions": {
+          "apartment": "Apartment",
+          "house": "House",
+          "wgRoom": "WG-Room",
+          "studio": "Studio",
+          "office": "Office"
+        },
+        "currentFloor": "On which floor do you live now? *",
+        "elevatorAvailable": "Is there currently an elevator available? *",
+        "yes": "YES",
+        "no": "NO",
+        "currentLivingSpace": "Current living space",
+        "currentRooms": "How many rooms do you currently have? *",
+        "movingTo": "Where are you moving to? *",
+        "movingToOptions": {
+          "apartment": "Apartment",
+          "house": "House",
+          "wgRoom": "WG-Room",
+          "studio": "Studio",
+          "office": "Office",
+          "storage": "Storage"
+        },
+        "movingToAddress": "Moving to - Postcode / City / Address *",
+        "newElevator": "Is there currently an elevator available? *",
+        "newLivingSpace": "Living space new apartment",
+        "newRooms": "How many rooms does your new apartment have? *",
+        "peopleMoving": "How many people are moving?",
+        "peopleMovingHint": "This helps us better estimate the scope of your move.",
+        "movingBoxes": "How many moving boxes need to be moved?",
+        "movingBoxesHint": "Adults need an average of 20-30 boxes, children approximately 10.",
+        "additionalSuppliesTitle": "Do you need additional moving supplies?",
+        "supplies": {
+          "movingBox": "CHF 20.- / moving box (10 pieces)",
+          "wardrobeBox": "CHF 22.- / wardrobe box",
+          "bottleCarton": "CHF 8.- / bottle carton wine carton",
+          "adhesiveTape": "CHF 20.- / adhesive tape, 6 rolls with dispenser"
+        },
+        "areasCleaningTitle": "Which areas need cleaning?",
+        "otherAreasTitle": "Are there other areas?",
+        "otherAreas": {
+          "cellar": "Cellar",
+          "atticScreed": "Attic / screed",
+          "garageParkingSpace": "Garage / Parking space",
+          "conservatoryBalcony": "Conservatory / Balcony"
+        },
+        "additionalAreasTitle": "Are there other areas:",
+        "additionalAreas": {
+          "parking": "Parking",
+          "stairs": "Stairs",
+          "corridor": "Corridor"
+        },
+        "furtherRequests": "Further requests/comments:",
+        "desiredCleaningDate": "Desired cleaning date",
+        "preferredMoveDate": "Preferred date for the move",
+        "nameFirstName": "Name first Name: *",
+        "company": "Company: *",
+        "emailAddress": "E-mail address: *",
+        "telephoneNumber": "Telephone number: *",
+        "zipCity": "ZIP / City: *",
+        "streetNo": "Street, No.: *"
+      },
+      "disposal": {
+        "pleaseChoose": "Please choose: *",
+        "disposalTypes": {
+          "disposal": "Disposal",
+          "eviction": "Eviction",
+          "disposalClearance": "Disposal + Clearance"
+        },
+        "objectType": "Object type *",
+        "location": "Location *",
+        "floor": "On which floor is it located? *",
+        "elevatorAvailable": "Is there currently an elevator available? *",
+        "yes": "Yes",
+        "no": "No",
+        "wasteTitle": "Waste",
+        "wasteItems": {
+          "furniture": "Furniture (wardrobe, bed, table, etc.)",
+          "electrical": "Electrical appliances (TV, refrigerator, PC)",
+          "cardboard": "Cardboard / Paper / Small parts",
+          "construction": "Construction debris / wood / metal",
+          "garden": "Garden waste / plants / soil",
+          "textiles": "Textiles / Carpets / Mattresses"
+        },
+        "otherDisposalItems": "Other items for disposal",
+        "disassemblyNeeded": "Do items need to be disassembled?",
+        "materialAmount": "How much material needs to be disposed of? *",
+        "materialAmounts": {
+          "little": "Little (e.g., small space)",
+          "medium": "Medium (1-2 rooms)",
+          "lots": "Lots (entire apartment / house / warehouse)"
+        },
+        "additionalOptionsTitle": "Additional options",
+        "additionalOptions": {
+          "cleaningAfter": "Including cleaning after the evacuation",
+          "broomCleaning": "Broom cleaning only",
+          "basicCleaning": "Basic cleaning",
+          "adhesiveTape": "CHF 20.- / adhesive tape, 6 rolls with dispenser"
+        },
+        "movingSuppliesTitle": "Do you need additional moving supplies?",
+        "furtherWishes": "Further wishes / comments: *",
+        "desiredDate": "Desired date *",
+        "nameFirstName": "Name / First Name: *",
+        "company": "Company: *",
+        "emailAddress": "E-mail address: *",
+        "telephoneNumber": "Telephone number: *",
+        "zipCity": "ZIP / City: *",
+        "streetNo": "Street / No.: *"
+      },
+      "householdHelping": {
+        "floors": "Floors *",
+        "elevatorAvailable": "Is there an elevator?",
+        "yes": "Yes",
+        "no": "No",
+        "livingArea": "Living area: *",
+        "householdSituation": "Household situation",
+        "numberOfAdults": "Number of adults",
+        "numberOfChildren": "Number of children",
+        "hasPets": "Do you have pets?",
+        "desiredFrequency": "Desired deployment frequency *",
+        "frequencyOptions": {
+          "weekly": "Weekly",
+          "biweekly": "Every 2 weeks",
+          "monthly": "Monthly",
+          "onDemand": "On demand"
+        },
+        "desiredHours": "Desired hours per assignment *",
+        "desiredServicesTitle": "Desired services *",
+        "desiredServices": {
+          "routineCleaning": "Routine cleaning (vacuuming, mopping, bathroom, kitchen, etc.)",
+          "ironing": "Ironing service",
+          "laundry": "Wash and hang up laundry",
+          "shopping": "Shopping / Delivery service",
+          "dishwashing": "Dishwashing service / Washing up",
+          "cooking": "Cooking / Preparing meals",
+          "plantCare": "Plant care in the home",
+          "smallTasks": "Small tasks (taking out trash, changing bed linen, etc.)",
+          "petCare": "Pet care",
+          "seniorCare": "Senior care",
+          "errands": "Errands / Post Office visits"
+        },
+        "otherTasks": "Other tasks or requests:",
+        "furtherRequests": "Further requests/comments:",
+        "wishDay": "Wish day *",
+        "preferredTime": "Preferred time:",
+        "nameFirstName": "Name first Name: *",
+        "company": "Company: *",
+        "emailAddress": "E-mail address: *",
+        "telephoneNumber": "Telephone number: *",
+        "zipCity": "ZIP / City: *",
+        "streetNo": "Street, No.: *"
       },
       "labels": {
         "propertyType": "Property Type",
@@ -820,6 +1075,18 @@
           "select": "Please select..."
         }
       },
+      "placeholders": {
+        "areaM2": "e.g. 120",
+        "rooms": "e.g. 3",
+        "zipCity": "3000 Bern",
+        "address": "Street 12",
+        "phone": "+41 XX XXX XX XX",
+        "email": "you@example.com",
+        "message": "Any additional information...",
+        "specialRequest": "e.g. Carpet, Upholstery, Disinfection",
+        "firstName": "Your first name",
+        "lastName": "Your last name"
+      },
       "additional": {
         "title": "Additional Services",
         "largeWindows": "Large Windows",
@@ -848,12 +1115,6 @@
         "hygieneTitle": "Hygiene & Compliance",
         "disinfectionTreatment": "Disinfection Treatment Required",
         "medicalWaste": "Medical Waste Disposal Service"
-      },
-      "buttons": {
-        "back": "Back",
-        "next": "Next",
-        "submit": "Submit Request",
-        "submitting": "Submitting..."
       }
     }
   },
@@ -1289,7 +1550,8 @@
       "serviceForms": "Service Forms",
       "emailCommunication": "Email Communication",
       "gallery": "Gallery",
-      "calendar": "Calendar"
+      "calendar": "Calendar",
+      "householdHelping": "Household Helping"
     },
     "calendar": {
       "title": "Calendar",
@@ -2104,7 +2366,8 @@
         "mr": "Mr.",
         "mrs": "Mrs.",
         "ms": "Ms.",
-        "dr": "Dr."
+        "dr": "Dr.",
+        "other": "Other"
       },
       "step5": {
         "title": "Pricing & Final Details",
@@ -2438,7 +2701,8 @@
       "constructionCleaning": "Construction Cleaning",
       "propertyMaintenance": "Property Maintenance",
       "specialCleaning": "Special Cleaning",
-      "comboService": "Cleaning + Moving Combo"
+      "comboService": "Cleaning + Moving Combo",
+      "householdHelping": "Household Helping"
     }
   }
 }

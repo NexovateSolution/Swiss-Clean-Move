@@ -27,6 +27,7 @@ import {
   Heart,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   Play,
   Pause
 } from 'lucide-react';
@@ -36,6 +37,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   // Slideshow images data
   const slideImages = [
@@ -70,123 +72,74 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slideImages.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [slideImages.length]);
 
-  const services = [
+  const serviceCategories = [
     {
-      icon: HomeIcon,
-      title: t('home.services.houseCleaning.title'),
-      description: t('home.services.houseCleaning.description'),
-      href: `/${locale}/services/house-cleaning`,
-      formHref: `/${locale}/form?service=house-cleaning`,
-      color: 'bg-blue-500'
+      id: 'cleaning',
+      icon: Sparkles,
+      title: t('home.serviceCategories.cleaning.title'),
+      description: t('home.serviceCategories.cleaning.description'),
+      color: 'from-blue-500 to-blue-700',
+      bgColor: 'bg-blue-50',
+      borderColor: 'border-blue-200',
+      iconColor: 'text-blue-600',
+      services: [
+        { title: t('home.services.houseCleaning.title'), description: t('home.services.houseCleaning.description'), formHref: `/${locale}/form?service=house-cleaning`, href: `/${locale}/services/house-cleaning`, icon: HomeIcon },
+        { title: t('home.services.apartmentCleaning.title'), description: t('home.services.apartmentCleaning.description'), formHref: `/${locale}/form?service=apartment-cleaning`, href: `/${locale}/services/apartment-cleaning`, icon: Building2 },
+        { title: t('home.services.stairwellCleaning.title'), description: t('home.services.stairwellCleaning.description'), formHref: `/${locale}/form?service=stairwell-cleaning`, href: `/${locale}/services/stairwell-cleaning`, icon: Building2 },
+        { title: t('home.services.officeCleaning.title'), description: t('home.services.officeCleaning.description'), formHref: `/${locale}/form?service=office-cleaning`, href: `/${locale}/services/office-cleaning`, icon: Briefcase },
+        { title: t('home.services.finalCleaning.title'), description: t('home.services.finalCleaning.description'), formHref: `/${locale}/form?service=final-cleaning`, href: `/${locale}/services/final-cleaning`, icon: CheckCircle },
+        { title: t('home.services.windowCleaning.title'), description: t('home.services.windowCleaning.description'), formHref: `/${locale}/form?service=window-cleaning`, href: `/${locale}/services/window-cleaning`, icon: HomeIcon },
+        { title: t('home.services.gastronomyCleaning.title'), description: t('home.services.gastronomyCleaning.description'), formHref: `/${locale}/form?service=gastronomy-cleaning`, href: `/${locale}/services#gastronomyCleaning`, icon: UtensilsCrossed },
+        { title: t('home.services.medicalCleaning.title'), description: t('home.services.medicalCleaning.description'), formHref: `/${locale}/form?service=medical-cleaning`, href: `/${locale}/services#medicalCleaning`, icon: Shield },
+        { title: t('home.services.constructionCleaning.title'), description: t('home.services.constructionCleaning.description'), formHref: `/${locale}/form?service=construction-cleaning`, href: `/${locale}/services#constructionCleaning`, icon: Building2 },
+        { title: t('home.services.specialCleaning.title'), description: t('home.services.specialCleaning.description'), formHref: `/${locale}/form?service=special-cleaning`, href: `/${locale}/services#specialCleaning`, icon: Star },
+      ]
     },
     {
-      icon: Building2,
-      title: t('home.services.apartmentCleaning.title'),
-      description: t('home.services.apartmentCleaning.description'),
-      href: `/${locale}/services/apartment-cleaning`,
-      formHref: `/${locale}/form?service=apartment-cleaning`,
-      color: 'bg-green-500'
-    },
-    {
-      icon: Building2,
-      title: t('home.services.stairwellCleaning.title'),
-      description: t('home.services.stairwellCleaning.description'),
-      href: `/${locale}/services/stairwell-cleaning`,
-      formHref: `/${locale}/form?service=stairwell-cleaning`,
-      color: 'bg-purple-500'
-    },
-    {
-      icon: Briefcase,
-      title: t('home.services.officeCleaning.title'),
-      description: t('home.services.officeCleaning.description'),
-      href: `/${locale}/services/office-cleaning`,
-      formHref: `/${locale}/form?service=office-cleaning`,
-      color: 'bg-orange-500'
-    },
-    {
-      icon: CheckCircle,
-      title: t('home.services.finalCleaning.title'),
-      description: t('home.services.finalCleaning.description'),
-      href: `/${locale}/services/final-cleaning`,
-      formHref: `/${locale}/form?service=final-cleaning`,
-      color: 'bg-teal-500'
-    },
-    {
-      icon: HomeIcon,
-      title: t('home.services.windowCleaning.title'),
-      description: t('home.services.windowCleaning.description'),
-      href: `/${locale}/services/window-cleaning`,
-      formHref: `/${locale}/form?service=window-cleaning`,
-      color: 'bg-cyan-500'
-    },
-    {
+      id: 'moving',
       icon: Truck,
-      title: t('home.services.relocation.title'),
-      description: t('home.services.relocation.description'),
-      href: `/${locale}/services/relocation`,
-      formHref: `/${locale}/form?service=relocation`,
-      color: 'bg-indigo-500'
+      title: t('home.serviceCategories.moving.title'),
+      description: t('home.serviceCategories.moving.description'),
+      color: 'from-indigo-500 to-indigo-700',
+      bgColor: 'bg-indigo-50',
+      borderColor: 'border-indigo-200',
+      iconColor: 'text-indigo-600',
+      services: [
+        { title: t('home.services.relocation.title'), description: t('home.services.relocation.description'), formHref: `/${locale}/form?service=relocation`, href: `/${locale}/services/relocation`, icon: Truck },
+        { title: t('home.services.comboService.title'), description: t('home.services.comboService.description'), formHref: `/${locale}/form?service=combo-service`, href: `/${locale}/services#comboService`, icon: Truck },
+      ]
     },
     {
+      id: 'disposal',
       icon: Trash2,
-      title: t('home.services.disposal.title'),
-      description: t('home.services.disposal.description'),
-      href: `/${locale}/services/disposal`,
-      formHref: `/${locale}/form?service=disposal`,
-      color: 'bg-red-500'
+      title: t('home.serviceCategories.disposal.title'),
+      description: t('home.serviceCategories.disposal.description'),
+      color: 'from-red-500 to-red-700',
+      bgColor: 'bg-red-50',
+      borderColor: 'border-red-200',
+      iconColor: 'text-red-600',
+      services: [
+        { title: t('home.services.disposal.title'), description: t('home.services.disposal.description'), formHref: `/${locale}/form?service=disposal`, href: `/${locale}/services/disposal`, icon: Trash2 },
+      ]
     },
     {
-      icon: UtensilsCrossed,
-      title: t('home.services.gastronomyCleaning.title'),
-      description: t('home.services.gastronomyCleaning.description'),
-      href: `/${locale}/services#gastronomyCleaning`,
-      formHref: `/${locale}/form?service=gastronomy-cleaning`,
-      color: 'bg-rose-500'
-    },
-    {
-      icon: Shield,
-      title: t('home.services.medicalCleaning.title'),
-      description: t('home.services.medicalCleaning.description'),
-      href: `/${locale}/services#medicalCleaning`,
-      formHref: `/${locale}/form?service=medical-cleaning`,
-      color: 'bg-emerald-500'
-    },
-    {
-      icon: Building2,
-      title: t('home.services.constructionCleaning.title'),
-      description: t('home.services.constructionCleaning.description'),
-      href: `/${locale}/services#constructionCleaning`,
-      formHref: `/${locale}/form?service=construction-cleaning`,
-      color: 'bg-yellow-500'
-    },
-    {
-      icon: Wrench,
-      title: t('home.services.propertyMaintenance.title'),
-      description: t('home.services.propertyMaintenance.description'),
-      href: `/${locale}/services#propertyMaintenance`,
-      formHref: `/${locale}/form?service=property-maintenance`,
-      color: 'bg-sky-500'
-    },
-    {
-      icon: Star,
-      title: t('home.services.specialCleaning.title'),
-      description: t('home.services.specialCleaning.description'),
-      href: `/${locale}/services#specialCleaning`,
-      formHref: `/${locale}/form?service=special-cleaning`,
-      color: 'bg-fuchsia-500'
-    },
-    {
-      icon: Truck,
-      title: t('home.services.comboService.title'),
-      description: t('home.services.comboService.description'),
-      href: `/${locale}/services#comboService`,
-      formHref: `/${locale}/form?service=combo-service`,
-      color: 'bg-indigo-700'
+      id: 'household',
+      icon: Heart,
+      title: t('home.serviceCategories.household.title'),
+      description: t('home.serviceCategories.household.description'),
+      color: 'from-emerald-500 to-emerald-700',
+      bgColor: 'bg-emerald-50',
+      borderColor: 'border-emerald-200',
+      iconColor: 'text-emerald-600',
+      services: [
+        { title: t('home.services.householdHelping.title'), description: t('home.services.householdHelping.description'), formHref: `/${locale}/form?service=household-helping`, href: `/${locale}/services/household-helping`, icon: Heart },
+        { title: t('home.services.propertyMaintenance.title'), description: t('home.services.propertyMaintenance.description'), formHref: `/${locale}/form?service=property-maintenance`, href: `/${locale}/services#propertyMaintenance`, icon: Wrench },
+      ]
     }
   ];
 
@@ -372,50 +325,62 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             </p>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
+          {/* Service Categories Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {serviceCategories.map((category) => {
+              const CategoryIcon = category.icon;
+              const isExpanded = expandedCategory === category.id;
               return (
-                <div
-                  key={index}
-                  className="group relative bg-white rounded-2xl p-6 shadow-subtle hover:shadow-soft transition-all duration-300 transform hover:-translate-y-1 border border-swiss-border overflow-hidden"
-                >
-                  {/* Content */}
-                  <div className="relative space-y-4">
-                    {/* Icon */}
-                    <div className="relative">
-                      <div className="w-14 h-14 bg-swiss-gray-50 rounded-xl flex items-center justify-center transition-all duration-300 border border-swiss-border group-hover:border-swiss-red/30">
-                        <IconComponent className="w-7 h-7 text-swiss-body group-hover:text-swiss-red transition-colors duration-300" />
+                <div key={category.id} className="relative">
+                  {/* Category Card */}
+                  <button
+                    onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
+                    className={`w-full text-left bg-white rounded-2xl p-8 shadow-subtle hover:shadow-soft transition-all duration-300 border ${isExpanded ? category.borderColor : 'border-swiss-border'} overflow-hidden group`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className={`w-16 h-16 ${category.bgColor} rounded-2xl flex items-center justify-center transition-all duration-300`}>
+                          <CategoryIcon className={`w-8 h-8 ${category.iconColor}`} />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-swiss-text">{category.title}</h3>
+                          <p className="text-swiss-body text-sm mt-1">{category.description}</p>
+                          <span className="text-xs text-swiss-body mt-2 inline-block">{category.services.length} {category.services.length === 1 ? 'service' : 'services'}</span>
+                        </div>
                       </div>
+                      <ChevronDown className={`w-6 h-6 text-swiss-body transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
                     </div>
+                  </button>
 
-                    {/* Title */}
-                    <h3 className="text-lg font-bold text-swiss-text group-hover:text-swiss-text transition-colors duration-300">
-                      {service.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-swiss-body text-sm leading-relaxed line-clamp-3">{service.description}</p>
-
-                    {/* Actions */}
-                    <div className="flex items-center justify-between gap-3 pt-2">
-                      <Link
-                        href={service.href}
-                        className="inline-flex items-center text-swiss-red font-medium hover:translate-x-1 transition-transform duration-300"
-                      >
-                        <span className="text-sm">{t('common.learnMore')}</span>
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-
-                      <Link
-                        href={service.formHref}
-                        className="text-sm font-semibold text-swiss-text bg-swiss-softRed border border-swiss-border rounded-full px-4 py-2 hover:bg-white transition-colors"
-                      >
-                        {t('common.formLink')}
-                      </Link>
+                  {/* Expanded Sub-services */}
+                  {isExpanded && (
+                    <div className={`mt-3 bg-white rounded-2xl border ${category.borderColor} overflow-hidden shadow-soft animate-in fade-in duration-300`}>
+                      {category.services.map((svc, svcIdx) => {
+                        const SvcIcon = svc.icon;
+                        return (
+                          <div key={svcIdx} className={`p-5 ${svcIdx > 0 ? 'border-t border-swiss-border' : ''} hover:bg-swiss-section transition-colors`}>
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center space-x-3">
+                                <div className="w-10 h-10 bg-swiss-gray-50 rounded-xl flex items-center justify-center border border-swiss-border">
+                                  <SvcIcon className="w-5 h-5 text-swiss-body" />
+                                </div>
+                                <div>
+                                  <h4 className="text-sm font-bold text-swiss-text">{svc.title}</h4>
+                                  <p className="text-xs text-swiss-body line-clamp-1 mt-0.5">{svc.description}</p>
+                                </div>
+                              </div>
+                              <div className="flex items-center gap-2 ml-4 flex-shrink-0">
+                                <Link href={svc.href} className="text-xs font-medium text-swiss-red hover:underline hidden sm:inline">{t('common.learnMore')}</Link>
+                                <Link href={svc.formHref} className="text-xs font-semibold text-white bg-swiss-red rounded-full px-4 py-1.5 hover:bg-swiss-red/90 transition-colors whitespace-nowrap">
+                                  {t('common.formLink')}
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
-                  </div>
+                  )}
                 </div>
               );
             })}
@@ -574,7 +539,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-swiss-blue via-blue-600 to-blue-800 text-white">
+      <section className="section-padding bg-gradient-to-br from-blue-400/80 via-blue-500/70 to-blue-600/80 text-white">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Badge */}

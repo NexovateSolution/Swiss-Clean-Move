@@ -10,417 +10,705 @@ export type ServiceSlug =
   | 'office-cleaning' | 'final-cleaning' | 'window-cleaning'
   | 'relocation' | 'disposal' | 'gastronomy-cleaning'
   | 'medical-cleaning' | 'construction-cleaning' | 'property-maintenance'
-  | 'special-cleaning' | 'combo-service'
+  | 'special-cleaning' | 'combo-service' | 'household-helping'
 
-type FormType = 'cleaning' | 'relocation' | 'disposal'
+type FormCategory = 'cleaning' | 'relocation' | 'disposal' | 'household-helping' | 'other'
 
-type StepId =
-  | 'property' | 'date_frequency' | 'additional' | 'hygiene'
-  | 'moving_old' | 'moving_new' | 'moving_details'
-  | 'special_bg' | 'contact'
-
-interface WizardData {
-  salutation?: 'Mister' | 'Woman' | 'Other'
-  firstName: string; name: string; emailAddress: string; telephone: string
-  postalCodeAndCity: string; streetAndNumber: string
-  contactPreferredVia?: 'E-mail' | 'Phone'
-  viewingIsWelcome?: 'And' | 'No'; remark?: string
-  propertyType?: string; livingAreaM2?: string; roomCount?: string
-  bathroomCount?: string; floorCount?: string; hasElevator?: string
-  frequency?: string; desiredDate?: string; message?: string
-  hasPets?: string; specialFeatures?: string[]; serviceFrequency?: string
-  windowCleaningOpt?: boolean; kitchenExtra?: boolean; carpetCare?: boolean; gardenMaintenance?: boolean
-  hasBasement?: boolean; hasAttic?: boolean; hasBalcony?: boolean
-  rentalHandover?: string; windowsInsideOutside?: boolean
-  kitchenAppliances?: boolean; bulkyWasteDisposal?: boolean
-  buildingType?: string; stairwellArea?: string; unitCount?: string
-  handrailsExtra?: boolean; lightSwitchesMailboxes?: boolean; windowCleaningStairwell?: boolean
-  officeAreaM2?: string; workstationCount?: string; sanitaryFacilityCount?: string
-  kitchenetteCount?: string; disinfectionWCKitchen?: boolean
-  carpetCareOffice?: boolean; windowCleaningOffice?: boolean
-  practiceType?: string; treatmentRoomCount?: string
-  disinfectionTreatment?: boolean; medicalWasteDisposal?: boolean
-  gastronomyAreaM2?: string; hasKitchen?: string; seatsCount?: string; staffRoomCount?: string
-  greaseFilterCleaning?: boolean; intensiveFloorCleaning?: boolean; windowsGastro?: boolean
-  constructionAreaM2?: string; constructionType?: string; constructionCondition?: string
-  fineCleaningOpt?: boolean; dustProtection?: boolean; windowCleaningConstruction?: boolean
-  specialRequestType?: string; areaQuantity?: string; specialFrequency?: string
-  specialPeriod?: string; specialRequirements?: string
-  windowCount?: string; windowFloors?: string; insideOutsideBoth?: string; balconyGlazing?: string
-  oldAddress?: string; oldFloor?: string; oldElevator?: string; oldAccess?: string
-  newAddress?: string; newFloor?: string; newElevator?: string; newAccess?: string
-  movingRoomCount?: string; bulkySpecialItems?: string; packingService?: string
-  furnitureAssembly?: string; movingDate?: string
-  disposalAddress?: string; itemType?: string; volumeM3?: string
-  preferredDate?: string; preferredTime?: string
-  pmBuildingType?: string; pmUnitCount?: string; pmAreaM2?: string
-  winterService?: string; minorRepairs?: string; gardenMaintenancePM?: string; contractType?: string
-  comboCleaningType?: string; comboCleaningArea?: string; comboCleaningRooms?: string
-}
-
-/* ─── helpers ─── */
-function getFormType(s: ServiceSlug): FormType {
+function getFormCategory(s: ServiceSlug): FormCategory {
   if (s === 'relocation' || s === 'combo-service') return 'relocation'
   if (s === 'disposal') return 'disposal'
-  return 'cleaning'
+  if (s === 'household-helping') return 'household-helping'
+  if (['house-cleaning', 'apartment-cleaning', 'stairwell-cleaning', 'office-cleaning', 'final-cleaning', 'window-cleaning'].includes(s)) return 'cleaning'
+  return 'other'
 }
 
-function getSteps(s: ServiceSlug): StepId[] {
-  switch (s) {
-    case 'house-cleaning': case 'apartment-cleaning': case 'final-cleaning':
-    case 'stairwell-cleaning': case 'office-cleaning':
-    case 'gastronomy-cleaning': case 'construction-cleaning':
-      return ['property', 'date_frequency', 'additional', 'contact']
-    case 'medical-cleaning':
-      return ['property', 'date_frequency', 'hygiene', 'contact']
-    case 'special-cleaning':
-      return ['special_bg', 'date_frequency', 'contact']
-    case 'window-cleaning': case 'disposal': case 'property-maintenance':
-      return ['property', 'date_frequency', 'contact']
-    case 'relocation':
-      return ['moving_old', 'moving_new', 'moving_details', 'date_frequency', 'contact']
-    case 'combo-service':
-      return ['moving_old', 'moving_new', 'moving_details', 'additional', 'date_frequency', 'contact']
-    default:
-      return ['property', 'date_frequency', 'contact']
-  }
+function getStepCount(s: ServiceSlug): number {
+  const cat = getFormCategory(s)
+  if (cat === 'cleaning') return 5
+  if (cat === 'relocation') return 5
+  if (cat === 'disposal') return 4
+  if (cat === 'household-helping') return 3
+  return 3
 }
 
-/* ─── Stable field components (outside render to prevent focus loss) ─── */
-const ic = 'w-full px-3 py-2.5 border border-swiss-border rounded-lg focus:outline-none focus:ring-2 focus:ring-swiss-red/40 focus:border-swiss-red bg-white text-swiss-text transition-colors'
+/* ─── Stable field components ─── */
+const ic = 'w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366]/40 focus:border-[#003366] bg-white text-[#003366] transition-colors text-sm'
 
-function FI({ label, value, onChange, required, type = 'text', placeholder }: { label: string; value: string; onChange: (v: string) => void; required?: boolean; type?: string; placeholder?: string }) {
-  return (<div><label className="block text-sm font-semibold text-swiss-text mb-1.5">{label}{required && <span className="text-swiss-red ml-0.5">*</span>}</label><input type={type} value={value} onChange={e => onChange(e.target.value)} className={ic} placeholder={placeholder} /></div>)
+function FI({ label, value, onChange, required, type = 'text', placeholder, hint }: {
+  label: string; value: string; onChange: (v: string) => void; required?: boolean; type?: string; placeholder?: string; hint?: string
+}) {
+  return (
+    <div className="mb-4">
+      <label className="block text-sm font-bold text-[#003366] mb-2">{label}</label>
+      <input type={type} value={value} onChange={e => onChange(e.target.value)} className={ic} placeholder={placeholder} />
+      {hint && <p className="text-xs text-[#5a7a9a] mt-1">{hint}</p>}
+    </div>
+  )
 }
 
-function FS({ label, value, onChange, required, options, placeholder, selectLabel }: { label: string; value: string; onChange: (v: string) => void; required?: boolean; options: { value: string; label: string }[]; placeholder?: string; selectLabel?: string }) {
-  return (<div><label className="block text-sm font-semibold text-swiss-text mb-1.5">{label}{required && <span className="text-swiss-red ml-0.5">*</span>}</label><select value={value} onChange={e => onChange(e.target.value)} className={ic}><option value="">{placeholder || selectLabel || 'Please select...'}</option>{options.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}</select></div>)
+function FS({ label, value, onChange, options, placeholder, hint }: {
+  label: string; value: string; onChange: (v: string) => void; options: { value: string; label: string }[]; placeholder?: string; hint?: string
+}) {
+  return (
+    <div className="mb-4">
+      <label className="block text-sm font-bold text-[#003366] mb-2">{label}</label>
+      <select value={value} onChange={e => onChange(e.target.value)} className={ic}>
+        <option value="">{placeholder || '---'}</option>
+        {options.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+      </select>
+      {hint && <p className="text-xs text-[#5a7a9a] mt-1 flex items-center gap-1">
+        <span className="text-[#cc0000]">ⓘ</span> {hint}
+      </p>}
+    </div>
+  )
 }
 
-function FYN({ label, value, onChange, required, yesLabel = 'Yes', noLabel = 'No', selectLabel }: { label: string; value: string; onChange: (v: string) => void; required?: boolean; yesLabel?: string; noLabel?: string; selectLabel?: string }) {
-  return <FS label={label} value={value} onChange={onChange} required={required} selectLabel={selectLabel} options={[{ value: 'yes', label: yesLabel }, { value: 'no', label: noLabel }]} />
+function FR({ label, value, onChange, options }: {
+  label: string; value: string; onChange: (v: string) => void; options: { value: string; label: string }[]
+}) {
+  return (
+    <div className="mb-4">
+      <label className="block text-sm font-bold text-[#003366] mb-2">{label}</label>
+      <div className="space-y-2">
+        {options.map(o => (
+          <label key={o.value} className="flex items-center gap-3 cursor-pointer">
+            <input
+              type="radio" name={label} value={o.value}
+              checked={value === o.value}
+              onChange={() => onChange(o.value)}
+              className="w-4 h-4 text-[#003366] border-[#a8c8e8] focus:ring-[#003366]"
+            />
+            <span className="text-sm text-[#003366]">{o.label}</span>
+          </label>
+        ))}
+      </div>
+    </div>
+  )
 }
 
 function FC({ label, checked, onChange }: { label: string; checked: boolean; onChange: (v: boolean) => void }) {
-  return (<label className="flex items-center gap-3 p-3 rounded-lg border border-swiss-border hover:border-swiss-red/30 hover:bg-swiss-softRed/30 transition-colors cursor-pointer"><input type="checkbox" checked={checked} onChange={e => onChange(e.target.checked)} className="w-4 h-4 rounded border-swiss-border text-swiss-red focus:ring-swiss-red" /><span className="text-sm text-swiss-text">{label}</span></label>)
+  return (
+    <label className="flex items-center gap-3 py-1.5 cursor-pointer group">
+      <input
+        type="checkbox" checked={checked} onChange={e => onChange(e.target.checked)}
+        className="w-4 h-4 rounded border-[#a8c8e8] text-[#003366] focus:ring-[#003366]"
+      />
+      <span className="text-sm text-[#003366] group-hover:text-[#001a33]">{label}</span>
+    </label>
+  )
 }
 
-function FTA({ label, value, onChange, placeholder, rows = 4 }: { label: string; value: string; onChange: (v: string) => void; placeholder?: string; rows?: number }) {
-  return (<div><label className="block text-sm font-semibold text-swiss-text mb-1.5">{label}</label><textarea value={value} onChange={e => onChange(e.target.value)} rows={rows} className={ic} placeholder={placeholder} /></div>)
+function FTA({ label, value, onChange, placeholder, rows = 3 }: {
+  label: string; value: string; onChange: (v: string) => void; placeholder?: string; rows?: number
+}) {
+  return (
+    <div className="mb-4">
+      <label className="block text-sm font-bold text-[#003366] mb-2">{label}</label>
+      <textarea value={value} onChange={e => onChange(e.target.value)} rows={rows} className={ic} placeholder={placeholder} />
+    </div>
+  )
 }
 
 function SH({ children }: { children: string }) {
-  return <h3 className="text-base font-bold text-swiss-text border-b border-swiss-border pb-2 mb-4">{children}</h3>
+  return <h3 className="text-base font-bold text-[#003366] mb-4">{children}</h3>
 }
+
+const floorOptions = [
+  { value: 'ground', label: 'Ground floor' }, { value: '1', label: '1st floor' },
+  { value: '2', label: '2nd floor' }, { value: '3', label: '3rd floor' },
+  { value: '4', label: '4th floor' }, { value: '5', label: '5th floor' },
+  { value: '6+', label: '6th floor or higher' }
+]
 
 const roomNumbers = [
   { value: '1', label: '1' }, { value: '1.5', label: '1.5' }, { value: '2', label: '2' },
   { value: '2.5', label: '2.5' }, { value: '3', label: '3' }, { value: '3.5', label: '3.5' },
   { value: '4', label: '4' }, { value: '4.5', label: '4.5' }, { value: '5', label: '5' },
   { value: '5.5', label: '5.5' }, { value: '6', label: '6' }, { value: '6.5', label: '6.5' },
-  { value: '7', label: '7' }
+  { value: '7', label: '7' }, { value: '7+', label: '7+' }
+]
+
+const livingSpaceOptions = [
+  { value: '<40', label: '< 40 m²' }, { value: '40-60', label: '40 - 60 m²' },
+  { value: '60-80', label: '60 - 80 m²' }, { value: '80-100', label: '80 - 100 m²' },
+  { value: '100-120', label: '100 - 120 m²' }, { value: '120-150', label: '120 - 150 m²' },
+  { value: '150-200', label: '150 - 200 m²' }, { value: '>200', label: '> 200 m²' }
+]
+
+const peopleOptions = [
+  { value: '1', label: '1' }, { value: '2', label: '2' }, { value: '3', label: '3' },
+  { value: '4', label: '4' }, { value: '5', label: '5' }, { value: '6+', label: '6+' }
+]
+
+const boxOptions = [
+  { value: '0-10', label: '0 - 10' }, { value: '10-20', label: '10 - 20' },
+  { value: '20-30', label: '20 - 30' }, { value: '30-40', label: '30 - 40' },
+  { value: '40-50', label: '40 - 50' }, { value: '50+', label: '50+' }
 ]
 
 /* ═══ COMPONENT ═══ */
 export default function ServiceFormWizard({ service, serviceName, locale }: { service: ServiceSlug; serviceName: string; locale: string }) {
   const t = useTranslations('serviceForm')
   const router = useRouter()
-  const steps = useMemo(() => getSteps(service), [service])
-  const formType = useMemo(() => getFormType(service), [service])
+  const category = useMemo(() => getFormCategory(service), [service])
+  const totalSteps = useMemo(() => getStepCount(service), [service])
   const [step, setStep] = useState(0)
   const [busy, setBusy] = useState(false)
-  const [d, setD] = useState<WizardData>({ salutation: 'Mister', firstName: '', name: '', emailAddress: '', telephone: '', postalCodeAndCity: '', streetAndNumber: '', contactPreferredVia: 'E-mail', viewingIsWelcome: 'And', remark: '', specialFeatures: [] })
+  const [d, setD] = useState<Record<string, any>>({
+    specialFeatures: [], cleaningAreas: [], wasteItems: [], otherAreas: [],
+    additionalAreas: [], movingSupplies: [], additionalOptions: [], desiredServices: [],
+    blinds: [], windowSpecialFeatures: []
+  })
 
-  const cur = steps[step]
   const isFirst = step === 0
-  const isLast = step === steps.length - 1
-  const set = <K extends keyof WizardData>(k: K, v: WizardData[K]) => setD(p => ({ ...p, [k]: v }))
-  const v = (k: keyof WizardData) => (d[k] as string) ?? ''
-  const b = (k: keyof WizardData) => !!d[k]
-  const toggleArr = (key: keyof WizardData, val: string) => { const a = (d[key] as string[] | undefined) ?? []; const s = new Set(a); if (s.has(val)) s.delete(val); else s.add(val); set(key, Array.from(s) as any) }
+  const isLast = step === totalSteps - 1
+  const set = (k: string, v: any) => setD(p => ({ ...p, [k]: v }))
+  const v = (k: string) => (d[k] as string) ?? ''
+  const b = (k: string) => !!d[k]
+  const toggleArr = (key: string, val: string) => {
+    const a = (d[key] as string[] | undefined) ?? []
+    const s = new Set(a); if (s.has(val)) s.delete(val); else s.add(val)
+    set(key, Array.from(s))
+  }
+  const arrHas = (key: string, val: string) => ((d[key] as string[]) ?? []).includes(val)
 
-  // Translated common labels
-  const yesLabel = t('wizard.options.common.yes')
-  const noLabel = t('wizard.options.common.no')
-  const selectLabel = t('wizard.options.common.select')
-
-  // Translated frequency options
-  const freqOpts = useMemo(() => [{ value: 'one-time', label: t('wizard.options.frequency.one-time') }, { value: 'weekly', label: t('wizard.options.frequency.weekly') }, { value: 'bi-weekly', label: t('wizard.options.frequency.bi-weekly') }, { value: 'monthly', label: t('wizard.options.frequency.monthly') }], [t])
-  const freqExt = useMemo(() => [{ value: 'daily', label: t('wizard.options.frequency.daily') }, { value: '2-3x-week', label: t('wizard.options.frequency.2-3x-week') }, ...freqOpts], [t, freqOpts])
-
-  // Translated room options
-  const roomOptions = useMemo(() => [...roomNumbers, { value: 'more', label: t('wizard.options.common.more') }], [t])
-
-  // Translated special features
-  const specialFeatureItems = useMemo(() => [
-    { key: 'Large Windows', label: t('wizard.additional.largeWindows') },
-    { key: 'Terrace', label: t('wizard.additional.terrace') },
-    { key: 'Garage', label: t('wizard.additional.garage') },
-    { key: 'Garden', label: t('wizard.additional.garden') },
-    { key: 'Balcony', label: t('wizard.additional.balcony') },
-    { key: 'Fireplace', label: t('wizard.additional.fireplace') },
-  ], [t])
+  // Use translated labels - with fallback pattern
+  const tl = (key: string) => { try { return t(key) } catch { return key } }
 
   const validate = (): boolean => {
-    const fail = () => { toast.error(t('wizard.validation.required')); return false }
-    switch (cur) {
-      case 'property':
-        if (service === 'house-cleaning') return !!d.propertyType && !!d.livingAreaM2 ? true : fail()
-        if (service === 'apartment-cleaning' || service === 'final-cleaning') return !!d.livingAreaM2 && !!d.roomCount ? true : fail()
-        if (service === 'stairwell-cleaning') return !!d.buildingType && !!d.floorCount ? true : fail()
-        if (service === 'office-cleaning') return !!d.officeAreaM2 ? true : fail()
-        if (service === 'medical-cleaning') return !!d.practiceType && !!d.livingAreaM2 ? true : fail()
-        if (service === 'gastronomy-cleaning') return !!d.gastronomyAreaM2 ? true : fail()
-        if (service === 'construction-cleaning') return !!d.propertyType && !!d.constructionAreaM2 ? true : fail()
-        if (service === 'window-cleaning') return !!d.windowCount ? true : fail()
-        if (service === 'disposal') return !!d.disposalAddress && !!d.itemType ? true : fail()
-        if (service === 'property-maintenance') return !!d.pmBuildingType ? true : fail()
-        return true
-      case 'moving_old': return !!d.oldAddress ? true : fail()
-      case 'moving_new': return !!d.newAddress ? true : fail()
-      case 'special_bg': return !!d.specialRequestType ? true : fail()
-      case 'contact': return (!!d.firstName && !!d.name && !!d.emailAddress && !!d.telephone && !!d.postalCodeAndCity && !!d.streetAndNumber) ? true : fail()
-      default: return true
+    const fail = () => { toast.error(tl('wizard.validation.required')); return false }
+
+    if (category === 'cleaning') {
+      if (step === 0) return !!d.objectType ? true : fail()
+      if (step === 4) return (!!d.nameFirstName && !!d.emailAddress && !!d.telephone && !!d.zipCity && !!d.streetNo) ? true : fail()
+    } else if (category === 'relocation') {
+      if (step === 0) return (!!d.movingFromAddress && !!d.currentLiving && !!d.currentFloor) ? true : fail()
+      if (step === 1) return (!!d.movingToType && !!d.movingToAddress) ? true : fail()
+      if (step === 4) return (!!d.nameFirstName && !!d.emailAddress && !!d.telephone && !!d.zipCity && !!d.streetNo) ? true : fail()
+    } else if (category === 'disposal') {
+      if (step === 0) return (!!d.disposalType && !!d.objectType && !!d.location) ? true : fail()
+      if (step === 3) return (!!d.nameFirstName && !!d.emailAddress && !!d.telephone && !!d.zipCity && !!d.streetNo) ? true : fail()
+    } else if (category === 'household-helping') {
+      if (step === 0) return (!!d.floors && !!d.livingArea) ? true : fail()
+      if (step === 1) return (!!d.desiredFrequency && !!d.desiredHours) ? true : fail()
+      if (step === 2) return (!!d.nameFirstName && !!d.emailAddress && !!d.telephone && !!d.zipCity && !!d.streetNo) ? true : fail()
+    } else {
+      // other services: simplified validation
+      if (isLast) return (!!d.nameFirstName && !!d.emailAddress && !!d.telephone && !!d.zipCity && !!d.streetNo) ? true : fail()
     }
+    return true
   }
 
-  const goNext = () => { if (validate()) setStep(i => Math.min(i + 1, steps.length - 1)) }
+  const goNext = () => { if (validate()) setStep(i => Math.min(i + 1, totalSteps - 1)) }
   const goBack = () => setStep(i => Math.max(i - 1, 0))
   const submit = async () => {
     if (!validate()) return
     setBusy(true)
     try {
-      const res = await fetch('/api/service-forms', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ serviceName, formType, ...d }) })
+      const formType = category === 'other' ? 'cleaning' : category
+      const res = await fetch('/api/service-forms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          serviceName, formType,
+          firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
+          name: d.nameFirstName?.split(' ')[0] || '',
+          emailAddress: d.emailAddress || '',
+          telephone: d.telephone || '',
+          streetAndNumber: d.streetNo || '',
+          postalCodeAndCity: d.zipCity || '',
+          salutation: d.salutation || 'Other',
+          remark: d.furtherRequests || d.furtherWishes || d.otherTasks || '',
+          ...d
+        })
+      })
       if (!res.ok) throw new Error('fail')
-      toast.success(t('toasts.submitted'))
+      toast.success(tl('toasts.submitted'))
       router.push(`/${locale}`)
-    } catch { toast.error(t('toasts.submitFailedRetry')) } finally { setBusy(false) }
+    } catch { toast.error(tl('toasts.submitFailedRetry')) } finally { setBusy(false) }
   }
 
-  const stepTitle = (s: StepId) => t(`wizard.stepTitles.${s}`)
+  /* ─── STEP RENDERERS ─── */
+  const renderCleaningStep = () => {
+    switch (step) {
+      case 0: // Service & Object Type
+        return (
+          <div>
+            <FR
+              label={tl('wizard.cleaning.desiredService')}
+              value={v('desiredService')}
+              onChange={v => set('desiredService', v)}
+              options={[
+                { value: 'cleaning-only', label: tl('wizard.cleaning.cleaningOnly') },
+                { value: 'moving-and-cleaning', label: tl('wizard.cleaning.movingAndCleaning') }
+              ]}
+            />
+            <FI label={tl('wizard.cleaning.cleaningLocation')} value={v('cleaningLocation')} onChange={v => set('cleaningLocation', v)} />
+            <FS
+              label={tl('wizard.cleaning.objectType')}
+              value={v('objectType')}
+              onChange={v => set('objectType', v)}
+              options={[
+                { value: 'apartment', label: tl('wizard.cleaning.objectTypes.apartment') },
+                { value: 'house', label: tl('wizard.cleaning.objectTypes.house') },
+                { value: 'wg-room', label: tl('wizard.cleaning.objectTypes.wgRoom') },
+                { value: 'office', label: tl('wizard.cleaning.objectTypes.office') },
+                { value: 'storage-cellar', label: tl('wizard.cleaning.objectTypes.storageCellar') }
+              ]}
+            />
+          </div>
+        )
+      case 1: // Floors, Rooms, Space
+        return (
+          <div>
+            <FS label={tl('wizard.cleaning.floors')} value={v('floors')} onChange={v => set('floors', v)} options={floorOptions} />
+            <FS label={tl('wizard.cleaning.numberOfRooms')} value={v('numberOfRooms')} onChange={v => set('numberOfRooms', v)} options={roomNumbers} />
+            <FI label={tl('wizard.cleaning.livingSpace')} value={v('livingSpace')} onChange={v => set('livingSpace', v)} type="text" placeholder="e.g. 120" />
+          </div>
+        )
+      case 2: // Areas
+        return (
+          <div>
+            <SH>{tl('wizard.cleaning.areasTitle')}</SH>
+            {Object.entries({
+              completeAll: tl('wizard.cleaning.areas.completeAll'),
+              cellar: tl('wizard.cleaning.areas.cellar'),
+              atticScreed: tl('wizard.cleaning.areas.atticScreed'),
+              garage: tl('wizard.cleaning.areas.garage'),
+              conservatory: tl('wizard.cleaning.areas.conservatory'),
+              individualRooms: tl('wizard.cleaning.areas.individualRooms'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('cleaningAreas', key)} onChange={() => toggleArr('cleaningAreas', key)} />
+            ))}
+          </div>
+        )
+      case 3: // Windows & Glass
+        return (
+          <div>
+            <SH>{tl('wizard.cleaning.windowsTitle')}</SH>
+            <FI label={tl('wizard.cleaning.normalWindows')} value={v('normalWindows')} onChange={v => set('normalWindows', v)} type="number" />
+            <FI label={tl('wizard.cleaning.frenchDoors')} value={v('frenchDoors')} onChange={v => set('frenchDoors', v)} type="number" />
+            <FI label={tl('wizard.cleaning.otherGlassSurfaces')} value={v('otherGlassSurfaces')} onChange={v => set('otherGlassSurfaces', v)} type="number" />
+            <FI label={tl('wizard.cleaning.panoramicHint')} value={v('panoramicWindows')} onChange={v => set('panoramicWindows', v)} type="number" />
+
+            <SH>{tl('wizard.cleaning.blindsTitle')}</SH>
+            {Object.entries({
+              venetian: tl('wizard.cleaning.blinds.venetian'),
+              rollerShutters: tl('wizard.cleaning.blinds.rollerShutters'),
+              shutters: tl('wizard.cleaning.blinds.shutters'),
+              otherSpecial: tl('wizard.cleaning.blinds.otherSpecial'),
+              no: tl('wizard.cleaning.blinds.no'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('blinds', key)} onChange={() => toggleArr('blinds', key)} />
+            ))}
+
+            <SH>{tl('wizard.cleaning.specialFeaturesTitle')}</SH>
+            {Object.entries({
+              heavilySoiled: tl('wizard.cleaning.specialFeatures.heavilySoiled'),
+              moldFrames: tl('wizard.cleaning.specialFeatures.moldFrames'),
+              smallCasement: tl('wizard.cleaning.specialFeatures.smallCasement'),
+              roofWindow: tl('wizard.cleaning.specialFeatures.roofWindow'),
+              safetyFilm: tl('wizard.cleaning.specialFeatures.safetyFilm'),
+              noSpecial: tl('wizard.cleaning.specialFeatures.noSpecial'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('windowSpecialFeatures', key)} onChange={() => toggleArr('windowSpecialFeatures', key)} />
+            ))}
+          </div>
+        )
+      case 4: // Contact & Dates
+        return (
+          <div>
+            <FTA label={tl('wizard.cleaning.furtherRequests')} value={v('furtherRequests')} onChange={v => set('furtherRequests', v)} />
+            <FI label={tl('wizard.cleaning.desiredCleaningDate')} value={v('desiredCleaningDate')} onChange={v => set('desiredCleaningDate', v)} type="date" />
+            <FI label={tl('wizard.cleaning.deliveryHandoverDate')} value={v('deliveryHandoverDate')} onChange={v => set('deliveryHandoverDate', v)} type="date" required />
+            <FI label={tl('wizard.cleaning.nameFirstName')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
+            <FI label={tl('wizard.cleaning.emailAddress')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type="email" required />
+            <FI label={tl('wizard.cleaning.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
+            <FI label={tl('wizard.cleaning.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
+            <FI label={tl('wizard.cleaning.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+          </div>
+        )
+      default: return null
+    }
+  }
+
+  const renderRelocationStep = () => {
+    switch (step) {
+      case 0: // Moving FROM
+        return (
+          <div>
+            <FI label={tl('wizard.relocation.movingFrom')} value={v('movingFromAddress')} onChange={v => set('movingFromAddress', v)} required />
+            <FS label={tl('wizard.relocation.currentLiving')} value={v('currentLiving')} onChange={v => set('currentLiving', v)}
+              options={Object.entries({
+                apartment: tl('wizard.relocation.currentLivingOptions.apartment'),
+                house: tl('wizard.relocation.currentLivingOptions.house'),
+                wgRoom: tl('wizard.relocation.currentLivingOptions.wgRoom'),
+                studio: tl('wizard.relocation.currentLivingOptions.studio'),
+                office: tl('wizard.relocation.currentLivingOptions.office'),
+              }).map(([value, label]) => ({ value, label }))}
+            />
+            <FS label={tl('wizard.relocation.currentFloor')} value={v('currentFloor')} onChange={v => set('currentFloor', v)} options={floorOptions} />
+            <FR label={tl('wizard.relocation.elevatorAvailable')} value={v('currentElevator')} onChange={v => set('currentElevator', v)}
+              options={[{ value: 'yes', label: tl('wizard.relocation.yes') }, { value: 'no', label: tl('wizard.relocation.no') }]}
+            />
+            <FS label={tl('wizard.relocation.currentLivingSpace')} value={v('currentLivingSpace')} onChange={v => set('currentLivingSpace', v)} options={livingSpaceOptions} />
+            <FS label={tl('wizard.relocation.currentRooms')} value={v('currentRooms')} onChange={v => set('currentRooms', v)} options={roomNumbers} />
+          </div>
+        )
+      case 1: // Moving TO
+        return (
+          <div>
+            <FS label={tl('wizard.relocation.movingTo')} value={v('movingToType')} onChange={v => set('movingToType', v)}
+              hint={tl('wizard.validation.selectOption')}
+              options={Object.entries({
+                apartment: tl('wizard.relocation.movingToOptions.apartment'),
+                house: tl('wizard.relocation.movingToOptions.house'),
+                wgRoom: tl('wizard.relocation.movingToOptions.wgRoom'),
+                studio: tl('wizard.relocation.movingToOptions.studio'),
+                office: tl('wizard.relocation.movingToOptions.office'),
+                storage: tl('wizard.relocation.movingToOptions.storage'),
+              }).map(([value, label]) => ({ value, label }))}
+            />
+            <FI label={tl('wizard.relocation.movingToAddress')} value={v('movingToAddress')} onChange={v => set('movingToAddress', v)} required />
+            <FR label={tl('wizard.relocation.newElevator')} value={v('newElevator')} onChange={v => set('newElevator', v)}
+              options={[{ value: 'yes', label: tl('wizard.relocation.yes') }, { value: 'no', label: tl('wizard.relocation.no') }]}
+            />
+            <FS label={tl('wizard.relocation.newLivingSpace')} value={v('newLivingSpace')} onChange={v => set('newLivingSpace', v)} options={livingSpaceOptions} />
+            <FS label={tl('wizard.relocation.newRooms')} value={v('newRooms')} onChange={v => set('newRooms', v)} options={roomNumbers}
+              hint={tl('wizard.validation.selectOption')}
+            />
+            <FS label={tl('wizard.relocation.peopleMoving')} value={v('peopleMoving')} onChange={v => set('peopleMoving', v)} options={peopleOptions}
+              hint={tl('wizard.relocation.peopleMovingHint')}
+            />
+          </div>
+        )
+      case 2: // Moving Boxes & Supplies
+        return (
+          <div>
+            <FS label={tl('wizard.relocation.movingBoxes')} value={v('movingBoxes')} onChange={v => set('movingBoxes', v)} options={boxOptions}
+              hint={tl('wizard.relocation.movingBoxesHint')}
+            />
+            <SH>{tl('wizard.relocation.additionalSuppliesTitle')}</SH>
+            {Object.entries({
+              movingBox: tl('wizard.relocation.supplies.movingBox'),
+              wardrobeBox: tl('wizard.relocation.supplies.wardrobeBox'),
+              bottleCarton: tl('wizard.relocation.supplies.bottleCarton'),
+              adhesiveTape: tl('wizard.relocation.supplies.adhesiveTape'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('movingSupplies', key)} onChange={() => toggleArr('movingSupplies', key)} />
+            ))}
+          </div>
+        )
+      case 3: // Cleaning Areas
+        return (
+          <div>
+            <SH>{tl('wizard.relocation.areasCleaningTitle')}</SH>
+            {Object.entries({
+              completeAll: tl('wizard.cleaning.areas.completeAll'),
+              cellar: tl('wizard.cleaning.areas.cellar'),
+              atticScreed: tl('wizard.cleaning.areas.atticScreed'),
+              garage: tl('wizard.cleaning.areas.garage'),
+              conservatory: tl('wizard.cleaning.areas.conservatory'),
+              individualRooms: tl('wizard.cleaning.areas.individualRooms'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('cleaningAreas', key)} onChange={() => toggleArr('cleaningAreas', key)} />
+            ))}
+
+            <SH>{tl('wizard.relocation.otherAreasTitle')}</SH>
+            {Object.entries({
+              cellar: tl('wizard.relocation.otherAreas.cellar'),
+              atticScreed: tl('wizard.relocation.otherAreas.atticScreed'),
+              garageParkingSpace: tl('wizard.relocation.otherAreas.garageParkingSpace'),
+              conservatoryBalcony: tl('wizard.relocation.otherAreas.conservatoryBalcony'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('otherAreas', key)} onChange={() => toggleArr('otherAreas', key)} />
+            ))}
+
+            <SH>{tl('wizard.relocation.additionalAreasTitle')}</SH>
+            {Object.entries({
+              parking: tl('wizard.relocation.additionalAreas.parking'),
+              stairs: tl('wizard.relocation.additionalAreas.stairs'),
+              corridor: tl('wizard.relocation.additionalAreas.corridor'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('additionalAreas', key)} onChange={() => toggleArr('additionalAreas', key)} />
+            ))}
+          </div>
+        )
+      case 4: // Contact
+        return (
+          <div>
+            <FTA label={tl('wizard.relocation.furtherRequests')} value={v('furtherRequests')} onChange={v => set('furtherRequests', v)} />
+            <FI label={tl('wizard.relocation.desiredCleaningDate')} value={v('desiredCleaningDate')} onChange={v => set('desiredCleaningDate', v)} type="date" />
+            <FI label={tl('wizard.relocation.preferredMoveDate')} value={v('preferredMoveDate')} onChange={v => set('preferredMoveDate', v)} type="date" />
+            <FI label={tl('wizard.relocation.nameFirstName')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
+            <FI label={tl('wizard.relocation.company')} value={v('company')} onChange={v => set('company', v)} />
+            <FI label={tl('wizard.relocation.emailAddress')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type="email" required />
+            <FI label={tl('wizard.relocation.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
+            <FI label={tl('wizard.relocation.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
+            <FI label={tl('wizard.relocation.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+          </div>
+        )
+      default: return null
+    }
+  }
+
+  const renderDisposalStep = () => {
+    switch (step) {
+      case 0: // Type & Location
+        return (
+          <div>
+            <FR label={tl('wizard.disposal.pleaseChoose')} value={v('disposalType')} onChange={v => set('disposalType', v)}
+              options={[
+                { value: 'disposal', label: tl('wizard.disposal.disposalTypes.disposal') },
+                { value: 'eviction', label: tl('wizard.disposal.disposalTypes.eviction') },
+                { value: 'disposal-clearance', label: tl('wizard.disposal.disposalTypes.disposalClearance') },
+              ]}
+            />
+            <FS label={tl('wizard.disposal.objectType')} value={v('objectType')} onChange={v => set('objectType', v)}
+              options={[
+                { value: 'apartment', label: tl('wizard.cleaning.objectTypes.apartment') },
+                { value: 'house', label: tl('wizard.cleaning.objectTypes.house') },
+                { value: 'office', label: tl('wizard.cleaning.objectTypes.office') },
+                { value: 'storage-cellar', label: tl('wizard.cleaning.objectTypes.storageCellar') },
+              ]}
+            />
+            <FI label={tl('wizard.disposal.location')} value={v('location')} onChange={v => set('location', v)} required />
+            <FS label={tl('wizard.disposal.floor')} value={v('floor')} onChange={v => set('floor', v)} options={floorOptions} />
+            <FR label={tl('wizard.disposal.elevatorAvailable')} value={v('elevator')} onChange={v => set('elevator', v)}
+              options={[{ value: 'yes', label: tl('wizard.disposal.yes') }, { value: 'no', label: tl('wizard.disposal.no') }]}
+            />
+          </div>
+        )
+      case 1: // Waste Details
+        return (
+          <div>
+            <SH>{tl('wizard.disposal.wasteTitle')}</SH>
+            {Object.entries({
+              furniture: tl('wizard.disposal.wasteItems.furniture'),
+              electrical: tl('wizard.disposal.wasteItems.electrical'),
+              cardboard: tl('wizard.disposal.wasteItems.cardboard'),
+              construction: tl('wizard.disposal.wasteItems.construction'),
+              garden: tl('wizard.disposal.wasteItems.garden'),
+              textiles: tl('wizard.disposal.wasteItems.textiles'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('wasteItems', key)} onChange={() => toggleArr('wasteItems', key)} />
+            ))}
+            <FI label={tl('wizard.disposal.otherDisposalItems')} value={v('otherDisposalItems')} onChange={v => set('otherDisposalItems', v)} />
+            <FR label={tl('wizard.disposal.disassemblyNeeded')} value={v('disassemblyNeeded')} onChange={v => set('disassemblyNeeded', v)}
+              options={[{ value: 'yes', label: tl('wizard.disposal.yes') }, { value: 'no', label: tl('wizard.disposal.no') }]}
+            />
+            <FR label={tl('wizard.disposal.materialAmount')} value={v('materialAmount')} onChange={v => set('materialAmount', v)}
+              options={[
+                { value: 'little', label: tl('wizard.disposal.materialAmounts.little') },
+                { value: 'medium', label: tl('wizard.disposal.materialAmounts.medium') },
+                { value: 'lots', label: tl('wizard.disposal.materialAmounts.lots') },
+              ]}
+            />
+          </div>
+        )
+      case 2: // Additional Options
+        return (
+          <div>
+            <SH>{tl('wizard.disposal.additionalOptionsTitle')}</SH>
+            {Object.entries({
+              cleaningAfter: tl('wizard.disposal.additionalOptions.cleaningAfter'),
+              broomCleaning: tl('wizard.disposal.additionalOptions.broomCleaning'),
+              basicCleaning: tl('wizard.disposal.additionalOptions.basicCleaning'),
+              adhesiveTape: tl('wizard.disposal.additionalOptions.adhesiveTape'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('additionalOptions', key)} onChange={() => toggleArr('additionalOptions', key)} />
+            ))}
+
+            <SH>{tl('wizard.disposal.movingSuppliesTitle')}</SH>
+            {Object.entries({
+              movingBox: tl('wizard.relocation.supplies.movingBox'),
+              wardrobeBox: tl('wizard.relocation.supplies.wardrobeBox'),
+              bottleCarton: tl('wizard.relocation.supplies.bottleCarton'),
+              adhesiveTape: tl('wizard.relocation.supplies.adhesiveTape'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('movingSupplies', key)} onChange={() => toggleArr('movingSupplies', key)} />
+            ))}
+          </div>
+        )
+      case 3: // Contact
+        return (
+          <div>
+            <FTA label={tl('wizard.disposal.furtherWishes')} value={v('furtherWishes')} onChange={v => set('furtherWishes', v)} />
+            <FI label={tl('wizard.disposal.desiredDate')} value={v('desiredDate')} onChange={v => set('desiredDate', v)} type="date" required />
+            <FI label={tl('wizard.disposal.nameFirstName')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
+            <FI label={tl('wizard.disposal.company')} value={v('company')} onChange={v => set('company', v)} />
+            <FI label={tl('wizard.disposal.emailAddress')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type="email" required />
+            <FI label={tl('wizard.disposal.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
+            <FI label={tl('wizard.disposal.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
+            <FI label={tl('wizard.disposal.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+          </div>
+        )
+      default: return null
+    }
+  }
+
+  const renderHouseholdStep = () => {
+    switch (step) {
+      case 0: // Property & Household
+        return (
+          <div>
+            <FS label={tl('wizard.householdHelping.floors')} value={v('floors')} onChange={v => set('floors', v)} options={floorOptions} />
+            <FR label={tl('wizard.householdHelping.elevatorAvailable')} value={v('elevator')} onChange={v => set('elevator', v)}
+              options={[{ value: 'yes', label: tl('wizard.householdHelping.yes') }, { value: 'no', label: tl('wizard.householdHelping.no') }]}
+            />
+            <FS label={tl('wizard.householdHelping.livingArea')} value={v('livingArea')} onChange={v => set('livingArea', v)} options={livingSpaceOptions} />
+            <SH>{tl('wizard.householdHelping.householdSituation')}</SH>
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              <FI label={tl('wizard.householdHelping.numberOfAdults')} value={v('numberOfAdults')} onChange={v => set('numberOfAdults', v)} type="number" placeholder={tl('wizard.householdHelping.numberOfAdults')} />
+              <FI label={tl('wizard.householdHelping.numberOfChildren')} value={v('numberOfChildren')} onChange={v => set('numberOfChildren', v)} type="number" placeholder={tl('wizard.householdHelping.numberOfChildren')} />
+            </div>
+            <FR label={tl('wizard.householdHelping.hasPets')} value={v('hasPets')} onChange={v => set('hasPets', v)}
+              options={[{ value: 'yes', label: tl('wizard.householdHelping.yes') }, { value: 'no', label: tl('wizard.householdHelping.no') }]}
+            />
+          </div>
+        )
+      case 1: // Services & Frequency
+        return (
+          <div>
+            <FS label={tl('wizard.householdHelping.desiredFrequency')} value={v('desiredFrequency')} onChange={v => set('desiredFrequency', v)}
+              hint={tl('wizard.validation.selectOption')}
+              options={Object.entries({
+                weekly: tl('wizard.householdHelping.frequencyOptions.weekly'),
+                biweekly: tl('wizard.householdHelping.frequencyOptions.biweekly'),
+                monthly: tl('wizard.householdHelping.frequencyOptions.monthly'),
+                onDemand: tl('wizard.householdHelping.frequencyOptions.onDemand'),
+              }).map(([value, label]) => ({ value, label }))}
+            />
+            <FI label={tl('wizard.householdHelping.desiredHours')} value={v('desiredHours')} onChange={v => set('desiredHours', v)} required />
+            <SH>{tl('wizard.householdHelping.desiredServicesTitle')}</SH>
+            {Object.entries({
+              routineCleaning: tl('wizard.householdHelping.desiredServices.routineCleaning'),
+              ironing: tl('wizard.householdHelping.desiredServices.ironing'),
+              laundry: tl('wizard.householdHelping.desiredServices.laundry'),
+              shopping: tl('wizard.householdHelping.desiredServices.shopping'),
+              dishwashing: tl('wizard.householdHelping.desiredServices.dishwashing'),
+              cooking: tl('wizard.householdHelping.desiredServices.cooking'),
+              plantCare: tl('wizard.householdHelping.desiredServices.plantCare'),
+              smallTasks: tl('wizard.householdHelping.desiredServices.smallTasks'),
+              petCare: tl('wizard.householdHelping.desiredServices.petCare'),
+              seniorCare: tl('wizard.householdHelping.desiredServices.seniorCare'),
+              errands: tl('wizard.householdHelping.desiredServices.errands'),
+            }).map(([key, label]) => (
+              <FC key={key} label={label} checked={arrHas('desiredServices', key)} onChange={() => toggleArr('desiredServices', key)} />
+            ))}
+            <FI label={tl('wizard.householdHelping.otherTasks')} value={v('otherTasks')} onChange={v => set('otherTasks', v)} />
+          </div>
+        )
+      case 2: // Contact
+        return (
+          <div>
+            <FTA label={tl('wizard.householdHelping.furtherRequests')} value={v('furtherRequests')} onChange={v => set('furtherRequests', v)} />
+            <div className="grid grid-cols-2 gap-4">
+              <FI label={tl('wizard.householdHelping.wishDay')} value={v('wishDay')} onChange={v => set('wishDay', v)} type="date" required />
+              <FI label={tl('wizard.householdHelping.preferredTime')} value={v('preferredTime')} onChange={v => set('preferredTime', v)} type="time" />
+            </div>
+            <FI label={tl('wizard.householdHelping.nameFirstName')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
+            <FI label={tl('wizard.householdHelping.company')} value={v('company')} onChange={v => set('company', v)} />
+            <FI label={tl('wizard.householdHelping.emailAddress')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type="email" required />
+            <FI label={tl('wizard.householdHelping.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
+            <FI label={tl('wizard.householdHelping.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
+            <FI label={tl('wizard.householdHelping.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+          </div>
+        )
+      default: return null
+    }
+  }
+
+  const renderOtherStep = () => {
+    // Generic form for gastronomy, medical, construction, special, property maintenance, combo
+    switch (step) {
+      case 0:
+        return (
+          <div>
+            <FS label={tl('wizard.cleaning.objectType')} value={v('objectType')} onChange={v => set('objectType', v)}
+              options={[
+                { value: 'apartment', label: tl('wizard.cleaning.objectTypes.apartment') },
+                { value: 'house', label: tl('wizard.cleaning.objectTypes.house') },
+                { value: 'office', label: tl('wizard.cleaning.objectTypes.office') },
+                { value: 'storage-cellar', label: tl('wizard.cleaning.objectTypes.storageCellar') },
+              ]}
+            />
+            <FI label={tl('wizard.disposal.location')} value={v('location')} onChange={v => set('location', v)} />
+            <FS label={tl('wizard.disposal.floor')} value={v('floor')} onChange={v => set('floor', v)} options={floorOptions} />
+            <FI label={tl('wizard.cleaning.livingSpace')} value={v('livingSpace')} onChange={v => set('livingSpace', v)} placeholder="m²" />
+            <FS label={tl('wizard.cleaning.numberOfRooms')} value={v('numberOfRooms')} onChange={v => set('numberOfRooms', v)} options={roomNumbers} />
+          </div>
+        )
+      case 1:
+        return (
+          <div>
+            <FTA label={tl('wizard.cleaning.furtherRequests')} value={v('furtherRequests')} onChange={v => set('furtherRequests', v)} />
+            <FI label={tl('wizard.cleaning.desiredCleaningDate')} value={v('desiredCleaningDate')} onChange={v => set('desiredCleaningDate', v)} type="date" />
+          </div>
+        )
+      case 2:
+        return (
+          <div>
+            <FI label={tl('wizard.cleaning.nameFirstName')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
+            <FI label={tl('wizard.cleaning.emailAddress')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type="email" required />
+            <FI label={tl('wizard.cleaning.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
+            <FI label={tl('wizard.cleaning.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
+            <FI label={tl('wizard.cleaning.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+          </div>
+        )
+      default: return null
+    }
+  }
+
+  const renderCurrentStep = () => {
+    switch (category) {
+      case 'cleaning': return renderCleaningStep()
+      case 'relocation': return renderRelocationStep()
+      case 'disposal': return renderDisposalStep()
+      case 'household-helping': return renderHouseholdStep()
+      default: return renderOtherStep()
+    }
+  }
 
   return (
-    <div className="card p-6 md:p-8">
-      <div className="flex items-start justify-between gap-6"><div className="space-y-2">
-        <div className="inline-flex items-center bg-blue-50 text-swiss-blue rounded-full px-4 py-2 text-[11px] font-semibold tracking-wider uppercase border border-swiss-blue/20">{t('wizard.badge')}</div>
-        <h1 className="text-2xl md:text-3xl font-bold text-swiss-text">{serviceName}</h1>
-        <p className="text-swiss-body">{t('wizard.stepCounter', { current: step + 1, total: steps.length })}</p>
-      </div></div>
-      <div className="mt-4 flex gap-1.5">{steps.map((_, i) => (<div key={i} className={`h-1.5 flex-1 rounded-full transition-colors ${i <= step ? 'bg-swiss-red' : 'bg-swiss-border'}`} />))}</div>
-
-      <div className="mt-6 border-t border-swiss-border pt-6">
-        <h2 className="text-xl font-semibold text-swiss-text mb-6">{stepTitle(cur)}</h2>
-
-        {/* ═══ PROPERTY ═══ */}
-        {cur === 'property' && <div className="space-y-6">
-          {service === 'house-cleaning' && <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FS selectLabel={selectLabel} label={t('wizard.labels.propertyType')} value={v('propertyType')} onChange={x => set('propertyType', x)} required options={[{ value: 'single-family', label: t('wizard.options.propertyTypes.single-family') }, { value: 'row-house', label: t('wizard.options.propertyTypes.row-house') }, { value: 'apartment-building', label: t('wizard.options.propertyTypes.apartment-building') }]} />
-              <FI label={t('wizard.labels.livingArea')} value={v('livingAreaM2')} onChange={x => set('livingAreaM2', x)} required type="number" placeholder={t('wizard.placeholders.areaM2')} />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <FS selectLabel={selectLabel} label={t('wizard.labels.roomCount')} value={v('roomCount')} onChange={x => set('roomCount', x)} options={roomOptions} />
-              <FI label={t('wizard.labels.bathroomCount')} value={v('bathroomCount')} onChange={x => set('bathroomCount', x)} type="number" placeholder="e.g. 2" />
-              <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.hasPets')} value={v('hasPets')} onChange={x => set('hasPets', x)} />
-            </div>
-            <div><label className="block text-sm font-semibold text-swiss-text mb-2">{t('wizard.labels.specialFeatures')}</label>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-2">{specialFeatureItems.map(f => (
-                <label key={f.key} className="flex items-center gap-2 p-2.5 rounded-lg border border-swiss-border hover:border-swiss-red/30 hover:bg-swiss-softRed/30 transition-colors cursor-pointer text-sm">
-                  <input type="checkbox" checked={(d.specialFeatures ?? []).includes(f.key)} onChange={() => toggleArr('specialFeatures', f.key)} className="w-4 h-4 rounded border-swiss-border text-swiss-red focus:ring-swiss-red" />{f.label}
-                </label>))}</div></div>
-          </>}
-
-          {(service === 'apartment-cleaning' || service === 'final-cleaning') && <>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <FI label={t('wizard.labels.livingArea')} value={v('livingAreaM2')} onChange={x => set('livingAreaM2', x)} required type="number" placeholder={t('wizard.placeholders.areaM2')} />
-              <FS label={t('wizard.labels.roomCount')} value={v('roomCount')} onChange={x => set('roomCount', x)} required options={roomOptions} />
-              <FI label={t('wizard.labels.bathroomCount')} value={v('bathroomCount')} onChange={x => set('bathroomCount', x)} type="number" placeholder="e.g. 1" />
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              <FC label={t('wizard.additional.basement')} checked={b('hasBasement')} onChange={x => set('hasBasement', x)} />
-              <FC label={t('wizard.additional.attic')} checked={b('hasAttic')} onChange={x => set('hasAttic', x)} />
-              <FC label={t('wizard.additional.balcony')} checked={b('hasBalcony')} onChange={x => set('hasBalcony', x)} />
-            </div>
-            {service === 'final-cleaning' && <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.additional.rentalHandover')} value={v('rentalHandover')} onChange={x => set('rentalHandover', x)} required />}
-          </>}
-
-          {service === 'stairwell-cleaning' && <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FS selectLabel={selectLabel} label={t('wizard.labels.buildingType')} value={v('buildingType')} onChange={x => set('buildingType', x)} required options={[{ value: 'commercial-building', label: t('wizard.options.buildingTypes.commercial-building') }, { value: 'apartment-building', label: t('wizard.options.propertyTypes.apartment-building') }]} />
-              <FI label={t('wizard.labels.floorCount')} value={v('floorCount')} onChange={x => set('floorCount', x)} required type="number" placeholder="e.g. 4" />
-              <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.elevator')} value={v('hasElevator')} onChange={x => set('hasElevator', x)} />
-              <FI label={t('wizard.labels.stairwellArea')} value={v('stairwellArea')} onChange={x => set('stairwellArea', x)} type="number" placeholder={t('wizard.placeholders.areaM2')} />
-              <FI label={t('wizard.labels.units')} value={v('unitCount')} onChange={x => set('unitCount', x)} type="number" placeholder="e.g. 8" />
-            </div>
-          </>}
-
-          {service === 'office-cleaning' && <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FI label={t('wizard.labels.officeArea')} value={v('officeAreaM2')} onChange={x => set('officeAreaM2', x)} required type="number" placeholder="e.g. 200" />
-            <FI label={t('wizard.labels.workstations')} value={v('workstationCount')} onChange={x => set('workstationCount', x)} type="number" placeholder="e.g. 15" />
-            <FI label={t('wizard.labels.sanitary')} value={v('sanitaryFacilityCount')} onChange={x => set('sanitaryFacilityCount', x)} type="number" placeholder="e.g. 2" />
-            <FI label={t('wizard.labels.kitchenettes')} value={v('kitchenetteCount')} onChange={x => set('kitchenetteCount', x)} type="number" placeholder="e.g. 1" />
-          </div>}
-
-          {service === 'medical-cleaning' && <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FS selectLabel={selectLabel} label={t('wizard.labels.practiceType')} value={v('practiceType')} onChange={x => set('practiceType', x)} required options={[{ value: 'doctor', label: t('wizard.options.practiceTypes.doctor') }, { value: 'dentist', label: t('wizard.options.practiceTypes.dentist') }, { value: 'therapy', label: t('wizard.options.practiceTypes.therapy') }, { value: 'laboratory', label: t('wizard.options.practiceTypes.laboratory') }]} />
-              <FI label={t('wizard.labels.livingArea')} value={v('livingAreaM2')} onChange={x => set('livingAreaM2', x)} required type="number" placeholder="e.g. 150" />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FI label={t('wizard.labels.treatmentRooms')} value={v('treatmentRoomCount')} onChange={x => set('treatmentRoomCount', x)} type="number" placeholder="e.g. 4" />
-              <FI label={t('wizard.labels.sanitary')} value={v('sanitaryFacilityCount')} onChange={x => set('sanitaryFacilityCount', x)} type="number" placeholder="e.g. 2" />
-            </div>
-          </>}
-
-          {service === 'gastronomy-cleaning' && <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FI label={t('wizard.labels.gastroArea')} value={v('gastronomyAreaM2')} onChange={x => set('gastronomyAreaM2', x)} required type="number" placeholder={t('wizard.placeholders.areaM2')} />
-              <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.hasKitchen')} value={v('hasKitchen')} onChange={x => set('hasKitchen', x)} />
-              <FI label={t('wizard.labels.seats')} value={v('seatsCount')} onChange={x => set('seatsCount', x)} type="number" placeholder="e.g. 50" />
-            </div>
-          </>}
-
-          {service === 'construction-cleaning' && <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FS selectLabel={selectLabel} label={t('wizard.labels.propertyType')} value={v('propertyType')} onChange={x => set('propertyType', x)} required options={[{ value: 'residential', label: t('wizard.options.propertyTypes.residential') }, { value: 'commercial', label: t('wizard.options.propertyTypes.commercial') }, { value: 'mixed', label: t('wizard.options.propertyTypes.mixed') }]} />
-              <FI label={t('wizard.labels.constructionArea')} value={v('constructionAreaM2')} onChange={x => set('constructionAreaM2', x)} required type="number" placeholder={t('wizard.placeholders.areaM2')} />
-              <FS selectLabel={selectLabel} label={t('wizard.labels.constructionType')} value={v('constructionType')} onChange={x => set('constructionType', x)} options={[{ value: 'new-build', label: t('wizard.options.constructionTypes.new-build') }, { value: 'renovation', label: t('wizard.options.constructionTypes.renovation') }]} />
-              <FS selectLabel={selectLabel} label={t('wizard.labels.soiling')} value={v('constructionCondition')} onChange={x => set('constructionCondition', x)} options={[{ value: 'light', label: t('wizard.options.soiling.light') }, { value: 'medium', label: t('wizard.options.soiling.medium') }, { value: 'heavy', label: t('wizard.options.soiling.heavy') }]} />
-            </div>
-          </>}
-
-          {service === 'window-cleaning' && <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FS selectLabel={selectLabel} label={t('wizard.labels.propertyType')} value={v('propertyType')} onChange={x => set('propertyType', x)} options={[{ value: 'apartment', label: t('wizard.options.propertyTypes.apartment') }, { value: 'house', label: t('wizard.options.propertyTypes.house') }, { value: 'commercial', label: t('wizard.options.propertyTypes.commercial') }]} />
-              <FI label={t('wizard.labels.windowCount')} value={v('windowCount')} onChange={x => set('windowCount', x)} required type="number" placeholder="e.g. 10" />
-              <FI label={t('wizard.labels.windowFloors')} value={v('windowFloors')} onChange={x => set('windowFloors', x)} type="number" placeholder="e.g. 2" />
-              <FS selectLabel={selectLabel} label={t('wizard.labels.cleaningScope')} value={v('insideOutsideBoth')} onChange={x => set('insideOutsideBoth', x)} options={[{ value: 'inside', label: t('wizard.options.cleaningScope.inside') }, { value: 'outside', label: t('wizard.options.cleaningScope.outside') }, { value: 'both', label: t('wizard.options.cleaningScope.both') }]} />
-              <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.balconyGlazing')} value={v('balconyGlazing')} onChange={x => set('balconyGlazing', x)} />
-            </div>
-          </>}
-
-          {service === 'disposal' && <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FI label={t('wizard.labels.pickupAddress')} value={v('disposalAddress')} onChange={x => set('disposalAddress', x)} required placeholder={t('wizard.placeholders.address')} />
-              <FI label={t('wizard.labels.itemType')} value={v('itemType')} onChange={x => set('itemType', x)} required placeholder={t('wizard.placeholders.specialRequest')} />
-              <FI label={t('wizard.labels.volume')} value={v('volumeM3')} onChange={x => set('volumeM3', x)} type="number" placeholder="e.g. 5" />
-            </div>
-          </>}
-
-          {service === 'property-maintenance' && <>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FS selectLabel={selectLabel} label={t('wizard.labels.buildingType')} value={v('pmBuildingType')} onChange={x => set('pmBuildingType', x)} required options={[{ value: 'apartment-building', label: t('wizard.options.propertyTypes.apartment-building') }, { value: 'commercial-building', label: t('wizard.options.buildingTypes.commercial-building') }]} />
-              <FI label={t('wizard.labels.unitCount')} value={v('pmUnitCount')} onChange={x => set('pmUnitCount', x)} type="number" placeholder="e.g. 12" />
-              <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.winterService')} value={v('winterService')} onChange={x => set('winterService', x)} />
-              <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.minorRepairs')} value={v('minorRepairs')} onChange={x => set('minorRepairs', x)} />
-            </div>
-            <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.gardenMaintenance')} value={v('gardenMaintenancePM')} onChange={x => set('gardenMaintenancePM', x)} />
-          </>}
-        </div>}
-
-        {/* ═══ SPECIAL BG ═══ */}
-        {cur === 'special_bg' && <div className="space-y-4">
-          <FI label={t('wizard.labels.specialRequestType')} value={v('specialRequestType')} onChange={x => set('specialRequestType', x)} required placeholder={t('wizard.placeholders.specialRequest')} />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FI label={t('wizard.labels.areaQuantity')} value={v('areaQuantity')} onChange={x => set('areaQuantity', x)} placeholder="e.g. 50m² or 3 pieces" />
-            <FS selectLabel={selectLabel} label={t('wizard.labels.frequency')} value={v('specialFrequency')} onChange={x => set('specialFrequency', x)} options={freqOpts} />
-          </div>
-        </div>}
-
-        {/* ═══ DATE & FREQUENCY ═══ */}
-        {cur === 'date_frequency' && <div className="space-y-6">
-          {service === 'house-cleaning' && <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FI label={t('wizard.labels.startDate')} value={v('desiredDate')} onChange={x => set('desiredDate', x)} type="date" />
-            <FS selectLabel={selectLabel} label={t('wizard.labels.serviceFrequency')} value={v('serviceFrequency')} onChange={x => set('serviceFrequency', x)} options={freqOpts} />
-          </div>}
-          {(service === 'apartment-cleaning' || service === 'final-cleaning' || service === 'construction-cleaning') && <FI label={t('wizard.labels.cleaningDate')} value={v('desiredDate')} onChange={x => set('desiredDate', x)} type="date" />}
-          {(['stairwell-cleaning', 'office-cleaning', 'gastronomy-cleaning'] as ServiceSlug[]).includes(service) && <FS selectLabel={selectLabel} label={t('wizard.labels.cleaningFrequency')} value={v('frequency')} onChange={x => set('frequency', x)} required options={service === 'stairwell-cleaning' ? freqOpts.slice(1) : freqExt} />}
-          {service === 'medical-cleaning' && <FS selectLabel={selectLabel} label={t('wizard.labels.cleaningFrequency')} value={v('frequency')} onChange={x => set('frequency', x)} required options={[{ value: 'daily', label: t('wizard.options.frequency.daily') }, { value: '2-3x-week', label: t('wizard.options.frequency.2-3x-week') }, { value: 'weekly', label: t('wizard.options.frequency.weekly') }]} />}
-          {service === 'special-cleaning' && <FI label={t('wizard.labels.startDate')} value={v('specialPeriod')} onChange={x => set('specialPeriod', x)} type="date" />}
-          {service === 'window-cleaning' && <div className="grid grid-cols-1 md:grid-cols-2 gap-4"><FI label={t('wizard.labels.preferredDate')} value={v('desiredDate')} onChange={x => set('desiredDate', x)} type="date" /><FS selectLabel={selectLabel} label={t('wizard.labels.frequency')} value={v('frequency')} onChange={x => set('frequency', x)} options={freqOpts} /></div>}
-          {(service === 'relocation' || service === 'combo-service') && <FI label={t('wizard.labels.movingDate')} value={v('movingDate')} onChange={x => set('movingDate', x)} type="date" />}
-          {service === 'disposal' && <div className="grid grid-cols-1 md:grid-cols-2 gap-4"><FI label={t('wizard.labels.preferredDate')} value={v('preferredDate')} onChange={x => set('preferredDate', x)} type="date" /><FI label={t('wizard.labels.preferredTime')} value={v('preferredTime')} onChange={x => set('preferredTime', x)} type="time" /></div>}
-          {service === 'property-maintenance' && <FS selectLabel={selectLabel} label={t('wizard.labels.contractType')} value={v('contractType')} onChange={x => set('contractType', x)} options={[{ value: 'monthly', label: t('wizard.options.frequency.monthly') }, { value: 'quarterly', label: t('wizard.options.frequency.quarterly') }, { value: 'annual', label: t('wizard.options.frequency.annual') }, { value: 'on-demand', label: t('wizard.options.frequency.on-demand') }]} />}
-          <div className="border-t border-swiss-border pt-4 mt-2"><FTA label={t('wizard.labels.message')} value={v('message')} onChange={x => set('message', x)} placeholder={t('wizard.placeholders.message')} /></div>
-        </div>}
-
-        {/* ═══ ADDITIONAL ═══ */}
-        {cur === 'additional' && <div className="space-y-4">
-          {service === 'house-cleaning' && <><SH>{t('wizard.additional.title')}</SH><div className="grid grid-cols-1 md:grid-cols-2 gap-3"><FC label={t('wizard.additional.windowCleaning')} checked={b('windowCleaningOpt')} onChange={x => set('windowCleaningOpt', x)} /><FC label={t('wizard.additional.kitchenExtra')} checked={b('kitchenExtra')} onChange={x => set('kitchenExtra', x)} /><FC label={t('wizard.additional.carpetCare')} checked={b('carpetCare')} onChange={x => set('carpetCare', x)} /><FC label={t('wizard.additional.gardenMaintenance')} checked={b('gardenMaintenance')} onChange={x => set('gardenMaintenance', x)} /></div></>}
-          {(service === 'apartment-cleaning' || service === 'final-cleaning') && <><SH>{t('wizard.additional.title')}</SH><div className="grid grid-cols-1 md:grid-cols-2 gap-3"><FC label={t('wizard.additional.insideOutside')} checked={b('windowsInsideOutside')} onChange={x => set('windowsInsideOutside', x)} /><FC label={t('wizard.additional.kitchenExtra')} checked={b('kitchenAppliances')} onChange={x => set('kitchenAppliances', x)} /><FC label={t('wizard.additional.bulkyWaste')} checked={b('bulkyWasteDisposal')} onChange={x => set('bulkyWasteDisposal', x)} /></div></>}
-          {service === 'stairwell-cleaning' && <><SH>{t('wizard.additional.title')}</SH><div className="grid grid-cols-1 md:grid-cols-2 gap-3"><FC label={t('wizard.additional.windowCleaning')} checked={b('windowCleaningStairwell')} onChange={x => set('windowCleaningStairwell', x)} /><FC label={t('wizard.additional.handrails')} checked={b('handrailsExtra')} onChange={x => set('handrailsExtra', x)} /><FC label={t('wizard.additional.lightSwitches')} checked={b('lightSwitchesMailboxes')} onChange={x => set('lightSwitchesMailboxes', x)} /></div></>}
-          {service === 'office-cleaning' && <><SH>{t('wizard.additional.title')}</SH><div className="grid grid-cols-1 md:grid-cols-2 gap-3"><FC label={t('wizard.additional.windowCleaning')} checked={b('windowCleaningOffice')} onChange={x => set('windowCleaningOffice', x)} /><FC label={t('wizard.additional.disinfection')} checked={b('disinfectionWCKitchen')} onChange={x => set('disinfectionWCKitchen', x)} /><FC label={t('wizard.additional.carpetCare')} checked={b('carpetCareOffice')} onChange={x => set('carpetCareOffice', x)} /></div></>}
-          {service === 'gastronomy-cleaning' && <><SH>{t('wizard.additional.title')}</SH><div className="grid grid-cols-1 md:grid-cols-2 gap-3"><FC label={t('wizard.additional.greaseFilter')} checked={b('greaseFilterCleaning')} onChange={x => set('greaseFilterCleaning', x)} /><FC label={t('wizard.additional.intensiveFloor')} checked={b('intensiveFloorCleaning')} onChange={x => set('intensiveFloorCleaning', x)} /><FC label={t('wizard.additional.insideOutside')} checked={b('windowsGastro')} onChange={x => set('windowsGastro', x)} /></div></>}
-          {service === 'construction-cleaning' && <><SH>{t('wizard.additional.title')}</SH><div className="grid grid-cols-1 md:grid-cols-2 gap-3"><FC label={t('wizard.additional.fineCleaning')} checked={b('fineCleaningOpt')} onChange={x => set('fineCleaningOpt', x)} /><FC label={t('wizard.additional.windowCleaning')} checked={b('windowCleaningConstruction')} onChange={x => set('windowCleaningConstruction', x)} /><FC label={t('wizard.additional.dustProtection')} checked={b('dustProtection')} onChange={x => set('dustProtection', x)} /></div></>}
-          {service === 'combo-service' && <><SH>{t('wizard.additional.cleaningType')}</SH><div className="grid grid-cols-1 md:grid-cols-2 gap-4"><FS selectLabel={selectLabel} label={t('wizard.additional.cleaningType')} value={v('comboCleaningType')} onChange={x => set('comboCleaningType', x)} options={[{ value: 'final-cleaning', label: t('wizard.options.propertyTypes.apartment') }, { value: 'apartment-cleaning', label: t('wizard.options.propertyTypes.apartment') }, { value: 'house-cleaning', label: t('wizard.options.propertyTypes.house') }]} /><FI label={t('wizard.labels.livingArea')} value={v('comboCleaningArea')} onChange={x => set('comboCleaningArea', x)} type="number" placeholder="e.g. 80" /><FS selectLabel={selectLabel} label={t('wizard.labels.roomCount')} value={v('comboCleaningRooms')} onChange={x => set('comboCleaningRooms', x)} options={roomOptions} /></div><div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3"><FC label={t('wizard.additional.insideOutside')} checked={b('windowsInsideOutside')} onChange={x => set('windowsInsideOutside', x)} /><FC label={t('wizard.additional.kitchenExtra')} checked={b('kitchenAppliances')} onChange={x => set('kitchenAppliances', x)} /><FC label={t('wizard.additional.bulkyWaste')} checked={b('bulkyWasteDisposal')} onChange={x => set('bulkyWasteDisposal', x)} /></div></>}
-        </div>}
-
-        {/* ═══ HYGIENE ═══ */}
-        {cur === 'hygiene' && <div className="space-y-4"><SH>{t('wizard.additional.hygieneTitle')}</SH><div className="grid grid-cols-1 md:grid-cols-2 gap-3"><FC label={t('wizard.additional.disinfectionTreatment')} checked={b('disinfectionTreatment')} onChange={x => set('disinfectionTreatment', x)} /><FC label={t('wizard.additional.medicalWaste')} checked={b('medicalWasteDisposal')} onChange={x => set('medicalWasteDisposal', x)} /></div></div>}
-
-        {/* ═══ MOVING OLD ═══ */}
-        {cur === 'moving_old' && <div className="space-y-4">
-          <FI label={t('wizard.labels.currentAddress')} value={v('oldAddress')} onChange={x => set('oldAddress', x)} required placeholder={t('wizard.placeholders.address')} />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <FI label={t('wizard.labels.floor')} value={v('oldFloor')} onChange={x => set('oldFloor', x)} placeholder="e.g. 3rd floor" />
-            <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.elevator')} value={v('oldElevator')} onChange={x => set('oldElevator', x)} />
-            <FI label={t('wizard.labels.accessNotes')} value={v('oldAccess')} onChange={x => set('oldAccess', x)} placeholder="e.g. Narrow staircase" />
-          </div>
-        </div>}
-
-        {/* ═══ MOVING NEW ═══ */}
-        {cur === 'moving_new' && <div className="space-y-4">
-          <FI label={t('wizard.labels.newAddress')} value={v('newAddress')} onChange={x => set('newAddress', x)} required placeholder={t('wizard.placeholders.address')} />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <FI label={t('wizard.labels.floor')} value={v('newFloor')} onChange={x => set('newFloor', x)} placeholder="e.g. 2nd floor" />
-            <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.elevator')} value={v('newElevator')} onChange={x => set('newElevator', x)} />
-            <FI label={t('wizard.labels.accessNotes')} value={v('newAccess')} onChange={x => set('newAccess', x)} placeholder="e.g. Loading zone available" />
-          </div>
-        </div>}
-
-        {/* ═══ MOVING DETAILS ═══ */}
-        {cur === 'moving_details' && <div className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FS selectLabel={selectLabel} label={t('wizard.labels.roomCount')} value={v('movingRoomCount')} onChange={x => set('movingRoomCount', x)} options={roomOptions} />
-            <FI label={t('wizard.labels.bulkyItems')} value={v('bulkySpecialItems')} onChange={x => set('bulkySpecialItems', x)} placeholder="e.g. Piano, safe, artwork" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.packingService')} value={v('packingService')} onChange={x => set('packingService', x)} />
-            <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.assemblyService')} value={v('furnitureAssembly')} onChange={x => set('furnitureAssembly', x)} />
-          </div>
-        </div>}
-
-        {/* ═══ CONTACT ═══ */}
-        {cur === 'contact' && <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="md:col-span-2"><p className="text-sm font-semibold text-swiss-text mb-2">{t('wizard.labels.salutation')}</p>
-            <div className="flex flex-wrap gap-4">
-              {(['Mister', 'Woman', 'Other'] as const).map(s => (
-                <label key={s} className="flex items-center gap-2 cursor-pointer">
-                  <input type="radio" name="salutation" checked={d.salutation === s} onChange={() => set('salutation', s)} className="w-4 h-4 text-swiss-red focus:ring-swiss-red" />
-                  <span className="text-sm text-swiss-text">{s === 'Mister' ? t('wizard.options.salutations.mister') : s === 'Woman' ? t('wizard.options.salutations.woman') : t('wizard.options.salutations.other')}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-          <FI label={t('wizard.labels.firstName')} value={d.firstName} onChange={x => set('firstName', x)} required placeholder={t('wizard.placeholders.firstName') ?? 'Your first name'} />
-          <FI label={t('wizard.labels.lastName')} value={d.name} onChange={x => set('name', x)} required placeholder={t('wizard.placeholders.lastName') ?? 'Your last name'} />
-          <FI label={t('wizard.labels.phone')} value={d.telephone} onChange={x => set('telephone', x)} required type="tel" placeholder={t('wizard.placeholders.phone')} />
-          <FI label={t('wizard.labels.email')} value={d.emailAddress} onChange={x => set('emailAddress', x)} required type="email" placeholder={t('wizard.placeholders.email')} />
-          <FI label={t('wizard.labels.address')} value={d.streetAndNumber} onChange={x => set('streetAndNumber', x)} required placeholder={t('wizard.placeholders.address')} />
-          <FI label={t('wizard.labels.zipCity')} value={d.postalCodeAndCity} onChange={x => set('postalCodeAndCity', x)} required placeholder={t('wizard.placeholders.zipCity')} />
-          <FS selectLabel={selectLabel} label={t('wizard.labels.preferredContact')} value={v('contactPreferredVia')} onChange={x => set('contactPreferredVia', x as any)} options={[{ value: 'E-mail', label: t('wizard.options.contactVia.email') }, { value: 'Phone', label: t('wizard.options.contactVia.phone') }]} />
-          <FYN selectLabel={selectLabel} yesLabel={yesLabel} noLabel={noLabel} label={t('wizard.labels.siteViewing')} value={v('viewingIsWelcome')} onChange={x => set('viewingIsWelcome', x as any)} />
-          <div className="md:col-span-2"><FTA label={t('wizard.labels.remarks')} value={v('remark')} onChange={x => set('remark', x)} placeholder={t('wizard.placeholders.message')} /></div>
-        </div>}
+    <div className="max-w-2xl mx-auto">
+      {/* Progress Bar */}
+      <div className="mb-8">
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-xl font-bold text-[#003366]">{serviceName}</h2>
+          <span className="text-sm font-medium text-[#5a7a9a]">
+            {`${step + 1} / ${totalSteps}`}
+          </span>
+        </div>
+        <div className="w-full bg-[#d4e4f4] rounded-full h-2">
+          <div
+            className="bg-[#003366] h-2 rounded-full transition-all duration-500"
+            style={{ width: `${((step + 1) / totalSteps) * 100}%` }}
+          />
+        </div>
       </div>
 
-      {/* ═══ NAV ═══ */}
-      <div className="mt-8 flex items-center justify-between gap-4">
-        <button type="button" onClick={goBack} disabled={isFirst} className="px-6 py-3 rounded-lg border border-swiss-border bg-white text-swiss-text disabled:opacity-40 hover:bg-gray-50 transition-colors">← {t('wizard.buttons.back')}</button>
-        {!isLast ? (
-          <button type="button" onClick={goNext} className="btn-secondary px-8 py-3">{t('wizard.buttons.next')} →</button>
+      {/* Form Content */}
+      <div className="bg-[#dce9f5] rounded-2xl p-6 md:p-8 border border-[#b8d4eb]">
+        {renderCurrentStep()}
+      </div>
+
+      {/* Navigation Buttons */}
+      <div className="flex justify-between mt-6">
+        {!isFirst ? (
+          <button onClick={goBack} className="px-6 py-2.5 bg-[#003366] text-white font-semibold rounded-lg hover:bg-[#002244] transition-colors text-sm">
+            {tl('wizard.buttons.back')}
+          </button>
+        ) : <div />}
+        {isLast ? (
+          <button onClick={submit} disabled={busy}
+            className="px-8 py-2.5 bg-[#003366] text-white font-semibold rounded-lg hover:bg-[#002244] transition-colors disabled:opacity-50 text-sm">
+            {busy ? tl('wizard.buttons.submitting') : tl('wizard.buttons.submit')}
+          </button>
         ) : (
-          <button type="button" onClick={submit} disabled={busy} className="btn-primary px-8 py-3 disabled:opacity-50">{busy ? t('wizard.buttons.submitting') : `✓ ${t('wizard.buttons.submit')}`}</button>
+          <button onClick={goNext} className="px-6 py-2.5 bg-[#003366] text-white font-semibold rounded-lg hover:bg-[#002244] transition-colors text-sm">
+            {tl('wizard.buttons.next')}
+          </button>
         )}
       </div>
     </div>

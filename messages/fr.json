@@ -11,7 +11,8 @@
     "legal": "Mentions légales",
     "login": "Se connecter",
     "language": "Langue",
-    "gallery": "Galerie"
+    "gallery": "Galerie",
+    "householdHelping": "Aide ménagère"
   },
   "home": {
     "hero": {
@@ -136,6 +137,10 @@
       "comboService": {
         "title": "Déménagement + Nettoyage (Combo)",
         "description": "Service combiné de déménagement avec nettoyage final et garantie de reprise"
+      },
+      "householdHelping": {
+        "title": "Aide ménagère",
+        "description": "Assistance ménagère professionnelle incluant nettoyage, cuisine, lessive, courses et services de soins"
       }
     },
     "numbers": {
@@ -193,6 +198,30 @@
       "guarantee": "Garantie de satisfaction à 100%",
       "nationwide": "Disponible dans toute la Suisse",
       "professional": "Équipe professionnelle"
+    },
+    "serviceCategories": {
+      "title": "Nos catégories de services",
+      "subtitle": "Sélectionnez une catégorie pour trouver le service qui vous convient",
+      "cleaning": {
+        "title": "Services de nettoyage",
+        "description": "Nettoyage professionnel pour maisons, bureaux et plus",
+        "selectService": "Choisir un service de nettoyage"
+      },
+      "moving": {
+        "title": "Déménagement & Relocalisation",
+        "description": "Solutions complètes de déménagement",
+        "selectService": "Choisir un service de déménagement"
+      },
+      "disposal": {
+        "title": "Élimination & Débarras",
+        "description": "Services professionnels d'élimination et de débarras",
+        "selectService": "Choisir un service d'élimination"
+      },
+      "household": {
+        "title": "Ménage & Entretien",
+        "description": "Aide ménagère et entretien des propriétés",
+        "selectService": "Choisir un service ménager"
+      }
     }
   },
   "services": {
@@ -312,6 +341,14 @@
         "Nettoyage final avec garantie",
         "Couverture d'assurance",
         "Interlocuteur unique"
+      ],
+      "householdHelping": [
+        "Nettoyage de routine (aspirateur, serpillère, salle de bain, cuisine)",
+        "Service de repassage et de blanchisserie",
+        "Service de courses et de livraison",
+        "Cuisine et préparation des repas",
+        "Soins des animaux et des plantes",
+        "Soins aux personnes âgées et courses"
       ]
     },
     "pricingUnits": {
@@ -354,7 +391,8 @@
       "finalCleaning": "dès CHF 250",
       "windowCleaning": "CHF 8–15 / fenêtre",
       "relocation": "dès CHF 160 / heure",
-      "disposal": "dès CHF 30 / m³"
+      "disposal": "dès CHF 30 / m³",
+      "householdHelping": "dès CHF 35 / heure"
     }
   },
   "about": {
@@ -708,7 +746,8 @@
       "badge": "Calculer une offre",
       "stepCounter": "Étape {current} sur {total}",
       "validation": {
-        "required": "Veuillez remplir tous les champs obligatoires de cette étape"
+        "required": "Veuillez remplir tous les champs obligatoires",
+        "selectOption": "Veuillez sélectionner une option."
       },
       "common": {
         "select": "Veuillez sélectionner",
@@ -718,7 +757,7 @@
       "buttons": {
         "back": "Retour",
         "next": "Suivant",
-        "submit": "Envoyer",
+        "submit": "Soumettre",
         "submitting": "Envoi en cours..."
       },
       "subtitle": "Recevez un devis gratuit et sans engagement pour nos services professionnels",
@@ -731,7 +770,16 @@
         "moving_new": "Nouveau logement",
         "moving_details": "Détails du déménagement",
         "special_bg": "Exigences du service",
-        "contact": "Coordonnées"
+        "contact": "Coordonnées",
+        "areas": "Zones à nettoyer",
+        "windows": "Fenêtres & Vitrages",
+        "waste": "Détails des déchets",
+        "supplies": "Fournitures supplémentaires",
+        "household_property": "Propriété & Ménage",
+        "household_services": "Services & Fréquence",
+        "disposal_type": "Type d'élimination",
+        "disposal_items": "Articles & Volume",
+        "disposal_options": "Options supplémentaires"
       },
       "placeholders": {
         "areaM2": "ex. 120",
@@ -1109,6 +1157,216 @@
             "placeholder": "Note supplémentaire"
           }
         }
+      },
+      "cleaning": {
+        "desiredService": "Service souhaité *",
+        "cleaningOnly": "Nettoyage uniquement",
+        "movingAndCleaning": "Déménagement & Nettoyage",
+        "cleaningLocation": "Lieu de nettoyage",
+        "objectType": "Quel type d'objet doit être nettoyé ? *",
+        "objectTypes": {
+          "apartment": "Appartement",
+          "house": "Maison",
+          "wgRoom": "Chambre / Colocation",
+          "office": "Bureau",
+          "storageCellar": "Dépôt/Cave"
+        },
+        "floors": "Combien d'étages a votre maison/appartement ?",
+        "numberOfRooms": "Nombre de pièces :",
+        "livingSpace": "Surface habitable (m²) :",
+        "areasTitle": "Quelles zones doivent être nettoyées ? *",
+        "areas": {
+          "completeAll": "Nettoyage complet de toutes les pièces (cuisine, salle de bain & WC inclus)",
+          "cellar": "Cave",
+          "atticScreed": "Grenier / Combles",
+          "garage": "Garage",
+          "conservatory": "Véranda",
+          "individualRooms": "Seulement certaines pièces"
+        },
+        "windowsTitle": "Fenêtres & surfaces vitrées (veuillez indiquer le nombre)",
+        "normalWindows": "Fenêtres normales :",
+        "frenchDoors": "Portes-fenêtres (ex. balcon/terrasse) :",
+        "otherGlassSurfaces": "Autres grandes surfaces vitrées :",
+        "panoramicHint": "Fenêtres panoramiques (ex. véranda, façades vitrées) :",
+        "blindsTitle": "Stores & volets",
+        "blinds": {
+          "venetian": "Stores vénitiens",
+          "rollerShutters": "Volets roulants",
+          "shutters": "Volets",
+          "otherSpecial": "Autres / systèmes spéciaux",
+          "no": "Non"
+        },
+        "specialFeaturesTitle": "Particularités des fenêtres",
+        "specialFeatures": {
+          "heavilySoiled": "Très sales (ex. nicotine, graisse, poussière)",
+          "moldFrames": "Moisissure sur les cadres",
+          "smallCasement": "Nombreuses petites fenêtres battantes",
+          "roofWindow": "Fenêtre de toit / difficile d'accès",
+          "safetyFilm": "Fenêtres avec film de sécurité ou vitrage spécial",
+          "noSpecial": "Aucune particularité"
+        },
+        "furtherRequests": "Autres demandes/commentaires :",
+        "desiredCleaningDate": "Date de nettoyage souhaitée",
+        "deliveryHandoverDate": "Date de remise *",
+        "nameFirstName": "Nom Prénom : *",
+        "emailAddress": "Adresse e-mail : *",
+        "telephoneNumber": "Numéro de téléphone : *",
+        "zipCity": "NPA / Localité : *",
+        "streetNo": "Rue, N° : *"
+      },
+      "relocation": {
+        "movingFrom": "Déménagement de - NPA / Localité / Adresse *",
+        "currentLiving": "Où habitez-vous actuellement ? *",
+        "currentLivingOptions": {
+          "apartment": "Appartement",
+          "house": "Maison",
+          "wgRoom": "Colocation",
+          "studio": "Studio",
+          "office": "Bureau"
+        },
+        "currentFloor": "À quel étage habitez-vous ? *",
+        "elevatorAvailable": "Y a-t-il un ascenseur ? *",
+        "yes": "OUI",
+        "no": "NON",
+        "currentLivingSpace": "Surface habitable actuelle",
+        "currentRooms": "Combien de pièces avez-vous actuellement ? *",
+        "movingTo": "Où déménagez-vous ? *",
+        "movingToOptions": {
+          "apartment": "Appartement",
+          "house": "Maison",
+          "wgRoom": "Colocation",
+          "studio": "Studio",
+          "office": "Bureau",
+          "storage": "Dépôt"
+        },
+        "movingToAddress": "Déménagement vers - NPA / Localité / Adresse *",
+        "newElevator": "Y a-t-il un ascenseur ? *",
+        "newLivingSpace": "Surface habitable du nouvel appartement",
+        "newRooms": "Combien de pièces a votre nouvel appartement ? *",
+        "peopleMoving": "Combien de personnes déménagent ?",
+        "peopleMovingHint": "Cette indication aide à mieux estimer l'ampleur de votre déménagement.",
+        "movingBoxes": "Combien de cartons de déménagement doivent être transportés ?",
+        "movingBoxesHint": "Les adultes ont besoin en moyenne de 20-30 cartons, les enfants environ 10.",
+        "additionalSuppliesTitle": "Avez-vous besoin de fournitures supplémentaires ?",
+        "supplies": {
+          "movingBox": "CHF 20.- / carton de déménagement (10 pièces)",
+          "wardrobeBox": "CHF 22.- / carton penderie",
+          "bottleCarton": "CHF 8.- / carton à bouteilles",
+          "adhesiveTape": "CHF 20.- / ruban adhésif, 6 rouleaux avec dérouleur"
+        },
+        "areasCleaningTitle": "Quelles zones doivent être nettoyées ?",
+        "otherAreasTitle": "Y a-t-il d'autres zones ?",
+        "otherAreas": {
+          "cellar": "Cave",
+          "atticScreed": "Grenier / Combles",
+          "garageParkingSpace": "Garage / Place de parc",
+          "conservatoryBalcony": "Véranda / Balcon"
+        },
+        "additionalAreasTitle": "Y a-t-il d'autres zones :",
+        "additionalAreas": {
+          "parking": "Parking",
+          "stairs": "Escaliers",
+          "corridor": "Couloir"
+        },
+        "furtherRequests": "Autres demandes/commentaires :",
+        "desiredCleaningDate": "Date de nettoyage souhaitée",
+        "preferredMoveDate": "Date de déménagement préférée",
+        "nameFirstName": "Nom Prénom : *",
+        "company": "Entreprise : *",
+        "emailAddress": "Adresse e-mail : *",
+        "telephoneNumber": "Numéro de téléphone : *",
+        "zipCity": "NPA / Localité : *",
+        "streetNo": "Rue / N° : *"
+      },
+      "disposal": {
+        "pleaseChoose": "Veuillez choisir : *",
+        "disposalTypes": {
+          "disposal": "Élimination",
+          "eviction": "Évacuation",
+          "disposalClearance": "Élimination + Débarras"
+        },
+        "objectType": "Type d'objet *",
+        "location": "Emplacement *",
+        "floor": "À quel étage se trouve-t-il ? *",
+        "elevatorAvailable": "Y a-t-il un ascenseur ? *",
+        "yes": "Oui",
+        "no": "Non",
+        "wasteTitle": "Déchets",
+        "wasteItems": {
+          "furniture": "Meubles (armoire, lit, table, etc.)",
+          "electrical": "Appareils électriques (TV, réfrigérateur, PC)",
+          "cardboard": "Carton / Papier / Petites pièces",
+          "construction": "Gravats / Bois / Métal",
+          "garden": "Déchets de jardin / Plantes / Terre",
+          "textiles": "Textiles / Tapis / Matelas"
+        },
+        "otherDisposalItems": "Autres objets à éliminer",
+        "disassemblyNeeded": "Les objets doivent-ils être démontés ?",
+        "materialAmount": "Quelle quantité de matériel doit être éliminée ? *",
+        "materialAmounts": {
+          "little": "Peu (ex. petit espace)",
+          "medium": "Moyen (1-2 pièces)",
+          "lots": "Beaucoup (appartement entier / maison / entrepôt)"
+        },
+        "additionalOptionsTitle": "Options supplémentaires",
+        "additionalOptions": {
+          "cleaningAfter": "Nettoyage après l'évacuation inclus",
+          "broomCleaning": "Nettoyage au balai uniquement",
+          "basicCleaning": "Nettoyage de base",
+          "adhesiveTape": "CHF 20.- / ruban adhésif, 6 rouleaux avec dérouleur"
+        },
+        "movingSuppliesTitle": "Avez-vous besoin de fournitures supplémentaires ?",
+        "furtherWishes": "Autres souhaits / remarques : *",
+        "desiredDate": "Date souhaitée *",
+        "nameFirstName": "Nom / Prénom : *",
+        "company": "Entreprise : *",
+        "emailAddress": "Adresse e-mail : *",
+        "telephoneNumber": "Numéro de téléphone : *",
+        "zipCity": "NPA / Localité : *",
+        "streetNo": "Rue / N° : *"
+      },
+      "householdHelping": {
+        "floors": "Étage *",
+        "elevatorAvailable": "Y a-t-il un ascenseur ?",
+        "yes": "Oui",
+        "no": "Non",
+        "livingArea": "Surface habitable : *",
+        "householdSituation": "Situation du ménage",
+        "numberOfAdults": "Nombre d'adultes",
+        "numberOfChildren": "Nombre d'enfants",
+        "hasPets": "Avez-vous des animaux ?",
+        "desiredFrequency": "Fréquence d'intervention souhaitée *",
+        "frequencyOptions": {
+          "weekly": "Hebdomadaire",
+          "biweekly": "Toutes les 2 semaines",
+          "monthly": "Mensuel",
+          "onDemand": "Sur demande"
+        },
+        "desiredHours": "Heures souhaitées par intervention *",
+        "desiredServicesTitle": "Services souhaités *",
+        "desiredServices": {
+          "routineCleaning": "Nettoyage de routine (aspirateur, serpillère, salle de bain, cuisine, etc.)",
+          "ironing": "Service de repassage",
+          "laundry": "Laver et étendre le linge",
+          "shopping": "Service de courses / Livraison",
+          "dishwashing": "Vaisselle / Nettoyage",
+          "cooking": "Cuisine / Préparation des repas",
+          "plantCare": "Entretien des plantes",
+          "smallTasks": "Petites tâches (sortir les poubelles, changer les draps, etc.)",
+          "petCare": "Soins des animaux",
+          "seniorCare": "Soins aux personnes âgées",
+          "errands": "Courses / Poste"
+        },
+        "otherTasks": "Autres tâches ou demandes :",
+        "furtherRequests": "Autres demandes/commentaires :",
+        "wishDay": "Jour souhaité *",
+        "preferredTime": "Heure préférée :",
+        "nameFirstName": "Nom Prénom : *",
+        "company": "Entreprise : *",
+        "emailAddress": "Adresse e-mail : *",
+        "telephoneNumber": "Numéro de téléphone : *",
+        "zipCity": "NPA / Localité : *",
+        "streetNo": "Rue, N° : *"
       }
     },
     "title": {
@@ -1517,7 +1775,8 @@
       "serviceForms": "Formulaires de service",
       "emailCommunication": "Communication e-mail",
       "gallery": "Galerie",
-      "calendar": "Calendrier"
+      "calendar": "Calendrier",
+      "householdHelping": "Aide ménagère"
     },
     "calendar": {
       "title": "Calendrier",
@@ -2332,7 +2591,8 @@
         "mr": "M.",
         "mrs": "Mme",
         "ms": "Mx",
-        "dr": "Dr"
+        "dr": "Dr",
+        "other": "Autre"
       },
       "step5": {
         "title": "Tarification et détails finaux",
@@ -2532,7 +2792,8 @@
       "constructionCleaning": "Nettoyage de chantier",
       "propertyMaintenance": "Entretien d'immeuble",
       "specialCleaning": "Nettoyage spécial",
-      "comboService": "Pack nettoyage + déménagement"
+      "comboService": "Pack nettoyage + déménagement",
+      "householdHelping": "Aide ménagère"
     }
   },
   "pricing": {

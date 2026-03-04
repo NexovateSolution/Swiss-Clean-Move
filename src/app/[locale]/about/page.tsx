@@ -188,7 +188,7 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-swiss-blue via-blue-600 to-blue-800 text-white">
+      <section className="section-padding bg-gradient-to-br from-blue-400/80 via-blue-500/70 to-blue-600/80 text-white">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">

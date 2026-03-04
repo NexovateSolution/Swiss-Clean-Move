@@ -21,7 +21,8 @@ import {
   Truck,
   CheckCircle,
   Send,
-  FileText
+  FileText,
+  Heart
 } from 'lucide-react';
 
 export default function FreeOfferPage({ params: { locale } }: { params: { locale: string } }) {
@@ -72,7 +73,8 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
     { value: 'construction-cleaning', label: t('home.services.constructionCleaning.title'), icon: Building2 },
     { value: 'property-maintenance', label: t('home.services.propertyMaintenance.title'), icon: Wrench },
     { value: 'special-cleaning', label: t('home.services.specialCleaning.title'), icon: CheckCircle },
-    { value: 'combo-service', label: t('home.services.comboService.title'), icon: Truck }
+    { value: 'combo-service', label: t('home.services.comboService.title'), icon: Truck },
+    { value: 'household-helping', label: t('home.services.householdHelping.title'), icon: Heart }
   ];
 
   const propertyTypes = [
