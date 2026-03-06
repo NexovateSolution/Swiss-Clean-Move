@@ -127,10 +127,45 @@ function generatePDFContent(data: any): string {
 
 export async function POST(request: NextRequest) {
     try {
-        const data = await request.json()
+        const formData = await request.formData()
+        const dataStr = formData.get('data') as string
+        if (!dataStr) {
+            return NextResponse.json({ error: 'Missing form data' }, { status: 400 })
+        }
+
+        const data = JSON.parse(dataStr)
         if (!data.serviceName || !data.name || !data.firstName || !data.emailAddress) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
         }
+
+        // Process images
+        const images = formData.getAll('images') as File[]
+        const imagePaths: string[] = []
+
+        if (images.length > 0) {
+            const uploadDir = join(process.cwd(), 'public', 'uploads', 'service-forms-images')
+            if (!existsSync(uploadDir)) await mkdir(uploadDir, { recursive: true })
+
+            for (const image of images) {
+                if (image instanceof Blob) {
+                    const bytes = await image.arrayBuffer()
+                    const buffer = Buffer.from(bytes)
+                    const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1E9)}`
+                    const ext = image.name.split('.').pop() || 'png'
+                    const filename = `${uniqueSuffix}.${ext}`
+                    const filepath = join(uploadDir, filename)
+
+                    await writeFile(filepath, buffer)
+                    imagePaths.push(`/uploads/service-forms-images/${filename}`)
+                }
+            }
+        }
+
+        // Add image paths to the data blob for admin display
+        if (imagePaths.length > 0) {
+            data.imagePaths = imagePaths
+        }
+
         const submission = await prisma.serviceFormSubmission.create({
             data: {
                 serviceName: data.serviceName,

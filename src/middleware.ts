@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 
 const intlMiddleware = createMiddleware({
   // A list of all locales that are supported
-  locales: ['de', 'fr', 'en', 'nl'],
+  locales: ['de', 'fr', 'en'],
 
   // Used when no locale matches
   defaultLocale: 'de'
@@ -23,5 +23,5 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(de|fr|en|nl)/:path*', '/admin/:path*', '/admin']
+  matcher: ['/', '/(de|fr|en)/:path*', '/admin/:path*', '/admin']
 };

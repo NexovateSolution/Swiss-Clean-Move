@@ -1,9 +1,10 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import toast from 'react-hot-toast'
+import { Upload, X } from 'lucide-react'
 
 export type ServiceSlug =
   | 'house-cleaning' | 'apartment-cleaning' | 'stairwell-cleaning'
@@ -159,6 +160,8 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
     additionalAreas: [], movingSupplies: [], additionalOptions: [], desiredServices: [],
     blinds: [], windowSpecialFeatures: []
   })
+  const [images, setImages] = useState<File[]>([])
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const isFirst = step === 0
   const isLast = step === totalSteps - 1
@@ -201,26 +204,83 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
 
   const goNext = () => { if (validate()) setStep(i => Math.min(i + 1, totalSteps - 1)) }
   const goBack = () => setStep(i => Math.max(i - 1, 0))
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setImages(prev => [...prev, ...Array.from(e.target.files!)])
+    }
+  }
+  const removeImage = (index: number) => {
+    setImages(prev => prev.filter((_, i) => i !== index))
+  }
+
+  const ImageUpload = () => (
+    <div className="mt-6 border-t-2 border-[#a8c8e8] pt-6">
+      <h3 className="text-[#003366] font-semibold mb-2">{tl('upload.title') || 'Upload Pictures (Optional)'}</h3>
+      <p className="text-sm text-[#5a7a9a] mb-4">{tl('upload.description') || 'Attach photos of your property to help us provide a more accurate quote.'}</p>
+
+      <div
+        onClick={() => fileInputRef.current?.click()}
+        className="border-2 border-dashed border-[#003366] rounded-xl p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-white/50 transition-colors"
+      >
+        <Upload className="w-8 h-8 text-[#003366] mb-2" />
+        <span className="text-sm font-medium text-[#003366]">{tl('upload.button') || 'Click to select images'}</span>
+        <input
+          type="file"
+          ref={fileInputRef}
+          onChange={handleFileChange}
+          multiple
+          accept="image/*"
+          className="hidden"
+        />
+      </div>
+
+      {images.length > 0 && (
+        <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {images.map((img, i) => (
+            <div key={i} className="relative group">
+              <div className="w-full h-20 bg-white rounded-lg border border-[#a8c8e8] flex items-center justify-center overflow-hidden">
+                <span className="text-xs text-center px-2 truncate block w-full text-gray-600">{img.name}</span>
+              </div>
+              <button
+                onClick={(e) => { e.stopPropagation(); removeImage(i); }}
+                className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity shadow-sm"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+
   const submit = async () => {
     if (!validate()) return
     setBusy(true)
     try {
       const formType = category === 'other' ? 'cleaning' : category
+      const payload = {
+        serviceName, formType,
+        firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
+        name: d.nameFirstName?.split(' ')[0] || '',
+        emailAddress: d.emailAddress || '',
+        telephone: d.telephone || '',
+        streetAndNumber: d.streetNo || '',
+        postalCodeAndCity: d.zipCity || '',
+        salutation: d.salutation || 'Other',
+        remark: d.furtherRequests || d.furtherWishes || d.otherTasks || '',
+        ...d
+      }
+
+      const formData = new FormData()
+      formData.append('data', JSON.stringify(payload))
+      images.forEach((file) => {
+        formData.append('images', file)
+      })
+
       const res = await fetch('/api/service-forms', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          serviceName, formType,
-          firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
-          name: d.nameFirstName?.split(' ')[0] || '',
-          emailAddress: d.emailAddress || '',
-          telephone: d.telephone || '',
-          streetAndNumber: d.streetNo || '',
-          postalCodeAndCity: d.zipCity || '',
-          salutation: d.salutation || 'Other',
-          remark: d.furtherRequests || d.furtherWishes || d.otherTasks || '',
-          ...d
-        })
+        body: formData
       })
       if (!res.ok) throw new Error('fail')
       toast.success(tl('toasts.submitted'))
@@ -326,6 +386,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
             <FI label={tl('wizard.cleaning.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
             <FI label={tl('wizard.cleaning.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
             <FI label={tl('wizard.cleaning.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+            <ImageUpload />
           </div>
         )
       default: return null
@@ -446,6 +507,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
             <FI label={tl('wizard.relocation.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
             <FI label={tl('wizard.relocation.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
             <FI label={tl('wizard.relocation.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+            <ImageUpload />
           </div>
         )
       default: return null
@@ -541,6 +603,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
             <FI label={tl('wizard.disposal.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
             <FI label={tl('wizard.disposal.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
             <FI label={tl('wizard.disposal.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+            <ImageUpload />
           </div>
         )
       default: return null
@@ -654,6 +717,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
             <FI label={tl('wizard.cleaning.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
             <FI label={tl('wizard.cleaning.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
             <FI label={tl('wizard.cleaning.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+            <ImageUpload />
           </div>
         )
       default: return null

@@ -163,16 +163,6 @@ export default function Header() {
                   >
                     🇫🇷 Français
                   </button>
-                  <button
-                    onClick={() => {
-                      switchLocale('nl');
-                      setIsLangDropdownOpen(false);
-                    }}
-                    className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${locale === 'nl' ? 'text-swiss-blue font-medium' : 'text-gray-700'
-                      }`}
-                  >
-                    🇳🇱 Nederlands
-                  </button>
                 </div>
               )}
             </div>
@@ -254,18 +244,6 @@ export default function Header() {
                       }`}
                   >
                     🇫🇷 FR
-                  </button>
-                  <button
-                    onClick={() => {
-                      switchLocale('nl');
-                      setIsMenuOpen(false);
-                    }}
-                    className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-all ${locale === 'nl'
-                      ? 'bg-swiss-red text-white shadow-subtle'
-                      : 'text-swiss-body hover:text-swiss-text hover:bg-white'
-                      }`}
-                  >
-                    🇳🇱 NL
                   </button>
                 </div>
               </div>
