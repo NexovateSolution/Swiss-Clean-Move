@@ -1576,6 +1576,11 @@
       "close": "Schliessen",
       "submitting": "Wird gesendet...",
       "submit": "Senden"
+    },
+    "upload": {
+      "title": "Bilder hochladen (Optional)",
+      "description": "Hängen Sie Fotos Ihrer Immobilie an, damit wir ein genaueres Angebot erstellen können.",
+      "button": "Klicken Sie, um Bilder auszuwählen"
     }
   },
   "priceCalculator": {

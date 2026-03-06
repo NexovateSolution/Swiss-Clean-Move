@@ -1541,6 +1541,11 @@
       "close": "Fermer",
       "submitting": "Envoi...",
       "submit": "Envoyer"
+    },
+    "upload": {
+      "title": "Télécharger des photos (Optionnel)",
+      "description": "Joignez des photos de votre propriété pour nous aider à vous fournir un devis plus précis.",
+      "button": "Cliquez pour sélectionner des images"
     }
   },
   "priceCalculator": {

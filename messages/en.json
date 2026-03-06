@@ -1117,6 +1117,11 @@
         "disinfectionTreatment": "Disinfection Treatment Required",
         "medicalWaste": "Medical Waste Disposal Service"
       }
+    },
+    "upload": {
+      "title": "Upload Pictures (Optional)",
+      "description": "Attach photos of your property to help us provide a more accurate quote.",
+      "button": "Click to select images"
     }
   },
   "phone": {
