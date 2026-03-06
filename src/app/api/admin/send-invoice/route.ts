@@ -3,12 +3,7 @@ import { prisma } from '../../../../../lib/db'
 import { authenticateRequest } from '../../../../../lib/auth'
 import nodemailer from 'nodemailer'
 import puppeteer from 'puppeteer'
-import fs from 'fs'
-import path from 'path'
-
-// Read the actual logo file from disk and convert to Base64
-const logoPath = path.join(process.cwd(), 'public', 'images', 'logo.jpg')
-const LOGO_BASE64 = fs.readFileSync(logoPath).toString('base64')
+import { LOGO_BASE64 } from '@/lib/logo-base64'
 
 export async function POST(request: NextRequest) {
     try {
