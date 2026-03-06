@@ -38,7 +38,20 @@ export default getRequestConfig(async ({ requestLocale }) => {
     };
   }
 
-  const localeMessages = (await import(`../messages/${locale}.json`)).default;
+  // Use a map instead of template strings so Webpack can statically analyze and bundle the JSON files on Vercel
+  let localeMessages;
+  switch (locale) {
+    case 'de':
+      localeMessages = (await import('../messages/de.json')).default;
+      break;
+    case 'fr':
+      localeMessages = (await import('../messages/fr.json')).default;
+      break;
+    case 'en':
+    default:
+      localeMessages = {}; // Handled above, but just in case
+      break;
+  }
 
   return {
     locale,
