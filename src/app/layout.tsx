@@ -3,15 +3,17 @@ import './globals.css';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 
 export const metadata: Metadata = {
-  title: 'SwissCleanMove - Professional Cleaning & Moving Services Switzerland',
-  description: 'Reliable cleaning services and moving assistance in Switzerland with 100% satisfaction guarantee. Move-out cleaning, office cleaning, restaurant cleaning and more.',
-  keywords: 'Cleaning Switzerland, Moving Switzerland, End of tenancy cleaning, Office cleaning, Restaurant cleaning, Property maintenance, Disposal',
+  title: {
+    default: 'SwissCleanMove – Moving & Cleaning Company Switzerland',
+    template: '%s',
+  },
+  description: 'SwissCleanMove is your professional moving and cleaning company in Biel/Bienne, Bern, Zurich and across Switzerland.',
+  keywords: 'Moving Company Switzerland, End-of-Lease Cleaning, Maintenance Cleaning, Office Cleaning, Facility Service, Gastronomy Cleaning, Construction Cleaning, Clearance, Biel, Bern, Zurich, SwissCleanMove',
   openGraph: {
-    title: 'SwissCleanMove - Professional Cleaning & Moving Services',
-    description: 'Reliable cleaning services and moving assistance in Switzerland',
+    title: 'SwissCleanMove – Moving & Cleaning Company Switzerland',
+    description: 'Professional moving services, end-of-lease cleaning with guarantee, maintenance cleaning and facility service across Switzerland.',
     type: 'website',
-    locale: 'en_CH',
-    alternateLocale: ['de_CH', 'fr_CH'],
+    siteName: 'SwissCleanMove',
   },
   robots: {
     index: true,

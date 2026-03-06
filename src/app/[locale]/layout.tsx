@@ -1,8 +1,24 @@
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
 
 const locales = ['en', 'de', 'fr', 'nl'];
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'seo.home' });
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+      locale: `${locale}_CH`,
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

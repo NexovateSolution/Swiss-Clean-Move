@@ -17,7 +17,7 @@
   "home": {
     "hero": {
       "badge": "",
-      "title": "Professional Cleaning & Moving Services in Switzerland",
+      "title": "Professional Moving & Cleaning Company in Switzerland – Biel, Bern & Zurich",
       "subtitle": "Reliable cleaning services and moving assistance with 100% satisfaction guarantee",
       "slides": {
         "transport": {
@@ -198,7 +198,8 @@
         "description": "Huishoudelijke hulp en vastgoedonderhoud",
         "selectService": "Huishoudservice kiezen"
       }
-    }
+    },
+    "seoText": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland. We organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards. For a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines. For companies, property managers and businesses, we offer maintenance cleaning, office cleaning, stairwell cleaning and commercial cleaning – reliable, discreet and professionally managed. Additionally, we provide full facility service and property maintenance (regular inspections, minor repairs, winter service, green area maintenance), professional gastronomy cleaning for restaurants, hotels and commercial kitchens, construction cleaning (rough, detailed and final cleaning), as well as clearance and disposal services with environmentally responsible waste separation. SwissCleanMove stands for clear processes, transparent quotations, 24-hour response time and visible results – in Biel, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura, Lucerne and across Switzerland."
   },
   "services": {
     "title": "Our Services",
@@ -1586,7 +1587,8 @@
       "requestQuote": "Offerte aanvragen",
       "callNow": "Nu bellen",
       "emailUs": "E-mail ons",
-      "ourServicesInclude": "Onze diensten omvatten:"
+      "ourServicesInclude": "Onze diensten omvatten:",
+      "title": "Our Services – Complete Professional Solutions in Switzerland"
     },
     "officeCleaning": {
       "hero": {
@@ -1709,7 +1711,8 @@
         "subtitle": "Vraag vandaag nog je persoonlijke verhuisofferte aan",
         "primaryButton": "Verhuisofferte aanvragen"
       }
-    }
+    },
+    "seoText": "SwissCleanMove provides professional moving and cleaning services throughout Switzerland. We plan and execute private and corporate relocations, including secure furniture transport and structured organization. For property handovers, we offer end-of-lease cleaning with a full guarantee. We also provide regular maintenance cleaning, office cleaning and facility services for businesses and property managers. Our portfolio is completed by gastronomy cleaning, construction cleaning and professional clearance services – ensuring all services are delivered with Swiss precision and reliability."
   },
   "admin": {
     "sidebar": {
@@ -2814,7 +2817,8 @@
           "Price on request for large properties"
         ]
       }
-    }
+    },
+    "seoText": "The cost of moving and end-of-lease cleaning depends on property size, distance, floor level, elevator availability and preferred date. Maintenance cleaning, gastronomy cleaning and facility services are calculated individually based on scope and property requirements. SwissCleanMove provides a free and transparent quotation without hidden costs – for private relocations, corporate moves, cleaning services and clearance across Switzerland."
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -2867,5 +2871,48 @@
         }
       ]
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Moving Company Biel, Bern & Zurich | End-of-Lease Cleaning Switzerland – SwissCleanMove",
+      "description": "SwissCleanMove is your professional moving and cleaning company in Biel/Bienne, Bern, Zurich and across Switzerland. Moving services, end-of-lease cleaning with guarantee, maintenance cleaning, facility service, gastronomy cleaning, construction cleaning and clearance. Request your free quote within 24 hours."
+    },
+    "about": {
+      "title": "About SwissCleanMove | Moving & Cleaning Company Switzerland",
+      "description": "SwissCleanMove represents Swiss quality in moving services, end-of-lease cleaning with guarantee, maintenance cleaning, gastronomy cleaning and facility service – active in Biel, Bern, Zurich and across Switzerland."
+    },
+    "services": {
+      "title": "Services | Moving, End-of-Lease Cleaning & Facility Service – SwissCleanMove",
+      "description": "All services by SwissCleanMove: Private & corporate moving, end-of-lease cleaning with guarantee, maintenance cleaning, office cleaning, facility service, gastronomy cleaning, construction cleaning and clearance – Switzerland-wide."
+    },
+    "regions": {
+      "title": "Service Areas | Moving & Cleaning Services in Switzerland – SwissCleanMove",
+      "description": "SwissCleanMove operates across Switzerland: Biel, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura and more."
+    },
+    "pricing": {
+      "title": "Prices | Moving & End-of-Lease Cleaning Switzerland – SwissCleanMove",
+      "description": "Transparent pricing for moving, end-of-lease cleaning, maintenance cleaning and facility services. Free and non-binding quotation."
+    },
+    "faq": {
+      "title": "FAQ | Moving & Cleaning Services – SwissCleanMove Switzerland",
+      "description": "Frequently asked questions about moving services, end-of-lease cleaning, maintenance cleaning, facility service and pricing."
+    },
+    "freeQuote": {
+      "title": "Free Quote | Moving & Cleaning Switzerland – SwissCleanMove",
+      "description": "Request your free quote for moving, end-of-lease cleaning, maintenance cleaning or facility service. Fast response within 24 hours."
+    },
+    "contact": {
+      "title": "Contact | Moving & Cleaning Company Switzerland – SwissCleanMove",
+      "description": "Contact SwissCleanMove for professional moving and cleaning services across Switzerland."
+    },
+    "gallery": {
+      "title": "Gallery | Moving & Cleaning Projects – SwissCleanMove",
+      "description": "Explore our moving projects, end-of-lease cleaning, maintenance cleaning, gastronomy cleaning and construction cleaning results across Switzerland."
+    }
+  },
+  "galleryPage": {
+    "title": "Gallery – Our Work & Quality Standards",
+    "description": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel, Bern, Zurich and throughout Switzerland.",
+    "seoText": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel, Bern, Zurich and throughout Switzerland."
   }
 }
