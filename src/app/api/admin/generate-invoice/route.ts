@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { verifyToken } from '../../../../../lib/auth'
 import { prisma } from '../../../../../lib/db'
+import fs from 'fs'
+import path from 'path'
 
-const LOGO_BASE64 = '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'
+// Read the actual logo file from disk and convert to Base64
+const logoPath = path.join(process.cwd(), 'public', 'images', 'logo.jpg')
+const LOGO_BASE64 = fs.readFileSync(logoPath).toString('base64')
 
 export async function POST(request: NextRequest) {
     try {
@@ -34,7 +38,8 @@ export async function POST(request: NextRequest) {
                 clientStartTime: 'Beginn beim Kunden',
                 cleaningCompleted: 'Reinigung Übergabe',
                 paymentCondition: 'Zahlungsbedingung',
-                thankYou: 'Wir stehen Ihnen gerne für Fragen zur Verfügung.',
+                thankYou: 'Vielen Dank für Ihren Auftrag. Gerne bestätigen wir Ihnen folgendes Angebot.',
+                greeting: 'Sehr geehrte(r)',
                 regards: 'Mit freundlichen Grüßen',
                 companyName: 'SwissCleanMove',
                 service: 'Leistung',
@@ -67,7 +72,8 @@ export async function POST(request: NextRequest) {
                 clientStartTime: 'Début chez le client',
                 cleaningCompleted: 'Remise du nettoyage',
                 paymentCondition: 'Condition de paiement',
-                thankYou: 'Nous sommes à votre disposition pour répondre à vos questions.',
+                thankYou: 'Merci pour votre commande. Nous avons le plaisir de vous confirmer l offre suivante.',
+                greeting: 'Cher/Chère',
                 regards: 'Cordialement',
                 companyName: 'SwissCleanMove',
                 service: 'Service',
@@ -100,7 +106,8 @@ export async function POST(request: NextRequest) {
                 clientStartTime: 'Start at Client',
                 cleaningCompleted: 'Cleaning Handover',
                 paymentCondition: 'Payment Condition',
-                thankYou: 'We are at your disposal to answer your questions.',
+                thankYou: 'Thank you for your order. We are pleased to confirm the following offer.',
+                greeting: 'Dear',
                 regards: 'Best regards',
                 companyName: 'SwissCleanMove',
                 service: 'Service',
@@ -204,6 +211,11 @@ export async function POST(request: NextRequest) {
         </div>
 
         <div class="title">${t.title}</div>
+
+        <div style="margin: 15px 0 25px 0; font-size: 15px; line-height: 1.8;">
+            <strong>${t.greeting} ${clientName}</strong><br>
+            ${t.thankYou}
+        </div>
 
         <div class="order-info">
             <strong>${t.orderNumber}:</strong> ${orderNumber}<br>
