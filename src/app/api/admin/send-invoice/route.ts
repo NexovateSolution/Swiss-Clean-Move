@@ -156,7 +156,14 @@ function generateInvoiceHTML(client: any, language: string): string {
             page: 'Seite',
             guarantee: 'Übergabegarantie Inkl. 8.1% MwSt Pauschal',
             customerSignature: 'Unterschrift Kunde',
-            teamSignature: 'Unterschrift Teamleiter'
+            teamSignature: 'Unterschrift Teamleiter',
+            type: 'Typ',
+            livingArea: 'Wohnfläche',
+            floorLabel: 'Stockwerk',
+            elevatorLabel: 'Aufzug',
+            withElevator: 'Mit Lift',
+            withoutElevator: 'Ohne Lift',
+            remarks: 'Bemerkungen:'
         },
         fr: {
             title: 'Confirmation de commande de nettoyage',
@@ -190,7 +197,14 @@ function generateInvoiceHTML(client: any, language: string): string {
             page: 'Page',
             guarantee: 'Garantie de remise incl. 8.1% TVA forfaitaire',
             customerSignature: 'Signature du client',
-            teamSignature: 'Signature du chef d\'équipe'
+            teamSignature: 'Signature du chef d\'équipe',
+            type: 'Type',
+            livingArea: 'Surface habitable',
+            floorLabel: 'Étage',
+            elevatorLabel: 'Ascenseur',
+            withElevator: 'Avec ascenseur',
+            withoutElevator: 'Sans ascenseur',
+            remarks: 'Remarques:'
         },
         en: {
             title: 'Cleaning Order Confirmation',
@@ -224,7 +238,14 @@ function generateInvoiceHTML(client: any, language: string): string {
             page: 'Page',
             guarantee: 'Handover guarantee Incl. 8.1% VAT flat rate',
             customerSignature: 'Customer Signature',
-            teamSignature: 'Team Leader Signature'
+            teamSignature: 'Team Leader Signature',
+            type: 'Type',
+            livingArea: 'Living area',
+            floorLabel: 'Floor',
+            elevatorLabel: 'Elevator',
+            withElevator: 'With elevator',
+            withoutElevator: 'Without elevator',
+            remarks: 'Remarks:'
         }
     }[language] || { /* fallback */ };
 
@@ -263,8 +284,8 @@ function generateInvoiceHTML(client: any, language: string): string {
             .signatures { display: flex; justify-content: space-between; margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; }
             .signature-box { width: 45%; text-align: center; }
             .signature-line { border-bottom: 1px solid #333; margin-bottom: 5px; height: 40px; }
-            .footer { position: fixed; bottom: 20px; left: 20px; right: 20px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #ddd; padding-top: 10px; }
-            .page-number { position: fixed; bottom: 10px; right: 20px; font-size: 10px; color: #666; }
+            .footer-wrapper { margin-top: 40px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #ddd; padding-top: 10px; }
+            .page-number { text-align: right; font-size: 10px; color: #666; padding-top: 5px; }
             .payment-slip { margin-top: 40px; border: 2px solid #111; border-radius: 8px; overflow: hidden; }
             .payment-slip-table { width: 100%; border-collapse: collapse; }
             .payment-slip-table td { vertical-align: top; padding: 16px; }
@@ -280,9 +301,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             .payment-slip-currency { font-size: 12px; font-weight: bold; }
             .remarks-section { margin-top: 20px; font-size: 12px; color: #555; }
             @media print {
-                body { margin: 0; padding: 15px; padding-bottom: 80px; -webkit-print-color-adjust: exact; }
-                .footer { position: fixed; bottom: 15px; }
-                .page-number { position: fixed; bottom: 5px; }
+                body { margin: 0; padding: 15px; -webkit-print-color-adjust: exact; }
                 .service-table th { background: #0066CC !important; color: white !important; }
             }
         </style>
@@ -335,8 +354,8 @@ function generateInvoiceHTML(client: any, language: string): string {
                         <td>
                             ${client.buildingType || 'N/A'} • ${client.squareMeters || 0}m²<br>
                             ${client.numberOfRooms ? `${client.numberOfRooms} ${t.room}<br>` : ''}
-                            ${client.floor ? `Stockwerk: ${client.floor}<br>` : ''}
-                            ${client.elevator === 'yes' ? 'Mit Lift' : 'Ohne Lift'}<br>
+                            ${client.floor ? `${t.floorLabel}: ${client.floor}<br>` : ''}
+                            ${client.elevator === 'yes' ? t.withElevator : t.withoutElevator}<br>
                             ${t.guarantee}
                         </td>
                         <td><strong>${client.totalPrice || 0} CHF</strong></td>
@@ -392,7 +411,7 @@ function generateInvoiceHTML(client: any, language: string): string {
 
         ${(client.remarks1 || client.remarks2 || client.remarks3) ? `
         <div class="remarks-section">
-            <h4 style="margin-bottom: 5px; color: #333;">Bemerkungen:</h4>
+            <h4 style="margin-bottom: 5px; color: #333;">${t.remarks}</h4>
             ${client.remarks1 ? `<p style="margin: 2px 0;">• ${client.remarks1}</p>` : ''}
             ${client.remarks2 ? `<p style="margin: 2px 0;">• ${client.remarks2}</p>` : ''}
             ${client.remarks3 ? `<p style="margin: 2px 0;">• ${client.remarks3}</p>` : ''}
@@ -415,13 +434,10 @@ function generateInvoiceHTML(client: any, language: string): string {
             </div>
         </div>
 
-        <div class="footer">
+        <div class="footer-wrapper">
             Copyright © ${t.companyName} ${new Date().getFullYear()}<br>
-            Designed by Saran Solutions
-        </div>
-
-        <div class="page-number">
-            ${t.page} 1 of 2
+            Designed by SwissCleanMove
+            <div class="page-number">${t.page} 1 of 2</div>
         </div>
 
         <div style="page-break-before: always;"></div>
@@ -498,8 +514,10 @@ function generateInvoiceHTML(client: any, language: string): string {
             </table>
         </div>
 
-        <div class="page-number">
-            ${t.page} 2 of 2
+        <div class="footer-wrapper" style="margin-top: 60px;">
+            Copyright © ${t.companyName} ${new Date().getFullYear()}<br>
+            Designed by SwissCleanMove
+            <div class="page-number">${t.page} 2 of 2</div>
         </div>
     </body>
     </html>
