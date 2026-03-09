@@ -90,116 +90,22 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
     if (!client) return
 
     try {
-      // Pre-fetch logo as base64 to ensure it renders instantly in the popup without network latency
-      const logoUrl = '/images/logo.jpg';
-      let logoBase64 = '';
-      try {
-        const response = await fetch(logoUrl);
-        const blob = await response.blob();
-        logoBase64 = await new Promise((resolve) => {
-          const reader = new FileReader();
-          reader.onloadend = () => resolve(reader.result as string);
-          reader.readAsDataURL(blob);
-        });
-      } catch (e) {
-        console.warn('Failed to preload logo', e);
+      const response = await fetch('/api/admin/generate-invoice', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          clientId: client.id,
+          language: 'de'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch invoice template');
       }
 
-      const htmlContent = `
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <title>Invoice - ${invoice.invoiceNumber}</title>
-        <style>
-          body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; color: #333; max-width: 800px; margin: 0 auto; padding: 40px; }
-          .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; border-bottom: 2px solid #0066CC; padding-bottom: 20px; }
-          .company-info { text-align: right; }
-          .invoice-title { font-size: 32px; font-weight: bold; color: #0066CC; margin-bottom: 30px; letter-spacing: 2px; }
-          .client-info, .invoice-details { margin-bottom: 40px; }
-          table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-          th { background-color: #f8f9fa; border-bottom: 2px solid #dee2e6; text-align: left; padding: 12px; font-weight: bold; }
-          td { border-bottom: 1px solid #dee2e6; padding: 12px; vertical-align: top; }
-          .total-row td { font-weight: bold; border-top: 2px solid #0066CC; font-size: 1.1em; }
-          .amount { text-align: right; }
-          .footer { margin-top: 50px; font-size: 14px; color: #666; border-top: 1px solid #dee2e6; padding-top: 20px; }
-          .bank-details { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 20px; }
-          @media print {
-            body { padding: 0; }
-            button { display: none; }
-          }
-        </style>
-      </head>
-      <body>
-        <div class="header">
-          <div>
-            <img src="${logoBase64}" alt="SwissCleanMove" style="height:120px;width:auto;margin-bottom:8px;">
-          </div>
-          <div class="company-info">
-            <div><strong>SwissCleanMove GmbH</strong></div>
-            <div>Orpundstrasse 31</div>
-            <div>2504 Biel/Bienne, Switzerland</div>
-            <div>Phone: +41 76 488 36 89 / +41 78 215 80 30</div>
-            <div>Email: info@swisscleanmove.ch</div>
-          </div>
-        </div>
-
-        <div class="invoice-title">INVOICE</div>
-
-        <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
-          <div class="client-info">
-            <h3>Bill To:</h3>
-            <div><strong>${client.firstName} ${client.lastName}</strong></div>
-            <div>${client.address}</div>
-            <div>${client.postalCode} ${client.location}</div>
-            <div>Phone: ${client.phone}</div>
-            ${client.email ? `<div>Email: ${client.email}</div>` : ''}
-          </div>
-          
-          <div class="invoice-details">
-            <table>
-              <tr><td><strong>Invoice Number:</strong></td><td>${invoice.invoiceNumber}</td></tr>
-              <tr><td><strong>Invoice Date:</strong></td><td>${format(new Date(), 'dd.MM.yyyy')}</td></tr>
-              <tr><td><strong>Due Date:</strong></td><td>${format(new Date(invoice.dueDate), 'dd.MM.yyyy')}</td></tr>
-            </table>
-          </div>
-        </div>
-
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Description</th>
-              <th>Quantity</th>
-              <th>Unit Price</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>${client.serviceType}</td>
-              <td>1</td>
-              <td>CHF ${invoice.amount.toFixed(2)}</td>
-              <td>CHF ${invoice.amount.toFixed(2)}</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="total">
-          <div>Subtotal: CHF ${invoice.amount.toFixed(2)}</div>
-          <div>VAT (7.7%): CHF ${(invoice.amount * 0.077).toFixed(2)}</div>
-          <div style="border-top: 2px solid #2563eb; padding-top: 10px; margin-top: 10px;">
-            <strong>Total: CHF ${(invoice.amount * 1.077).toFixed(2)}</strong>
-          </div>
-        </div>
-
-        <div class="footer">
-          <p><strong>Payment Terms:</strong> Payment is due within 30 days of invoice date.</p>
-          <p><strong>Bank Details:</strong> Swiss Bank, Account: CH12 3456 7890 1234 5678 9, BIC: SBCHCH22</p>
-          <p>Thank you for choosing SwissCleanMove for your cleaning needs!</p>
-        </div>
-      </body>
-      </html>
-    `
+      const htmlContent = await response.text();
 
       // Open in new window for printing/saving as PDF
       const printWindow = window.open('', '_blank')
@@ -209,10 +115,11 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
         printWindow.focus()
         setTimeout(() => {
           printWindow.print()
-        }, 250)
+        }, 500)
       }
     } catch (error) {
-      console.error('Failed to pre-load logo or generate PDF:', error);
+      console.error('Failed to generate PDF:', error);
+      toast.error('Failed to generate PDF preview');
     }
   }
 

@@ -148,7 +148,7 @@ export async function POST(request: NextRequest) {
     <head>
         <meta charset="UTF-8">
         <style>
-            body { font-family: Arial, sans-serif; margin: 0; padding: 20px; font-size: 14px; line-height: 1.5; }
+            body { font-family: Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 14px; line-height: 1.5; }
             .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #0066CC; padding-bottom: 15px; }
             .logo-section { display: flex; align-items: center; gap: 15px; }
             .company-info { text-align: right; font-size: 13px; color: #333; line-height: 1.8; }
@@ -184,7 +184,7 @@ export async function POST(request: NextRequest) {
             .payment-slip-currency { font-size: 12px; font-weight: bold; }
             .remarks-section { margin-top: 20px; font-size: 12px; color: #555; }
             @media print {
-                body { margin: 0; padding: 15px; -webkit-print-color-adjust: exact; }
+                body { margin: 0; padding: 15px; padding-bottom: 80px; -webkit-print-color-adjust: exact; }
                 .footer { position: fixed; bottom: 15px; }
                 .page-number { position: fixed; bottom: 5px; }
                 .service-table th { background: #0066CC !important; color: white !important; }
@@ -201,7 +201,7 @@ export async function POST(request: NextRequest) {
                 Orpundstrasse 31, 2504 Biel/Bienne<br>
                 info@swisscleanmove.ch<br>
                 📞 +41 76 488 36 89 / +41 78 215 80 30<br>
-                UID: CHE-123.456.789
+                UID: CHE-457.949.122
             </div>
         </div>
 
@@ -339,7 +339,7 @@ export async function POST(request: NextRequest) {
                 Orpundstrasse 31, 2504 Biel/Bienne<br>
                 info@swisscleanmove.ch<br>
                 📞 +41 76 488 36 89 / +41 78 215 80 30<br>
-                UID: CHE-123.456.789
+                UID: CHE-457.949.122
             </div>
         </div>
 

@@ -387,14 +387,22 @@ export default function ServiceFormsPage() {
                 <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                     <FileText className="w-5 h-5 text-blue-600" />
-                    All Submitted Form Data
+                    Additional Submitted Data
                   </h3>
                   {(() => {
-                    // Merge: prefer the rich `data` JSON, fall back to top-level DB columns
-                    const raw: Record<string, any> = (selectedSubmission as any).data || selectedSubmission
+                    // Merge selectedSubmission and its internal data payload
+                    const raw: Record<string, any> = { ...selectedSubmission, ...((selectedSubmission as any).data || {}) }
+
+                    const DEDUPLICATED_KEYS = new Set([
+                      ...Array.from(SKIP_KEYS),
+                      'firstName', 'name', 'emailAddress', 'telephone', 'streetAndNumber',
+                      'postalCodeAndCity', 'contactPreferredVia', 'viewingIsWelcome', 'salutation'
+                    ])
+
                     const allKeys = Object.keys(raw).filter(
-                      k => !SKIP_KEYS.has(k) && raw[k] !== null && raw[k] !== undefined && raw[k] !== ''
+                      k => !DEDUPLICATED_KEYS.has(k) && raw[k] !== null && raw[k] !== undefined && raw[k] !== ''
                     )
+
                     if (allKeys.length === 0) {
                       return <p className="text-gray-500 dark:text-gray-400 italic">No additional data submitted.</p>
                     }
@@ -405,7 +413,23 @@ export default function ServiceFormsPage() {
                             const val = raw[key]
                             let display: React.ReactNode
 
-                            if (Array.isArray(val)) {
+                            if (key === 'imagePaths' && Array.isArray(val)) {
+                              display = (
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2">
+                                  {val.map((img: string, i: number) => (
+                                    <a key={i} href={img} target="_blank" rel="noopener noreferrer" className="block outline-none ring-2 ring-transparent focus:ring-blue-500 rounded">
+                                      {img.match(/\.(jpeg|jpg|gif|png|webp)$/i) ? (
+                                        <img src={img} alt="Uploaded form attachment" className="w-full h-24 object-cover rounded shadow-sm border border-gray-200" />
+                                      ) : (
+                                        <div className="w-full h-24 bg-gray-100 flex items-center justify-center text-xs text-blue-600 underline rounded border border-gray-200">
+                                          View File
+                                        </div>
+                                      )}
+                                    </a>
+                                  ))}
+                                </div>
+                              )
+                            } else if (Array.isArray(val)) {
                               if (val.length === 0) return null
                               display = (
                                 <div className="flex flex-wrap gap-1.5">
@@ -429,15 +453,15 @@ export default function ServiceFormsPage() {
                             } else if (typeof val === 'object') {
                               display = <pre className="text-sm text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-700 rounded p-2 overflow-x-auto">{JSON.stringify(val, null, 2)}</pre>
                             } else {
-                              display = <span className="text-gray-900 dark:text-white font-medium break-words">{String(val)}</span>
+                              display = <span className="text-gray-900 dark:text-white font-medium break-words whitespace-pre-wrap">{String(val)}</span>
                             }
 
                             return (
-                              <div key={key} className="flex items-start px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-750">
-                                <dt className="w-1/3 min-w-[160px] flex-shrink-0 text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider pt-0.5">
+                              <div key={key} className="flex flex-col sm:flex-row items-start px-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-750">
+                                <dt className="sm:w-1/3 min-w-[200px] flex-shrink-0 text-sm font-semibold text-gray-500 dark:text-gray-400 capitalize pt-0.5 mb-1 sm:mb-0">
                                   {prettifyKey(key)}
                                 </dt>
-                                <dd className="flex-1 ml-4">
+                                <dd className="flex-1 w-full sm:ml-4">
                                   {display}
                                 </dd>
                               </div>
