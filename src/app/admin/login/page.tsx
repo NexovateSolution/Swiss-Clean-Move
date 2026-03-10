@@ -31,7 +31,7 @@ export default function AdminLogin() {
   const onSubmit = async (data: LoginForm) => {
     try {
       setLoading(true)
-      
+
       const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: {
@@ -46,10 +46,10 @@ export default function AdminLogin() {
       }
 
       const result = await response.json()
-      
+
       // Store user data in localStorage
       localStorage.setItem('user', JSON.stringify(result.user))
-      
+
       toast.success(tAdmin('toast.loginSuccess'))
       router.push(`/${locale}/admin`)
     } catch (error) {
@@ -85,7 +85,7 @@ export default function AdminLogin() {
               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="email"
-                {...register('email', { 
+                {...register('email', {
                   required: t('validation.emailRequired'),
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -109,7 +109,7 @@ export default function AdminLogin() {
               <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type={showPassword ? 'text' : 'password'}
-                {...register('password', { 
+                {...register('password', {
                   required: t('validation.passwordRequired'),
                   minLength: {
                     value: 6,
@@ -153,15 +153,6 @@ export default function AdminLogin() {
               <ArrowLeft className="w-4 h-4" />
               <span>{t('returnToSite')}</span>
             </Link>
-          </div>
-
-          {/* Demo Credentials */}
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-sm font-medium text-gray-700 mb-2">{t('demo.title')}</h3>
-            <div className="text-sm text-gray-600 space-y-1">
-              <p><strong>{t('demo.emailLabel')}</strong> admin@swisscleanmove.ch</p>
-              <p><strong>{t('demo.passwordLabel')}</strong> admin123</p>
-            </div>
           </div>
         </form>
       </motion.div>
