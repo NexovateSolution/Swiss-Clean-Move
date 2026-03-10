@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'SwissCleanMove',
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   robots: {
     index: true,
     follow: true,
