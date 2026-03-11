@@ -1229,8 +1229,12 @@
           "venetian": "Jalousien",
           "rollerShutters": "Rollläden",
           "shutters": "Fensterläden",
+          "slat": "Lamellenstoren",
+          "adjustable": "Verstellbare Außenjalousien",
+          "windowShutters": "Fensterläden",
+          "blinds": "Rollläden / Jalousien",
           "otherSpecial": "Andere / Spezialsysteme",
-          "no": "Nein"
+          "no": "Keine Storen oder Jalousien vorhanden"
         },
         "specialFeaturesTitle": "Besonderheiten der Fenster",
         "specialFeatures": {
@@ -1675,7 +1679,7 @@
   },
   "servicesPages": {
     "common": {
-      "requestQuote": "Kostenloses Angebot",
+      "requestQuote": "Bestellen",
       "callNow": "Jetzt anrufen",
       "ourServicesInclude": "Unsere Leistungen umfassen",
       "emailUs": "E-Mail schreiben",

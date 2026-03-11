@@ -347,7 +347,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
               >
                 <span className="flex items-center justify-center space-x-2">
                   <Calendar className="w-5 h-5" />
-                  <span>{t('common.freeQuote')}</span>
+                  <span>{t('servicesPages.common.requestQuote')}</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>

@@ -356,6 +356,10 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
               venetian: tl('wizard.cleaning.blinds.venetian'),
               rollerShutters: tl('wizard.cleaning.blinds.rollerShutters'),
               shutters: tl('wizard.cleaning.blinds.shutters'),
+              slat: tl('wizard.cleaning.blinds.slat'),
+              adjustable: tl('wizard.cleaning.blinds.adjustable'),
+              windowShutters: tl('wizard.cleaning.blinds.windowShutters'),
+              blinds: tl('wizard.cleaning.blinds.blinds'),
               otherSpecial: tl('wizard.cleaning.blinds.otherSpecial'),
               no: tl('wizard.cleaning.blinds.no'),
             }).map(([key, label]) => (

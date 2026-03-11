@@ -50,10 +50,10 @@ export default function AdminLogin() {
       // Store user data in localStorage
       localStorage.setItem('user', JSON.stringify(result.user))
 
-      toast.success(tAdmin('toast.loginSuccess'))
+      toast.success(tAdmin('toast.loginSuccess'), { duration: 2500 })
       router.push(`/${locale}/admin`)
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : tAdmin('toast.loginFailed'))
+      toast.error(error instanceof Error ? error.message : tAdmin('toast.loginFailed'), { duration: 3500 })
     } finally {
       setLoading(false)
     }

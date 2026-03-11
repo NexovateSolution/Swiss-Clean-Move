@@ -150,7 +150,7 @@ export default function FinalCleaningPage({ params: { locale } }: { params: { lo
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href={`/${locale}/form?service=final-cleaning`} className="btn-secondary text-lg px-8 py-4">
-                  {t('common.freeQuote')}
+                  {t('servicesPages.common.requestQuote')}
                 </Link>
                 <a
                   href={`mailto:info@swisscleanmove.ch`}

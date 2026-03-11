@@ -775,8 +775,12 @@
           "venetian": "Venetian blinds",
           "rollerShutters": "Roller shutters",
           "shutters": "Shutters",
+          "slat": "Slat blinds",
+          "adjustable": "Adjustable external blinds",
+          "windowShutters": "Window shutters",
+          "blinds": "Blinds",
           "otherSpecial": "Other / special systems",
-          "no": "No"
+          "no": "No shades or shutters available"
         },
         "specialFeaturesTitle": "Special features of windows",
         "specialFeatures": {
@@ -1415,7 +1419,7 @@
   },
   "servicesPages": {
     "common": {
-      "requestQuote": "Request Free Quote",
+      "requestQuote": "Order",
       "callNow": "Call Now",
       "ourServicesInclude": "Our Services Include",
       "emailUs": "Email Us",

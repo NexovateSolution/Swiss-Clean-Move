@@ -1194,8 +1194,12 @@
           "venetian": "Stores vénitiens",
           "rollerShutters": "Volets roulants",
           "shutters": "Volets",
+          "slat": "Stores à lamelles",
+          "adjustable": "Stores extérieurs orientables",
+          "windowShutters": "Volets",
+          "blinds": "Stores",
           "otherSpecial": "Autres / systèmes spéciaux",
-          "no": "Non"
+          "no": "Aucun store ou volet disponible"
         },
         "specialFeaturesTitle": "Particularités des fenêtres",
         "specialFeatures": {
@@ -1640,7 +1644,7 @@
   },
   "servicesPages": {
     "common": {
-      "requestQuote": "Demander un devis",
+      "requestQuote": "Commander",
       "callNow": "Appeler maintenant",
       "ourServicesInclude": "Nos services comprennent",
       "emailUs": "Contactez-nous par e-mail",
