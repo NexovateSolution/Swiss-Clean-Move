@@ -398,7 +398,7 @@
   "about": {
     "title": "À propos de SwissCleanMove",
     "subtitle": "Votre partenaire de confiance pour le nettoyage et le déménagement",
-    "description": "SwissCleanMove est votre entreprise de déménagement professionnelle à Biel/Bienne (Canton de Berne) et votre partenaire de déménagement fiable à Berne et Zurich – opérant dans toute la Suisse.\nNous organisons des déménagements privés, des déménagements d'entreprise, des déménagements de bureau et des transports de meubles, y compris les services d'emballage, le démontage et le montage, et l'exécution ponctuelle selon les normes de qualité suisses.\nPour une remise d'appartement sans stress, nous fournissons un nettoyage de fin de bail avec une garantie de remise à 100%. Nous nettoyons soigneusement les cuisines, salles de bains, fenêtres, sols, portes et toutes les zones requises selon des directives de qualité strictes.",
+    "description": "",
     "values": {
       "reliability": {
         "title": "Fiabilité",
@@ -485,7 +485,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Prenez contact avec nous",
+    "subtitle": "Contactez SwissCleanMove pour des services professionnels de déménagement, nettoyage et facility services à Biel/Bienne, Berne, Zurich et dans toute la Suisse.",
     "errors": {
       "submitFailed": "Échec de l'envoi du formulaire",
       "submitFailedRetry": "Échec de l'envoi du formulaire. Veuillez réessayer."
@@ -560,7 +560,7 @@
   },
   "freeOffer": {
     "title": "Demander un devis gratuit",
-    "subtitle": "Recevez un devis sans engagement pour votre nettoyage ou déménagement",
+    "subtitle": "Recevez un devis gratuit et sans engagement pour des services de déménagement, nettoyage et facility services – disponible dans toute la Suisse.",
     "errors": {
       "submitFailed": "Échec de l'envoi du formulaire",
       "submitFailedRetry": "Échec de l'envoi du formulaire. Veuillez réessayer."

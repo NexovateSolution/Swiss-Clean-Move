@@ -70,9 +70,6 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
                   {t('about.story.title')}
                 </h2>
                 <p className="text-lg text-swiss-body">
-                  {t('about.description')}
-                </p>
-                <p className="text-swiss-body">
                   {t('about.story.description')}
                 </p>
                 <div className="flex items-center space-x-4">

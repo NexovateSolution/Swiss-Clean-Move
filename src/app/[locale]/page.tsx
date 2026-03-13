@@ -194,14 +194,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </a>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="flex flex-col items-start space-y-2">
-                <div className="flex items-center space-x-2 text-swiss-text">
-                  <Shield className="w-5 h-5" />
-                  <span className="font-semibold">100%</span>
-                </div>
-                <span className="text-sm text-swiss-body">{t('home.hero.trust.guarantee')}</span>
-              </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               <div className="flex flex-col items-start space-y-2">
                 <div className="flex items-center space-x-2 text-swiss-text">
                   <MapPin className="w-5 h-5" />

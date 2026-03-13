@@ -433,7 +433,7 @@
   "about": {
     "title": "Über SwissCleanMove",
     "subtitle": "Ihr vertrauensvoller Partner für Reinigung und Umzug",
-    "description": "SwissCleanMove ist Ihr professionelles Umzugsunternehmen in Biel/Bienne (Kanton Bern) und Ihr zuverlässiger Umzugspartner in Bern und Zürich – in der ganzen Schweiz tätig.\nWir organisieren Privatumzüge, Firmenumzüge, Büroumzüge und Möbeltransporte, inklusive Einpackservice, Demontage und Montage sowie pünktlicher Ausführung nach Schweizer Qualitätsstandards.\nFür eine stressfreie Wohnungsübergabe bieten wir eine Endreinigung mit 100% Abnahmegarantie. Wir reinigen Küchen, Badezimmer, Fenster, Böden, Türen und alle erforderlichen Bereiche nach strengen Qualitätsrichtlinien.",
+    "description": "",
     "values": {
       "reliability": {
         "title": "Zuverlässigkeit",
@@ -520,7 +520,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "subtitle": "Nehmen Sie Kontakt mit uns auf",
+    "subtitle": "Kontaktieren Sie SwissCleanMove für professionelle Umzugs-, Reinigungs- und Facility-Dienstleistungen in Biel/Bienne, Bern, Zürich und in der ganzen Schweiz.",
     "errors": {
       "submitFailed": "Formular konnte nicht gesendet werden",
       "submitFailedRetry": "Formular konnte nicht gesendet werden. Bitte versuche es erneut."
@@ -595,7 +595,7 @@
   },
   "freeOffer": {
     "title": "Kostenloses Angebot anfordern",
-    "subtitle": "Erhalten Sie ein unverbindliches Angebot für Ihre Reinigung oder Ihren Umzug",
+    "subtitle": "Erhalten Sie eine kostenlose und unverbindliche Offerte für Umzugs-, Reinigungs- und Facility-Dienstleistungen – schweizweit verfügbar.",
     "errors": {
       "submitFailed": "Formular konnte nicht gesendet werden",
       "submitFailedRetry": "Formular konnte nicht gesendet werden. Bitte versuche es erneut."

@@ -377,7 +377,7 @@
   "about": {
     "title": "About SwissCleanMove",
     "subtitle": "Your trusted partner for cleaning and moving",
-    "description": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland.\nWe organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards.\nFor a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines.",
+    "description": "",
     "values": {
       "reliability": {
         "title": "Reliability",
@@ -464,7 +464,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Get in touch with us",
+    "subtitle": "Contact SwissCleanMove for professional moving, cleaning, and facility services in Biel/Bienne, Bern, Zürich, and throughout Switzerland.",
     "errors": {
       "submitFailed": "Failed to submit form",
       "submitFailedRetry": "Failed to submit form. Please try again."
@@ -539,7 +539,7 @@
   },
   "freeOffer": {
     "title": "Request Free Quote",
-    "subtitle": "Get a non-binding quote for your cleaning or moving needs",
+    "subtitle": "Receive a free and non-binding quote for moving, cleaning, and facility services – available throughout Switzerland.",
     "errors": {
       "submitFailed": "Failed to submit form",
       "submitFailedRetry": "Failed to submit form. Please try again."
