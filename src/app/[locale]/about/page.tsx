@@ -41,7 +41,6 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
   const stats = [
     { number: '500+', label: t('about.stats.satisfiedCustomers') },
     { number: '5+', label: t('about.stats.yearsExperience') },
-    { number: '100%', label: t('about.stats.depositGuarantee') },
     { number: '24h', label: t('about.stats.responseTime') }
   ];
 

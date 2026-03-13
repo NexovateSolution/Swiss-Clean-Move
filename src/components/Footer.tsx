@@ -179,10 +179,6 @@ export default function Footer() {
               {t('footer.copyright', { year: new Date().getFullYear() })}
             </p>
             <div className="flex items-center space-x-4 text-sm text-swiss-gray-400">
-              <span>🇨🇭 {t('footer.madeInSwitzerland')}</span>
-              <span>•</span>
-              <span>{t('footer.acceptanceGuarantee')}</span>
-              <span>•</span>
               <Link
                 href="/admin/login"
                 className="text-swiss-gray-600 hover:text-swiss-gray-400 transition-colors"

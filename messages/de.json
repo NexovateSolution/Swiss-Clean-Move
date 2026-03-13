@@ -17,7 +17,7 @@
   "home": {
     "hero": {
       "badge": "",
-      "title": "Professional Moving & Cleaning Company in Switzerland – Biel, Bern & Zurich",
+      "title": "Professionelles Umzugs- & Reinigungsunternehmen in der Schweiz – Biel, Bern & Zürich",
       "subtitle": "Zuverlässige Reinigungsdienstleistungen und Umzugshilfe mit 100% Abnahmegarantie",
       "slides": {
         "transport": {
@@ -227,7 +227,7 @@
   },
   "services": {
     "title": "Unsere Dienstleistungen",
-    "subtitle": "Professionelle Lösungen für alle Ihre Reinigungs- und Umzugsbedürfnisse",
+    "subtitle": "Professionelle Umzugs-, Reinigungs-, Facility-Service- und Endreinigungslösungen für Privat- und Geschäftskunden in der ganzen Schweiz.",
     "featuresTitle": "Leistungen",
     "priceCalculator": {
       "title": "Preisrechner",
@@ -249,8 +249,7 @@
         "Komplette Wohnungsreinigung",
         "Küche und Badezimmer gründlich",
         "Fenster innen und außen",
-        "Böden und Teppiche",
-        "100% Abnahmegarantie"
+        "Böden und Teppiche"
       ],
       "stairwellCleaning": [
         "Treppenhaus- und Flurreinigung",
@@ -434,7 +433,7 @@
   "about": {
     "title": "Über SwissCleanMove",
     "subtitle": "Ihr vertrauensvoller Partner für Reinigung und Umzug",
-    "description": "Mit jahrelanger Erfahrung bieten wir professionelle Reinigungsdienstleistungen und Umzugshilfe in der ganzen Schweiz. Unser engagiertes Team sorgt für höchste Qualität und Kundenzufriedenheit.",
+    "description": "SwissCleanMove ist Ihr professionelles Umzugsunternehmen in Biel/Bienne (Kanton Bern) und Ihr zuverlässiger Umzugspartner in Bern und Zürich – in der ganzen Schweiz tätig.\nWir organisieren Privatumzüge, Firmenumzüge, Büroumzüge und Möbeltransporte, inklusive Einpackservice, Demontage und Montage sowie pünktlicher Ausführung nach Schweizer Qualitätsstandards.\nFür eine stressfreie Wohnungsübergabe bieten wir eine Endreinigung mit 100% Abnahmegarantie. Wir reinigen Küchen, Badezimmer, Fenster, Böden, Türen und alle erforderlichen Bereiche nach strengen Qualitätsrichtlinien.",
     "values": {
       "reliability": {
         "title": "Zuverlässigkeit",
@@ -481,9 +480,9 @@
       }
     },
     "story": {
-      "title": "Unsere Geschichte",
-      "description": "Gegründet im Jahr 2019, hat sich SwissCleanMove zu einem der vertrauenswürdigsten Anbieter für Reinigungsdienstleistungen und Umzugshilfe in der Schweiz entwickelt. Unser Erfolg basiert auf der Kombination aus traditionellen Schweizer Werten wie Präzision und Zuverlässigkeit mit modernen, effizienten Arbeitsmethoden.",
-      "qualityBadge": "Schweizer Qualität seit 2019",
+      "title": "Über uns",
+      "description": "SwissCleanMove ist Ihr professionelles Umzugsunternehmen in Biel/Bienne (Kanton Bern) und Ihr zuverlässiger Umzugspartner in Bern und Zürich – in der ganzen Schweiz tätig.\nWir organisieren Privatumzüge, Firmenumzüge, Büroumzüge und Möbeltransporte, inklusive Einpackservice, Demontage und Montage sowie pünktlicher Ausführung nach Schweizer Qualitätsstandards.\nFür eine stressfreie Wohnungsübergabe bieten wir eine Endreinigung mit 100% Abnahmegarantie. Wir reinigen Küchen, Badezimmer, Fenster, Böden, Türen und alle erforderlichen Bereiche nach strengen Qualitätsrichtlinien.",
+      "qualityBadge": "Schweizer Qualität seit 2024",
       "teamImage": "Unser professionelles Team"
     },
     "statsSection": {
@@ -768,7 +767,7 @@
     "followUs": "Folgen Sie uns",
     "copyright": "© {year} SwissCleanMove. Alle Rechte vorbehalten.",
     "madeInSwitzerland": "Made in Switzerland",
-    "acceptanceGuarantee": "100% Abnahmegarantie"
+    "acceptanceGuarantee": ""
   },
   "whatsapp": {
     "message": "Hallo! Ich interessiere mich für Ihre Dienstleistungen."
@@ -788,7 +787,16 @@
       "common": {
         "select": "Bitte auswählen",
         "yes": "Ja",
-        "no": "Nein"
+        "no": "Nein",
+        "floorOptions": {
+          "1": "1. Stock",
+          "2": "2. Stock",
+          "3": "3. Stock",
+          "4": "4. Stock",
+          "5": "5. Stock",
+          "ground": "Erdgeschoss",
+          "6plus": "6. Stock oder höher"
+        }
       },
       "buttons": {
         "back": "Zurück",
@@ -1316,7 +1324,8 @@
         "emailAddress": "E-Mail-Adresse: *",
         "telephoneNumber": "Telefonnummer: *",
         "zipCity": "PLZ / Ort: *",
-        "streetNo": "Strasse / Nr.: *"
+        "streetNo": "Strasse / Nr.: *",
+        "parkingDistance": "Entfernung zwischen Haus und Parkplatz (Meter)"
       },
       "disposal": {
         "pleaseChoose": "Bitte wählen: *",
@@ -2674,7 +2683,7 @@
   },
   "regions": {
     "title": "Serviceregionen",
-    "subtitle": "Wir bieten professionelle Reinigungs- und Umzugsdienstleistungen in der ganzen Schweiz",
+    "subtitle": "SwissCleanMove bietet professionelle Umzug, Reinigung und Facility Services in Biel/Bienne, Bern, Zürich und in der ganzen Schweiz.",
     "coverageAreas": "Unsere Abdeckungsgebiete",
     "citiesCount": "50+ Städte",
     "citiesDesc": "Wir bedienen über 50 Städte in der ganzen Schweiz",
@@ -2845,7 +2854,7 @@
   },
   "pricing": {
     "title": "Transparente Preise",
-    "subtitle": "Faire und wettbewerbsfähige Preise für alle unsere Dienstleistungen",
+    "subtitle": "Faire und transparente Preise für professionelle Umzugs-, Reinigungs- und Facility-Dienstleistungen.",
     "choosePlan": "Wählen Sie Ihren Service-Plan",
     "priceDisclaimer": "Alle Preise sind Schätzungen und können je nach spezifischen Anforderungen, Standort und Komplexität des Auftrags variieren.",
     "mostPopular": "Am beliebtesten",
@@ -2920,7 +2929,7 @@
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
-    "subtitle": "Finden Sie Antworten auf häufige Fragen zu unseren Dienstleistungen",
+    "subtitle": "Hier finden Sie Antworten auf die häufigsten Fragen zu unseren professionellen Umzugs-, Reinigungs- und Facility-Dienstleistungen in der ganzen Schweiz.",
     "quickFacts": "Schnelle Fakten zu unseren Dienstleistungen",
     "keyInfo": "Wichtige Informationen, die Sie über SwissCleanMove wissen sollten",
     "responseTime": "Antwortzeit",

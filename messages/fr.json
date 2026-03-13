@@ -17,7 +17,7 @@
   "home": {
     "hero": {
       "badge": "",
-      "title": "Professional Moving & Cleaning Company in Switzerland – Biel, Bern & Zurich",
+      "title": "Entreprise professionnelle de déménagement & nettoyage en Suisse – Biel, Berne & Zurich",
       "subtitle": "Services de nettoyage fiables et aide au déménagement avec garantie de reprise à 100%",
       "slides": {
         "transport": {
@@ -227,7 +227,7 @@
   },
   "services": {
     "title": "Nos Services",
-    "subtitle": "Solutions professionnelles pour tous vos besoins de nettoyage et de déménagement",
+    "subtitle": "Solutions professionnelles de déménagement, nettoyage, facility service et nettoyage de fin de bail pour clients privés et professionnels dans toute la Suisse.",
     "featuresTitle": "Caractéristiques",
     "priceCalculator": {
       "title": "Calculateur de prix",
@@ -249,8 +249,7 @@
         "Nettoyage complet d'appartement",
         "Cuisine et salle de bain en profondeur",
         "Fenêtres intérieur et extérieur",
-        "Sols et moquettes",
-        "Garantie de restitution à 100%"
+        "Sols et moquettes"
       ],
       "stairwellCleaning": [
         "Nettoyage des escaliers et couloirs",
@@ -399,7 +398,7 @@
   "about": {
     "title": "À propos de SwissCleanMove",
     "subtitle": "Votre partenaire de confiance pour le nettoyage et le déménagement",
-    "description": "Avec des années d'expérience, nous offrons des services de nettoyage professionnels et d'aide au déménagement dans toute la Suisse. Notre équipe dévouée assure la plus haute qualité et satisfaction client.",
+    "description": "SwissCleanMove est votre entreprise de déménagement professionnelle à Biel/Bienne (Canton de Berne) et votre partenaire de déménagement fiable à Berne et Zurich – opérant dans toute la Suisse.\nNous organisons des déménagements privés, des déménagements d'entreprise, des déménagements de bureau et des transports de meubles, y compris les services d'emballage, le démontage et le montage, et l'exécution ponctuelle selon les normes de qualité suisses.\nPour une remise d'appartement sans stress, nous fournissons un nettoyage de fin de bail avec une garantie de remise à 100%. Nous nettoyons soigneusement les cuisines, salles de bains, fenêtres, sols, portes et toutes les zones requises selon des directives de qualité strictes.",
     "values": {
       "reliability": {
         "title": "Fiabilité",
@@ -446,9 +445,9 @@
       }
     },
     "story": {
-      "title": "Notre Histoire",
-      "description": "Fondée en 2019, SwissCleanMove s'est développée pour devenir l'un des fournisseurs les plus fiables de services de nettoyage et d'aide au déménagement en Suisse. Notre succès repose sur la combinaison des valeurs suisses traditionnelles telles que la précision et la fiabilité avec des méthodes de travail modernes et efficaces.",
-      "qualityBadge": "Qualité suisse depuis 2019",
+      "title": "À propos de nous",
+      "description": "SwissCleanMove est votre entreprise de déménagement professionnelle à Biel/Bienne (Canton de Berne) et votre partenaire de déménagement fiable à Berne et Zurich – opérant dans toute la Suisse.\nNous organisons des déménagements privés, des déménagements d'entreprise, des déménagements de bureau et des transports de meubles, y compris les services d'emballage, le démontage et le montage, et l'exécution ponctuelle selon les normes de qualité suisses.\nPour une remise d'appartement sans stress, nous fournissons un nettoyage de fin de bail avec une garantie de remise à 100%. Nous nettoyons soigneusement les cuisines, salles de bains, fenêtres, sols, portes et toutes les zones requises selon des directives de qualité strictes.",
+      "qualityBadge": "Qualité Suisse depuis 2024",
       "teamImage": "Notre équipe professionnelle"
     },
     "statsSection": {
@@ -733,7 +732,7 @@
     "followUs": "Suivez-nous",
     "copyright": "© {year} SwissCleanMove. Tous droits réservés.",
     "madeInSwitzerland": "Fabriqué en Suisse",
-    "acceptanceGuarantee": "Garantie d’acceptation 100%"
+    "acceptanceGuarantee": ""
   },
   "whatsapp": {
     "message": "Bonjour! Je suis intéressé par vos services."
@@ -753,7 +752,16 @@
       "common": {
         "select": "Veuillez sélectionner",
         "yes": "Oui",
-        "no": "Non"
+        "no": "Non",
+        "floorOptions": {
+          "1": "1er étage",
+          "2": "2e étage",
+          "3": "3e étage",
+          "4": "4e étage",
+          "5": "5e étage",
+          "ground": "Rez-de-chaussée",
+          "6plus": "6e étage ou plus"
+        }
       },
       "buttons": {
         "back": "Retour",
@@ -1281,7 +1289,8 @@
         "emailAddress": "Adresse e-mail : *",
         "telephoneNumber": "Numéro de téléphone : *",
         "zipCity": "NPA / Localité : *",
-        "streetNo": "Rue / N° : *"
+        "streetNo": "Rue / N° : *",
+        "parkingDistance": "Distance entre la maison et le parking (mètres)"
       },
       "disposal": {
         "pleaseChoose": "Veuillez choisir : *",
@@ -2639,7 +2648,7 @@
   },
   "regions": {
     "title": "Régions de Service",
-    "subtitle": "Nous fournissons des services professionnels de nettoyage et de déménagement dans toute la Suisse",
+    "subtitle": "SwissCleanMove propose des services professionnels de déménagement, nettoyage et facility services à Biel/Bienne, Berne, Zurich et dans toute la Suisse.",
     "coverageAreas": "Nos Zones de Couverture",
     "citiesCount": "50+ Villes",
     "citiesDesc": "Nous desservons plus de 50 villes à travers la Suisse",
@@ -2810,7 +2819,7 @@
   },
   "pricing": {
     "title": "Prix Transparents",
-    "subtitle": "Tarifs équitables et compétitifs pour tous nos services",
+    "subtitle": "Des prix justes et transparents pour des services professionnels de déménagement, nettoyage et facility services.",
     "choosePlan": "Choisissez Votre Plan de Service",
     "priceDisclaimer": "Tous les prix sont des estimations et peuvent varier selon les exigences spécifiques, l'emplacement et la complexité du travail.",
     "mostPopular": "Le Plus Populaire",
@@ -2885,7 +2894,7 @@
   },
   "faq": {
     "title": "Questions Fréquemment Posées",
-    "subtitle": "Trouvez des réponses aux questions courantes sur nos services",
+    "subtitle": "Vous trouverez ici les réponses aux questions les plus fréquentes sur nos services professionnels de déménagement, nettoyage et facility services dans toute la Suisse.",
     "quickFacts": "Faits Rapides sur Nos Services",
     "keyInfo": "Informations clés que vous devriez connaître sur SwissCleanMove",
     "responseTime": "Temps de Réponse",
@@ -2923,10 +2932,6 @@
         {
           "question": "Fournissez-vous les produits de nettoyage?",
           "answer": "Oui, nous apportons tous les produits de nettoyage nécessaires et l'équipement professionnel à chaque travail."
-        },
-        {
-          "question": "Quelle est votre garantie de dépôt?",
-          "answer": "Nous offrons une garantie de remboursement de dépôt à 100% pour le nettoyage de fin de bail. Si la propriété n'est pas acceptée, nous nettoyons à nouveau sans frais."
         }
       ],
       "moving": [

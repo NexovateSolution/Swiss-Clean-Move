@@ -88,14 +88,14 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
     {
       icon: Clock,
       title: t('contact.info.hours'),
-      details: [`${t('contact.businessHours.mondayFriday')}: 07:00 - 19:00`, `${t('contact.businessHours.saturday')}: 08:00 - 16:00`, `${t('contact.businessHours.sunday')}: ${t('contact.businessHours.emergencyOnly')}`],
+      details: [`${t('contact.businessHours.mondayFriday')}: 08:00 - 17:00`, `${t('contact.businessHours.saturday')}: ${t('contact.businessHours.emergencyOnly')}`, `${t('contact.businessHours.sunday')}: ${t('contact.businessHours.emergencyOnly')}`],
       color: 'text-orange-500'
     }
   ];
 
   const serviceAreas = [
-    'Bern', 'Zürich', 'Basel', 'Genf', 'Lausanne', 'Winterthur',
-    'Luzern', 'St. Gallen', 'Lugano', 'Biel/Bienne', 'Thun', 'Köniz'
+    'Biel/Bienne', 'Bern', 'Zürich', 'Basel', 'Lausanne',
+    'Luzern', 'Winterthur', 'Thun', 'Jura'
   ];
 
   const socialLinks = [
@@ -403,11 +403,11 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span className="text-swiss-gray-700">{t('contact.businessHours.mondayFriday')}</span>
-                    <span className="font-medium">07:00 - 19:00</span>
+                    <span className="font-medium">08:00 - 17:00</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-swiss-gray-700">{t('contact.businessHours.saturday')}</span>
-                    <span className="font-medium">08:00 - 16:00</span>
+                    <span className="font-medium">{t('contact.businessHours.emergencyOnly')}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-swiss-gray-700">{t('contact.businessHours.sunday')}</span>

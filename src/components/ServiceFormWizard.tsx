@@ -35,13 +35,13 @@ function getStepCount(s: ServiceSlug): number {
 /* ─── Stable field components ─── */
 const ic = 'w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366]/40 focus:border-[#003366] bg-white text-[#003366] transition-colors text-sm'
 
-function FI({ label, value, onChange, required, type = 'text', placeholder, hint }: {
-  label: string; value: string; onChange: (v: string) => void; required?: boolean; type?: string; placeholder?: string; hint?: string
+function FI({ label, value, onChange, required, type = 'text', placeholder, hint, min, max, step }: {
+  label: string; value: string; onChange: (v: string) => void; required?: boolean; type?: string; placeholder?: string; hint?: string; min?: string; max?: string; step?: string;
 }) {
   return (
     <div className="mb-4">
       <label className="block text-sm font-bold text-[#003366] mb-2">{label}</label>
-      <input type={type} value={value} onChange={e => onChange(e.target.value)} className={ic} placeholder={placeholder} />
+      <input type={type} min={min} max={max} step={step} value={value} onChange={e => onChange(e.target.value)} className={ic} placeholder={placeholder} />
       {hint && <p className="text-xs text-[#5a7a9a] mt-1">{hint}</p>}
     </div>
   )
@@ -114,11 +114,14 @@ function SH({ children }: { children: string }) {
   return <h3 className="text-base font-bold text-[#003366] mb-4">{children}</h3>
 }
 
-const floorOptions = [
-  { value: 'ground', label: 'Ground floor' }, { value: '1', label: '1st floor' },
-  { value: '2', label: '2nd floor' }, { value: '3', label: '3rd floor' },
-  { value: '4', label: '4th floor' }, { value: '5', label: '5th floor' },
-  { value: '6+', label: '6th floor or higher' }
+const getFloorOptions = (t: any) => [
+  { value: 'ground', label: t('wizard.common.floorOptions.ground') },
+  { value: '1', label: t('wizard.common.floorOptions.1') },
+  { value: '2', label: t('wizard.common.floorOptions.2') },
+  { value: '3', label: t('wizard.common.floorOptions.3') },
+  { value: '4', label: t('wizard.common.floorOptions.4') },
+  { value: '5', label: t('wizard.common.floorOptions.5') },
+  { value: '6+', label: t('wizard.common.floorOptions.6plus') }
 ]
 
 const roomNumbers = [
@@ -321,7 +324,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
       case 1: // Floors, Rooms, Space
         return (
           <div>
-            <FS label={tl('wizard.cleaning.floors')} value={v('floors')} onChange={v => set('floors', v)} options={floorOptions} />
+            <FS label={tl('wizard.cleaning.floors')} value={v('floors')} onChange={v => set('floors', v)} options={getFloorOptions(tl)} />
             <FS label={tl('wizard.cleaning.numberOfRooms')} value={v('numberOfRooms')} onChange={v => set('numberOfRooms', v)} options={roomNumbers} />
             <FI label={tl('wizard.cleaning.livingSpace')} value={v('livingSpace')} onChange={v => set('livingSpace', v)} type="text" placeholder="e.g. 120" />
           </div>
@@ -383,8 +386,8 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
         return (
           <div>
             <FTA label={tl('wizard.cleaning.furtherRequests')} value={v('furtherRequests')} onChange={v => set('furtherRequests', v)} />
-            <FI label={tl('wizard.cleaning.desiredCleaningDate')} value={v('desiredCleaningDate')} onChange={v => set('desiredCleaningDate', v)} type="date" />
-            <FI label={tl('wizard.cleaning.deliveryHandoverDate')} value={v('deliveryHandoverDate')} onChange={v => set('deliveryHandoverDate', v)} type="date" required />
+            <FI label={tl('wizard.cleaning.desiredCleaningDate')} value={v('desiredCleaningDate')} onChange={v => set('desiredCleaningDate', v)} type="datetime-local" />
+            <FI label={tl('wizard.cleaning.deliveryHandoverDate')} value={v('deliveryHandoverDate')} onChange={v => set('deliveryHandoverDate', v)} type="datetime-local" required />
             <FI label={tl('wizard.cleaning.nameFirstName')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
             <FI label={tl('wizard.cleaning.emailAddress')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type="email" required />
             <FI label={tl('wizard.cleaning.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
@@ -412,12 +415,13 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
                 office: tl('wizard.relocation.currentLivingOptions.office'),
               }).map(([value, label]) => ({ value, label }))}
             />
-            <FS label={tl('wizard.relocation.currentFloor')} value={v('currentFloor')} onChange={v => set('currentFloor', v)} options={floorOptions} />
+            <FS label={tl('wizard.relocation.currentFloor')} value={v('currentFloor')} onChange={v => set('currentFloor', v)} options={getFloorOptions(tl)} />
             <FR label={tl('wizard.relocation.elevatorAvailable')} value={v('currentElevator')} onChange={v => set('currentElevator', v)}
               options={[{ value: 'yes', label: tl('wizard.relocation.yes') }, { value: 'no', label: tl('wizard.relocation.no') }]}
             />
             <FS label={tl('wizard.relocation.currentLivingSpace')} value={v('currentLivingSpace')} onChange={v => set('currentLivingSpace', v)} options={livingSpaceOptions} />
             <FS label={tl('wizard.relocation.currentRooms')} value={v('currentRooms')} onChange={v => set('currentRooms', v)} options={roomNumbers} />
+            <FI label={tl('wizard.relocation.parkingDistance')} value={v('parkingDistance')} onChange={v => set('parkingDistance', v)} type="number" placeholder="Distance in meters (e.g. 10)" />
           </div>
         )
       case 1: // Moving TO
@@ -450,7 +454,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
       case 2: // Moving Boxes & Supplies
         return (
           <div>
-            <FS label={tl('wizard.relocation.movingBoxes')} value={v('movingBoxes')} onChange={v => set('movingBoxes', v)} options={boxOptions}
+            <FI label={tl('wizard.relocation.movingBoxes')} value={v('movingBoxes')} onChange={v => set('movingBoxes', v)} type="number" min="0" placeholder="e.g. 20"
               hint={tl('wizard.relocation.movingBoxesHint')}
             />
             <SH>{tl('wizard.relocation.additionalSuppliesTitle')}</SH>
@@ -503,8 +507,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
         return (
           <div>
             <FTA label={tl('wizard.relocation.furtherRequests')} value={v('furtherRequests')} onChange={v => set('furtherRequests', v)} />
-            <FI label={tl('wizard.relocation.desiredCleaningDate')} value={v('desiredCleaningDate')} onChange={v => set('desiredCleaningDate', v)} type="date" />
-            <FI label={tl('wizard.relocation.preferredMoveDate')} value={v('preferredMoveDate')} onChange={v => set('preferredMoveDate', v)} type="date" />
+            <FI label={tl('wizard.relocation.preferredMoveDate')} value={v('preferredMoveDate')} onChange={v => set('preferredMoveDate', v)} type="datetime-local" />
             <FI label={tl('wizard.relocation.nameFirstName')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
             <FI label={tl('wizard.relocation.company')} value={v('company')} onChange={v => set('company', v)} />
             <FI label={tl('wizard.relocation.emailAddress')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type="email" required />
@@ -539,7 +542,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
               ]}
             />
             <FI label={tl('wizard.disposal.location')} value={v('location')} onChange={v => set('location', v)} required />
-            <FS label={tl('wizard.disposal.floor')} value={v('floor')} onChange={v => set('floor', v)} options={floorOptions} />
+            <FS label={tl('wizard.disposal.floor')} value={v('floor')} onChange={v => set('floor', v)} options={getFloorOptions(tl)} />
             <FR label={tl('wizard.disposal.elevatorAvailable')} value={v('elevator')} onChange={v => set('elevator', v)}
               options={[{ value: 'yes', label: tl('wizard.disposal.yes') }, { value: 'no', label: tl('wizard.disposal.no') }]}
             />
@@ -619,7 +622,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
       case 0: // Property & Household
         return (
           <div>
-            <FS label={tl('wizard.householdHelping.floors')} value={v('floors')} onChange={v => set('floors', v)} options={floorOptions} />
+            <FS label={tl('wizard.householdHelping.floors')} value={v('floors')} onChange={v => set('floors', v)} options={getFloorOptions(tl)} />
             <FR label={tl('wizard.householdHelping.elevatorAvailable')} value={v('elevator')} onChange={v => set('elevator', v)}
               options={[{ value: 'yes', label: tl('wizard.householdHelping.yes') }, { value: 'no', label: tl('wizard.householdHelping.no') }]}
             />
@@ -701,7 +704,7 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
               ]}
             />
             <FI label={tl('wizard.disposal.location')} value={v('location')} onChange={v => set('location', v)} />
-            <FS label={tl('wizard.disposal.floor')} value={v('floor')} onChange={v => set('floor', v)} options={floorOptions} />
+            <FS label={tl('wizard.disposal.floor')} value={v('floor')} onChange={v => set('floor', v)} options={getFloorOptions(tl)} />
             <FI label={tl('wizard.cleaning.livingSpace')} value={v('livingSpace')} onChange={v => set('livingSpace', v)} placeholder="m²" />
             <FS label={tl('wizard.cleaning.numberOfRooms')} value={v('numberOfRooms')} onChange={v => set('numberOfRooms', v)} options={roomNumbers} />
           </div>
