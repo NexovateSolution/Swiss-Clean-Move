@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { 
-  TrendingUp, 
-  TrendingDown, 
+import {
+  TrendingUp,
+  TrendingDown,
   Users,
   DollarSign,
   Calendar,
@@ -81,10 +81,10 @@ export default function AdminDashboard() {
         year: currentYear.toString(),
         month: selectedMonth.toString()
       })
-      
+
       const response = await fetch(`/api/admin/analytics?${params}`)
       if (!response.ok) throw new Error(t('errors.fetchAnalytics'))
-      
+
       const result = await response.json()
       if (result.success) {
         setAnalyticsData(result.data)
@@ -430,7 +430,7 @@ export default function AdminDashboard() {
               <BarChart3 className="w-5 h-5 text-blue-600" />
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4">
               <div className="flex items-center justify-between">
@@ -441,7 +441,7 @@ export default function AdminDashboard() {
                 <TrendingUp className="w-8 h-8 text-blue-600" />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-4">
               <div className="flex items-center justify-between">
                 <div>
@@ -451,7 +451,7 @@ export default function AdminDashboard() {
                 <Users className="w-8 h-8 text-green-600" />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg p-4">
               <div className="flex items-center justify-between">
                 <div>
@@ -465,7 +465,6 @@ export default function AdminDashboard() {
         </motion.div>
       </div>
 
-      <Toaster position="top-right" />
     </AdminLayout>
   )
 }

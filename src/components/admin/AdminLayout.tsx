@@ -85,7 +85,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
               <div className={`${sidebarCollapsed ? 'w-12' : 'w-full max-w-[280px]'} h-32 relative`}
               >
                 <Image
-                  src="/images/logo.jpg"
+                  src="/images/logo.png"
                   alt="SwissCleanMove Logo"
                   fill
                   sizes={sidebarCollapsed ? '460px' : '260px'}

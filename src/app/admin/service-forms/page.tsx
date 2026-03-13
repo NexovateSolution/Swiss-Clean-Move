@@ -514,8 +514,6 @@ export default function ServiceFormsPage() {
           </div>
         )}
       </div>
-
-      <Toaster position="top-right" />
     </AdminLayout>
   )
 }

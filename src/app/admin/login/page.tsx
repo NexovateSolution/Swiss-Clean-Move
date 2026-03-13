@@ -164,7 +164,6 @@ export default function AdminLogin() {
         </form>
       </motion.div>
 
-      <Toaster position="top-right" />
     </div>
   )
 }

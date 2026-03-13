@@ -3,15 +3,15 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { 
-  Search, 
-  Filter, 
-  Plus, 
-  Edit, 
-  Trash2, 
-  Eye, 
-  Phone, 
-  Mail, 
+import {
+  Search,
+  Filter,
+  Plus,
+  Edit,
+  Trash2,
+  Eye,
+  Phone,
+  Mail,
   MapPin,
   Calendar,
   CreditCard,
@@ -62,7 +62,7 @@ export default function ClientsPage() {
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('list')
-  
+
   // Modal states
   const [editModal, setEditModal] = useState<{ open: boolean; client?: Client }>({ open: false })
   const [paymentModal, setPaymentModal] = useState<{ open: boolean; client?: Client }>({ open: false })
@@ -82,7 +82,7 @@ export default function ClientsPage() {
         status: statusFilter !== 'all' ? statusFilter : '',
         service: serviceFilter !== 'all' ? serviceFilter : ''
       })
-      
+
       const response = await fetch(`/api/admin/clients?${params}`)
       if (response.ok) {
         const data = await response.json()
@@ -117,7 +117,7 @@ export default function ClientsPage() {
     if (showExportMenu || activeActionMenu) {
       document.addEventListener('mousedown', handleClickOutside)
     }
-    
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
@@ -169,7 +169,7 @@ export default function ClientsPage() {
             }, 500)
           }
         }
-        
+
         // Send invoice via email
         if (client.email) {
           toast.loading(t('toast.sendingInvoice'))
@@ -297,7 +297,7 @@ export default function ClientsPage() {
       // Create Excel-compatible CSV with proper formatting
       const csvRows = [
         headers.map(h => `"${h}"`).join(','),
-        ...excelData.map(row => 
+        ...excelData.map(row =>
           row.map((cell, index) => {
             // Format numbers properly for Excel
             if (index >= 10 && index <= 12) { // Price columns
@@ -308,29 +308,29 @@ export default function ClientsPage() {
           }).join(',')
         )
       ]
-      
+
       const csvContent = csvRows.join('\r\n')
-      
+
       // Add BOM for UTF-8 Excel compatibility
       const BOM = '\uFEFF'
-      const blob = new Blob([BOM + csvContent], { 
-        type: 'text/csv;charset=utf-8;' 
+      const blob = new Blob([BOM + csvContent], {
+        type: 'text/csv;charset=utf-8;'
       })
-      
+
       // Create download link
       const link = document.createElement('a')
       const url = URL.createObjectURL(blob)
       link.href = url
       link.download = `clients-${new Date().toISOString().split('T')[0]}.csv`
-      
+
       // Trigger download
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
-      
+
       // Clean up
       setTimeout(() => URL.revokeObjectURL(url), 100)
-      
+
       toast.success(t('export.excel.toast.success', { count: filteredClients.length }))
     } catch (error) {
       console.error('Excel Export Error:', error)
@@ -351,7 +351,7 @@ export default function ClientsPage() {
         return
       }
 
-    const html = `
+      const html = `
       <!DOCTYPE html>
       <html>
       <head>
@@ -451,13 +451,13 @@ export default function ClientsPage() {
   }
 
   const filteredClients = clients.filter(client => {
-    const matchesSearch = 
+    const matchesSearch =
       client.firstName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       client.lastName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       client.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
       client.phone.includes(searchTerm) ||
       client.location.toLowerCase().includes(searchTerm.toLowerCase())
-    
+
     return matchesSearch
   })
 
@@ -527,7 +527,7 @@ export default function ClientsPage() {
               </select>
 
               <div className="relative export-dropdown">
-                <button 
+                <button
                   onClick={(e) => {
                     e.stopPropagation()
                     setShowExportMenu(!showExportMenu)
@@ -537,15 +537,15 @@ export default function ClientsPage() {
                   <Download className="w-4 h-4" />
                   <span>{t('actions.export')}</span>
                 </button>
-                
+
                 {showExportMenu && (
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-xl z-50 border border-gray-200">
                     <div className="py-1">
                       <button
-                        onClick={(e) => { 
+                        onClick={(e) => {
                           e.stopPropagation()
-                          exportToExcel(); 
-                          setShowExportMenu(false); 
+                          exportToExcel();
+                          setShowExportMenu(false);
                         }}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                       >
@@ -555,10 +555,10 @@ export default function ClientsPage() {
                         </span>
                       </button>
                       <button
-                        onClick={(e) => { 
+                        onClick={(e) => {
                           e.stopPropagation()
-                          exportToPDF(); 
-                          setShowExportMenu(false); 
+                          exportToPDF();
+                          setShowExportMenu(false);
                         }}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                       >
@@ -692,7 +692,7 @@ export default function ClientsPage() {
                             <Settings className="w-3 h-3" />
                             <span>{t('actions.actions')}</span>
                           </button>
-                          
+
                           {activeActionMenu === client.id && (
                             <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-xl z-50 border border-gray-200">
                               <div className="py-1">
@@ -818,21 +818,21 @@ export default function ClientsPage() {
         client={editModal.client}
         onSuccess={fetchClients}
       />
-      
+
       <PaymentModal
         isOpen={paymentModal.open}
         onClose={() => setPaymentModal({ open: false })}
         client={paymentModal.client}
         onSuccess={fetchClients}
       />
-      
+
       <DeleteModal
         isOpen={deleteModal.open}
         onClose={() => setDeleteModal({ open: false })}
         client={deleteModal.client}
         onSuccess={fetchClients}
       />
-      
+
       <PhotoModal
         isOpen={photoModal.open}
         onClose={() => setPhotoModal({ open: false })}
@@ -848,7 +848,7 @@ export default function ClientsPage() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('invoiceLanguage.title')}</h3>
               <p className="text-gray-600">{t('invoiceLanguage.subtitle')}</p>
             </div>
-            
+
             <div className="space-y-3">
               <button
                 onClick={() => generatePDFInvoice(languageModal.client!, 'de')}
@@ -857,7 +857,7 @@ export default function ClientsPage() {
                 <span>🇩🇪</span>
                 <span>{t('invoiceLanguage.german')}</span>
               </button>
-              
+
               <button
                 onClick={() => generatePDFInvoice(languageModal.client!, 'fr')}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
@@ -865,7 +865,7 @@ export default function ClientsPage() {
                 <span>🇫🇷</span>
                 <span>{t('invoiceLanguage.french')}</span>
               </button>
-              
+
               <button
                 onClick={() => generatePDFInvoice(languageModal.client!, 'en')}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
@@ -874,7 +874,7 @@ export default function ClientsPage() {
                 <span>{t('invoiceLanguage.english')}</span>
               </button>
             </div>
-            
+
             <button
               onClick={() => setLanguageModal({ open: false })}
               className="w-full mt-4 bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors"
@@ -885,7 +885,6 @@ export default function ClientsPage() {
         </div>
       )}
 
-      <Toaster position="top-right" />
     </AdminLayout>
   )
 }
