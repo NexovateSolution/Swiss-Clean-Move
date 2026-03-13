@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Lock, Mail, Eye, EyeOff, Loader2, ArrowLeft } from 'lucide-react'
+import { Mail, Eye, EyeOff, Loader2, ArrowLeft } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
@@ -68,8 +69,14 @@ export default function AdminLogin() {
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6 text-center">
-          <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-            <Lock className="w-8 h-8 text-blue-600" />
+          <div className="w-32 h-20 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 p-2 shadow-sm">
+            <Image
+              src="/images/logo.png"
+              alt="SwissCleanMove Logo"
+              width={120}
+              height={60}
+              className="object-contain"
+            />
           </div>
           <h1 className="text-2xl font-bold text-white">{t('title')}</h1>
           <p className="text-blue-100 mt-2">{t('subtitle')}</p>

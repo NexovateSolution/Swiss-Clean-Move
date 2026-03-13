@@ -61,18 +61,11 @@ export default function Header() {
           {/* Logo (image only) */}
           <Link href={`/${locale}`} className="flex items-center flex-shrink-0 min-w-fit" prefetch={true}>
             <img
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="SwissCleanMove Logo"
               width={280}
               height={80}
-              className="h-36 md:h-40 w-auto object-contain drop-shadow-sm bg-transparent"
-              onError={(e) => {
-                const img = e.currentTarget as HTMLImageElement;
-                if (!img.dataset.fallback) {
-                  img.dataset.fallback = 'jpg';
-                  img.src = '/images/logo.jpg';
-                }
-              }}
+              className="h-16 md:h-20 w-auto object-contain drop-shadow-sm bg-transparent"
             />
           </Link>
 

@@ -16,7 +16,12 @@ export const metadata: Metadata = {
     siteName: 'SwissCleanMove',
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/favicon.ico', sizes: '96x96' },
+      { url: '/favicon.ico', type: 'image/svg+xml' }
+    ],
     shortcut: '/favicon.ico',
     apple: '/favicon.ico',
   },
