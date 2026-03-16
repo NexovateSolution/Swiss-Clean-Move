@@ -65,7 +65,13 @@ export async function POST(request: NextRequest) {
                 elevatorLabel: 'Aufzug',
                 withElevator: 'Mit Lift',
                 withoutElevator: 'Ohne Lift',
-                remarks: 'Bemerkungen:'
+                remarks: 'Bemerkungen:',
+                invoiceRef: 'Referenz',
+                invoiceDate: 'Rechnungsdatum',
+                paymentDeadline: 'Zahlungsfrist',
+                acceptancePoint: 'Annahmestelle',
+                additionalInfoQr: 'Zusätzliche Informationen',
+                invoiceLabel: 'Rechnung'
             },
             fr: {
                 title: 'Confirmation de commande de nettoyage',
@@ -106,7 +112,13 @@ export async function POST(request: NextRequest) {
                 elevatorLabel: 'Ascenseur',
                 withElevator: 'Avec ascenseur',
                 withoutElevator: 'Sans ascenseur',
-                remarks: 'Remarques:'
+                remarks: 'Remarques:',
+                invoiceRef: 'Référence',
+                invoiceDate: 'Date de facture',
+                paymentDeadline: 'Délai de paiement',
+                acceptancePoint: 'Point de dépôt',
+                additionalInfoQr: 'Informations supplémentaires',
+                invoiceLabel: 'Facture'
             },
             en: {
                 title: 'Cleaning Order Confirmation',
@@ -147,7 +159,13 @@ export async function POST(request: NextRequest) {
                 elevatorLabel: 'Elevator',
                 withElevator: 'With elevator',
                 withoutElevator: 'Without elevator',
-                remarks: 'Remarks:'
+                remarks: 'Remarks:',
+                invoiceRef: 'Reference',
+                invoiceDate: 'Invoice Date',
+                paymentDeadline: 'Payment Deadline',
+                acceptancePoint: 'Acceptance point',
+                additionalInfoQr: 'Additional information',
+                invoiceLabel: 'Invoice'
             }
         }[language as 'en' | 'de' | 'fr'] || { /* fallback */ };
 
@@ -170,43 +188,152 @@ export async function POST(request: NextRequest) {
         <meta charset="UTF-8">
         <style>
             body { font-family: Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 14px; line-height: 1.5; }
-            .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #0066CC; padding-bottom: 15px; }
+            .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; border-bottom: 2px solid #555; padding-bottom: 15px; }
             .logo-section { display: flex; align-items: center; gap: 15px; }
-            .company-info { text-align: right; font-size: 13px; color: #333; line-height: 1.8; }
-            .company-info strong { font-size: 15px; color: #000; }
-            .title { text-align: center; font-size: 20px; font-weight: bold; color: #333; margin: 30px 0; }
+            .company-info { text-align: right; font-size: 12px; color: #333; line-height: 1.6; }
+            .company-info strong { font-size: 14px; color: #000; }
+            
+            .address-and-ref-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-top: 15mm;
+                margin-bottom: 10mm;
+            }
+            .address-window {
+                width: 90mm;
+                font-family: Arial, sans-serif;
+            }
+            .address-window-sender { font-size: 8px; color: #666; margin-bottom: 5px; text-decoration: underline; }
+            .address-window-pp { display: flex; align-items: center; margin-bottom: 15px; }
+            .pp-box { border: 1px solid #000; padding: 2px 5px; font-weight: bold; font-size: 14px; line-height: 1; margin-right: 10px; }
+            .pp-text { font-size: 10px; line-height: 1.2; }
+            .post-ch-ag { font-size: 10px; font-weight: bold; margin-left: auto; text-align: right; line-height: 1.2; }
+            .address-recipient { font-size: 14px; line-height: 1.4; color: #000; }
+            
+            .ref-info-block {
+                width: 55mm;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #333;
+                text-align: left;
+            }
+            .ref-info-block table { border-collapse: collapse; }
+            .ref-info-block td { padding: 2px 0; vertical-align: top; }
+            .ref-info-block td:first-child { font-weight: normal; color: #555; padding-right: 15px; white-space: nowrap; }
+            .ref-info-block td:last-child { font-weight: normal; color: #000; }
+            
+            .title { text-align: center; font-size: 20px; font-weight: bold; color: #333; margin: 20px 0; }
             .order-info { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-            .client-info { float: right; width: 45%; background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+            .client-info { display: none; } /* Hidden because now in address window */
             .service-details { clear: both; margin-top: 20px; }
             .service-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
             .service-table th, .service-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-            .service-table th { background: #0066CC; color: white; font-weight: bold; }
+            .service-table th { background: #555; color: white; font-weight: bold; }
             .total-section { float: right; width: 300px; margin-top: 20px; }
             .total-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
-            .total-row.final { font-weight: bold; font-size: 14px; border-bottom: 2px solid #0066CC; color: #0066CC; }
-            .payment-info { clear: both; margin-top: 40px; padding: 15px; background: #f0f8ff; border-left: 4px solid #0066CC; }
+            .total-row.final { font-weight: bold; font-size: 14px; border-bottom: 2px solid #555; color: #555; }
+            .payment-info { clear: both; margin-top: 40px; padding: 15px; background: #f4f4f4; border-left: 4px solid #555; }
             .signatures { display: flex; justify-content: space-between; margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; }
             .signature-box { width: 45%; text-align: center; }
             .signature-line { border-bottom: 1px solid #333; margin-bottom: 5px; height: 40px; }
             .footer-wrapper { margin-top: 40px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #ddd; padding-top: 10px; }
             .page-number { text-align: right; font-size: 10px; color: #666; padding-top: 5px; }
-            .payment-slip { margin-top: 40px; border: 2px solid #111; border-radius: 8px; overflow: hidden; }
-            .payment-slip-table { width: 100%; border-collapse: collapse; }
-            .payment-slip-table td { vertical-align: top; padding: 16px; }
-            .payment-slip-left { width: 35%; border-right: 1px solid #111; }
-            .payment-slip-right { width: 65%; }
-            .payment-slip-title { margin: 0 0 14px 0; font-size: 14px; font-weight: bold; letter-spacing: 0.2px; }
-            .payment-slip-label { display: block; font-size: 11px; font-weight: bold; color: #111; margin-bottom: 3px; }
-            .payment-slip-value { font-size: 11px; color: #111; }
-            .payment-slip-block { margin-bottom: 14px; }
-            .payment-slip-amount-box { border: 1px solid #111; border-radius: 6px; padding: 10px; text-align: left; width: 170px; }
-            .payment-slip-amount-row { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
-            .payment-slip-amount { font-size: 14px; font-weight: bold; }
-            .payment-slip-currency { font-size: 12px; font-weight: bold; }
+            .payment-slip { 
+                margin-top: 40px; 
+                position: relative;
+                width: 100%;
+                /* Standard QR bill height: 105mm -> ~396px at 96dpi, width 210mm -> ~793px */
+                height: 396px; 
+            }
+            .scissors-line-horizontal {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                border-top: 1px dashed #666;
+                text-align: center;
+                height: 0;
+            }
+            .scissors-icon {
+                position: absolute;
+                left: 10px;
+                top: -10px;
+                font-size: 14px;
+                color: #666;
+                background: #fff;
+            }
+            .payment-slip-table { width: 100%; height: 100%; border-collapse: collapse; margin-top: 10px; table-layout: fixed; }
+            .payment-slip-table td { vertical-align: top; }
+            .payment-slip-left { 
+                width: 62mm; /* Exactly 62mm wide */
+                position: relative;
+            }
+            .payment-slip-right { 
+                width: 148mm; /* Exactly 148mm wide */
+                padding-left: 5mm; /* Standard margin */
+            }
+            .scissors-line-vertical {
+                position: absolute;
+                right: -1px; /* border offset */
+                top: -10px; /* start at the top scissors */
+                height: 100%;
+                border-right: 1px dashed #666;
+            }
+            .scissors-icon-v {
+                position: absolute;
+                top: 20px;
+                right: -6px;
+                font-size: 14px;
+                color: #666;
+                background: #fff;
+                transform: rotate(-90deg);
+            }
+            .pt-receipt { padding-top: 5mm; padding-right: 5mm; }
+            .pt-payment { padding-top: 5mm; }
+            .payment-slip-title { margin: 0 0 14px 0; font-size: 11pt; font-weight: bold; letter-spacing: 0.2px; font-family: Helvetica, Arial, sans-serif; }
+            
+            .payment-slip-label { display: block; font-size: 6pt; font-weight: bold; color: #111; margin-bottom: 2px; line-height: 1.1; }
+            .payment-slip-value { font-size: 8pt; color: #111; line-height: 1.2; }
+            .payment-slip-block { margin-bottom: 3mm; }
+            
+            .payment-part-content { display: flex; gap: 5mm; }
+            .payment-col-left { width: 46mm; }
+            .payment-col-right { flex: 1; }
+            
+            .qr-code-wrapper {
+                width: 46mm; /* Exactly 46x46 QR Code */
+                height: 46mm;
+                position: relative;
+                margin-bottom: 5mm;
+            }
+            .qr-code-wrapper img { width: 100%; height: 100%; object-fit: contain; }
+            .qr-cross {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 7mm;
+                height: 7mm;
+                background: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .amount-area-receipt, .amount-area-payment {
+                display: flex;
+                margin-top: 5mm;
+            }
+            .amount-area-receipt { gap: 10px; }
+            .amount-area-payment { gap: 15px; }
+            .amount-col { display: flex; flex-direction: column; }
+            .amount-col .payment-slip-value { font-size: 10pt; margin-top: 4px; }
+            
             .remarks-section { margin-top: 20px; font-size: 12px; color: #555; }
             @media print {
                 body { margin: 0; padding: 15px; -webkit-print-color-adjust: exact; }
-                .service-table th { background: #0066CC !important; color: white !important; }
+                .service-table th { background: #555 !important; color: white !important; }
             }
         </style>
     </head>
@@ -224,6 +351,41 @@ export async function POST(request: NextRequest) {
             </div>
         </div>
 
+        <div class="address-and-ref-row">
+            <div class="address-window">
+                <div class="address-window-sender">
+                    SwissCleanMove - Orpundstrasse 31 - 2504 Biel/Bienne
+                </div>
+                <div class="address-window-pp">
+                    <div class="pp-box">P.P.</div>
+                    <div class="pp-text">CH-2504<br>Biel/Bienne</div>
+                    <div class="post-ch-ag">Post CH AG<br>B-ECONOMY</div>
+                </div>
+                <div class="address-recipient">
+                    <strong>${clientName}</strong><br>
+                    ${client.address}<br>
+                    ${client.postalCode} ${client.location}<br>
+                    SWITZERLAND
+                </div>
+            </div>
+            <div class="ref-info-block">
+                <table>
+                    <tr>
+                        <td>${t.invoiceRef}</td>
+                        <td>${orderNumber}</td>
+                    </tr>
+                    <tr>
+                        <td>${t.invoiceDate}</td>
+                        <td>${currentDate}</td>
+                    </tr>
+                    <tr>
+                        <td>${t.paymentDeadline}</td>
+                        <td>${(() => { const d = new Date(); d.setDate(d.getDate() + 30); return d.toLocaleDateString(); })()}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
         <div class="title">${t.title}</div>
 
         <div style="margin: 15px 0 25px 0; font-size: 15px; line-height: 1.8;">
@@ -236,14 +398,8 @@ export async function POST(request: NextRequest) {
             <strong>Datum:</strong> ${currentDate}
         </div>
 
-        <div class="client-info">
-            <strong>${clientName}</strong><br>
-            ${client.address}<br>
-            ${client.postalCode} ${client.location}
-        </div>
-
         <div class="service-details">
-            <h3 style="color: #0066CC; border-bottom: 1px solid #0066CC; padding-bottom: 5px;">${t.serviceDetails}</h3>
+            <h3 style="color: #555; border-bottom: 1px solid #555; padding-bottom: 5px;">${t.serviceDetails}</h3>
             <table class="service-table">
                 <thead>
                     <tr>
@@ -270,7 +426,7 @@ export async function POST(request: NextRequest) {
             <table class="service-table" style="margin-top: 10px;">
                 <thead>
                     <tr>
-                        <th colspan="2" style="background: #004C99;">${t.additionalInfo}</th>
+                        <th colspan="2" style="background: #444;">${t.additionalInfo}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -360,68 +516,106 @@ export async function POST(request: NextRequest) {
         </div>
 
         <div class="payment-slip">
+            <div class="scissors-line-horizontal">
+                <span class="scissors-icon">✂</span>
+                <span style="background: #fff; padding: 0 10px; font-size: 10px; color: #666;">Vor der Einzahlung abzutrennen / A détacher avant le versement / Da staccare prima del versamento</span>
+            </div>
+            
             <table class="payment-slip-table">
                 <tr>
-                    <td class="payment-slip-left">
+                    <td class="payment-slip-left pt-receipt">
+                        <div class="scissors-line-vertical">
+                            <span class="scissors-icon-v">✂</span>
+                        </div>
                         <div class="payment-slip-title">${t.receiptSlip}</div>
+                        
                         <div class="payment-slip-block">
                             <span class="payment-slip-label">${t.accountPayableTo}</span>
                             <div class="payment-slip-value">${paymentSlip.account}</div>
                             <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
                         </div>
+
                         <div class="payment-slip-block">
                             <span class="payment-slip-label">${t.reference}</span>
                             <div class="payment-slip-value">${paymentSlip.reference}</div>
                         </div>
-                        <div class="payment-slip-block">
-                            <span class="payment-slip-label">${t.currency}</span>
-                            <div class="payment-slip-value">CHF</div>
-                        </div>
-                        <div class="payment-slip-block">
-                            <span class="payment-slip-label">${t.amount}</span>
-                            <div class="payment-slip-value">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
-                        </div>
-                        <div class="payment-slip-block" style="margin-bottom: 0;">
+
+                        <div class="payment-slip-block" style="margin-top: 15px;">
                             <span class="payment-slip-label">${t.payableBy}</span>
                             <div class="payment-slip-value">${clientName}</div>
                             <div class="payment-slip-value">${client.address}<br>${client.postalCode} ${client.location}</div>
                         </div>
+
+                        <div class="amount-area-receipt">
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.currency}</span>
+                                <div class="payment-slip-value">CHF</div>
+                            </div>
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.amount}</span>
+                                <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
+                            </div>
+                        </div>
+                        
+                        <div style="font-size: 8px; color: #111; margin-top: 15px; text-align: right;">${t.acceptancePoint}</div>
                     </td>
-                    <td class="payment-slip-right">
+                    <td class="payment-slip-right pt-payment">
                         <div class="payment-slip-title">${t.paymentPart}</div>
-                        <div class="payment-slip-amount-row">
-                            <div style="flex: 1;">
+                        
+                        <div class="payment-part-content">
+                            <!-- Left Column of Payment Part -->
+                            <div class="payment-col-left">
+                                <div class="qr-code-wrapper">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=174x174&data=https%3A%2F%2Fswisscleanmove.ch&margin=0" alt="QR Code">
+                                    <!-- Swiss Cross Overlay -->
+                                    <div class="qr-cross">
+                                        <div style="width: 28px; height: 28px; background: #000; border: 2px solid #fff; position: relative;">
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 18px; height: 4px; background: #fff;"></div>
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 4px; height: 18px; background: #fff;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="amount-area-payment">
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.currency}</span>
+                                        <div class="payment-slip-value">CHF</div>
+                                    </div>
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.amount}</span>
+                                        <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column of Payment Part -->
+                            <div class="payment-col-right">
                                 <div class="payment-slip-block">
                                     <span class="payment-slip-label">${t.accountPayableTo}</span>
                                     <div class="payment-slip-value">${paymentSlip.account}</div>
                                     <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
                                 </div>
+
                                 <div class="payment-slip-block">
                                     <span class="payment-slip-label">${t.reference}</span>
                                     <div class="payment-slip-value">${paymentSlip.reference}</div>
                                 </div>
-                                <div class="payment-slip-block" style="margin-bottom: 0;">
+
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.additionalInfoQr}</span>
+                                    <div class="payment-slip-value">${t.invoiceLabel} ${orderNumber}</div>
+                                </div>
+
+                                <div class="payment-slip-block" style="margin-top: 15px;">
                                     <span class="payment-slip-label">${t.payableBy}</span>
                                     <div class="payment-slip-value">${clientName}</div>
                                     <div class="payment-slip-value">${client.address}<br>${client.postalCode} ${client.location}</div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="payment-slip-amount-box">
-                                    <div class="payment-slip-currency">CHF</div>
-                                    <div class="payment-slip-amount">${(client.totalPrice || 0).toFixed(2)}</div>
                                 </div>
                             </div>
                         </div>
                     </td>
                 </tr>
             </table>
-        </div>
-
-        <div class="footer-wrapper" style="margin-top: 60px;">
-            Copyright © ${t.companyName} ${new Date().getFullYear()}<br>
-            Designed by SwissCleanMove
-            <div class="page-number">${t.page} 2 of 2</div>
         </div>
     </body>
     </html>
