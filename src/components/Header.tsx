@@ -63,7 +63,7 @@ export default function Header() {
             <img
               src="/images/logo.png"
               alt="SwissCleanMove Logo"
-              className="h-16 md:h-20 w-auto object-contain drop-shadow-sm bg-transparent rounded-xl"
+              className="h-16 md:h-20 w-auto object-contain scale-[1.35] origin-left -ml-2 mix-blend-multiply"
             />
           </Link>
 

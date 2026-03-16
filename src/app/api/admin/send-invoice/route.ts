@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
             html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <img src="data:image/jpeg;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height: 100px; width: auto;">
+            <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height: 100px; width: auto;">
           </div>
           <h2 style="color: #0066CC;">Rechnung / Invoice</h2>
           <p>${(messages[language] || messages.en).replace(/\n/g, '<br>')}</p>
@@ -436,7 +436,7 @@ function generateInvoiceHTML(client: any, language: string): string {
     <body>
         <div class="header">
             <div class="logo-section">
-                <img src="data:image/jpeg;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height:140px;width:auto;">
+                <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height:140px;width:auto;">
             </div>
             <div class="company-info">
                 <strong>SwissCleanMove</strong><br>

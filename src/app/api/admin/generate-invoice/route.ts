@@ -340,7 +340,7 @@ export async function POST(request: NextRequest) {
     <body>
         <div class="header">
             <div class="logo-section">
-                <img src="data:image/jpeg;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height:140px;width:auto;">
+                <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height:140px;width:auto;">
             </div>
             <div class="company-info">
                 <strong>SwissCleanMove</strong><br>
@@ -504,7 +504,7 @@ export async function POST(request: NextRequest) {
 
         <div class="header">
             <div class="logo-section">
-                 <img src="data:image/jpeg;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height:140px;width:auto;">
+                 <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height:140px;width:auto;">
             </div>
             <div class="company-info">
                 <strong>SwissCleanMove</strong><br>
