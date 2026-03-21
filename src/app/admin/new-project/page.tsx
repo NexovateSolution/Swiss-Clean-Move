@@ -436,9 +436,13 @@ function Step3({ data, updateData }: { data: ProjectData; updateData: (field: ke
             <option value="">{t('step3.selectBuildingType')}</option>
             <option value="Apartment">{t('buildingTypes.apartment')}</option>
             <option value="House">{t('buildingTypes.house')}</option>
+            <option value="WG Room">{t('buildingTypes.wgRoom')}</option>
             <option value="Office">{t('buildingTypes.office')}</option>
+            <option value="Studio">{t('buildingTypes.studio')}</option>
+            <option value="Storage/Cellar">{t('buildingTypes.storageCellar')}</option>
             <option value="Restaurant">{t('buildingTypes.restaurant')}</option>
             <option value="Commercial">{t('buildingTypes.commercial')}</option>
+            <option value="Other">{t('buildingTypes.other')}</option>
           </select>
         </div>
 
@@ -451,12 +455,21 @@ function Step3({ data, updateData }: { data: ProjectData; updateData: (field: ke
             onChange={(e) => updateData('rooms', e.target.value)}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
-            <option value="">{t('step3.selectRooms')}</option>
-            <option value="1">{t('roomsOptions.one')}</option>
-            <option value="2">{t('roomsOptions.two')}</option>
-            <option value="3">{t('roomsOptions.three')}</option>
-            <option value="4">{t('roomsOptions.four')}</option>
-            <option value="5+">{t('roomsOptions.fivePlus')}</option>
+            <option value="">Select rooms</option>
+            <option value="1">1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+            <option value="3">3</option>
+            <option value="3.5">3.5</option>
+            <option value="4">4</option>
+            <option value="4.5">4.5</option>
+            <option value="5">5</option>
+            <option value="5.5">5.5</option>
+            <option value="6">6</option>
+            <option value="6.5">6.5</option>
+            <option value="7">7</option>
+            <option value="7+">7+</option>
           </select>
         </div>
 
@@ -475,7 +488,8 @@ function Step3({ data, updateData }: { data: ProjectData; updateData: (field: ke
             <option value="2nd floor">{t('floorOptions.second')}</option>
             <option value="3rd floor">{t('floorOptions.third')}</option>
             <option value="4th floor">{t('floorOptions.fourth')}</option>
-            <option value="5+ floor">{t('floorOptions.fivePlus')}</option>
+            <option value="5th floor">{t('floorOptions.fifth')}</option>
+            <option value="6+ floor">{t('floorOptions.sixPlus')}</option>
           </select>
         </div>
 

@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
             html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height: 100px; width: auto;">
+            <img src="https://swisscleanmove.ch/images/logo.png" alt="SwissCleanMove" style="height: 100px; width: auto;">
           </div>
           <h2 style="color: #0066CC;">Rechnung / Invoice</h2>
           <p>${(messages[language] || messages.en).replace(/\n/g, '<br>')}</p>
@@ -299,12 +299,10 @@ function generateInvoiceHTML(client: any, language: string): string {
             .address-window {
                 width: 90mm;
                 font-family: Arial, sans-serif;
+                margin-top: -25px;
+                margin-left: 45px;
             }
-            .address-window-sender { font-size: 8px; color: #666; margin-bottom: 5px; text-decoration: underline; }
-            .address-window-pp { display: flex; align-items: center; margin-bottom: 15px; }
-            .pp-box { border: 1px solid #000; padding: 2px 5px; font-weight: bold; font-size: 14px; line-height: 1; margin-right: 10px; }
-            .pp-text { font-size: 10px; line-height: 1.2; }
-            .post-ch-ag { font-size: 10px; font-weight: bold; margin-left: auto; text-align: right; line-height: 1.2; }
+            .address-window-sender { font-size: 8px; color: #666; margin-bottom: 15px; text-decoration: underline; }
             .address-recipient { font-size: 14px; line-height: 1.4; color: #000; }
             
             .ref-info-block {
@@ -451,11 +449,6 @@ function generateInvoiceHTML(client: any, language: string): string {
             <div class="address-window">
                 <div class="address-window-sender">
                     SwissCleanMove - Orpundstrasse 31 - 2504 Biel/Bienne
-                </div>
-                <div class="address-window-pp">
-                    <div class="pp-box">P.P.</div>
-                    <div class="pp-text">CH-2504<br>Biel/Bienne</div>
-                    <div class="post-ch-ag">Post CH AG<br>B-ECONOMY</div>
                 </div>
                 <div class="address-recipient">
                     <strong>${clientName}</strong><br>

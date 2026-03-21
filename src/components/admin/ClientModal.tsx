@@ -302,10 +302,20 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                         >
                           <option value="Apartment cleaning">Apartment cleaning</option>
                           <option value="House cleaning">House cleaning</option>
+                          <option value="Stairwell cleaning">Stairwell cleaning</option>
                           <option value="Office cleaning">Office cleaning</option>
-                          <option value="Restaurant cleaning">Restaurant cleaning</option>
-                          <option value="Move-out cleaning">Move-out cleaning</option>
-                          <option value="Deep cleaning">Deep cleaning</option>
+                          <option value="Final cleaning">Final cleaning</option>
+                          <option value="Window cleaning">Window cleaning</option>
+                          <option value="Relocation">Relocation</option>
+                          <option value="Disposal">Disposal</option>
+                          <option value="Gastronomy cleaning">Gastronomy cleaning</option>
+                          <option value="Medical cleaning">Medical cleaning</option>
+                          <option value="Construction cleaning">Construction cleaning</option>
+                          <option value="Property maintenance">Property maintenance</option>
+                          <option value="Special cleaning">Special cleaning</option>
+                          <option value="Combo service">Combo service</option>
+                          <option value="Maintenance cleaning">Maintenance cleaning</option>
+                          <option value="Household helping">Household helping</option>
                         </select>
                         {errors.serviceType && (
                           <p className="mt-1 text-sm text-red-600">{errors.serviceType.message}</p>
@@ -322,8 +332,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                         >
                           <option value="Apartment">Apartment</option>
                           <option value="House">House</option>
+                          <option value="WG Room">WG Room</option>
                           <option value="Office">Office</option>
+                          <option value="Studio">Studio</option>
+                          <option value="Storage/Cellar">Storage/Cellar</option>
                           <option value="Restaurant">Restaurant</option>
+                          <option value="Commercial">Commercial</option>
                           <option value="Other">Other</option>
                         </select>
                         {errors.buildingType && (

@@ -18,7 +18,7 @@
     "hero": {
       "badge": "",
       "title": "SwissCleanMove est votre entreprise professionnelle de déménagement, de nettoyage et votre partenaire de services généraux à Bienne, Berne, Zurich et dans toute la Suisse.",
-      "subtitle": "Services de nettoyage fiables et aide au déménagement avec garantie de reprise à 100%",
+      "subtitle": "Services de nettoyage, de déménagement et de facility service fiables pour les particuliers et les entreprises",
       "slides": {
         "transport": {
           "title": "Déménagement & transport professionnels",
@@ -55,7 +55,7 @@
     },
     "services": {
       "title": "Nos Services",
-      "subtitle": "Solutions professionnelles pour tous vos besoins de nettoyage et de déménagement",
+      "subtitle": "Solutions professionnelles pour le nettoyage, le déménagement et le facility service – fiables, efficaces et dans toute la Suisse.",
       "viewAll": "Voir tous les services",
       "customSolution": "Besoin d'une solution sur mesure ? Nous adaptons notre service à vos besoins.",
       "houseCleaning": {
@@ -181,7 +181,7 @@
     },
     "cta": {
       "badge": "Commencer",
-      "title": "Prêt pour un nettoyage professionnel?",
+      "title": "Prêt pour des services professionnels de déménagement, de nettoyage et de facility service ?",
       "subtitle": "Contactez-nous dès aujourd'hui pour un devis gratuit",
       "button": "Devis gratuit",
       "trust": {
@@ -191,7 +191,7 @@
       }
     },
     "servicesCta": {
-      "title": "Prêt pour un nettoyage professionnel?",
+      "title": "Prêt pour des services professionnels de déménagement, de nettoyage et de facility service ?",
       "subtitle": "Contactez-nous dès aujourd'hui pour un devis gratuit et sans engagement"
     },
     "trustIndicators": {
@@ -446,7 +446,7 @@
     },
     "story": {
       "title": "À propos de nous",
-      "description": "SwissCleanMove est votre entreprise de déménagement professionnelle à Biel/Bienne (Canton de Berne) et votre partenaire de déménagement fiable à Berne et Zurich – opérant dans toute la Suisse.\nNous organisons des déménagements privés, des déménagements d'entreprise, des déménagements de bureau et des transports de meubles, y compris les services d'emballage, le démontage et le montage, et l'exécution ponctuelle selon les normes de qualité suisses.\nPour une remise d'appartement sans stress, nous fournissons un nettoyage de fin de bail avec une garantie de remise à 100%. Nous nettoyons soigneusement les cuisines, salles de bains, fenêtres, sols, portes et toutes les zones requises selon des directives de qualité strictes.",
+      "description": "SwissCleanMove est votre entreprise de déménagement professionnelle à Biel/Bienne (Canton de Berne) et votre partenaire de déménagement fiable à Berne et Zurich – opérant dans toute la Suisse.\nNous organisons des déménagements privés, des déménagements d'entreprise, des déménagements de bureau et des transports de meubles, y compris les services d'emballage, le démontage et le montage, et l'exécution ponctuelle selon les normes de qualité suisses.\nNous nettoyons soigneusement les cuisines, salles de bains, fenêtres, sols, portes et toutes les zones requises selon des directives de qualité strictes.",
       "qualityBadge": "Qualité Suisse depuis 2024",
       "teamImage": "Notre équipe professionnelle"
     },
@@ -2569,9 +2569,13 @@
       "buildingTypes": {
         "apartment": "Appartement",
         "house": "Maison",
+        "wgRoom": "Chambre en colocation",
         "office": "Bureau",
+        "studio": "Studio",
+        "storageCellar": "Dépôt/Cave",
         "restaurant": "Restaurant",
-        "commercial": "Commercial"
+        "commercial": "Commercial",
+        "other": "Autre"
       },
       "roomsOptions": {
         "one": "1 pièce",
@@ -2586,7 +2590,8 @@
         "second": "2e étage",
         "third": "3e étage",
         "fourth": "4e étage",
-        "fivePlus": "5e+ étage"
+        "fifth": "5e étage",
+        "sixPlus": "6e+ étage"
       },
       "step4": {
         "title": "Informations client",

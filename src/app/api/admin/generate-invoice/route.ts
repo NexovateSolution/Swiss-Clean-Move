@@ -203,12 +203,10 @@ export async function POST(request: NextRequest) {
             .address-window {
                 width: 90mm;
                 font-family: Arial, sans-serif;
+                margin-top: -25px;
+                margin-left: 45px;
             }
-            .address-window-sender { font-size: 8px; color: #666; margin-bottom: 5px; text-decoration: underline; }
-            .address-window-pp { display: flex; align-items: center; margin-bottom: 15px; }
-            .pp-box { border: 1px solid #000; padding: 2px 5px; font-weight: bold; font-size: 14px; line-height: 1; margin-right: 10px; }
-            .pp-text { font-size: 10px; line-height: 1.2; }
-            .post-ch-ag { font-size: 10px; font-weight: bold; margin-left: auto; text-align: right; line-height: 1.2; }
+            .address-window-sender { font-size: 8px; color: #666; margin-bottom: 15px; text-decoration: underline; }
             .address-recipient { font-size: 14px; line-height: 1.4; color: #000; }
             
             .ref-info-block {
@@ -355,11 +353,6 @@ export async function POST(request: NextRequest) {
             <div class="address-window">
                 <div class="address-window-sender">
                     SwissCleanMove - Orpundstrasse 31 - 2504 Biel/Bienne
-                </div>
-                <div class="address-window-pp">
-                    <div class="pp-box">P.P.</div>
-                    <div class="pp-text">CH-2504<br>Biel/Bienne</div>
-                    <div class="post-ch-ag">Post CH AG<br>B-ECONOMY</div>
                 </div>
                 <div class="address-recipient">
                     <strong>${clientName}</strong><br>
