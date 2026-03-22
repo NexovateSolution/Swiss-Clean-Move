@@ -110,7 +110,8 @@ export async function POST(request: NextRequest) {
       elevator: rawData.elevator,
       remarks1: rawData.remarks1,
       remarks2: rawData.remarks2,
-      remarks3: rawData.remarks3
+      remarks3: rawData.remarks3,
+      deploymentFrequency: rawData.deploymentFrequency
     }
 
     const client = await prisma.client.create({

@@ -168,6 +168,8 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
 
   const isFirst = step === 0
   const isLast = step === totalSteps - 1
+  const needsFrequency = ['office-cleaning', 'gastronomy-cleaning', 'medical-cleaning', 'property-maintenance'].includes(service)
+
   const set = (k: string, v: any) => setD(p => ({ ...p, [k]: v }))
   const v = (k: string) => (d[k] as string) ?? ''
   const b = (k: string) => !!d[k]
@@ -319,6 +321,20 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
                 { value: 'storage-cellar', label: tl('wizard.cleaning.objectTypes.storageCellar') }
               ]}
             />
+            {needsFrequency && (
+              <FS
+                label={tl('wizard.frequency.label') || 'Desired deployment frequency *'}
+                value={v('deploymentFrequency')}
+                onChange={v => set('deploymentFrequency', v)}
+                options={[
+                  { value: 'Unique', label: tl('wizard.frequency.options.unique') || 'Unique' },
+                  { value: 'Every other week', label: tl('wizard.frequency.options.everyOtherWeek') || 'Every other week' },
+                  { value: 'Weekly', label: tl('wizard.frequency.options.weekly') || 'Weekly' },
+                  { value: 'Several times a week', label: tl('wizard.frequency.options.severalTimesWeek') || 'Several times a week' },
+                  { value: 'Daily', label: tl('wizard.frequency.options.daily') || 'Daily' }
+                ]}
+              />
+            )}
           </div>
         )
       case 1: // Floors, Rooms, Space
@@ -703,6 +719,20 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
                 { value: 'storage-cellar', label: tl('wizard.cleaning.objectTypes.storageCellar') },
               ]}
             />
+            {needsFrequency && (
+              <FS
+                label={tl('wizard.frequency.label') || 'Desired deployment frequency *'}
+                value={v('deploymentFrequency')}
+                onChange={v => set('deploymentFrequency', v)}
+                options={[
+                  { value: 'Unique', label: tl('wizard.frequency.options.unique') || 'Unique' },
+                  { value: 'Every other week', label: tl('wizard.frequency.options.everyOtherWeek') || 'Every other week' },
+                  { value: 'Weekly', label: tl('wizard.frequency.options.weekly') || 'Weekly' },
+                  { value: 'Several times a week', label: tl('wizard.frequency.options.severalTimesWeek') || 'Several times a week' },
+                  { value: 'Daily', label: tl('wizard.frequency.options.daily') || 'Daily' }
+                ]}
+              />
+            )}
             <FI label={tl('wizard.disposal.location')} value={v('location')} onChange={v => set('location', v)} />
             <FS label={tl('wizard.disposal.floor')} value={v('floor')} onChange={v => set('floor', v)} options={getFloorOptions(tl)} />
             <FI label={tl('wizard.cleaning.livingSpace')} value={v('livingSpace')} onChange={v => set('livingSpace', v)} placeholder="m²" />

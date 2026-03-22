@@ -6,7 +6,7 @@
     "regions": "Regionen",
     "pricing": "Preise",
     "faq": "FAQ",
-    "freeOffer": "Kostenloses Angebot",
+    "freeOffer": "Angebot anfordern",
     "contact": "Kontakt",
     "legal": "Impressum",
     "login": "Anmelden",
@@ -594,8 +594,10 @@
     }
   },
   "freeOffer": {
-    "title": "Kostenloses Angebot anfordern",
-    "subtitle": "Erhalten Sie eine kostenlose und unverbindliche Offerte für Umzugs-, Reinigungs- und Facility-Dienstleistungen – schweizweit verfügbar.",
+    "servicesTitle": "Unsere Dienstleistungen und Formular",
+    "servicesDescription": "Bitte wählen Sie den spezifischen Service aus, an dem Sie interessiert sind. Sie werden zum entsprechenden Anfrageformular weitergeleitet.",
+    "title": "Angebot anfordern",
+    "subtitle": "Erhalten Sie eine unverbindliche Offerte für Umzugs-, Reinigungs- und Facility-Dienstleistungen – schweizweit verfügbar.",
     "errors": {
       "submitFailed": "Formular konnte nicht gesendet werden",
       "submitFailedRetry": "Formular konnte nicht gesendet werden. Bitte versuche es erneut."
@@ -1416,6 +1418,16 @@
         "telephoneNumber": "Telefonnummer: *",
         "zipCity": "PLZ / Ort: *",
         "streetNo": "Strasse, Nr.: *"
+      },
+      "frequency": {
+        "label": "Gewünschter Einsatzrhythmus *",
+        "options": {
+          "unique": "Einmalig",
+          "everyOtherWeek": "Alle zwei Wochen",
+          "weekly": "Wöchentlich",
+          "severalTimesWeek": "Mehrmals pro Woche",
+          "daily": "Täglich"
+        }
       }
     },
     "title": {
@@ -2560,7 +2572,16 @@
         "subtitle": "Wähle die Art der Reinigung aus, die du benötigst",
         "selectedTitle": "✓ Service ausgewählt",
         "requiredTitle": "⚠ Service erforderlich",
-        "requiredText": "Bitte wähle einen Service aus, um fortzufahren"
+        "requiredText": "Bitte wähle einen Service aus, um fortzufahren",
+        "desiredFrequency": "Gewünschter Einsatzrhythmus *",
+        "selectFrequency": "Häufigkeit wählen",
+        "frequencyOptions": {
+          "unique": "Einmalig",
+          "everyOtherWeek": "Alle zwei Wochen",
+          "weekly": "Wöchentlich",
+          "severalTimesWeek": "Mehrmals pro Woche",
+          "daily": "Täglich"
+        }
       },
       "services": {
         "maintenanceCleaning": "Unterhaltsreinigung",

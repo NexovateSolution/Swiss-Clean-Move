@@ -20,6 +20,7 @@ import AdminLayout from '@/components/admin/AdminLayout'
 interface ProjectData {
   // Step 1: Service Selection
   serviceType: string
+  deploymentFrequency: string
 
   // Step 2: Schedule
   fromDate: string
@@ -52,6 +53,7 @@ interface ProjectData {
 
 const initialData: ProjectData = {
   serviceType: '',
+  deploymentFrequency: '',
   fromDate: '',
   untilDate: '',
   buildingType: '',
@@ -156,6 +158,7 @@ export default function NewProjectPage() {
           numberOfRooms: projectData.rooms?.toString() || '',
           floor: projectData.floor,
           elevator: projectData.hasElevator,
+          deploymentFrequency: projectData.deploymentFrequency,
           remarks1: projectData.remarks1,
           remarks2: projectData.remarks2,
           remarks3: projectData.remarks3
@@ -340,6 +343,26 @@ function Step1({ data, updateData }: { data: ProjectData; updateData: (field: ke
           </button>
         ))}
       </div>
+
+      {['Office Cleaning', 'Property Maintenance', 'Gastronomy Cleaning', 'Medical Cleaning'].includes(data.serviceType) && (
+        <div className="mt-6 p-4 border border-blue-200 rounded-lg bg-blue-50">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            {t('step1.desiredFrequency')}
+          </label>
+          <select
+            value={data.deploymentFrequency}
+            onChange={(e) => updateData('deploymentFrequency', e.target.value)}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="">{t('step1.selectFrequency')}</option>
+            <option value="Unique">{t('step1.frequencyOptions.unique')}</option>
+            <option value="Every other week">{t('step1.frequencyOptions.everyOtherWeek')}</option>
+            <option value="Weekly">{t('step1.frequencyOptions.weekly')}</option>
+            <option value="Several times a week">{t('step1.frequencyOptions.severalTimesWeek')}</option>
+            <option value="Daily">{t('step1.frequencyOptions.daily')}</option>
+          </select>
+        </div>
+      )}
 
       {data.serviceType ? (
         <div className="bg-green-50 border border-green-200 rounded-lg p-4">

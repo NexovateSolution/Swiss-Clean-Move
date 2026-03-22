@@ -6,7 +6,7 @@
     "regions": "Régions",
     "pricing": "Tarifs",
     "faq": "FAQ",
-    "freeOffer": "Devis gratuit",
+    "freeOffer": "Demander un devis",
     "contact": "Contact",
     "legal": "Mentions légales",
     "login": "Se connecter",
@@ -559,8 +559,10 @@
     }
   },
   "freeOffer": {
-    "title": "Demander un devis gratuit",
-    "subtitle": "Recevez un devis gratuit et sans engagement pour des services de déménagement, nettoyage et facility services – disponible dans toute la Suisse.",
+    "servicesTitle": "Nos services et formulaire",
+    "servicesDescription": "Veuillez sélectionner le service spécifique qui vous intéresse. Vous serez redirigé vers le formulaire de demande approprié.",
+    "title": "Demander un devis",
+    "subtitle": "Recevez un devis sans engagement pour des services de déménagement, nettoyage et facility services – disponible dans toute la Suisse.",
     "errors": {
       "submitFailed": "Échec de l'envoi du formulaire",
       "submitFailedRetry": "Échec de l'envoi du formulaire. Veuillez réessayer."
@@ -1381,6 +1383,16 @@
         "telephoneNumber": "Numéro de téléphone : *",
         "zipCity": "NPA / Localité : *",
         "streetNo": "Rue, N° : *"
+      },
+      "frequency": {
+        "label": "Fréquence d'intervention souhaitée *",
+        "options": {
+          "unique": "Unique",
+          "everyOtherWeek": "Toutes les deux semaines",
+          "weekly": "Hebdomadaire",
+          "severalTimesWeek": "Plusieurs fois par semaine",
+          "daily": "Quotidien"
+        }
       }
     },
     "title": {
@@ -2525,7 +2537,16 @@
         "subtitle": "Sélectionnez le type de service de nettoyage dont vous avez besoin",
         "selectedTitle": "✓ Service sélectionné",
         "requiredTitle": "⚠ Service requis",
-        "requiredText": "Veuillez sélectionner un service pour continuer"
+        "requiredText": "Veuillez sélectionner un service pour continuer",
+        "desiredFrequency": "Fréquence d'intervention souhaitée *",
+        "selectFrequency": "Sélectionner la fréquence",
+        "frequencyOptions": {
+          "unique": "Unique",
+          "everyOtherWeek": "Toutes les deux semaines",
+          "weekly": "Hebdomadaire",
+          "severalTimesWeek": "Plusieurs fois par semaine",
+          "daily": "Quotidien"
+        }
       },
       "services": {
         "maintenanceCleaning": "Nettoyage d'entretien",

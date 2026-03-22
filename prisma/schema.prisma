@@ -48,6 +48,7 @@ model Client {
   numberOfRooms String?
   floor         String?
   elevator      String?
+  deploymentFrequency String?
   remarks1      String?
   remarks2      String?
   remarks3      String?

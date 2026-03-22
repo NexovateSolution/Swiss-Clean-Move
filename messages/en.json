@@ -16,7 +16,7 @@
     "regions": "Regions",
     "pricing": "Pricing",
     "faq": "FAQ",
-    "freeOffer": "Free Quote",
+    "freeOffer": "Request a quote",
     "contact": "Contact",
     "legal": "Legal Notice",
     "login": "Login",
@@ -538,8 +538,10 @@
     }
   },
   "freeOffer": {
-    "title": "Request Free Quote",
-    "subtitle": "Receive a free and non-binding quote for moving, cleaning, and facility services – available throughout Switzerland.",
+    "servicesTitle": "Our services and form",
+    "servicesDescription": "Please select the specific service you are interested in. You will be redirected to the appropriate request form.",
+    "title": "Request a quote",
+    "subtitle": "Receive a non-binding quote for moving, cleaning, and facility services – available throughout Switzerland.",
     "errors": {
       "submitFailed": "Failed to submit form",
       "submitFailedRetry": "Failed to submit form. Please try again."
@@ -953,6 +955,16 @@
         "telephoneNumber": "Telephone number: *",
         "zipCity": "ZIP / City: *",
         "streetNo": "Street, No.: *"
+      },
+      "frequency": {
+        "label": "Desired deployment frequency *",
+        "options": {
+          "unique": "Unique",
+          "everyOtherWeek": "Every other week",
+          "weekly": "Weekly",
+          "severalTimesWeek": "Several times a week",
+          "daily": "Daily"
+        }
       },
       "labels": {
         "propertyType": "Property Type",
@@ -2302,7 +2314,16 @@
         "subtitle": "Select the type of cleaning service you need",
         "selectedTitle": "✓ Service Selected",
         "requiredTitle": "⚠ Service Required",
-        "requiredText": "Please select a service to continue"
+        "requiredText": "Please select a service to continue",
+        "desiredFrequency": "Desired deployment frequency *",
+        "selectFrequency": "Select frequency",
+        "frequencyOptions": {
+          "unique": "Unique",
+          "everyOtherWeek": "Every other week",
+          "weekly": "Weekly",
+          "severalTimesWeek": "Several times a week",
+          "daily": "Daily"
+        }
       },
       "services": {
         "maintenanceCleaning": "Maintenance Cleaning",

@@ -271,6 +271,38 @@ function generateInvoiceHTML(client: any, language: string): string {
     const currentDate = new Date().toLocaleDateString()
     const clientName = `${client.prefix ? client.prefix + ' ' : ''}${client.firstName} ${client.lastName}`
 
+    const serviceMap: Record<string, Record<string, string>> = {
+        'House Cleaning': { en: 'House Cleaning', de: 'Hausreinigung', fr: 'Nettoyage de maison' },
+        'Apartment Cleaning': { en: 'Apartment Cleaning', de: 'Wohnungsreinigung', fr: "Nettoyage d'appartement" },
+        'Stairwell Cleaning': { en: 'Stairwell Cleaning', de: 'Treppenhausreinigung', fr: "Nettoyage de cage d'escalier" },
+        'Office Cleaning': { en: 'Office Cleaning', de: 'Büroreinigung', fr: 'Nettoyage de bureau' },
+        'Final Cleaning': { en: 'Final Cleaning', de: 'Endreinigung / Umzugsreinigung', fr: 'Nettoyage de fin de bail' },
+        'Window Cleaning': { en: 'Window Cleaning', de: 'Fensterreinigung', fr: 'Nettoyage de vitres' },
+        'Relocation': { en: 'Relocation', de: 'Umzug', fr: 'Déménagement' },
+        'Combo Service': { en: 'Combo Service', de: 'Kombi-Angebot', fr: 'Offre combinée' },
+        'Disposal': { en: 'Disposal', de: 'Räumung / Entsorgung', fr: 'Débarras / Élimination' },
+        'Gastronomy Cleaning': { en: 'Gastronomy Cleaning', de: 'Gastronomiereinigung', fr: 'Nettoyage gastronomique' },
+        'Medical Cleaning': { en: 'Medical Cleaning', de: 'Praxisreinigung', fr: 'Nettoyage de cabinet médical' },
+        'Construction Cleaning': { en: 'Construction Cleaning', de: 'Baureinigung', fr: 'Nettoyage de fin de chantier' },
+        'Property Maintenance': { en: 'Property Maintenance', de: 'Hauswartung', fr: 'Conciergerie / Entretien' },
+        'Special Cleaning': { en: 'Special Cleaning', de: 'Spezialreinigung', fr: 'Nettoyage spécial' },
+        'Household Helping': { en: 'Household Helping', de: 'Haushaltshilfe', fr: 'Aide ménagère' },
+        'Maintenance Cleaning': { en: 'Maintenance Cleaning', de: 'Unterhaltsreinigung', fr: "Nettoyage d'entretien" }
+    };
+
+    const floorMap: Record<string, Record<string, string>> = {
+        'Ground floor': { en: 'Ground floor', de: 'Erdgeschoss', fr: 'Rez-de-chaussée' },
+        '1st floor': { en: '1st floor', de: '1. Stockwerk', fr: '1er étage' },
+        '2nd floor': { en: '2nd floor', de: '2. Stockwerk', fr: '2ème étage' },
+        '3rd floor': { en: '3rd floor', de: '3. Stockwerk', fr: '3ème étage' },
+        '4th floor': { en: '4th floor', de: '4. Stockwerk', fr: '4ème étage' },
+        '5th floor': { en: '5th floor', de: '5. Stockwerk', fr: '5ème étage' },
+        '6+ floor': { en: '6+ floor', de: '6+ Stockwerk', fr: '6ème étage et plus' }
+    };
+
+    const translatedService = client.serviceType ? (serviceMap[client.serviceType]?.[language as string] || client.serviceType) : '';
+    const translatedFloor = client.floor ? (floorMap[client.floor]?.[language as string] || client.floor) : '';
+
     const paymentSlip = {
         account: 'CH86 0900 0000 1636 3866 5',
         payableTo: ['SwissCleanMove Gebrekristos', 'Orpundstrasse 31', 'CH-2504 Biel/Bienne'],
@@ -453,8 +485,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <div class="address-recipient">
                     <strong>${clientName}</strong><br>
                     ${client.address}<br>
-                    ${client.postalCode} ${client.location}<br>
-                    SWITZERLAND
+                    ${client.postalCode} ${client.location}
                 </div>
             </div>
             <div class="ref-info-block">
@@ -499,11 +530,11 @@ function generateInvoiceHTML(client: any, language: string): string {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>${client.serviceType}</strong></td>
+                        <td><strong>${translatedService}</strong></td>
                         <td>
                             ${client.buildingType || 'N/A'} • ${client.squareMeters || 0}m²<br>
                             ${client.numberOfRooms ? `${client.numberOfRooms} ${t.room}<br>` : ''}
-                            ${client.floor ? `${t.floorLabel}: ${client.floor}<br>` : ''}
+                            ${client.floor ? `${t.floorLabel}: ${translatedFloor}<br>` : ''}
                             ${client.elevator === 'yes' ? t.withElevator : t.withoutElevator}<br>
                             ${t.guarantee}
                         </td>
@@ -552,7 +583,6 @@ function generateInvoiceHTML(client: any, language: string): string {
         </div>
 
         <div class="payment-info">
-            <strong>${t.paymentCondition}:</strong> ${t.cashPayment}<br><br>
             <strong>${t.date}:</strong> ${new Date(client.fromDate || Date.now()).toLocaleDateString()}<br>
             <strong>${t.clientStartTime}:</strong> ${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}<br>
             <strong>${t.cleaningCompleted}:</strong> ${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
