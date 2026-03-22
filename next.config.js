@@ -24,6 +24,9 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   // Route rewrites for missing static assets
+  experimental: {
+    serverComponentsExternalPackages: ['puppeteer-core', '@sparticuz/chromium'],
+  },
   async rewrites() {
     return [
       // Ensure legacy references to transportation.jpg resolve to the existing PNG
