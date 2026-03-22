@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '../../../../../lib/db'
 import { authenticateRequest } from '../../../../../lib/auth'
 import nodemailer from 'nodemailer'
-import puppeteer from 'puppeteer'
+import puppeteerCore from 'puppeteer-core'
+import chromium from '@sparticuz/chromium'
 import { LOGO_BASE64 } from '@/lib/logo-base64'
 
 export async function POST(request: NextRequest) {
@@ -103,10 +104,25 @@ export async function POST(request: NextRequest) {
 }
 
 async function renderPdfFromHtml(html: string): Promise<Buffer> {
-    const browser = await puppeteer.launch({
-        headless: 'new',
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-    })
+    const isLocal = process.env.NODE_ENV === 'development' || !process.env.VERCEL_ENV
+    let browser
+
+    if (isLocal) {
+        const puppeteerLocal = require('puppeteer')
+        browser = await puppeteerLocal.launch({
+            headless: 'new',
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        })
+    } else {
+        browser = await puppeteerCore.launch({
+            args: chromium.args,
+            // @ts-ignore
+            defaultViewport: chromium.defaultViewport || { width: 1920, height: 1080 },
+            executablePath: await chromium.executablePath(),
+            // @ts-ignore
+            headless: chromium.headless === false ? false : true,
+        })
+    }
 
     try {
         const page = await browser.newPage()

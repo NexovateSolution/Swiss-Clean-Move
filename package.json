@@ -18,6 +18,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@prisma/client": "^5.6.0",
+    "@sparticuz/chromium": "^143.0.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -37,6 +38,7 @@
     "postcss": "^8",
     "prisma": "^5.6.0",
     "puppeteer": "^21.11.0",
+    "puppeteer-core": "^24.40.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.48.2",
