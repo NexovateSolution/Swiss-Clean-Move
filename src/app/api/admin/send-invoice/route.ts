@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
 }
 
 async function renderPdfFromHtml(html: string): Promise<Buffer> {
-    const isLocal = process.env.NODE_ENV === 'development' || !process.env.VERCEL_ENV
+    const isLocal = !!!process.env.VERCEL
     let browser
 
     if (isLocal) {
