@@ -183,25 +183,41 @@ export async function POST(request: NextRequest) {
                 status: 'NEW'
             }
         })
+
+        // Send email notification FIRST (this is the critical path)
         try {
-            const submissionsDir = join(process.cwd(), 'public', 'submissions')
-            if (!existsSync(submissionsDir)) await mkdir(submissionsDir, { recursive: true })
-            const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
-            const filename = `${data.serviceName.replace(/\s+/g, '-')} -${data.name} -${timestamp} `
-            const pdfContent = generatePDFContent(data)
-            const pdfPath = join(submissionsDir, `${filename}.html`)
-            await writeFile(pdfPath, pdfContent, 'utf8')
-            const jsonPath = join(submissionsDir, `${filename}.json`)
-            await writeFile(jsonPath, JSON.stringify({ ...data, submissionDate: new Date().toISOString(), pdfPath: `/ submissions / ${filename}.html`, id: submission.id }, null, 2), 'utf8')
-            await prisma.serviceFormSubmission.update({ where: { id: submission.id }, data: { pdfPath: `/ submissions / ${filename}.html` } })
-        } catch (e) { console.warn('File saving skipped:', e) }
-        const emailHtml = formatServiceFormEmail(data)
-        await sendEmailNotification({
-            to: 'info@swisscleanmove.ch',
-            subject: `New ${data.serviceName} ${data.formType} Request`,
-            html: emailHtml,
-            text: `New ${data.formType} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`
-        })
+            const emailHtml = formatServiceFormEmail(data)
+            const emailSent = await sendEmailNotification({
+                to: 'info@swisscleanmove.ch',
+                subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
+                html: emailHtml,
+                text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`
+            })
+            if (emailSent) {
+                console.log('✅ Email notification sent to info@swisscleanmove.ch')
+            } else {
+                console.warn('⚠️ Email notification failed but form was saved')
+            }
+        } catch (emailError) {
+            console.error('❌ Email notification error:', emailError)
+        }
+
+        // Save files locally only (skip on Vercel — read-only filesystem)
+        if (!process.env.VERCEL) {
+            try {
+                const submissionsDir = join(process.cwd(), 'public', 'submissions')
+                if (!existsSync(submissionsDir)) await mkdir(submissionsDir, { recursive: true })
+                const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
+                const filename = `${data.serviceName.replace(/\s+/g, '-')}-${data.name}-${timestamp}`
+                const pdfContent = generatePDFContent(data)
+                const pdfPath = join(submissionsDir, `${filename}.html`)
+                await writeFile(pdfPath, pdfContent, 'utf8')
+                const jsonPath = join(submissionsDir, `${filename}.json`)
+                await writeFile(jsonPath, JSON.stringify({ ...data, submissionDate: new Date().toISOString(), pdfPath: `/submissions/${filename}.html`, id: submission.id }, null, 2), 'utf8')
+                await prisma.serviceFormSubmission.update({ where: { id: submission.id }, data: { pdfPath: `/submissions/${filename}.html` } })
+            } catch (e) { console.warn('File saving skipped:', e) }
+        }
+
         return NextResponse.json({ success: true, message: 'Form submitted successfully', submissionId: submission.id })
     } catch (error) {
         console.error('Error processing form submission:', error)
