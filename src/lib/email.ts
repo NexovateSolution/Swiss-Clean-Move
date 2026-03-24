@@ -6,6 +6,7 @@ interface EmailOptions {
   subject: string;
   html: string;
   text?: string;
+  attachments?: any[];
 }
 
 export async function sendEmailNotification(options: EmailOptions): Promise<boolean | string> {
@@ -29,6 +30,7 @@ export async function sendEmailNotification(options: EmailOptions): Promise<bool
       subject: options.subject,
       text: options.text || '',
       html: options.html,
+      attachments: options.attachments,
     });
 
     console.log(`✅ Email sent to ${options.to}: ${options.subject}`);

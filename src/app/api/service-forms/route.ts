@@ -187,7 +187,9 @@ export async function POST(request: NextRequest) {
         // Send email notification FIRST (this is the critical path)
         let emailDebug = 'Not attempted';
         try {
-            const emailHtml = formatServiceFormEmail(data)
+            // Use the rich "PDF" HTML template for both the email body and as an attachment!
+            const emailHtml = generatePDFContent(data);
+            
             if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
                 emailDebug = `Missing credentials. USER: '${process.env.GMAIL_USER}', PASS: '${process.env.GMAIL_APP_PASSWORD}'`;
             } else {
@@ -196,7 +198,14 @@ export async function POST(request: NextRequest) {
                     to: 'mikiyasdesalegn9@gmail.com',
                     subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
                     html: emailHtml,
-                    text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`
+                    text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
+                    attachments: [
+                        {
+                            filename: `Service-Request-${data.name}-${new Date().toISOString().split('T')[0]}.html`,
+                            content: emailHtml,
+                            contentType: 'text/html'
+                        }
+                    ]
                 })
                 if (emailSent === true) {
                     console.log('✅ Email notification sent to mikiyasdesalegn9@gmail.com')
