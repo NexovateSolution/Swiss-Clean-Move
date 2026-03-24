@@ -4,6 +4,7 @@ import { join } from 'path'
 import { existsSync } from 'fs'
 import { sendEmailNotification, formatServiceFormEmail } from '@/lib/email'
 import { prisma } from '../../../../lib/db'
+import { LOGO_BASE64 } from '@/lib/logo-base64'
 
 // Simple PDF generation function (you can replace with a proper PDF library like jsPDF or Puppeteer)
 // Simple PDF generation function (you can replace with a proper PDF library like jsPDF or Puppeteer)
@@ -62,8 +63,6 @@ function generatePDFContent(data: any): string {
                 <div class="data-value">${display}</div>
             </div>`;
     });
-
-    const LOGO_BASE64 = '${fullBase64}';
 
     return `
 <!DOCTYPE html>
@@ -198,7 +197,14 @@ export async function POST(request: NextRequest) {
                     to: 'mikiyasdesalegn9@gmail.com',
                     subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
                     html: emailHtml,
-                    text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`
+                    text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
+                    attachments: [
+                        {
+                            filename: `Service-Request-${data.name}-${new Date().toISOString().split('T')[0]}.html`,
+                            content: emailHtml,
+                            contentType: 'text/html'
+                        }
+                    ]
                 })
                 if (emailSent === true) {
                     console.log('✅ Email notification sent to mikiyasdesalegn9@gmail.com')
