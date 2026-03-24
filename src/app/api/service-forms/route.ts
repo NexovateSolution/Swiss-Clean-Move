@@ -230,7 +230,7 @@ export async function POST(request: NextRequest) {
                 }] : [];
 
                 const emailSent = await sendEmailNotification({
-                    to: 'info@swisscleanmove.ch',
+                    to: 'info@swisscleanmove.ch, Swisscleanmove.ch@gmail.com',
                     subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
                     html: emailHtml,
                     text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
