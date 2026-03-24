@@ -185,21 +185,30 @@ export async function POST(request: NextRequest) {
         })
 
         // Send email notification FIRST (this is the critical path)
+        let emailDebug = 'Not attempted';
         try {
             const emailHtml = formatServiceFormEmail(data)
-            const emailSent = await sendEmailNotification({
-                to: 'mikiyasdesalegn9@gmail.com',
-                subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
-                html: emailHtml,
-                text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`
-            })
-            if (emailSent) {
-                console.log('✅ Email notification sent to info@swisscleanmove.ch')
+            if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+                emailDebug = `Missing credentials. USER: '${process.env.GMAIL_USER}', PASS: '${process.env.GMAIL_APP_PASSWORD}'`;
             } else {
-                console.warn('⚠️ Email notification failed but form was saved')
+                emailDebug = `Using credentials. USER: '${process.env.GMAIL_USER.trim()}', PASS length: ${process.env.GMAIL_APP_PASSWORD.trim().length}, PASS chars: ${Array.from(process.env.GMAIL_APP_PASSWORD.trim()).map(c=>c.charCodeAt(0)).join(',')}`;
+                const emailSent = await sendEmailNotification({
+                    to: 'mikiyasdesalegn9@gmail.com',
+                    subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
+                    html: emailHtml,
+                    text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`
+                })
+                if (emailSent === true) {
+                    console.log('✅ Email notification sent to mikiyasdesalegn9@gmail.com')
+                    emailDebug += ' | Success';
+                } else {
+                    console.warn('⚠️ Email notification failed but form was saved')
+                    emailDebug += ' | sendEmailNotification failed: ' + String(emailSent);
+                }
             }
-        } catch (emailError) {
+        } catch (emailError: any) {
             console.error('❌ Email notification error:', emailError)
+            emailDebug = 'Exception thrown: ' + emailError.toString();
         }
 
         // Save files locally only (skip on Vercel — read-only filesystem)
@@ -215,12 +224,15 @@ export async function POST(request: NextRequest) {
                 const jsonPath = join(submissionsDir, `${filename}.json`)
                 await writeFile(jsonPath, JSON.stringify({ ...data, submissionDate: new Date().toISOString(), pdfPath: `/submissions/${filename}.html`, id: submission.id }, null, 2), 'utf8')
                 await prisma.serviceFormSubmission.update({ where: { id: submission.id }, data: { pdfPath: `/submissions/${filename}.html` } })
-            } catch (e) { console.warn('File saving skipped:', e) }
+            } catch (e) { 
+                console.warn('File saving skipped:', e)
+                emailDebug += ' | File saving skipped: ' + String(e);
+            }
         }
 
-        return NextResponse.json({ success: true, message: 'Form submitted successfully', submissionId: submission.id })
+        return NextResponse.json({ success: true, message: 'Form submitted successfully', emailDebug, submissionId: submission.id })
     } catch (error) {
         console.error('Error processing form submission:', error)
-        return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+        return NextResponse.json({ error: 'Internal server error', details: String(error) }, { status: 500 })
     }
 }

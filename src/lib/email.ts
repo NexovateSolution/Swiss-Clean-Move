@@ -8,7 +8,7 @@ interface EmailOptions {
   text?: string;
 }
 
-export async function sendEmailNotification(options: EmailOptions): Promise<boolean> {
+export async function sendEmailNotification(options: EmailOptions): Promise<boolean | string> {
   try {
     if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
       console.warn('⚠️ Gmail credentials not configured. Email not sent.');
@@ -18,13 +18,13 @@ export async function sendEmailNotification(options: EmailOptions): Promise<bool
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: process.env.GMAIL_USER.trim(),
+        pass: process.env.GMAIL_APP_PASSWORD.trim(),
       },
     });
 
     await transporter.sendMail({
-      from: `"SwissCleanMove" <${process.env.GMAIL_USER}>`,
+      from: `"SwissCleanMove" <${process.env.GMAIL_USER.trim()}>`,
       to: options.to,
       subject: options.subject,
       text: options.text || '',
@@ -33,9 +33,9 @@ export async function sendEmailNotification(options: EmailOptions): Promise<bool
 
     console.log(`✅ Email sent to ${options.to}: ${options.subject}`);
     return true;
-  } catch (error) {
+  } catch (error: any) {
     console.error('❌ Failed to send email notification:', error);
-    return false;
+    return 'Error: ' + error.toString();
   }
 }
 
