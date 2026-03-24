@@ -198,14 +198,7 @@ export async function POST(request: NextRequest) {
                     to: 'mikiyasdesalegn9@gmail.com',
                     subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
                     html: emailHtml,
-                    text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
-                    attachments: [
-                        {
-                            filename: `Service-Request-${data.name}-${new Date().toISOString().split('T')[0]}.html`,
-                            content: emailHtml,
-                            contentType: 'text/html'
-                        }
-                    ]
+                    text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`
                 })
                 if (emailSent === true) {
                     console.log('✅ Email notification sent to mikiyasdesalegn9@gmail.com')

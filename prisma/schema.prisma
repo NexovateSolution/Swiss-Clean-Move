@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -21,82 +18,73 @@ model User {
 }
 
 model Client {
-  id           String    @id @default(cuid())
-  firstName    String
-  lastName     String
-  email        String?
-  phone        String
-  address      String
-  postalCode   String
-  location     String
-  squareMeters Int
-  
-  // Project details
-  serviceType  String
-  buildingType String
-  fromDate     DateTime
-  untilDate    DateTime
-  
-  // Financial
-  totalPrice   Float
-  paidAmount   Float     @default(0)
-  balance      Float
-  status       String    @default("UNPAID")
-  
-  // Additional Project details
-  prefix        String?
-  numberOfRooms String?
-  floor         String?
-  elevator      String?
+  id                  String    @id @default(cuid())
+  firstName           String
+  lastName            String
+  email               String?
+  phone               String
+  address             String
+  postalCode          String
+  location            String
+  squareMeters        Int
+  serviceType         String
+  buildingType        String
+  fromDate            DateTime
+  untilDate           DateTime
+  totalPrice          Float
+  paidAmount          Float     @default(0)
+  balance             Float
+  status              String    @default("UNPAID")
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+  elevator            String?
+  floor               String?
+  numberOfRooms       String?
+  prefix              String?
+  remarks1            String?
+  remarks2            String?
+  remarks3            String?
   deploymentFrequency String?
-  remarks1      String?
-  remarks2      String?
-  remarks3      String?
-  
-  // Relationships
-  payments     Payment[]
-  photos       Photo[]
-  invoices     Invoice[]
-  
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
+  invoices            Invoice[]
+  payments            Payment[]
+  photos              Photo[]
 }
 
 model Payment {
   id          String   @id @default(cuid())
   clientId    String
-  client      Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
   amount      Float
   paymentDate DateTime @default(now())
   method      String   @default("CASH")
   notes       String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  client      Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
 }
 
 model Photo {
-  id        String   @id @default(cuid())
-  clientId  String
-  client    Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
-  filename  String
+  id           String   @id @default(cuid())
+  clientId     String
+  filename     String
   originalName String
-  url       String
-  size      Int
-  mimeType  String
-  createdAt DateTime @default(now())
+  url          String
+  size         Int
+  mimeType     String
+  createdAt    DateTime @default(now())
+  client       Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
 }
 
 model Invoice {
-  id          String   @id @default(cuid())
-  clientId    String
-  client      Client   @relation(fields: [clientId], references: [id], onDelete: Cascade)
-  invoiceNumber String @unique
-  amount      Float
-  status      String   @default("PENDING")
-  dueDate     DateTime
-  paidDate    DateTime?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id            String    @id @default(cuid())
+  clientId      String
+  invoiceNumber String    @unique
+  amount        Float
+  status        String    @default("PENDING")
+  dueDate       DateTime
+  paidDate      DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  client        Client    @relation(fields: [clientId], references: [id], onDelete: Cascade)
 }
 
 model QuoteSubmission {
@@ -105,7 +93,7 @@ model QuoteSubmission {
   email     String
   phone     String
   service   String
-  details   String   // JSON string containing all form details
+  details   String
   status    String   @default("NEW")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -130,15 +118,15 @@ model ServiceFormSubmission {
   firstName           String
   name                String
   emailAddress        String
-  telephone          String
+  telephone           String
   streetAndNumber     String
   postalCodeAndCity   String
   submissionDate      DateTime @default(now())
   pdfPath             String?
   contactPreferredVia String?
   viewingIsWelcome    String?
-  remark              String?  @db.Text
-  data                Json     // Store all wizard data as JSON for flexibility
+  remark              String?
+  data                Json
   status              String   @default("NEW")
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt
