@@ -1,6 +1,6 @@
 'use client'
 
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useRouter, usePathname } from 'next/navigation'
 import AdminLayout from '@/components/admin/AdminLayout'
 import ServiceFormWizard, { ServiceSlug } from '@/components/ServiceFormWizard'
@@ -25,6 +25,7 @@ const SERVICES: { slug: ServiceSlug; label: string }[] = [
 ]
 
 export default function NewProjectPage() {
+  const t = useTranslations('admin.newProjectPage')
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
@@ -61,16 +62,16 @@ export default function NewProjectPage() {
       <div className="w-full max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">New Project</h1>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{t('title')}</h1>
           <p className="text-gray-600 dark:text-gray-400 mt-2">
-            Fill out the same form the client sees on the website
+            {t('subtitle')}
           </p>
         </div>
 
         {!selected ? (
           /* Service selector */
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border dark:border-gray-700 p-8">
-            <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Select a Service</h2>
+            <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">{t('selectService')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {SERVICES.map((s) => (
                 <button
@@ -90,7 +91,7 @@ export default function NewProjectPage() {
               onClick={handleClear}
               className="mb-4 text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium flex items-center gap-1"
             >
-              ← Change service
+              ← {t('changeService')}
             </button>
             <ServiceFormWizard
               service={selected}

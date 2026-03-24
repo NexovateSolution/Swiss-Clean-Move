@@ -188,7 +188,7 @@ export async function POST(request: NextRequest) {
         try {
             const emailHtml = formatServiceFormEmail(data)
             const emailSent = await sendEmailNotification({
-                to: 'info@swisscleanmove.ch',
+                to: 'mikiyasdesalegn9@gmail.com',
                 subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
                 html: emailHtml,
                 text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`

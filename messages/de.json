@@ -1834,6 +1834,12 @@
     "seoText": "SwissCleanMove provides professional moving and cleaning services throughout Switzerland. We plan and execute private and corporate relocations, including secure furniture transport and structured organization. For property handovers, we offer end-of-lease cleaning with a full guarantee. We also provide regular maintenance cleaning, office cleaning and facility services for businesses and property managers. Our portfolio is completed by gastronomy cleaning, construction cleaning and professional clearance services – ensuring all services are delivered with Swiss precision and reliability."
   },
   "admin": {
+    "newProjectPage": {
+      "title": "Neues Projekt",
+      "subtitle": "Füllen Sie das gleiche Formular aus, das der Kunde auf der Website sieht",
+      "selectService": "Wählen Sie einen Service aus",
+      "changeService": "Service ändern"
+    },
     "sidebar": {
       "dashboard": "Übersicht",
       "newProject": "Neues Projekt",
