@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { writeFile, mkdir } from 'fs/promises'
 import { join } from 'path'
 import { existsSync } from 'fs'
+import { jsPDF } from 'jspdf'
 import { sendEmailNotification, formatServiceFormEmail } from '@/lib/email'
 import { prisma } from '../../../../lib/db'
 import { LOGO_BASE64 } from '@/lib/logo-base64'
@@ -101,7 +102,7 @@ function generatePDFContent(data: any): string {
 <body>
     <div class="container">
         <div class="header">
-            <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height:80px;width:auto;margin-bottom:15px;" onerror="this.style.display='none'">
+            <img src="https://swisscleanmove.ch/images/logo.jpg" alt="SwissCleanMove" style="height:80px;width:auto;margin-bottom:15px;" onerror="this.style.display='none'">
             <h1 class="service-title">${data.serviceName}</h1>
             <div class="service-subtitle">${data.formType?.charAt(0).toUpperCase() + data.formType?.slice(1)} Request</div>
         </div>
@@ -185,6 +186,34 @@ export async function POST(request: NextRequest) {
 
         // Send email notification FIRST (this is the critical path)
         let emailDebug = 'Not attempted';
+        // generate a real PDF using jsPDF for the attachment
+        let pdfBuffer: Buffer | null = null;
+        try {
+            const doc = new jsPDF();
+            doc.setFontSize(16);
+            doc.text(`SwissCleanMove - ${data.serviceName}`, 10, 20);
+            doc.setFontSize(12);
+            doc.text(`${(data.formType || 'service').toUpperCase()} Request`, 10, 30);
+            
+            let y = 45;
+            const skips = new Set(['serviceName', 'formType', 'status', 'pdfPath', 'submissionDate', 'createdAt', 'updatedAt', 'data', 'id']);
+            for (const key of Object.keys(data)) {
+                if (skips.has(key) || data[key] === null || data[key] === undefined || data[key] === '') continue;
+                
+                let display = String(data[key]);
+                if (typeof data[key] === 'object') display = JSON.stringify(data[key]);
+                else if (typeof data[key] === 'boolean') display = data[key] ? 'Yes' : 'No';
+                
+                const label = key.replace(/([A-Z])/g, ' $1').replace(/[_-]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).trim().toUpperCase();
+                doc.text(`${label}: ${display.substring(0, 70)}`, 10, y);
+                y += 10;
+                if (y > 280) { doc.addPage(); y = 20; }
+            }
+            pdfBuffer = Buffer.from(doc.output('arraybuffer'));
+        } catch (pdfErr) {
+            console.warn('Failed to generate jsPDF attachment:', pdfErr);
+        }
+
         try {
             // Use the rich "PDF" HTML template for both the email body and as an attachment!
             const emailHtml = generatePDFContent(data);
@@ -193,18 +222,19 @@ export async function POST(request: NextRequest) {
                 emailDebug = `Missing credentials. USER: '${process.env.GMAIL_USER}', PASS: '${process.env.GMAIL_APP_PASSWORD}'`;
             } else {
                 emailDebug = `Using credentials. USER: '${process.env.GMAIL_USER.trim()}', PASS length: ${process.env.GMAIL_APP_PASSWORD.trim().length}, PASS chars: ${Array.from(process.env.GMAIL_APP_PASSWORD.trim()).map(c=>c.charCodeAt(0)).join(',')}`;
+                
+                const attachmentsConfig = pdfBuffer ? [{
+                    filename: `Service-Request-${data.name}-${new Date().toISOString().split('T')[0]}.pdf`,
+                    content: pdfBuffer,
+                    contentType: 'application/pdf'
+                }] : [];
+
                 const emailSent = await sendEmailNotification({
                     to: 'mikiyasdesalegn9@gmail.com',
                     subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
                     html: emailHtml,
                     text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
-                    attachments: [
-                        {
-                            filename: `Service-Request-${data.name}-${new Date().toISOString().split('T')[0]}.html`,
-                            content: emailHtml,
-                            contentType: 'text/html'
-                        }
-                    ]
+                    attachments: attachmentsConfig
                 })
                 if (emailSent === true) {
                     console.log('✅ Email notification sent to mikiyasdesalegn9@gmail.com')
