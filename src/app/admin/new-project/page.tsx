@@ -6,22 +6,22 @@ import AdminLayout from '@/components/admin/AdminLayout'
 import ServiceFormWizard, { ServiceSlug } from '@/components/ServiceFormWizard'
 import { useState, useEffect } from 'react'
 
-const SERVICES: { slug: ServiceSlug; label: string }[] = [
-  { slug: 'house-cleaning', label: 'House Cleaning' },
-  { slug: 'apartment-cleaning', label: 'Apartment Cleaning' },
-  { slug: 'stairwell-cleaning', label: 'Stairwell Cleaning' },
-  { slug: 'office-cleaning', label: 'Office Cleaning' },
-  { slug: 'final-cleaning', label: 'Final Cleaning' },
-  { slug: 'window-cleaning', label: 'Window Cleaning' },
-  { slug: 'relocation', label: 'Relocation' },
-  { slug: 'disposal', label: 'Disposal' },
-  { slug: 'gastronomy-cleaning', label: 'Gastronomy Cleaning' },
-  { slug: 'medical-cleaning', label: 'Medical Cleaning' },
-  { slug: 'construction-cleaning', label: 'Construction Cleaning' },
-  { slug: 'property-maintenance', label: 'Property Maintenance' },
-  { slug: 'special-cleaning', label: 'Special Cleaning' },
-  { slug: 'combo-service', label: 'Combo Service' },
-  { slug: 'household-helping', label: 'Household Helping' },
+const SERVICES: { slug: ServiceSlug; tKey: string }[] = [
+  { slug: 'house-cleaning', tKey: 'houseCleaning' },
+  { slug: 'apartment-cleaning', tKey: 'apartmentCleaning' },
+  { slug: 'stairwell-cleaning', tKey: 'stairwellCleaning' },
+  { slug: 'office-cleaning', tKey: 'officeCleaning' },
+  { slug: 'final-cleaning', tKey: 'finalCleaning' },
+  { slug: 'window-cleaning', tKey: 'windowCleaning' },
+  { slug: 'relocation', tKey: 'relocation' },
+  { slug: 'disposal', tKey: 'disposal' },
+  { slug: 'gastronomy-cleaning', tKey: 'gastronomyCleaning' },
+  { slug: 'medical-cleaning', tKey: 'medicalCleaning' },
+  { slug: 'construction-cleaning', tKey: 'constructionCleaning' },
+  { slug: 'property-maintenance', tKey: 'propertyMaintenance' },
+  { slug: 'special-cleaning', tKey: 'specialCleaning' },
+  { slug: 'combo-service', tKey: 'comboService' },
+  { slug: 'household-helping', tKey: 'householdHelping' },
 ]
 
 export default function NewProjectPage() {
@@ -79,7 +79,7 @@ export default function NewProjectPage() {
                   onClick={() => handleSelect(s.slug)}
                   className="p-4 border-2 border-gray-200 dark:border-gray-600 rounded-lg text-left hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
                 >
-                  <div className="font-medium text-gray-900 dark:text-gray-100">{s.label}</div>
+                  <div className="font-medium text-gray-900 dark:text-gray-100">{t(`services.${s.tKey}` as any)}</div>
                 </button>
               ))}
             </div>
@@ -95,7 +95,11 @@ export default function NewProjectPage() {
             </button>
             <ServiceFormWizard
               service={selected}
-              serviceName={SERVICES.find(s => s.slug === selected)?.label || selected}
+              serviceName={
+                SERVICES.find(s => s.slug === selected)
+                  ? t(`services.${SERVICES.find(s => s.slug === selected)!.tKey}` as any)
+                  : selected
+              }
               locale={locale}
             />
           </div>

@@ -1580,7 +1580,24 @@
       "title": "New Project",
       "subtitle": "Fill out the same form the client sees on the website",
       "selectService": "Select a Service",
-      "changeService": "Change service"
+      "changeService": "Change service",
+      "services": {
+        "houseCleaning": "House Cleaning",
+        "apartmentCleaning": "Apartment Cleaning",
+        "stairwellCleaning": "Stairwell Cleaning",
+        "officeCleaning": "Office Cleaning",
+        "finalCleaning": "Final Cleaning",
+        "windowCleaning": "Window Cleaning",
+        "relocation": "Relocation",
+        "disposal": "Disposal",
+        "gastronomyCleaning": "Gastronomy Cleaning",
+        "medicalCleaning": "Medical Cleaning",
+        "constructionCleaning": "Construction Cleaning",
+        "propertyMaintenance": "Property Maintenance",
+        "specialCleaning": "Special Cleaning",
+        "comboService": "Combo Service",
+        "householdHelping": "Household Helping"
+      }
     },
     "sidebar": {
       "dashboard": "Dashboard",

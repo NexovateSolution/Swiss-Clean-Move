@@ -1838,7 +1838,24 @@
       "title": "Neues Projekt",
       "subtitle": "Füllen Sie das gleiche Formular aus, das der Kunde auf der Website sieht",
       "selectService": "Wählen Sie einen Service aus",
-      "changeService": "Service ändern"
+      "changeService": "Service ändern",
+      "services": {
+        "houseCleaning": "Hausreinigung",
+        "apartmentCleaning": "Wohnungsreinigung",
+        "stairwellCleaning": "Treppenhausreinigung",
+        "officeCleaning": "Büroreinigung",
+        "finalCleaning": "Endreinigung",
+        "windowCleaning": "Fensterreinigung",
+        "relocation": "Umzug",
+        "disposal": "Entsorgung",
+        "gastronomyCleaning": "Gastronomiereinigung",
+        "medicalCleaning": "Praxisreinigung",
+        "constructionCleaning": "Baureinigung",
+        "propertyMaintenance": "Hauswartung",
+        "specialCleaning": "Spezialreinigung",
+        "comboService": "Kombi-Service",
+        "householdHelping": "Haushaltshilfe"
+      }
     },
     "sidebar": {
       "dashboard": "Übersicht",

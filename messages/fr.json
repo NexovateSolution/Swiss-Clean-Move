@@ -1803,7 +1803,24 @@
       "title": "Nouveau projet",
       "subtitle": "Remplissez le même formulaire que le client voit sur le site web",
       "selectService": "Sélectionnez un service",
-      "changeService": "Changer de service"
+      "changeService": "Changer de service",
+      "services": {
+        "houseCleaning": "Nettoyage de maison",
+        "apartmentCleaning": "Nettoyage d'appartement",
+        "stairwellCleaning": "Nettoyage de cage d'escalier",
+        "officeCleaning": "Nettoyage de bureau",
+        "finalCleaning": "Nettoyage de fin de bail",
+        "windowCleaning": "Nettoyage de vitres",
+        "relocation": "Déménagement",
+        "disposal": "Élimination",
+        "gastronomyCleaning": "Nettoyage gastronomique",
+        "medicalCleaning": "Nettoyage médical",
+        "constructionCleaning": "Nettoyage de chantier",
+        "propertyMaintenance": "Entretien de propriété",
+        "specialCleaning": "Nettoyage spécial",
+        "comboService": "Service combiné",
+        "householdHelping": "Aide ménagère"
+      }
     },
     "sidebar": {
       "dashboard": "Tableau de bord",
