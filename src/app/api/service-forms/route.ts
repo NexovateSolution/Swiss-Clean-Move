@@ -102,7 +102,7 @@ function generatePDFContent(data: any): string {
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://swisscleanmove.ch/images/logo.jpg" alt="SwissCleanMove" style="height:80px;width:auto;margin-bottom:15px;" onerror="this.style.display='none'">
+            <img src="https://swisscleanmove.ch/images/logo.png" alt="SwissCleanMove" style="height:80px;width:auto;margin-bottom:15px;" onerror="this.style.display='none'">
             <h1 class="service-title">${data.serviceName}</h1>
             <div class="service-subtitle">${data.formType?.charAt(0).toUpperCase() + data.formType?.slice(1)} Request</div>
         </div>
@@ -230,14 +230,14 @@ export async function POST(request: NextRequest) {
                 }] : [];
 
                 const emailSent = await sendEmailNotification({
-                    to: 'mikiyasdesalegn9@gmail.com',
+                    to: 'info@swisscleanmove.ch',
                     subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
                     html: emailHtml,
                     text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
                     attachments: attachmentsConfig
                 })
                 if (emailSent === true) {
-                    console.log('✅ Email notification sent to mikiyasdesalegn9@gmail.com')
+                    console.log('✅ Email notification sent to info@swisscleanmove.ch')
                     emailDebug += ' | Success';
                 } else {
                     console.warn('⚠️ Email notification failed but form was saved')
