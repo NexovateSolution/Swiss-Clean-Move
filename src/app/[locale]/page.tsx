@@ -169,7 +169,21 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       {/* Swiss-themed Hero Section */}
       <SwissHero
         badge={t('home.hero.badge')}
-        title={t('home.hero.title')}
+        title={(() => {
+          const full = t('home.hero.title');
+          const brand = 'SwissCleanMove';
+          const idx = full.indexOf(brand);
+          if (idx === -1) return full;
+          const rest = full.slice(idx + brand.length);
+          return (
+            <>
+              <span style={{ color: '#CC0000' }}>Swiss</span>
+              <span style={{ color: '#1B2A4A' }}>CleanMove</span>
+              <br />
+              <span className="text-[22px] md:text-[30px] font-semibold text-swiss-body">{rest.trimStart()}</span>
+            </>
+          );
+        })()}
         subtitle={t('home.hero.subtitle')}
         cta={
           <div className="space-y-8">
