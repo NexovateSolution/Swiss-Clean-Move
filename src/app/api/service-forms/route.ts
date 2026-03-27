@@ -1,18 +1,37 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { writeFile, mkdir } from 'fs/promises'
 import { join } from 'path'
-import { existsSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
 import { jsPDF } from 'jspdf'
-import { sendEmailNotification, formatServiceFormEmail } from '@/lib/email'
+import { sendEmailNotification } from '@/lib/email'
 import { prisma } from '../../../../lib/db'
-import { LOGO_BASE64 } from '@/lib/logo-base64'
 
-// Simple PDF generation function (you can replace with a proper PDF library like jsPDF or Puppeteer)
-// Simple PDF generation function (you can replace with a proper PDF library like jsPDF or Puppeteer)
-// Simple PDF generation function (you can replace with a proper PDF library like jsPDF or Puppeteer)
-// Simple PDF generation function (you can replace with a proper PDF library like jsPDF or Puppeteer)
-function generatePDFContent(data: any): string {
-    const currentDate = new Date().toLocaleString('en-CH', {
+function getTranslationDict(locale: string = 'en') {
+    try {
+        const fileContent = readFileSync(join(process.cwd(), 'messages', `${locale}.json`), 'utf-8');
+        const msgs = JSON.parse(fileContent);
+        
+        const flatten = (obj: any): Record<string, string> => {
+            let res: Record<string, string> = {};
+            for(let k in obj) {
+                if (typeof obj[k] === 'object' && obj[k] !== null) {
+                    Object.assign(res, flatten(obj[k]));
+                } else if (typeof obj[k] === 'string') {
+                    // strip trailing : * 
+                    res[k] = obj[k].replace(/[:*]/g, '').trim();
+                }
+            }
+            return res;
+        }
+        return flatten(msgs?.serviceForm?.wizard || {});
+    } catch (e) { 
+        console.warn('Failed to load translations for email:', e);
+        return {}; 
+    }
+}
+
+function generatePDFContent(data: any, dict: Record<string, string>, locale: string): string {
+    const currentDate = new Date().toLocaleString(locale === 'de' ? 'de-CH' : locale === 'fr' ? 'fr-CH' : 'en-CH', {
         timeZone: 'Europe/Zurich',
         year: 'numeric',
         month: '2-digit',
@@ -23,12 +42,11 @@ function generatePDFContent(data: any): string {
 
     const SKIP_KEYS = new Set([
         'serviceName', 'formType', 'status', 'pdfPath', 'submissionDate',
-        'createdAt', 'updatedAt', 'data', 'id'
+        'createdAt', 'updatedAt', 'data', 'id', 'locale'
     ])
 
-    // Pretty-print camelCase or snake_case keys into readable labels
     function prettifyKey(key: string): string {
-        return key
+        return dict[key] || key
             .replace(/([A-Z])/g, ' $1')
             .replace(/[_-]/g, ' ')
             .replace(/\b\w/g, l => l.toUpperCase())
@@ -39,23 +57,27 @@ function generatePDFContent(data: any): string {
         k => !SKIP_KEYS.has(k) && data[k] !== null && data[k] !== undefined && data[k] !== ''
     )
 
+    const labelYes = dict['yes'] || 'Yes';
+    const labelNo = dict['no'] || 'No';
+
     let dynamicRows = '';
     allKeys.forEach(key => {
         let val = data[key];
         let display = '';
         if (Array.isArray(val)) {
             if (val.length === 0) return;
-            display = val.map(item => `<span class="badge badge-blue">✓ ${String(item)}</span>`).join(' ');
+            display = val.map(item => `<span class="badge badge-blue">✓ ${dict[String(item)] || String(item)}</span>`).join(' ');
         } else if (typeof val === 'boolean') {
-            display = val ? `<span class="badge badge-green">✓ Yes</span>` : `<span class="badge badge-gray">✗ No</span>`;
-        } else if (val === 'And' || val === 'yes' || val === 'Yes' || val === true) {
-            display = `<span class="badge badge-green">✓ Yes</span>`;
-        } else if (val === 'no' || val === 'No' || val === false) {
-            display = `<span class="badge badge-gray">✗ No</span>`;
+            display = val ? `<span class="badge badge-green">✓ ${labelYes}</span>` : `<span class="badge badge-gray">✗ ${labelNo}</span>`;
+        } else if (['yes', 'true'].includes(String(val).toLowerCase())) {
+            display = `<span class="badge badge-green">✓ ${labelYes}</span>`;
+        } else if (['no', 'false'].includes(String(val).toLowerCase())) {
+            display = `<span class="badge badge-gray">✗ ${labelNo}</span>`;
         } else if (typeof val === 'object') {
             display = `<pre class="remark-box">${JSON.stringify(val, null, 2)}</pre>`;
         } else {
-            display = String(val);
+            // Check if string matches a dict key without mapping numbers natively
+            display = (isNaN(Number(val)) && dict[String(val)]) ? dict[String(val)] : String(val);
         }
 
         dynamicRows += `
@@ -64,6 +86,8 @@ function generatePDFContent(data: any): string {
                 <div class="data-value">${display}</div>
             </div>`;
     });
+
+    const submitLabel = dict['formSubmitted'] || 'Form submitted on';
 
     return `
 <!DOCTYPE html>
@@ -104,13 +128,13 @@ function generatePDFContent(data: any): string {
         <div class="header">
             <img src="https://swisscleanmove.ch/images/logo.png" alt="SwissCleanMove" style="height:80px;width:auto;margin-bottom:15px;" onerror="this.style.display='none'">
             <h1 class="service-title">${data.serviceName}</h1>
-            <div class="service-subtitle">${data.formType?.charAt(0).toUpperCase() + data.formType?.slice(1)} Request</div>
+            <div class="service-subtitle">${dict[(data.formType || 'service')] || (data.formType || 'service').charAt(0).toUpperCase() + (data.formType || 'service').slice(1)}</div>
         </div>
         
         <div class="section">
             <div class="section-header">
                 <div class="section-icon">📄</div>
-                <h2 class="section-title">All Submitted Form Data</h2>
+                <h2 class="section-title">Submission Data</h2>
             </div>
             <div class="data-list">
                 ${dynamicRows || '<p style="color: #6b7280; font-style: italic;">No additional data submitted.</p>'}
@@ -118,7 +142,7 @@ function generatePDFContent(data: any): string {
         </div>
         
         <div class="footer">
-            Form submitted on ${currentDate} • SwissCleanMove GmbH
+            ${submitLabel} ${currentDate} • SwissCleanMove GmbH
         </div>
     </div>
 </body>
@@ -129,6 +153,8 @@ export async function POST(request: NextRequest) {
     try {
         const formData = await request.formData()
         const dataStr = formData.get('data') as string
+        const locale = formData.get('locale') as string || 'en'
+        
         if (!dataStr) {
             return NextResponse.json({ error: 'Missing form data' }, { status: 400 })
         }
@@ -137,6 +163,8 @@ export async function POST(request: NextRequest) {
         if (!data.serviceName || !data.name || !data.firstName || !data.emailAddress) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
         }
+        
+        const dict = getTranslationDict(locale);
 
         // Process images
         const images = formData.getAll('images') as File[]
@@ -193,18 +221,37 @@ export async function POST(request: NextRequest) {
             doc.setFontSize(16);
             doc.text(`SwissCleanMove - ${data.serviceName}`, 10, 20);
             doc.setFontSize(12);
-            doc.text(`${(data.formType || 'service').toUpperCase()} Request`, 10, 30);
+            doc.text(`${dict[(data.formType || 'service')] || (data.formType || 'service').toUpperCase()} Request`, 10, 30);
             
             let y = 45;
-            const skips = new Set(['serviceName', 'formType', 'status', 'pdfPath', 'submissionDate', 'createdAt', 'updatedAt', 'data', 'id']);
+            const skips = new Set(['serviceName', 'formType', 'status', 'pdfPath', 'submissionDate', 'createdAt', 'updatedAt', 'data', 'id', 'locale']);
+            
             for (const key of Object.keys(data)) {
                 if (skips.has(key) || data[key] === null || data[key] === undefined || data[key] === '') continue;
                 
                 let display = String(data[key]);
-                if (typeof data[key] === 'object') display = JSON.stringify(data[key]);
-                else if (typeof data[key] === 'boolean') display = data[key] ? 'Yes' : 'No';
+                if (typeof data[key] === 'object') {
+                    if (Array.isArray(data[key])) {
+                        display = data[key].map((v:any) => dict[String(v)] || String(v)).join(', ');
+                    } else {
+                        display = JSON.stringify(data[key]);
+                    }
+                }
+                else if (typeof data[key] === 'boolean') {
+                    display = data[key] ? (dict['yes'] || 'Yes') : (dict['no'] || 'No');
+                }
+                else if (['yes', 'true'].includes(String(data[key]).toLowerCase())) {
+                    display = dict['yes'] || 'Yes';
+                }
+                else if (['no', 'false'].includes(String(data[key]).toLowerCase())) {
+                    display = dict['no'] || 'No';
+                }
+                else {
+                    display = (isNaN(Number(data[key])) && dict[String(data[key])]) ? dict[String(data[key])] : String(data[key]);
+                }
                 
-                const label = key.replace(/([A-Z])/g, ' $1').replace(/[_-]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).trim().toUpperCase();
+                const label = dict[key] || key.replace(/([A-Z])/g, ' $1').replace(/[_-]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).trim().toUpperCase();
+                
                 doc.text(`${label}: ${display.substring(0, 70)}`, 10, y);
                 y += 10;
                 if (y > 280) { doc.addPage(); y = 20; }
@@ -216,12 +263,12 @@ export async function POST(request: NextRequest) {
 
         try {
             // Use the rich "PDF" HTML template for both the email body and as an attachment!
-            const emailHtml = generatePDFContent(data);
+            const emailHtml = generatePDFContent(data, dict, locale);
             
             if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-                emailDebug = `Missing credentials. USER: '${process.env.GMAIL_USER}', PASS: '${process.env.GMAIL_APP_PASSWORD}'`;
+                emailDebug = `Missing credentials.`;
             } else {
-                emailDebug = `Using credentials. USER: '${process.env.GMAIL_USER.trim()}', PASS length: ${process.env.GMAIL_APP_PASSWORD.trim().length}, PASS chars: ${Array.from(process.env.GMAIL_APP_PASSWORD.trim()).map(c=>c.charCodeAt(0)).join(',')}`;
+                emailDebug = `Using credentials.`;
                 
                 const attachmentsConfig = pdfBuffer ? [{
                     filename: `Service-Request-${data.name}-${new Date().toISOString().split('T')[0]}.pdf`,
@@ -231,17 +278,17 @@ export async function POST(request: NextRequest) {
 
                 const emailSent = await sendEmailNotification({
                     to: 'info@swisscleanmove.ch, Swisscleanmove.ch@gmail.com',
-                    subject: `New ${data.serviceName} ${data.formType || 'service'} Request`,
+                    subject: `New ${data.serviceName} Request`,
                     html: emailHtml,
-                    text: `New ${data.formType || 'service'} request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
+                    text: `New request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
                     attachments: attachmentsConfig
                 })
                 if (emailSent === true) {
-                    console.log('✅ Email notification sent to info@swisscleanmove.ch')
+                    console.log('✅ Email notification sent')
                     emailDebug += ' | Success';
                 } else {
                     console.warn('⚠️ Email notification failed but form was saved')
-                    emailDebug += ' | sendEmailNotification failed: ' + String(emailSent);
+                    emailDebug += ' | sendEmailNotification failed';
                 }
             }
         } catch (emailError: any) {
@@ -256,7 +303,7 @@ export async function POST(request: NextRequest) {
                 if (!existsSync(submissionsDir)) await mkdir(submissionsDir, { recursive: true })
                 const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
                 const filename = `${data.serviceName.replace(/\s+/g, '-')}-${data.name}-${timestamp}`
-                const pdfContent = generatePDFContent(data)
+                const pdfContent = generatePDFContent(data, dict, locale)
                 const pdfPath = join(submissionsDir, `${filename}.html`)
                 await writeFile(pdfPath, pdfContent, 'utf8')
                 const jsonPath = join(submissionsDir, `${filename}.json`)
@@ -264,7 +311,6 @@ export async function POST(request: NextRequest) {
                 await prisma.serviceFormSubmission.update({ where: { id: submission.id }, data: { pdfPath: `/submissions/${filename}.html` } })
             } catch (e) { 
                 console.warn('File saving skipped:', e)
-                emailDebug += ' | File saving skipped: ' + String(e);
             }
         }
 

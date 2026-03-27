@@ -1327,7 +1327,140 @@
         "telephoneNumber": "Telefonnummer: *",
         "zipCity": "PLZ / Ort: *",
         "streetNo": "Strasse / Nr.: *",
-        "parkingDistance": "Entfernung zwischen Haus und Parkplatz (Meter)"
+        "parkingDistance": "Entfernung zwischen Haus und Parkplatz (Meter)",
+        "contact": "Kontakt",
+        "nameCompany": "Name / Firma *",
+        "contactPerson": "Ansprechperson",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "addressesTitle": "Adressen",
+        "pickupAddress": "Abholadresse (Strasse, PLZ, Ort) *",
+        "deliveryAddress": "Lieferadresse (Strasse, PLZ, Ort) *",
+        "movingType": "Umzugsart",
+        "types": {
+          "private": "Privatumzug",
+          "office": "Büroumzug",
+          "transport": "Transport (Einzelstücke)",
+          "internal": "Interner Umzug",
+          "company": "Firmenumzug"
+        },
+        "objectfromTo": "Objekt (von / nach)",
+        "propertyType": "Objektart",
+        "objectTypes": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "office": "Büro",
+          "commercial": "Gewerbe"
+        },
+        "roomsFromTo": "Zimmer (von / nach)",
+        "livingArea": "Wohnfläche (m²)",
+        "householdSize": "Haushalt (Personen / Arbeitsplätze)",
+        "scope": "Umfang (für Preisberechnung)",
+        "scopes": {
+          "small": "Klein (1–2 Zimmer)",
+          "medium": "Mittel (3–4 Zimmer)",
+          "large": "Gross (5+ Zimmer)",
+          "veryLarge": "Sehr gross / umfangreich"
+        },
+        "inventory": "Inventar / Transportgut",
+        "inventoryItems": {
+          "furniture": "Möbel",
+          "boxes": "Kartons",
+          "appliances": "Elektrogeräte",
+          "washingMachine": "Waschmaschine",
+          "dryer": "Tumbler",
+          "fridge": "Kühlschrank",
+          "sofa": "Sofa",
+          "bed": "Bett",
+          "wardrobe": "Schrank",
+          "table": "Tisch",
+          "plants": "Pflanzen",
+          "bulky": "Sperrgut"
+        },
+        "furtherDetails": "Weitere Angaben",
+        "specialTransport": "Spezialtransport",
+        "specialItems": {
+          "piano": "Klavier",
+          "safe": "Safe",
+          "aquarium": "Aquarium",
+          "art": "Kunst / empfindlich",
+          "heavy": "Sehr schwere Möbel (>100 kg)"
+        },
+        "accessLogistics": "Zugang & Logistik (von / nach)",
+        "floorPickupDeliv": "Etage (Abholung / Lieferung)",
+        "elevatorSizes": {
+          "small": "Klein",
+          "medium": "Mittel",
+          "large": "Gross"
+        },
+        "parking": "Parkplatz",
+        "reservedParking": "Reservierter Parkplatz",
+        "distanceParking": "Distanz Parkplatz → Eingang (m)",
+        "accessPossible": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "stairwell": "Treppenhaus",
+        "stairwellTypes": {
+          "narrow": "Eng",
+          "normal": "Normal",
+          "large": "Gross"
+        },
+        "difficulties": "Erschwernisse",
+        "difficultyItems": {
+          "noElevator": "Kein Lift",
+          "longPaths": "Lange Wege",
+          "narrowStairs": "Enge Treppen",
+          "difficultAccess": "Schwierige Zufahrt",
+          "timeConstraints": "Zeitvorgaben (Verwaltung)",
+          "hardAccess": "Schwer zugängliche Räume"
+        },
+        "additionalServices": "Zusatzleistungen",
+        "additionalOptions": {
+          "packing": "Verpackungsservice",
+          "unpacking": "Ein- / Auspacken",
+          "demontage": "Möbel Demontage",
+          "assembly": "Möbel Montage",
+          "disposal": "Entsorgung",
+          "endCleaning": "Endreinigung (mit Abnahmegarantie)"
+        },
+        "material": "Material",
+        "materialItems": {
+          "boxes": "Umzugskartons",
+          "packaging": "Verpackungsmaterial",
+          "foilBlankets": "Schutzfolie / Decken"
+        },
+        "schedule": "Termin",
+        "movingDate": "Umzugsdatum *",
+        "timeWindow": "Zeitfenster",
+        "from": "Von *",
+        "to": "Bis *",
+        "scheduleOptions": {
+          "flexible": "Flexibel",
+          "express": "Express / dringend"
+        },
+        "workDuration": "Arbeitsdauer / Einsatz",
+        "durations": {
+          "hours24": "2–4 Stunden",
+          "halfDay": "Halbtags",
+          "fullDay": "Ganztags",
+          "multiday": "Mehrtägig",
+          "custom": "Individuell"
+        },
+        "accessKey": "Zugang / Schlüssel",
+        "accessOptions": {
+          "client": "Kunde vor Ort",
+          "keyAvailable": "Schlüssel vorhanden",
+          "management": "Verwaltung",
+          "neighbor": "Nachbar"
+        },
+        "upload": "Upload (sehr wichtig)",
+        "uploads": {
+          "photos": "Fotos",
+          "videos": "Videos",
+          "inventory": "Inventarliste"
+        },
+        "notes": "Bemerkungen (optional)"
       },
       "disposal": {
         "pleaseChoose": "Bitte wählen: *",
@@ -1338,7 +1471,7 @@
         },
         "objectType": "Objekttyp *",
         "location": "Standort *",
-        "floor": "In welchem Stockwerk befindet es sich? *",
+        "floor": "Etage",
         "elevatorAvailable": "Ist ein Aufzug vorhanden? *",
         "yes": "Ja",
         "no": "Nein",
@@ -1361,10 +1494,11 @@
         },
         "additionalOptionsTitle": "Zusätzliche Optionen",
         "additionalOptions": {
-          "cleaningAfter": "Inkl. Reinigung nach der Räumung",
-          "broomCleaning": "Nur Besenreinigung",
-          "basicCleaning": "Grundreinigung",
-          "adhesiveTape": "CHF 20.- / Klebeband, 6 Rollen mit Abroller"
+          "demontage": "Demontage",
+          "cleaningAfter": "Reinigung nach Räumung",
+          "endCleaningGuarantee": "Endreinigung mit Abnahmegarantie",
+          "transportNew": "Transport zu neuem Standort",
+          "recycling": "Recycling / fachgerechte Entsorgung"
         },
         "movingSuppliesTitle": "Benötigen Sie zusätzliches Umzugsmaterial?",
         "furtherWishes": "Weitere Wünsche / Hinweise: *",
@@ -1374,10 +1508,146 @@
         "emailAddress": "E-Mail-Adresse: *",
         "telephoneNumber": "Telefonnummer: *",
         "zipCity": "PLZ / Ort: *",
-        "streetNo": "Strasse / Nr.: *"
+        "streetNo": "Strasse / Nr.: *",
+        "contact": "Kontakt",
+        "nameCompany": "Name / Firma *",
+        "contactPerson": "Ansprechperson",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "property": "Objekt",
+        "address": "Adresse (Strasse, PLZ, Ort) *",
+        "propertyType": "Objektart",
+        "types": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "basement": "Keller",
+          "attic": "Estrich",
+          "garage": "Garage",
+          "office": "Büro",
+          "commercial": "Gewerbe"
+        },
+        "areaOptional": "Fläche (m², optional)",
+        "typeOfClearance": "Art der Räumung",
+        "clearanceTypes": {
+          "singlePickup": "Einzelabholung (wenige Gegenstände)",
+          "partial": "Teilräumung",
+          "full": "Komplett Räumung",
+          "apartmentLiquidation": "Wohnungsauflösung",
+          "afterMoving": "Räumung nach Umzug",
+          "afterDeath": "Räumung nach Todesfall"
+        },
+        "volume": "Umfang / Volumen",
+        "volumes": {
+          "small": "Klein (1–3 m³)",
+          "medium": "Mittel (4–10 m³)",
+          "large": "Gross (10–20 m³)",
+          "veryLarge": "Sehr gross (20+ m³)"
+        },
+        "estimatedVolume": "Geschätztes Volumen (m³):",
+        "materials": "Material / Inhalt (Detail)",
+        "materialItems": {
+          "furniture": "Möbel",
+          "sofa": "Sofa",
+          "bed": "Bett",
+          "wardrobe": "Schrank",
+          "table": "Tisch",
+          "electronics": "Elektrogeräte",
+          "fridge": "Kühlschrank",
+          "washingMachine": "Waschmaschine",
+          "tv": "TV",
+          "wood": "Holz",
+          "metal": "Metall",
+          "glass": "Glas",
+          "cardboard": "Karton",
+          "paper": "Papier",
+          "textiles": "Textilien",
+          "bulkyWaste": "Sperrgut",
+          "mixedWaste": "Mischabfall"
+        },
+        "hazardous": "Sonderabfälle",
+        "hazardousItems": {
+          "paint": "Farbe",
+          "chemicals": "Chemikalien",
+          "batteries": "Batterien",
+          "electronicWaste": "Elektro-Sondermüll"
+        },
+        "demontagePreparation": "Demontage & Vorbereitung",
+        "prepItems": {
+          "furnitureDemontage": "Möbel müssen demontiert werden",
+          "kitchenDemontage": "Küche / Einbauten demontieren",
+          "allReady": "Alles bereits bereitgestellt",
+          "sortingHelp": "Unterstützung beim Sortieren nötig"
+        },
+        "accessLogistics": "Zugang & Logistik",
+        "elevatorSizes": {
+          "small": "Klein",
+          "medium": "Mittel",
+          "large": "Gross"
+        },
+        "parking": "Parkplatz",
+        "reservedParking": "Reservierter Parkplatz",
+        "distanceParking": "Distanz Parkplatz → Eingang (m)",
+        "accessPossible": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "stairwell": "Treppenhaus",
+        "stairwellTypes": {
+          "narrow": "Eng",
+          "normal": "Normal",
+          "large": "Gross"
+        },
+        "difficulties": "Erschwernisse",
+        "difficultyItems": {
+          "noElevator": "Kein Lift",
+          "longPaths": "Lange Wege",
+          "narrowStairs": "Enge Treppen",
+          "difficultAccess": "Schwierige Zufahrt",
+          "timeConstraints": "Zeitvorgaben (Verwaltung)"
+        },
+        "additionalServices": "Zusatzleistungen",
+        "schedule": "Termin",
+        "date": "Datum *",
+        "timeWindow": "Zeitfenster (optional)",
+        "from": "Von",
+        "to": "Bis",
+        "scheduleOptions": {
+          "flexible": "Flexibel",
+          "express": "Express / dringend"
+        },
+        "workDuration": "Arbeitsdauer (für Planung & Preis)",
+        "durations": {
+          "hours12": "1–2 Stunden",
+          "halfDay": "Halbtags",
+          "fullDay": "Ganztags",
+          "multiday": "Mehrtägig",
+          "custom": "Individuell"
+        },
+        "accessKey": "Zugang / Schlüssel",
+        "accessOptions": {
+          "inPerson": "Persönlich vor Ort",
+          "keyAvailable": "Schlüssel vorhanden",
+          "mailbox": "Briefkasten",
+          "neighbor": "Nachbar",
+          "management": "Verwaltung",
+          "keyBox": "Schlüsselbox"
+        },
+        "upload": "Upload (sehr wichtig)",
+        "uploads": {
+          "photos": "Fotos",
+          "videos": "Videos"
+        },
+        "notes": "Bemerkungen (optional)"
       },
       "householdHelping": {
-        "floors": "Stockwerk *",
+        "floors": {
+          "parquet": "Parkett",
+          "laminate": "Laminat",
+          "tiles": "Fliesen",
+          "stone": "Stein",
+          "carpet": "Teppich",
+          "pvc": "PVC"
+        },
         "elevatorAvailable": "Gibt es einen Aufzug?",
         "yes": "Ja",
         "no": "Nein",
@@ -1417,7 +1687,132 @@
         "emailAddress": "E-Mail-Adresse: *",
         "telephoneNumber": "Telefonnummer: *",
         "zipCity": "PLZ / Ort: *",
-        "streetNo": "Strasse, Nr.: *"
+        "streetNo": "Strasse, Nr.: *",
+        "contact": "Kontakt",
+        "nameCompany": "Name / Firma *",
+        "contactPerson": "Ansprechperson",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "addressTitle": "Adresse",
+        "address": "Strasse, PLZ, Ort *",
+        "serviceSelection": "Service auswählen",
+        "services": {
+          "householdPrivate": "Haushaltshilfe (Privat)",
+          "maintenanceBoth": "Unterhaltsreinigung (Privat / Geschäftlich)"
+        },
+        "property": "Objekt",
+        "propertyType": "Objektart",
+        "types": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "office": "Büro",
+          "practice": "Praxis",
+          "commercial": "Gewerbe",
+          "stairwell": "Treppenhaus"
+        },
+        "area": "Fläche (m²)",
+        "rooms": "Zimmer / Räume (Anzahl)",
+        "sanitary": "Sanitär (Anzahl)",
+        "usage": "Nutzung",
+        "usages": {
+          "private": "Privat",
+          "commercial": "Geschäftlich",
+          "highTraffic": "Stark frequentiert"
+        },
+        "servicesProvided": "Leistungen",
+        "cleaning": "Reinigung",
+        "cleaningItems": {
+          "vacuuming": "Staubsaugen",
+          "wetMopping": "Nass wischen",
+          "dusting": "Abstauben",
+          "kitchen": "Küche reinigen",
+          "bathroom": "Bad / WC reinigen"
+        },
+        "maintenanceOffice": "Unterhalt / Büro",
+        "officeItems": {
+          "workplaces": "Arbeitsplätze",
+          "furniture": "Möbel",
+          "appliances": "Geräte"
+        },
+        "householdHelping": "Haushaltshilfe",
+        "householdItems": {
+          "laundry": "Wäsche waschen",
+          "ironing": "Bügeln",
+          "beds": "Betten wechseln",
+          "tidying": "Aufräumen",
+          "shopping": "Einkaufen"
+        },
+        "additionalServices": "Zusatzleistungen",
+        "additionalOptions": {
+          "windows": "Fenster",
+          "stairwell": "Treppenhaus",
+          "waste": "Abfall",
+          "disinfection": "Desinfektion"
+        },
+        "floorTypes": "Bodenarten",
+        "specialNeeds": "Besonderes",
+        "specialItems": {
+          "pets": "Haustiere",
+          "children": "Kinder",
+          "allergies": "Allergien",
+          "heavySoiling": "Stark verschmutzt",
+          "highHygiene": "Hoher Hygieneanspruch"
+        },
+        "interval": "Intervall",
+        "intervals": {
+          "oneTime": "Einmalig",
+          "weekly": "Wöchentlich",
+          "multipleWeek": "2–3x pro Woche",
+          "biweekly": "14-täglich",
+          "monthly": "Monatlich",
+          "custom": "Individuell"
+        },
+        "serviceTimes": "Einsatzzeiten",
+        "times": {
+          "earlyMorning": "Früh morgens",
+          "morning": "Vormittag",
+          "afternoon": "Nachmittag",
+          "evening": "Abends",
+          "duringOperation": "Während Betrieb",
+          "afterOperation": "Nach Betrieb",
+          "flexible": "Flexibel"
+        },
+        "duration": "Einsatzdauer",
+        "durations": {
+          "hours12": "1–2 Stunden",
+          "hours23": "2–3 Stunden",
+          "hours35": "3–5 Stunden",
+          "halfDay": "Halbtags",
+          "fullDay": "Ganztags",
+          "custom": "Individuell"
+        },
+        "start": "Start",
+        "startDate": "Startdatum *",
+        "accessOrganization": "Zugang & Organisation",
+        "orgOptions": {
+          "key": "Schlüssel vorhanden",
+          "code": "Code / Zugangssystem",
+          "clientOnSite": "Kunde / Personal vor Ort"
+        },
+        "specialOrg": "Besonderes",
+        "specialOrgItems": {
+          "alarm": "Alarmanlage",
+          "houseRules": "Hausordnung",
+          "cleaningPlan": "Reinigungsplan vorhanden"
+        },
+        "additionalOrgServices": "Zusatzservices",
+        "additionalOrgOptions": {
+          "deepCleaning": "Grundreinigung",
+          "disinfectionService": "Desinfektionsservice",
+          "specialCleaning": "Spezialreinigung",
+          "replacement": "Ersatz bei Ausfall"
+        },
+        "upload": "Upload",
+        "uploads": {
+          "photos": "Fotos",
+          "documents": "Dokumente"
+        },
+        "notes": "Bemerkungen (optional)"
       },
       "frequency": {
         "label": "Gewünschter Einsatzrhythmus *",
@@ -1428,6 +1823,997 @@
           "severalTimesWeek": "Mehrmals pro Woche",
           "daily": "Täglich"
         }
+      },
+      "propertyMaintenance": {
+        "companyOrManagement": "Firma / Verwaltung *",
+        "contactPerson": "Ansprechperson",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "address": "Adresse (Strasse, PLZ, Ort) *",
+        "propertyType": "Objektart",
+        "types": {
+          "apartmentBuilding": "Mehrfamilienhaus",
+          "commercialProperty": "Gewerbeobjekt",
+          "residentialComplex": "Überbauung",
+          "officeBuilding": "Bürogebäude"
+        },
+        "units": "Einheiten (Anzahl Wohnungen / Büros)",
+        "floors": "Etagen (Anzahl)",
+        "area": "Fläche (m², ca.)",
+        "scopeOfServices": "Leistungsumfang",
+        "cleaningMaintenance": "Reinigung & Pflege",
+        "services": {
+          "stairwell": "Treppenhausreinigung",
+          "elevator": "Liftreinigung",
+          "garage": "Garagenreinigung",
+          "basement": "Keller / Nebenräume",
+          "outdoorMaintenance": "Umgebungspflege",
+          "landscaping": "Grünpflege (Rasen / Hecken)",
+          "outdoorCleaning": "Reinigung Aussenflächen",
+          "parking": "Parkplatzreinigung",
+          "snowRemoval": "Schneeräumung",
+          "grittingService": "Streudienst",
+          "techInspections": "Technische Kontrolle",
+          "routineChecks": "Kontrollgänge",
+          "minorRepairs": "Kleinreparaturen",
+          "lightingChecks": "Lichtkontrolle",
+          "wasteHandling": "Kehricht bereitstellen",
+          "containerCleaning": "Container reinigen",
+          "disposalRecycling": "Entsorgung / Recycling"
+        },
+        "outdoorSurroundings": "Umgebung & Aussenbereich",
+        "winterService": "Winterdienst",
+        "technicalMaintenance": "Technische Betreuung",
+        "wasteManagement": "Abfallmanagement",
+        "frequency": "Intervall",
+        "frequencies": {
+          "weekly": "Wöchentlich",
+          "biweekly": "14-täglich",
+          "monthly": "Monatlich",
+          "custom": "Individuell / nach Bedarf"
+        },
+        "propertyDetails": "Objekt-Details",
+        "details": {
+          "staircases": "Treppenhäuser (Anzahl)",
+          "elevators": "Lifte (Anzahl)",
+          "entrances": "Eingänge (Anzahl)",
+          "parkingSpaces": "Garagenplätze (Anzahl)",
+          "specialReqs": "Besondere Anforderungen (optional)"
+        },
+        "orgAndAccess": "Organisation & Zugang",
+        "org": {
+          "houseRules": "Hausordnung vorhanden",
+          "keyAvailable": "Schlüssel vorhanden",
+          "contactOnSite": "Ansprechpartner vor Ort",
+          "serviceSpecs": "Pflichtenheft vorhanden"
+        },
+        "access": "Zugang zum Objekt",
+        "accessTypes": {
+          "free": "Frei zugänglich",
+          "key": "Mit Schlüssel",
+          "code": "Mit Code / System"
+        },
+        "serviceTimes": "Einsatzzeiten",
+        "times": {
+          "daytime": "Tagsüber",
+          "earlyMorning": "Früh morgens",
+          "flexible": "Flexibel"
+        },
+        "start": "Start",
+        "desiredStart": "Gewünschter Start *",
+        "contractType": "Vertragsart",
+        "contracts": {
+          "ongoing": "Laufender Vertrag",
+          "trial": "Testphase",
+          "oneTime": "Einmaliger Einsatz"
+        },
+        "additionalServices": "Zusatzleistungen",
+        "additional": {
+          "emergency": "Notfallservice",
+          "availability24h": "24h Bereitschaft",
+          "reports": "Rapport / Dokumentation",
+          "photoDoc": "Foto-Dokumentation"
+        },
+        "upload": "Upload",
+        "uploads": {
+          "photos": "Fotos",
+          "documents": "Dokumente (z.B. Pflichtenheft)"
+        },
+        "notes": "Bemerkungen (optional)"
+      },
+      "finalCleaning": {
+        "contact": "Kontakt",
+        "nameCompany": "Name / Firma *",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "property": "Objekt",
+        "address": "Adresse (Strasse, PLZ, Ort) *",
+        "propertyType": "Objektart",
+        "roomsLabel": "Zimmer *",
+        "livingArea": "Wohnfläche (m²)",
+        "layout": "Raumstruktur",
+        "bedrooms": "Schlafzimmer (Anzahl)",
+        "livingRooms": "Wohnzimmer (Anzahl)",
+        "bathrooms": "Badezimmer (Anzahl)",
+        "separateWc": "WC separat (Anzahl)",
+        "kitchens": "Küche (Anzahl)",
+        "sanitary": "Sanitär",
+        "sanitaryItems": {
+          "shower": "Dusche",
+          "bathtub": "Badewanne",
+          "doubleSink": "Doppellavabo",
+          "guestWc": "Gäste-WC",
+          "glassShowerWall": "Glasduschwand",
+          "mirrors": "Spiegel",
+          "fittings": "Armaturen"
+        },
+        "kitchen": "Küche",
+        "kitchenItems": {
+          "oven": "Backofen (intensiv)",
+          "cooktop": "Kochfeld",
+          "refrigerator": "Kühlschrank innen",
+          "freezer": "Tiefkühler",
+          "dishwasher": "Geschirrspüler",
+          "extractorHood": "Dunstabzug / Filter",
+          "cabinetsInside": "Schränke innen",
+          "cabinetsOutside": "Schränke aussen",
+          "workSurfaces": "Arbeitsflächen"
+        },
+        "laundryRoom": "Waschküche",
+        "laundryItems": {
+          "washingMachine": "Waschmaschine reinigen",
+          "dryer": "Tumbler reinigen"
+        },
+        "location": "Standort",
+        "locationTypes": {
+          "apartment": "Wohnung",
+          "basement": "Keller",
+          "sharedRoom": "Allgemeinraum"
+        },
+        "additionalRooms": "Nebenräume & Aussenflächen",
+        "additionalItems": {
+          "balcony": "Balkon",
+          "terrace": "Terrasse"
+        },
+        "area": "Fläche (m²)",
+        "cleaning": "Reinigung",
+        "cleaningTypes": {
+          "machine": "Maschine",
+          "manual": "Manuell"
+        },
+        "otherRooms": "Nebenräume",
+        "otherRoomItems": {
+          "basement": "Keller",
+          "attic": "Estrich",
+          "garage": "Garage",
+          "storageRoom": "Reduit"
+        },
+        "windowsShading": "Fenster & Beschattung",
+        "windowsInfo": "Fenster (Anzahl)",
+        "windowTypes": {
+          "standard": "Standard",
+          "floorToCeiling": "Bodentief",
+          "roofWindows": "Dachfenster",
+          "largeSurfaces": "Grossflächen",
+          "hardToAccess": "Schwer zugänglich"
+        },
+        "shading": "Beschattung",
+        "shadingTypes": {
+          "venetian": "Lamellenstoren",
+          "rollerShutters": "Rollläden",
+          "windowShutters": "Fensterläden"
+        },
+        "floorTypes": "Bodenbeläge",
+        "floors": {
+          "parquet": "Parkett",
+          "laminate": "Laminat",
+          "tiles": "Fliesen",
+          "stone": "Stein",
+          "carpet": "Teppich",
+          "pvc": "PVC"
+        },
+        "cleaningScope": "Reinigungsumfang",
+        "scopeItems": {
+          "full": "Komplett (Abgabestandard)"
+        },
+        "general": "Allgemein",
+        "generalItems": {
+          "floors": "Böden",
+          "doors": "Türen",
+          "frames": "Rahmen",
+          "windows": "Fenster",
+          "cabinets": "Schränke",
+          "sockets": "Steckdosen",
+          "lightSwitches": "Lichtschalter"
+        },
+        "sanitaryScope": "Sanitär",
+        "sanitaryScopeItems": {
+          "limescale": "Kalk entfernen",
+          "grout": "Fugen reinigen",
+          "descaling": "Entkalkung"
+        },
+        "condition": "Zustand",
+        "conditions": {
+          "normal": "Normal",
+          "heavilySoiled": "Stark verschmutzt",
+          "nicotine": "Nikotinbelastung",
+          "construction": "Baustelle / Renovation"
+        },
+        "pets": "Haustiere",
+        "handoverManagement": "Abgabe / Verwaltung",
+        "handoverDate": "Abgabetermin *",
+        "handoverOptions": {
+          "inspection": "Abnahme mit Verwaltung",
+          "guarantee": "Abnahmegarantie"
+        },
+        "managementContact": "Verwaltung / Kontakt (optional)",
+        "accessLogistics": "Zugang & Logistik",
+        "floor": "Etage",
+        "elevatorSizes": {
+          "small": "Klein",
+          "medium": "Mittel",
+          "large": "Gross"
+        },
+        "parkingStatus": "Parkplatz",
+        "reserved": "Reserviert",
+        "distanceParking": "Distanz Parkplatz → Eingang (m)",
+        "accessPossible": {
+          "possible": "Möglich",
+          "restricted": "Eingeschränkt"
+        },
+        "keyHandover": "Schlüsselübergabe",
+        "keyOptions": {
+          "inPerson": "Persönlich",
+          "mailbox": "Briefkasten",
+          "neighbor": "Nachbar",
+          "management": "Verwaltung",
+          "keyBox": "Schlüsselbox"
+        },
+        "schedule": "Termin",
+        "cleaningDate": "Reinigungsdatum *",
+        "from": "Von *",
+        "to": "Bis *",
+        "scheduleOptions": {
+          "flexible": "Flexibel",
+          "express": "Express"
+        },
+        "additionalServices": "Zusatzleistungen",
+        "additionalOptions": {
+          "recleaning": "Nachreinigung bei Abnahme",
+          "guarantee": "Garantie bis Übergabe",
+          "disposal": "Entsorgung",
+          "movingCombo": "Umzug kombiniert"
+        },
+        "upload": "Upload",
+        "uploads": {
+          "photos": "Fotos",
+          "videos": "Videos",
+          "documents": "Dokumente"
+        },
+        "notes": "Bemerkungen (optional)"
+      },
+      "maintenanceCleaning": {
+        "contact": "Kontakt",
+        "nameCompany": "Name / Firma *",
+        "contactPerson": "Ansprechperson",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "property": "Objekt",
+        "address": "Adresse (Strasse, PLZ, Ort) *",
+        "propertyType": "Objektart",
+        "types": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "office": "Büro",
+          "practice": "Praxis",
+          "commercial": "Gewerbe",
+          "stairwell": "Treppenhaus",
+          "retailStore": "Ladenlokal"
+        },
+        "area": "Fläche (m², ca.) *",
+        "rooms": "Räume (Anzahl)",
+        "sanitary": "Sanitär (Anzahl)",
+        "usage": "Nutzung",
+        "usages": {
+          "private": "Privat",
+          "commercial": "Geschäftlich",
+          "highTraffic": "Stark frequentiert"
+        },
+        "floorTypes": "Bodenarten",
+        "floors": {
+          "parquet": "Parkett",
+          "laminate": "Laminat",
+          "tiles": "Fliesen",
+          "stone": "Stein",
+          "carpet": "Teppich",
+          "pvc": "PVC"
+        },
+        "scopeOfServices": "Leistungsumfang",
+        "services": {
+          "vacuuming": "Staubsaugen",
+          "wetMopping": "Nass wischen",
+          "dusting": "Abstauben",
+          "sanitary": "Sanitär",
+          "kitchen": "Küche",
+          "officesRooms": "Büro / Räume",
+          "windows": "Fenster",
+          "stairwell": "Treppenhaus",
+          "waste": "Abfall"
+        },
+        "frequency": "Intervall",
+        "frequencies": {
+          "daily": "Täglich",
+          "twoThreeTimes": "2–3x pro Woche",
+          "weekly": "Wöchentlich",
+          "biweekly": "14-täglich",
+          "monthly": "Monatlich",
+          "custom": "Individuell"
+        },
+        "serviceTimes": "Einsatzzeiten (Zeitfenster)",
+        "times": {
+          "earlyMorning": "Früh morgens",
+          "morning": "Vormittag",
+          "afternoon": "Nachmittag",
+          "evening": "Abends",
+          "duringOperation": "Während Betrieb",
+          "afterOperation": "Nach Betrieb",
+          "flexible": "Flexibel"
+        },
+        "cleaningDuration": "Reinigungsdauer (sehr wichtig für Preis)",
+        "durations": {
+          "hours12": "1–2 Stunden",
+          "hours23": "2–3 Stunden",
+          "hours35": "3–5 Stunden",
+          "halfDay": "Halbtags",
+          "fullDay": "Ganztags",
+          "custom": "Individuell"
+        },
+        "startPlanning": "Start & Planung",
+        "startDate": "Startdatum *",
+        "orgAndAccess": "Organisation & Zugang",
+        "org": {
+          "keyAvailable": "Schlüssel vorhanden",
+          "codeSystem": "Code / System",
+          "clientOnSite": "Kunde vor Ort"
+        },
+        "special": "Besonderes",
+        "specialItems": {
+          "pets": "Haustiere",
+          "children": "Kinder",
+          "alarmSystem": "Alarmanlage"
+        },
+        "additionalServices": "Zusatzservices",
+        "additional": {
+          "disinfection": "Desinfektion",
+          "deepCleaning": "Grundreinigung",
+          "specialCleaning": "Spezialreinigung"
+        },
+        "upload": "Upload",
+        "uploads": {
+          "photos": "Fotos",
+          "documents": "Dokumente"
+        },
+        "notes": "Bemerkungen (optional)"
+      },
+      "constructionCleaning": {
+        "contact": "Kontakt",
+        "companyManagement": "Firma / Bauleitung *",
+        "contactPerson": "Ansprechperson",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "property": "Objekt",
+        "address": "Adresse (Strasse, PLZ, Ort) *",
+        "propertyType": "Objektart",
+        "types": {
+          "newBuild": "Neubau",
+          "renovation": "Umbau / Renovation",
+          "commercial": "Gewerbebau",
+          "residential": "Wohnbau",
+          "industry": "Industrie"
+        },
+        "area": "Fläche (m², ca.) *",
+        "floors": "Etagen (Anzahl)",
+        "constructionPhase": "Bauphase / Reinigungsart",
+        "phases": {
+          "rough": "Grobreinigung (Bauzwischenreinigung)",
+          "fine": "Feinreinigung (vor Übergabe)",
+          "final": "Bauendreinigung (inkl. Abgabe)",
+          "partial": "Teilreinigung nach Bauphase"
+        },
+        "cleaningAreas": "Reinigungsbereiche",
+        "interior": "Innenbereich",
+        "interiorItems": {
+          "floors": "Böden",
+          "walls": "Wände",
+          "ceilings": "Decken",
+          "doors": "Türen / Rahmen",
+          "windows": "Fenster"
+        },
+        "sanitary": "Sanitär",
+        "sanitaryItems": {
+          "wc": "WC",
+          "sink": "Lavabo",
+          "showers": "Duschen / Bäder"
+        },
+        "kitchen": "Küche / Einbauküche",
+        "kitchenItems": {
+          "appliances": "Geräte",
+          "surfaces": "Oberflächen",
+          "cabinets": "Schränke"
+        },
+        "exterior": "Aussenbereich",
+        "exteriorItems": {
+          "balcony": "Balkon",
+          "terrace": "Terrasse",
+          "facade": "Fassade",
+          "surroundings": "Umgebung"
+        },
+        "contaminationLevel": "Verschmutzungsgrad",
+        "levels": {
+          "light": "Leicht (Staub)",
+          "normal": "Normal (Bauschmutz)",
+          "heavy": "Stark (Zement / Farbe / Kleberreste)"
+        },
+        "specialContamination": "Spezielle Verschmutzungen",
+        "specialItems": {
+          "cement": "Zementreste",
+          "paint": "Farbflecken",
+          "silicone": "Silikonreste",
+          "glue": "Kleber",
+          "dust": "Staub intensiv"
+        },
+        "windowsGlass": "Fenster & Glas",
+        "windowsCount": "Fenster (Anzahl)",
+        "windowTypes": {
+          "standard": "Standard",
+          "large": "Grossflächen",
+          "facade": "Glasfassade",
+          "hardToAccess": "Schwer zugänglich"
+        },
+        "floorTypes": "Bodenarten",
+        "floorsOptions": {
+          "concrete": "Beton",
+          "tiles": "Fliesen",
+          "parquet": "Parkett",
+          "stone": "Stein",
+          "pvc": "PVC / Vinyl"
+        },
+        "machinesTech": "Maschinen / Technik",
+        "techItems": {
+          "floorMachine": "Bodenmaschine erforderlich",
+          "highPressure": "Hochdruckreiniger",
+          "specialEquip": "Spezialgeräte notwendig"
+        },
+        "accessLogistics": "Zugang & Logistik",
+        "floorInfo": "Etage",
+        "elevatorSizes": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "parking": "Parkplatz",
+        "accessPossible": {
+          "possible": "Möglich",
+          "restricted": "Eingeschränkt"
+        },
+        "powerWater": {
+          "powerYes": "Strom vorhanden - Ja",
+          "powerNo": "Strom vorhanden - Nein",
+          "waterYes": "Wasser vorhanden - Ja",
+          "waterNo": "Wasser vorhanden - Nein"
+        },
+        "difficulties": "Erschwernisse",
+        "difficultyItems": {
+          "noElevator": "Kein Lift",
+          "activeSite": "Baustelle aktiv",
+          "hardAccess": "Schwer zugängliche Bereiche",
+          "timePressure": "Zeitdruck / Termin"
+        },
+        "additionalServices": "Zusatzleistungen",
+        "additionalOptions": {
+          "disposal": "Entsorgung von Baumaterial",
+          "tradesman": "Reinigung nach Handwerker",
+          "endGuarantee": "Endreinigung mit Abnahme",
+          "removeFoil": "Schutzfolien entfernen"
+        },
+        "schedule": "Termin",
+        "date": "Datum *",
+        "from": "Von",
+        "to": "Bis",
+        "scheduleOptions": {
+          "flexible": "Flexibel",
+          "express": "Express / dringend"
+        },
+        "projectPlanning": "Projektplanung",
+        "planningOptions": {
+          "oneTime": "Einmalige Reinigung",
+          "multiple": "Mehrere Einsätze",
+          "ongoing": "Laufende Baustellenreinigung"
+        },
+        "upload": "Upload",
+        "uploads": {
+          "photos": "Fotos",
+          "plans": "Baupläne",
+          "documents": "Dokumente"
+        },
+        "notes": "Bemerkungen (optional)"
+      },
+      "gastronomyCleaning": {
+        "contact": "Kontakt",
+        "company": "Betrieb / Firma *",
+        "contactPerson": "Ansprechperson",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "property": "Objekt",
+        "address": "Adresse (Strasse, PLZ, Ort) *",
+        "businessType": "Betriebsart",
+        "types": {
+          "restaurant": "Restaurant",
+          "cafeBar": "Café / Bar",
+          "hotel": "Hotel",
+          "canteen": "Grossküche",
+          "catering": "Catering",
+          "takeAway": "Take-away"
+        },
+        "area": "Fläche (m², ca.)",
+        "cleaningAreas": "Reinigungsbereiche",
+        "kitchenMain": "Küche (Hauptbereich)",
+        "kitchenItems": {
+          "floor": "Küchenboden",
+          "surfaces": "Arbeitsflächen",
+          "stations": "Kochstationen",
+          "appliances": "Geräte / Maschinen",
+          "fridges": "Kühlschränke / Kühlräume"
+        },
+        "appliancesTech": "Geräte & Technik",
+        "appliancesItems": {
+          "oven": "Backofen",
+          "grill": "Grill / Herd",
+          "fryer": "Fritteuse",
+          "extractorHook": "Dunstabzug / Fettfilter"
+        },
+        "diningRoom": "Gastraum",
+        "diningItems": {
+          "tablesChairs": "Tische / Stühle",
+          "floor": "Boden",
+          "barArea": "Barbereich"
+        },
+        "sanitary": "Sanitäranlagen",
+        "sanitaryItems": {
+          "wc": "WC",
+          "sink": "Lavabo",
+          "mirrors": "Spiegel"
+        },
+        "sideRooms": "Nebenräume",
+        "sideItems": {
+          "storage": "Lager",
+          "coldRoom": "Kühlraum",
+          "staffRooms": "Personalräume"
+        },
+        "floorTypes": "Bodenart",
+        "floors": {
+          "tiles": "Fliesen",
+          "stone": "Stein",
+          "pvc": "PVC / Vinyl",
+          "other": "Andere"
+        },
+        "contaminationLevel": "Verschmutzungsgrad",
+        "levels": {
+          "normal": "Normal",
+          "grease": "Fettverschmutzung",
+          "heavy": "Stark verschmutzt",
+          "intensive": "Intensive Küchenreinigung"
+        },
+        "hygieneRequirements": "Hygiene & Anforderungen",
+        "hygieneItems": {
+          "haccp": "HACCP erforderlich",
+          "disinfection": "Desinfektion erforderlich",
+          "foodSensitve": "Lebensmittelbereich sensibel",
+          "documentation": "Dokumentation / Protokoll nötig"
+        },
+        "interval": "Intervall",
+        "intervals": {
+          "daily": "Täglich",
+          "multipleTimes": "Mehrmals pro Woche",
+          "weekly": "Wöchentlich",
+          "custom": "Individuell"
+        },
+        "serviceTimes": "Einsatzzeiten",
+        "times": {
+          "earlyMorning": "Früh morgens",
+          "duringOperation": "Während Betrieb",
+          "afterOperation": "Nach Betrieb",
+          "night": "Nacht",
+          "flexible": "Flexibel"
+        },
+        "additionalServices": "Zusatzleistungen",
+        "additionalOptions": {
+          "greaseFilter": "Fettfilter Reinigung",
+          "extractorCleaning": "Dunstabzug Reinigung",
+          "deepCleaning": "Tiefenreinigung Küche",
+          "glassWindow": "Glas / Fenster",
+          "floorMachine": "Bodenmaschine / Spezialreinigung"
+        },
+        "accessOrganization": "Zugang & Organisation",
+        "accessToProperty": "Zugang zum Objekt",
+        "accessOptions": {
+          "key": "Schlüssel vorhanden",
+          "code": "Code / Zugangssystem",
+          "staffOnSite": "Personal vor Ort"
+        },
+        "parking": "Parkplatz",
+        "parkingOptions": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "start": "Start",
+        "startDate": "Startdatum *",
+        "contractType": "Vertragsart",
+        "contracts": {
+          "ongoing": "Laufend",
+          "trial": "Testphase",
+          "oneTime": "Einmalig"
+        },
+        "upload": "Upload",
+        "uploads": {
+          "photos": "Fotos",
+          "documents": "Dokumente"
+        },
+        "notes": "Bemerkungen (optional)"
+      },
+      "comboService": {
+        "contact": "Kontakt",
+        "nameCompany": "Name / Firma *",
+        "contactPerson": "Ansprechperson",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "addressesTitle": "Adressen",
+        "pickupAddress": "Abholadresse (Strasse, PLZ, Ort) *",
+        "deliveryAddress": "Lieferadresse (Strasse, PLZ, Ort) *",
+        "service": "Service",
+        "services": {
+          "moving": "Umzug",
+          "transport": "Transport",
+          "cleaning": "Umzugsreinigung (Endreinigung)",
+          "combo": "Komplettpaket (Umzug + Reinigung)"
+        },
+        "movingDetails": "UMZUG – DETAILANGABEN",
+        "objectFromTo": "Objekt (Abholung / Lieferung)",
+        "propertyType": "Objektart",
+        "objectTypes": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "office": "Büro",
+          "commercial": "Gewerbe"
+        },
+        "roomsFromTo": "Zimmer (von / nach)",
+        "livingArea": "Wohnfläche (m²)",
+        "householdSize": "Haushalt (Personen / Arbeitsplätze)",
+        "scope": "Umfang",
+        "scopes": {
+          "small": "Klein (1–2 Zimmer)",
+          "medium": "Mittel (3–4 Zimmer)",
+          "large": "Gross (5+ Zimmer)",
+          "veryLarge": "Sehr gross / umfangreich"
+        },
+        "inventory": "Inventar (Detail)",
+        "inventoryItems": {
+          "sofa": "Sofa",
+          "bed": "Bett",
+          "wardrobe": "Schrank",
+          "table": "Tisch",
+          "chairs": "Stühle",
+          "washingMachine": "Waschmaschine",
+          "dryer": "Tumbler",
+          "fridge": "Kühlschrank",
+          "tv": "TV",
+          "boxes": "Kartons",
+          "plants": "Pflanzen",
+          "bulky": "Sperrgut"
+        },
+        "furtherDetails": "Weitere Angaben",
+        "specialTransport": "Spezialtransport",
+        "specialItems": {
+          "piano": "Klavier",
+          "safe": "Safe",
+          "aquarium": "Aquarium",
+          "art": "Kunst",
+          "sensitive": "Empfindlich",
+          "heavy": "Sehr schwer (>100kg)"
+        },
+        "accessLogistics": "Zugang & Logistik (von / nach)",
+        "floor": "Etage",
+        "elevatorSizes": {
+          "small": "Klein",
+          "medium": "Mittel",
+          "large": "Gross"
+        },
+        "parking": "Parkplatz",
+        "reservedParking": "Reservierter Parkplatz",
+        "distanceParking": "Distanz Parkplatz → Eingang (m)",
+        "accessPossible": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "stairwell": "Treppenhaus",
+        "stairwellTypes": {
+          "narrow": "Eng",
+          "normal": "Normal",
+          "large": "Gross"
+        },
+        "difficulties": "Erschwernisse",
+        "difficultyItems": {
+          "noElevator": "Kein Lift",
+          "longPaths": "Lange Wege",
+          "narrowStairs": "Enge Treppen",
+          "difficultAccess": "Schwierige Zufahrt",
+          "timeConstraints": "Zeitvorgaben (Verwaltung)",
+          "hardAccess": "Schwer zugängliche Räume"
+        },
+        "servicesProvided": "Leistungen",
+        "serviceOptions": {
+          "transport": "Transport",
+          "packing": "Verpackungsservice",
+          "unpacking": "Ein- / Auspacken",
+          "demontage": "Möbel Demontage",
+          "assembly": "Möbel Montage",
+          "disposal": "Entsorgung",
+          "cleaning": "Reinigung"
+        },
+        "material": "Material",
+        "materialItems": {
+          "boxes": "Umzugskartons",
+          "packaging": "Verpackungsmaterial",
+          "foilBlankets": "Schutzfolie / Decken"
+        },
+        "cleaningDetails": "REINIGUNG – DETAILANGABEN",
+        "cleaningObject": "Objekt",
+        "rooms": "Zimmer",
+        "roomLayout": "Raumaufteilung",
+        "roomItems": {
+          "bedrooms": "Schlafzimmer (Anzahl)",
+          "livingRooms": "Wohnzimmer (Anzahl)",
+          "bathrooms": "Badezimmer (Anzahl)",
+          "separateWc": "WC separat (Anzahl)",
+          "kitchens": "Küche (Anzahl)"
+        },
+        "sanitary": "Sanitär",
+        "sanitaryItems": {
+          "shower": "Dusche",
+          "bathtub": "Badewanne",
+          "doubleSink": "Doppellavabo",
+          "guestWc": "Gäste-WC",
+          "glassShowerWall": "Glasduschwand"
+        },
+        "kitchen": "Küche",
+        "kitchenItems": {
+          "oven": "Backofen intensiv",
+          "cooktop": "Kochfeld",
+          "refrigerator": "Kühlschrank innen",
+          "freezer": "Tiefkühler",
+          "dishwasher": "Geschirrspüler",
+          "extractorHood": "Dunstabzug / Filter",
+          "cabinets": "Schränke innen & aussen"
+        },
+        "laundryRoom": "Waschküche",
+        "laundryItems": {
+          "washingMachine": "Waschmaschine",
+          "dryer": "Tumbler"
+        },
+        "location": "Standort",
+        "locationTypes": {
+          "apartment": "Wohnung",
+          "basement": "Keller"
+        },
+        "roomsAndSideRooms": "Räume & Nebenräume",
+        "additionalItems": {
+          "balcony": "Balkon",
+          "terrace": "Terrasse"
+        },
+        "cleaningTypes": {
+          "machine": "Reinigung mit Maschine",
+          "manual": "Manuell"
+        },
+        "otherRoomItems": {
+          "basement": "Keller",
+          "attic": "Estrich",
+          "garage": "Garage",
+          "storageRoom": "Reduit"
+        },
+        "windowsShading": "Fenster & Beschattung",
+        "windowsInfo": "Fenster (Anzahl)",
+        "windowTypes": {
+          "standard": "Standard",
+          "floorToCeiling": "Bodentief",
+          "roofWindows": "Dachfenster",
+          "largeSurfaces": "Grossflächen",
+          "hardToAccess": "Schwer zugänglich"
+        },
+        "shadingTypes": {
+          "venetian": "Lamellen",
+          "rollerShutters": "Rollläden",
+          "windowShutters": "Fensterläden"
+        },
+        "floorTypes": "Bodenarten",
+        "floors": {
+          "parquet": "Parkett",
+          "laminate": "Laminat",
+          "tiles": "Fliesen",
+          "stone": "Stein",
+          "carpet": "Teppich",
+          "pvc": "PVC"
+        },
+        "cleaningScope": "Reinigungsumfang",
+        "scopeItems": {
+          "full": "Komplett (Abgabestandard)",
+          "floors": "Böden",
+          "doors": "Türen",
+          "windows": "Fenster",
+          "cabinets": "Schränke",
+          "limescale": "Kalk entfernen",
+          "grout": "Fugen reinigen"
+        },
+        "condition": "Zustand",
+        "conditions": {
+          "normal": "Normal",
+          "heavilySoiled": "Stark verschmutzt",
+          "nicotine": "Nikotin",
+          "construction": "Baustelle"
+        },
+        "pets": "Haustiere",
+        "handoverDate": "Abgabetermin",
+        "handoverOptions": {
+          "inspection": "Abnahme mit Verwaltung",
+          "guarantee": "Abnahmegarantie"
+        },
+        "scheduleAndPlanning": "TERMIN & PLANUNG",
+        "movingDate": "Umzugsdatum *",
+        "cleaningDate": "Reinigungsdatum *",
+        "timeWindow": "Zeitfenster",
+        "from": "Von",
+        "to": "Bis",
+        "scheduleOptions": {
+          "flexible": "Flexibel",
+          "express": "Express / dringend"
+        },
+        "workDuration": "Arbeitsdauer",
+        "durations": {
+          "hours24": "2–4 Stunden",
+          "halfDay": "Halbtags",
+          "fullDay": "Ganztags",
+          "multiday": "Mehrtägig"
+        },
+        "accessKey": "Zugang / Schlüssel",
+        "accessOptions": {
+          "inPerson": "Persönlich",
+          "key": "Schlüssel",
+          "management": "Verwaltung",
+          "neighbor": "Nachbar",
+          "keyBox": "Schlüsselbox"
+        },
+        "upload": "Upload",
+        "uploads": {
+          "photos": "Fotos",
+          "videos": "Videos",
+          "documents": "Dokumente"
+        },
+        "notes": "Bemerkungen (optional)"
+      },
+      "specialCleaning": {
+        "contact": "Kontakt",
+        "nameCompany": "Name / Firma *",
+        "contactPerson": "Ansprechperson",
+        "phone": "Telefon *",
+        "email": "E-Mail *",
+        "property": "Objekt",
+        "address": "Adresse (Strasse, PLZ, Ort) *",
+        "propertyType": "Objektart",
+        "types": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "office": "Büro",
+          "commercial": "Gewerbe",
+          "constructionSite": "Baustelle",
+          "gastronomy": "Gastronomie"
+        },
+        "area": "Fläche (m², ca.)",
+        "typeOfSpecialCleaning": "Art der Spezialreinigung",
+        "cleaningTypes": {
+          "deepCleaning": "Grundreinigung (intensiv)",
+          "afterRenovation": "Nach Renovation",
+          "afterConstruction": "Nach Bauarbeiten",
+          "nicotineCleaning": "Nikotinreinigung",
+          "messieApartment": "Messie-Wohnung",
+          "disinfection": "Desinfektion",
+          "odorNeutralization": "Geruchsneutralisation"
+        },
+        "cleaningAreas": "Reinigungsbereiche",
+        "areas": {
+          "floors": "Böden",
+          "walls": "Wände",
+          "ceilings": "Decken",
+          "doorsFrames": "Türen / Rahmen",
+          "windows": "Fenster",
+          "kitchen": "Küche",
+          "sanitary": "Sanitär"
+        },
+        "specialContamination": "Spezielle Verschmutzungen",
+        "contaminationItems": {
+          "nicotine": "Nikotin",
+          "grease": "Fett",
+          "mold": "Schimmel",
+          "limescale": "Kalk",
+          "cement": "Zement / Bauverschmutzung",
+          "paintGlue": "Farbe / Kleberreste",
+          "heavyGeneral": "Starke Verschmutzung allgemein"
+        },
+        "floorTypes": "Bodenarten",
+        "floors": {
+          "parquet": "Parkett",
+          "laminate": "Laminat",
+          "tiles": "Fliesen",
+          "stone": "Stein",
+          "carpet": "Teppich",
+          "pvc": "PVC"
+        },
+        "cleaningMethods": "Reinigungsmethoden",
+        "methods": {
+          "machine": "Maschinenreinigung",
+          "highPressure": "Hochdruck",
+          "specialChemistry": "Spezialchemie",
+          "disinfection": "Desinfektion"
+        },
+        "contaminationLevel": "Verschmutzungsgrad",
+        "levels": {
+          "normal": "Normal",
+          "heavy": "Stark",
+          "veryHeavy": "Sehr stark"
+        },
+        "accessLogistics": "Zugang & Logistik",
+        "floor": "Etage",
+        "elevatorSizes": {
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "parking": "Parkplatz",
+        "accessPossible": {
+          "possible": "Möglich",
+          "restricted": "Eingeschränkt"
+        },
+        "difficulties": "Erschwernisse",
+        "difficultyItems": {
+          "noElevator": "Kein Lift",
+          "longPaths": "Lange Wege",
+          "narrowRooms": "Enge Räume",
+          "hardAccess": "Schwieriger Zugang"
+        },
+        "schedule": "Termin",
+        "date": "Datum *",
+        "from": "Von",
+        "to": "Bis",
+        "scheduleOptions": {
+          "flexible": "Flexibel",
+          "express": "Express"
+        },
+        "workDuration": "Arbeitsdauer",
+        "durations": {
+          "halfDay": "Halbtags",
+          "fullDay": "Ganztags",
+          "multiday": "Mehrtägig",
+          "custom": "Individuell"
+        },
+        "additionalServices": "Zusatzleistungen",
+        "additionalOptions": {
+          "disposal": "Entsorgung",
+          "disinfection": "Desinfektion",
+          "odorTreatment": "Geruchsbehandlung",
+          "protectiveMeasures": "Schutzmassnahmen"
+        },
+        "upload": "Upload",
+        "uploads": {
+          "photos": "Fotos",
+          "videos": "Videos"
+        },
+        "notes": "Bemerkungen (optional)"
       }
     },
     "title": {
