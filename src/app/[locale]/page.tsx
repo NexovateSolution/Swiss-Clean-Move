@@ -180,7 +180,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <span style={{ color: '#CC0000' }}>Swiss</span>
               <span style={{ color: '#1B2A4A' }}>CleanMove</span>
               <br />
-              <span className="text-[22px] md:text-[30px] font-semibold text-swiss-body">{rest.trimStart()}</span>
+              <span className="text-[18px] md:text-[24px] font-semibold text-swiss-body">{rest.trimStart()}</span>
             </>
           );
         })()}
