@@ -113,14 +113,28 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
     setBusy(true)
     try {
       if (isAdmin) {
+        // Attempt to extract street, zip, and city from a solitary 'address' string if distinct fields are not present
+        let finalAddress = d.streetNo || d.address || '';
+        let finalZip = d.postalCode || d.zipCity?.split(' ')[0] || '';
+        let finalCity = d.location || d.zipCity?.split(' ').slice(1).join(' ') || '';
+        
+        if (d.address && !d.streetNo && !d.postalCode && !d.location) {
+           const match = d.address.match(/(.+?)(?:,\s*|\s+)(\d{4})\s+(.+)/);
+           if (match) {
+               finalAddress = match[1].trim();
+               finalZip = match[2];
+               finalCity = match[3].trim();
+           }
+        }
+
         const payload = {
             firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
             lastName: d.nameFirstName?.split(' ')[0] || '',
             email: d.emailAddress || '',
             phone: d.telephone || '',
-            address: d.streetNo || '',
-            postalCode: d.zipCity?.split(' ')[0] || '',
-            location: d.zipCity?.split(' ').slice(1).join(' ') || d.zipCity || '',
+            address: finalAddress,
+            postalCode: finalZip,
+            location: finalCity,
             squareMeters: d.livingSpace || d.area || 0,
             serviceType: serviceName,
             buildingType: d.objectType || d.currentLiving || 'Other',
@@ -128,7 +142,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
             untilDate: d.untilDate,
             totalPrice: d.totalPrice,
             paidAmount: d.paidAmount || 0,
-            remarks1: Object.entries(d).filter(([k]) => !['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity'].includes(k)).map(([k,v]) => `${k}: ${Array.isArray(v) ? v.join(', ') : v}`).join(' | '),
+            remarks1: Object.entries(d).filter(([k]) => !['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address'].includes(k)).map(([k,v]) => `${k}: ${Array.isArray(v) ? v.join(', ') : v}`).join(' | '),
             data: d
         }
         
@@ -141,14 +155,24 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
         toast.success('Project stored successfully')
         router.push('/admin/clients')
       } else {
+        let finalAddress = d.streetNo || d.address || '';
+        let finalZipCity = d.zipCity || '';
+        if (d.address && !d.streetNo && !d.zipCity) {
+           const match = d.address.match(/(.+?)(?:,\s*|\s+)(\d{4})\s+(.+)/);
+           if (match) {
+               finalAddress = match[1].trim();
+               finalZipCity = `${match[2]} ${match[3].trim()}`;
+           }
+        }
+
         const payload = {
           serviceName, formType: service, locale,
           firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
           name: d.nameFirstName?.split(' ')[0] || '',
           emailAddress: d.emailAddress || '',
           telephone: d.telephone || '',
-          streetAndNumber: d.streetNo || '',
-          postalCodeAndCity: d.zipCity || '',
+          streetAndNumber: finalAddress,
+          postalCodeAndCity: finalZipCity,
           ...d
         }
 
