@@ -2258,7 +2258,15 @@
           "public": "Public"
         },
         "area": "Surface (m²)",
-        "floors": "Étage",
+        "floors": {
+          "parquet": "Parquet",
+          "laminate": "Laminate",
+          "tiles": "Tiles",
+          "stone": "Stone",
+          "carpet": "Carpet",
+          "concrete": "Concrete",
+          "epoxy": "Epoxy"
+        },
         "constructionPhase": "Phase de construction / Type",
         "phases": {
           "rough": "Rough",
@@ -2503,7 +2511,13 @@
           "custom": "Individuel"
         },
         "serviceTimes": "Heures de service",
-        "times": "Times",
+        "times": {
+          "earlyMorning": "Early Morning",
+          "morning": "Morning",
+          "afternoon": "Afternoon",
+          "evening": "Evening",
+          "night": "Night"
+        },
         "additionalServices": "Additional Services",
         "additionalOptions": {
           "greaseFilter": "Nettoyage filtre à graisse",

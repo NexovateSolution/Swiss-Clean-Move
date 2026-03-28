@@ -2008,7 +2008,15 @@
           "public": "Public"
         },
         "area": "Area (m²)",
-        "floors": "Floors",
+        "floors": {
+          "parquet": "Parquet",
+          "laminate": "Laminate",
+          "tiles": "Tiles",
+          "stone": "Stone",
+          "carpet": "Carpet",
+          "concrete": "Concrete",
+          "epoxy": "Epoxy"
+        },
         "constructionPhase": "Construction Phase / Cleaning Type",
         "phases": {
           "rough": "Rough",
@@ -2253,7 +2261,13 @@
           "custom": "Custom"
         },
         "serviceTimes": "Service Times",
-        "times": "Times",
+        "times": {
+          "earlyMorning": "Early Morning",
+          "morning": "Morning",
+          "afternoon": "Afternoon",
+          "evening": "Evening",
+          "night": "Night"
+        },
         "additionalServices": "Additional Services",
         "additionalOptions": {
           "greaseFilter": "Grease filter cleaning",
