@@ -32,10 +32,10 @@ function getStepCount(s: ServiceSlug): number {
   return 3
 }
 
-export default function ServiceFormWizard({ service, serviceName, locale }: { service: ServiceSlug; serviceName: string; locale: string }) {
+export default function ServiceFormWizard({ service, serviceName, locale, isAdmin }: { service: ServiceSlug; serviceName: string; locale: string; isAdmin?: boolean }) {
   const t = useTranslations('serviceForm')
   const router = useRouter()
-  const totalSteps = useMemo(() => getStepCount(service), [service])
+  const totalSteps = useMemo(() => getStepCount(service) + (isAdmin ? 1 : 0), [service, isAdmin])
   const [step, setStep] = useState(0)
   const [busy, setBusy] = useState(false)
   const [d, setD] = useState<Record<string, any>>({})
@@ -57,7 +57,12 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
   const tl = (key: string) => { try { return t(key) } catch { return key } }
 
   const validate = (): boolean => {
-    if (isLast) {
+    if (isAdmin && step === totalSteps - 1) {
+      if (!d.totalPrice || !d.fromDate || !d.untilDate) {
+        toast.error('Admin details missing (Price, Dates)');
+        return false;
+      }
+    } else if (isAdmin ? (step === totalSteps - 2) : isLast) {
       if (!d.nameFirstName || !d.emailAddress || !d.telephone) {
         toast.error(tl('wizard.validation.required'));
         return false;
@@ -107,37 +112,95 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
     if (!validate()) return
     setBusy(true)
     try {
-      const payload = {
-        serviceName, formType: service, locale,
-        firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
-        name: d.nameFirstName?.split(' ')[0] || '',
-        emailAddress: d.emailAddress || '',
-        telephone: d.telephone || '',
-        streetAndNumber: d.streetNo || '',
-        postalCodeAndCity: d.zipCity || '',
-        ...d
+      if (isAdmin) {
+        const payload = {
+            firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
+            lastName: d.nameFirstName?.split(' ')[0] || '',
+            email: d.emailAddress || '',
+            phone: d.telephone || '',
+            address: d.streetNo || '',
+            postalCode: d.zipCity?.split(' ')[0] || '',
+            location: d.zipCity?.split(' ').slice(1).join(' ') || d.zipCity || '',
+            squareMeters: d.livingSpace || d.area || 0,
+            serviceType: serviceName,
+            buildingType: d.objectType || d.currentLiving || 'Other',
+            fromDate: d.fromDate,
+            untilDate: d.untilDate,
+            totalPrice: d.totalPrice,
+            paidAmount: d.paidAmount || 0,
+            remarks1: Object.entries(d).filter(([k]) => !['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity'].includes(k)).map(([k,v]) => `${k}: ${Array.isArray(v) ? v.join(', ') : v}`).join(' | '),
+            data: d
+        }
+        
+        const res = await fetch('/api/admin/clients', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        if (!res.ok) throw new Error('fail')
+        toast.success('Project stored successfully')
+        router.push('/admin/clients')
+      } else {
+        const payload = {
+          serviceName, formType: service, locale,
+          firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
+          name: d.nameFirstName?.split(' ')[0] || '',
+          emailAddress: d.emailAddress || '',
+          telephone: d.telephone || '',
+          streetAndNumber: d.streetNo || '',
+          postalCodeAndCity: d.zipCity || '',
+          ...d
+        }
+
+        const formData = new FormData()
+        formData.append('data', JSON.stringify(payload))
+        formData.append('locale', locale)
+        images.forEach((file) => {
+          formData.append('images', file)
+        })
+
+        const res = await fetch('/api/service-forms', {
+          method: 'POST',
+          body: formData
+        })
+        if (!res.ok) throw new Error('fail')
+        toast.success(tl('toasts.submitted'))
+        router.push(`/${locale}`)
       }
-
-      const formData = new FormData()
-      formData.append('data', JSON.stringify(payload))
-      formData.append('locale', locale)
-      images.forEach((file) => {
-        formData.append('images', file)
-      })
-
-      const res = await fetch('/api/service-forms', {
-        method: 'POST',
-        body: formData
-      })
-      if (!res.ok) throw new Error('fail')
-      toast.success(tl('toasts.submitted'))
-      router.push(`/${locale}`)
     } catch { toast.error(tl('toasts.submitFailedRetry')) } finally { setBusy(false) }
   }
 
   const formProps: FormStepProps = { step, d, set, tl, v, arrHas, toggleArr, ImageUpload }
 
   const renderCurrentStep = () => {
+    if (isAdmin && step === totalSteps - 1) {
+      return (
+        <div>
+          <h3 className="text-xl font-bold text-[#003366] mb-6">Admin Dashboard: Finalizing Project Setup</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+             <div className="mb-2">
+                <label className="block text-sm font-bold text-[#003366] mb-2">Total Price (CHF) *</label>
+                <input type="number" step="0.01" value={v('totalPrice')} onChange={e => set('totalPrice', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" placeholder="0.00" required />
+             </div>
+             <div className="mb-2">
+                <label className="block text-sm font-bold text-[#003366] mb-2">Paid Amount (CHF)</label>
+                <input type="number" step="0.01" value={v('paidAmount')} onChange={e => set('paidAmount', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" placeholder="0.00" />
+             </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+             <div className="mb-2">
+                <label className="block text-sm font-bold text-[#003366] mb-2">Project Execution Start *</label>
+                <input type="datetime-local" value={v('fromDate')} onChange={e => set('fromDate', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" required />
+             </div>
+             <div className="mb-2">
+                <label className="block text-sm font-bold text-[#003366] mb-2">Project Execution End *</label>
+                <input type="datetime-local" value={v('untilDate')} onChange={e => set('untilDate', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" required />
+             </div>
+          </div>
+        </div>
+      )
+    }
+
     switch (service) {
       case 'property-maintenance': return <PropertyMaintenanceForm {...formProps} />
       case 'final-cleaning': return <FinalCleaningForm {...formProps} />

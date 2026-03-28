@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
 import { useRouter, usePathname } from 'next/navigation'
@@ -85,13 +85,13 @@ export default function NewProjectPage() {
             </div>
           </div>
         ) : (
-          /* ServiceFormWizard — same form the client uses */
+          /* ServiceFormWizard ΓÇö same form the client uses */
           <div>
             <button
               onClick={handleClear}
               className="mb-4 text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium flex items-center gap-1"
             >
-              ← {t('changeService')}
+              ΓåÉ {t('changeService')}
             </button>
             <ServiceFormWizard
               service={selected}
@@ -101,7 +101,6 @@ export default function NewProjectPage() {
                   : selected
               }
               locale={locale}
-              isAdmin={true}
             />
           </div>
         )}

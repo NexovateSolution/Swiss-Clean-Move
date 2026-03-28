@@ -111,7 +111,8 @@ export async function POST(request: NextRequest) {
       remarks1: rawData.remarks1,
       remarks2: rawData.remarks2,
       remarks3: rawData.remarks3,
-      deploymentFrequency: rawData.deploymentFrequency
+      deploymentFrequency: rawData.deploymentFrequency,
+      data: rawData.data ? rawData.data : undefined
     }
 
     const client = await prisma.client.create({

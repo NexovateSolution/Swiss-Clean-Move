@@ -45,6 +45,7 @@ model Client {
   remarks2            String?
   remarks3            String?
   deploymentFrequency String?
+  data                Json?
   invoices            Invoice[]
   payments            Payment[]
   photos              Photo[]
