@@ -16,3 +16,5 @@ export default function AdminRootLayout({
     </NextIntlClientProvider>
   )
 }
+
+// force refresh

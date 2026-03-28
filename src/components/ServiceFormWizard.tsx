@@ -188,3 +188,5 @@ export default function ServiceFormWizard({ service, serviceName, locale }: { se
     </div>
   )
 }
+
+// force refresh wizard
