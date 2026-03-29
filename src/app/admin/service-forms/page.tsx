@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import {
   FileText,
   Download,
@@ -22,6 +22,7 @@ import toast, { Toaster } from 'react-hot-toast'
 import AdminLayout from '@/components/admin/AdminLayout'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { exportServiceFormToPDF } from '@/utils/pdfExport'
+import { translateValue } from '@/utils/formTranslations'
 
 interface ServiceFormSubmission {
   id: string
@@ -58,6 +59,7 @@ const SKIP_KEYS = new Set([
 
 export default function ServiceFormsPage() {
   const t = useTranslations('admin.serviceForms')
+  const locale = useLocale()
   const [submissions, setSubmissions] = useState<ServiceFormSubmission[]>([])
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState('')
@@ -104,7 +106,7 @@ export default function ServiceFormsPage() {
 
   const handleDownloadPDF = (submission: ServiceFormSubmission) => {
     try {
-      exportServiceFormToPDF(submission)
+      exportServiceFormToPDF(submission, locale)
       toast.success(t('toast.pdfDownloaded'))
     } catch (error) {
       console.error('Error generating PDF:', error)
@@ -435,31 +437,31 @@ export default function ServiceFormsPage() {
                                 <div className="flex flex-wrap gap-1.5">
                                   {val.map((item: any, i: number) => (
                                     <span key={i} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                                      ✓ {String(item)}
+                                      ✓ {translateValue(typeof item === 'string' ? prettifyKey(item) : String(item), locale)}
                                     </span>
                                   ))}
                                 </div>
                               )
                             } else if (typeof val === 'boolean') {
                               display = val ? (
-                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">✓ Yes</span>
+                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">✓ {t('common.yes')}</span>
                               ) : (
-                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">✗ No</span>
+                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">✗ {t('common.no')}</span>
                               )
                             } else if (val === 'And' || val === 'yes' || val === 'Yes') {
-                              display = <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">✓ Yes</span>
+                              display = <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">✓ {t('common.yes')}</span>
                             } else if (val === 'no' || val === 'No') {
-                              display = <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">✗ No</span>
+                              display = <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">✗ {t('common.no')}</span>
                             } else if (typeof val === 'object') {
                               display = <pre className="text-sm text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-700 rounded p-2 overflow-x-auto">{JSON.stringify(val, null, 2)}</pre>
                             } else {
-                              display = <span className="text-gray-900 dark:text-white font-medium break-words whitespace-pre-wrap">{String(val)}</span>
+                              display = <span className="text-gray-900 dark:text-white font-medium break-words whitespace-pre-wrap">{translateValue(typeof val === 'string' ? prettifyKey(val) : String(val), locale)}</span>
                             }
 
                             return (
                               <div key={key} className="flex flex-col sm:flex-row items-start px-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-750">
                                 <dt className="sm:w-1/3 min-w-[200px] flex-shrink-0 text-sm font-semibold text-gray-500 dark:text-gray-400 capitalize pt-0.5 mb-1 sm:mb-0">
-                                  {prettifyKey(key)}
+                                  {translateValue(prettifyKey(key), locale)}
                                 </dt>
                                 <dd className="flex-1 w-full sm:ml-4">
                                   {display}

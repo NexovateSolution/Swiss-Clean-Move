@@ -1,5 +1,6 @@
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import { translateValue } from './formTranslations';
 
 // Extend jsPDF type
 declare module 'jspdf' {
@@ -285,7 +286,7 @@ export async function exportQuoteToPDF(quote: QuoteSubmission) {
     doc.save(`quote-${quote.id}.pdf`);
 }
 
-export async function exportServiceFormToPDF(rawSubmission: any) {
+export async function exportServiceFormToPDF(rawSubmission: any, locale: string = 'en') {
     const submission = rawSubmission.data || rawSubmission;
 
     const currentDate = new Date().toLocaleString('en-CH', {
@@ -320,7 +321,7 @@ export async function exportServiceFormToPDF(rawSubmission: any) {
         let display = '';
         if (Array.isArray(val)) {
             if (val.length === 0) return;
-            display = val.map(item => `<span class="badge badge-blue">✓ ${String(item)}</span>`).join(' ');
+            display = val.map(item => `<span class="badge badge-blue">✓ ${translateValue(typeof item === 'string' ? prettifyKey(item) : String(item), locale)}</span>`).join(' ');
         } else if (typeof val === 'boolean') {
             display = val ? `<span class="badge badge-green">✓ Yes</span>` : `<span class="badge badge-gray">✗ No</span>`;
         } else if (val === 'And' || val === 'yes' || val === 'Yes' || val === true) {
@@ -330,12 +331,12 @@ export async function exportServiceFormToPDF(rawSubmission: any) {
         } else if (typeof val === 'object') {
             display = `<pre class="remark-box">${JSON.stringify(val, null, 2)}</pre>`;
         } else {
-            display = String(val);
+            display = translateValue(typeof val === 'string' ? prettifyKey(val) : String(val), locale);
         }
 
         dynamicRows += `
             <div class="data-row">
-                <div class="data-label">${prettifyKey(key)}</div>
+                <div class="data-label">${translateValue(prettifyKey(key), locale)}</div>
                 <div class="data-value">${display}</div>
             </div>`;
     });

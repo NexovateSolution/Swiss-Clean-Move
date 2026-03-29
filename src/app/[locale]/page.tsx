@@ -211,15 +211,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               <div className="flex flex-col items-start space-y-2">
                 <div className="flex items-center space-x-2 text-swiss-text">
-                  <MapPin className="w-5 h-5" />
-                  <span className="font-semibold">26</span>
+                  <span className="font-semibold">{t('home.hero.trust.all')}</span>
                 </div>
                 <span className="text-sm text-swiss-body">{t('home.hero.trust.cantons')}</span>
               </div>
               <div className="flex flex-col items-start space-y-2">
                 <div className="flex items-center space-x-2 text-swiss-text">
                   <Users className="w-5 h-5" />
-                  <span className="font-semibold">500+</span>
+                  <span className="font-semibold">50+</span>
                 </div>
                 <span className="text-sm text-swiss-body">{t('home.hero.trust.happyClients')}</span>
               </div>
@@ -320,10 +319,6 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <div className="container-max">
           {/* Section Header */}
           <div className="text-center space-y-6 mb-20">
-            <div className="inline-flex items-center space-x-2 bg-swiss-softRed text-swiss-text rounded-full px-4 py-2 text-sm font-medium border border-swiss-border">
-              <Sparkles className="w-4 h-4 text-swiss-red" />
-              <span>Our Premium Services</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-swiss-text">
               {t('home.services.title')}
             </h2>
@@ -421,22 +416,22 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center px-6 py-8">
-              <div className="text-4xl font-bold text-swiss-text">500+</div>
+              <div className="text-4xl font-bold text-swiss-text">50+</div>
               <div className="mx-auto mt-3 h-0.5 w-10 bg-swiss-red rounded-full"></div>
               <div className="mt-4 text-swiss-body font-medium">{t('home.numbers.items.happyClients')}</div>
             </div>
             <div className="text-center px-6 py-8 md:border-l md:border-swiss-border">
-              <div className="text-4xl font-bold text-swiss-text">500+</div>
+              <div className="text-4xl font-bold text-swiss-text">50+</div>
               <div className="mx-auto mt-3 h-0.5 w-10 bg-swiss-red rounded-full"></div>
               <div className="mt-4 text-swiss-body font-medium">{t('home.numbers.items.projectsCompleted')}</div>
             </div>
             <div className="text-center px-6 py-8 md:border-l md:border-swiss-border">
-              <div className="text-4xl font-bold text-swiss-text">26</div>
+              <div className="text-4xl font-bold text-swiss-text">{t('home.hero.trust.all')}</div>
               <div className="mx-auto mt-3 h-0.5 w-10 bg-swiss-red rounded-full"></div>
               <div className="mt-4 text-swiss-body font-medium">{t('home.numbers.items.swissCantons')}</div>
             </div>
             <div className="text-center px-6 py-8 md:border-l md:border-swiss-border">
-              <div className="text-4xl font-bold text-swiss-text">10+</div>
+              <div className="text-4xl font-bold text-swiss-text">2+</div>
               <div className="mx-auto mt-3 h-0.5 w-10 bg-swiss-red rounded-full"></div>
               <div className="mt-4 text-swiss-body font-medium">{t('home.numbers.items.yearsExperience')}</div>
             </div>

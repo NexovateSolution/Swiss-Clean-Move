@@ -55,7 +55,8 @@
         "guarantee": "Deposit guarantee",
         "cantons": "Swiss cantons",
         "happyClients": "Happy clients",
-        "support": "24/7 support"
+        "support": "24/7 support",
+        "all": "All"
       },
       "qualityBadge": {
         "title": "Trusted & Certified"
@@ -2819,7 +2820,8 @@
       "title": "Upload Pictures (Optional)",
       "description": "Attach photos of your property to help us provide a more accurate quote.",
       "button": "Click to select images"
-    }
+    },
+    " ": " "
   },
   "phone": {
     "label": "Telephone number"

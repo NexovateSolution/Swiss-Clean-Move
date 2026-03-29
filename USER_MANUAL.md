@@ -30,7 +30,7 @@ The application is built upon a modern, highly scalable JavaScript web stack, en
 The Next.js App Router captures the language prefix via dynamic routing syntax: `src/app/[locale]/`. 
 - Every page rendered inside `[locale]` loads the corresponding `messages/{locale}.json` file.
 - The `useTranslations` hook extracts localized strings on the frontend.
-- **API Mapping:** Because backend API requests do not natively inherit the client's locale loop, endpoints (such as `route.ts` for form submission) receive the `locale` from internal payloads. The server then reads the JSON translation file using `fs.readFileSync` and dynamically builds a translation mapper. This guarantees that backend-generated emails and PDFs are printed in the customer's native language.
+- **API Mapping:** Because backend API requests do not natively inherit the client's locale loop, endpoints (such as form processing and invoice generation) use a centralized, type-safe translation module located at `src/lib/translations.ts`. This module maintains a comprehensive trilingual dictionary and exports a `createTranslator` utility. This guarantees that backend-generated emails and PDFs are strictly printed in the customer's native language without relying on disk-read operations.
 
 ### 3.2 The Service Form Wizard (10 Modular Forms)
 In order to support highly specific quotation pipelines, the generic quote form is split into 10 unique paths, managed by `src/components/ServiceFormWizard.tsx`.
@@ -63,7 +63,7 @@ To run the server in development mode, execute the following commands in the ter
 3. `npm run dev` - Boots the Next.js hot-reloading server, accessible at `http://localhost:3000`.
 
 ### Making Changes
-- **Adding a New Translation:** If you add a new field to any form, be sure to add its English, German, and French translation key into `messages/en.json`, `messages/de.json`, and `messages/fr.json` inside the `serviceForm.wizard` JSON block. If you forget to do this, the application will fail over to displaying the raw string literal.
+- **Adding a New Translation:** For frontend components, add your translation keys into `messages/en.json`, `messages/de.json`, and `messages/fr.json`. For backend forms, emails, and PDFs, you MUST also add the field label and value mappings into the shared dictionary objects located directly in `src/lib/translations.ts`. If you forget to update the shared module, backend operations will fallback to English or raw camelCase formatting.
 - **Database Schema Sync:** If you introduce new core meta-fields requiring native column backing in the Database, update `prisma/schema.prisma` first, then run `npx prisma db push` to synchronize your database without requiring complex migration histories. 
 
 ---

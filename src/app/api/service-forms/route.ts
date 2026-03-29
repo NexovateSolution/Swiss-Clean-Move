@@ -1,36 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { writeFile, mkdir } from 'fs/promises'
 import { join } from 'path'
-import { existsSync, readFileSync } from 'fs'
+import { existsSync } from 'fs'
 import { jsPDF } from 'jspdf'
 import { sendEmailNotification } from '@/lib/email'
 import { prisma } from '../../../../lib/db'
+import { createTranslator } from '@/lib/translations'
 
-function getTranslationDict(locale: string = 'en') {
-    try {
-        const fileContent = readFileSync(join(process.cwd(), 'messages', `${locale}.json`), 'utf-8');
-        const msgs = JSON.parse(fileContent);
-        
-        const flatten = (obj: any): Record<string, string> => {
-            let res: Record<string, string> = {};
-            for(let k in obj) {
-                if (typeof obj[k] === 'object' && obj[k] !== null) {
-                    Object.assign(res, flatten(obj[k]));
-                } else if (typeof obj[k] === 'string') {
-                    // strip trailing : * 
-                    res[k] = obj[k].replace(/[:*]/g, '').trim();
-                }
-            }
-            return res;
-        }
-        return flatten(msgs?.serviceForm?.wizard || {});
-    } catch (e) { 
-        console.warn('Failed to load translations for email:', e);
-        return {}; 
-    }
-}
-
-function generatePDFContent(data: any, dict: Record<string, string>, locale: string): string {
+function generatePDFContent(data: any, translator: ReturnType<typeof createTranslator>, locale: string): string {
+    const { tKey, tVal } = translator;
     const currentDate = new Date().toLocaleString(locale === 'de' ? 'de-CH' : locale === 'fr' ? 'fr-CH' : 'en-CH', {
         timeZone: 'Europe/Zurich',
         year: 'numeric',
@@ -46,19 +24,15 @@ function generatePDFContent(data: any, dict: Record<string, string>, locale: str
     ])
 
     function prettifyKey(key: string): string {
-        return dict[key] || key
-            .replace(/([A-Z])/g, ' $1')
-            .replace(/[_-]/g, ' ')
-            .replace(/\b\w/g, l => l.toUpperCase())
-            .trim().toUpperCase()
+        return tKey(key).toUpperCase();
     }
 
     const allKeys = Object.keys(data).filter(
         k => !SKIP_KEYS.has(k) && data[k] !== null && data[k] !== undefined && data[k] !== ''
     )
 
-    const labelYes = dict['yes'] || 'Yes';
-    const labelNo = dict['no'] || 'No';
+    const labelYes = tVal('yes') || 'Yes';
+    const labelNo = tVal('no') || 'No';
 
     let dynamicRows = '';
     allKeys.forEach(key => {
@@ -66,7 +40,7 @@ function generatePDFContent(data: any, dict: Record<string, string>, locale: str
         let display = '';
         if (Array.isArray(val)) {
             if (val.length === 0) return;
-            display = val.map(item => `<span class="badge badge-blue">✓ ${dict[String(item)] || String(item)}</span>`).join(' ');
+            display = val.map(item => `<span class="badge badge-blue">✓ ${tVal(String(item))}</span>`).join(' ');
         } else if (typeof val === 'boolean') {
             display = val ? `<span class="badge badge-green">✓ ${labelYes}</span>` : `<span class="badge badge-gray">✗ ${labelNo}</span>`;
         } else if (['yes', 'true'].includes(String(val).toLowerCase())) {
@@ -77,7 +51,7 @@ function generatePDFContent(data: any, dict: Record<string, string>, locale: str
             display = `<pre class="remark-box">${JSON.stringify(val, null, 2)}</pre>`;
         } else {
             // Check if string matches a dict key without mapping numbers natively
-            display = (isNaN(Number(val)) && dict[String(val)]) ? dict[String(val)] : String(val);
+            display = isNaN(Number(val)) ? tVal(String(val)) : String(val);
         }
 
         dynamicRows += `
@@ -87,7 +61,7 @@ function generatePDFContent(data: any, dict: Record<string, string>, locale: str
             </div>`;
     });
 
-    const submitLabel = dict['formSubmitted'] || 'Form submitted on';
+    const submitLabel = tVal('formSubmitted') === 'formSubmitted' ? 'Form submitted on' : tVal('formSubmitted');
 
     return `
 <!DOCTYPE html>
@@ -128,7 +102,7 @@ function generatePDFContent(data: any, dict: Record<string, string>, locale: str
         <div class="header">
             <img src="https://swisscleanmove.ch/images/logo.png" alt="SwissCleanMove" style="height:80px;width:auto;margin-bottom:15px;" onerror="this.style.display='none'">
             <h1 class="service-title">${data.serviceName}</h1>
-            <div class="service-subtitle">${dict[(data.formType || 'service')] || (data.formType || 'service').charAt(0).toUpperCase() + (data.formType || 'service').slice(1)}</div>
+            <div class="service-subtitle">${tKey(data.formType || 'service')}</div>
         </div>
         
         <div class="section">
@@ -164,7 +138,8 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
         }
         
-        const dict = getTranslationDict(locale);
+        const translator = createTranslator(locale);
+        const { tKey, tVal } = translator;
 
         // Process images
         const images = formData.getAll('images') as File[]
@@ -221,7 +196,7 @@ export async function POST(request: NextRequest) {
             doc.setFontSize(16);
             doc.text(`SwissCleanMove - ${data.serviceName}`, 10, 20);
             doc.setFontSize(12);
-            doc.text(`${dict[(data.formType || 'service')] || (data.formType || 'service').toUpperCase()} Request`, 10, 30);
+            doc.text(`${tKey(data.formType || 'service').toUpperCase()} Request`, 10, 30);
             
             let y = 45;
             const skips = new Set(['serviceName', 'formType', 'status', 'pdfPath', 'submissionDate', 'createdAt', 'updatedAt', 'data', 'id', 'locale']);
@@ -232,25 +207,25 @@ export async function POST(request: NextRequest) {
                 let display = String(data[key]);
                 if (typeof data[key] === 'object') {
                     if (Array.isArray(data[key])) {
-                        display = data[key].map((v:any) => dict[String(v)] || String(v)).join(', ');
+                        display = data[key].map((v:any) => tVal(String(v))).join(', ');
                     } else {
                         display = JSON.stringify(data[key]);
                     }
                 }
                 else if (typeof data[key] === 'boolean') {
-                    display = data[key] ? (dict['yes'] || 'Yes') : (dict['no'] || 'No');
+                    display = data[key] ? tVal('yes') : tVal('no');
                 }
                 else if (['yes', 'true'].includes(String(data[key]).toLowerCase())) {
-                    display = dict['yes'] || 'Yes';
+                    display = tVal('yes');
                 }
                 else if (['no', 'false'].includes(String(data[key]).toLowerCase())) {
-                    display = dict['no'] || 'No';
+                    display = tVal('no');
                 }
                 else {
-                    display = (isNaN(Number(data[key])) && dict[String(data[key])]) ? dict[String(data[key])] : String(data[key]);
+                    display = isNaN(Number(data[key])) ? tVal(String(data[key])) : String(data[key]);
                 }
                 
-                const label = dict[key] || key.replace(/([A-Z])/g, ' $1').replace(/[_-]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).trim().toUpperCase();
+                const label = tKey(key).toUpperCase();
                 
                 doc.text(`${label}: ${display.substring(0, 70)}`, 10, y);
                 y += 10;
@@ -263,7 +238,7 @@ export async function POST(request: NextRequest) {
 
         try {
             // Use the rich "PDF" HTML template for both the email body and as an attachment!
-            const emailHtml = generatePDFContent(data, dict, locale);
+            const emailHtml = generatePDFContent(data, translator, locale);
             
             if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
                 emailDebug = `Missing credentials.`;
@@ -303,7 +278,7 @@ export async function POST(request: NextRequest) {
                 if (!existsSync(submissionsDir)) await mkdir(submissionsDir, { recursive: true })
                 const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
                 const filename = `${data.serviceName.replace(/\s+/g, '-')}-${data.name}-${timestamp}`
-                const pdfContent = generatePDFContent(data, dict, locale)
+                const pdfContent = generatePDFContent(data, translator, locale)
                 const pdfPath = join(submissionsDir, `${filename}.html`)
                 await writeFile(pdfPath, pdfContent, 'utf8')
                 const jsonPath = join(submissionsDir, `${filename}.json`)
