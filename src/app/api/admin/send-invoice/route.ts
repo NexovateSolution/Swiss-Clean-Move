@@ -371,6 +371,14 @@ function generateInvoiceHTML(client: any, language: string): string {
     const translatedService = client.serviceType ? (serviceMap[client.serviceType]?.[language as string] || client.serviceType) : '';
     const translatedFloor = client.floor ? (floorMap[client.floor]?.[language as string] || client.floor) : '';
 
+    if (translatedService) {
+        t.title = {
+            de: `${translatedService} Auftragsbestätigung`,
+            fr: `Confirmation de commande de ${translatedService.toLowerCase()}`,
+            en: `${translatedService} Order Confirmation`
+        }[language as 'en' | 'de' | 'fr'] || t.title;
+    }
+
     const paymentSlip = {
         account: 'CH86 0900 0000 1636 3866 5',
         payableTo: ['SwissCleanMove Gebrekristos', 'Orpundstrasse 31', 'CH-2504 Biel/Bienne'],
@@ -600,10 +608,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                     <tr>
                         <td><strong>${translatedService}</strong></td>
                         <td>
-                            ${client.buildingType || 'N/A'} • ${client.squareMeters || 0}m²<br>
-                            ${client.numberOfRooms ? `${client.numberOfRooms} ${t.room}<br>` : ''}
-                            ${client.floor ? `${t.floorLabel}: ${translatedFloor}<br>` : ''}
-                            ${client.elevator === 'yes' ? t.withElevator : t.withoutElevator}<br>
+                            ${formattedRemarks.length > 0 ? `${formattedRemarks.join('<br>')}<br><br>` : ''}
                             ${t.guarantee}
                         </td>
                         <td><strong>${client.totalPrice || 0} CHF</strong></td>
@@ -656,10 +661,9 @@ function generateInvoiceHTML(client: any, language: string): string {
             <strong>${t.cleaningCompleted}:</strong> ${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
         </div>
 
-        ${(formattedRemarks.length > 0) ? `
+        ${(client.remarks2 || client.remarks3) ? `
         <div class="remarks-section">
             <h4 style="margin-bottom: 5px; color: #333;">${t.remarks}</h4>
-            ${formattedRemarks.map(r => `<p style="margin: 2px 0;">• ${r}</p>`).join('\n')}
             ${client.remarks2 ? `<p style="margin: 2px 0;">• ${client.remarks2}</p>` : ''}
             ${client.remarks3 ? `<p style="margin: 2px 0;">• ${client.remarks3}</p>` : ''}
         </div>
