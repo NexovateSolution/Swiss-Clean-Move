@@ -35,13 +35,16 @@ function getStepCount(s: ServiceSlug): number {
 export default function ServiceFormWizard({ service, serviceName, locale, isAdmin }: { service: ServiceSlug; serviceName: string; locale: string; isAdmin?: boolean }) {
   const t = useTranslations('serviceForm')
   const router = useRouter()
-  const totalSteps = useMemo(() => getStepCount(service) + (isAdmin ? 1 : 0), [service, isAdmin])
   const [step, setStep] = useState(0)
   const [busy, setBusy] = useState(false)
   const [d, setD] = useState<Record<string, any>>({})
   const [images, setImages] = useState<File[]>([])
   const fileInputRef = useRef<HTMLInputElement>(null)
-
+  
+  const isCombo = d.desiredService === 'moving-and-cleaning';
+  const comboExtraSteps = isCombo ? 3 : 0;
+  const totalSteps = useMemo(() => getStepCount(service) + (isAdmin ? 1 : 0) + comboExtraSteps, [service, isAdmin, comboExtraSteps])
+  
   const isFirst = step === 0
   const isLast = step === totalSteps - 1
 
@@ -194,7 +197,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
     } catch { toast.error(tl('toasts.submitFailedRetry')) } finally { setBusy(false) }
   }
 
-  const formProps: FormStepProps = { step, d, set, tl, v, arrHas, toggleArr, ImageUpload }
+  const formProps: FormStepProps = { step, d, set, tl, v, arrHas, toggleArr, ImageUpload, service }
 
   const renderCurrentStep = () => {
     if (isAdmin && step === totalSteps - 1) {
@@ -225,24 +228,43 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
       )
     }
 
+    const baseSteps = getStepCount(service);
+    
+    // Determine which step and form to render
+    let actualFormProps = { ...formProps };
+    
+    if (isCombo) {
+      if (step < baseSteps - 1) {
+         // Clean steps
+         actualFormProps.step = step;
+      } else if (step >= baseSteps - 1 && step < baseSteps - 1 + 3) {
+         // Relocation step 0, 1, 2
+         actualFormProps.step = step - (baseSteps - 1);
+         return <RelocationForm {...actualFormProps} />;
+      } else if (step === baseSteps - 1 + 3) {
+         // The contact step (last step of base form)
+         actualFormProps.step = baseSteps - 1;
+      }
+    }
+
     switch (service) {
-      case 'property-maintenance': return <PropertyMaintenanceForm {...formProps} />
-      case 'final-cleaning': return <FinalCleaningForm {...formProps} />
+      case 'property-maintenance': return <PropertyMaintenanceForm {...actualFormProps} />
+      case 'final-cleaning': return <FinalCleaningForm {...actualFormProps} />
       case 'house-cleaning': 
       case 'apartment-cleaning': 
       case 'stairwell-cleaning': 
       case 'office-cleaning': 
       case 'window-cleaning': 
       case 'medical-cleaning': 
-        return <MaintenanceCleaningForm {...formProps} />
-      case 'disposal': return <DisposalForm {...formProps} />
-      case 'construction-cleaning': return <ConstructionCleaningForm {...formProps} />
-      case 'gastronomy-cleaning': return <GastronomyCleaningForm {...formProps} />
-      case 'relocation': return <RelocationForm {...formProps} />
-      case 'household-helping': return <HouseholdHelpingForm {...formProps} />
-      case 'combo-service': return <ComboServiceForm {...formProps} />
-      case 'special-cleaning': return <SpecialCleaningForm {...formProps} />
-      default: return <FinalCleaningForm {...formProps} />
+        return <MaintenanceCleaningForm {...actualFormProps} />
+      case 'disposal': return <DisposalForm {...actualFormProps} />
+      case 'construction-cleaning': return <ConstructionCleaningForm {...actualFormProps} />
+      case 'gastronomy-cleaning': return <GastronomyCleaningForm {...actualFormProps} />
+      case 'relocation': return <RelocationForm {...actualFormProps} />
+      case 'household-helping': return <HouseholdHelpingForm {...actualFormProps} />
+      case 'combo-service': return <ComboServiceForm {...actualFormProps} />
+      case 'special-cleaning': return <SpecialCleaningForm {...actualFormProps} />
+      default: return <FinalCleaningForm {...actualFormProps} />
     }
   }
 

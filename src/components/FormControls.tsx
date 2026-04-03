@@ -90,6 +90,7 @@ export interface FormStepProps {
   arrHas: (key: string, val: string) => boolean;
   toggleArr: (key: string, val: string) => void;
   ImageUpload: () => JSX.Element;
+  service?: string;
 }
 
 export const getFloorOptions = (t: any) => [

@@ -431,7 +431,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <div className="mt-4 text-swiss-body font-medium">{t('home.numbers.items.swissCantons')}</div>
             </div>
             <div className="text-center px-6 py-8 md:border-l md:border-swiss-border">
-              <div className="text-4xl font-bold text-swiss-text">2+</div>
+              <div className="text-4xl font-bold text-swiss-text">5+</div>
               <div className="mx-auto mt-3 h-0.5 w-10 bg-swiss-red rounded-full"></div>
               <div className="mt-4 text-swiss-body font-medium">{t('home.numbers.items.yearsExperience')}</div>
             </div>

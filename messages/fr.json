@@ -46,7 +46,7 @@
         "cantons": "Cantons suisses",
         "happyClients": "Clients satisfaits",
         "support": "Support 24/7",
-        "all": "Tous"
+        "all": "Plusieurs"
       },
       "qualityBadge": {
         "title": "Fiable & certifié"
@@ -68,7 +68,7 @@
         "description": "Nettoyage professionnel d'appartements incluant nettoyage final avec garantie de reprise"
       },
       "stairwellCleaning": {
-        "title": "Nettoyage de cage d'escalier",
+        "title": "Nettoyage des installations",
         "description": "Entretien régulier et nettoyage approfondi des cages d'escalier et espaces communs"
       },
       "officeCleaning": {
@@ -108,7 +108,7 @@
         "description": "Services complets de déménagement avec équipe expérimentée"
       },
       "relocation": {
-        "title": "Déménagement",
+        "title": "Transport",
         "description": "Services complets de déménagement avec équipe expérimentée"
       },
       "disposal": {
@@ -209,8 +209,8 @@
         "selectService": "Choisir un service de nettoyage"
       },
       "moving": {
-        "title": "Déménagement & Relocalisation",
-        "description": "Solutions complètes de déménagement",
+        "title": "Déménagement & Transport",
+        "description": "Solutions complètes de déménagement et transport",
         "selectService": "Choisir un service de déménagement"
       },
       "disposal": {
@@ -1903,7 +1903,12 @@
           "lightingChecks": "Contrôle d'éclairage",
           "wasteHandling": "Gestion des déchets",
           "containerCleaning": "Nettoyage des conteneurs",
-          "disposalRecycling": "Élimination & Recyclage"
+          "disposalRecycling": "Élimination & Recyclage",
+          "regInspection": "Tournées d'inspection régulières",
+          "techMonitoring": "Surveillance technique",
+          "minorRepairsBase": "Réparations mineures",
+          "faultManagement": "Gestion des pannes",
+          "keyManagement": "Gestion des clés"
         },
         "outdoorSurroundings": "Aménagement extérieur",
         "winterService": "Service d'hiver",
@@ -1964,7 +1969,8 @@
           "documents": "Documents (ex: cahier des charges)"
         },
         "notes": "Remarques",
-        "property": "Propriété"
+        "property": "Propriété",
+        "caretakingTitle": "Conciergerie"
       },
       "finalCleaning": {
         "contact": "Contact",
@@ -2031,7 +2037,9 @@
           "basement": "Sous-sol",
           "attic": "Grenier",
           "garage": "Garage",
-          "storageRoom": "Cellier"
+          "storageRoom": "Cellier",
+          "balcony": "Balcon",
+          "terrace": "Terrasse"
         },
         "windowsShading": "Fenêtres et Ombrage",
         "windowsInfo": "Infos fenêtres",
@@ -2183,7 +2191,13 @@
           "officesRooms": "Pièces",
           "windows": "Fenêtres",
           "stairwell": "Cage d'escalier",
-          "waste": "Déchets"
+          "waste": "Tout",
+          "stairwellClean": "Nettoyage de cages d'escalier",
+          "elevatorClean": "Nettoyage d'ascenseur",
+          "basementClean": "Sous-sol / Locaux utilitaires",
+          "garageClean": "Garage souterrain / Parkings",
+          "windowClean": "Nettoyage de vitres",
+          "deepClean": "Nettoyage en profondeur"
         },
         "frequency": "Fréquence",
         "frequencies": {
@@ -2238,7 +2252,8 @@
           "photos": "Photos",
           "documents": "Documents"
         },
-        "notes": "Remarques"
+        "notes": "Remarques",
+        "cleaningUpkeep": "Nettoyage & Entretien"
       },
       "constructionCleaning": {
         "contact": "Contact",
@@ -3066,6 +3081,49 @@
         "nameContact": "Nom du contact",
         "email": "E-mail",
         "phone": "Téléphone"
+      },
+      "sharedCleaning": {
+        "accessAndOrg": "Accès & Organisation",
+        "workingHours": "Heures de travail",
+        "propertyInformation": "Informations sur la propriété",
+        "propertyType": "Type de propriété",
+        "propertyLocation": "Lieu de la propriété",
+        "access": {
+          "keysAvailable": "Clés disponibles",
+          "accessSystemCode": "Système d'accès / Code",
+          "caretakerOnSite": "Concierge sur place",
+          "adminOnSite": "Administration sur place",
+          "alarmSystem": "Système d'alarme",
+          "houseRulesAvailable": "Règlement intérieur disponible",
+          "cleaningPlanAvailable": "Plan de nettoyage disponible"
+        },
+        "hours": {
+          "earlyMorning": "Tôt le matin",
+          "morning": "Matin",
+          "afternoon": "Après-midi",
+          "evening": "Soir",
+          "duringBusinessHours": "Pendant les heures de bureau",
+          "afterBusinessHours": "Après les heures de bureau",
+          "flexible": "Flexible"
+        },
+        "info": {
+          "units": "Nombre d'unités (appartements / bureaux)",
+          "floors": "Nombre d'étages",
+          "totalArea": "Superficie totale (m²)",
+          "outdoorArea": "Superficie extérieure (m²)"
+        },
+        "types": {
+          "multiFamily": "Maison multifamiliale",
+          "residentialComplex": "Complexe résidentiel",
+          "officeBuilding": "Immeuble de bureaux",
+          "commercialProperty": "Immobilier commercial",
+          "industrialProperty": "Propriété industrielle",
+          "practiceClinic": "Cabinet / Clinique",
+          "specialProperty": "Propriété spéciale"
+        },
+        "location": {
+          "streetZipCity": "Rue, NPA, Lieu*"
+        }
       }
     },
     "title": {
@@ -4392,13 +4450,16 @@
     "callNow": "Appelez Maintenant",
     "cities": {
       "zurich": "Zurich",
-      "geneva": "Genève",
       "basel": "Bâle",
       "bern": "Berne",
       "lausanne": "Lausanne",
       "winterthur": "Winterthur",
       "lucerne": "Lucerne",
-      "stgallen": "Saint-Gall"
+      "stgallen": "Saint-Gall",
+      "aargau": {
+        "name": "Aargau",
+        "description": "Services de nettoyage fiables en Argovie"
+      }
     },
     "regionData": {
       "zurich": {
@@ -4435,18 +4496,6 @@
           "Biel/Bienne",
           "Burgdorf",
           "Langenthal"
-        ]
-      },
-      "geneva": {
-        "name": "Genève",
-        "description": "Services premium dans la région métropolitaine de Genève",
-        "coverage": "Canton de Genève et zones frontalières",
-        "areas": [
-          "Ville de Genève",
-          "Carouge",
-          "Vernier",
-          "Lancy",
-          "Meyrin"
         ]
       },
       "lausanne": {
@@ -4519,6 +4568,18 @@
           "Gossau",
           "Uzwil",
           "Altstätten"
+        ]
+      },
+      "aargau": {
+        "name": "Aargau",
+        "description": "Services professionnels dans le canton d'Argovie",
+        "coverage": "Canton d'Argovie et environs",
+        "areas": [
+          "Aarau",
+          "Baden",
+          "Wettingen",
+          "Brugg",
+          "Lenzburg"
         ]
       }
     },

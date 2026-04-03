@@ -34,7 +34,7 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
     { id: 'zurich', phone: companyPhone },
     { id: 'basel', phone: companyPhone },
     { id: 'bern', phone: companyPhone },
-    { id: 'geneva', phone: companyPhone },
+    { id: 'aargau', phone: companyPhone },
     { id: 'lausanne', phone: companyPhone },
     { id: 'lucerne', phone: companyPhone },
     { id: 'biel', phone: companyPhone },

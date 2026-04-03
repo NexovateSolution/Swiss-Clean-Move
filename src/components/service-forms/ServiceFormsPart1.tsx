@@ -57,12 +57,13 @@ export function PropertyMaintenanceForm({ step, d, set, tl, v, arrHas, toggleArr
             { k: 'grittingService', l: tl('wizard.propertyMaintenance.services.grittingService') }
           ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('winterServices', s.k)} onChange={() => toggleArr('winterServices', s.k)} /> ))}
 
-          <SH>{tl('wizard.propertyMaintenance.technicalMaintenance')}</SH>
+          <SH>{tl('wizard.propertyMaintenance.caretakingTitle')}</SH>
           {[
-            { k: 'techInspections', l: tl('wizard.propertyMaintenance.services.techInspections') },
-            { k: 'routineChecks', l: tl('wizard.propertyMaintenance.services.routineChecks') },
-            { k: 'minorRepairs', l: tl('wizard.propertyMaintenance.services.minorRepairs') },
-            { k: 'lightingChecks', l: tl('wizard.propertyMaintenance.services.lightingChecks') }
+            { k: 'regInspection', l: tl('wizard.propertyMaintenance.services.regInspection') },
+            { k: 'techMonitoring', l: tl('wizard.propertyMaintenance.services.techMonitoring') },
+            { k: 'minorRepairsBase', l: tl('wizard.propertyMaintenance.services.minorRepairsBase') },
+            { k: 'faultManagement', l: tl('wizard.propertyMaintenance.services.faultManagement') },
+            { k: 'keyManagement', l: tl('wizard.propertyMaintenance.services.keyManagement') }
           ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('techServices', s.k)} onChange={() => toggleArr('techServices', s.k)} /> ))}
           
           <SH>{tl('wizard.propertyMaintenance.wasteManagement')}</SH>
@@ -155,26 +156,29 @@ export function FinalCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, Imag
           />
           <FI label={tl('wizard.cleaning.cleaningLocation')} value={v('cleaningLocation')} onChange={v => set('cleaningLocation', v)} />
           
-          <SH>{tl('wizard.finalCleaning.property')}</SH>
-          <FI label={tl('wizard.finalCleaning.address')} value={v('address')} onChange={v => set('address', v)} required />
-          <FS label={tl('wizard.cleaning.objectType')} value={v('objectType')} onChange={v => set('objectType', v)}
+          <SH>{tl('wizard.sharedCleaning.propertyLocation')}</SH>
+          <FI label={tl('wizard.sharedCleaning.location.streetZipCity')} value={v('address')} onChange={v => set('address', v)} required />
+          
+          <SH>{tl('wizard.sharedCleaning.propertyType')}</SH>
+          <FS label={tl('wizard.sharedCleaning.propertyType')} value={v('propertyType')} onChange={v => set('propertyType', v)}
             options={[
-              { value: 'apartment', label: tl('wizard.cleaning.objectTypes.apartment') },
-              { value: 'house', label: tl('wizard.cleaning.objectTypes.house') },
-              { value: 'wg-room', label: tl('wizard.cleaning.objectTypes.wgRoom') },
-              { value: 'office', label: tl('wizard.cleaning.objectTypes.office') },
-              { value: 'storage-cellar', label: tl('wizard.cleaning.objectTypes.storageCellar') }
+              { value: 'multiFamily', label: tl('wizard.sharedCleaning.types.multiFamily') },
+              { value: 'residentialComplex', label: tl('wizard.sharedCleaning.types.residentialComplex') },
+              { value: 'officeBuilding', label: tl('wizard.sharedCleaning.types.officeBuilding') },
+              { value: 'commercialProperty', label: tl('wizard.sharedCleaning.types.commercialProperty') },
+              { value: 'industrialProperty', label: tl('wizard.sharedCleaning.types.industrialProperty') },
+              { value: 'practiceClinic', label: tl('wizard.sharedCleaning.types.practiceClinic') },
+              { value: 'specialProperty', label: tl('wizard.sharedCleaning.types.specialProperty') },
             ]}
           />
           
+          <SH>{tl('wizard.sharedCleaning.propertyInformation')}</SH>
           <div className="grid grid-cols-2 gap-4">
-             <FS label={tl('wizard.cleaning.floors')} value={v('floorsLevel')} onChange={v => set('floorsLevel', v)} options={getFloorOptions(tl)} />
-             <FS label={tl('wizard.cleaning.numberOfRooms')} value={v('numberOfRooms')} onChange={v => set('numberOfRooms', v)} options={roomNumbers} />
-          </div>
-          
-          <div className="grid grid-cols-2 gap-4">
-            <FI label={tl('wizard.finalCleaning.roomsLabel')} value={v('rooms')} onChange={v => set('rooms', v)} type="number" required />
-            <FI label={tl('wizard.finalCleaning.livingArea')} value={v('livingArea')} onChange={v => set('livingArea', v)} type="number" />
+            <FI label={tl('wizard.sharedCleaning.info.units')} value={v('units')} onChange={v => set('units', v)} type="number" />
+            <FI label={tl('wizard.sharedCleaning.info.floors')} value={v('floorsCount')} onChange={v => set('floorsCount', v)} type="number" />
+            <FI label={tl('wizard.sharedCleaning.info.totalArea')} value={v('totalArea')} onChange={v => set('totalArea', v)} type="number" />
+            <FI label={tl('wizard.sharedCleaning.info.outdoorArea')} value={v('outdoorArea')} onChange={v => set('outdoorArea', v)} type="number" />
+            <FS label={tl('wizard.cleaning.numberOfRooms')} value={v('numberOfRooms')} onChange={v => set('numberOfRooms', v)} options={roomNumbers} />
           </div>
           
           <SH>{tl('wizard.finalCleaning.layout')}</SH>
@@ -199,21 +203,11 @@ export function FinalCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, Imag
               { k: 'garage', l: tl('wizard.cleaning.areas.garage') },
               { k: 'conservatory', l: tl('wizard.cleaning.areas.conservatory') },
               { k: 'individualRooms', l: tl('wizard.cleaning.areas.individualRooms') },
+              { k: 'balcony', l: tl('wizard.finalCleaning.otherRoomItems.balcony') },
+              { k: 'terrace', l: tl('wizard.finalCleaning.otherRoomItems.terrace') },
             ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('cleaningAreas', s.k)} onChange={() => toggleArr('cleaningAreas', s.k)} /> ))}
           </div>
 
-          <SH>{tl('wizard.finalCleaning.sanitary')}</SH>
-          <div className="grid grid-cols-2 gap-2">
-            {[
-              { k: 'shower', l: tl('wizard.finalCleaning.sanitaryItems.shower') },
-              { k: 'bathtub', l: tl('wizard.finalCleaning.sanitaryItems.bathtub') },
-              { k: 'doubleSink', l: tl('wizard.finalCleaning.sanitaryItems.doubleSink') },
-              { k: 'guestWc', l: tl('wizard.finalCleaning.sanitaryItems.guestWc') },
-              { k: 'glassShowerWall', l: tl('wizard.finalCleaning.sanitaryItems.glassShowerWall') },
-              { k: 'mirrors', l: tl('wizard.finalCleaning.sanitaryItems.mirrors') },
-              { k: 'fittings', l: tl('wizard.finalCleaning.sanitaryItems.fittings') }
-            ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('sanitaryFeatures', s.k)} onChange={() => toggleArr('sanitaryFeatures', s.k)} /> ))}
-          </div>
 
           <SH>{tl('wizard.finalCleaning.kitchen')}</SH>
           <div className="grid grid-cols-2 gap-2">
@@ -292,15 +286,30 @@ export function FinalCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, Imag
             { k: 'carpet', l: tl('wizard.finalCleaning.floors.carpet') },
             { k: 'pvc', l: tl('wizard.finalCleaning.floors.pvc') },
           ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('floorTypes', s.k)} onChange={() => toggleArr('floorTypes', s.k)} /> ))}
-          
-          <SH>{tl('wizard.finalCleaning.otherRooms')}</SH>
-          {[
-            { k: 'basement', l: tl('wizard.finalCleaning.otherRoomItems.basement') },
-            { k: 'attic', l: tl('wizard.finalCleaning.otherRoomItems.attic') },
-            { k: 'garage', l: tl('wizard.finalCleaning.otherRoomItems.garage') },
-            { k: 'storageRoom', l: tl('wizard.finalCleaning.otherRoomItems.storageRoom') },
-          ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('otherRooms', s.k)} onChange={() => toggleArr('otherRooms', s.k)} /> ))}
-
+          <SH>{tl('wizard.sharedCleaning.workingHours')}</SH>
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              { k: 'earlyMorning', l: tl('wizard.sharedCleaning.hours.earlyMorning') },
+              { k: 'morning', l: tl('wizard.sharedCleaning.hours.morning') },
+              { k: 'afternoon', l: tl('wizard.sharedCleaning.hours.afternoon') },
+              { k: 'evening', l: tl('wizard.sharedCleaning.hours.evening') },
+              { k: 'duringBusinessHours', l: tl('wizard.sharedCleaning.hours.duringBusinessHours') },
+              { k: 'afterBusinessHours', l: tl('wizard.sharedCleaning.hours.afterBusinessHours') },
+              { k: 'flexible', l: tl('wizard.sharedCleaning.hours.flexible') }
+            ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('workingHours', s.k)} onChange={() => toggleArr('workingHours', s.k)} /> ))}
+          </div>
+          <SH>{tl('wizard.sharedCleaning.accessAndOrg')}</SH>
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              { k: 'keysAvailable', l: tl('wizard.sharedCleaning.access.keysAvailable') },
+              { k: 'accessSystemCode', l: tl('wizard.sharedCleaning.access.accessSystemCode') },
+              { k: 'caretakerOnSite', l: tl('wizard.sharedCleaning.access.caretakerOnSite') },
+              { k: 'adminOnSite', l: tl('wizard.sharedCleaning.access.adminOnSite') },
+              { k: 'alarmSystem', l: tl('wizard.sharedCleaning.access.alarmSystem') },
+              { k: 'houseRulesAvailable', l: tl('wizard.sharedCleaning.access.houseRulesAvailable') },
+              { k: 'cleaningPlanAvailable', l: tl('wizard.sharedCleaning.access.cleaningPlanAvailable') }
+            ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('accessAndOrg', s.k)} onChange={() => toggleArr('accessAndOrg', s.k)} /> ))}
+          </div>
           <SH>{tl('wizard.finalCleaning.condition')}</SH>
           <FS label={tl('wizard.finalCleaning.condition')} value={v('condition')} onChange={v => set('condition', v)}
             options={[
@@ -349,7 +358,7 @@ export function FinalCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, Imag
   }
 }
 
-export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUpload }: FormStepProps) {
+export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUpload, service }: FormStepProps) {
   switch (step) {
     case 0:
       return (
@@ -365,46 +374,30 @@ export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr
           />
           <FI label={tl('wizard.cleaning.cleaningLocation')} value={v('cleaningLocation')} onChange={v => set('cleaningLocation', v)} />
           
-          <SH>{tl('wizard.maintenanceCleaning.property')}</SH>
-          <FI label={tl('wizard.maintenanceCleaning.address')} value={v('address')} onChange={v => set('address', v)} required />
+          <SH>{tl('wizard.sharedCleaning.propertyLocation')}</SH>
+          <FI label={tl('wizard.sharedCleaning.location.streetZipCity')} value={v('address')} onChange={v => set('address', v)} required />
           
-          <FS label={tl('wizard.cleaning.objectType')} value={v('objectType')} onChange={v => set('objectType', v)}
+          <SH>{tl('wizard.sharedCleaning.propertyType')}</SH>
+          <FS label={tl('wizard.sharedCleaning.propertyType')} value={v('propertyType')} onChange={v => set('propertyType', v)}
             options={[
-              { value: 'apartment', label: tl('wizard.cleaning.objectTypes.apartment') },
-              { value: 'house', label: tl('wizard.cleaning.objectTypes.house') },
-              { value: 'wg-room', label: tl('wizard.cleaning.objectTypes.wgRoom') },
-              { value: 'office', label: tl('wizard.cleaning.objectTypes.office') },
-              { value: 'storage-cellar', label: tl('wizard.cleaning.objectTypes.storageCellar') }
+              { value: 'multiFamily', label: tl('wizard.sharedCleaning.types.multiFamily') },
+              { value: 'residentialComplex', label: tl('wizard.sharedCleaning.types.residentialComplex') },
+              { value: 'officeBuilding', label: tl('wizard.sharedCleaning.types.officeBuilding') },
+              { value: 'commercialProperty', label: tl('wizard.sharedCleaning.types.commercialProperty') },
+              { value: 'industrialProperty', label: tl('wizard.sharedCleaning.types.industrialProperty') },
+              { value: 'practiceClinic', label: tl('wizard.sharedCleaning.types.practiceClinic') },
+              { value: 'specialProperty', label: tl('wizard.sharedCleaning.types.specialProperty') },
             ]}
           />
-          <FS label={tl('wizard.maintenanceCleaning.propertyType')} value={v('propertyType')} onChange={v => set('propertyType', v)}
-            options={[
-              { value: 'apartment', label: tl('wizard.maintenanceCleaning.types.apartment') },
-              { value: 'house', label: tl('wizard.maintenanceCleaning.types.house') },
-              { value: 'office', label: tl('wizard.maintenanceCleaning.types.office') },
-              { value: 'practice', label: tl('wizard.maintenanceCleaning.types.practice') },
-              { value: 'commercial', label: tl('wizard.maintenanceCleaning.types.commercial') },
-              { value: 'stairwell', label: tl('wizard.maintenanceCleaning.types.stairwell') },
-              { value: 'retailStore', label: tl('wizard.maintenanceCleaning.types.retailStore') }
-            ]}
-          />
-          <div className="grid grid-cols-2 gap-4">
-            <FI label={tl('wizard.maintenanceCleaning.area')} value={v('area')} onChange={v => set('area', v)} type="number" required />
-            <FI label={tl('wizard.maintenanceCleaning.rooms')} value={v('rooms')} onChange={v => set('rooms', v)} type="number" />
-            <FI label={tl('wizard.maintenanceCleaning.sanitary')} value={v('sanitary')} onChange={v => set('sanitary', v)} type="number" />
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-             <FS label={tl('wizard.cleaning.floors')} value={v('floorsLevel')} onChange={v => set('floorsLevel', v)} options={getFloorOptions(tl)} />
-             <FS label={tl('wizard.cleaning.numberOfRooms')} value={v('numberOfRooms')} onChange={v => set('numberOfRooms', v)} options={roomNumbers} />
-          </div>
           
-          <FS label={tl('wizard.maintenanceCleaning.usage')} value={v('usage')} onChange={v => set('usage', v)}
-            options={[
-              { value: 'private', label: tl('wizard.maintenanceCleaning.usages.private') },
-              { value: 'commercial', label: tl('wizard.maintenanceCleaning.usages.commercial') },
-              { value: 'highTraffic', label: tl('wizard.maintenanceCleaning.usages.highTraffic') }
-            ]}
-          />
+          <SH>{tl('wizard.sharedCleaning.propertyInformation')}</SH>
+          <div className="grid grid-cols-2 gap-4">
+            <FI label={tl('wizard.sharedCleaning.info.units')} value={v('units')} onChange={v => set('units', v)} type="number" />
+            <FI label={tl('wizard.sharedCleaning.info.floors')} value={v('floorsCount')} onChange={v => set('floorsCount', v)} type="number" />
+            <FI label={tl('wizard.sharedCleaning.info.totalArea')} value={v('totalArea')} onChange={v => set('totalArea', v)} type="number" />
+            <FI label={tl('wizard.sharedCleaning.info.outdoorArea')} value={v('outdoorArea')} onChange={v => set('outdoorArea', v)} type="number" />
+            <FS label={tl('wizard.cleaning.numberOfRooms')} value={v('numberOfRooms')} onChange={v => set('numberOfRooms', v)} options={roomNumbers} />
+          </div>
         </div>
       );
     case 1:
@@ -434,12 +427,27 @@ export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr
           ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('floorTypes', s.k)} onChange={() => toggleArr('floorTypes', s.k)} /> ))}
           </div>
           
+          {service === 'stairwell-cleaning' && (
+            <>
+              <SH>{tl('wizard.maintenanceCleaning.cleaningUpkeep')}</SH>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { k: 'stairwellClean', l: tl('wizard.maintenanceCleaning.services.stairwellClean') },
+                  { k: 'elevatorClean', l: tl('wizard.maintenanceCleaning.services.elevatorClean') },
+                  { k: 'basementClean', l: tl('wizard.maintenanceCleaning.services.basementClean') },
+                  { k: 'garageClean', l: tl('wizard.maintenanceCleaning.services.garageClean') },
+                  { k: 'windowClean', l: tl('wizard.maintenanceCleaning.services.windowClean') },
+                  { k: 'deepClean', l: tl('wizard.maintenanceCleaning.services.deepClean') },
+                ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('cleaningUpkeep', s.k)} onChange={() => toggleArr('cleaningUpkeep', s.k)} /> ))}
+              </div>
+            </>
+          )}
+
           <SH>{tl('wizard.maintenanceCleaning.scopeOfServices')}</SH>
           {[
             { k: 'vacuuming', l: tl('wizard.maintenanceCleaning.services.vacuuming') },
             { k: 'wetMopping', l: tl('wizard.maintenanceCleaning.services.wetMopping') },
             { k: 'dusting', l: tl('wizard.maintenanceCleaning.services.dusting') },
-            { k: 'sanitary', l: tl('wizard.maintenanceCleaning.services.sanitary') },
             { k: 'kitchen', l: tl('wizard.maintenanceCleaning.services.kitchen') },
             { k: 'officesRooms', l: tl('wizard.maintenanceCleaning.services.officesRooms') },
             { k: 'windows', l: tl('wizard.maintenanceCleaning.services.windows') },
@@ -486,18 +494,7 @@ export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr
       return (
         <div>
           <SH>{tl('wizard.maintenanceCleaning.frequency')}</SH>
-          <FS
-             label={tl('wizard.frequency.label')}
-             value={v('deploymentFrequency')}
-             onChange={v => set('deploymentFrequency', v)}
-             options={[
-               { value: 'Unique', label: tl('wizard.frequency.options.unique') },
-               { value: 'Every other week', label: tl('wizard.frequency.options.everyOtherWeek') },
-               { value: 'Weekly', label: tl('wizard.frequency.options.weekly') },
-               { value: 'Several times a week', label: tl('wizard.frequency.options.severalTimesWeek') },
-               { value: 'Daily', label: tl('wizard.frequency.options.daily') }
-             ]}
-          />
+
           <FS label={tl('wizard.maintenanceCleaning.frequency')} value={v('frequency')} onChange={v => set('frequency', v)}
             options={[
               { value: 'daily', label: tl('wizard.maintenanceCleaning.frequencies.daily') },
@@ -509,15 +506,30 @@ export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr
             ]}
           />
           
-          <FS label={tl('wizard.maintenanceCleaning.serviceTimes')} value={v('serviceTimes')} onChange={v => set('serviceTimes', v)}
-            options={[
-              { value: 'earlyMorning', label: tl('wizard.maintenanceCleaning.times.earlyMorning') },
-              { value: 'morning', label: tl('wizard.maintenanceCleaning.times.morning') },
-              { value: 'afternoon', label: tl('wizard.maintenanceCleaning.times.afternoon') },
-              { value: 'evening', label: tl('wizard.maintenanceCleaning.times.evening') },
-              { value: 'flexible', label: tl('wizard.maintenanceCleaning.times.flexible') }
-            ]}
-          />
+          <SH>{tl('wizard.sharedCleaning.workingHours')}</SH>
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              { k: 'earlyMorning', l: tl('wizard.sharedCleaning.hours.earlyMorning') },
+              { k: 'morning', l: tl('wizard.sharedCleaning.hours.morning') },
+              { k: 'afternoon', l: tl('wizard.sharedCleaning.hours.afternoon') },
+              { k: 'evening', l: tl('wizard.sharedCleaning.hours.evening') },
+              { k: 'duringBusinessHours', l: tl('wizard.sharedCleaning.hours.duringBusinessHours') },
+              { k: 'afterBusinessHours', l: tl('wizard.sharedCleaning.hours.afterBusinessHours') },
+              { k: 'flexible', l: tl('wizard.sharedCleaning.hours.flexible') }
+            ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('workingHours', s.k)} onChange={() => toggleArr('workingHours', s.k)} /> ))}
+          </div>
+          <SH>{tl('wizard.sharedCleaning.accessAndOrg')}</SH>
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              { k: 'keysAvailable', l: tl('wizard.sharedCleaning.access.keysAvailable') },
+              { k: 'accessSystemCode', l: tl('wizard.sharedCleaning.access.accessSystemCode') },
+              { k: 'caretakerOnSite', l: tl('wizard.sharedCleaning.access.caretakerOnSite') },
+              { k: 'adminOnSite', l: tl('wizard.sharedCleaning.access.adminOnSite') },
+              { k: 'alarmSystem', l: tl('wizard.sharedCleaning.access.alarmSystem') },
+              { k: 'houseRulesAvailable', l: tl('wizard.sharedCleaning.access.houseRulesAvailable') },
+              { k: 'cleaningPlanAvailable', l: tl('wizard.sharedCleaning.access.cleaningPlanAvailable') }
+            ].map(s => ( <FC key={s.k} label={s.l} checked={arrHas('accessAndOrg', s.k)} onChange={() => toggleArr('accessAndOrg', s.k)} /> ))}
+          </div>
 
           <FS label={tl('wizard.maintenanceCleaning.cleaningDuration')} value={v('cleaningDuration')} onChange={v => set('cleaningDuration', v)}
             options={[
@@ -542,7 +554,6 @@ export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr
       return (
         <div>
           <FI label={tl('wizard.maintenanceCleaning.startDate')} value={v('startDate')} onChange={v => set('startDate', v)} type="date" required />
-          <FI label={tl('wizard.cleaning.desiredCleaningDate')} value={v('desiredCleaningDate')} onChange={v => set('desiredCleaningDate', v)} type="datetime-local" />
           <FI label={tl('wizard.cleaning.deliveryHandoverDate')} value={v('deliveryHandoverDate')} onChange={v => set('deliveryHandoverDate', v)} type="datetime-local" />
           <SH>{tl('wizard.maintenanceCleaning.contact')}</SH>
           <FI label={tl('wizard.maintenanceCleaning.nameCompany')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />

@@ -56,7 +56,7 @@
         "cantons": "Swiss cantons",
         "happyClients": "Happy clients",
         "support": "24/7 support",
-        "all": "All"
+        "all": "Several"
       },
       "qualityBadge": {
         "title": "Trusted & Certified"
@@ -78,7 +78,7 @@
         "description": "Professional apartment cleaning services including final cleaning with deposit guarantee"
       },
       "stairwellCleaning": {
-        "title": "Stairwell Cleaning",
+        "title": "Facility Service Cleaning",
         "description": "Regular maintenance and thorough cleaning of building stairwells and common areas"
       },
       "officeCleaning": {
@@ -94,7 +94,7 @@
         "description": "Professional window cleaning services for residential and commercial properties"
       },
       "relocation": {
-        "title": "Relocation",
+        "title": "Transportation",
         "description": "Complete relocation services with experienced team and professional equipment"
       },
       "disposal": {
@@ -195,8 +195,8 @@
         "selectService": "Select Cleaning Service"
       },
       "moving": {
-        "title": "Moving & Relocation",
-        "description": "Complete moving and relocation solutions",
+        "title": "Moving and Transportation",
+        "description": "Complete moving and transportation solutions",
         "selectService": "Select Moving Service"
       },
       "disposal": {
@@ -1651,7 +1651,12 @@
           "lightingChecks": "Lighting Checks",
           "wasteHandling": "Waste Handling",
           "containerCleaning": "Container Cleaning",
-          "disposalRecycling": "Disposal Recycling"
+          "disposalRecycling": "Disposal Recycling",
+          "regInspection": "Regular inspection rounds",
+          "techMonitoring": "Technical monitoring (heating, ventilation, systems)",
+          "minorRepairsBase": "Minor repairs / Maintenance",
+          "faultManagement": "Fault management / Emergency service",
+          "keyManagement": "Key management"
         },
         "outdoorSurroundings": "Outdoor Surroundings",
         "winterService": "Winter Service",
@@ -1712,7 +1717,8 @@
           "documents": "Documents (e.g. service specifications)"
         },
         "notes": "Notes",
-        "property": "Property"
+        "property": "Property",
+        "caretakingTitle": "Caretaking (Technical & Inspections)"
       },
       "finalCleaning": {
         "contact": "Contact",
@@ -1779,7 +1785,9 @@
           "basement": "Basement",
           "attic": "Attic",
           "garage": "Garage",
-          "storageRoom": "Storage Room"
+          "storageRoom": "Storage Room",
+          "balcony": "Balcony",
+          "terrace": "Terrace"
         },
         "windowsShading": "Windows & Shading",
         "windowsInfo": "Windows Info",
@@ -1931,7 +1939,13 @@
           "officesRooms": "Offices Rooms",
           "windows": "Windows",
           "stairwell": "Stairwell",
-          "waste": "Waste"
+          "waste": "All",
+          "stairwellClean": "Stairwell cleaning",
+          "elevatorClean": "Elevator cleaning",
+          "basementClean": "Basement / Utility rooms",
+          "garageClean": "Underground garage / Parking spaces",
+          "windowClean": "Window cleaning",
+          "deepClean": "Deep cleaning"
         },
         "frequency": "Frequency",
         "frequencies": {
@@ -1986,7 +2000,8 @@
           "photos": "Photos",
           "documents": "Documents"
         },
-        "notes": "Notes"
+        "notes": "Notes",
+        "cleaningUpkeep": "Cleaning & Upkeep"
       },
       "constructionCleaning": {
         "contact": "Contact",
@@ -2814,6 +2829,49 @@
         "nameContact": "Name Contact",
         "email": "Email",
         "phone": "Phone"
+      },
+      "sharedCleaning": {
+        "accessAndOrg": "Access & Organization",
+        "workingHours": "Working Hours",
+        "propertyInformation": "Property Information",
+        "propertyType": "Property Type",
+        "propertyLocation": "Property Location",
+        "access": {
+          "keysAvailable": "Keys available",
+          "accessSystemCode": "Access system / Code",
+          "caretakerOnSite": "Caretaker on-site",
+          "adminOnSite": "Administration on-site",
+          "alarmSystem": "Alarm system",
+          "houseRulesAvailable": "House rules available",
+          "cleaningPlanAvailable": "Cleaning plan available"
+        },
+        "hours": {
+          "earlyMorning": "Early morning",
+          "morning": "Morning",
+          "afternoon": "Afternoon",
+          "evening": "Evening",
+          "duringBusinessHours": "During business hours",
+          "afterBusinessHours": "After business hours",
+          "flexible": "Flexible"
+        },
+        "info": {
+          "units": "Number of units (apartments / offices)",
+          "floors": "Number of floors",
+          "totalArea": "Total area (m²)",
+          "outdoorArea": "Outdoor area (m²)"
+        },
+        "types": {
+          "multiFamily": "Multi-family house",
+          "residentialComplex": "Residential complex",
+          "officeBuilding": "Office building",
+          "commercialProperty": "Commercial property",
+          "industrialProperty": "Industrial property",
+          "practiceClinic": "Practice / Clinic",
+          "specialProperty": "Special property"
+        },
+        "location": {
+          "streetZipCity": "Street, ZIP, City*"
+        }
       }
     },
     "upload": {
@@ -4298,13 +4356,16 @@
     "callNow": "Call Now",
     "cities": {
       "zurich": "Zurich",
-      "geneva": "Geneva",
       "basel": "Basel",
       "bern": "Bern",
       "lausanne": "Lausanne",
       "winterthur": "Winterthur",
       "lucerne": "Lucerne",
-      "stgallen": "St. Gallen"
+      "stgallen": "St. Gallen",
+      "aargau": {
+        "name": "Aargau",
+        "description": "Reliable cleaning services in Aargau"
+      }
     },
     "regionData": {
       "zurich": {
@@ -4341,18 +4402,6 @@
           "Biel/Bienne",
           "Burgdorf",
           "Langenthal"
-        ]
-      },
-      "geneva": {
-        "name": "Geneva",
-        "description": "Premium services in the Geneva metropolitan area",
-        "coverage": "Geneva canton and cross-border areas",
-        "areas": [
-          "Geneva City",
-          "Carouge",
-          "Vernier",
-          "Lancy",
-          "Meyrin"
         ]
       },
       "lausanne": {
@@ -4425,6 +4474,18 @@
           "Gossau",
           "Uzwil",
           "Altstätten"
+        ]
+      },
+      "aargau": {
+        "name": "Aargau",
+        "description": "Professional services in the canton of Aargau",
+        "coverage": "Canton of Aargau and surrounding areas",
+        "areas": [
+          "Aarau",
+          "Baden",
+          "Wettingen",
+          "Brugg",
+          "Lenzburg"
         ]
       }
     },
