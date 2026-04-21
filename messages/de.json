@@ -3159,6 +3159,212 @@
         "location": {
           "streetZipCity": "Strasse, PLZ, Ort*"
         }
+      },
+      "unified": {
+        "step1": {
+          "title": "DIENSTLEISTUNG & TERMIN",
+          "requestType": "Was möchten Sie anfragen? *",
+          "options": {
+            "moving": "Umzug",
+            "cleaning": "Umzugsreinigung",
+            "combo": "Umzug + Reinigung"
+          },
+          "preferredDateTitle": "Gewünschter Termin *",
+          "date": "Datum",
+          "time": "Uhrzeit (optional)",
+          "flexible": "Ich bin flexibel",
+          "express": "Express-Anfrage (kurzfristig)"
+        },
+        "step2": {
+          "title": "ANGABEN ZUM AUFTRAG",
+          "sharedPropertyDesc": "OBJEKTANGABEN (NUR EINMAL ANZEIGEN)",
+          "propertyType": "Objektart",
+          "types": {
+            "apartment": "Wohnung",
+            "house": "Haus",
+            "studio": "Studio",
+            "wgRoom": "WG-Zimmer",
+            "office": "Büro",
+            "commercial": "Gewerbe"
+          },
+          "rooms": "Anzahl Zimmer *",
+          "livingArea": "Wohnfläche (m²)",
+          "floor": "Etage",
+          "floors": {
+            "ground": "EG",
+            "f1_2": "1–2",
+            "f3_4": "3–4",
+            "f5_6": "5–6",
+            "f7plus": "7+"
+          },
+          "elevator": "Lift vorhanden",
+          "yes": "Ja",
+          "no": "Nein",
+          "parkingTitle": "Parkplatz",
+          "available": "Vorhanden",
+          "distance": "Distanz",
+          "distances": {
+            "direct": "Direkt vor dem Gebäude",
+            "d0_20": "0–20 m",
+            "d20_50": "20–50 m",
+            "d50plus": "Mehr als 50 m"
+          }
+        },
+        "moving": {
+          "title": "UMZUG",
+          "fromTitle": "Auszugsadresse (VON)",
+          "toTitle": "Einzugsadresse (NACH)",
+          "streetNo": "Strasse / Nr.",
+          "zipCity": "PLZ / Ort *",
+          "accessParkingTitle": "Zugang & Parkplatz",
+          "specialConditions": "Besonderheiten",
+          "conditions": {
+            "narrowStairs": "Enge Treppen",
+            "noElevator": "Kein nutzbarer Lift",
+            "longDistances": "Lange Tragewege",
+            "limitedAccess": "Zufahrt eingeschränkt"
+          },
+          "volumeTitle": "Umzugsvolumen",
+          "volumes": {
+            "small": "Klein (Studio / wenig Möbel)",
+            "medium": "Mittel (normale Wohnung)",
+            "large": "Gross (Haus / viel Inventar)"
+          },
+          "inventoryTitle": "Inventar & Angaben (optional)",
+          "boxesTitle": "Kartons",
+          "boxes": {
+            "b0_20": "0–20",
+            "b20_50": "20–50",
+            "b50_100": "50–100",
+            "b100plus": "100+"
+          },
+          "furnitureTitle": "Möbel / Geräte",
+          "furniture": {
+            "sofa": "Sofa",
+            "bed": "Bett",
+            "wardrobe": "Kleiderschrank",
+            "tableChairs": "Tisch / Stühle",
+            "tv": "TV",
+            "washingMachine": "Waschmaschine",
+            "refrigerator": "Kühlschrank"
+          },
+          "specialItemsTitle": "Spezialgegenstände",
+          "specialItems": {
+            "piano": "Klavier",
+            "safe": "Safe / Tresor",
+            "aquarium": "Aquarium",
+            "fitness": "Fitnessgeräte",
+            "fragile": "Empfindliche Möbel"
+          },
+          "servicesTitle": "Zusatzleistungen",
+          "services": {
+            "assembly": "Möbel Demontage / Montage",
+            "packingService": "Verpackungsservice",
+            "packingMaterials": "Verpackungsmaterial liefern",
+            "disposal": "Entsorgung / Räumung",
+            "storage": "Zwischenlagerung",
+            "cleaningRequested": "Umzugsreinigung gewünscht"
+          }
+        },
+        "cleaning": {
+          "title": "UMZUGSREINIGUNG / ENDREINIGUNG",
+          "addressTitle": "Adresse",
+          "addressHintCombo": "(Bei «Umzug + Reinigung»: automatisch VON-Adresse verwenden)",
+          "sanitaryTitle": "Sanitär",
+          "bathrooms": "Badezimmer",
+          "toilets": "WC",
+          "kitchenTitle": "Küche",
+          "available": "Vorhanden",
+          "kitchenState": {
+            "normal": "Normal",
+            "heavilySoiled": "Stark verschmutzt"
+          },
+          "windowsTitle": "Fenster & Glasflächen",
+          "windowsCount": "Anzahl Fenster",
+          "windowTypes": "Typ",
+          "types": {
+            "standard": "Standard",
+            "floorToCeiling": "Bodentief",
+            "roof": "Dachfenster"
+          },
+          "balconyDoorsTitle": "Balkontüren",
+          "balconyDoors": {
+            "d0": "0",
+            "d1_2": "1–2",
+            "d3_5": "3–5",
+            "d5plus": "5+"
+          },
+          "specialGlass": "Spezielle Glasflächen (optional)",
+          "specialGlassTypes": {
+            "sliding": "Schiebefenster",
+            "glassFront": "Glasfront",
+            "winterGarden": "Wintergarten"
+          },
+          "conditionTitle": "Zustand",
+          "conditions": {
+            "normal": "Normal",
+            "heavilySoiled": "Stark verschmutzt",
+            "nicotine": "Nikotinbelastung",
+            "afterRenovation": "Nach Renovation"
+          },
+          "petsTitle": "Haustiere",
+          "additionalAreasTitle": "Zusatzbereiche",
+          "areas": {
+            "balcony": "Balkon",
+            "basement": "Keller",
+            "garage": "Garage",
+            "attic": "Estrich"
+          }
+        },
+        "access": {
+          "title": "ZUGANG (NUR FÜR REINIGUNG)",
+          "keyTitle": "Zugang",
+          "keys": {
+            "personal": "Persönlich",
+            "mailbox": "Schlüssel im Briefkasten",
+            "keySafe": "Schlüsselsafe",
+            "caretaker": "Verwaltung / Hauswart",
+            "undecided": "Noch offen"
+          },
+          "independentAccess": "Selbstständiger Zugang möglich",
+          "independent": {
+            "yes": "Ja",
+            "no": "Nein",
+            "undecided": "Noch offen"
+          },
+          "handoverTitle": "Abgabe",
+          "handoverDate": "Abgabetermin *",
+          "options": {
+            "inspection": "Abnahme mit Verwaltung",
+            "guarantee": "Abnahmegarantie"
+          }
+        },
+        "upload": {
+          "title": "UPLOAD (EMPFOHLEN)",
+          "uploadTitle": "Fotos / Videos hochladen",
+          "hint1": "Fotos helfen uns, Ihre Anfrage schneller und genauer zu beurteilen.",
+          "hint2": "Fotos erhöhen die Genauigkeit und beschleunigen die Offerte."
+        },
+        "contact": {
+          "title": "KONTAKT",
+          "detailsTitle": "Kontaktdaten",
+          "nameCompany": "Name / Firma *",
+          "phone": "Telefon *",
+          "email": "E-Mail *",
+          "methodTitle": "Kontaktwunsch",
+          "methods": {
+            "phone": "Telefon",
+            "whatsapp": "WhatsApp",
+            "email": "E-Mail"
+          },
+          "notes": "Bemerkungen (optional)",
+          "privacy": "DATENSCHUTZ",
+          "acceptPrivacy": "Ich akzeptiere die Datenschutzbestimmungen",
+          "button": "Kostenlose Offerte anfordern",
+          "confirmationTitle": "BESTÄTIGUNG",
+          "thankYou": "Vielen Dank für Ihre Anfrage.",
+          "reviewing": "Unser Team prüft Ihre Angaben und meldet sich in Kürze mit einer passenden Offerte."
+        }
       }
     },
     "title": {

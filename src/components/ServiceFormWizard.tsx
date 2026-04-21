@@ -10,6 +10,7 @@ import { Upload, X } from 'lucide-react'
 import { PropertyMaintenanceForm, FinalCleaningForm, MaintenanceCleaningForm } from './service-forms/ServiceFormsPart1'
 import { DisposalForm, ConstructionCleaningForm, GastronomyCleaningForm } from './service-forms/ServiceFormsPart2'
 import { RelocationForm, HouseholdHelpingForm, ComboServiceForm, SpecialCleaningForm } from './service-forms/ServiceFormsPart3'
+import { UnifiedMovingCleaningForm } from './service-forms/UnifiedMovingCleaningForm'
 import { FormStepProps } from './FormControls'
 
 export type ServiceSlug =
@@ -41,9 +42,21 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
   const [images, setImages] = useState<File[]>([])
   const fileInputRef = useRef<HTMLInputElement>(null)
   
-  const isCombo = d.desiredService === 'moving-and-cleaning';
-  const comboExtraSteps = isCombo ? 3 : 0;
-  const totalSteps = useMemo(() => getStepCount(service) + (isAdmin ? 1 : 0) + comboExtraSteps, [service, isAdmin, comboExtraSteps])
+  const isUnified = ['relocation', 'final-cleaning', 'combo-service', 'house-cleaning', 'apartment-cleaning', 'office-cleaning'].includes(service);
+  const reqType = (d.requestType as string) || (['relocation'].includes(service) ? 'moving' : service === 'combo-service' ? 'combo' : 'cleaning');
+  
+  const baseSteps = useMemo(() => {
+    if (isUnified) {
+      if (reqType === 'moving') return 5;
+      if (reqType === 'cleaning') return 6;
+      if (reqType === 'combo') return 7;
+    }
+    // old logic fallback:
+    const isCombo = d.desiredService === 'moving-and-cleaning';
+    return getStepCount(service) + (isCombo ? 3 : 0);
+  }, [isUnified, reqType, service, d.desiredService]);
+
+  const totalSteps = useMemo(() => baseSteps + (isAdmin ? 1 : 0), [baseSteps, isAdmin])
   
   const isFirst = step === 0
   const isLast = step === totalSteps - 1
@@ -228,22 +241,27 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
       )
     }
 
-    const baseSteps = getStepCount(service);
-    
     // Determine which step and form to render
     let actualFormProps = { ...formProps };
     
-    if (isCombo) {
-      if (step < baseSteps - 1) {
+    // Unified form logic
+    if (isUnified) {
+       return <UnifiedMovingCleaningForm {...actualFormProps} />;
+    }
+
+    // Legacy old logic fallback for other services
+    const oldIsCombo = d.desiredService === 'moving-and-cleaning';
+    if (oldIsCombo) {
+      if (step < getStepCount(service) - 1) {
          // Clean steps
          actualFormProps.step = step;
-      } else if (step >= baseSteps - 1 && step < baseSteps - 1 + 3) {
+      } else if (step >= getStepCount(service) - 1 && step < getStepCount(service) - 1 + 3) {
          // Relocation step 0, 1, 2
-         actualFormProps.step = step - (baseSteps - 1);
+         actualFormProps.step = step - (getStepCount(service) - 1);
          return <RelocationForm {...actualFormProps} />;
-      } else if (step === baseSteps - 1 + 3) {
+      } else if (step === getStepCount(service) - 1 + 3) {
          // The contact step (last step of base form)
-         actualFormProps.step = baseSteps - 1;
+         actualFormProps.step = getStepCount(service) - 1;
       }
     }
 
@@ -260,11 +278,9 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
       case 'disposal': return <DisposalForm {...actualFormProps} />
       case 'construction-cleaning': return <ConstructionCleaningForm {...actualFormProps} />
       case 'gastronomy-cleaning': return <GastronomyCleaningForm {...actualFormProps} />
-      case 'relocation': return <RelocationForm {...actualFormProps} />
       case 'household-helping': return <HouseholdHelpingForm {...actualFormProps} />
-      case 'combo-service': return <ComboServiceForm {...actualFormProps} />
       case 'special-cleaning': return <SpecialCleaningForm {...actualFormProps} />
-      default: return <FinalCleaningForm {...actualFormProps} />
+      default: return <MaintenanceCleaningForm {...actualFormProps} />
     }
   }
 

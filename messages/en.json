@@ -2872,6 +2872,212 @@
         "location": {
           "streetZipCity": "Street, ZIP, City*"
         }
+      },
+      "unified": {
+        "step1": {
+          "title": "SERVICE & APPOINTMENT",
+          "requestType": "What would you like to request? *",
+          "options": {
+            "moving": "Moving",
+            "cleaning": "Move-out cleaning",
+            "combo": "Moving + cleaning"
+          },
+          "preferredDateTitle": "Preferred date *",
+          "date": "Date",
+          "time": "Time (optional)",
+          "flexible": "I am flexible",
+          "express": "Express request (short notice)"
+        },
+        "step2": {
+          "title": "JOB DETAILS",
+          "sharedPropertyDesc": "SHARED PROPERTY DETAILS (ALWAYS SHOWN ONCE)",
+          "propertyType": "Property type",
+          "types": {
+            "apartment": "Apartment",
+            "house": "House",
+            "studio": "Studio",
+            "wgRoom": "Shared room (WG room)",
+            "office": "Office",
+            "commercial": "Commercial"
+          },
+          "rooms": "Number of rooms *",
+          "livingArea": "Living area (m²)",
+          "floor": "Floor",
+          "floors": {
+            "ground": "Ground floor",
+            "f1_2": "1–2",
+            "f3_4": "3–4",
+            "f5_6": "5–6",
+            "f7plus": "7+"
+          },
+          "elevator": "Elevator available",
+          "yes": "Yes",
+          "no": "No",
+          "parkingTitle": "Parking",
+          "available": "Available",
+          "distance": "Distance",
+          "distances": {
+            "direct": "Directly in front",
+            "d0_20": "0–20 m",
+            "d20_50": "20–50 m",
+            "d50plus": "More than 50 m"
+          }
+        },
+        "moving": {
+          "title": "MOVING",
+          "fromTitle": "Move-out address (FROM)",
+          "toTitle": "Move-in address (TO)",
+          "streetNo": "Street / No.",
+          "zipCity": "ZIP / City *",
+          "accessParkingTitle": "Access & Parking",
+          "specialConditions": "Special conditions",
+          "conditions": {
+            "narrowStairs": "Narrow stairs",
+            "noElevator": "No usable elevator",
+            "longDistances": "Long carrying distances",
+            "limitedAccess": "Limited access"
+          },
+          "volumeTitle": "Moving volume",
+          "volumes": {
+            "small": "Small (studio / few items)",
+            "medium": "Medium (normal apartment)",
+            "large": "Large (house / many items)"
+          },
+          "inventoryTitle": "Inventory & details (optional)",
+          "boxesTitle": "Boxes",
+          "boxes": {
+            "b0_20": "0–20",
+            "b20_50": "20–50",
+            "b50_100": "50–100",
+            "b100plus": "100+"
+          },
+          "furnitureTitle": "Furniture / appliances",
+          "furniture": {
+            "sofa": "Sofa",
+            "bed": "Bed",
+            "wardrobe": "Wardrobe",
+            "tableChairs": "Table / chairs",
+            "tv": "TV",
+            "washingMachine": "Washing machine",
+            "refrigerator": "Refrigerator"
+          },
+          "specialItemsTitle": "Special items",
+          "specialItems": {
+            "piano": "Piano",
+            "safe": "Safe",
+            "aquarium": "Aquarium",
+            "fitness": "Fitness equipment",
+            "fragile": "Fragile furniture"
+          },
+          "servicesTitle": "Additional moving services",
+          "services": {
+            "assembly": "Furniture disassembly / assembly",
+            "packingService": "Packing service",
+            "packingMaterials": "Supply packing materials",
+            "disposal": "Disposal / clearance",
+            "storage": "Temporary storage",
+            "cleaningRequested": "Move-out cleaning requested"
+          }
+        },
+        "cleaning": {
+          "title": "MOVE-OUT CLEANING / END CLEANING",
+          "addressTitle": "Address",
+          "addressHintCombo": "(If Moving + Cleaning: using Move-out (FROM) address automatically)",
+          "sanitaryTitle": "Sanitary",
+          "bathrooms": "Bathrooms",
+          "toilets": "Toilets",
+          "kitchenTitle": "Kitchen",
+          "available": "Available",
+          "kitchenState": {
+            "normal": "Normal",
+            "heavilySoiled": "Heavily soiled"
+          },
+          "windowsTitle": "Windows & Glass Areas",
+          "windowsCount": "Number of windows",
+          "windowTypes": "Types",
+          "types": {
+            "standard": "Standard",
+            "floorToCeiling": "Floor-to-ceiling",
+            "roof": "Roof windows"
+          },
+          "balconyDoorsTitle": "Balcony doors",
+          "balconyDoors": {
+            "d0": "0",
+            "d1_2": "1–2",
+            "d3_5": "3–5",
+            "d5plus": "5+"
+          },
+          "specialGlass": "Special glass surfaces (optional)",
+          "specialGlassTypes": {
+            "sliding": "Sliding windows",
+            "glassFront": "Glass front",
+            "winterGarden": "Winter garden"
+          },
+          "conditionTitle": "Condition",
+          "conditions": {
+            "normal": "Normal",
+            "heavilySoiled": "Heavily soiled",
+            "nicotine": "Nicotine residue",
+            "afterRenovation": "After renovation"
+          },
+          "petsTitle": "Pets",
+          "additionalAreasTitle": "Additional areas",
+          "areas": {
+            "balcony": "Balcony",
+            "basement": "Basement",
+            "garage": "Garage",
+            "attic": "Attic"
+          }
+        },
+        "access": {
+          "title": "ACCESS (CLEANING ONLY)",
+          "keyTitle": "Access",
+          "keys": {
+            "personal": "Personal",
+            "mailbox": "Key in mailbox",
+            "keySafe": "Key safe",
+            "caretaker": "Property manager / caretaker",
+            "undecided": "Not decided"
+          },
+          "independentAccess": "Independent access possible",
+          "independent": {
+            "yes": "Yes",
+            "no": "No",
+            "undecided": "Not decided"
+          },
+          "handoverTitle": "Handover",
+          "handoverDate": "Handover date *",
+          "options": {
+            "inspection": "Inspection with property management",
+            "guarantee": "Handover guarantee"
+          }
+        },
+        "upload": {
+          "title": "UPLOAD (RECOMMENDED)",
+          "uploadTitle": "Upload photos / videos",
+          "hint1": "Photos help us assess your request faster and more accurately.",
+          "hint2": "Uploading photos increases quote accuracy and response speed."
+        },
+        "contact": {
+          "title": "CONTACT",
+          "detailsTitle": "Contact details",
+          "nameCompany": "Name / Company *",
+          "phone": "Phone *",
+          "email": "Email *",
+          "methodTitle": "Preferred contact method",
+          "methods": {
+            "phone": "Phone",
+            "whatsapp": "WhatsApp",
+            "email": "Email"
+          },
+          "notes": "Notes (optional)",
+          "privacy": "DATA PROTECTION",
+          "acceptPrivacy": "I accept the privacy policy",
+          "button": "Request a quote",
+          "confirmationTitle": "CONFIRMATION",
+          "thankYou": "Thank you for your request.",
+          "reviewing": "Our team will review your details and get back to you shortly with a suitable offer."
+        }
       }
     },
     "upload": {

@@ -3124,6 +3124,212 @@
         "location": {
           "streetZipCity": "Rue, NPA, Lieu*"
         }
+      },
+      "unified": {
+        "step1": {
+          "title": "SERVICE ET RENDEZ-VOUS",
+          "requestType": "Que souhaitez-vous demander ? *",
+          "options": {
+            "moving": "Déménagement",
+            "cleaning": "Nettoyage de fin de bail",
+            "combo": "Déménagement + Nettoyage"
+          },
+          "preferredDateTitle": "Date souhaitée *",
+          "date": "Date",
+          "time": "Heure (facultatif)",
+          "flexible": "Je suis flexible",
+          "express": "Demande express (à court terme)"
+        },
+        "step2": {
+          "title": "DÉTAILS DE LA PROPRIÉTÉ",
+          "sharedPropertyDesc": "DÉTAILS DE LA PROPRIÉTÉ (AFFICHER UNE SEULE FOIS)",
+          "propertyType": "Type de bien",
+          "types": {
+            "apartment": "Appartement",
+            "house": "Maison",
+            "studio": "Studio",
+            "wgRoom": "Chambre en colocation",
+            "office": "Bureau",
+            "commercial": "Commerce"
+          },
+          "rooms": "Nombre de pièces *",
+          "livingArea": "Surface habitable (m²)",
+          "floor": "Étage",
+          "floors": {
+            "ground": "Rez-de-chaussée",
+            "f1_2": "1–2",
+            "f3_4": "3–4",
+            "f5_6": "5–6",
+            "f7plus": "7+"
+          },
+          "elevator": "Ascenseur disponible",
+          "yes": "Oui",
+          "no": "Non",
+          "parkingTitle": "Parking",
+          "available": "Disponible",
+          "distance": "Distance",
+          "distances": {
+            "direct": "Directement devant le bâtiment",
+            "d0_20": "0–20 m",
+            "d20_50": "20–50 m",
+            "d50plus": "Plus de 50 m"
+          }
+        },
+        "moving": {
+          "title": "DÉMÉNAGEMENT",
+          "fromTitle": "Adresse de départ (DE)",
+          "toTitle": "Adresse d'arrivée (À)",
+          "streetNo": "Rue / No",
+          "zipCity": "NPA / Localité *",
+          "accessParkingTitle": "Accès & Parking",
+          "specialConditions": "Conditions spéciales",
+          "conditions": {
+            "narrowStairs": "Escaliers étroits",
+            "noElevator": "Pas d'ascenseur utilisable",
+            "longDistances": "Longues distances de portage",
+            "limitedAccess": "Accès limité"
+          },
+          "volumeTitle": "Volume du déménagement",
+          "volumes": {
+            "small": "Petit (studio / peu de meubles)",
+            "medium": "Moyen (appartement normal)",
+            "large": "Grand (maison / beaucoup d'articles)"
+          },
+          "inventoryTitle": "Inventaire et détails (facultatif)",
+          "boxesTitle": "Cartons",
+          "boxes": {
+            "b0_20": "0–20",
+            "b20_50": "20–50",
+            "b50_100": "50–100",
+            "b100plus": "100+"
+          },
+          "furnitureTitle": "Meubles / appareils",
+          "furniture": {
+            "sofa": "Canapé",
+            "bed": "Lit",
+            "wardrobe": "Armoire",
+            "tableChairs": "Table / chaises",
+            "tv": "TV",
+            "washingMachine": "Lave-linge",
+            "refrigerator": "Réfrigérateur"
+          },
+          "specialItemsTitle": "Objets spéciaux",
+          "specialItems": {
+            "piano": "Piano",
+            "safe": "Coffre-fort",
+            "aquarium": "Aquarium",
+            "fitness": "Appareils de fitness",
+            "fragile": "Meubles fragiles"
+          },
+          "servicesTitle": "Services supplémentaires",
+          "services": {
+            "assembly": "Démontage / montage de meubles",
+            "packingService": "Service d'emballage",
+            "packingMaterials": "Fournir des matériaux d'emballage",
+            "disposal": "Élimination / débarras",
+            "storage": "Stockage temporaire",
+            "cleaningRequested": "Nettoyage de remise demandé"
+          }
+        },
+        "cleaning": {
+          "title": "NETTOYAGE DE FIN DE BAIL",
+          "addressTitle": "Adresse",
+          "addressHintCombo": "(Si Déménagement + Nettoyage : utilise automatiquement l'adresse de départ)",
+          "sanitaryTitle": "Sanitaires",
+          "bathrooms": "Salles de bain",
+          "toilets": "Toilettes",
+          "kitchenTitle": "Cuisine",
+          "available": "Disponible",
+          "kitchenState": {
+            "normal": "Normale",
+            "heavilySoiled": "Très sale"
+          },
+          "windowsTitle": "Fenêtres & surfaces vitrées",
+          "windowsCount": "Nombre de fenêtres",
+          "windowTypes": "Type",
+          "types": {
+            "standard": "Standard",
+            "floorToCeiling": "Du sol au plafond",
+            "roof": "Fenêtres de toit"
+          },
+          "balconyDoorsTitle": "Portes de balcon",
+          "balconyDoors": {
+            "d0": "0",
+            "d1_2": "1–2",
+            "d3_5": "3–5",
+            "d5plus": "5+"
+          },
+          "specialGlass": "Surfaces vitrées spéciales (facultatif)",
+          "specialGlassTypes": {
+            "sliding": "Fenêtres coulissantes",
+            "glassFront": "Façade en verre",
+            "winterGarden": "Jardin d'hiver"
+          },
+          "conditionTitle": "État",
+          "conditions": {
+            "normal": "Normal",
+            "heavilySoiled": "Très sale",
+            "nicotine": "Résidus de nicotine",
+            "afterRenovation": "Après rénovation"
+          },
+          "petsTitle": "Animaux de compagnie",
+          "additionalAreasTitle": "Zones supplémentaires",
+          "areas": {
+            "balcony": "Balcon",
+            "basement": "Cave",
+            "garage": "Garage",
+            "attic": "Grenier"
+          }
+        },
+        "access": {
+          "title": "ACCÈS (NETTOYAGE UNIQUEMENT)",
+          "keyTitle": "Accès",
+          "keys": {
+            "personal": "Personnel",
+            "mailbox": "Clé dans la boîte aux lettres",
+            "keySafe": "Boîte à clés",
+            "caretaker": "Régie / Concierge",
+            "undecided": "Pas encore décidé"
+          },
+          "independentAccess": "Accès indépendant possible",
+          "independent": {
+            "yes": "Oui",
+            "no": "Non",
+            "undecided": "Pas encore décidé"
+          },
+          "handoverTitle": "Remise",
+          "handoverDate": "Date de remise *",
+          "options": {
+            "inspection": "Inspection avec la gérance",
+            "guarantee": "Garantie de remise"
+          }
+        },
+        "upload": {
+          "title": "TÉLÉCHARGER (RECOMMANDÉ)",
+          "uploadTitle": "Téléchargez des photos / vidéos",
+          "hint1": "Les photos nous aident à évaluer votre demande plus rapidement et avec plus de précision.",
+          "hint2": "Télécharger des photos augmente la précision de votre devis et accélère le processus."
+        },
+        "contact": {
+          "title": "CONTACT",
+          "detailsTitle": "Détails de contact",
+          "nameCompany": "Nom / Entreprise *",
+          "phone": "Téléphone *",
+          "email": "Email *",
+          "methodTitle": "Méthode de contact préférée",
+          "methods": {
+            "phone": "Téléphone",
+            "whatsapp": "WhatsApp",
+            "email": "Email"
+          },
+          "notes": "Remarques (facultatif)",
+          "privacy": "PROTECTION DES DONNÉES",
+          "acceptPrivacy": "J'accepte la politique de confidentialité",
+          "button": "Demander un devis gratuit",
+          "confirmationTitle": "CONFIRMATION",
+          "thankYou": "Merci pour votre demande.",
+          "reviewing": "Notre équipe va examiner vos détails et vous recontactera rapidement avec une offre adaptée."
+        }
       }
     },
     "title": {
