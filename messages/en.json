@@ -3000,18 +3000,36 @@
             "floorToCeiling": "Floor-to-ceiling",
             "roof": "Roof windows"
           },
-          "balconyDoorsTitle": "Balcony doors",
-          "balconyDoors": {
-            "d0": "0",
-            "d1_2": "1–2",
-            "d3_5": "3–5",
-            "d5plus": "5+"
-          },
           "specialGlass": "Special glass surfaces (optional)",
           "specialGlassTypes": {
             "sliding": "Sliding windows",
             "glassFront": "Glass front",
             "winterGarden": "Winter garden"
+          },
+          "shuttersBlinds": {
+            "title": "Shutters / Blinds",
+            "venetian": "Venetian blinds",
+            "roller": "Roller shutters",
+            "window": "Window shutters",
+            "awnings": "Awnings",
+            "vertical": "Vertical awnings",
+            "raff": "Raff blinds",
+            "quantity": "Quantity",
+            "cleaningRequired": "Cleaning required"
+          },
+          "asRecommended": "As recommended",
+          "outdoorArea": {
+            "title": "Outdoor area",
+            "none": "None",
+            "balcony": "Balcony",
+            "terrace": "Terrace",
+            "both": "Both",
+            "ifAvailable": "If available:",
+            "condition": "Condition",
+            "pressureWashing": "Pressure washing",
+            "drillHoles": "🔩 Drill holes",
+            "notSure": "Not sure",
+            "drillHolesCount": "If yes:"
           },
           "conditionTitle": "Condition",
           "conditions": {

@@ -90,15 +90,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
             />
             <FI label={tl('wizard.unified.step2.rooms')} value={v('sharedRooms')} onChange={val => set('sharedRooms', val)} type="number" required />
             <FI label={tl('wizard.unified.step2.livingArea')} value={v('sharedLivingArea')} onChange={val => set('sharedLivingArea', val)} type="number" />
-            <FS label={tl('wizard.unified.step2.floor')} value={v('sharedFloor')} onChange={val => set('sharedFloor', val)}
-              options={[
-                 { value: 'ground', label: tl('wizard.unified.step2.floors.ground') },
-                 { value: 'f1_2', label: tl('wizard.unified.step2.floors.f1_2') },
-                 { value: 'f3_4', label: tl('wizard.unified.step2.floors.f3_4') },
-                 { value: 'f5_6', label: tl('wizard.unified.step2.floors.f5_6') },
-                 { value: 'f7plus', label: tl('wizard.unified.step2.floors.f7plus') }
-              ]}
-            />
+            <FI label={tl('wizard.unified.step2.floor')} value={v('sharedFloor')} onChange={val => set('sharedFloor', val)} type="number" />
           </div>
           <div className="mt-4 border-t border-gray-200 pt-4">
              <FR label={tl('wizard.unified.step2.elevator')} value={v('sharedElevator')} onChange={val => set('sharedElevator', val)}
@@ -241,17 +233,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           )}
 
           <SH>{tl('wizard.unified.cleaning.windowsTitle')}</SH>
-          <div className="grid grid-cols-2 gap-4">
-             <FI label={tl('wizard.unified.cleaning.windowsCount')} value={v('cleanWindowsCount')} onChange={val => set('cleanWindowsCount', val)} type="number" />
-             <FS label={tl('wizard.unified.cleaning.balconyDoorsTitle')} value={v('cleanBalconyDoors')} onChange={val => set('cleanBalconyDoors', val)}
-                options={[
-                   { value: 'd0', label: tl('wizard.unified.cleaning.balconyDoors.d0') },
-                   { value: 'd1_2', label: tl('wizard.unified.cleaning.balconyDoors.d1_2') },
-                   { value: 'd3_5', label: tl('wizard.unified.cleaning.balconyDoors.d3_5') },
-                   { value: 'd5plus', label: tl('wizard.unified.cleaning.balconyDoors.d5plus') }
-                ]}
-             />
-          </div>
+          <FI label={tl('wizard.unified.cleaning.windowsCount')} value={v('cleanWindowsCount')} onChange={val => set('cleanWindowsCount', val)} type="number" />
           <div className="mt-2 text-sm font-semibold text-[#003366]">{tl('wizard.unified.cleaning.windowTypes')}</div>
           <div className="grid grid-cols-2 gap-2 mt-2">
              <FC label={tl('wizard.unified.cleaning.types.standard')} checked={arrHas('cleanWindowTypes', 'standard')} onChange={() => toggleArr('cleanWindowTypes', 'standard')} />
@@ -264,6 +246,74 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
              <FC label={tl('wizard.unified.cleaning.specialGlassTypes.glassFront')} checked={arrHas('cleanSpecialGlass', 'glassFront')} onChange={() => toggleArr('cleanSpecialGlass', 'glassFront')} />
              <FC label={tl('wizard.unified.cleaning.specialGlassTypes.winterGarden')} checked={arrHas('cleanSpecialGlass', 'winterGarden')} onChange={() => toggleArr('cleanSpecialGlass', 'winterGarden')} />
           </div>
+
+          <div className="mt-4 text-sm font-semibold text-[#003366]">{tl('wizard.unified.cleaning.shuttersBlinds.title')}</div>
+          <div className="grid grid-cols-2 gap-2 mt-2">
+             <FC label={tl('wizard.unified.cleaning.shuttersBlinds.venetian')} checked={arrHas('cleanShuttersBlinds', 'venetian')} onChange={() => toggleArr('cleanShuttersBlinds', 'venetian')} />
+             <FC label={tl('wizard.unified.cleaning.shuttersBlinds.roller')} checked={arrHas('cleanShuttersBlinds', 'roller')} onChange={() => toggleArr('cleanShuttersBlinds', 'roller')} />
+             <FC label={tl('wizard.unified.cleaning.shuttersBlinds.window')} checked={arrHas('cleanShuttersBlinds', 'window')} onChange={() => toggleArr('cleanShuttersBlinds', 'window')} />
+             <FC label={tl('wizard.unified.cleaning.shuttersBlinds.awnings')} checked={arrHas('cleanShuttersBlinds', 'awnings')} onChange={() => toggleArr('cleanShuttersBlinds', 'awnings')} />
+             <FC label={tl('wizard.unified.cleaning.shuttersBlinds.vertical')} checked={arrHas('cleanShuttersBlinds', 'vertical')} onChange={() => toggleArr('cleanShuttersBlinds', 'vertical')} />
+             <FC label={tl('wizard.unified.cleaning.shuttersBlinds.raff')} checked={arrHas('cleanShuttersBlinds', 'raff')} onChange={() => toggleArr('cleanShuttersBlinds', 'raff')} />
+          </div>
+          <FI label={tl('wizard.unified.cleaning.shuttersBlinds.quantity')} value={v('cleanShuttersBlindsQty')} onChange={val => set('cleanShuttersBlindsQty', val)} type="number" />
+          <FR label={tl('wizard.unified.cleaning.shuttersBlinds.cleaningRequired')} value={v('cleanShuttersBlindsClean')} onChange={val => set('cleanShuttersBlindsClean', val)}
+             options={[
+               { value: 'yes', label: tl('wizard.unified.step2.yes') },
+               { value: 'no', label: tl('wizard.unified.step2.no') },
+               { value: 'asRecommended', label: tl('wizard.unified.cleaning.asRecommended') }
+             ]}
+          />
+
+          <SH>{tl('wizard.unified.cleaning.outdoorArea.title')}</SH>
+          <FR label={''} value={v('cleanOutdoorArea')} onChange={val => set('cleanOutdoorArea', val)}
+             options={[
+               { value: 'none', label: tl('wizard.unified.cleaning.outdoorArea.none') },
+               { value: 'balcony', label: tl('wizard.unified.cleaning.outdoorArea.balcony') },
+               { value: 'terrace', label: tl('wizard.unified.cleaning.outdoorArea.terrace') },
+               { value: 'both', label: tl('wizard.unified.cleaning.outdoorArea.both') }
+             ]}
+          />
+          {v('cleanOutdoorArea') === 'balcony' && (
+             <FI label={tl('wizard.unified.cleaning.outdoorArea.balcony')} value={v('cleanBalconyCount')} onChange={val => set('cleanBalconyCount', val)} type="number" />
+          )}
+          {v('cleanOutdoorArea') === 'terrace' && (
+             <FI label={tl('wizard.unified.cleaning.outdoorArea.terrace')} value={v('cleanTerraceCount')} onChange={val => set('cleanTerraceCount', val)} type="number" />
+          )}
+          {v('cleanOutdoorArea') === 'both' && (
+             <div className="grid grid-cols-2 gap-4">
+               <FI label={tl('wizard.unified.cleaning.outdoorArea.balcony')} value={v('cleanBalconyCount')} onChange={val => set('cleanBalconyCount', val)} type="number" />
+               <FI label={tl('wizard.unified.cleaning.outdoorArea.terrace')} value={v('cleanTerraceCount')} onChange={val => set('cleanTerraceCount', val)} type="number" />
+             </div>
+          )}
+          {(v('cleanOutdoorArea') && v('cleanOutdoorArea') !== 'none') && (
+             <>
+               <div className="mt-4 text-sm font-semibold text-[#003366]">{tl('wizard.unified.cleaning.outdoorArea.ifAvailable')}</div>
+               <FR label={tl('wizard.unified.cleaning.outdoorArea.condition')} value={v('cleanOutdoorCondition')} onChange={val => set('cleanOutdoorCondition', val)}
+                  options={[
+                    { value: 'normal', label: tl('wizard.unified.cleaning.conditions.normal') },
+                    { value: 'heavilySoiled', label: tl('wizard.unified.cleaning.conditions.heavilySoiled') }
+                  ]}
+               />
+               <FR label={tl('wizard.unified.cleaning.outdoorArea.pressureWashing')} value={v('cleanPressureWashing')} onChange={val => set('cleanPressureWashing', val)}
+                  options={[
+                    { value: 'yes', label: tl('wizard.unified.step2.yes') },
+                    { value: 'no', label: tl('wizard.unified.step2.no') },
+                    { value: 'asRecommended', label: tl('wizard.unified.cleaning.asRecommended') }
+                  ]}
+               />
+               <FR label={tl('wizard.unified.cleaning.outdoorArea.drillHoles')} value={v('cleanDrillHoles')} onChange={val => set('cleanDrillHoles', val)}
+                  options={[
+                    { value: 'no', label: tl('wizard.unified.step2.no') },
+                    { value: 'yes', label: tl('wizard.unified.step2.yes') },
+                    { value: 'notSure', label: tl('wizard.unified.cleaning.outdoorArea.notSure') }
+                  ]}
+               />
+               {v('cleanDrillHoles') === 'yes' && (
+                  <FI label={tl('wizard.unified.cleaning.outdoorArea.drillHolesCount')} value={v('cleanDrillHolesCount')} onChange={val => set('cleanDrillHolesCount', val)} type="number" />
+               )}
+             </>
+          )}
 
           <SH>{tl('wizard.unified.cleaning.conditionTitle')}</SH>
           <div className="grid grid-cols-2 gap-2 mt-2">

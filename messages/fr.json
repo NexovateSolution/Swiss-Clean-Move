@@ -3252,18 +3252,36 @@
             "floorToCeiling": "Du sol au plafond",
             "roof": "Fenêtres de toit"
           },
-          "balconyDoorsTitle": "Portes de balcon",
-          "balconyDoors": {
-            "d0": "0",
-            "d1_2": "1–2",
-            "d3_5": "3–5",
-            "d5plus": "5+"
-          },
           "specialGlass": "Surfaces vitrées spéciales (facultatif)",
           "specialGlassTypes": {
             "sliding": "Fenêtres coulissantes",
             "glassFront": "Façade en verre",
             "winterGarden": "Jardin d'hiver"
+          },
+          "shuttersBlinds": {
+            "title": "Stores / Volets",
+            "venetian": "Stores vénitiens",
+            "roller": "Volets roulants",
+            "window": "Volets battants",
+            "awnings": "Stores bannes",
+            "vertical": "Stores verticaux",
+            "raff": "Stores à lamelles",
+            "quantity": "Quantité",
+            "cleaningRequired": "Nettoyage requis"
+          },
+          "asRecommended": "Selon recommandation",
+          "outdoorArea": {
+            "title": "Espace extérieur",
+            "none": "Aucun",
+            "balcony": "Balcon",
+            "terrace": "Terrasse",
+            "both": "Les deux",
+            "ifAvailable": "Si disponible :",
+            "condition": "État",
+            "pressureWashing": "Nettoyage haute pression",
+            "drillHoles": "🔩 Trous de perçage",
+            "notSure": "Pas sûr",
+            "drillHolesCount": "Si oui :"
           },
           "conditionTitle": "État",
           "conditions": {

@@ -3287,18 +3287,36 @@
             "floorToCeiling": "Bodentief",
             "roof": "Dachfenster"
           },
-          "balconyDoorsTitle": "Balkontüren",
-          "balconyDoors": {
-            "d0": "0",
-            "d1_2": "1–2",
-            "d3_5": "3–5",
-            "d5plus": "5+"
-          },
           "specialGlass": "Spezielle Glasflächen (optional)",
           "specialGlassTypes": {
             "sliding": "Schiebefenster",
             "glassFront": "Glasfront",
             "winterGarden": "Wintergarten"
+          },
+          "shuttersBlinds": {
+            "title": "Storen / Jalousien",
+            "venetian": "Jalousien (Lamellen)",
+            "roller": "Rollläden",
+            "window": "Fensterläden",
+            "awnings": "Markisen",
+            "vertical": "Senkrechtmarkisen",
+            "raff": "Raffstoren",
+            "quantity": "Anzahl",
+            "cleaningRequired": "Reinigung erforderlich"
+          },
+          "asRecommended": "Nach Empfehlung",
+          "outdoorArea": {
+            "title": "Aussenbereich",
+            "none": "Keiner",
+            "balcony": "Balkon",
+            "terrace": "Terrasse",
+            "both": "Beides",
+            "ifAvailable": "Falls vorhanden:",
+            "condition": "Zustand",
+            "pressureWashing": "Hochdruckreinigung",
+            "drillHoles": "🔩 Bohrlöcher",
+            "notSure": "Nicht sicher",
+            "drillHolesCount": "Falls ja:"
           },
           "conditionTitle": "Zustand",
           "conditions": {
