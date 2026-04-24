@@ -3189,19 +3189,29 @@
             "longDistances": "Longues distances de portage",
             "limitedAccess": "Accès limité"
           },
-          "volumeTitle": "Volume du déménagement",
+          "volumeTitle": "📦 Volume",
           "volumes": {
             "small": "Petit (studio / peu de meubles)",
             "medium": "Moyen (appartement normal)",
-            "large": "Grand (maison / beaucoup d'articles)"
+            "large": "Grand (maison / beaucoup d'articles)",
+            "veryLarge": "Très grand"
           },
           "inventoryTitle": "Inventaire et détails (facultatif)",
-          "boxesTitle": "Cartons",
-          "boxes": {
-            "b0_20": "0–20",
-            "b20_50": "20–50",
-            "b50_100": "50–100",
-            "b100plus": "100+"
+          "premiumBoxesTitle": "📦 Cartons",
+          "premiumBoxes": {
+            "standard": "Cartons standard",
+            "book": "Cartons à livres",
+            "wardrobe": "Cartons penderie",
+            "dishesGlass": "Vaisselle / Verre",
+            "specialTvPaintings": "Cartons spéciaux (TV / tableaux)"
+          },
+          "packingMaterialsTitle": "📦 Matériel d'emballage",
+          "packingMaterials": {
+            "provideBoxes": "Fournir des cartons",
+            "bubbleWrap": "Papier bulle",
+            "packingPaper": "Papier d'emballage",
+            "stretchFilm": "Film étirable",
+            "movingBlankets": "Couvertures de déménagement"
           },
           "furnitureTitle": "Meubles / appareils",
           "furniture": {

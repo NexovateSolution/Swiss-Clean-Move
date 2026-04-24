@@ -3224,19 +3224,29 @@
             "longDistances": "Lange Tragewege",
             "limitedAccess": "Zufahrt eingeschränkt"
           },
-          "volumeTitle": "Umzugsvolumen",
+          "volumeTitle": "📦 Volumen",
           "volumes": {
             "small": "Klein (Studio / wenig Möbel)",
             "medium": "Mittel (normale Wohnung)",
-            "large": "Gross (Haus / viel Inventar)"
+            "large": "Gross (Haus / viel Inventar)",
+            "veryLarge": "Sehr gross"
           },
           "inventoryTitle": "Inventar & Angaben (optional)",
-          "boxesTitle": "Kartons",
-          "boxes": {
-            "b0_20": "0–20",
-            "b20_50": "20–50",
-            "b50_100": "50–100",
-            "b100plus": "100+"
+          "premiumBoxesTitle": "📦 Kartons",
+          "premiumBoxes": {
+            "standard": "Standardkartons",
+            "book": "Bücherkartons",
+            "wardrobe": "Kleiderkartons",
+            "dishesGlass": "Geschirr / Glas",
+            "specialTvPaintings": "Spezialkartons (TV / Bilder)"
+          },
+          "packingMaterialsTitle": "📦 Verpackungsmaterial",
+          "packingMaterials": {
+            "provideBoxes": "Kartons bereitstellen",
+            "bubbleWrap": "Luftpolsterfolie",
+            "packingPaper": "Packpapier",
+            "stretchFilm": "Stretchfolie",
+            "movingBlankets": "Umzugsdecken"
           },
           "furnitureTitle": "Möbel / Geräte",
           "furniture": {

@@ -166,20 +166,31 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
             options={[
               { value: 'small', label: tl('wizard.unified.moving.volumes.small') },
               { value: 'medium', label: tl('wizard.unified.moving.volumes.medium') },
-              { value: 'large', label: tl('wizard.unified.moving.volumes.large') }
+              { value: 'large', label: tl('wizard.unified.moving.volumes.large') },
+              { value: 'veryLarge', label: tl('wizard.unified.moving.volumes.veryLarge') }
             ]}
           />
 
           <SH>{tl('wizard.unified.moving.inventoryTitle')}</SH>
-          <FS label={tl('wizard.unified.moving.boxesTitle')} value={v('moveBoxes')} onChange={val => set('moveBoxes', val)}
-             options={[
-               { value: 'b0_20', label: tl('wizard.unified.moving.boxes.b0_20') },
-               { value: 'b20_50', label: tl('wizard.unified.moving.boxes.b20_50') },
-               { value: 'b50_100', label: tl('wizard.unified.moving.boxes.b50_100') },
-               { value: 'b100plus', label: tl('wizard.unified.moving.boxes.b100plus') }
-             ]}
-          />
-          <div className="mt-2 text-sm font-semibold text-[#003366]">{tl('wizard.unified.moving.furnitureTitle')}</div>
+
+          <div className="mt-2 text-sm font-semibold text-[#003366]">{tl('wizard.unified.moving.premiumBoxesTitle')}</div>
+          {['standard','book','wardrobe','dishesGlass','specialTvPaintings'].map(k => (
+             <div key={k} className="flex items-center gap-3 mt-2">
+               <FC label={tl(`wizard.unified.moving.premiumBoxes.${k}`)} checked={arrHas('moveBoxTypes', k)} onChange={() => toggleArr('moveBoxTypes', k)} />
+               {arrHas('moveBoxTypes', k) && (
+                 <input type="number" min="0" value={v(`moveBoxQty_${k}`)} onChange={e => set(`moveBoxQty_${k}`, e.target.value)} placeholder="0" className="w-20 px-2 py-1 border-2 border-[#a8c8e8] rounded-lg text-sm text-[#003366] bg-white" />
+               )}
+             </div>
+          ))}
+
+          <div className="mt-4 text-sm font-semibold text-[#003366]">{tl('wizard.unified.moving.packingMaterialsTitle')}</div>
+          <div className="grid grid-cols-2 gap-2 mt-2">
+             {['provideBoxes','bubbleWrap','packingPaper','stretchFilm','movingBlankets'].map(k => (
+                <FC key={k} label={tl(`wizard.unified.moving.packingMaterials.${k}`)} checked={arrHas('movePackingMaterials', k)} onChange={() => toggleArr('movePackingMaterials', k)} />
+             ))}
+          </div>
+
+          <div className="mt-4 text-sm font-semibold text-[#003366]">{tl('wizard.unified.moving.furnitureTitle')}</div>
           <div className="grid grid-cols-2 gap-2">
              {['sofa','bed','wardrobe','tableChairs','tv','washingMachine','refrigerator'].map(k => (
                 <FC key={k} label={tl(`wizard.unified.moving.furniture.${k}`)} checked={arrHas('moveFurniture', k)} onChange={() => toggleArr('moveFurniture', k)} />

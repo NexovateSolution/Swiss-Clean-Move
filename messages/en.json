@@ -2937,19 +2937,29 @@
             "longDistances": "Long carrying distances",
             "limitedAccess": "Limited access"
           },
-          "volumeTitle": "Moving volume",
+          "volumeTitle": "📦 Volume",
           "volumes": {
             "small": "Small (studio / few items)",
             "medium": "Medium (normal apartment)",
-            "large": "Large (house / many items)"
+            "large": "Large (house / many items)",
+            "veryLarge": "Very large"
           },
           "inventoryTitle": "Inventory & details (optional)",
-          "boxesTitle": "Boxes",
-          "boxes": {
-            "b0_20": "0–20",
-            "b20_50": "20–50",
-            "b50_100": "50–100",
-            "b100plus": "100+"
+          "premiumBoxesTitle": "📦 Boxes",
+          "premiumBoxes": {
+            "standard": "Standard boxes",
+            "book": "Book boxes",
+            "wardrobe": "Wardrobe boxes",
+            "dishesGlass": "Dishes / Glass",
+            "specialTvPaintings": "Special boxes (TV / paintings)"
+          },
+          "packingMaterialsTitle": "📦 Packing materials",
+          "packingMaterials": {
+            "provideBoxes": "Provide boxes",
+            "bubbleWrap": "Bubble wrap",
+            "packingPaper": "Packing paper",
+            "stretchFilm": "Stretch film",
+            "movingBlankets": "Moving blankets"
           },
           "furnitureTitle": "Furniture / appliances",
           "furniture": {
