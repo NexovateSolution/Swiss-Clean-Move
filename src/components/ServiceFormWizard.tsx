@@ -7,7 +7,7 @@ import toast from 'react-hot-toast'
 import { Upload, X } from 'lucide-react'
 
 // Imports of the forms
-import { PropertyMaintenanceForm, MaintenanceCleaningForm } from './service-forms/ServiceFormsPart1'
+import { MaintenanceCleaningForm } from './service-forms/ServiceFormsPart1'
 import { DisposalForm } from './service-forms/ServiceFormsPart2'
 import { RelocationForm, HouseholdHelpingForm, ComboServiceForm } from './service-forms/ServiceFormsPart3'
 import { UnifiedMovingCleaningForm } from './service-forms/UnifiedMovingCleaningForm'
@@ -17,7 +17,6 @@ import { FormStepProps } from './FormControls'
 export type ServiceSlug =
   | 'house-cleaning' | 'window-cleaning'
   | 'relocation' | 'disposal'
-  | 'property-maintenance'
   | 'combo-service' | 'household-helping'
   | 'facility-services'
   // Legacy slugs that redirect to facility-services
@@ -34,11 +33,10 @@ function isFacilityService(s: ServiceSlug): boolean {
 
 function getStepCount(s: ServiceSlug): number {
   if (isFacilityService(s)) return 2
-  if (s === 'property-maintenance') return 4
   if (['house-cleaning', 'window-cleaning'].includes(s)) return 4
   if (s === 'disposal') return 4
   if (s === 'relocation') return 4
-  if (s === 'household-helping') return 3
+  if (s === 'household-helping') return 5
   if (s === 'combo-service') return 3
   return 3
 }
@@ -281,7 +279,6 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
     }
 
     switch (service) {
-      case 'property-maintenance': return <PropertyMaintenanceForm {...actualFormProps} />
       case 'house-cleaning': 
       case 'window-cleaning': 
         return <MaintenanceCleaningForm {...actualFormProps} />

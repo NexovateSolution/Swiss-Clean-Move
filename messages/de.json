@@ -25,7 +25,7 @@
       "viewAll": "Alle Services ansehen",
       "customSolution": "Sie benötigen eine individuelle Lösung? Wir passen unseren Service an Ihre Bedürfnisse an.",
       "houseCleaning": {
-        "title": "Hausreinigung",
+        "title": "Reinigung und Hauswartung",
         "description": "Umfassende Hausreinigungsdienstleistungen für Wohnimmobilien mit Liebe zum Detail"
       },
       "apartmentCleaning": {
@@ -934,7 +934,8 @@
           "name": "Name / Vorname:",
           "email": "E-Mail:",
           "phone": "Telefon:"
-        }
+        },
+        "specialNotes": "Besondere Hinweise (optional)"
       },
       "badge": "Offerte berechnen",
       "stepCounter": "Schritt {current} von {total}",
@@ -1883,7 +1884,7 @@
           "carpet": "Teppich",
           "pvc": "PVC"
         },
-        "elevatorAvailable": "Gibt es einen Aufzug?",
+        "elevatorAvailable": "Aufzug vorhanden",
         "yes": "Ja",
         "no": "Nein",
         "livingArea": "Wohnfläche: *",
@@ -1921,22 +1922,22 @@
         "company": "Firma: *",
         "emailAddress": "E-Mail-Adresse: *",
         "telephoneNumber": "Telefonnummer: *",
-        "zipCity": "PLZ / Ort: *",
-        "streetNo": "Strasse, Nr.: *",
+        "zipCity": "PLZ / Ort",
+        "streetNo": "Strasse / Nr.",
         "contact": "Kontakt",
         "nameCompany": "Name / Firma *",
         "contactPerson": "Ansprechperson",
-        "phone": "Telefon *",
-        "email": "E-Mail *",
+        "phone": "Telefon",
+        "email": "E-Mail",
         "addressTitle": "Adresse",
-        "address": "Strasse, PLZ, Ort *",
+        "address": "Adresse *",
         "serviceSelection": "Service auswählen",
         "services": {
           "householdPrivate": "Haushaltshilfe (Privat)",
           "maintenanceBoth": "Unterhaltsreinigung (Privat / Geschäftlich)"
         },
         "property": "Objekt",
-        "propertyType": "Objektart",
+        "propertyType": "Objektart *",
         "types": {
           "apartment": "Wohnung",
           "house": "Haus",
@@ -1982,7 +1983,13 @@
           "windows": "Fenster",
           "stairwell": "Treppenhaus",
           "waste": "Abfall",
-          "disinfection": "Desinfektion"
+          "disinfection": "Desinfektion",
+          "windowsInside": "Fenster (innen)",
+          "windowsOutside": "Fenster (außen)",
+          "blindsShutters": "Storen / Rollläden",
+          "cleaningRefrigerator": "Kühlschrank reinigen",
+          "cleaningOven": "Backofen reinigen",
+          "balconyTerrace": "Balkon / Terrasse"
         },
         "floorTypes": "Bodenarten",
         "specialNeeds": "Besonderes",
@@ -2047,7 +2054,75 @@
           "photos": "Fotos",
           "documents": "Dokumente"
         },
-        "notes": "Bemerkungen (optional)"
+        "notes": "Bemerkungen (optional)",
+        "step1Title": "SCHRITT 1 – REINIGUNG & HÄUFIGKEIT",
+        "supportType": "Welche Art von Unterstützung benötigen Sie?",
+        "supportTypes": {
+          "householdHelp": "Haushaltshilfe (alltägliche Unterstützung / Betreuung)",
+          "maintenanceCleaning": "Unterhaltsreinigung (regelmäßig)",
+          "combination": "Kombination"
+        },
+        "cleaningFrequency": "Reinigungsintervall *",
+        "frequency": {
+          "oneTime": "Einmalig",
+          "weekly": "Wöchentlich",
+          "twoThreePerWeek": "2–3 Mal pro Woche",
+          "everyTwoWeeks": "Alle 2 Wochen",
+          "monthly": "Monatlich",
+          "custom": "Individuell"
+        },
+        "preferredStart": "Gewünschter Beginn *",
+        "date": "Datum",
+        "time": "Uhrzeit (optional)",
+        "flexibility": "Flexibilität",
+        "flexibilityTypes": {
+          "fixed": "Fester Termin",
+          "flexible": "Flexibel"
+        },
+        "step2Title": "SCHRITT 2 – OBJEKT & HAUSHALT",
+        "propertyTypes": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "sharedRoom": "WG-Zimmer"
+        },
+        "size": "Größe",
+        "numberOfRooms": "Anzahl Zimmer",
+        "areaM2": "Fläche (m²)",
+        "floor": "Etage",
+        "step3Title": "SCHRITT 3 – REINIGUNGSUMFANG",
+        "standardCleaning": "Standardreinigung",
+        "standardOptions": {
+          "vacuuming": "Staubsaugen",
+          "moppingFloors": "Böden feucht aufnehmen",
+          "dusting": "Abstauben",
+          "cleaningKitchen": "Küche reinigen",
+          "cleaningBathroom": "Bad / WC reinigen",
+          "cleaningSurfaces": "Oberflächen reinigen"
+        },
+        "householdHelpOptional": "Haushaltshilfe (optional)",
+        "householdHelpOptions": {
+          "laundry": "Wäsche waschen",
+          "ironing": "Bügeln",
+          "changingBedLinen": "Bettwäsche wechseln",
+          "tidyingUp": "Aufräumen / Organisieren",
+          "shopping": "Einkaufen / Botengänge"
+        },
+        "step4Title": "SCHRITT 4 – ZUGANG & DETAILS",
+        "accessApartment": "Zugang zur Wohnung",
+        "accessTypes": {
+          "inPerson": "Persönlich vor Ort",
+          "keyAvailable": "Schlüssel vorhanden",
+          "keyMailbox": "Schlüssel im Briefkasten",
+          "other": "Sonstiges"
+        },
+        "otherSpecify": "Bitte angeben:",
+        "pets": "Haustiere",
+        "specialNotes": "Besondere Hinweise (optional)",
+        "step5Title": "SCHRITT 5 – UPLOAD & KONTAKT",
+        "uploadPhotos": "Fotos hochladen",
+        "uploadHint": "Für eine schnellere & genauere Offerte",
+        "contactDetails": "Kontaktdaten",
+        "name": "Name / Vorname"
       },
       "frequency": {
         "label": "Häufigkeit / Intervall",

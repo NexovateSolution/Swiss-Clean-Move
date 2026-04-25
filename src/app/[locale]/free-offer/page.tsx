@@ -79,7 +79,6 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
       iconColor: 'text-emerald-600',
       services: [
         { title: t('home.services.householdHelping.title'), description: t('home.services.householdHelping.description'), formHref: `/${locale}/form?service=household-helping`, href: `/${locale}/services/household-helping`, icon: Heart },
-        { title: t('home.services.propertyMaintenance.title'), description: t('home.services.propertyMaintenance.description'), formHref: `/${locale}/form?service=property-maintenance`, href: `/${locale}/services#propertyMaintenance`, icon: Wrench },
       ]
     }
   ];

@@ -16,7 +16,6 @@ const SERVICES: { slug: ServiceSlug; tKey: string }[] = [
   { slug: 'gastronomy-cleaning', tKey: 'gastronomyCleaning' },
   { slug: 'medical-cleaning', tKey: 'medicalCleaning' },
   { slug: 'construction-cleaning', tKey: 'constructionCleaning' },
-  { slug: 'property-maintenance', tKey: 'propertyMaintenance' },
   { slug: 'special-cleaning', tKey: 'specialCleaning' },
   { slug: 'combo-service', tKey: 'comboService' },
   { slug: 'household-helping', tKey: 'householdHelping' },

@@ -12,7 +12,6 @@ const allowedServices: ServiceSlug[] = [
   'window-cleaning',
   'relocation',
   'disposal',
-  'property-maintenance',
   'combo-service',
   'household-helping',
   'facility-services',
@@ -40,8 +39,6 @@ function getServiceName(t: ReturnType<typeof useTranslations>, service: ServiceS
       return t('home.services.relocation.title')
     case 'disposal':
       return t('home.services.disposal.title')
-    case 'property-maintenance':
-      return t('home.services.propertyMaintenance.title')
     case 'combo-service':
       return t('home.services.comboService.title')
     case 'household-helping':

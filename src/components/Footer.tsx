@@ -23,7 +23,6 @@ export default function Footer() {
     { name: t('home.services.windowCleaning.title'), href: `/${locale}/services#windowCleaning` },
     { name: t('home.services.relocation.title'), href: `/${locale}/services#relocation` },
     { name: t('home.services.disposal.title'), href: `/${locale}/services#disposal` },
-    { name: t('home.services.propertyMaintenance.title'), href: `/${locale}/services#propertyMaintenance` },
     { name: t('home.services.comboService.title'), href: `/${locale}/services#comboService` },
     { name: t('home.services.facilityServices.title'), href: `/${locale}/services#facilityServices` },
   ];

@@ -296,6 +296,18 @@ export function FacilityServicesForm({ step, d, set, tl, v, arrHas, toggleArr, I
           <p className="text-sm text-[#5a7a9a] mb-3">{tl('wizard.facilityServices.upload.hint')}</p>
           <ImageUpload />
 
+          {/* Special Notes */}
+          <SH>{tl('wizard.facilityServices.specialNotes')}</SH>
+          <div className="mb-6">
+            <textarea
+              className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003366]/40 focus:border-[#003366] bg-white text-[#003366] transition-colors text-sm"
+              rows={4}
+              placeholder={tl('wizard.facilityServices.specialNotes')}
+              value={v('specialNotes')}
+              onChange={e => set('specialNotes', e.target.value)}
+            />
+          </div>
+
           {/* Contact info */}
           <SH>{tl('wizard.facilityServices.contact.title')}</SH>
           <FI label={tl('wizard.facilityServices.contact.name')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />

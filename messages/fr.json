@@ -25,7 +25,7 @@
       "viewAll": "Voir tous les services",
       "customSolution": "Besoin d'une solution sur mesure ? Nous adaptons notre service à vos besoins.",
       "houseCleaning": {
-        "title": "Nettoyage de maison",
+        "title": "Nettoyage et Conciergerie",
         "description": "Services complets de nettoyage de maison pour les propriétés résidentielles avec une attention à chaque détail"
       },
       "apartmentCleaning": {
@@ -899,7 +899,8 @@
           "name": "Nom / Prénom :",
           "email": "E-mail :",
           "phone": "Téléphone :"
-        }
+        },
+        "specialNotes": "Remarques particulières (optionnel)"
       },
       "badge": "Calculer une offre",
       "stepCounter": "Étape {current} sur {total}",
@@ -1848,7 +1849,7 @@
           "carpet": "Moquette",
           "pvc": "PVC"
         },
-        "elevatorAvailable": "Y a-t-il un ascenseur ?",
+        "elevatorAvailable": "Ascenseur disponible",
         "yes": "Oui",
         "no": "Non",
         "livingArea": "Surface habitable : *",
@@ -1886,22 +1887,22 @@
         "company": "Entreprise : *",
         "emailAddress": "Adresse e-mail : *",
         "telephoneNumber": "Numéro de téléphone : *",
-        "zipCity": "NPA / Localité : *",
-        "streetNo": "Rue, N° : *",
+        "zipCity": "NPA / Localité",
+        "streetNo": "Rue / N°",
         "contact": "Contact",
         "nameCompany": "Nom / Entreprise *",
         "contactPerson": "Personne de contact",
-        "phone": "Téléphone *",
-        "email": "Email *",
+        "phone": "Téléphone",
+        "email": "E-mail",
         "addressTitle": "Adresse",
-        "address": "Rue, NPA, Ville *",
+        "address": "Adresse *",
         "serviceSelection": "Sélectionner le service",
         "services": {
           "householdPrivate": "Aide au ménage (Privé)",
           "maintenanceBoth": "Nettoyage d'entretien (Privé / Commercial)"
         },
         "property": "Propriété",
-        "propertyType": "Type de bien",
+        "propertyType": "Type de propriété *",
         "types": {
           "apartment": "Appartement",
           "house": "Maison",
@@ -1947,7 +1948,13 @@
           "windows": "Fenêtres",
           "stairwell": "Cage d'escalier",
           "waste": "Déchets",
-          "disinfection": "Désinfection"
+          "disinfection": "Désinfection",
+          "windowsInside": "Fenêtres (intérieur)",
+          "windowsOutside": "Fenêtres (extérieur)",
+          "blindsShutters": "Stores / volets",
+          "cleaningRefrigerator": "Nettoyer le réfrigérateur",
+          "cleaningOven": "Nettoyer le four",
+          "balconyTerrace": "Balcon / terrasse"
         },
         "floorTypes": "Types de sol",
         "specialNeeds": "Besoins particuliers",
@@ -2012,7 +2019,75 @@
           "photos": "Photos",
           "documents": "Documents"
         },
-        "notes": "Remarques (facultatif)"
+        "notes": "Remarques (facultatif)",
+        "step1Title": "ÉTAPE 1 – NETTOYAGE & FRÉQUENCE",
+        "supportType": "De quel type de soutien avez-vous besoin ?",
+        "supportTypes": {
+          "householdHelp": "Aide ménagère (soutien quotidien / assistance)",
+          "maintenanceCleaning": "Nettoyage d'entretien (régulier)",
+          "combination": "Combinaison"
+        },
+        "cleaningFrequency": "Fréquence de nettoyage *",
+        "frequency": {
+          "oneTime": "Une fois",
+          "weekly": "Hebdomadaire",
+          "twoThreePerWeek": "2–3 fois par semaine",
+          "everyTwoWeeks": "Toutes les 2 semaines",
+          "monthly": "Mensuel",
+          "custom": "Sur mesure"
+        },
+        "preferredStart": "Début souhaité *",
+        "date": "Date",
+        "time": "Heure (optionnel)",
+        "flexibility": "Flexibilité",
+        "flexibilityTypes": {
+          "fixed": "Rendez-vous fixe",
+          "flexible": "Flexible"
+        },
+        "step2Title": "ÉTAPE 2 – PROPRIÉTÉ & MÉNAGE",
+        "propertyTypes": {
+          "apartment": "Appartement",
+          "house": "Maison",
+          "sharedRoom": "Chambre en colocation"
+        },
+        "size": "Taille",
+        "numberOfRooms": "Nombre de pièces",
+        "areaM2": "Surface (m²)",
+        "floor": "Étage",
+        "step3Title": "ÉTAPE 3 – ÉTENDUE DU NETTOYAGE",
+        "standardCleaning": "Nettoyage standard",
+        "standardOptions": {
+          "vacuuming": "Passer l'aspirateur",
+          "moppingFloors": "Laver les sols",
+          "dusting": "Faire la poussière",
+          "cleaningKitchen": "Nettoyer la cuisine",
+          "cleaningBathroom": "Nettoyer salle de bain / WC",
+          "cleaningSurfaces": "Nettoyer les surfaces"
+        },
+        "householdHelpOptional": "Aide ménagère (optionnel)",
+        "householdHelpOptions": {
+          "laundry": "Faire la lessive",
+          "ironing": "Repasser",
+          "changingBedLinen": "Changer les draps",
+          "tidyingUp": "Ranger / organiser",
+          "shopping": "Faire les courses / commissions"
+        },
+        "step4Title": "ÉTAPE 4 – ACCÈS & DÉTAILS",
+        "accessApartment": "Accès à l'appartement",
+        "accessTypes": {
+          "inPerson": "En personne",
+          "keyAvailable": "Clé disponible",
+          "keyMailbox": "Clé dans la boîte aux lettres",
+          "other": "Autre"
+        },
+        "otherSpecify": "Veuillez préciser :",
+        "pets": "Animaux domestiques",
+        "specialNotes": "Remarques particulières (optionnel)",
+        "step5Title": "ÉTAPE 5 – TÉLÉCHARGEMENT & CONTACT",
+        "uploadPhotos": "Télécharger des photos",
+        "uploadHint": "Pour un devis plus rapide & plus précis",
+        "contactDetails": "Coordonnées",
+        "name": "Nom / Prénom"
       },
       "frequency": {
         "label": "Fréquence / Intervalle",

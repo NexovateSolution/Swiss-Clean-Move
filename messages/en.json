@@ -35,7 +35,7 @@
       "viewAll": "View all services",
       "customSolution": "Need a custom solution? We tailor our service to your needs.",
       "houseCleaning": {
-        "title": "House Cleaning",
+        "title": "Cleaning & Property Maintenance",
         "description": "Comprehensive house cleaning services for residential properties with attention to every detail"
       },
       "apartmentCleaning": {
@@ -862,7 +862,8 @@
           "name": "Name / First name:",
           "email": "E-mail:",
           "phone": "Phone:"
-        }
+        },
+        "specialNotes": "Special notes (optional)"
       },
       "badge": "Request Quote",
       "subtitle": "Get a free, no-obligation quote for our professional services",
@@ -1418,7 +1419,7 @@
           "carpet": "Carpet",
           "pvc": "PVC"
         },
-        "elevatorAvailable": "Is there an elevator?",
+        "elevatorAvailable": "Elevator available",
         "yes": "Yes",
         "no": "No",
         "livingArea": "Living area: *",
@@ -1456,22 +1457,22 @@
         "company": "Company: *",
         "emailAddress": "E-mail address: *",
         "telephoneNumber": "Telephone number: *",
-        "zipCity": "ZIP / City: *",
-        "streetNo": "Street, No.: *",
+        "zipCity": "ZIP / City",
+        "streetNo": "Street / No.",
         "contact": "Contact",
         "nameCompany": "Name / Company *",
         "contactPerson": "Contact person",
-        "phone": "Phone *",
-        "email": "Email *",
+        "phone": "Phone",
+        "email": "E-mail",
         "addressTitle": "Address",
-        "address": "Street, ZIP, City *",
+        "address": "Address *",
         "serviceSelection": "Select Service",
         "services": {
           "householdPrivate": "Household helping (Private)",
           "maintenanceBoth": "Maintenance cleaning (Private / Commercial)"
         },
         "property": "Property",
-        "propertyType": "Property type",
+        "propertyType": "Property type *",
         "types": {
           "apartment": "Apartment",
           "house": "House",
@@ -1512,12 +1513,18 @@
           "tidying": "Tidying up",
           "shopping": "Shopping"
         },
-        "additionalServices": "Additional Services",
+        "additionalServices": "Additional services",
         "additionalOptions": {
           "windows": "Windows",
           "stairwell": "Stairwell",
           "waste": "Waste",
-          "disinfection": "Disinfection"
+          "disinfection": "Disinfection",
+          "windowsInside": "Windows (inside)",
+          "windowsOutside": "Windows (outside)",
+          "blindsShutters": "Blinds / shutters",
+          "cleaningRefrigerator": "Cleaning the refrigerator",
+          "cleaningOven": "Cleaning the oven",
+          "balconyTerrace": "Balcony / terrace"
         },
         "floorTypes": "Floor Types",
         "specialNeeds": "Special Needs",
@@ -1582,7 +1589,75 @@
           "photos": "Photos",
           "documents": "Documents"
         },
-        "notes": "Notes (optional)"
+        "notes": "Notes (optional)",
+        "step1Title": "STEP 1 – CLEANING & FREQUENCY",
+        "supportType": "What kind of support do you need?",
+        "supportTypes": {
+          "householdHelp": "Household help (daily support / assistance)",
+          "maintenanceCleaning": "Maintenance cleaning (regular)",
+          "combination": "Combination"
+        },
+        "cleaningFrequency": "Cleaning frequency *",
+        "frequency": {
+          "oneTime": "One-time",
+          "weekly": "Weekly",
+          "twoThreePerWeek": "2–3 times per week",
+          "everyTwoWeeks": "Every 2 weeks",
+          "monthly": "Monthly",
+          "custom": "Custom"
+        },
+        "preferredStart": "Preferred start *",
+        "date": "Date",
+        "time": "Time (optional)",
+        "flexibility": "Flexibility",
+        "flexibilityTypes": {
+          "fixed": "Fixed appointment",
+          "flexible": "Flexible"
+        },
+        "step2Title": "STEP 2 – PROPERTY & HOUSEHOLD",
+        "propertyTypes": {
+          "apartment": "Apartment",
+          "house": "House",
+          "sharedRoom": "Shared room (WG room)"
+        },
+        "size": "Size",
+        "numberOfRooms": "Number of rooms",
+        "areaM2": "Area (m²)",
+        "floor": "Floor",
+        "step3Title": "STEP 3 – CLEANING SCOPE",
+        "standardCleaning": "Standard cleaning",
+        "standardOptions": {
+          "vacuuming": "Vacuuming",
+          "moppingFloors": "Mopping floors",
+          "dusting": "Dusting",
+          "cleaningKitchen": "Cleaning the kitchen",
+          "cleaningBathroom": "Cleaning bathroom / toilet",
+          "cleaningSurfaces": "Cleaning surfaces"
+        },
+        "householdHelpOptional": "Household help (optional)",
+        "householdHelpOptions": {
+          "laundry": "Laundry",
+          "ironing": "Ironing",
+          "changingBedLinen": "Changing bed linen",
+          "tidyingUp": "Tidying up / organizing",
+          "shopping": "Shopping / errands"
+        },
+        "step4Title": "STEP 4 – ACCESS & DETAILS",
+        "accessApartment": "Access to the apartment",
+        "accessTypes": {
+          "inPerson": "In person",
+          "keyAvailable": "Key available",
+          "keyMailbox": "Key in mailbox",
+          "other": "Other"
+        },
+        "otherSpecify": "Please specify:",
+        "pets": "Pets",
+        "specialNotes": "Special notes (optional)",
+        "step5Title": "STEP 5 – UPLOAD & CONTACT",
+        "uploadPhotos": "Upload photos",
+        "uploadHint": "For a faster & more accurate quote",
+        "contactDetails": "Contact Details",
+        "name": "Name / First Name"
       },
       "frequency": {
         "label": "Label",
