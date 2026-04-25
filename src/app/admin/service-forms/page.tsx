@@ -117,20 +117,11 @@ export default function ServiceFormsPage() {
   const getServiceColor = (serviceName: string) => {
     const colors: { [key: string]: string } = {
       'House Cleaning': 'bg-blue-100 text-blue-800',
-      'Apartment Cleaning': 'bg-green-100 text-green-800',
-      'Stairwell Cleaning': 'bg-purple-100 text-purple-800',
-      'Office Cleaning': 'bg-orange-100 text-orange-800',
-      'Final Cleaning': 'bg-teal-100 text-teal-800',
       'Window Cleaning': 'bg-cyan-100 text-cyan-800',
       'Relocation': 'bg-indigo-100 text-indigo-800',
       'Disposal': 'bg-red-100 text-red-800',
-      'Maintenance Cleaning': 'bg-sky-100 text-sky-800',
-      'Gastronomy Cleaning': 'bg-rose-100 text-rose-800',
-      'Medical Cleaning': 'bg-emerald-100 text-emerald-800',
-      'Construction Cleaning': 'bg-yellow-100 text-yellow-800',
-      'Property Maintenance': 'bg-teal-100 text-teal-800',
-      'Special Cleaning': 'bg-fuchsia-100 text-fuchsia-800',
-      'Combo Service': 'bg-indigo-100 text-indigo-800'
+      'Household Helping': 'bg-emerald-100 text-emerald-800',
+      'Facility Services': 'bg-purple-100 text-purple-800',
     }
     return colors[serviceName] || 'bg-gray-100 text-gray-800'
   }

@@ -6,8 +6,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
   useEffect(() => {
     if (!v('requestType')) {
       if (service === 'relocation') set('requestType', 'moving');
-      else if (service === 'combo-service') set('requestType', 'combo');
-      else set('requestType', 'cleaning'); // Default to cleaning for 'final-cleaning'
+      else set('requestType', 'cleaning');
     }
   }, [service, v, set]);
 

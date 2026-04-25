@@ -47,7 +47,6 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
     { id: 'windowCleaning', icon: Layers, href: `/${locale}/services/window-cleaning` },
     { id: 'relocation', icon: Truck, href: `/${locale}/services/relocation` },
     { id: 'disposal', icon: Trash2, href: `/${locale}/services/disposal` },
-    { id: 'comboService', icon: RotateCcw, href: `/${locale}/services#comboService` },
     { id: 'householdHelping', icon: Heart, href: `/${locale}/services/household-helping` },
     { id: 'facilityServices', icon: Building2, href: `/${locale}/services#facilityServices` }
   ];

@@ -12,7 +12,6 @@ const allowedServices: ServiceSlug[] = [
   'window-cleaning',
   'relocation',
   'disposal',
-  'combo-service',
   'household-helping',
   'facility-services',
   // Legacy slugs
@@ -39,8 +38,6 @@ function getServiceName(t: ReturnType<typeof useTranslations>, service: ServiceS
       return t('home.services.relocation.title')
     case 'disposal':
       return t('home.services.disposal.title')
-    case 'combo-service':
-      return t('home.services.comboService.title')
     case 'household-helping':
       return t('home.services.householdHelping.title')
     case 'facility-services':

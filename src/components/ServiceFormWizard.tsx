@@ -17,7 +17,7 @@ import { FormStepProps } from './FormControls'
 export type ServiceSlug =
   | 'house-cleaning' | 'window-cleaning'
   | 'relocation' | 'disposal'
-  | 'combo-service' | 'household-helping'
+  | 'household-helping'
   | 'facility-services'
   // Legacy slugs that redirect to facility-services
   | 'stairwell-cleaning'
@@ -37,7 +37,6 @@ function getStepCount(s: ServiceSlug): number {
   if (s === 'disposal') return 4
   if (s === 'relocation') return 4
   if (s === 'household-helping') return 5
-  if (s === 'combo-service') return 3
   return 3
 }
 
@@ -50,8 +49,8 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
   const [images, setImages] = useState<File[]>([])
   const fileInputRef = useRef<HTMLInputElement>(null)
   
-  const isUnified = ['relocation', 'combo-service', 'house-cleaning'].includes(service);
-  const reqType = (d.requestType as string) || (['relocation'].includes(service) ? 'moving' : service === 'combo-service' ? 'combo' : 'cleaning');
+  const isUnified = ['relocation', 'house-cleaning'].includes(service);
+  const reqType = (d.requestType as string) || (['relocation'].includes(service) ? 'moving' : 'cleaning');
   
   const baseSteps = useMemo(() => {
     if (isUnified) {

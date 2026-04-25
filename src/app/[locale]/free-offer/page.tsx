@@ -52,7 +52,6 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
       iconColor: 'text-indigo-600',
       services: [
         { title: t('home.services.relocation.title'), description: t('home.services.relocation.description'), formHref: `/${locale}/form?service=relocation`, href: `/${locale}/services/relocation`, icon: Truck },
-        { title: t('home.services.comboService.title'), description: t('home.services.comboService.description'), formHref: `/${locale}/form?service=combo-service`, href: `/${locale}/services#comboService`, icon: Truck },
       ]
     },
     {

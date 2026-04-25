@@ -223,14 +223,12 @@ export default function ClientsPage() {
   }
 
   const serviceOptions = [
-    { value: 'Maintenance Cleaning', label: t('services.maintenanceCleaning') },
     { value: 'House Cleaning', label: t('services.houseCleaning') },
     { value: 'Window Cleaning', label: t('services.windowCleaning') },
     { value: 'Relocation', label: t('services.relocation') },
     { value: 'Disposal', label: t('services.disposal') },
-    { value: 'Property Maintenance', label: t('services.propertyMaintenance') },
-    { value: 'Combo Service', label: t('services.comboService') },
-    { value: 'Facility Services', label: 'Facility Services' }
+    { value: 'Household Helping', label: t('services.householdHelping') },
+    { value: 'Facility Services', label: t('services.facilityServices') },
   ]
 
   const getStatusColor = (status: string) => {

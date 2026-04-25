@@ -8,17 +8,11 @@ import { useState, useEffect } from 'react'
 
 const SERVICES: { slug: ServiceSlug; tKey: string }[] = [
   { slug: 'house-cleaning', tKey: 'houseCleaning' },
-  { slug: 'stairwell-cleaning', tKey: 'stairwellCleaning' },
-  { slug: 'final-cleaning', tKey: 'finalCleaning' },
   { slug: 'window-cleaning', tKey: 'windowCleaning' },
   { slug: 'relocation', tKey: 'relocation' },
   { slug: 'disposal', tKey: 'disposal' },
-  { slug: 'gastronomy-cleaning', tKey: 'gastronomyCleaning' },
-  { slug: 'medical-cleaning', tKey: 'medicalCleaning' },
-  { slug: 'construction-cleaning', tKey: 'constructionCleaning' },
-  { slug: 'special-cleaning', tKey: 'specialCleaning' },
-  { slug: 'combo-service', tKey: 'comboService' },
   { slug: 'household-helping', tKey: 'householdHelping' },
+  { slug: 'facility-services', tKey: 'facilityServices' },
 ]
 
 export default function NewProjectPage() {
