@@ -25,7 +25,7 @@
       "viewAll": "Alle Services ansehen",
       "customSolution": "Sie benötigen eine individuelle Lösung? Wir passen unseren Service an Ihre Bedürfnisse an.",
       "houseCleaning": {
-        "title": "Reinigung und Hauswartung",
+        "title": "Umzugsreinigung & Endreinigung mit Abnahmegarantie",
         "description": "Umfassende Hausreinigungsdienstleistungen für Wohnimmobilien mit Liebe zum Detail"
       },
       "apartmentCleaning": {
@@ -4041,7 +4041,7 @@
       "selectService": "Wählen Sie einen Service aus",
       "changeService": "Service ändern",
       "services": {
-        "houseCleaning": "Reinigung und Hauswartung",
+        "houseCleaning": "Umzugsreinigung & Endreinigung mit Abnahmegarantie",
         "apartmentCleaning": "Wohnungsreinigung",
         "stairwellCleaning": "Treppenhausreinigung",
         "officeCleaning": "Büroreinigung",

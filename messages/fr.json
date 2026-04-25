@@ -25,7 +25,7 @@
       "viewAll": "Voir tous les services",
       "customSolution": "Besoin d'une solution sur mesure ? Nous adaptons notre service à vos besoins.",
       "houseCleaning": {
-        "title": "Nettoyage et Conciergerie",
+        "title": "Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise",
         "description": "Services complets de nettoyage de maison pour les propriétés résidentielles avec une attention à chaque détail"
       },
       "apartmentCleaning": {
@@ -4006,7 +4006,7 @@
       "selectService": "Sélectionnez un service",
       "changeService": "Changer de service",
       "services": {
-        "houseCleaning": "Nettoyage et Conciergerie",
+        "houseCleaning": "Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise",
         "apartmentCleaning": "Nettoyage d'appartement",
         "stairwellCleaning": "Nettoyage de cage d'escalier",
         "officeCleaning": "Nettoyage de bureau",

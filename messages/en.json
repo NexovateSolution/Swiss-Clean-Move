@@ -35,7 +35,7 @@
       "viewAll": "View all services",
       "customSolution": "Need a custom solution? We tailor our service to your needs.",
       "houseCleaning": {
-        "title": "Cleaning & Property Maintenance",
+        "title": "Move-out cleaning & end-of-tenancy cleaning with handover guarantee",
         "description": "Comprehensive house cleaning services for residential properties with attention to every detail"
       },
       "apartmentCleaning": {
@@ -3781,7 +3781,7 @@
       "selectService": "Select a Service",
       "changeService": "Change service",
       "services": {
-        "houseCleaning": "Cleaning & Property Maintenance",
+        "houseCleaning": "Move-out cleaning & end-of-tenancy cleaning with handover guarantee",
         "apartmentCleaning": "Apartment Cleaning",
         "stairwellCleaning": "Stairwell Cleaning",
         "officeCleaning": "Office Cleaning",
