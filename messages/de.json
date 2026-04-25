@@ -4055,7 +4055,8 @@
         "propertyMaintenance": "Hauswartung",
         "specialCleaning": "Spezialreinigung",
         "comboService": "Kombi-Service",
-        "householdHelping": "Haushaltshilfe"
+        "householdHelping": "Haushaltshilfe",
+        "facilityServices": "Facility Services"
       }
     },
     "sidebar": {

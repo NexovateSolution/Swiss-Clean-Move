@@ -3795,7 +3795,8 @@
         "propertyMaintenance": "Property Maintenance",
         "specialCleaning": "Special Cleaning",
         "comboService": "Combo Service",
-        "householdHelping": "Household Helping"
+        "householdHelping": "Household Helping",
+        "facilityServices": "Facility Services"
       }
     },
     "sidebar": {
