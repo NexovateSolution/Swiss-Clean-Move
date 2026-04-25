@@ -80,11 +80,9 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           <div className="grid grid-cols-2 gap-4">
             <FS label={tl('wizard.unified.step2.propertyType')} value={v('sharedPropertyType')} onChange={val => set('sharedPropertyType', val)}
               options={[
-                { value: 'apartment', label: tl('wizard.unified.step2.types.apartment') },
                 { value: 'house', label: tl('wizard.unified.step2.types.house') },
                 { value: 'studio', label: tl('wizard.unified.step2.types.studio') },
                 { value: 'wgRoom', label: tl('wizard.unified.step2.types.wgRoom') },
-                { value: 'office', label: tl('wizard.unified.step2.types.office') },
                 { value: 'commercial', label: tl('wizard.unified.step2.types.commercial') }
               ]}
             />

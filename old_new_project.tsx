@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
 import { useRouter, usePathname } from 'next/navigation'
@@ -8,9 +8,7 @@ import { useState, useEffect } from 'react'
 
 const SERVICES: { slug: ServiceSlug; tKey: string }[] = [
   { slug: 'house-cleaning', tKey: 'houseCleaning' },
-  { slug: 'apartment-cleaning', tKey: 'apartmentCleaning' },
   { slug: 'stairwell-cleaning', tKey: 'stairwellCleaning' },
-  { slug: 'office-cleaning', tKey: 'officeCleaning' },
   { slug: 'final-cleaning', tKey: 'finalCleaning' },
   { slug: 'window-cleaning', tKey: 'windowCleaning' },
   { slug: 'relocation', tKey: 'relocation' },

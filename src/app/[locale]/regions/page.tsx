@@ -44,20 +44,13 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
 
   const services = [
     { id: 'houseCleaning', icon: HomeIcon, href: `/${locale}/services/house-cleaning` },
-    { id: 'apartmentCleaning', icon: Building2, href: `/${locale}/services/apartment-cleaning` },
-    { id: 'officeCleaning', icon: Briefcase, href: `/${locale}/services/office-cleaning` },
-    { id: 'finalCleaning', icon: Sparkles, href: `/${locale}/services/final-cleaning` },
     { id: 'windowCleaning', icon: Layers, href: `/${locale}/services/window-cleaning` },
-    { id: 'stairwellCleaning', icon: Building2, href: `/${locale}/services/stairwell-cleaning` },
     { id: 'relocation', icon: Truck, href: `/${locale}/services/relocation` },
     { id: 'disposal', icon: Trash2, href: `/${locale}/services/disposal` },
-    { id: 'gastronomyCleaning', icon: UtensilsCrossed, href: `/${locale}/services#gastronomyCleaning` },
-    { id: 'medicalCleaning', icon: Shield, href: `/${locale}/services#medicalCleaning` },
-    { id: 'constructionCleaning', icon: HardHat, href: `/${locale}/services#constructionCleaning` },
     { id: 'propertyMaintenance', icon: Wrench, href: `/${locale}/services#propertyMaintenance` },
-    { id: 'specialCleaning', icon: Star, href: `/${locale}/services#specialCleaning` },
     { id: 'comboService', icon: RotateCcw, href: `/${locale}/services#comboService` },
-    { id: 'householdHelping', icon: Heart, href: `/${locale}/services/household-helping` }
+    { id: 'householdHelping', icon: Heart, href: `/${locale}/services/household-helping` },
+    { id: 'facilityServices', icon: Building2, href: `/${locale}/services#facilityServices` }
   ];
 
   return (

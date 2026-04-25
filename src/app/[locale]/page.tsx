@@ -89,15 +89,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       iconColor: 'text-blue-600',
       services: [
         { title: t('home.services.houseCleaning.title'), description: t('home.services.houseCleaning.description'), formHref: `/${locale}/form?service=house-cleaning`, href: `/${locale}/services/house-cleaning`, icon: HomeIcon },
-        { title: t('home.services.apartmentCleaning.title'), description: t('home.services.apartmentCleaning.description'), formHref: `/${locale}/form?service=apartment-cleaning`, href: `/${locale}/services/apartment-cleaning`, icon: Building2 },
-        { title: t('home.services.stairwellCleaning.title'), description: t('home.services.stairwellCleaning.description'), formHref: `/${locale}/form?service=stairwell-cleaning`, href: `/${locale}/services/stairwell-cleaning`, icon: Building2 },
-        { title: t('home.services.officeCleaning.title'), description: t('home.services.officeCleaning.description'), formHref: `/${locale}/form?service=office-cleaning`, href: `/${locale}/services/office-cleaning`, icon: Briefcase },
-        { title: t('home.services.finalCleaning.title'), description: t('home.services.finalCleaning.description'), formHref: `/${locale}/form?service=final-cleaning`, href: `/${locale}/services/final-cleaning`, icon: CheckCircle },
+        { title: t('home.services.facilityServices.title'), description: t('home.services.facilityServices.description'), formHref: `/${locale}/form?service=facility-services`, href: `/${locale}/services#facilityServices`, icon: Building2 },
         { title: t('home.services.windowCleaning.title'), description: t('home.services.windowCleaning.description'), formHref: `/${locale}/form?service=window-cleaning`, href: `/${locale}/services/window-cleaning`, icon: HomeIcon },
-        { title: t('home.services.gastronomyCleaning.title'), description: t('home.services.gastronomyCleaning.description'), formHref: `/${locale}/form?service=gastronomy-cleaning`, href: `/${locale}/services#gastronomyCleaning`, icon: UtensilsCrossed },
-        { title: t('home.services.medicalCleaning.title'), description: t('home.services.medicalCleaning.description'), formHref: `/${locale}/form?service=medical-cleaning`, href: `/${locale}/services#medicalCleaning`, icon: Shield },
-        { title: t('home.services.constructionCleaning.title'), description: t('home.services.constructionCleaning.description'), formHref: `/${locale}/form?service=construction-cleaning`, href: `/${locale}/services#constructionCleaning`, icon: Building2 },
-        { title: t('home.services.specialCleaning.title'), description: t('home.services.specialCleaning.description'), formHref: `/${locale}/form?service=special-cleaning`, href: `/${locale}/services#specialCleaning`, icon: Star },
       ]
     },
     {

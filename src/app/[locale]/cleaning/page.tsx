@@ -8,10 +8,9 @@ export default function CleaningPage({ params: { locale } }: { params: { locale:
   const t = useTranslations()
 
   const cleaningServices = [
-    { key: 'finalCleaning', icon: CheckCircle },
+    { key: 'facilityServices', icon: CheckCircle },
     { key: 'houseCleaning', icon: HomeIcon },
-    { key: 'apartmentCleaning', icon: Building2 },
-    { key: 'officeCleaning', icon: Briefcase },
+    { key: 'windowCleaning', icon: Building2 },
   ] as const
 
   return (

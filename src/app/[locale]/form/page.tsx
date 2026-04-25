@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import Layout from '@/components/Layout'
@@ -9,20 +9,20 @@ import ServiceFormWizard, { ServiceSlug } from '@/components/ServiceFormWizard'
 
 const allowedServices: ServiceSlug[] = [
   'house-cleaning',
-  'apartment-cleaning',
-  'stairwell-cleaning',
-  'office-cleaning',
-  'final-cleaning',
   'window-cleaning',
   'relocation',
   'disposal',
+  'property-maintenance',
+  'combo-service',
+  'household-helping',
+  'facility-services',
+  // Legacy slugs
+  'stairwell-cleaning',
+  'final-cleaning',
   'gastronomy-cleaning',
   'medical-cleaning',
   'construction-cleaning',
-  'property-maintenance',
-  'special-cleaning',
-  'combo-service',
-  'household-helping'
+  'special-cleaning'
 ]
 
 function isServiceSlug(value: string | null): value is ServiceSlug {
@@ -34,40 +34,39 @@ function getServiceName(t: ReturnType<typeof useTranslations>, service: ServiceS
   switch (service) {
     case 'house-cleaning':
       return t('home.services.houseCleaning.title')
-    case 'apartment-cleaning':
-      return t('home.services.apartmentCleaning.title')
-    case 'stairwell-cleaning':
-      return t('home.services.stairwellCleaning.title')
-    case 'office-cleaning':
-      return t('home.services.officeCleaning.title')
-    case 'final-cleaning':
-      return t('home.services.finalCleaning.title')
     case 'window-cleaning':
       return t('home.services.windowCleaning.title')
     case 'relocation':
       return t('home.services.relocation.title')
     case 'disposal':
       return t('home.services.disposal.title')
+    case 'property-maintenance':
+      return t('home.services.propertyMaintenance.title')
+    case 'combo-service':
+      return t('home.services.comboService.title')
+    case 'household-helping':
+      return t('home.services.householdHelping.title')
+    case 'facility-services':
+      return t('home.services.facilityServices.title')
+    // Legacy mapping
+    case 'stairwell-cleaning':
+      return t('home.services.stairwellCleaning.title')
+    case 'final-cleaning':
+      return t('home.services.finalCleaning.title')
     case 'gastronomy-cleaning':
       return t('home.services.gastronomyCleaning.title')
     case 'medical-cleaning':
       return t('home.services.medicalCleaning.title')
     case 'construction-cleaning':
       return t('home.services.constructionCleaning.title')
-    case 'property-maintenance':
-      return t('home.services.propertyMaintenance.title')
     case 'special-cleaning':
       return t('home.services.specialCleaning.title')
-    case 'combo-service':
-      return t('home.services.comboService.title')
-    case 'household-helping':
-      return t('home.services.householdHelping.title')
     default:
       return t('services.title')
   }
 }
 
-export default function FormPage({ params: { locale } }: { params: { locale: string } }) {
+function FormContent({ locale }: { locale: string }) {
   const t = useTranslations()
   const searchParams = useSearchParams()
 
@@ -98,19 +97,34 @@ export default function FormPage({ params: { locale } }: { params: { locale: str
               <div className="text-swiss-red font-bold text-lg">3</div>
               <div className="text-swiss-body text-sm">{t('serviceForm.wizard.stepTitles.contact')}</div>
             </div>
-            <div className="card p-4 bg-swiss-softRed border border-swiss-border text-center">
-              <div className="text-swiss-red font-bold text-lg">4</div>
-              <div className="text-swiss-body text-sm">{t('serviceForm.wizard.buttons.submit')}</div>
+            <div className="card p-4 bg-swiss-softRed border border-swiss-border text-center flex items-center justify-center">
+              <div className="text-swiss-red font-bold text-sm leading-tight">{t('serviceForm.wizard.stepTitles.fast_offer')}</div>
             </div>
           </div>
         }
       />
-
       <section className="section-padding bg-swiss-section">
         <div className="container-max">
           <ServiceFormWizard service={service} serviceName={serviceName} locale={locale} />
         </div>
       </section>
     </Layout>
+  )
+}
+
+export default function FormPage({ params: { locale } }: { params: { locale: string } }) {
+  return (
+    <Suspense fallback={
+      <Layout>
+        <div className="min-h-[60vh] flex items-center justify-center">
+          <div className="animate-pulse flex flex-col items-center">
+            <div className="h-12 w-12 rounded-full border-4 border-swiss-red border-t-transparent animate-spin mb-4"></div>
+            <div className="text-swiss-body">Loading...</div>
+          </div>
+        </div>
+      </Layout>
+    }>
+      <FormContent locale={locale} />
+    </Suspense>
   )
 }

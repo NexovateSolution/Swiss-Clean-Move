@@ -6,30 +6,40 @@ import { useTranslations } from 'next-intl'
 import toast from 'react-hot-toast'
 import { Upload, X } from 'lucide-react'
 
-// Imports of the 10 forms
-import { PropertyMaintenanceForm, FinalCleaningForm, MaintenanceCleaningForm } from './service-forms/ServiceFormsPart1'
-import { DisposalForm, ConstructionCleaningForm, GastronomyCleaningForm } from './service-forms/ServiceFormsPart2'
-import { RelocationForm, HouseholdHelpingForm, ComboServiceForm, SpecialCleaningForm } from './service-forms/ServiceFormsPart3'
+// Imports of the forms
+import { PropertyMaintenanceForm, MaintenanceCleaningForm } from './service-forms/ServiceFormsPart1'
+import { DisposalForm } from './service-forms/ServiceFormsPart2'
+import { RelocationForm, HouseholdHelpingForm, ComboServiceForm } from './service-forms/ServiceFormsPart3'
 import { UnifiedMovingCleaningForm } from './service-forms/UnifiedMovingCleaningForm'
+import { FacilityServicesForm } from './service-forms/FacilityServicesForm'
 import { FormStepProps } from './FormControls'
 
 export type ServiceSlug =
-  | 'house-cleaning' | 'apartment-cleaning' | 'stairwell-cleaning'
-  | 'office-cleaning' | 'final-cleaning' | 'window-cleaning'
-  | 'relocation' | 'disposal' | 'gastronomy-cleaning'
-  | 'medical-cleaning' | 'construction-cleaning' | 'property-maintenance'
-  | 'special-cleaning' | 'combo-service' | 'household-helping'
+  | 'house-cleaning' | 'window-cleaning'
+  | 'relocation' | 'disposal'
+  | 'property-maintenance'
+  | 'combo-service' | 'household-helping'
+  | 'facility-services'
+  // Legacy slugs that redirect to facility-services
+  | 'stairwell-cleaning'
+  | 'final-cleaning' | 'gastronomy-cleaning' | 'medical-cleaning'
+  | 'construction-cleaning' | 'special-cleaning'
+
+// Legacy slugs that should use facility-services form
+const facilityLegacySlugs = ['stairwell-cleaning', 'final-cleaning', 'gastronomy-cleaning', 'medical-cleaning', 'construction-cleaning', 'special-cleaning'];
+
+function isFacilityService(s: ServiceSlug): boolean {
+  return s === 'facility-services' || facilityLegacySlugs.includes(s);
+}
 
 function getStepCount(s: ServiceSlug): number {
+  if (isFacilityService(s)) return 2
   if (s === 'property-maintenance') return 4
-  if (['final-cleaning', 'house-cleaning', 'apartment-cleaning', 'stairwell-cleaning', 'office-cleaning', 'window-cleaning', 'medical-cleaning'].includes(s)) return 4
+  if (['house-cleaning', 'window-cleaning'].includes(s)) return 4
   if (s === 'disposal') return 4
-  if (s === 'construction-cleaning') return 4
-  if (s === 'gastronomy-cleaning') return 4
   if (s === 'relocation') return 4
   if (s === 'household-helping') return 3
   if (s === 'combo-service') return 3
-  if (s === 'special-cleaning') return 3
   return 3
 }
 
@@ -42,7 +52,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
   const [images, setImages] = useState<File[]>([])
   const fileInputRef = useRef<HTMLInputElement>(null)
   
-  const isUnified = ['relocation', 'final-cleaning', 'combo-service', 'house-cleaning', 'apartment-cleaning', 'office-cleaning'].includes(service);
+  const isUnified = ['relocation', 'combo-service', 'house-cleaning'].includes(service);
   const reqType = (d.requestType as string) || (['relocation'].includes(service) ? 'moving' : service === 'combo-service' ? 'combo' : 'cleaning');
   
   const baseSteps = useMemo(() => {
@@ -244,6 +254,11 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
     // Determine which step and form to render
     let actualFormProps = { ...formProps };
     
+    // Facility Services form (new unified form + legacy redirects)
+    if (isFacilityService(service)) {
+       return <FacilityServicesForm {...actualFormProps} />;
+    }
+
     // Unified form logic
     if (isUnified) {
        return <UnifiedMovingCleaningForm {...actualFormProps} />;
@@ -267,19 +282,11 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
 
     switch (service) {
       case 'property-maintenance': return <PropertyMaintenanceForm {...actualFormProps} />
-      case 'final-cleaning': return <FinalCleaningForm {...actualFormProps} />
       case 'house-cleaning': 
-      case 'apartment-cleaning': 
-      case 'stairwell-cleaning': 
-      case 'office-cleaning': 
       case 'window-cleaning': 
-      case 'medical-cleaning': 
         return <MaintenanceCleaningForm {...actualFormProps} />
       case 'disposal': return <DisposalForm {...actualFormProps} />
-      case 'construction-cleaning': return <ConstructionCleaningForm {...actualFormProps} />
-      case 'gastronomy-cleaning': return <GastronomyCleaningForm {...actualFormProps} />
       case 'household-helping': return <HouseholdHelpingForm {...actualFormProps} />
-      case 'special-cleaning': return <SpecialCleaningForm {...actualFormProps} />
       default: return <MaintenanceCleaningForm {...actualFormProps} />
     }
   }

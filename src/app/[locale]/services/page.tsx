@@ -35,125 +35,14 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
       gradient: 'from-blue-500 to-blue-600'
     },
     {
-      id: 'apartmentCleaning',
+      id: 'facilityServices',
       icon: Building2,
-      title: t('home.services.apartmentCleaning.title'),
-      description: t('home.services.apartmentCleaning.description'),
-      features: t.raw('services.features.apartmentCleaning'),
-      pricing: t('services.pricing.apartmentCleaning'),
-      color: 'bg-green-500',
-      gradient: 'from-green-500 to-green-600'
-    },
-    {
-      id: 'stairwellCleaning',
-      icon: Building2,
-      title: t('home.services.stairwellCleaning.title'),
-      description: t('home.services.stairwellCleaning.description'),
-      features: t.raw('services.features.stairwellCleaning'),
-      pricing: t('services.pricing.stairwellCleaning'),
-      color: 'bg-purple-500',
-      gradient: 'from-purple-500 to-purple-600'
-    },
-    {
-      id: 'officeCleaning',
-      icon: Briefcase,
-      title: t('home.services.officeCleaning.title'),
-      description: t('home.services.officeCleaning.description'),
-      features: t.raw('services.features.officeCleaning'),
-      pricing: t('services.pricing.officeCleaning'),
-      color: 'bg-orange-500',
-      gradient: 'from-orange-500 to-orange-600'
-    },
-    {
-      id: 'finalCleaning',
-      icon: CheckCircle,
-      title: t('home.services.finalCleaning.title'),
-      description: t('home.services.finalCleaning.description'),
-      features: t.raw('services.features.finalCleaning'),
-      pricing: t('services.pricing.finalCleaning'),
-      color: 'bg-teal-500',
-      gradient: 'from-teal-500 to-teal-600'
-    },
-    {
-      id: 'windowCleaning',
-      icon: HomeIcon,
-      title: t('home.services.windowCleaning.title'),
-      description: t('home.services.windowCleaning.description'),
-      features: t.raw('services.features.windowCleaning'),
-      pricing: t('services.pricing.windowCleaning'),
-      color: 'bg-cyan-500',
-      gradient: 'from-cyan-500 to-cyan-600'
-    },
-    {
-      id: 'relocation',
-      icon: Truck,
-      title: t('home.services.relocation.title'),
-      description: t('home.services.relocation.description'),
-      features: t.raw('services.features.relocation'),
-      pricing: t('services.pricing.relocation'),
-      color: 'bg-indigo-500',
-      gradient: 'from-indigo-500 to-indigo-600'
-    },
-    {
-      id: 'disposal',
-      icon: Trash2,
-      title: t('home.services.disposal.title'),
-      description: t('home.services.disposal.description'),
-      features: t.raw('services.features.disposal'),
-      pricing: t('services.pricing.disposal'),
-      color: 'bg-red-500',
-      gradient: 'from-red-500 to-red-600'
-    }
-    ,
-    {
-      id: 'gastronomyCleaning',
-      icon: UtensilsCrossed,
-      title: t('home.services.gastronomyCleaning.title'),
-      description: t('home.services.gastronomyCleaning.description'),
-      features: t.raw('services.features.gastronomyCleaning'),
+      title: t('home.services.facilityServices.title'),
+      description: t('home.services.facilityServices.description'),
+      features: t.raw('services.features.facilityServices'),
       pricing: t('services.pricingUnits.byArrangement'),
-      color: 'bg-rose-500',
-      gradient: 'from-rose-500 to-rose-600'
-    },
-    {
-      id: 'medicalCleaning',
-      icon: Shield,
-      title: t('home.services.medicalCleaning.title'),
-      description: t('home.services.medicalCleaning.description'),
-      features: t.raw('services.features.medicalCleaning'),
-      pricing: t('services.pricing.officeCleaning'),
       color: 'bg-emerald-500',
       gradient: 'from-emerald-500 to-emerald-600'
-    },
-    {
-      id: 'constructionCleaning',
-      icon: Building2,
-      title: t('home.services.constructionCleaning.title'),
-      description: t('home.services.constructionCleaning.description'),
-      features: t.raw('services.features.constructionCleaning'),
-      pricing: t('services.pricingUnits.byArrangement'),
-      color: 'bg-yellow-500',
-      gradient: 'from-yellow-500 to-yellow-600'
-    },
-    {
-      id: 'propertyMaintenance',
-      icon: Wrench,
-      title: t('home.services.propertyMaintenance.title'),
-      description: t('home.services.propertyMaintenance.description'),
-      features: t.raw('services.features.propertyMaintenance'),
-      pricing: t('services.pricingUnits.byArrangement'),
-      color: 'bg-sky-500',
-      gradient: 'from-sky-500 to-sky-600'
-    },
-    {
-      id: 'specialCleaning',
-      icon: Star,
-      title: t('home.services.specialCleaning.title'),
-      description: t('home.services.specialCleaning.description'),
-      features: t.raw('services.features.specialCleaning'),
-      pricing: t('services.pricingUnits.byArrangement'),
-      color: 'bg-fuchsia-500',
-      gradient: 'from-fuchsia-500 to-fuchsia-600'
     },
     {
       id: 'comboService',

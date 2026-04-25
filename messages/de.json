@@ -15,46 +15,11 @@
     "householdHelping": "Haushaltshilfe"
   },
   "home": {
-    "hero": {
-      "badge": "",
-      "title": "SwissCleanMove ist Ihre professionelle Umzugsfirma, Reinigungsfirma und Ihr Facility-Service-Partner in Biel/Bienne, Bern, Zürich und in der ganzen Schweiz.",
-      "subtitle": "Zuverlässige Reinigungs-, Umzugs- und Facility-Services für Privat- und Geschäftskunden",
-      "slides": {
-        "transport": {
-          "title": "Professioneller Umzug & Transport",
-          "description": "Sicher, pünktlich und stressfrei in der ganzen Schweiz"
-        },
-        "houseCleaning": {
-          "title": "Strahlend saubere Zuhause",
-          "description": "Gründliche Reinigung für Wohnungen und Häuser mit Liebe zum Detail"
-        },
-        "expertMoving": {
-          "title": "Erfahrenes Umzugsteam",
-          "description": "Geschultes Personal, sorgfältiger Umgang und transparente Preise"
-        },
-        "office": {
-          "title": "Büro- & Gewerbereinigung",
-          "description": "Flexible Termine für ein stets sauberes Arbeitsumfeld"
-        },
-        "final": {
-          "title": "Endreinigung mit Garantie",
-          "description": "Umzugsreinigung mit 100% Abnahmegarantie"
-        }
-      },
-      "trust": {
-        "guarantee": "Abnahmegarantie",
-        "cantons": "Schweizer Kantone",
-        "happyClients": "Zufriedene Kunden",
-        "support": "24/7 Support",
-        "all": "Mehrere"
-      },
-      "qualityBadge": {
-        "title": "Vertrauenswürdig & zertifiziert"
-      },
-      "cta": "Kostenloses Angebot anfordern",
-      "phone": "Jetzt anrufen"
-    },
     "services": {
+      "facilityServices": {
+        "title": "Facility Services",
+        "description": "Umfassende Reinigungslösungen für alle Arten von Immobilien und Unternehmen."
+      },
       "title": "Unsere Dienstleistungen",
       "subtitle": "Professionelle Lösungen für Reinigung, Umzug und Facility Service – zuverlässig, effizient und schweizweit.",
       "viewAll": "Alle Services ansehen",
@@ -144,6 +109,45 @@
         "description": "Professionelle Haushaltshilfe inkl. Reinigung, Kochen, Wäsche, Einkaufen und Betreuungsdienste"
       }
     },
+    "hero": {
+      "badge": "",
+      "title": "SwissCleanMove ist Ihre professionelle Umzugsfirma, Reinigungsfirma und Ihr Facility-Service-Partner in Biel/Bienne, Bern, Zürich und in der ganzen Schweiz.",
+      "subtitle": "Zuverlässige Reinigungs-, Umzugs- und Facility-Services für Privat- und Geschäftskunden",
+      "slides": {
+        "transport": {
+          "title": "Professioneller Umzug & Transport",
+          "description": "Sicher, pünktlich und stressfrei in der ganzen Schweiz"
+        },
+        "houseCleaning": {
+          "title": "Strahlend saubere Zuhause",
+          "description": "Gründliche Reinigung für Wohnungen und Häuser mit Liebe zum Detail"
+        },
+        "expertMoving": {
+          "title": "Erfahrenes Umzugsteam",
+          "description": "Geschultes Personal, sorgfältiger Umgang und transparente Preise"
+        },
+        "office": {
+          "title": "Büro- & Gewerbereinigung",
+          "description": "Flexible Termine für ein stets sauberes Arbeitsumfeld"
+        },
+        "final": {
+          "title": "Endreinigung mit Garantie",
+          "description": "Umzugsreinigung mit 100% Abnahmegarantie"
+        }
+      },
+      "trust": {
+        "guarantee": "Abnahmegarantie",
+        "cantons": "Schweizer Kantone",
+        "happyClients": "Zufriedene Kunden",
+        "support": "24/7 Support",
+        "all": "Mehrere"
+      },
+      "qualityBadge": {
+        "title": "Vertrauenswürdig & zertifiziert"
+      },
+      "cta": "Kostenloses Angebot anfordern",
+      "phone": "Jetzt anrufen"
+    },
     "numbers": {
       "badge": "Zahlen, die überzeugen",
       "title": "Zahlen, die für sich sprechen",
@@ -227,18 +231,13 @@
     "seoText": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland. We organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards. For a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines. For companies, property managers and businesses, we offer maintenance cleaning, office cleaning, stairwell cleaning and commercial cleaning – reliable, discreet and professionally managed. Additionally, we provide full facility service and property maintenance (regular inspections, minor repairs, winter service, green area maintenance), professional gastronomy cleaning for restaurants, hotels and commercial kitchens, construction cleaning (rough, detailed and final cleaning), as well as clearance and disposal services with environmentally responsible waste separation. SwissCleanMove stands for clear processes, transparent quotations, 24-hour response time and visible results – in Biel, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura, Lucerne and across Switzerland."
   },
   "services": {
-    "title": "Unsere Dienstleistungen",
-    "subtitle": "Professionelle Umzugs-, Reinigungs-, Facility-Service- und Endreinigungslösungen für Privat- und Geschäftskunden in der ganzen Schweiz.",
-    "featuresTitle": "Leistungen",
-    "priceCalculator": {
-      "title": "Preisrechner",
-      "subtitle": "Wählen Sie eine Leistung und erhalten Sie sofort eine Schätzung"
-    },
-    "benefitsSection": {
-      "title": "Warum SwissCleanMove?",
-      "subtitle": "Ihre Vorteile bei unserem professionellen Service"
-    },
     "features": {
+      "facilityServices": [
+        "Individuelle Servicepläne",
+        "Professionelles Equipment und Personal",
+        "Höchste Hygienestandards",
+        "Flexible Terminplanung"
+      ],
       "houseCleaning": [
         "Komplette Hausreinigung",
         "Küche und Badezimmer gründlich",
@@ -386,6 +385,17 @@
         "Tier- und Pflanzenpflege",
         "Seniorenbetreuung und Besorgungen"
       ]
+    },
+    "title": "Unsere Dienstleistungen",
+    "subtitle": "Professionelle Umzugs-, Reinigungs-, Facility-Service- und Endreinigungslösungen für Privat- und Geschäftskunden in der ganzen Schweiz.",
+    "featuresTitle": "Leistungen",
+    "priceCalculator": {
+      "title": "Preisrechner",
+      "subtitle": "Wählen Sie eine Leistung und erhalten Sie sofort eine Schätzung"
+    },
+    "benefitsSection": {
+      "title": "Warum SwissCleanMove?",
+      "subtitle": "Ihre Vorteile bei unserem professionellen Service"
     },
     "pricingUnits": {
       "perHour": "pro Stunde",
@@ -776,11 +786,156 @@
     "message": "Hallo! Ich interessiere mich für Ihre Dienstleistungen."
   },
   "serviceForm": {
-    "common": {
-      "yes": "Ja",
-      "no": "Nein"
-    },
     "wizard": {
+      "facilityServices": {
+        "step1Title": "Schritt 1 – Service & Termin",
+        "whichService": "Welchen Service benötigen Sie? *",
+        "serviceTypes": {
+          "maintenanceCleaning": "Unterhaltsreinigung (regelmäßig)",
+          "propertyMaintenance": "Hauswartung",
+          "facilityServices": "Facility Services",
+          "constructionCleaning": "Baureinigung",
+          "specialCleaning": "Spezialreinigung",
+          "gastronomyCleaning": "Gastronomiereinigung (Restaurant, Küche)",
+          "pharmacyMedical": "Apotheken- & Praxisreinigung (Hygienereinigung)",
+          "shopRetail": "Laden- / Verkaufsflächenreinigung",
+          "combination": "Kombination mehrerer Services"
+        },
+        "preferredStart": "Gewünschter Beginn / Termin *",
+        "date": "Datum:",
+        "time": "Uhrzeit (optional):",
+        "frequencyTitle": "Reinigungsintervall (wichtig bei Unterhaltsreinigung)",
+        "frequency": {
+          "oneTime": "Einmalig",
+          "daily": "Täglich",
+          "weekly": "Wöchentlich",
+          "twoThreePerWeek": "2–3 Mal pro Woche",
+          "monthly": "Monatlich",
+          "custom": "Individuell"
+        },
+        "flexibilityTitle": "Flexibilität",
+        "flexibility": {
+          "fixed": "Fester Termin",
+          "flexible": "Flexibel"
+        },
+        "step2Title": "Schritt 2 – Objekt & Standort",
+        "zipCity": "PLZ / Ort:",
+        "streetNo": "Strasse / Nr.:",
+        "propertyTypeTitle": "Objektart *",
+        "propertyTypes": {
+          "apartment": "Wohnung",
+          "house": "Haus",
+          "office": "Büro",
+          "medicalPractice": "Arztpraxis",
+          "pharmacy": "Apotheke",
+          "restaurant": "Restaurant / Gastronomie",
+          "shopRetail": "Laden- / Verkaufsfläche",
+          "commercial": "Gewerbeobjekt",
+          "constructionSite": "Baustelle",
+          "other": "Sonstiges:",
+          "otherSpecify": "Bitte angeben:"
+        },
+        "area": "Fläche",
+        "rooms": "Zimmer / Räume (optional)",
+        "floor": "Etage",
+        "elevator": "Aufzug vorhanden",
+        "yes": "Ja",
+        "no": "Nein",
+        "generalCleaning": {
+          "title": "Allgemeine Reinigung",
+          "floors": "Böden (saugen / feucht / maschinell)",
+          "sanitary": "Sanitär (WC / Dusche / Bad)",
+          "kitchenBreakRoom": "Küche / Pausenraum",
+          "windowsInsideOutside": "Fenster innen / außen",
+          "windowFrames": "Fensterrahmen",
+          "blindsShutters": "Storen / Rollläden",
+          "doorsFrames": "Türen & Rahmen",
+          "wallsCeilings": "Wände / Decken",
+          "staircaseEntrance": "Treppenhaus / Eingangsbereich",
+          "elevatorCleaning": "Liftreinigung",
+          "basementAtticGarage": "Keller / Estrich / Garage",
+          "balconyTerrace": "Balkon / Terrasse"
+        },
+        "maintenanceCleaningSection": {
+          "title": "Unterhaltsreinigung (regelmäßig)",
+          "officeCleaning": "Büroreinigung",
+          "practiceCleaning": "Praxisreinigung",
+          "staircaseCleaning": "Treppenhausreinigung",
+          "commercialCleaning": "Gewerbereinigung",
+          "wasteDisposal": "Abfallentsorgung",
+          "refillConsumables": "Verbrauchsmaterial auffüllen"
+        },
+        "pharmacyMedicalSection": {
+          "title": "Apotheken- / Praxisreinigung (Hygiene)",
+          "surfaceDisinfection": "Flächendesinfektion",
+          "hygieneRegulations": "Hygienereinigung nach Vorschrift",
+          "receptionCounter": "Empfang / Verkaufstheke",
+          "treatmentRooms": "Behandlungszimmer",
+          "floorDisinfection": "Bodendesinfektion",
+          "medicalAreas": "Medizinische Bereiche"
+        },
+        "gastronomySection": {
+          "title": "Restaurant / Gastronomie",
+          "intensiveKitchen": "Intensive Küchenreinigung",
+          "appliances": "Geräte (Ofen, Kühlschrank etc.)",
+          "extractorHoodFilters": "Dunstabzug / Filter",
+          "greaseRemoval": "Fettentfernung",
+          "diningAreaFloors": "Gastraum / Böden / Tische",
+          "toilets": "Toiletten",
+          "storageBackRooms": "Lager- / Nebenräume"
+        },
+        "retailSection": {
+          "title": "Laden- / Verkaufsflächen",
+          "salesFloor": "Verkaufsfläche / Böden",
+          "shopWindows": "Schaufenster",
+          "shelvesDisplays": "Regale / Auslagen",
+          "checkoutArea": "Kassenbereich",
+          "storageBackRooms": "Lager- / Nebenräume"
+        },
+        "constructionSection": {
+          "title": "Baureinigung",
+          "roughCleaning": "Baugrobreinigung",
+          "intermediateCleaning": "Bauzwischenreinigung",
+          "finalConstructionCleaning": "Bauendreinigung"
+        },
+        "specialSection": {
+          "title": "Spezialreinigung",
+          "highPressure": "Hochdruckreinigung (Balkon / Terrasse)",
+          "carpetCleaning": "Teppichreinigung",
+          "hardToReachWindows": "Schwer zugängliche Fenster",
+          "disinfection": "Desinfektion",
+          "nicotineCleaning": "Nikotinreinigung",
+          "glassFacade": "Glas- / Fassadenreinigung",
+          "other": "Sonstiges:",
+          "otherSpecify": "Bitte angeben:"
+        },
+        "accessLogistics": {
+          "title": "Zugang & Logistik",
+          "accessProperty": "Zugang zum Objekt",
+          "keyInPerson": "Schlüsselübergabe persönlich",
+          "keyMailbox": "Schlüssel im Briefkasten",
+          "propertyManagement": "Übergabe via Verwaltung",
+          "other": "Sonstiges:",
+          "otherSpecify": "Bitte angeben:",
+          "parkingAvailable": "Parkplatz vorhanden",
+          "parkingAccess": "Parkplatz / Zufahrt",
+          "mustReserve": "Parkplatz muss reserviert werden",
+          "assistReservation": "Hilfe bei Reservierung nötig",
+          "noParkingZone": "Halteverbotszone erforderlich",
+          "restrictedAccess": "Erschwerte Zufahrt",
+          "distance": "Distanz Parkplatz → Eingang"
+        },
+        "upload": {
+          "title": "Upload (empfohlen)",
+          "hint": "Laden Sie Fotos / Videos für eine schnelle & genaue Offerte hoch"
+        },
+        "contact": {
+          "title": "Kontaktdaten",
+          "name": "Name / Vorname:",
+          "email": "E-Mail:",
+          "phone": "Telefon:"
+        }
+      },
       "badge": "Offerte berechnen",
       "stepCounter": "Schritt {current} von {total}",
       "validation": {
@@ -826,7 +981,8 @@
         "household_services": "Dienste & Häufigkeit",
         "disposal_type": "Entsorgungsart",
         "disposal_items": "Gegenstände & Volumen",
-        "disposal_options": "Zusätzliche Optionen"
+        "disposal_options": "Zusätzliche Optionen",
+        "fast_offer": "Schnelle Offerte"
       },
       "placeholders": {
         "areaM2": "z.B. 120",
@@ -3394,6 +3550,10 @@
           "reviewing": "Unser Team prüft Ihre Angaben und meldet sich in Kürze mit einer passenden Offerte."
         }
       }
+    },
+    "common": {
+      "yes": "Ja",
+      "no": "Nein"
     },
     "title": {
       "quote": "Offerte",

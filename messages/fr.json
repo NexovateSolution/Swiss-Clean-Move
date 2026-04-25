@@ -15,46 +15,11 @@
     "householdHelping": "Aide ménagère"
   },
   "home": {
-    "hero": {
-      "badge": "",
-      "title": "SwissCleanMove est votre entreprise professionnelle de déménagement, de nettoyage et votre partenaire de services généraux à Bienne, Berne, Zurich et dans toute la Suisse.",
-      "subtitle": "Services de nettoyage, de déménagement et de facility service fiables pour les particuliers et les entreprises",
-      "slides": {
-        "transport": {
-          "title": "Déménagement & transport professionnels",
-          "description": "Sûr, ponctuel et sans stress dans toute la Suisse"
-        },
-        "houseCleaning": {
-          "title": "Maisons impeccables",
-          "description": "Nettoyage complet pour appartements et maisons, avec soin du détail"
-        },
-        "expertMoving": {
-          "title": "Équipe de déménagement experte",
-          "description": "Personnel expérimenté, manipulation soignée, prix transparents"
-        },
-        "office": {
-          "title": "Nettoyage bureaux & commerces",
-          "description": "Gardez vos locaux propres avec des horaires flexibles"
-        },
-        "final": {
-          "title": "Nettoyage de fin de bail",
-          "description": "Nettoyage de sortie avec garantie de remise à 100%"
-        }
-      },
-      "trust": {
-        "guarantee": "Garantie de remise",
-        "cantons": "Cantons suisses",
-        "happyClients": "Clients satisfaits",
-        "support": "Support 24/7",
-        "all": "Plusieurs"
-      },
-      "qualityBadge": {
-        "title": "Fiable & certifié"
-      },
-      "cta": "Demander un devis gratuit",
-      "phone": "Appeler maintenant"
-    },
     "services": {
+      "facilityServices": {
+        "title": "Facility Services",
+        "description": "Solutions de nettoyage complètes pour tous types de propriétés et entreprises."
+      },
       "title": "Nos Services",
       "subtitle": "Solutions professionnelles pour le nettoyage, le déménagement et le facility service – fiables, efficaces et dans toute la Suisse.",
       "viewAll": "Voir tous les services",
@@ -144,6 +109,45 @@
         "description": "Assistance ménagère professionnelle incluant nettoyage, cuisine, lessive, courses et services de soins"
       }
     },
+    "hero": {
+      "badge": "",
+      "title": "SwissCleanMove est votre entreprise professionnelle de déménagement, de nettoyage et votre partenaire de services généraux à Bienne, Berne, Zurich et dans toute la Suisse.",
+      "subtitle": "Services de nettoyage, de déménagement et de facility service fiables pour les particuliers et les entreprises",
+      "slides": {
+        "transport": {
+          "title": "Déménagement & transport professionnels",
+          "description": "Sûr, ponctuel et sans stress dans toute la Suisse"
+        },
+        "houseCleaning": {
+          "title": "Maisons impeccables",
+          "description": "Nettoyage complet pour appartements et maisons, avec soin du détail"
+        },
+        "expertMoving": {
+          "title": "Équipe de déménagement experte",
+          "description": "Personnel expérimenté, manipulation soignée, prix transparents"
+        },
+        "office": {
+          "title": "Nettoyage bureaux & commerces",
+          "description": "Gardez vos locaux propres avec des horaires flexibles"
+        },
+        "final": {
+          "title": "Nettoyage de fin de bail",
+          "description": "Nettoyage de sortie avec garantie de remise à 100%"
+        }
+      },
+      "trust": {
+        "guarantee": "Garantie de remise",
+        "cantons": "Cantons suisses",
+        "happyClients": "Clients satisfaits",
+        "support": "Support 24/7",
+        "all": "Plusieurs"
+      },
+      "qualityBadge": {
+        "title": "Fiable & certifié"
+      },
+      "cta": "Demander un devis gratuit",
+      "phone": "Appeler maintenant"
+    },
     "numbers": {
       "badge": "Des chiffres parlants",
       "title": "Des chiffres qui parlent",
@@ -227,18 +231,13 @@
     "seoText": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland. We organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards. For a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines. For companies, property managers and businesses, we offer maintenance cleaning, office cleaning, stairwell cleaning and commercial cleaning – reliable, discreet and professionally managed. Additionally, we provide full facility service and property maintenance (regular inspections, minor repairs, winter service, green area maintenance), professional gastronomy cleaning for restaurants, hotels and commercial kitchens, construction cleaning (rough, detailed and final cleaning), as well as clearance and disposal services with environmentally responsible waste separation. SwissCleanMove stands for clear processes, transparent quotations, 24-hour response time and visible results – in Biel, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura, Lucerne and across Switzerland."
   },
   "services": {
-    "title": "Nos Services",
-    "subtitle": "Solutions professionnelles de déménagement, nettoyage, facility service et nettoyage de fin de bail pour clients privés et professionnels dans toute la Suisse.",
-    "featuresTitle": "Caractéristiques",
-    "priceCalculator": {
-      "title": "Calculateur de prix",
-      "subtitle": "Choisissez un service et obtenez une estimation instantanée"
-    },
-    "benefitsSection": {
-      "title": "Pourquoi SwissCleanMove?",
-      "subtitle": "Vos avantages avec notre service professionnel"
-    },
     "features": {
+      "facilityServices": [
+        "Plans de service sur mesure",
+        "Équipement et personnel professionnels",
+        "Normes d'hygiène les plus élevées",
+        "Planification flexible"
+      ],
       "houseCleaning": [
         "Nettoyage complet de la maison",
         "Cuisine et salle de bain en profondeur",
@@ -351,6 +350,17 @@
         "Soins des animaux et des plantes",
         "Soins aux personnes âgées et courses"
       ]
+    },
+    "title": "Nos Services",
+    "subtitle": "Solutions professionnelles de déménagement, nettoyage, facility service et nettoyage de fin de bail pour clients privés et professionnels dans toute la Suisse.",
+    "featuresTitle": "Caractéristiques",
+    "priceCalculator": {
+      "title": "Calculateur de prix",
+      "subtitle": "Choisissez un service et obtenez une estimation instantanée"
+    },
+    "benefitsSection": {
+      "title": "Pourquoi SwissCleanMove?",
+      "subtitle": "Vos avantages avec notre service professionnel"
     },
     "pricingUnits": {
       "perHour": "par heure",
@@ -741,11 +751,156 @@
     "message": "Bonjour! Je suis intéressé par vos services."
   },
   "serviceForm": {
-    "common": {
-      "yes": "Oui",
-      "no": "Non"
-    },
     "wizard": {
+      "facilityServices": {
+        "step1Title": "Étape 1 – Service & Rendez-vous",
+        "whichService": "De quel service avez-vous besoin ? *",
+        "serviceTypes": {
+          "maintenanceCleaning": "Nettoyage d'entretien (régulier)",
+          "propertyMaintenance": "Conciergerie",
+          "facilityServices": "Facility services",
+          "constructionCleaning": "Nettoyage de fin de chantier",
+          "specialCleaning": "Nettoyage spécial",
+          "gastronomyCleaning": "Nettoyage gastronomie (restaurant, cuisine)",
+          "pharmacyMedical": "Nettoyage cabinets médicaux & pharmacies (hygiène)",
+          "shopRetail": "Nettoyage de surfaces de vente / magasins",
+          "combination": "Combinaison de plusieurs services"
+        },
+        "preferredStart": "Début / rendez-vous souhaité *",
+        "date": "Date :",
+        "time": "Heure (optionnel) :",
+        "frequencyTitle": "Fréquence de nettoyage (important pour l'entretien)",
+        "frequency": {
+          "oneTime": "Une fois",
+          "daily": "Quotidien",
+          "weekly": "Hebdomadaire",
+          "twoThreePerWeek": "2-3 fois par semaine",
+          "monthly": "Mensuel",
+          "custom": "Sur mesure"
+        },
+        "flexibilityTitle": "Flexibilité",
+        "flexibility": {
+          "fixed": "Rendez-vous fixe",
+          "flexible": "Flexible"
+        },
+        "step2Title": "Étape 2 – Propriété & Localisation",
+        "zipCity": "NPA / Localité :",
+        "streetNo": "Rue / N° :",
+        "propertyTypeTitle": "Type de propriété *",
+        "propertyTypes": {
+          "apartment": "Appartement",
+          "house": "Maison",
+          "office": "Bureau",
+          "medicalPractice": "Cabinet médical",
+          "pharmacy": "Pharmacie",
+          "restaurant": "Restaurant / Gastronomie",
+          "shopRetail": "Magasin / Surface de vente",
+          "commercial": "Local commercial",
+          "constructionSite": "Chantier",
+          "other": "Autre :",
+          "otherSpecify": "Veuillez préciser :"
+        },
+        "area": "Surface",
+        "rooms": "Pièces / Espaces (optionnel)",
+        "floor": "Étage",
+        "elevator": "Ascenseur disponible",
+        "yes": "Oui",
+        "no": "Non",
+        "generalCleaning": {
+          "title": "Nettoyage général",
+          "floors": "Sols (aspirer / humide / machine)",
+          "sanitary": "Sanitaires (WC / douche / bain)",
+          "kitchenBreakRoom": "Cuisine / salle de pause",
+          "windowsInsideOutside": "Fenêtres intérieur / extérieur",
+          "windowFrames": "Cadres de fenêtres",
+          "blindsShutters": "Stores / volets",
+          "doorsFrames": "Portes & cadres",
+          "wallsCeilings": "Murs / plafonds",
+          "staircaseEntrance": "Cage d'escalier / entrée",
+          "elevatorCleaning": "Nettoyage d'ascenseur",
+          "basementAtticGarage": "Cave / grenier / garage",
+          "balconyTerrace": "Balcon / terrasse"
+        },
+        "maintenanceCleaningSection": {
+          "title": "Nettoyage d'entretien (régulier)",
+          "officeCleaning": "Nettoyage de bureaux",
+          "practiceCleaning": "Nettoyage de cabinet",
+          "staircaseCleaning": "Nettoyage de cage d'escalier",
+          "commercialCleaning": "Nettoyage commercial",
+          "wasteDisposal": "Élimination des déchets",
+          "refillConsumables": "Recharge des consommables"
+        },
+        "pharmacyMedicalSection": {
+          "title": "Pharmacie / cabinet médical (hygiène)",
+          "surfaceDisinfection": "Désinfection des surfaces",
+          "hygieneRegulations": "Nettoyage d'hygiène selon les normes",
+          "receptionCounter": "Réception / comptoir de vente",
+          "treatmentRooms": "Salles de traitement",
+          "floorDisinfection": "Désinfection des sols",
+          "medicalAreas": "Zones médicales"
+        },
+        "gastronomySection": {
+          "title": "Restaurant / Gastronomie",
+          "intensiveKitchen": "Nettoyage intensif de la cuisine",
+          "appliances": "Appareils (four, réfrigérateur, etc.)",
+          "extractorHoodFilters": "Hotte / filtres",
+          "greaseRemoval": "Dégraissage",
+          "diningAreaFloors": "Salle à manger / sols / tables",
+          "toilets": "Toilettes",
+          "storageBackRooms": "Stockage / locaux annexes"
+        },
+        "retailSection": {
+          "title": "Surfaces de vente",
+          "salesFloor": "Surface de vente / sols",
+          "shopWindows": "Vitrines",
+          "shelvesDisplays": "Étagères / présentoirs",
+          "checkoutArea": "Zone de caisse",
+          "storageBackRooms": "Stockage / locaux annexes"
+        },
+        "constructionSection": {
+          "title": "Nettoyage de fin de chantier",
+          "roughCleaning": "Nettoyage grossier",
+          "intermediateCleaning": "Nettoyage intermédiaire",
+          "finalConstructionCleaning": "Nettoyage final de chantier"
+        },
+        "specialSection": {
+          "title": "Nettoyage spécial",
+          "highPressure": "Nettoyage haute pression (balcon / terrasse)",
+          "carpetCleaning": "Nettoyage de tapis",
+          "hardToReachWindows": "Fenêtres difficiles d'accès",
+          "disinfection": "Désinfection",
+          "nicotineCleaning": "Nettoyage de nicotine",
+          "glassFacade": "Nettoyage de vitres / façades",
+          "other": "Autre :",
+          "otherSpecify": "Veuillez préciser :"
+        },
+        "accessLogistics": {
+          "title": "Accès & Logistique",
+          "accessProperty": "Accès à la propriété",
+          "keyInPerson": "Remise des clés en personne",
+          "keyMailbox": "Clé dans la boîte aux lettres",
+          "propertyManagement": "Remise via la gérance",
+          "other": "Autre :",
+          "otherSpecify": "Veuillez préciser :",
+          "parkingAvailable": "Parking disponible",
+          "parkingAccess": "Parking / accès",
+          "mustReserve": "Le parking doit être réservé",
+          "assistReservation": "Aide à la réservation nécessaire",
+          "noParkingZone": "Zone d'interdiction de stationnement requise",
+          "restrictedAccess": "Accès restreint",
+          "distance": "Distance parking → entrée"
+        },
+        "upload": {
+          "title": "Upload (recommandé)",
+          "hint": "Téléchargez des photos / vidéos pour un devis rapide & précis"
+        },
+        "contact": {
+          "title": "Coordonnées",
+          "name": "Nom / Prénom :",
+          "email": "E-mail :",
+          "phone": "Téléphone :"
+        }
+      },
       "badge": "Calculer une offre",
       "stepCounter": "Étape {current} sur {total}",
       "validation": {
@@ -791,7 +946,8 @@
         "household_services": "Services & Fréquence",
         "disposal_type": "Type d'élimination",
         "disposal_items": "Articles & Volume",
-        "disposal_options": "Options supplémentaires"
+        "disposal_options": "Options supplémentaires",
+        "fast_offer": "Offre Rapide"
       },
       "placeholders": {
         "areaM2": "ex. 120",
@@ -3359,6 +3515,10 @@
           "reviewing": "Notre équipe va examiner vos détails et vous recontactera rapidement avec une offre adaptée."
         }
       }
+    },
+    "common": {
+      "yes": "Oui",
+      "no": "Non"
     },
     "title": {
       "quote": "Devis",
