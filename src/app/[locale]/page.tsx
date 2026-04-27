@@ -136,19 +136,19 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
   const testimonials = [
     {
-      name: 'Maria Schmidt',
+      name: 'Lukas Meier',
       location: 'Zürich',
       rating: 5,
       text: 'Ausgezeichneter Service! Die Endreinigung war perfekt und wir haben die Kaution vollständig zurückerhalten.',
     },
     {
-      name: 'Jean Dubois',
-      location: 'Genève',
+      name: 'Anna Müller',
+      location: 'Bern',
       rating: 5,
       text: 'Service impeccable! L\'équipe était professionnelle et très efficace. Je recommande vivement.',
     },
     {
-      name: 'Andreas Müller',
+      name: 'Thomas Schmid',
       location: 'Basel',
       rating: 5,
       text: 'Schnell, zuverlässig und gründlich. Genau das, was man sich von einem professionellen Service wünscht.',
