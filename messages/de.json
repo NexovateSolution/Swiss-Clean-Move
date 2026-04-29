@@ -228,7 +228,11 @@
         "selectService": "Haushaltsservice wählen"
       }
     },
-    "seoText": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland. We organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards. For a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines. For companies, property managers and businesses, we offer maintenance cleaning, office cleaning, stairwell cleaning and commercial cleaning – reliable, discreet and professionally managed. Additionally, we provide full facility service and property maintenance (regular inspections, minor repairs, winter service, green area maintenance), professional gastronomy cleaning for restaurants, hotels and commercial kitchens, construction cleaning (rough, detailed and final cleaning), as well as clearance and disposal services with environmentally responsible waste separation. SwissCleanMove stands for clear processes, transparent quotations, 24-hour response time and visible results – in Biel, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura, Lucerne and across Switzerland."
+    "seoText": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland. We organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards. For a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines. For companies, property managers and businesses, we offer maintenance cleaning, office cleaning, stairwell cleaning and commercial cleaning – reliable, discreet and professionally managed. Additionally, we provide full facility service and property maintenance (regular inspections, minor repairs, winter service, green area maintenance), professional gastronomy cleaning for restaurants, hotels and commercial kitchens, construction cleaning (rough, detailed and final cleaning), as well as clearance and disposal services with environmentally responsible waste separation. SwissCleanMove stands for clear processes, transparent quotations, 24-hour response time and visible results – in Biel, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura, Lucerne and across Switzerland.",
+    "regional": {
+      "title": "Unsere Standorte im Seeland",
+      "subtitle": "Wir sind in der ganzen Region Biel-Seeland für Sie da. Schnell, lokal und zuverlässig."
+    }
   },
   "services": {
     "features": {
@@ -780,7 +784,8 @@
     "followUs": "Folgen Sie uns",
     "copyright": "© {year} SwissCleanMove. Alle Rechte vorbehalten.",
     "madeInSwitzerland": "Made in Switzerland",
-    "acceptanceGuarantee": ""
+    "acceptanceGuarantee": "",
+    "regional": "Regionale Services (Seeland)"
   },
   "whatsapp": {
     "message": "Hallo! Ich interessiere mich für Ihre Dienstleistungen."
@@ -5283,5 +5288,1410 @@
     "title": "Gallery – Our Work & Quality Standards",
     "description": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel, Bern, Zurich and throughout Switzerland.",
     "seoText": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel, Bern, Zurich and throughout Switzerland."
+  },
+  "seoPages": {
+    "umzugBiel": {
+      "meta": {
+        "title": "Umzugsfirma Biel – Professioneller Umzug in Biel/Bienne & Seeland",
+        "description": "SwissCleanMove ist Ihre Umzugsfirma in Biel/Bienne. Professioneller Umzug im Seeland – sorgfältig, pünktlich und zu fairen Preisen. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsfirma Biel/Bienne",
+      "h1": "Umzugsfirma Biel – Ihr zuverlässiger Umzugspartner in Biel/Bienne",
+      "heroSubtitle": "Professionelle Umzüge im Seeland – sorgfältig geplant, effizient durchgeführt und fair kalkuliert.",
+      "ctaSoft": "Jetzt unverbindlich anfragen",
+      "intro": "Sie planen einen Umzug in Biel/Bienne oder ins Seeland? SwissCleanMove ist Ihre lokale Umzugsfirma mit Sitz direkt in Biel. Seit 2024 unterstützen wir Privatpersonen, Familien und Unternehmen bei ihrem Umzug – ob innerhalb der Stadt, in die umliegenden Gemeinden oder in die ganze Schweiz. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, termingerecht und zu einem transparenten Preis abläuft. Über 50 erfolgreich durchgeführte Umzüge im Raum Biel und Seeland sprechen für unsere Arbeit.",
+      "sections": [
+        {
+          "heading": "Umzug in Biel/Bienne – unser Angebot",
+          "body": "Als Umzugsfirma in Biel bieten wir Ihnen ein Komplettpaket, das auf Ihre Bedürfnisse zugeschnitten ist. Ob Privatumzug, Firmenumzug oder Büroumzug – wir kümmern uns um den gesamten Ablauf. Von der kostenlosen Besichtigung über die sorgfältige Verpackung bis hin zum sicheren Transport und Aufbau am neuen Standort. Unsere Fahrzeuge sind modern ausgestattet, und unser Team geht mit Ihrem Mobiliar so um, als wäre es das eigene.",
+          "bullets": [
+            "Privatumzüge in und um Biel/Bienne",
+            "Firmen- und Büroumzüge im Seeland",
+            "Ein- und Auspackservice auf Wunsch",
+            "Möbelmontage und -demontage",
+            "Möbellift für schwer zugängliche Stockwerke",
+            "Transportversicherung inklusive"
+          ]
+        },
+        {
+          "heading": "So läuft Ihr Umzug mit SwissCleanMove ab",
+          "body": "Ein gut organisierter Umzug beginnt mit einer klaren Planung. Bei SwissCleanMove erhalten Sie zunächst eine kostenlose Besichtigung vor Ort in Biel oder Umgebung. Danach erstellen wir eine detaillierte Offerte mit Pauschalpreis – ohne versteckte Kosten. Am Umzugstag sind unsere Zügelhelfer pünktlich vor Ort, verpacken Ihre Möbel fachgerecht und transportieren alles sicher an den neuen Standort. Auf Wunsch übernehmen wir auch die Montage und den Aufbau.",
+          "bullets": [
+            "Schritt 1: Kostenlose Besichtigung und Beratung",
+            "Schritt 2: Individuelle Offerte mit Pauschalpreis",
+            "Schritt 3: Professionelle Verpackung und Demontage",
+            "Schritt 4: Sicherer Transport mit modernen Fahrzeugen",
+            "Schritt 5: Aufbau und Einrichtung am neuen Standort"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove als Umzugsfirma in Biel wählen?",
+          "body": "Wir sind keine anonyme Zügelplattform – wir sind ein lokales Unternehmen mit Sitz an der Orpundstrasse 31 in Biel. Sie erreichen uns direkt, sprechen mit echten Ansprechpartnern und erhalten einen persönlichen Service. Unsere Preise sind fair und transparent, unsere Zügelhelfer erfahren und sorgfältig. Seit 2024 haben wir über 50 Umzüge im Raum Biel/Bienne und Seeland erfolgreich durchgeführt – von der kleinen Studentenwohnung bis zum grossen Einfamilienhaus.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Umzugsleistungen im Überblick",
+      "serviceBullets": [
+        "3.5t und 7.5t Umzugsfahrzeuge",
+        "2–4 erfahrene Zügelhelfer je nach Bedarf",
+        "Verpackungsmaterial inklusive",
+        "Möbellift verfügbar",
+        "Transportversicherung inklusive",
+        "Entsorgung von Altmöbeln auf Wunsch"
+      ],
+      "trustPoints": [
+        "Seit 2024 in Biel/Bienne tätig",
+        "Über 50 erfolgreiche Umzüge",
+        "Faire Pauschalpreise ab CHF 490"
+      ],
+      "ctaMidHeading": "Umzug in Biel geplant?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Kostenlose Offerte anfordern",
+      "serviceAreaHeading": "Unser Einzugsgebiet im Seeland",
+      "serviceAreaBody": "Als Umzugsfirma mit Sitz in Biel/Bienne sind wir täglich im Seeland unterwegs. Unser Einzugsgebiet umfasst Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen und die gesamte Region rund um den Bielersee. Selbstverständlich führen wir auch Umzüge in die ganze Schweiz durch.",
+      "internalLinksHeading": "Weitere Dienstleistungen in der Region",
+      "internalLinks": [
+        {
+          "label": "Endreinigung in Biel – mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Reinigungsfirma Biel – regelmässige Reinigung",
+          "href": "reinigung-biel"
+        },
+        {
+          "label": "Umzugsservice Nidau",
+          "href": "umzug-nidau"
+        },
+        {
+          "label": "Zügelfirma Lyss",
+          "href": "umzug-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Umzugsofferte anfordern – kostenlos und unverbindlich",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innert 24 Stunden eine transparente Offerte für Ihren Umzug in Biel oder im Seeland.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "endreinigungBiel": {
+      "meta": {
+        "title": "Endreinigung Biel – Umzugsreinigung mit Abnahmegarantie",
+        "description": "Professionelle Endreinigung in Biel/Bienne mit 100% Abnahmegarantie. Kaution zurück garantiert. SwissCleanMove – Ihre Reinigungsfirma im Seeland."
+      },
+      "badge": "Endreinigung Biel/Bienne",
+      "h1": "Endreinigung Biel – Umzugsreinigung mit 100% Abnahmegarantie",
+      "heroSubtitle": "Ihre Wohnung in Biel wird so sauber übergeben, dass die Kaution garantiert zurückkommt.",
+      "ctaSoft": "Jetzt Offerte einholen",
+      "intro": "Wer in Biel/Bienne umzieht, braucht eine professionelle Endreinigung, die bei der Wohnungsabnahme besteht. SwissCleanMove bietet Ihnen genau das: eine gründliche Umzugsreinigung nach Branchenstandard mit 100% Abnahmegarantie. Sollte die Verwaltung Mängel feststellen, kommen wir kostenlos zurück und bessern nach. So erhalten Sie Ihre Kaution vollständig zurück – ohne Diskussion. Seit 2024 haben wir zahlreiche Endreinigungen in Biel und im Seeland durchgeführt, die alle beim ersten Mal bestanden haben.",
+      "sections": [
+        {
+          "heading": "Was umfasst unsere Endreinigung in Biel?",
+          "body": "Unsere Endreinigung in Biel/Bienne deckt alle Bereiche ab, die bei einer Wohnungsübergabe geprüft werden. Wir arbeiten nach einem systematischen Reinigungsplan, der alle Details berücksichtigt – von der Küche über das Bad bis hin zu den Fenstern und Rollläden. Jede Fläche, jede Fuge und jedes Gerät wird gründlich gereinigt.",
+          "bullets": [
+            "Küche: Backofen, Kühlschrank, Abzugshaube, Schränke innen/aussen",
+            "Bad: Armaturen, Fugen, Spiegel, WC, Dusche/Badewanne",
+            "Böden: Alle Böden gewischt, gesaugt und bei Bedarf poliert",
+            "Fenster: Glas, Rahmen und Fenstersims innen und aussen",
+            "Rollläden und Storen: Lamellen und Führungsschienen",
+            "Balkone und Terrassen: Boden und Geländer"
+          ]
+        },
+        {
+          "heading": "Abnahmegarantie – Ihre Sicherheit bei der Wohnungsübergabe",
+          "body": "Die Abnahmegarantie ist unser Versprechen an Sie. Wir reinigen Ihre Wohnung in Biel so gründlich, dass die Immobilienverwaltung die Abnahme beim ersten Mal akzeptiert. Falls doch etwas beanstandet wird, kommen wir kostenlos zurück und beheben die Mängel – ohne Wenn und Aber. So sparen Sie nicht nur Zeit, sondern sichern sich auch Ihre Mietkaution vollständig zurück.",
+          "bullets": []
+        },
+        {
+          "heading": "Preise für Endreinigung in Biel",
+          "body": "Unsere Preise richten sich nach der Wohnungsgrösse und dem Zustand der Wohnung. Sie erhalten vorab eine transparente Offerte ohne versteckte Kosten. Hier finden Sie unsere Richtwerte für Endreinigungen in Biel/Bienne und Umgebung:",
+          "bullets": [
+            "2.5-Zimmer-Wohnung: ab CHF 350",
+            "3.5-Zimmer-Wohnung: ab CHF 490",
+            "4.5-Zimmer-Wohnung: ab CHF 690",
+            "Einfamilienhaus: individuelle Offerte",
+            "Dauer: 4–8 Stunden je nach Wohnungsgrösse"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Endreinigung umfasst",
+      "serviceBullets": [
+        "Reinigung nach Branchenstandard",
+        "100% Abnahmegarantie inklusive",
+        "Kostenlose Nachbesserung bei Beanstandung",
+        "Umweltfreundliche Reinigungsmittel",
+        "Erfahrenes Reinigungsteam aus dem Seeland"
+      ],
+      "trustPoints": [
+        "100% Abnahmegarantie",
+        "Kaution zurück – garantiert",
+        "Faire Pauschalpreise"
+      ],
+      "ctaMidHeading": "Wohnungswechsel in Biel?",
+      "ctaMidBody": "Lassen Sie Ihre Endreinigung von Profis erledigen. Wir garantieren die Abnahme – oder kommen kostenlos zurück.",
+      "ctaMid": "Kostenlose Offerte anfordern",
+      "serviceAreaHeading": "Endreinigung im ganzen Seeland",
+      "serviceAreaBody": "Wir führen Endreinigungen nicht nur in Biel/Bienne durch, sondern im gesamten Seeland. Ob Nidau, Lyss, Brügg, Ipsach, Aarberg oder Pieterlen – unser Team ist schnell vor Ort und sorgt für eine saubere Übergabe.",
+      "internalLinksHeading": "Weitere Dienstleistungen in der Region",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel – professioneller Umzug",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Reinigungsfirma Biel – laufende Reinigung",
+          "href": "reinigung-biel"
+        },
+        {
+          "label": "Endreinigung Nidau",
+          "href": "endreinigung-nidau"
+        },
+        {
+          "label": "Umzugsreinigung Lyss",
+          "href": "endreinigung-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Endreinigung mit Abnahmegarantie – jetzt Offerte anfordern",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine kostenlose Offerte. Wir melden uns schnell und beraten Sie persönlich zu Ihrer Endreinigung in Biel.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "reinigungBiel": {
+      "meta": {
+        "title": "Reinigungsfirma Biel – Professionelle Reinigung in Biel/Bienne",
+        "description": "SwissCleanMove – Ihre Reinigungsfirma in Biel/Bienne. Unterhaltsreinigung, Büroreinigung und Gebäudereinigung im Seeland. Jetzt Offerte einholen."
+      },
+      "badge": "Reinigungsfirma Biel/Bienne",
+      "h1": "Reinigungsfirma Biel – professionelle Reinigung in Biel/Bienne & Seeland",
+      "heroSubtitle": "Regelmässig sauber – auf uns können Sie sich verlassen. Unterhaltsreinigung, Büroreinigung und mehr.",
+      "ctaSoft": "Offerte kostenlos einholen",
+      "intro": "Sauberkeit ist kein Zufall – sie ist das Ergebnis professioneller Arbeit. Als Reinigungsfirma in Biel/Bienne bietet SwissCleanMove zuverlässige Reinigungsdienstleistungen für Privathaushalte, Büros, Treppenhäuser und Gewerbeliegenschaften im gesamten Seeland. Ob wöchentlich, zweiwöchentlich oder nach Bedarf: Wir stellen Ihnen ein festes Reinigungsteam zusammen, das Ihre Räumlichkeiten regelmässig und gründlich pflegt. Seit 2024 sind wir in Biel und Umgebung täglich im Einsatz.",
+      "sections": [
+        {
+          "heading": "Reinigungsdienstleistungen in Biel/Bienne",
+          "body": "Unser Reinigungsangebot in Biel ist breit gefächert und lässt sich individuell auf Ihre Bedürfnisse abstimmen. Ob es um die regelmässige Pflege Ihres Zuhauses geht, die Reinigung Ihres Büros oder die Instandhaltung von Gemeinschaftsflächen – wir haben die passende Lösung für Sie.",
+          "bullets": [
+            "Unterhaltsreinigung für Privathaushalte",
+            "Büroreinigung und Gewerbereinigung",
+            "Treppenhausreinigung für Mehrfamilienhäuser",
+            "Fensterreinigung innen und aussen",
+            "Grundreinigung nach Renovation oder Umbau",
+            "Sonderreinigung auf Anfrage"
+          ]
+        },
+        {
+          "heading": "Ihr festes Reinigungsteam in Biel",
+          "body": "Bei SwissCleanMove setzen wir auf Kontinuität. Sie erhalten ein festes Reinigungsteam, das Ihre Räumlichkeiten kennt und weiss, worauf es ankommt. So müssen Sie nicht jedes Mal erklären, was zu tun ist – Ihr Team kennt Ihre Ansprüche und liefert konstant hochwertige Ergebnisse. Wir arbeiten mit umweltfreundlichen Reinigungsmitteln und bringen sämtliches Material selbst mit.",
+          "bullets": []
+        },
+        {
+          "heading": "Flexible Reinigungsintervalle",
+          "body": "Wir passen uns Ihrem Rhythmus an. Ob Sie eine wöchentliche Unterhaltsreinigung benötigen, eine zweiwöchentliche Büroreinigung oder eine monatliche Grundreinigung – wir erstellen einen Reinigungsplan, der zu Ihrem Alltag passt. Änderungen sind jederzeit möglich, und bei Bedarf organisieren wir kurzfristig zusätzliche Einsätze.",
+          "bullets": [
+            "Wöchentliche Reinigung",
+            "Zweiwöchentliche Reinigung",
+            "Monatliche Reinigung",
+            "Reinigung nach Bedarf",
+            "Kurzfristige Sondereinsätze"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Das zeichnet unsere Reinigung aus",
+      "serviceBullets": [
+        "Festes Reinigungsteam für Ihren Standort",
+        "Umweltfreundliche Reinigungsmittel",
+        "Alle Materialien inklusive",
+        "Flexible Intervalle und Zeiten",
+        "Ab CHF 35 pro Stunde",
+        "Pauschalpreise für regelmässige Einsätze"
+      ],
+      "trustPoints": [
+        "Festes Team – konstante Qualität",
+        "Lokal in Biel tätig – täglich im Einsatz",
+        "Faire Preise ab CHF 35/Std."
+      ],
+      "ctaMidHeading": "Regelmässige Reinigung gewünscht?",
+      "ctaMidBody": "Wir erstellen Ihnen gerne einen individuellen Reinigungsplan für Ihr Zuhause oder Büro in Biel/Bienne.",
+      "ctaMid": "Gratis-Offerte erhalten",
+      "serviceAreaHeading": "Reinigung im gesamten Seeland",
+      "serviceAreaBody": "Unsere Reinigungsteams sind im gesamten Seeland im Einsatz – in Biel/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg und Pieterlen. Dank unserer lokalen Präsenz sind wir schnell vor Ort und flexibel in der Planung.",
+      "internalLinksHeading": "Weitere Dienstleistungen in der Region",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel – professioneller Umzug",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Endreinigung Biel – mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Reinigungsfirma Nidau",
+          "href": "reinigung-nidau"
+        },
+        {
+          "label": "Reinigungsunternehmen Lyss",
+          "href": "reinigung-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Saubere Räume – ohne Aufwand für Sie",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine unverbindliche Offerte. Wir beraten Sie persönlich und erstellen einen Reinigungsplan, der zu Ihnen passt.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "umzugNidau": {
+      "meta": {
+        "title": "Umzugsservice Nidau – Professioneller Umzug in Nidau & Seeland",
+        "description": "SwissCleanMove – Ihr Umzugsservice in Nidau. Sorgfältiger Umzug direkt bei Biel/Bienne. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsservice Nidau",
+      "h1": "Umzugsservice Nidau – sorgfältig und zuverlässig umziehen",
+      "heroSubtitle": "Ihr Umzug in Nidau – professionell geplant und schnell erledigt.",
+      "ctaSoft": "Jetzt unverbindlich anfragen",
+      "intro": "Steht ein Umzug in Nidau an? Ob Sie innerhalb von Nidau umziehen, von Biel/Bienne nach Nidau wechseln oder das Seeland verlassen – SwissCleanMove ist Ihr lokaler Umzugsservice direkt vor Ort. Wir kennen die Gegebenheiten in Nidau und Umgebung und sorgen dafür, dass Ihr Umzug reibungslos verläuft. Mit modernen Fahrzeugen, erfahrenen Zügelhelfer und einem klaren Ablauf sind wir seit 2024 in Nidau und im gesamten Seeland täglich im Einsatz.",
+      "sections": [
+        {
+          "heading": "Umzugsservice in Nidau – was wir bieten",
+          "body": "Unser Umzugsservice in Nidau umfasst alles, was Sie für einen reibungslosen Wohnungswechsel brauchen. Dabei kümmern wir uns um Verpackung, Transport und Aufbau – Sie müssen sich um nichts sorgen.",
+          "bullets": [
+            "Privatumzüge in Nidau und Umgebung",
+            "Firmenumzüge im Seeland",
+            "Verpackungsservice mit eigenem Material",
+            "Möbelmontage und -demontage",
+            "Transportversicherung inklusive"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove in Nidau?",
+          "body": "Nidau liegt direkt neben Biel/Bienne – und genau dort haben wir unseren Firmensitz. Das bedeutet für Sie: kurze Anfahrtswege, schnelle Verfügbarkeit und persönlicher Kontakt. Ausserdem profitieren Sie von transparenten Pauschalpreisen ohne versteckte Kosten.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Leistungen für Ihren Umzug",
+      "serviceBullets": [
+        "3.5t und 7.5t Fahrzeuge",
+        "2–4 Zügelhelfer",
+        "Verpackungsmaterial inklusive",
+        "Möbellift bei Bedarf",
+        "Entsorgung auf Wunsch"
+      ],
+      "trustPoints": [
+        "Lokal in Nidau und Biel tätig",
+        "Schnelle Verfügbarkeit",
+        "Pauschalpreise ab CHF 490"
+      ],
+      "ctaMidHeading": "Umzug in Nidau geplant?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose Offerte an – schnelle Rückmeldung garantiert.",
+      "ctaMid": "Kostenlose Offerte anfordern",
+      "serviceAreaHeading": "Unser Einsatzgebiet rund um Nidau",
+      "serviceAreaBody": "Von Nidau aus sind wir im gesamten Seeland unterwegs – in Biel/Bienne, Brügg, Ipsach, Lyss, Aarberg und Pieterlen. Auch Umzüge in die ganze Schweiz sind möglich.",
+      "internalLinksHeading": "Weitere Angebote in der Region",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel – Ihr Partner im Seeland",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Endreinigung Nidau – mit Abnahmegarantie",
+          "href": "endreinigung-nidau"
+        },
+        {
+          "label": "Umzugsunternehmen Brügg",
+          "href": "umzug-bruegg"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Umzugsofferte für Nidau anfordern",
+      "ctaStrongBody": "Rufen Sie uns an oder nutzen Sie unser Formular. Wir erstellen Ihnen innert 24 Stunden eine faire Offerte.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "umzugLyss": {
+      "meta": {
+        "title": "Zügelfirma Lyss – Professioneller Umzug in Lyss & Seeland",
+        "description": "SwissCleanMove – Ihre Zügelfirma in Lyss. Effizient, sorgfältig und fair. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Zügelfirma Lyss",
+      "h1": "Zügelfirma Lyss – effizient und sorgfältig umziehen im Seeland",
+      "heroSubtitle": "Als Zügelfirma in Lyss bieten wir Ihnen einen Umzug ohne Stress – termingerecht und fair kalkuliert.",
+      "ctaSoft": "Offerte kostenlos einholen",
+      "intro": "Als Zügelfirma in Lyss steht SwissCleanMove für Effizienz, Sorgfalt und faire Preise. Lyss ist eine der grössten Gemeinden im Seeland – und genau hier sind wir regelmässig im Einsatz. Ob Wohnungsumzug, Hausumzug oder Büroverlagerung: Unser eingespieltes Team übernimmt die komplette Organisation und Durchführung. Zudem profitieren Sie von kurzen Anfahrtswegen aus unserem Standort in Biel/Bienne und einer schnellen Terminvergabe.",
+      "sections": [
+        {
+          "heading": "Professioneller Umzug in Lyss",
+          "body": "Ein Umzug in Lyss erfordert Planung und Erfahrung – beides bringen wir mit. Darüber hinaus bieten wir einen Komplettservice, der Ihnen den gesamten Aufwand abnimmt: von der Besichtigung über die Verpackung bis zum Aufbau am neuen Standort.",
+          "bullets": [
+            "Wohnungsumzüge in Lyss und Umgebung",
+            "Haus- und Villenumzüge",
+            "Büro- und Gewerbeumzüge",
+            "Ein- und Auspackservice",
+            "Möbellift und Spezialequipment"
+          ]
+        },
+        {
+          "heading": "Transparent und fair – unsere Preise",
+          "body": "Bei SwissCleanMove erhalten Sie eine detaillierte Offerte mit Pauschalpreis. Keine Überraschungen, keine Nachforderungen. Unsere Umzüge in Lyss starten ab CHF 490 für eine 2-Zimmer-Wohnung. Der Stundenansatz liegt bei CHF 45–65 pro Person.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Zügelleistungen in Lyss",
+      "serviceBullets": [
+        "Moderne Umzugsfahrzeuge",
+        "Erfahrene Zügelhelfer",
+        "Verpackungsmaterial inklusive",
+        "Transportversicherung",
+        "Entsorgung von Altmöbeln"
+      ],
+      "trustPoints": [
+        "Regelmässig in Lyss im Einsatz",
+        "Effizient und sorgfältig",
+        "Pauschalpreise ab CHF 490"
+      ],
+      "ctaMidHeading": "Zügeltermin in Lyss sichern",
+      "ctaMidBody": "Fragen Sie jetzt unverbindlich an – wir melden uns schnell zurück.",
+      "ctaMid": "Jetzt Angebot sichern",
+      "serviceAreaHeading": "Umzüge in Lyss und Umgebung",
+      "serviceAreaBody": "Von Lyss aus bedienen wir das gesamte Seeland: Biel/Bienne, Aarberg, Nidau, Brügg, Ipsach und Pieterlen. Darüber hinaus führen wir Umzüge in die ganze Schweiz durch.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel – Zentrale im Seeland",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Endreinigung Lyss – Umzugsreinigung mit Garantie",
+          "href": "endreinigung-lyss"
+        },
+        {
+          "label": "Zügelunternehmen Aarberg",
+          "href": "umzug-aarberg"
+        }
+      ],
+      "ctaStrongHeading": "Heute anfragen – morgen erledigt",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine kostenlose Offerte. Ihr Umzug in Lyss ist bei uns in besten Händen.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "umzugBruegg": {
+      "meta": {
+        "title": "Umzugsunternehmen Brügg – Professioneller Umzug in Brügg & Seeland",
+        "description": "SwissCleanMove – Ihr Umzugsunternehmen in Brügg bei Biel. Professionell, pünktlich und zuverlässig. Jetzt Offerte einholen."
+      },
+      "badge": "Umzugsunternehmen Brügg",
+      "h1": "Umzugsunternehmen Brügg – professionell und pünktlich umziehen",
+      "heroSubtitle": "Suchen Sie ein zuverlässiges Umzugsunternehmen in Brügg? Wir sind Ihr Partner vor Ort.",
+      "ctaSoft": "Lassen Sie sich beraten",
+      "intro": "Suchen Sie ein zuverlässiges Umzugsunternehmen in Brügg? SwissCleanMove bietet Ihnen professionelle Umzüge in Brügg und im gesamten Seeland. Gleichzeitig profitieren Sie von unserem Standort in Biel/Bienne – nur wenige Minuten von Brügg entfernt. Nicht zuletzt überzeugen wir mit transparenten Preisen, pünktlicher Ausführung und einem eingespielten Team, das sich um jedes Detail kümmert.",
+      "sections": [
+        {
+          "heading": "Umzug in Brügg – unser Angebot",
+          "body": "Brügg liegt zwischen Biel und Nidau und ist bestens an die Verkehrsinfrastruktur angebunden. Gleichzeitig kennen wir die lokalen Gegebenheiten und können Ihren Umzug effizient planen – inklusive Parkbewilligungen und Zufahrtsregelungen.",
+          "bullets": [
+            "Umzüge für Privatpersonen und Familien",
+            "Gewerbe- und Büroumzüge",
+            "Verpackung und Demontage",
+            "Sichere Lagerung auf Anfrage",
+            "Transportversicherung inklusive"
+          ]
+        },
+        {
+          "heading": "Ablauf Ihres Umzugs in Brügg",
+          "body": "Nach einer kostenlosen Besichtigung vor Ort erstellen wir eine verbindliche Offerte mit Pauschalpreis. Am Umzugstag sind wir pünktlich da und erledigen alles Weitere – professionell und ohne Hektik.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Umzugsleistungen",
+      "serviceBullets": [
+        "Moderne 3.5t und 7.5t Fahrzeuge",
+        "Erfahrenes Zügelteam",
+        "Verpackungsmaterial",
+        "Möbellift verfügbar",
+        "Entsorgungsservice"
+      ],
+      "trustPoints": [
+        "Professionell und pünktlich",
+        "Nur Minuten von Brügg entfernt",
+        "Transparente Pauschalpreise"
+      ],
+      "ctaMidHeading": "Umzug in Brügg geplant?",
+      "ctaMidBody": "Wir erstellen Ihnen eine kostenlose Offerte – unverbindlich und transparent.",
+      "ctaMid": "Gratis-Offerte erhalten",
+      "serviceAreaHeading": "Einsatzgebiet rund um Brügg",
+      "serviceAreaBody": "Von Brügg aus sind wir in wenigen Minuten in Biel/Bienne, Nidau, Ipsach, Lyss, Aarberg und Pieterlen. Unser Einzugsgebiet deckt das gesamte Seeland ab.",
+      "internalLinksHeading": "Weitere Angebote in der Region",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel – Hauptstandort",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Endreinigung Brügg – sauber übergeben",
+          "href": "endreinigung-bruegg"
+        },
+        {
+          "label": "Umzugsservice Nidau",
+          "href": "umzug-nidau"
+        }
+      ],
+      "ctaStrongHeading": "Rufen Sie uns an oder schreiben Sie uns",
+      "ctaStrongBody": "Wir sind für Sie da – persönlich, schnell und unkompliziert. Ihre Offerte für den Umzug in Brügg erhalten Sie innert 24 Stunden.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "umzugIpsach": {
+      "meta": {
+        "title": "Umzugsfirma Ipsach – Professioneller Umzug in Ipsach & Seeland",
+        "description": "SwissCleanMove – Ihre Umzugsfirma in Ipsach am Bielersee. Flexibel, erfahren und lokal. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsfirma Ipsach",
+      "h1": "Umzugsfirma Ipsach – flexibel und erfahren am Bielersee",
+      "heroSubtitle": "In Ipsach, direkt am Bielersee gelegen, bieten wir Ihnen einen Umzug mit persönlichem Service.",
+      "ctaSoft": "Kontaktieren Sie uns direkt",
+      "intro": "In Ipsach, direkt am Bielersee und unweit von Biel/Bienne, ist SwissCleanMove Ihre Umzugsfirma mit persönlichem Anspruch. Vor allem schätzen unsere Kunden in Ipsach die kurzen Wege und die flexible Terminplanung. Ob Wohnungswechsel innerhalb der Gemeinde oder ein Umzug in eine andere Region – wir kümmern uns um Planung, Verpackung, Transport und Aufbau. Zusätzlich bieten wir Entsorgung und Endreinigung als Komplettpaket an, damit Sie sich um nichts mehr kümmern müssen.",
+      "sections": [
+        {
+          "heading": "Ihr Umzug in Ipsach – persönlich und flexibel",
+          "body": "Ipsach ist eine überschaubare Gemeinde am Bielersee, in der wir uns bestens auskennen. Vor allem die enge Zusammenarbeit mit unseren Kunden zeichnet uns aus – Sie erhalten einen persönlichen Ansprechpartner, der Ihren Umzug von Anfang bis Ende begleitet.",
+          "bullets": [
+            "Privatumzüge in Ipsach und Umgebung",
+            "Umzüge von und nach Biel/Bienne",
+            "Verpackungsservice und Möbelschutz",
+            "Möbelmontage am neuen Standort",
+            "Kombinierbar mit Endreinigung"
+          ]
+        },
+        {
+          "heading": "Alles aus einer Hand in Ipsach",
+          "body": "Zusätzlich zum Umzug bieten wir Ihnen Endreinigung mit Abnahmegarantie und Entsorgung von Altmöbeln. So erledigen Sie Umzug, Reinigung und Entsorgung mit einem einzigen Anbieter – einfach und effizient.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Umzugsleistungen in Ipsach",
+      "serviceBullets": [
+        "Moderne Umzugsfahrzeuge",
+        "Erfahrenes Zügelteam",
+        "Verpackungsmaterial inklusive",
+        "Transportversicherung",
+        "Endreinigung kombinierbar"
+      ],
+      "trustPoints": [
+        "Flexibel und erfahren",
+        "Persönlicher Ansprechpartner",
+        "Alles aus einer Hand"
+      ],
+      "ctaMidHeading": "Umzug in Ipsach?",
+      "ctaMidBody": "Wir beraten Sie persönlich und erstellen eine massgeschneiderte Offerte für Ihren Umzug.",
+      "ctaMid": "Unverbindlich anfragen",
+      "serviceAreaHeading": "Einsatzgebiet rund um Ipsach",
+      "serviceAreaBody": "Von Ipsach aus erreichen wir in kürzester Zeit Biel/Bienne, Nidau, Brügg, Lyss, Aarberg und Pieterlen. Unser Einzugsgebiet umfasst das gesamte Seeland und darüber hinaus.",
+      "internalLinksHeading": "Weitere Services in Ipsach",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel – Ihr Partner im Seeland",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Endreinigung Ipsach",
+          "href": "endreinigung-ipsach"
+        },
+        {
+          "label": "Umzugshilfe Pieterlen",
+          "href": "umzug-pieterlen"
+        }
+      ],
+      "ctaStrongHeading": "Wir sind für Sie da – jetzt anfragen",
+      "ctaStrongBody": "Kontaktieren Sie uns telefonisch oder per Formular. Wir melden uns schnell und erstellen Ihnen eine faire Offerte.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "umzugAarberg": {
+      "meta": {
+        "title": "Zügelunternehmen Aarberg – Professioneller Umzug in Aarberg & Seeland",
+        "description": "SwissCleanMove – Ihr Zügelunternehmen in Aarberg. Gründlich, transparent und regional. Jetzt Offerte anfordern."
+      },
+      "badge": "Zügelunternehmen Aarberg",
+      "h1": "Zügelunternehmen Aarberg – gründlich und transparent umziehen",
+      "heroSubtitle": "Professionell, flexibel und regional verankert – Ihr Zügelunternehmen für Aarberg und das Seeland.",
+      "ctaSoft": "Fordern Sie Ihre Offerte an",
+      "intro": "Professionell, flexibel und im Seeland verwurzelt: SwissCleanMove ist Ihr Zügelunternehmen in Aarberg. Besonders schätzen unsere Kunden die gründliche Arbeitsweise und die transparente Preisgestaltung. Ebenso wichtig ist uns die persönliche Betreuung – von der ersten Anfrage bis zum letzten Karton am neuen Standort. Aarberg, als historisches Städtchen im Herzen des Seelands, kennen wir bestens und wissen, worauf es bei Umzügen hier ankommt.",
+      "sections": [
+        {
+          "heading": "Umzüge in Aarberg – regional und erfahren",
+          "body": "Aarberg liegt zentral im Seeland, und wir sind von unserem Standort in Biel/Bienne in wenigen Minuten vor Ort. Besonders bei Umzügen in der Altstadt von Aarberg ist Erfahrung gefragt – enge Gassen, Parkplatzsituation und Zufahrten erfordern sorgfältige Planung.",
+          "bullets": [
+            "Wohnungsumzüge in Aarberg und Umgebung",
+            "Haus- und Villenumzüge",
+            "Büro- und Praxisumzüge",
+            "Seniorenumzüge mit besonderer Sorgfalt",
+            "Lagerung auf Anfrage"
+          ]
+        },
+        {
+          "heading": "Faire Preise für Ihren Umzug in Aarberg",
+          "body": "Bei uns erhalten Sie eine Offerte mit Pauschalpreis – transparent und verbindlich. Keine versteckten Kosten, keine Nachforderungen. So wissen Sie im Voraus genau, was Ihr Umzug in Aarberg kostet.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Leistungen für Aarberg",
+      "serviceBullets": [
+        "3.5t und 7.5t Fahrzeuge",
+        "Erfahrene Zügelhelfer",
+        "Verpackung und Demontage",
+        "Möbellift und Spezialgeräte",
+        "Entsorgung und Recycling"
+      ],
+      "trustPoints": [
+        "Gründlich und transparent",
+        "Im Seeland verankert",
+        "Faire Pauschalpreise"
+      ],
+      "ctaMidHeading": "Zügeltermin in Aarberg sichern",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose Offerte an – wir beraten Sie gerne.",
+      "ctaMid": "Preis berechnen lassen",
+      "serviceAreaHeading": "Von Aarberg ins ganze Seeland",
+      "serviceAreaBody": "Unser Einsatzgebiet umfasst Biel/Bienne, Lyss, Nidau, Brügg, Ipsach und Pieterlen. Ebenso sind Umzüge in den ganzen Kanton Bern und die Schweiz möglich.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel – Zentrale Seeland",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Endreinigung Aarberg",
+          "href": "endreinigung-aarberg"
+        },
+        {
+          "label": "Zügelfirma Lyss",
+          "href": "umzug-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Starten Sie jetzt – kostenlos und unverbindlich",
+      "ctaStrongBody": "Füllen Sie unser Formular aus oder rufen Sie uns an. Ihre Offerte für Aarberg erhalten Sie innert 24 Stunden.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "umzugPieterlen": {
+      "meta": {
+        "title": "Umzugshilfe Pieterlen – Professioneller Umzug in Pieterlen & Seeland",
+        "description": "SwissCleanMove – Ihre Umzugshilfe in Pieterlen. Persönlich, kompetent und seit Jahren im Seeland tätig. Jetzt Offerte anfordern."
+      },
+      "badge": "Umzugshilfe Pieterlen",
+      "h1": "Umzugshilfe Pieterlen – persönlich und kompetent umziehen",
+      "heroSubtitle": "Seit Jahren sind wir in Pieterlen und im Seeland Ihr verlässlicher Partner für Umzüge aller Art.",
+      "ctaSoft": "Sprechen Sie uns an",
+      "intro": "Seit Jahren ist SwissCleanMove in Pieterlen und im gesamten Seeland als kompetente Umzugshilfe bekannt. Selbstverständlich bieten wir auch in Pieterlen den gleichen hohen Standard wie in Biel/Bienne – mit persönlicher Betreuung und sorgfältiger Durchführung. Natürlich gehören faire Preise und transparente Kommunikation für uns selbstverständlich dazu. Pieterlen, am östlichen Rand des Seelands gelegen, erreichen wir von unserem Standort in Biel in wenigen Minuten.",
+      "sections": [
+        {
+          "heading": "Umzugshilfe in Pieterlen – unser Angebot",
+          "body": "Selbstverständlich passen wir unseren Service an Ihre individuellen Bedürfnisse an. Ob kleiner Wohnungsumzug oder grosser Hausumzug in Pieterlen – wir haben die Erfahrung und die Ausrüstung für jede Grösse.",
+          "bullets": [
+            "Wohnungsumzüge in Pieterlen",
+            "Hausumzüge im Seeland",
+            "Möbeltransport und -montage",
+            "Verpackungsservice",
+            "Entsorgung alter Möbel und Geräte"
+          ]
+        },
+        {
+          "heading": "Vertrauen Sie auf unsere Erfahrung",
+          "body": "Natürlich ist Erfahrung entscheidend, wenn es um einen reibungslosen Umzug geht. Seit 2024 haben wir über 50 Umzüge im Raum Biel/Bienne und Seeland durchgeführt – mit konstant hoher Zufriedenheit unserer Kunden. Jeder Umzug wird individuell geplant und persönlich begleitet.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Leistungen in Pieterlen",
+      "serviceBullets": [
+        "Umzugsfahrzeuge verschiedener Grössen",
+        "Erfahrene und sorgfältige Helfer",
+        "Verpackungsmaterial inklusive",
+        "Möbellift bei Bedarf",
+        "Komplettservice mit Reinigung"
+      ],
+      "trustPoints": [
+        "Persönlich und kompetent",
+        "Seit 2024 im Seeland tätig",
+        "Über 50 zufriedene Kunden"
+      ],
+      "ctaMidHeading": "Umzug in Pieterlen?",
+      "ctaMidBody": "Vertrauen Sie auf unsere Erfahrung – fordern Sie jetzt Ihre Offerte an.",
+      "ctaMid": "Offerte einholen",
+      "serviceAreaHeading": "Von Pieterlen ins ganze Seeland",
+      "serviceAreaBody": "Von Pieterlen aus erreichen wir schnell Biel/Bienne, Nidau, Brügg, Ipsach, Lyss und Aarberg. Unser Einzugsgebiet erstreckt sich über das gesamte Seeland und darüber hinaus.",
+      "internalLinksHeading": "Weitere Angebote",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel – Hauptstandort",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Endreinigung Pieterlen",
+          "href": "endreinigung-pieterlen"
+        },
+        {
+          "label": "Umzugsfirma Ipsach",
+          "href": "umzug-ipsach"
+        }
+      ],
+      "ctaStrongHeading": "Vertrauen Sie auf unsere Erfahrung – jetzt anfragen",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir beraten Sie persönlich und erstellen eine faire Offerte für Pieterlen.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "endreinigungNidau": {
+      "meta": {
+        "title": "Endreinigung Nidau – Umzugsreinigung mit Abnahmegarantie",
+        "description": "Professionelle Endreinigung in Nidau mit 100% Abnahmegarantie. Kaution zurück garantiert. SwissCleanMove – Ihre Reinigungsfirma im Seeland."
+      },
+      "badge": "Endreinigung Nidau",
+      "h1": "Endreinigung Nidau – Umzugsreinigung mit 100% Abnahmegarantie",
+      "heroSubtitle": "Garantiert sauber: Wir reinigen Ihre Wohnung in Nidau so gründlich, dass die Abnahme problemlos verläuft.",
+      "ctaSoft": "Jetzt unverbindlich anfragen",
+      "intro": "Ein Umzug ist stressig genug – überlassen Sie die Endreinigung in Nidau den Profis. SwissCleanMove bietet Ihnen eine gründliche Umzugsreinigung mit 100% Abnahmegarantie. Als Reinigungsfirma direkt nebenan in Biel/Bienne sind wir schnell vor Ort und kennen die hohen Anforderungen der lokalen Verwaltungen. Mit unserer Garantie sind Sie auf der sicheren Seite: Wir reinigen so lange, bis die Wohnung abgenommen ist. So erhalten Sie Ihre Kaution garantiert zurück.",
+      "sections": [
+        {
+          "heading": "Ihre Umzugsreinigung in Nidau",
+          "body": "Wir reinigen nach den strengen Branchenstandards der Schweizer Immobilienverwaltungen. Jeder Raum, jede Ecke und jedes Gerät wird detailliert gereinigt – von der Küche bis zum Balkon.",
+          "bullets": [
+            "Küche: Geräte, Schränke, Dampfabzug",
+            "Badezimmer: Entkalkung, Fugen, Sanitäranlagen",
+            "Fenster: inkl. Rahmen und Storen/Rollläden",
+            "Böden: fachgerechte Reinigung aller Beläge"
+          ]
+        },
+        {
+          "heading": "Sicherheit dank Abnahmegarantie",
+          "body": "Unsere 100% Abnahmegarantie bedeutet für Sie volle Sicherheit. Wir sind bei der Wohnungsübergabe in Nidau auf Wunsch dabei. Sollte die Verwaltung wider Erwarten Mängel feststellen, beheben wir diese sofort und kostenlos.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Leistungen der Endreinigung",
+      "serviceBullets": [
+        "100% Abnahmegarantie",
+        "Kostenlose Nachreinigung bei Beanstandung",
+        "Inklusive Material und umweltfreundlichen Mitteln",
+        "Transparente Pauschalpreise",
+        "Erfahrenes Reinigungsteam"
+      ],
+      "trustPoints": [
+        "100% Abnahmegarantie",
+        "Kaution sicher zurück",
+        "Lokal in Nidau und Biel"
+      ],
+      "ctaMidHeading": "Wohnungsabgabe in Nidau?",
+      "ctaMidBody": "Sichern Sie sich jetzt Ihren Termin für die Endreinigung mit Garantie.",
+      "ctaMid": "Kostenlose Offerte anfordern",
+      "serviceAreaHeading": "Endreinigung im Seeland",
+      "serviceAreaBody": "Neben Nidau reinigen wir auch in Biel/Bienne, Brügg, Ipsach, Lyss, Aarberg und Pieterlen. Unser Team ist im ganzen Seeland für Sie da.",
+      "internalLinksHeading": "Weitere Angebote",
+      "internalLinks": [
+        {
+          "label": "Umzugsservice Nidau – professionell umziehen",
+          "href": "umzug-nidau"
+        },
+        {
+          "label": "Endreinigung Biel – Hauptstandort",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Reinigungsfirma Nidau – Unterhaltsreinigung",
+          "href": "reinigung-nidau"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Endreinigung für Nidau anfragen",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine faire und transparente Offerte. Wir freuen uns auf Ihre Anfrage.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "endreinigungLyss": {
+      "meta": {
+        "title": "Umzugsreinigung Lyss – Endreinigung mit Abnahmegarantie",
+        "description": "Professionelle Umzugsreinigung in Lyss. Mit Abnahmegarantie für eine stressfreie Wohnungsabgabe. Jetzt Offerte einholen."
+      },
+      "badge": "Umzugsreinigung Lyss",
+      "h1": "Umzugsreinigung Lyss – Endreinigung mit Abnahmegarantie",
+      "heroSubtitle": "Stressfreie Wohnungsübergabe in Lyss: Wir garantieren die reibungslose Abnahme Ihrer Wohnung.",
+      "ctaSoft": "Offerte kostenlos einholen",
+      "intro": "Die Wohnungsübergabe rückt näher? SwissCleanMove ist Ihr Partner für die professionelle Umzugsreinigung in Lyss. Wir wissen genau, worauf Liegenschaftsverwaltungen in Lyss bei der Abnahme achten. Unsere erfahrenen Reinigungsteams arbeiten nach einer strikten Checkliste und garantieren eine makellose Sauberkeit. Dank unserer 100% Abnahmegarantie können Sie dem Abgabetermin in Lyss völlig entspannt entgegensehen. Wir sorgen dafür, dass Sie Ihre Mietkaution vollständig zurückerhalten.",
+      "sections": [
+        {
+          "heading": "Professionelle Endreinigung in Lyss",
+          "body": "Eine gründliche Umzugsreinigung erfordert Zeit, Fachwissen und die richtigen Reinigungsmittel. Wir übernehmen diese anspruchsvolle Arbeit für Sie. Von hartnäckigen Kalkrückständen im Bad bis zu fetthaltigen Ablagerungen in der Küche – wir bringen Ihre Wohnung in Lyss auf Hochglanz.",
+          "bullets": [
+            "Gründliche Reinigung aller Räume",
+            "Spezialreinigung von Küche und Bad",
+            "Fenster- und Storenreinigung",
+            "Balkon- und Terrassenreinigung"
+          ]
+        },
+        {
+          "heading": "Unsere Garantie für Lyss",
+          "body": "Wir versprechen nicht nur Sauberkeit, wir garantieren sie. Unsere Abnahmegarantie ist fester Bestandteil jeder Offerte. Falls bei der Übergabe in Lyss noch etwas beanstandet wird, reinigen wir sofort und ohne Zusatzkosten nach.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Das bietet unsere Umzugsreinigung",
+      "serviceBullets": [
+        "Abnahmegarantie inklusive",
+        "Fixer Pauschalpreis ohne Überraschungen",
+        "Alle Reinigungsmittel inklusive",
+        "Anwesenheit bei der Übergabe auf Wunsch",
+        "Flexibel und termintreu"
+      ],
+      "trustPoints": [
+        "Erfahren in Lyss",
+        "Mit Abnahmegarantie",
+        "Fixer Pauschalpreis"
+      ],
+      "ctaMidHeading": "Umzug in Lyss?",
+      "ctaMidBody": "Holen Sie sich jetzt Ihre kostenlose Offerte für die Endreinigung in Lyss.",
+      "ctaMid": "Jetzt Angebot sichern",
+      "serviceAreaHeading": "Reinigung in der Region",
+      "serviceAreaBody": "Wir bieten unsere Endreinigungen in Lyss und im ganzen Seeland an: Biel/Bienne, Nidau, Brügg, Ipsach, Aarberg und Pieterlen.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Zügelfirma Lyss – Ihr Umzugspartner",
+          "href": "umzug-lyss"
+        },
+        {
+          "label": "Reinigungsunternehmen Lyss – regelmässige Reinigung",
+          "href": "reinigung-lyss"
+        },
+        {
+          "label": "Endreinigung Biel – Zentrale Seeland",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Heute anfragen – entspannt abgeben",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine kostenlose Offerte. Ihre Umzugsreinigung in Lyss ist bei uns in besten Händen.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "endreinigungBruegg": {
+      "meta": {
+        "title": "Endreinigung mit Abnahmegarantie Brügg – SwissCleanMove",
+        "description": "Professionelle Endreinigung in Brügg. 100% Abnahmegarantie für Ihre Mietwohnung. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Endreinigung Brügg",
+      "h1": "Endreinigung mit Abnahmegarantie Brügg – sicher und sauber",
+      "heroSubtitle": "Ihre Mietwohnung in Brügg blitzblank geputzt und garantiert mängelfrei übergeben.",
+      "ctaSoft": "Lassen Sie sich beraten",
+      "intro": "Die Endreinigung ist oft der mühsamste Teil eines Umzugs. Sparen Sie sich die Zeit und den Ärger! SwissCleanMove übernimmt Ihre Endreinigung in Brügg – professionell, zuverlässig und mit 100% Abnahmegarantie. Durch unseren Hauptsitz im benachbarten Biel/Bienne sind wir schnell in Brügg und bieten Ihnen einen erstklassigen Reinigungsservice zu fairen Pauschalpreisen. Wir kennen die Standards der Liegenschaftsverwaltungen und garantieren eine reibungslose Übergabe.",
+      "sections": [
+        {
+          "heading": "Umfassende Endreinigung in Brügg",
+          "body": "Unser Reinigungsteam arbeitet systematisch und gründlich. Wir verwenden professionelles Equipment und umweltfreundliche Reinigungsmittel, um selbst hartnäckigste Verschmutzungen zu beseitigen. Ihre Wohnung in Brügg wird in einem Zustand übergeben, der auch den strengsten Prüfer überzeugt.",
+          "bullets": [
+            "Komplette Reinigung aller Zimmer",
+            "Intensive Küchen- und Badreinigung",
+            "Fenster, Rahmen und Storen",
+            "Fachgerechte Bodenpflege"
+          ]
+        },
+        {
+          "heading": "Pauschalpreise mit Garantie",
+          "body": "Bei SwissCleanMove wissen Sie vorher, was es nachher kostet. Unsere Offerten für die Endreinigung in Brügg sind Festpreise. Und das Wichtigste: Die Abnahmegarantie ist immer inklusive. Wir lassen Sie bei der Übergabe nicht allein.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Details unserer Endreinigung",
+      "serviceBullets": [
+        "100% Abnahmegarantie",
+        "Transparente Festpreise",
+        "Professionelles Reinigungsmaterial",
+        "Spezialisierte Teams",
+        "Umweltbewusste Reinigung"
+      ],
+      "trustPoints": [
+        "Nähe zu Brügg",
+        "Festpreise garantiert",
+        "Abnahme ohne Probleme"
+      ],
+      "ctaMidHeading": "Wohnungsübergabe in Brügg?",
+      "ctaMidBody": "Verlangen Sie jetzt eine unverbindliche Offerte für Ihre Endreinigung.",
+      "ctaMid": "Gratis-Offerte erhalten",
+      "serviceAreaHeading": "Unser Servicegebiet",
+      "serviceAreaBody": "Wir sind in Brügg, Biel/Bienne, Nidau, Ipsach, Lyss, Aarberg und Pieterlen sowie im gesamten Seeland für Endreinigungen im Einsatz.",
+      "internalLinksHeading": "Weitere Angebote in der Region",
+      "internalLinks": [
+        {
+          "label": "Umzugsunternehmen Brügg – professionell umziehen",
+          "href": "umzug-bruegg"
+        },
+        {
+          "label": "Reinigungsservice Brügg – laufende Reinigung",
+          "href": "reinigung-bruegg"
+        },
+        {
+          "label": "Endreinigung Biel",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Endreinigung in Brügg sichern",
+      "ctaStrongBody": "Wir sind für Sie da – fordern Sie noch heute Ihre massgeschneiderte Offerte an.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "endreinigungIpsach": {
+      "meta": {
+        "title": "Endreinigung Ipsach – Umzugsreinigung & Wohnungsreinigung",
+        "description": "SwissCleanMove – Ihre Reinigungsfirma für die Endreinigung in Ipsach. Zuverlässig, schnell und mit Abnahmegarantie. Jetzt anfragen."
+      },
+      "badge": "Endreinigung Ipsach",
+      "h1": "Endreinigung Ipsach – Umzugsreinigung mit Abnahmegarantie",
+      "heroSubtitle": "Ihre Wohnung in Ipsach am Bielersee – perfekt gereinigt und bereit für die Übergabe.",
+      "ctaSoft": "Offerte kostenlos einholen",
+      "intro": "Sie ziehen aus Ihrer Wohnung in Ipsach aus? Mit SwissCleanMove wird die Wohnungsabgabe zum Kinderspiel. Wir bieten Ihnen eine professionelle Endreinigung in Ipsach mit voller Abnahmegarantie. Durch unsere lokale Präsenz sind wir am Bielersee bestens vernetzt und kennen die Erwartungen der hiesigen Verwaltungen. Wir reinigen gründlich, umweltfreundlich und zu fairen Festpreisen. So können Sie sich entspannt Ihrem neuen Zuhause widmen, während wir Ihre alte Wohnung in Ipsach übergabebereit machen.",
+      "sections": [
+        {
+          "heading": "Ihre Reinigungsfirma für Ipsach",
+          "body": "Die Reinigung einer Wohnung erfordert mehr als nur Staubsaugen und Wischen. Besonders in Küche und Bad, aber auch bei Fenstern und Storen, sind Erfahrung und die richtigen Mittel gefragt. Unser Team arbeitet mit modernen Geräten und effizienten Reinigungsmethoden.",
+          "bullets": [
+            "Gründliche Reinigung aller Wohnräume",
+            "Tiefenreinigung von Bad und Küche",
+            "Streifenfreie Fenster und Storen",
+            "Pflege aller Bodenarten"
+          ]
+        },
+        {
+          "heading": "Volle Sicherheit mit unserer Garantie",
+          "body": "Wir überlassen nichts dem Zufall. Mit unserer Abnahmegarantie versprechen wir Ihnen eine problemlose Übergabe in Ipsach. Sind bei der Abnahme Nachbesserungen nötig, führen wir diese sofort und ohne Aufpreis durch.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Reinigungsleistungen",
+      "serviceBullets": [
+        "Abnahmegarantie in Ipsach",
+        "Transparente Festpreise",
+        "Professionelle Reinigungsmittel",
+        "Erfahrenes Personal",
+        "Termingerechte Ausführung"
+      ],
+      "trustPoints": [
+        "Lokale Präsenz am Bielersee",
+        "100% Abnahmegarantie",
+        "Faire Preise"
+      ],
+      "ctaMidHeading": "Umzug aus Ipsach?",
+      "ctaMidBody": "Sichern Sie sich jetzt Ihre stressfreie Endreinigung.",
+      "ctaMid": "Angebot sichern",
+      "serviceAreaHeading": "Unser Einzugsgebiet",
+      "serviceAreaBody": "Neben Ipsach sind wir im ganzen Seeland für Endreinigungen im Einsatz, darunter Biel/Bienne, Nidau, Brügg, Lyss, Aarberg und Pieterlen.",
+      "internalLinksHeading": "Weitere Services",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Ipsach – wir zügeln für Sie",
+          "href": "umzug-ipsach"
+        },
+        {
+          "label": "Reinigung Ipsach – Unterhaltsreinigung",
+          "href": "reinigung-ipsach"
+        },
+        {
+          "label": "Endreinigung Biel",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Termin für Ipsach anfragen",
+      "ctaStrongBody": "Wir erstellen Ihnen schnell und unverbindlich eine Offerte für Ihre Endreinigung.",
+      "ctaStrong": "Offerte anfordern"
+    },
+    "endreinigungAarberg": {
+      "meta": {
+        "title": "Abnahmereinigung Aarberg – Endreinigung mit Garantie",
+        "description": "Sorgenfreie Wohnungsabgabe in Aarberg dank unserer Abnahmereinigung. Wir garantieren eine saubere Übergabe. Jetzt Offerte anfordern."
+      },
+      "badge": "Abnahmereinigung Aarberg",
+      "h1": "Abnahmereinigung Aarberg – Sauberkeit mit Garantie",
+      "heroSubtitle": "Professionelle Endreinigung in Aarberg: Wir putzen, Sie übergeben entspannt.",
+      "ctaSoft": "Jetzt Offerte anfordern",
+      "intro": "Eine Wohnungsabgabe in Aarberg steht an? Die Abnahmereinigung ist oft ein Stressfaktor. Mit SwissCleanMove lagern Sie diese Aufgabe an Profis aus. Wir bieten eine umfassende Endreinigung in Aarberg – inklusive 100% Abnahmegarantie. Unsere eingespielten Teams kennen die hohen Anforderungen der Verwaltungen und sorgen für eine makellose Sauberkeit in jedem Winkel Ihrer Wohnung. Dank unserer transparenten Festpreise wissen Sie genau, woran Sie sind.",
+      "sections": [
+        {
+          "heading": "Gründliche Reinigung in Aarberg",
+          "body": "Wir reinigen nach einem bewährten System, das alle Bereiche der Wohnung abdeckt. Von der Entkalkung der Badarmaturen über die Backofenreinigung bis hin zur Pflege der Parkettböden – wir sorgen dafür, dass Ihre Wohnung in Aarberg wieder strahlt.",
+          "bullets": [
+            "Küche: Backofen, Kühlschrank, Dampfabzug",
+            "Badezimmer: Entkalkung, Armaturen, Fugen",
+            "Fenster: Glas, Rahmen, Fenstersims",
+            "Staub- und schmutzfreie Böden"
+          ]
+        },
+        {
+          "heading": "Garantierte Abnahme",
+          "body": "Die Abnahmegarantie ist Ihr Ruhekissen. Wir garantieren, dass die Verwaltung die Reinigung akzeptiert. Gibt es dennoch Beanstandungen, reinigen wir in Aarberg umgehend und kostenlos nach. Ihre Kaution ist sicher.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Leistungen der Endreinigung",
+      "serviceBullets": [
+        "Abnahmegarantie inklusive",
+        "Festpreise ohne versteckte Kosten",
+        "Umweltfreundliche Reinigungsmittel",
+        "Präsenz bei der Wohnungsübergabe",
+        "Zuverlässig und pünktlich"
+      ],
+      "trustPoints": [
+        "100% Garantie auf die Abnahme",
+        "Keine versteckten Kosten",
+        "Professionelle Reinigung"
+      ],
+      "ctaMidHeading": "Wohnungsabgabe in Aarberg?",
+      "ctaMidBody": "Verlangen Sie eine unverbindliche Offerte für Ihre Endreinigung.",
+      "ctaMid": "Gratis-Offerte erhalten",
+      "serviceAreaHeading": "Reinigung im ganzen Seeland",
+      "serviceAreaBody": "Wir sind in Aarberg und im gesamten Seeland für Sie da, inklusive Biel/Bienne, Lyss, Nidau, Brügg, Ipsach und Pieterlen.",
+      "internalLinksHeading": "Weitere Angebote in Aarberg",
+      "internalLinks": [
+        {
+          "label": "Zügelunternehmen Aarberg",
+          "href": "umzug-aarberg"
+        },
+        {
+          "label": "Reinigungsfirma Aarberg – laufende Reinigung",
+          "href": "reinigung-aarberg"
+        },
+        {
+          "label": "Umzugsreinigung Lyss",
+          "href": "endreinigung-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Endreinigung für Aarberg sichern",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine massgeschneiderte Offerte. Wir freuen uns auf Ihre Anfrage.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "endreinigungPieterlen": {
+      "meta": {
+        "title": "Endreinigung Pieterlen – Umzugsreinigung mit Abnahmegarantie",
+        "description": "SwissCleanMove bietet professionelle Endreinigungen in Pieterlen. Kaution zurück garantiert. Jetzt unverbindlich anfragen."
+      },
+      "badge": "Endreinigung Pieterlen",
+      "h1": "Endreinigung Pieterlen – professionell, sauber, garantiert",
+      "heroSubtitle": "Wir übernehmen die Umzugsreinigung in Pieterlen, damit Sie sich entspannt zurücklehnen können.",
+      "ctaSoft": "Jetzt unverbindlich anfragen",
+      "intro": "Der Umzug ist geschafft, doch die alte Wohnung in Pieterlen muss noch gereinigt werden? Übergeben Sie diese Aufgabe an SwissCleanMove. Wir sind spezialisiert auf Endreinigungen mit Abnahmegarantie in Pieterlen und dem gesamten Seeland. Mit unserem professionellen Service garantieren wir Ihnen eine reibungslose Wohnungsabgabe. Wir reinigen gründlich, speditiv und zu einem fairen Pauschalpreis. So sichern Sie sich Ihre Mietkaution ohne Stress und Diskussionen.",
+      "sections": [
+        {
+          "heading": "Ihre Umzugsreinigung in Pieterlen",
+          "body": "Unsere erfahrenen Reinigungsteams arbeiten nach einer detaillierten Checkliste, die den strengen Vorgaben der Liegenschaftsverwaltungen entspricht. Wir bringen alle benötigten Reinigungsmittel und Geräte mit und sorgen für strahlende Sauberkeit in jedem Raum.",
+          "bullets": [
+            "Detailreinigung von Küche und Bad",
+            "Streifenfreie Fenster und Storen",
+            "Pflege aller Bodenbeläge",
+            "Reinigung von Balkon und Nebenräumen"
+          ]
+        },
+        {
+          "heading": "Abnahmegarantie – Ihr Vorteil",
+          "body": "Unsere 100% Abnahmegarantie gibt Ihnen die Sicherheit, die Sie bei der Wohnungsabgabe brauchen. Wir stehen für unsere Arbeit ein. Sollte bei der Übergabe in Pieterlen eine Nachreinigung gefordert werden, erledigen wir das sofort und kostenlos.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Leistungen",
+      "serviceBullets": [
+        "Endreinigung mit Abnahmegarantie",
+        "Transparente Pauschalpreise",
+        "Inklusive Material und Fahrspesen",
+        "Anwesenheit bei der Übergabe",
+        "Erfahrenes Personal"
+      ],
+      "trustPoints": [
+        "Erfahren in Pieterlen",
+        "Sichere Wohnungsabgabe",
+        "Faire Festpreise"
+      ],
+      "ctaMidHeading": "Umzug in Pieterlen?",
+      "ctaMidBody": "Holen Sie sich jetzt Ihre kostenlose Offerte für die Endreinigung.",
+      "ctaMid": "Offerte anfordern",
+      "serviceAreaHeading": "Unser Einsatzgebiet",
+      "serviceAreaBody": "Neben Pieterlen sind wir im ganzen Seeland für Endreinigungen im Einsatz: Biel/Bienne, Nidau, Brügg, Ipsach, Lyss und Aarberg.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Umzugshilfe Pieterlen – wir zügeln für Sie",
+          "href": "umzug-pieterlen"
+        },
+        {
+          "label": "Gebäudereinigung Pieterlen – Unterhaltsreinigung",
+          "href": "reinigung-pieterlen"
+        },
+        {
+          "label": "Endreinigung Biel",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Termin für Pieterlen sichern",
+      "ctaStrongBody": "Rufen Sie uns an oder nutzen Sie unser Formular. Wir unterbreiten Ihnen gerne eine unverbindliche Offerte.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "reinigungNidau": {
+      "meta": {
+        "title": "Reinigungsfirma Nidau – Unterhaltsreinigung & Büroreinigung",
+        "description": "SwissCleanMove – Ihre Reinigungsfirma in Nidau. Professionelle und regelmässige Reinigung für private und gewerbliche Kunden."
+      },
+      "badge": "Reinigungsfirma Nidau",
+      "h1": "Reinigungsfirma Nidau – zuverlässige Sauberkeit vor Ort",
+      "heroSubtitle": "Regelmässige Unterhaltsreinigung in Nidau für Privathaushalte und Unternehmen.",
+      "ctaSoft": "Jetzt Offerte einholen",
+      "intro": "Eine saubere Umgebung trägt massgeblich zum Wohlbefinden bei. SwissCleanMove ist Ihre Reinigungsfirma in Nidau, spezialisiert auf regelmässige Unterhalts- und Büroreinigungen. Dank unseres Standorts direkt am Rand von Nidau profitieren Sie von maximaler Flexibilität und kurzen Reaktionszeiten. Wir stellen Ihnen ein festes Reinigungsteam zur Seite, das Ihre Räumlichkeiten genau kennt und vertrauensvoll arbeitet. Ob wöchentliche Hausreinigung oder täglicher Büroservice – wir richten uns nach Ihren Bedürfnissen.",
+      "sections": [
+        {
+          "heading": "Reinigungsdienste in Nidau",
+          "body": "Unser Reinigungsservice in Nidau ist breit aufgestellt. Wir betreuen Privathaushalte, Büros, Arztpraxen und Gewerbeliegenschaften. Mit einem massgeschneiderten Reinigungsplan sorgen wir für kontinuierliche Sauberkeit.",
+          "bullets": [
+            "Wohnungs- und Hausreinigung (regelmässig)",
+            "Büro- und Gewerbereinigung",
+            "Treppenhausreinigung für Verwaltungen",
+            "Fenster- und Spezialreinigungen"
+          ]
+        },
+        {
+          "heading": "Vertrauen und Kontinuität",
+          "body": "Bei der Unterhaltsreinigung ist Vertrauen das Wichtigste. Deshalb arbeiten wir in Nidau mit festen Teams. Sie wissen immer, wer bei Ihnen reinigt. Unsere Mitarbeitenden sind geschult, diskret und sorgfältig.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Qualitätsversprechen",
+      "serviceBullets": [
+        "Festes Reinigungspersonal für Nidau",
+        "Flexible Intervalle nach Wunsch",
+        "Umweltfreundliche Reinigungsmittel",
+        "Volle Diskretion",
+        "Transparente Stunden- oder Pauschaltarife"
+      ],
+      "trustPoints": [
+        "Festes Reinigungsteam",
+        "Nah und flexibel",
+        "Faire Preise"
+      ],
+      "ctaMidHeading": "Reinigung in Nidau gesucht?",
+      "ctaMidBody": "Vereinbaren Sie jetzt einen kostenlosen Besichtigungstermin in Nidau.",
+      "ctaMid": "Termin vereinbaren",
+      "serviceAreaHeading": "Unser Einzugsgebiet",
+      "serviceAreaBody": "Wir reinigen nicht nur in Nidau, sondern im ganzen Seeland: Biel/Bienne, Brügg, Ipsach, Lyss, Aarberg und Pieterlen.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Endreinigung Nidau – mit Abnahmegarantie",
+          "href": "endreinigung-nidau"
+        },
+        {
+          "label": "Umzugsservice Nidau",
+          "href": "umzug-nidau"
+        },
+        {
+          "label": "Reinigungsfirma Biel – Zentrale",
+          "href": "reinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Ihre Reinigungsfirma in Nidau – jetzt kontaktieren",
+      "ctaStrongBody": "Rufen Sie uns an. Wir erstellen Ihnen gerne ein massgeschneidertes Angebot.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "reinigungLyss": {
+      "meta": {
+        "title": "Reinigungsunternehmen Lyss – Professionelle Gebäudereinigung",
+        "description": "SwissCleanMove – Ihr Reinigungsunternehmen in Lyss. Zuverlässige Unterhaltsreinigung, Büroreinigung und Treppenhausreinigung. Jetzt anfragen."
+      },
+      "badge": "Reinigungsunternehmen Lyss",
+      "h1": "Reinigungsunternehmen Lyss – professionell und gründlich",
+      "heroSubtitle": "Ihr Partner für Unterhaltsreinigung, Hauswartung und Büroreinigung in Lyss.",
+      "ctaSoft": "Jetzt unverbindlich anfragen",
+      "intro": "Lyss ist ein wachsender Wirtschaftsstandort – und wo gearbeitet und gelebt wird, ist Sauberkeit essenziell. SwissCleanMove ist Ihr Reinigungsunternehmen in Lyss. Wir bieten professionelle Reinigungslösungen für Gewerbe, Verwaltungen und Privatpersonen. Unser Fokus liegt auf der regelmässigen Unterhaltsreinigung. Mit modernster Ausrüstung, umweltschonenden Reinigungsmitteln und geschultem Personal garantieren wir in Lyss einen Werterhalt Ihrer Immobilien und ein gepflegtes Erscheinungsbild.",
+      "sections": [
+        {
+          "heading": "Reinigungsleistungen für Lyss",
+          "body": "Jedes Gebäude hat eigene Anforderungen. Wir entwickeln für Sie ein individuelles Reinigungskonzept. Von der täglichen Büroreinigung bis zur wöchentlichen Treppenhausreinigung – wir setzen Ihre Wünsche zuverlässig um.",
+          "bullets": [
+            "Regelmässige Unterhaltsreinigung",
+            "Büro-, Praxis- und Ladenreinigung",
+            "Treppenhaus- und Anlagenpflege",
+            "Fenster- und Fassadenreinigung auf Anfrage"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove in Lyss?",
+          "body": "Wir überzeugen durch Qualität und Zuverlässigkeit. Unsere Reinigungsteams für Lyss arbeiten speditiv und diskret. Ein persönlicher Objektleiter kontrolliert regelmässig die Reinigungsqualität und ist Ihr direkter Ansprechpartner.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Ihre Vorteile bei uns",
+      "serviceBullets": [
+        "Massgeschneiderte Reinigungspläne",
+        "Persönlicher Ansprechpartner",
+        "Geschultes, festes Personal",
+        "Faire, transparente Preise",
+        "Qualitätskontrollen inklusive"
+      ],
+      "trustPoints": [
+        "Professionell und gründlich",
+        "Regelmässige Kontrollen",
+        "Feste Teams"
+      ],
+      "ctaMidHeading": "Reinigungskonzept für Lyss?",
+      "ctaMidBody": "Lassen Sie uns Ihre Bedürfnisse besprechen – völlig unverbindlich.",
+      "ctaMid": "Beratung anfordern",
+      "serviceAreaHeading": "Im gesamten Seeland für Sie da",
+      "serviceAreaBody": "Unsere Reinigungsteams sind in Lyss, Aarberg, Biel/Bienne, Nidau, Brügg, Ipsach und Pieterlen im Einsatz.",
+      "internalLinksHeading": "Weitere Services in Lyss",
+      "internalLinks": [
+        {
+          "label": "Umzugsreinigung Lyss",
+          "href": "endreinigung-lyss"
+        },
+        {
+          "label": "Zügelfirma Lyss",
+          "href": "umzug-lyss"
+        },
+        {
+          "label": "Reinigungsunternehmen Aarberg",
+          "href": "reinigung-aarberg"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Reinigungsofferte für Lyss einholen",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine Objektbegehung und eine unverbindliche Offerte.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "reinigungBruegg": {
+      "meta": {
+        "title": "Reinigungsservice Brügg – Sauberkeit für Ihr Zuhause oder Büro",
+        "description": "SwissCleanMove ist Ihr Reinigungsservice in Brügg. Wir bieten massgeschneiderte Reinigungslösungen für Privathaushalte und Unternehmen."
+      },
+      "badge": "Reinigungsservice Brügg",
+      "h1": "Reinigungsservice Brügg – flexibel, gründlich, nah",
+      "heroSubtitle": "Unterhaltsreinigung in Brügg für ein sauberes und angenehmes Umfeld.",
+      "ctaSoft": "Direkt anfragen",
+      "intro": "Suchen Sie einen zuverlässigen Reinigungsservice in Brügg? SwissCleanMove ist direkt vor Ort und übernimmt die regelmässige Reinigung Ihrer Räumlichkeiten. Ob privates Zuhause, Büro oder Verkaufsfläche – wir sorgen in Brügg für hygienische Sauberkeit. Dabei passen wir uns flexibel Ihren Zeiten an: Wir reinigen morgens, abends oder am Wochenende. Vertrauen Sie auf unser geschultes Personal und geniessen Sie stets saubere Räume ohne eigenen Aufwand.",
+      "sections": [
+        {
+          "heading": "Unser Reinigungsangebot in Brügg",
+          "body": "Ein sauberes Umfeld ist Ihre Visitenkarte. Wir sorgen dafür, dass alles makellos ist. Sie bestimmen die Intervalle – wir liefern die Qualität. Dabei verwenden wir ausschliesslich hochwertige und materialschonende Reinigungsmittel.",
+          "bullets": [
+            "Wöchentliche Haus- und Wohnungsreinigung",
+            "Regelmässige Büro- und Praxisreinigung",
+            "Unterhalt von Treppenhäusern",
+            "Fenster- und Storenreinigung"
+          ]
+        },
+        {
+          "heading": "Flexibilität und Vertrauen",
+          "body": "Als lokaler Reinigungsservice für Brügg sind wir flexibel und schnell. Wir setzen auf feste Bezugspersonen, damit Sie wissen, wer in Ihren Räumlichkeiten arbeitet. Diskretion und Sorgfalt sind für uns selbstverständlich.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Was uns auszeichnet",
+      "serviceBullets": [
+        "Nahe bei Brügg – schnell vor Ort",
+        "Flexible Einsatzzeiten",
+        "Materialsorgfalt und Umweltschutz",
+        "Diskret und zuverlässig",
+        "Faire Stunden- oder Monatspauschalen"
+      ],
+      "trustPoints": [
+        "Flexibel einsetzbar",
+        "Lokaler Anbieter",
+        "Diskret und zuverlässig"
+      ],
+      "ctaMidHeading": "Reinigung in Brügg gesucht?",
+      "ctaMidBody": "Fordern Sie jetzt ein unverbindliches Angebot für Ihre Unterhaltsreinigung an.",
+      "ctaMid": "Angebot erhalten",
+      "serviceAreaHeading": "Unser Reinigungsgebiet",
+      "serviceAreaBody": "Wir reinigen in Brügg, Biel/Bienne, Nidau, Ipsach, Lyss, Aarberg und Pieterlen.",
+      "internalLinksHeading": "Passende Angebote",
+      "internalLinks": [
+        {
+          "label": "Endreinigung Brügg – mit Abnahmegarantie",
+          "href": "endreinigung-bruegg"
+        },
+        {
+          "label": "Umzugsunternehmen Brügg",
+          "href": "umzug-bruegg"
+        },
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Sichern Sie sich Ihren Reinigungsservice in Brügg",
+      "ctaStrongBody": "Kontaktieren Sie uns noch heute. Wir erstellen Ihnen eine transparente Offerte.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "reinigungIpsach": {
+      "meta": {
+        "title": "Reinigung Ipsach – Professionelle Hauswartung & Unterhalt",
+        "description": "Reinigungsdienst in Ipsach gesucht? SwissCleanMove bietet erstklassige Unterhalts- und Büroreinigung am Bielersee. Jetzt Offerte anfordern."
+      },
+      "badge": "Reinigung Ipsach",
+      "h1": "Reinigung Ipsach – professionelle Pflege für Ihre Immobilien",
+      "heroSubtitle": "Ihr Reinigungsdienst am Bielersee: Wir pflegen Ihre Liegenschaften in Ipsach zuverlässig und kompetent.",
+      "ctaSoft": "Jetzt Offerte anfordern",
+      "intro": "Eine gepflegte Immobilie am Bielersee verdient die beste Betreuung. SwissCleanMove ist Ihr Partner für Reinigung in Ipsach. Wir kümmern uns um die regelmässige Unterhaltsreinigung von Privatliegenschaften, Bürogebäuden und Treppenhäusern. Unsere Kunden in Ipsach schätzen unsere Zuverlässigkeit, die hohen Qualitätsstandards und die kurzen Wege. Wir sorgen dafür, dass Ihre Räumlichkeiten dauerhaft repräsentativ und hygienisch sauber bleiben.",
+      "sections": [
+        {
+          "heading": "Reinigungsdienste in Ipsach",
+          "body": "Wir bieten Ihnen ein umfassendes Dienstleistungsportfolio für Ipsach. Unser Schwerpunkt liegt auf der regelmässigen Reinigung, aber wir übernehmen auch spezielle Aufgaben wie Fensterreinigung oder Frühjahrsputz.",
+          "bullets": [
+            "Regelmässige Unterhaltsreinigung",
+            "Büro- und Praxisreinigung",
+            "Treppenhaus- und Anlagenpflege",
+            "Schaufenster- und Glasreinigung"
+          ]
+        },
+        {
+          "heading": "Ihre Vorteile am Bielersee",
+          "body": "Da wir direkt in der Region verwurzelt sind, sind wir für unsere Kunden in Ipsach schnell erreichbar. Wir garantieren gleichbleibend hohe Qualität durch feste Reinigungsteams und regelmässige Kontrollen durch unsere Objektleiter.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Was wir Ihnen bieten",
+      "serviceBullets": [
+        "Schnelle Erreichbarkeit in Ipsach",
+        "Gleichbleibende Reinigungsqualität",
+        "Umweltfreundliche Reinigung",
+        "Transparente Kostenkontrolle",
+        "Diskretion und Vertrauen"
+      ],
+      "trustPoints": [
+        "Hohe Qualitätsstandards",
+        "Regional verankert",
+        "Feste Ansprechpartner"
+      ],
+      "ctaMidHeading": "Reinigung in Ipsach planen?",
+      "ctaMidBody": "Gerne erstellen wir ein individuelles Konzept für Ihre Liegenschaft.",
+      "ctaMid": "Konzept anfragen",
+      "serviceAreaHeading": "Unser Service am Bielersee",
+      "serviceAreaBody": "Von Ipsach aus bedienen wir das gesamte Seeland: Biel/Bienne, Nidau, Brügg, Lyss, Aarberg und Pieterlen.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Endreinigung Ipsach – Umzugsreinigung",
+          "href": "endreinigung-ipsach"
+        },
+        {
+          "label": "Umzugsfirma Ipsach",
+          "href": "umzug-ipsach"
+        },
+        {
+          "label": "Reinigungsunternehmen Lyss",
+          "href": "reinigung-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Reinigungsdienst in Ipsach sichern",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine unverbindliche Beratung vor Ort.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "reinigungAarberg": {
+      "meta": {
+        "title": "Reinigungsfirma Aarberg – Kompetente Reinigung & Pflege",
+        "description": "SwissCleanMove – Ihre Reinigungsfirma in Aarberg. Wir sorgen für saubere Wohnungen, Büros und Treppenhäuser. Zuverlässig und fair."
+      },
+      "badge": "Reinigungsfirma Aarberg",
+      "h1": "Reinigungsfirma Aarberg – kompetent, sauber, fair",
+      "heroSubtitle": "Vertrauen Sie die Reinigung Ihrer Räumlichkeiten in Aarberg den Profis an.",
+      "ctaSoft": "Jetzt unverbindlich anfragen",
+      "intro": "Im historischen Zentrum des Seelands bieten wir moderne Reinigungsdienstleistungen: SwissCleanMove ist Ihre Reinigungsfirma in Aarberg. Wir betreuen Geschäfts- und Privatkunden mit massgeschneiderten Reinigungskonzepten. Egal, ob es um die wöchentliche Büroreinigung in der Altstadt oder die Pflege eines Mehrfamilienhauses geht – wir sind Ihr zuverlässiger Partner. Wir legen Wert auf Transparenz, Pünktlichkeit und ein makelloses Ergebnis.",
+      "sections": [
+        {
+          "heading": "Reinigungsdienste in Aarberg",
+          "body": "Unser Leistungsspektrum in Aarberg deckt alle Bereiche der regelmässigen Gebäudereinigung ab. Wir reinigen nach höchsten Standards und passen uns flexibel Ihren Wünschen an.",
+          "bullets": [
+            "Büro- und Gewerbereinigung",
+            "Treppenhaus- und Hauswartung",
+            "Wöchentliche Wohnungsreinigung",
+            "Spezialreinigungen auf Anfrage"
+          ]
+        },
+        {
+          "heading": "Feste Preise, hohe Qualität",
+          "body": "Bei uns in Aarberg gibt es keine versteckten Kosten. Sie erhalten eine detaillierte Offerte – ob nach Aufwand oder als Monatspauschale. Unsere festangestellten Mitarbeiter garantieren höchste Qualität und Diskretion.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Ihre Reinigungsfirma vor Ort",
+      "serviceBullets": [
+        "Transparente Preisgestaltung",
+        "Massgeschneiderte Intervalle",
+        "Erfahrenes Fachpersonal",
+        "Schonende Reinigungsmittel",
+        "Feste Ansprechpartner"
+      ],
+      "trustPoints": [
+        "Keine versteckten Kosten",
+        "Höchste Diskretion",
+        "Pünktlich und fair"
+      ],
+      "ctaMidHeading": "Gebäudereinigung in Aarberg?",
+      "ctaMidBody": "Fordern Sie jetzt eine Besichtigung und ein Angebot an.",
+      "ctaMid": "Angebot erhalten",
+      "serviceAreaHeading": "Unser Einzugsgebiet",
+      "serviceAreaBody": "Wir sind in Aarberg und im gesamten Seeland für Sie im Einsatz, inklusive Lyss, Biel/Bienne, Nidau, Brügg, Ipsach und Pieterlen.",
+      "internalLinksHeading": "Weitere Angebote in Aarberg",
+      "internalLinks": [
+        {
+          "label": "Abnahmereinigung Aarberg",
+          "href": "endreinigung-aarberg"
+        },
+        {
+          "label": "Zügelunternehmen Aarberg",
+          "href": "umzug-aarberg"
+        },
+        {
+          "label": "Reinigungsservice Brügg",
+          "href": "reinigung-bruegg"
+        }
+      ],
+      "ctaStrongHeading": "Starten Sie jetzt – sauber und fair",
+      "ctaStrongBody": "Wir freuen uns auf Ihre Anfrage für Aarberg. Rufen Sie uns an oder nutzen Sie unser Formular.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    },
+    "reinigungPieterlen": {
+      "meta": {
+        "title": "Gebäudereinigung Pieterlen – Professionelle Unterhaltsreinigung",
+        "description": "SwissCleanMove bietet umfassende Gebäudereinigung und Unterhaltsreinigung in Pieterlen. Massgeschneiderte Lösungen für Ihr Objekt."
+      },
+      "badge": "Gebäudereinigung Pieterlen",
+      "h1": "Gebäudereinigung Pieterlen – dauerhafte Sauberkeit",
+      "heroSubtitle": "Ihre Immobilie in Pieterlen in besten Händen: Wir übernehmen die regelmässige Pflege.",
+      "ctaSoft": "Direkt anfragen",
+      "intro": "Der Werterhalt Ihrer Immobilie beginnt bei der regelmässigen Pflege. SwissCleanMove übernimmt die Gebäudereinigung und Unterhaltsreinigung in Pieterlen. Wir sind Ihr Ansprechpartner für saubere Treppenhäuser, gepflegte Büros und hygienische Praxisräume. Mit einem klaren Leistungsverzeichnis und festen Reinigungsteams sorgen wir dafür, dass Ihre Objekte in Pieterlen jederzeit einen hervorragenden Eindruck hinterlassen. Wir entlasten Eigentümer, Verwaltungen und Mieter gleichermassen.",
+      "sections": [
+        {
+          "heading": "Professionelle Pflege in Pieterlen",
+          "body": "Wir bieten Komplettlösungen für Pieterlen an. Von der Bodenpflege über die Sanitärreinigung bis zur Müllentsorgung – wir decken den gesamten Bedarf der Unterhaltsreinigung ab.",
+          "bullets": [
+            "Treppenhausreinigung (wöchentlich/monatlich)",
+            "Büro- und Gewerbereinigung",
+            "Praxisreinigung nach Hygienestandards",
+            "Fenster- und Rahmenreinigung"
+          ]
+        },
+        {
+          "heading": "Verlässlichkeit ist unser Standard",
+          "body": "Sie können sich auf uns verlassen. Unsere Teams arbeiten selbstständig und gewissenhaft. Wir setzen auf moderne Reinigungstechnik und nachhaltige Produkte, um die Umwelt und Ihre Oberflächen zu schonen.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Details unserer Gebäudereinigung",
+      "serviceBullets": [
+        "Klares Leistungsverzeichnis",
+        "Regelmässige Qualitätskontrollen",
+        "Nachhaltige Reinigungsprodukte",
+        "Feste Teams für Ihr Objekt",
+        "Transparente Abrechnung"
+      ],
+      "trustPoints": [
+        "Selbstständige Arbeitsweise",
+        "Klare Leistungsverzeichnisse",
+        "Werterhalt garantiert"
+      ],
+      "ctaMidHeading": "Gebäudereinigung in Pieterlen gesucht?",
+      "ctaMidBody": "Verlangen Sie jetzt eine unverbindliche Offerte für Ihr Objekt.",
+      "ctaMid": "Offerte anfordern",
+      "serviceAreaHeading": "Im gesamten Seeland aktiv",
+      "serviceAreaBody": "Von Pieterlen aus erreichen wir schnell Biel/Bienne, Nidau, Brügg, Ipsach, Lyss und Aarberg.",
+      "internalLinksHeading": "Passende Angebote",
+      "internalLinks": [
+        {
+          "label": "Endreinigung Pieterlen – mit Garantie",
+          "href": "endreinigung-pieterlen"
+        },
+        {
+          "label": "Umzugshilfe Pieterlen",
+          "href": "umzug-pieterlen"
+        },
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Sichern Sie sich unseren Service für Pieterlen",
+      "ctaStrongBody": "Wir beraten Sie gerne vor Ort. Kontaktieren Sie uns noch heute.",
+      "ctaStrong": "Jetzt Offerte anfordern"
+    }
   }
 }

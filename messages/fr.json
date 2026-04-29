@@ -228,7 +228,11 @@
         "selectService": "Choisir un service ménager"
       }
     },
-    "seoText": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland. We organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards. For a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines. For companies, property managers and businesses, we offer maintenance cleaning, office cleaning, stairwell cleaning and commercial cleaning – reliable, discreet and professionally managed. Additionally, we provide full facility service and property maintenance (regular inspections, minor repairs, winter service, green area maintenance), professional gastronomy cleaning for restaurants, hotels and commercial kitchens, construction cleaning (rough, detailed and final cleaning), as well as clearance and disposal services with environmentally responsible waste separation. SwissCleanMove stands for clear processes, transparent quotations, 24-hour response time and visible results – in Biel, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura, Lucerne and across Switzerland."
+    "seoText": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland. We organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards. For a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines. For companies, property managers and businesses, we offer maintenance cleaning, office cleaning, stairwell cleaning and commercial cleaning – reliable, discreet and professionally managed. Additionally, we provide full facility service and property maintenance (regular inspections, minor repairs, winter service, green area maintenance), professional gastronomy cleaning for restaurants, hotels and commercial kitchens, construction cleaning (rough, detailed and final cleaning), as well as clearance and disposal services with environmentally responsible waste separation. SwissCleanMove stands for clear processes, transparent quotations, 24-hour response time and visible results – in Biel, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura, Lucerne and across Switzerland.",
+    "regional": {
+      "title": "Nos Sites dans le Seeland",
+      "subtitle": "Nous sommes là pour vous dans toute la région de Bienne-Seeland. Rapide, local et fiable."
+    }
   },
   "services": {
     "features": {
@@ -745,7 +749,8 @@
     "followUs": "Suivez-nous",
     "copyright": "© {year} SwissCleanMove. Tous droits réservés.",
     "madeInSwitzerland": "Fabriqué en Suisse",
-    "acceptanceGuarantee": ""
+    "acceptanceGuarantee": "",
+    "regional": "Services Régionaux (Seeland)"
   },
   "whatsapp": {
     "message": "Bonjour! Je suis intéressé par vos services."
@@ -5244,5 +5249,1410 @@
     "title": "Gallery – Our Work & Quality Standards",
     "description": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel, Bern, Zurich and throughout Switzerland.",
     "seoText": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel, Bern, Zurich and throughout Switzerland."
+  },
+  "seoPages": {
+    "umzugBiel": {
+      "meta": {
+        "title": "Entreprise de déménagement Bienne – Déménagement professionnel à Biel/Bienne & Seeland",
+        "description": "SwissCleanMove est votre entreprise de déménagement à Biel/Bienne. Déménagement professionnel dans le Seeland – soigneux, ponctuel et à prix équitable."
+      },
+      "badge": "Déménagement Biel/Bienne",
+      "h1": "Entreprise de déménagement Bienne – Votre partenaire de confiance à Biel/Bienne",
+      "heroSubtitle": "Déménagements professionnels dans le Seeland – planifiés avec soin, exécutés efficacement et à prix juste.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous planifiez un déménagement à Biel/Bienne ou dans le Seeland ? SwissCleanMove est votre entreprise de déménagement locale basée directement à Bienne. Depuis 2024, nous accompagnons particuliers, familles et entreprises dans leur déménagement – que ce soit au sein de la ville, vers les communes environnantes ou dans toute la Suisse. Notre équipe expérimentée veille à ce que votre déménagement se déroule sans stress, dans les délais et à un prix transparent. Plus de 50 déménagements réussis dans la région de Bienne et du Seeland témoignent de notre travail.",
+      "sections": [
+        {
+          "heading": "Déménagement à Biel/Bienne – notre offre",
+          "body": "En tant qu'entreprise de déménagement à Bienne, nous vous proposons un forfait complet adapté à vos besoins. Déménagement privé, déménagement d'entreprise ou de bureau – nous gérons l'ensemble du processus.",
+          "bullets": [
+            "Déménagements privés à Biel/Bienne et environs",
+            "Déménagements d'entreprises et de bureaux dans le Seeland",
+            "Service d'emballage et de déballage sur demande",
+            "Montage et démontage de meubles",
+            "Monte-meubles pour les étages difficiles d'accès",
+            "Assurance transport incluse"
+          ]
+        },
+        {
+          "heading": "Comment se déroule votre déménagement avec SwissCleanMove",
+          "body": "Un déménagement bien organisé commence par une planification claire. Chez SwissCleanMove, vous bénéficiez d'abord d'une visite gratuite sur place à Bienne ou dans les environs. Ensuite, nous établissons un devis détaillé à prix forfaitaire – sans frais cachés.",
+          "bullets": [
+            "Étape 1 : Visite et conseil gratuits",
+            "Étape 2 : Devis individuel à prix forfaitaire",
+            "Étape 3 : Emballage et démontage professionnels",
+            "Étape 4 : Transport sécurisé avec des véhicules modernes",
+            "Étape 5 : Montage et installation au nouveau domicile"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove à Bienne ?",
+          "body": "Nous ne sommes pas une plateforme anonyme – nous sommes une entreprise locale à l'Orpundstrasse 31 à Bienne. Vous nous contactez directement, parlez à de vraies personnes et recevez un service personnalisé. Depuis 2024, nous avons réalisé avec succès plus de 50 déménagements dans la région de Biel/Bienne et du Seeland.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos prestations de déménagement en un coup d'œil",
+      "serviceBullets": [
+        "Véhicules de déménagement 3,5t et 7,5t",
+        "2 à 4 déménageurs expérimentés selon les besoins",
+        "Matériel d'emballage inclus",
+        "Monte-meubles disponible",
+        "Assurance transport incluse",
+        "Évacuation de vieux meubles sur demande"
+      ],
+      "trustPoints": [
+        "Basés à Biel/Bienne depuis 2024",
+        "Plus de 50 déménagements réussis",
+        "Prix forfaitaires dès CHF 490"
+      ],
+      "ctaMidHeading": "Un déménagement prévu à Bienne ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement. Nous vous répondons sous 24 heures.",
+      "ctaMid": "Demander un devis gratuit",
+      "serviceAreaHeading": "Notre zone d'intervention dans le Seeland",
+      "serviceAreaBody": "En tant qu'entreprise de déménagement basée à Biel/Bienne, nous intervenons quotidiennement dans tout le Seeland. Notre zone couvre Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen et toute la région du lac de Bienne.",
+      "internalLinksHeading": "Autres services dans la région",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail à Bienne – avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigung-biel"
+        },
+        {
+          "label": "Service de déménagement Nidau",
+          "href": "umzug-nidau"
+        },
+        {
+          "label": "Entreprise de déménagement Lyss",
+          "href": "umzug-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Demandez votre devis de déménagement – gratuit et sans engagement",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous vous préparons un devis transparent sous 24 heures.",
+      "ctaStrong": "Demander un devis"
+    },
+    "endreinigungBiel": {
+      "meta": {
+        "title": "Nettoyage de fin de bail Bienne – avec garantie de remise",
+        "description": "Nettoyage professionnel de fin de bail à Biel/Bienne avec garantie de remise à 100%. Récupérez votre caution. SwissCleanMove dans le Seeland."
+      },
+      "badge": "Nettoyage de fin de bail Biel/Bienne",
+      "h1": "Nettoyage de fin de bail Bienne – avec garantie de remise à 100%",
+      "heroSubtitle": "Votre appartement à Bienne sera remis si propre que la caution est garantie.",
+      "ctaSoft": "Obtenir un devis",
+      "intro": "Vous déménagez de Biel/Bienne ? Vous avez besoin d'un nettoyage de fin de bail professionnel qui passe l'inspection. SwissCleanMove vous offre exactement cela : un nettoyage de déménagement complet avec une garantie de remise à 100%. Si la régie constate des défauts, nous revenons gratuitement. Depuis 2024, nous avons réalisé de nombreux nettoyages de fin de bail à Bienne et dans le Seeland, tous acceptés du premier coup.",
+      "sections": [
+        {
+          "heading": "Que comprend notre nettoyage de fin de bail à Bienne ?",
+          "body": "Notre nettoyage couvre tous les points contrôlés lors de la remise. Nous suivons un plan systématique – de la cuisine à la salle de bains en passant par les fenêtres et les stores.",
+          "bullets": [
+            "Cuisine : four, réfrigérateur, hotte, armoires intérieur/extérieur",
+            "Salle de bains : robinetterie, joints, miroir, WC, douche/baignoire",
+            "Sols : tous les sols lavés, aspirés et polis si nécessaire",
+            "Fenêtres : vitres, cadres et rebords intérieur et extérieur",
+            "Stores et volets : lamelles et rails de guidage",
+            "Balcons et terrasses : sol et balustrade"
+          ]
+        },
+        {
+          "heading": "Garantie de remise – votre sécurité",
+          "body": "La garantie de remise est notre promesse. Nous nettoyons votre appartement à Bienne si minutieusement que la régie accepte la remise du premier coup. En cas de remarque, nous revenons gratuitement.",
+          "bullets": []
+        },
+        {
+          "heading": "Prix du nettoyage de fin de bail à Bienne",
+          "body": "Nos prix dépendent de la taille et de l'état de l'appartement. Vous recevez un devis transparent sans frais cachés.",
+          "bullets": [
+            "Appartement 2,5 pièces : dès CHF 350",
+            "Appartement 3,5 pièces : dès CHF 490",
+            "Appartement 4,5 pièces : dès CHF 690",
+            "Maison individuelle : devis sur mesure",
+            "Durée : 4 à 8 heures selon la taille"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Notre nettoyage de fin de bail comprend",
+      "serviceBullets": [
+        "Nettoyage selon les standards du secteur",
+        "Garantie de remise à 100% incluse",
+        "Retouches gratuites en cas de remarque",
+        "Produits de nettoyage écologiques",
+        "Équipe expérimentée du Seeland"
+      ],
+      "trustPoints": [
+        "Garantie de remise à 100%",
+        "Caution récupérée – garanti",
+        "Prix forfaitaires équitables"
+      ],
+      "ctaMidHeading": "Vous changez d'appartement à Bienne ?",
+      "ctaMidBody": "Confiez votre nettoyage de fin de bail à des professionnels. Nous garantissons la remise – ou revenons gratuitement.",
+      "ctaMid": "Demander un devis gratuit",
+      "serviceAreaHeading": "Nettoyage de fin de bail dans tout le Seeland",
+      "serviceAreaBody": "Nous réalisons des nettoyages de fin de bail non seulement à Biel/Bienne mais dans tout le Seeland – Nidau, Lyss, Brügg, Ipsach, Aarberg et Pieterlen.",
+      "internalLinksHeading": "Autres services dans la région",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigung-biel"
+        },
+        {
+          "label": "Nettoyage de fin de bail Nidau",
+          "href": "endreinigung-nidau"
+        },
+        {
+          "label": "Nettoyage de déménagement Lyss",
+          "href": "endreinigung-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Nettoyage de fin de bail avec garantie – demandez votre devis",
+      "ctaStrongBody": "Contactez-nous pour un devis gratuit. Nous vous conseillons personnellement pour votre nettoyage à Bienne.",
+      "ctaStrong": "Demander un devis"
+    },
+    "reinigungBiel": {
+      "meta": {
+        "title": "Entreprise de nettoyage Bienne – Nettoyage professionnel à Biel/Bienne",
+        "description": "SwissCleanMove – votre entreprise de nettoyage à Biel/Bienne. Nettoyage d'entretien, de bureaux et d'immeubles dans le Seeland."
+      },
+      "badge": "Entreprise de nettoyage Biel/Bienne",
+      "h1": "Entreprise de nettoyage Bienne – nettoyage professionnel à Biel/Bienne & Seeland",
+      "heroSubtitle": "Toujours propre – vous pouvez compter sur nous. Nettoyage d'entretien, de bureaux et plus encore.",
+      "ctaSoft": "Obtenir un devis gratuit",
+      "intro": "La propreté n'est pas un hasard – c'est le résultat d'un travail professionnel. En tant qu'entreprise de nettoyage à Biel/Bienne, SwissCleanMove propose des services fiables pour les ménages privés, bureaux, cages d'escalier et locaux commerciaux dans tout le Seeland. Hebdomadaire, bimensuel ou sur demande : nous vous attribuons une équipe dédiée. Depuis 2024, nous intervenons quotidiennement à Bienne et environs.",
+      "sections": [
+        {
+          "heading": "Services de nettoyage à Biel/Bienne",
+          "body": "Notre offre de nettoyage est large et s'adapte à vos besoins – entretien du domicile, nettoyage de bureaux ou maintenance des parties communes.",
+          "bullets": [
+            "Nettoyage d'entretien pour particuliers",
+            "Nettoyage de bureaux et locaux commerciaux",
+            "Nettoyage de cages d'escalier",
+            "Nettoyage de vitres intérieur et extérieur",
+            "Nettoyage en profondeur après rénovation",
+            "Nettoyage spécial sur demande"
+          ]
+        },
+        {
+          "heading": "Votre équipe de nettoyage dédiée à Bienne",
+          "body": "Chez SwissCleanMove, nous misons sur la continuité. Vous bénéficiez d'une équipe fixe qui connaît vos locaux. Nous utilisons des produits écologiques et apportons tout le matériel.",
+          "bullets": []
+        },
+        {
+          "heading": "Intervalles de nettoyage flexibles",
+          "body": "Nous nous adaptons à votre rythme – nettoyage hebdomadaire, bimensuel, mensuel ou sur demande.",
+          "bullets": [
+            "Nettoyage hebdomadaire",
+            "Nettoyage bimensuel",
+            "Nettoyage mensuel",
+            "Nettoyage sur demande",
+            "Interventions à court terme"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Ce qui distingue notre nettoyage",
+      "serviceBullets": [
+        "Équipe dédiée pour votre site",
+        "Produits de nettoyage écologiques",
+        "Tout le matériel inclus",
+        "Intervalles et horaires flexibles",
+        "Dès CHF 35 de l'heure",
+        "Prix forfaitaires pour interventions régulières"
+      ],
+      "trustPoints": [
+        "Équipe fixe – qualité constante",
+        "Actifs localement à Bienne – en service quotidien",
+        "Prix équitables dès CHF 35/h"
+      ],
+      "ctaMidHeading": "Besoin d'un nettoyage régulier ?",
+      "ctaMidBody": "Nous établissons volontiers un plan de nettoyage individuel pour votre domicile ou bureau à Biel/Bienne.",
+      "ctaMid": "Obtenir un devis gratuit",
+      "serviceAreaHeading": "Nettoyage dans tout le Seeland",
+      "serviceAreaBody": "Nos équipes interviennent dans tout le Seeland – à Biel/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg et Pieterlen.",
+      "internalLinksHeading": "Autres services dans la région",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Nettoyage de fin de bail Bienne – avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Nidau",
+          "href": "reinigung-nidau"
+        },
+        {
+          "label": "Entreprise de nettoyage Lyss",
+          "href": "reinigung-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Des locaux propres – sans effort pour vous",
+      "ctaStrongBody": "Contactez-nous pour un devis sans engagement. Nous vous conseillons personnellement.",
+      "ctaStrong": "Demander un devis"
+    },
+    "umzugNidau": {
+      "meta": {
+        "title": "Service de Déménagement Nidau – Professionnel et Soigneux",
+        "description": "SwissCleanMove – votre service de déménagement à Nidau. Déménagement soigné juste à côté de Bienne. Demandez un devis gratuit maintenant."
+      },
+      "badge": "Service de Déménagement Nidau",
+      "h1": "Service de Déménagement Nidau – soigneux et fiable",
+      "heroSubtitle": "Votre déménagement à Nidau – planifié professionnellement et exécuté rapidement.",
+      "ctaSoft": "Demande sans engagement",
+      "intro": "Vous prévoyez un déménagement à Nidau ? Que vous déménagiez au sein de Nidau, de Bienne vers Nidau ou que vous quittiez le Seeland – SwissCleanMove est votre service de déménagement local sur place. Nous connaissons les environs de Nidau et veillons à ce que votre déménagement se passe sans problème. Avec des véhicules modernes, des déménageurs expérimentés et un processus clair, nous sommes actifs quotidiennement à Nidau et dans tout le Seeland depuis 2024.",
+      "sections": [
+        {
+          "heading": "Service de Déménagement à Nidau – Notre Offre",
+          "body": "Notre service de déménagement à Nidau comprend tout ce dont vous avez besoin pour un déménagement en douceur. Nous nous occupons de l'emballage, du transport et du montage – vous n'avez à vous soucier de rien.",
+          "bullets": [
+            "Déménagements privés à Nidau et environs",
+            "Déménagements d'entreprises dans le Seeland",
+            "Service d'emballage avec notre propre matériel",
+            "Montage et démontage de meubles",
+            "Assurance transport incluse"
+          ]
+        },
+        {
+          "heading": "Pourquoi SwissCleanMove à Nidau ?",
+          "body": "Nidau est situé juste à côté de Bienne – là où se trouve notre siège. Pour vous, cela signifie : de courtes distances de trajet, une disponibilité rapide et un contact personnel. De plus, vous bénéficiez de forfaits transparents sans frais cachés.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos Services pour Votre Déménagement",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "2 à 4 déménageurs",
+        "Matériel d'emballage inclus",
+        "Monte-meubles si nécessaire",
+        "Élimination sur demande"
+      ],
+      "trustPoints": [
+        "Actif localement à Nidau et Bienne",
+        "Disponibilité rapide",
+        "Forfaits à partir de CHF 490"
+      ],
+      "ctaMidHeading": "Vous Prévoyez un Déménagement à Nidau ?",
+      "ctaMidBody": "Demandez votre devis gratuit dès maintenant – réponse rapide garantie.",
+      "ctaMid": "Demander un devis gratuit",
+      "serviceAreaHeading": "Notre Zone de Service autour de Nidau",
+      "serviceAreaBody": "Depuis Nidau, nous desservons tout le Seeland : Bienne, Brügg, Ipsach, Lyss, Aarberg et Pieterlen. Des déménagements dans toute la Suisse sont également possibles.",
+      "internalLinksHeading": "Plus d'Offres dans la Région",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne – votre partenaire",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Nettoyage de remise Nidau – avec garantie",
+          "href": "endreinigung-nidau"
+        },
+        {
+          "label": "Déménagement Brügg",
+          "href": "umzug-bruegg"
+        }
+      ],
+      "ctaStrongHeading": "Demandez un Devis pour Nidau Maintenant",
+      "ctaStrongBody": "Appelez-nous ou utilisez notre formulaire. Nous vous fournirons une offre juste sous 24 heures.",
+      "ctaStrong": "Demander un devis"
+    },
+    "umzugLyss": {
+      "meta": {
+        "title": "Entreprise de Déménagement Lyss – Efficace et Fair-play",
+        "description": "SwissCleanMove – votre entreprise de déménagement à Lyss. Efficace, soigneux et transparent. Demandez un devis gratuit."
+      },
+      "badge": "Entreprise de Déménagement Lyss",
+      "h1": "Entreprise de Déménagement Lyss – efficace et soigneuse dans le Seeland",
+      "heroSubtitle": "En tant qu'entreprise de déménagement à Lyss, nous vous offrons un déménagement sans stress.",
+      "ctaSoft": "Obtenir un devis gratuit",
+      "intro": "En tant qu'entreprise de déménagement à Lyss, SwissCleanMove est synonyme d'efficacité, de soin et de prix équitables. Lyss est l'une des plus grandes communes du Seeland – et c'est exactement là que nous opérons régulièrement. Qu'il s'agisse d'un déménagement d'appartement, de maison ou de bureau : notre équipe expérimentée prend en charge toute l'organisation et l'exécution. Vous bénéficiez également de temps de trajet courts depuis notre site de Bienne.",
+      "sections": [
+        {
+          "heading": "Déménagement Professionnel à Lyss",
+          "body": "Un déménagement à Lyss nécessite de la planification et de l'expérience – nous apportons les deux. De plus, nous offrons un service complet qui vous décharge de tout effort : de la visite à l'emballage jusqu'au montage sur le nouveau site.",
+          "bullets": [
+            "Déménagements d'appartements à Lyss",
+            "Déménagements de maisons et villas",
+            "Déménagements de bureaux et commerces",
+            "Service d'emballage et de déballage",
+            "Monte-meubles et équipement spécial"
+          ]
+        },
+        {
+          "heading": "Transparent et Équitable – Nos Prix",
+          "body": "Chez SwissCleanMove, vous recevez un devis détaillé avec un forfait. Pas de surprises, pas de suppléments. Nos déménagements à Lyss commencent à CHF 490 pour un appartement de 2.5 pièces. Le taux horaire est de CHF 45–65 par personne.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Services de Déménagement à Lyss",
+      "serviceBullets": [
+        "Véhicules de déménagement modernes",
+        "Déménageurs expérimentés",
+        "Matériel d'emballage inclus",
+        "Assurance transport",
+        "Élimination des vieux meubles"
+      ],
+      "trustPoints": [
+        "Opère régulièrement à Lyss",
+        "Efficace et soigneux",
+        "Forfaits à partir de CHF 490"
+      ],
+      "ctaMidHeading": "Réservez Votre Date à Lyss",
+      "ctaMidBody": "Demandez un devis sans engagement dès maintenant – nous vous répondrons rapidement.",
+      "ctaMid": "Demander un devis",
+      "serviceAreaHeading": "Déménagements autour de Lyss",
+      "serviceAreaBody": "Depuis Lyss, nous desservons tout le Seeland : Bienne, Aarberg, Nidau, Brügg, Ipsach et Pieterlen. De plus, nous effectuons des déménagements dans toute la Suisse.",
+      "internalLinksHeading": "Plus de Services",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Nettoyage de remise Lyss – avec garantie",
+          "href": "endreinigung-lyss"
+        },
+        {
+          "label": "Déménagement Aarberg",
+          "href": "umzug-aarberg"
+        }
+      ],
+      "ctaStrongHeading": "Demandez Aujourd'hui – Fait Demain",
+      "ctaStrongBody": "Contactez-nous pour un devis gratuit. Votre déménagement à Lyss est entre de bonnes mains avec nous.",
+      "ctaStrong": "Demander un devis"
+    },
+    "umzugBruegg": {
+      "meta": {
+        "title": "Entreprise de Déménagement Brügg – Professionnel & Fiable",
+        "description": "SwissCleanMove – votre entreprise de déménagement à Brügg près de Bienne. Professionnel, ponctuel et fiable. Demandez un devis."
+      },
+      "badge": "Entreprise de Déménagement Brügg",
+      "h1": "Entreprise de Déménagement Brügg – ponctuelle et fiable",
+      "heroSubtitle": "Vous cherchez une entreprise de déménagement fiable à Brügg ? Nous sommes là.",
+      "ctaSoft": "Obtenir des conseils",
+      "intro": "Vous cherchez une entreprise de déménagement fiable à Brügg ? SwissCleanMove propose des déménagements professionnels à Brügg et dans tout le Seeland. En même temps, vous profitez de notre emplacement à Bienne – à quelques minutes seulement de Brügg. Enfin et surtout, nous convainquons par des prix transparents, une exécution ponctuelle et une équipe coordonnée qui s'occupe de chaque détail.",
+      "sections": [
+        {
+          "heading": "Déménager à Brügg – Notre Offre",
+          "body": "Brügg est situé entre Bienne et Nidau et bénéficie d'excellentes connexions de transport. En même temps, nous connaissons les conditions locales et pouvons planifier votre déménagement efficacement – y compris les permis de stationnement et les règles d'accès.",
+          "bullets": [
+            "Déménagements pour particuliers et familles",
+            "Déménagements commerciaux et de bureaux",
+            "Emballage et démontage",
+            "Stockage sécurisé sur demande",
+            "Assurance transport incluse"
+          ]
+        },
+        {
+          "heading": "Le Déroulement de Votre Déménagement à Brügg",
+          "body": "Après une visite gratuite sur place, nous créons un devis contraignant avec un forfait. Le jour du déménagement, nous arrivons ponctuellement et nous occupons de tout le reste – de manière professionnelle et sans précipitation.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos Services de Déménagement",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "Équipe de déménagement expérimentée",
+        "Matériel d'emballage",
+        "Monte-meubles disponible",
+        "Service d'élimination"
+      ],
+      "trustPoints": [
+        "Professionnel et ponctuel",
+        "À quelques minutes de Brügg",
+        "Forfaits transparents"
+      ],
+      "ctaMidHeading": "Vous Prévoyez un Déménagement à Brügg ?",
+      "ctaMidBody": "Nous vous fournirons un devis gratuit – sans engagement et transparent.",
+      "ctaMid": "Obtenir un devis",
+      "serviceAreaHeading": "Zone de Service autour de Brügg",
+      "serviceAreaBody": "Depuis Brügg, nous pouvons être à Bienne, Nidau, Ipsach, Lyss, Aarberg et Pieterlen en quelques minutes.",
+      "internalLinksHeading": "Plus d'Offres dans la Région",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Nettoyage de remise Brügg",
+          "href": "endreinigung-bruegg"
+        },
+        {
+          "label": "Service de déménagement Nidau",
+          "href": "umzug-nidau"
+        }
+      ],
+      "ctaStrongHeading": "Appelez-nous ou Écrivez-nous",
+      "ctaStrongBody": "Nous sommes là pour vous – personnellement et rapidement. Vous recevrez votre devis pour le déménagement à Brügg sous 24 heures.",
+      "ctaStrong": "Demander un devis"
+    },
+    "umzugIpsach": {
+      "meta": {
+        "title": "Entreprise de Déménagement Ipsach – Déménagement sur le Lac",
+        "description": "SwissCleanMove – votre entreprise de déménagement à Ipsach sur le lac de Bienne. Flexible, expérimenté. Demandez un devis."
+      },
+      "badge": "Entreprise de Déménagement Ipsach",
+      "h1": "Entreprise de Déménagement Ipsach – flexible sur le lac de Bienne",
+      "heroSubtitle": "À Ipsach, situé directement sur le lac de Bienne, nous offrons un service personnel.",
+      "ctaSoft": "Contactez-nous",
+      "intro": "À Ipsach, directement sur le lac de Bienne et non loin de Bienne, SwissCleanMove est votre entreprise de déménagement avec une touche personnelle. Nos clients à Ipsach apprécient particulièrement les courtes distances et la planification flexible. Qu'il s'agisse de changer d'appartement dans la commune ou de déménager dans une autre région – nous nous occupons de la planification, de l'emballage, du transport et du montage. Nous offrons également l'élimination et le nettoyage.",
+      "sections": [
+        {
+          "heading": "Votre Déménagement à Ipsach – Personnel et Flexible",
+          "body": "Ipsach est une commune gérable sur le lac de Bienne, où nous nous repérons parfaitement. L'étroite collaboration avec nos clients est ce qui nous distingue – vous avez un interlocuteur personnel qui vous accompagne.",
+          "bullets": [
+            "Déménagements privés à Ipsach",
+            "Déménagements de et vers Bienne",
+            "Service d'emballage et protection",
+            "Montage de meubles",
+            "Combinable avec le nettoyage"
+          ]
+        },
+        {
+          "heading": "Tout d'une Seule Source à Ipsach",
+          "body": "En plus du déménagement, nous offrons un nettoyage de remise avec garantie et l'élimination des vieux meubles. Ainsi, vous gérez le déménagement, le nettoyage et l'élimination avec un seul prestataire – simple et efficace.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Services de Déménagement",
+      "serviceBullets": [
+        "Véhicules modernes",
+        "Équipe expérimentée",
+        "Matériel d'emballage",
+        "Assurance transport",
+        "Nettoyage combinable"
+      ],
+      "trustPoints": [
+        "Flexible et expérimenté",
+        "Contact personnel",
+        "Tout d'une seule source"
+      ],
+      "ctaMidHeading": "Déménager à Ipsach ?",
+      "ctaMidBody": "Nous vous conseillons personnellement et créons un devis sur mesure.",
+      "ctaMid": "Demander un devis",
+      "serviceAreaHeading": "Zone de Service autour d'Ipsach",
+      "serviceAreaBody": "Depuis Ipsach, nous atteignons Bienne, Nidau, Brügg, Lyss, Aarberg et Pieterlen en un rien de temps.",
+      "internalLinksHeading": "Plus de Services",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Nettoyage de remise Ipsach",
+          "href": "endreinigung-ipsach"
+        },
+        {
+          "label": "Aide au déménagement Pieterlen",
+          "href": "umzug-pieterlen"
+        }
+      ],
+      "ctaStrongHeading": "Nous Sommes Là – Demandez Maintenant",
+      "ctaStrongBody": "Contactez-nous par téléphone ou via le formulaire. Nous vous répondrons avec une offre juste.",
+      "ctaStrong": "Demander un devis"
+    },
+    "umzugAarberg": {
+      "meta": {
+        "title": "Entreprise de Déménagement Aarberg – Professionnel & Transparent",
+        "description": "SwissCleanMove – votre entreprise de déménagement à Aarberg. Minutieux, transparent et régional. Demandez un devis."
+      },
+      "badge": "Entreprise de Déménagement Aarberg",
+      "h1": "Entreprise de Déménagement Aarberg – transparente et minutieuse",
+      "heroSubtitle": "Professionnel, flexible et enraciné régionalement – votre entreprise de déménagement pour Aarberg.",
+      "ctaSoft": "Demandez votre devis",
+      "intro": "Professionnel, flexible et enraciné dans le Seeland : SwissCleanMove est votre entreprise de déménagement à Aarberg. Nos clients apprécient particulièrement notre travail minutieux et nos prix transparents. Le soutien personnel est tout aussi important pour nous – de la première demande à la dernière boîte. En tant que ville historique au cœur du Seeland, nous connaissons bien Aarberg et comprenons ce qui compte lors d'un déménagement ici.",
+      "sections": [
+        {
+          "heading": "Déménagements à Aarberg – Régional et Expérimenté",
+          "body": "Aarberg est idéalement situé dans le Seeland, et nous pouvons être sur place en quelques minutes depuis notre site de Bienne. L'expérience est particulièrement nécessaire pour les déménagements dans la vieille ville d'Aarberg.",
+          "bullets": [
+            "Déménagements d'appartements à Aarberg",
+            "Déménagements de maisons et villas",
+            "Déménagements de bureaux",
+            "Déménagements pour seniors",
+            "Stockage sur demande"
+          ]
+        },
+        {
+          "heading": "Prix Équitables pour Votre Déménagement",
+          "body": "Avec nous, vous recevez un devis avec un forfait – transparent et contraignant. Pas de frais cachés. Ainsi, vous savez exactement ce que coûtera votre déménagement à Aarberg à l'avance.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Services pour Aarberg",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "Déménageurs expérimentés",
+        "Emballage et démontage",
+        "Monte-meubles",
+        "Élimination et recyclage"
+      ],
+      "trustPoints": [
+        "Minutieux et transparent",
+        "Enraciné dans le Seeland",
+        "Forfaits équitables"
+      ],
+      "ctaMidHeading": "Réservez Votre Date à Aarberg",
+      "ctaMidBody": "Demandez votre devis gratuit dès maintenant – nous vous conseillerons volontiers.",
+      "ctaMid": "Calculer le prix",
+      "serviceAreaHeading": "D'Aarberg à tout le Seeland",
+      "serviceAreaBody": "Notre zone de service comprend Bienne, Lyss, Nidau, Brügg, Ipsach et Pieterlen. Des déménagements dans toute la Suisse sont également possibles.",
+      "internalLinksHeading": "Plus de Services",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Nettoyage de remise Aarberg",
+          "href": "endreinigung-aarberg"
+        },
+        {
+          "label": "Entreprise de déménagement Lyss",
+          "href": "umzug-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Commencez Maintenant – Sans Engagement",
+      "ctaStrongBody": "Remplissez notre formulaire ou appelez-nous. Vous recevrez votre devis pour Aarberg sous 24 heures.",
+      "ctaStrong": "Demander un devis"
+    },
+    "umzugPieterlen": {
+      "meta": {
+        "title": "Aide au Déménagement Pieterlen – Professionnel et Personnel",
+        "description": "SwissCleanMove – votre aide au déménagement à Pieterlen. Personnel, compétent et actif dans le Seeland. Demandez un devis."
+      },
+      "badge": "Aide au Déménagement Pieterlen",
+      "h1": "Aide au Déménagement Pieterlen – personnel et compétent",
+      "heroSubtitle": "Nous sommes votre partenaire fiable pour les déménagements de toutes sortes à Pieterlen.",
+      "ctaSoft": "Parlez-nous",
+      "intro": "SwissCleanMove est connu comme une aide au déménagement compétente à Pieterlen et dans tout le Seeland depuis des années. Bien sûr, nous offrons le même standard élevé à Pieterlen qu'à Bienne – avec un soutien personnel et une exécution minutieuse. Des prix équitables et une communication transparente vont de soi pour nous. Situés à l'est du Seeland, nous atteignons Pieterlen en quelques minutes.",
+      "sections": [
+        {
+          "heading": "Aide au Déménagement à Pieterlen",
+          "body": "Bien sûr, nous adaptons notre service à vos besoins individuels. Qu'il s'agisse d'un petit déménagement d'appartement ou d'un grand déménagement de maison à Pieterlen – nous avons l'expérience et l'équipement.",
+          "bullets": [
+            "Déménagements d'appartements à Pieterlen",
+            "Déménagements de maisons dans le Seeland",
+            "Transport et montage de meubles",
+            "Service d'emballage",
+            "Élimination de meubles"
+          ]
+        },
+        {
+          "heading": "Faites Confiance à Notre Expérience",
+          "body": "L'expérience est cruciale pour un déménagement en douceur. Depuis 2024, nous avons réalisé plus de 50 déménagements dans la région de Bienne et du Seeland – avec une grande satisfaction.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Services à Pieterlen",
+      "serviceBullets": [
+        "Véhicules de différentes tailles",
+        "Aides expérimentés",
+        "Matériel d'emballage inclus",
+        "Monte-meubles si nécessaire",
+        "Service complet avec nettoyage"
+      ],
+      "trustPoints": [
+        "Personnel et compétent",
+        "Actif dans le Seeland depuis 2024",
+        "Plus de 50 clients satisfaits"
+      ],
+      "ctaMidHeading": "Déménager à Pieterlen ?",
+      "ctaMidBody": "Faites confiance à notre expérience – demandez votre devis maintenant.",
+      "ctaMid": "Obtenir un devis",
+      "serviceAreaHeading": "De Pieterlen à tout le Seeland",
+      "serviceAreaBody": "Depuis Pieterlen, nous atteignons rapidement Bienne, Nidau, Brügg, Ipsach, Lyss et Aarberg.",
+      "internalLinksHeading": "Plus d'Offres",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzug-biel"
+        },
+        {
+          "label": "Nettoyage de remise Pieterlen",
+          "href": "endreinigung-pieterlen"
+        },
+        {
+          "label": "Entreprise de déménagement Ipsach",
+          "href": "umzug-ipsach"
+        }
+      ],
+      "ctaStrongHeading": "Demandez Maintenant – Fait Rapidement",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous vous conseillons personnellement pour Pieterlen.",
+      "ctaStrong": "Demander un devis"
+    },
+    "endreinigungNidau": {
+      "meta": {
+        "title": "Nettoyage de Fin de Bail Nidau – Avec Garantie de Remise",
+        "description": "Nettoyage de remise professionnel à Nidau avec garantie à 100%. Caution remboursée garantie. SwissCleanMove – votre entreprise."
+      },
+      "badge": "Nettoyage de Fin de Bail Nidau",
+      "h1": "Nettoyage de Fin de Bail Nidau – avec garantie de remise à 100%",
+      "heroSubtitle": "Propreté garantie : Nous nettoyons votre appartement à Nidau pour que la remise se passe bien.",
+      "ctaSoft": "Demande sans engagement",
+      "intro": "Un déménagement est déjà assez stressant – confiez le nettoyage de fin de bail à Nidau aux professionnels. SwissCleanMove vous offre un nettoyage minutieux avec une garantie de remise à 100%. En tant qu'entreprise de nettoyage juste à côté à Bienne, nous sommes rapidement sur place et connaissons les exigences élevées des gérances locales. Avec notre garantie, vous êtes du côté sûr : nous nettoyons jusqu'à ce que l'appartement soit accepté.",
+      "sections": [
+        {
+          "heading": "Votre Nettoyage de Remise à Nidau",
+          "body": "Nous nettoyons selon les normes strictes des gérances immobilières suisses. Chaque pièce, chaque coin et chaque appareil est nettoyé en détail – de la cuisine au balcon.",
+          "bullets": [
+            "Cuisine : appareils, armoires, hotte de ventilation",
+            "Salle de bain : détartrage, joints, sanitaires",
+            "Fenêtres : y compris cadres et stores",
+            "Sols : nettoyage professionnel de tous les revêtements"
+          ]
+        },
+        {
+          "heading": "Sécurité grâce à la Garantie de Remise",
+          "body": "Notre garantie de remise à 100% signifie une sécurité totale pour vous. Nous sommes présents lors de la remise de l'appartement à Nidau sur demande. Si la gérance devait inopinément constater des défauts, nous les corrigerions immédiatement et gratuitement.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Services de Nettoyage de Fin de Bail",
+      "serviceBullets": [
+        "Garantie de remise à 100%",
+        "Retouches gratuites en cas de réclamation",
+        "Matériel et produits écologiques inclus",
+        "Forfaits transparents",
+        "Équipe de nettoyage expérimentée"
+      ],
+      "trustPoints": [
+        "Garantie à 100%",
+        "Caution récupérée",
+        "Localement à Nidau et Bienne"
+      ],
+      "ctaMidHeading": "Remise d'Appartement à Nidau ?",
+      "ctaMidBody": "Réservez votre date pour le nettoyage de fin de bail avec garantie.",
+      "ctaMid": "Demander un devis",
+      "serviceAreaHeading": "Nettoyage dans le Seeland",
+      "serviceAreaBody": "Outre Nidau, nous nettoyons également à Bienne, Brügg, Ipsach, Lyss, Aarberg et Pieterlen. Notre équipe est là pour vous dans tout le Seeland.",
+      "internalLinksHeading": "Plus d'Offres",
+      "internalLinks": [
+        {
+          "label": "Service de déménagement Nidau",
+          "href": "umzug-nidau"
+        },
+        {
+          "label": "Nettoyage de remise Bienne",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Nidau",
+          "href": "reinigung-nidau"
+        }
+      ],
+      "ctaStrongHeading": "Demandez un Devis pour Nidau",
+      "ctaStrongBody": "Contactez-nous pour un devis juste et transparent. Nous attendons votre demande.",
+      "ctaStrong": "Demander un devis"
+    },
+    "endreinigungLyss": {
+      "meta": {
+        "title": "Nettoyage de Déménagement Lyss – Avec Garantie",
+        "description": "Nettoyage professionnel de déménagement à Lyss. Avec garantie pour une remise d'appartement sans stress. Demandez un devis."
+      },
+      "badge": "Nettoyage de Déménagement Lyss",
+      "h1": "Nettoyage de Déménagement Lyss – avec garantie de remise",
+      "heroSubtitle": "Remise d'appartement sans stress à Lyss : Nous garantissons l'acceptation.",
+      "ctaSoft": "Obtenir un devis",
+      "intro": "La remise de l'appartement approche ? SwissCleanMove est votre partenaire pour le nettoyage professionnel de déménagement à Lyss. Nous savons exactement à quoi les gérances de Lyss font attention lors de la remise. Nos équipes expérimentées travaillent selon une liste de contrôle stricte et garantissent une propreté irréprochable. Grâce à notre garantie de remise à 100%, vous pouvez envisager la date de remise à Lyss en toute détente.",
+      "sections": [
+        {
+          "heading": "Nettoyage Professionnel à Lyss",
+          "body": "Un nettoyage approfondi nécessite du temps, de l'expertise et les bons produits. Nous prenons en charge ce travail exigeant pour vous. Des résidus calcaires tenaces dans la salle de bain aux dépôts de graisse dans la cuisine – nous faisons briller votre appartement à Lyss.",
+          "bullets": [
+            "Nettoyage approfondi de toutes les pièces",
+            "Nettoyage spécial de la cuisine et de la salle de bain",
+            "Nettoyage des fenêtres et des stores",
+            "Nettoyage des balcons et terrasses"
+          ]
+        },
+        {
+          "heading": "Notre Garantie pour Lyss",
+          "body": "Nous ne promettons pas seulement la propreté, nous la garantissons. Notre garantie de remise fait partie intégrante de chaque devis. Si quelque chose fait l'objet d'une réclamation à Lyss, nous effectuons des retouches immédiatement et sans frais.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Ce que notre Nettoyage Offre",
+      "serviceBullets": [
+        "Garantie de remise incluse",
+        "Forfait fixe sans surprises",
+        "Tous les produits inclus",
+        "Présence à la remise sur demande",
+        "Flexible et ponctuel"
+      ],
+      "trustPoints": [
+        "Expérimenté à Lyss",
+        "Avec garantie de remise",
+        "Forfait fixe"
+      ],
+      "ctaMidHeading": "Déménager à Lyss ?",
+      "ctaMidBody": "Obtenez votre devis gratuit pour le nettoyage de fin de bail à Lyss.",
+      "ctaMid": "Réserver une offre",
+      "serviceAreaHeading": "Nettoyage dans la Région",
+      "serviceAreaBody": "Nous offrons nos nettoyages de fin de bail à Lyss et dans tout le Seeland : Bienne, Nidau, Brügg, Ipsach, Aarberg et Pieterlen.",
+      "internalLinksHeading": "Plus de Services",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Lyss",
+          "href": "umzug-lyss"
+        },
+        {
+          "label": "Entreprise de nettoyage Lyss",
+          "href": "reinigung-lyss"
+        },
+        {
+          "label": "Nettoyage de remise Bienne",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Demandez Aujourd'hui – Remettez Détendu",
+      "ctaStrongBody": "Contactez-nous pour un devis gratuit. Votre nettoyage à Lyss est entre de bonnes mains.",
+      "ctaStrong": "Demander un devis"
+    },
+    "endreinigungBruegg": {
+      "meta": {
+        "title": "Nettoyage de Fin de Bail Brügg – SwissCleanMove",
+        "description": "Nettoyage professionnel de fin de bail à Brügg. Garantie de remise à 100% pour votre appartement de location. Demandez un devis."
+      },
+      "badge": "Nettoyage de Fin de Bail Brügg",
+      "h1": "Nettoyage de Fin de Bail avec Garantie Brügg – sûr et propre",
+      "heroSubtitle": "Votre appartement à Brügg nettoyé de manière étincelante et remis sans défauts.",
+      "ctaSoft": "Obtenir des conseils",
+      "intro": "Le nettoyage de fin de bail est souvent la partie la plus fastidieuse d'un déménagement. Épargnez-vous le temps et les ennuis ! SwissCleanMove prend en charge votre nettoyage à Brügg – professionnellement, fiablement et avec une garantie de remise à 100%. Grâce à notre siège à Bienne voisine, nous sommes rapidement à Brügg et vous offrons un service de première classe à des forfaits équitables. Nous garantissons une remise en douceur.",
+      "sections": [
+        {
+          "heading": "Nettoyage Complet à Brügg",
+          "body": "Notre équipe de nettoyage travaille de manière systématique et approfondie. Nous utilisons des équipements professionnels et des produits écologiques pour éliminer même les saletés les plus tenaces. Votre appartement à Brügg sera remis dans un état qui convaincra même l'inspecteur le plus strict.",
+          "bullets": [
+            "Nettoyage complet de toutes les pièces",
+            "Nettoyage intensif de la cuisine et de la salle de bain",
+            "Fenêtres, cadres et stores",
+            "Entretien professionnel des sols"
+          ]
+        },
+        {
+          "heading": "Forfaits avec Garantie",
+          "body": "Chez SwissCleanMove, vous savez à l'avance ce que cela coûtera après. Nos devis pour le nettoyage à Brügg sont des prix fixes. Et surtout : la garantie de remise est toujours incluse. Nous ne vous laisserons pas seul lors de la remise.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Détails de notre Nettoyage",
+      "serviceBullets": [
+        "Garantie de remise à 100%",
+        "Prix fixes transparents",
+        "Matériel professionnel",
+        "Équipes spécialisées",
+        "Nettoyage respectueux de l'environnement"
+      ],
+      "trustPoints": [
+        "Proximité de Brügg",
+        "Prix fixes garantis",
+        "Remise sans problèmes"
+      ],
+      "ctaMidHeading": "Remise d'Appartement à Brügg ?",
+      "ctaMidBody": "Demandez un devis sans engagement pour votre nettoyage.",
+      "ctaMid": "Obtenir un devis",
+      "serviceAreaHeading": "Notre Zone de Service",
+      "serviceAreaBody": "Nous intervenons à Brügg, Bienne, Nidau, Ipsach, Lyss, Aarberg et Pieterlen.",
+      "internalLinksHeading": "Plus d'Offres dans la Région",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Brügg",
+          "href": "umzug-bruegg"
+        },
+        {
+          "label": "Service de nettoyage Brügg",
+          "href": "reinigung-bruegg"
+        },
+        {
+          "label": "Nettoyage de remise Bienne",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Sécurisez Votre Nettoyage à Brügg",
+      "ctaStrongBody": "Nous sommes là pour vous – demandez votre devis sur mesure dès aujourd'hui.",
+      "ctaStrong": "Demander un devis"
+    },
+    "endreinigungIpsach": {
+      "meta": {
+        "title": "Nettoyage de Fin de Bail Ipsach – Nettoyage de Déménagement",
+        "description": "SwissCleanMove – votre entreprise de nettoyage pour le nettoyage de fin de bail à Ipsach. Fiable et avec garantie."
+      },
+      "badge": "Nettoyage de Fin de Bail Ipsach",
+      "h1": "Nettoyage de Fin de Bail Ipsach – Nettoyage avec Garantie",
+      "heroSubtitle": "Votre appartement à Ipsach – parfaitement nettoyé et prêt pour la remise.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous quittez votre appartement à Ipsach ? Avec SwissCleanMove, la remise de l'appartement devient un jeu d'enfant. Nous vous proposons un nettoyage professionnel à Ipsach avec une garantie de remise complète. Grâce à notre présence locale, nous sommes bien connectés sur le lac de Bienne et connaissons les attentes des administrations locales. Nous nettoyons en profondeur, de manière écologique et à des prix fixes équitables.",
+      "sections": [
+        {
+          "heading": "Votre Entreprise de Nettoyage à Ipsach",
+          "body": "Le nettoyage d'un appartement demande plus que passer l'aspirateur et essuyer. L'expérience et les bons produits sont requis, surtout dans la cuisine et la salle de bain. Notre équipe travaille avec des équipements modernes et des méthodes efficaces.",
+          "bullets": [
+            "Nettoyage approfondi des espaces de vie",
+            "Nettoyage en profondeur de la salle de bain et de la cuisine",
+            "Fenêtres et stores sans traces",
+            "Entretien de tous les types de sols"
+          ]
+        },
+        {
+          "heading": "Sécurité Totale avec Notre Garantie",
+          "body": "Nous ne laissons rien au hasard. Avec notre garantie de remise, nous vous promettons une remise sans problème à Ipsach. Si des retouches sont nécessaires lors de l'acceptation, nous les effectuons immédiatement et sans frais supplémentaires.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos Services de Nettoyage",
+      "serviceBullets": [
+        "Garantie de remise à Ipsach",
+        "Prix fixes transparents",
+        "Produits professionnels",
+        "Personnel expérimenté",
+        "Exécution dans les délais"
+      ],
+      "trustPoints": [
+        "Présence locale au bord du lac",
+        "Garantie à 100%",
+        "Prix équitables"
+      ],
+      "ctaMidHeading": "Vous Quittez Ipsach ?",
+      "ctaMidBody": "Sécurisez votre nettoyage de fin de bail sans stress dès maintenant.",
+      "ctaMid": "Obtenir une offre",
+      "serviceAreaHeading": "Notre Zone de Couverture",
+      "serviceAreaBody": "En plus d'Ipsach, nous sommes actifs dans tout le Seeland pour les nettoyages de fin de bail, y compris Bienne, Nidau, Brügg, Lyss, Aarberg et Pieterlen.",
+      "internalLinksHeading": "Plus de Services",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Ipsach",
+          "href": "umzug-ipsach"
+        },
+        {
+          "label": "Nettoyage Ipsach",
+          "href": "reinigung-ipsach"
+        },
+        {
+          "label": "Nettoyage de remise Bienne",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Demandez un Rendez-vous pour Ipsach",
+      "ctaStrongBody": "Nous créerons un devis pour votre nettoyage rapidement et sans engagement.",
+      "ctaStrong": "Demander un devis"
+    },
+    "endreinigungAarberg": {
+      "meta": {
+        "title": "Nettoyage de Déménagement Aarberg – Avec Garantie",
+        "description": "Remise d'appartement sans soucis à Aarberg grâce à notre nettoyage de déménagement. Nous garantissons une remise propre."
+      },
+      "badge": "Nettoyage de Déménagement Aarberg",
+      "h1": "Nettoyage de Déménagement Aarberg – Propreté avec Garantie",
+      "heroSubtitle": "Nettoyage professionnel à Aarberg : Nous nettoyons, vous remettez l'esprit tranquille.",
+      "ctaSoft": "Demander un devis",
+      "intro": "Une remise d'appartement à Aarberg approche ? Le nettoyage de déménagement est souvent un facteur de stress. Avec SwissCleanMove, vous confiez cette tâche à des professionnels. Nous proposons un nettoyage complet à Aarberg – incluant une garantie de remise à 100%. Nos équipes coordonnées connaissent les exigences élevées des administrations et assurent une propreté irréprochable. Grâce à nos prix fixes transparents, vous savez où vous en êtes.",
+      "sections": [
+        {
+          "heading": "Nettoyage Approfondi à Aarberg",
+          "body": "Nous nettoyons selon un système éprouvé qui couvre tous les domaines de l'appartement. Du détartrage de la salle de bain au nettoyage du four en passant par l'entretien des parquets – nous faisons briller votre appartement à Aarberg.",
+          "bullets": [
+            "Cuisine : four, réfrigérateur, hotte",
+            "Salle de bain : détartrage, joints",
+            "Fenêtres : vitres, cadres",
+            "Sols sans poussière ni saleté"
+          ]
+        },
+        {
+          "heading": "Remise Garantie",
+          "body": "La garantie de remise est votre tranquillité d'esprit. Nous garantissons que l'administration acceptera le nettoyage. S'il y a des plaintes, nous ferons des retouches à Aarberg immédiatement et gratuitement. Votre caution est en sécurité.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Services de Nettoyage",
+      "serviceBullets": [
+        "Garantie de remise incluse",
+        "Prix fixes sans frais cachés",
+        "Produits respectueux de l'environnement",
+        "Présence à la remise de l'appartement",
+        "Fiable et ponctuel"
+      ],
+      "trustPoints": [
+        "Garantie à 100% sur la remise",
+        "Pas de frais cachés",
+        "Nettoyage professionnel"
+      ],
+      "ctaMidHeading": "Remise d'Appartement à Aarberg ?",
+      "ctaMidBody": "Demandez un devis sans engagement pour votre nettoyage de fin de bail.",
+      "ctaMid": "Obtenir un devis",
+      "serviceAreaHeading": "Nettoyage dans le Seeland",
+      "serviceAreaBody": "Nous sommes là pour vous à Aarberg et dans tout le Seeland : Bienne, Lyss, Nidau, Brügg, Ipsach et Pieterlen.",
+      "internalLinksHeading": "Plus d'Offres à Aarberg",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Aarberg",
+          "href": "umzug-aarberg"
+        },
+        {
+          "label": "Entreprise de nettoyage Aarberg",
+          "href": "reinigung-aarberg"
+        },
+        {
+          "label": "Nettoyage de déménagement Lyss",
+          "href": "endreinigung-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Sécurisez Votre Nettoyage pour Aarberg",
+      "ctaStrongBody": "Contactez-nous pour un devis sur mesure. Nous attendons votre demande.",
+      "ctaStrong": "Demander un devis"
+    },
+    "endreinigungPieterlen": {
+      "meta": {
+        "title": "Nettoyage de Fin de Bail Pieterlen – Avec Garantie",
+        "description": "SwissCleanMove propose des nettoyages professionnels de fin de bail à Pieterlen. Caution récupérée garantie."
+      },
+      "badge": "Nettoyage de Fin de Bail Pieterlen",
+      "h1": "Nettoyage de Fin de Bail Pieterlen – Professionnel et Garanti",
+      "heroSubtitle": "Nous gérons le nettoyage de déménagement à Pieterlen pour que vous puissiez vous détendre.",
+      "ctaSoft": "Demande sans engagement",
+      "intro": "Le déménagement est terminé, mais l'ancien appartement à Pieterlen doit encore être nettoyé ? Confiez cette tâche à SwissCleanMove. Nous sommes spécialisés dans les nettoyages avec garantie de remise à Pieterlen et dans tout le Seeland. Avec notre service professionnel, nous vous garantissons une remise en douceur. Nous nettoyons en profondeur, rapidement et à un forfait équitable. Ainsi, vous sécurisez votre caution sans stress.",
+      "sections": [
+        {
+          "heading": "Votre Nettoyage de Déménagement à Pieterlen",
+          "body": "Nos équipes de nettoyage travaillent selon une liste de contrôle détaillée qui répond aux exigences strictes des gérances. Nous apportons tous les produits nécessaires et assurons une propreté étincelante dans chaque pièce.",
+          "bullets": [
+            "Nettoyage détaillé de la cuisine et de la salle de bain",
+            "Fenêtres et stores sans traces",
+            "Entretien de tous les revêtements de sol",
+            "Nettoyage du balcon"
+          ]
+        },
+        {
+          "heading": "Garantie de Remise – Votre Avantage",
+          "body": "Notre garantie de remise à 100% vous offre la sécurité dont vous avez besoin. Nous assumons notre travail. Si une retouche est demandée lors de la remise à Pieterlen, nous le ferons immédiatement et gratuitement.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos Services",
+      "serviceBullets": [
+        "Nettoyage avec garantie de remise",
+        "Forfaits transparents",
+        "Matériel et déplacements inclus",
+        "Présence à la remise",
+        "Personnel expérimenté"
+      ],
+      "trustPoints": [
+        "Expérimenté à Pieterlen",
+        "Remise sécurisée",
+        "Prix fixes équitables"
+      ],
+      "ctaMidHeading": "Déménager à Pieterlen ?",
+      "ctaMidBody": "Obtenez votre devis gratuit pour le nettoyage de fin de bail maintenant.",
+      "ctaMid": "Demander un devis",
+      "serviceAreaHeading": "Notre Zone de Service",
+      "serviceAreaBody": "En plus de Pieterlen, nous sommes actifs dans tout le Seeland : Bienne, Nidau, Brügg, Ipsach, Lyss et Aarberg.",
+      "internalLinksHeading": "Plus de Services",
+      "internalLinks": [
+        {
+          "label": "Aide au déménagement Pieterlen",
+          "href": "umzug-pieterlen"
+        },
+        {
+          "label": "Nettoyage de bâtiments Pieterlen",
+          "href": "reinigung-pieterlen"
+        },
+        {
+          "label": "Nettoyage de remise Bienne",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Sécurisez un Rendez-vous pour Pieterlen",
+      "ctaStrongBody": "Appelez-nous ou utilisez notre formulaire. Nous vous fournirons un devis avec plaisir.",
+      "ctaStrong": "Demander un devis"
+    },
+    "reinigungNidau": {
+      "meta": {
+        "title": "Entreprise de Nettoyage Nidau – Nettoyage de Bureaux",
+        "description": "SwissCleanMove – votre entreprise de nettoyage à Nidau. Nettoyage professionnel pour clients privés et commerciaux."
+      },
+      "badge": "Entreprise de Nettoyage Nidau",
+      "h1": "Entreprise de Nettoyage Nidau – propreté fiable sur place",
+      "heroSubtitle": "Nettoyage d'entretien régulier à Nidau pour les ménages privés et les entreprises.",
+      "ctaSoft": "Obtenir un devis",
+      "intro": "Un environnement propre contribue au bien-être. SwissCleanMove est votre entreprise de nettoyage à Nidau, spécialisée dans l'entretien régulier et le nettoyage de bureaux. Grâce à notre emplacement à Nidau, vous bénéficiez d'une flexibilité maximale. Nous vous fournissons une équipe de nettoyage dédiée qui connaît vos locaux et travaille de manière fiable. Qu'il s'agisse d'un nettoyage hebdomadaire ou d'un service de bureau quotidien – nous répondons à vos besoins.",
+      "sections": [
+        {
+          "heading": "Services de Nettoyage à Nidau",
+          "body": "Notre service de nettoyage à Nidau est vaste. Nous nous occupons des ménages privés, des bureaux, des cabinets médicaux et des propriétés commerciales. Avec un plan sur mesure, nous assurons une propreté continue.",
+          "bullets": [
+            "Nettoyage d'appartements et de maisons (régulier)",
+            "Nettoyage de bureaux et commerces",
+            "Nettoyage des cages d'escalier",
+            "Nettoyage des fenêtres et spécialisé"
+          ]
+        },
+        {
+          "heading": "Confiance et Continuité",
+          "body": "La confiance est importante pour le nettoyage d'entretien. C'est pourquoi nous travaillons avec des équipes fixes à Nidau. Vous savez toujours qui nettoie pour vous. Nos employés sont formés et discrets.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos Promesses de Qualité",
+      "serviceBullets": [
+        "Personnel de nettoyage dédié pour Nidau",
+        "Intervalles flexibles",
+        "Produits de nettoyage écologiques",
+        "Discrétion totale",
+        "Tarifs horaires ou forfaitaires transparents"
+      ],
+      "trustPoints": [
+        "Équipe de nettoyage dédiée",
+        "Proche et flexible",
+        "Prix équitables"
+      ],
+      "ctaMidHeading": "Vous Cherchez un Nettoyage à Nidau ?",
+      "ctaMidBody": "Prenez rendez-vous pour une visite gratuite à Nidau maintenant.",
+      "ctaMid": "Prendre rendez-vous",
+      "serviceAreaHeading": "Notre Zone de Service",
+      "serviceAreaBody": "Nous ne nettoyons pas seulement à Nidau mais dans tout le Seeland : Bienne, Brügg, Ipsach, Lyss, Aarberg et Pieterlen.",
+      "internalLinksHeading": "Plus de Services",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de remise Nidau – avec garantie",
+          "href": "endreinigung-nidau"
+        },
+        {
+          "label": "Service de déménagement Nidau",
+          "href": "umzug-nidau"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne – siège",
+          "href": "reinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Votre Entreprise de Nettoyage à Nidau",
+      "ctaStrongBody": "Appelez-nous. Nous nous ferons un plaisir de créer un devis sur mesure.",
+      "ctaStrong": "Demander un devis"
+    },
+    "reinigungLyss": {
+      "meta": {
+        "title": "Entreprise de Nettoyage Lyss – Nettoyage de Bâtiments",
+        "description": "SwissCleanMove – votre entreprise de nettoyage à Lyss. Nettoyage d'entretien fiable, nettoyage de bureaux. Demandez maintenant."
+      },
+      "badge": "Entreprise de Nettoyage Lyss",
+      "h1": "Entreprise de Nettoyage Lyss – professionnel et minutieux",
+      "heroSubtitle": "Votre partenaire pour le nettoyage d'entretien et le nettoyage de bureaux à Lyss.",
+      "ctaSoft": "Demande sans engagement",
+      "intro": "Lyss est un lieu d'affaires en pleine croissance – et là où les gens travaillent et vivent, la propreté est essentielle. SwissCleanMove est votre entreprise de nettoyage à Lyss. Nous offrons des solutions professionnelles pour les entreprises, les administrations et les particuliers. Avec des équipements de pointe, des produits écologiques et un personnel formé, nous garantissons la préservation de la valeur de vos propriétés à Lyss.",
+      "sections": [
+        {
+          "heading": "Services de Nettoyage pour Lyss",
+          "body": "Chaque bâtiment a ses propres exigences. Nous développons un concept de nettoyage individuel pour vous. Du nettoyage quotidien des bureaux au nettoyage hebdomadaire des cages d'escalier.",
+          "bullets": [
+            "Nettoyage d'entretien régulier",
+            "Nettoyage de bureaux et de cabinets",
+            "Entretien des cages d'escalier",
+            "Nettoyage des façades sur demande"
+          ]
+        },
+        {
+          "heading": "Pourquoi SwissCleanMove à Lyss ?",
+          "body": "Nous convainquons par la qualité et la fiabilité. Nos équipes de nettoyage pour Lyss travaillent rapidement et discrètement. Un gestionnaire vérifie régulièrement la qualité du nettoyage.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Vos Avantages Avec Nous",
+      "serviceBullets": [
+        "Plans de nettoyage sur mesure",
+        "Contact personnel",
+        "Personnel formé et permanent",
+        "Prix justes et transparents",
+        "Contrôles de qualité inclus"
+      ],
+      "trustPoints": [
+        "Professionnel et minutieux",
+        "Contrôles réguliers",
+        "Équipes fixes"
+      ],
+      "ctaMidHeading": "Concept de Nettoyage pour Lyss ?",
+      "ctaMidBody": "Discutons de vos besoins – sans engagement.",
+      "ctaMid": "Demander des conseils",
+      "serviceAreaHeading": "Là pour Vous dans le Seeland",
+      "serviceAreaBody": "Nos équipes opèrent à Lyss, Aarberg, Bienne, Nidau, Brügg, Ipsach et Pieterlen.",
+      "internalLinksHeading": "Plus de Services à Lyss",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de déménagement Lyss",
+          "href": "endreinigung-lyss"
+        },
+        {
+          "label": "Entreprise de déménagement Lyss",
+          "href": "umzug-lyss"
+        },
+        {
+          "label": "Entreprise de nettoyage Aarberg",
+          "href": "reinigung-aarberg"
+        }
+      ],
+      "ctaStrongHeading": "Obtenez un Devis pour Lyss",
+      "ctaStrongBody": "Contactez-nous pour une inspection de propriété et un devis sans engagement.",
+      "ctaStrong": "Demander un devis"
+    },
+    "reinigungBruegg": {
+      "meta": {
+        "title": "Service de Nettoyage Brügg – Propreté pour Votre Maison",
+        "description": "SwissCleanMove est votre service de nettoyage à Brügg. Nous offrons des solutions sur mesure pour les ménages privés et les entreprises."
+      },
+      "badge": "Service de Nettoyage Brügg",
+      "h1": "Service de Nettoyage Brügg – flexible, minutieux, proche",
+      "heroSubtitle": "Nettoyage d'entretien à Brügg pour un environnement propre et agréable.",
+      "ctaSoft": "Se renseigner directement",
+      "intro": "Vous cherchez un service de nettoyage fiable à Brügg ? SwissCleanMove est sur place et prend en charge le nettoyage régulier de vos locaux. Qu'il s'agisse d'une maison privée, d'un bureau ou d'un espace de vente – nous assurons une propreté hygiénique à Brügg. Nous nous adaptons à vos horaires : nous nettoyons le matin, le soir ou le week-end. Faites confiance à notre personnel formé.",
+      "sections": [
+        {
+          "heading": "Notre Offre de Nettoyage à Brügg",
+          "body": "Un environnement propre est votre carte de visite. Nous veillons à ce que tout soit impeccable. Vous déterminez les intervalles – nous livrons la qualité. Nous utilisons uniquement des produits de haute qualité.",
+          "bullets": [
+            "Nettoyage hebdomadaire de maisons et d'appartements",
+            "Nettoyage régulier de bureaux",
+            "Entretien des cages d'escalier",
+            "Nettoyage des fenêtres et des stores"
+          ]
+        },
+        {
+          "heading": "Flexibilité et Confiance",
+          "body": "En tant que service local pour Brügg, nous sommes flexibles et rapides. Nous nous appuyons sur des contacts fixes pour que vous sachiez qui travaille dans vos locaux. La discrétion et le soin vont de soi.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Ce Qui Nous Distingue",
+      "serviceBullets": [
+        "Proche de Brügg – rapidement sur place",
+        "Horaires de déploiement flexibles",
+        "Soin des matériaux et de l'environnement",
+        "Discret et fiable",
+        "Forfaits horaires ou mensuels équitables"
+      ],
+      "trustPoints": [
+        "Déploiement flexible",
+        "Fournisseur local",
+        "Discret et fiable"
+      ],
+      "ctaMidHeading": "Vous Cherchez un Nettoyage à Brügg ?",
+      "ctaMidBody": "Demandez un devis sans engagement pour votre nettoyage d'entretien maintenant.",
+      "ctaMid": "Obtenir une offre",
+      "serviceAreaHeading": "Notre Zone de Nettoyage",
+      "serviceAreaBody": "Nous nettoyons à Brügg, Bienne, Nidau, Ipsach, Lyss, Aarberg et Pieterlen.",
+      "internalLinksHeading": "Offres Correspondantes",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail Brügg – avec garantie",
+          "href": "endreinigung-bruegg"
+        },
+        {
+          "label": "Entreprise de déménagement Brügg",
+          "href": "umzug-bruegg"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Sécurisez Votre Service à Brügg",
+      "ctaStrongBody": "Contactez-nous aujourd'hui. Nous créerons un devis transparent pour vous.",
+      "ctaStrong": "Demander un devis"
+    },
+    "reinigungIpsach": {
+      "meta": {
+        "title": "Nettoyage Ipsach – Entretien de Propriété Professionnel",
+        "description": "Vous cherchez un service de nettoyage à Ipsach ? SwissCleanMove offre un nettoyage d'entretien de première classe sur le lac de Bienne."
+      },
+      "badge": "Nettoyage Ipsach",
+      "h1": "Nettoyage Ipsach – soin professionnel pour vos propriétés",
+      "heroSubtitle": "Votre service de nettoyage sur le lac de Bienne : Nous entretenons vos propriétés à Ipsach.",
+      "ctaSoft": "Demander un devis",
+      "intro": "Une propriété bien entretenue sur le lac de Bienne mérite les meilleurs soins. SwissCleanMove est votre partenaire pour le nettoyage à Ipsach. Nous prenons soin de l'entretien régulier des propriétés privées, des immeubles de bureaux et des cages d'escalier. Nos clients à Ipsach apprécient notre fiabilité, les normes de qualité élevées et les courtes distances. Nous veillons à ce que vos locaux restent hygiéniquement propres.",
+      "sections": [
+        {
+          "heading": "Services de Nettoyage à Ipsach",
+          "body": "Nous vous offrons un portefeuille de services complet pour Ipsach. Notre objectif est le nettoyage régulier, mais nous prenons également en charge des tâches spéciales telles que le nettoyage des vitres.",
+          "bullets": [
+            "Nettoyage d'entretien régulier",
+            "Nettoyage de bureaux et de cabinets",
+            "Entretien des cages d'escalier",
+            "Nettoyage de vitrines et de verre"
+          ]
+        },
+        {
+          "heading": "Vos Avantages sur le Lac de Bienne",
+          "body": "Comme nous sommes enracinés dans la région, nous sommes rapidement disponibles pour nos clients à Ipsach. Nous garantissons une qualité constante grâce à des équipes dédiées et des contrôles réguliers.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Ce Que Nous Vous Offrons",
+      "serviceBullets": [
+        "Disponibilité rapide à Ipsach",
+        "Qualité de nettoyage constante",
+        "Nettoyage respectueux de l'environnement",
+        "Contrôle transparent des coûts",
+        "Discrétion et confiance"
+      ],
+      "trustPoints": [
+        "Normes de qualité élevées",
+        "Enraciné régionalement",
+        "Contacts dédiés"
+      ],
+      "ctaMidHeading": "Planifier un Nettoyage à Ipsach ?",
+      "ctaMidBody": "Nous serions heureux de créer un concept individuel pour votre propriété.",
+      "ctaMid": "Demander un concept",
+      "serviceAreaHeading": "Notre Service sur le Lac",
+      "serviceAreaBody": "Depuis Ipsach, nous desservons tout le Seeland : Bienne, Nidau, Brügg, Lyss, Aarberg et Pieterlen.",
+      "internalLinksHeading": "Plus de Services",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail Ipsach",
+          "href": "endreinigung-ipsach"
+        },
+        {
+          "label": "Entreprise de déménagement Ipsach",
+          "href": "umzug-ipsach"
+        },
+        {
+          "label": "Entreprise de nettoyage Lyss",
+          "href": "reinigung-lyss"
+        }
+      ],
+      "ctaStrongHeading": "Sécurisez un Service à Ipsach",
+      "ctaStrongBody": "Contactez-nous pour une consultation sur place sans engagement.",
+      "ctaStrong": "Demander un devis"
+    },
+    "reinigungAarberg": {
+      "meta": {
+        "title": "Entreprise de Nettoyage Aarberg – Nettoyage Compétent",
+        "description": "SwissCleanMove – votre entreprise de nettoyage à Aarberg. Nous assurons des appartements propres. Fiable et juste."
+      },
+      "badge": "Entreprise de Nettoyage Aarberg",
+      "h1": "Entreprise de Nettoyage Aarberg – compétent, propre, juste",
+      "heroSubtitle": "Confiez le nettoyage de vos locaux à Aarberg aux professionnels.",
+      "ctaSoft": "Demande sans engagement",
+      "intro": "Dans le centre historique du Seeland, nous offrons des services de nettoyage modernes : SwissCleanMove est votre entreprise de nettoyage à Aarberg. Nous nous occupons des clients corporatifs et privés avec des concepts sur mesure. Qu'il s'agisse du nettoyage hebdomadaire de bureaux dans la vieille ville ou de l'entretien d'un immeuble – nous sommes votre partenaire fiable. Nous valorisons la transparence et la ponctualité.",
+      "sections": [
+        {
+          "heading": "Services de Nettoyage à Aarberg",
+          "body": "Notre gamme de services à Aarberg couvre tous les domaines du nettoyage régulier. Nous nettoyons selon les normes les plus élevées et nous nous adaptons à vos souhaits.",
+          "bullets": [
+            "Nettoyage de bureaux et commerces",
+            "Gestion des cages d'escalier",
+            "Nettoyage hebdomadaire d'appartements",
+            "Nettoyages spéciaux sur demande"
+          ]
+        },
+        {
+          "heading": "Prix Fixes, Haute Qualité",
+          "body": "Avec nous à Aarberg, il n'y a pas de frais cachés. Vous recevez un devis détaillé – selon l'effort ou sous forme de forfait mensuel. Notre personnel garantit la plus haute qualité et discrétion.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Votre Entreprise Locale",
+      "serviceBullets": [
+        "Tarification transparente",
+        "Intervalles sur mesure",
+        "Spécialistes expérimentés",
+        "Produits de nettoyage doux",
+        "Contacts dédiés"
+      ],
+      "trustPoints": [
+        "Pas de frais cachés",
+        "Haute discrétion",
+        "Ponctuel et juste"
+      ],
+      "ctaMidHeading": "Nettoyage de Bâtiments à Aarberg ?",
+      "ctaMidBody": "Demandez une inspection et un devis maintenant.",
+      "ctaMid": "Obtenir une offre",
+      "serviceAreaHeading": "Notre Zone de Couverture",
+      "serviceAreaBody": "Nous opérons pour vous à Aarberg et dans tout le Seeland, y compris Lyss, Bienne, Nidau, Brügg, Ipsach et Pieterlen.",
+      "internalLinksHeading": "Plus d'Offres à Aarberg",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de remise Aarberg",
+          "href": "endreinigung-aarberg"
+        },
+        {
+          "label": "Entreprise de déménagement Aarberg",
+          "href": "umzug-aarberg"
+        },
+        {
+          "label": "Service de nettoyage Brügg",
+          "href": "reinigung-bruegg"
+        }
+      ],
+      "ctaStrongHeading": "Commencez Maintenant – Propre et Juste",
+      "ctaStrongBody": "Nous attendons votre demande pour Aarberg. Appelez-nous ou utilisez notre formulaire.",
+      "ctaStrong": "Demander un devis"
+    },
+    "reinigungPieterlen": {
+      "meta": {
+        "title": "Nettoyage de Bâtiments Pieterlen – Entretien Professionnel",
+        "description": "SwissCleanMove offre un nettoyage de bâtiments et d'entretien complet à Pieterlen. Solutions sur mesure."
+      },
+      "badge": "Nettoyage de Bâtiments Pieterlen",
+      "h1": "Nettoyage de Bâtiments Pieterlen – propreté durable",
+      "heroSubtitle": "Votre propriété à Pieterlen entre de bonnes mains : Nous prenons en charge l'entretien.",
+      "ctaSoft": "Se renseigner directement",
+      "intro": "La préservation de la valeur de votre propriété commence par un entretien régulier. SwissCleanMove prend en charge le nettoyage de bâtiments et d'entretien à Pieterlen. Nous sommes votre contact pour des cages d'escalier propres, des bureaux bien entretenus et des cabinets hygiéniques. Avec des équipes dédiées, nous veillons à ce que vos propriétés à Pieterlen laissent toujours une excellente impression. Nous soulageons les propriétaires et locataires.",
+      "sections": [
+        {
+          "heading": "Soin Professionnel à Pieterlen",
+          "body": "Nous offrons des solutions complètes pour Pieterlen. De l'entretien des sols au nettoyage sanitaire en passant par l'élimination des déchets – nous couvrons tous les besoins.",
+          "bullets": [
+            "Nettoyage des cages d'escalier (hebdomadaire/mensuel)",
+            "Nettoyage de bureaux et commerces",
+            "Nettoyage de cabinets",
+            "Nettoyage des fenêtres et cadres"
+          ]
+        },
+        {
+          "heading": "La Fiabilité est Notre Standard",
+          "body": "Vous pouvez compter sur nous. Nos équipes travaillent de manière indépendante et consciencieuse. Nous nous appuyons sur une technologie de nettoyage moderne et des produits durables.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Détails de notre Nettoyage",
+      "serviceBullets": [
+        "Spécification claire des services",
+        "Contrôles de qualité réguliers",
+        "Produits de nettoyage durables",
+        "Équipes dédiées pour votre propriété",
+        "Facturation transparente"
+      ],
+      "trustPoints": [
+        "Méthode de travail indépendante",
+        "Spécifications de service claires",
+        "Valeur garantie"
+      ],
+      "ctaMidHeading": "Nettoyage de Bâtiments à Pieterlen ?",
+      "ctaMidBody": "Demandez un devis sans engagement pour votre propriété maintenant.",
+      "ctaMid": "Demander un devis",
+      "serviceAreaHeading": "Actif dans tout le Seeland",
+      "serviceAreaBody": "Depuis Pieterlen, nous atteignons rapidement Bienne, Nidau, Brügg, Ipsach, Lyss et Aarberg.",
+      "internalLinksHeading": "Offres Correspondantes",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail Pieterlen – avec garantie",
+          "href": "endreinigung-pieterlen"
+        },
+        {
+          "label": "Aide au déménagement Pieterlen",
+          "href": "umzug-pieterlen"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Sécurisez Notre Service pour Pieterlen",
+      "ctaStrongBody": "Nous serions heureux de vous conseiller sur place. Contactez-nous dès aujourd'hui.",
+      "ctaStrong": "Demander un devis"
+    }
   }
 }

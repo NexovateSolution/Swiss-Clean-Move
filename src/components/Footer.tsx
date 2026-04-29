@@ -164,8 +164,45 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Regional SEO Links */}
         <div className="border-t border-swiss-gray-700 mt-12 pt-8">
+          <h4 className="text-lg font-semibold mb-6">{t('footer.regional')}</h4>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            {[
+              { city: 'Biel/Bienne', slug: 'biel' },
+              { city: 'Nidau', slug: 'nidau' },
+              { city: 'Lyss', slug: 'lyss' },
+              { city: 'Brügg', slug: 'bruegg' },
+              { city: 'Ipsach', slug: 'ipsach' },
+              { city: 'Aarberg', slug: 'aarberg' },
+              { city: 'Pieterlen', slug: 'pieterlen' }
+            ].map((loc) => (
+              <div key={loc.slug}>
+                <h5 className="font-medium text-swiss-gray-300 mb-3">{loc.city}</h5>
+                <ul className="space-y-2">
+                  <li>
+                    <Link href={`/${locale}/umzug-${loc.slug}`} className="text-sm text-swiss-gray-500 hover:text-swiss-blue transition-colors">
+                      {t('home.services.relocation.title')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/${locale}/reinigung-${loc.slug}`} className="text-sm text-swiss-gray-500 hover:text-swiss-blue transition-colors">
+                      {t('home.services.houseCleaning.title')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/${locale}/endreinigung-${loc.slug}`} className="text-sm text-swiss-gray-500 hover:text-swiss-blue transition-colors">
+                      {t('home.services.facilityServices.title')} {/* Fallback to facility/end cleaning */}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-swiss-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-swiss-gray-400 text-sm">
               {t('footer.copyright', { year: new Date().getFullYear() })}

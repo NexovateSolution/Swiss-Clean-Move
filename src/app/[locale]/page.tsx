@@ -393,6 +393,41 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
+      {/* Regional Locations Section */}
+      <section className="section-padding bg-white border-b border-swiss-border">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-swiss-text">
+              {t('home.regional.title')}
+            </h2>
+            <p className="text-xl text-swiss-body max-w-2xl mx-auto">
+              {t('home.regional.subtitle')}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 text-center">
+            {[
+              { city: 'Biel/Bienne', slug: 'biel' },
+              { city: 'Nidau', slug: 'nidau' },
+              { city: 'Lyss', slug: 'lyss' },
+              { city: 'Brügg', slug: 'bruegg' },
+              { city: 'Ipsach', slug: 'ipsach' },
+              { city: 'Aarberg', slug: 'aarberg' },
+              { city: 'Pieterlen', slug: 'pieterlen' }
+            ].map((loc) => (
+              <div key={loc.slug} className="group">
+                <Link href={`/${locale}/regions`} className="block p-4 rounded-xl border border-swiss-border hover:border-swiss-red hover:shadow-soft transition-all duration-300">
+                  <MapPin className="w-6 h-6 text-swiss-red mx-auto mb-2 group-hover:-translate-y-1 transition-transform" />
+                  <span className="font-semibold text-swiss-text group-hover:text-swiss-red transition-colors">
+                    {loc.city}
+                  </span>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Statistics Section */}
       <section className="section-padding bg-white">
         <div className="container-max">
