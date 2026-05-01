@@ -33,7 +33,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     seelandCities.map(city => `/${cluster}-${city}`)
   );
 
-  const allPaths = [...staticPages, ...localPages];
+  // Blog pages
+  const blogPages = [
+    '/blog',
+    '/blog/umzug-kosten-schweiz',
+    '/blog/umzug-checkliste',
+    '/blog/endreinigung-tipps',
+    '/blog/reinigungsfirma-finden',
+    '/blog/umzugskartons-packen',
+    '/blog/abgabegarantie-erklaert'
+  ];
+
+  const allPaths = [...staticPages, ...localPages, ...blogPages];
 
   return allPaths.map((path) => {
     // Generate alternate languages
