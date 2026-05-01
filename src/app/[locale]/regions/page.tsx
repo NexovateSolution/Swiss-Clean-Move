@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
 import {
@@ -13,38 +14,53 @@ import {
   Users,
   Home as HomeIcon,
   Building2,
-  Briefcase,
-  Sparkles,
-  Truck,
   Trash2,
-  UtensilsCrossed,
-  Shield,
-  HardHat,
-  Wrench,
-  RotateCcw,
-  Layers,
-  Heart
+  Heart,
+  Truck,
+  ArrowRight
 } from 'lucide-react';
 
 export default function RegionsPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations();
 
-  const companyPhone = '+41 76 488 36 89 / +41 78 215 80 30';
-  const regions = [
-    { id: 'zurich', phone: companyPhone },
-    { id: 'basel', phone: companyPhone },
-    { id: 'bern', phone: companyPhone },
-    { id: 'aargau', phone: companyPhone },
-    { id: 'lausanne', phone: companyPhone },
-    { id: 'lucerne', phone: companyPhone },
-    { id: 'biel', phone: companyPhone },
-    { id: 'solothurn', phone: companyPhone },
-    { id: 'jura', phone: companyPhone },
+  const companyPhone = '+41 76 488 36 89';
+  
+  // Switzerland-wide Einsatzgebiete
+  const globalLocations = ['Bern', 'Zürich', 'Solothurn', 'Neuchâtel', 'Fribourg', 'Basel', 'Aargau', 'Ganze Schweiz'];
+
+  const customRegions = [
+    {
+      id: 'biel',
+      name: 'Biel / Bienne',
+      keywords: 'Umzug Biel | Umzugsfirma Biel | Umzugsreinigung Biel mit Abnahmegarantie',
+      desc: locale === 'en' ? 'Professional moves and cleaning in Biel and Seeland. Reliable, fast, and local.' : locale === 'fr' ? 'Déménagements et nettoyages professionnels à Bienne et dans le Seeland. Fiable, rapide et local.' : 'Professionelle Umzüge und Reinigungen in Biel und Seeland. Zuverlässig, schnell und lokal.',
+      link: `/${locale}/umzug-biel`
+    },
+    {
+      id: 'seeland',
+      name: 'Seeland (Nidau, Lyss, Aarberg)',
+      keywords: 'Umzug Seeland | Zügelfirma Seeland | Endreinigung Seeland',
+      desc: locale === 'en' ? 'We cover the entire Seeland region with our relocation and cleaning teams. Ready for action in 24h.' : locale === 'fr' ? 'Nous couvrons toute la région du Seeland avec nos équipes de déménagement et de nettoyage. Prêts à intervenir en 24h.' : 'Wir decken das gesamte Seeland mit unseren Zügel- und Reinigungsteams ab. Einsatzbereit in 24h.',
+      link: `/${locale}/umzug-nidau`
+    },
+    {
+      id: 'bern',
+      name: 'Kanton Bern',
+      keywords: 'Umzug Bern | Reinigungsfirma Bern | Wohnungsreinigung Bern',
+      desc: locale === 'en' ? 'Your partner for moves across the entire canton of Bern. Fixed prices and transport insurance included.' : locale === 'fr' ? 'Votre partenaire pour les déménagements dans tout le canton de Berne. Prix fixes et assurance transport inclus.' : 'Ihr Partner für Umzüge im gesamten Kanton Bern. Fixpreise und Transportversicherung inklusive.',
+      link: `/${locale}/contact`
+    },
+    {
+      id: 'zurich',
+      name: 'Zürich & Aargau',
+      keywords: 'Umzugsfirma Zürich | Umzug Aargau | Zügelunternehmen',
+      desc: locale === 'en' ? 'Long-distance moves to and from Zurich. We organize your move smoothly and safely.' : locale === 'fr' ? 'Déménagements longue distance de et vers Zurich. Nous organisons votre déménagement en douceur et en toute sécurité.' : 'Fernumzüge von und nach Zürich. Wir organisieren Ihren Umzug reibungslos und sicher.',
+      link: `/${locale}/contact`
+    }
   ];
 
   const services = [
     { id: 'houseCleaning', icon: HomeIcon, href: `/${locale}/services/house-cleaning` },
-    { id: 'windowCleaning', icon: Layers, href: `/${locale}/services/window-cleaning` },
     { id: 'relocation', icon: Truck, href: `/${locale}/services/relocation` },
     { id: 'disposal', icon: Trash2, href: `/${locale}/services/disposal` },
     { id: 'householdHelping', icon: Heart, href: `/${locale}/services/household-helping` },
@@ -55,116 +71,74 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
     <Layout>
       {/* Hero Section */}
       <SwissHero
-        badge={t('regions.title')}
-        title={t('regions.title')}
-        subtitle={t('regions.subtitle')}
+        badge={locale === 'en' ? 'Our Regions' : locale === 'fr' ? 'Nos Régions' : 'Unsere Regionen'}
+        title={<h1 className="text-[28px] leading-[1.2] md:text-[38px] md:leading-[1.15] font-bold text-swiss-text">
+          {locale === 'en' ? 'Moving & Cleaning Company Switzerland – All Regions | SwissCleanMove' : locale === 'fr' ? 'Entreprise de déménagement et nettoyage Suisse – Toutes les régions | SwissCleanMove' : 'Umzugsfirma & Reinigungsfirma Schweiz – Alle Regionen | SwissCleanMove'}
+        </h1>}
+        subtitle={locale === 'en' ? 'Professional moving and cleaning services across Switzerland.' : locale === 'fr' ? 'Services professionnels de déménagement et de nettoyage dans toute la Suisse.' : 'Professionelle Umzugs- und Reinigungsdienste in der ganzen Schweiz.'}
         right={
-          <img
-            src="/Gallary/2.jpeg"
-            alt={t('regions.title')}
-            className="w-full h-[340px] md:h-[420px] object-cover"
-          />
+          <div className="w-full h-[340px] md:h-[420px] relative rounded-2xl overflow-hidden shadow-subtle border border-swiss-border">
+            <Image
+              src="/images/transportation.jpg"
+              alt="SwissCleanMove Regions"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         }
       />
 
-      {/* Coverage Overview */}
+      {/* SEO Intro Section */}
       <section className="section-padding">
         <div className="container-max">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
-              {t('regions.coverageAreas')}
-            </h2>
-            <p className="text-xl text-swiss-body">
-              {t('regions.subtitle')}
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-lg text-swiss-body leading-relaxed">
+              {locale === 'en' 
+                ? 'Are you planning a move in Switzerland? SwissCleanMove is your reliable partner for relocation and cleaning. Whether you need a moving company in Switzerland or an end-of-tenancy cleaning company in Switzerland, our experienced teams are ready to assist you nationwide. We specialize in stress-free moves, including transport insurance and handover guarantee.' 
+                : locale === 'fr' 
+                ? 'Prévoyez-vous un déménagement en Suisse ? SwissCleanMove est votre partenaire fiable pour le déménagement et le nettoyage. Que vous ayez besoin d\'une entreprise de déménagement en Suisse ou d\'une entreprise de nettoyage de fin de bail en Suisse, nos équipes expérimentées sont prêtes à vous aider dans tout le pays. Nous sommes spécialisés dans les déménagements sans stress, avec assurance transport et garantie de remise.' 
+                : 'Planen Sie einen Umzug Schweiz? SwissCleanMove ist Ihr zuverlässiger Partner für Umzüge und Reinigungen. Egal ob Sie eine Umzugsfirma Schweiz oder eine Reinigungsfirma Schweiz für die Wohnungsabgabe suchen – unsere erfahrenen Teams sind national für Sie im Einsatz. Wir garantieren einen stressfreien Ablauf, faire Preise inklusive Transportversicherung und eine 100% Abnahmegarantie bei Endreinigungen.'}
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="card p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-swiss-gray-50 border border-swiss-border rounded-full flex items-center justify-center mx-auto">
-                <Users className="w-8 h-8 text-swiss-body" />
-              </div>
-              <h3 className="text-xl font-semibold text-swiss-text">{t('regions.citiesCount')}</h3>
-              <p className="text-swiss-body">{t('regions.citiesDesc')}</p>
-            </div>
-            <div className="card p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-swiss-gray-50 border border-swiss-border rounded-full flex items-center justify-center mx-auto">
-                <Clock className="w-8 h-8 text-swiss-body" />
-              </div>
-              <h3 className="text-xl font-semibold text-swiss-text">{t('regions.sameDayService')}</h3>
-              <p className="text-swiss-body">{t('regions.sameDayDesc')}</p>
-            </div>
-            <div className="card p-6 text-center space-y-4">
-              <div className="w-16 h-16 bg-swiss-gray-50 border border-swiss-border rounded-full flex items-center justify-center mx-auto">
-                <Star className="w-8 h-8 text-swiss-body" />
-              </div>
-              <h3 className="text-xl font-semibold text-swiss-text">{t('regions.localTeams')}</h3>
-              <p className="text-swiss-body">{t('regions.localTeamsDesc')}</p>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Regional Services */}
+      {/* Region Grid (Upgraded) */}
       <section className="section-padding bg-swiss-section">
         <div className="container-max">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
-              {t('regions.ourRegions')}
+              {locale === 'en' ? 'Our Core Regions' : locale === 'fr' ? 'Nos Régions Principales' : 'Unsere Kernregionen'}
             </h2>
-            <p className="text-xl text-swiss-body">
-              {t('regions.professionalServices')}
-            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {regions.map((region, index) => (
-              <div key={index} className="card p-8 space-y-6">
+            {customRegions.map((region, index) => (
+              <div key={index} className="card p-8 flex flex-col space-y-6 hover:shadow-medium transition-shadow">
                 <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-2xl font-bold text-swiss-text mb-2">
-                      {t(`regions.regionData.${region.id}.name`)}
-                    </h3>
-                    <p className="text-swiss-body">
-                      {t(`regions.regionData.${region.id}.description`)}
-                    </p>
-                  </div>
+                  <h3 className="text-2xl font-bold text-swiss-text mb-2 border-b-2 border-swiss-red pb-2 inline-block">
+                    {region.name}
+                  </h3>
                   <MapPin className="w-8 h-8 text-swiss-red flex-shrink-0" />
                 </div>
+                
+                <div className="bg-swiss-softRed p-3 rounded-lg border border-swiss-red/20">
+                  <p className="text-sm font-semibold text-swiss-red">
+                    {region.keywords}
+                  </p>
+                </div>
 
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-swiss-text mb-2">{t('regions.serviceAreas')}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {(t.raw(`regions.regionData.${region.id}.areas`) as string[]).map((area, areaIndex) => (
-                        <span
-                          key={areaIndex}
-                          className="bg-white border border-swiss-border text-swiss-body px-3 py-1 rounded-full text-sm font-medium"
-                        >
-                          {area}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                <p className="text-swiss-body flex-grow">
+                  {region.desc}
+                </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-gray-200">
-                    <div className="flex items-center space-x-3">
-                      <Phone className="w-5 h-5 text-swiss-red" />
-                      <div>
-                        <p className="text-sm font-medium text-swiss-text">{t('regions.phone')}</p>
-                        <p className="text-sm text-swiss-body">{region.phone}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-swiss-red" />
-                      <div>
-                        <p className="text-sm font-medium text-swiss-text">{t('regions.coverage')}</p>
-                        <p className="text-sm text-swiss-body">
-                          {t(`regions.regionData.${region.id}.coverage`)}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                <div className="pt-4 border-t border-swiss-border">
+                  <Link href={region.link} className="inline-flex items-center space-x-2 text-swiss-red font-bold hover:text-red-700 transition-colors group">
+                    <span>👉 {locale === 'en' ? 'View Page' : locale === 'fr' ? 'Voir la page' : 'Seite ansehen'}</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -172,19 +146,35 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
         </div>
       </section>
 
-      {/* Available Services */}
+      {/* Switzerland-wide Einsatzgebiete */}
       <section className="section-padding">
+        <div className="container-max">
+          <div className="max-w-4xl mx-auto space-y-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
+              {locale === 'en' ? 'Operational Throughout Switzerland' : locale === 'fr' ? 'Opérationnel dans toute la Suisse' : 'Schweizweit im Einsatz'}
+            </h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              {globalLocations.map((loc, i) => (
+                <span key={i} className="px-5 py-2.5 bg-white border border-swiss-border rounded-xl shadow-subtle font-medium text-swiss-text flex items-center space-x-2">
+                  <MapPin className="w-4 h-4 text-swiss-red" />
+                  <span>{loc}</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Available Services */}
+      <section className="section-padding bg-swiss-section">
         <div className="container-max">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
               {t('regions.servicesAvailable')}
             </h2>
-            <p className="text-xl text-swiss-body">
-              {t('regions.completeRange')}
-            </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {services.map((service, index) => (
               (() => {
                 const IconComponent = service.icon;
@@ -192,12 +182,12 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
                   <Link
                     key={index}
                     href={service.href}
-                    className="card p-6 text-center space-y-4 group focus:outline-none focus:ring-2 focus:ring-swiss-red/20"
+                    className="card p-6 text-center space-y-4 group hover:border-swiss-red transition-all"
                   >
-                    <div className="w-14 h-14 bg-swiss-gray-50 border border-swiss-border rounded-2xl flex items-center justify-center mx-auto">
-                      <IconComponent className="w-7 h-7 text-swiss-body group-hover:text-swiss-red transition-colors" />
+                    <div className="w-12 h-12 bg-swiss-softRed rounded-xl flex items-center justify-center mx-auto transition-transform group-hover:scale-110">
+                      <IconComponent className="w-6 h-6 text-swiss-red" />
                     </div>
-                    <h3 className="font-semibold text-swiss-text group-hover:text-swiss-red transition-colors">
+                    <h3 className="font-semibold text-swiss-text text-sm">
                       {t(`regions.services.${service.id}`)}
                     </h3>
                   </Link>
@@ -208,28 +198,6 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="section-padding bg-swiss-section">
-        <div className="container-max">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
-              {t('regions.notSureArea')}
-            </h2>
-            <p className="text-xl text-swiss-body">
-              {t('regions.contactCheck')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={`/${locale}/contact`} className="btn-primary text-lg px-8 py-4">
-                {t('regions.contactUs')}
-              </Link>
-              <a href="tel:+41764883689" className="flex items-center justify-center space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 border border-swiss-border shadow-subtle">
-                <Phone className="w-5 h-5 text-swiss-red" />
-                <span>{t('regions.callNow')}</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 }

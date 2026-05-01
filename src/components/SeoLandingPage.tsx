@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
 import {
@@ -17,8 +18,10 @@ import {
   Truck,
   Home as HomeIcon,
   Sparkles,
-  Building2
+  Building2,
+  ChevronDown
 } from 'lucide-react';
+import { useState } from 'react';
 
 type SeoLandingPageProps = {
   pageKey: string;
@@ -50,54 +53,87 @@ export default function SeoLandingPage({
   const pRaw = (key: string) => t.raw(`seoPages.${pageKey}.${key}` as any);
 
   const IconComponent = serviceIcons[service];
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  // Parse FAQs
+  let faqs: { question: string; answer: string }[] = [];
+  try {
+    faqs = pRaw('faqs') as any;
+  } catch {
+    faqs = [];
+  }
+
+  // Parse testimonial
+  let testimonial: { quote: string; author: string; trust: string } | null = null;
+  try {
+    testimonial = pRaw('testimonial') as any;
+  } catch {
+    testimonial = null;
+  }
 
   // Structured Data (JSON-LD)
+  const baseSchema = isPillar
+    ? {
+        '@type': 'LocalBusiness',
+        name: 'SwissCleanMove',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Orpundstrasse 31',
+          addressLocality: 'Biel/Bienne',
+          postalCode: '2504',
+          addressCountry: 'CH',
+        },
+        telephone: '+41 76 488 36 89',
+        url: `https://swisscleanmove.ch/${locale}/${pageKey}`,
+        areaServed: {
+          '@type': 'Place',
+          name: `${city}, Seeland, Schweiz`,
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          reviewCount: '52',
+          bestRating: '5',
+          worstRating: '1'
+        }
+      }
+    : {
+        '@type': 'Service',
+        name: p('meta.title'),
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'SwissCleanMove',
+          telephone: '+41 76 488 36 89',
+        },
+        areaServed: {
+          '@type': 'City',
+          name: city,
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          reviewCount: '28',
+          bestRating: '5',
+          worstRating: '1'
+        }
+      };
+
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': isPillar ? 'LocalBusiness' : 'Service',
-    ...(isPillar
-      ? {
-          name: 'SwissCleanMove',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: 'Orpundstrasse 31',
-            addressLocality: 'Biel/Bienne',
-            postalCode: '2504',
-            addressCountry: 'CH',
-          },
-          telephone: '+41 76 488 36 89',
-          url: `https://swisscleanmove.ch/${locale}/${pageKey}`,
-          areaServed: {
-            '@type': 'Place',
-            name: `${city}, Seeland, Schweiz`,
-          },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.9',
-            reviewCount: '52',
-            bestRating: '5',
-            worstRating: '1'
+    '@graph': [
+      baseSchema,
+      faqs.length > 0 && {
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer
           }
-        }
-      : {
-          name: p('meta.title'),
-          provider: {
-            '@type': 'LocalBusiness',
-            name: 'SwissCleanMove',
-            telephone: '+41 76 488 36 89',
-          },
-          areaServed: {
-            '@type': 'City',
-            name: city,
-          },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: '4.9',
-            reviewCount: '28',
-            bestRating: '5',
-            worstRating: '1'
-          }
-        }),
+        }))
+      }
+    ].filter(Boolean)
   };
 
   // Parse sections from translations
@@ -132,6 +168,17 @@ export default function SeoLandingPage({
     serviceBullets = [];
   }
 
+  // Conversion Tracking
+  const handleCtaClick = (ctaName: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'click_cta', {
+        event_category: 'engagement',
+        event_label: ctaName,
+        value: 1
+      });
+    }
+  };
+
   return (
     <Layout>
       {/* JSON-LD Structured Data */}
@@ -150,12 +197,14 @@ export default function SeoLandingPage({
             <Link
               href={`/${locale}/form?service=${formService}`}
               className="btn-secondary text-lg px-8 py-4"
+              onClick={() => handleCtaClick('hero_form_btn')}
             >
               {p('ctaSoft')}
             </Link>
             <a
               href="tel:+41764883689"
               className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
+              onClick={() => handleCtaClick('hero_phone_btn')}
             >
               <Phone className="w-5 h-5 text-swiss-red" />
               <span>+41 76 488 36 89</span>
@@ -163,8 +212,17 @@ export default function SeoLandingPage({
           </div>
         }
         right={
-          <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center">
-            <div className="w-20 h-20 bg-swiss-softRed rounded-3xl flex items-center justify-center mx-auto border border-swiss-border shadow-subtle">
+          <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center relative rounded-2xl overflow-hidden shadow-subtle border border-swiss-border">
+            <Image 
+              src={service === 'umzug' ? '/images/transportation.jpg' : '/Gallary/2.jpeg'} 
+              alt={`${service} in ${city}`}
+              fill
+              className="object-cover opacity-90"
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="w-20 h-20 bg-white/90 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto border border-white/50 shadow-soft relative z-10">
               <IconComponent className="w-10 h-10 text-swiss-red" />
             </div>
           </div>
@@ -181,6 +239,31 @@ export default function SeoLandingPage({
           </div>
         </div>
       </section>
+
+      {/* Testimonial Section */}
+      {testimonial && (
+        <section className="section-padding bg-swiss-softRed border-y border-swiss-border/50">
+          <div className="container-max">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <div className="flex justify-center space-x-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-2xl font-medium text-swiss-text italic">
+                "{testimonial.quote}"
+              </blockquote>
+              <div className="space-y-2">
+                <p className="font-bold text-swiss-text text-lg">— {testimonial.author}</p>
+                <div className="flex items-center justify-center space-x-2 text-sm text-swiss-red font-medium">
+                  <CheckCircle className="w-4 h-4" />
+                  <span>{testimonial.trust}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Dynamic Sections */}
       {sections.map((section, index) => (
@@ -232,6 +315,33 @@ export default function SeoLandingPage({
         </section>
       )}
 
+      {/* Real-World Proof Section ("Unsere Arbeit") */}
+      <section className="section-padding bg-white">
+        <div className="container-max">
+          <div className="text-center space-y-4 mb-10">
+            <h2 className="text-3xl font-bold text-swiss-text">
+              {locale === 'en' ? 'Our Work' : locale === 'fr' ? 'Notre Travail' : 'Unsere Arbeit'}
+            </h2>
+            <p className="text-swiss-body max-w-2xl mx-auto">
+              {locale === 'en' ? `Impressions of our ${service} team in action.` : locale === 'fr' ? `Impressions de notre équipe de ${service} en action.` : `Eindrücke unseres ${service === 'umzug' ? 'Umzugs-' : 'Reinigungs-'}Teams im Einsatz.`}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[1, 2, 3].map((num) => (
+              <div key={num} className="relative h-64 rounded-2xl overflow-hidden shadow-subtle border border-swiss-border group">
+                <Image 
+                  src={service === 'umzug' ? '/images/transportation.jpg' : '/Gallary/2.jpeg'} 
+                  alt={`${service} ${city} - Arbeit ${num}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Mid-Page CTA with Trust Block */}
       <section className="section-padding bg-swiss-section">
         <div className="container-max">
@@ -261,6 +371,7 @@ export default function SeoLandingPage({
               <Link
                 href={`/${locale}/form?service=${formService}`}
                 className="btn-primary text-lg px-8 py-4 inline-block"
+                onClick={() => handleCtaClick('mid_form_btn')}
               >
                 {p('ctaMid')}
               </Link>
@@ -269,40 +380,84 @@ export default function SeoLandingPage({
         </div>
       </section>
 
-      {/* Service Area Section */}
+      {/* Service Area Section & Einsatzgebiete */}
       <section className="section-padding">
         <div className="container-max">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-              {p('serviceAreaHeading')}
-            </h2>
-            <p className="text-lg text-swiss-body leading-relaxed">
-              {p('serviceAreaBody')}
-            </p>
-            <div className="flex flex-wrap gap-2 mt-4">
-              {['Biel/Bienne', 'Nidau', 'Brügg', 'Lyss', 'Ipsach', 'Aarberg', 'Pieterlen'].map(
-                (areaCity) => (
-                  <span
-                    key={areaCity}
-                    className={`px-4 py-2 rounded-full text-sm font-medium border ${
-                      areaCity.toLowerCase().includes(city.toLowerCase())
-                        ? 'bg-swiss-softRed text-swiss-red border-swiss-red/20'
-                        : 'bg-white text-swiss-body border-swiss-border'
-                    }`}
-                  >
-                    <MapPin className="w-3.5 h-3.5 inline mr-1" />
-                    {areaCity}
-                  </span>
-                )
-              )}
+          <div className="max-w-3xl mx-auto space-y-12">
+            
+            {/* Einsatzgebiete */}
+            <div className="space-y-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
+                {locale === 'en' ? 'Operational Areas' : locale === 'fr' ? 'Zones d\'intervention' : 'Einsatzgebiete'}
+              </h2>
+              <div className="bg-swiss-section p-6 md:p-8 rounded-2xl border border-swiss-border">
+                <p className="text-swiss-text font-medium mb-4">
+                  {locale === 'en' ? 'Our teams are in daily operation in:' : locale === 'fr' ? 'Nos équipes interviennent quotidiennement à :' : 'Unsere Teams sind täglich im Einsatz in:'}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {['Biel/Bienne', 'Nidau', 'Lyss', 'Brügg', 'Ipsach', 'Aarberg', 'Pieterlen'].map(areaCity => (
+                    <span
+                      key={areaCity}
+                      className={`px-4 py-2 rounded-full text-sm font-medium border ${
+                        areaCity.toLowerCase().includes(city.toLowerCase())
+                          ? 'bg-swiss-red text-white border-swiss-red'
+                          : 'bg-white text-swiss-body border-swiss-border'
+                      }`}
+                    >
+                      <MapPin className="w-3.5 h-3.5 inline mr-1" />
+                      {areaCity}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex items-start space-x-3 text-swiss-text font-medium bg-white p-4 rounded-xl border border-swiss-border shadow-subtle">
+                  <span className="text-xl">👉</span>
+                  <p>
+                    {locale === 'en' ? 'Fast availability throughout the Seeland region' : locale === 'fr' ? 'Disponibilité rapide dans toute la région du Seeland' : 'Schnelle Verfügbarkeit in der gesamten Region Seeland'}
+                  </p>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
+      {/* FAQ Section */}
+      {faqs.length > 0 && (
+        <section className="section-padding bg-swiss-section">
+          <div className="container-max">
+            <div className="max-w-3xl mx-auto space-y-8">
+              <div className="text-center">
+                <h2 className="text-3xl font-bold text-swiss-text">
+                  {locale === 'en' ? 'Frequently Asked Questions' : locale === 'fr' ? 'Questions Fréquentes' : 'Häufig gestellte Fragen (FAQ)'}
+                </h2>
+              </div>
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="bg-white border border-swiss-border rounded-xl overflow-hidden shadow-subtle">
+                    <button
+                      className="w-full text-left px-6 py-4 flex items-center justify-between font-semibold text-swiss-text hover:bg-swiss-gray-50 transition-colors"
+                      onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    >
+                      <span>{faq.question}</span>
+                      <ChevronDown className={`w-5 h-5 text-swiss-body transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                    </button>
+                    {openFaq === index && (
+                      <div className="px-6 pb-4 pt-2 text-swiss-body border-t border-swiss-border/50 bg-swiss-gray-50">
+                        {faq.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Internal Links Section */}
       {internalLinks.length > 0 && (
-        <section className="section-padding bg-swiss-section">
+        <section className="section-padding">
           <div className="container-max">
             <div className="max-w-3xl mx-auto space-y-6">
               <h2 className="text-2xl font-bold text-swiss-text">
@@ -328,7 +483,7 @@ export default function SeoLandingPage({
       )}
 
       {/* Strong CTA Section (Bottom) */}
-      <section className="section-padding">
+      <section className="section-padding bg-swiss-section">
         <div className="container-max">
           <div className="max-w-3xl mx-auto">
             <div className="card p-8 md:p-10 bg-swiss-softRed border border-swiss-border text-center space-y-6">
@@ -342,12 +497,14 @@ export default function SeoLandingPage({
                 <Link
                   href={`/${locale}/form?service=${formService}`}
                   className="btn-primary text-lg px-8 py-4"
+                  onClick={() => handleCtaClick('footer_form_btn')}
                 >
                   {p('ctaStrong')}
                 </Link>
                 <a
                   href="tel:+41764883689"
                   className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
+                  onClick={() => handleCtaClick('footer_phone_btn')}
                 >
                   <Phone className="w-5 h-5 text-swiss-red" />
                   <span>+41 76 488 36 89</span>

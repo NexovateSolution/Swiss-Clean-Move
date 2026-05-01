@@ -405,7 +405,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 text-center mb-12">
             {[
               { city: 'Biel/Bienne', slug: 'biel' },
               { city: 'Nidau', slug: 'nidau' },
@@ -424,6 +424,21 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 </Link>
               </div>
             ))}
+          </div>
+
+          {/* Switzerland-wide Einsatzgebiete */}
+          <div className="max-w-4xl mx-auto space-y-6 text-center pt-12 border-t border-swiss-border">
+            <h3 className="text-2xl font-bold text-swiss-text">
+              {locale === 'en' ? 'Operational Throughout Switzerland' : locale === 'fr' ? 'Opérationnel dans toute la Suisse' : 'Schweizweit im Einsatz'}
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {['Bern', 'Zürich', 'Solothurn', 'Neuchâtel', 'Fribourg', 'Basel', 'Aargau', 'Ganze Schweiz'].map((loc, i) => (
+                <span key={i} className="px-5 py-2.5 bg-swiss-section border border-swiss-border rounded-xl shadow-subtle font-medium text-swiss-text flex items-center space-x-2">
+                  <MapPin className="w-4 h-4 text-swiss-red" />
+                  <span>{loc}</span>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

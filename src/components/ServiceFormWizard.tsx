@@ -211,6 +211,15 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
           body: formData
         })
         if (!res.ok) throw new Error('fail')
+        
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'generate_lead', {
+            event_category: 'form_submission',
+            event_label: serviceName,
+            value: 1
+          });
+        }
+
         toast.success(tl('toasts.submitted'))
         router.push(`/${locale}`)
       }
