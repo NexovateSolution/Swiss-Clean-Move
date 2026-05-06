@@ -8,7 +8,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: t('description'),
     // Phased rollout: noindex true for secondary cities temporarily
     robots: {
-      index: false,
+      index: true,
       follow: true
     }
   };
@@ -23,7 +23,7 @@ export default function UmzugBrueggPage({ params: { locale } }: { params: { loca
       city="Brügg"
       isPillar={false}
       formService="relocation"
-      noindex={true}
+      noindex={false}
     />
   );
 }

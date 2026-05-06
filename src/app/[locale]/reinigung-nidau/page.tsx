@@ -8,7 +8,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: t('description'),
     // Phased rollout: noindex true for secondary cities temporarily
     robots: {
-      index: false,
+      index: true,
       follow: true
     }
   };
@@ -23,7 +23,7 @@ export default function ReinigungNidauPage({ params: { locale } }: { params: { l
       city="Nidau"
       isPillar={false}
       formService="house-cleaning"
-      noindex={true}
+      noindex={false}
     />
   );
 }
