@@ -25,10 +25,9 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
 
   const companyPhone = '+41 76 488 36 89';
   
-  // Switzerland-wide Einsatzgebiete
-  const globalLocations = ['Bern', 'Zürich', 'Solothurn', 'Neuchâtel', 'Fribourg', 'Basel', 'Aargau', 'Ganze Schweiz'];
 
-  const customRegions = [
+
+    const customRegions = [
     {
       id: 'biel',
       name: 'Biel / Bienne',
@@ -48,14 +47,49 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
       name: 'Kanton Bern',
       keywords: 'Umzug Bern | Reinigungsfirma Bern | Wohnungsreinigung Bern',
       desc: locale === 'en' ? 'Your partner for moves across the entire canton of Bern. Fixed prices and transport insurance included.' : locale === 'fr' ? 'Votre partenaire pour les déménagements dans tout le canton de Berne. Prix fixes et assurance transport inclus.' : 'Ihr Partner für Umzüge im gesamten Kanton Bern. Fixpreise und Transportversicherung inklusive.',
-      link: `/${locale}/contact`
+      link: `/${locale}/free-offer`
     },
     {
       id: 'zurich',
       name: 'Zürich & Aargau',
       keywords: 'Umzugsfirma Zürich | Umzug Aargau | Zügelunternehmen',
       desc: locale === 'en' ? 'Long-distance moves to and from Zurich. We organize your move smoothly and safely.' : locale === 'fr' ? 'Déménagements longue distance de et vers Zurich. Nous organisons votre déménagement en douceur et en toute sécurité.' : 'Fernumzüge von und nach Zürich. Wir organisieren Ihren Umzug reibungslos und sicher.',
-      link: `/${locale}/contact`
+      link: `/${locale}/free-offer`
+    },
+    {
+      id: 'solothurn',
+      name: 'Solothurn',
+      keywords: 'Umzug Solothurn | Reinigungsfirma Solothurn | Zügeln',
+      desc: locale === 'en' ? 'Professional moving and cleaning services in Solothurn.' : locale === 'fr' ? 'Services professionnels de déménagement et de nettoyage à Soleure.' : 'Professionelle Umzugs- und Reinigungsdienste in Solothurn.',
+      link: `/${locale}/free-offer`
+    },
+    {
+      id: 'neuchatel',
+      name: 'Neuchâtel',
+      keywords: 'Déménagement Neuchâtel | Nettoyage Neuchâtel',
+      desc: locale === 'en' ? 'Reliable relocation services in the Neuchâtel region.' : locale === 'fr' ? 'Services de déménagement fiables dans la région de Neuchâtel.' : 'Zuverlässige Umzugsdienste in der Region Neuenburg.',
+      link: `/${locale}/free-offer`
+    },
+    {
+      id: 'fribourg',
+      name: 'Fribourg',
+      keywords: 'Umzug Fribourg | Déménagement Fribourg | Nettoyage',
+      desc: locale === 'en' ? 'Your partner for moves and cleaning in Fribourg.' : locale === 'fr' ? 'Votre partenaire pour les déménagements et le nettoyage à Fribourg.' : 'Ihr Partner für Umzüge und Reinigungen in Freiburg.',
+      link: `/${locale}/free-offer`
+    },
+    {
+      id: 'basel',
+      name: 'Basel',
+      keywords: 'Umzug Basel | Reinigungsfirma Basel | Zügelfirma',
+      desc: locale === 'en' ? 'Stress-free moving and cleaning in the Basel area.' : locale === 'fr' ? 'Déménagement et nettoyage sans stress dans la région de Bâle.' : 'Stressfreier Umzug und Reinigung im Raum Basel.',
+      link: `/${locale}/free-offer`
+    },
+    {
+      id: 'ganze-schweiz',
+      name: 'Ganze Schweiz',
+      keywords: 'Umzugsfirma Schweiz | Schweizweit umziehen | Reinigung',
+      desc: locale === 'en' ? 'We operate throughout Switzerland for your moving and cleaning needs.' : locale === 'fr' ? 'Nous opérons dans toute la Suisse pour vos besoins de déménagement et de nettoyage.' : 'Wir sind schweizweit für Ihre Umzugs- und Reinigungsbedürfnisse im Einsatz.',
+      link: `/${locale}/free-offer`
     }
   ];
 
@@ -146,24 +180,7 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
         </div>
       </section>
 
-      {/* Switzerland-wide Einsatzgebiete */}
-      <section className="section-padding">
-        <div className="container-max">
-          <div className="max-w-4xl mx-auto space-y-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-              {locale === 'en' ? 'Operational Throughout Switzerland' : locale === 'fr' ? 'Opérationnel dans toute la Suisse' : 'Schweizweit im Einsatz'}
-            </h2>
-            <div className="flex flex-wrap justify-center gap-3">
-              {globalLocations.map((loc, i) => (
-                <span key={i} className="px-5 py-2.5 bg-white border border-swiss-border rounded-xl shadow-subtle font-medium text-swiss-text flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-swiss-red" />
-                  <span>{loc}</span>
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Available Services */}
       <section className="section-padding bg-swiss-section">

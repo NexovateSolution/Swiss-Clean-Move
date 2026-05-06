@@ -184,20 +184,20 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-blue-400/80 via-blue-500/70 to-blue-600/80 text-white">
+      <section className="section-padding bg-swiss-section text-swiss-text border-y border-swiss-border">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">
               {t('about.cta.title')}
             </h2>
-            <p className="text-xl text-white/80">
+            <p className="text-xl text-swiss-body">
               {t('about.cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={`/${locale}/free-offer`} className="inline-flex items-center justify-center bg-white text-swiss-red font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 shadow-soft hover:shadow-soft">
+              <Link href={`/${locale}/free-offer`} className="inline-flex items-center justify-center btn-primary px-8 py-4">
                 {t('about.cta.freeOffer')}
               </Link>
-              <Link href={`/${locale}/contact`} className="flex items-center justify-center space-x-2 bg-transparent hover:bg-white/10 text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 border border-white/40">
+              <Link href={`/${locale}/contact`} className="flex items-center justify-center space-x-2 btn-secondary px-8 py-4">
                 {t('about.cta.contact')}
               </Link>
             </div>

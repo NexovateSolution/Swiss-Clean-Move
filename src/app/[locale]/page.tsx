@@ -253,7 +253,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <h3 className="font-bold text-xl mb-2">{slideImages[currentSlide]?.title}</h3>
-                <p className="text-white/80 text-sm">{slideImages[currentSlide]?.description}</p>
+                <p className="text-swiss-body text-sm">{slideImages[currentSlide]?.description}</p>
               </div>
 
               <button
@@ -291,7 +291,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <p className="font-bold text-gray-900 text-sm">{t('home.hero.qualityBadge.title')}</p>
                   <div className="flex space-x-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-3 h-3 text-swiss-red fill-current" />
                     ))}
                   </div>
                 </div>
@@ -509,7 +509,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                     {/* Stars */}
                     <div className="flex items-center space-x-1">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        <Star key={i} className="w-5 h-5 text-swiss-red fill-current" />
                       ))}
                     </div>
 
@@ -582,12 +582,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-blue-400/80 via-blue-500/70 to-blue-600/80 text-white">
+      <section className="section-padding bg-swiss-section text-swiss-text border-y border-swiss-border">
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm font-medium">
-              <Sparkles className="w-4 h-4 text-yellow-400" />
+            <div className="inline-flex items-center space-x-2 bg-swiss-softRed border border-swiss-border text-swiss-text rounded-full px-4 py-2 text-sm font-medium">
+              <Sparkles className="w-4 h-4 text-swiss-red" />
               <span>{t('home.cta.badge')}</span>
             </div>
 
@@ -597,7 +597,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             </h2>
 
             {/* Subtitle */}
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-swiss-body max-w-2xl mx-auto leading-relaxed">
               {t('home.cta.subtitle')}
             </p>
 
@@ -605,7 +605,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href={`/${locale}/free-offer`}
-                className="inline-flex items-center justify-center bg-white text-swiss-red font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 shadow-soft hover:shadow-soft"
+                className="inline-flex items-center justify-center btn-primary px-8 py-4"
               >
                 <span className="flex items-center justify-center space-x-2">
                   <Calendar className="w-5 h-5" />
@@ -616,7 +616,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
               <a
                 href="tel:+41764883689"
-                className="inline-flex items-center justify-center space-x-2 bg-transparent hover:bg-white/10 text-white font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 border border-white/40"
+                className="inline-flex items-center justify-center space-x-2 btn-secondary px-8 py-4"
               >
                 <Phone className="w-5 h-5 group-hover:animate-pulse" />
                 <span>+41 76 488 36 89</span>
@@ -624,17 +624,17 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             </div>
 
             {/* Trust Elements */}
-            <div className="flex flex-wrap justify-center items-center gap-8 pt-8 text-white/80">
+            <div className="flex flex-wrap justify-center items-center gap-8 pt-8 text-swiss-body">
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-white" />
+                <CheckCircle className="w-5 h-5 text-swiss-red" />
                 <span className="text-sm">{t('home.cta.trust.freeQuote')}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-white" />
+                <CheckCircle className="w-5 h-5 text-swiss-red" />
                 <span className="text-sm">{t('home.cta.trust.noHiddenFees')}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-white" />
+                <CheckCircle className="w-5 h-5 text-swiss-red" />
                 <span className="text-sm">{t('home.cta.trust.sameDayResponse')}</span>
               </div>
             </div>

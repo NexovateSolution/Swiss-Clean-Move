@@ -20,7 +20,7 @@ export default function GalleryPage() {
     return (
         <Layout>
             <main className="min-h-screen bg-swiss-bg pb-12">
-                <div className="bg-gradient-to-br from-blue-400/80 via-blue-500/70 to-blue-600/80 pt-32 pb-16 text-center text-white">
+                <div className="bg-swiss-section text-swiss-text border-y border-swiss-border pt-32 pb-16 text-center">
                     <h1 className="text-4xl lg:text-5xl font-bold mb-4">{t('title')}</h1>
                     <p className="text-xl max-w-2xl mx-auto opacity-90 px-4">{t('description')}</p>
                 </div>
