@@ -162,56 +162,51 @@ export default function RegionsPage({ params: { locale } }: { params: { locale: 
 
           <div className="space-y-8">
             {customRegions.map((region, index) => (
-              <div key={index} className="card overflow-hidden hover:shadow-medium transition-shadow">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                  {/* Map */}
-                  <div className="lg:col-span-1 h-64 lg:h-auto min-h-[250px]">
-                    <iframe
-                      title={`Map of ${region.name}`}
-                      src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(region.mapQuery)}&zoom=${region.id === 'ganze-schweiz' ? 7 : 10}`}
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0, minHeight: '250px' }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
+              <div key={index} className="card p-8 hover:shadow-medium transition-shadow space-y-5">
+                <div className="flex items-start justify-between">
+                  <h3 className="text-2xl font-bold text-swiss-text border-b-2 border-swiss-red pb-2 inline-block">
+                    {region.name}
+                  </h3>
+                  <MapPin className="w-8 h-8 text-swiss-red flex-shrink-0" />
+                </div>
+                
+                <div className="bg-swiss-softRed p-3 rounded-lg border border-swiss-red/20">
+                  <p className="text-sm font-semibold text-swiss-red">
+                    {region.keywords}
+                  </p>
+                </div>
 
-                  {/* Content */}
-                  <div className="lg:col-span-2 p-8 flex flex-col space-y-5">
-                    <div className="flex items-start justify-between">
-                      <h3 className="text-2xl font-bold text-swiss-text border-b-2 border-swiss-red pb-2 inline-block">
-                        {region.name}
-                      </h3>
-                      <MapPin className="w-8 h-8 text-swiss-red flex-shrink-0" />
-                    </div>
-                    
-                    <div className="bg-swiss-softRed p-3 rounded-lg border border-swiss-red/20">
-                      <p className="text-sm font-semibold text-swiss-red">
-                        {region.keywords}
-                      </p>
-                    </div>
+                <p className="text-swiss-body leading-relaxed">
+                  {region.desc}
+                </p>
 
-                    <p className="text-swiss-body flex-grow leading-relaxed">
-                      {region.desc}
-                    </p>
+                {/* Map - full width inside the card */}
+                <div className="rounded-xl overflow-hidden border border-swiss-border shadow-sm">
+                  <iframe
+                    title={`Map of ${region.name}`}
+                    src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(region.mapQuery)}&zoom=${region.id === 'ganze-schweiz' ? 7 : 10}`}
+                    width="100%"
+                    height="350"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
 
-                    <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-swiss-border">
-                      <Link
-                        href={`/${locale}/free-offer`}
-                        className="inline-flex items-center justify-center space-x-2 btn-primary px-6 py-3"
-                      >
-                        <span>{locale === 'en' ? '📋 Request a Quote' : locale === 'fr' ? '📋 Demander un devis' : '📋 Offerte anfordern'}</span>
-                      </Link>
-                      {region.link !== `/${locale}/free-offer` && (
-                        <Link href={region.link} className="inline-flex items-center space-x-2 text-swiss-red font-bold hover:text-red-700 transition-colors group px-6 py-3">
-                          <span>👉 {locale === 'en' ? 'View Page' : locale === 'fr' ? 'Voir la page' : 'Seite ansehen'}</span>
-                          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                      )}
-                    </div>
-                  </div>
+                <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-swiss-border">
+                  <Link
+                    href={`/${locale}/free-offer`}
+                    className="inline-flex items-center justify-center space-x-2 btn-primary px-6 py-3"
+                  >
+                    <span>{locale === 'en' ? '📋 Request a Quote' : locale === 'fr' ? '📋 Demander un devis' : '📋 Offerte anfordern'}</span>
+                  </Link>
+                  {region.link !== `/${locale}/free-offer` && (
+                    <Link href={region.link} className="inline-flex items-center space-x-2 text-swiss-red font-bold hover:text-red-700 transition-colors group px-6 py-3">
+                      <span>👉 {locale === 'en' ? 'View Page' : locale === 'fr' ? 'Voir la page' : 'Seite ansehen'}</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
