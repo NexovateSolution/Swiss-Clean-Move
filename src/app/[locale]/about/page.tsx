@@ -77,9 +77,13 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
                 <h2 className="text-3xl font-bold text-swiss-text">
                   {t('about.story.title')}
                 </h2>
-                <p className="text-lg text-swiss-body">
-                  {t('about.story.description')}
-                </p>
+                <div className="space-y-4">
+                  {t('about.story.description').split('\n\n').map((paragraph: string, i: number) => (
+                    <p key={i} className="text-lg text-swiss-body leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
                 <div className="flex items-center space-x-4">
                   <CheckCircle className="w-6 h-6 text-swiss-red" />
                   <span className="font-semibold text-swiss-text">{t('about.story.qualityBadge')}</span>
