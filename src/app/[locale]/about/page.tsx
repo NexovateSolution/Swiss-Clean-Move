@@ -9,7 +9,15 @@ import {
   Heart,
   Leaf,
   Target,
-  CheckCircle
+  CheckCircle,
+  Layers,
+  ShieldCheck,
+  Star,
+  DollarSign,
+  Zap,
+  MapPin,
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
 
 export default function AboutPage({ params: { locale } }: { params: { locale: string } }) {
@@ -115,6 +123,92 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Customers Choose SwissCleanMove Section */}
+      <section className="section-padding bg-swiss-section">
+        <div className="container-max">
+          <div className="text-center space-y-4 mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-swiss-border shadow-sm">
+              <Sparkles className="w-4 h-4 text-swiss-red" />
+              <span className="text-sm font-semibold text-swiss-red tracking-wide uppercase">
+                {t('about.whyChoose.badge')}
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-swiss-text">
+              {t('about.whyChoose.title')}
+            </h2>
+          </div>
+
+          {/* 6 Benefit Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              { icon: Layers, key: 'oneSource' },
+              { icon: ShieldCheck, key: 'handoverGuarantee' },
+              { icon: Star, key: 'swissQuality' },
+              { icon: DollarSign, key: 'transparentPricing' },
+              { icon: Zap, key: 'fastQuote' },
+              { icon: MapPin, key: 'flexible' }
+            ].map((item, index) => {
+              const IconComp = item.icon;
+              return (
+                <div
+                  key={index}
+                  className="group relative bg-white rounded-2xl p-8 border border-swiss-border shadow-sm hover:shadow-lg hover:border-swiss-red/20 transition-all duration-300"
+                >
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-swiss-red to-swiss-red/60 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="w-14 h-14 bg-swiss-red/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-swiss-red/20 transition-colors duration-300">
+                    <IconComp className="w-7 h-7 text-swiss-red" />
+                  </div>
+                  <h3 className="text-lg font-bold text-swiss-text mb-3">
+                    {t(`about.whyChoose.benefits.${item.key}.title`)}
+                  </h3>
+                  <p className="text-swiss-body leading-relaxed">
+                    {t(`about.whyChoose.benefits.${item.key}.description`)}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Our Services Strip */}
+          <div className="bg-white rounded-2xl border border-swiss-border p-8 md:p-10 mb-12 shadow-sm">
+            <h3 className="text-2xl font-bold text-swiss-text mb-6 text-center">
+              {t('about.whyChoose.servicesTitle')}
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                'moving', 'moveOutCleaning', 'maintenanceCleaning', 'facilityServices',
+                'propertyMaintenance', 'constructionCleaning', 'restaurantCleaning',
+                'disposal', 'windowCleaning'
+              ].map((serviceKey, index) => (
+                <span
+                  key={index}
+                  className="inline-flex items-center px-4 py-2 rounded-full bg-swiss-section border border-swiss-border text-sm font-medium text-swiss-text hover:bg-swiss-red/5 hover:border-swiss-red/30 transition-colors duration-200"
+                >
+                  {t(`about.whyChoose.services.${serviceKey}`)}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Closing Tagline & CTA */}
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <p className="text-xl font-semibold text-swiss-text">
+              {t('about.whyChoose.tagline')}
+            </p>
+            <p className="text-lg text-swiss-body leading-relaxed">
+              {t('about.whyChoose.closingText')}
+            </p>
+            <Link
+              href={`/${locale}/free-offer`}
+              className="inline-flex items-center gap-2 btn-primary px-8 py-4 text-lg"
+            >
+              {t('about.whyChoose.ctaButton')}
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

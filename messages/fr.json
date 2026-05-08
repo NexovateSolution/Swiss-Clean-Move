@@ -496,6 +496,51 @@
           "description": "Partenariats à long terme avec nos clients"
         }
       }
+    },
+    "whyChoose": {
+      "badge": "Pourquoi nous",
+      "title": "Pourquoi les clients choisissent SwissCleanMove",
+      "servicesTitle": "Nos Services",
+      "tagline": "SwissCleanMove — Professionnel. Fiable. Qualité suisse.",
+      "closingText": "Nous combinons des services modernes, une organisation efficace et les plus hauts standards de qualité pour que votre projet de déménagement ou de nettoyage soit simple, sûr et sans stress.",
+      "ctaButton": "Demandez votre devis gratuit maintenant",
+      "benefits": {
+        "oneSource": {
+          "title": "Tout d'un seul prestataire",
+          "description": "Déménagement, nettoyage, élimination et services de facility — coordonnés professionnellement par un partenaire fiable."
+        },
+        "handoverGuarantee": {
+          "title": "Nettoyage de fin de bail avec garantie de remise",
+          "description": "Nettoyage professionnel de fin de bail pour appartements, maisons, bureaux et espaces commerciaux."
+        },
+        "swissQuality": {
+          "title": "Qualité & fiabilité suisse",
+          "description": "Équipes ponctuelles, travail soigné, communication transparente et exécution professionnelle."
+        },
+        "transparentPricing": {
+          "title": "Prix transparents",
+          "description": "Devis clairs et équitables sans coûts cachés."
+        },
+        "fastQuote": {
+          "title": "Demande de devis rapide & facile",
+          "description": "Recevez votre devis personnalisé rapidement et facilement en ligne."
+        },
+        "flexible": {
+          "title": "Service flexible dans toute la Suisse",
+          "description": "SwissCleanMove opère à Biel/Bienne, Berne, Zurich, dans la région du Seeland et dans toute la Suisse."
+        }
+      },
+      "services": {
+        "moving": "Déménagement",
+        "moveOutCleaning": "Nettoyage de fin de bail",
+        "maintenanceCleaning": "Nettoyage d'entretien",
+        "facilityServices": "Services de Facility",
+        "propertyMaintenance": "Entretien immobilier",
+        "constructionCleaning": "Nettoyage de chantier",
+        "restaurantCleaning": "Nettoyage de restaurant & hôtellerie",
+        "disposal": "Élimination & débarras",
+        "windowCleaning": "Nettoyage de vitres"
+      }
     }
   },
   "contact": {

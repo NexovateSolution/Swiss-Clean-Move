@@ -531,6 +531,51 @@
           "description": "Langfristige Partnerschaften mit unseren Kunden"
         }
       }
+    },
+    "whyChoose": {
+      "badge": "Warum wir",
+      "title": "Warum Kunden SwissCleanMove wählen",
+      "servicesTitle": "Unsere Dienstleistungen",
+      "tagline": "SwissCleanMove — Professionell. Zuverlässig. Schweizer Qualität.",
+      "closingText": "Wir kombinieren moderne Dienstleistungen, effiziente Organisation und höchste Qualitätsstandards, damit Ihr Umzugs- oder Reinigungsprojekt einfach, sicher und stressfrei abläuft.",
+      "ctaButton": "Jetzt kostenloses Angebot anfordern",
+      "benefits": {
+        "oneSource": {
+          "title": "Alles aus einer Hand",
+          "description": "Umzug, Reinigung, Entsorgung und Facility Services — professionell koordiniert von einem zuverlässigen Partner."
+        },
+        "handoverGuarantee": {
+          "title": "Endreinigung mit Abnahmegarantie",
+          "description": "Professionelle Endreinigung für Wohnungen, Häuser, Büros und Gewerbeflächen."
+        },
+        "swissQuality": {
+          "title": "Schweizer Qualität & Zuverlässigkeit",
+          "description": "Pünktliche Teams, sorgfältige Arbeit, transparente Kommunikation und professionelle Ausführung."
+        },
+        "transparentPricing": {
+          "title": "Transparente Preise",
+          "description": "Klare und faire Offerten ohne versteckte Kosten."
+        },
+        "fastQuote": {
+          "title": "Schnelle & einfache Offertanfrage",
+          "description": "Erhalten Sie Ihre persönliche Offerte schnell und bequem online."
+        },
+        "flexible": {
+          "title": "Flexibler Service in der ganzen Schweiz",
+          "description": "SwissCleanMove ist in Biel/Bienne, Bern, Zürich, im Seeland und in der ganzen Schweiz tätig."
+        }
+      },
+      "services": {
+        "moving": "Umzug",
+        "moveOutCleaning": "Endreinigung",
+        "maintenanceCleaning": "Unterhaltsreinigung",
+        "facilityServices": "Facility Services",
+        "propertyMaintenance": "Liegenschaftsunterhalt",
+        "constructionCleaning": "Baureinigung",
+        "restaurantCleaning": "Restaurant- & Gastronomiereinigung",
+        "disposal": "Entsorgung & Räumung",
+        "windowCleaning": "Fensterreinigung"
+      }
     }
   },
   "contact": {

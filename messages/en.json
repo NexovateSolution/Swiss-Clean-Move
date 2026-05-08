@@ -475,6 +475,51 @@
           "description": "Long-term partnerships with our customers"
         }
       }
+    },
+    "whyChoose": {
+      "badge": "Why Us",
+      "title": "Why Customers Choose SwissCleanMove",
+      "servicesTitle": "Our Services",
+      "tagline": "SwissCleanMove — Professional. Reliable. Swiss Quality.",
+      "closingText": "We combine modern services, efficient organization, and the highest quality standards to ensure your moving or cleaning project is simple, safe, and stress-free.",
+      "ctaButton": "Request Your Free Quote Now",
+      "benefits": {
+        "oneSource": {
+          "title": "Everything from One Source",
+          "description": "Moving, cleaning, disposal, and facility services — professionally coordinated by one reliable partner."
+        },
+        "handoverGuarantee": {
+          "title": "Move-Out Cleaning with Handover Guarantee",
+          "description": "Professional end-of-tenancy cleaning for apartments, houses, offices, and commercial spaces."
+        },
+        "swissQuality": {
+          "title": "Swiss Quality & Reliability",
+          "description": "Punctual teams, careful work, transparent communication, and professional execution."
+        },
+        "transparentPricing": {
+          "title": "Transparent Pricing",
+          "description": "Clear and fair quotes with no hidden costs."
+        },
+        "fastQuote": {
+          "title": "Fast & Easy Quote Requests",
+          "description": "Receive your personalized quote quickly and conveniently online."
+        },
+        "flexible": {
+          "title": "Flexible Service Throughout Switzerland",
+          "description": "SwissCleanMove operates in Biel/Bienne, Bern, Zurich, the Seeland region, and throughout Switzerland."
+        }
+      },
+      "services": {
+        "moving": "Moving",
+        "moveOutCleaning": "Move-Out Cleaning",
+        "maintenanceCleaning": "Maintenance Cleaning",
+        "facilityServices": "Facility Services",
+        "propertyMaintenance": "Property Maintenance",
+        "constructionCleaning": "Construction Cleaning",
+        "restaurantCleaning": "Restaurant & Hospitality Cleaning",
+        "disposal": "Disposal & Clearance",
+        "windowCleaning": "Window Cleaning"
+      }
     }
   },
   "contact": {
