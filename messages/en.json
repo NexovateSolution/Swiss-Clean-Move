@@ -6809,6 +6809,636 @@
           "answer": "Yes, Short-term appointments possible. We are a local company and quickly on site in Pieterlen."
         }
       ]
+    },
+    "umzugBern": {
+      "meta": {
+        "title": "Moving Company Bern | SwissCleanMove",
+        "description": "SwissCleanMove – your professional moving company in Bern. Relocation, cleaning & facility services. Request a free quote now."
+      },
+      "badge": "Moving Company Bern",
+      "h1": "Moving Company Bern – Relocation, Cleaning & Moving Services",
+      "heroSubtitle": "Professional moves in Bern – carefully planned, efficiently executed and fairly priced.",
+      "ctaSoft": "Request free quote now",
+      "intro": "Planning a move in Bern? SwissCleanMove is your reliable partner for relocations and cleaning services. We serve the entire Canton of Bern – from the city center to Thun, Burgdorf, and Langenthal. Our experienced team ensures your move is stress-free, on time and at a transparent price.",
+      "sections": [
+        {
+          "heading": "Moving in Bern – Our Services",
+          "body": "As a moving company serving Bern, we offer a complete package tailored to your needs. Whether private move, company relocation or office move – we take care of the entire process.",
+          "bullets": [
+            "Private and family moves",
+            "Company and office relocations",
+            "Packing and unpacking service",
+            "Furniture assembly and disassembly",
+            "Transport insurance included",
+            "End-of-tenancy cleaning available"
+          ]
+        },
+        {
+          "heading": "How Your Move Works",
+          "body": "A well-organized move starts with clear planning. You receive a free consultation, then a detailed quote with a flat rate – no hidden costs. On moving day, our team arrives punctually and handles everything professionally.",
+          "bullets": [
+            "Step 1: Free consultation",
+            "Step 2: Individual quote with flat rate",
+            "Step 3: Professional packing and transport",
+            "Step 4: Setup at the new location"
+          ]
+        },
+        {
+          "heading": "Why Choose SwissCleanMove in Bern?",
+          "body": "We are a Swiss company based in Biel/Bienne, serving Bern and the surrounding region with professional moving and cleaning services. Our prices are fair and transparent, our movers experienced and careful.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our Moving Services at a Glance",
+      "serviceBullets": [
+        "3.5t and 7.5t moving vehicles",
+        "2–4 experienced movers",
+        "Packing material included",
+        "Furniture lift available",
+        "Transport insurance included",
+        "Disposal of old furniture on request"
+      ],
+      "trustPoints": [
+        "Swiss Quality Standards",
+        "Transparent Flat Rates",
+        "Available within 48h"
+      ],
+      "ctaMidHeading": "Planning a Move in Bern?",
+      "ctaMidBody": "Request your free, no-obligation quote now. We will get back to you within 24 hours.",
+      "ctaMid": "Get your quote now",
+      "internalLinksHeading": "More Services",
+      "internalLinks": [
+        {
+          "label": "End-of-tenancy cleaning with handover guarantee",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "All regions overview",
+          "href": "regions"
+        },
+        {
+          "label": "Moving service Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Request Your Moving Quote – Free",
+      "ctaStrongBody": "Call us or fill out our form. We prepare a transparent quote for your move in Bern within 24 hours.",
+      "ctaStrong": "Fast feedback within 24h",
+      "testimonial": {
+        "quote": "Great service for our move in Bern! Very professional.",
+        "author": "SwissCleanMove Customer",
+        "trust": "Trusted Swiss quality"
+      },
+      "faqs": [
+        {
+          "question": "How much does a move cost in Bern?",
+          "answer": "The cost depends on apartment size and distance. We offer transparent flat rates starting from CHF 490. Contact us for a free quote."
+        },
+        {
+          "question": "Are you available on short notice in Bern?",
+          "answer": "Yes, we can often arrange moves within 48 hours. Contact us to check availability."
+        }
+      ]
+    },
+    "umzugZurich": {
+      "meta": {
+        "title": "Moving Company Zürich | SwissCleanMove",
+        "description": "SwissCleanMove – your professional moving company in Zürich. Relocation, cleaning & facility services. Request a free quote now."
+      },
+      "badge": "Moving Company Zürich",
+      "h1": "Moving Company Zürich – Relocation, Cleaning & Moving Services",
+      "heroSubtitle": "Professional moves in Zürich – carefully planned, efficiently executed and fairly priced.",
+      "ctaSoft": "Request free quote now",
+      "intro": "Planning a move in Zürich? SwissCleanMove is your reliable partner for relocations and cleaning services. We coordinate long-distance relocations between Seeland and the greater Zurich area, including Winterthur, Baden, and Aarau. Our experienced team ensures your move is stress-free, on time and at a transparent price.",
+      "sections": [
+        {
+          "heading": "Moving in Zürich – Our Services",
+          "body": "As a moving company serving Zürich, we offer a complete package tailored to your needs. Whether private move, company relocation or office move – we take care of the entire process.",
+          "bullets": [
+            "Private and family moves",
+            "Company and office relocations",
+            "Packing and unpacking service",
+            "Furniture assembly and disassembly",
+            "Transport insurance included",
+            "End-of-tenancy cleaning available"
+          ]
+        },
+        {
+          "heading": "How Your Move Works",
+          "body": "A well-organized move starts with clear planning. You receive a free consultation, then a detailed quote with a flat rate – no hidden costs. On moving day, our team arrives punctually and handles everything professionally.",
+          "bullets": [
+            "Step 1: Free consultation",
+            "Step 2: Individual quote with flat rate",
+            "Step 3: Professional packing and transport",
+            "Step 4: Setup at the new location"
+          ]
+        },
+        {
+          "heading": "Why Choose SwissCleanMove in Zürich?",
+          "body": "We are a Swiss company based in Biel/Bienne, serving Zürich and the surrounding region with professional moving and cleaning services. Our prices are fair and transparent, our movers experienced and careful.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our Moving Services at a Glance",
+      "serviceBullets": [
+        "3.5t and 7.5t moving vehicles",
+        "2–4 experienced movers",
+        "Packing material included",
+        "Furniture lift available",
+        "Transport insurance included",
+        "Disposal of old furniture on request"
+      ],
+      "trustPoints": [
+        "Swiss Quality Standards",
+        "Transparent Flat Rates",
+        "Available within 48h"
+      ],
+      "ctaMidHeading": "Planning a Move in Zürich?",
+      "ctaMidBody": "Request your free, no-obligation quote now. We will get back to you within 24 hours.",
+      "ctaMid": "Get your quote now",
+      "internalLinksHeading": "More Services",
+      "internalLinks": [
+        {
+          "label": "End-of-tenancy cleaning with handover guarantee",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "All regions overview",
+          "href": "regions"
+        },
+        {
+          "label": "Moving service Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Request Your Moving Quote – Free",
+      "ctaStrongBody": "Call us or fill out our form. We prepare a transparent quote for your move in Zürich within 24 hours.",
+      "ctaStrong": "Fast feedback within 24h",
+      "testimonial": {
+        "quote": "Great service for our move in Zürich! Very professional.",
+        "author": "SwissCleanMove Customer",
+        "trust": "Trusted Swiss quality"
+      },
+      "faqs": [
+        {
+          "question": "How much does a move cost in Zürich?",
+          "answer": "The cost depends on apartment size and distance. We offer transparent flat rates starting from CHF 490. Contact us for a free quote."
+        },
+        {
+          "question": "Are you available on short notice in Zürich?",
+          "answer": "Yes, we can often arrange moves within 48 hours. Contact us to check availability."
+        }
+      ]
+    },
+    "umzugSolothurn": {
+      "meta": {
+        "title": "Moving Company Solothurn | SwissCleanMove",
+        "description": "SwissCleanMove – your professional moving company in Solothurn. Relocation, cleaning & facility services. Request a free quote now."
+      },
+      "badge": "Moving Company Solothurn",
+      "h1": "Moving Company Solothurn – Relocation, Cleaning & Moving Services",
+      "heroSubtitle": "Professional moves in Solothurn – carefully planned, efficiently executed and fairly priced.",
+      "ctaSoft": "Request free quote now",
+      "intro": "Planning a move in Solothurn? SwissCleanMove is your reliable partner for relocations and cleaning services. As a neighboring region to our base in Biel, we offer fast deployment times in Solothurn, Olten, and Grenchen. Our experienced team ensures your move is stress-free, on time and at a transparent price.",
+      "sections": [
+        {
+          "heading": "Moving in Solothurn – Our Services",
+          "body": "As a moving company serving Solothurn, we offer a complete package tailored to your needs. Whether private move, company relocation or office move – we take care of the entire process.",
+          "bullets": [
+            "Private and family moves",
+            "Company and office relocations",
+            "Packing and unpacking service",
+            "Furniture assembly and disassembly",
+            "Transport insurance included",
+            "End-of-tenancy cleaning available"
+          ]
+        },
+        {
+          "heading": "How Your Move Works",
+          "body": "A well-organized move starts with clear planning. You receive a free consultation, then a detailed quote with a flat rate – no hidden costs. On moving day, our team arrives punctually and handles everything professionally.",
+          "bullets": [
+            "Step 1: Free consultation",
+            "Step 2: Individual quote with flat rate",
+            "Step 3: Professional packing and transport",
+            "Step 4: Setup at the new location"
+          ]
+        },
+        {
+          "heading": "Why Choose SwissCleanMove in Solothurn?",
+          "body": "We are a Swiss company based in Biel/Bienne, serving Solothurn and the surrounding region with professional moving and cleaning services. Our prices are fair and transparent, our movers experienced and careful.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our Moving Services at a Glance",
+      "serviceBullets": [
+        "3.5t and 7.5t moving vehicles",
+        "2–4 experienced movers",
+        "Packing material included",
+        "Furniture lift available",
+        "Transport insurance included",
+        "Disposal of old furniture on request"
+      ],
+      "trustPoints": [
+        "Swiss Quality Standards",
+        "Transparent Flat Rates",
+        "Available within 48h"
+      ],
+      "ctaMidHeading": "Planning a Move in Solothurn?",
+      "ctaMidBody": "Request your free, no-obligation quote now. We will get back to you within 24 hours.",
+      "ctaMid": "Get your quote now",
+      "internalLinksHeading": "More Services",
+      "internalLinks": [
+        {
+          "label": "End-of-tenancy cleaning with handover guarantee",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "All regions overview",
+          "href": "regions"
+        },
+        {
+          "label": "Moving service Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Request Your Moving Quote – Free",
+      "ctaStrongBody": "Call us or fill out our form. We prepare a transparent quote for your move in Solothurn within 24 hours.",
+      "ctaStrong": "Fast feedback within 24h",
+      "testimonial": {
+        "quote": "Great service for our move in Solothurn! Very professional.",
+        "author": "SwissCleanMove Customer",
+        "trust": "Trusted Swiss quality"
+      },
+      "faqs": [
+        {
+          "question": "How much does a move cost in Solothurn?",
+          "answer": "The cost depends on apartment size and distance. We offer transparent flat rates starting from CHF 490. Contact us for a free quote."
+        },
+        {
+          "question": "Are you available on short notice in Solothurn?",
+          "answer": "Yes, we can often arrange moves within 48 hours. Contact us to check availability."
+        }
+      ]
+    },
+    "umzugNeuchatel": {
+      "meta": {
+        "title": "Moving Company Neuchâtel | SwissCleanMove",
+        "description": "SwissCleanMove – your professional moving company in Neuchâtel. Relocation, cleaning & facility services. Request a free quote now."
+      },
+      "badge": "Moving Company Neuchâtel",
+      "h1": "Moving Company Neuchâtel – Relocation, Cleaning & Moving Services",
+      "heroSubtitle": "Professional moves in Neuchâtel – carefully planned, efficiently executed and fairly priced.",
+      "ctaSoft": "Request free quote now",
+      "intro": "Planning a move in Neuchâtel? SwissCleanMove is your reliable partner for relocations and cleaning services. We serve Neuchâtel, La Chaux-de-Fonds, and Le Locle with bilingual service in French and German. Our experienced team ensures your move is stress-free, on time and at a transparent price.",
+      "sections": [
+        {
+          "heading": "Moving in Neuchâtel – Our Services",
+          "body": "As a moving company serving Neuchâtel, we offer a complete package tailored to your needs. Whether private move, company relocation or office move – we take care of the entire process.",
+          "bullets": [
+            "Private and family moves",
+            "Company and office relocations",
+            "Packing and unpacking service",
+            "Furniture assembly and disassembly",
+            "Transport insurance included",
+            "End-of-tenancy cleaning available"
+          ]
+        },
+        {
+          "heading": "How Your Move Works",
+          "body": "A well-organized move starts with clear planning. You receive a free consultation, then a detailed quote with a flat rate – no hidden costs. On moving day, our team arrives punctually and handles everything professionally.",
+          "bullets": [
+            "Step 1: Free consultation",
+            "Step 2: Individual quote with flat rate",
+            "Step 3: Professional packing and transport",
+            "Step 4: Setup at the new location"
+          ]
+        },
+        {
+          "heading": "Why Choose SwissCleanMove in Neuchâtel?",
+          "body": "We are a Swiss company based in Biel/Bienne, serving Neuchâtel and the surrounding region with professional moving and cleaning services. Our prices are fair and transparent, our movers experienced and careful.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our Moving Services at a Glance",
+      "serviceBullets": [
+        "3.5t and 7.5t moving vehicles",
+        "2–4 experienced movers",
+        "Packing material included",
+        "Furniture lift available",
+        "Transport insurance included",
+        "Disposal of old furniture on request"
+      ],
+      "trustPoints": [
+        "Swiss Quality Standards",
+        "Transparent Flat Rates",
+        "Available within 48h"
+      ],
+      "ctaMidHeading": "Planning a Move in Neuchâtel?",
+      "ctaMidBody": "Request your free, no-obligation quote now. We will get back to you within 24 hours.",
+      "ctaMid": "Get your quote now",
+      "internalLinksHeading": "More Services",
+      "internalLinks": [
+        {
+          "label": "End-of-tenancy cleaning with handover guarantee",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "All regions overview",
+          "href": "regions"
+        },
+        {
+          "label": "Moving service Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Request Your Moving Quote – Free",
+      "ctaStrongBody": "Call us or fill out our form. We prepare a transparent quote for your move in Neuchâtel within 24 hours.",
+      "ctaStrong": "Fast feedback within 24h",
+      "testimonial": {
+        "quote": "Great service for our move in Neuchâtel! Very professional.",
+        "author": "SwissCleanMove Customer",
+        "trust": "Trusted Swiss quality"
+      },
+      "faqs": [
+        {
+          "question": "How much does a move cost in Neuchâtel?",
+          "answer": "The cost depends on apartment size and distance. We offer transparent flat rates starting from CHF 490. Contact us for a free quote."
+        },
+        {
+          "question": "Are you available on short notice in Neuchâtel?",
+          "answer": "Yes, we can often arrange moves within 48 hours. Contact us to check availability."
+        }
+      ]
+    },
+    "umzugFribourg": {
+      "meta": {
+        "title": "Moving Company Fribourg | SwissCleanMove",
+        "description": "SwissCleanMove – your professional moving company in Fribourg. Relocation, cleaning & facility services. Request a free quote now."
+      },
+      "badge": "Moving Company Fribourg",
+      "h1": "Moving Company Fribourg – Relocation, Cleaning & Moving Services",
+      "heroSubtitle": "Professional moves in Fribourg – carefully planned, efficiently executed and fairly priced.",
+      "ctaSoft": "Request free quote now",
+      "intro": "Planning a move in Fribourg? SwissCleanMove is your reliable partner for relocations and cleaning services. We provide complete services in Fribourg city, Bulle, and Murten with bilingual French and German teams. Our experienced team ensures your move is stress-free, on time and at a transparent price.",
+      "sections": [
+        {
+          "heading": "Moving in Fribourg – Our Services",
+          "body": "As a moving company serving Fribourg, we offer a complete package tailored to your needs. Whether private move, company relocation or office move – we take care of the entire process.",
+          "bullets": [
+            "Private and family moves",
+            "Company and office relocations",
+            "Packing and unpacking service",
+            "Furniture assembly and disassembly",
+            "Transport insurance included",
+            "End-of-tenancy cleaning available"
+          ]
+        },
+        {
+          "heading": "How Your Move Works",
+          "body": "A well-organized move starts with clear planning. You receive a free consultation, then a detailed quote with a flat rate – no hidden costs. On moving day, our team arrives punctually and handles everything professionally.",
+          "bullets": [
+            "Step 1: Free consultation",
+            "Step 2: Individual quote with flat rate",
+            "Step 3: Professional packing and transport",
+            "Step 4: Setup at the new location"
+          ]
+        },
+        {
+          "heading": "Why Choose SwissCleanMove in Fribourg?",
+          "body": "We are a Swiss company based in Biel/Bienne, serving Fribourg and the surrounding region with professional moving and cleaning services. Our prices are fair and transparent, our movers experienced and careful.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our Moving Services at a Glance",
+      "serviceBullets": [
+        "3.5t and 7.5t moving vehicles",
+        "2–4 experienced movers",
+        "Packing material included",
+        "Furniture lift available",
+        "Transport insurance included",
+        "Disposal of old furniture on request"
+      ],
+      "trustPoints": [
+        "Swiss Quality Standards",
+        "Transparent Flat Rates",
+        "Available within 48h"
+      ],
+      "ctaMidHeading": "Planning a Move in Fribourg?",
+      "ctaMidBody": "Request your free, no-obligation quote now. We will get back to you within 24 hours.",
+      "ctaMid": "Get your quote now",
+      "internalLinksHeading": "More Services",
+      "internalLinks": [
+        {
+          "label": "End-of-tenancy cleaning with handover guarantee",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "All regions overview",
+          "href": "regions"
+        },
+        {
+          "label": "Moving service Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Request Your Moving Quote – Free",
+      "ctaStrongBody": "Call us or fill out our form. We prepare a transparent quote for your move in Fribourg within 24 hours.",
+      "ctaStrong": "Fast feedback within 24h",
+      "testimonial": {
+        "quote": "Great service for our move in Fribourg! Very professional.",
+        "author": "SwissCleanMove Customer",
+        "trust": "Trusted Swiss quality"
+      },
+      "faqs": [
+        {
+          "question": "How much does a move cost in Fribourg?",
+          "answer": "The cost depends on apartment size and distance. We offer transparent flat rates starting from CHF 490. Contact us for a free quote."
+        },
+        {
+          "question": "Are you available on short notice in Fribourg?",
+          "answer": "Yes, we can often arrange moves within 48 hours. Contact us to check availability."
+        }
+      ]
+    },
+    "umzugBasel": {
+      "meta": {
+        "title": "Moving Company Basel | SwissCleanMove",
+        "description": "SwissCleanMove – your professional moving company in Basel. Relocation, cleaning & facility services. Request a free quote now."
+      },
+      "badge": "Moving Company Basel",
+      "h1": "Moving Company Basel – Relocation, Cleaning & Moving Services",
+      "heroSubtitle": "Professional moves in Basel – carefully planned, efficiently executed and fairly priced.",
+      "ctaSoft": "Request free quote now",
+      "intro": "Planning a move in Basel? SwissCleanMove is your reliable partner for relocations and cleaning services. We handle relocations in Basel-Stadt and Basel-Landschaft, including cross-border moves to Germany and France. Our experienced team ensures your move is stress-free, on time and at a transparent price.",
+      "sections": [
+        {
+          "heading": "Moving in Basel – Our Services",
+          "body": "As a moving company serving Basel, we offer a complete package tailored to your needs. Whether private move, company relocation or office move – we take care of the entire process.",
+          "bullets": [
+            "Private and family moves",
+            "Company and office relocations",
+            "Packing and unpacking service",
+            "Furniture assembly and disassembly",
+            "Transport insurance included",
+            "End-of-tenancy cleaning available"
+          ]
+        },
+        {
+          "heading": "How Your Move Works",
+          "body": "A well-organized move starts with clear planning. You receive a free consultation, then a detailed quote with a flat rate – no hidden costs. On moving day, our team arrives punctually and handles everything professionally.",
+          "bullets": [
+            "Step 1: Free consultation",
+            "Step 2: Individual quote with flat rate",
+            "Step 3: Professional packing and transport",
+            "Step 4: Setup at the new location"
+          ]
+        },
+        {
+          "heading": "Why Choose SwissCleanMove in Basel?",
+          "body": "We are a Swiss company based in Biel/Bienne, serving Basel and the surrounding region with professional moving and cleaning services. Our prices are fair and transparent, our movers experienced and careful.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our Moving Services at a Glance",
+      "serviceBullets": [
+        "3.5t and 7.5t moving vehicles",
+        "2–4 experienced movers",
+        "Packing material included",
+        "Furniture lift available",
+        "Transport insurance included",
+        "Disposal of old furniture on request"
+      ],
+      "trustPoints": [
+        "Swiss Quality Standards",
+        "Transparent Flat Rates",
+        "Available within 48h"
+      ],
+      "ctaMidHeading": "Planning a Move in Basel?",
+      "ctaMidBody": "Request your free, no-obligation quote now. We will get back to you within 24 hours.",
+      "ctaMid": "Get your quote now",
+      "internalLinksHeading": "More Services",
+      "internalLinks": [
+        {
+          "label": "End-of-tenancy cleaning with handover guarantee",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "All regions overview",
+          "href": "regions"
+        },
+        {
+          "label": "Moving service Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Request Your Moving Quote – Free",
+      "ctaStrongBody": "Call us or fill out our form. We prepare a transparent quote for your move in Basel within 24 hours.",
+      "ctaStrong": "Fast feedback within 24h",
+      "testimonial": {
+        "quote": "Great service for our move in Basel! Very professional.",
+        "author": "SwissCleanMove Customer",
+        "trust": "Trusted Swiss quality"
+      },
+      "faqs": [
+        {
+          "question": "How much does a move cost in Basel?",
+          "answer": "The cost depends on apartment size and distance. We offer transparent flat rates starting from CHF 490. Contact us for a free quote."
+        },
+        {
+          "question": "Are you available on short notice in Basel?",
+          "answer": "Yes, we can often arrange moves within 48 hours. Contact us to check availability."
+        }
+      ]
+    },
+    "umzugSchweiz": {
+      "meta": {
+        "title": "Moving Company Switzerland | SwissCleanMove",
+        "description": "SwissCleanMove – your professional moving company in Switzerland. Relocation, cleaning & facility services. Request a free quote now."
+      },
+      "badge": "Moving Company Switzerland",
+      "h1": "Moving Company Switzerland – Relocation, Cleaning & Moving Services",
+      "heroSubtitle": "Professional moves in Switzerland – carefully planned, efficiently executed and fairly priced.",
+      "ctaSoft": "Request free quote now",
+      "intro": "Planning a move in Switzerland? SwissCleanMove is your reliable partner for relocations and cleaning services. From Biel to Geneva, Lugano to St. Gallen — we coordinate relocations nationwide across Switzerland. Our experienced team ensures your move is stress-free, on time and at a transparent price.",
+      "sections": [
+        {
+          "heading": "Moving in Switzerland – Our Services",
+          "body": "As a moving company serving Switzerland, we offer a complete package tailored to your needs. Whether private move, company relocation or office move – we take care of the entire process.",
+          "bullets": [
+            "Private and family moves",
+            "Company and office relocations",
+            "Packing and unpacking service",
+            "Furniture assembly and disassembly",
+            "Transport insurance included",
+            "End-of-tenancy cleaning available"
+          ]
+        },
+        {
+          "heading": "How Your Move Works",
+          "body": "A well-organized move starts with clear planning. You receive a free consultation, then a detailed quote with a flat rate – no hidden costs. On moving day, our team arrives punctually and handles everything professionally.",
+          "bullets": [
+            "Step 1: Free consultation",
+            "Step 2: Individual quote with flat rate",
+            "Step 3: Professional packing and transport",
+            "Step 4: Setup at the new location"
+          ]
+        },
+        {
+          "heading": "Why Choose SwissCleanMove in Switzerland?",
+          "body": "We are a Swiss company based in Biel/Bienne, serving Switzerland and the surrounding region with professional moving and cleaning services. Our prices are fair and transparent, our movers experienced and careful.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our Moving Services at a Glance",
+      "serviceBullets": [
+        "3.5t and 7.5t moving vehicles",
+        "2–4 experienced movers",
+        "Packing material included",
+        "Furniture lift available",
+        "Transport insurance included",
+        "Disposal of old furniture on request"
+      ],
+      "trustPoints": [
+        "Swiss Quality Standards",
+        "Transparent Flat Rates",
+        "Available within 48h"
+      ],
+      "ctaMidHeading": "Planning a Move in Switzerland?",
+      "ctaMidBody": "Request your free, no-obligation quote now. We will get back to you within 24 hours.",
+      "ctaMid": "Get your quote now",
+      "internalLinksHeading": "More Services",
+      "internalLinks": [
+        {
+          "label": "End-of-tenancy cleaning with handover guarantee",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "All regions overview",
+          "href": "regions"
+        },
+        {
+          "label": "Moving service Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Request Your Moving Quote – Free",
+      "ctaStrongBody": "Call us or fill out our form. We prepare a transparent quote for your move in Switzerland within 24 hours.",
+      "ctaStrong": "Fast feedback within 24h",
+      "testimonial": {
+        "quote": "Great service for our move in Switzerland! Very professional.",
+        "author": "SwissCleanMove Customer",
+        "trust": "Trusted Swiss quality"
+      },
+      "faqs": [
+        {
+          "question": "How much does a move cost in Switzerland?",
+          "answer": "The cost depends on apartment size and distance. We offer transparent flat rates starting from CHF 490. Contact us for a free quote."
+        },
+        {
+          "question": "Are you available on short notice in Switzerland?",
+          "answer": "Yes, we can often arrange moves within 48 hours. Contact us to check availability."
+        }
+      ]
     }
   }
 }

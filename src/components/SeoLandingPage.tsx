@@ -31,6 +31,8 @@ type SeoLandingPageProps = {
   isPillar?: boolean;
   noindex?: boolean;
   formService: string;
+  mapQuery?: string;
+  areaCities?: string[];
 };
 
 const serviceIcons = {
@@ -47,6 +49,8 @@ export default function SeoLandingPage({
   isPillar = false,
   noindex = false,
   formService,
+  mapQuery,
+  areaCities,
 }: SeoLandingPageProps) {
   const t = useTranslations();
   const p = (key: string) => t(`seoPages.${pageKey}.${key}` as any);
@@ -395,7 +399,7 @@ export default function SeoLandingPage({
                   {locale === 'en' ? 'Our teams are in daily operation in:' : locale === 'fr' ? 'Nos équipes interviennent quotidiennement à :' : 'Unsere Teams sind täglich im Einsatz in:'}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {['Biel/Bienne', 'Nidau', 'Lyss', 'Brügg', 'Ipsach', 'Aarberg', 'Pieterlen'].map(areaCity => (
+                  {(areaCities || ['Biel/Bienne', 'Nidau', 'Lyss', 'Brügg', 'Ipsach', 'Aarberg', 'Pieterlen']).map(areaCity => (
                     <span
                       key={areaCity}
                       className={`px-4 py-2 rounded-full text-sm font-medium border ${
@@ -412,11 +416,32 @@ export default function SeoLandingPage({
                 <div className="flex items-start space-x-3 text-swiss-text font-medium bg-white p-4 rounded-xl border border-swiss-border shadow-subtle">
                   <span className="text-xl">👉</span>
                   <p>
-                    {locale === 'en' ? 'Fast availability throughout the Seeland region' : locale === 'fr' ? 'Disponibilité rapide dans toute la région du Seeland' : 'Schnelle Verfügbarkeit in der gesamten Region Seeland'}
+                    {locale === 'en' ? `Fast availability in the ${city} region` : locale === 'fr' ? `Disponibilité rapide dans la région de ${city}` : `Schnelle Verfügbarkeit in der Region ${city}`}
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* Region Map */}
+            {mapQuery && (
+              <div className="space-y-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
+                  {locale === 'en' ? `${city} on the Map` : locale === 'fr' ? `${city} sur la carte` : `${city} auf der Karte`}
+                </h2>
+                <div className="rounded-2xl overflow-hidden border border-swiss-border shadow-sm">
+                  <iframe
+                    title={`Map of ${city}`}
+                    src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(mapQuery)}&zoom=11`}
+                    width="100%"
+                    height="400"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
+            )}
 
           </div>
         </div>

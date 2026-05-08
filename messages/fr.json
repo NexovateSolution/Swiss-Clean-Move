@@ -7034,6 +7034,636 @@
           "answer": "Oui, Temps de réponse rapide garanti. Nous sommes une entreprise locale et rapidement sur place à Pieterlen."
         }
       ]
+    },
+    "umzugBern": {
+      "meta": {
+        "title": "Entreprise de déménagement Berne | SwissCleanMove",
+        "description": "SwissCleanMove – votre entreprise de déménagement professionnelle à Berne. Déménagement, nettoyage & facility services. Demandez un devis gratuit."
+      },
+      "badge": "Déménagement Berne",
+      "h1": "Entreprise de déménagement Berne – Déménagement, Nettoyage & Services",
+      "heroSubtitle": "Déménagements professionnels à Berne – soigneusement planifiés, efficacement exécutés et à prix équitable.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous planifiez un déménagement à Berne ? SwissCleanMove est votre partenaire fiable pour les déménagements et le nettoyage. Nous desservons tout le canton de Berne – du centre-ville à Thoune, Berthoud et Langenthal. Notre équipe expérimentée garantit un déménagement sans stress, ponctuel et à un prix transparent.",
+      "sections": [
+        {
+          "heading": "Déménagement à Berne – Nos Services",
+          "body": "En tant qu'entreprise de déménagement pour Berne, nous offrons un package complet adapté à vos besoins. Déménagement privé, d'entreprise ou de bureau – nous gérons tout le processus.",
+          "bullets": [
+            "Déménagements privés et familiaux",
+            "Déménagements d'entreprise et de bureau",
+            "Service d'emballage et déballage",
+            "Montage et démontage de meubles",
+            "Assurance transport incluse",
+            "Nettoyage de fin de bail disponible"
+          ]
+        },
+        {
+          "heading": "Comment se déroule votre déménagement",
+          "body": "Un déménagement bien organisé commence par une planification claire. Vous recevez une consultation gratuite, puis un devis détaillé à prix fixe – sans coûts cachés.",
+          "bullets": [
+            "Étape 1 : Consultation gratuite",
+            "Étape 2 : Devis individuel à prix fixe",
+            "Étape 3 : Emballage et transport professionnels",
+            "Étape 4 : Installation au nouveau lieu"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove à Berne ?",
+          "body": "Nous sommes une entreprise suisse basée à Biel/Bienne, desservant Berne et la région environnante avec des services professionnels de déménagement et de nettoyage. Nos prix sont équitables et transparents.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de déménagement en un coup d'œil",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "2–4 déménageurs expérimentés",
+        "Matériel d'emballage inclus",
+        "Monte-meubles disponible",
+        "Assurance transport incluse",
+        "Élimination d'anciens meubles sur demande"
+      ],
+      "trustPoints": [
+        "Standards de qualité suisses",
+        "Prix fixes transparents",
+        "Disponible sous 48h"
+      ],
+      "ctaMidHeading": "Vous planifiez un déménagement à Berne ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement. Nous vous répondons sous 24 heures.",
+      "ctaMid": "Obtenir un devis maintenant",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Toutes les régions",
+          "href": "regions"
+        },
+        {
+          "label": "Déménagement Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Demandez votre devis – Gratuit",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous préparons un devis transparent pour votre déménagement à Berne sous 24 heures.",
+      "ctaStrong": "Réponse rapide sous 24h",
+      "testimonial": {
+        "quote": "Excellent service pour notre déménagement à Berne ! Très professionnel.",
+        "author": "Client SwissCleanMove",
+        "trust": "Qualité suisse de confiance"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte un déménagement à Berne ?",
+          "answer": "Le coût dépend de la taille de l'appartement et de la distance. Nous offrons des prix fixes transparents à partir de CHF 490. Contactez-nous pour un devis gratuit."
+        },
+        {
+          "question": "Êtes-vous disponible rapidement à Berne ?",
+          "answer": "Oui, nous pouvons souvent organiser des déménagements sous 48 heures. Contactez-nous pour vérifier la disponibilité."
+        }
+      ]
+    },
+    "umzugZurich": {
+      "meta": {
+        "title": "Entreprise de déménagement Zurich | SwissCleanMove",
+        "description": "SwissCleanMove – votre entreprise de déménagement professionnelle à Zurich. Déménagement, nettoyage & facility services. Demandez un devis gratuit."
+      },
+      "badge": "Déménagement Zurich",
+      "h1": "Entreprise de déménagement Zurich – Déménagement, Nettoyage & Services",
+      "heroSubtitle": "Déménagements professionnels à Zurich – soigneusement planifiés, efficacement exécutés et à prix équitable.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous planifiez un déménagement à Zurich ? SwissCleanMove est votre partenaire fiable pour les déménagements et le nettoyage. Nous coordonnons les déménagements longue distance entre le Seeland et la grande région de Zurich, y compris Winterthour, Baden et Aarau. Notre équipe expérimentée garantit un déménagement sans stress, ponctuel et à un prix transparent.",
+      "sections": [
+        {
+          "heading": "Déménagement à Zurich – Nos Services",
+          "body": "En tant qu'entreprise de déménagement pour Zurich, nous offrons un package complet adapté à vos besoins. Déménagement privé, d'entreprise ou de bureau – nous gérons tout le processus.",
+          "bullets": [
+            "Déménagements privés et familiaux",
+            "Déménagements d'entreprise et de bureau",
+            "Service d'emballage et déballage",
+            "Montage et démontage de meubles",
+            "Assurance transport incluse",
+            "Nettoyage de fin de bail disponible"
+          ]
+        },
+        {
+          "heading": "Comment se déroule votre déménagement",
+          "body": "Un déménagement bien organisé commence par une planification claire. Vous recevez une consultation gratuite, puis un devis détaillé à prix fixe – sans coûts cachés.",
+          "bullets": [
+            "Étape 1 : Consultation gratuite",
+            "Étape 2 : Devis individuel à prix fixe",
+            "Étape 3 : Emballage et transport professionnels",
+            "Étape 4 : Installation au nouveau lieu"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove à Zurich ?",
+          "body": "Nous sommes une entreprise suisse basée à Biel/Bienne, desservant Zurich et la région environnante avec des services professionnels de déménagement et de nettoyage. Nos prix sont équitables et transparents.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de déménagement en un coup d'œil",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "2–4 déménageurs expérimentés",
+        "Matériel d'emballage inclus",
+        "Monte-meubles disponible",
+        "Assurance transport incluse",
+        "Élimination d'anciens meubles sur demande"
+      ],
+      "trustPoints": [
+        "Standards de qualité suisses",
+        "Prix fixes transparents",
+        "Disponible sous 48h"
+      ],
+      "ctaMidHeading": "Vous planifiez un déménagement à Zurich ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement. Nous vous répondons sous 24 heures.",
+      "ctaMid": "Obtenir un devis maintenant",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Toutes les régions",
+          "href": "regions"
+        },
+        {
+          "label": "Déménagement Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Demandez votre devis – Gratuit",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous préparons un devis transparent pour votre déménagement à Zurich sous 24 heures.",
+      "ctaStrong": "Réponse rapide sous 24h",
+      "testimonial": {
+        "quote": "Excellent service pour notre déménagement à Zurich ! Très professionnel.",
+        "author": "Client SwissCleanMove",
+        "trust": "Qualité suisse de confiance"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte un déménagement à Zurich ?",
+          "answer": "Le coût dépend de la taille de l'appartement et de la distance. Nous offrons des prix fixes transparents à partir de CHF 490. Contactez-nous pour un devis gratuit."
+        },
+        {
+          "question": "Êtes-vous disponible rapidement à Zurich ?",
+          "answer": "Oui, nous pouvons souvent organiser des déménagements sous 48 heures. Contactez-nous pour vérifier la disponibilité."
+        }
+      ]
+    },
+    "umzugSolothurn": {
+      "meta": {
+        "title": "Entreprise de déménagement Soleure | SwissCleanMove",
+        "description": "SwissCleanMove – votre entreprise de déménagement professionnelle à Soleure. Déménagement, nettoyage & facility services. Demandez un devis gratuit."
+      },
+      "badge": "Déménagement Soleure",
+      "h1": "Entreprise de déménagement Soleure – Déménagement, Nettoyage & Services",
+      "heroSubtitle": "Déménagements professionnels à Soleure – soigneusement planifiés, efficacement exécutés et à prix équitable.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous planifiez un déménagement à Soleure ? SwissCleanMove est votre partenaire fiable pour les déménagements et le nettoyage. En tant que région voisine de notre base à Bienne, nous offrons des délais rapides à Soleure, Olten et Granges. Notre équipe expérimentée garantit un déménagement sans stress, ponctuel et à un prix transparent.",
+      "sections": [
+        {
+          "heading": "Déménagement à Soleure – Nos Services",
+          "body": "En tant qu'entreprise de déménagement pour Soleure, nous offrons un package complet adapté à vos besoins. Déménagement privé, d'entreprise ou de bureau – nous gérons tout le processus.",
+          "bullets": [
+            "Déménagements privés et familiaux",
+            "Déménagements d'entreprise et de bureau",
+            "Service d'emballage et déballage",
+            "Montage et démontage de meubles",
+            "Assurance transport incluse",
+            "Nettoyage de fin de bail disponible"
+          ]
+        },
+        {
+          "heading": "Comment se déroule votre déménagement",
+          "body": "Un déménagement bien organisé commence par une planification claire. Vous recevez une consultation gratuite, puis un devis détaillé à prix fixe – sans coûts cachés.",
+          "bullets": [
+            "Étape 1 : Consultation gratuite",
+            "Étape 2 : Devis individuel à prix fixe",
+            "Étape 3 : Emballage et transport professionnels",
+            "Étape 4 : Installation au nouveau lieu"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove à Soleure ?",
+          "body": "Nous sommes une entreprise suisse basée à Biel/Bienne, desservant Soleure et la région environnante avec des services professionnels de déménagement et de nettoyage. Nos prix sont équitables et transparents.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de déménagement en un coup d'œil",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "2–4 déménageurs expérimentés",
+        "Matériel d'emballage inclus",
+        "Monte-meubles disponible",
+        "Assurance transport incluse",
+        "Élimination d'anciens meubles sur demande"
+      ],
+      "trustPoints": [
+        "Standards de qualité suisses",
+        "Prix fixes transparents",
+        "Disponible sous 48h"
+      ],
+      "ctaMidHeading": "Vous planifiez un déménagement à Soleure ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement. Nous vous répondons sous 24 heures.",
+      "ctaMid": "Obtenir un devis maintenant",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Toutes les régions",
+          "href": "regions"
+        },
+        {
+          "label": "Déménagement Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Demandez votre devis – Gratuit",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous préparons un devis transparent pour votre déménagement à Soleure sous 24 heures.",
+      "ctaStrong": "Réponse rapide sous 24h",
+      "testimonial": {
+        "quote": "Excellent service pour notre déménagement à Soleure ! Très professionnel.",
+        "author": "Client SwissCleanMove",
+        "trust": "Qualité suisse de confiance"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte un déménagement à Soleure ?",
+          "answer": "Le coût dépend de la taille de l'appartement et de la distance. Nous offrons des prix fixes transparents à partir de CHF 490. Contactez-nous pour un devis gratuit."
+        },
+        {
+          "question": "Êtes-vous disponible rapidement à Soleure ?",
+          "answer": "Oui, nous pouvons souvent organiser des déménagements sous 48 heures. Contactez-nous pour vérifier la disponibilité."
+        }
+      ]
+    },
+    "umzugNeuchatel": {
+      "meta": {
+        "title": "Entreprise de déménagement Neuchâtel | SwissCleanMove",
+        "description": "SwissCleanMove – votre entreprise de déménagement professionnelle à Neuchâtel. Déménagement, nettoyage & facility services. Demandez un devis gratuit."
+      },
+      "badge": "Déménagement Neuchâtel",
+      "h1": "Entreprise de déménagement Neuchâtel – Déménagement, Nettoyage & Services",
+      "heroSubtitle": "Déménagements professionnels à Neuchâtel – soigneusement planifiés, efficacement exécutés et à prix équitable.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous planifiez un déménagement à Neuchâtel ? SwissCleanMove est votre partenaire fiable pour les déménagements et le nettoyage. Nous desservons Neuchâtel, La Chaux-de-Fonds et Le Locle avec un service bilingue en français et en allemand. Notre équipe expérimentée garantit un déménagement sans stress, ponctuel et à un prix transparent.",
+      "sections": [
+        {
+          "heading": "Déménagement à Neuchâtel – Nos Services",
+          "body": "En tant qu'entreprise de déménagement pour Neuchâtel, nous offrons un package complet adapté à vos besoins. Déménagement privé, d'entreprise ou de bureau – nous gérons tout le processus.",
+          "bullets": [
+            "Déménagements privés et familiaux",
+            "Déménagements d'entreprise et de bureau",
+            "Service d'emballage et déballage",
+            "Montage et démontage de meubles",
+            "Assurance transport incluse",
+            "Nettoyage de fin de bail disponible"
+          ]
+        },
+        {
+          "heading": "Comment se déroule votre déménagement",
+          "body": "Un déménagement bien organisé commence par une planification claire. Vous recevez une consultation gratuite, puis un devis détaillé à prix fixe – sans coûts cachés.",
+          "bullets": [
+            "Étape 1 : Consultation gratuite",
+            "Étape 2 : Devis individuel à prix fixe",
+            "Étape 3 : Emballage et transport professionnels",
+            "Étape 4 : Installation au nouveau lieu"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove à Neuchâtel ?",
+          "body": "Nous sommes une entreprise suisse basée à Biel/Bienne, desservant Neuchâtel et la région environnante avec des services professionnels de déménagement et de nettoyage. Nos prix sont équitables et transparents.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de déménagement en un coup d'œil",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "2–4 déménageurs expérimentés",
+        "Matériel d'emballage inclus",
+        "Monte-meubles disponible",
+        "Assurance transport incluse",
+        "Élimination d'anciens meubles sur demande"
+      ],
+      "trustPoints": [
+        "Standards de qualité suisses",
+        "Prix fixes transparents",
+        "Disponible sous 48h"
+      ],
+      "ctaMidHeading": "Vous planifiez un déménagement à Neuchâtel ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement. Nous vous répondons sous 24 heures.",
+      "ctaMid": "Obtenir un devis maintenant",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Toutes les régions",
+          "href": "regions"
+        },
+        {
+          "label": "Déménagement Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Demandez votre devis – Gratuit",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous préparons un devis transparent pour votre déménagement à Neuchâtel sous 24 heures.",
+      "ctaStrong": "Réponse rapide sous 24h",
+      "testimonial": {
+        "quote": "Excellent service pour notre déménagement à Neuchâtel ! Très professionnel.",
+        "author": "Client SwissCleanMove",
+        "trust": "Qualité suisse de confiance"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte un déménagement à Neuchâtel ?",
+          "answer": "Le coût dépend de la taille de l'appartement et de la distance. Nous offrons des prix fixes transparents à partir de CHF 490. Contactez-nous pour un devis gratuit."
+        },
+        {
+          "question": "Êtes-vous disponible rapidement à Neuchâtel ?",
+          "answer": "Oui, nous pouvons souvent organiser des déménagements sous 48 heures. Contactez-nous pour vérifier la disponibilité."
+        }
+      ]
+    },
+    "umzugFribourg": {
+      "meta": {
+        "title": "Entreprise de déménagement Fribourg | SwissCleanMove",
+        "description": "SwissCleanMove – votre entreprise de déménagement professionnelle à Fribourg. Déménagement, nettoyage & facility services. Demandez un devis gratuit."
+      },
+      "badge": "Déménagement Fribourg",
+      "h1": "Entreprise de déménagement Fribourg – Déménagement, Nettoyage & Services",
+      "heroSubtitle": "Déménagements professionnels à Fribourg – soigneusement planifiés, efficacement exécutés et à prix équitable.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous planifiez un déménagement à Fribourg ? SwissCleanMove est votre partenaire fiable pour les déménagements et le nettoyage. Nous offrons des services complets à Fribourg ville, Bulle et Morat avec des équipes bilingues. Notre équipe expérimentée garantit un déménagement sans stress, ponctuel et à un prix transparent.",
+      "sections": [
+        {
+          "heading": "Déménagement à Fribourg – Nos Services",
+          "body": "En tant qu'entreprise de déménagement pour Fribourg, nous offrons un package complet adapté à vos besoins. Déménagement privé, d'entreprise ou de bureau – nous gérons tout le processus.",
+          "bullets": [
+            "Déménagements privés et familiaux",
+            "Déménagements d'entreprise et de bureau",
+            "Service d'emballage et déballage",
+            "Montage et démontage de meubles",
+            "Assurance transport incluse",
+            "Nettoyage de fin de bail disponible"
+          ]
+        },
+        {
+          "heading": "Comment se déroule votre déménagement",
+          "body": "Un déménagement bien organisé commence par une planification claire. Vous recevez une consultation gratuite, puis un devis détaillé à prix fixe – sans coûts cachés.",
+          "bullets": [
+            "Étape 1 : Consultation gratuite",
+            "Étape 2 : Devis individuel à prix fixe",
+            "Étape 3 : Emballage et transport professionnels",
+            "Étape 4 : Installation au nouveau lieu"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove à Fribourg ?",
+          "body": "Nous sommes une entreprise suisse basée à Biel/Bienne, desservant Fribourg et la région environnante avec des services professionnels de déménagement et de nettoyage. Nos prix sont équitables et transparents.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de déménagement en un coup d'œil",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "2–4 déménageurs expérimentés",
+        "Matériel d'emballage inclus",
+        "Monte-meubles disponible",
+        "Assurance transport incluse",
+        "Élimination d'anciens meubles sur demande"
+      ],
+      "trustPoints": [
+        "Standards de qualité suisses",
+        "Prix fixes transparents",
+        "Disponible sous 48h"
+      ],
+      "ctaMidHeading": "Vous planifiez un déménagement à Fribourg ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement. Nous vous répondons sous 24 heures.",
+      "ctaMid": "Obtenir un devis maintenant",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Toutes les régions",
+          "href": "regions"
+        },
+        {
+          "label": "Déménagement Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Demandez votre devis – Gratuit",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous préparons un devis transparent pour votre déménagement à Fribourg sous 24 heures.",
+      "ctaStrong": "Réponse rapide sous 24h",
+      "testimonial": {
+        "quote": "Excellent service pour notre déménagement à Fribourg ! Très professionnel.",
+        "author": "Client SwissCleanMove",
+        "trust": "Qualité suisse de confiance"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte un déménagement à Fribourg ?",
+          "answer": "Le coût dépend de la taille de l'appartement et de la distance. Nous offrons des prix fixes transparents à partir de CHF 490. Contactez-nous pour un devis gratuit."
+        },
+        {
+          "question": "Êtes-vous disponible rapidement à Fribourg ?",
+          "answer": "Oui, nous pouvons souvent organiser des déménagements sous 48 heures. Contactez-nous pour vérifier la disponibilité."
+        }
+      ]
+    },
+    "umzugBasel": {
+      "meta": {
+        "title": "Entreprise de déménagement Bâle | SwissCleanMove",
+        "description": "SwissCleanMove – votre entreprise de déménagement professionnelle à Bâle. Déménagement, nettoyage & facility services. Demandez un devis gratuit."
+      },
+      "badge": "Déménagement Bâle",
+      "h1": "Entreprise de déménagement Bâle – Déménagement, Nettoyage & Services",
+      "heroSubtitle": "Déménagements professionnels à Bâle – soigneusement planifiés, efficacement exécutés et à prix équitable.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous planifiez un déménagement à Bâle ? SwissCleanMove est votre partenaire fiable pour les déménagements et le nettoyage. Nous gérons les déménagements à Bâle-Ville et Bâle-Campagne, y compris les déménagements transfrontaliers. Notre équipe expérimentée garantit un déménagement sans stress, ponctuel et à un prix transparent.",
+      "sections": [
+        {
+          "heading": "Déménagement à Bâle – Nos Services",
+          "body": "En tant qu'entreprise de déménagement pour Bâle, nous offrons un package complet adapté à vos besoins. Déménagement privé, d'entreprise ou de bureau – nous gérons tout le processus.",
+          "bullets": [
+            "Déménagements privés et familiaux",
+            "Déménagements d'entreprise et de bureau",
+            "Service d'emballage et déballage",
+            "Montage et démontage de meubles",
+            "Assurance transport incluse",
+            "Nettoyage de fin de bail disponible"
+          ]
+        },
+        {
+          "heading": "Comment se déroule votre déménagement",
+          "body": "Un déménagement bien organisé commence par une planification claire. Vous recevez une consultation gratuite, puis un devis détaillé à prix fixe – sans coûts cachés.",
+          "bullets": [
+            "Étape 1 : Consultation gratuite",
+            "Étape 2 : Devis individuel à prix fixe",
+            "Étape 3 : Emballage et transport professionnels",
+            "Étape 4 : Installation au nouveau lieu"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove à Bâle ?",
+          "body": "Nous sommes une entreprise suisse basée à Biel/Bienne, desservant Bâle et la région environnante avec des services professionnels de déménagement et de nettoyage. Nos prix sont équitables et transparents.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de déménagement en un coup d'œil",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "2–4 déménageurs expérimentés",
+        "Matériel d'emballage inclus",
+        "Monte-meubles disponible",
+        "Assurance transport incluse",
+        "Élimination d'anciens meubles sur demande"
+      ],
+      "trustPoints": [
+        "Standards de qualité suisses",
+        "Prix fixes transparents",
+        "Disponible sous 48h"
+      ],
+      "ctaMidHeading": "Vous planifiez un déménagement à Bâle ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement. Nous vous répondons sous 24 heures.",
+      "ctaMid": "Obtenir un devis maintenant",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Toutes les régions",
+          "href": "regions"
+        },
+        {
+          "label": "Déménagement Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Demandez votre devis – Gratuit",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous préparons un devis transparent pour votre déménagement à Bâle sous 24 heures.",
+      "ctaStrong": "Réponse rapide sous 24h",
+      "testimonial": {
+        "quote": "Excellent service pour notre déménagement à Bâle ! Très professionnel.",
+        "author": "Client SwissCleanMove",
+        "trust": "Qualité suisse de confiance"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte un déménagement à Bâle ?",
+          "answer": "Le coût dépend de la taille de l'appartement et de la distance. Nous offrons des prix fixes transparents à partir de CHF 490. Contactez-nous pour un devis gratuit."
+        },
+        {
+          "question": "Êtes-vous disponible rapidement à Bâle ?",
+          "answer": "Oui, nous pouvons souvent organiser des déménagements sous 48 heures. Contactez-nous pour vérifier la disponibilité."
+        }
+      ]
+    },
+    "umzugSchweiz": {
+      "meta": {
+        "title": "Entreprise de déménagement Suisse | SwissCleanMove",
+        "description": "SwissCleanMove – votre entreprise de déménagement professionnelle à Suisse. Déménagement, nettoyage & facility services. Demandez un devis gratuit."
+      },
+      "badge": "Déménagement Suisse",
+      "h1": "Entreprise de déménagement Suisse – Déménagement, Nettoyage & Services",
+      "heroSubtitle": "Déménagements professionnels à Suisse – soigneusement planifiés, efficacement exécutés et à prix équitable.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous planifiez un déménagement à Suisse ? SwissCleanMove est votre partenaire fiable pour les déménagements et le nettoyage. De Bienne à Genève, Lugano à Saint-Gall — nous coordonnons les déménagements dans toute la Suisse. Notre équipe expérimentée garantit un déménagement sans stress, ponctuel et à un prix transparent.",
+      "sections": [
+        {
+          "heading": "Déménagement à Suisse – Nos Services",
+          "body": "En tant qu'entreprise de déménagement pour Suisse, nous offrons un package complet adapté à vos besoins. Déménagement privé, d'entreprise ou de bureau – nous gérons tout le processus.",
+          "bullets": [
+            "Déménagements privés et familiaux",
+            "Déménagements d'entreprise et de bureau",
+            "Service d'emballage et déballage",
+            "Montage et démontage de meubles",
+            "Assurance transport incluse",
+            "Nettoyage de fin de bail disponible"
+          ]
+        },
+        {
+          "heading": "Comment se déroule votre déménagement",
+          "body": "Un déménagement bien organisé commence par une planification claire. Vous recevez une consultation gratuite, puis un devis détaillé à prix fixe – sans coûts cachés.",
+          "bullets": [
+            "Étape 1 : Consultation gratuite",
+            "Étape 2 : Devis individuel à prix fixe",
+            "Étape 3 : Emballage et transport professionnels",
+            "Étape 4 : Installation au nouveau lieu"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove à Suisse ?",
+          "body": "Nous sommes une entreprise suisse basée à Biel/Bienne, desservant Suisse et la région environnante avec des services professionnels de déménagement et de nettoyage. Nos prix sont équitables et transparents.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de déménagement en un coup d'œil",
+      "serviceBullets": [
+        "Véhicules de 3.5t et 7.5t",
+        "2–4 déménageurs expérimentés",
+        "Matériel d'emballage inclus",
+        "Monte-meubles disponible",
+        "Assurance transport incluse",
+        "Élimination d'anciens meubles sur demande"
+      ],
+      "trustPoints": [
+        "Standards de qualité suisses",
+        "Prix fixes transparents",
+        "Disponible sous 48h"
+      ],
+      "ctaMidHeading": "Vous planifiez un déménagement à Suisse ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement. Nous vous répondons sous 24 heures.",
+      "ctaMid": "Obtenir un devis maintenant",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Toutes les régions",
+          "href": "regions"
+        },
+        {
+          "label": "Déménagement Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Demandez votre devis – Gratuit",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous préparons un devis transparent pour votre déménagement à Suisse sous 24 heures.",
+      "ctaStrong": "Réponse rapide sous 24h",
+      "testimonial": {
+        "quote": "Excellent service pour notre déménagement à Suisse ! Très professionnel.",
+        "author": "Client SwissCleanMove",
+        "trust": "Qualité suisse de confiance"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte un déménagement à Suisse ?",
+          "answer": "Le coût dépend de la taille de l'appartement et de la distance. Nous offrons des prix fixes transparents à partir de CHF 490. Contactez-nous pour un devis gratuit."
+        },
+        {
+          "question": "Êtes-vous disponible rapidement à Suisse ?",
+          "answer": "Oui, nous pouvons souvent organiser des déménagements sous 48 heures. Contactez-nous pour vérifier la disponibilité."
+        }
+      ]
     }
   }
 }

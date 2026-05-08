@@ -7073,6 +7073,636 @@
           "answer": "Ja, Kurzfristige Termine möglich. Wir sind eine lokale Firma und schnell in Pieterlen vor Ort."
         }
       ]
+    },
+    "umzugBern": {
+      "meta": {
+        "title": "Umzugsfirma Bern | SwissCleanMove",
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Bern. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsfirma Bern",
+      "h1": "Umzugsfirma Bern – Umzug, Reinigung & Zügelservice",
+      "heroSubtitle": "Professionelle Umzüge in Bern – sorgfältig geplant, effizient durchgeführt und fair bepreist.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "intro": "Planen Sie einen Umzug in Bern? SwissCleanMove ist Ihr zuverlässiger Partner für Umzüge und Reinigungen. Wir bedienen den gesamten Kanton Bern – von der Innenstadt bis Thun, Burgdorf und Langenthal. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, pünktlich und zu einem transparenten Preis abläuft.",
+      "sections": [
+        {
+          "heading": "Umzug in Bern – Unsere Leistungen",
+          "body": "Als Umzugsfirma für Bern bieten wir Ihnen ein Komplettpaket nach Ihren Bedürfnissen. Ob Privatumzug, Firmenumzug oder Büroumzug – wir kümmern uns um den gesamten Ablauf.",
+          "bullets": [
+            "Privat- und Familienumzüge",
+            "Firmen- und Büroumzüge",
+            "Ein- und Auspackservice",
+            "Möbelmontage und -demontage",
+            "Transportversicherung inklusive",
+            "Endreinigung auf Wunsch"
+          ]
+        },
+        {
+          "heading": "So läuft Ihr Umzug ab",
+          "body": "Ein gut organisierter Umzug beginnt mit klarer Planung. Sie erhalten eine kostenlose Beratung, dann eine detaillierte Offerte zum Fixpreis – ohne versteckte Kosten.",
+          "bullets": [
+            "Schritt 1: Kostenlose Beratung",
+            "Schritt 2: Individuelle Offerte zum Fixpreis",
+            "Schritt 3: Professionelles Packen und Transport",
+            "Schritt 4: Aufbau am neuen Standort"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove in Bern?",
+          "body": "Wir sind ein Schweizer Unternehmen mit Sitz in Biel/Bienne und bedienen Bern und die umliegende Region mit professionellen Umzugs- und Reinigungsdiensten. Unsere Preise sind fair und transparent.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Umzugsleistungen im Überblick",
+      "serviceBullets": [
+        "3.5t und 7.5t Umzugsfahrzeuge",
+        "2–4 erfahrene Umzugshelfer",
+        "Packmaterial inklusive",
+        "Möbellift verfügbar",
+        "Transportversicherung inklusive",
+        "Entsorgung alter Möbel auf Wunsch"
+      ],
+      "trustPoints": [
+        "Schweizer Qualitätsstandards",
+        "Transparente Fixpreise",
+        "Verfügbar innert 48h"
+      ],
+      "ctaMidHeading": "Planen Sie einen Umzug in Bern?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose, unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Jetzt Offerte sichern",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Endreinigung mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Alle Regionen im Überblick",
+          "href": "regions"
+        },
+        {
+          "label": "Umzugsfirma Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Umzugsofferte anfordern – Kostenlos",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innerhalb von 24 Stunden eine transparente Offerte für Ihren Umzug in Bern.",
+      "ctaStrong": "Schnelle Rückmeldung innert 24h",
+      "testimonial": {
+        "quote": "Toller Service für unseren Umzug in Bern! Sehr professionell.",
+        "author": "SwissCleanMove Kunde",
+        "trust": "Vertrauenswürdige Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet ein Umzug in Bern?",
+          "answer": "Die Kosten hängen von Wohnungsgrösse und Distanz ab. Wir bieten transparente Fixpreise ab CHF 490. Kontaktieren Sie uns für eine kostenlose Offerte."
+        },
+        {
+          "question": "Sind Sie kurzfristig in Bern verfügbar?",
+          "answer": "Ja, oft können wir Umzüge innerhalb von 48 Stunden organisieren. Kontaktieren Sie uns zur Verfügbarkeitsprüfung."
+        }
+      ]
+    },
+    "umzugZurich": {
+      "meta": {
+        "title": "Umzugsfirma Zürich | SwissCleanMove",
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Zürich. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsfirma Zürich",
+      "h1": "Umzugsfirma Zürich – Umzug, Reinigung & Zügelservice",
+      "heroSubtitle": "Professionelle Umzüge in Zürich – sorgfältig geplant, effizient durchgeführt und fair bepreist.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "intro": "Planen Sie einen Umzug in Zürich? SwissCleanMove ist Ihr zuverlässiger Partner für Umzüge und Reinigungen. Wir koordinieren Fernumzüge zwischen dem Seeland und dem Grossraum Zürich, inkl. Winterthur, Baden und Aarau. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, pünktlich und zu einem transparenten Preis abläuft.",
+      "sections": [
+        {
+          "heading": "Umzug in Zürich – Unsere Leistungen",
+          "body": "Als Umzugsfirma für Zürich bieten wir Ihnen ein Komplettpaket nach Ihren Bedürfnissen. Ob Privatumzug, Firmenumzug oder Büroumzug – wir kümmern uns um den gesamten Ablauf.",
+          "bullets": [
+            "Privat- und Familienumzüge",
+            "Firmen- und Büroumzüge",
+            "Ein- und Auspackservice",
+            "Möbelmontage und -demontage",
+            "Transportversicherung inklusive",
+            "Endreinigung auf Wunsch"
+          ]
+        },
+        {
+          "heading": "So läuft Ihr Umzug ab",
+          "body": "Ein gut organisierter Umzug beginnt mit klarer Planung. Sie erhalten eine kostenlose Beratung, dann eine detaillierte Offerte zum Fixpreis – ohne versteckte Kosten.",
+          "bullets": [
+            "Schritt 1: Kostenlose Beratung",
+            "Schritt 2: Individuelle Offerte zum Fixpreis",
+            "Schritt 3: Professionelles Packen und Transport",
+            "Schritt 4: Aufbau am neuen Standort"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove in Zürich?",
+          "body": "Wir sind ein Schweizer Unternehmen mit Sitz in Biel/Bienne und bedienen Zürich und die umliegende Region mit professionellen Umzugs- und Reinigungsdiensten. Unsere Preise sind fair und transparent.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Umzugsleistungen im Überblick",
+      "serviceBullets": [
+        "3.5t und 7.5t Umzugsfahrzeuge",
+        "2–4 erfahrene Umzugshelfer",
+        "Packmaterial inklusive",
+        "Möbellift verfügbar",
+        "Transportversicherung inklusive",
+        "Entsorgung alter Möbel auf Wunsch"
+      ],
+      "trustPoints": [
+        "Schweizer Qualitätsstandards",
+        "Transparente Fixpreise",
+        "Verfügbar innert 48h"
+      ],
+      "ctaMidHeading": "Planen Sie einen Umzug in Zürich?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose, unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Jetzt Offerte sichern",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Endreinigung mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Alle Regionen im Überblick",
+          "href": "regions"
+        },
+        {
+          "label": "Umzugsfirma Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Umzugsofferte anfordern – Kostenlos",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innerhalb von 24 Stunden eine transparente Offerte für Ihren Umzug in Zürich.",
+      "ctaStrong": "Schnelle Rückmeldung innert 24h",
+      "testimonial": {
+        "quote": "Toller Service für unseren Umzug in Zürich! Sehr professionell.",
+        "author": "SwissCleanMove Kunde",
+        "trust": "Vertrauenswürdige Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet ein Umzug in Zürich?",
+          "answer": "Die Kosten hängen von Wohnungsgrösse und Distanz ab. Wir bieten transparente Fixpreise ab CHF 490. Kontaktieren Sie uns für eine kostenlose Offerte."
+        },
+        {
+          "question": "Sind Sie kurzfristig in Zürich verfügbar?",
+          "answer": "Ja, oft können wir Umzüge innerhalb von 48 Stunden organisieren. Kontaktieren Sie uns zur Verfügbarkeitsprüfung."
+        }
+      ]
+    },
+    "umzugSolothurn": {
+      "meta": {
+        "title": "Umzugsfirma Solothurn | SwissCleanMove",
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Solothurn. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsfirma Solothurn",
+      "h1": "Umzugsfirma Solothurn – Umzug, Reinigung & Zügelservice",
+      "heroSubtitle": "Professionelle Umzüge in Solothurn – sorgfältig geplant, effizient durchgeführt und fair bepreist.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "intro": "Planen Sie einen Umzug in Solothurn? SwissCleanMove ist Ihr zuverlässiger Partner für Umzüge und Reinigungen. Als Nachbarregion unseres Standorts in Biel bieten wir schnelle Einsatzzeiten in Solothurn, Olten und Grenchen. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, pünktlich und zu einem transparenten Preis abläuft.",
+      "sections": [
+        {
+          "heading": "Umzug in Solothurn – Unsere Leistungen",
+          "body": "Als Umzugsfirma für Solothurn bieten wir Ihnen ein Komplettpaket nach Ihren Bedürfnissen. Ob Privatumzug, Firmenumzug oder Büroumzug – wir kümmern uns um den gesamten Ablauf.",
+          "bullets": [
+            "Privat- und Familienumzüge",
+            "Firmen- und Büroumzüge",
+            "Ein- und Auspackservice",
+            "Möbelmontage und -demontage",
+            "Transportversicherung inklusive",
+            "Endreinigung auf Wunsch"
+          ]
+        },
+        {
+          "heading": "So läuft Ihr Umzug ab",
+          "body": "Ein gut organisierter Umzug beginnt mit klarer Planung. Sie erhalten eine kostenlose Beratung, dann eine detaillierte Offerte zum Fixpreis – ohne versteckte Kosten.",
+          "bullets": [
+            "Schritt 1: Kostenlose Beratung",
+            "Schritt 2: Individuelle Offerte zum Fixpreis",
+            "Schritt 3: Professionelles Packen und Transport",
+            "Schritt 4: Aufbau am neuen Standort"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove in Solothurn?",
+          "body": "Wir sind ein Schweizer Unternehmen mit Sitz in Biel/Bienne und bedienen Solothurn und die umliegende Region mit professionellen Umzugs- und Reinigungsdiensten. Unsere Preise sind fair und transparent.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Umzugsleistungen im Überblick",
+      "serviceBullets": [
+        "3.5t und 7.5t Umzugsfahrzeuge",
+        "2–4 erfahrene Umzugshelfer",
+        "Packmaterial inklusive",
+        "Möbellift verfügbar",
+        "Transportversicherung inklusive",
+        "Entsorgung alter Möbel auf Wunsch"
+      ],
+      "trustPoints": [
+        "Schweizer Qualitätsstandards",
+        "Transparente Fixpreise",
+        "Verfügbar innert 48h"
+      ],
+      "ctaMidHeading": "Planen Sie einen Umzug in Solothurn?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose, unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Jetzt Offerte sichern",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Endreinigung mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Alle Regionen im Überblick",
+          "href": "regions"
+        },
+        {
+          "label": "Umzugsfirma Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Umzugsofferte anfordern – Kostenlos",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innerhalb von 24 Stunden eine transparente Offerte für Ihren Umzug in Solothurn.",
+      "ctaStrong": "Schnelle Rückmeldung innert 24h",
+      "testimonial": {
+        "quote": "Toller Service für unseren Umzug in Solothurn! Sehr professionell.",
+        "author": "SwissCleanMove Kunde",
+        "trust": "Vertrauenswürdige Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet ein Umzug in Solothurn?",
+          "answer": "Die Kosten hängen von Wohnungsgrösse und Distanz ab. Wir bieten transparente Fixpreise ab CHF 490. Kontaktieren Sie uns für eine kostenlose Offerte."
+        },
+        {
+          "question": "Sind Sie kurzfristig in Solothurn verfügbar?",
+          "answer": "Ja, oft können wir Umzüge innerhalb von 48 Stunden organisieren. Kontaktieren Sie uns zur Verfügbarkeitsprüfung."
+        }
+      ]
+    },
+    "umzugNeuchatel": {
+      "meta": {
+        "title": "Umzugsfirma Neuenburg | SwissCleanMove",
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Neuenburg. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsfirma Neuenburg",
+      "h1": "Umzugsfirma Neuenburg – Umzug, Reinigung & Zügelservice",
+      "heroSubtitle": "Professionelle Umzüge in Neuenburg – sorgfältig geplant, effizient durchgeführt und fair bepreist.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "intro": "Planen Sie einen Umzug in Neuenburg? SwissCleanMove ist Ihr zuverlässiger Partner für Umzüge und Reinigungen. Wir bedienen Neuenburg, La Chaux-de-Fonds und Le Locle mit zweisprachigem Service in Französisch und Deutsch. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, pünktlich und zu einem transparenten Preis abläuft.",
+      "sections": [
+        {
+          "heading": "Umzug in Neuenburg – Unsere Leistungen",
+          "body": "Als Umzugsfirma für Neuenburg bieten wir Ihnen ein Komplettpaket nach Ihren Bedürfnissen. Ob Privatumzug, Firmenumzug oder Büroumzug – wir kümmern uns um den gesamten Ablauf.",
+          "bullets": [
+            "Privat- und Familienumzüge",
+            "Firmen- und Büroumzüge",
+            "Ein- und Auspackservice",
+            "Möbelmontage und -demontage",
+            "Transportversicherung inklusive",
+            "Endreinigung auf Wunsch"
+          ]
+        },
+        {
+          "heading": "So läuft Ihr Umzug ab",
+          "body": "Ein gut organisierter Umzug beginnt mit klarer Planung. Sie erhalten eine kostenlose Beratung, dann eine detaillierte Offerte zum Fixpreis – ohne versteckte Kosten.",
+          "bullets": [
+            "Schritt 1: Kostenlose Beratung",
+            "Schritt 2: Individuelle Offerte zum Fixpreis",
+            "Schritt 3: Professionelles Packen und Transport",
+            "Schritt 4: Aufbau am neuen Standort"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove in Neuenburg?",
+          "body": "Wir sind ein Schweizer Unternehmen mit Sitz in Biel/Bienne und bedienen Neuenburg und die umliegende Region mit professionellen Umzugs- und Reinigungsdiensten. Unsere Preise sind fair und transparent.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Umzugsleistungen im Überblick",
+      "serviceBullets": [
+        "3.5t und 7.5t Umzugsfahrzeuge",
+        "2–4 erfahrene Umzugshelfer",
+        "Packmaterial inklusive",
+        "Möbellift verfügbar",
+        "Transportversicherung inklusive",
+        "Entsorgung alter Möbel auf Wunsch"
+      ],
+      "trustPoints": [
+        "Schweizer Qualitätsstandards",
+        "Transparente Fixpreise",
+        "Verfügbar innert 48h"
+      ],
+      "ctaMidHeading": "Planen Sie einen Umzug in Neuenburg?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose, unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Jetzt Offerte sichern",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Endreinigung mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Alle Regionen im Überblick",
+          "href": "regions"
+        },
+        {
+          "label": "Umzugsfirma Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Umzugsofferte anfordern – Kostenlos",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innerhalb von 24 Stunden eine transparente Offerte für Ihren Umzug in Neuenburg.",
+      "ctaStrong": "Schnelle Rückmeldung innert 24h",
+      "testimonial": {
+        "quote": "Toller Service für unseren Umzug in Neuenburg! Sehr professionell.",
+        "author": "SwissCleanMove Kunde",
+        "trust": "Vertrauenswürdige Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet ein Umzug in Neuenburg?",
+          "answer": "Die Kosten hängen von Wohnungsgrösse und Distanz ab. Wir bieten transparente Fixpreise ab CHF 490. Kontaktieren Sie uns für eine kostenlose Offerte."
+        },
+        {
+          "question": "Sind Sie kurzfristig in Neuenburg verfügbar?",
+          "answer": "Ja, oft können wir Umzüge innerhalb von 48 Stunden organisieren. Kontaktieren Sie uns zur Verfügbarkeitsprüfung."
+        }
+      ]
+    },
+    "umzugFribourg": {
+      "meta": {
+        "title": "Umzugsfirma Freiburg | SwissCleanMove",
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Freiburg. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsfirma Freiburg",
+      "h1": "Umzugsfirma Freiburg – Umzug, Reinigung & Zügelservice",
+      "heroSubtitle": "Professionelle Umzüge in Freiburg – sorgfältig geplant, effizient durchgeführt und fair bepreist.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "intro": "Planen Sie einen Umzug in Freiburg? SwissCleanMove ist Ihr zuverlässiger Partner für Umzüge und Reinigungen. Wir bieten komplette Dienstleistungen in der Stadt Freiburg, Bulle und Murten mit zweisprachigen Teams. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, pünktlich und zu einem transparenten Preis abläuft.",
+      "sections": [
+        {
+          "heading": "Umzug in Freiburg – Unsere Leistungen",
+          "body": "Als Umzugsfirma für Freiburg bieten wir Ihnen ein Komplettpaket nach Ihren Bedürfnissen. Ob Privatumzug, Firmenumzug oder Büroumzug – wir kümmern uns um den gesamten Ablauf.",
+          "bullets": [
+            "Privat- und Familienumzüge",
+            "Firmen- und Büroumzüge",
+            "Ein- und Auspackservice",
+            "Möbelmontage und -demontage",
+            "Transportversicherung inklusive",
+            "Endreinigung auf Wunsch"
+          ]
+        },
+        {
+          "heading": "So läuft Ihr Umzug ab",
+          "body": "Ein gut organisierter Umzug beginnt mit klarer Planung. Sie erhalten eine kostenlose Beratung, dann eine detaillierte Offerte zum Fixpreis – ohne versteckte Kosten.",
+          "bullets": [
+            "Schritt 1: Kostenlose Beratung",
+            "Schritt 2: Individuelle Offerte zum Fixpreis",
+            "Schritt 3: Professionelles Packen und Transport",
+            "Schritt 4: Aufbau am neuen Standort"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove in Freiburg?",
+          "body": "Wir sind ein Schweizer Unternehmen mit Sitz in Biel/Bienne und bedienen Freiburg und die umliegende Region mit professionellen Umzugs- und Reinigungsdiensten. Unsere Preise sind fair und transparent.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Umzugsleistungen im Überblick",
+      "serviceBullets": [
+        "3.5t und 7.5t Umzugsfahrzeuge",
+        "2–4 erfahrene Umzugshelfer",
+        "Packmaterial inklusive",
+        "Möbellift verfügbar",
+        "Transportversicherung inklusive",
+        "Entsorgung alter Möbel auf Wunsch"
+      ],
+      "trustPoints": [
+        "Schweizer Qualitätsstandards",
+        "Transparente Fixpreise",
+        "Verfügbar innert 48h"
+      ],
+      "ctaMidHeading": "Planen Sie einen Umzug in Freiburg?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose, unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Jetzt Offerte sichern",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Endreinigung mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Alle Regionen im Überblick",
+          "href": "regions"
+        },
+        {
+          "label": "Umzugsfirma Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Umzugsofferte anfordern – Kostenlos",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innerhalb von 24 Stunden eine transparente Offerte für Ihren Umzug in Freiburg.",
+      "ctaStrong": "Schnelle Rückmeldung innert 24h",
+      "testimonial": {
+        "quote": "Toller Service für unseren Umzug in Freiburg! Sehr professionell.",
+        "author": "SwissCleanMove Kunde",
+        "trust": "Vertrauenswürdige Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet ein Umzug in Freiburg?",
+          "answer": "Die Kosten hängen von Wohnungsgrösse und Distanz ab. Wir bieten transparente Fixpreise ab CHF 490. Kontaktieren Sie uns für eine kostenlose Offerte."
+        },
+        {
+          "question": "Sind Sie kurzfristig in Freiburg verfügbar?",
+          "answer": "Ja, oft können wir Umzüge innerhalb von 48 Stunden organisieren. Kontaktieren Sie uns zur Verfügbarkeitsprüfung."
+        }
+      ]
+    },
+    "umzugBasel": {
+      "meta": {
+        "title": "Umzugsfirma Basel | SwissCleanMove",
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Basel. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsfirma Basel",
+      "h1": "Umzugsfirma Basel – Umzug, Reinigung & Zügelservice",
+      "heroSubtitle": "Professionelle Umzüge in Basel – sorgfältig geplant, effizient durchgeführt und fair bepreist.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "intro": "Planen Sie einen Umzug in Basel? SwissCleanMove ist Ihr zuverlässiger Partner für Umzüge und Reinigungen. Wir übernehmen Umzüge in Basel-Stadt und Basel-Landschaft, inkl. grenzüberschreitende Umzüge nach Deutschland und Frankreich. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, pünktlich und zu einem transparenten Preis abläuft.",
+      "sections": [
+        {
+          "heading": "Umzug in Basel – Unsere Leistungen",
+          "body": "Als Umzugsfirma für Basel bieten wir Ihnen ein Komplettpaket nach Ihren Bedürfnissen. Ob Privatumzug, Firmenumzug oder Büroumzug – wir kümmern uns um den gesamten Ablauf.",
+          "bullets": [
+            "Privat- und Familienumzüge",
+            "Firmen- und Büroumzüge",
+            "Ein- und Auspackservice",
+            "Möbelmontage und -demontage",
+            "Transportversicherung inklusive",
+            "Endreinigung auf Wunsch"
+          ]
+        },
+        {
+          "heading": "So läuft Ihr Umzug ab",
+          "body": "Ein gut organisierter Umzug beginnt mit klarer Planung. Sie erhalten eine kostenlose Beratung, dann eine detaillierte Offerte zum Fixpreis – ohne versteckte Kosten.",
+          "bullets": [
+            "Schritt 1: Kostenlose Beratung",
+            "Schritt 2: Individuelle Offerte zum Fixpreis",
+            "Schritt 3: Professionelles Packen und Transport",
+            "Schritt 4: Aufbau am neuen Standort"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove in Basel?",
+          "body": "Wir sind ein Schweizer Unternehmen mit Sitz in Biel/Bienne und bedienen Basel und die umliegende Region mit professionellen Umzugs- und Reinigungsdiensten. Unsere Preise sind fair und transparent.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Umzugsleistungen im Überblick",
+      "serviceBullets": [
+        "3.5t und 7.5t Umzugsfahrzeuge",
+        "2–4 erfahrene Umzugshelfer",
+        "Packmaterial inklusive",
+        "Möbellift verfügbar",
+        "Transportversicherung inklusive",
+        "Entsorgung alter Möbel auf Wunsch"
+      ],
+      "trustPoints": [
+        "Schweizer Qualitätsstandards",
+        "Transparente Fixpreise",
+        "Verfügbar innert 48h"
+      ],
+      "ctaMidHeading": "Planen Sie einen Umzug in Basel?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose, unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Jetzt Offerte sichern",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Endreinigung mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Alle Regionen im Überblick",
+          "href": "regions"
+        },
+        {
+          "label": "Umzugsfirma Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Umzugsofferte anfordern – Kostenlos",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innerhalb von 24 Stunden eine transparente Offerte für Ihren Umzug in Basel.",
+      "ctaStrong": "Schnelle Rückmeldung innert 24h",
+      "testimonial": {
+        "quote": "Toller Service für unseren Umzug in Basel! Sehr professionell.",
+        "author": "SwissCleanMove Kunde",
+        "trust": "Vertrauenswürdige Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet ein Umzug in Basel?",
+          "answer": "Die Kosten hängen von Wohnungsgrösse und Distanz ab. Wir bieten transparente Fixpreise ab CHF 490. Kontaktieren Sie uns für eine kostenlose Offerte."
+        },
+        {
+          "question": "Sind Sie kurzfristig in Basel verfügbar?",
+          "answer": "Ja, oft können wir Umzüge innerhalb von 48 Stunden organisieren. Kontaktieren Sie uns zur Verfügbarkeitsprüfung."
+        }
+      ]
+    },
+    "umzugSchweiz": {
+      "meta": {
+        "title": "Umzugsfirma Schweiz | SwissCleanMove",
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Schweiz. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "Umzugsfirma Schweiz",
+      "h1": "Umzugsfirma Schweiz – Umzug, Reinigung & Zügelservice",
+      "heroSubtitle": "Professionelle Umzüge in Schweiz – sorgfältig geplant, effizient durchgeführt und fair bepreist.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "intro": "Planen Sie einen Umzug in Schweiz? SwissCleanMove ist Ihr zuverlässiger Partner für Umzüge und Reinigungen. Von Biel bis Genf, Lugano bis St. Gallen — wir koordinieren Umzüge landesweit in der ganzen Schweiz. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, pünktlich und zu einem transparenten Preis abläuft.",
+      "sections": [
+        {
+          "heading": "Umzug in Schweiz – Unsere Leistungen",
+          "body": "Als Umzugsfirma für Schweiz bieten wir Ihnen ein Komplettpaket nach Ihren Bedürfnissen. Ob Privatumzug, Firmenumzug oder Büroumzug – wir kümmern uns um den gesamten Ablauf.",
+          "bullets": [
+            "Privat- und Familienumzüge",
+            "Firmen- und Büroumzüge",
+            "Ein- und Auspackservice",
+            "Möbelmontage und -demontage",
+            "Transportversicherung inklusive",
+            "Endreinigung auf Wunsch"
+          ]
+        },
+        {
+          "heading": "So läuft Ihr Umzug ab",
+          "body": "Ein gut organisierter Umzug beginnt mit klarer Planung. Sie erhalten eine kostenlose Beratung, dann eine detaillierte Offerte zum Fixpreis – ohne versteckte Kosten.",
+          "bullets": [
+            "Schritt 1: Kostenlose Beratung",
+            "Schritt 2: Individuelle Offerte zum Fixpreis",
+            "Schritt 3: Professionelles Packen und Transport",
+            "Schritt 4: Aufbau am neuen Standort"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove in Schweiz?",
+          "body": "Wir sind ein Schweizer Unternehmen mit Sitz in Biel/Bienne und bedienen Schweiz und die umliegende Region mit professionellen Umzugs- und Reinigungsdiensten. Unsere Preise sind fair und transparent.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Umzugsleistungen im Überblick",
+      "serviceBullets": [
+        "3.5t und 7.5t Umzugsfahrzeuge",
+        "2–4 erfahrene Umzugshelfer",
+        "Packmaterial inklusive",
+        "Möbellift verfügbar",
+        "Transportversicherung inklusive",
+        "Entsorgung alter Möbel auf Wunsch"
+      ],
+      "trustPoints": [
+        "Schweizer Qualitätsstandards",
+        "Transparente Fixpreise",
+        "Verfügbar innert 48h"
+      ],
+      "ctaMidHeading": "Planen Sie einen Umzug in Schweiz?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose, unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Jetzt Offerte sichern",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [
+        {
+          "label": "Endreinigung mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Alle Regionen im Überblick",
+          "href": "regions"
+        },
+        {
+          "label": "Umzugsfirma Biel/Bienne",
+          "href": "umzug-biel"
+        }
+      ],
+      "ctaStrongHeading": "Umzugsofferte anfordern – Kostenlos",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innerhalb von 24 Stunden eine transparente Offerte für Ihren Umzug in Schweiz.",
+      "ctaStrong": "Schnelle Rückmeldung innert 24h",
+      "testimonial": {
+        "quote": "Toller Service für unseren Umzug in Schweiz! Sehr professionell.",
+        "author": "SwissCleanMove Kunde",
+        "trust": "Vertrauenswürdige Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet ein Umzug in Schweiz?",
+          "answer": "Die Kosten hängen von Wohnungsgrösse und Distanz ab. Wir bieten transparente Fixpreise ab CHF 490. Kontaktieren Sie uns für eine kostenlose Offerte."
+        },
+        {
+          "question": "Sind Sie kurzfristig in Schweiz verfügbar?",
+          "answer": "Ja, oft können wir Umzüge innerhalb von 48 Stunden organisieren. Kontaktieren Sie uns zur Verfügbarkeitsprüfung."
+        }
+      ]
     }
   }
 }
