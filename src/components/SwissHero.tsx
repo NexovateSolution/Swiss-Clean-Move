@@ -16,13 +16,13 @@ export default function SwissHero({ badge, title, subtitle, cta, right, classNam
         `relative overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fb_100%)] ${className ?? ''}`
       }
     >
-      <div className="container-max py-10 md:py-12 lg:py-14">
+      <div className="container-max py-3 md:py-4 lg:py-5">
         <div className="relative bg-white border border-swiss-border rounded-3xl shadow-soft overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#FFE9EA_0%,transparent_55%)] opacity-40"></div>
           <div
-            className={`relative grid grid-cols-1 ${right ? 'lg:grid-cols-2' : ''} gap-8 lg:gap-10 items-center p-7 md:p-8 lg:p-10`}
+            className={`relative grid grid-cols-1 ${right ? 'lg:grid-cols-2' : ''} gap-6 lg:gap-8 items-center p-5 md:p-6 lg:p-8`}
           >
-            <div className="space-y-5 md:space-y-6">
+            <div className="space-y-3 md:space-y-4">
               <div className="inline-flex items-center bg-swiss-softRed text-swiss-red rounded-full px-4 py-2 text-[11px] font-semibold tracking-wider uppercase">
                 {badge}
               </div>

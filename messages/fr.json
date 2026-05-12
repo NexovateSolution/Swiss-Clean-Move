@@ -615,7 +615,8 @@
     "emergency": {
       "title": "Service d'Urgence",
       "subtitle": "Besoin d'aide immédiate? Notre service d'urgence est disponible 24h/24 et 7j/7.",
-      "call": "Urgence: +41 79 123 45 67"
+      "call": "Urgence: +41 76 488 36 89",
+      "callNow": "Appeler maintenant: +41 76 488 36 89"
     }
   },
   "freeOffer": {

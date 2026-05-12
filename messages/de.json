@@ -650,7 +650,8 @@
     "emergency": {
       "title": "Notfall-Service",
       "subtitle": "Benötigen Sie sofortige Hilfe? Unser Notfall-Service ist 24/7 erreichbar.",
-      "call": "Notfall: +41 79 123 45 67"
+      "call": "Notfall: +41 76 488 36 89",
+      "callNow": "Jetzt anrufen: +41 76 488 36 89"
     }
   },
   "freeOffer": {

@@ -55,6 +55,8 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-subtle fixed top-0 w-full z-50 border-b border-swiss-border">
+      {/* Red accent line at the top */}
+      <div className="h-[3px] w-full bg-swiss-red" />
       <div className="container-max">
         <div className={`flex justify-between items-center py-0.5 px-4 ${locale === 'de' ? 'lg:px-4 gap-2' : 'lg:px-6 gap-4'
           }`}>

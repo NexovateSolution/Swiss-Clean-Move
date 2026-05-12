@@ -8,7 +8,8 @@ import {
   MapPin, Phone, ChevronDown, ArrowRight, CheckCircle,
   Truck, Home as HomeIcon, Building2, Sparkles, Package,
   Brush, Wind, UtensilsCrossed, Settings, Shield, Wrench,
-  Trash2, PackageOpen, MessageCircle, Mail, Calendar
+  Trash2, PackageOpen, MessageCircle, Mail, Calendar,
+  Star, ClipboardList, Search, BookOpen, Clock, Award
 } from 'lucide-react';
 
 export type RegionPageData = {
@@ -22,6 +23,27 @@ export type RegionPageData = {
   introParagraphs: string[];
   faqs: { question: string; answer: string }[];
   mapQuery: string;
+  // NEW: Rich content sections (movu.ch style)
+  descriptionSections?: {
+    heading: string;
+    paragraphs: string[];
+    bullets?: string[];
+  }[];
+  testimonials?: {
+    quote: string;
+    author: string;
+    city: string;
+  }[];
+  costInfo?: {
+    heading: string;
+    body: string;
+    factors?: string[];
+  };
+  regionFacts?: {
+    heading: string;
+    body: string;
+  };
+  whyChooseUs?: string[];
 };
 
 const SERVICES = [
