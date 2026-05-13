@@ -111,8 +111,9 @@
     },
     "hero": {
       "badge": "",
-      "title": "SwissCleanMove Umzug, Endreinigung mit Abnahmegarantie & Facility Services – alles aus einer Hand. Schweizweit verfügbar.",
-      "subtitle": "Wir kümmern uns um alles. Stressfrei und professionell.",
+      "title": "SwissCleanMove Professionelle Umzugs-, Reinigungs- & Facility-Dienstleistungen.",
+      "subtitle": "Für Privatkunden, Unternehmen und Hausverwaltungen – schweizweit verfügbar.",
+      "subtitle2": "Effizient organisiert. Zuverlässig ausgeführt. Nach Schweizer Qualitätsstandards.",
       "slides": {
         "transport": {
           "title": "Professioneller Umzug & Transport",

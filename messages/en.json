@@ -97,8 +97,9 @@
     },
     "hero": {
       "badge": "",
-      "title": "SwissCleanMove Moving, end-of-tenancy cleaning with handover guarantee & facility services all from a single provider. Available throughout Switzerland.",
-      "subtitle": "We take care of everything. Stress-free and professional.",
+      "title": "SwissCleanMove Professional Moving, Cleaning & Facility Services.",
+      "subtitle": "For private clients, companies, and property managements – available throughout Switzerland.",
+      "subtitle2": "Efficiently organized. Reliably executed. According to Swiss quality standards.",
       "slides": {
         "transport": {
           "title": "Professional Moving & Transport",

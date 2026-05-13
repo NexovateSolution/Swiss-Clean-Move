@@ -171,11 +171,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <span style={{ color: '#CC0000' }}>Swiss</span>
               <span style={{ color: '#1B2A4A' }}>CleanMove</span>
               <br />
-              <span className="text-[18px] md:text-[24px] font-semibold text-swiss-body">{rest.trimStart()}</span>
+              <span className="text-[16px] md:text-[20px] font-semibold text-swiss-body">{rest.trimStart()}</span>
+              <br />
+              <span className="text-[16px] md:text-[20px] font-semibold text-swiss-body">{t('home.hero.subtitle')}</span>
+              <br />
+              <span className="text-[16px] md:text-[20px] font-semibold text-swiss-body">{t('home.hero.subtitle2')}</span>
             </>
           );
         })()}
-        subtitle={t('home.hero.subtitle')}
         cta={
           <div className="space-y-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
@@ -201,10 +204,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
               {[
-                { de: 'Abnahmegarantie', en: 'Handover Guarantee', fr: 'Garantie de remise' },
-                { de: 'Versicherter Service', en: 'Insured Service', fr: 'Service assuré' },
-                { de: 'Schweizer Qualitätsstandard', en: 'Swiss Quality Standard', fr: 'Standard de qualité suisse' },
-                { de: 'Flexible Termine', en: 'Flexible Scheduling', fr: 'Horaires flexibles' },
+                { de: '✓ Abnahmegarantie', en: '✓ Handover Guarantee', fr: '✓ Garantie de remise' },
+                { de: '✓ Haftpflichtversichert', en: '✓ Liability Insured', fr: '✓ Assurance responsabilité civile' },
+                { de: '✓ Schweizweiter Service', en: '✓ Nationwide Service Across Switzerland', fr: '✓ Service dans toute la Suisse' },
+                { de: '✓ Transparente Preise', en: '✓ Transparent Pricing', fr: '✓ Prix transparents' },
               ].map((item, i) => (
                 <div key={i} className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-swiss-red flex-shrink-0" />
