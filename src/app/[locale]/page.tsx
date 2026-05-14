@@ -419,12 +419,28 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               {locale === 'en' ? 'Operational Throughout Switzerland' : locale === 'fr' ? 'Opérationnel dans toute la Suisse' : 'Schweizweit im Einsatz'}
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
-              {['Bern', 'Zürich', 'Solothurn', 'Neuchâtel', 'Fribourg', 'Basel', 'Aargau', 'Ganze Schweiz'].map((loc, i) => (
-                <span key={i} className="px-5 py-2.5 bg-swiss-section border border-swiss-border rounded-xl shadow-subtle font-medium text-swiss-text flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-swiss-red" />
-                  <span>{loc}</span>
-                </span>
-              ))}
+              {[
+                { name: 'Bern', slug: 'bern' },
+                { name: 'Zürich', slug: 'zuerich' },
+                { name: 'Solothurn', slug: 'solothurn' },
+                { name: 'Neuchâtel', slug: 'neuchatel' },
+                { name: 'Fribourg', slug: 'fribourg' },
+                { name: 'Basel', slug: 'basel' },
+                { name: 'Aargau', slug: 'aargau' },
+                { name: 'Ganze Schweiz', slug: '' },
+              ].map((loc, i) =>
+                loc.slug ? (
+                  <Link key={i} href={`/${locale}/${loc.slug}`} className="px-5 py-2.5 bg-swiss-section border border-swiss-border rounded-xl shadow-subtle font-medium text-swiss-text flex items-center space-x-2 hover:border-swiss-red/40 hover:shadow-medium transition-all cursor-pointer">
+                    <MapPin className="w-4 h-4 text-swiss-red" />
+                    <span>{loc.name}</span>
+                  </Link>
+                ) : (
+                  <span key={i} className="px-5 py-2.5 bg-swiss-section border border-swiss-border rounded-xl shadow-subtle font-medium text-swiss-text flex items-center space-x-2">
+                    <MapPin className="w-4 h-4 text-swiss-red" />
+                    <span>{loc.name}</span>
+                  </span>
+                )
+              )}
             </div>
           </div>
         </div>
