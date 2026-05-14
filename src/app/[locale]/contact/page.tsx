@@ -74,7 +74,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
     {
       icon: Phone,
       title: t('contact.info.phone'),
-      details: ['+41 78 215 80 30'],
+      details: ['+41 78 215 80 30', '+41 76 488 36 89'],
       color: 'text-blue-500',
       action: 'tel:+41782158030'
     },

@@ -436,7 +436,7 @@ export async function POST(request: NextRequest) {
                 <strong>SwissCleanMove</strong><br>
                 Orpundstrasse 31, 2504 Biel/Bienne<br>
                 info@swisscleanmove.ch<br>
-                📞 +41 78 215 80 30<br>
+                📞 +41 78 215 80 30 / +41 76 488 36 89<br>
                 UID: CHE-457.949.122
             </div>
         </div>
@@ -589,7 +589,7 @@ export async function POST(request: NextRequest) {
                 <strong>SwissCleanMove</strong><br>
                 Orpundstrasse 31, 2504 Biel/Bienne<br>
                 info@swisscleanmove.ch<br>
-                📞 +41 78 215 80 30<br>
+                📞 +41 78 215 80 30 / +41 76 488 36 89<br>
                 UID: CHE-457.949.122
             </div>
         </div>
