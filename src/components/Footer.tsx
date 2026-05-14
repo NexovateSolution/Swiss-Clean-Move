@@ -76,8 +76,8 @@ export default function Footer() {
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="w-4 h-4 text-swiss-blue" />
                 <div className="flex flex-col leading-relaxed">
-                  <a href="tel:+41764883689" className="hover:text-swiss-blue transition-colors">
-                    +41 76 488 36 89
+                  <a href="tel:+41782158030" className="hover:text-swiss-blue transition-colors">
+                    +41 78 215 80 30
                   </a>
                   <a href="tel:+41782158030" className="hover:text-swiss-blue transition-colors">
                     +41 78 215 80 30

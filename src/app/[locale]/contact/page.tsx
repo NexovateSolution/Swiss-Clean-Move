@@ -74,9 +74,9 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
     {
       icon: Phone,
       title: t('contact.info.phone'),
-      details: ['+41 76 488 36 89', '+41 78 215 80 30'],
+      details: ['+41 78 215 80 30'],
       color: 'text-blue-500',
-      action: 'tel:+41764883689'
+      action: 'tel:+41782158030'
     },
     {
       icon: Mail,
@@ -138,7 +138,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                 <a href={`/${locale}`} className="btn-primary">
                   {t('contact.success.actions.homepage')}
                 </a>
-                <a href="tel:+41764883689" className="btn-secondary">
+                <a href="tel:+41782158030" className="btn-secondary">
                   {t('contact.success.actions.call')}
                 </a>
               </div>
@@ -386,7 +386,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                   {t('contact.emergency.subtitle')}
                 </p>
                 <a
-                  href="tel:+41764883689"
+                  href="tel:+41782158030"
                   className="inline-flex items-center space-x-2 bg-swiss-red text-white px-6 py-3 rounded-xl hover:bg-swiss-red/90 transition-colors shadow-subtle"
                 >
                   <Phone className="w-5 h-5" />

@@ -52,7 +52,7 @@ export default function DisposalPage({ params: { locale } }: { params: { locale:
               {t('servicesPages.common.requestQuote')}
             </Link>
             <a
-              href="tel:+41764883689"
+              href="tel:+41782158030"
               className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5 text-swiss-red" />

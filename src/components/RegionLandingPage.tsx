@@ -85,8 +85,8 @@ const SERVICE_LABELS: Record<string, Record<string, string>> = {
 function getCTAs(locale: string) {
   return [
     { label: locale === 'en' ? 'Request Free Quote' : locale === 'fr' ? 'Demander un devis gratuit' : 'Kostenlose Offerte anfordern', href: `/${locale}/free-offer`, icon: Mail, variant: 'primary' as const },
-    { label: locale === 'en' ? 'Call Now' : locale === 'fr' ? 'Appeler maintenant' : 'Jetzt anrufen', href: 'tel:+41764883689', icon: Phone, variant: 'secondary' as const },
-    { label: locale === 'en' ? 'WhatsApp Inquiry' : locale === 'fr' ? 'Demande WhatsApp' : 'WhatsApp Anfrage senden', href: 'https://wa.me/41764883689', icon: MessageCircle, variant: 'secondary' as const },
+    { label: locale === 'en' ? 'Call Now' : locale === 'fr' ? 'Appeler maintenant' : 'Jetzt anrufen', href: 'tel:+41782158030', icon: Phone, variant: 'secondary' as const },
+    { label: locale === 'en' ? 'WhatsApp Inquiry' : locale === 'fr' ? 'Demande WhatsApp' : 'WhatsApp Anfrage senden', href: 'https://wa.me/41782158030', icon: MessageCircle, variant: 'secondary' as const },
     { label: locale === 'en' ? 'Request Cleaning' : locale === 'fr' ? 'Demander un nettoyage' : 'Reinigung anfragen', href: `/${locale}/form?service=cleaning`, icon: Sparkles, variant: 'outline' as const },
     { label: locale === 'en' ? 'Plan Move' : locale === 'fr' ? 'Planifier déménagement' : 'Umzug planen', href: `/${locale}/form?service=relocation`, icon: Truck, variant: 'outline' as const },
     { label: locale === 'en' ? 'Request Facility Service' : locale === 'fr' ? 'Demander facility service' : 'Facility Service anfragen', href: `/${locale}/form?service=facility`, icon: Settings, variant: 'outline' as const },
@@ -120,7 +120,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
         '@type': 'LocalBusiness',
         name: 'SwissCleanMove',
         address: { '@type': 'PostalAddress', streetAddress: 'Orpundstrasse 31', addressLocality: 'Biel/Bienne', postalCode: '2504', addressCountry: 'CH' },
-        telephone: '+41 76 488 36 89',
+        telephone: '+41 78 215 80 30',
         url: `https://swisscleanmove.ch/${locale}/${data.slug}`,
         areaServed: { '@type': 'Place', name: data.regionName },
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '52', bestRating: '5', worstRating: '1' },
@@ -128,7 +128,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
       {
         '@type': 'Service',
         name: data.seoTitle,
-        provider: { '@type': 'LocalBusiness', name: 'SwissCleanMove', telephone: '+41 76 488 36 89' },
+        provider: { '@type': 'LocalBusiness', name: 'SwissCleanMove', telephone: '+41 78 215 80 30' },
         areaServed: { '@type': 'Place', name: data.regionName },
       },
       {
@@ -164,9 +164,9 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
             <Link href={`/${locale}/free-offer`} className="btn-primary text-lg px-8 py-4">
               {locale === 'en' ? '📋 Request Free Quote' : locale === 'fr' ? '📋 Demander un devis' : '📋 Kostenlose Offerte anfordern'}
             </Link>
-            <a href="tel:+41764883689" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
+            <a href="tel:+41782158030" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
               <Phone className="w-5 h-5 text-swiss-red" />
-              <span>+41 76 488 36 89</span>
+              <span>+41 78 215 80 30</span>
             </a>
           </div>
         }
@@ -367,8 +367,8 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
                 <Link href={`/${locale}/free-offer`} className="btn-primary text-lg px-8 py-4">
                   {locale === 'en' ? 'Request Free Quote' : locale === 'fr' ? 'Demander un devis' : 'Kostenlose Offerte anfordern'}
                 </Link>
-                <a href="tel:+41764883689" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
-                  <Phone className="w-5 h-5 text-swiss-red" /><span>+41 76 488 36 89</span>
+                <a href="tel:+41782158030" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
+                  <Phone className="w-5 h-5 text-swiss-red" /><span>+41 78 215 80 30</span>
                 </a>
               </div>
             </div>

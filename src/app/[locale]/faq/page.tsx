@@ -160,12 +160,12 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <a
-                href="tel:+41764883689"
+                href="tel:+41782158030"
                 className="bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-xl p-6 transition-all duration-200 shadow-subtle hover:shadow-soft"
               >
                 <Phone className="w-8 h-8 text-swiss-red mx-auto mb-3" />
                 <h3 className="font-semibold mb-2 text-swiss-text">{t('faq.callUs')}</h3>
-                <p className="text-swiss-body">+41 76 488 36 89</p>
+                <p className="text-swiss-body">+41 78 215 80 30</p>
               </a>
 
               <a

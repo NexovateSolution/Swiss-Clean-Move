@@ -15,7 +15,7 @@ const COMPANY_INFO = {
     tagline: 'Umzug & Reinigung',
     address: 'Orpundstrasse 31',
     city: '2504 Biel/Bienne',
-    phone: '+41 76 488 36 89',
+    phone: '+41 78 215 80 30',
     email: 'info@swisscleanmove.ch',
     website: 'swisscleanmove.ch',
     uid: 'CHE-123.456.789'

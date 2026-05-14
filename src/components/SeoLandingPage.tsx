@@ -87,7 +87,7 @@ export default function SeoLandingPage({
           postalCode: '2504',
           addressCountry: 'CH',
         },
-        telephone: '+41 76 488 36 89',
+        telephone: '+41 78 215 80 30',
         url: `https://swisscleanmove.ch/${locale}/${pageKey}`,
         areaServed: {
           '@type': 'Place',
@@ -107,7 +107,7 @@ export default function SeoLandingPage({
         provider: {
           '@type': 'LocalBusiness',
           name: 'SwissCleanMove',
-          telephone: '+41 76 488 36 89',
+          telephone: '+41 78 215 80 30',
         },
         areaServed: {
           '@type': 'City',
@@ -206,12 +206,12 @@ export default function SeoLandingPage({
               {p('ctaSoft')}
             </Link>
             <a
-              href="tel:+41764883689"
+              href="tel:+41782158030"
               className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
               onClick={() => handleCtaClick('hero_phone_btn')}
             >
               <Phone className="w-5 h-5 text-swiss-red" />
-              <span>+41 76 488 36 89</span>
+              <span>+41 78 215 80 30</span>
             </a>
           </div>
         }
@@ -527,12 +527,12 @@ export default function SeoLandingPage({
                   {p('ctaStrong')}
                 </Link>
                 <a
-                  href="tel:+41764883689"
+                  href="tel:+41782158030"
                   className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
                   onClick={() => handleCtaClick('footer_phone_btn')}
                 >
                   <Phone className="w-5 h-5 text-swiss-red" />
-                  <span>+41 76 488 36 89</span>
+                  <span>+41 78 215 80 30</span>
                 </a>
               </div>
             </div>

@@ -43,7 +43,7 @@ export async function POST(request: Request) {
               <p style="color: #666; font-size: 12px; margin: 0;">
                 <strong>SwissCleanMove</strong><br>
                 Orpundstrasse 31, 2504 Biel/Bienne<br>
-                📞 +41 76 488 36 89 / +41 78 215 80 30 | 📧 info@swisscleanmove.ch<br>
+                📞 +41 78 215 80 30 | 📧 info@swisscleanmove.ch<br>
                 <span style="color: #999; font-size: 11px;">Sent on ${new Date().toLocaleString('en-CH', { timeZone: 'Europe/Zurich' })}</span>
               </p>
             </div>

@@ -241,10 +241,10 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
                 </span>
               </Link>
               <a
-                href="tel:+41764883689"
+                href="tel:+41782158030"
                 className="flex items-center justify-center space-x-2 btn-secondary px-8 py-4"
               >
-                <span>+41 76 488 36 89</span>
+                <span>+41 78 215 80 30</span>
               </a>
             </div>
           </div>

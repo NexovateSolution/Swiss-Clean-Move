@@ -104,12 +104,12 @@ export default function Header() {
             }`}>
             {/* Phone */}
             <a
-              href="tel:+41764883689"
+              href="tel:+41782158030"
               className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text rounded-lg transition-all duration-150 whitespace-nowrap group border border-swiss-border ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                 }`}
             >
               <Phone className="w-4 h-4 text-swiss-red" />
-              <span className={`font-medium ${locale === 'de' ? 'text-xs' : 'text-xs xl:text-sm'}`}>+41 76 488 36 89</span>
+              <span className={`font-medium ${locale === 'de' ? 'text-xs' : 'text-xs xl:text-sm'}`}>+41 78 215 80 30</span>
             </a>
 
             {/* Language Dropdown */}
@@ -244,11 +244,11 @@ export default function Header() {
               {/* Mobile Actions */}
               <div className="flex flex-col space-y-3 pt-4 px-4 border-t border-swiss-gray-200">
                 <a
-                  href="tel:+41764883689"
+                  href="tel:+41782158030"
                   className="flex items-center space-x-2 text-swiss-text hover:text-swiss-text/80 py-2"
                 >
                   <Phone className="w-4 h-4 text-swiss-red" />
-                  <span className="font-medium">+41 76 488 36 89</span>
+                  <span className="font-medium">+41 78 215 80 30</span>
                 </a>
 
               </div>

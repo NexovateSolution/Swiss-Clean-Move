@@ -548,7 +548,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <strong>SwissCleanMove</strong><br>
                 Orpundstrasse 31, 2504 Biel/Bienne<br>
                 info@swisscleanmove.ch<br>
-                📞 +41 76 488 36 89 / +41 78 215 80 30<br>
+                📞 +41 78 215 80 30<br>
                 UID: CHE-457.949.122
             </div>
         </div>
@@ -701,7 +701,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <strong>SwissCleanMove</strong><br>
                 Orpundstrasse 31, 2504 Biel/Bienne<br>
                 info@swisscleanmove.ch<br>
-                📞 +41 76 488 36 89 / +41 78 215 80 30<br>
+                📞 +41 78 215 80 30<br>
                 UID: CHE-457.949.122
             </div>
         </div>
