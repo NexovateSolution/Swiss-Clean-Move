@@ -160,25 +160,18 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       {/* Swiss-themed Hero Section */}
       <SwissHero
         badge={t('home.hero.badge')}
-        title={(() => {
-          const full = t('home.hero.title');
-          const brand = 'SwissCleanMove';
-          const idx = full.indexOf(brand);
-          if (idx === -1) return full;
-          const rest = full.slice(idx + brand.length);
-          return (
-            <>
-              <span style={{ color: '#CC0000' }}>Swiss</span>
-              <span style={{ color: '#1B2A4A' }}>CleanMove</span>
-              <br />
-              <span className="text-[16px] md:text-[20px] font-semibold text-swiss-body">{rest.trimStart()}</span>
-              <br />
-              <span className="text-[16px] md:text-[20px] font-semibold text-swiss-body">{t('home.hero.subtitle')}</span>
-              <br />
-              <span className="text-[16px] md:text-[20px] font-semibold text-swiss-body">{t('home.hero.subtitle2')}</span>
-            </>
-          );
-        })()}
+        title={
+          <>
+            <span style={{ color: '#CC0000' }}>Swiss</span>
+            <span style={{ color: '#1B2A4A' }}>CleanMove</span>
+            <br />
+            <span className="text-[16px] md:text-[20px] font-semibold text-swiss-body">{t('home.hero.title')}</span>
+            <br />
+            <span className="text-[13px] md:text-[15px] font-medium text-swiss-body">{t('home.hero.subtitle')}</span>
+            <br />
+            <span className="text-[13px] md:text-[15px] font-medium text-swiss-body">{t('home.hero.subtitle2')}</span>
+          </>
+        }
         cta={
           <div className="space-y-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
@@ -194,11 +187,11 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </Link>
 
               <a
-                href="tel:+41764883689"
+                href="tel:+41782158030"
                 className="btn-secondary flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5 text-swiss-red" />
-                <span>+41 76 488 36 89</span>
+                <span>+41 78 215 80 30</span>
               </a>
             </div>
 
