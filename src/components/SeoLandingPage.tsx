@@ -19,6 +19,7 @@ import {
   Home as HomeIcon,
   Sparkles,
   Building2,
+  Heart,
   ChevronDown
 } from 'lucide-react';
 import { useState } from 'react';
@@ -26,7 +27,7 @@ import { useState } from 'react';
 type SeoLandingPageProps = {
   pageKey: string;
   locale: string;
-  service: 'umzug' | 'endreinigung' | 'reinigung';
+  service: 'umzug' | 'endreinigung' | 'reinigung' | 'haushaltshilfe';
   city: string;
   isPillar?: boolean;
   noindex?: boolean;
@@ -39,6 +40,7 @@ const serviceIcons = {
   umzug: Truck,
   endreinigung: Sparkles,
   reinigung: Building2,
+  haushaltshilfe: Heart,
 };
 
 export default function SeoLandingPage({
@@ -170,6 +172,14 @@ export default function SeoLandingPage({
     serviceBullets = pRaw('serviceBullets') as any;
   } catch {
     serviceBullets = [];
+  }
+
+  // Parse premium service cards (for haushaltshilfe pages)
+  let serviceCards: { title: string; description: string; features: string[] }[] = [];
+  try {
+    serviceCards = pRaw('serviceCards') as any;
+  } catch {
+    serviceCards = [];
   }
 
   // Conversion Tracking
@@ -313,6 +323,46 @@ export default function SeoLandingPage({
                     <span className="text-swiss-body">{bullet}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Premium Service Cards (for haushaltshilfe pages) */}
+      {serviceCards.length > 0 && (
+        <section className="section-padding bg-white">
+          <div className="container-max">
+            <div className="max-w-5xl mx-auto space-y-8">
+              <div className="text-center">
+                <h2 className="text-3xl font-bold text-swiss-text">
+                  {p('serviceCardsHeading')}
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {serviceCards.map((card, i) => {
+                  const cardIcons = [Sparkles, HomeIcon, Star, Heart];
+                  const CardIcon = cardIcons[i % cardIcons.length];
+                  return (
+                    <div key={i} className="card p-6 space-y-4 bg-white border border-swiss-border">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 bg-swiss-softRed border border-swiss-border rounded-xl flex items-center justify-center flex-shrink-0">
+                          <CardIcon className="w-6 h-6 text-swiss-red" />
+                        </div>
+                        <h3 className="text-lg font-bold text-swiss-text">{card.title}</h3>
+                      </div>
+                      <p className="text-swiss-body text-sm">{card.description}</p>
+                      <div className="space-y-2">
+                        {card.features.map((feat, fi) => (
+                          <div key={fi} className="flex items-center space-x-2">
+                            <CheckCircle className="w-4 h-4 text-swiss-red flex-shrink-0" />
+                            <span className="text-sm text-swiss-body">{feat}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

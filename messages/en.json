@@ -744,9 +744,34 @@
     }
   },
   "gallery": {
-    "title": "Our Gallery",
-    "description": "See our professional cleaning and moving teams in action.",
-    "imageAlt": "SwissCleanMove Project Image"
+    "badge": "Real Results",
+    "title": "Before & After Gallery",
+    "description": "See the real transformation. Drag the slider to compare our professional cleaning results — every project backed by our quality guarantee.",
+    "imageAlt": "SwissCleanMove Cleaning Result",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "hint": "Drag the slider left and right to compare before & after",
+    "noResults": "No projects found in this category.",
+    "filters": {
+      "all": "All Projects",
+      "kitchen": "Kitchen",
+      "bathroom": "Bathroom",
+      "living": "Living Areas",
+      "floor": "Floors",
+      "window": "Windows",
+      "other": "Other"
+    },
+    "cta": {
+      "badge": "Get Started Today",
+      "title": "Impressed by Our Results?",
+      "subtitle": "Get a free, no-obligation quote for your cleaning or moving project today.",
+      "button": "Request a Quote",
+      "trust": {
+        "freeQuote": "Free Quote",
+        "noObligation": "No Obligation",
+        "fastResponse": "Fast Response"
+      }
+    }
   },
   "footer": {
     "company": "SwissCleanMove",
@@ -5345,6 +5370,10 @@
         {
           "label": "Cleaning company Lyss",
           "href": "reinigung-lyss"
+        },
+        {
+          "label": "Household Help & Cleaning Biel",
+          "href": "haushaltshilfe-biel"
         }
       ],
       "ctaStrongHeading": "Clean Spaces – No Effort for You",
@@ -7439,6 +7468,146 @@
         {
           "question": "Are you available on short notice in Switzerland?",
           "answer": "Yes, we can often arrange moves within 48 hours. Contact us to check availability."
+        }
+      ]
+    },
+    "haushaltshilfeBiel": {
+      "meta": {
+        "title": "Household Help & Cleaning Service Biel | SwissCleanMove",
+        "description": "Professional household help and cleaning service in Biel & Seeland. Regular apartment cleaning, private cleaning, and maintenance cleaning. Free quote."
+      },
+      "badge": "Household Help Biel & Seeland",
+      "h1": "Household Help & Cleaning Service in Biel and Seeland",
+      "heroSubtitle": "SwissCleanMove provides reliable household help, regular apartment cleaning, and professional private cleaning for families, professionals, and seniors.",
+      "ctaSoft": "Request Free Quote",
+      "intro": "Looking for reliable household help or a professional cleaner in Biel/Bienne? SwissCleanMove offers premium private cleaning and household assistance for discerning households across the entire Seeland region. Whether regular apartment cleaning, ironing and laundry service, or support for senior households — we stand for Swiss quality, discretion, and personal service. Our experienced team works to the highest standards so you feel completely at home.",
+      "sections": [
+        {
+          "heading": "Regular Apartment Cleaning in Biel — Flexible and Reliable",
+          "body": "A clean home is the foundation of wellbeing and quality of life. With our regular apartment cleaning in Biel/Bienne, we take complete care of your home — weekly, bi-weekly, or monthly, tailored to your needs. Our cleaning staff work discreetly, punctually, and with the utmost care. Whether kitchen, bathroom, living areas, or floors — every room is thoroughly and professionally cleaned. We exclusively use high-quality, environmentally friendly cleaning products and pay special attention to delicate surfaces. In Biel, Nidau, Brügg, Ipsach, Port, and the surrounding Seeland communities, we are your reliable partner for well-maintained living spaces.",
+          "bullets": [
+            "Weekly, bi-weekly, or monthly cleaning",
+            "Complete kitchen and bathroom cleaning",
+            "Vacuuming, floor cleaning, and dusting",
+            "Environmentally friendly cleaning products",
+            "Always the same trusted cleaning team"
+          ]
+        },
+        {
+          "heading": "Household Help for Families, Professionals, and Seniors",
+          "body": "Our household help service goes far beyond traditional cleaning. We support families, professionals, and seniors with daily household tasks — from ironing and folding laundry to changing bed sheets and maintaining general order. Especially for elderly residents in Biel, Pieterlen, Studen, and Orpund, we offer empathetic and discreet support that makes everyday life easier while promoting independence. Our household helpers are trained, insured, and provide a trusted relationship you can rely on.",
+          "bullets": [
+            "Ironing and laundry service",
+            "Bed sheet changing and tidying",
+            "General household support",
+            "Empathetic senior household care",
+            "Trained and insured household helpers"
+          ]
+        },
+        {
+          "heading": "Why Choose SwissCleanMove for Private Cleaning in Biel?",
+          "body": "SwissCleanMove positions itself as a premium service provider for private households in Biel and Seeland. We are not an anonymous platform — we are a local company based at Orpundstrasse 31 in Biel. You know your cleaning team personally, receive a dedicated contact person, and benefit from service that meets Swiss quality standards in every respect. Our clients in Lyss, Aarberg, Brügg, and the entire Seeland region value our reliability, transparency, and personal commitment. No hidden costs, no rotating cleaners — just trust that grows.",
+          "bullets": []
+        },
+        {
+          "heading": "Your Local Partner in the Seeland Region",
+          "body": "From Biel/Bienne through Nidau, Brügg, and Ipsach to Port, Lyss, Aarberg, Pieterlen, Studen, and Orpund — our household helpers are active across the region every day. We understand the needs of local residents and flexibly adapt our service to your wishes. Whether a family home in Pieterlen, a city apartment in Biel, or a senior residence in Nidau — we come to you and ensure a well-maintained home.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our Household Services at a Glance",
+      "serviceBullets": [
+        "Regular apartment cleaning",
+        "Kitchen and bathroom cleaning",
+        "Vacuuming and floor care",
+        "Ironing and laundry service",
+        "Bed sheet changing",
+        "Laundry folding",
+        "Window frames and surface cleaning",
+        "Senior household support"
+      ],
+      "serviceCardsHeading": "Our Premium Services",
+      "serviceCards": [
+        {
+          "title": "Regular Apartment Cleaning",
+          "description": "Professional cleaning of your home on a fixed schedule — for a permanently well-maintained home.",
+          "features": ["Weekly, bi-weekly, or monthly", "Kitchen, bath, floors, dusting", "Always the same trusted team"]
+        },
+        {
+          "title": "Household Help",
+          "description": "Comprehensive daily household support — for families, professionals, and seniors.",
+          "features": ["Tidying and organizing", "Shopping assistance on request", "Flexible scheduling"]
+        },
+        {
+          "title": "Ironing & Laundry Service",
+          "description": "Professional ironing, laundry folding, and bed sheet changing — discreet and reliable.",
+          "features": ["Shirts, blouses, bed linen ironing", "Laundry sorting and organizing", "Combinable with cleaning"]
+        },
+        {
+          "title": "Senior Household Help",
+          "description": "Empathetic support for elderly people — making everyday life easier.",
+          "features": ["Regular visits", "Light household tasks", "Trusted companionship"]
+        }
+      ],
+      "trustPoints": [
+        "Flexible scheduling — weekly to monthly",
+        "Fully liability insured",
+        "Swiss quality standard"
+      ],
+      "ctaMidHeading": "Looking for Household Help in Biel?",
+      "ctaMidBody": "Request your free, no-obligation quote now. We will get back to you within 24 hours.",
+      "ctaMid": "Request Free Quote",
+      "internalLinksHeading": "More Services in the Region",
+      "internalLinks": [
+        {
+          "label": "Move-out Cleaning Biel — With Handover Guarantee",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Cleaning Company Biel — Maintenance Cleaning",
+          "href": "reinigung-biel"
+        },
+        {
+          "label": "Window Cleaning — Professional & Streak-Free",
+          "href": "services/window-cleaning"
+        }
+      ],
+      "ctaStrongHeading": "Book Household Help Now — Free and No Obligation",
+      "ctaStrongBody": "Call us or fill out our form. We will provide you with a transparent quote within 24 hours.",
+      "ctaStrong": "Request Quote",
+      "testimonial": {
+        "quote": "Our household helper from SwissCleanMove has been coming for three months now — reliable, thorough, and always friendly. We feel very well taken care of.",
+        "author": "Weber Family, Biel",
+        "trust": "Trust through Swiss Quality"
+      },
+      "faqs": [
+        {
+          "question": "How much does household help cost in Biel?",
+          "answer": "Costs depend on apartment size and frequency. We offer transparent pricing and provide a free, no-obligation quote."
+        },
+        {
+          "question": "How often can the cleaning take place?",
+          "answer": "You choose the rhythm: weekly, bi-weekly, or monthly. One-time appointments are also possible."
+        },
+        {
+          "question": "Are your cleaning staff insured?",
+          "answer": "Yes, all our employees are fully liability insured. Your property is in safe hands with us."
+        },
+        {
+          "question": "Do you offer household help for seniors?",
+          "answer": "Yes, we offer empathetic household help specifically for elderly people — regular and reliable, to make everyday life easier."
+        },
+        {
+          "question": "Can I flexibly change or cancel appointments?",
+          "answer": "Yes, changes and cancellations are free of charge up to 24 hours in advance. We are flexible and uncomplicated."
+        },
+        {
+          "question": "Will the same cleaner always come?",
+          "answer": "Yes, we value continuity. You will always receive the same trusted cleaning team."
+        },
+        {
+          "question": "In which areas around Biel do you operate?",
+          "answer": "We work in Biel/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund, and the entire Seeland region."
         }
       ]
     }

@@ -781,9 +781,34 @@
     }
   },
   "gallery": {
-    "title": "Notre Galerie",
-    "description": "Découvrez nos équipes professionnelles de nettoyage et de déménagement en action.",
-    "imageAlt": "Image de projet SwissCleanMove"
+    "badge": "Résultats Réels",
+    "title": "Galerie Avant & Après",
+    "description": "Découvrez la vraie transformation. Glissez le curseur pour comparer nos résultats de nettoyage professionnel — chaque projet garanti par notre engagement qualité.",
+    "imageAlt": "Résultat de nettoyage SwissCleanMove",
+    "beforeLabel": "Avant",
+    "afterLabel": "Après",
+    "hint": "Glissez le curseur à gauche et à droite pour comparer avant & après",
+    "noResults": "Aucun projet trouvé dans cette catégorie.",
+    "filters": {
+      "all": "Tous les Projets",
+      "kitchen": "Cuisine",
+      "bathroom": "Salle de Bain",
+      "living": "Espaces de Vie",
+      "floor": "Sols",
+      "window": "Fenêtres",
+      "other": "Autres"
+    },
+    "cta": {
+      "badge": "Commencez Aujourd'hui",
+      "title": "Impressionné par nos résultats ?",
+      "subtitle": "Obtenez un devis gratuit et sans engagement pour votre projet de nettoyage ou de déménagement.",
+      "button": "Demander un Devis",
+      "trust": {
+        "freeQuote": "Devis Gratuit",
+        "noObligation": "Sans Engagement",
+        "fastResponse": "Réponse Rapide"
+      }
+    }
   },
   "footer": {
     "company": "SwissCleanMove",
@@ -5570,6 +5595,10 @@
         {
           "label": "Entreprise de nettoyage Lyss",
           "href": "reinigung-lyss"
+        },
+        {
+          "label": "Aide ménagère & Femme de ménage Bienne",
+          "href": "haushaltshilfe-biel"
         }
       ],
       "ctaStrongHeading": "Des locaux propres – sans effort pour vous",
@@ -7664,6 +7693,146 @@
         {
           "question": "Êtes-vous disponible rapidement à Suisse ?",
           "answer": "Oui, nous pouvons souvent organiser des déménagements sous 48 heures. Contactez-nous pour vérifier la disponibilité."
+        }
+      ]
+    },
+    "haushaltshilfeBiel": {
+      "meta": {
+        "title": "Aide ménagère & Femme de ménage Bienne | SwissCleanMove",
+        "description": "Aide ménagère professionnelle et femme de ménage à Bienne & Seeland. Nettoyage régulier d'appartement, nettoyage privé et entretien ménager. Devis gratuit."
+      },
+      "badge": "Aide ménagère Bienne & Seeland",
+      "h1": "Aide ménagère & Femme de ménage à Bienne et Seeland",
+      "heroSubtitle": "SwissCleanMove propose une aide ménagère fiable, un nettoyage régulier d'appartement et un nettoyage privé professionnel pour les particuliers, les familles et les seniors.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous cherchez une aide ménagère fiable ou une femme de ménage professionnelle à Bienne ? SwissCleanMove offre un nettoyage privé haut de gamme et une aide ménagère pour les ménages exigeants dans toute la région du Seeland. Que ce soit le nettoyage régulier d'appartement, le service de repassage et de lessive, ou le soutien aux ménages de personnes âgées — nous incarnons la qualité suisse, la discrétion et le service personnalisé.",
+      "sections": [
+        {
+          "heading": "Nettoyage régulier d'appartement à Bienne — Flexible et fiable",
+          "body": "Un logement propre est la base du bien-être et de la qualité de vie. Avec notre nettoyage régulier d'appartement à Bienne, nous prenons soin de votre intérieur — hebdomadaire, bimensuel ou mensuel, selon vos besoins. Notre personnel de nettoyage travaille avec discrétion, ponctualité et le plus grand soin. Que ce soit la cuisine, la salle de bain, les espaces de vie ou les sols — chaque pièce est nettoyée en profondeur. À Biel, Nidau, Brügg, Ipsach, Port et les communes environnantes du Seeland, nous sommes votre partenaire fiable.",
+          "bullets": [
+            "Nettoyage hebdomadaire, bimensuel ou mensuel",
+            "Nettoyage complet de la cuisine et de la salle de bain",
+            "Aspirateur, nettoyage des sols et dépoussiérage",
+            "Produits de nettoyage écologiques",
+            "Toujours la même équipe de confiance"
+          ]
+        },
+        {
+          "heading": "Aide ménagère pour familles, professionnels et seniors",
+          "body": "Notre service d'aide ménagère va bien au-delà du nettoyage classique. Nous soutenons les familles, les professionnels et les seniors dans les tâches ménagères quotidiennes — du repassage au changement de draps en passant par le rangement. Pour les personnes âgées de Bienne, Pieterlen, Studen et Orpund, nous offrons un soutien empathique et discret qui facilite le quotidien.",
+          "bullets": [
+            "Service de repassage et de lessive",
+            "Changement de draps et rangement",
+            "Soutien ménager général",
+            "Aide aux seniors avec empathie",
+            "Aides ménagères formées et assurées"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove pour votre nettoyage privé à Bienne ?",
+          "body": "SwissCleanMove se positionne comme prestataire premium pour les ménages privés de Bienne et du Seeland. Nous ne sommes pas une plateforme anonyme — nous sommes une entreprise locale basée à l'Orpundstrasse 31 à Bienne. Vous connaissez personnellement votre équipe de nettoyage, vous bénéficiez d'un interlocuteur dédié et d'un service conforme aux standards de qualité suisses. Nos clients de Lyss, Aarberg, Brügg et de toute la région du Seeland apprécient notre fiabilité et notre engagement.",
+          "bullets": []
+        },
+        {
+          "heading": "Votre partenaire local dans la région du Seeland",
+          "body": "De Bienne à Nidau, Brügg et Ipsach en passant par Port, Lyss, Aarberg, Pieterlen, Studen et Orpund — nos aides ménagères interviennent chaque jour dans la région. Que ce soit une maison à Pieterlen, un appartement en ville de Bienne ou un logement pour seniors à Nidau — nous venons chez vous et assurons un intérieur soigné.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos prestations d'aide ménagère en un coup d'œil",
+      "serviceBullets": [
+        "Nettoyage régulier d'appartement",
+        "Nettoyage de cuisine et salle de bain",
+        "Aspirateur et nettoyage des sols",
+        "Service de repassage et lessive",
+        "Changement de draps",
+        "Pliage du linge",
+        "Nettoyage des cadres de fenêtres et surfaces",
+        "Soutien aux ménages seniors"
+      ],
+      "serviceCardsHeading": "Nos services premium",
+      "serviceCards": [
+        {
+          "title": "Nettoyage régulier d'appartement",
+          "description": "Nettoyage professionnel à rythme fixe — pour un intérieur toujours soigné.",
+          "features": ["Hebdomadaire, bimensuel ou mensuel", "Cuisine, bain, sols, poussière", "Toujours la même équipe de confiance"]
+        },
+        {
+          "title": "Aide ménagère",
+          "description": "Soutien complet dans les tâches quotidiennes — pour familles, professionnels et seniors.",
+          "features": ["Rangement et organisation", "Aide aux courses sur demande", "Horaires flexibles"]
+        },
+        {
+          "title": "Repassage & Service de linge",
+          "description": "Repassage professionnel, pliage du linge et changement de draps — discret et fiable.",
+          "features": ["Chemises, blouses, draps repassés", "Tri et rangement du linge", "Combinable avec le nettoyage"]
+        },
+        {
+          "title": "Aide ménagère pour seniors",
+          "description": "Soutien empathique pour les personnes âgées — pour faciliter le quotidien.",
+          "features": ["Visites régulières", "Tâches ménagères légères", "Accompagnement de confiance"]
+        }
+      ],
+      "trustPoints": [
+        "Horaires flexibles — hebdomadaire à mensuel",
+        "Assurance responsabilité civile complète",
+        "Standard de qualité suisse"
+      ],
+      "ctaMidHeading": "Vous cherchez une aide ménagère à Bienne ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement. Nous vous répondrons dans les 24 heures.",
+      "ctaMid": "Demander un devis gratuit",
+      "internalLinksHeading": "Autres services dans la région",
+      "internalLinks": [
+        {
+          "label": "Nettoyage de fin de bail Bienne — Avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne — Entretien",
+          "href": "reinigung-biel"
+        },
+        {
+          "label": "Nettoyage de vitres — Professionnel & sans traces",
+          "href": "services/window-cleaning"
+        }
+      ],
+      "ctaStrongHeading": "Réservez une aide ménagère — Gratuit et sans engagement",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous vous fournirons un devis transparent sous 24 heures.",
+      "ctaStrong": "Demander un devis",
+      "testimonial": {
+        "quote": "Notre aide ménagère de SwissCleanMove vient depuis trois mois — fiable, minutieuse et toujours aimable. Nous nous sentons très bien accompagnés.",
+        "author": "Famille Weber, Bienne",
+        "trust": "Confiance grâce à la qualité suisse"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte une aide ménagère à Bienne ?",
+          "answer": "Les coûts dépendent de la taille de l'appartement et de la fréquence. Nous offrons des prix transparents et un devis gratuit sans engagement."
+        },
+        {
+          "question": "À quelle fréquence le nettoyage peut-il avoir lieu ?",
+          "answer": "Vous choisissez le rythme : hebdomadaire, bimensuel ou mensuel. Les interventions ponctuelles sont également possibles."
+        },
+        {
+          "question": "Votre personnel de nettoyage est-il assuré ?",
+          "answer": "Oui, tous nos employés sont entièrement couverts par une assurance responsabilité civile."
+        },
+        {
+          "question": "Proposez-vous une aide ménagère pour les seniors ?",
+          "answer": "Oui, nous proposons une aide ménagère empathique spécialement pour les personnes âgées — régulière et fiable."
+        },
+        {
+          "question": "Puis-je modifier ou annuler mon rendez-vous de manière flexible ?",
+          "answer": "Oui, les modifications et annulations sont gratuites jusqu'à 24 heures avant. Nous sommes flexibles et simples."
+        },
+        {
+          "question": "Est-ce que la même personne viendra toujours ?",
+          "answer": "Oui, nous accordons de l'importance à la continuité. Vous aurez toujours la même équipe de nettoyage de confiance."
+        },
+        {
+          "question": "Dans quelles localités autour de Bienne intervenez-vous ?",
+          "answer": "Nous travaillons à Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund et dans toute la région du Seeland."
         }
       ]
     }

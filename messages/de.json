@@ -816,9 +816,34 @@
     }
   },
   "gallery": {
-    "title": "Unsere Galerie",
-    "description": "Sehen Sie unsere professionellen Reinigungs- und Umzugsteams in Aktion.",
-    "imageAlt": "SwissCleanMove Projektbild"
+    "badge": "Echte Ergebnisse",
+    "title": "Vorher & Nachher Galerie",
+    "description": "Sehen Sie die echte Transformation. Ziehen Sie den Regler, um unsere professionellen Reinigungsergebnisse zu vergleichen — jedes Projekt mit unserer Qualitätsgarantie.",
+    "imageAlt": "SwissCleanMove Reinigungsergebnis",
+    "beforeLabel": "Vorher",
+    "afterLabel": "Nachher",
+    "hint": "Ziehen Sie den Regler nach links und rechts, um Vorher & Nachher zu vergleichen",
+    "noResults": "Keine Projekte in dieser Kategorie gefunden.",
+    "filters": {
+      "all": "Alle Projekte",
+      "kitchen": "Küche",
+      "bathroom": "Badezimmer",
+      "living": "Wohnbereiche",
+      "floor": "Böden",
+      "window": "Fenster",
+      "other": "Sonstiges"
+    },
+    "cta": {
+      "badge": "Jetzt loslegen",
+      "title": "Überzeugt von unseren Ergebnissen?",
+      "subtitle": "Erhalten Sie heute noch ein kostenloses, unverbindliches Angebot für Ihr Reinigungs- oder Umzugsprojekt.",
+      "button": "Angebot anfordern",
+      "trust": {
+        "freeQuote": "Kostenlose Offerte",
+        "noObligation": "Unverbindlich",
+        "fastResponse": "Schnelle Antwort"
+      }
+    }
   },
   "footer": {
     "company": "SwissCleanMove",
@@ -5609,6 +5634,10 @@
         {
           "label": "Reinigungsunternehmen Lyss",
           "href": "reinigung-lyss"
+        },
+        {
+          "label": "Haushaltshilfe & Putzfrau Biel",
+          "href": "haushaltshilfe-biel"
         }
       ],
       "ctaStrongHeading": "Saubere Räume – ohne Aufwand für Sie",
@@ -7703,6 +7732,146 @@
         {
           "question": "Sind Sie kurzfristig in Schweiz verfügbar?",
           "answer": "Ja, oft können wir Umzüge innerhalb von 48 Stunden organisieren. Kontaktieren Sie uns zur Verfügbarkeitsprüfung."
+        }
+      ]
+    },
+    "haushaltshilfeBiel": {
+      "meta": {
+        "title": "Haushaltshilfe & Putzfrau Biel | SwissCleanMove",
+        "description": "Professionelle Haushaltshilfe und Putzfrau in Biel & Seeland. Regelmässige Wohnungsreinigung, Privatreinigung und Unterhaltsreinigung für Haushalte. Kostenlose Offerte."
+      },
+      "badge": "Haushaltshilfe Biel & Seeland",
+      "h1": "Haushaltshilfe & Putzfrau in Biel und Seeland",
+      "heroSubtitle": "SwissCleanMove bietet zuverlässige Haushaltshilfe, regelmässige Wohnungsreinigung und professionelle Privatreinigung für Privatkunden, Familien und Senioren.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Sie suchen eine zuverlässige Haushaltshilfe oder eine professionelle Putzfrau in Biel/Bienne? SwissCleanMove bietet hochwertige Privatreinigung und Haushaltshilfe für anspruchsvolle Privathaushalte in der gesamten Seeland-Region. Ob regelmässige Wohnungsreinigung, Bügel- und Wäscheservice oder Unterstützung im Seniorenhaushalt — wir stehen für Schweizer Qualität, Diskretion und persönlichen Service. Unser erfahrenes Team arbeitet nach höchsten Standards, damit Sie sich in Ihrem Zuhause rundum wohlfühlen.",
+      "sections": [
+        {
+          "heading": "Regelmässige Wohnungsreinigung in Biel — flexibel und zuverlässig",
+          "body": "Eine saubere Wohnung ist die Grundlage für Wohlbefinden und Lebensqualität. Mit unserer regelmässigen Wohnungsreinigung in Biel/Bienne übernehmen wir die komplette Pflege Ihres Zuhauses — wöchentlich, alle zwei Wochen oder monatlich, ganz nach Ihrem Bedarf. Unsere Reinigungskräfte arbeiten diskret, pünktlich und mit höchster Sorgfalt. Ob Küche, Badezimmer, Wohn- und Schlafbereiche oder Böden — jeder Raum wird gründlich und professionell gereinigt. Wir verwenden ausschliesslich hochwertige, umweltverträgliche Reinigungsmittel und achten besonders auf empfindliche Oberflächen. In Biel, Nidau, Brügg, Ipsach, Port und den umliegenden Gemeinden im Seeland sind wir Ihr verlässlicher Partner für gepflegte Wohnräume.",
+          "bullets": [
+            "Wöchentliche, 14-tägige oder monatliche Reinigung",
+            "Komplette Küchen- und Badezimmerreinigung",
+            "Staubsaugen, Bodenreinigung und Staubwischen",
+            "Umweltfreundliche Reinigungsmittel",
+            "Immer das gleiche, vertraute Reinigungsteam"
+          ]
+        },
+        {
+          "heading": "Haushaltshilfe für Familien, Berufstätige und Senioren",
+          "body": "Unser Haushaltshilfe-Service geht weit über das klassische Putzen hinaus. Wir unterstützen Familien, Berufstätige und Senioren bei den täglichen Aufgaben im Haushalt — vom Bügeln und Wäsche zusammenlegen über das Wechseln der Bettwäsche bis hin zur Grundordnung in allen Wohnbereichen. Besonders für ältere Menschen in Biel, Pieterlen, Studen und Orpund bieten wir eine einfühlsame und diskrete Unterstützung, die den Alltag erleichtert und die Selbständigkeit fördert. Unsere Haushaltshilfen sind geschult, versichert und sprechen Deutsch — für ein Vertrauensverhältnis, auf das Sie sich verlassen können.",
+          "bullets": [
+            "Bügel- und Wäscheservice",
+            "Bettwäsche wechseln und aufräumen",
+            "Allgemeine Haushaltsunterstützung",
+            "Einfühlsame Seniorenbetreuung im Haushalt",
+            "Deutschsprachige, versicherte Haushaltshilfen"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove für Ihre Privatreinigung in Biel wählen?",
+          "body": "SwissCleanMove positioniert sich bewusst als Premium-Dienstleister für Privathaushalte in Biel und dem Seeland. Wir sind keine anonyme Vermittlungsplattform, sondern ein lokales Unternehmen mit Sitz an der Orpundstrasse 31 in Biel. Sie kennen Ihr Reinigungsteam persönlich, erhalten einen festen Ansprechpartner und profitieren von einem Service, der Schweizer Qualitätsstandards in jeder Hinsicht entspricht. Unsere Kundschaft in Lyss, Aarberg, Brügg und der gesamten Region Seeland schätzt unsere Zuverlässigkeit, Transparenz und das persönliche Engagement. Keine versteckten Kosten, keine wechselnden Reinigungskräfte — sondern Vertrauen, das wächst.",
+          "bullets": []
+        },
+        {
+          "heading": "Ihr lokaler Partner in der Region Seeland",
+          "body": "Von Biel/Bienne über Nidau, Brügg und Ipsach bis nach Port, Lyss, Aarberg, Pieterlen, Studen und Orpund — unsere Haushaltshilfen sind täglich in der Region im Einsatz. Wir kennen die Bedürfnisse der Menschen vor Ort und passen unseren Service flexibel an Ihre Wünsche an. Ob Einfamilienhaus in Pieterlen, Stadtwohnung in Biel oder Seniorenwohnung in Nidau — wir kommen zu Ihnen und sorgen für ein gepflegtes Zuhause.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Haushaltshilfe-Leistungen im Überblick",
+      "serviceBullets": [
+        "Regelmässige Wohnungsreinigung",
+        "Küchen- und Badezimmerreinigung",
+        "Staubsaugen und Bodenreinigung",
+        "Bügel- und Wäscheservice",
+        "Bettwäsche wechseln",
+        "Wäsche zusammenlegen",
+        "Fensterrahmen und Oberflächen reinigen",
+        "Seniorenhaushalt-Unterstützung"
+      ],
+      "serviceCardsHeading": "Unsere Premium-Dienstleistungen",
+      "serviceCards": [
+        {
+          "title": "Regelmässige Wohnungsreinigung",
+          "description": "Professionelle Reinigung Ihrer Wohnung in festem Rhythmus — für ein dauerhaft gepflegtes Zuhause.",
+          "features": ["Wöchentlich, 14-tägig oder monatlich", "Küche, Bad, Böden, Staub", "Immer dasselbe vertraute Team"]
+        },
+        {
+          "title": "Haushaltshilfe",
+          "description": "Umfassende Unterstützung im täglichen Haushalt — für Familien, Berufstätige und Senioren.",
+          "features": ["Aufräumen, Ordnung schaffen", "Einkaufshilfe auf Wunsch", "Flexible Einsatzzeiten"]
+        },
+        {
+          "title": "Bügel- & Wäscheservice",
+          "description": "Professionelles Bügeln, Wäsche zusammenlegen und Bettwäsche wechseln — diskret und zuverlässig.",
+          "features": ["Hemden, Blusen, Bettwäsche bügeln", "Wäsche sortieren und versorgen", "Kombinierbar mit Reinigung"]
+        },
+        {
+          "title": "Senioren Haushaltshilfe",
+          "description": "Einfühlsame Unterstützung für ältere Menschen — damit der Alltag leichter wird.",
+          "features": ["Regelmässige Besuche", "Leichte Haushaltsaufgaben", "Vertrauensvolle Betreuung"]
+        }
+      ],
+      "trustPoints": [
+        "Flexible Termine — wöchentlich bis monatlich",
+        "Haftpflichtversichert und zuverlässig",
+        "Schweizer Qualitätsstandard"
+      ],
+      "ctaMidHeading": "Haushaltshilfe in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Kostenlose Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in der Region",
+      "internalLinks": [
+        {
+          "label": "Umzugsreinigung Biel — mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Reinigungsfirma Biel — Unterhaltsreinigung",
+          "href": "reinigung-biel"
+        },
+        {
+          "label": "Fensterreinigung — professionell & streifenfrei",
+          "href": "services/window-cleaning"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Haushaltshilfe buchen — kostenlos und unverbindlich",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innert 24 Stunden eine transparente Offerte.",
+      "ctaStrong": "Offerte anfordern",
+      "testimonial": {
+        "quote": "Seit drei Monaten kommt unsere Haushaltshilfe von SwissCleanMove — zuverlässig, gründlich und immer freundlich. Wir fühlen uns bestens betreut.",
+        "author": "Familie Weber, Biel",
+        "trust": "Vertrauen durch Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet eine Haushaltshilfe in Biel?",
+          "answer": "Die Kosten richten sich nach Wohnungsgrösse und Häufigkeit. Wir bieten transparente Preise und erstellen Ihnen eine kostenlose, unverbindliche Offerte."
+        },
+        {
+          "question": "Wie oft kann die Reinigung stattfinden?",
+          "answer": "Sie wählen den Rhythmus: wöchentlich, alle zwei Wochen oder monatlich. Auch einmalige Einsätze sind möglich."
+        },
+        {
+          "question": "Sind Ihre Reinigungskräfte versichert?",
+          "answer": "Ja, alle unsere Mitarbeitenden sind vollständig haftpflichtversichert. Ihr Eigentum ist bei uns in sicheren Händen."
+        },
+        {
+          "question": "Bieten Sie auch Haushaltshilfe für Senioren an?",
+          "answer": "Ja, wir bieten einfühlsame Haushaltshilfe speziell für ältere Menschen — regelmässig und zuverlässig, um den Alltag zu erleichtern."
+        },
+        {
+          "question": "Kann ich den Termin flexibel ändern oder absagen?",
+          "answer": "Ja, Terminänderungen und Absagen sind bis 24 Stunden vorher kostenlos möglich. Wir sind flexibel und unkompliziert."
+        },
+        {
+          "question": "Kommt immer dieselbe Reinigungskraft?",
+          "answer": "Ja, wir legen Wert auf Kontinuität. Sie erhalten immer dasselbe vertraute Reinigungsteam."
+        },
+        {
+          "question": "In welchen Orten rund um Biel sind Sie tätig?",
+          "answer": "Wir arbeiten in Biel/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund und der gesamten Region Seeland."
         }
       ]
     }

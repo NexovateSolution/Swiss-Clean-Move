@@ -74,3 +74,61 @@ a {
     @apply max-w-[1200px] mx-auto;
   }
 }
+
+/* ── Before/After Slider ─────────────────────────────────────────────── */
+.ba-slider-container {
+  @apply relative w-full aspect-[4/3] overflow-hidden rounded-2xl cursor-col-resize select-none;
+}
+
+.ba-slider-image {
+  @apply absolute inset-0;
+}
+
+.ba-slider-line {
+  @apply absolute top-0 bottom-0 z-10;
+  transform: translateX(-50%);
+}
+
+.ba-slider-line-inner {
+  @apply w-[2px] h-full bg-white shadow-[0_0_8px_rgba(0,0,0,0.3)];
+}
+
+.ba-slider-handle {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+         w-12 h-12 rounded-full bg-white shadow-[0_2px_16px_rgba(0,0,0,0.25)]
+         flex items-center justify-center text-gray-700
+         transition-transform duration-200 hover:scale-110;
+}
+
+.ba-label {
+  @apply absolute bottom-4 z-10 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider
+         backdrop-blur-md transition-opacity duration-300 pointer-events-none;
+}
+
+.ba-label-before {
+  @apply left-4 bg-gray-900/70 text-white;
+}
+
+.ba-label-after {
+  @apply right-4 bg-swiss-red/80 text-white;
+}
+
+/* ── Gallery card ────────────────────────────────────────────────────── */
+.gallery-card {
+  @apply relative rounded-2xl overflow-hidden
+         shadow-[0_4px_24px_rgba(0,0,0,0.06)]
+         transition-all duration-500 ease-out;
+}
+
+.gallery-card:hover {
+  @apply shadow-[0_12px_40px_rgba(0,0,0,0.12)] -translate-y-1;
+}
+
+/* ── Scrollbar hide utility ──────────────────────────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

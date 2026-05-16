@@ -380,6 +380,50 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
+      {/* Haushaltshilfe & Privatreinigung – Premium Highlight */}
+      <section className="section-padding bg-white border-b border-swiss-border">
+        <div className="container-max">
+          <div className="max-w-4xl mx-auto">
+            <div className="card p-8 md:p-10 bg-swiss-section border border-swiss-border relative overflow-hidden">
+              {/* Decorative accent */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-swiss-red via-swiss-red/60 to-transparent"></div>
+
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                {/* Icon */}
+                <div className="w-16 h-16 bg-swiss-softRed border border-swiss-border rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Heart className="w-8 h-8 text-swiss-red" />
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 space-y-3">
+                  <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
+                    {locale === 'en' ? 'Household Help & Private Cleaning' : locale === 'fr' ? 'Aide ménagère & Nettoyage privé' : 'Haushaltshilfe & Privatreinigung'}
+                  </h2>
+                  <p className="text-swiss-body leading-relaxed">
+                    {locale === 'en'
+                      ? 'Professional household help and regular apartment cleaning for private clients in Biel & Seeland — flexible, reliable, and to Swiss quality standards.'
+                      : locale === 'fr'
+                        ? 'Aide ménagère professionnelle et nettoyage régulier d\'appartement pour les particuliers à Bienne & Seeland — flexible, fiable et selon les standards de qualité suisses.'
+                        : 'Professionelle Haushaltshilfe und regelmässige Wohnungsreinigung für Privatkunden in Biel & Seeland — flexibel, zuverlässig und nach Schweizer Qualitätsstandard.'}
+                  </p>
+                </div>
+
+                {/* CTA */}
+                <div className="flex-shrink-0">
+                  <Link
+                    href={`/${locale}/haushaltshilfe-biel`}
+                    className="btn-primary inline-flex items-center space-x-2 whitespace-nowrap"
+                  >
+                    <span>{locale === 'en' ? 'Learn More' : locale === 'fr' ? 'En savoir plus' : 'Mehr erfahren'}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Regional Locations Section */}
       <section className="section-padding bg-white border-b border-swiss-border">
         <div className="container-max">

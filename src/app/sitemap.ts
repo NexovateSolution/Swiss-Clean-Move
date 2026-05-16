@@ -33,6 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     seelandCities.map(city => `/${cluster}-${city}`)
   );
 
+  // Haushaltshilfe landing page
+  const householdPages = ['/haushaltshilfe-biel'];
+
   // Blog pages
   const blogPages = [
     '/blog',
@@ -44,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/abgabegarantie-erklaert'
   ];
 
-  const allPaths = [...staticPages, ...localPages, ...blogPages];
+  const allPaths = [...staticPages, ...localPages, ...householdPages, ...blogPages];
 
   return allPaths.map((path) => {
     // Generate alternate languages
