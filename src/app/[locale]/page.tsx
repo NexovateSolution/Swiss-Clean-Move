@@ -134,24 +134,53 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     }
   ];
 
-  const testimonials = [
+  const testimonials = locale === 'fr' ? [
     {
-      name: 'Lukas Meier',
-      location: 'Zürich',
+      name: 'Nazret Bahram',
       rating: 5,
-      text: 'Ausgezeichneter Service! Die Endreinigung war perfekt und wir haben die Kaution vollständig zurückerhalten.',
+      text: 'Excellente expérience avec SwissCleanMove. Communication rapide, équipe ponctuelle et travail très soigné. L\'appartement a été parfaitement nettoyé avec garantie de remise des clés. Merci beaucoup à toute l\'équipe.',
     },
     {
-      name: 'Anna Müller',
-      location: 'Bern',
+      name: 'Boran Aris',
       rating: 5,
-      text: 'Service impeccable! L\'équipe était professionnelle et très efficace. Je recommande vivement.',
+      text: 'Rien à dire le boulot est impeccables, je recommande à 100%.',
     },
     {
-      name: 'Thomas Schmid',
-      location: 'Basel',
+      name: 'Pedro All',
       rating: 5,
-      text: 'Schnell, zuverlässig und gründlich. Genau das, was man sich von einem professionellen Service wünscht.',
+      text: 'Service de nettoyage parfait en cas de déménagement, impeccable tout est propre, l\'équipe est très aimable et professionnel je n\'hésiterai pas à rappeler. Merci beaucoup',
+    }
+  ] : locale === 'en' ? [
+    {
+      name: 'Nazret Bahram',
+      rating: 5,
+      text: 'Excellent experience with SwissCleanMove. Fast communication, punctual team, and very thorough work. The apartment was perfectly cleaned with key handover guarantee. Thank you very much to the whole team.',
+    },
+    {
+      name: 'Boran Aris',
+      rating: 5,
+      text: 'Nothing to say, the work is impeccable. I recommend 100%.',
+    },
+    {
+      name: 'Pedro All',
+      rating: 5,
+      text: 'Perfect cleaning service for moving, impeccable — everything is clean. The team is very friendly and professional. I won\'t hesitate to call again. Thank you very much!',
+    }
+  ] : [
+    {
+      name: 'Nazret Bahram',
+      rating: 5,
+      text: 'Ausgezeichnete Erfahrung mit SwissCleanMove. Schnelle Kommunikation, pünktliches Team und sehr sorgfältige Arbeit. Die Wohnung wurde perfekt gereinigt mit Schlüsselübergabe-Garantie. Vielen Dank an das gesamte Team.',
+    },
+    {
+      name: 'Boran Aris',
+      rating: 5,
+      text: 'Nichts zu beanstanden, die Arbeit ist einwandfrei. Ich empfehle zu 100%.',
+    },
+    {
+      name: 'Pedro All',
+      rating: 5,
+      text: 'Perfekter Reinigungsservice beim Umzug, tadellos — alles ist sauber. Das Team ist sehr freundlich und professionell. Ich werde nicht zögern, wieder anzurufen. Vielen Dank!',
     }
   ];
 
