@@ -111,8 +111,8 @@
     },
     "hero": {
       "badge": "",
-      "title": "Professionelle Umzugs-, Reinigungs- & Facility Services in der ganzen Schweiz",
-      "subtitle": "Für Privatkunden, Unternehmen und Verwaltungen.",
+      "title": "Ihre Reinigungsfirma & Umzugsfirma für die ganze Schweiz",
+      "subtitle": "Professionelle Reinigungs-, Umzugs- & Facility Services für Privatkunden, Unternehmen und Verwaltungen.",
       "subtitle2": "Effizient organisiert. Zuverlässig ausgeführt. Nach Schweizer Qualitätsstandard.",
       "slides": {
         "transport": {
@@ -5433,12 +5433,16 @@
           "href": "reinigung-biel"
         },
         {
-          "label": "Umzugsservice Nidau",
-          "href": "umzug-nidau"
+          "label": "Umzugsfirma Biel/Bienne",
+          "href": "umzugsfirma-biel"
         },
         {
-          "label": "Zügelfirma Lyss",
-          "href": "umzug-lyss"
+          "label": "Transportfirma Biel",
+          "href": "transportfirma-biel"
+        },
+        {
+          "label": "Entsorgung & Räumung",
+          "href": "entsorgung-biel"
         }
       ],
       "ctaStrongHeading": "Jetzt Umzugsofferte anfordern – kostenlos und unverbindlich",
@@ -5628,16 +5632,20 @@
           "href": "endreinigung-biel"
         },
         {
-          "label": "Reinigungsfirma Nidau",
-          "href": "reinigung-nidau"
+          "label": "Reinigungsfirma Biel/Bienne",
+          "href": "reinigungsfirma-biel"
         },
         {
-          "label": "Reinigungsunternehmen Lyss",
-          "href": "reinigung-lyss"
+          "label": "Unterhaltsreinigung",
+          "href": "unterhaltsreinigung-biel"
         },
         {
-          "label": "Haushaltshilfe & Putzfrau Biel",
-          "href": "haushaltshilfe-biel"
+          "label": "Fensterreinigung",
+          "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Baureinigung",
+          "href": "baureinigung-biel"
         }
       ],
       "ctaStrongHeading": "Saubere Räume – ohne Aufwand für Sie",
@@ -7795,22 +7803,38 @@
         {
           "title": "Regelmässige Wohnungsreinigung",
           "description": "Professionelle Reinigung Ihrer Wohnung in festem Rhythmus — für ein dauerhaft gepflegtes Zuhause.",
-          "features": ["Wöchentlich, 14-tägig oder monatlich", "Küche, Bad, Böden, Staub", "Immer dasselbe vertraute Team"]
+          "features": [
+            "Wöchentlich, 14-tägig oder monatlich",
+            "Küche, Bad, Böden, Staub",
+            "Immer dasselbe vertraute Team"
+          ]
         },
         {
           "title": "Haushaltshilfe",
           "description": "Umfassende Unterstützung im täglichen Haushalt — für Familien, Berufstätige und Senioren.",
-          "features": ["Aufräumen, Ordnung schaffen", "Einkaufshilfe auf Wunsch", "Flexible Einsatzzeiten"]
+          "features": [
+            "Aufräumen, Ordnung schaffen",
+            "Einkaufshilfe auf Wunsch",
+            "Flexible Einsatzzeiten"
+          ]
         },
         {
           "title": "Bügel- & Wäscheservice",
           "description": "Professionelles Bügeln, Wäsche zusammenlegen und Bettwäsche wechseln — diskret und zuverlässig.",
-          "features": ["Hemden, Blusen, Bettwäsche bügeln", "Wäsche sortieren und versorgen", "Kombinierbar mit Reinigung"]
+          "features": [
+            "Hemden, Blusen, Bettwäsche bügeln",
+            "Wäsche sortieren und versorgen",
+            "Kombinierbar mit Reinigung"
+          ]
         },
         {
           "title": "Senioren Haushaltshilfe",
           "description": "Einfühlsame Unterstützung für ältere Menschen — damit der Alltag leichter wird.",
-          "features": ["Regelmässige Besuche", "Leichte Haushaltsaufgaben", "Vertrauensvolle Betreuung"]
+          "features": [
+            "Regelmässige Besuche",
+            "Leichte Haushaltsaufgaben",
+            "Vertrauensvolle Betreuung"
+          ]
         }
       ],
       "trustPoints": [
@@ -7872,6 +7896,1044 @@
         {
           "question": "In welchen Orten rund um Biel sind Sie tätig?",
           "answer": "Wir arbeiten in Biel/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund und der gesamten Region Seeland."
+        }
+      ]
+    },
+    "reinigungsfirmaBiel": {
+      "meta": {
+        "title": "Reinigungsfirma Biel | Professionelle Reinigung mit Schweizer Qualität | SwissCleanMove",
+        "description": "SwissCleanMove ist Ihre Reinigungsfirma in Biel/Bienne. Professionelle Reinigung, Unterhaltsreinigung und Gebäudereinigung im Seeland. Jetzt kostenlose Offerte."
+      },
+      "badge": "Reinigungsfirma Biel & Seeland",
+      "h1": "Reinigungsfirma Biel — Ihre professionelle Reinigungsfirma im Seeland",
+      "heroSubtitle": "SwissCleanMove ist Ihre lokale Reinigungsfirma in Biel/Bienne. Zuverlässig, professionell und nach Schweizer Qualitätsstandard — für Privatkunden, Unternehmen und Verwaltungen.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Sie suchen eine zuverlässige Reinigungsfirma in Biel? SwissCleanMove ist Ihr lokaler Partner für professionelle Reinigungsdienstleistungen in Biel/Bienne und der gesamten Region Seeland. Als etablierte Putzfirma in Biel bieten wir ein breites Spektrum an Reinigungslösungen — von der regelmässigen Unterhaltsreinigung über Fensterreinigung bis hin zur Endreinigung mit Abnahmegarantie. Unser Reinigungsunternehmen in Biel steht für Schweizer Qualität, Transparenz und persönlichen Service. Mit Sitz an der Orpundstrasse 31 sind wir direkt vor Ort und kennen die Bedürfnisse unserer Kundschaft im Seeland.",
+      "sections": [
+        {
+          "heading": "Warum SwissCleanMove Ihre Reinigungsfirma in Biel sein sollte",
+          "body": "Als Reinigungsfirma in Biel/Bienne unterscheiden wir uns durch persönlichen Service, feste Ansprechpartner und ein Team, das Ihre Räumlichkeiten kennt. Wir sind keine anonyme Putzfirma — wir sind ein lokales Reinigungsunternehmen mit echten Menschen, die sich um Ihr Zuhause oder Ihre Geschäftsräume kümmern. Unsere Reinigungskräfte sind geschult, versichert und arbeiten nach höchsten Schweizer Standards. Ob Privatwohnung in Nidau, Büro in Brügg oder Gewerbeimmobilie in Lyss — als Ihre Reinigungsfirma im Seeland sind wir flexibel und zuverlässig.",
+          "bullets": [
+            "Lokale Reinigungsfirma mit Sitz in Biel",
+            "Feste Ansprechpartner und vertrautes Team",
+            "Haftpflichtversichert und nach Schweizer Standard",
+            "Flexible Termine — auch kurzfristig verfügbar"
+          ]
+        },
+        {
+          "heading": "Unser Reinigungsangebot für Biel und Umgebung",
+          "body": "Als Reinigungsfirma in Biel decken wir das gesamte Spektrum professioneller Reinigung ab. Von der Wohnungsreinigung für Privatkunden über die Büroreinigung für Unternehmen bis zur Unterhaltsreinigung für Verwaltungen und Liegenschaften. Unsere Putzfirma arbeitet in Biel, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen und Orpund. Wir reinigen Treppenhäuser, Tiefgaragen, Bürokomplexe und Privatwohnungen — gründlich, pünktlich und zu transparenten Preisen.",
+          "bullets": [
+            "Unterhaltsreinigung für Büros und Liegenschaften",
+            "Wohnungsreinigung und Privatreinigung",
+            "Treppenhausreinigung und Gebäudereinigung",
+            "Endreinigung mit 100% Abnahmegarantie",
+            "Fensterreinigung — streifenfrei und professionell"
+          ]
+        },
+        {
+          "heading": "Lokale Reinigungsfirma mit Schweizer Qualitätsanspruch",
+          "body": "SwissCleanMove verbindet lokale Nähe mit professionellem Anspruch. Als Reinigungsfirma in Biel arbeiten wir ausschliesslich mit umweltverträglichen Reinigungsmitteln und modernster Ausrüstung. Unsere Kundschaft in der Region Seeland schätzt unsere Zuverlässigkeit — ob wöchentliche Büroreinigung in Aarberg, monatliche Treppenhausreinigung in Pieterlen oder die Endreinigung nach dem Umzug in Biel. Keine versteckten Kosten, keine Überraschungen — nur saubere Ergebnisse.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Leistungen unserer Reinigungsfirma",
+      "serviceBullets": [
+        "Regelmässige Unterhaltsreinigung",
+        "Büro- und Gewerbereinigung",
+        "Wohnungsreinigung",
+        "Treppenhausreinigung",
+        "Fensterreinigung",
+        "Endreinigung mit Abnahmegarantie",
+        "Baureinigung nach Renovation",
+        "Gastronomie-Reinigung"
+      ],
+      "trustPoints": [
+        "Lokale Reinigungsfirma seit 2024",
+        "Haftpflichtversichert und zuverlässig",
+        "Transparente Preise ohne versteckte Kosten"
+      ],
+      "ctaMidHeading": "Reinigungsfirma in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Kostenlose Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Unterhaltsreinigung Biel",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Fensterreinigung Biel",
+          "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Endreinigung Biel — mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Umzugsfirma Biel",
+          "href": "umzugsfirma-biel"
+        }
+      ],
+      "ctaStrongHeading": "Ihre Reinigungsfirma in Biel — jetzt kontaktieren",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innert 24 Stunden eine transparente Offerte für Ihre Reinigung.",
+      "ctaStrong": "Offerte anfordern",
+      "testimonial": {
+        "quote": "SwissCleanMove ist unsere Reinigungsfirma des Vertrauens in Biel. Zuverlässig, gründlich und immer pünktlich.",
+        "author": "Unternehmen in Biel",
+        "trust": "Vertrauen durch Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet eine Reinigungsfirma in Biel?",
+          "answer": "Die Kosten hängen von Fläche und Häufigkeit ab. Als Reinigungsfirma in Biel bieten wir transparente Preise ab CHF 35/Stunde. Fordern Sie eine kostenlose Offerte an."
+        },
+        {
+          "question": "Welche Reinigungsleistungen bietet Ihre Reinigungsfirma in Biel an?",
+          "answer": "Wir bieten Unterhaltsreinigung, Büroreinigung, Wohnungsreinigung, Fensterreinigung, Treppenhausreinigung, Endreinigung und Baureinigung in Biel und dem Seeland."
+        },
+        {
+          "question": "Sind Sie als Reinigungsfirma in Biel versichert?",
+          "answer": "Ja, als Reinigungsfirma in Biel sind wir vollständig haftpflichtversichert. Ihr Eigentum ist bei uns in sicheren Händen."
+        },
+        {
+          "question": "Wie schnell kann Ihre Reinigungsfirma in Biel starten?",
+          "answer": "Wir sind oft innerhalb von 24–48 Stunden verfügbar. Kontaktieren Sie uns für eine schnelle Terminvereinbarung."
+        },
+        {
+          "question": "In welchen Orten ist Ihre Reinigungsfirma tätig?",
+          "answer": "Unsere Reinigungsfirma arbeitet in Biel/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund und der gesamten Region Seeland."
+        }
+      ]
+    },
+    "umzugsfirmaBiel": {
+      "meta": {
+        "title": "Umzugsfirma Biel | Stressfreier Umzug mit Schweizer Qualität | SwissCleanMove",
+        "description": "SwissCleanMove ist Ihre Umzugsfirma in Biel/Bienne. Professionelle Umzüge, Möbeltransport und Räumungen im Seeland. Faire Preise ab CHF 490."
+      },
+      "badge": "Umzugsfirma Biel & Seeland",
+      "h1": "Umzugsfirma Biel — Ihr zuverlässiger Umzugspartner im Seeland",
+      "heroSubtitle": "SwissCleanMove ist Ihre lokale Umzugsfirma in Biel/Bienne. Professionelle Umzüge für Privatkunden und Unternehmen — stressfrei, pünktlich und transparent.",
+      "ctaSoft": "Kostenlose Umzugsofferte anfordern",
+      "intro": "Sie suchen eine zuverlässige Umzugsfirma in Biel? SwissCleanMove ist Ihre Zügelfirma im Seeland — erfahren, versichert und immer pünktlich. Als lokales Umzugsunternehmen in Biel kennen wir jede Strasse, jedes Quartier und jede Herausforderung. Ob Privatumzug in Nidau, Firmenumzug in Brügg oder Möbeltransport nach Lyss — unsere Umzugsfirma steht für Schweizer Präzision und faire Preise ab CHF 490.",
+      "sections": [
+        {
+          "heading": "Ihre Umzugsfirma in Biel — persönlich und professionell",
+          "body": "Als Umzugsfirma in Biel/Bienne setzen wir auf persönlichen Service statt anonymer Plattformen. Sie erhalten einen festen Ansprechpartner, ein erfahrenes Umzugsteam und eine transparente Pauschalofferte ohne versteckte Kosten. Unsere Zügelfirma in Biel ist direkt vor Ort — das bedeutet kurze Anfahrtswege, flexible Termine und schnelle Verfügbarkeit. Ob kleiner Studentenumzug oder grosser Einfamilienhausumzug im Seeland — als Ihre Umzugsfirma planen wir jeden Umzug individuell.",
+          "bullets": [
+            "Lokale Umzugsfirma mit Sitz in Biel",
+            "Erfahrenes Team mit 2–4 Zügelhelfer",
+            "Transparente Pauschalpreise ab CHF 490",
+            "Transportversicherung inklusive",
+            "Auch kurzfristig verfügbar"
+          ]
+        },
+        {
+          "heading": "Umzugsservice unserer Zügelfirma in Biel",
+          "body": "Unsere Umzugsfirma in Biel bietet das komplette Umzugspaket: kostenlose Besichtigung, professionelles Verpacken, Möbeldemontage und -montage, sicherer Transport mit modernen Fahrzeugen und Aufbau am neuen Standort. In Biel, Nidau, Brügg, Ipsach, Port, Lyss und Aarberg sind wir täglich unterwegs. Als Umzugsunternehmen im Seeland führen wir auch Fernumzüge in die ganze Schweiz durch.",
+          "bullets": [
+            "Privatumzüge und Firmenumzüge",
+            "Möbelmontage und -demontage",
+            "Verpackungsservice mit Material",
+            "Möbellift für schwierige Zugänge",
+            "Entsorgung von Altmöbeln auf Wunsch"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove als Umzugsfirma in Biel wählen?",
+          "body": "Als Umzugsfirma in Biel sind wir mehr als nur Zügelhelfer — wir sind Ihr Partner für einen stressfreien Neuanfang. Unsere Kundschaft im Seeland schätzt unsere Pünktlichkeit, Sorgfalt und die persönliche Betreuung. Mit über 50 erfolgreichen Umzügen in Biel und Umgebung wissen wir genau, worauf es ankommt. Keine Überraschungen, keine versteckten Zuschläge — als Ihr Umzugsunternehmen in Biel stehen wir für Vertrauen und Qualität.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Leistungen unserer Umzugsfirma",
+      "serviceBullets": [
+        "Privatumzüge",
+        "Firmen- und Büroumzüge",
+        "Möbeltransport",
+        "Ein- und Auspackservice",
+        "Möbelmontage",
+        "Möbellift-Service",
+        "Transportversicherung",
+        "Entsorgung auf Wunsch"
+      ],
+      "trustPoints": [
+        "Über 50 Umzüge in Biel",
+        "Faire Pauschalpreise ab CHF 490",
+        "Versichert und zuverlässig"
+      ],
+      "ctaMidHeading": "Umzugsfirma in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie Ihre kostenlose Umzugsofferte an. Wir melden uns innerhalb von 24 Stunden mit einem transparenten Angebot.",
+      "ctaMid": "Umzugsofferte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Endreinigung Biel — mit Abnahmegarantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Transportfirma Biel",
+          "href": "transportfirma-biel"
+        },
+        {
+          "label": "Entsorgung Biel",
+          "href": "entsorgung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Ihre Umzugsfirma in Biel — jetzt Offerte anfordern",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innert 24 Stunden eine transparente Umzugsofferte.",
+      "ctaStrong": "Umzugsofferte sichern",
+      "testimonial": {
+        "quote": "Unsere Umzugsfirma in Biel — pünktlich, sorgfältig und fair. SwissCleanMove hat unseren Umzug perfekt organisiert.",
+        "author": "Familie M., Biel",
+        "trust": "Über 50 zufriedene Kunden"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet eine Umzugsfirma in Biel?",
+          "answer": "Unsere Umzugsfirma in Biel bietet Pauschalpreise ab CHF 490 für Privatumzüge. Der genaue Preis hängt von Wohnungsgrösse und Distanz ab."
+        },
+        {
+          "question": "Wie früh sollte ich eine Umzugsfirma in Biel buchen?",
+          "answer": "Wir empfehlen 2–3 Wochen Vorlauf, sind aber auch kurzfristig innerhalb von 48 Stunden verfügbar."
+        },
+        {
+          "question": "Ist Ihre Umzugsfirma in Biel versichert?",
+          "answer": "Ja, alle Umzüge sind durch unsere Transportversicherung abgedeckt. Ihr Mobiliar ist bei uns sicher."
+        },
+        {
+          "question": "Bietet Ihre Umzugsfirma auch Endreinigung an?",
+          "answer": "Ja, wir bieten Kombi-Pakete: Umzug + Endreinigung mit Abnahmegarantie. Alles aus einer Hand."
+        },
+        {
+          "question": "In welchen Orten arbeitet Ihre Umzugsfirma?",
+          "answer": "Unsere Umzugsfirma ist in Biel/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen und Orpund tätig."
+        }
+      ]
+    },
+    "unterhaltsreinigungBiel": {
+      "meta": {
+        "title": "Unterhaltsreinigung Biel | Regelmässige Gebäudereinigung | SwissCleanMove",
+        "description": "Professionelle Unterhaltsreinigung in Biel/Bienne. Regelmässige Büroreinigung, Treppenhausreinigung und Gebäudereinigung im Seeland. Kostenlose Offerte."
+      },
+      "badge": "Unterhaltsreinigung Biel",
+      "h1": "Unterhaltsreinigung Biel — Regelmässige Reinigung für Büros & Gebäude",
+      "heroSubtitle": "Professionelle Unterhaltsreinigung in Biel/Bienne für Büros, Treppenhäuser, Gewerbeimmobilien und Liegenschaften — flexibel, zuverlässig und nach Schweizer Standard.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Saubere Räume sind die Grundlage für Produktivität und Wohlbefinden. SwissCleanMove bietet professionelle Unterhaltsreinigung in Biel/Bienne für Büros, Treppenhäuser, Gewerberäume und Wohnliegenschaften. Als lokale Reinigungsfirma im Seeland verstehen wir die Bedürfnisse unserer Kundschaft und bieten massgeschneiderte Reinigungspläne — wöchentlich, 14-tägig oder monatlich. Unsere Unterhaltsreinigung in Biel garantiert dauerhaft saubere Räumlichkeiten zu transparenten Preisen.",
+      "sections": [
+        {
+          "heading": "Unterhaltsreinigung für Büros in Biel und Seeland",
+          "body": "Ein sauberes Büro steigert die Produktivität und hinterlässt einen professionellen Eindruck bei Kunden und Mitarbeitenden. Unsere Unterhaltsreinigung in Biel umfasst die regelmässige Reinigung von Arbeitsplätzen, Sanitäranlagen, Küchen und Gemeinschaftsräumen. Wir reinigen Büros in Biel, Nidau, Brügg, Lyss und der gesamten Region — zu flexiblen Zeiten, die Ihren Betrieb nicht stören. Abends, frühmorgens oder am Wochenende — wir passen uns an.",
+          "bullets": [
+            "Regelmässige Büroreinigung",
+            "Sanitäranlagen und Küchen",
+            "Flexible Reinigungszeiten",
+            "Wöchentlich, 14-tägig oder monatlich"
+          ]
+        },
+        {
+          "heading": "Treppenhausreinigung und Gebäudeunterhalt",
+          "body": "Für Liegenschaftsverwaltungen und Hauseigentümer in Biel bieten wir professionelle Treppenhausreinigung und Gebäudeunterhalt. Saubere Eingangsbereiche und Treppenhäuser sind die Visitenkarte jeder Immobilie. Unsere Unterhaltsreinigung in Biel sorgt dafür, dass Ihre Liegenschaften in Pieterlen, Aarberg, Ipsach und Orpund stets gepflegt aussehen — regelmässig und verlässlich.",
+          "bullets": [
+            "Treppenhausreinigung für Mehrfamilienhäuser",
+            "Eingangsbereich und Tiefgarage",
+            "Abfallentsorgung und Winterdienst",
+            "Regelmässige Kontrollen"
+          ]
+        },
+        {
+          "heading": "Ihr Partner für Unterhaltsreinigung im Seeland",
+          "body": "SwissCleanMove ist mehr als eine Putzfirma — wir sind Ihr langfristiger Partner für Unterhaltsreinigung in Biel und dem Seeland. Wir erstellen individuelle Reinigungspläne, führen regelmässige Qualitätskontrollen durch und passen unseren Service an Ihre sich ändernden Bedürfnisse an. Unsere Reinigungskräfte kennen Ihre Räumlichkeiten und arbeiten selbstständig und diskret.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Unterhaltsreinigung im Überblick",
+      "serviceBullets": [
+        "Büroreinigung",
+        "Treppenhausreinigung",
+        "Sanitärreinigung",
+        "Bodenreinigung und -pflege",
+        "Fensterrahmen reinigen",
+        "Abfallentsorgung",
+        "Winterdienst auf Wunsch",
+        "Qualitätskontrollen"
+      ],
+      "trustPoints": [
+        "Regelmässig und zuverlässig",
+        "Flexible Reinigungspläne",
+        "Umweltfreundliche Reinigungsmittel"
+      ],
+      "ctaMidHeading": "Unterhaltsreinigung in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose Offerte für regelmässige Unterhaltsreinigung an.",
+      "ctaMid": "Offerte anfordern",
+      "internalLinksHeading": "Weitere Reinigungsleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Fensterreinigung Biel",
+          "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Facility Service Biel",
+          "href": "facility-service-biel"
+        },
+        {
+          "label": "Hauswartung Biel",
+          "href": "hauswartung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Unterhaltsreinigung buchen",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine massgeschneiderte Unterhaltsreinigung in Biel und im Seeland.",
+      "ctaStrong": "Offerte anfordern",
+      "testimonial": {
+        "quote": "Seit einem Jahr reinigt SwissCleanMove unsere Büros in Biel — immer pünktlich, immer gründlich.",
+        "author": "KMU in Biel",
+        "trust": "Zuverlässige Unterhaltsreinigung"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet Unterhaltsreinigung in Biel?",
+          "answer": "Die Kosten hängen von Fläche und Häufigkeit ab. Wir bieten individuelle Offerten für Unterhaltsreinigung in Biel ab CHF 35/Stunde."
+        },
+        {
+          "question": "Wie oft findet die Unterhaltsreinigung statt?",
+          "answer": "Sie wählen: wöchentlich, 14-tägig oder monatlich. Wir passen den Rhythmus an Ihre Bedürfnisse an."
+        },
+        {
+          "question": "Reinigen Sie auch Treppenhäuser?",
+          "answer": "Ja, Treppenhausreinigung ist Teil unserer Unterhaltsreinigung in Biel — für Mehrfamilienhäuser und Liegenschaften."
+        },
+        {
+          "question": "Können Sie abends oder am Wochenende reinigen?",
+          "answer": "Ja, wir bieten flexible Reinigungszeiten, die Ihren Betrieb nicht stören."
+        },
+        {
+          "question": "In welchen Orten bieten Sie Unterhaltsreinigung an?",
+          "answer": "In Biel/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund und im gesamten Seeland."
+        }
+      ]
+    },
+    "fensterreinigungBiel": {
+      "meta": {
+        "title": "Fensterreinigung Biel | Streifenfreie Fenster | SwissCleanMove",
+        "description": "Professionelle Fensterreinigung in Biel/Bienne. Streifenfreie Fenster für Wohnungen, Büros und Gewerbe im Seeland. Jetzt Offerte anfordern."
+      },
+      "badge": "Fensterreinigung Biel",
+      "h1": "Fensterreinigung Biel — Streifenfreie Fenster für Wohnungen & Büros",
+      "heroSubtitle": "Professionelle Fensterreinigung in Biel/Bienne und im Seeland. Kristallklare Fenster für Privathaushalte, Büros und Gewerbeimmobilien — zuverlässig und streifenfrei.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Saubere Fenster lassen Räume heller wirken und steigern den Wert jeder Immobilie. SwissCleanMove bietet professionelle Fensterreinigung in Biel/Bienne für Privathaushalte, Bürokomplexe und Gewerbeimmobilien. Als Fensterputzer in Biel arbeiten wir mit modernster Ausrüstung und umweltfreundlichen Reinigungsmitteln — für streifenfreie Ergebnisse, die überzeugen. Von der Stadtwohnung in Biel über das Büro in Nidau bis zum Geschäftsgebäude in Lyss — unsere Glasreinigung im Seeland ist gründlich, schnell und professionell.",
+      "sections": [
+        {
+          "heading": "Fensterreinigung für Privathaushalte in Biel",
+          "body": "Ob Mietwohnung, Eigentumswohnung oder Einfamilienhaus — unsere Fensterreinigung in Biel bringt Ihre Fenster zum Strahlen. Wir reinigen Fenster innen und aussen, inklusive Rahmen, Fensterbänke und Rollläden. Besonders bei schwer zugänglichen Fenstern in oberen Stockwerken setzen wir auf professionelle Ausrüstung. In Biel, Nidau, Brügg, Ipsach und Pieterlen sind wir regelmässig im Einsatz — einmalig oder als regelmässiger Service.",
+          "bullets": [
+            "Fenster innen und aussen",
+            "Rahmen, Fensterbänke und Rollläden",
+            "Schwer zugängliche Fenster",
+            "Einmalig oder regelmässig"
+          ]
+        },
+        {
+          "heading": "Glasreinigung für Büros und Gewerbe",
+          "body": "Für Unternehmen in Biel und im Seeland bieten wir professionelle Glasreinigung und Fensterreinigung für Bürogebäude, Geschäfte und Gewerbeimmobilien. Saubere Glasfassaden und Schaufenster hinterlassen einen professionellen Eindruck bei Kunden. Unsere Fensterputzer arbeiten effizient und diskret — auch in Lyss, Aarberg und der gesamten Region.",
+          "bullets": [
+            "Bürofenster und Glasfassaden",
+            "Schaufensterreinigung",
+            "Regelmässige Intervalle möglich",
+            "Diskreter Service ausserhalb der Bürozeiten"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove als Fensterputzer in Biel?",
+          "body": "Als lokaler Fensterputzer in Biel bieten wir faire Preise, zuverlässige Termine und streifenfreie Qualität. Unsere Reinigungskräfte sind geschult, versichert und verwenden professionelle Squeegees und osmosegereinigtes Wasser für makellose Ergebnisse. Keine Schlieren, keine Rückstände — nur klare Sicht.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Fensterreinigung im Überblick",
+      "serviceBullets": [
+        "Fenster innen und aussen",
+        "Rahmen und Fensterbänke",
+        "Glasfassaden",
+        "Schaufenster",
+        "Wintergärten",
+        "Rollläden und Jalousien",
+        "Balkonverglasungen",
+        "Dachfenster"
+      ],
+      "trustPoints": [
+        "Streifenfrei garantiert",
+        "Professionelle Ausrüstung",
+        "Umweltfreundliche Reinigung"
+      ],
+      "ctaMidHeading": "Fensterreinigung in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose Offerte für professionelle Fensterreinigung an.",
+      "ctaMid": "Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Unterhaltsreinigung Biel",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Hauswartung Biel",
+          "href": "hauswartung-biel"
+        },
+        {
+          "label": "Facility Service Biel",
+          "href": "facility-service-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Fensterreinigung buchen — streifenfrei garantiert",
+      "ctaStrongBody": "Kontaktieren Sie uns für kristallklare Fenster in Biel und im Seeland.",
+      "ctaStrong": "Offerte anfordern",
+      "testimonial": {
+        "quote": "Endlich streifenfreie Fenster! SwissCleanMove macht einen super Job bei unserer Fensterreinigung in Biel.",
+        "author": "Privatkundin, Nidau",
+        "trust": "Professionelle Fensterreinigung"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet Fensterreinigung in Biel?",
+          "answer": "Die Kosten hängen von Anzahl und Grösse der Fenster ab. Wir bieten transparente Preise und erstellen Ihnen eine kostenlose Offerte."
+        },
+        {
+          "question": "Reinigen Sie auch Fensterrahmen und Fensterbänke?",
+          "answer": "Ja, unsere Fensterreinigung in Biel umfasst Glasflächen, Rahmen, Fensterbänke und auf Wunsch auch Rollläden."
+        },
+        {
+          "question": "Bieten Sie regelmässige Fensterreinigung an?",
+          "answer": "Ja, wir bieten monatliche, vierteljährliche oder halbjährliche Fensterreinigung in Biel und im Seeland."
+        },
+        {
+          "question": "Reinigen Sie auch schwer zugängliche Fenster?",
+          "answer": "Ja, mit professioneller Ausrüstung erreichen wir auch Fenster in oberen Stockwerken sicher und gründlich."
+        },
+        {
+          "question": "In welchen Orten bieten Sie Fensterreinigung an?",
+          "answer": "In Biel/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen und im gesamten Seeland."
+        }
+      ]
+    },
+    "transportfirmaBiel": {
+      "meta": {
+        "title": "Transportfirma Biel | Möbeltransport & Lieferservice | SwissCleanMove",
+        "description": "SwissCleanMove ist Ihre Transportfirma in Biel/Bienne. Möbeltransport, Lieferservice und Logistik im Seeland. Faire Preise und sichere Transporte."
+      },
+      "badge": "Transportfirma Biel",
+      "h1": "Transportfirma Biel — Möbeltransport & Lieferservice im Seeland",
+      "heroSubtitle": "SwissCleanMove ist Ihre lokale Transportfirma in Biel/Bienne. Professioneller Möbeltransport, Lieferservice und Logistik — schnell, sicher und versichert.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Sie brauchen einen zuverlässigen Transport in Biel? SwissCleanMove ist Ihre Transportfirma im Seeland — ob Möbeltransport, Einzelstücke, Gerätelieferungen oder komplette Logistiklösungen. Als lokale Transportfirma in Biel verfügen wir über moderne 3.5t- und 7.5t-Fahrzeuge und ein erfahrenes Team. Von Biel über Nidau und Brügg bis nach Lyss und Aarberg — wir transportieren sicher, pünktlich und zu transparenten Preisen.",
+      "sections": [
+        {
+          "heading": "Möbeltransport in Biel und Umgebung",
+          "body": "Als Transportfirma in Biel bieten wir professionellen Möbeltransport für Privatkunden und Unternehmen. Ob einzelne Möbelstücke, Elektrogeräte oder komplette Wohnungsauflösungen — wir transportieren alles sicher und fachgerecht. Unsere Fahrzeuge sind mit Gurten, Decken und Polstermaterial ausgestattet, um Ihre Güter optimal zu schützen. In Biel, Nidau, Brügg, Ipsach, Port und dem gesamten Seeland sind wir täglich unterwegs.",
+          "bullets": [
+            "Möbeltransport für Einzelstücke",
+            "Kompletttransporte für Wohnungen",
+            "Geräte- und Maschinenlieferungen",
+            "Verpackung und Sicherung inklusive"
+          ]
+        },
+        {
+          "heading": "Lieferservice und Logistik im Seeland",
+          "body": "Neben dem klassischen Möbeltransport bieten wir als Transportfirma in Biel auch Lieferservice für Unternehmen. Regelmässige Warenlieferungen, Lagerumzüge oder Materiallogistik — wir planen und führen Ihre Transporte zuverlässig durch. Unsere Fahrer kennen die Region rund um Biel, Lyss, Aarberg und Pieterlen und finden immer den schnellsten Weg.",
+          "bullets": [
+            "Warenlieferungen für Unternehmen",
+            "Lagerumzüge",
+            "Materiallogistik",
+            "Flexibel und kurzfristig verfügbar"
+          ]
+        },
+        {
+          "heading": "Ihre Transportfirma in Biel — lokal und versichert",
+          "body": "Als Ihre Transportfirma in Biel bieten wir vollversicherte Transporte mit transparenter Preisgestaltung. Kein Risiko für Sie — Ihre Güter sind bei jedem Transport durch unsere Versicherung abgedeckt. Wir sind direkt in Biel ansässig, kennen die Region und können auch kurzfristig reagieren.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Leistungen unserer Transportfirma",
+      "serviceBullets": [
+        "Möbeltransport",
+        "Einzelstücktransport",
+        "Gerätelieferungen",
+        "Lagerumzüge",
+        "Warenlogistik",
+        "3.5t und 7.5t Fahrzeuge",
+        "Transportversicherung",
+        "Verpackungsservice"
+      ],
+      "trustPoints": [
+        "Versicherte Transporte",
+        "Moderne Fahrzeugflotte",
+        "Faire Pauschalpreise"
+      ],
+      "ctaMidHeading": "Transportfirma in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie Ihre kostenlose Transportofferte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel",
+          "href": "umzugsfirma-biel"
+        },
+        {
+          "label": "Entsorgung Biel",
+          "href": "entsorgung-biel"
+        },
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Endreinigung Biel",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Ihre Transportfirma in Biel — jetzt kontaktieren",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen eine transparente Offerte.",
+      "ctaStrong": "Transportofferte anfordern",
+      "testimonial": {
+        "quote": "SwissCleanMove hat unseren Möbeltransport in Biel perfekt abgewickelt — pünktlich und sorgfältig.",
+        "author": "Kunde, Biel",
+        "trust": "Sichere Transporte im Seeland"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet ein Transport in Biel?",
+          "answer": "Die Kosten hängen von Distanz und Umfang ab. Wir bieten transparente Pauschalpreise und eine kostenlose Offerte."
+        },
+        {
+          "question": "Welche Fahrzeuge hat Ihre Transportfirma?",
+          "answer": "Wir verfügen über 3.5t- und 7.5t-Transportfahrzeuge mit kompletter Sicherungsausstattung."
+        },
+        {
+          "question": "Ist der Transport versichert?",
+          "answer": "Ja, alle Transporte unserer Transportfirma in Biel sind vollversichert."
+        },
+        {
+          "question": "Können Sie auch kurzfristig transportieren?",
+          "answer": "Ja, wir sind oft innerhalb von 24–48 Stunden verfügbar."
+        },
+        {
+          "question": "Wohin transportieren Sie?",
+          "answer": "Von Biel/Bienne ins gesamte Seeland und die ganze Schweiz."
+        }
+      ]
+    },
+    "entsorgungBiel": {
+      "meta": {
+        "title": "Entsorgung Biel | Möbelentsorgung & Räumung | SwissCleanMove",
+        "description": "Professionelle Entsorgung in Biel/Bienne. Möbelentsorgung, Wohnungsräumung und Entrümpelung im Seeland. Fachgerecht und umweltbewusst."
+      },
+      "badge": "Entsorgung Biel",
+      "h1": "Entsorgung Biel — Fachgerechte Möbelentsorgung & Räumung im Seeland",
+      "heroSubtitle": "SwissCleanMove bietet professionelle Entsorgung in Biel/Bienne. Möbelentsorgung, Wohnungsräumung und Entrümpelung — fachgerecht, schnell und umweltbewusst.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Sie müssen alte Möbel entsorgen, eine Wohnung räumen oder brauchen eine professionelle Entrümpelung in Biel? SwissCleanMove ist Ihr Partner für fachgerechte Entsorgung im Seeland. Wir kümmern uns um die Abholung, den Transport und die umweltgerechte Entsorgung Ihrer Altmöbel, Elektrogeräte und Haushaltsauflösungen. In Biel, Nidau, Brügg, Lyss und der gesamten Region sind wir schnell vor Ort.",
+      "sections": [
+        {
+          "heading": "Möbelentsorgung und Wohnungsräumung in Biel",
+          "body": "Ob einzelne Möbelstücke oder komplette Wohnungsauflösungen — unsere Entsorgung in Biel ist unkompliziert und professionell. Wir kommen zu Ihnen, demontieren bei Bedarf, tragen alles raus und entsorgen fachgerecht. Besonders nach Umzügen, Renovationen oder im Todesfall bieten wir schnelle und diskrete Räumungen in Biel, Nidau, Pieterlen und Orpund.",
+          "bullets": [
+            "Möbelentsorgung und Abholung",
+            "Komplette Wohnungsräumungen",
+            "Keller- und Dachbodenräumung",
+            "Diskrete Räumung im Todesfall"
+          ]
+        },
+        {
+          "heading": "Umweltgerechte Entsorgung — unser Anspruch",
+          "body": "Als verantwortungsvolles Unternehmen in Biel achten wir auf umweltgerechte Entsorgung. Wiederverwertbare Materialien werden recycelt, Sondermüll fachgerecht entsorgt und brauchbare Gegenstände auf Wunsch gespendet. Unsere Entsorgung in Biel entspricht den Schweizer Umweltstandards — transparent und nachhaltig.",
+          "bullets": [
+            "Recycling von Wertstoffen",
+            "Fachgerechte Sondermüllentsorgung",
+            "Spendenvermittlung auf Wunsch",
+            "Schweizer Umweltstandards"
+          ]
+        },
+        {
+          "heading": "Schnelle Entsorgung im Seeland",
+          "body": "Als lokales Unternehmen in Biel sind wir schnell vor Ort — in Biel, Nidau, Brügg, Ipsach, Lyss, Aarberg und der gesamten Region. Wir bieten kurzfristige Termine für dringende Entsorgungen und arbeiten effizient, damit Ihre Räume schnell wieder frei sind.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Entsorgungsleistungen",
+      "serviceBullets": [
+        "Möbelentsorgung",
+        "Wohnungsräumung",
+        "Kellerräumung",
+        "Dachbodenräumung",
+        "Elektrogeräte-Entsorgung",
+        "Sperrmüllabholung",
+        "Gartenabfall-Entsorgung",
+        "Büroauflösung"
+      ],
+      "trustPoints": [
+        "Umweltgerechte Entsorgung",
+        "Schnell und zuverlässig",
+        "Transparente Pauschalpreise"
+      ],
+      "ctaMidHeading": "Entsorgung in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie Ihre kostenlose Offerte für professionelle Entsorgung an.",
+      "ctaMid": "Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Umzugsfirma Biel",
+          "href": "umzugsfirma-biel"
+        },
+        {
+          "label": "Transportfirma Biel",
+          "href": "transportfirma-biel"
+        },
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Baureinigung Biel",
+          "href": "baureinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Entsorgung buchen — schnell und fachgerecht",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine unkomplizierte Entsorgung in Biel und im Seeland.",
+      "ctaStrong": "Entsorgungsofferte anfordern",
+      "testimonial": {
+        "quote": "Die Wohnungsräumung war super organisiert. SwissCleanMove hat alles schnell und sauber entsorgt.",
+        "author": "Erbengemeinschaft, Biel",
+        "trust": "Professionelle Entsorgung"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet eine Entsorgung in Biel?",
+          "answer": "Die Kosten hängen vom Umfang ab. Wir bieten transparente Pauschalpreise und eine kostenlose Besichtigung."
+        },
+        {
+          "question": "Entsorgen Sie auch Elektrogeräte?",
+          "answer": "Ja, wir entsorgen Möbel, Elektrogeräte, Sperrmüll und Sondermüll — alles fachgerecht und umweltbewusst."
+        },
+        {
+          "question": "Wie schnell können Sie eine Räumung durchführen?",
+          "answer": "Wir sind oft innerhalb von 24–48 Stunden vor Ort. Bei dringenden Fällen reagieren wir besonders schnell."
+        },
+        {
+          "question": "Räumen Sie auch ganze Wohnungen?",
+          "answer": "Ja, komplette Wohnungsräumungen und Haushaltsauflösungen gehören zu unseren Kernleistungen."
+        },
+        {
+          "question": "In welchen Orten bieten Sie Entsorgung an?",
+          "answer": "In Biel/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund und im gesamten Seeland."
+        }
+      ]
+    },
+    "facilityServiceBiel": {
+      "meta": {
+        "title": "Facility Service Biel | Gebäudemanagement & Reinigung | SwissCleanMove",
+        "description": "Facility Service in Biel/Bienne. Gebäudemanagement, Unterhaltsreinigung und Liegenschaftsbetreuung im Seeland. Alles aus einer Hand."
+      },
+      "badge": "Facility Service Biel",
+      "h1": "Facility Service Biel — Gebäudemanagement & Unterhaltsreinigung",
+      "heroSubtitle": "SwissCleanMove bietet umfassenden Facility Service in Biel/Bienne. Gebäudemanagement, Unterhaltsreinigung, Hauswartung und technische Betreuung — alles aus einer Hand.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Facility Service bedeutet mehr als nur Reinigung — es ist die Gesamtbetreuung Ihrer Immobilie. SwissCleanMove bietet professionellen Facility Service in Biel/Bienne für Liegenschaftsverwaltungen, Unternehmen und Institutionen. Von der regelmässigen Unterhaltsreinigung über Hauswartung bis zur technischen Gebäudebetreuung — als Ihr Facility-Partner im Seeland übernehmen wir die Verantwortung für Ihre Liegenschaften in Biel, Nidau, Brügg, Lyss und Umgebung.",
+      "sections": [
+        {
+          "heading": "Facility Management für Liegenschaften in Biel",
+          "body": "Unser Facility Service in Biel umfasst die ganzheitliche Betreuung von Wohn- und Geschäftsliegenschaften. Wir koordinieren Reinigung, Hauswartung, Grünpflege und kleinere Reparaturen — alles über einen Ansprechpartner. Für Verwaltungen in Biel, Nidau und dem Seeland bedeutet das weniger Aufwand und zuverlässige Ergebnisse.",
+          "bullets": [
+            "Ganzheitliches Gebäudemanagement",
+            "Ein Ansprechpartner für alle Services",
+            "Massgeschneiderte Betreuungspläne",
+            "Regelmässige Qualitätskontrollen"
+          ]
+        },
+        {
+          "heading": "Reinigung und Unterhalt im Facility Service",
+          "body": "Im Rahmen unseres Facility Service in Biel bieten wir professionelle Unterhaltsreinigung, Treppenhausreinigung, Fensterreinigung und Aussenbereichspflege. Unsere Teams arbeiten zuverlässig und nach festen Plänen — damit Ihre Immobilien in Pieterlen, Aarberg, Ipsach und Orpund immer gepflegt aussehen.",
+          "bullets": [
+            "Unterhaltsreinigung",
+            "Treppenhausreinigung",
+            "Aussenbereichspflege",
+            "Winterdienst"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Facility Services",
+      "serviceBullets": [
+        "Unterhaltsreinigung",
+        "Hauswartung",
+        "Treppenhausreinigung",
+        "Grünpflege",
+        "Winterdienst",
+        "Kleinreparaturen",
+        "Schlüsselservice",
+        "Objektbetreuung"
+      ],
+      "trustPoints": [
+        "Alles aus einer Hand",
+        "Erfahrene Facility-Teams",
+        "Massgeschneiderte Lösungen"
+      ],
+      "ctaMidHeading": "Facility Service in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie Ihre Offerte für professionellen Facility Service an.",
+      "ctaMid": "Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Unterhaltsreinigung Biel",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Hauswartung Biel",
+          "href": "hauswartung-biel"
+        },
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Fensterreinigung Biel",
+          "href": "fensterreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Facility Service buchen",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine massgeschneiderte Facility-Lösung in Biel.",
+      "ctaStrong": "Offerte anfordern",
+      "testimonial": {
+        "quote": "SwissCleanMove betreut unsere Liegenschaft in Biel seit Monaten — alles läuft reibungslos.",
+        "author": "Verwaltung, Biel",
+        "trust": "Zuverlässiger Facility Service"
+      },
+      "faqs": [
+        {
+          "question": "Was umfasst Facility Service in Biel?",
+          "answer": "Unser Facility Service umfasst Unterhaltsreinigung, Hauswartung, Grünpflege, Winterdienst und technische Betreuung — alles aus einer Hand."
+        },
+        {
+          "question": "Für wen ist Facility Service geeignet?",
+          "answer": "Für Liegenschaftsverwaltungen, Unternehmen, Institutionen und Hauseigentümer in Biel und im Seeland."
+        },
+        {
+          "question": "Wie oft findet der Facility Service statt?",
+          "answer": "Nach individuellem Plan — wöchentlich, 14-tägig oder nach Bedarf."
+        },
+        {
+          "question": "Bieten Sie auch Winterdienst an?",
+          "answer": "Ja, Winterdienst und Schneeräumung sind Teil unseres Facility Service in Biel."
+        },
+        {
+          "question": "In welchen Orten bieten Sie Facility Service an?",
+          "answer": "In Biel/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen und im gesamten Seeland."
+        }
+      ]
+    },
+    "hauswartungBiel": {
+      "meta": {
+        "title": "Hauswartung Biel | Professionelle Liegenschaftsbetreuung | SwissCleanMove",
+        "description": "Hauswartung in Biel/Bienne. Professionelle Liegenschaftsbetreuung, Treppenhausreinigung und Gebäudeunterhalt im Seeland."
+      },
+      "badge": "Hauswartung Biel",
+      "h1": "Hauswartung Biel — Professionelle Liegenschaftsbetreuung im Seeland",
+      "heroSubtitle": "SwissCleanMove bietet professionelle Hauswartung in Biel/Bienne. Liegenschaftsbetreuung, Gebäudeunterhalt und Reinigung — zuverlässig und persönlich.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Eine gepflegte Liegenschaft steigert den Wert und die Zufriedenheit der Bewohner. SwissCleanMove bietet professionelle Hauswartung in Biel/Bienne für Mehrfamilienhäuser, Gewerbeliegenschaften und Wohnsiedlungen. Als Hauswart in Biel übernehmen wir Treppenhausreinigung, Aussenbereichspflege, Winterdienst und kleinere Reparaturen — regelmässig, zuverlässig und zu transparenten Konditionen.",
+      "sections": [
+        {
+          "heading": "Hauswartung für Mehrfamilienhäuser in Biel",
+          "body": "Unsere Hauswartung in Biel umfasst alle Aufgaben, die eine Liegenschaft gepflegt und funktional halten. Wir reinigen Treppenhäuser, pflegen Grünflächen, führen den Winterdienst durch und kümmern uns um kleinere Reparaturen. In Biel, Nidau, Brügg, Ipsach und Pieterlen sind wir regelmässig im Einsatz.",
+          "bullets": [
+            "Treppenhausreinigung",
+            "Grünpflege und Gartenarbeit",
+            "Winterdienst und Schneeräumung",
+            "Kleinreparaturen und Kontrollen"
+          ]
+        },
+        {
+          "heading": "Ihr Hauswart in Biel — persönlich und zuverlässig",
+          "body": "Als Ihr Hauswart in Biel setzen wir auf persönlichen Kontakt und feste Teams. Ihre Bewohner haben einen vertrauten Ansprechpartner, der die Liegenschaft kennt. Wir arbeiten eigenständig, diskret und sorgen dafür, dass alles reibungslos funktioniert — ob in Aarberg, Lyss oder Orpund.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Hauswartungsleistungen",
+      "serviceBullets": [
+        "Treppenhausreinigung",
+        "Grünpflege",
+        "Winterdienst",
+        "Kleinreparaturen",
+        "Schlüsselservice",
+        "Abfallbewirtschaftung",
+        "Kontrollgänge",
+        "Meldewesen"
+      ],
+      "trustPoints": [
+        "Feste Hauswart-Teams",
+        "Regelmässig und zuverlässig",
+        "Transparente Konditionen"
+      ],
+      "ctaMidHeading": "Hauswartung in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie Ihre Offerte für professionelle Hauswartung an.",
+      "ctaMid": "Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Facility Service Biel",
+          "href": "facility-service-biel"
+        },
+        {
+          "label": "Unterhaltsreinigung Biel",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Fensterreinigung Biel",
+          "href": "fensterreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Hauswartung buchen",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine professionelle Hauswartung in Biel und im Seeland.",
+      "ctaStrong": "Offerte anfordern",
+      "testimonial": {
+        "quote": "Seit SwissCleanMove unsere Hauswartung übernommen hat, ist alles bestens organisiert.",
+        "author": "Hauseigentümer, Nidau",
+        "trust": "Zuverlässige Hauswartung"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet Hauswartung in Biel?",
+          "answer": "Die Kosten hängen von der Liegenschaftsgrösse und dem Leistungsumfang ab. Wir erstellen individuelle Offerten."
+        },
+        {
+          "question": "Was gehört zur Hauswartung?",
+          "answer": "Treppenhausreinigung, Grünpflege, Winterdienst, Kleinreparaturen, Kontrollgänge und Abfallbewirtschaftung."
+        },
+        {
+          "question": "Haben Sie feste Hauswart-Teams?",
+          "answer": "Ja, jede Liegenschaft bekommt ein festes Team, das die Bewohner kennen."
+        },
+        {
+          "question": "Bieten Sie auch Winterdienst an?",
+          "answer": "Ja, Winterdienst und Schneeräumung sind Teil unserer Hauswartung in Biel."
+        },
+        {
+          "question": "In welchen Orten bieten Sie Hauswartung an?",
+          "answer": "In Biel/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen und im gesamten Seeland."
+        }
+      ]
+    },
+    "baureinigungBiel": {
+      "meta": {
+        "title": "Baureinigung Biel | Reinigung nach Bau & Renovation | SwissCleanMove",
+        "description": "Professionelle Baureinigung in Biel/Bienne. Bauendreinigung nach Neubau und Renovation im Seeland. Staubfrei und bezugsfertig."
+      },
+      "badge": "Baureinigung Biel",
+      "h1": "Baureinigung Biel — Reinigung nach Bau- & Renovationsarbeiten",
+      "heroSubtitle": "Professionelle Baureinigung in Biel/Bienne. Nach Neubau, Umbau oder Renovation — wir machen Ihre Räume staubfrei und bezugsfertig.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Nach Bau- oder Renovationsarbeiten braucht es eine gründliche Reinigung, bevor Räume bezogen werden können. SwissCleanMove bietet professionelle Baureinigung in Biel/Bienne für Bauherren, Generalunternehmer und Handwerksbetriebe. Unsere Bauendreinigung im Seeland umfasst die Entfernung von Baustaub, Gipsresten, Farbspritzern und Schutzfolien — für staubfreie, bezugsfertige Räume.",
+      "sections": [
+        {
+          "heading": "Baureinigung nach Neubau in Biel",
+          "body": "Bei Neubauten in Biel und Umgebung übernehmen wir die komplette Bauendreinigung: Feinreinigung aller Oberflächen, Fensterreinigung, Bodenreinigung und Sanitäranlagen. Unsere Baureinigung in Biel sorgt dafür, dass Neubauwohnungen in Nidau, Brügg, Ipsach und Lyss termingerecht übergeben werden können.",
+          "bullets": [
+            "Feinreinigung aller Oberflächen",
+            "Fensterreinigung nach Bau",
+            "Bodenreinigung und Versiegelung",
+            "Termingerechte Fertigstellung"
+          ]
+        },
+        {
+          "heading": "Reinigung nach Renovation und Umbau",
+          "body": "Auch bei Renovationen und Umbauten fällt viel Schmutz an. Unsere Baureinigung in Biel entfernt Baustaub, Gipsreste, Farbspritzer und Kleberrückstände — gründlich und effizient. In Aarberg, Pieterlen und der gesamten Region sind wir kurzfristig verfügbar.",
+          "bullets": [
+            "Baustaub-Entfernung",
+            "Farbspritzer und Kleberrückstände",
+            "Schutzfolien-Entfernung",
+            "Kurzfristig verfügbar"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Baureinigung im Überblick",
+      "serviceBullets": [
+        "Grobreinigung nach Bau",
+        "Feinreinigung vor Bezug",
+        "Fensterreinigung",
+        "Bodenreinigung",
+        "Sanitärreinigung",
+        "Baustaub-Entfernung",
+        "Farbspritzer-Entfernung",
+        "Schutzfolien-Entfernung"
+      ],
+      "trustPoints": [
+        "Termingerechte Fertigstellung",
+        "Erfahrung mit Generalunternehmern",
+        "Bezugsfertige Qualität"
+      ],
+      "ctaMidHeading": "Baureinigung in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie Ihre kostenlose Offerte für professionelle Baureinigung an.",
+      "ctaMid": "Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Endreinigung Biel",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Fensterreinigung Biel",
+          "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Entsorgung Biel",
+          "href": "entsorgung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Baureinigung buchen — staubfrei und bezugsfertig",
+      "ctaStrongBody": "Kontaktieren Sie uns für eine professionelle Baureinigung in Biel und im Seeland.",
+      "ctaStrong": "Offerte anfordern",
+      "testimonial": {
+        "quote": "Die Baureinigung war top — alles staubfrei und bezugsfertig. Gerne wieder!",
+        "author": "Generalunternehmer, Biel",
+        "trust": "Professionelle Baureinigung"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet Baureinigung in Biel?",
+          "answer": "Die Kosten hängen von Fläche und Verschmutzungsgrad ab. Wir bieten transparente Pauschalpreise nach Besichtigung."
+        },
+        {
+          "question": "Was umfasst die Baureinigung?",
+          "answer": "Grob- und Feinreinigung, Fensterreinigung, Bodenreinigung, Baustaub-Entfernung und Sanitärreinigung."
+        },
+        {
+          "question": "Wie schnell können Sie nach Bauende reinigen?",
+          "answer": "Wir sind kurzfristig verfügbar und arbeiten termingerecht — auch unter Zeitdruck."
+        },
+        {
+          "question": "Arbeiten Sie mit Generalunternehmern zusammen?",
+          "answer": "Ja, wir arbeiten regelmässig mit Bauunternehmen und GU in Biel und im Seeland zusammen."
+        },
+        {
+          "question": "In welchen Orten bieten Sie Baureinigung an?",
+          "answer": "In Biel/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen und im gesamten Seeland."
+        }
+      ]
+    },
+    "gastronomieReinigungBiel": {
+      "meta": {
+        "title": "Gastronomie Reinigung Biel | Küchen- & Restaurantreinigung | SwissCleanMove",
+        "description": "Professionelle Gastronomie Reinigung in Biel/Bienne. Hygienische Küchen- und Restaurantreinigung nach HACCP-Standards im Seeland."
+      },
+      "badge": "Gastronomie Reinigung Biel",
+      "h1": "Gastronomie Reinigung Biel — Hygienische Küchen- & Restaurantreinigung",
+      "heroSubtitle": "Professionelle Gastronomie Reinigung in Biel/Bienne. Küchen, Restaurants und Gastrobetriebe — hygienisch sauber nach Schweizer Standards.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "Hygiene ist in der Gastronomie nicht verhandelbar. SwissCleanMove bietet professionelle Gastronomie Reinigung in Biel/Bienne für Restaurants, Hotels, Cafés, Kantinen und Catering-Betriebe. Unsere Küchenreinigung im Seeland entspricht den Schweizer Hygienestandards und sorgt dafür, dass Ihr Betrieb jederzeit inspektionsbereit ist. Von der Grundreinigung der Grossküche bis zur regelmässigen Unterhaltsreinigung — wir sind Ihr Partner für Sauberkeit in der Gastronomie.",
+      "sections": [
+        {
+          "heading": "Küchenreinigung für Gastrobetriebe in Biel",
+          "body": "Unsere Gastronomie Reinigung in Biel umfasst die Grundreinigung und den regelmässigen Unterhalt von Grossküchen, Kochstationen, Abzugshauben, Fettfiltern und Lagerflächen. Wir reinigen nach den aktuellen Hygienevorschriften und sorgen dafür, dass Ihre Küche in Biel, Nidau und der Region stets den höchsten Standards entspricht.",
+          "bullets": [
+            "Grossküchen-Grundreinigung",
+            "Abzugshauben und Fettfilter",
+            "Kochstationen und Arbeitsflächen",
+            "Lagerflächen und Kühlräume"
+          ]
+        },
+        {
+          "heading": "Restaurantreinigung — Gastraum und Sanitär",
+          "body": "Neben der Küchenreinigung bieten wir als Gastronomie-Reiniger in Biel auch die Reinigung von Gasträumen, Sanitäranlagen und Eingangsbereichen. Ein sauberes Restaurant hinterlässt den besten Eindruck bei Ihren Gästen. Wir arbeiten ausserhalb der Betriebszeiten — diskret und effizient.",
+          "bullets": [
+            "Gastraum-Reinigung",
+            "Sanitäranlagen",
+            "Eingangs- und Thekenbereich",
+            "Reinigung ausserhalb der Öffnungszeiten"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Gastronomie-Reinigung",
+      "serviceBullets": [
+        "Grossküchen-Reinigung",
+        "Abzugshauben-Reinigung",
+        "Gastraum-Reinigung",
+        "Sanitärreinigung",
+        "Fettfilter-Reinigung",
+        "Bodenreinigung",
+        "Fensterreinigung",
+        "Grundreinigung"
+      ],
+      "trustPoints": [
+        "Nach Schweizer Hygienestandards",
+        "Inspektionsbereit jederzeit",
+        "Erfahrung in der Gastronomie"
+      ],
+      "ctaMidHeading": "Gastronomie Reinigung in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie Ihre Offerte für professionelle Gastronomie Reinigung an.",
+      "ctaMid": "Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "internalLinks": [
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Unterhaltsreinigung Biel",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Facility Service Biel",
+          "href": "facility-service-biel"
+        },
+        {
+          "label": "Fensterreinigung Biel",
+          "href": "fensterreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Jetzt Gastronomie Reinigung buchen",
+      "ctaStrongBody": "Kontaktieren Sie uns für hygienische Sauberkeit in Ihrem Gastrobetrieb.",
+      "ctaStrong": "Offerte anfordern",
+      "testimonial": {
+        "quote": "Seit SwissCleanMove unsere Küche reinigt, bestehen wir jede Inspektion problemlos.",
+        "author": "Restaurant, Biel",
+        "trust": "Hygienische Gastronomie Reinigung"
+      },
+      "faqs": [
+        {
+          "question": "Was kostet Gastronomie Reinigung in Biel?",
+          "answer": "Die Kosten hängen von der Küchengrösse und Häufigkeit ab. Wir erstellen individuelle Offerten nach Besichtigung."
+        },
+        {
+          "question": "Reinigen Sie nach HACCP-Standards?",
+          "answer": "Ja, unsere Gastronomie Reinigung in Biel entspricht den aktuellen Schweizer Hygienevorschriften."
+        },
+        {
+          "question": "Reinigen Sie auch ausserhalb der Öffnungszeiten?",
+          "answer": "Ja, wir arbeiten frühmorgens, abends oder nachts — ganz nach Ihrem Betriebsablauf."
+        },
+        {
+          "question": "Bieten Sie regelmässige Gastronomie Reinigung an?",
+          "answer": "Ja, wöchentlich, 14-tägig oder nach individuellem Plan."
+        },
+        {
+          "question": "In welchen Orten bieten Sie Gastronomie Reinigung an?",
+          "answer": "In Biel/Bienne, Nidau, Brügg, Lyss, Aarberg und im gesamten Seeland."
         }
       ]
     }

@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle, Settings } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle, Settings, Star } from 'lucide-react';
 
 export default function Footer() {
   const t = useTranslations();
@@ -167,7 +167,29 @@ export default function Footer() {
         {/* Regional SEO Links */}
         <div className="border-t border-swiss-gray-700 mt-12 pt-8">
           <h4 className="text-lg font-semibold mb-6">{t('footer.regional')}</h4>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+            
+            {/* New Authority Pages: Biel Spezial */}
+            <div>
+              <h5 className="font-medium text-swiss-white mb-3 flex items-center gap-2">
+                <Star className="w-4 h-4 text-swiss-red" />
+                Biel Spezial
+              </h5>
+              <ul className="space-y-2">
+                <li><Link href={`/${locale}/reinigungsfirma-biel`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">Reinigungsfirma</Link></li>
+                <li><Link href={`/${locale}/umzugsfirma-biel`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">Umzugsfirma</Link></li>
+                <li><Link href={`/${locale}/unterhaltsreinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">Unterhaltsreinigung</Link></li>
+                <li><Link href={`/${locale}/fensterreinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">Fensterreinigung</Link></li>
+                <li><Link href={`/${locale}/baureinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">Baureinigung</Link></li>
+                <li><Link href={`/${locale}/gastronomie-reinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">Gastro Reinigung</Link></li>
+                <li><Link href={`/${locale}/transportfirma-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">Transportfirma</Link></li>
+                <li><Link href={`/${locale}/entsorgung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">Entsorgung</Link></li>
+                <li><Link href={`/${locale}/facility-service-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">Facility Service</Link></li>
+                <li><Link href={`/${locale}/hauswartung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">Hauswartung</Link></li>
+              </ul>
+            </div>
+
+            {/* Standard Regional Clusters */}
             {[
               { city: 'Biel/Bienne', slug: 'biel' },
               { city: 'Nidau', slug: 'nidau' },

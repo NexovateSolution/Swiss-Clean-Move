@@ -111,8 +111,8 @@
     },
     "hero": {
       "badge": "",
-      "title": "Services professionnels de déménagement, nettoyage & facility dans toute la Suisse",
-      "subtitle": "Pour les particuliers, les entreprises et les administrations.",
+      "title": "Votre entreprise de nettoyage & entreprise de déménagement pour toute la Suisse",
+      "subtitle": "Services professionnels de nettoyage, déménagement & facility pour particuliers, entreprises et gérances.",
       "subtitle2": "Organisé efficacement. Exécuté de manière fiable. Selon les standards de qualité suisses.",
       "slides": {
         "transport": {
@@ -5394,12 +5394,16 @@
           "href": "reinigung-biel"
         },
         {
-          "label": "Service de déménagement Nidau",
-          "href": "umzug-nidau"
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzugsfirma-biel"
         },
         {
-          "label": "Entreprise de déménagement Lyss",
-          "href": "umzug-lyss"
+          "label": "Entreprise de transport Bienne",
+          "href": "transportfirma-biel"
+        },
+        {
+          "label": "Débarras Bienne",
+          "href": "entsorgung-biel"
         }
       ],
       "ctaStrongHeading": "Demandez votre devis de déménagement – gratuit et sans engagement",
@@ -5589,16 +5593,20 @@
           "href": "endreinigung-biel"
         },
         {
-          "label": "Entreprise de nettoyage Nidau",
-          "href": "reinigung-nidau"
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
         },
         {
-          "label": "Entreprise de nettoyage Lyss",
-          "href": "reinigung-lyss"
+          "label": "Nettoyage d'entretien",
+          "href": "unterhaltsreinigung-biel"
         },
         {
-          "label": "Aide ménagère & Femme de ménage Bienne",
-          "href": "haushaltshilfe-biel"
+          "label": "Nettoyage de vitres",
+          "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Nettoyage de fin de chantier",
+          "href": "baureinigung-biel"
         }
       ],
       "ctaStrongHeading": "Des locaux propres – sans effort pour vous",
@@ -7756,22 +7764,38 @@
         {
           "title": "Nettoyage régulier d'appartement",
           "description": "Nettoyage professionnel à rythme fixe — pour un intérieur toujours soigné.",
-          "features": ["Hebdomadaire, bimensuel ou mensuel", "Cuisine, bain, sols, poussière", "Toujours la même équipe de confiance"]
+          "features": [
+            "Hebdomadaire, bimensuel ou mensuel",
+            "Cuisine, bain, sols, poussière",
+            "Toujours la même équipe de confiance"
+          ]
         },
         {
           "title": "Aide ménagère",
           "description": "Soutien complet dans les tâches quotidiennes — pour familles, professionnels et seniors.",
-          "features": ["Rangement et organisation", "Aide aux courses sur demande", "Horaires flexibles"]
+          "features": [
+            "Rangement et organisation",
+            "Aide aux courses sur demande",
+            "Horaires flexibles"
+          ]
         },
         {
           "title": "Repassage & Service de linge",
           "description": "Repassage professionnel, pliage du linge et changement de draps — discret et fiable.",
-          "features": ["Chemises, blouses, draps repassés", "Tri et rangement du linge", "Combinable avec le nettoyage"]
+          "features": [
+            "Chemises, blouses, draps repassés",
+            "Tri et rangement du linge",
+            "Combinable avec le nettoyage"
+          ]
         },
         {
           "title": "Aide ménagère pour seniors",
           "description": "Soutien empathique pour les personnes âgées — pour faciliter le quotidien.",
-          "features": ["Visites régulières", "Tâches ménagères légères", "Accompagnement de confiance"]
+          "features": [
+            "Visites régulières",
+            "Tâches ménagères légères",
+            "Accompagnement de confiance"
+          ]
         }
       ],
       "trustPoints": [
@@ -7833,6 +7857,1044 @@
         {
           "question": "Dans quelles localités autour de Bienne intervenez-vous ?",
           "answer": "Nous travaillons à Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund et dans toute la région du Seeland."
+        }
+      ]
+    },
+    "reinigungsfirmaBiel": {
+      "meta": {
+        "title": "Entreprise de nettoyage Bienne | Nettoyage professionnel qualité suisse | SwissCleanMove",
+        "description": "SwissCleanMove est votre entreprise de nettoyage à Bienne/Bienne. Nettoyage professionnel, entretien et nettoyage de locaux dans le Seeland. Devis gratuit."
+      },
+      "badge": "Entreprise de nettoyage Bienne & Seeland",
+      "h1": "Entreprise de nettoyage Bienne — Votre partenaire professionnel dans le Seeland",
+      "heroSubtitle": "SwissCleanMove est votre entreprise de nettoyage locale à Bienne/Bienne. Fiable, professionnelle et selon les normes de qualité suisses — pour les particuliers, les entreprises et les gérances.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Vous cherchez une entreprise de nettoyage fiable à Bienne ? SwissCleanMove est votre partenaire local pour les services de nettoyage professionnels à Bienne/Bienne et dans tout le Seeland. En tant qu'entreprise de nettoyage établie à Bienne, nous proposons une large gamme de solutions de nettoyage — de l'entretien régulier au nettoyage de vitres, en passant par le nettoyage de fin de bail avec garantie de remise. Notre entreprise de nettoyage à Bienne est synonyme de qualité suisse, de transparence et de service personnalisé. Situés à l'Orpundstrasse 31, nous sommes sur place et comprenons les besoins de nos clients du Seeland.",
+      "sections": [
+        {
+          "heading": "Pourquoi choisir SwissCleanMove comme entreprise de nettoyage à Bienne ?",
+          "body": "En tant qu'entreprise de nettoyage à Bienne/Bienne, nous nous distinguons par un service personnalisé, des interlocuteurs dédiés et une équipe qui connaît vos locaux. Nous ne sommes pas une plateforme de nettoyage anonyme — nous sommes une entreprise de nettoyage locale avec de vraies personnes qui prennent soin de votre domicile ou bureau. Nos agents de nettoyage sont formés, assurés et travaillent selon les plus hauts standards suisses. Qu'il s'agisse d'un appartement privé à Nidau, d'un bureau à Brügg ou de locaux commerciaux à Lyss — en tant qu'entreprise de nettoyage dans le Seeland, nous sommes flexibles et fiables.",
+          "bullets": [
+            "Entreprise de nettoyage locale basée à Bienne",
+            "Interlocuteurs dédiés et équipe de confiance",
+            "Assurance complète et qualité suisse",
+            "Horaires flexibles — disponible rapidement"
+          ]
+        },
+        {
+          "heading": "Nos services de nettoyage pour Bienne et les environs",
+          "body": "En tant qu'entreprise de nettoyage à Bienne, nous couvrons tout le spectre du nettoyage professionnel. Du nettoyage d'appartement pour les particuliers au nettoyage de bureaux pour les entreprises, en passant par l'entretien pour les gérances. Notre équipe de nettoyage intervient à Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen et Orpund. Nous nettoyons les cages d'escalier, les garages souterrains, les complexes de bureaux et les appartements privés — minutieusement, ponctuellement et à des prix transparents.",
+          "bullets": [
+            "Nettoyage d'entretien pour bureaux et locaux",
+            "Nettoyage d'appartement et nettoyage privé",
+            "Nettoyage de cages d'escalier et conciergerie",
+            "Nettoyage de fin de bail avec garantie 100%",
+            "Nettoyage de vitres — sans traces et professionnel"
+          ]
+        },
+        {
+          "heading": "Entreprise de nettoyage locale avec normes de qualité suisses",
+          "body": "SwissCleanMove combine la proximité locale avec les standards professionnels. En tant qu'entreprise de nettoyage à Bienne, nous utilisons exclusivement des produits de nettoyage écologiques et des équipements de pointe. Nos clients dans le Seeland apprécient notre fiabilité — que ce soit pour le nettoyage hebdomadaire de bureaux à Aarberg, le nettoyage mensuel de cages d'escalier à Pieterlen ou le nettoyage de fin de bail à Bienne. Pas de coûts cachés, pas de surprises — juste des résultats impeccables.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Services de notre entreprise de nettoyage",
+      "serviceBullets": [
+        "Nettoyage d'entretien régulier",
+        "Nettoyage de bureaux et commerces",
+        "Nettoyage d'appartement",
+        "Nettoyage de cages d'escalier",
+        "Nettoyage de vitres",
+        "Nettoyage de fin de bail avec garantie",
+        "Nettoyage de fin de chantier",
+        "Nettoyage pour la gastronomie"
+      ],
+      "trustPoints": [
+        "Entreprise locale depuis 2024",
+        "Entièrement assurée et fiable",
+        "Prix transparents sans frais cachés"
+      ],
+      "ctaMidHeading": "Vous cherchez une entreprise de nettoyage à Bienne ?",
+      "ctaMidBody": "Demandez dès maintenant votre devis gratuit et sans engagement. Nous vous répondrons dans les 24 heures.",
+      "ctaMid": "Demander un devis gratuit",
+      "internalLinksHeading": "Plus de services à Bienne",
+      "internalLinks": [
+        {
+          "label": "Nettoyage d'entretien Bienne",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Nettoyage de vitres Bienne",
+          "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Nettoyage de fin de bail Bienne — avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzugsfirma-biel"
+        }
+      ],
+      "ctaStrongHeading": "Votre entreprise de nettoyage à Bienne — Contactez-nous",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous vous fournirons un devis de nettoyage transparent sous 24 heures.",
+      "ctaStrong": "Demander un devis",
+      "testimonial": {
+        "quote": "SwissCleanMove est notre entreprise de nettoyage de confiance à Bienne. Fiable, minutieuse et toujours ponctuelle.",
+        "author": "Entreprise à Bienne",
+        "trust": "Confiance grâce à la qualité suisse"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte une entreprise de nettoyage à Bienne ?",
+          "answer": "Les coûts dépendent de la surface et de la fréquence. En tant qu'entreprise de nettoyage à Bienne, nous offrons des prix transparents à partir de CHF 35/heure. Demandez un devis gratuit."
+        },
+        {
+          "question": "Quels services de nettoyage proposez-vous à Bienne ?",
+          "answer": "Nous proposons le nettoyage d'entretien, de bureaux, d'appartements, de vitres, de cages d'escalier, de fin de bail et de fin de chantier à Bienne et dans le Seeland."
+        },
+        {
+          "question": "Êtes-vous assurés en tant qu'entreprise de nettoyage ?",
+          "answer": "Oui, en tant qu'entreprise de nettoyage à Bienne, nous avons une assurance responsabilité civile complète. Vos biens sont en sécurité."
+        },
+        {
+          "question": "À quelle vitesse pouvez-vous intervenir à Bienne ?",
+          "answer": "Nous sommes souvent disponibles sous 24–48 heures. Contactez-nous pour un rendez-vous rapide."
+        },
+        {
+          "question": "Dans quelles localités votre entreprise intervient-elle ?",
+          "answer": "Notre entreprise de nettoyage intervient à Bienne/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund et dans tout le Seeland."
+        }
+      ]
+    },
+    "umzugsfirmaBiel": {
+      "meta": {
+        "title": "Entreprise de déménagement Bienne | Déménagements sans stress | SwissCleanMove",
+        "description": "SwissCleanMove est votre entreprise de déménagement à Bienne/Bienne. Déménagements professionnels, transport de meubles et débarras dans le Seeland. Dès CHF 490."
+      },
+      "badge": "Entreprise de déménagement Bienne & Seeland",
+      "h1": "Entreprise de déménagement Bienne — Votre partenaire fiable dans le Seeland",
+      "heroSubtitle": "SwissCleanMove est votre entreprise de déménagement locale à Bienne/Bienne. Déménagements professionnels pour particuliers et entreprises — sans stress, ponctuels et transparents.",
+      "ctaSoft": "Demander un devis de déménagement",
+      "intro": "Vous cherchez une entreprise de déménagement fiable à Bienne ? SwissCleanMove est votre partenaire de déménagement dans le Seeland — expérimenté, assuré et toujours ponctuel. En tant qu'entreprise locale à Bienne, nous connaissons chaque rue, chaque quartier et chaque défi. Que ce soit un déménagement privé à Nidau, un déménagement d'entreprise à Brügg ou un transport de meubles vers Lyss — notre entreprise garantit la précision suisse et des prix équitables à partir de CHF 490.",
+      "sections": [
+        {
+          "heading": "Votre entreprise de déménagement à Bienne — Personnelle et professionnelle",
+          "body": "En tant qu'entreprise de déménagement à Bienne/Bienne, nous privilégions le service personnel aux plateformes anonymes. Vous bénéficiez d'un interlocuteur dédié, d'une équipe de déménageurs expérimentés et d'un devis forfaitaire transparent sans frais cachés. Notre entreprise est basée localement — cela signifie de courts trajets, une planification flexible et une disponibilité rapide. Que ce soit un petit déménagement d'étudiant ou une grande maison familiale dans le Seeland — nous planifions chaque déménagement individuellement.",
+          "bullets": [
+            "Entreprise locale basée à Bienne",
+            "Équipe expérimentée de 2 à 4 déménageurs",
+            "Forfaits transparents dès CHF 490",
+            "Assurance transport incluse",
+            "Disponible rapidement"
+          ]
+        },
+        {
+          "heading": "Services de déménagement de notre entreprise à Bienne",
+          "body": "Notre entreprise de déménagement à Bienne propose un forfait complet : conseils gratuits, emballage professionnel, démontage et montage de meubles, transport sécurisé avec des véhicules modernes et installation à la nouvelle adresse. Nous sommes sur la route tous les jours à Bienne, Nidau, Brügg, Ipsach, Port, Lyss et Aarberg. Dans le Seeland, nous gérons également les déménagements longue distance dans toute la Suisse.",
+          "bullets": [
+            "Déménagements privés et d'entreprise",
+            "Montage et démontage de meubles",
+            "Service d'emballage avec matériel",
+            "Monte-meubles pour accès difficiles",
+            "Débarras d'anciens meubles sur demande"
+          ]
+        },
+        {
+          "heading": "Pourquoi choisir SwissCleanMove à Bienne ?",
+          "body": "En tant qu'entreprise de déménagement à Bienne, nous sommes plus que de simples déménageurs — nous sommes votre partenaire pour un nouveau départ sans stress. Nos clients du Seeland apprécient notre ponctualité, notre soin et notre accompagnement personnalisé. Avec plus de 50 déménagements réussis à Bienne et environs, nous savons exactement ce qui compte. Pas de surprises, pas de suppléments cachés.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Services de notre entreprise de déménagement",
+      "serviceBullets": [
+        "Déménagements privés",
+        "Déménagements d'entreprise",
+        "Transport de meubles",
+        "Service d'emballage",
+        "Montage de meubles",
+        "Service monte-meubles",
+        "Assurance transport",
+        "Débarras sur demande"
+      ],
+      "trustPoints": [
+        "Plus de 50 déménagements à Bienne",
+        "Forfaits équitables dès CHF 490",
+        "Assuré et fiable"
+      ],
+      "ctaMidHeading": "Vous cherchez une entreprise de déménagement à Bienne ?",
+      "ctaMidBody": "Demandez votre devis de déménagement gratuit. Nous vous répondrons sous 24 heures avec une offre transparente.",
+      "ctaMid": "Demander un devis de déménagement",
+      "internalLinksHeading": "Plus de services à Bienne",
+      "internalLinks": [
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Nettoyage de fin de bail Bienne — avec garantie",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Entreprise de transport Bienne",
+          "href": "transportfirma-biel"
+        },
+        {
+          "label": "Débarras Bienne",
+          "href": "entsorgung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Votre entreprise de déménagement à Bienne — Demandez un devis",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous vous fournirons un devis transparent sous 24 heures.",
+      "ctaStrong": "Obtenir un devis",
+      "testimonial": {
+        "quote": "Notre entreprise de déménagement à Bienne — ponctuelle, soigneuse et équitable. SwissCleanMove a organisé notre déménagement à la perfection.",
+        "author": "Famille M., Bienne",
+        "trust": "Plus de 50 clients satisfaits"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte une entreprise de déménagement à Bienne ?",
+          "answer": "Nous proposons des forfaits à partir de CHF 490 pour les déménagements privés. Le prix exact dépend de la taille de l'appartement et de la distance."
+        },
+        {
+          "question": "Combien de temps à l'avance dois-je réserver ?",
+          "answer": "Nous recommandons un délai de 2-3 semaines, mais nous sommes aussi disponibles sous 48 heures."
+        },
+        {
+          "question": "Votre entreprise à Bienne est-elle assurée ?",
+          "answer": "Oui, tous les déménagements sont couverts par notre assurance transport. Vos meubles sont en sécurité."
+        },
+        {
+          "question": "Proposez-vous aussi le nettoyage de fin de bail ?",
+          "answer": "Oui, nous proposons des forfaits combinés : Déménagement + Nettoyage avec garantie de remise."
+        },
+        {
+          "question": "Dans quelles localités travaillez-vous ?",
+          "answer": "Nous intervenons à Bienne/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen et Orpund."
+        }
+      ]
+    },
+    "unterhaltsreinigungBiel": {
+      "meta": {
+        "title": "Nettoyage d'entretien Bienne | Entretien régulier de locaux | SwissCleanMove",
+        "description": "Nettoyage d'entretien professionnel à Bienne/Bienne. Nettoyage régulier de bureaux, cages d'escalier et locaux dans le Seeland. Devis gratuit."
+      },
+      "badge": "Nettoyage d'entretien Bienne",
+      "h1": "Nettoyage d'entretien Bienne — Entretien régulier pour bureaux & bâtiments",
+      "heroSubtitle": "Nettoyage d'entretien professionnel à Bienne/Bienne pour bureaux, cages d'escalier, locaux commerciaux et bâtiments résidentiels — flexible et fiable.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Des locaux propres sont la base de la productivité et du bien-être. SwissCleanMove propose un nettoyage d'entretien professionnel à Bienne/Bienne pour les bureaux, cages d'escalier, espaces commerciaux et propriétés résidentielles. En tant qu'entreprise de nettoyage locale dans le Seeland, nous comprenons les besoins de nos clients et proposons des plans de nettoyage sur mesure — hebdomadaires, bimensuels ou mensuels. Notre nettoyage d'entretien à Bienne garantit des locaux toujours propres à des prix transparents.",
+      "sections": [
+        {
+          "heading": "Nettoyage d'entretien pour bureaux à Bienne et dans le Seeland",
+          "body": "Un bureau propre stimule la productivité et laisse une impression professionnelle. Notre nettoyage d'entretien à Bienne comprend le nettoyage régulier des espaces de travail, des sanitaires, des cuisines et des zones communes. Nous nettoyons des bureaux à Bienne, Nidau, Brügg, Lyss et dans toute la région — à des horaires flexibles qui ne perturbent pas vos opérations. En soirée, tôt le matin ou le week-end.",
+          "bullets": [
+            "Nettoyage régulier de bureaux",
+            "Sanitaires et cuisines",
+            "Horaires de nettoyage flexibles",
+            "Hebdomadaire, bimensuel ou mensuel"
+          ]
+        },
+        {
+          "heading": "Nettoyage de cages d'escalier et entretien de bâtiments",
+          "body": "Pour les gérances et les propriétaires à Bienne, nous proposons le nettoyage professionnel des cages d'escalier et l'entretien des bâtiments. Les entrées et cages d'escalier propres sont la carte de visite de chaque propriété. Notre nettoyage d'entretien s'assure que vos biens à Pieterlen, Aarberg, Ipsach et Orpund sont toujours bien entretenus.",
+          "bullets": [
+            "Nettoyage de cages d'escalier pour immeubles",
+            "Zone d'entrée et garage souterrain",
+            "Gestion des déchets et service hivernal",
+            "Inspections régulières"
+          ]
+        },
+        {
+          "heading": "Votre partenaire pour le nettoyage d'entretien dans le Seeland",
+          "body": "SwissCleanMove est plus qu'une simple entreprise de nettoyage — nous sommes votre partenaire à long terme pour le nettoyage d'entretien à Bienne et dans le Seeland. Nous créons des plans de nettoyage individuels, effectuons des contrôles de qualité réguliers et adaptons nos services à vos besoins.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Aperçu de notre nettoyage d'entretien",
+      "serviceBullets": [
+        "Nettoyage de bureaux",
+        "Nettoyage de cages d'escalier",
+        "Nettoyage des sanitaires",
+        "Nettoyage des sols",
+        "Nettoyage des cadres de fenêtres",
+        "Gestion des déchets",
+        "Service hivernal sur demande",
+        "Contrôles de qualité"
+      ],
+      "trustPoints": [
+        "Régulier et fiable",
+        "Plans de nettoyage flexibles",
+        "Produits de nettoyage écologiques"
+      ],
+      "ctaMidHeading": "Vous cherchez un nettoyage d'entretien à Bienne ?",
+      "ctaMidBody": "Demandez dès maintenant votre devis gratuit pour un nettoyage d'entretien régulier.",
+      "ctaMid": "Demander un devis",
+      "internalLinksHeading": "Plus de services de nettoyage à Bienne",
+      "internalLinks": [
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Nettoyage de vitres Bienne",
+          "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Facility Service Bienne",
+          "href": "facility-service-biel"
+        },
+        {
+          "label": "Conciergerie Bienne",
+          "href": "hauswartung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Réserver un nettoyage d'entretien maintenant",
+      "ctaStrongBody": "Contactez-nous pour un nettoyage d'entretien sur mesure à Bienne et dans le Seeland.",
+      "ctaStrong": "Demander un devis",
+      "testimonial": {
+        "quote": "SwissCleanMove nettoie nos bureaux à Bienne depuis un an — toujours ponctuels, toujours minutieux.",
+        "author": "PME à Bienne",
+        "trust": "Nettoyage d'entretien fiable"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte le nettoyage d'entretien à Bienne ?",
+          "answer": "Les coûts dépendent de la surface et de la fréquence. Nous proposons des devis personnalisés à partir de CHF 35/heure."
+        },
+        {
+          "question": "À quelle fréquence a lieu le nettoyage d'entretien ?",
+          "answer": "Vous choisissez : hebdomadaire, bimensuel ou mensuel. Nous adaptons le planning à vos besoins."
+        },
+        {
+          "question": "Nettoyez-vous aussi les cages d'escalier ?",
+          "answer": "Oui, le nettoyage des cages d'escalier fait partie de notre service pour les immeubles."
+        },
+        {
+          "question": "Pouvez-vous nettoyer le soir ou le week-end ?",
+          "answer": "Oui, nous proposons des horaires de nettoyage flexibles qui ne perturbent pas vos activités."
+        },
+        {
+          "question": "Où proposez-vous le nettoyage d'entretien ?",
+          "answer": "À Bienne/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund et dans tout le Seeland."
+        }
+      ]
+    },
+    "fensterreinigungBiel": {
+      "meta": {
+        "title": "Nettoyage de vitres Bienne | Vitres sans traces | SwissCleanMove",
+        "description": "Nettoyage professionnel de vitres à Bienne/Bienne. Vitres sans traces pour appartements, bureaux et commerces dans le Seeland. Demandez un devis."
+      },
+      "badge": "Nettoyage de vitres Bienne",
+      "h1": "Nettoyage de vitres Bienne — Vitres sans traces pour ménages & bureaux",
+      "heroSubtitle": "Nettoyage professionnel de vitres à Bienne/Bienne et dans le Seeland. Des vitres cristallines pour les ménages privés, les bureaux et les commerces — fiable et sans traces.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Des fenêtres propres rendent les pièces plus lumineuses et augmentent la valeur de chaque propriété. SwissCleanMove propose un nettoyage professionnel de vitres à Bienne/Bienne pour les ménages privés, les complexes de bureaux et les propriétés commerciales. En tant que nettoyeurs de vitres à Bienne, nous travaillons avec un équipement de pointe et des produits écologiques — pour des résultats sans traces. Des appartements en ville de Bienne aux bureaux de Nidau et aux bâtiments commerciaux de Lyss — notre nettoyage de vitres dans le Seeland est minutieux, rapide et professionnel.",
+      "sections": [
+        {
+          "heading": "Nettoyage de vitres pour ménages privés à Bienne",
+          "body": "Qu'il s'agisse d'un appartement en location, d'une copropriété ou d'une maison individuelle — notre nettoyage de vitres à Bienne fera briller vos fenêtres. Nous nettoyons les vitres à l'intérieur et à l'extérieur, y compris les cadres, rebords et volets. Surtout pour les fenêtres difficiles d'accès aux étages supérieurs, nous nous appuyons sur un équipement professionnel. Nous intervenons régulièrement à Bienne, Nidau, Brügg, Ipsach et Pieterlen — pour un service unique ou régulier.",
+          "bullets": [
+            "Fenêtres intérieures et extérieures",
+            "Cadres, rebords de fenêtres et volets",
+            "Fenêtres difficiles d'accès",
+            "Service unique ou régulier"
+          ]
+        },
+        {
+          "heading": "Nettoyage de vitres pour bureaux et commerces",
+          "body": "Pour les entreprises de Bienne et du Seeland, nous proposons un nettoyage professionnel des vitres pour les immeubles de bureaux, magasins et propriétés commerciales. Des façades en verre et des vitrines propres laissent une impression professionnelle aux clients. Nos nettoyeurs de vitres travaillent efficacement et discrètement — également à Lyss, Aarberg et dans toute la région.",
+          "bullets": [
+            "Vitres de bureaux et façades en verre",
+            "Nettoyage de vitrines",
+            "Intervalles réguliers possibles",
+            "Service discret en dehors des heures de bureau"
+          ]
+        },
+        {
+          "heading": "Pourquoi SwissCleanMove comme nettoyeur de vitres à Bienne ?",
+          "body": "En tant que nettoyeur de vitres local à Bienne, nous offrons des prix équitables, des rendez-vous fiables et une qualité sans traces. Nos agents d'entretien sont formés, assurés et utilisent des raclettes professionnelles et de l'eau purifiée par osmose pour des résultats impeccables. Pas de traces, pas de résidus — juste une vision claire.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Aperçu de notre nettoyage de vitres",
+      "serviceBullets": [
+        "Vitres intérieures et extérieures",
+        "Cadres et rebords",
+        "Façades en verre",
+        "Vitrines",
+        "Jardins d'hiver",
+        "Volets et stores",
+        "Vitrages de balcon",
+        "Puits de lumière"
+      ],
+      "trustPoints": [
+        "Sans traces garanti",
+        "Équipement professionnel",
+        "Nettoyage écologique"
+      ],
+      "ctaMidHeading": "Vous cherchez un nettoyage de vitres à Bienne ?",
+      "ctaMidBody": "Demandez dès maintenant votre devis gratuit pour un nettoyage de vitres professionnel.",
+      "ctaMid": "Demander un devis",
+      "internalLinksHeading": "Plus de services à Bienne",
+      "internalLinks": [
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Nettoyage d'entretien Bienne",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Conciergerie Bienne",
+          "href": "hauswartung-biel"
+        },
+        {
+          "label": "Facility Service Bienne",
+          "href": "facility-service-biel"
+        }
+      ],
+      "ctaStrongHeading": "Réserver un nettoyage de vitres — Sans traces garanti",
+      "ctaStrongBody": "Contactez-nous pour des vitres cristallines à Bienne et dans le Seeland.",
+      "ctaStrong": "Demander un devis",
+      "testimonial": {
+        "quote": "Enfin des vitres sans traces ! SwissCleanMove fait un excellent travail avec notre nettoyage de vitres à Bienne.",
+        "author": "Client privé, Nidau",
+        "trust": "Nettoyage de vitres professionnel"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte le nettoyage de vitres à Bienne ?",
+          "answer": "Les coûts dépendent du nombre et de la taille des fenêtres. Nous offrons des prix transparents et vous fournirons un devis gratuit."
+        },
+        {
+          "question": "Nettoyez-vous aussi les cadres et rebords de fenêtres ?",
+          "answer": "Oui, notre nettoyage de vitres à Bienne inclut les surfaces vitrées, cadres, rebords et volets sur demande."
+        },
+        {
+          "question": "Proposez-vous un nettoyage de vitres régulier ?",
+          "answer": "Oui, nous proposons un nettoyage mensuel, trimestriel ou semestriel à Bienne et dans le Seeland."
+        },
+        {
+          "question": "Nettoyez-vous les fenêtres difficiles d'accès ?",
+          "answer": "Oui, avec un équipement professionnel, nous pouvons atteindre de manière sûre et complète les fenêtres des étages supérieurs."
+        },
+        {
+          "question": "Où proposez-vous le nettoyage de vitres ?",
+          "answer": "À Bienne/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen et dans tout le Seeland."
+        }
+      ]
+    },
+    "transportfirmaBiel": {
+      "meta": {
+        "title": "Entreprise de transport Bienne | Transport de meubles & Livraison | SwissCleanMove",
+        "description": "SwissCleanMove est votre entreprise de transport à Bienne/Bienne. Transport de meubles, service de livraison et logistique dans le Seeland."
+      },
+      "badge": "Entreprise de transport Bienne",
+      "h1": "Entreprise de transport Bienne — Transport de meubles & Service de livraison",
+      "heroSubtitle": "SwissCleanMove est votre entreprise de transport locale à Bienne/Bienne. Transport de meubles professionnel, service de livraison et logistique — rapide, sûr et assuré.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Avez-vous besoin d'un transport fiable à Bienne ? SwissCleanMove est votre entreprise de transport dans le Seeland — que ce soit pour le transport de meubles, d'articles individuels, de livraisons d'appareils ou de solutions logistiques complètes. En tant qu'entreprise de transport locale à Bienne, nous disposons de véhicules modernes de 3,5t et 7,5t et d'une équipe expérimentée. De Bienne à Nidau et Brügg, en passant par Lyss et Aarberg — nous transportons en toute sécurité, ponctuellement et à des prix transparents.",
+      "sections": [
+        {
+          "heading": "Transport de meubles à Bienne et environs",
+          "body": "En tant qu'entreprise de transport à Bienne, nous proposons le transport professionnel de meubles pour particuliers et entreprises. Qu'il s'agisse de meubles individuels, d'appareils électriques ou de débarras complets d'appartements — nous transportons tout en toute sécurité et de manière professionnelle. Nos véhicules sont équipés de sangles, couvertures et matériel de rembourrage. Nous sommes sur la route tous les jours à Bienne, Nidau, Brügg, Ipsach, Port et dans tout le Seeland.",
+          "bullets": [
+            "Transport de meubles à l'unité",
+            "Transports complets pour appartements",
+            "Livraisons d'appareils et de machines",
+            "Emballage et sécurisation inclus"
+          ]
+        },
+        {
+          "heading": "Service de livraison et logistique dans le Seeland",
+          "body": "En plus du transport classique de meubles, notre entreprise à Bienne propose également un service de livraison pour les entreprises. Livraisons régulières de marchandises, déménagements d'entrepôts ou logistique de matériel — nous planifions et exécutons vos transports de manière fiable. Nos chauffeurs connaissent la région autour de Bienne, Lyss, Aarberg et Pieterlen, et trouvent toujours l'itinéraire le plus rapide.",
+          "bullets": [
+            "Livraisons de marchandises pour les entreprises",
+            "Déménagements d'entrepôts",
+            "Logistique de matériel",
+            "Flexible et disponible rapidement"
+          ]
+        },
+        {
+          "heading": "Votre entreprise de transport à Bienne — Locale et assurée",
+          "body": "En tant qu'entreprise de transport à Bienne, nous offrons des transports entièrement assurés avec des prix transparents. Aucun risque pour vous — vos biens sont couverts par notre assurance pendant chaque transport. Nous sommes basés directement à Bienne, connaissons la région et pouvons réagir rapidement.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Services de notre entreprise de transport",
+      "serviceBullets": [
+        "Transport de meubles",
+        "Transport d'articles individuels",
+        "Livraisons d'appareils",
+        "Déménagements d'entrepôts",
+        "Logistique de marchandises",
+        "Véhicules 3,5t et 7,5t",
+        "Assurance transport",
+        "Service d'emballage"
+      ],
+      "trustPoints": [
+        "Transports assurés",
+        "Flotte de véhicules modernes",
+        "Forfaits équitables"
+      ],
+      "ctaMidHeading": "Vous cherchez une entreprise de transport à Bienne ?",
+      "ctaMidBody": "Demandez votre devis de transport gratuit. Nous vous répondrons sous 24 heures.",
+      "ctaMid": "Demander un devis",
+      "internalLinksHeading": "Plus de services à Bienne",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzugsfirma-biel"
+        },
+        {
+          "label": "Débarras Bienne",
+          "href": "entsorgung-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Nettoyage de fin de bail Bienne",
+          "href": "endreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Votre entreprise de transport à Bienne — Contactez-nous",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire. Nous vous fournirons un devis transparent.",
+      "ctaStrong": "Demander un devis de transport",
+      "testimonial": {
+        "quote": "SwissCleanMove a géré notre transport de meubles à Bienne à la perfection — ponctuel et soigneux.",
+        "author": "Client, Bienne",
+        "trust": "Transports sûrs dans le Seeland"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte un transport à Bienne ?",
+          "answer": "Les coûts dépendent de la distance et du volume. Nous offrons des forfaits transparents et un devis gratuit."
+        },
+        {
+          "question": "Quels véhicules possède votre entreprise de transport ?",
+          "answer": "Nous avons des véhicules de transport de 3,5t et 7,5t avec équipement de sécurisation complet."
+        },
+        {
+          "question": "Le transport est-il assuré ?",
+          "answer": "Oui, tous les transports effectués par notre entreprise à Bienne sont entièrement assurés."
+        },
+        {
+          "question": "Pouvez-vous également transporter à court préavis ?",
+          "answer": "Oui, nous sommes souvent disponibles sous 24–48 heures."
+        },
+        {
+          "question": "Où transportez-vous ?",
+          "answer": "De Bienne/Bienne vers tout le Seeland et dans toute la Suisse."
+        }
+      ]
+    },
+    "entsorgungBiel": {
+      "meta": {
+        "title": "Débarras Bienne | Élimination de meubles | SwissCleanMove",
+        "description": "Débarras professionnel à Bienne/Bienne. Élimination de meubles, vide-appartement et désencombrement dans le Seeland. Écologique."
+      },
+      "badge": "Débarras Bienne",
+      "h1": "Débarras Bienne — Élimination de meubles & Vide-appartement dans le Seeland",
+      "heroSubtitle": "SwissCleanMove propose un débarras professionnel à Bienne/Bienne. Élimination de meubles, vide-appartement et désencombrement — rapide et écologique.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Besoin de vous débarrasser de vieux meubles, de vider un appartement ou de désencombrer à Bienne ? SwissCleanMove est votre partenaire pour un débarras professionnel dans le Seeland. Nous nous occupons de la collecte, du transport et de l'élimination écologique de vos anciens meubles, appareils électriques et liquidations de ménage. Nous sommes rapidement sur place à Bienne, Nidau, Brügg, Lyss et dans toute la région.",
+      "sections": [
+        {
+          "heading": "Élimination de meubles et vide-appartement à Bienne",
+          "body": "Qu'il s'agisse de meubles individuels ou de vidages complets d'appartements — notre service de débarras à Bienne est simple et professionnel. Nous venons à vous, démontons si nécessaire, sortons tout et l'éliminons correctement. Surtout après des déménagements, rénovations ou en cas de décès, nous proposons des vidages rapides et discrets à Bienne, Nidau, Pieterlen et Orpund.",
+          "bullets": [
+            "Élimination et collecte de meubles",
+            "Vide-appartement complet",
+            "Débarras de cave et grenier",
+            "Débarras discret en cas de décès"
+          ]
+        },
+        {
+          "heading": "Élimination écologique — Notre standard",
+          "body": "En tant qu'entreprise responsable à Bienne, nous privilégions l'élimination écologique. Les matériaux recyclables sont recyclés, les déchets dangereux sont correctement éliminés et les objets utilisables sont donnés sur demande. Notre débarras à Bienne respecte les normes environnementales suisses — transparent et durable.",
+          "bullets": [
+            "Recyclage des matériaux de valeur",
+            "Élimination professionnelle des déchets dangereux",
+            "Médiation de dons sur demande",
+            "Normes environnementales suisses"
+          ]
+        },
+        {
+          "heading": "Débarras rapide dans le Seeland",
+          "body": "En tant qu'entreprise locale à Bienne, nous sommes rapidement sur place — à Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg et dans toute la région. Nous proposons des rendez-vous à court terme pour des débarras urgents et travaillons efficacement pour que vos pièces soient rapidement libres.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de débarras",
+      "serviceBullets": [
+        "Élimination de meubles",
+        "Vide-appartement",
+        "Débarras de cave",
+        "Débarras de grenier",
+        "Élimination d'appareils électriques",
+        "Collecte des encombrants",
+        "Élimination des déchets verts",
+        "Débarras de bureaux"
+      ],
+      "trustPoints": [
+        "Élimination écologique",
+        "Rapide et fiable",
+        "Forfaits transparents"
+      ],
+      "ctaMidHeading": "Vous cherchez un débarras à Bienne ?",
+      "ctaMidBody": "Demandez votre devis gratuit pour un débarras professionnel.",
+      "ctaMid": "Demander un devis",
+      "internalLinksHeading": "Plus de services à Bienne",
+      "internalLinks": [
+        {
+          "label": "Entreprise de déménagement Bienne",
+          "href": "umzugsfirma-biel"
+        },
+        {
+          "label": "Entreprise de transport Bienne",
+          "href": "transportfirma-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Nettoyage de fin de chantier Bienne",
+          "href": "baureinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Réserver un débarras maintenant — Rapide et professionnel",
+      "ctaStrongBody": "Contactez-nous pour un débarras simple à Bienne et dans le Seeland.",
+      "ctaStrong": "Demander un devis de débarras",
+      "testimonial": {
+        "quote": "Le vide-appartement était super bien organisé. SwissCleanMove a tout éliminé rapidement et proprement.",
+        "author": "Communauté d'héritiers, Bienne",
+        "trust": "Débarras professionnel"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte un débarras à Bienne ?",
+          "answer": "Les coûts dépendent du volume. Nous offrons des forfaits transparents et une inspection gratuite."
+        },
+        {
+          "question": "Éliminez-vous aussi les appareils électriques ?",
+          "answer": "Oui, nous éliminons les meubles, appareils électriques, encombrants et déchets dangereux — de manière professionnelle et écologique."
+        },
+        {
+          "question": "À quelle vitesse pouvez-vous effectuer un débarras ?",
+          "answer": "Nous sommes souvent sur place sous 24–48 heures. En cas d'urgence, nous réagissons particulièrement vite."
+        },
+        {
+          "question": "Videz-vous aussi des appartements entiers ?",
+          "answer": "Oui, les vide-appartements complets et les liquidations de ménage font partie de nos services de base."
+        },
+        {
+          "question": "Où proposez-vous le débarras ?",
+          "answer": "À Bienne/Bienne, Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund et dans tout le Seeland."
+        }
+      ]
+    },
+    "facilityServiceBiel": {
+      "meta": {
+        "title": "Facility Service Bienne | Gestion & Nettoyage | SwissCleanMove",
+        "description": "Facility Service à Bienne/Bienne. Gestion immobilière, nettoyage d'entretien et conciergerie dans le Seeland. Tout d'une seule source."
+      },
+      "badge": "Facility Service Bienne",
+      "h1": "Facility Service Bienne — Gestion immobilière & Nettoyage d'entretien",
+      "heroSubtitle": "SwissCleanMove propose un Facility Service complet à Bienne/Bienne. Gestion immobilière, nettoyage d'entretien, conciergerie et support technique — tout d'une seule source.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Le Facility Service, c'est plus qu'un simple nettoyage — c'est l'entretien global de votre propriété. SwissCleanMove propose un Facility Service professionnel à Bienne/Bienne pour les gérances immobilières, les entreprises et les institutions. Du nettoyage d'entretien régulier à la conciergerie en passant par l'assistance technique — en tant que partenaire de facility management dans le Seeland, nous assumons la responsabilité de vos biens à Bienne, Nidau, Brügg, Lyss et environs.",
+      "sections": [
+        {
+          "heading": "Facility Management pour propriétés à Bienne",
+          "body": "Notre Facility Service à Bienne englobe l'entretien global de propriétés résidentielles et commerciales. Nous coordonnons le nettoyage, la conciergerie, l'entretien des espaces verts et les petites réparations — tout via un seul interlocuteur. Pour les gérances à Bienne, Nidau et dans le Seeland, cela signifie moins d'efforts et des résultats fiables.",
+          "bullets": [
+            "Gestion globale des bâtiments",
+            "Un interlocuteur pour tous les services",
+            "Plans d'entretien sur mesure",
+            "Contrôles de qualité réguliers"
+          ]
+        },
+        {
+          "heading": "Nettoyage et entretien dans le Facility Service",
+          "body": "Dans le cadre de notre Facility Service à Bienne, nous proposons le nettoyage d'entretien professionnel, le nettoyage des cages d'escalier, le nettoyage des vitres et l'entretien des espaces extérieurs. Nos équipes travaillent de manière fiable et selon des horaires fixes — pour que vos propriétés à Pieterlen, Aarberg, Ipsach et Orpund soient toujours soignées.",
+          "bullets": [
+            "Nettoyage d'entretien",
+            "Nettoyage de cages d'escalier",
+            "Entretien des espaces extérieurs",
+            "Service hivernal"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de Facility Management",
+      "serviceBullets": [
+        "Nettoyage d'entretien",
+        "Conciergerie",
+        "Nettoyage de cages d'escalier",
+        "Espaces verts",
+        "Service hivernal",
+        "Petites réparations",
+        "Service de clés",
+        "Support immobilier"
+      ],
+      "trustPoints": [
+        "Tout d'une seule source",
+        "Équipes de facility expérimentées",
+        "Solutions sur mesure"
+      ],
+      "ctaMidHeading": "Vous cherchez un Facility Service à Bienne ?",
+      "ctaMidBody": "Demandez votre devis pour un Facility Service professionnel.",
+      "ctaMid": "Demander un devis",
+      "internalLinksHeading": "Plus de services à Bienne",
+      "internalLinks": [
+        {
+          "label": "Nettoyage d'entretien Bienne",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Conciergerie Bienne",
+          "href": "hauswartung-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Nettoyage de vitres Bienne",
+          "href": "fensterreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Réserver un Facility Service maintenant",
+      "ctaStrongBody": "Contactez-nous pour une solution sur mesure à Bienne.",
+      "ctaStrong": "Demander un devis",
+      "testimonial": {
+        "quote": "SwissCleanMove gère notre propriété à Bienne depuis des mois — tout se passe parfaitement.",
+        "author": "Gérance, Bienne",
+        "trust": "Facility Service fiable"
+      },
+      "faqs": [
+        {
+          "question": "Que comprend le Facility Service à Bienne ?",
+          "answer": "Notre Facility Service comprend le nettoyage d'entretien, la conciergerie, les espaces verts, le service hivernal et le support technique — tout d'une seule source."
+        },
+        {
+          "question": "À qui s'adresse le Facility Service ?",
+          "answer": "Aux gérances immobilières, entreprises, institutions et propriétaires à Bienne et dans le Seeland."
+        },
+        {
+          "question": "À quelle fréquence le Facility Service a-t-il lieu ?",
+          "answer": "Selon un plan individuel — hebdomadaire, bimensuel ou selon les besoins."
+        },
+        {
+          "question": "Proposez-vous aussi le service hivernal ?",
+          "answer": "Oui, le service hivernal et le déneigement font partie de notre Facility Service à Bienne."
+        },
+        {
+          "question": "Où proposez-vous le Facility Service ?",
+          "answer": "À Bienne/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen et dans tout le Seeland."
+        }
+      ]
+    },
+    "hauswartungBiel": {
+      "meta": {
+        "title": "Conciergerie Bienne | Entretien immobilier professionnel | SwissCleanMove",
+        "description": "Conciergerie à Bienne/Bienne. Entretien immobilier professionnel, nettoyage de cages d'escalier et maintenance de bâtiments dans le Seeland."
+      },
+      "badge": "Conciergerie Bienne",
+      "h1": "Conciergerie Bienne — Entretien immobilier professionnel dans le Seeland",
+      "heroSubtitle": "SwissCleanMove propose une conciergerie professionnelle à Bienne/Bienne. Entretien immobilier, maintenance de bâtiments et nettoyage — fiable et personnel.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Une propriété bien entretenue augmente la valeur et la satisfaction des résidents. SwissCleanMove propose une conciergerie professionnelle à Bienne/Bienne pour les immeubles d'habitation, les propriétés commerciales et les complexes résidentiels. En tant que concierge à Bienne, nous nous occupons du nettoyage des cages d'escalier, de l'entretien des espaces extérieurs, du service hivernal et des petites réparations — régulièrement, de manière fiable et à des conditions transparentes.",
+      "sections": [
+        {
+          "heading": "Conciergerie pour immeubles à Bienne",
+          "body": "Notre conciergerie à Bienne couvre toutes les tâches qui maintiennent une propriété soignée et fonctionnelle. Nous nettoyons les cages d'escalier, entretenons les espaces verts, assurons le service hivernal et gérons les petites réparations. Nous sommes régulièrement actifs à Bienne, Nidau, Brügg, Ipsach et Pieterlen.",
+          "bullets": [
+            "Nettoyage de cages d'escalier",
+            "Espaces verts et jardinage",
+            "Service hivernal et déneigement",
+            "Petites réparations et contrôles"
+          ]
+        },
+        {
+          "heading": "Votre concierge à Bienne — Personnel et fiable",
+          "body": "En tant que concierge à Bienne, nous misons sur un contact personnel et des équipes fixes. Vos résidents ont un interlocuteur familier qui connaît la propriété. Nous travaillons de manière indépendante, discrète et nous assurons que tout fonctionne parfaitement — que ce soit à Aarberg, Lyss ou Orpund.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services de conciergerie",
+      "serviceBullets": [
+        "Nettoyage de cages d'escalier",
+        "Espaces verts",
+        "Service hivernal",
+        "Petites réparations",
+        "Service de clés",
+        "Gestion des déchets",
+        "Rondes d'inspection",
+        "Signalement"
+      ],
+      "trustPoints": [
+        "Équipes de conciergerie fixes",
+        "Régulier et fiable",
+        "Conditions transparentes"
+      ],
+      "ctaMidHeading": "Vous cherchez une conciergerie à Bienne ?",
+      "ctaMidBody": "Demandez votre devis pour une conciergerie professionnelle.",
+      "ctaMid": "Demander un devis",
+      "internalLinksHeading": "Plus de services à Bienne",
+      "internalLinks": [
+        {
+          "label": "Facility Service Bienne",
+          "href": "facility-service-biel"
+        },
+        {
+          "label": "Nettoyage d'entretien Bienne",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Nettoyage de vitres Bienne",
+          "href": "fensterreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Réserver une conciergerie maintenant",
+      "ctaStrongBody": "Contactez-nous pour une conciergerie professionnelle à Bienne et dans le Seeland.",
+      "ctaStrong": "Demander un devis",
+      "testimonial": {
+        "quote": "Depuis que SwissCleanMove a repris notre conciergerie, tout est parfaitement organisé.",
+        "author": "Propriétaire, Nidau",
+        "trust": "Conciergerie fiable"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte une conciergerie à Bienne ?",
+          "answer": "Les coûts dépendent de la taille de la propriété et de l'étendue des services. Nous établissons des devis sur mesure."
+        },
+        {
+          "question": "Que comprend la conciergerie ?",
+          "answer": "Nettoyage des cages d'escalier, espaces verts, service hivernal, petites réparations, rondes d'inspection et gestion des déchets."
+        },
+        {
+          "question": "Avez-vous des équipes de conciergerie fixes ?",
+          "answer": "Oui, chaque propriété a une équipe fixe que les résidents connaissent."
+        },
+        {
+          "question": "Proposez-vous aussi le service hivernal ?",
+          "answer": "Oui, le service hivernal et le déneigement font partie de notre conciergerie à Bienne."
+        },
+        {
+          "question": "Où proposez-vous la conciergerie ?",
+          "answer": "À Bienne/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen et dans tout le Seeland."
+        }
+      ]
+    },
+    "baureinigungBiel": {
+      "meta": {
+        "title": "Nettoyage de fin de chantier Bienne | SwissCleanMove",
+        "description": "Nettoyage professionnel de fin de chantier à Bienne/Bienne. Après nouvelles constructions et rénovations dans le Seeland. Sans poussière et prêt à l'emménagement."
+      },
+      "badge": "Nettoyage de fin de chantier Bienne",
+      "h1": "Nettoyage de fin de chantier Bienne — Après construction & Rénovation",
+      "heroSubtitle": "Nettoyage professionnel de fin de chantier à Bienne/Bienne. Après de nouvelles constructions ou rénovations — nous rendons vos pièces sans poussière et prêtes à être occupées.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "Après des travaux de construction ou de rénovation, un nettoyage approfondi est nécessaire avant que les locaux puissent être occupés. SwissCleanMove propose un nettoyage de fin de chantier professionnel à Bienne/Bienne pour les constructeurs, les entreprises générales et les artisans. Notre nettoyage de fin de chantier dans le Seeland comprend l'élimination de la poussière de construction, des résidus de plâtre, des éclaboussures de peinture et des films de protection — pour des pièces sans poussière, prêtes à l'emménagement.",
+      "sections": [
+        {
+          "heading": "Nettoyage après nouvelles constructions à Bienne",
+          "body": "Pour les nouveaux bâtiments à Bienne et environs, nous prenons en charge le nettoyage final complet : nettoyage détaillé de toutes les surfaces, nettoyage des vitres, nettoyage des sols et installations sanitaires. Notre nettoyage de fin de chantier à Bienne garantit que les appartements neufs à Nidau, Brügg, Ipsach et Lyss peuvent être remis à temps.",
+          "bullets": [
+            "Nettoyage détaillé de toutes les surfaces",
+            "Nettoyage des vitres après construction",
+            "Nettoyage et scellement des sols",
+            "Achèvement dans les délais"
+          ]
+        },
+        {
+          "heading": "Nettoyage après rénovation et transformation",
+          "body": "Beaucoup de saleté s'accumule également lors de rénovations. Notre nettoyage de fin de chantier à Bienne élimine la poussière, les résidus de plâtre, les taches de peinture et les résidus de colle — minutieusement et efficacement. Nous sommes disponibles rapidement à Aarberg, Pieterlen et dans toute la région.",
+          "bullets": [
+            "Élimination de la poussière de construction",
+            "Taches de peinture et de colle",
+            "Retrait des films de protection",
+            "Disponible rapidement"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Aperçu du nettoyage de fin de chantier",
+      "serviceBullets": [
+        "Nettoyage grossier après travaux",
+        "Nettoyage détaillé avant emménagement",
+        "Nettoyage de vitres",
+        "Nettoyage des sols",
+        "Nettoyage sanitaire",
+        "Élimination de la poussière",
+        "Élimination des taches de peinture",
+        "Retrait des films protecteurs"
+      ],
+      "trustPoints": [
+        "Achèvement dans les délais",
+        "Expérience avec entreprises générales",
+        "Qualité prête à l'emménagement"
+      ],
+      "ctaMidHeading": "Vous cherchez un nettoyage de fin de chantier à Bienne ?",
+      "ctaMidBody": "Demandez votre devis gratuit pour un nettoyage professionnel.",
+      "ctaMid": "Demander un devis",
+      "internalLinksHeading": "Plus de services à Bienne",
+      "internalLinks": [
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Nettoyage de fin de bail Bienne",
+          "href": "endreinigung-biel"
+        },
+        {
+          "label": "Nettoyage de vitres Bienne",
+          "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Débarras Bienne",
+          "href": "entsorgung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Réserver un nettoyage de fin de chantier — Sans poussière",
+      "ctaStrongBody": "Contactez-nous pour un nettoyage de fin de chantier professionnel à Bienne.",
+      "ctaStrong": "Demander un devis",
+      "testimonial": {
+        "quote": "Le nettoyage de fin de chantier était au top — tout sans poussière et prêt. Avec plaisir encore !",
+        "author": "Entreprise générale, Bienne",
+        "trust": "Nettoyage professionnel"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte le nettoyage de fin de chantier à Bienne ?",
+          "answer": "Les coûts dépendent de la surface et du degré de salissure. Nous offrons des forfaits transparents après visite."
+        },
+        {
+          "question": "Que comprend le nettoyage de fin de chantier ?",
+          "answer": "Nettoyage grossier et fin, nettoyage des vitres, des sols, élimination de la poussière et nettoyage sanitaire."
+        },
+        {
+          "question": "À quelle vitesse pouvez-vous nettoyer après les travaux ?",
+          "answer": "Nous sommes disponibles rapidement et travaillons dans les délais — même sous pression du temps."
+        },
+        {
+          "question": "Travaillez-vous avec des entreprises générales ?",
+          "answer": "Oui, nous travaillons régulièrement avec des entreprises de construction à Bienne et dans le Seeland."
+        },
+        {
+          "question": "Où proposez-vous le nettoyage de fin de chantier ?",
+          "answer": "À Bienne/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen et dans tout le Seeland."
+        }
+      ]
+    },
+    "gastronomieReinigungBiel": {
+      "meta": {
+        "title": "Nettoyage gastronomie Bienne | Cuisines & Restaurants | SwissCleanMove",
+        "description": "Nettoyage professionnel pour la gastronomie à Bienne/Bienne. Nettoyage hygiénique de cuisines selon normes HACCP dans le Seeland."
+      },
+      "badge": "Nettoyage gastronomie Bienne",
+      "h1": "Nettoyage gastronomie Bienne — Cuisines & Restaurants hygiéniques",
+      "heroSubtitle": "Nettoyage professionnel pour la gastronomie à Bienne/Bienne. Cuisines, restaurants et traiteurs — hygiéniquement propres selon les normes suisses.",
+      "ctaSoft": "Demander un devis gratuit",
+      "intro": "L'hygiène est non négociable dans la gastronomie. SwissCleanMove propose un nettoyage professionnel pour la gastronomie à Bienne/Bienne pour les restaurants, hôtels, cafés, cantines et traiteurs. Notre nettoyage de cuisine dans le Seeland respecte les normes d'hygiène suisses et garantit que votre établissement est prêt pour une inspection à tout moment. Du nettoyage approfondi de la cuisine professionnelle au nettoyage d'entretien régulier.",
+      "sections": [
+        {
+          "heading": "Nettoyage de cuisines pour la gastronomie à Bienne",
+          "body": "Notre nettoyage gastronomique à Bienne comprend le nettoyage en profondeur et l'entretien régulier des cuisines professionnelles, stations de cuisson, hottes aspirantes, filtres à graisse et zones de stockage. Nous nettoyons selon les dernières réglementations d'hygiène à Bienne, Nidau et dans la région.",
+          "bullets": [
+            "Nettoyage en profondeur de cuisines pro",
+            "Hottes aspirantes et filtres à graisse",
+            "Stations de cuisson et plans de travail",
+            "Zones de stockage et chambres froides"
+          ]
+        },
+        {
+          "heading": "Nettoyage de restaurant — Salle et sanitaires",
+          "body": "En plus du nettoyage des cuisines, nous proposons également le nettoyage des salles de restaurant, sanitaires et zones d'entrée. Un restaurant propre laisse la meilleure impression à vos clients. Nous travaillons en dehors des heures d'ouverture — discrètement et efficacement.",
+          "bullets": [
+            "Nettoyage de la salle",
+            "Installations sanitaires",
+            "Zone d'entrée et comptoir",
+            "Nettoyage en dehors des heures d'ouverture"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Notre nettoyage pour la gastronomie",
+      "serviceBullets": [
+        "Nettoyage de cuisines pro",
+        "Nettoyage de hottes",
+        "Nettoyage de la salle",
+        "Nettoyage sanitaire",
+        "Filtres à graisse",
+        "Nettoyage des sols",
+        "Nettoyage des vitres",
+        "Nettoyage en profondeur"
+      ],
+      "trustPoints": [
+        "Selon les normes d'hygiène suisses",
+        "Prêt pour inspection à tout moment",
+        "Expérience en gastronomie"
+      ],
+      "ctaMidHeading": "Vous cherchez un nettoyage pour la gastronomie à Bienne ?",
+      "ctaMidBody": "Demandez votre devis pour un nettoyage professionnel.",
+      "ctaMid": "Demander un devis",
+      "internalLinksHeading": "Plus de services à Bienne",
+      "internalLinks": [
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
+        },
+        {
+          "label": "Nettoyage d'entretien Bienne",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Facility Service Bienne",
+          "href": "facility-service-biel"
+        },
+        {
+          "label": "Nettoyage de vitres Bienne",
+          "href": "fensterreinigung-biel"
+        }
+      ],
+      "ctaStrongHeading": "Réserver un nettoyage gastronomique",
+      "ctaStrongBody": "Contactez-nous pour une propreté hygiénique dans votre établissement.",
+      "ctaStrong": "Demander un devis",
+      "testimonial": {
+        "quote": "Depuis que SwissCleanMove nettoie notre cuisine, nous passons chaque inspection sans problème.",
+        "author": "Restaurant, Bienne",
+        "trust": "Nettoyage hygiénique"
+      },
+      "faqs": [
+        {
+          "question": "Combien coûte le nettoyage gastronomique à Bienne ?",
+          "answer": "Les coûts dépendent de la taille de la cuisine et de la fréquence. Nous créons des devis sur mesure après visite."
+        },
+        {
+          "question": "Nettoyez-vous selon les normes HACCP ?",
+          "answer": "Oui, notre nettoyage gastronomique à Bienne respecte les réglementations d'hygiène suisses actuelles."
+        },
+        {
+          "question": "Nettoyez-vous en dehors des heures d'ouverture ?",
+          "answer": "Oui, nous travaillons tôt le matin, le soir ou la nuit — selon votre emploi du temps."
+        },
+        {
+          "question": "Proposez-vous un nettoyage régulier ?",
+          "answer": "Oui, hebdomadaire, bimensuel ou selon un plan individuel."
+        },
+        {
+          "question": "Où proposez-vous le nettoyage gastronomique ?",
+          "answer": "À Bienne/Bienne, Nidau, Brügg, Lyss, Aarberg et dans tout le Seeland."
         }
       ]
     }

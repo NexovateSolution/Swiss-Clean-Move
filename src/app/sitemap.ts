@@ -36,6 +36,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Haushaltshilfe landing page
   const householdPages = ['/haushaltshilfe-biel'];
 
+  // Authority SEO pages (Biel Focus)
+  const authorityPages = [
+    '/reinigungsfirma-biel',
+    '/umzugsfirma-biel',
+    '/unterhaltsreinigung-biel',
+    '/fensterreinigung-biel',
+    '/transportfirma-biel',
+    '/entsorgung-biel',
+    '/facility-service-biel',
+    '/hauswartung-biel',
+    '/baureinigung-biel',
+    '/gastronomie-reinigung-biel'
+  ];
+
   // Blog pages
   const blogPages = [
     '/blog',
@@ -47,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/abgabegarantie-erklaert'
   ];
 
-  const allPaths = [...staticPages, ...localPages, ...householdPages, ...blogPages];
+  const allPaths = [...staticPages, ...localPages, ...householdPages, ...authorityPages, ...blogPages];
 
   return allPaths.map((path) => {
     // Generate alternate languages

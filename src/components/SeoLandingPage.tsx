@@ -20,6 +20,9 @@ import {
   Sparkles,
   Building2,
   Heart,
+  Trash2,
+  UtensilsCrossed,
+  Wrench,
   ChevronDown
 } from 'lucide-react';
 import { useState } from 'react';
@@ -27,7 +30,7 @@ import { useState } from 'react';
 type SeoLandingPageProps = {
   pageKey: string;
   locale: string;
-  service: 'umzug' | 'endreinigung' | 'reinigung' | 'haushaltshilfe';
+  service: 'umzug' | 'endreinigung' | 'reinigung' | 'haushaltshilfe' | 'reinigungsfirma' | 'umzugsfirma' | 'unterhaltsreinigung' | 'fensterreinigung' | 'transport' | 'entsorgung' | 'facilityService' | 'hauswartung' | 'baureinigung' | 'gastronomieReinigung';
   city: string;
   isPillar?: boolean;
   noindex?: boolean;
@@ -41,6 +44,16 @@ const serviceIcons = {
   endreinigung: Sparkles,
   reinigung: Building2,
   haushaltshilfe: Heart,
+  reinigungsfirma: Building2,
+  umzugsfirma: Truck,
+  unterhaltsreinigung: Building2,
+  fensterreinigung: Sparkles,
+  transport: Truck,
+  entsorgung: Trash2,
+  facilityService: Building2,
+  hauswartung: Wrench,
+  baureinigung: Sparkles,
+  gastronomieReinigung: UtensilsCrossed,
 };
 
 export default function SeoLandingPage({
