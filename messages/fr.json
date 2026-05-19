@@ -8602,51 +8602,66 @@
     },
     "hauswartungBiel": {
       "meta": {
-        "title": "Conciergerie Bienne | Entretien immobilier professionnel | SwissCleanMove",
-        "description": "Conciergerie à Bienne/Bienne. Entretien immobilier professionnel, nettoyage de cages d'escalier et maintenance de bâtiments dans le Seeland."
+        "title": "Conciergerie & Facility Service Bienne | Service B2B",
+        "description": "Facility Service Premium & Conciergerie à Bienne/Biel. Entretien de bâtiments professionnel pour gérances immobilières, locaux commerciaux et immeubles de bureaux dans le Seeland."
       },
-      "badge": "Conciergerie Bienne",
-      "h1": "Conciergerie Bienne — Entretien immobilier professionnel dans le Seeland",
-      "heroSubtitle": "SwissCleanMove propose une conciergerie professionnelle à Bienne/Bienne. Entretien immobilier, maintenance de bâtiments et nettoyage — fiable et personnel.",
-      "ctaSoft": "Demander un devis gratuit",
-      "intro": "Une propriété bien entretenue augmente la valeur et la satisfaction des résidents. SwissCleanMove propose une conciergerie professionnelle à Bienne/Bienne pour les immeubles d'habitation, les propriétés commerciales et les complexes résidentiels. En tant que concierge à Bienne, nous nous occupons du nettoyage des cages d'escalier, de l'entretien des espaces extérieurs, du service hivernal et des petites réparations — régulièrement, de manière fiable et à des conditions transparentes.",
+      "badge": "Conciergerie Premium Bienne",
+      "h1": "Facility Service & Conciergerie Bienne — Entretien Immobilier Premium",
+      "heroSubtitle": "En tant que prestataire suisse de qualité en Facility Management, nous gérons les immeubles de bureaux, les complexes résidentiels et les locaux commerciaux dans tout le Seeland.",
+      "ctaSoft": "Demander un conseil B2B",
+      "intro": "Un immeuble entretenu de manière professionnelle garantit le maintien de sa valeur et la plus haute satisfaction des locataires et des copropriétaires. SwissCleanMove est votre partenaire fiable pour le Facility Service et la conciergerie à Bienne/Biel. Nous offrons des solutions sur mesure pour les gérances immobilières, les immeubles de bureaux et les immeubles locatifs - avec la norme de qualité suisse, des processus transparents et des interlocuteurs dédiés dans le Seeland.",
       "sections": [
         {
-          "heading": "Conciergerie pour immeubles à Bienne",
-          "body": "Notre conciergerie à Bienne couvre toutes les tâches qui maintiennent une propriété soignée et fonctionnelle. Nous nettoyons les cages d'escalier, entretenons les espaces verts, assurons le service hivernal et gérons les petites réparations. Nous sommes régulièrement actifs à Bienne, Nidau, Brügg, Ipsach et Pieterlen.",
+          "heading": "Facility Service Global & Entretien de Bâtiments",
+          "body": "Notre service de conciergerie est conçu pour des exigences professionnelles. Nous prenons en charge le service technique complet du bâtiment, coordonnons les rondes de contrôle et veillons à ce que la technique du bâtiment fonctionne parfaitement. Que ce soit à Nidau, Brügg ou Lyss – nous gérons vos locaux commerciaux et complexes résidentiels de manière proactive et fiable.",
           "bullets": [
-            "Nettoyage de cages d'escalier",
-            "Espaces verts et jardinage",
-            "Service hivernal et déneigement",
-            "Petites réparations et contrôles"
+            "Service technique & contrôle des installations",
+            "Rondes de contrôle régulières & vérification de sécurité",
+            "Coordination des artisans",
+            "Service de piquet 24/7 pour les urgences"
           ]
         },
         {
-          "heading": "Votre concierge à Bienne — Personnel et fiable",
-          "body": "En tant que concierge à Bienne, nous misons sur un contact personnel et des équipes fixes. Vos résidents ont un interlocuteur familier qui connaît la propriété. Nous travaillons de manière indépendante, discrète et nous assurons que tout fonctionne parfaitement — que ce soit à Aarberg, Lyss ou Orpund.",
-          "bullets": []
+          "heading": "Nettoyage Professionnel des Cages d'Escalier & Entretien",
+          "body": "La première impression de votre immeuble compte. Nos spécialistes assurent une propreté immaculée dans toutes les zones communes. Cela comprend le nettoyage minutieux des cages d'escalier, le nettoyage en douceur des ascenseurs et le nettoyage systématique des garages dans les grands parkings.",
+          "bullets": [
+            "Nettoyage de cage d'escalier & nettoyage d'entretien",
+            "Nettoyage d'ascenseurs & façades vitrées",
+            "Nettoyage de garage (mécanique)",
+            "Entretien des zones d'entrée & foyers"
+          ]
+        },
+        {
+          "heading": "Entretien Extérieur & Service Hivernal dans le Seeland",
+          "body": "Les installations extérieures sont la carte de visite de votre immeuble. Nous prenons en charge l'entretien professionnel des espaces verts à Bienne, Ipsach et Port. Pendant la saison froide, notre service hivernal fiable garantit des voies d'accès sûres et des parkings déneigés – à l'heure et conformément à la loi.",
+          "bullets": [
+            "Entretien extérieur & espaces verts",
+            "Service hivernal & déneigement",
+            "Nettoyage des surfaces goudronnées",
+            "Gestion des déchets & élimination"
+          ]
         }
       ],
-      "serviceBulletsHeading": "Nos services de conciergerie",
+      "serviceBulletsHeading": "Nos Services Facility B2B",
       "serviceBullets": [
-        "Nettoyage de cages d'escalier",
-        "Espaces verts",
-        "Service hivernal",
-        "Petites réparations",
-        "Service de clés",
-        "Gestion des déchets",
-        "Rondes d'inspection",
-        "Signalement"
+        "Conciergerie & Service de bâtiment",
+        "Nettoyage de cage d'escalier",
+        "Service technique du bâtiment",
+        "Service hivernal & déneigement",
+        "Entretien des espaces verts",
+        "Nettoyage d'ascenseurs & de garages",
+        "Nettoyage d'entretien",
+        "Service immobilier"
       ],
       "trustPoints": [
-        "Équipes de conciergerie fixes",
-        "Régulier et fiable",
-        "Conditions transparentes"
+        "Partenaire des gérances",
+        "Standard de qualité suisse",
+        "Ponctuel & Discret"
       ],
-      "ctaMidHeading": "Vous cherchez une conciergerie à Bienne ?",
-      "ctaMidBody": "Demandez votre devis pour une conciergerie professionnelle.",
-      "ctaMid": "Demander un devis",
-      "internalLinksHeading": "Plus de services à Bienne",
+      "ctaMidHeading": "Facility Management pour vos Immeubles ?",
+      "ctaMidBody": "Nous établissons volontiers un cahier des charges sur mesure pour vos immeubles dans la région de Bienne.",
+      "ctaMid": "Offre pour Gérances",
+      "internalLinksHeading": "Services associés pour les Gérances",
       "internalLinks": [
         {
           "label": "Facility Service Bienne",
@@ -8657,42 +8672,42 @@
           "href": "unterhaltsreinigung-biel"
         },
         {
-          "label": "Entreprise de nettoyage Bienne",
-          "href": "reinigungsfirma-biel"
-        },
-        {
           "label": "Nettoyage de vitres Bienne",
           "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Entreprise de nettoyage Bienne",
+          "href": "reinigungsfirma-biel"
         }
       ],
-      "ctaStrongHeading": "Réserver une conciergerie maintenant",
-      "ctaStrongBody": "Contactez-nous pour une conciergerie professionnelle à Bienne et dans le Seeland.",
-      "ctaStrong": "Demander un devis",
+      "ctaStrongHeading": "Votre Partenaire Premium pour le Service Immobilier",
+      "ctaStrongBody": "Contactez SwissCleanMove pour une conciergerie et un Facility Service professionnels à Bienne, Aarberg, Pieterlen, Studen et dans tout le Seeland.",
+      "ctaStrong": "Démarrer un projet",
       "testimonial": {
-        "quote": "Depuis que SwissCleanMove a repris notre conciergerie, tout est parfaitement organisé.",
-        "author": "Propriétaire, Nidau",
-        "trust": "Conciergerie fiable"
+        "quote": "Depuis que nous avons confié la gestion de nos bâtiments commerciaux dans le Seeland à SwissCleanMove, les réclamations des locataires ont été réduites à zéro. Un service immobilier extrêmement professionnel.",
+        "author": "Gérance immobilière, Bienne/Biel",
+        "trust": "Partenaire B2B Vérifié"
       },
       "faqs": [
         {
-          "question": "Combien coûte une conciergerie à Bienne ?",
-          "answer": "Les coûts dépendent de la taille de la propriété et de l'étendue des services. Nous établissons des devis sur mesure."
+          "question": "SwissCleanMove propose-t-il un Facility Service pour les gérances ?",
+          "answer": "Oui, nous sommes spécialisés dans la collaboration avec les gérances immobilières, les communautés de copropriétaires et les propriétaires d'immeubles commerciaux dans le Seeland."
         },
         {
           "question": "Que comprend la conciergerie ?",
-          "answer": "Nettoyage des cages d'escalier, espaces verts, service hivernal, petites réparations, rondes d'inspection et gestion des déchets."
+          "answer": "Notre service comprend le nettoyage des cages d'escalier, le nettoyage d'entretien, l'entretien des espaces verts, le service hivernal, le nettoyage des ascenseurs, le nettoyage des garages ainsi que le service technique du bâtiment et des rondes de contrôle régulières."
         },
         {
-          "question": "Avez-vous des équipes de conciergerie fixes ?",
-          "answer": "Oui, chaque propriété a une équipe fixe que les résidents connaissent."
+          "question": "SwissCleanMove offre-t-il un service hivernal ?",
+          "answer": "Oui, nous offrons un service hivernal professionnel incluant le déneigement et le salage pour les complexes résidentiels et les immeubles de bureaux, afin d'assurer la sécurité en cas de glace et de neige."
         },
         {
-          "question": "Proposez-vous aussi le service hivernal ?",
-          "answer": "Oui, le service hivernal et le déneigement font partie de notre conciergerie à Bienne."
+          "question": "Quelles régions couvre SwissCleanMove ?",
+          "answer": "Notre service immobilier couvre Bienne/Biel et tout le Seeland, y compris Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen, Port, Studen et Orpund."
         },
         {
-          "question": "Où proposez-vous la conciergerie ?",
-          "answer": "À Bienne/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen et dans tout le Seeland."
+          "question": "À quelle fréquence la conciergerie peut-elle être effectuée ?",
+          "answer": "La fréquence est déterminée individuellement selon les besoins de votre immeuble. Nous proposons des interventions quotidiennes, hebdomadaires ou sur mesure pour le nettoyage d'entretien et l'entretien du bâtiment."
         }
       ]
     },

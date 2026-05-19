@@ -206,6 +206,20 @@ export default function SeoLandingPage({
     }
   };
 
+  const getOptimizedAlt = (baseService: string, locCity: string, isHero = false) => {
+    if (baseService === 'hauswartung') {
+      return isHero 
+        ? `Professionelle Hauswartung & Facility Service in ${locCity}`
+        : `Hauswartung und Treppenhausreinigung ${locCity}`;
+    }
+    if (baseService === 'facilityService') {
+      return isHero
+        ? `Facility Service & Gebäudeservice in ${locCity}`
+        : `Gebäudeunterhalt und Facility Management ${locCity}`;
+    }
+    return isHero ? `${baseService} in ${locCity}` : `${baseService} ${locCity}`;
+  };
+
   return (
     <Layout>
       {/* JSON-LD Structured Data */}
@@ -242,7 +256,7 @@ export default function SeoLandingPage({
           <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center relative rounded-2xl overflow-hidden shadow-subtle border border-swiss-border">
             <Image 
               src={service === 'umzug' ? '/images/transportation.jpg' : '/Gallary/2.jpeg'} 
-              alt={`${service} in ${city}`}
+              alt={getOptimizedAlt(service, city, true)}
               fill
               className="object-cover opacity-90"
               priority
@@ -398,7 +412,7 @@ export default function SeoLandingPage({
               <div key={num} className="relative h-64 rounded-2xl overflow-hidden shadow-subtle border border-swiss-border group">
                 <Image 
                   src={service === 'umzug' ? '/images/transportation.jpg' : '/Gallary/2.jpeg'} 
-                  alt={`${service} ${city} - Arbeit ${num}`}
+                  alt={`${getOptimizedAlt(service, city, false)} - Arbeit ${num}`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"

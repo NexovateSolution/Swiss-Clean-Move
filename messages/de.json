@@ -8641,51 +8641,66 @@
     },
     "hauswartungBiel": {
       "meta": {
-        "title": "Hauswartung Biel | Professionelle Liegenschaftsbetreuung | SwissCleanMove",
-        "description": "Hauswartung in Biel/Bienne. Professionelle Liegenschaftsbetreuung, Treppenhausreinigung und Gebäudeunterhalt im Seeland."
+        "title": "Hauswartung & Facility Service Biel | B2B Liegenschaftsservice",
+        "description": "Premium Facility Service & Hauswartung in Biel/Bienne. Professioneller Gebäudeunterhalt für Immobilienverwaltungen, Gewerbeliegenschaften und Bürogebäude im Seeland."
       },
-      "badge": "Hauswartung Biel",
-      "h1": "Hauswartung Biel — Professionelle Liegenschaftsbetreuung im Seeland",
-      "heroSubtitle": "SwissCleanMove bietet professionelle Hauswartung in Biel/Bienne. Liegenschaftsbetreuung, Gebäudeunterhalt und Reinigung — zuverlässig und persönlich.",
-      "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Eine gepflegte Liegenschaft steigert den Wert und die Zufriedenheit der Bewohner. SwissCleanMove bietet professionelle Hauswartung in Biel/Bienne für Mehrfamilienhäuser, Gewerbeliegenschaften und Wohnsiedlungen. Als Hauswart in Biel übernehmen wir Treppenhausreinigung, Aussenbereichspflege, Winterdienst und kleinere Reparaturen — regelmässig, zuverlässig und zu transparenten Konditionen.",
+      "badge": "Premium Hauswartung Biel",
+      "h1": "Facility Service & Hauswartung Biel — Premium Liegenschaftsbetreuung",
+      "heroSubtitle": "Als Schweizer Qualitätsanbieter für Facility Management betreuen wir Immobilienverwaltungen, Wohnüberbauungen und Gewerbeliegenschaften im gesamten Seeland.",
+      "ctaSoft": "B2B Beratung anfordern",
+      "intro": "Eine professionell betreute Liegenschaft sichert den Werterhalt und garantiert höchste Zufriedenheit bei Mietern und Stockwerkeigentümergemeinschaften. SwissCleanMove ist Ihr verlässlicher Partner für Facility Service und Hauswartung in Biel/Bienne. Wir bieten massgeschneiderte Lösungen für Immobilienverwaltungen, Bürogebäude und Mehrfamilienhäuser – mit Schweizer Qualitätsstandard, transparenten Prozessen und dedizierten Ansprechpartnern im Seeland.",
       "sections": [
         {
-          "heading": "Hauswartung für Mehrfamilienhäuser in Biel",
-          "body": "Unsere Hauswartung in Biel umfasst alle Aufgaben, die eine Liegenschaft gepflegt und funktional halten. Wir reinigen Treppenhäuser, pflegen Grünflächen, führen den Winterdienst durch und kümmern uns um kleinere Reparaturen. In Biel, Nidau, Brügg, Ipsach und Pieterlen sind wir regelmässig im Einsatz.",
+          "heading": "Ganzheitlicher Facility Service & Gebäudeunterhalt",
+          "body": "Unser Gebäudeservice richtet sich an professionelle Ansprüche. Wir übernehmen den kompletten technischen Hausdienst, koordinieren Kontrollgänge und stellen sicher, dass die Gebäudetechnik einwandfrei funktioniert. Ob in Nidau, Brügg oder Lyss – wir betreuen Ihre Gewerbeliegenschaften und Wohnanlagen vorausschauend und zuverlässig.",
           "bullets": [
-            "Treppenhausreinigung",
-            "Grünpflege und Gartenarbeit",
-            "Winterdienst und Schneeräumung",
-            "Kleinreparaturen und Kontrollen"
+            "Technischer Hausdienst & Anlagenkontrolle",
+            "Regelmässige Kontrollgänge & Sicherheitsüberprüfung",
+            "Koordination von Handwerkern",
+            "24/7 Pikettdienst für Notfälle"
           ]
         },
         {
-          "heading": "Ihr Hauswart in Biel — persönlich und zuverlässig",
-          "body": "Als Ihr Hauswart in Biel setzen wir auf persönlichen Kontakt und feste Teams. Ihre Bewohner haben einen vertrauten Ansprechpartner, der die Liegenschaft kennt. Wir arbeiten eigenständig, diskret und sorgen dafür, dass alles reibungslos funktioniert — ob in Aarberg, Lyss oder Orpund.",
-          "bullets": []
+          "heading": "Professionelle Treppenhausreinigung & Unterhalt",
+          "body": "Der erste Eindruck Ihrer Immobilie zählt. Unsere Fachkräfte sorgen für makellose Sauberkeit in allen Gemeinschaftszonen. Dies umfasst die sorgfältige Treppenhausreinigung, schonende Liftreinigung sowie die systematische Garagenreinigung in grossen Einstellhallen.",
+          "bullets": [
+            "Treppenhausreinigung & Unterhaltsreinigung",
+            "Liftreinigung & Fensterfronten",
+            "Garagenreinigung (maschinell)",
+            "Pflege von Eingangsbereichen & Foyers"
+          ]
+        },
+        {
+          "heading": "Umgebungspflege & Winterdienst im Seeland",
+          "body": "Die Aussenanlagen sind die Visitenkarte Ihrer Liegenschaft. Wir übernehmen die professionelle Umgebungspflege in Biel, Ipsach und Port. In der kalten Jahreszeit garantiert unser zuverlässiger Winterdienst sichere Zugangswege und zugefrorene Parkflächen – pünktlich und gesetzeskonform.",
+          "bullets": [
+            "Umgebungspflege & Grünflächenunterhalt",
+            "Winterdienst & Schneeräumung",
+            "Schwarzflächenreinigung",
+            "Abfallbewirtschaftung & Entsorgung"
+          ]
         }
       ],
-      "serviceBulletsHeading": "Unsere Hauswartungsleistungen",
+      "serviceBulletsHeading": "Unsere B2B Facility Services",
       "serviceBullets": [
+        "Hauswartung & Gebäudeservice",
         "Treppenhausreinigung",
-        "Grünpflege",
-        "Winterdienst",
-        "Kleinreparaturen",
-        "Schlüsselservice",
-        "Abfallbewirtschaftung",
-        "Kontrollgänge",
-        "Meldewesen"
+        "Technischer Hausdienst",
+        "Winterdienst & Schneeräumung",
+        "Umgebungspflege",
+        "Liftreinigung & Garagenreinigung",
+        "Unterhaltsreinigung",
+        "Liegenschaftsservice"
       ],
       "trustPoints": [
-        "Feste Hauswart-Teams",
-        "Regelmässig und zuverlässig",
-        "Transparente Konditionen"
+        "Partner für Verwaltungen",
+        "Schweizer Qualitätsstandard",
+        "Pünktlich & Diskret"
       ],
-      "ctaMidHeading": "Hauswartung in Biel gesucht?",
-      "ctaMidBody": "Fordern Sie Ihre Offerte für professionelle Hauswartung an.",
-      "ctaMid": "Offerte anfordern",
-      "internalLinksHeading": "Weitere Dienstleistungen in Biel",
+      "ctaMidHeading": "Facility Management für Ihre Immobilien?",
+      "ctaMidBody": "Gerne erstellen wir ein massgeschneidertes Pflichtenheft für Ihre Liegenschaften in der Region Biel.",
+      "ctaMid": "Offerte für Verwaltungen",
+      "internalLinksHeading": "Verwandte Services für Verwaltungen",
       "internalLinks": [
         {
           "label": "Facility Service Biel",
@@ -8696,42 +8711,42 @@
           "href": "unterhaltsreinigung-biel"
         },
         {
-          "label": "Reinigungsfirma Biel",
-          "href": "reinigungsfirma-biel"
-        },
-        {
           "label": "Fensterreinigung Biel",
           "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Umzugsreinigung Biel",
+          "href": "umzugsreinigung-biel"
         }
       ],
-      "ctaStrongHeading": "Jetzt Hauswartung buchen",
-      "ctaStrongBody": "Kontaktieren Sie uns für eine professionelle Hauswartung in Biel und im Seeland.",
-      "ctaStrong": "Offerte anfordern",
+      "ctaStrongHeading": "Ihr Premium Partner für Liegenschaftsservice",
+      "ctaStrongBody": "Kontaktieren Sie SwissCleanMove für professionelle Hauswartung und Facility Service in Biel, Aarberg, Pieterlen, Studen und dem gesamten Seeland.",
+      "ctaStrong": "Projektanfrage starten",
       "testimonial": {
-        "quote": "Seit SwissCleanMove unsere Hauswartung übernommen hat, ist alles bestens organisiert.",
-        "author": "Hauseigentümer, Nidau",
-        "trust": "Zuverlässige Hauswartung"
+        "quote": "Seit wir unsere Gewerbegebäude im Seeland von SwissCleanMove betreuen lassen, haben sich die Reklamationen der Mieter auf null reduziert. Ein extrem professioneller Liegenschaftsservice.",
+        "author": "Immobilienverwaltung, Biel/Bienne",
+        "trust": "Verifizierter B2B Partner"
       },
       "faqs": [
         {
-          "question": "Was kostet Hauswartung in Biel?",
-          "answer": "Die Kosten hängen von der Liegenschaftsgrösse und dem Leistungsumfang ab. Wir erstellen individuelle Offerten."
+          "question": "Bietet SwissCleanMove Facility Service für Verwaltungen?",
+          "answer": "Ja, wir sind spezialisiert auf die Zusammenarbeit mit Immobilienverwaltungen, Stockwerkeigentümergemeinschaften und Eigentümern von Gewerbeliegenschaften im Seeland."
         },
         {
           "question": "Was gehört zur Hauswartung?",
-          "answer": "Treppenhausreinigung, Grünpflege, Winterdienst, Kleinreparaturen, Kontrollgänge und Abfallbewirtschaftung."
+          "answer": "Unser Service umfasst Treppenhausreinigung, Unterhaltsreinigung, Umgebungspflege, Winterdienst, Liftreinigung, Garagenreinigung sowie den technischen Hausdienst und regelmässige Kontrollgänge."
         },
         {
-          "question": "Haben Sie feste Hauswart-Teams?",
-          "answer": "Ja, jede Liegenschaft bekommt ein festes Team, das die Bewohner kennen."
+          "question": "Bietet SwissCleanMove Winterdienst an?",
+          "answer": "Ja, wir bieten professionellen Winterdienst inklusive Schneeräumung und Salzung für Wohnüberbauungen und Bürogebäude, um die Sicherheit bei Eis und Schnee zu gewährleisten."
         },
         {
-          "question": "Bieten Sie auch Winterdienst an?",
-          "answer": "Ja, Winterdienst und Schneeräumung sind Teil unserer Hauswartung in Biel."
+          "question": "Welche Regionen betreut SwissCleanMove?",
+          "answer": "Unser Liegenschaftsservice deckt Biel/Bienne und das gesamte Seeland ab, einschliesslich Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen, Port, Studen und Orpund."
         },
         {
-          "question": "In welchen Orten bieten Sie Hauswartung an?",
-          "answer": "In Biel/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen und im gesamten Seeland."
+          "question": "Wie oft kann die Hauswartung durchgeführt werden?",
+          "answer": "Die Frequenz wird individuell nach den Bedürfnissen Ihrer Immobilie festgelegt. Wir bieten tägliche, wöchentliche oder massgeschneiderte Intervalle für die Unterhaltsreinigung und den Gebäudeunterhalt."
         }
       ]
     },
