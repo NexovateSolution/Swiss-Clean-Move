@@ -42,7 +42,8 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
       features: t.raw('services.features.facilityServices'),
       pricing: t('services.pricingUnits.byArrangement'),
       color: 'bg-emerald-500',
-      gradient: 'from-emerald-500 to-emerald-600'
+      gradient: 'from-emerald-500 to-emerald-600',
+      href: `/${locale}/hauswartung-biel`
     },
     {
       id: 'comboService',
@@ -62,7 +63,8 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
       features: t.raw('services.features.householdHelping'),
       pricing: t('services.pricing.householdHelping'),
       color: 'bg-emerald-500',
-      gradient: 'from-emerald-500 to-emerald-600'
+      gradient: 'from-emerald-500 to-emerald-600',
+      href: `/${locale}/haushaltshilfe-biel`
     }
   ];
 
@@ -153,10 +155,10 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
                     {/* CTA */}
                     <div className="pt-4 border-t border-swiss-border">
                       <Link
-                        href={`/${locale}/free-offer`}
+                        href={(service as any).href || `/${locale}/free-offer`}
                         className="inline-flex items-center space-x-2 text-swiss-red hover:text-swiss-red/80 font-medium transition-colors"
                       >
-                        <span>{t('common.requestFreeQuote')}</span>
+                        <span>{(service as any).href ? t('common.learnMore') : t('common.requestFreeQuote')}</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>

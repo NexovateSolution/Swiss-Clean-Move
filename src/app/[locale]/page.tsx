@@ -89,7 +89,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       iconColor: 'text-blue-600',
       services: [
         { title: t('home.services.houseCleaning.title'), description: t('home.services.houseCleaning.description'), formHref: `/${locale}/form?service=house-cleaning`, href: `/${locale}/services/house-cleaning`, icon: HomeIcon },
-        { title: t('home.services.facilityServices.title'), description: t('home.services.facilityServices.description'), formHref: `/${locale}/form?service=facility-services`, href: `/${locale}/services#facilityServices`, icon: Building2 },
+        { title: t('home.services.facilityServices.title'), description: t('home.services.facilityServices.description'), formHref: `/${locale}/form?service=facility-services`, href: `/${locale}/hauswartung-biel`, icon: Building2 },
         { title: t('home.services.windowCleaning.title'), description: t('home.services.windowCleaning.description'), formHref: `/${locale}/form?service=window-cleaning`, href: `/${locale}/services/window-cleaning`, icon: HomeIcon },
       ]
     },
