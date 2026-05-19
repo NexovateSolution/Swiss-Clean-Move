@@ -22,7 +22,8 @@
     "login": "Login",
     "language": "Language",
     "gallery": "Gallery",
-    "householdHelping": "Household Helping"
+    "householdHelping": "Household Helping",
+    "hauswartung": "Property Maintenance"
   },
   "home": {
     "services": {
