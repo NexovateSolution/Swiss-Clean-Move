@@ -22,8 +22,7 @@
     "login": "Login",
     "language": "Language",
     "gallery": "Gallery",
-    "householdHelping": "Household Helping",
-    "hauswartung": "Property Maintenance"
+    "householdHelping": "Household Helping"
   },
   "home": {
     "services": {
@@ -8484,6 +8483,45 @@
         {
           "question": "How often can the property maintenance be performed?",
           "answer": "The frequency is determined individually according to the needs of your property. We offer daily, weekly, or customized intervals for maintenance cleaning and building upkeep."
+        }
+      ],
+      "serviceCardsHeading": "Our Premium B2B Services",
+      "serviceCards": [
+        {
+          "title": "Technical Building Service",
+          "description": "Comprehensive control and maintenance of building technology.",
+          "features": [
+            "Regular inspection rounds",
+            "Security checks",
+            "Coordination of tradesmen"
+          ]
+        },
+        {
+          "title": "Stairwell Cleaning",
+          "description": "Immaculate cleanliness in all common areas and stairwells.",
+          "features": [
+            "Cleaning of stairs & floors",
+            "Window and elevator cleaning",
+            "Care of entrance areas"
+          ]
+        },
+        {
+          "title": "Winter Service",
+          "description": "Safe access paths and ice-free parking areas in the cold season.",
+          "features": [
+            "Reliable snow removal",
+            "Salting & ice clearance",
+            "Legally compliant execution"
+          ]
+        },
+        {
+          "title": "Grounds Maintenance",
+          "description": "Care of outdoor facilities and green areas as the calling card of your property.",
+          "features": [
+            "Green area upkeep",
+            "Waste management",
+            "Cleanliness in outdoor areas"
+          ]
         }
       ]
     },

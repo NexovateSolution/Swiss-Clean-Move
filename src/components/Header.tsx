@@ -34,7 +34,6 @@ export default function Header() {
     { name: t('navigation.home'), href: `/${locale}` },
     { name: t('navigation.about'), href: `/${locale}/about` },
     { name: t('navigation.services'), href: `/${locale}/services` },
-    { name: t('navigation.hauswartung'), href: `/${locale}/hauswartung-biel` },
     { name: t('navigation.regions'), href: `/${locale}/regions` },
     { name: t('navigation.pricing'), href: `/${locale}/pricing` },
     { name: t('navigation.gallery'), href: `/${locale}/gallery` },

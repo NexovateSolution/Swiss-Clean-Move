@@ -12,8 +12,7 @@
     "login": "Anmelden",
     "language": "Sprache",
     "gallery": "Galerie",
-    "householdHelping": "Haushaltshilfe",
-    "hauswartung": "Hauswartung"
+    "householdHelping": "Haushaltshilfe"
   },
   "home": {
     "services": {
@@ -8748,6 +8747,45 @@
         {
           "question": "Wie oft kann die Hauswartung durchgeführt werden?",
           "answer": "Die Frequenz wird individuell nach den Bedürfnissen Ihrer Immobilie festgelegt. Wir bieten tägliche, wöchentliche oder massgeschneiderte Intervalle für die Unterhaltsreinigung und den Gebäudeunterhalt."
+        }
+      ],
+      "serviceCardsHeading": "Unsere Premium B2B Services",
+      "serviceCards": [
+        {
+          "title": "Technischer Hausdienst",
+          "description": "Umfassende Kontrolle und Instandhaltung der Gebäudetechnik.",
+          "features": [
+            "Regelmässige Kontrollgänge",
+            "Sicherheitsüberprüfung",
+            "Koordination von Handwerkern"
+          ]
+        },
+        {
+          "title": "Treppenhausreinigung",
+          "description": "Makellose Sauberkeit in allen Gemeinschaftszonen und Treppenhäusern.",
+          "features": [
+            "Reinigung von Treppen & Böden",
+            "Fenster- und Liftreinigung",
+            "Pflege von Eingangsbereichen"
+          ]
+        },
+        {
+          "title": "Winterdienst",
+          "description": "Sichere Zugangswege und eisfeie Parkplätze in der kalten Jahreszeit.",
+          "features": [
+            "Zuverlässige Schneeräumung",
+            "Salzung & Schwarzräumung",
+            "Gesetzeskonforme Ausführung"
+          ]
+        },
+        {
+          "title": "Umgebungspflege",
+          "description": "Pflege der Aussenanlagen und Grünflächen als Visitenkarte Ihrer Immobilie.",
+          "features": [
+            "Grünflächenunterhalt",
+            "Abfallbewirtschaftung",
+            "Sauberkeit im Aussenbereich"
+          ]
         }
       ]
     },

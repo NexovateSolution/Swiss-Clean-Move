@@ -12,8 +12,7 @@
     "login": "Se connecter",
     "language": "Langue",
     "gallery": "Galerie",
-    "householdHelping": "Aide ménagère",
-    "hauswartung": "Conciergerie"
+    "householdHelping": "Aide ménagère"
   },
   "home": {
     "services": {
@@ -8709,6 +8708,45 @@
         {
           "question": "À quelle fréquence la conciergerie peut-elle être effectuée ?",
           "answer": "La fréquence est déterminée individuellement selon les besoins de votre immeuble. Nous proposons des interventions quotidiennes, hebdomadaires ou sur mesure pour le nettoyage d'entretien et l'entretien du bâtiment."
+        }
+      ],
+      "serviceCardsHeading": "Nos Services Premium B2B",
+      "serviceCards": [
+        {
+          "title": "Service Technique du Bâtiment",
+          "description": "Contrôle complet et entretien de la technique du bâtiment.",
+          "features": [
+            "Rondes de contrôle régulières",
+            "Vérifications de sécurité",
+            "Coordination des artisans"
+          ]
+        },
+        {
+          "title": "Nettoyage de Cages d'Escalier",
+          "description": "Propreté immaculée dans toutes les zones communes et les cages d'escalier.",
+          "features": [
+            "Nettoyage des escaliers et sols",
+            "Nettoyage des fenêtres et ascenseurs",
+            "Entretien des zones d'entrée"
+          ]
+        },
+        {
+          "title": "Service Hivernal",
+          "description": "Voies d'accès sûres et parkings déneigés pendant la saison froide.",
+          "features": [
+            "Déneigement fiable",
+            "Salage et déglaçage",
+            "Exécution conforme à la loi"
+          ]
+        },
+        {
+          "title": "Entretien Extérieur",
+          "description": "Entretien des espaces extérieurs et des espaces verts comme carte de visite de votre bien.",
+          "features": [
+            "Entretien des espaces verts",
+            "Gestion des déchets",
+            "Propreté des espaces extérieurs"
+          ]
         }
       ]
     },
