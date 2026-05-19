@@ -412,7 +412,46 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       {/* Haushaltshilfe & Privatreinigung – Premium Highlight */}
       <section className="section-padding bg-white border-b border-swiss-border">
         <div className="container-max">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-6">
+            {/* Facility Service & Hauswartung – Premium Highlight */}
+            <div className="card p-8 md:p-10 bg-swiss-section border border-swiss-border relative overflow-hidden">
+              {/* Decorative accent */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-swiss-red via-swiss-red/60 to-transparent"></div>
+
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                {/* Icon */}
+                <div className="w-16 h-16 bg-swiss-softRed border border-swiss-border rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Building2 className="w-8 h-8 text-swiss-red" />
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 space-y-3">
+                  <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
+                    {locale === 'en' ? 'Facility Service & Property Maintenance' : locale === 'fr' ? 'Facility Service & Conciergerie' : 'Facility Service & Hauswartung'}
+                  </h2>
+                  <p className="text-swiss-body leading-relaxed">
+                    {locale === 'en'
+                      ? 'Professional property maintenance and facility services for B2B clients in Biel & Seeland — technical building services, stairwell cleaning, and winter service.'
+                      : locale === 'fr'
+                        ? 'Entretien professionnel de propriétés et services de conciergerie pour les clients B2B à Bienne & Seeland — service technique, nettoyage des escaliers et service hivernal.'
+                        : 'Professionelle Liegenschaftsbetreuung und Facility Services für B2B-Kunden in Biel & Seeland — technischer Hausdienst, Treppenhausreinigung und Winterdienst.'}
+                  </p>
+                </div>
+
+                {/* CTA */}
+                <div className="flex-shrink-0">
+                  <Link
+                    href={`/${locale}/hauswartung-biel`}
+                    className="btn-primary inline-flex items-center space-x-2 whitespace-nowrap"
+                  >
+                    <span>{locale === 'en' ? 'Learn More' : locale === 'fr' ? 'En savoir plus' : 'Mehr erfahren'}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Haushaltshilfe & Privatreinigung – Premium Highlight */}
             <div className="card p-8 md:p-10 bg-swiss-section border border-swiss-border relative overflow-hidden">
               {/* Decorative accent */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-swiss-red via-swiss-red/60 to-transparent"></div>
