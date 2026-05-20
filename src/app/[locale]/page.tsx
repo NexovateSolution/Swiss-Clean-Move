@@ -427,14 +427,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 {/* Content */}
                 <div className="flex-1 space-y-3">
                   <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-                    {locale === 'en' ? 'Facility Service & Property Maintenance' : locale === 'fr' ? 'Facility Service & Conciergerie' : 'Facility Service & Hauswartung'}
+                    {locale === 'en' ? 'Property Maintenance Biel/Bienne & Facility Service' : locale === 'fr' ? 'Entretien de Propriétés Bienne/Bienne' : 'Hauswartung Reinigung Biel/Bienne'}
                   </h2>
                   <p className="text-swiss-body leading-relaxed">
                     {locale === 'en'
-                      ? 'Professional property maintenance and facility services for B2B clients in Biel & Seeland — technical building services, stairwell cleaning, and winter service.'
+                      ? 'Professional property maintenance, facility services, and building cleaning for B2B clients in Biel/Bienne & Seeland — technical building services, stairwell cleaning, and winter service.'
                       : locale === 'fr'
-                        ? 'Entretien professionnel de propriétés et services de conciergerie pour les clients B2B à Bienne & Seeland — service technique, nettoyage des escaliers et service hivernal.'
-                        : 'Professionelle Liegenschaftsbetreuung und Facility Services für B2B-Kunden in Biel & Seeland — technischer Hausdienst, Treppenhausreinigung und Winterdienst.'}
+                        ? 'Entretien professionnel de propriétés, facility services et nettoyage de bâtiments pour les clients B2B à Bienne & Seeland — service technique, nettoyage des escaliers et service hivernal.'
+                        : 'Professionelle Hauswartung Reinigung und Facility Services für B2B-Kunden in Biel/Bienne & Seeland — technischer Hausdienst, Treppenhausreinigung und Winterdienst.'}
                   </p>
                 </div>
 
