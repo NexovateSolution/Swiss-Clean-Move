@@ -77,7 +77,8 @@ export default function SeoLandingPage({
   // Parse FAQs
   let faqs: { question: string; answer: string }[] = [];
   try {
-    faqs = pRaw('faqs') as any;
+    const rawFaqs = pRaw('faqs');
+    if (Array.isArray(rawFaqs)) faqs = rawFaqs;
   } catch {
     faqs = [];
   }
@@ -85,7 +86,10 @@ export default function SeoLandingPage({
   // Parse testimonial
   let testimonial: { quote: string; author: string; trust: string } | null = null;
   try {
-    testimonial = pRaw('testimonial') as any;
+    const rawTestimonial = pRaw('testimonial');
+    if (typeof rawTestimonial === 'object' && rawTestimonial !== null && !Array.isArray(rawTestimonial)) {
+      testimonial = rawTestimonial as any;
+    }
   } catch {
     testimonial = null;
   }
@@ -158,7 +162,8 @@ export default function SeoLandingPage({
   // Parse sections from translations
   let sections: { heading: string; body: string; bullets?: string[] }[] = [];
   try {
-    sections = pRaw('sections') as any;
+    const rawSections = pRaw('sections');
+    if (Array.isArray(rawSections)) sections = rawSections;
   } catch {
     sections = [];
   }
@@ -166,7 +171,8 @@ export default function SeoLandingPage({
   // Parse internal links
   let internalLinks: { label: string; href: string }[] = [];
   try {
-    internalLinks = pRaw('internalLinks') as any;
+    const rawLinks = pRaw('internalLinks');
+    if (Array.isArray(rawLinks)) internalLinks = rawLinks;
   } catch {
     internalLinks = [];
   }
@@ -174,7 +180,8 @@ export default function SeoLandingPage({
   // Parse trust points
   let trustPoints: string[] = [];
   try {
-    trustPoints = pRaw('trustPoints') as any;
+    const rawTrust = pRaw('trustPoints');
+    if (Array.isArray(rawTrust)) trustPoints = rawTrust;
   } catch {
     trustPoints = [];
   }
@@ -182,7 +189,8 @@ export default function SeoLandingPage({
   // Parse service bullets
   let serviceBullets: string[] = [];
   try {
-    serviceBullets = pRaw('serviceBullets') as any;
+    const rawBullets = pRaw('serviceBullets');
+    if (Array.isArray(rawBullets)) serviceBullets = rawBullets;
   } catch {
     serviceBullets = [];
   }
@@ -190,7 +198,8 @@ export default function SeoLandingPage({
   // Parse premium service cards (for haushaltshilfe pages)
   let serviceCards: { title: string; description: string; features: string[] }[] = [];
   try {
-    serviceCards = pRaw('serviceCards') as any;
+    const rawCards = pRaw('serviceCards');
+    if (Array.isArray(rawCards)) serviceCards = rawCards;
   } catch {
     serviceCards = [];
   }
