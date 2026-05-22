@@ -8286,7 +8286,7 @@
       "intro": "Facility Service means more than just cleaning — it's the overall care of your property. SwissCleanMove offers professional Facility Service in Biel/Bienne for property management companies, businesses, and institutions. From regular maintenance cleaning and caretaking to technical building support — as your facility partner in Seeland, we take responsibility for your properties in Biel, Nidau, Brügg, Lyss, and the surrounding area.",
       "sections": [
         {
-          "heading": "Facility Management for Properties in Biel",
+          "heading": "Facility Service for Properties in Biel",
           "body": "Our Facility Service in Biel encompasses the holistic care of residential and commercial properties. We coordinate cleaning, caretaking, landscaping, and minor repairs — all through one contact person. For management companies in Biel, Nidau, and Seeland, this means less effort and reliable results.",
           "bullets": [
             "Holistic building management",
@@ -8377,28 +8377,28 @@
     },
     "hauswartungBiel": {
       "meta": {
-        "title": "Property Maintenance Biel/Bienne | Facility Service & Property Care | SwissCleanMove",
-        "description": "Professional property maintenance, facility services, and building cleaning in Biel/Bienne & Seeland. Tailored property care and caretaker service for B2B commercial properties and property managers."
+        "title": "Property Maintenance Biel/Bienne | Facility Service & Building Care | SwissCleanMove",
+        "description": "Professional property maintenance, facility service, and building care in Biel/Bienne & Seeland. Caretaker service, building cleaning, and property supervision for B2B property managers."
       },
-      "badge": "Premium Property Maintenance Biel",
-      "h1": "Property Maintenance Biel/Bienne & Facility Management",
-      "heroSubtitle": "As a Swiss quality provider for Facility Management, we serve property managers, residential complexes and commercial buildings throughout the Seeland.",
+      "badge": "Premium Property Maintenance & Building Care Biel",
+      "h1": "Property Maintenance Biel/Bienne — Facility Service & Building Care",
+      "heroSubtitle": "As a Swiss quality provider for property maintenance and facility service, we serve property managers, residential complexes and commercial buildings throughout the Seeland.",
       "ctaSoft": "Request B2B Consultation",
-      "intro": "A professionally maintained property ensures value retention and guarantees the highest satisfaction among tenants and condominium associations. SwissCleanMove is your reliable partner for Property Maintenance Biel and comprehensive facility services. We offer tailored Building Management Biel and Property Supervision Biel for property management companies, office properties, and residential complexes – with premium Swiss quality standards, transparent processes, and a dedicated Caretaker Service Biel in the Seeland.",
+      "intro": "A professionally maintained property ensures value retention and guarantees the highest satisfaction among tenants and condominium associations. SwissCleanMove is your reliable partner for property maintenance in Biel/Bienne — offering comprehensive facility service, building care, and caretaker service. We provide tailored property supervision for property managers, office buildings, and residential complexes — with premium Swiss quality standards, dedicated contact persons, and long-term service concepts across the Seeland.",
       "sections": [
         {
-          "heading": "Holistic Property Care Biel & Technical Facility Service",
-          "body": "Our property care and caretaker service is designed for professional B2B requirements. We take over the complete technical building management, coordinate inspection rounds, and ensure that the building technology functions flawlessly. Whether in Nidau, Brügg, or Lyss – we manage your commercial buildings, office properties, and apartment buildings proactively and reliably.",
+          "heading": "Technical Building Service & Property Supervision Biel",
+          "body": "Our technical building service and caretaker service is designed for professional B2B requirements. We take over complete property supervision, coordinate inspection rounds, and ensure that building technology functions flawlessly. Whether apartment buildings in Nidau, office properties in Brügg, or commercial buildings in Lyss — our property maintenance in Biel guarantees fast response times and reliable building inspections.",
           "bullets": [
             "Technical building service & system control",
             "Regular inspection rounds & security checks",
-            "Coordination of tradesmen",
-            "24/7 on-call service for emergencies"
+            "Coordination of tradesmen & maintenance",
+            "Fast response times & 24/7 on-call service"
           ]
         },
         {
-          "heading": "Building Cleaning for Residential Complexes & Commercial Buildings",
-          "body": "The first impression of your property counts. Our Facility Service for Property Managers ensures immaculate cleanliness in all common areas. This includes careful stairwell cleaning, gentle elevator cleaning, and systematic Property Maintenance for Apartment Buildings and large parking halls.",
+          "heading": "Building Cleaning & Stairwell Cleaning Biel",
+          "body": "The first impression of your property counts. Our building care service in Biel covers professional stairwell cleaning, gentle elevator cleaning, and systematic garage cleaning. We serve residential complexes, apartment buildings, and condominium associations with a dedicated cleaning team and flexible service plans.",
           "bullets": [
             "Stairwell cleaning & maintenance cleaning",
             "Elevator cleaning & window fronts",
@@ -8407,120 +8407,148 @@
           ]
         },
         {
-          "heading": "Grounds Maintenance & Winter Service in Seeland",
-          "body": "The outdoor facilities are the calling card of your property. We take over the professional grounds maintenance in Biel, Ipsach, and Port. In the cold season, our reliable winter service guarantees safe access paths and ice-free parking areas – on time and in compliance with the law.",
+          "heading": "Grounds Maintenance & Winter Service in the Seeland",
+          "body": "The outdoor facilities are the calling card of your property. SwissCleanMove provides professional building care in Biel, Ipsach, Port, Täuffelen, and Studen. In the cold season, our reliable winter service guarantees safe access paths — on time and legally compliant for residential complexes and commercial properties.",
           "bullets": [
             "Grounds maintenance & green area upkeep",
             "Winter service & snow removal",
-            "Asphalt surface cleaning",
+            "Asphalt surface cleaning & salting",
             "Waste management & disposal"
+          ]
+        },
+        {
+          "heading": "Property Maintenance for Property Managers",
+          "body": "Property managers in Biel/Bienne, Aarberg, Pieterlen, and Orpund trust SwissCleanMove as a reliable partner for professional property supervision. We create tailored service specifications and handle the complete property care — from maintenance cleaning and technical building service to seasonal grounds maintenance. Dedicated contact persons, flexible service plans, and transparent billing ensure a long-term, trusted partnership.",
+          "bullets": [
+            "Tailored service specifications for property managers",
+            "Dedicated contact persons & property supervision",
+            "Flexible service plans & transparent billing",
+            "Long-term service concepts for properties"
+          ]
+        },
+        {
+          "heading": "Professional Building Care for Commercial Properties",
+          "body": "Commercial clients and businesses in Biel/Bienne benefit from our comprehensive property maintenance service. Whether office buildings in Lyss, medical practices in Brügg, or commercial properties in Ipsach — we provide professional care for residential and commercial properties to Swiss quality standards. Our property service for businesses covers technical inspections, cleaning services, and seasonal outdoor work — all from a single source.",
+          "bullets": [
+            "Property service for office buildings & commercial properties",
+            "Professional care for residential & commercial buildings",
+            "Swiss quality standard & insured staff",
+            "Regional presence in Biel, Nidau, Lyss & surrounding areas"
           ]
         }
       ],
-      "serviceBulletsHeading": "Our B2B Facility Services",
+      "serviceBulletsHeading": "Our Property Maintenance & Facility Service Portfolio",
       "serviceBullets": [
-        "Property Maintenance & Building Service",
-        "Stairwell Cleaning",
-        "Technical Building Service",
+        "Property Maintenance & Building Supervision",
+        "Stairwell Cleaning & Maintenance Cleaning",
+        "Technical Building Service & System Control",
         "Winter Service & Snow Removal",
-        "Grounds Maintenance",
+        "Grounds Maintenance & Green Area Upkeep",
         "Elevator & Garage Cleaning",
-        "Maintenance Cleaning",
-        "Real Estate Service"
+        "Building Care & Property Service",
+        "Property Supervision for Property Managers"
       ],
       "trustPoints": [
-        "Partner for Property Managers",
+        "Dedicated Contact Persons for Property Managers",
         "Swiss Quality Standard",
-        "Punctual & Discreet"
+        "Fast Response Times & Flexible Service Plans"
       ],
-      "ctaMidHeading": "Facility Management for Your Properties?",
-      "ctaMidBody": "We would be happy to create a tailored service specification for your properties in the Biel region.",
+      "ctaMidHeading": "Property Maintenance & Building Care for Your Properties?",
+      "ctaMidBody": "We are happy to create a tailored service specification for your properties in Biel/Bienne and the Seeland region.",
       "ctaMid": "Quote for Property Managers",
-      "internalLinksHeading": "Related Services for Property Managers",
+      "internalLinksHeading": "Related Services for Property Managers & Businesses",
       "internalLinks": [
         {
-          "label": "Facility Service Biel",
+          "label": "Facility Service Biel — Building Service",
           "href": "facility-service-biel"
         },
         {
-          "label": "Maintenance Cleaning Biel",
+          "label": "Maintenance Cleaning Biel — Regular Cleaning",
           "href": "unterhaltsreinigung-biel"
         },
         {
-          "label": "Window Cleaning Biel",
+          "label": "Window Cleaning Biel — Professional & Streak-Free",
           "href": "fensterreinigung-biel"
         },
         {
-          "label": "Cleaning Company Biel",
+          "label": "Cleaning Company Biel — Your Local Partner",
           "href": "reinigungsfirma-biel"
         }
       ],
-      "ctaStrongHeading": "Your Premium Partner for Property Services",
-      "ctaStrongBody": "Contact SwissCleanMove for professional property maintenance and facility service in Biel, Aarberg, Pieterlen, Studen, and the entire Seeland.",
+      "ctaStrongHeading": "Your Premium Partner for Property Maintenance & Facility Service",
+      "ctaStrongBody": "Contact SwissCleanMove for professional property maintenance, building care, and caretaker service in Biel/Bienne, Nidau, Brügg, Aarberg, Pieterlen, and the entire Seeland.",
       "ctaStrong": "Start Project Inquiry",
       "testimonial": {
         "quote": "Since we have had our commercial buildings in Seeland managed by SwissCleanMove, tenant complaints have reduced to zero. An extremely professional property service.",
         "author": "Property Management, Biel/Bienne",
-        "trust": "Verified B2B Partner"
+        "trust": "Verified B2B Property Service Partner"
       },
       "faqs": [
         {
-          "question": "Does SwissCleanMove offer Facility Service for property managers?",
-          "answer": "Yes, we specialize in working with property management companies, condominium owners' associations, and owners of commercial properties in Seeland."
+          "question": "Does SwissCleanMove offer property maintenance for property managers?",
+          "answer": "Yes, we specialize in working with property managers, condominium associations, and owners of commercial properties in the Seeland. Our property service includes technical building service, stairwell cleaning, winter service, and grounds maintenance."
         },
         {
-          "question": "What is included in property maintenance?",
-          "answer": "Our service includes stairwell cleaning, maintenance cleaning, grounds maintenance, winter service, elevator cleaning, garage cleaning, as well as technical building service and regular inspection rounds."
+          "question": "What is included in the caretaker service?",
+          "answer": "Our caretaker service includes stairwell cleaning, maintenance cleaning, technical inspection rounds, winter service with snow removal, grounds maintenance, elevator cleaning, and garage cleaning — all from a single source with dedicated contact persons."
         },
         {
-          "question": "Does SwissCleanMove offer winter service?",
-          "answer": "Yes, we offer professional winter service including snow removal and salting for residential complexes and office buildings to ensure safety during ice and snow."
+          "question": "Does SwissCleanMove offer winter service in Biel?",
+          "answer": "Yes, our professional winter service in Biel/Bienne and the Seeland includes snow removal and salting for residential complexes, office buildings, and commercial properties — reliable, punctual, and legally compliant."
         },
         {
-          "question": "Which regions does SwissCleanMove serve?",
-          "answer": "Our property service covers Biel/Bienne and the entire Seeland, including Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen, Port, Studen, and Orpund."
+          "question": "Which areas around Biel does SwissCleanMove serve?",
+          "answer": "Our property maintenance and facility service covers Biel/Bienne and the entire Seeland: Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen, Studen, Orpund, and Täuffelen."
         },
         {
-          "question": "How often can the property maintenance be performed?",
-          "answer": "The frequency is determined individually according to the needs of your property. We offer daily, weekly, or customized intervals for maintenance cleaning and building upkeep."
+          "question": "How often can property maintenance be performed?",
+          "answer": "The frequency is determined individually according to your property's needs. We offer daily, weekly, or customized intervals for maintenance cleaning, building care, and property inspections."
+        },
+        {
+          "question": "What distinguishes SwissCleanMove from other property maintenance providers?",
+          "answer": "We offer premium property maintenance with dedicated contact persons, long-term service concepts, and Swiss quality standards. No anonymous outsourcing — but professional property supervision with transparent billing and fast response times."
+        },
+        {
+          "question": "Does SwissCleanMove offer building care for commercial properties?",
+          "answer": "Yes, we serve office buildings, medical practices, and commercial properties in Biel/Bienne and the surrounding area. Our property service for businesses covers technical inspections, cleaning services, and seasonal outdoor work."
         }
       ],
-      "serviceCardsHeading": "Our Premium B2B Services",
+      "serviceCardsHeading": "Our Premium Property Maintenance & Facility Services",
       "serviceCards": [
         {
           "title": "Technical Building Service",
-          "description": "Comprehensive control and maintenance of building technology.",
+          "description": "Comprehensive inspection and maintenance of building technology for your properties.",
           "features": [
-            "Regular inspection rounds",
-            "Security checks",
-            "Coordination of tradesmen"
+            "Regular inspection rounds & security checks",
+            "Coordination of tradesmen & maintenance",
+            "Fast response times for disruptions"
           ]
         },
         {
-          "title": "Stairwell Cleaning",
-          "description": "Immaculate cleanliness in all common areas and stairwells.",
+          "title": "Stairwell Cleaning & Building Service",
+          "description": "Immaculate cleanliness in all common areas — for a well-maintained overall impression.",
           "features": [
-            "Cleaning of stairs & floors",
+            "Cleaning of stairs, floors & foyers",
             "Window and elevator cleaning",
             "Care of entrance areas"
           ]
         },
         {
-          "title": "Winter Service",
-          "description": "Safe access paths and ice-free parking areas in the cold season.",
+          "title": "Winter Service & Snow Removal",
+          "description": "Safe access paths and ice-free parking areas — reliable and legally compliant.",
           "features": [
-            "Reliable snow removal",
-            "Salting & ice clearance",
+            "Reliable snow removal & salting",
+            "Asphalt surface cleaning & de-icing",
             "Legally compliant execution"
           ]
         },
         {
-          "title": "Grounds Maintenance",
-          "description": "Care of outdoor facilities and green areas as the calling card of your property.",
+          "title": "Property Supervision & Building Care",
+          "description": "Holistic care of your properties — from grounds maintenance to waste management.",
           "features": [
-            "Green area upkeep",
-            "Waste management",
-            "Cleanliness in outdoor areas"
+            "Green area upkeep & grounds maintenance",
+            "Waste management & disposal",
+            "Flexible service plans per specification"
           ]
         }
       ]

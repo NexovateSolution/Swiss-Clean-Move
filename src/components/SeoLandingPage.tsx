@@ -210,12 +210,12 @@ export default function SeoLandingPage({
     if (baseService === 'hauswartung') {
       return isHero 
         ? `Professionelle Hauswartung & Facility Service in ${locCity}`
-        : `Hauswartung und Treppenhausreinigung ${locCity}`;
+        : `Hauswartung und Objektbetreuung ${locCity}`;
     }
     if (baseService === 'facilityService') {
       return isHero
         ? `Facility Service & Gebäudeservice in ${locCity}`
-        : `Gebäudeunterhalt und Facility Management ${locCity}`;
+        : `Gebäudeunterhalt und Liegenschaftsservice ${locCity}`;
     }
     return isHero ? `${baseService} in ${locCity}` : `${baseService} ${locCity}`;
   };
