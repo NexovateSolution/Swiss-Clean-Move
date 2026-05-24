@@ -30,7 +30,7 @@ export async function POST(request: Request) {
         // Send email notification to admin
         const emailHtml = formatContactEmail({ name, email, phone, subject, message });
         await sendEmailNotification({
-            to: 'info@swisscleanmove.ch',
+            to: 'info@swisscleanmove.ch, Swisscleanmove.ch@gmail.com',
             subject: `New Contact Form: ${subject}`,
             html: emailHtml,
             text: `New contact form submission from ${name} (${email})\n\nSubject: ${subject}\n\nMessage: ${message}`
