@@ -2,7 +2,7 @@ import SeoLandingPage from '@/components/SeoLandingPage';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const t = await getTranslations({ locale, namespace: `seoPages.${'umzugSchweiz'}.meta` });
+  const t = await getTranslations({ locale, namespace: `seoPages.${'facilityServiceSchweiz'}.meta` });
   return {
     title: t('title'),
     description: t('description'),
@@ -13,18 +13,18 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default function UmzugSchweizPage({ params: { locale } }: { params: { locale: string } }) {
+export default function FacilityServiceSchweizPage({ params: { locale } }: { params: { locale: string } }) {
   return (
     <SeoLandingPage
-      pageKey="umzugSchweiz"
+      pageKey="facilityServiceSchweiz"
       locale={locale}
-      service="umzug"
+      service="facilityService"
       city="Schweiz"
       isPillar={true}
-      formService="relocation"
+      formService="facility-services"
       noindex={false}
       mapQuery="Switzerland"
-      areaCities={['Biel/Bienne', 'Bern', 'Zürich', 'Basel', 'Genf', 'Lausanne', 'Luzern', 'St. Gallen']}
+      areaCities={['Biel/Bienne', 'Bern', 'Zürich', 'Basel', 'Genf', 'Lausanne', 'Luzern', 'St. Gallen', 'Solothurn']}
     />
   );
 }

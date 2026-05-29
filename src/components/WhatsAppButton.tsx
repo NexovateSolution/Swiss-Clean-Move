@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-[9999]">
+    <div className="fixed bottom-6 right-6 z-[9999] hidden md:block">
       <div className="relative">
         {/* Close button */}
         <button

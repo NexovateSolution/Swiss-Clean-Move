@@ -15,12 +15,30 @@ import Layout from '@/components/Layout';
 // We pair them in order: before/2 ↔ after/15, before/3 ↔ after/16, etc.
 // The last 3 "after" images (28-30) have no matching "before", so they're excluded.
 const beforeFiles = [2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14];
-const afterFiles = [26, 17, 18, 16, 23, 22, 24, 27, 28, 26, 20, 28, 29, 30];
+const afterFiles = [26, 17, 18, 16, 23, 22, 24, 27, 28, 26, 20];
+
+// Adding metadata for SEO and filtering
+const projectMetadata = [
+  { city: 'Bern', service: 'umzugsreinigung', rating: 5 },
+  { city: 'Zürich', service: 'unterhaltsreinigung', rating: 5 },
+  { city: 'Biel/Bienne', service: 'umzugsreinigung', rating: 5 },
+  { city: 'Basel', service: 'baureinigung', rating: 5 },
+  { city: 'Solothurn', service: 'umzugsreinigung', rating: 5 },
+  { city: 'Lyss', service: 'unterhaltsreinigung', rating: 5 },
+  { city: 'Neuchâtel', service: 'umzugsreinigung', rating: 5 },
+  { city: 'Bern', service: 'baureinigung', rating: 5 },
+  { city: 'Zürich', service: 'umzugsreinigung', rating: 5 },
+  { city: 'Biel/Bienne', service: 'unterhaltsreinigung', rating: 5 },
+  { city: 'Basel', service: 'umzugsreinigung', rating: 5 },
+];
 
 const pairs = beforeFiles.map((bNum, i) => ({
     id: i + 1,
     before: `/Gallary/before/${bNum}.jpeg`,
     after: `/Gallary/after/${afterFiles[i]}.jpeg`,
+    city: projectMetadata[i].city,
+    service: projectMetadata[i].service,
+    rating: projectMetadata[i].rating,
 }));
 
 // ── Lightbox state ───────────────────────────────────────────────────
@@ -34,12 +52,32 @@ export default function GalleryPage() {
     const t = useTranslations('gallery');
     const { locale } = useParams();
     const [lightbox, setLightbox] = useState<LightboxState>(null);
+    const [selectedService, setSelectedService] = useState<string>('all');
+    const [selectedCity, setSelectedCity] = useState<string>('all');
 
     const openLightbox = (pairIndex: number, view: 'before' | 'after') =>
         setLightbox({ pairIndex, view });
     const closeLightbox = () => setLightbox(null);
 
+    const filteredPairs = pairs.filter(p => 
+      (selectedService === 'all' || p.service === selectedService) &&
+      (selectedCity === 'all' || p.city === selectedCity)
+    );
+
     const currentPair = lightbox !== null ? pairs[lightbox.pairIndex] : null;
+
+    const uniqueCities = Array.from(new Set(pairs.map(p => p.city)));
+    const uniqueServices = Array.from(new Set(pairs.map(p => p.service)));
+
+    const getServiceLabel = (serviceId: string) => {
+      const loc = typeof locale === 'string' ? locale : 'de';
+      const labels: Record<string, Record<string, string>> = {
+        'umzugsreinigung': { 'en': 'Move-out Cleaning', 'fr': 'Nettoyage de fin de bail', 'de': 'Umzugsreinigung' },
+        'unterhaltsreinigung': { 'en': 'Maintenance Cleaning', 'fr': 'Nettoyage d\'entretien', 'de': 'Unterhaltsreinigung' },
+        'baureinigung': { 'en': 'Construction Cleaning', 'fr': 'Nettoyage de chantier', 'de': 'Baureinigung' }
+      };
+      return labels[serviceId]?.[loc] || (serviceId.charAt(0).toUpperCase() + serviceId.slice(1));
+    };
 
     return (
         <Layout>
@@ -67,9 +105,35 @@ export default function GalleryPage() {
                 </section>
 
                 {/* ── Gallery grid (side-by-side) ─────────────────────────── */}
-                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+                    
+                    {/* Filters */}
+                    <div className="flex flex-wrap gap-4 justify-center mb-12">
+                      <select 
+                        className="px-4 py-2 bg-white border border-swiss-border rounded-lg shadow-subtle focus:outline-none focus:border-swiss-red"
+                        value={selectedService}
+                        onChange={(e) => setSelectedService(e.target.value)}
+                      >
+                        <option value="all">{locale === 'en' ? 'All Services' : locale === 'fr' ? 'Tous les services' : 'Alle Dienstleistungen'}</option>
+                        {uniqueServices.map(s => (
+                          <option key={s} value={s}>{getServiceLabel(s)}</option>
+                        ))}
+                      </select>
+
+                      <select 
+                        className="px-4 py-2 bg-white border border-swiss-border rounded-lg shadow-subtle focus:outline-none focus:border-swiss-red"
+                        value={selectedCity}
+                        onChange={(e) => setSelectedCity(e.target.value)}
+                      >
+                        <option value="all">{locale === 'en' ? 'All Cities' : locale === 'fr' ? 'Toutes les villes' : 'Alle Städte'}</option>
+                        {uniqueCities.map(c => (
+                          <option key={c} value={c}>{c}</option>
+                        ))}
+                      </select>
+                    </div>
+
                     <div className="flex flex-col gap-10 lg:gap-14">
-                        {pairs.map((pair, index) => (
+                        {filteredPairs.map((pair, index) => (
                             <motion.div
                                 key={pair.id}
                                 initial={{ opacity: 0, y: 30 }}
@@ -79,10 +143,23 @@ export default function GalleryPage() {
                                 className="bg-white rounded-2xl border border-swiss-border shadow-subtle overflow-hidden"
                             >
                                 {/* Card header */}
-                                <div className="flex items-center justify-between px-6 py-4 border-b border-swiss-border bg-swiss-gray-50">
-                                    <span className="text-sm font-bold text-swiss-text">
-                                        #{pair.id}
-                                    </span>
+                                <div className="flex flex-col md:flex-row md:items-center justify-between px-6 py-4 border-b border-swiss-border bg-swiss-gray-50 gap-4">
+                                    <div className="flex flex-col">
+                                      <div className="flex items-center gap-2 mb-1">
+                                        <span className="text-sm font-bold text-swiss-text">Projekt #{pair.id}</span>
+                                        <div className="flex">
+                                          {[...Array(pair.rating)].map((_, i) => (
+                                            <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                          ))}
+                                        </div>
+                                      </div>
+                                      <div className="text-xs text-swiss-body font-medium flex items-center gap-2">
+                                        <span className="bg-white px-2 py-1 rounded border border-swiss-border">{pair.city}</span>
+                                        <span className="bg-white px-2 py-1 rounded border border-swiss-border">{getServiceLabel(pair.service)}</span>
+                                      </div>
+                                    </div>
                                     <div className="flex items-center gap-4 text-xs font-semibold uppercase tracking-wider">
                                         <span className="text-swiss-body">{t('beforeLabel')}</span>
                                         <span className="text-swiss-red">{t('afterLabel')}</span>
@@ -98,7 +175,7 @@ export default function GalleryPage() {
                                     >
                                         <Image
                                             src={pair.before}
-                                            alt={`${t('beforeLabel')} - ${t('imageAlt')} ${pair.id}`}
+                                            alt={`${t('beforeLabel')} - ${pair.service} in ${pair.city}`}
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                                             sizes="(max-width: 768px) 50vw, (max-width: 1280px) 40vw, 560px"
@@ -116,7 +193,7 @@ export default function GalleryPage() {
                                     >
                                         <Image
                                             src={pair.after}
-                                            alt={`${t('afterLabel')} - ${t('imageAlt')} ${pair.id}`}
+                                            alt={`${t('afterLabel')} - ${pair.service} in ${pair.city} - Cleaned`}
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                                             sizes="(max-width: 768px) 50vw, (max-width: 1280px) 40vw, 560px"

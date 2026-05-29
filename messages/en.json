@@ -147,23 +147,23 @@
       }
     },
     "trustBadges": {
-      "title": "Trusted & Certified",
-      "subtitle": "Professional standards you can rely on",
+      "title": "Certified Swiss Quality",
+      "subtitle": "Premium standards for the highest demands throughout Switzerland",
       "iso": {
-        "title": "Quality Management",
-        "subtitle": "Processes aligned with industry best practices"
+        "title": "Highest Quality Standards",
+        "subtitle": "Verified processes for guaranteed satisfaction"
       },
       "swissQuality": {
-        "title": "Swiss Quality",
-        "subtitle": "High standards, reliable service"
+        "title": "100% Swiss Quality",
+        "subtitle": "Premium service according to Swiss standards"
       },
       "trainedStaff": {
-        "title": "Trained Staff",
-        "subtitle": "Experienced and vetted teams"
+        "title": "Certified Professionals",
+        "subtitle": "Regularly trained and background-checked experts"
       },
       "insured": {
-        "title": "Insured",
-        "subtitle": "Covered for peace of mind"
+        "title": "Fully Insured",
+        "subtitle": "Complete coverage for your absolute peace of mind"
       }
     },
     "testimonials": {
@@ -219,6 +219,19 @@
     "regional": {
       "title": "Our Locations in Seeland",
       "subtitle": "We are there for you throughout the Biel-Seeland region. Fast, local and reliable."
+    },
+    "authority": {
+      "umzug": "Whether a private move or corporate relocation: We organize your move throughout Switzerland professionally, punctually, and stress-free.",
+      "reinigung": "From regular maintenance cleaning to special cleaning – we ensure brilliant cleanliness in your properties across Switzerland.",
+      "facility": "Our comprehensive facility management for real estate and corporate clients. We take care of property maintenance, technology, and upkeep.",
+      "umzugsreinigung": "Stress-free apartment handover thanks to our professional final cleaning with a 100% handover guarantee – in all Swiss cantons.",
+      "umzugTitle": "Moving Company Switzerland",
+      "reinigungTitle": "Cleaning Company Switzerland",
+      "facilityTitle": "Facility Service & Property Maintenance",
+      "umzugsreinigungTitle": "Move-out Cleaning Switzerland",
+      "learnMore": "Learn more",
+      "facilityServices": "Facility Services",
+      "hauswartung": "Property Maintenance"
     }
   },
   "services": {
@@ -4847,35 +4860,267 @@
       "general": "General Questions",
       "cleaning": "Cleaning Services",
       "moving": "Moving Services",
-      "pricing": "Pricing & Payment"
+      "pricing": "Pricing & Payment",
+      "umzugsreinigung": "Move-out Cleaning",
+      "hauswartung": "Property Maintenance",
+      "facility": "Facility Services",
+      "guarantees": "Guarantees & Insurance"
     },
     "questions": {
       "general": [
         {
-          "question": "What areas do you serve?",
-          "answer": "We provide services throughout Switzerland, including major cities like Zurich, Geneva, Basel, Bern, and Lausanne."
+          "question": "Does SwissCleanMove operate throughout Switzerland?",
+          "answer": "Yes, we offer our services (moving, cleaning, facility services) nationwide, with a focus on the Seeland, Bern, Zurich, Basel, and other regions."
         },
         {
-          "question": "Are you insured?",
-          "answer": "Yes, we are fully insured and bonded. All our employees are covered by comprehensive insurance."
+          "question": "How can I request a quote?",
+          "answer": "You can easily request a free, no-obligation quote using the online form on our website."
+        },
+        {
+          "question": "Are your employees insured?",
+          "answer": "Yes, all our employees are fully insured, and we hold comprehensive public liability insurance."
+        },
+        {
+          "question": "Do you offer on-site visits?",
+          "answer": "Yes, for larger moves or extensive cleaning jobs, we offer free on-site viewings."
+        },
+        {
+          "question": "How long does it take to receive a quote?",
+          "answer": "You will generally receive our quote within 24 hours of your request."
+        },
+        {
+          "question": "Can services be combined?",
+          "answer": "Yes, we offer attractive combination packages, for example, moving and end-of-lease cleaning from a single source."
+        },
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "You can pay conveniently by invoice, bank transfer, or cash (by arrangement)."
+        },
+        {
+          "question": "Do you work on weekends?",
+          "answer": "Yes, by prior arrangement, we also carry out moves and cleaning on weekends."
         }
       ],
-      "cleaning": [
+      "umzug": [
         {
-          "question": "Do you provide cleaning supplies?",
-          "answer": "Yes, we bring all necessary cleaning supplies and professional equipment to every job."
+          "question": "What is included in the moving service?",
+          "answer": "Our moving service includes safe transport, optional furniture assembly/disassembly, and optional packing services and materials."
+        },
+        {
+          "question": "Do you offer furniture disassembly and assembly?",
+          "answer": "Yes, our trained staff will gladly handle the professional disassembly and assembly of your furniture."
+        },
+        {
+          "question": "Do you provide moving boxes?",
+          "answer": "Yes, we can deliver moving boxes and other packing materials to you well ahead of the move."
+        },
+        {
+          "question": "Are my belongings insured during the move?",
+          "answer": "Yes, your household goods are covered by our transport insurance throughout the entire moving process."
+        },
+        {
+          "question": "Do you also do commercial moves?",
+          "answer": "Absolutely. We have a lot of experience with office and commercial relocations, minimizing your company's downtime."
+        },
+        {
+          "question": "How do I calculate the volume of my move?",
+          "answer": "You can use our online calculator or arrange a free viewing where we estimate the volume for you."
+        },
+        {
+          "question": "What happens if something is damaged during the move?",
+          "answer": "Should damage occur despite our utmost care, it is covered by our insurance and handled straightforwardly."
+        },
+        {
+          "question": "Do you transport heavy items like pianos?",
+          "answer": "Yes, we have the necessary equipment and expertise for transporting heavy items like pianos or safes."
+        },
+        {
+          "question": "Can I help with the move?",
+          "answer": "Yes, you are welcome to help in order to reduce costs. We are happy to discuss this with you beforehand."
+        },
+        {
+          "question": "How far in advance should I plan the move?",
+          "answer": "We recommend contacting us at least 4 to 6 weeks before your desired date to secure your preferred slot."
         }
       ],
-      "moving": [
+      "reinigung": [
         {
-          "question": "Do you provide packing materials?",
-          "answer": "Yes, we can provide all necessary packing materials including boxes, bubble wrap, and protective covers."
+          "question": "Do you bring your own cleaning supplies?",
+          "answer": "Yes, we bring all necessary professional and eco-friendly cleaning supplies and equipment."
+        },
+        {
+          "question": "Do you offer regular maintenance cleaning?",
+          "answer": "Yes, we offer regular cleaning services for private homes, offices, and commercial spaces (weekly, bi-weekly, etc.)."
+        },
+        {
+          "question": "Do you guarantee the quality of the cleaning?",
+          "answer": "Yes, we work according to strict Swiss quality standards and regularly check our work."
+        },
+        {
+          "question": "Do you also clean windows and blinds?",
+          "answer": "Yes, professional window and blind cleaning is one of our core competencies."
+        },
+        {
+          "question": "What is construction cleaning?",
+          "answer": "Construction cleaning involves rough, fine, and final cleaning of new builds or after renovations so the property is ready for move-in."
+        },
+        {
+          "question": "Are your cleaning products eco-friendly?",
+          "answer": "We place great emphasis on sustainability and use eco-friendly and biodegradable cleaning products wherever possible."
+        },
+        {
+          "question": "Do you also offer carpet cleaning?",
+          "answer": "Yes, we have special equipment for the professional deep cleaning of carpets and upholstered furniture."
+        },
+        {
+          "question": "How is discretion ensured during office cleaning?",
+          "answer": "Our staff are contractually bound to confidentiality and work discreetly so as not to disrupt your business operations."
+        },
+        {
+          "question": "Can you clean outside of our office hours?",
+          "answer": "Of course. We are happy to adapt our cleaning times to your business hours (e.g., early morning or evening)."
+        },
+        {
+          "question": "Will it always be the same cleaner?",
+          "answer": "For regular contracts, we strive to assign the same staff to build continuity and trust."
+        }
+      ],
+      "umzugsreinigung": [
+        {
+          "question": "What does 'with handover guarantee' mean?",
+          "answer": "We guarantee that the property management will accept the cleaning at the handover. If re-cleaning is needed, we do it for free."
+        },
+        {
+          "question": "Do you have to be present at the handover?",
+          "answer": "Yes, for the final cleaning with handover guarantee, a manager from our team is always present at the official apartment handover."
+        },
+        {
+          "question": "How much does a move-out cleaning cost?",
+          "answer": "The price depends on the size (number of rooms, square meters) and the level of dirt. We will gladly provide a fixed-price quote."
+        },
+        {
+          "question": "Are windows and blinds included in the final cleaning?",
+          "answer": "Yes, our standard move-out cleaning includes the cleaning of windows (inside/outside) and blinds."
+        },
+        {
+          "question": "Do you also clean secondary rooms like basements or balconies?",
+          "answer": "Yes, balconies, basements, attics, and garages can be included in the final cleaning upon request."
+        },
+        {
+          "question": "What happens if the landlord is not satisfied with the cleaning?",
+          "answer": "Thanks to our handover guarantee, we rectify any complaints immediately and at no extra cost, right on site during the handover."
+        },
+        {
+          "question": "How long does a typical final cleaning take?",
+          "answer": "Depending on the apartment size, a final cleaning usually takes 1 to 2 working days. We coordinate the date so the handover happens on time."
+        },
+        {
+          "question": "Does the apartment have to be completely empty for the final cleaning?",
+          "answer": "Yes, for a flawless final cleaning, the apartment must be swept clean and completely emptied."
+        }
+      ],
+      "hauswartung": [
+        {
+          "question": "What does your property maintenance service include?",
+          "answer": "Our service includes stairwell cleaning, exterior maintenance, winter service, minor repairs, and checking the building technology."
+        },
+        {
+          "question": "Who is your property maintenance service suitable for?",
+          "answer": "We maintain apartment buildings, residential complexes, office buildings, and commercial properties for property managers and owners."
+        },
+        {
+          "question": "Do you also offer winter service?",
+          "answer": "Yes, we offer a reliable winter service including snow removal and salting."
+        },
+        {
+          "question": "Are minor repairs also carried out?",
+          "answer": "Yes, our technical maintenance team handles minor repairs like changing lightbulbs or adjusting doors."
+        },
+        {
+          "question": "Is an on-call service available for emergencies?",
+          "answer": "Yes, for our property maintenance clients, we offer a 24/7 on-call service for emergencies (e.g., heating failure, burst pipe)."
+        },
+        {
+          "question": "How often are you on-site?",
+          "answer": "The interval (e.g., weekly, bi-weekly) is determined individually according to your needs and the property's requirements."
+        }
+      ],
+      "facility": [
+        {
+          "question": "What are Facility Services?",
+          "answer": "Facility Services encompass the holistic management and maintenance of buildings, including cleaning, technology, security, and exterior areas."
+        },
+        {
+          "question": "Do you offer Facility Services for large enterprises?",
+          "answer": "Yes, we have the capacity and experience to offer tailored facility services even for large office and commercial complexes."
+        },
+        {
+          "question": "Can I book individual services from Facility Management?",
+          "answer": "Of course. You can flexibly choose the services you need from our portfolio."
+        },
+        {
+          "question": "Is there a dedicated contact person?",
+          "answer": "Yes, you will be assigned a dedicated property manager as your central point of contact for all matters relating to your property."
+        },
+        {
+          "question": "Do you also create individual maintenance plans?",
+          "answer": "Yes, we analyze your property and create a tailored maintenance and upkeep plan."
+        },
+        {
+          "question": "How do you ensure the quality of the Facility Services?",
+          "answer": "Through regular quality controls, trained staff, and transparent documentation of our services."
         }
       ],
       "pricing": [
         {
-          "question": "How do you calculate prices?",
-          "answer": "Prices are based on the size of the property, type of service, and specific requirements. We provide free quotes."
+          "question": "Are your quotes binding?",
+          "answer": "Our quotes for final cleanings and moves are generally binding flat rates. There are no hidden costs."
+        },
+        {
+          "question": "How are moving costs calculated?",
+          "answer": "Costs are based on the volume of goods, distance, floor level, elevator availability, and additional services like packing."
+        },
+        {
+          "question": "Are there surcharges for weekend work?",
+          "answer": "Statutory surcharges may apply for work on Sundays and public holidays. Saturdays are often available at normal rates (depending on the job)."
+        },
+        {
+          "question": "Is VAT included in the prices?",
+          "answer": "On our quotes, we clearly state whether the prices are exclusive or inclusive of the statutory value-added tax."
+        },
+        {
+          "question": "Do I have to pay a deposit?",
+          "answer": "For larger jobs or special services, a deposit may be agreed upon. This will be transparently indicated in the quote."
+        },
+        {
+          "question": "Do regular customers get special rates?",
+          "answer": "Yes, for regular contracts (like maintenance cleaning), we offer attractive framework agreements and conditions."
+        }
+      ],
+      "guarantees": [
+        {
+          "question": "How high is your insurance coverage?",
+          "answer": "We hold comprehensive public liability and transport insurance covering damages up to several million francs."
+        },
+        {
+          "question": "What do you do in the event of a claim?",
+          "answer": "We immediately report the damage to our insurance and ensure a quick and smooth settlement for you."
+        },
+        {
+          "question": "Is the handover guarantee time-limited?",
+          "answer": "The handover guarantee is valid for the official handover appointment with the property management. We are on-site and resolve defects immediately."
+        },
+        {
+          "question": "Do your employees have clean criminal records?",
+          "answer": "Yes, we require a current and flawless criminal record extract from all our permanent employees upon hiring."
+        },
+        {
+          "question": "How do you ensure deadlines are met?",
+          "answer": "Through careful planning, sufficient staff reserves, and our commitment to Swiss punctuality and reliability."
+        },
+        {
+          "question": "What happens if cleaning staff are absent?",
+          "answer": "In the event of illness or holidays, we immediately provide a qualified substitute so your service continues without interruption."
         }
       ]
     }
@@ -5052,6 +5297,45 @@
       "specialCleaning": "Special Cleaning",
       "comboService": "Cleaning + Moving Combo",
       "householdHelping": "Household Helping"
+    },
+    "geneve": {
+      "meta": {
+        "title": "Cleaning Company & Moving in Geneva | SwissCleanMove",
+        "description": "Professional moving and cleaning services in Geneva and surroundings."
+      },
+      "h1": "Cleaning Company & Moving Geneva",
+      "introParagraphs": [
+        "SwissCleanMove is your reliable partner in Geneva for moves, end-of-tenancy cleaning and facility services."
+      ],
+      "faqs": [
+        {
+          "question": "Do you offer a handover guarantee in Geneva?",
+          "answer": "Yes, our move-out cleanings include a 100% handover guarantee."
+        }
+      ],
+      "sections": {
+        "services": {
+          "heading": "Our Services in Geneva",
+          "paragraphs": [
+            "We offer comprehensive services."
+          ],
+          "bullets": [
+            "Moving",
+            "Cleaning",
+            "Property Maintenance"
+          ]
+        },
+        "quality": {
+          "heading": "Swiss Quality",
+          "paragraphs": [
+            "Highest standards for every job."
+          ]
+        }
+      },
+      "whyChooseUs": [
+        "Swiss Quality",
+        "Fast & Reliable"
+      ]
     }
   },
   "seo": {
@@ -8752,6 +9036,202 @@
         {
           "question": "In which locations do you offer gastronomy cleaning?",
           "answer": "In Biel/Bienne, Nidau, Brügg, Lyss, Aarberg, and throughout Seeland."
+        }
+      ]
+    },
+    "reinigungsfirmaSchweiz": {
+      "meta": {
+        "title": "Cleaning Company Switzerland | Professional Cleaning | SwissCleanMove",
+        "description": "Your professional cleaning company throughout Switzerland. Maintenance cleaning, office cleaning, and special cleaning to Swiss quality standards."
+      },
+      "badge": "Cleaning Company Switzerland",
+      "h1": "Cleaning Company Switzerland – Professionelle Cleaning",
+      "heroSubtitle": "Your reliable partner for Cleaning Company throughout Switzerland.",
+      "intro": "Are you looking for a professional Cleaning Company for Switzerland? SwissCleanMove is your partner for top quality.",
+      "ctaSoft": "Request free quote now",
+      "ctaMidHeading": "Planning a service?",
+      "ctaMidBody": "Request your free and non-binding quote now.",
+      "ctaMid": "Secure quote in 2 minutes",
+      "ctaStrongHeading": "Inquire now",
+      "ctaStrongBody": "Call us or fill out our form.",
+      "ctaStrong": "Fast feedback within 24h",
+      "sections": [
+        {
+          "heading": "Our offer for Cleaning Company",
+          "body": "We offer comprehensive solutions in Cleaning.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our services",
+      "serviceBullets": [
+        "Swiss-wide service",
+        "Free quote",
+        "Professional team"
+      ],
+      "trustPoints": [
+        "Swiss Quality",
+        "Fast availability"
+      ],
+      "serviceAreaHeading": "Swiss-wide operation",
+      "serviceAreaBody": "We are here for you in all cantons.",
+      "internalLinksHeading": "Other services",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Great service throughout Switzerland!",
+        "author": "Max M.",
+        "trust": "Verified Customer"
+      },
+      "faqs": [
+        {
+          "question": "Do you offer Cleaning Company throughout Switzerland?",
+          "answer": "Yes, we operate Swiss-wide."
+        }
+      ]
+    },
+    "umzugsreinigungSchweiz": {
+      "meta": {
+        "title": "Move-out Cleaning Switzerland | Cleaning with Handover Guarantee",
+        "description": "Professional move-out and final cleaning throughout Switzerland. 100% handover guarantee, punctual and reliable."
+      },
+      "badge": "Move-out Cleaning Switzerland",
+      "h1": "Move-out Cleaning Switzerland – Professionelle Final Cleaning",
+      "heroSubtitle": "Your reliable partner for Move-out Cleaning throughout Switzerland.",
+      "intro": "Are you looking for a professional Move-out Cleaning for Switzerland? SwissCleanMove is your partner for top quality.",
+      "ctaSoft": "Request free quote now",
+      "ctaMidHeading": "Planning a service?",
+      "ctaMidBody": "Request your free and non-binding quote now.",
+      "ctaMid": "Secure quote in 2 minutes",
+      "ctaStrongHeading": "Inquire now",
+      "ctaStrongBody": "Call us or fill out our form.",
+      "ctaStrong": "Fast feedback within 24h",
+      "sections": [
+        {
+          "heading": "Our offer for Move-out Cleaning",
+          "body": "We offer comprehensive solutions in Final Cleaning.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our services",
+      "serviceBullets": [
+        "Swiss-wide service",
+        "Free quote",
+        "Professional team"
+      ],
+      "trustPoints": [
+        "Swiss Quality",
+        "Fast availability"
+      ],
+      "serviceAreaHeading": "Swiss-wide operation",
+      "serviceAreaBody": "We are here for you in all cantons.",
+      "internalLinksHeading": "Other services",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Great service throughout Switzerland!",
+        "author": "Max M.",
+        "trust": "Verified Customer"
+      },
+      "faqs": [
+        {
+          "question": "Do you offer Move-out Cleaning throughout Switzerland?",
+          "answer": "Yes, we operate Swiss-wide."
+        }
+      ]
+    },
+    "facilityServiceSchweiz": {
+      "meta": {
+        "title": "Facility Service Switzerland | Building Management | SwissCleanMove",
+        "description": "Your partner for comprehensive facility services in Switzerland. Professional building management for businesses and real estate."
+      },
+      "badge": "Facility Services Switzerland",
+      "h1": "Facility Services Switzerland – Professionelle Facility Management",
+      "heroSubtitle": "Your reliable partner for Facility Services throughout Switzerland.",
+      "intro": "Are you looking for a professional Facility Services for Switzerland? SwissCleanMove is your partner for top quality.",
+      "ctaSoft": "Request free quote now",
+      "ctaMidHeading": "Planning a service?",
+      "ctaMidBody": "Request your free and non-binding quote now.",
+      "ctaMid": "Secure quote in 2 minutes",
+      "ctaStrongHeading": "Inquire now",
+      "ctaStrongBody": "Call us or fill out our form.",
+      "ctaStrong": "Fast feedback within 24h",
+      "sections": [
+        {
+          "heading": "Our offer for Facility Services",
+          "body": "We offer comprehensive solutions in Facility Management.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our services",
+      "serviceBullets": [
+        "Swiss-wide service",
+        "Free quote",
+        "Professional team"
+      ],
+      "trustPoints": [
+        "Swiss Quality",
+        "Fast availability"
+      ],
+      "serviceAreaHeading": "Swiss-wide operation",
+      "serviceAreaBody": "We are here for you in all cantons.",
+      "internalLinksHeading": "Other services",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Great service throughout Switzerland!",
+        "author": "Max M.",
+        "trust": "Verified Customer"
+      },
+      "faqs": [
+        {
+          "question": "Do you offer Facility Services throughout Switzerland?",
+          "answer": "Yes, we operate Swiss-wide."
+        }
+      ]
+    },
+    "hauswartungSchweiz": {
+      "meta": {
+        "title": "Property Maintenance Switzerland | Building Upkeep | SwissCleanMove",
+        "description": "Reliable property maintenance and building upkeep throughout Switzerland. Stairwell cleaning, winter service, and technical maintenance."
+      },
+      "badge": "Property Maintenance Switzerland",
+      "h1": "Property Maintenance Switzerland – Professionelle Property Service",
+      "heroSubtitle": "Your reliable partner for Property Maintenance throughout Switzerland.",
+      "intro": "Are you looking for a professional Property Maintenance for Switzerland? SwissCleanMove is your partner for top quality.",
+      "ctaSoft": "Request free quote now",
+      "ctaMidHeading": "Planning a service?",
+      "ctaMidBody": "Request your free and non-binding quote now.",
+      "ctaMid": "Secure quote in 2 minutes",
+      "ctaStrongHeading": "Inquire now",
+      "ctaStrongBody": "Call us or fill out our form.",
+      "ctaStrong": "Fast feedback within 24h",
+      "sections": [
+        {
+          "heading": "Our offer for Property Maintenance",
+          "body": "We offer comprehensive solutions in Property Service.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Our services",
+      "serviceBullets": [
+        "Swiss-wide service",
+        "Free quote",
+        "Professional team"
+      ],
+      "trustPoints": [
+        "Swiss Quality",
+        "Fast availability"
+      ],
+      "serviceAreaHeading": "Swiss-wide operation",
+      "serviceAreaBody": "We are here for you in all cantons.",
+      "internalLinksHeading": "Other services",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Great service throughout Switzerland!",
+        "author": "Max M.",
+        "trust": "Verified Customer"
+      },
+      "faqs": [
+        {
+          "question": "Do you offer Property Maintenance throughout Switzerland?",
+          "answer": "Yes, we operate Swiss-wide."
         }
       ]
     }

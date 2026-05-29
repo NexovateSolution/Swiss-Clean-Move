@@ -13,31 +13,49 @@ import {
   MessageCircle,
   Clock,
   Shield,
-  CheckCircle
+  CheckCircle,
+  Search
 } from 'lucide-react';
 
 export default function FAQPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations();
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const faqCategories = [
-    {
-      title: t('faq.categories.general'),
-      faqs: t.raw('faq.questions.general') || []
-    },
-    {
-      title: t('faq.categories.cleaning'),
-      faqs: t.raw('faq.questions.cleaning') || []
-    },
-    {
-      title: t('faq.categories.moving'),
-      faqs: t.raw('faq.questions.moving') || []
-    },
-    {
-      title: t('faq.categories.pricing'),
-      faqs: t.raw('faq.questions.pricing') || []
-    }
+    { id: 'general', title: t('faq.categories.general'), faqs: t.raw('faq.questions.general') || [] },
+    { id: 'umzug', title: t('faq.categories.moving'), faqs: t.raw('faq.questions.umzug') || [] },
+    { id: 'reinigung', title: t('faq.categories.cleaning'), faqs: t.raw('faq.questions.reinigung') || [] },
+    { id: 'umzugsreinigung', title: t('faq.categories.umzugsreinigung'), faqs: t.raw('faq.questions.umzugsreinigung') || [] },
+    { id: 'hauswartung', title: t('faq.categories.hauswartung'), faqs: t.raw('faq.questions.hauswartung') || [] },
+    { id: 'facility', title: t('faq.categories.facility'), faqs: t.raw('faq.questions.facility') || [] },
+    { id: 'pricing', title: t('faq.categories.pricing'), faqs: t.raw('faq.questions.pricing') || [] },
+    { id: 'guarantees', title: t('faq.categories.guarantees'), faqs: t.raw('faq.questions.guarantees') || [] }
   ];
+
+  const filteredCategories = faqCategories.map(cat => ({
+    ...cat,
+    faqs: cat.faqs.filter((faq: any) => 
+      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(cat => (activeCategory ? cat.id === activeCategory : true) && cat.faqs.length > 0);
+
+  // Generate FAQ Schema
+  const allFaqs = faqCategories.flatMap(cat => cat.faqs);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": allFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -45,6 +63,10 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
 
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <SwissHero
         badge={t('faq.title')}
@@ -63,7 +85,40 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
       <section className="section-padding bg-white">
         <div className="container-max">
           <div className="max-w-4xl mx-auto">
-            {faqCategories.map((category, categoryIndex) => (
+            {/* Search and Filters */}
+            <div className="mb-10 space-y-6">
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <Search className="h-5 w-5 text-swiss-body" />
+                </div>
+                <input
+                  type="text"
+                  placeholder="Suchen Sie nach einer Frage..."
+                  className="block w-full pl-11 pr-4 py-4 border border-swiss-border rounded-xl leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-swiss-red focus:border-swiss-red transition duration-150 ease-in-out sm:text-sm"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  onClick={() => setActiveCategory(null)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeCategory === null ? 'bg-swiss-red text-white' : 'bg-swiss-gray-50 text-swiss-text hover:bg-swiss-gray-100 border border-swiss-border'}`}
+                >
+                  Alle
+                </button>
+                {faqCategories.map(cat => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${activeCategory === cat.id ? 'bg-swiss-red text-white' : 'bg-swiss-gray-50 text-swiss-text hover:bg-swiss-gray-100 border border-swiss-border'}`}
+                  >
+                    {cat.title}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {filteredCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-swiss-text mb-6 pb-2 border-b border-swiss-border">
                   {category.title}

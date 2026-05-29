@@ -161,23 +161,23 @@
       }
     },
     "trustBadges": {
-      "title": "Vertrauenswürdig & zertifiziert",
-      "subtitle": "Professionelle Standards, auf die Sie zählen können",
+      "title": "Zertifizierte Schweizer Qualität",
+      "subtitle": "Premium-Standards für höchste Ansprüche in der ganzen Schweiz",
       "iso": {
-        "title": "Qualitätsmanagement",
-        "subtitle": "Prozesse nach bewährten Branchenstandards"
+        "title": "Höchste Qualitätsstandards",
+        "subtitle": "Geprüfte Prozesse für garantierte Zufriedenheit"
       },
       "swissQuality": {
-        "title": "Swiss Quality",
-        "subtitle": "Hohe Standards, zuverlässiger Service"
+        "title": "100% Swiss Quality",
+        "subtitle": "Premium-Service nach Schweizer Massstäben"
       },
       "trainedStaff": {
-        "title": "Geschultes Personal",
-        "subtitle": "Erfahrene und geprüfte Teams"
+        "title": "Zertifiziertes Fachpersonal",
+        "subtitle": "Regelmässig geschulte und geprüfte Experten"
       },
       "insured": {
-        "title": "Versichert",
-        "subtitle": "Abgedeckt für Ihre Sicherheit"
+        "title": "Umfassend Versichert",
+        "subtitle": "Voller Schutz für Ihre absolute Sicherheit"
       }
     },
     "testimonials": {
@@ -233,6 +233,19 @@
     "regional": {
       "title": "Unsere Standorte im Seeland",
       "subtitle": "Wir sind in der ganzen Region Biel-Seeland für Sie da. Schnell, lokal und zuverlässig."
+    },
+    "authority": {
+      "umzug": "Ob privater Wohnungswechsel oder Firmenumzug: Wir organisieren Ihren Umzug in der ganzen Schweiz professionell, pünktlich und stressfrei.",
+      "reinigung": "Von der regelmässigen Unterhaltsreinigung bis zur Spezialreinigung – wir sorgen schweizweit für strahlende Sauberkeit in Ihren Immobilien.",
+      "facility": "Unser umfassendes Facility Management für Liegenschaften und Geschäftskunden. Wir kümmern uns um Hauswartung, Technik und Unterhalt.",
+      "umzugsreinigung": "Stressfreie Wohnungsabgabe dank unserer professionellen Endreinigung mit 100% Abnahmegarantie – in allen Schweizer Kantonen.",
+      "umzugTitle": "Umzugsfirma Schweiz",
+      "reinigungTitle": "Reinigungsfirma Schweiz",
+      "facilityTitle": "Facility Service & Hauswartung",
+      "umzugsreinigungTitle": "Umzugsreinigung Schweiz",
+      "learnMore": "Mehr erfahren",
+      "facilityServices": "Facility Services",
+      "hauswartung": "Hauswartung"
     }
   },
   "services": {
@@ -5181,6 +5194,45 @@
       "specialCleaning": "Spezialreinigung",
       "comboService": "Reinigung + Umzug Kombi",
       "householdHelping": "Haushaltshilfe"
+    },
+    "geneve": {
+      "meta": {
+        "title": "Reinigungsfirma & Umzug in Genf | SwissCleanMove",
+        "description": "Professionelle Umzugs- und Reinigungsdienstleistungen in Genf und Umgebung."
+      },
+      "h1": "Reinigungsfirma & Umzug Genf",
+      "introParagraphs": [
+        "SwissCleanMove ist Ihr zuverlässiger Partner in Genf für Umzüge, Endreinigungen und Facility Services."
+      ],
+      "faqs": [
+        {
+          "question": "Bieten Sie eine Abnahmegarantie in Genf?",
+          "answer": "Ja, unsere Umzugsnreinigungen beinhalten eine 100% Abnahmegarantie."
+        }
+      ],
+      "sections": {
+        "services": {
+          "heading": "Unsere Dienstleistungen in Genf",
+          "paragraphs": [
+            "Wir bieten umfassende Services."
+          ],
+          "bullets": [
+            "Umzug",
+            "Reinigung",
+            "Hauswartung"
+          ]
+        },
+        "quality": {
+          "heading": "Schweizer Qualität",
+          "paragraphs": [
+            "Höchste Standards für jeden Einsatz."
+          ]
+        }
+      },
+      "whyChooseUs": [
+        "Schweizer Qualität",
+        "Schnell & Zuverlässig"
+      ]
     }
   },
   "pricing": {
@@ -5281,39 +5333,267 @@
       "general": "Allgemeine Fragen",
       "cleaning": "Reinigungsdienstleistungen",
       "moving": "Umzugsdienstleistungen",
-      "pricing": "Preise & Zahlung"
+      "pricing": "Preise & Zahlung",
+      "umzugsreinigung": "Umzugsreinigung",
+      "hauswartung": "Hauswartung",
+      "facility": "Facility Services",
+      "guarantees": "Garantien & Versicherungen"
     },
     "questions": {
       "general": [
         {
-          "question": "Welche Gebiete bedienen Sie?",
-          "answer": "Wir bieten Dienstleistungen in der ganzen Schweiz, einschließlich Großstädten wie Zürich, Genf, Basel, Bern und Lausanne."
+          "question": "Ist SwissCleanMove in der ganzen Schweiz tätig?",
+          "answer": "Ja, wir bieten unsere Dienstleistungen (Umzug, Reinigung, Facility Services) schweizweit an, mit Schwerpunkten im Seeland, Bern, Zürich, Basel und weiteren Regionen."
         },
         {
-          "question": "Sind Sie versichert?",
-          "answer": "Ja, wir sind vollständig versichert und gebunden. Alle unsere Mitarbeiter sind durch eine umfassende Versicherung abgedeckt."
-        }
-      ],
-      "cleaning": [
-        {
-          "question": "Stellen Sie Reinigungsmittel zur Verfügung?",
-          "answer": "Ja, wir bringen alle notwendigen Reinigungsmittel und professionelle Ausrüstung zu jedem Auftrag mit."
+          "question": "Wie kann ich eine Offerte einholen?",
+          "answer": "Sie können ganz einfach über unser Online-Formular auf der Website ein kostenloses und unverbindliches Angebot anfordern."
         },
         {
-          "question": "Was ist Ihre Kautionsgarantie?",
-          "answer": "Wir bieten eine 100%ige Kautionsrückgarantie für Auszugsreinigungen. Wenn die Immobilie nicht akzeptiert wird, reinigen wir kostenlos nach."
+          "question": "Sind Ihre Mitarbeiter versichert?",
+          "answer": "Ja, alle unsere Mitarbeiter sind vollständig versichert, und wir verfügen über eine umfassende Betriebshaftpflichtversicherung."
+        },
+        {
+          "question": "Bieten Sie Besichtigungstermine an?",
+          "answer": "Ja, für grössere Umzüge oder umfangreiche Reinigungsaufträge bieten wir kostenlose Besichtigungstermine vor Ort an."
+        },
+        {
+          "question": "Wie lange dauert es, bis ich ein Angebot erhalte?",
+          "answer": "In der Regel erhalten Sie unser Angebot innerhalb von 24 Stunden nach Ihrer Anfrage."
+        },
+        {
+          "question": "Können Dienstleistungen kombiniert werden?",
+          "answer": "Ja, wir bieten attraktive Kombi-Pakete an, zum Beispiel Umzug und Endreinigung aus einer Hand."
+        },
+        {
+          "question": "Welche Zahlungsmöglichkeiten bieten Sie an?",
+          "answer": "Sie können bei uns bequem per Rechnung, Banküberweisung oder Barzahlung (nach Vereinbarung) bezahlen."
+        },
+        {
+          "question": "Sind Sie auch am Wochenende im Einsatz?",
+          "answer": "Ja, nach vorheriger Absprache führen wir Umzüge und Reinigungen auch an Wochenenden durch."
         }
       ],
-      "moving": [
+      "umzug": [
         {
-          "question": "Stellen Sie Verpackungsmaterialien zur Verfügung?",
-          "answer": "Ja, wir können alle notwendigen Verpackungsmaterialien einschließlich Kartons, Luftpolsterfolie und Schutzabdeckungen bereitstellen."
+          "question": "Was ist im Umzugsservice enthalten?",
+          "answer": "Unser Umzugsservice umfasst den sicheren Transport, auf Wunsch Möbelmontage, sowie optional Verpackungsservice und Bereitstellung von Umzugsmaterial."
+        },
+        {
+          "question": "Bieten Sie auch Möbeldemontage und -montage an?",
+          "answer": "Ja, unser geschultes Personal übernimmt gerne die fachgerechte Demontage und Montage Ihrer Möbel."
+        },
+        {
+          "question": "Stellen Sie Umzugskartons zur Verfügung?",
+          "answer": "Ja, wir können Ihnen Umzugskartons und weiteres Verpackungsmaterial rechtzeitig vor dem Umzug liefern."
+        },
+        {
+          "question": "Ist mein Hausrat während des Umzugs versichert?",
+          "answer": "Ja, Ihr Hausrat ist während des gesamten Umzugsprozesses über unsere Transportversicherung abgesichert."
+        },
+        {
+          "question": "Führen Sie auch Firmenumzüge durch?",
+          "answer": "Absolut. Wir haben viel Erfahrung mit Büro- und Firmenumzügen und minimieren die Ausfallzeiten Ihres Betriebs."
+        },
+        {
+          "question": "Wie berechne ich das Volumen meines Umzugsguts?",
+          "answer": "Sie können unseren Online-Rechner nutzen oder einen kostenlosen Besichtigungstermin vereinbaren, bei dem wir das Volumen für Sie schätzen."
+        },
+        {
+          "question": "Was passiert bei Schäden während des Umzugs?",
+          "answer": "Sollte trotz grösster Sorgfalt ein Schaden entstehen, ist dieser durch unsere Versicherung gedeckt und wird unkompliziert abgewickelt."
+        },
+        {
+          "question": "Transportieren Sie auch schwere Gegenstände wie Klaviere?",
+          "answer": "Ja, wir verfügen über das notwendige Equipment und Know-how für den Transport von Schwergütern wie Klavieren oder Tresoren."
+        },
+        {
+          "question": "Kann ich beim Umzug selbst mithelfen?",
+          "answer": "Ja, Sie können gerne mithelfen, um die Kosten zu reduzieren. Wir besprechen dies gerne im Vorfeld mit Ihnen."
+        },
+        {
+          "question": "Wie weit im Voraus sollte ich den Umzug planen?",
+          "answer": "Wir empfehlen, sich mindestens 4 bis 6 Wochen vor dem gewünschten Termin bei uns zu melden, um Ihren Wunschtermin zu sichern."
+        }
+      ],
+      "reinigung": [
+        {
+          "question": "Bringen Sie Ihre eigenen Reinigungsmittel mit?",
+          "answer": "Ja, wir bringen alle notwendigen, professionellen und umweltfreundlichen Reinigungsmittel sowie das Equipment mit."
+        },
+        {
+          "question": "Bieten Sie regelmässige Unterhaltsreinigungen an?",
+          "answer": "Ja, wir bieten regelmässige Reinigungsdienste für Privatwohnungen, Büros und Gewerberäume an (wöchentlich, zweiwöchentlich etc.)."
+        },
+        {
+          "question": "Garantieren Sie für die Qualität der Reinigung?",
+          "answer": "Ja, wir arbeiten nach strengen Schweizer Qualitätsstandards und prüfen unsere Arbeit regelmässig."
+        },
+        {
+          "question": "Reinigen Sie auch Fenster und Storen?",
+          "answer": "Ja, professionelle Fenster- und Storenreinigung gehört zu unseren Kernkompetenzen."
+        },
+        {
+          "question": "Was ist eine Baureinigung?",
+          "answer": "Die Baureinigung umfasst die Baugrob-, Baufein- und Endreinigung von Neubauten oder nach Renovationen, damit das Objekt bezugsbereit ist."
+        },
+        {
+          "question": "Sind Ihre Reinigungsmittel umweltfreundlich?",
+          "answer": "Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende und biologisch abbaubare Reinigungsmittel."
+        },
+        {
+          "question": "Bieten Sie auch Teppichreinigungen an?",
+          "answer": "Ja, wir verfügen über Spezialgeräte für die professionelle Tiefenreinigung von Teppichen und Polstermöbeln."
+        },
+        {
+          "question": "Wie wird bei der Büroreinigung Diskretion gewährleistet?",
+          "answer": "Unser Personal ist vertraglich zur Verschwiegenheit verpflichtet und arbeitet diskret, um Ihre Geschäftsabläufe nicht zu stören."
+        },
+        {
+          "question": "Können Sie auch ausserhalb unserer Bürozeiten reinigen?",
+          "answer": "Selbstverständlich. Wir passen unsere Reinigungszeiten gerne an Ihre Geschäftszeiten an (z.B. frühmorgens oder abends)."
+        },
+        {
+          "question": "Ist immer die gleiche Reinigungskraft vor Ort?",
+          "answer": "Bei regelmässigen Aufträgen bemühen wir uns, immer das gleiche Personal einzusetzen, um Kontinuität und Vertrauen aufzubauen."
+        }
+      ],
+      "umzugsreinigung": [
+        {
+          "question": "Was bedeutet 'mit Abnahmegarantie'?",
+          "answer": "Wir garantieren, dass die Verwaltung die Reinigung bei der Wohnungsübergabe akzeptiert. Falls nachgereinigt werden muss, tun wir dies kostenlos."
+        },
+        {
+          "question": "Müssen Sie bei der Übergabe dabei sein?",
+          "answer": "Ja, bei der Endreinigung mit Abnahmegarantie ist immer ein Verantwortlicher von uns bei der offiziellen Wohnungsabgabe anwesend."
+        },
+        {
+          "question": "Wie viel kostet eine Umzugsreinigung?",
+          "answer": "Der Preis hängt von der Grösse (Zimmeranzahl, Quadratmeter) und dem Verschmutzungsgrad ab. Wir erstellen Ihnen gerne eine pauschale Offerte."
+        },
+        {
+          "question": "Sind Fenster und Storen in der Endreinigung inbegriffen?",
+          "answer": "Ja, bei unserer Standard-Umzugsreinigung sind die Reinigung von Fenstern (innen/aussen) und Storen inbegriffen."
+        },
+        {
+          "question": "Reinigen Sie auch Nebenräume wie Keller oder Balkon?",
+          "answer": "Ja, Balkone, Kellerabteile, Estrich und Garage können auf Wunsch in die Endreinigung einbezogen werden."
+        },
+        {
+          "question": "Was passiert, wenn der Vermieter mit der Reinigung nicht zufrieden ist?",
+          "answer": "Dank unserer Abnahmegarantie reinigen wir allfällige Beanstandungen sofort und ohne Zusatzkosten nach, direkt vor Ort während der Übergabe."
+        },
+        {
+          "question": "Wie lange dauert eine typische Endreinigung?",
+          "answer": "Je nach Wohnungsgrösse dauert eine Endreinigung in der Regel 1 bis 2 Arbeitstage. Wir koordinieren den Termin so, dass die Übergabe pünktlich stattfinden kann."
+        },
+        {
+          "question": "Muss die Wohnung für die Endreinigung komplett leer sein?",
+          "answer": "Ja, für eine einwandfreie Endreinigung muss die Wohnung besenrein und komplett geräumt sein."
+        }
+      ],
+      "hauswartung": [
+        {
+          "question": "Was umfasst Ihr Hauswartungsservice?",
+          "answer": "Unser Service umfasst Treppenhausreinigung, Umgebungsarbeiten, Winterdienst, kleine Reparaturen sowie die Kontrolle der Haustechnik."
+        },
+        {
+          "question": "Für wen eignet sich Ihr Hauswartungsservice?",
+          "answer": "Wir betreuen Mehrfamilienhäuser, Wohnsiedlungen, Bürogebäude und Gewerbeliegenschaften für Immobilienverwaltungen und Eigentümer."
+        },
+        {
+          "question": "Bieten Sie auch einen Winterdienst an?",
+          "answer": "Ja, wir bieten einen zuverlässigen Winterdienst inkl. Schneeräumung und Salzen an."
+        },
+        {
+          "question": "Werden auch kleine Reparaturen durchgeführt?",
+          "answer": "Ja, unser technischer Hausdienst übernimmt kleinere Reparaturen wie Glühbirnenwechsel oder das Einstellen von Türen."
+        },
+        {
+          "question": "Ist ein Pikettdienst bei Notfällen verfügbar?",
+          "answer": "Ja, für unsere Hauswartungskunden bieten wir einen 24/7-Pikettdienst für Notfälle (z.B. Heizungsausfall, Wasserrohrbruch) an."
+        },
+        {
+          "question": "Wie oft sind Sie vor Ort?",
+          "answer": "Das Intervall (z.B. wöchentlich, 14-täglich) wird individuell nach Ihren Bedürfnissen und den Anforderungen der Liegenschaft festgelegt."
+        }
+      ],
+      "facility": [
+        {
+          "question": "Was sind Facility Services?",
+          "answer": "Facility Services umfassen das ganzheitliche Management und den Unterhalt von Gebäuden, inkl. Reinigung, Technik, Sicherheit und Aussenanlagen."
+        },
+        {
+          "question": "Bieten Sie Facility Services für Grossunternehmen an?",
+          "answer": "Ja, wir haben die Kapazität und Erfahrung, auch für grosse Büro- und Gewerbekomplexe massgeschneiderte Facility Services anzubieten."
+        },
+        {
+          "question": "Kann ich einzelne Services aus dem Facility Management buchen?",
+          "answer": "Selbstverständlich. Sie können aus unserem Portfolio flexibel die Dienstleistungen wählen, die Sie benötigen."
+        },
+        {
+          "question": "Gibt es einen festen Ansprechpartner?",
+          "answer": "Ja, Sie erhalten einen dedizierten Objektbetreuer als zentralen Ansprechpartner für alle Belange rund um Ihre Immobilie."
+        },
+        {
+          "question": "Erstellen Sie auch individuelle Wartungspläne?",
+          "answer": "Ja, wir analysieren Ihre Liegenschaft und erstellen einen massgeschneiderten Unterhalts- und Wartungsplan."
+        },
+        {
+          "question": "Wie stellen Sie die Qualität der Facility Services sicher?",
+          "answer": "Durch regelmässige Qualitätskontrollen, geschultes Personal und transparente Dokumentation unserer Leistungen."
         }
       ],
       "pricing": [
         {
-          "question": "Wie berechnen Sie die Preise?",
-          "answer": "Die Preise basieren auf der Größe der Immobilie, der Art der Dienstleistung und den spezifischen Anforderungen. Wir bieten kostenlose Kostenvoranschläge."
+          "question": "Sind Ihre Offerten verbindlich?",
+          "answer": "Unsere Offerten für Endreinigungen und Umzüge sind in der Regel verbindliche Pauschalpreise. Es gibt keine versteckten Kosten."
+        },
+        {
+          "question": "Wie setzen sich die Umzugskosten zusammen?",
+          "answer": "Die Kosten basieren auf dem Volumen des Umzugsguts, der Distanz, dem Stockwerk, Vorhandensein eines Lifts und Zusatzleistungen wie Verpackung."
+        },
+        {
+          "question": "Gibt es Zuschläge für Arbeiten am Wochenende?",
+          "answer": "Für Einsätze an Sonn- und Feiertagen können gesetzliche Zuschläge anfallen. Samstage sind oft zum Normaltarif möglich (je nach Auftrag)."
+        },
+        {
+          "question": "Ist die Mehrwertsteuer in den Preisen enthalten?",
+          "answer": "Auf unseren Offerten weisen wir klar aus, ob die Preise exklusive oder inklusive der gesetzlichen Mehrwertsteuer zu verstehen sind."
+        },
+        {
+          "question": "Muss ich eine Anzahlung leisten?",
+          "answer": "Bei grösseren Aufträgen oder speziellen Dienstleistungen kann eine Anzahlung vereinbart werden. Dies wird in der Offerte transparent ausgewiesen."
+        },
+        {
+          "question": "Erhalten Stammkunden spezielle Konditionen?",
+          "answer": "Ja, für regelmässige Aufträge (wie Unterhaltsreinigungen) bieten wir attraktive Rahmenverträge und Konditionen an."
+        }
+      ],
+      "guarantees": [
+        {
+          "question": "Wie hoch ist Ihre Versicherungssumme?",
+          "answer": "Wir verfügen über eine umfassende Betriebshaftpflicht- und Transportversicherung, die Schäden bis zu mehreren Millionen Franken abdeckt."
+        },
+        {
+          "question": "Was tun Sie bei Schadensfällen?",
+          "answer": "Wir melden den Schaden umgehend unserer Versicherung und kümmern uns um eine schnelle und reibungslose Regulierung für Sie."
+        },
+        {
+          "question": "Ist die Abnahmegarantie zeitlich begrenzt?",
+          "answer": "Die Abnahmegarantie gilt für den offiziellen Übergabetermin mit der Verwaltung. Wir sind vor Ort und beheben Mängel sofort."
+        },
+        {
+          "question": "Haben Ihre Mitarbeiter einen sauberen Strafregisterauszug?",
+          "answer": "Ja, wir verlangen von all unseren festangestellten Mitarbeitern bei der Einstellung einen aktuellen und einwandfreien Strafregisterauszug."
+        },
+        {
+          "question": "Wie stellen Sie sicher, dass Termine eingehalten werden?",
+          "answer": "Durch sorgfältige Planung, ausreichende Personalreserven und unser Engagement für Schweizer Pünktlichkeit und Zuverlässigkeit."
+        },
+        {
+          "question": "Was passiert bei Ausfall von Reinigungspersonal?",
+          "answer": "Bei Krankheit oder Ferienabwesenheit stellen wir umgehend eine qualifizierte Stellvertretung, sodass Ihr Service lückenlos fortgeführt wird."
         }
       ]
     }
@@ -9016,6 +9296,202 @@
         {
           "question": "In welchen Orten bieten Sie Gastronomie Reinigung an?",
           "answer": "In Biel/Bienne, Nidau, Brügg, Lyss, Aarberg und im gesamten Seeland."
+        }
+      ]
+    },
+    "reinigungsfirmaSchweiz": {
+      "meta": {
+        "title": "Reinigungsfirma Schweiz | Professionelle Reinigung | SwissCleanMove",
+        "description": "Ihre professionelle Reinigungsfirma in der ganzen Schweiz. Unterhaltsreinigung, Büroreinigung und Spezialreinigungen nach Schweizer Qualitätsstandard."
+      },
+      "badge": "Reinigungsfirma die Schweiz",
+      "h1": "Reinigungsfirma die Schweiz – Professionelle Reinigung",
+      "heroSubtitle": "Ihr zuverlässiger Partner für Reinigungsfirma in der ganzen Schweiz.",
+      "intro": "Suchen Sie eine professionelle Reinigungsfirma für die Schweiz? SwissCleanMove ist Ihr Partner für höchste Qualität.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "ctaMidHeading": "Planen Sie einen Service?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an.",
+      "ctaMid": "Offerte in 2 Minuten sichern",
+      "ctaStrongHeading": "Jetzt anfragen",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus.",
+      "ctaStrong": "Schnelle Rückmeldung innerhalb 24h",
+      "sections": [
+        {
+          "heading": "Unser Angebot für Reinigungsfirma",
+          "body": "Wir bieten umfassende Lösungen im Bereich Reinigung.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Leistungen",
+      "serviceBullets": [
+        "Schweizweiter Service",
+        "Kostenlose Offerte",
+        "Professionelles Team"
+      ],
+      "trustPoints": [
+        "Schweizer Qualität",
+        "Schnelle Verfügbarkeit"
+      ],
+      "serviceAreaHeading": "Schweizweiter Einsatz",
+      "serviceAreaBody": "Wir sind in allen Kantonen für Sie da.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Super Service in der ganzen Schweiz!",
+        "author": "Max M.",
+        "trust": "Verifizierter Kunde"
+      },
+      "faqs": [
+        {
+          "question": "Bieten Sie Reinigungsfirma in der ganzen Schweiz an?",
+          "answer": "Ja, wir sind schweizweit tätig."
+        }
+      ]
+    },
+    "umzugsreinigungSchweiz": {
+      "meta": {
+        "title": "Umzugsreinigung Schweiz | Endreinigung mit Abnahmegarantie",
+        "description": "Professionelle Umzugsreinigung und Endreinigung in der ganzen Schweiz. 100% Abnahmegarantie, pünktlich und zuverlässig."
+      },
+      "badge": "Umzugsreinigung die Schweiz",
+      "h1": "Umzugsreinigung die Schweiz – Professionelle Endreinigung",
+      "heroSubtitle": "Ihr zuverlässiger Partner für Umzugsreinigung in der ganzen Schweiz.",
+      "intro": "Suchen Sie eine professionelle Umzugsreinigung für die Schweiz? SwissCleanMove ist Ihr Partner für höchste Qualität.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "ctaMidHeading": "Planen Sie einen Service?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an.",
+      "ctaMid": "Offerte in 2 Minuten sichern",
+      "ctaStrongHeading": "Jetzt anfragen",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus.",
+      "ctaStrong": "Schnelle Rückmeldung innerhalb 24h",
+      "sections": [
+        {
+          "heading": "Unser Angebot für Umzugsreinigung",
+          "body": "Wir bieten umfassende Lösungen im Bereich Endreinigung.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Leistungen",
+      "serviceBullets": [
+        "Schweizweiter Service",
+        "Kostenlose Offerte",
+        "Professionelles Team"
+      ],
+      "trustPoints": [
+        "Schweizer Qualität",
+        "Schnelle Verfügbarkeit"
+      ],
+      "serviceAreaHeading": "Schweizweiter Einsatz",
+      "serviceAreaBody": "Wir sind in allen Kantonen für Sie da.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Super Service in der ganzen Schweiz!",
+        "author": "Max M.",
+        "trust": "Verifizierter Kunde"
+      },
+      "faqs": [
+        {
+          "question": "Bieten Sie Umzugsreinigung in der ganzen Schweiz an?",
+          "answer": "Ja, wir sind schweizweit tätig."
+        }
+      ]
+    },
+    "facilityServiceSchweiz": {
+      "meta": {
+        "title": "Facility Service Schweiz | Gebäudemanagement | SwissCleanMove",
+        "description": "Ihr Partner für umfassende Facility Services in der Schweiz. Professionelles Gebäudemanagement für Unternehmen und Immobilien."
+      },
+      "badge": "Facility Services die Schweiz",
+      "h1": "Facility Services die Schweiz – Professionelle Facility Management",
+      "heroSubtitle": "Ihr zuverlässiger Partner für Facility Services in der ganzen Schweiz.",
+      "intro": "Suchen Sie eine professionelle Facility Services für die Schweiz? SwissCleanMove ist Ihr Partner für höchste Qualität.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "ctaMidHeading": "Planen Sie einen Service?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an.",
+      "ctaMid": "Offerte in 2 Minuten sichern",
+      "ctaStrongHeading": "Jetzt anfragen",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus.",
+      "ctaStrong": "Schnelle Rückmeldung innerhalb 24h",
+      "sections": [
+        {
+          "heading": "Unser Angebot für Facility Services",
+          "body": "Wir bieten umfassende Lösungen im Bereich Facility Management.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Leistungen",
+      "serviceBullets": [
+        "Schweizweiter Service",
+        "Kostenlose Offerte",
+        "Professionelles Team"
+      ],
+      "trustPoints": [
+        "Schweizer Qualität",
+        "Schnelle Verfügbarkeit"
+      ],
+      "serviceAreaHeading": "Schweizweiter Einsatz",
+      "serviceAreaBody": "Wir sind in allen Kantonen für Sie da.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Super Service in der ganzen Schweiz!",
+        "author": "Max M.",
+        "trust": "Verifizierter Kunde"
+      },
+      "faqs": [
+        {
+          "question": "Bieten Sie Facility Services in der ganzen Schweiz an?",
+          "answer": "Ja, wir sind schweizweit tätig."
+        }
+      ]
+    },
+    "hauswartungSchweiz": {
+      "meta": {
+        "title": "Hauswartung Schweiz | Gebäudeunterhalt | SwissCleanMove",
+        "description": "Zuverlässige Hauswartung und Gebäudeunterhalt in der ganzen Schweiz. Treppenhausreinigung, Winterdienst und technischer Unterhalt."
+      },
+      "badge": "Hauswartung die Schweiz",
+      "h1": "Hauswartung die Schweiz – Professionelle Liegenschaftsservice",
+      "heroSubtitle": "Ihr zuverlässiger Partner für Hauswartung in der ganzen Schweiz.",
+      "intro": "Suchen Sie eine professionelle Hauswartung für die Schweiz? SwissCleanMove ist Ihr Partner für höchste Qualität.",
+      "ctaSoft": "Jetzt kostenlose Offerte anfordern",
+      "ctaMidHeading": "Planen Sie einen Service?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an.",
+      "ctaMid": "Offerte in 2 Minuten sichern",
+      "ctaStrongHeading": "Jetzt anfragen",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus.",
+      "ctaStrong": "Schnelle Rückmeldung innerhalb 24h",
+      "sections": [
+        {
+          "heading": "Unser Angebot für Hauswartung",
+          "body": "Wir bieten umfassende Lösungen im Bereich Liegenschaftsservice.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Leistungen",
+      "serviceBullets": [
+        "Schweizweiter Service",
+        "Kostenlose Offerte",
+        "Professionelles Team"
+      ],
+      "trustPoints": [
+        "Schweizer Qualität",
+        "Schnelle Verfügbarkeit"
+      ],
+      "serviceAreaHeading": "Schweizweiter Einsatz",
+      "serviceAreaBody": "Wir sind in allen Kantonen für Sie da.",
+      "internalLinksHeading": "Weitere Dienstleistungen",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Super Service in der ganzen Schweiz!",
+        "author": "Max M.",
+        "trust": "Verifizierter Kunde"
+      },
+      "faqs": [
+        {
+          "question": "Bieten Sie Hauswartung in der ganzen Schweiz an?",
+          "answer": "Ja, wir sind schweizweit tätig."
         }
       ]
     }

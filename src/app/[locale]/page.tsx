@@ -558,6 +558,84 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
+      {/* Authority Content Sections for Swiss-wide positioning */}
+      <section className="section-padding bg-swiss-section border-t border-swiss-border">
+        <div className="container-max">
+          <div className="max-w-6xl mx-auto space-y-12">
+            
+            {/* Umzug */}
+            <div className="bg-white rounded-2xl p-8 border border-swiss-border shadow-subtle flex flex-col md:flex-row gap-8 items-center">
+              <div className="md:w-2/3">
+                <h2 className="text-2xl font-bold text-swiss-text mb-4">{t('home.authority.umzugTitle')}</h2>
+                <p className="text-swiss-body mb-6">{t.raw('home.authority.umzug')}</p>
+                <Link href={`/${locale}/umzug-schweiz`} className="inline-flex items-center text-swiss-red font-semibold hover:text-red-700 transition-colors">
+                  {t('home.authority.learnMore')} <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
+              <div className="md:w-1/3 flex justify-center">
+                <div className="w-24 h-24 bg-swiss-softRed rounded-full flex items-center justify-center">
+                  <Truck className="w-12 h-12 text-swiss-red" />
+                </div>
+              </div>
+            </div>
+
+            {/* Reinigung */}
+            <div className="bg-white rounded-2xl p-8 border border-swiss-border shadow-subtle flex flex-col md:flex-row-reverse gap-8 items-center">
+              <div className="md:w-2/3">
+                <h2 className="text-2xl font-bold text-swiss-text mb-4">{t('home.authority.reinigungTitle')}</h2>
+                <p className="text-swiss-body mb-6">{t.raw('home.authority.reinigung')}</p>
+                <Link href={`/${locale}/reinigungsfirma-schweiz`} className="inline-flex items-center text-swiss-red font-semibold hover:text-red-700 transition-colors">
+                  {t('home.authority.learnMore')} <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
+              <div className="md:w-1/3 flex justify-center">
+                <div className="w-24 h-24 bg-swiss-softRed rounded-full flex items-center justify-center">
+                  <Sparkles className="w-12 h-12 text-swiss-red" />
+                </div>
+              </div>
+            </div>
+
+            {/* Facility & Hauswartung */}
+            <div className="bg-white rounded-2xl p-8 border border-swiss-border shadow-subtle flex flex-col md:flex-row gap-8 items-center">
+              <div className="md:w-2/3">
+                <h2 className="text-2xl font-bold text-swiss-text mb-4">{t('home.authority.facilityTitle')}</h2>
+                <p className="text-swiss-body mb-6">{t.raw('home.authority.facility')}</p>
+                <div className="flex flex-wrap gap-4">
+                  <Link href={`/${locale}/facility-service-schweiz`} className="inline-flex items-center text-swiss-red font-semibold hover:text-red-700 transition-colors">
+                    {t('home.authority.facilityServices')} <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                  <Link href={`/${locale}/hauswartung-schweiz`} className="inline-flex items-center text-swiss-red font-semibold hover:text-red-700 transition-colors">
+                    {t('home.authority.hauswartung')} <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+              <div className="md:w-1/3 flex justify-center">
+                <div className="w-24 h-24 bg-swiss-softRed rounded-full flex items-center justify-center">
+                  <Building2 className="w-12 h-12 text-swiss-red" />
+                </div>
+              </div>
+            </div>
+
+            {/* Umzugsreinigung */}
+            <div className="bg-white rounded-2xl p-8 border border-swiss-border shadow-subtle flex flex-col md:flex-row-reverse gap-8 items-center">
+              <div className="md:w-2/3">
+                <h2 className="text-2xl font-bold text-swiss-text mb-4">{t('home.authority.umzugsreinigungTitle')}</h2>
+                <p className="text-swiss-body mb-6">{t.raw('home.authority.umzugsreinigung')}</p>
+                <Link href={`/${locale}/umzugsreinigung-schweiz`} className="inline-flex items-center text-swiss-red font-semibold hover:text-red-700 transition-colors">
+                  {t('home.authority.learnMore')} <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
+              <div className="md:w-1/3 flex justify-center">
+                <div className="w-24 h-24 bg-swiss-softRed rounded-full flex items-center justify-center">
+                  <CheckCircle className="w-12 h-12 text-swiss-red" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Statistics Section - COMMENTED OUT
       <section className="section-padding bg-white">
         <div className="container-max">

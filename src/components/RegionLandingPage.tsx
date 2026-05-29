@@ -95,15 +95,12 @@ function getCTAs(locale: string) {
 
 function getInternalLinks(locale: string) {
   return [
-    { label: locale === 'en' ? 'Moving Services' : locale === 'fr' ? 'Services de déménagement' : 'Umzug', href: `/${locale}/moving` },
-    { label: locale === 'en' ? 'Move-out Cleaning' : locale === 'fr' ? 'Nettoyage de fin de bail' : 'Umzugsreinigung', href: `/${locale}/cleaning` },
-    { label: locale === 'en' ? 'Maintenance Cleaning' : locale === 'fr' ? 'Nettoyage d\'entretien' : 'Unterhaltsreinigung', href: `/${locale}/cleaning` },
-    { label: locale === 'en' ? 'Restaurant Cleaning' : locale === 'fr' ? 'Nettoyage gastronomie' : 'Gastronomie Reinigung', href: `/${locale}/services` },
-    { label: locale === 'en' ? 'Facility Services' : locale === 'fr' ? 'Facility Services' : 'Facility Services', href: `/${locale}/services` },
-    { label: locale === 'en' ? 'Property Maintenance' : locale === 'fr' ? 'Conciergerie' : 'Hauswartung', href: `/${locale}/property-maintenance` },
-    { label: locale === 'en' ? 'Disposal' : locale === 'fr' ? 'Débarras' : 'Entsorgung', href: `/${locale}/services` },
-    { label: locale === 'en' ? 'Contact' : locale === 'fr' ? 'Contact' : 'Kontakt', href: `/${locale}/contact` },
-    { label: locale === 'en' ? 'Free Quote' : locale === 'fr' ? 'Devis gratuit' : 'Offerte', href: `/${locale}/free-offer` },
+    { label: locale === 'en' ? 'Moving Switzerland' : locale === 'fr' ? 'Déménagement Suisse' : 'Umzug Schweiz', href: `/${locale}/umzug-schweiz` },
+    { label: locale === 'en' ? 'Cleaning Switzerland' : locale === 'fr' ? 'Nettoyage Suisse' : 'Reinigungsfirma Schweiz', href: `/${locale}/reinigungsfirma-schweiz` },
+    { label: locale === 'en' ? 'Facility Services Switzerland' : locale === 'fr' ? 'Facility Services Suisse' : 'Facility Service Schweiz', href: `/${locale}/facility-service-schweiz` },
+    { label: locale === 'en' ? 'Property Maintenance Switzerland' : locale === 'fr' ? 'Conciergerie Suisse' : 'Hauswartung Schweiz', href: `/${locale}/hauswartung-schweiz` },
+    { label: locale === 'en' ? 'Move-out Cleaning Switzerland' : locale === 'fr' ? 'Nettoyage de fin de bail Suisse' : 'Umzugsreinigung Schweiz', href: `/${locale}/umzugsreinigung-schweiz` },
+    { label: locale === 'en' ? 'FAQ' : locale === 'fr' ? 'FAQ' : 'Häufige Fragen (FAQ)', href: `/${locale}/faq` },
   ];
 }
 

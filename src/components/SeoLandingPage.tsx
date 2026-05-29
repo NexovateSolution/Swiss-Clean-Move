@@ -567,31 +567,60 @@ export default function SeoLandingPage({
       )}
 
       {/* Internal Links Section */}
-      {internalLinks.length > 0 && (
-        <section className="section-padding">
-          <div className="container-max">
-            <div className="max-w-3xl mx-auto space-y-6">
-              <h2 className="text-2xl font-bold text-swiss-text">
-                {p('internalLinksHeading')}
-              </h2>
-              <div className="space-y-3">
-                {internalLinks.map((link, i) => (
-                  <Link
-                    key={i}
-                    href={`/${locale}/${link.href}`}
-                    className="flex items-center space-x-3 p-4 bg-white border border-swiss-border rounded-xl hover:border-swiss-red/30 hover:shadow-sm transition-all group"
-                  >
-                    <ArrowRight className="w-5 h-5 text-swiss-red group-hover:translate-x-1 transition-transform" />
-                    <span className="font-medium text-swiss-text group-hover:text-swiss-red transition-colors">
-                      {link.label}
-                    </span>
-                  </Link>
-                ))}
-              </div>
+      <section className="section-padding">
+        <div className="container-max">
+          <div className="max-w-3xl mx-auto space-y-6">
+            <h2 className="text-2xl font-bold text-swiss-text">
+              {p('internalLinksHeading') || (locale === 'en' ? 'Related Links' : locale === 'fr' ? 'Liens Connexes' : 'Weiterführende Links')}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {internalLinks.map((link, i) => (
+                <Link
+                  key={`t-${i}`}
+                  href={`/${locale}/${link.href}`}
+                  className="flex items-center space-x-3 p-4 bg-white border border-swiss-border rounded-xl hover:border-swiss-red/30 hover:shadow-sm transition-all group"
+                >
+                  <ArrowRight className="w-5 h-5 text-swiss-red group-hover:translate-x-1 transition-transform" />
+                  <span className="font-medium text-swiss-text group-hover:text-swiss-red transition-colors">
+                    {link.label}
+                  </span>
+                </Link>
+              ))}
+              
+              {/* Dynamic Contextual Links */}
+              {!isPillar && (
+                <Link
+                  href={`/${locale}/${service === 'umzug' ? 'umzug-schweiz' : service === 'reinigungsfirma' ? 'reinigungsfirma-schweiz' : service === 'facilityService' ? 'facility-service-schweiz' : service === 'hauswartung' ? 'hauswartung-schweiz' : 'umzugsreinigung-schweiz'}`}
+                  className="flex items-center space-x-3 p-4 bg-white border border-swiss-border rounded-xl hover:border-swiss-red/30 hover:shadow-sm transition-all group"
+                >
+                  <ArrowRight className="w-5 h-5 text-swiss-red group-hover:translate-x-1 transition-transform" />
+                  <span className="font-medium text-swiss-text group-hover:text-swiss-red transition-colors">
+                    {locale === 'en' ? 'Service throughout Switzerland' : locale === 'fr' ? 'Service dans toute la Suisse' : 'Service schweizweit'}
+                  </span>
+                </Link>
+              )}
+              <Link
+                href={`/${locale}/faq`}
+                className="flex items-center space-x-3 p-4 bg-white border border-swiss-border rounded-xl hover:border-swiss-red/30 hover:shadow-sm transition-all group"
+              >
+                <ArrowRight className="w-5 h-5 text-swiss-red group-hover:translate-x-1 transition-transform" />
+                <span className="font-medium text-swiss-text group-hover:text-swiss-red transition-colors">
+                  {locale === 'en' ? 'FAQ' : locale === 'fr' ? 'FAQ' : 'Häufige Fragen (FAQ)'}
+                </span>
+              </Link>
+              <Link
+                href={`/${locale}/regions`}
+                className="flex items-center space-x-3 p-4 bg-white border border-swiss-border rounded-xl hover:border-swiss-red/30 hover:shadow-sm transition-all group"
+              >
+                <ArrowRight className="w-5 h-5 text-swiss-red group-hover:translate-x-1 transition-transform" />
+                <span className="font-medium text-swiss-text group-hover:text-swiss-red transition-colors">
+                  {locale === 'en' ? 'All Regions' : locale === 'fr' ? 'Toutes les Régions' : 'Alle Regionen'}
+                </span>
+              </Link>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Strong CTA Section (Bottom) */}
       <section className="section-padding bg-swiss-section">

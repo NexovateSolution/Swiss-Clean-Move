@@ -161,23 +161,23 @@
       }
     },
     "trustBadges": {
-      "title": "Fiable & certifié",
-      "subtitle": "Des standards professionnels sur lesquels compter",
+      "title": "Qualité Suisse Certifiée",
+      "subtitle": "Des standards premium pour les exigences les plus élevées dans toute la Suisse",
       "iso": {
-        "title": "Gestion de la qualité",
-        "subtitle": "Processus alignés sur les meilleures pratiques"
+        "title": "Standards de Qualité Supérieurs",
+        "subtitle": "Processus vérifiés pour une satisfaction garantie"
       },
       "swissQuality": {
-        "title": "Qualité suisse",
-        "subtitle": "Exigence élevée, service fiable"
+        "title": "100% Qualité Suisse",
+        "subtitle": "Service premium selon les standards suisses"
       },
       "trainedStaff": {
-        "title": "Personnel formé",
-        "subtitle": "Équipes expérimentées et vérifiées"
+        "title": "Professionnels Certifiés",
+        "subtitle": "Experts régulièrement formés et contrôlés"
       },
       "insured": {
-        "title": "Assuré",
-        "subtitle": "Couvert pour votre tranquillité"
+        "title": "Entièrement Assuré",
+        "subtitle": "Couverture complète pour votre tranquillité absolue"
       }
     },
     "testimonials": {
@@ -233,6 +233,19 @@
     "regional": {
       "title": "Nos Sites dans le Seeland",
       "subtitle": "Nous sommes là pour vous dans toute la région de Bienne-Seeland. Rapide, local et fiable."
+    },
+    "authority": {
+      "umzug": "Déménagement privé ou d'entreprise : nous organisons votre déménagement dans toute la Suisse de manière professionnelle, ponctuelle et sans stress.",
+      "reinigung": "De l'entretien régulier au nettoyage spécial - nous assurons une propreté éclatante de vos biens immobiliers dans toute la Suisse.",
+      "facility": "Notre facility management complet pour les biens immobiliers et les entreprises. Nous nous occupons de la conciergerie, de la technique et de l'entretien.",
+      "umzugsreinigung": "Remise d'appartement sans stress grâce à notre nettoyage final professionnel avec garantie de remise à 100% - dans tous les cantons suisses.",
+      "umzugTitle": "Entreprise de déménagement Suisse",
+      "reinigungTitle": "Entreprise de nettoyage Suisse",
+      "facilityTitle": "Services généraux et conciergerie",
+      "umzugsreinigungTitle": "Nettoyage de remise de bail Suisse",
+      "learnMore": "En savoir plus",
+      "facilityServices": "Services généraux",
+      "hauswartung": "Conciergerie"
     }
   },
   "services": {
@@ -5146,6 +5159,45 @@
       "specialCleaning": "Nettoyage spécial",
       "comboService": "Pack nettoyage + déménagement",
       "householdHelping": "Aide ménagère"
+    },
+    "geneve": {
+      "meta": {
+        "title": "Entreprise de nettoyage & Déménagement à Genève | SwissCleanMove",
+        "description": "Services professionnels de déménagement et de nettoyage à Genève et environs."
+      },
+      "h1": "Entreprise de nettoyage & Déménagement Genève",
+      "introParagraphs": [
+        "SwissCleanMove est votre partenaire de confiance à Genève pour les déménagements, nettoyages de fin de bail et services de conciergerie."
+      ],
+      "faqs": [
+        {
+          "question": "Offrez-vous une garantie de remise à Genève?",
+          "answer": "Oui, nos nettoyages de déménagement incluent une garantie de remise à 100%."
+        }
+      ],
+      "sections": {
+        "services": {
+          "heading": "Nos Services à Genève",
+          "paragraphs": [
+            "Nous offrons des services complets."
+          ],
+          "bullets": [
+            "Déménagement",
+            "Nettoyage",
+            "Conciergerie"
+          ]
+        },
+        "quality": {
+          "heading": "Qualité Suisse",
+          "paragraphs": [
+            "Les plus hauts standards pour chaque intervention."
+          ]
+        }
+      },
+      "whyChooseUs": [
+        "Qualité Suisse",
+        "Rapide & Fiable"
+      ]
     }
   },
   "pricing": {
@@ -5246,35 +5298,267 @@
       "general": "Questions Générales",
       "cleaning": "Services de Nettoyage",
       "moving": "Services de Déménagement",
-      "pricing": "Prix et Paiement"
+      "pricing": "Prix et Paiement",
+      "umzugsreinigung": "Nettoyage de Déménagement",
+      "hauswartung": "Conciergerie",
+      "facility": "Facility Services",
+      "guarantees": "Garanties et Assurances"
     },
     "questions": {
       "general": [
         {
-          "question": "Quelles zones desservez-vous?",
-          "answer": "Nous fournissons des services dans toute la Suisse, y compris les grandes villes comme Zurich, Genève, Bâle, Berne et Lausanne."
+          "question": "SwissCleanMove opère-t-il dans toute la Suisse ?",
+          "answer": "Oui, nous proposons nos services (déménagement, nettoyage, facility services) dans tout le pays, avec un accent sur le Seeland, Berne, Zurich, Bâle et d'autres régions."
         },
         {
-          "question": "Êtes-vous assurés?",
-          "answer": "Oui, nous sommes entièrement assurés et cautionnés. Tous nos employés sont couverts par une assurance complète."
+          "question": "Comment puis-je demander un devis ?",
+          "answer": "Vous pouvez facilement demander un devis gratuit et sans engagement via le formulaire en ligne sur notre site web."
+        },
+        {
+          "question": "Vos employés sont-ils assurés ?",
+          "answer": "Oui, tous nos employés sont entièrement assurés et nous disposons d'une assurance responsabilité civile complète."
+        },
+        {
+          "question": "Proposez-vous des visites sur place ?",
+          "answer": "Oui, pour les gros déménagements ou les travaux de nettoyage importants, nous proposons des visites gratuites sur place."
+        },
+        {
+          "question": "Combien de temps faut-il pour recevoir un devis ?",
+          "answer": "En général, vous recevrez notre devis dans les 24 heures suivant votre demande."
+        },
+        {
+          "question": "Les services peuvent-ils être combinés ?",
+          "answer": "Oui, nous proposons des forfaits combinés avantageux, par exemple déménagement et nettoyage de fin de bail auprès d'un seul prestataire."
+        },
+        {
+          "question": "Quels modes de paiement acceptez-vous ?",
+          "answer": "Vous pouvez payer facilement par facture, virement bancaire ou en espèces (sur accord)."
+        },
+        {
+          "question": "Travaillez-vous aussi le week-end ?",
+          "answer": "Oui, sur accord préalable, nous effectuons également des déménagements et des nettoyages le week-end."
         }
       ],
-      "cleaning": [
+      "umzug": [
         {
-          "question": "Fournissez-vous les produits de nettoyage?",
-          "answer": "Oui, nous apportons tous les produits de nettoyage nécessaires et l'équipement professionnel à chaque travail."
+          "question": "Que comprend le service de déménagement ?",
+          "answer": "Notre service de déménagement comprend le transport sécurisé, le montage de meubles sur demande, ainsi que des services d'emballage et de matériel en option."
+        },
+        {
+          "question": "Proposez-vous également le démontage et montage de meubles ?",
+          "answer": "Oui, notre personnel formé se charge volontiers du démontage et montage professionnel de vos meubles."
+        },
+        {
+          "question": "Fournissez-vous des cartons de déménagement ?",
+          "answer": "Oui, nous pouvons vous livrer des cartons et autres matériels d'emballage bien avant le déménagement."
+        },
+        {
+          "question": "Mes biens sont-ils assurés pendant le déménagement ?",
+          "answer": "Oui, vos biens ménagers sont couverts par notre assurance transport tout au long du processus."
+        },
+        {
+          "question": "Effectuez-vous également des déménagements d'entreprises ?",
+          "answer": "Absolument. Nous avons beaucoup d'expérience dans les déménagements de bureaux et d'entreprises."
+        },
+        {
+          "question": "Comment calculer le volume de mon déménagement ?",
+          "answer": "Vous pouvez utiliser notre calculateur en ligne ou organiser une visite gratuite où nous estimons le volume pour vous."
+        },
+        {
+          "question": "Que se passe-t-il en cas de dommage pendant le déménagement ?",
+          "answer": "Si un dommage survient malgré tout, il est couvert par notre assurance et géré de manière simple."
+        },
+        {
+          "question": "Transportez-vous aussi des objets lourds comme des pianos ?",
+          "answer": "Oui, nous disposons de l'équipement nécessaire pour transporter des objets lourds (pianos, coffres-forts)."
+        },
+        {
+          "question": "Puis-je aider lors du déménagement ?",
+          "answer": "Oui, vous pouvez aider pour réduire les coûts. Nous en discutons volontiers avec vous à l'avance."
+        },
+        {
+          "question": "Combien de temps à l'avance dois-je planifier le déménagement ?",
+          "answer": "Nous recommandons de nous contacter 4 à 6 semaines avant la date souhaitée."
         }
       ],
-      "moving": [
+      "reinigung": [
         {
-          "question": "Fournissez-vous les matériaux d'emballage?",
-          "answer": "Oui, nous pouvons fournir tous les matériaux d'emballage nécessaires, y compris les boîtes, le papier bulle et les housses de protection."
+          "question": "Apportez-vous vos propres produits de nettoyage ?",
+          "answer": "Oui, nous apportons tous les produits et équipements de nettoyage professionnels et écologiques."
+        },
+        {
+          "question": "Proposez-vous un nettoyage d'entretien régulier ?",
+          "answer": "Oui, nous proposons des services de nettoyage réguliers pour les particuliers, bureaux et locaux commerciaux."
+        },
+        {
+          "question": "Garantissez-vous la qualité du nettoyage ?",
+          "answer": "Oui, nous travaillons selon des normes de qualité suisses strictes et contrôlons régulièrement notre travail."
+        },
+        {
+          "question": "Nettoyez-vous également les vitres et les stores ?",
+          "answer": "Oui, le nettoyage professionnel des vitres et des stores fait partie de nos compétences clés."
+        },
+        {
+          "question": "Qu'est-ce que le nettoyage de fin de chantier ?",
+          "answer": "Il s'agit du nettoyage brut, fin et final des bâtiments neufs ou rénovés pour qu'ils soient prêts à être habités."
+        },
+        {
+          "question": "Vos produits sont-ils respectueux de l'environnement ?",
+          "answer": "Nous accordons une grande importance à la durabilité et utilisons des produits biodégradables autant que possible."
+        },
+        {
+          "question": "Proposez-vous également le nettoyage de tapis ?",
+          "answer": "Oui, nous disposons d'appareils spéciaux pour le nettoyage en profondeur des tapis et des meubles rembourrés."
+        },
+        {
+          "question": "Comment la discrétion est-elle assurée lors du nettoyage de bureau ?",
+          "answer": "Notre personnel est contractuellement tenu à la confidentialité et travaille discrètement."
+        },
+        {
+          "question": "Pouvez-vous nettoyer en dehors de nos heures de bureau ?",
+          "answer": "Bien sûr. Nous adaptons nos horaires de nettoyage à vos heures d'ouverture (tôt le matin ou le soir)."
+        },
+        {
+          "question": "Est-ce toujours le même agent de nettoyage ?",
+          "answer": "Pour les contrats réguliers, nous nous efforçons d'affecter le même personnel pour établir la confiance."
+        }
+      ],
+      "umzugsreinigung": [
+        {
+          "question": "Que signifie 'avec garantie de remise' ?",
+          "answer": "Nous garantissons que la gérance acceptera le nettoyage. Si un nouveau nettoyage est nécessaire, nous le faisons gratuitement."
+        },
+        {
+          "question": "Devez-vous être présent lors de la remise ?",
+          "answer": "Oui, pour le nettoyage final avec garantie, un responsable de notre équipe est toujours présent lors de la remise officielle."
+        },
+        {
+          "question": "Combien coûte un nettoyage de déménagement ?",
+          "answer": "Le prix dépend de la taille et de l'état de saleté. Nous vous fournissons volontiers un devis forfaitaire."
+        },
+        {
+          "question": "Les vitres et les stores sont-ils inclus ?",
+          "answer": "Oui, notre nettoyage standard inclut le nettoyage des vitres (intérieur/extérieur) et des stores."
+        },
+        {
+          "question": "Nettoyez-vous aussi les caves ou balcons ?",
+          "answer": "Oui, les balcons, caves, galetas et garages peuvent être inclus sur demande."
+        },
+        {
+          "question": "Que se passe-t-il si le propriétaire n'est pas satisfait ?",
+          "answer": "Grâce à notre garantie, nous rectifions toute réclamation immédiatement et sans frais supplémentaires."
+        },
+        {
+          "question": "Combien de temps dure un nettoyage final ?",
+          "answer": "En général 1 à 2 jours ouvrables selon la taille. Nous coordonnons la date pour que la remise ait lieu à l'heure."
+        },
+        {
+          "question": "L'appartement doit-il être vide ?",
+          "answer": "Oui, pour un nettoyage final impeccable, l'appartement doit être complètement vidé."
+        }
+      ],
+      "hauswartung": [
+        {
+          "question": "Que comprend votre service de conciergerie ?",
+          "answer": "Le nettoyage des cages d'escalier, l'entretien extérieur, le service hivernal, les petites réparations et le contrôle de la technique du bâtiment."
+        },
+        {
+          "question": "À qui s'adresse ce service ?",
+          "answer": "Nous entretenons des immeubles d'habitation, des immeubles de bureaux et des locaux commerciaux pour les gérances et les propriétaires."
+        },
+        {
+          "question": "Proposez-vous aussi un service hivernal ?",
+          "answer": "Oui, nous proposons un service hivernal fiable incluant le déneigement et le salage."
+        },
+        {
+          "question": "Effectuez-vous des petites réparations ?",
+          "answer": "Oui, notre service technique se charge des petites réparations comme changer des ampoules ou régler des portes."
+        },
+        {
+          "question": "Un service de piquet est-il disponible ?",
+          "answer": "Oui, nous offrons un service de piquet 24/7 pour les urgences (ex: panne de chauffage, rupture de conduite)."
+        },
+        {
+          "question": "À quelle fréquence êtes-vous sur place ?",
+          "answer": "L'intervalle (hebdomadaire, bimensuel) est défini selon vos besoins et les exigences de l'immeuble."
+        }
+      ],
+      "facility": [
+        {
+          "question": "Que sont les Facility Services ?",
+          "answer": "La gestion et l'entretien global des bâtiments, y compris le nettoyage, la technique, la sécurité et les espaces extérieurs."
+        },
+        {
+          "question": "Proposez-vous des Facility Services pour les grandes entreprises ?",
+          "answer": "Oui, nous avons la capacité d'offrir des services sur mesure pour les grands complexes de bureaux et commerciaux."
+        },
+        {
+          "question": "Puis-je réserver des services individuels ?",
+          "answer": "Bien sûr. Vous pouvez choisir de manière flexible les services dont vous avez besoin."
+        },
+        {
+          "question": "Y a-t-il une personne de contact dédiée ?",
+          "answer": "Oui, vous aurez un gestionnaire d'objet dédié comme point de contact central pour toutes les questions."
+        },
+        {
+          "question": "Créez-vous des plans d'entretien individuels ?",
+          "answer": "Oui, nous analysons votre propriété et créons un plan d'entretien sur mesure."
+        },
+        {
+          "question": "Comment garantissez-vous la qualité ?",
+          "answer": "Grâce à des contrôles de qualité réguliers, du personnel formé et une documentation transparente."
         }
       ],
       "pricing": [
         {
-          "question": "Comment calculez-vous les prix?",
-          "answer": "Les prix sont basés sur la taille de la propriété, le type de service et les exigences spécifiques. Nous fournissons des devis gratuits."
+          "question": "Vos devis sont-ils fermes ?",
+          "answer": "Nos devis pour les nettoyages finaux et les déménagements sont généralement des forfaits fermes. Aucun frais caché."
+        },
+        {
+          "question": "Comment sont calculés les coûts de déménagement ?",
+          "answer": "Les coûts sont basés sur le volume, la distance, l'étage, l'ascenseur et les services supplémentaires (emballage)."
+        },
+        {
+          "question": "Y a-t-il des suppléments pour le week-end ?",
+          "answer": "Des suppléments légaux peuvent s'appliquer pour le dimanche. Les samedis sont souvent au tarif normal (selon la commande)."
+        },
+        {
+          "question": "La TVA est-elle incluse ?",
+          "answer": "Sur nos devis, nous indiquons clairement si les prix sont hors taxes ou TVA comprise."
+        },
+        {
+          "question": "Dois-je payer un acompte ?",
+          "answer": "Pour les grosses commandes, un acompte peut être convenu. Cela sera indiqué de manière transparente."
+        },
+        {
+          "question": "Les clients réguliers bénéficient-ils de tarifs spéciaux ?",
+          "answer": "Oui, pour les contrats réguliers (nettoyage d'entretien), nous proposons des conditions attractives."
+        }
+      ],
+      "guarantees": [
+        {
+          "question": "Quel est le montant de votre assurance ?",
+          "answer": "Nous disposons d'une assurance responsabilité civile et transport couvrant des dommages jusqu'à plusieurs millions de francs."
+        },
+        {
+          "question": "Que faites-vous en cas de sinistre ?",
+          "answer": "Nous déclarons immédiatement le dommage à notre assurance et veillons à un règlement rapide pour vous."
+        },
+        {
+          "question": "La garantie de remise est-elle limitée dans le temps ?",
+          "answer": "Elle est valable pour le rendez-vous officiel de remise avec la gérance. Nous résolvons les défauts immédiatement."
+        },
+        {
+          "question": "Vos employés ont-ils un casier judiciaire vierge ?",
+          "answer": "Oui, nous exigeons un extrait de casier judiciaire récent et vierge de tous nos employés permanents lors de l'embauche."
+        },
+        {
+          "question": "Comment vous assurez-vous du respect des délais ?",
+          "answer": "Grâce à une planification minutieuse, des réserves de personnel suffisantes et notre engagement envers la ponctualité suisse."
+        },
+        {
+          "question": "Que se passe-t-il en cas d'absence du personnel ?",
+          "answer": "En cas de maladie ou de vacances, nous fournissons immédiatement un remplaçant qualifié pour assurer la continuité."
         }
       ]
     }
@@ -8977,6 +9261,202 @@
         {
           "question": "Où proposez-vous le nettoyage gastronomique ?",
           "answer": "À Bienne/Bienne, Nidau, Brügg, Lyss, Aarberg et dans tout le Seeland."
+        }
+      ]
+    },
+    "reinigungsfirmaSchweiz": {
+      "meta": {
+        "title": "Entreprise de Nettoyage Suisse | Nettoyage Professionnel | SwissCleanMove",
+        "description": "Votre entreprise de nettoyage professionnelle dans toute la Suisse. Nettoyage d'entretien, nettoyage de bureaux et nettoyages spéciaux."
+      },
+      "badge": "Entreprise de nettoyage la Suisse",
+      "h1": "Entreprise de nettoyage la Suisse – Professionelle Nettoyage",
+      "heroSubtitle": "Votre partenaire fiable pour Entreprise de nettoyage dans toute la Suisse.",
+      "intro": "Cherchez-vous une Entreprise de nettoyage professionnelle pour la Suisse? SwissCleanMove est votre partenaire pour la plus haute qualité.",
+      "ctaSoft": "Demander un devis gratuit",
+      "ctaMidHeading": "Vous planifiez un service ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement dès maintenant.",
+      "ctaMid": "Obtenir un devis en 2 minutes",
+      "ctaStrongHeading": "Demander maintenant",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire.",
+      "ctaStrong": "Retour rapide sous 24h",
+      "sections": [
+        {
+          "heading": "Notre offre pour Entreprise de nettoyage",
+          "body": "Nous offrons des solutions complètes en Nettoyage.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services",
+      "serviceBullets": [
+        "Service dans toute la Suisse",
+        "Devis gratuit",
+        "Équipe professionnelle"
+      ],
+      "trustPoints": [
+        "Qualité Suisse",
+        "Disponibilité rapide"
+      ],
+      "serviceAreaHeading": "Intervention dans toute la Suisse",
+      "serviceAreaBody": "Nous sommes là pour vous dans tous les cantons.",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Super service dans toute la Suisse!",
+        "author": "Max M.",
+        "trust": "Client vérifié"
+      },
+      "faqs": [
+        {
+          "question": "Proposez-vous des Entreprise de nettoyage dans toute la Suisse?",
+          "answer": "Oui, nous opérons dans toute la Suisse."
+        }
+      ]
+    },
+    "umzugsreinigungSchweiz": {
+      "meta": {
+        "title": "Nettoyage de Déménagement Suisse | Avec Garantie de Remise",
+        "description": "Nettoyage de déménagement et nettoyage final professionnel dans toute la Suisse. Garantie de remise à 100%, ponctuel et fiable."
+      },
+      "badge": "Nettoyage de remise de bail la Suisse",
+      "h1": "Nettoyage de remise de bail la Suisse – Professionelle Nettoyage final",
+      "heroSubtitle": "Votre partenaire fiable pour Nettoyage de remise de bail dans toute la Suisse.",
+      "intro": "Cherchez-vous une Nettoyage de remise de bail professionnelle pour la Suisse? SwissCleanMove est votre partenaire pour la plus haute qualité.",
+      "ctaSoft": "Demander un devis gratuit",
+      "ctaMidHeading": "Vous planifiez un service ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement dès maintenant.",
+      "ctaMid": "Obtenir un devis en 2 minutes",
+      "ctaStrongHeading": "Demander maintenant",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire.",
+      "ctaStrong": "Retour rapide sous 24h",
+      "sections": [
+        {
+          "heading": "Notre offre pour Nettoyage de remise de bail",
+          "body": "Nous offrons des solutions complètes en Nettoyage final.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services",
+      "serviceBullets": [
+        "Service dans toute la Suisse",
+        "Devis gratuit",
+        "Équipe professionnelle"
+      ],
+      "trustPoints": [
+        "Qualité Suisse",
+        "Disponibilité rapide"
+      ],
+      "serviceAreaHeading": "Intervention dans toute la Suisse",
+      "serviceAreaBody": "Nous sommes là pour vous dans tous les cantons.",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Super service dans toute la Suisse!",
+        "author": "Max M.",
+        "trust": "Client vérifié"
+      },
+      "faqs": [
+        {
+          "question": "Proposez-vous des Nettoyage de remise de bail dans toute la Suisse?",
+          "answer": "Oui, nous opérons dans toute la Suisse."
+        }
+      ]
+    },
+    "facilityServiceSchweiz": {
+      "meta": {
+        "title": "Facility Service Suisse | Gestion de Bâtiments | SwissCleanMove",
+        "description": "Votre partenaire pour des services de facility management complets en Suisse. Gestion professionnelle de bâtiments pour entreprises."
+      },
+      "badge": "Services Généraux la Suisse",
+      "h1": "Services Généraux la Suisse – Professionelle Facility Management",
+      "heroSubtitle": "Votre partenaire fiable pour Services Généraux dans toute la Suisse.",
+      "intro": "Cherchez-vous une Services Généraux professionnelle pour la Suisse? SwissCleanMove est votre partenaire pour la plus haute qualité.",
+      "ctaSoft": "Demander un devis gratuit",
+      "ctaMidHeading": "Vous planifiez un service ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement dès maintenant.",
+      "ctaMid": "Obtenir un devis en 2 minutes",
+      "ctaStrongHeading": "Demander maintenant",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire.",
+      "ctaStrong": "Retour rapide sous 24h",
+      "sections": [
+        {
+          "heading": "Notre offre pour Services Généraux",
+          "body": "Nous offrons des solutions complètes en Facility Management.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services",
+      "serviceBullets": [
+        "Service dans toute la Suisse",
+        "Devis gratuit",
+        "Équipe professionnelle"
+      ],
+      "trustPoints": [
+        "Qualité Suisse",
+        "Disponibilité rapide"
+      ],
+      "serviceAreaHeading": "Intervention dans toute la Suisse",
+      "serviceAreaBody": "Nous sommes là pour vous dans tous les cantons.",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Super service dans toute la Suisse!",
+        "author": "Max M.",
+        "trust": "Client vérifié"
+      },
+      "faqs": [
+        {
+          "question": "Proposez-vous des Services Généraux dans toute la Suisse?",
+          "answer": "Oui, nous opérons dans toute la Suisse."
+        }
+      ]
+    },
+    "hauswartungSchweiz": {
+      "meta": {
+        "title": "Conciergerie Suisse | Entretien de Bâtiments | SwissCleanMove",
+        "description": "Conciergerie fiable et entretien de bâtiments dans toute la Suisse. Nettoyage d'escaliers, service hivernal et entretien technique."
+      },
+      "badge": "Conciergerie la Suisse",
+      "h1": "Conciergerie la Suisse – Professionelle Entretien immobilier",
+      "heroSubtitle": "Votre partenaire fiable pour Conciergerie dans toute la Suisse.",
+      "intro": "Cherchez-vous une Conciergerie professionnelle pour la Suisse? SwissCleanMove est votre partenaire pour la plus haute qualité.",
+      "ctaSoft": "Demander un devis gratuit",
+      "ctaMidHeading": "Vous planifiez un service ?",
+      "ctaMidBody": "Demandez votre devis gratuit et sans engagement dès maintenant.",
+      "ctaMid": "Obtenir un devis en 2 minutes",
+      "ctaStrongHeading": "Demander maintenant",
+      "ctaStrongBody": "Appelez-nous ou remplissez notre formulaire.",
+      "ctaStrong": "Retour rapide sous 24h",
+      "sections": [
+        {
+          "heading": "Notre offre pour Conciergerie",
+          "body": "Nous offrons des solutions complètes en Entretien immobilier.",
+          "bullets": []
+        }
+      ],
+      "serviceBulletsHeading": "Nos services",
+      "serviceBullets": [
+        "Service dans toute la Suisse",
+        "Devis gratuit",
+        "Équipe professionnelle"
+      ],
+      "trustPoints": [
+        "Qualité Suisse",
+        "Disponibilité rapide"
+      ],
+      "serviceAreaHeading": "Intervention dans toute la Suisse",
+      "serviceAreaBody": "Nous sommes là pour vous dans tous les cantons.",
+      "internalLinksHeading": "Autres services",
+      "internalLinks": [],
+      "testimonial": {
+        "quote": "Super service dans toute la Suisse!",
+        "author": "Max M.",
+        "trust": "Client vérifié"
+      },
+      "faqs": [
+        {
+          "question": "Proposez-vous des Conciergerie dans toute la Suisse?",
+          "answer": "Oui, nous opérons dans toute la Suisse."
         }
       ]
     }

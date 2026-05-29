@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useTranslations } from 'next-intl'
 import toast from 'react-hot-toast'
 import { Upload, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 // Imports of the forms
 import { MaintenanceCleaningForm } from './service-forms/ServiceFormsPart1'
@@ -106,22 +107,22 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
   }
 
   const ImageUpload = () => (
-    <div className="mt-6 border-t-2 border-[#a8c8e8] pt-6">
-      <h3 className="text-[#003366] font-semibold mb-2">{tl('upload.title') || 'Upload Pictures (Optional)'}</h3>
-      <p className="text-sm text-[#5a7a9a] mb-4">{tl('upload.description') || 'Attach photos of your property to help us provide a more accurate quote.'}</p>
-      <div onClick={() => fileInputRef.current?.click()} className="border-2 border-dashed border-[#003366] rounded-xl p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-white/50 transition-colors">
-        <Upload className="w-8 h-8 text-[#003366] mb-2" />
-        <span className="text-sm font-medium text-[#003366]">{tl('upload.button') || 'Click to select images'}</span>
-        <input type="file" ref={fileInputRef} onChange={handleFileChange} multiple accept="image/*" className="hidden" />
+    <div className="mt-6 border-t border-swiss-border pt-6">
+      <h3 className="text-swiss-text font-semibold mb-2">{tl('upload.title') || 'Upload Pictures, Floorplans or Documents'}</h3>
+      <p className="text-sm text-swiss-body mb-4">{tl('upload.description') || 'Attach photos, floorplans, or handover documents to help us provide a more accurate quote.'}</p>
+      <div onClick={() => fileInputRef.current?.click()} className="border-2 border-dashed border-swiss-border rounded-xl p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-swiss-gray-50 hover:border-swiss-red transition-all">
+        <Upload className="w-8 h-8 text-swiss-red mb-2" />
+        <span className="text-sm font-medium text-swiss-text">{tl('upload.button') || 'Click to select files (Images/PDFs)'}</span>
+        <input type="file" ref={fileInputRef} onChange={handleFileChange} multiple accept="image/*,.pdf" className="hidden" />
       </div>
       {images.length > 0 && (
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
           {images.map((img, i) => (
             <div key={i} className="relative group">
-              <div className="w-full h-20 bg-white rounded-lg border border-[#a8c8e8] flex items-center justify-center overflow-hidden">
-                <span className="text-xs text-center px-2 truncate block w-full text-gray-600">{img.name}</span>
+              <div className="w-full h-20 bg-white rounded-lg border border-swiss-border flex items-center justify-center overflow-hidden">
+                <span className="text-xs text-center px-2 truncate block w-full text-swiss-body">{img.name}</span>
               </div>
-              <button onClick={(e) => { e.stopPropagation(); removeImage(i); }} className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
+              <button onClick={(e) => { e.stopPropagation(); removeImage(i); }} className="absolute -top-2 -right-2 bg-swiss-red text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
                 <X className="w-3 h-3" />
               </button>
             </div>
@@ -300,26 +301,38 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
     <div className="max-w-2xl mx-auto">
       <div className="mb-8">
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-xl font-bold text-[#003366]">{serviceName}</h2>
-          <span className="text-sm font-medium text-[#5a7a9a]">{`${step + 1} / ${totalSteps}`}</span>
+          <h2 className="text-xl font-bold text-swiss-text">{serviceName}</h2>
+          <span className="text-sm font-medium text-swiss-body">{`${step + 1} / ${totalSteps}`}</span>
         </div>
-        <div className="w-full bg-[#d4e4f4] rounded-full h-2">
-          <div className="bg-[#003366] h-2 rounded-full transition-all duration-500" style={{ width: `${((step + 1) / totalSteps) * 100}%` }} />
+        <div className="w-full bg-swiss-gray-100 rounded-full h-2">
+          <div className="bg-swiss-red h-2 rounded-full transition-all duration-500" style={{ width: `${((step + 1) / totalSteps) * 100}%` }} />
         </div>
       </div>
-      <div className="bg-[#dce9f5] rounded-2xl p-6 md:p-8 border border-[#b8d4eb]">
-        {renderCurrentStep()}
+      
+      <div className="bg-white rounded-2xl p-6 md:p-8 border border-swiss-border shadow-subtle relative overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={step}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {renderCurrentStep()}
+          </motion.div>
+        </AnimatePresence>
       </div>
+
       <div className="flex justify-between mt-6">
         {!isFirst ? (
-          <button onClick={goBack} className="px-6 py-2.5 bg-[#003366] text-white font-semibold rounded-lg hover:bg-[#002244] transition-colors text-sm">{tl('wizard.buttons.back') || 'Zurück'}</button>
+          <button onClick={goBack} className="px-6 py-2.5 bg-swiss-section border border-swiss-border text-swiss-text font-semibold rounded-lg hover:bg-swiss-gray-50 transition-colors text-sm">{tl('wizard.buttons.back') || 'Zurück'}</button>
         ) : <div />}
         {isLast ? (
-          <button onClick={submit} disabled={busy} className="px-8 py-2.5 bg-[#003366] text-white font-semibold rounded-lg hover:bg-[#002244] transition-colors disabled:opacity-50 text-sm">
+          <button onClick={submit} disabled={busy} className="btn-primary px-8 py-2.5 disabled:opacity-50 text-sm">
             {busy ? tl('wizard.buttons.submitting') : tl('wizard.buttons.submit')}
           </button>
         ) : (
-          <button onClick={goNext} className="px-6 py-2.5 bg-[#003366] text-white font-semibold rounded-lg hover:bg-[#002244] transition-colors text-sm">{tl('wizard.buttons.next') || 'Weiter'}</button>
+          <button onClick={goNext} className="btn-primary px-6 py-2.5 text-sm">{tl('wizard.buttons.next') || 'Weiter'}</button>
         )}
       </div>
     </div>
