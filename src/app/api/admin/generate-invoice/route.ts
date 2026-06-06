@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { verifyToken } from '../../../../../lib/auth'
 import { prisma } from '../../../../../lib/db'
-import { LOGO_BASE64 } from '@/lib/logo-base64'
 import { join } from 'path'
 import { readFileSync } from 'fs'
 
@@ -9,6 +8,10 @@ import { createTranslator } from '@/lib/translations';
 
 export async function POST(request: NextRequest) {
     try {
+        const logoPath = join(process.cwd(), 'public', 'images', 'logo.png');
+        const logoBuffer = readFileSync(logoPath);
+        const LOGO_BASE64 = logoBuffer.toString('base64');
+
         const token = request.cookies.get('auth-token')?.value
         if (!token || !verifyToken(token)) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -280,42 +283,184 @@ export async function POST(request: NextRequest) {
         <meta charset="UTF-8">
         <style>
             body { font-family: Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 14px; line-height: 1.5; }
-            .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; border-bottom: 2px solid #555; padding-bottom: 15px; }
-            .logo-section { display: flex; align-items: center; gap: 15px; }
-            .company-info { text-align: right; font-size: 12px; color: #333; line-height: 1.6; }
-            .company-info strong { font-size: 14px; color: #000; }
             
-            .address-and-ref-row {
+            /* ── New Premium Header ── */
+            .header-new {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
-                margin-top: 15mm;
-                margin-bottom: 10mm;
+                padding-bottom: 20px;
+                margin-bottom: 5px;
             }
-            .address-window {
-                width: 90mm;
-                font-family: Arial, sans-serif;
-                margin-top: -25px;
-                margin-left: 45px;
+            .header-logo {
+                display: flex;
+                flex-direction: column;
             }
-            .address-window-sender { font-size: 8px; color: #666; margin-bottom: 15px; text-decoration: underline; }
-            .address-recipient { font-size: 14px; line-height: 1.4; color: #000; }
-            
-            .ref-info-block {
-                width: 55mm;
-                font-size: 13px;
-                line-height: 1.8;
-                color: #333;
+            .header-logo img {
+                height: 140px;
+                width: auto;
+                margin-bottom: 4px;
+            }
+            .header-tagline {
+                font-size: 12px;
+                color: #555;
+                font-style: italic;
+                letter-spacing: 1px;
+                margin-left: 5px;
+            }
+            .header-contact {
                 text-align: left;
+                font-size: 12px;
+                color: #333;
+                line-height: 1.8;
+                margin-top: 10px;
             }
-            .ref-info-block table { border-collapse: collapse; }
-            .ref-info-block td { padding: 2px 0; vertical-align: top; }
-            .ref-info-block td:first-child { font-weight: normal; color: #555; padding-right: 15px; white-space: nowrap; }
-            .ref-info-block td:last-child { font-weight: normal; color: #000; }
-            
+            .header-contact-row {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 2px;
+            }
+            .header-contact-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 22px;
+                height: 22px;
+                background: #555;
+                color: #fff;
+                border-radius: 50%;
+                font-size: 11px;
+                flex-shrink: 0;
+            }
+            .header-contact-text {
+                font-size: 12px;
+                color: #333;
+            }
+            .header-contact-text strong {
+                font-weight: 600;
+            }
+            .header-divider {
+                height: 3px;
+                background: linear-gradient(90deg, #555 0%, #888 50%, #bbb 100%);
+                border: none;
+                margin: 0 0 20px 0;
+            }
+
+            /* ── Client & Order Number Cards ── */
+            .client-order-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                gap: 20px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .client-card {
+                flex: 1;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 18px 20px;
+                display: flex;
+                align-items: flex-start;
+                gap: 14px;
+                background: #fff;
+            }
+            .client-avatar {
+                width: 38px;
+                height: 38px;
+                background: #eee;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                margin-top: 2px;
+            }
+            .client-avatar svg {
+                width: 20px;
+                height: 20px;
+                fill: #555;
+            }
+            .client-card-label {
+                font-size: 10px;
+                font-weight: 700;
+                color: #555;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 4px;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+            .client-card-name {
+                font-size: 14px;
+                font-weight: 600;
+                color: #111;
+                margin-bottom: 2px;
+            }
+            .client-card-address {
+                font-size: 12px;
+                color: #555;
+                line-height: 1.5;
+            }
+            .order-card {
+                width: 260px;
+                flex-shrink: 0;
+                border: 2px solid #555;
+                border-radius: 10px;
+                overflow: hidden;
+                text-align: center;
+            }
+            .order-card-header {
+                background: #f5f5f5;
+                padding: 8px 16px;
+                font-size: 10px;
+                font-weight: 700;
+                color: #555;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                border-bottom: 1px solid #ddd;
+            }
+            .order-card-number {
+                font-size: 17px;
+                font-weight: 700;
+                color: #111;
+                padding: 14px 16px 10px;
+                letter-spacing: 0.5px;
+            }
+            .order-card-ref-label {
+                font-size: 10px;
+                font-weight: 700;
+                color: #555;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+            .order-card-ref-value {
+                font-size: 12px;
+                color: #333;
+                padding: 4px 0 12px;
+            }
+            .invoice-meta-row {
+                display: flex;
+                justify-content: flex-end;
+                gap: 30px;
+                margin-bottom: 10px;
+                font-size: 12px;
+                color: #555;
+            }
+            .invoice-meta-item {
+                display: flex;
+                gap: 8px;
+            }
+            .invoice-meta-item strong {
+                color: #333;
+            }
+
             .title { text-align: center; font-size: 20px; font-weight: bold; color: #333; margin: 20px 0; }
             .order-info { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-            .client-info { display: none; } /* Hidden because now in address window */
+            .client-info { display: none; }
             .service-details { clear: both; margin-top: 20px; }
             .service-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
             .service-table th, .service-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
@@ -333,7 +478,6 @@ export async function POST(request: NextRequest) {
                 margin-top: 40px; 
                 position: relative;
                 width: 100%;
-                /* Standard QR bill height: 105mm -> ~396px at 96dpi, width 210mm -> ~793px */
                 height: 396px; 
             }
             .scissors-line-horizontal {
@@ -356,17 +500,17 @@ export async function POST(request: NextRequest) {
             .payment-slip-table { width: 100%; height: 100%; border-collapse: collapse; margin-top: 10px; table-layout: fixed; }
             .payment-slip-table td { vertical-align: top; }
             .payment-slip-left { 
-                width: 62mm; /* Exactly 62mm wide */
+                width: 62mm;
                 position: relative;
             }
             .payment-slip-right { 
-                width: 148mm; /* Exactly 148mm wide */
-                padding-left: 5mm; /* Standard margin */
+                width: 148mm;
+                padding-left: 5mm;
             }
             .scissors-line-vertical {
                 position: absolute;
-                right: -1px; /* border offset */
-                top: -10px; /* start at the top scissors */
+                right: -1px;
+                top: -10px;
                 height: 100%;
                 border-right: 1px dashed #666;
             }
@@ -392,7 +536,7 @@ export async function POST(request: NextRequest) {
             .payment-col-right { flex: 1; }
             
             .qr-code-wrapper {
-                width: 46mm; /* Exactly 46x46 QR Code */
+                width: 46mm;
                 height: 46mm;
                 position: relative;
                 margin-bottom: 5mm;
@@ -428,45 +572,69 @@ export async function POST(request: NextRequest) {
         </style>
     </head>
     <body>
-        <div class="header">
-            <div class="logo-section">
-                <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height:140px;width:auto;">
+        <!-- ── Premium Header ── -->
+        <div class="header-new">
+            <div class="header-logo">
+                <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
+                <div class="header-tagline">Reinigung &middot; Umzug &middot; Facility Service</div>
             </div>
-            <div class="company-info">
-                <strong>SwissCleanMove</strong><br>
-                Orpundstrasse 31, 2504 Biel/Bienne<br>
-                info@swisscleanmove.ch<br>
-                📞 +41 78 215 80 30 / +41 76 488 36 89<br>
-                UID: CHE-457.949.122
+            <div class="header-contact">
+                <div class="header-contact-row">
+                    <span class="header-contact-icon">✆</span>
+                    <span class="header-contact-text">+41 78 215 80 30 / +41 76 488 36 89</span>
+                </div>
+                <div class="header-contact-row">
+                    <span class="header-contact-icon">✉</span>
+                    <span class="header-contact-text">info@swisscleanmove.ch</span>
+                </div>
+                <div class="header-contact-row">
+                    <span class="header-contact-icon">⊕</span>
+                    <span class="header-contact-text">www.swisscleanmove.ch</span>
+                </div>
+                <div class="header-contact-row">
+                    <span class="header-contact-icon">⌂</span>
+                    <span class="header-contact-text">Orpundstrasse 31, 2504 Biel/Bienne</span>
+                </div>
+                <div class="header-contact-row" style="margin-top: 4px;">
+                    <span class="header-contact-icon">★</span>
+                    <span class="header-contact-text"><strong>UID:</strong> CHE-457.949.122</span>
+                </div>
+            </div>
+        </div>
+        <hr class="header-divider">
+
+        <!-- ── Client Card + Order Number ── -->
+        <div class="client-order-row">
+            <div class="client-card">
+                <div class="client-avatar">
+                    <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                </div>
+                <div>
+                    <div class="client-card-label">${language === 'fr' ? 'CLIENT' : language === 'en' ? 'CUSTOMER' : 'KUNDE'}</div>
+                    <div class="client-card-name">${clientName}</div>
+                    <div class="client-card-address">
+                        <span style="font-size: 10px; color: #888; display: block; margin-bottom: 2px;">SwissCleanMove - Orpundstrasse 31 - 2504 Biel/Bienne</span>
+                        ${invoiceAddr ? invoiceAddr + '<br>' : ''}${invoiceZip} ${invoiceCity}
+                    </div>
+                </div>
+            </div>
+            <div class="order-card">
+                <div class="order-card-header">${language === 'fr' ? 'NUMÉRO DE COMMANDE' : language === 'en' ? 'ORDER NUMBER' : 'AUFTRAGSNUMMER'}</div>
+                <div class="order-card-number">${orderNumber}</div>
+                <div class="order-card-ref-label">${language === 'fr' ? 'RÉFÉRENCE CLIENT' : language === 'en' ? 'CUSTOMER REFERENCE' : 'KUNDENREFERENZ'}</div>
+                <div class="order-card-ref-value">–</div>
             </div>
         </div>
 
-        <div class="address-and-ref-row">
-            <div class="address-window">
-                <div class="address-window-sender">
-                    SwissCleanMove - Orpundstrasse 31 - 2504 Biel/Bienne
-                </div>
-                <div class="address-recipient">
-                    <strong>${clientName}</strong><br>
-                    ${invoiceAddr ? invoiceAddr + '<br>' : ''}
-                    ${invoiceZip} ${invoiceCity}
-                </div>
+        <!-- ── Invoice Meta (Date / Deadline) ── -->
+        <div class="invoice-meta-row">
+            <div class="invoice-meta-item">
+                <span>${t.invoiceDate}:</span>
+                <strong>${currentDate}</strong>
             </div>
-            <div class="ref-info-block">
-                <table>
-                    <tr>
-                        <td>${t.invoiceRef}</td>
-                        <td>${orderNumber}</td>
-                    </tr>
-                    <tr>
-                        <td>${t.invoiceDate}</td>
-                        <td>${currentDate}</td>
-                    </tr>
-                    <tr>
-                        <td>${t.paymentDeadline}</td>
-                        <td>${(() => { const d = new Date(); d.setDate(d.getDate() + 30); return d.toLocaleDateString(); })()}</td>
-                    </tr>
-                </table>
+            <div class="invoice-meta-item">
+                <span>${t.paymentDeadline}:</span>
+                <strong>${(() => { const d = new Date(); d.setDate(d.getDate() + 30); return d.toLocaleDateString(); })()}</strong>
             </div>
         </div>
 
@@ -581,18 +749,35 @@ export async function POST(request: NextRequest) {
 
         <div style="page-break-before: always;"></div>
 
-        <div class="header">
-            <div class="logo-section">
-                 <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove" style="height:140px;width:auto;">
+        <div class="header-new">
+            <div class="header-logo">
+                <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
+                <div class="header-tagline">Reinigung &middot; Umzug &middot; Facility Service</div>
             </div>
-            <div class="company-info">
-                <strong>SwissCleanMove</strong><br>
-                Orpundstrasse 31, 2504 Biel/Bienne<br>
-                info@swisscleanmove.ch<br>
-                📞 +41 78 215 80 30 / +41 76 488 36 89<br>
-                UID: CHE-457.949.122
+            <div class="header-contact">
+                <div class="header-contact-row">
+                    <span class="header-contact-icon">✆</span>
+                    <span class="header-contact-text">+41 78 215 80 30 / +41 76 488 36 89</span>
+                </div>
+                <div class="header-contact-row">
+                    <span class="header-contact-icon">✉</span>
+                    <span class="header-contact-text">info@swisscleanmove.ch</span>
+                </div>
+                <div class="header-contact-row">
+                    <span class="header-contact-icon">⊕</span>
+                    <span class="header-contact-text">www.swisscleanmove.ch</span>
+                </div>
+                <div class="header-contact-row">
+                    <span class="header-contact-icon">⌂</span>
+                    <span class="header-contact-text">Orpundstrasse 31, 2504 Biel/Bienne</span>
+                </div>
+                <div class="header-contact-row" style="margin-top: 4px;">
+                    <span class="header-contact-icon">★</span>
+                    <span class="header-contact-text"><strong>UID:</strong> CHE-457.949.122</span>
+                </div>
             </div>
         </div>
+        <hr class="header-divider">
 
         <div class="payment-slip">
             <div class="scissors-line-horizontal">

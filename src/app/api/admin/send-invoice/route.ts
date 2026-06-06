@@ -4,7 +4,6 @@ import { authenticateRequest } from '../../../../../lib/auth'
 import nodemailer from 'nodemailer'
 import puppeteerCore from 'puppeteer-core'
 import chromium from '@sparticuz/chromium'
-import { LOGO_BASE64 } from '@/lib/logo-base64'
 import { join } from 'path'
 import { readFileSync } from 'fs'
 
@@ -76,7 +75,7 @@ export async function POST(request: NextRequest) {
           <div style="text-align: center; margin-bottom: 30px;">
             <img src="https://swisscleanmove.ch/images/logo.png" alt="SwissCleanMove" style="height: 100px; width: auto;">
           </div>
-          <h2 style="color: #0066CC;">Rechnung / Invoice</h2>
+          <h2 style="color: #555;">Rechnung / Invoice</h2>
           <p>${(messages[language] || messages.en).replace(/\n/g, '<br>')}</p>
           <div style="margin-top: 30px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 12px; color: #666;">
             <strong>SwissCleanMove</strong><br>
@@ -106,6 +105,7 @@ export async function POST(request: NextRequest) {
         }, { status: 500 })
     }
 }
+
 
 async function renderPdfFromHtml(html: string): Promise<Buffer> {
     const isLocal = !!!process.env.VERCEL
@@ -143,6 +143,12 @@ async function renderPdfFromHtml(html: string): Promise<Buffer> {
 }
 
 function generateInvoiceHTML(client: any, language: string): string {
+    const { join } = require('path');
+    const { readFileSync } = require('fs');
+    const logoPath = join(process.cwd(), 'public', 'images', 'logo.png');
+    const logoBuffer = readFileSync(logoPath);
+    const LOGO_BASE64 = logoBuffer.toString('base64');
+
     const t: any = {
         de: {
             title: 'Reinigung Auftragsbestätigung',
