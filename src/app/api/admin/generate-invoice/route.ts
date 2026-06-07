@@ -282,7 +282,158 @@ export async function POST(request: NextRequest) {
     <html>
     <head>
         <meta charset="UTF-8">
-        <style>${cssStyles}</style>
+        <style>
+            * { box-sizing: border-box; }
+            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 11px; line-height: 1.4; color: #333; }
+            
+            /* -- Header -- */
+            .header-top { display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 30px; }
+            .header-logo img { height: 75px; width: auto; }
+            .header-tagline { font-size: 11px; color: #555; font-weight: bold; margin-top: 5px; letter-spacing: 0.5px; }
+            
+            .header-contact { text-align: left; font-size: 10px; color: #333; border-right: 2px solid #555; padding-right: 15px; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
+            .contact-line { display: flex; align-items: center; gap: 8px; }
+            .contact-icon { font-size: 12px; color: #555; width: 14px; text-align: center; }
+
+            /* -- Top Cards (Address & Order Num) -- */
+            .top-cards { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+            
+            /* Window Envelope position (Left) */
+            .customer-card { 
+                width: 90mm; /* Fit window envelope */
+                border: 1px solid #ddd; 
+                border-radius: 8px; 
+                padding: 15px; 
+                margin-left: 20px; /* Adjust to window pos */
+                margin-top: 10px;
+            }
+            .customer-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+            .customer-card-icon { background: #555; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+            .customer-card-title { font-size: 10px; font-weight: bold; color: #555; letter-spacing: 1px; }
+            .customer-address { font-size: 13px; line-height: 1.5; color: #000; font-weight: bold; }
+            .customer-address span { font-weight: normal; }
+
+            /* Order Card (Right) */
+            .order-card { 
+                width: 35%; 
+                border: 1px solid #555; 
+                border-radius: 8px; 
+                overflow: hidden; 
+                text-align: center;
+            }
+            .order-card-header { background: #555; color: white; padding: 8px; font-size: 10px; font-weight: bold; letter-spacing: 1px; }
+            .order-card-body { padding: 15px; background: #fff; }
+            .order-number { font-size: 16px; font-weight: bold; color: #000; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 10px; }
+            .order-ref-title { font-size: 9px; color: #555; font-weight: bold; }
+            .order-ref-val { font-size: 11px; color: #000; margin-top: 3px; }
+
+            /* -- Title Section -- */
+            .main-title { font-size: 28px; font-weight: bold; color: #555; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+            .sub-title { font-size: 11px; color: #555; margin-bottom: 30px; }
+
+            /* -- 3 Columns Info -- */
+            .info-columns { display: flex; gap: 15px; margin-bottom: 30px; }
+            .info-col { flex: 1; border: 1px solid #eee; border-radius: 8px; padding: 15px; background: #fafafa; }
+            .info-col-title { font-size: 10px; font-weight: bold; color: #555; margin-bottom: 12px; letter-spacing: 1px; }
+            .info-row { display: flex; margin-bottom: 8px; align-items: flex-start; }
+            .info-icon { font-size: 12px; color: #555; width: 20px; margin-top: 1px; }
+            .info-label { width: 90px; color: #666; font-size: 10px; }
+            .info-val { flex: 1; color: #000; font-weight: bold; font-size: 10px; }
+            .info-val span { font-weight: normal; }
+
+            /* -- Service Table -- */
+            .service-section { margin-bottom: 20px; }
+            .service-table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
+            .service-table th { background: #555; color: white; padding: 10px; text-align: left; font-size: 9px; letter-spacing: 1px; }
+            .service-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 10px; color: #333; vertical-align: top; }
+            .service-table tr:last-child td { border-bottom: none; }
+            
+            /* Table Columns Widths */
+            .col-nr { width: 5%; }
+            .col-le { width: 25%; font-weight: bold; }
+            .col-desc { width: 40%; color: #666; }
+            .col-qty { width: 10%; text-align: center; }
+            .col-price { width: 10%; text-align: right; }
+            .col-total { width: 10%; text-align: right; font-weight: bold; }
+
+            /* -- Bottom of Table Info -- */
+            .table-bottom-row { display: flex; justify-content: space-between; align-items: stretch; margin-top: 15px; gap: 15px; }
+            .scope-box { flex: 1; display: flex; gap: 10px; align-items: center; border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fafafa; }
+            .scope-icon { font-size: 20px; color: #555; }
+            .scope-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 3px; }
+            .scope-text { font-size: 9px; color: #666; }
+
+            .total-box { background: #555; color: white; padding: 15px 25px; border-radius: 8px; text-align: center; width: 250px; }
+            .total-box-title { font-size: 9px; font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; text-transform: uppercase; }
+            .total-box-amount { font-size: 22px; font-weight: bold; margin-bottom: 5px; }
+            .total-box-sub { font-size: 9px; color: #ccc; }
+
+            /* -- Badges -- */
+            .badges-row { display: flex; gap: 10px; margin-top: 30px; margin-bottom: 30px; }
+            .badge { flex: 1; display: flex; gap: 8px; align-items: flex-start; border: 1px solid #eee; padding: 10px; border-radius: 8px; }
+            .badge-icon { font-size: 16px; color: #555; margin-top: 2px; }
+            .badge-text strong { display: block; font-size: 9px; color: #555; margin-bottom: 2px; }
+            .badge-text { font-size: 8px; color: #666; line-height: 1.3; }
+
+            /* -- Signatures -- */
+            .signatures-row { display: flex; justify-content: space-between; margin-bottom: 30px; }
+            .sig-box { width: 45%; }
+            .sig-title { font-size: 9px; font-weight: bold; color: #555; margin-bottom: 15px; letter-spacing: 1px; }
+            .sig-name { font-size: 14px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
+            .sig-details { font-size: 9px; color: #666; }
+            .sig-details table { border-collapse: collapse; margin-top: 10px; }
+            .sig-details td { padding: 4px 0; }
+            .sig-details td:first-child { width: 50px; color: #555; }
+            .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 12px; }
+
+            /* -- Timing & Comm -- */
+            .timing-row { display: flex; gap: 15px; margin-bottom: 40px; }
+            .timing-box { flex: 1; border: 1px solid #eee; padding: 12px; border-radius: 8px; display: flex; gap: 12px; align-items: center; }
+            .timing-icon { font-size: 20px; color: #555; }
+            .timing-text strong { display: block; font-size: 9px; color: #555; margin-bottom: 3px; }
+            .timing-text { font-size: 9px; color: #666; display: flex; gap: 10px; }
+            .timing-text div { display: flex; flex-direction: column; gap: 3px; }
+
+            /* -- Footer -- */
+            .footer-banner { background: #555; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 9px; margin-top: auto; }
+            .footer-banner-title { font-weight: bold; display: flex; align-items: center; gap: 8px; letter-spacing: 1px; }
+            .footer-banner-items { display: flex; gap: 20px; }
+            .footer-item { display: flex; flex-direction: column; gap: 3px; }
+            .footer-item span { color: #ccc; font-size: 8px; }
+            
+            /* -- Payment Slip Styles -- */
+            .payment-slip { 
+                margin-top: 40px; 
+                position: relative;
+                width: 100%;
+                height: 396px; 
+            }
+            .scissors-line-horizontal { position: absolute; top: 0; left: 0; width: 100%; border-top: 1px dashed #666; text-align: center; height: 0; }
+            .scissors-icon { position: absolute; left: 10px; top: -10px; font-size: 14px; color: #666; background: #fff; }
+            .payment-slip-table { width: 100%; height: 100%; border-collapse: collapse; margin-top: 10px; table-layout: fixed; }
+            .payment-slip-table td { vertical-align: top; }
+            .payment-slip-left { width: 62mm; position: relative; }
+            .payment-slip-right { width: 148mm; padding-left: 5mm; }
+            .scissors-line-vertical { position: absolute; right: -1px; top: -10px; height: 100%; border-right: 1px dashed #666; }
+            .scissors-icon-v { position: absolute; top: 20px; right: -6px; font-size: 14px; color: #666; background: #fff; transform: rotate(-90deg); }
+            .pt-receipt { padding-top: 5mm; padding-right: 5mm; }
+            .pt-payment { padding-top: 5mm; }
+            .payment-slip-title { margin: 0 0 14px 0; font-size: 11pt; font-weight: bold; letter-spacing: 0.2px; font-family: Helvetica, Arial, sans-serif; }
+            .payment-slip-label { display: block; font-size: 6pt; font-weight: bold; color: #111; margin-bottom: 2px; line-height: 1.1; }
+            .payment-slip-value { font-size: 8pt; color: #111; line-height: 1.2; }
+            .payment-slip-block { margin-bottom: 3mm; }
+            .payment-part-content { display: flex; gap: 5mm; }
+            .payment-col-left { width: 46mm; }
+            .payment-col-right { flex: 1; }
+            .qr-code-wrapper { width: 46mm; height: 46mm; position: relative; margin-bottom: 5mm; }
+            .qr-code-wrapper img { width: 100%; height: 100%; object-fit: contain; }
+            .qr-cross { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 7mm; height: 7mm; background: #000; display: flex; align-items: center; justify-content: center; }
+            .amount-area-receipt, .amount-area-payment { display: flex; margin-top: 5mm; }
+            .amount-area-receipt { gap: 10px; }
+            .amount-area-payment { gap: 15px; }
+            .amount-col { display: flex; flex-direction: column; }
+            .amount-col .payment-slip-value { font-size: 10pt; margin-top: 4px; }
+</style>
     </head>
     <body>
         <!-- Header -->
