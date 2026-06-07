@@ -849,4 +849,6 @@ function generateInvoiceHTML(client: any, language: string): string {
             </table>
         </div>
     </body>
-    </html>\n    `\n}
+    </html>
+    `;
+}
