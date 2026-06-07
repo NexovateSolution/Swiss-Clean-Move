@@ -293,7 +293,12 @@ function generateInvoiceHTML(client: any, language: string): string {
         }
     }[language] || { /* fallback */ };
 
-    const orderNumber = `#FE-${client.id.substring(client.id.length - 6).toUpperCase()}`
+        const d = new Date();
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    const randomNum = String(Math.floor(Math.random() * 1000)).padStart(3, '0');
+    const orderNumber = `SCM-${year}-${month}${day}-${randomNum}`
     const currentDate = new Date().toLocaleDateString()
     const clientName = `${client.prefix ? client.prefix + ' ' : ''}${client.firstName} ${client.lastName}`
 

@@ -176,7 +176,12 @@ export async function POST(request: NextRequest) {
             }
         }[language as 'en' | 'de' | 'fr'] || { /* fallback */ };
 
-        const orderNumber = `#FE-${String(Date.now()).slice(-6)}`
+                const d = new Date();
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        const randomNum = String(Math.floor(Math.random() * 1000)).padStart(3, '0');
+        const orderNumber = `SCM-${year}-${month}${day}-${randomNum}`
         const currentDate = new Date().toLocaleDateString()
 
         // Name formatting with prefix logic
@@ -277,394 +282,319 @@ export async function POST(request: NextRequest) {
         }
 
         const html = `
+
     <!DOCTYPE html>
     <html>
     <head>
         <meta charset="UTF-8">
-        <style>
-            body { font-family: Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 14px; line-height: 1.5; }
-            
-            /* ── New Premium Header ── */
-            .header-new {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-                padding-bottom: 20px;
-                margin-bottom: 5px;
-            }
-            .header-logo {
-                display: flex;
-                flex-direction: column;
-            }
-            .header-logo img {
-                height: 140px;
-                width: auto;
-                margin-bottom: 4px;
-            }
-            .header-tagline {
-                font-size: 12px;
-                color: #555;
-                font-style: italic;
-                letter-spacing: 1px;
-                margin-left: 5px;
-            }
-            .header-contact {
-                text-align: left;
-                font-size: 12px;
-                color: #333;
-                line-height: 1.8;
-                margin-top: 10px;
-            }
-            .header-contact-row {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                margin-bottom: 2px;
-            }
-            .header-contact-icon {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                width: 22px;
-                height: 22px;
-                background: #555;
-                color: #fff;
-                border-radius: 50%;
-                font-size: 11px;
-                flex-shrink: 0;
-            }
-            .header-contact-text {
-                font-size: 12px;
-                color: #333;
-            }
-            .header-contact-text strong {
-                font-weight: 600;
-            }
-            .header-divider {
-                height: 3px;
-                background: linear-gradient(90deg, #555 0%, #888 50%, #bbb 100%);
-                border: none;
-                margin: 0 0 20px 0;
-            }
-
-            /* ── Client & Order Number Cards ── */
-            .client-order-row {
-                display: flex;
-                justify-content: space-between;
-                align-items: stretch;
-                gap: 20px;
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-            .client-card {
-                flex: 1;
-                border: 1px solid #ddd;
-                border-radius: 10px;
-                padding: 18px 20px;
-                display: flex;
-                align-items: flex-start;
-                gap: 14px;
-                background: #fff;
-            }
-            .client-avatar {
-                width: 38px;
-                height: 38px;
-                background: #eee;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-shrink: 0;
-                margin-top: 2px;
-            }
-            .client-avatar svg {
-                width: 20px;
-                height: 20px;
-                fill: #555;
-            }
-            .client-card-label {
-                font-size: 10px;
-                font-weight: 700;
-                color: #555;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-bottom: 4px;
-                text-decoration: underline;
-                text-underline-offset: 3px;
-            }
-            .client-card-name {
-                font-size: 14px;
-                font-weight: 600;
-                color: #111;
-                margin-bottom: 2px;
-            }
-            .client-card-address {
-                font-size: 12px;
-                color: #555;
-                line-height: 1.5;
-            }
-            .order-card {
-                width: 260px;
-                flex-shrink: 0;
-                border: 2px solid #555;
-                border-radius: 10px;
-                overflow: hidden;
-                text-align: center;
-            }
-            .order-card-header {
-                background: #f5f5f5;
-                padding: 8px 16px;
-                font-size: 10px;
-                font-weight: 700;
-                color: #555;
-                text-transform: uppercase;
-                letter-spacing: 1.5px;
-                border-bottom: 1px solid #ddd;
-            }
-            .order-card-number {
-                font-size: 17px;
-                font-weight: 700;
-                color: #111;
-                padding: 14px 16px 10px;
-                letter-spacing: 0.5px;
-            }
-            .order-card-ref-label {
-                font-size: 10px;
-                font-weight: 700;
-                color: #555;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                text-decoration: underline;
-                text-underline-offset: 3px;
-            }
-            .order-card-ref-value {
-                font-size: 12px;
-                color: #333;
-                padding: 4px 0 12px;
-            }
-            .invoice-meta-row {
-                display: flex;
-                justify-content: flex-end;
-                gap: 30px;
-                margin-bottom: 10px;
-                font-size: 12px;
-                color: #555;
-            }
-            .invoice-meta-item {
-                display: flex;
-                gap: 8px;
-            }
-            .invoice-meta-item strong {
-                color: #333;
-            }
-
-            .title { text-align: center; font-size: 20px; font-weight: bold; color: #333; margin: 20px 0; }
-            .order-info { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-            .client-info { display: none; }
-            .service-details { clear: both; margin-top: 20px; }
-            .service-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-            .service-table th, .service-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-            .service-table th { background: #555; color: white; font-weight: bold; }
-            .total-section { float: right; width: 300px; margin-top: 20px; }
-            .total-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
-            .total-row.final { font-weight: bold; font-size: 14px; border-bottom: 2px solid #555; color: #555; }
-            .payment-info { clear: both; margin-top: 40px; padding: 15px; background: #f4f4f4; border-left: 4px solid #555; }
-            .signatures { display: flex; justify-content: space-between; margin-top: 60px; padding-top: 20px; border-top: 1px solid #ddd; }
-            .signature-box { width: 45%; text-align: center; }
-            .signature-line { border-bottom: 1px solid #333; margin-bottom: 5px; height: 40px; }
-            .footer-wrapper { margin-top: 40px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #ddd; padding-top: 10px; }
-            .page-number { text-align: right; font-size: 10px; color: #666; padding-top: 5px; }
-            .payment-slip { 
-                margin-top: 40px; 
-                position: relative;
-                width: 100%;
-                height: 396px; 
-            }
-            .scissors-line-horizontal {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                border-top: 1px dashed #666;
-                text-align: center;
-                height: 0;
-            }
-            .scissors-icon {
-                position: absolute;
-                left: 10px;
-                top: -10px;
-                font-size: 14px;
-                color: #666;
-                background: #fff;
-            }
-            .payment-slip-table { width: 100%; height: 100%; border-collapse: collapse; margin-top: 10px; table-layout: fixed; }
-            .payment-slip-table td { vertical-align: top; }
-            .payment-slip-left { 
-                width: 62mm;
-                position: relative;
-            }
-            .payment-slip-right { 
-                width: 148mm;
-                padding-left: 5mm;
-            }
-            .scissors-line-vertical {
-                position: absolute;
-                right: -1px;
-                top: -10px;
-                height: 100%;
-                border-right: 1px dashed #666;
-            }
-            .scissors-icon-v {
-                position: absolute;
-                top: 20px;
-                right: -6px;
-                font-size: 14px;
-                color: #666;
-                background: #fff;
-                transform: rotate(-90deg);
-            }
-            .pt-receipt { padding-top: 5mm; padding-right: 5mm; }
-            .pt-payment { padding-top: 5mm; }
-            .payment-slip-title { margin: 0 0 14px 0; font-size: 11pt; font-weight: bold; letter-spacing: 0.2px; font-family: Helvetica, Arial, sans-serif; }
-            
-            .payment-slip-label { display: block; font-size: 6pt; font-weight: bold; color: #111; margin-bottom: 2px; line-height: 1.1; }
-            .payment-slip-value { font-size: 8pt; color: #111; line-height: 1.2; }
-            .payment-slip-block { margin-bottom: 3mm; }
-            
-            .payment-part-content { display: flex; gap: 5mm; }
-            .payment-col-left { width: 46mm; }
-            .payment-col-right { flex: 1; }
-            
-            .qr-code-wrapper {
-                width: 46mm;
-                height: 46mm;
-                position: relative;
-                margin-bottom: 5mm;
-            }
-            .qr-code-wrapper img { width: 100%; height: 100%; object-fit: contain; }
-            .qr-cross {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 7mm;
-                height: 7mm;
-                background: #000;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .amount-area-receipt, .amount-area-payment {
-                display: flex;
-                margin-top: 5mm;
-            }
-            .amount-area-receipt { gap: 10px; }
-            .amount-area-payment { gap: 15px; }
-            .amount-col { display: flex; flex-direction: column; }
-            .amount-col .payment-slip-value { font-size: 10pt; margin-top: 4px; }
-            
-            .remarks-section { margin-top: 20px; font-size: 12px; color: #555; }
-            @media print {
-                body { margin: 0; padding: 15px; -webkit-print-color-adjust: exact; }
-                .service-table th { background: #555 !important; color: white !important; }
-            }
-        </style>
+        <style>${cssStyles}</style>
     </head>
     <body>
-        <!-- ── Premium Header ── -->
-        <div class="header-new">
+        <!-- Header -->
+        <div class="header-top">
             <div class="header-logo">
                 <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
                 <div class="header-tagline">Reinigung &middot; Umzug &middot; Facility Service</div>
             </div>
             <div class="header-contact">
-                <div class="header-contact-row">
-                    <span class="header-contact-icon">✆</span>
-                    <span class="header-contact-text">+41 78 215 80 30 / +41 76 488 36 89</span>
-                </div>
-                <div class="header-contact-row">
-                    <span class="header-contact-icon">✉</span>
-                    <span class="header-contact-text">info@swisscleanmove.ch</span>
-                </div>
-                <div class="header-contact-row">
-                    <span class="header-contact-icon">⊕</span>
-                    <span class="header-contact-text">www.swisscleanmove.ch</span>
-                </div>
-                <div class="header-contact-row">
-                    <span class="header-contact-icon">⌂</span>
-                    <span class="header-contact-text">Orpundstrasse 31, 2504 Biel/Bienne</span>
-                </div>
-                <div class="header-contact-row" style="margin-top: 4px;">
-                    <span class="header-contact-icon">★</span>
-                    <span class="header-contact-text"><strong>UID:</strong> CHE-457.949.122</span>
-                </div>
+                <div class="contact-line"><span class="contact-icon">📞</span> +41 78 215 80 30</div>
+                <div class="contact-line"><span class="contact-icon">✉</span> info@swisscleanmove.ch</div>
+                <div class="contact-line"><span class="contact-icon">🌐</span> www.swisscleanmove.ch</div>
+                <div class="contact-line"><span class="contact-icon">📍</span> Orpundstrasse 31, 2504 Biel</div>
             </div>
         </div>
-        <hr class="header-divider">
 
-        <!-- ── Client Card + Order Number ── -->
-        <div class="client-order-row">
-            <div class="client-card">
-                <div class="client-avatar">
-                    <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+        <!-- Top Cards -->
+        <div class="top-cards">
+            <div class="customer-card">
+                <div class="customer-card-header">
+                    <div class="customer-card-icon">👤</div>
+                    <div class="customer-card-title">KUNDE</div>
                 </div>
-                <div>
-                    <div class="client-card-label">${language === 'fr' ? 'CLIENT' : language === 'en' ? 'CUSTOMER' : 'KUNDE'}</div>
-                    <div class="client-card-name">${clientName}</div>
-                    <div class="client-card-address">
-                        <span style="font-size: 10px; color: #888; display: block; margin-bottom: 2px;">SwissCleanMove - Orpundstrasse 31 - 2504 Biel/Bienne</span>
-                        ${invoiceAddr ? invoiceAddr + '<br>' : ''}${invoiceZip} ${invoiceCity}
-                    </div>
+                <div class="customer-address">
+                    ${clientName}<br>
+                    <span>${invoiceAddr ? invoiceAddr + '<br>' : ''}${invoiceZip} ${invoiceCity}</span>
                 </div>
             </div>
             <div class="order-card">
-                <div class="order-card-header">${language === 'fr' ? 'NUMÉRO DE COMMANDE' : language === 'en' ? 'ORDER NUMBER' : 'AUFTRAGSNUMMER'}</div>
-                <div class="order-card-number">${orderNumber}</div>
-                <div class="order-card-ref-label">${language === 'fr' ? 'RÉFÉRENCE CLIENT' : language === 'en' ? 'CUSTOMER REFERENCE' : 'KUNDENREFERENZ'}</div>
-                <div class="order-card-ref-value">–</div>
+                <div class="order-card-header">${t.orderNumber?.toUpperCase() || 'AUFTRAGSNUMMER'}</div>
+                <div class="order-card-body">
+                    <div class="order-number">${orderNumber}</div>
+                    <div class="order-ref-title">${t.invoiceRef?.toUpperCase() || 'KUNDENREFERENZ'}</div>
+                    <div class="order-ref-val">-</div>
+                </div>
             </div>
         </div>
 
-        <!-- ── Invoice Meta (Date / Deadline) ── -->
-        <div class="invoice-meta-row">
-            <div class="invoice-meta-item">
-                <span>${t.invoiceDate}:</span>
-                <strong>${currentDate}</strong>
+        <!-- Title -->
+        <div class="main-title">${t.title}</div>
+        <div class="sub-title">Professionelle Reinigungs- und Umzugsdienstleistungen nach Schweizer Qualitätsstandard.</div>
+
+        <!-- Info Columns -->
+        <div class="info-columns">
+            <!-- KUNDE -->
+            <div class="info-col">
+                <div class="info-col-title">KUNDE</div>
+                <div class="info-row"><span class="info-icon">👤</span><span class="info-val"><span>${clientName}</span></span></div>
+                <div class="info-row"><span class="info-icon">📍</span><span class="info-val"><span>${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</span></span></div>
+                <div class="info-row"><span class="info-icon">📞</span><span class="info-val"><span>${client.phone || '-'}</span></span></div>
+                <div class="info-row"><span class="info-icon">✉</span><span class="info-val"><span>${client.email || '-'}</span></span></div>
             </div>
-            <div class="invoice-meta-item">
-                <span>${t.paymentDeadline}:</span>
-                <strong>${(() => { const d = new Date(); d.setDate(d.getDate() + 30); return d.toLocaleDateString(); })()}</strong>
+            <!-- AUFTRAGSDATEN -->
+            <div class="info-col">
+                <div class="info-col-title">AUFTRAGSDATEN</div>
+                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">Leistungsdatum:</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
+                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">Startzeit:</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
+                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">Abgabezeit:</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
+                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">Ansprechpartner:</span><span class="info-val">${clientName}</span></div>
+                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">Zahlungsart:</span><span class="info-val">Rechnung (QR)</span></div>
+            </div>
+            <!-- OBJEKT -->
+            <div class="info-col">
+                <div class="info-col-title">OBJEKT</div>
+                <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${client.address || '-'}<br>${client.postalCode || ''} ${client.location || ''}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">Objekttyp:</span><span class="info-val"><span>${client.propertyType || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">Stockwerk:</span><span class="info-val"><span>${translatedFloor || client.floor || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">Fläche:</span><span class="info-val"><span>${client.squareMeters ? 'ca. ' + client.squareMeters + ' m²' : '-'}</span></span></div>
             </div>
         </div>
 
-        <div class="title">${t.title}</div>
-
-        <div style="margin: 15px 0 25px 0; font-size: 15px; line-height: 1.8;">
-            <strong>${t.greeting} ${clientName}</strong><br>
-            ${t.thankYou}
-        </div>
-
-        <div class="order-info">
-            <strong>${t.orderNumber}:</strong> ${orderNumber}<br>
-            <strong>Datum:</strong> ${currentDate}
-        </div>
-
-        <div class="service-details">
-            <h3 style="color: #555; border-bottom: 1px solid #555; padding-bottom: 5px;">${t.serviceDetails}</h3>
+        <!-- Service Table -->
+        <div class="service-section">
             <table class="service-table">
                 <thead>
                     <tr>
-                        <th>${t.service}</th>
-                        <th>${t.details}</th>
-                        <th>${t.amount}</th>
+                        <th class="col-nr">NR.</th>
+                        <th class="col-le">LEISTUNG</th>
+                        <th class="col-desc">BESCHREIBUNG</th>
+                        <th class="col-qty">MENGE</th>
+                        <th class="col-price">EINZELPREIS</th>
+                        <th class="col-total">GESAMTPREIS</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>${translatedService}</strong></td>
-                        <td>
-                            ${formattedRemarks.length > 0 ? `${formattedRemarks.join('<br>')}<br><br>` : ''}
+                        <td class="col-nr">1</td>
+                        <td class="col-le">${translatedService}</td>
+                        <td class="col-desc">${formattedRemarks.length > 0 ? formattedRemarks.join(', ') : 'Professionelle Dienstleistung gemäss Schweizer Standard.'}</td>
+                        <td class="col-qty">1</td>
+                        <td class="col-price">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
+                        <td class="col-total">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="table-bottom-row">
+                <div class="scope-box">
+                    <div class="scope-icon">ℹ️</div>
+                    <div class="scope-text">
+                        <strong>LEISTUNGSUMFANG</strong>
+                        Alle Arbeiten werden nach höchsten Schweizer Qualitätsstandards ausgeführt. ${t.guarantee}
+                    </div>
+                </div>
+                <div class="total-box">
+                    <div class="total-box-title">TOTAL FESTPREIS INKL. MWST.</div>
+                    <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
+                    <div class="total-box-sub">Festpreis - keine zusätzlichen Kosten</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="badges-row">
+            <div class="badge">
+                <div class="badge-icon">🛡️</div>
+                <div class="badge-text"><strong>ABNAHMEGARANTIE</strong>Zufriedenheitsgarantie bei Übergabe. Mängel werden kostenlos nachgebessert.</div>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">✅</div>
+                <div class="badge-text"><strong>HAFTPFLICHTVERSICHERT</strong>Vollständig versichert für Ihre Sicherheit und maximalen Schutz.</div>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">⭐</div>
+                <div class="badge-text"><strong>SCHWEIZER QUALITÄT</strong>Professionell, zuverlässig und pünktlich - dafür stehen wir ein.</div>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">🌿</div>
+                <div class="badge-text"><strong>UMWELTFREUNDLICH</strong>Wir verwenden umweltfreundliche Reinigungsmittel und nachhaltige Methoden.</div>
+            </div>
+        </div>
+
+        <!-- Signatures -->
+        <div class="signatures-row">
+            <div class="sig-box">
+                <div class="sig-title">SWISSCLEANMOVE</div>
+                <div class="sig-name">Dawit Gebrekristos</div>
+                <div class="sig-details">
+                    Dawit Gebrekristos<br>Geschäftsführer<br>
+                    <table>
+                        <tr><td>Datum:</td><td>${new Date().toLocaleDateString()}</td></tr>
+                        <tr><td>Ort:</td><td>Biel</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="sig-box">
+                <div class="sig-title">KUNDE</div>
+                <div class="sig-details" style="margin-top: 15px;">
+                    <table>
+                        <tr><td>Name:</td><td><span class="sig-line"></span></td></tr>
+                        <tr><td>Datum:</td><td><span class="sig-line"></span></td></tr>
+                        <tr><td>Unterschrift:</td><td><span class="sig-line"></span></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timing & Comm -->
+        <div class="timing-row">
+            <div class="timing-box">
+                <div class="timing-icon">📅</div>
+                <div class="timing-text">
+                    <div><strong>LEISTUNGSZEITRAUM</strong>Leistungsbeginn:<br>Leistungsende:</div>
+                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</div>
+                </div>
+            </div>
+            <div class="timing-box">
+                <div class="timing-icon">👤</div>
+                <div class="timing-text">
+                    <div><strong>KOMMUNIKATION</strong>Für Fragen oder Änderungen kontaktieren Sie uns bitte rechtzeitig.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Banner -->
+        <div class="footer-banner">
+            <div class="footer-banner-title">🏦 KONTOINFORMATIONEN</div>
+            <div class="footer-banner-items">
+                <div class="footer-item"><span>Bankname</span>PostFinance AG</div>
+                <div class="footer-item"><span>IBAN</span>CH86 0900 0000 1636 3866 5</div>
+                <div class="footer-item"><span>Kontoinhaber</span>Dawit Gebrekristos / SwissCleanMove</div>
+                <div class="footer-item"><span>Konto-Nr.</span>16-363866-5</div>
+                <div class="footer-item"><span>Clearing-Nr.</span>09000</div>
+            </div>
+        </div>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Payment Slip Header -->
+        <div class="header-top" style="margin-bottom: 20px;">
+            <div class="header-logo">
+                <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
+                <div class="header-tagline">Reinigung &middot; Umzug &middot; Facility Service</div>
+            </div>
+            <div class="header-contact">
+                <div class="contact-line"><span class="contact-icon">📞</span> +41 78 215 80 30</div>
+                <div class="contact-line"><span class="contact-icon">✉</span> info@swisscleanmove.ch</div>
+                <div class="contact-line"><span class="contact-icon">🌐</span> www.swisscleanmove.ch</div>
+                <div class="contact-line"><span class="contact-icon">📍</span> Orpundstrasse 31, 2504 Biel</div>
+            </div>
+        </div>
+
+        <div class="payment-slip">
+            <div class="scissors-line-horizontal">
+                <span class="scissors-icon">✂</span>
+                <span style="background: #fff; padding: 0 10px; font-size: 10px; color: #666;">Vor der Einzahlung abzutrennen / A détacher avant le versement / Da staccare prima del versamento</span>
+            </div>
+            
+            <table class="payment-slip-table">
+                <tr>
+                    <td class="payment-slip-left pt-receipt">
+                        <div class="scissors-line-vertical">
+                            <span class="scissors-icon-v">✂</span>
+                        </div>
+                        <div class="payment-slip-title">${t.receiptSlip}</div>
+                        
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.accountPayableTo}</span>
+                            <div class="payment-slip-value">${paymentSlip.account}</div>
+                            <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+                        </div>
+
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.reference}</span>
+                            <div class="payment-slip-value">${paymentSlip.reference}</div>
+                        </div>
+
+                        <div class="payment-slip-block" style="margin-top: 15px;">
+                            <span class="payment-slip-label">${t.payableBy}</span>
+                            <div class="payment-slip-value">${clientName}</div>
+                            <div class="payment-slip-value">${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</div>
+                        </div>
+
+                        <div class="amount-area-receipt">
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.currency}</span>
+                                <div class="payment-slip-value">CHF</div>
+                            </div>
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.amount}</span>
+                                <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
+                            </div>
+                        </div>
+                        
+                        <div style="font-size: 8px; color: #111; margin-top: 15px; text-align: right;">${t.acceptancePoint}</div>
+                    </td>
+                    <td class="payment-slip-right pt-payment">
+                        <div class="payment-slip-title">${t.paymentPart}</div>
+                        
+                        <div class="payment-part-content">
+                            <!-- Left Column of Payment Part -->
+                            <div class="payment-col-left">
+                                <div class="qr-code-wrapper">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=174x174&data=https%3A%2F%2Fswisscleanmove.ch&margin=0" alt="QR Code">
+                                    <!-- Swiss Cross Overlay -->
+                                    <div class="qr-cross">
+                                        <div style="width: 28px; height: 28px; background: #000; border: 2px solid #fff; position: relative;">
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 18px; height: 4px; background: #fff;"></div>
+                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 4px; height: 18px; background: #fff;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="amount-area-payment">
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.currency}</span>
+                                        <div class="payment-slip-value">CHF</div>
+                                    </div>
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.amount}</span>
+                                        <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column of Payment Part -->
+                            <div class="payment-col-right">
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.accountPayableTo}</span>
+                                    <div class="payment-slip-value">${paymentSlip.account}</div>
+                                    <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+                                </div>
+
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.reference}</span>
+                                    <div class="payment-slip-value">${paymentSlip.reference}</div>
+                                </div>
+
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.additionalInfoQr}</span>
+                                    <div class="payment-slip-value">${t.invoiceLabel} ${orderNumber}</div>
+                                </div>
+
+                                <div class="payment-slip-block" style="margin-top: 15px;">
+                                    <span class="payment-slip-label">${t.payableBy}</span>
+                                    <div class="payment-slip-value">${clientName}</div>
+                                    <div class="payment-slip-value">${client.address || ''}<br>${client.postalCode || ''} ${client.location || ''}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    </html>
+`${formattedRemarks.join('<br>')}<br><br>` : ''}
                             ${t.guarantee}
                         </td>
                         <td><strong>${client.totalPrice || 0} CHF</strong></td>
