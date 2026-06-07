@@ -445,7 +445,7 @@ export async function POST(request: NextRequest) {
         <div class="header-top">
             <div class="header-logo">
                 <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
-                <div class="header-tagline">Reinigung &middot; Umzug &middot; Facility Service</div>
+                <div class="header-tagline">${t.tagline}</div>
             </div>
             <div class="header-contact">
                 <div class="contact-line"><span class="contact-icon">📞</span> +41 78 215 80 30</div>
@@ -461,7 +461,7 @@ export async function POST(request: NextRequest) {
             <div class="customer-card">
                 <div class="customer-card-header">
                     <div class="customer-card-icon">👤</div>
-                    <div class="customer-card-title">${t.customer || 'KUNDE'}</div>
+                    <div class="customer-card-title">${t.customer}</div>
                 </div>
                 <div class="customer-address">
                     ${clientName}<br>
@@ -469,10 +469,10 @@ export async function POST(request: NextRequest) {
                 </div>
             </div>
             <div class="order-card">
-                <div class="order-card-header">${t.orderNumber?.toUpperCase() || 'AUFTRAGSNUMMER'}</div>
+                <div class="order-card-header">${t.orderNumber?.toUpperCase()}</div>
                 <div class="order-card-body">
                     <div class="order-number">${orderNumber}</div>
-                    <div class="order-ref-title">${t.invoiceRef?.toUpperCase() || 'KUNDENREFERENZ'}</div>
+                    <div class="order-ref-title">${t.invoiceRef?.toUpperCase()}</div>
                     <div class="order-ref-val">-</div>
                 </div>
             </div>
@@ -480,13 +480,13 @@ export async function POST(request: NextRequest) {
 
         <!-- Title -->
         <div class="main-title">${t.title}</div>
-        <div class="sub-title">Professionelle Reinigungs- und Umzugsdienstleistungen nach Schweizer Qualitätsstandard.</div>
+        <div class="sub-title">${t.subTitle}</div>
 
         <!-- Info Columns -->
         <div class="info-columns">
             <!-- KUNDE -->
             <div class="info-col">
-                <div class="info-col-title">${t.customer || 'KUNDE'}</div>
+                <div class="info-col-title"></div>
                 <div class="info-row"><span class="info-icon">👤</span><span class="info-val"><span>${clientName}</span></span></div>
                 <div class="info-row"><span class="info-icon">📍</span><span class="info-val"><span>${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</span></span></div>
                 <div class="info-row"><span class="info-icon">📞</span><span class="info-val"><span>${client.phone || '-'}</span></span></div>
@@ -494,20 +494,20 @@ export async function POST(request: NextRequest) {
             </div>
             <!-- AUFTRAGSDATEN -->
             <div class="info-col">
-                <div class="info-col-title">${t.orderData || 'AUFTRAGSDATEN'}</div>
-                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">${t.serviceDate || 'Leistungsdatum:'}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
-                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">${t.startTime || 'Startzeit:'}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
-                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">${t.handoverTime || 'Abgabezeit:'}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
-                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">${t.contactPerson || 'Ansprechpartner:'}</span><span class="info-val">${clientName}</span></div>
-                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">${t.paymentMethod || 'Zahlungsart:'}</span><span class="info-val">Rechnung (QR)</span></div>
+                <div class="info-col-title">${t.orderData}</div>
+                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">${t.serviceDate}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
+                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">${t.startTime}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
+                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">${t.handoverTime}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
+                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">${t.contactPerson}</span><span class="info-val">${clientName}</span></div>
+                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">${t.paymentMethod}</span><span class="info-val">${t.paymentMethodValue}</span></div>
             </div>
             <!-- OBJEKT -->
             <div class="info-col">
-                <div class="info-col-title">${t.object || 'OBJEKT'}</div>
+                <div class="info-col-title">${t.object}</div>
                 <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${client.address || '-'}<br>${client.postalCode || ''} ${client.location || ''}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType || 'Objekttyp:'}</span><span class="info-val"><span>${client.propertyType || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.floor || 'Stockwerk:'}</span><span class="info-val"><span>${translatedFloor || client.floor || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.area || 'Fläche:'}</span><span class="info-val"><span>${client.squareMeters ? 'ca. ' + client.squareMeters + ' m²' : '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType}</span><span class="info-val"><span>${client.propertyType || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor || client.floor || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.area}</span><span class="info-val"><span>${client.squareMeters ? t.areaPrefix + ' ' + client.squareMeters + ' m²' : '-'}</span></span></div>
             </div>
         </div>
 
@@ -517,18 +517,18 @@ export async function POST(request: NextRequest) {
                 <thead>
                     <tr>
                         <th class="col-nr">NR.</th>
-                        <th class="col-le">${t.service || 'LEISTUNG'}</th>
-                        <th class="col-desc">${t.description || 'BESCHREIBUNG'}</th>
-                        <th class="col-qty">${t.quantity || 'MENGE'}</th>
-                        <th class="col-price">${t.unitPrice || 'EINZELPREIS'}</th>
-                        <th class="col-total">${t.totalPrice || 'GESAMTPREIS'}</th>
+                        <th class="col-le">${t.service}</th>
+                        <th class="col-desc">${t.description}</th>
+                        <th class="col-qty">${t.quantity}</th>
+                        <th class="col-price">${t.unitPrice}</th>
+                        <th class="col-total">${t.totalPrice}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="col-nr">1</td>
                         <td class="col-le">${translatedService}</td>
-                        <td class="col-desc">${formattedRemarks.length > 0 ? formattedRemarks.join(', ') : 'Professionelle Dienstleistung gemäss Schweizer Standard.'}</td>
+                        <td class="col-desc">${formattedRemarks.length > 0 ? formattedRemarks.join(', ') : t.defaultServiceDesc}</td>
                         <td class="col-qty">1</td>
                         <td class="col-price">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
                         <td class="col-total">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
@@ -540,14 +540,14 @@ export async function POST(request: NextRequest) {
                 <div class="scope-box">
                     <div class="scope-icon">ℹ️</div>
                     <div class="scope-text">
-                        <strong>${t.scopeOfServices || 'LEISTUNGSUMFANG'}</strong>
-                        ${t.swissStandard || 'Alle Arbeiten werden nach höchsten Schweizer Qualitätsstandards ausgeführt.'} ${t.guarantee}
+                        <strong>${t.scopeOfServices}</strong>
+                        ${t.swissStandard} ${t.guarantee}
                     </div>
                 </div>
                 <div class="total-box">
-                    <div class="total-box-title">${t.totalFixedPrice || 'TOTAL FESTPREIS INKL. MWST.'}</div>
+                    <div class="total-box-title">${t.totalFixedPrice}</div>
                     <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
-                    <div class="total-box-sub">${t.fixedPriceSub || 'Festpreis - keine zusätzlichen Kosten'}</div>
+                    <div class="total-box-sub">${t.fixedPriceSub}</div>
                 </div>
             </div>
         </div>
@@ -556,19 +556,19 @@ export async function POST(request: NextRequest) {
         <div class="badges-row">
             <div class="badge">
                 <div class="badge-icon">🛡️</div>
-                <div class="badge-text"><strong>${t.acceptanceGuarantee || 'ABNAHMEGARANTIE'}</strong>Zufriedenheitsgarantie bei Übergabe. Mängel werden kostenlos nachgebessert.</div>
+                <div class="badge-text"><strong>${t.acceptanceGuarantee}</strong>${t.acceptanceGuaranteeDesc}</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">✅</div>
-                <div class="badge-text"><strong>${t.liabilityInsured || 'HAFTPFLICHTVERSICHERT'}</strong>Vollständig versichert für Ihre Sicherheit und maximalen Schutz.</div>
+                <div class="badge-text"><strong>${t.liabilityInsured}</strong>${t.liabilityInsuredDesc}</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">⭐</div>
-                <div class="badge-text"><strong>${t.swissQuality || 'SCHWEIZER QUALITÄT'}</strong>Professionell, zuverlässig und pünktlich - dafür stehen wir ein.</div>
+                <div class="badge-text"><strong>${t.swissQuality}</strong>${t.swissQualityDesc}</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">🌿</div>
-                <div class="badge-text"><strong>${t.ecoFriendly || 'UMWELTFREUNDLICH'}</strong>Wir verwenden umweltfreundliche Reinigungsmittel und nachhaltige Methoden.</div>
+                <div class="badge-text"><strong>${t.ecoFriendly}</strong>${t.ecoFriendlyDesc}</div>
             </div>
         </div>
 
@@ -578,9 +578,9 @@ export async function POST(request: NextRequest) {
                 <div class="sig-title">SWISSCLEANMOVE</div>
                 <div class="sig-details">
                     <table style="width: 100%;">
-                        <tr><td style="width: 80px;">Name:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Cleaning Date:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Unterschrift:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
                     </table>
                 </div>
             </div>
@@ -588,18 +588,18 @@ export async function POST(request: NextRequest) {
             <!-- Middle Section for Date & Ort -->
             <div class="sig-box" style="width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; margin-bottom: 15px;">
                 <div class="sig-details" style="text-align: center; font-size: 11px; color: #333;">
-                    <strong>Cleaning Date</strong> ${new Date().toLocaleDateString()}<br><br>
-                    <strong>Ort:</strong> Biel
+                    <strong>${t.cleaningDateLabel}</strong> ${new Date().toLocaleDateString()}<br><br>
+                    <strong>${t.locationLabel}</strong> Biel
                 </div>
             </div>
 
             <div class="sig-box" style="width: 30%;">
-                <div class="sig-title">${t.customer || 'KUNDE'}</div>
+                <div class="sig-title"></div>
                 <div class="sig-details">
                     <table style="width: 100%;">
-                        <tr><td style="width: 80px;">Name:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Cleaning Date:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Unterschrift:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
                     </table>
                 </div>
             </div>
@@ -610,27 +610,27 @@ export async function POST(request: NextRequest) {
             <div class="timing-box">
                 <div class="timing-icon">📅</div>
                 <div class="timing-text">
-                    <div><strong>${t.performancePeriod || 'LEISTUNGSZEITRAUM'}</strong>${t.serviceStart || 'Leistungsbeginn:'}<br>${t.serviceEnd || 'Leistungsende:'}</div>
-                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</div>
+                    <div><strong>${t.performancePeriod}</strong>${t.serviceStart}<br>${t.serviceEnd}</div>
+                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</div>
                 </div>
             </div>
             <div class="timing-box">
                 <div class="timing-icon">👤</div>
                 <div class="timing-text">
-                    <div><strong>${t.communication || 'KOMMUNIKATION'}</strong>${t.communicationText || 'Für Fragen oder Änderungen kontaktieren Sie uns bitte rechtzeitig.'}</div>
+                    <div><strong>${t.communication}</strong>${t.communicationText}</div>
                 </div>
             </div>
         </div>
 
         <!-- Footer Banner -->
         <div class="footer-banner">
-            <div class="footer-banner-title">🏦 ${t.accountInformation || 'KONTOINFORMATIONEN'}</div>
+            <div class="footer-banner-title">🏦 ${t.accountInformation}</div>
             <div class="footer-banner-items">
-                <div class="footer-item"><span>${t.bankName || 'Bankname'}</span>PostFinance AG</div>
+                <div class="footer-item"><span>${t.bankName}</span>PostFinance AG</div>
                 <div class="footer-item"><span>IBAN</span>CH86 0900 0000 1636 3866 5</div>
-                <div class="footer-item"><span>${t.accountHolder || 'Kontoinhaber'}</span>Dawit Gebrekristos / SwissCleanMove</div>
-                <div class="footer-item"><span>${t.accountNo || 'Konto-Nr.'}</span>16-363866-5</div>
-                <div class="footer-item"><span>${t.clearingNo || 'Clearing-Nr.'}</span>09000</div>
+                <div class="footer-item"><span>${t.accountHolder}</span>Dawit Gebrekristos / SwissCleanMove</div>
+                <div class="footer-item"><span>${t.accountNo}</span>16-363866-5</div>
+                <div class="footer-item"><span>${t.clearingNo}</span>09000</div>
             </div>
         </div>
 
