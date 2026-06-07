@@ -401,13 +401,13 @@ function generateInvoiceHTML(client: any, language: string): string {
             body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 13px; line-height: 1.4; color: #333; }
             
             /* -- Header -- */
-            .header-top { display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 30px; }
-            .header-logo img { height: 75px; width: auto; }
+            .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+            .header-logo img { height: 130px; width: auto; }
             .header-tagline { font-size: 13px; color: #555; font-weight: bold; margin-top: 5px; letter-spacing: 0.5px; }
             
-            .header-contact { text-align: left; font-size: 11px; color: #333; border-right: 2px solid #555; padding-right: 15px; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
-            .contact-line { display: flex; align-items: center; gap: 8px; }
-            .contact-icon { font-size: 12px; color: #555; width: 14px; text-align: center; }
+            .header-contact { text-align: left; font-size: 11px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
+            .contact-line { display: flex; align-items: center; gap: 12px; font-size: 12px; margin-bottom: 3px; }
+            .contact-icon { font-size: 14px; color: #555; width: 14px; text-align: center; }
 
             /* -- Top Cards (Address & Order Num) -- */
             .top-cards { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
@@ -422,7 +422,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                 margin-top: 10px;
             }
             .customer-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-            .customer-card-icon { background: #555; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+            .customer-card-icon { background: #00205B; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
             .customer-card-title { font-size: 11px; font-weight: bold; color: #555; letter-spacing: 1px; }
             .customer-address { font-size: 13px; line-height: 1.5; color: #000; font-weight: bold; }
             .customer-address span { font-weight: normal; }
@@ -435,14 +435,14 @@ function generateInvoiceHTML(client: any, language: string): string {
                 overflow: hidden; 
                 text-align: center;
             }
-            .order-card-header { background: #555; color: white; padding: 8px; font-size: 11px; font-weight: bold; letter-spacing: 1px; }
+            .order-card-header { background: #00205B; color: white; padding: 8px; font-size: 11px; font-weight: bold; letter-spacing: 1px; }
             .order-card-body { padding: 15px; background: #fff; }
             .order-number { font-size: 16px; font-weight: bold; color: #000; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 10px; }
             .order-ref-title { font-size: 10px; color: #555; font-weight: bold; }
             .order-ref-val { font-size: 13px; color: #000; margin-top: 3px; }
 
             /* -- Title Section -- */
-            .main-title { font-size: 28px; font-weight: bold; color: #555; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+            .main-title { font-size: 32px; font-weight: bold; color: #00205B; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
             .sub-title { font-size: 13px; color: #555; margin-bottom: 30px; }
 
             /* -- 3 Columns Info -- */
@@ -458,7 +458,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             /* -- Service Table -- */
             .service-section { margin-bottom: 20px; }
             .service-table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
-            .service-table th { background: #555; color: white; padding: 10px; text-align: left; font-size: 10px; letter-spacing: 1px; }
+            .service-table th { background: #00205B; color: white; padding: 10px; text-align: left; font-size: 10px; letter-spacing: 1px; }
             .service-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 11px; color: #333; vertical-align: top; }
             .service-table tr:last-child td { border-bottom: none; }
             
@@ -477,7 +477,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             .scope-text strong { display: block; font-size: 11px; color: #555; margin-bottom: 3px; }
             .scope-text { font-size: 10px; color: #666; }
 
-            .total-box { background: #555; color: white; padding: 15px 25px; border-radius: 8px; text-align: center; width: 250px; }
+            .total-box { background: #00205B; color: white; padding: 15px 25px; border-radius: 8px; text-align: center; width: 250px; }
             .total-box-title { font-size: 10px; font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; text-transform: uppercase; }
             .total-box-amount { font-size: 22px; font-weight: bold; margin-bottom: 5px; }
             .total-box-sub { font-size: 10px; color: #ccc; }
@@ -509,7 +509,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             .timing-text div { display: flex; flex-direction: column; gap: 3px; }
 
             /* -- Footer -- */
-            .footer-banner { background: #555; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 10px; margin-top: auto; }
+            .footer-banner { background: #00205B; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 10px; margin-top: auto; }
             .footer-banner-title { font-weight: bold; display: flex; align-items: center; gap: 8px; letter-spacing: 1px; }
             .footer-banner-items { display: flex; gap: 20px; }
             .footer-item { display: flex; flex-direction: column; gap: 3px; }
@@ -561,7 +561,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <div class="contact-line"><span class="contact-icon">✉</span> info@swisscleanmove.ch</div>
                 <div class="contact-line"><span class="contact-icon">🌐</span> www.swisscleanmove.ch</div>
                 <div class="contact-line"><span class="contact-icon">📍</span> Orpundstrasse 31, 2504 Biel</div>
-                <div class="contact-line"><span class="contact-icon">🏢</span> UID: CHE-361.350.222 MWST</div>
+                <div class="contact-line"><span class="contact-icon">🏢</span> UID: CHE-457.949.122 MWST</div>
             </div>
         </div>
 
@@ -743,7 +743,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <div class="contact-line"><span class="contact-icon">✉</span> info@swisscleanmove.ch</div>
                 <div class="contact-line"><span class="contact-icon">🌐</span> www.swisscleanmove.ch</div>
                 <div class="contact-line"><span class="contact-icon">📍</span> Orpundstrasse 31, 2504 Biel</div>
-                <div class="contact-line"><span class="contact-icon">🏢</span> UID: CHE-361.350.222 MWST</div>
+                <div class="contact-line"><span class="contact-icon">🏢</span> UID: CHE-457.949.122 MWST</div>
             </div>
         </div>
 
