@@ -375,36 +375,36 @@ export async function POST(request: NextRequest) {
 
             /* -- Badges -- */
             .badges-row { display: flex; gap: 10px; margin-top: 30px; margin-bottom: 30px; }
-            .badge { flex: 1; display: flex; gap: 8px; align-items: flex-start; border: 1px solid #eee; padding: 10px; border-radius: 8px; }
-            .badge-icon { font-size: 16px; color: #555; margin-top: 2px; }
-            .badge-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 2px; }
-            .badge-text { font-size: 9px; color: #666; line-height: 1.3; }
+            .badge { flex: 1; display: flex; gap: 10px; align-items: flex-start; border: 1px solid #eee; padding: 12px; border-radius: 8px; }
+            .badge-icon { font-size: 22px; color: #00205B; margin-top: 2px; }
+            .badge-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 3px; letter-spacing: 0.5px; }
+            .badge-text { font-size: 11px; color: #555; line-height: 1.4; }
 
             /* -- Signatures -- */
             .signatures-row { display: flex; justify-content: space-between; margin-bottom: 30px; }
             .sig-box { width: 45%; }
-            .sig-title { font-size: 10px; font-weight: bold; color: #555; margin-bottom: 15px; letter-spacing: 1px; }
-            .sig-name { font-size: 14px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
-            .sig-details { font-size: 10px; color: #666; }
+            .sig-title { font-size: 12px; font-weight: bold; color: #00205B; margin-bottom: 15px; letter-spacing: 1px; }
+            .sig-name { font-size: 16px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
+            .sig-details { font-size: 12px; color: #555; }
             .sig-details table { border-collapse: collapse; margin-top: 10px; }
-            .sig-details td { padding: 4px 0; }
+            .sig-details td { padding: 5px 0; }
             .sig-details td:first-child { padding-right: 15px; color: #555; }
-            .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 12px; }
+            .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 14px; }
 
             /* -- Timing & Comm -- */
             .timing-row { display: flex; gap: 15px; margin-bottom: 40px; }
-            .timing-box { flex: 1; border: 1px solid #eee; padding: 12px; border-radius: 8px; display: flex; gap: 12px; align-items: center; }
-            .timing-icon { font-size: 20px; color: #555; }
-            .timing-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 3px; }
-            .timing-text { font-size: 10px; color: #666; display: flex; gap: 10px; }
-            .timing-text div { display: flex; flex-direction: column; gap: 3px; }
+            .timing-box { flex: 1; border: 1px solid #eee; padding: 14px; border-radius: 8px; display: flex; gap: 14px; align-items: center; }
+            .timing-icon { font-size: 24px; color: #00205B; }
+            .timing-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 4px; letter-spacing: 0.5px; }
+            .timing-text { font-size: 12px; color: #555; display: flex; gap: 12px; }
+            .timing-text div { display: flex; flex-direction: column; gap: 4px; }
 
             /* -- Footer -- */
-            .footer-banner { background: transparent; padding: 10px 0; display: flex; align-items: center; margin-top: auto; border-top: 1px solid #eee; margin-bottom: 20px; }
-            .footer-banner-title { display: none; }
-            .footer-banner-items { display: flex; gap: 40px; width: 100%; justify-content: flex-start; }
-            .footer-item { display: flex; flex-direction: column; gap: 5px; color: #0055A4; font-size: 12px; font-weight: normal; }
-            .footer-item span { color: #999; font-size: 10px; font-weight: normal; }
+            .footer-banner { background: #00205B; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 10px; margin-top: auto; }
+            .footer-banner-title { font-weight: bold; display: flex; align-items: center; gap: 8px; letter-spacing: 1px; }
+            .footer-banner-items { display: flex; gap: 20px; }
+            .footer-item { display: flex; flex-direction: column; gap: 3px; }
+            .footer-item span { color: #ccc; font-size: 9px; }
             
             /* -- Payment Slip Styles -- */
             .payment-slip { 
