@@ -403,9 +403,9 @@ function generateInvoiceHTML(client: any, language: string): string {
             /* -- Header -- */
             .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
             .header-logo img { height: 130px; width: auto; }
-            .header-tagline { font-size: 13px; color: #555; font-weight: bold; margin-top: 5px; letter-spacing: 0.5px; }
+            .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -10px; letter-spacing: 0.5px; }
             
-            .header-contact { text-align: left; font-size: 11px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
+            .header-contact { width: 280px; text-align: left; font-size: 11px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
             .contact-line { display: flex; align-items: center; gap: 12px; font-size: 12px; margin-bottom: 3px; }
             .contact-icon { font-size: 14px; color: #555; width: 14px; text-align: center; }
 
@@ -423,13 +423,13 @@ function generateInvoiceHTML(client: any, language: string): string {
             }
             .customer-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
             .customer-card-icon { background: #00205B; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
-            .customer-card-title { font-size: 11px; font-weight: bold; color: #555; letter-spacing: 1px; }
+            .customer-card-title { font-size: 11px; font-weight: bold; color: #00205B; letter-spacing: 1px; }
             .customer-address { font-size: 13px; line-height: 1.5; color: #000; font-weight: bold; }
             .customer-address span { font-weight: normal; }
 
             /* Order Card (Right) */
             .order-card { 
-                width: 35%; 
+                width: 280px; 
                 border: 1px solid #555; 
                 border-radius: 8px; 
                 overflow: hidden; 
@@ -448,7 +448,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             /* -- 3 Columns Info -- */
             .info-columns { display: flex; gap: 15px; margin-bottom: 30px; }
             .info-col { flex: 1; border: 1px solid #eee; border-radius: 8px; padding: 15px; background: #fafafa; }
-            .info-col-title { font-size: 11px; font-weight: bold; color: #555; margin-bottom: 12px; letter-spacing: 1px; }
+            .info-col-title { font-size: 11px; font-weight: bold; color: #00205B; margin-bottom: 12px; letter-spacing: 1px; }
             .info-row { display: flex; margin-bottom: 8px; align-items: flex-start; }
             .info-icon { font-size: 12px; color: #555; width: 20px; margin-top: 1px; }
             .info-label { width: 90px; color: #666; font-size: 11px; }
