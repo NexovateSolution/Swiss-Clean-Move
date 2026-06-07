@@ -669,7 +669,7 @@ export async function POST(request: NextRequest) {
                     <tr>
                         <td class="col-nr">1</td>
                         <td class="col-le">${translatedService}</td>
-                        <td class="col-desc">${formattedRemarks.length > 0 ? formattedRemarks.join(', ') : t.defaultServiceDesc}</td>
+                        <td class="col-desc">${formattedRemarks.length > 0 ? '<ul style="margin: 0; padding-left: 15px; list-style-type: disc;"><li>' + formattedRemarks.join('</li><li>') + '</li></ul>' : t.defaultServiceDesc}</td>
                         <td class="col-qty">1</td>
                         <td class="col-price">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
                         <td class="col-total">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
