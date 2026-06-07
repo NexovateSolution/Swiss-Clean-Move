@@ -296,9 +296,9 @@ export async function POST(request: NextRequest) {
             .header-logo img { height: 130px; width: auto; }
             .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -10px; letter-spacing: 0.5px; }
             
-            .header-contact { width: 280px; text-align: left; font-size: 11px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
-            .contact-line { display: flex; align-items: center; gap: 12px; font-size: 12px; margin-bottom: 3px; }
-            .contact-icon { font-size: 14px; color: #555; width: 14px; text-align: center; }
+            .header-contact { width: 280px; text-align: left; font-size: 13px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
+            .contact-line { display: flex; align-items: center; gap: 15px; font-size: 14px; margin-bottom: 5px; }
+            .contact-icon { font-size: 16px; color: #555; width: 16px; text-align: center; }
 
             /* -- Top Cards (Address & Order Num) -- */
             .top-cards { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
@@ -315,7 +315,7 @@ export async function POST(request: NextRequest) {
             .customer-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
             .customer-card-icon { background: #00205B; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
             .customer-card-title { font-size: 11px; font-weight: bold; color: #00205B; letter-spacing: 1px; }
-            .customer-address { font-size: 13px; line-height: 1.5; color: #000; font-weight: bold; }
+            .customer-address { font-size: 13px; line-height: 1.6; color: #000; font-weight: normal; }
             .customer-address span { font-weight: normal; }
 
             /* Order Card (Right) */
@@ -341,9 +341,9 @@ export async function POST(request: NextRequest) {
             .info-col { flex: 1; border: 1px solid #eee; border-radius: 8px; padding: 15px; background: #fafafa; }
             .info-col-title { font-size: 11px; font-weight: bold; color: #00205B; margin-bottom: 12px; letter-spacing: 1px; }
             .info-row { display: flex; margin-bottom: 8px; align-items: flex-start; }
-            .info-icon { font-size: 12px; color: #555; width: 20px; margin-top: 1px; }
-            .info-label { width: 90px; color: #666; font-size: 11px; }
-            .info-val { flex: 1; color: #000; font-weight: bold; font-size: 11px; }
+            .info-icon { font-size: 14px; color: #00205B; width: 22px; margin-top: 1px; }
+            .info-label { width: 100px; color: #00205B; font-size: 12px; font-weight: bold; }
+            .info-val { flex: 1; color: #000; font-weight: bold; font-size: 12px; }
             .info-val span { font-weight: normal; }
 
             /* -- Service Table -- */
@@ -400,11 +400,11 @@ export async function POST(request: NextRequest) {
             .timing-text div { display: flex; flex-direction: column; gap: 3px; }
 
             /* -- Footer -- */
-            .footer-banner { background: #00205B; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 10px; margin-top: auto; }
-            .footer-banner-title { font-weight: bold; display: flex; align-items: center; gap: 8px; letter-spacing: 1px; }
-            .footer-banner-items { display: flex; gap: 20px; }
-            .footer-item { display: flex; flex-direction: column; gap: 3px; }
-            .footer-item span { color: #ccc; font-size: 9px; }
+            .footer-banner { background: transparent; padding: 10px 0; display: flex; align-items: center; margin-top: auto; border-top: 1px solid #eee; margin-bottom: 20px; }
+            .footer-banner-title { display: none; }
+            .footer-banner-items { display: flex; gap: 40px; width: 100%; justify-content: flex-start; }
+            .footer-item { display: flex; flex-direction: column; gap: 5px; color: #0055A4; font-size: 12px; font-weight: normal; }
+            .footer-item span { color: #999; font-size: 10px; font-weight: normal; }
             
             /* -- Payment Slip Styles -- */
             .payment-slip { 
@@ -573,25 +573,33 @@ export async function POST(request: NextRequest) {
         </div>
 
         <!-- Signatures -->
-        <div class="signatures-row">
-            <div class="sig-box">
+        <div class="signatures-row" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;">
+            <div class="sig-box" style="width: 30%;">
                 <div class="sig-title">SWISSCLEANMOVE</div>
-                <div class="sig-name">Dawit Gebrekristos</div>
                 <div class="sig-details">
-                    Dawit Gebrekristos<br>Geschäftsführer<br>
-                    <table>
-                        <tr><td>${t.date || 'Datum:'}</td><td>${new Date().toLocaleDateString()}</td></tr>
-                        <tr><td>${t.locationLabel || 'Ort:'}</td><td>Biel</td></tr>
+                    <table style="width: 100%;">
+                        <tr><td style="width: 80px;">Name:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>Cleaning Date:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>Unterschrift:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
                     </table>
                 </div>
             </div>
-            <div class="sig-box">
+
+            <!-- Middle Section for Date & Ort -->
+            <div class="sig-box" style="width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; margin-bottom: 15px;">
+                <div class="sig-details" style="text-align: center; font-size: 11px; color: #333;">
+                    <strong>Cleaning Date</strong> ${new Date().toLocaleDateString()}<br><br>
+                    <strong>Ort:</strong> Biel
+                </div>
+            </div>
+
+            <div class="sig-box" style="width: 30%;">
                 <div class="sig-title">${t.customer || 'KUNDE'}</div>
-                <div class="sig-details" style="margin-top: 15px;">
-                    <table>
-                        <tr><td>${t.nameLabel || 'Name:'}</td><td><span class="sig-line"></span></td></tr>
-                        <tr><td>${t.date || 'Datum:'}</td><td><span class="sig-line"></span></td></tr>
-                        <tr><td>${t.signatureLabel || 'Unterschrift:'}</td><td><span class="sig-line"></span></td></tr>
+                <div class="sig-details">
+                    <table style="width: 100%;">
+                        <tr><td style="width: 80px;">Name:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>Cleaning Date:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>Unterschrift:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
                     </table>
                 </div>
             </div>
@@ -629,15 +637,6 @@ export async function POST(request: NextRequest) {
         <div style="page-break-before: always;"></div>
 
         <!-- Payment Slip Header Removed -->
-            <div class="header-contact">
-                <div class="contact-line"><span class="contact-icon">📞</span> +41 78 215 80 30</div>
-                <div class="contact-line"><span class="contact-icon">✉</span> info@swisscleanmove.ch</div>
-                <div class="contact-line"><span class="contact-icon">🌐</span> www.swisscleanmove.ch</div>
-                <div class="contact-line"><span class="contact-icon">📍</span> Orpundstrasse 31, 2504 Biel</div>
-                <div class="contact-line"><span class="contact-icon">🏢</span> UID: CHE-457.949.122 MWST</div>
-            </div>
-        </div>
-
         <div class="payment-slip">
             <div class="scissors-line-horizontal">
                 <span class="scissors-icon">✂</span>
