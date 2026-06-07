@@ -398,14 +398,14 @@ function generateInvoiceHTML(client: any, language: string): string {
         <meta charset="UTF-8">
         <style>
             * { box-sizing: border-box; }
-            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 11px; line-height: 1.4; color: #333; }
+            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 13px; line-height: 1.4; color: #333; }
             
             /* -- Header -- */
             .header-top { display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 30px; }
             .header-logo img { height: 75px; width: auto; }
-            .header-tagline { font-size: 11px; color: #555; font-weight: bold; margin-top: 5px; letter-spacing: 0.5px; }
+            .header-tagline { font-size: 13px; color: #555; font-weight: bold; margin-top: 5px; letter-spacing: 0.5px; }
             
-            .header-contact { text-align: left; font-size: 10px; color: #333; border-right: 2px solid #555; padding-right: 15px; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
+            .header-contact { text-align: left; font-size: 11px; color: #333; border-right: 2px solid #555; padding-right: 15px; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
             .contact-line { display: flex; align-items: center; gap: 8px; }
             .contact-icon { font-size: 12px; color: #555; width: 14px; text-align: center; }
 
@@ -423,7 +423,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             }
             .customer-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
             .customer-card-icon { background: #555; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
-            .customer-card-title { font-size: 10px; font-weight: bold; color: #555; letter-spacing: 1px; }
+            .customer-card-title { font-size: 11px; font-weight: bold; color: #555; letter-spacing: 1px; }
             .customer-address { font-size: 13px; line-height: 1.5; color: #000; font-weight: bold; }
             .customer-address span { font-weight: normal; }
 
@@ -435,31 +435,31 @@ function generateInvoiceHTML(client: any, language: string): string {
                 overflow: hidden; 
                 text-align: center;
             }
-            .order-card-header { background: #555; color: white; padding: 8px; font-size: 10px; font-weight: bold; letter-spacing: 1px; }
+            .order-card-header { background: #555; color: white; padding: 8px; font-size: 11px; font-weight: bold; letter-spacing: 1px; }
             .order-card-body { padding: 15px; background: #fff; }
             .order-number { font-size: 16px; font-weight: bold; color: #000; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 10px; }
-            .order-ref-title { font-size: 9px; color: #555; font-weight: bold; }
-            .order-ref-val { font-size: 11px; color: #000; margin-top: 3px; }
+            .order-ref-title { font-size: 10px; color: #555; font-weight: bold; }
+            .order-ref-val { font-size: 13px; color: #000; margin-top: 3px; }
 
             /* -- Title Section -- */
             .main-title { font-size: 28px; font-weight: bold; color: #555; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-            .sub-title { font-size: 11px; color: #555; margin-bottom: 30px; }
+            .sub-title { font-size: 13px; color: #555; margin-bottom: 30px; }
 
             /* -- 3 Columns Info -- */
             .info-columns { display: flex; gap: 15px; margin-bottom: 30px; }
             .info-col { flex: 1; border: 1px solid #eee; border-radius: 8px; padding: 15px; background: #fafafa; }
-            .info-col-title { font-size: 10px; font-weight: bold; color: #555; margin-bottom: 12px; letter-spacing: 1px; }
+            .info-col-title { font-size: 11px; font-weight: bold; color: #555; margin-bottom: 12px; letter-spacing: 1px; }
             .info-row { display: flex; margin-bottom: 8px; align-items: flex-start; }
             .info-icon { font-size: 12px; color: #555; width: 20px; margin-top: 1px; }
-            .info-label { width: 90px; color: #666; font-size: 10px; }
-            .info-val { flex: 1; color: #000; font-weight: bold; font-size: 10px; }
+            .info-label { width: 90px; color: #666; font-size: 11px; }
+            .info-val { flex: 1; color: #000; font-weight: bold; font-size: 11px; }
             .info-val span { font-weight: normal; }
 
             /* -- Service Table -- */
             .service-section { margin-bottom: 20px; }
             .service-table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
-            .service-table th { background: #555; color: white; padding: 10px; text-align: left; font-size: 9px; letter-spacing: 1px; }
-            .service-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 10px; color: #333; vertical-align: top; }
+            .service-table th { background: #555; color: white; padding: 10px; text-align: left; font-size: 10px; letter-spacing: 1px; }
+            .service-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 11px; color: #333; vertical-align: top; }
             .service-table tr:last-child td { border-bottom: none; }
             
             /* Table Columns Widths */
@@ -474,46 +474,46 @@ function generateInvoiceHTML(client: any, language: string): string {
             .table-bottom-row { display: flex; justify-content: space-between; align-items: stretch; margin-top: 15px; gap: 15px; }
             .scope-box { flex: 1; display: flex; gap: 10px; align-items: center; border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fafafa; }
             .scope-icon { font-size: 20px; color: #555; }
-            .scope-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 3px; }
-            .scope-text { font-size: 9px; color: #666; }
+            .scope-text strong { display: block; font-size: 11px; color: #555; margin-bottom: 3px; }
+            .scope-text { font-size: 10px; color: #666; }
 
             .total-box { background: #555; color: white; padding: 15px 25px; border-radius: 8px; text-align: center; width: 250px; }
-            .total-box-title { font-size: 9px; font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; text-transform: uppercase; }
+            .total-box-title { font-size: 10px; font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; text-transform: uppercase; }
             .total-box-amount { font-size: 22px; font-weight: bold; margin-bottom: 5px; }
-            .total-box-sub { font-size: 9px; color: #ccc; }
+            .total-box-sub { font-size: 10px; color: #ccc; }
 
             /* -- Badges -- */
             .badges-row { display: flex; gap: 10px; margin-top: 30px; margin-bottom: 30px; }
             .badge { flex: 1; display: flex; gap: 8px; align-items: flex-start; border: 1px solid #eee; padding: 10px; border-radius: 8px; }
             .badge-icon { font-size: 16px; color: #555; margin-top: 2px; }
-            .badge-text strong { display: block; font-size: 9px; color: #555; margin-bottom: 2px; }
-            .badge-text { font-size: 8px; color: #666; line-height: 1.3; }
+            .badge-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 2px; }
+            .badge-text { font-size: 9px; color: #666; line-height: 1.3; }
 
             /* -- Signatures -- */
             .signatures-row { display: flex; justify-content: space-between; margin-bottom: 30px; }
             .sig-box { width: 45%; }
-            .sig-title { font-size: 9px; font-weight: bold; color: #555; margin-bottom: 15px; letter-spacing: 1px; }
+            .sig-title { font-size: 10px; font-weight: bold; color: #555; margin-bottom: 15px; letter-spacing: 1px; }
             .sig-name { font-size: 14px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
-            .sig-details { font-size: 9px; color: #666; }
+            .sig-details { font-size: 10px; color: #666; }
             .sig-details table { border-collapse: collapse; margin-top: 10px; }
             .sig-details td { padding: 4px 0; }
-            .sig-details td:first-child { width: 50px; color: #555; }
+            .sig-details td:first-child { padding-right: 15px; color: #555; }
             .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 12px; }
 
             /* -- Timing & Comm -- */
             .timing-row { display: flex; gap: 15px; margin-bottom: 40px; }
             .timing-box { flex: 1; border: 1px solid #eee; padding: 12px; border-radius: 8px; display: flex; gap: 12px; align-items: center; }
             .timing-icon { font-size: 20px; color: #555; }
-            .timing-text strong { display: block; font-size: 9px; color: #555; margin-bottom: 3px; }
-            .timing-text { font-size: 9px; color: #666; display: flex; gap: 10px; }
+            .timing-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 3px; }
+            .timing-text { font-size: 10px; color: #666; display: flex; gap: 10px; }
             .timing-text div { display: flex; flex-direction: column; gap: 3px; }
 
             /* -- Footer -- */
-            .footer-banner { background: #555; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 9px; margin-top: auto; }
+            .footer-banner { background: #555; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 10px; margin-top: auto; }
             .footer-banner-title { font-weight: bold; display: flex; align-items: center; gap: 8px; letter-spacing: 1px; }
             .footer-banner-items { display: flex; gap: 20px; }
             .footer-item { display: flex; flex-direction: column; gap: 3px; }
-            .footer-item span { color: #ccc; font-size: 8px; }
+            .footer-item span { color: #ccc; font-size: 9px; }
             
             /* -- Payment Slip Styles -- */
             .payment-slip { 
@@ -561,6 +561,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <div class="contact-line"><span class="contact-icon">✉</span> info@swisscleanmove.ch</div>
                 <div class="contact-line"><span class="contact-icon">🌐</span> www.swisscleanmove.ch</div>
                 <div class="contact-line"><span class="contact-icon">📍</span> Orpundstrasse 31, 2504 Biel</div>
+                <div class="contact-line"><span class="contact-icon">🏢</span> UID: CHE-361.350.222 MWST</div>
             </div>
         </div>
 
@@ -569,7 +570,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             <div class="customer-card">
                 <div class="customer-card-header">
                     <div class="customer-card-icon">👤</div>
-                    <div class="customer-card-title">KUNDE</div>
+                    <div class="customer-card-title">${t.customer || 'KUNDE'}</div>
                 </div>
                 <div class="customer-address">
                     ${clientName}<br>
@@ -594,7 +595,7 @@ function generateInvoiceHTML(client: any, language: string): string {
         <div class="info-columns">
             <!-- KUNDE -->
             <div class="info-col">
-                <div class="info-col-title">KUNDE</div>
+                <div class="info-col-title">${t.customer || 'KUNDE'}</div>
                 <div class="info-row"><span class="info-icon">👤</span><span class="info-val"><span>${clientName}</span></span></div>
                 <div class="info-row"><span class="info-icon">📍</span><span class="info-val"><span>${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</span></span></div>
                 <div class="info-row"><span class="info-icon">📞</span><span class="info-val"><span>${client.phone || '-'}</span></span></div>
@@ -602,20 +603,20 @@ function generateInvoiceHTML(client: any, language: string): string {
             </div>
             <!-- AUFTRAGSDATEN -->
             <div class="info-col">
-                <div class="info-col-title">AUFTRAGSDATEN</div>
-                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">Leistungsdatum:</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
-                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">Startzeit:</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
-                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">Abgabezeit:</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
-                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">Ansprechpartner:</span><span class="info-val">${clientName}</span></div>
-                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">Zahlungsart:</span><span class="info-val">Rechnung (QR)</span></div>
+                <div class="info-col-title">${t.orderData || 'AUFTRAGSDATEN'}</div>
+                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">${t.serviceDate || 'Leistungsdatum:'}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
+                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">${t.startTime || 'Startzeit:'}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
+                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">${t.handoverTime || 'Abgabezeit:'}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
+                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">${t.contactPerson || 'Ansprechpartner:'}</span><span class="info-val">${clientName}</span></div>
+                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">${t.paymentMethod || 'Zahlungsart:'}</span><span class="info-val">Rechnung (QR)</span></div>
             </div>
             <!-- OBJEKT -->
             <div class="info-col">
-                <div class="info-col-title">OBJEKT</div>
+                <div class="info-col-title">${t.object || 'OBJEKT'}</div>
                 <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${client.address || '-'}<br>${client.postalCode || ''} ${client.location || ''}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">Objekttyp:</span><span class="info-val"><span>${client.propertyType || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">Stockwerk:</span><span class="info-val"><span>${translatedFloor || client.floor || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">Fläche:</span><span class="info-val"><span>${client.squareMeters ? 'ca. ' + client.squareMeters + ' m²' : '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType || 'Objekttyp:'}</span><span class="info-val"><span>${client.propertyType || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.floor || 'Stockwerk:'}</span><span class="info-val"><span>${translatedFloor || client.floor || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.area || 'Fläche:'}</span><span class="info-val"><span>${client.squareMeters ? 'ca. ' + client.squareMeters + ' m²' : '-'}</span></span></div>
             </div>
         </div>
 
@@ -625,11 +626,11 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <thead>
                     <tr>
                         <th class="col-nr">NR.</th>
-                        <th class="col-le">LEISTUNG</th>
-                        <th class="col-desc">BESCHREIBUNG</th>
-                        <th class="col-qty">MENGE</th>
-                        <th class="col-price">EINZELPREIS</th>
-                        <th class="col-total">GESAMTPREIS</th>
+                        <th class="col-le">${t.service || 'LEISTUNG'}</th>
+                        <th class="col-desc">${t.description || 'BESCHREIBUNG'}</th>
+                        <th class="col-qty">${t.quantity || 'MENGE'}</th>
+                        <th class="col-price">${t.unitPrice || 'EINZELPREIS'}</th>
+                        <th class="col-total">${t.totalPrice || 'GESAMTPREIS'}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -648,14 +649,14 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <div class="scope-box">
                     <div class="scope-icon">ℹ️</div>
                     <div class="scope-text">
-                        <strong>LEISTUNGSUMFANG</strong>
-                        Alle Arbeiten werden nach höchsten Schweizer Qualitätsstandards ausgeführt. ${t.guarantee}
+                        <strong>${t.scopeOfServices || 'LEISTUNGSUMFANG'}</strong>
+                        ${t.swissStandard || 'Alle Arbeiten werden nach höchsten Schweizer Qualitätsstandards ausgeführt.'} ${t.guarantee}
                     </div>
                 </div>
                 <div class="total-box">
-                    <div class="total-box-title">TOTAL FESTPREIS INKL. MWST.</div>
+                    <div class="total-box-title">${t.totalFixedPrice || 'TOTAL FESTPREIS INKL. MWST.'}</div>
                     <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
-                    <div class="total-box-sub">Festpreis - keine zusätzlichen Kosten</div>
+                    <div class="total-box-sub">${t.fixedPriceSub || 'Festpreis - keine zusätzlichen Kosten'}</div>
                 </div>
             </div>
         </div>
@@ -664,19 +665,19 @@ function generateInvoiceHTML(client: any, language: string): string {
         <div class="badges-row">
             <div class="badge">
                 <div class="badge-icon">🛡️</div>
-                <div class="badge-text"><strong>ABNAHMEGARANTIE</strong>Zufriedenheitsgarantie bei Übergabe. Mängel werden kostenlos nachgebessert.</div>
+                <div class="badge-text"><strong>${t.acceptanceGuarantee || 'ABNAHMEGARANTIE'}</strong>Zufriedenheitsgarantie bei Übergabe. Mängel werden kostenlos nachgebessert.</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">✅</div>
-                <div class="badge-text"><strong>HAFTPFLICHTVERSICHERT</strong>Vollständig versichert für Ihre Sicherheit und maximalen Schutz.</div>
+                <div class="badge-text"><strong>${t.liabilityInsured || 'HAFTPFLICHTVERSICHERT'}</strong>Vollständig versichert für Ihre Sicherheit und maximalen Schutz.</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">⭐</div>
-                <div class="badge-text"><strong>SCHWEIZER QUALITÄT</strong>Professionell, zuverlässig und pünktlich - dafür stehen wir ein.</div>
+                <div class="badge-text"><strong>${t.swissQuality || 'SCHWEIZER QUALITÄT'}</strong>Professionell, zuverlässig und pünktlich - dafür stehen wir ein.</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">🌿</div>
-                <div class="badge-text"><strong>UMWELTFREUNDLICH</strong>Wir verwenden umweltfreundliche Reinigungsmittel und nachhaltige Methoden.</div>
+                <div class="badge-text"><strong>${t.ecoFriendly || 'UMWELTFREUNDLICH'}</strong>Wir verwenden umweltfreundliche Reinigungsmittel und nachhaltige Methoden.</div>
             </div>
         </div>
 
@@ -688,18 +689,18 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <div class="sig-details">
                     Dawit Gebrekristos<br>Geschäftsführer<br>
                     <table>
-                        <tr><td>Datum:</td><td>${new Date().toLocaleDateString()}</td></tr>
-                        <tr><td>Ort:</td><td>Biel</td></tr>
+                        <tr><td>${t.date || 'Datum:'}</td><td>${new Date().toLocaleDateString()}</td></tr>
+                        <tr><td>${t.locationLabel || 'Ort:'}</td><td>Biel</td></tr>
                     </table>
                 </div>
             </div>
             <div class="sig-box">
-                <div class="sig-title">KUNDE</div>
+                <div class="sig-title">${t.customer || 'KUNDE'}</div>
                 <div class="sig-details" style="margin-top: 15px;">
                     <table>
-                        <tr><td>Name:</td><td><span class="sig-line"></span></td></tr>
-                        <tr><td>Datum:</td><td><span class="sig-line"></span></td></tr>
-                        <tr><td>Unterschrift:</td><td><span class="sig-line"></span></td></tr>
+                        <tr><td>${t.nameLabel || 'Name:'}</td><td><span class="sig-line"></span></td></tr>
+                        <tr><td>${t.date || 'Datum:'}</td><td><span class="sig-line"></span></td></tr>
+                        <tr><td>${t.signatureLabel || 'Unterschrift:'}</td><td><span class="sig-line"></span></td></tr>
                     </table>
                 </div>
             </div>
@@ -710,50 +711,46 @@ function generateInvoiceHTML(client: any, language: string): string {
             <div class="timing-box">
                 <div class="timing-icon">📅</div>
                 <div class="timing-text">
-                    <div><strong>LEISTUNGSZEITRAUM</strong>Leistungsbeginn:<br>Leistungsende:</div>
+                    <div><strong>${t.performancePeriod || 'LEISTUNGSZEITRAUM'}</strong>${t.serviceStart || 'Leistungsbeginn:'}<br>${t.serviceEnd || 'Leistungsende:'}</div>
                     <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</div>
                 </div>
             </div>
             <div class="timing-box">
                 <div class="timing-icon">👤</div>
                 <div class="timing-text">
-                    <div><strong>KOMMUNIKATION</strong>Für Fragen oder Änderungen kontaktieren Sie uns bitte rechtzeitig.</div>
+                    <div><strong>${t.communication || 'KOMMUNIKATION'}</strong>${t.communicationText || 'Für Fragen oder Änderungen kontaktieren Sie uns bitte rechtzeitig.'}</div>
                 </div>
             </div>
         </div>
 
         <!-- Footer Banner -->
         <div class="footer-banner">
-            <div class="footer-banner-title">🏦 KONTOINFORMATIONEN</div>
+            <div class="footer-banner-title">🏦 ${t.accountInformation || 'KONTOINFORMATIONEN'}</div>
             <div class="footer-banner-items">
-                <div class="footer-item"><span>Bankname</span>PostFinance AG</div>
+                <div class="footer-item"><span>${t.bankName || 'Bankname'}</span>PostFinance AG</div>
                 <div class="footer-item"><span>IBAN</span>CH86 0900 0000 1636 3866 5</div>
-                <div class="footer-item"><span>Kontoinhaber</span>Dawit Gebrekristos / SwissCleanMove</div>
-                <div class="footer-item"><span>Konto-Nr.</span>16-363866-5</div>
-                <div class="footer-item"><span>Clearing-Nr.</span>09000</div>
+                <div class="footer-item"><span>${t.accountHolder || 'Kontoinhaber'}</span>Dawit Gebrekristos / SwissCleanMove</div>
+                <div class="footer-item"><span>${t.accountNo || 'Konto-Nr.'}</span>16-363866-5</div>
+                <div class="footer-item"><span>${t.clearingNo || 'Clearing-Nr.'}</span>09000</div>
             </div>
         </div>
 
         <div style="page-break-before: always;"></div>
 
-        <!-- Payment Slip Header -->
-        <div class="header-top" style="margin-bottom: 20px;">
-            <div class="header-logo">
-                <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
-                <div class="header-tagline">Reinigung &middot; Umzug &middot; Facility Service</div>
-            </div>
+        <!-- Payment Slip Header Removed -->
             <div class="header-contact">
                 <div class="contact-line"><span class="contact-icon">📞</span> +41 78 215 80 30</div>
                 <div class="contact-line"><span class="contact-icon">✉</span> info@swisscleanmove.ch</div>
                 <div class="contact-line"><span class="contact-icon">🌐</span> www.swisscleanmove.ch</div>
                 <div class="contact-line"><span class="contact-icon">📍</span> Orpundstrasse 31, 2504 Biel</div>
+                <div class="contact-line"><span class="contact-icon">🏢</span> UID: CHE-361.350.222 MWST</div>
             </div>
         </div>
 
         <div class="payment-slip">
             <div class="scissors-line-horizontal">
                 <span class="scissors-icon">✂</span>
-                <span style="background: #fff; padding: 0 10px; font-size: 10px; color: #666;">Vor der Einzahlung abzutrennen / A détacher avant le versement / Da staccare prima del versamento</span>
+                <span style="background: #fff; padding: 0 10px; font-size: 11px; color: #666;">Vor der Einzahlung abzutrennen / A détacher avant le versement / Da staccare prima del versamento</span>
             </div>
             
             <table class="payment-slip-table">
@@ -792,7 +789,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                             </div>
                         </div>
                         
-                        <div style="font-size: 8px; color: #111; margin-top: 15px; text-align: right;">${t.acceptancePoint}</div>
+                        <div style="font-size: 9px; color: #111; margin-top: 15px; text-align: right;">${t.acceptancePoint}</div>
                     </td>
                     <td class="payment-slip-right pt-payment">
                         <div class="payment-slip-title">${t.paymentPart}</div>
