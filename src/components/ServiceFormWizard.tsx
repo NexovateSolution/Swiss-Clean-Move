@@ -119,8 +119,12 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
           {images.map((img, i) => (
             <div key={i} className="relative group">
-              <div className="w-full h-20 bg-white rounded-lg border border-swiss-border flex items-center justify-center overflow-hidden">
-                <span className="text-xs text-center px-2 truncate block w-full text-swiss-body">{img.name}</span>
+              <div className="w-full h-20 bg-white rounded-lg border border-swiss-border flex items-center justify-center overflow-hidden relative">
+                {img.type.startsWith('image/') ? (
+                  <img src={URL.createObjectURL(img)} alt={img.name} className="w-full h-full object-cover" />
+                ) : (
+                  <span className="text-xs text-center px-2 truncate block w-full text-swiss-body">{img.name}</span>
+                )}
               </div>
               <button onClick={(e) => { e.stopPropagation(); removeImage(i); }} className="absolute -top-2 -right-2 bg-swiss-red text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity shadow-sm">
                 <X className="w-3 h-3" />
