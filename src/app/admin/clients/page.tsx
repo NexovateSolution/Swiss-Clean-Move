@@ -245,9 +245,20 @@ export default function ClientsPage() {
 
   const serviceOptions = [
     { value: 'House Cleaning', label: t('services.houseCleaning') },
+    { value: 'Apartment cleaning', label: t('services.apartmentCleaning') },
+    { value: 'Stairwell Cleaning', label: t('services.stairwellCleaning') },
+    { value: 'Office Cleaning', label: t('services.officeCleaning') },
+    { value: 'Final Cleaning', label: t('services.finalCleaning') },
     { value: 'Window Cleaning', label: t('services.windowCleaning') },
     { value: 'Relocation', label: t('services.relocation') },
     { value: 'Disposal', label: t('services.disposal') },
+    { value: 'Gastronomy Cleaning', label: t('services.gastronomyCleaning') },
+    { value: 'Medical Cleaning', label: t('services.medicalCleaning') },
+    { value: 'Construction Cleaning', label: t('services.constructionCleaning') },
+    { value: 'Property Maintenance', label: t('services.propertyMaintenance') },
+    { value: 'Special Cleaning', label: t('services.specialCleaning') },
+    { value: 'Combo Service', label: t('services.comboService') },
+    { value: 'Maintenance Cleaning', label: t('services.maintenanceCleaning') },
     { value: 'Household Helping', label: t('services.householdHelping') },
     { value: 'Facility Services', label: t('services.facilityServices') },
   ]

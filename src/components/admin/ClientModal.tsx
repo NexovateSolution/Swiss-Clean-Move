@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { X, Save, Loader2 } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
+import { useTranslations } from 'next-intl'
 
 interface Client {
   id?: string
@@ -34,6 +35,9 @@ interface ClientModalProps {
 }
 
 export default function ClientModal({ isOpen, onClose, client, onSuccess }: ClientModalProps) {
+  const t = useTranslations('admin.clients.modal')
+  const tServices = useTranslations('admin.clients.services')
+  const tBuilding = useTranslations('admin.newProject.buildingTypes')
   const [loading, setLoading] = useState(false)
   const isEdit = !!client
 
@@ -136,7 +140,7 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
                 <h2 className="text-xl font-semibold text-gray-900">
-                  {isEdit ? 'Edit Client' : 'New Client'}
+                  {isEdit ? t('editClientTitle') : t('newClientTitle')}
                 </h2>
                 <button
                   onClick={onClose}
@@ -151,16 +155,16 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                 <div className="p-6 space-y-8">
                   {/* Project Details */}
                   <div>
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">Project Details</h3>
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">{t('projectDetails')}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          First Name *
+                          {t('firstName')}
                         </label>
                         <input
                           {...register('firstName', { required: 'First name is required' })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="First name"
+                          placeholder={t('firstNamePlaceholder')}
                         />
                         {errors.firstName && (
                           <p className="mt-1 text-sm text-red-600">{errors.firstName.message}</p>
@@ -169,12 +173,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Last Name *
+                          {t('lastName')}
                         </label>
                         <input
                           {...register('lastName', { required: 'Last name is required' })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="Last name"
+                          placeholder={t('lastNamePlaceholder')}
                         />
                         {errors.lastName && (
                           <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>
@@ -183,7 +187,7 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          From Date *
+                          {t('fromDate')}
                         </label>
                         <input
                           type="datetime-local"
@@ -197,7 +201,7 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Until Date *
+                          {t('untilDate')}
                         </label>
                         <input
                           type="datetime-local"
@@ -211,12 +215,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Mobile *
+                          {t('mobile')}
                         </label>
                         <input
                           {...register('phone', { required: 'Phone is required' })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="Phone number"
+                          placeholder={t('mobilePlaceholder')}
                         />
                         {errors.phone && (
                           <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
@@ -225,25 +229,25 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          E-mail
+                          {t('email')}
                         </label>
                         <input
                           type="email"
                           {...register('email')}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="Email address"
+                          placeholder={t('emailPlaceholder')}
                         />
                       </div>
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Square Meters *
+                          {t('squareMeters')}
                         </label>
                         <input
                           type="number"
                           {...register('squareMeters', { required: 'Square meters is required', min: 1 })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="Square meters"
+                          placeholder={t('squareMetersPlaceholder')}
                         />
                         {errors.squareMeters && (
                           <p className="mt-1 text-sm text-red-600">{errors.squareMeters.message}</p>
@@ -252,12 +256,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Address *
+                          {t('address')}
                         </label>
                         <input
                           {...register('address', { required: 'Address is required' })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="Street address"
+                          placeholder={t('addressPlaceholder')}
                         />
                         {errors.address && (
                           <p className="mt-1 text-sm text-red-600">{errors.address.message}</p>
@@ -266,12 +270,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Location *
+                          {t('location')}
                         </label>
                         <input
                           {...register('location', { required: 'Location is required' })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="City"
+                          placeholder={t('locationPlaceholder')}
                         />
                         {errors.location && (
                           <p className="mt-1 text-sm text-red-600">{errors.location.message}</p>
@@ -280,12 +284,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Postal Code *
+                          {t('postalCode')}
                         </label>
                         <input
                           {...register('postalCode', { required: 'Postal code is required' })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="Postal code"
+                          placeholder={t('postalCodePlaceholder')}
                         />
                         {errors.postalCode && (
                           <p className="mt-1 text-sm text-red-600">{errors.postalCode.message}</p>
@@ -294,28 +298,29 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Service Type *
+                          {t('serviceType')}
                         </label>
                         <select
                           {...register('serviceType', { required: 'Service type is required' })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >
-                          <option value="Apartment cleaning">Apartment cleaning</option>
-                          <option value="House cleaning">House cleaning</option>
-                          <option value="Stairwell cleaning">Stairwell cleaning</option>
-                          <option value="Office cleaning">Office cleaning</option>
-                          <option value="Final cleaning">Final cleaning</option>
-                          <option value="Window cleaning">Window cleaning</option>
-                          <option value="Relocation">Relocation</option>
-                          <option value="Disposal">Disposal</option>
-                          <option value="Gastronomy cleaning">Gastronomy cleaning</option>
-                          <option value="Medical cleaning">Medical cleaning</option>
-                          <option value="Construction cleaning">Construction cleaning</option>
-                          <option value="Property maintenance">Property maintenance</option>
-                          <option value="Special cleaning">Special cleaning</option>
-                          <option value="Combo service">Combo service</option>
-                          <option value="Maintenance cleaning">Maintenance cleaning</option>
-                          <option value="Household helping">Household helping</option>
+                          <option value="House Cleaning">{tServices('houseCleaning')}</option>
+                          <option value="Apartment cleaning">{tServices('apartmentCleaning')}</option>
+                          <option value="Stairwell Cleaning">{tServices('stairwellCleaning')}</option>
+                          <option value="Office Cleaning">{tServices('officeCleaning')}</option>
+                          <option value="Final Cleaning">{tServices('finalCleaning')}</option>
+                          <option value="Window Cleaning">{tServices('windowCleaning')}</option>
+                          <option value="Relocation">{tServices('relocation')}</option>
+                          <option value="Disposal">{tServices('disposal')}</option>
+                          <option value="Gastronomy Cleaning">{tServices('gastronomyCleaning')}</option>
+                          <option value="Medical Cleaning">{tServices('medicalCleaning')}</option>
+                          <option value="Construction Cleaning">{tServices('constructionCleaning')}</option>
+                          <option value="Property Maintenance">{tServices('propertyMaintenance')}</option>
+                          <option value="Special Cleaning">{tServices('specialCleaning')}</option>
+                          <option value="Combo Service">{tServices('comboService')}</option>
+                          <option value="Maintenance Cleaning">{tServices('maintenanceCleaning')}</option>
+                          <option value="Household Helping">{tServices('householdHelping')}</option>
+                          <option value="Facility Services">{tServices('facilityServices')}</option>
                         </select>
                         {errors.serviceType && (
                           <p className="mt-1 text-sm text-red-600">{errors.serviceType.message}</p>
@@ -324,21 +329,21 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Building Type *
+                          {t('buildingType')}
                         </label>
                         <select
                           {...register('buildingType', { required: 'Building type is required' })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >
-                          <option value="Apartment">Apartment</option>
-                          <option value="House">House</option>
-                          <option value="WG Room">WG Room</option>
-                          <option value="Office">Office</option>
-                          <option value="Studio">Studio</option>
-                          <option value="Storage/Cellar">Storage/Cellar</option>
-                          <option value="Restaurant">Restaurant</option>
-                          <option value="Commercial">Commercial</option>
-                          <option value="Other">Other</option>
+                          <option value="Apartment">{tBuilding('apartment')}</option>
+                          <option value="House">{tBuilding('house')}</option>
+                          <option value="WG Room">{tBuilding('wgRoom')}</option>
+                          <option value="Office">{tBuilding('office')}</option>
+                          <option value="Studio">{tBuilding('studio')}</option>
+                          <option value="Storage/Cellar">{tBuilding('storageCellar')}</option>
+                          <option value="Restaurant">{tBuilding('restaurant')}</option>
+                          <option value="Commercial">{tBuilding('commercial')}</option>
+                          <option value="Other">{tBuilding('other')}</option>
                         </select>
                         {errors.buildingType && (
                           <p className="mt-1 text-sm text-red-600">{errors.buildingType.message}</p>
@@ -348,12 +353,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                   </div>
 
                   {/* Payment Details */}
-                  <div>
-                    <h3 className="text-lg font-medium text-gray-900 mb-4">Payment Details</h3>
+                  <div className="pt-6 border-t border-gray-200">
+                    <h3 className="text-lg font-medium text-gray-900 mb-4">{t('paymentDetails')}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Total Price *
+                          {t('totalPrice')}
                         </label>
                         <input
                           type="number"
@@ -369,7 +374,7 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Paid Amount
+                          {t('paidAmount')} (CHF)
                         </label>
                         <input
                           type="number"
@@ -382,7 +387,7 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Balance
+                          {t('balance')} (CHF)
                         </label>
                         <input
                           type="number"
@@ -398,25 +403,30 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                 </div>
 
                 {/* Footer */}
-                <div className="flex items-center justify-end space-x-4 p-6 border-t border-gray-200 bg-gray-50">
+                <div className="flex items-center justify-end px-6 py-4 border-t border-gray-200 bg-gray-50">
                   <button
                     type="button"
                     onClick={onClose}
-                    className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="px-4 py-2 text-gray-700 hover:text-gray-900 mr-3"
                   >
-                    Cancel
+                    {t('cancel')}
                   </button>
                   <button
                     type="submit"
                     disabled={loading}
-                    className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2 transition-colors"
+                    className="flex items-center px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-500/50 disabled:opacity-50 transition-colors"
                   >
                     {loading ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <>
+                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                        {t('saving')}
+                      </>
                     ) : (
-                      <Save className="w-4 h-4" />
+                      <>
+                        <Save className="w-5 h-5 mr-2" />
+                        {t('save')}
+                      </>
                     )}
-                    <span>{loading ? 'Saving...' : 'Save'}</span>
                   </button>
                 </div>
               </form>

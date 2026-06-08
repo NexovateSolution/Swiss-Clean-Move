@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
                 handoverTime: 'Abgabezeit:',
                 contactPerson: 'Ansprechpartner:',
                 paymentMethod: 'Zahlungsart:',
-                paymentMethodValue: 'Rechnung (QR)',
+                paymentMethodValue: 'Bar',
                 propertyType: 'Objekttyp:',
                 floor: 'Stockwerk:',
                 area: 'Fl\u00e4che:',
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
                 defaultServiceDesc: 'Professionelle Dienstleistung gem\u00e4ss Schweizer Standard.',
                 scopeOfServices: 'LEISTUNGSUMFANG',
                 swissStandard: 'Alle Arbeiten werden nach h\u00f6chsten Schweizer Qualit\u00e4tsstandards ausgef\u00fchrt.',
-                totalFixedPrice: 'TOTAL FESTPREIS INKL. MWST.',
+                totalFixedPrice: 'TOTAL FESTPREIS',
                 fixedPriceSub: 'Festpreis - keine zus\u00e4tzlichen Kosten',
                 acceptanceGuarantee: 'ABNAHMEGARANTIE',
                 acceptanceGuaranteeDesc: 'Zufriedenheitsgarantie bei \u00dcbergabe. M\u00e4ngel werden kostenlos nachgebessert.',
@@ -183,7 +183,7 @@ export async function POST(request: NextRequest) {
                 handoverTime: 'Heure de remise:',
                 contactPerson: 'Personne de contact:',
                 paymentMethod: 'Mode de paiement:',
-                paymentMethodValue: 'Facture (QR)',
+                paymentMethodValue: 'Comptant',
                 propertyType: 'Type d\'objet:',
                 floor: '\u00c9tage:',
                 area: 'Surface:',
@@ -195,7 +195,7 @@ export async function POST(request: NextRequest) {
                 defaultServiceDesc: 'Service professionnel selon les normes suisses.',
                 scopeOfServices: '\u00c9TENDUE DES SERVICES',
                 swissStandard: 'Tous les travaux sont ex\u00e9cut\u00e9s selon les normes suisses de qualit\u00e9 les plus \u00e9lev\u00e9es.',
-                totalFixedPrice: 'TOTAL PRIX FIXE TTC',
+                totalFixedPrice: 'TOTAL PRIX FIXE',
                 fixedPriceSub: 'Prix fixe - pas de frais suppl\u00e9mentaires',
                 acceptanceGuarantee: 'GARANTIE DE R\u00c9CEPTION',
                 acceptanceGuaranteeDesc: 'Garantie de satisfaction \u00e0 la remise. Les d\u00e9fauts sont corrig\u00e9s gratuitement.',
@@ -277,7 +277,7 @@ export async function POST(request: NextRequest) {
                 handoverTime: 'Handover Time:',
                 contactPerson: 'Contact Person:',
                 paymentMethod: 'Payment Method:',
-                paymentMethodValue: 'Invoice (QR)',
+                paymentMethodValue: 'Cash',
                 propertyType: 'Property Type:',
                 floor: 'Floor:',
                 area: 'Area:',
@@ -289,7 +289,7 @@ export async function POST(request: NextRequest) {
                 defaultServiceDesc: 'Professional service according to Swiss standards.',
                 scopeOfServices: 'SCOPE OF SERVICES',
                 swissStandard: 'All work is carried out according to the highest Swiss quality standards.',
-                totalFixedPrice: 'TOTAL FIXED PRICE INCL. VAT',
+                totalFixedPrice: 'TOTAL FIXED PRICE',
                 fixedPriceSub: 'Fixed price - no additional costs',
                 acceptanceGuarantee: 'ACCEPTANCE GUARANTEE',
                 acceptanceGuaranteeDesc: 'Satisfaction guarantee at handover. Defects are corrected free of charge.',
@@ -405,8 +405,10 @@ export async function POST(request: NextRequest) {
             '6+ floor': { en: '6+ floor', de: '6+ Stockwerk', fr: '6ème étage et plus' }
         };
 
-        const translatedService = client.serviceType ? (serviceMap[client.serviceType]?.[language as string] || client.serviceType) : '';
-        const translatedFloor = client.floor ? (floorMap[client.floor]?.[language as string] || client.floor) : '';
+        const serviceKey = client.serviceType ? Object.keys(serviceMap).find(k => k.toLowerCase() === client.serviceType?.toLowerCase()) : undefined;
+        const translatedService = serviceKey ? (serviceMap[serviceKey]?.[language as string] || client.serviceType) : (client.serviceType || '');
+        const floorKey = client.floor ? Object.keys(floorMap).find(k => k.toLowerCase() === client.floor?.toLowerCase()) : undefined;
+        const translatedFloor = floorKey ? (floorMap[floorKey]?.[language as string] || client.floor) : (client.floor || '');
 
         if (translatedService) {
             t.title = {
@@ -684,7 +686,6 @@ export async function POST(request: NextRequest) {
                 <div class="total-box">
                     <div class="total-box-title">${t.totalFixedPrice}</div>
                     <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
-                    <div class="total-box-sub">${t.fixedPriceSub}</div>
                 </div>
             </div>
         </div>
@@ -824,16 +825,7 @@ export async function POST(request: NextRequest) {
                         <div class="payment-part-content">
                             <!-- Left Column of Payment Part -->
                             <div class="payment-col-left">
-                                <div class="qr-code-wrapper">
-                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=174x174&data=https%3A%2F%2Fswisscleanmove.ch&margin=0" alt="QR Code">
-                                    <!-- Swiss Cross Overlay -->
-                                    <div class="qr-cross">
-                                        <div style="width: 28px; height: 28px; background: #000; border: 2px solid #fff; position: relative;">
-                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 18px; height: 4px; background: #fff;"></div>
-                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 4px; height: 18px; background: #fff;"></div>
-                                        </div>
-                                    </div>
-                                </div>
+    
                                 
                                 <div class="amount-area-payment">
                                     <div class="amount-col">
