@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '../../../../../lib/db'
 import { authenticateRequest } from '../../../../../lib/auth'
-import { put } from '@vercel/blob'
+import { writeFile, mkdir } from 'fs/promises'
+import { join } from 'path'
+import { existsSync } from 'fs'
 
 export async function POST(request: NextRequest) {
   try {
@@ -32,30 +34,53 @@ export async function POST(request: NextRequest) {
     // Generate unique filename
     const timestamp = Date.now()
     const extension = file.name.split('.').pop()
-    const filename = `clients/${clientId}/${timestamp}.${extension}`
+    const uniqueFilename = `${timestamp}-${Math.round(Math.random() * 1E9)}.${extension}`
 
-    // Upload to Vercel Blob
-    const blob = await put(filename, file, {
-      access: 'public',
-      addRandomSuffix: false,
-    })
+    let url: string
+    let savedFilename: string
+
+    const isVercel = process.env.VERCEL === '1'
+
+    if (isVercel && process.env.BLOB_READ_WRITE_TOKEN) {
+      // Production: use Vercel Blob
+      const { put } = await import('@vercel/blob')
+      const blobPath = `clients/${clientId}/${uniqueFilename}`
+      const blob = await put(blobPath, file, {
+        access: 'public',
+        addRandomSuffix: false,
+      })
+      url = blob.url
+      savedFilename = blobPath
+    } else {
+      // Local / dev: save to public/uploads/clients
+      const uploadDir = join(process.cwd(), 'public', 'uploads', 'clients', clientId)
+      if (!existsSync(uploadDir)) await mkdir(uploadDir, { recursive: true })
+
+      const bytes = await file.arrayBuffer()
+      const buffer = Buffer.from(bytes)
+      const filepath = join(uploadDir, uniqueFilename)
+      await writeFile(filepath, buffer)
+
+      url = `/uploads/clients/${clientId}/${uniqueFilename}`
+      savedFilename = uniqueFilename
+    }
 
     // Save to database
     const photo = await prisma.photo.create({
       data: {
         clientId,
-        filename,
+        filename: savedFilename,
         originalName: file.name,
-        url: blob.url,
+        url,
         size: file.size,
         mimeType: file.type
       }
     })
 
     return NextResponse.json(photo, { status: 201 })
-  } catch (error) {
-    console.error('Error uploading photo:', error)
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  } catch (error: any) {
+    console.error('Error uploading photo:', error?.message || error)
+    return NextResponse.json({ error: 'Internal server error', details: error?.message }, { status: 500 })
   }
 }
 
