@@ -68,7 +68,7 @@ export default function ClientsPage() {
   const [paymentModal, setPaymentModal] = useState<{ open: boolean; client?: Client }>({ open: false })
   const [deleteModal, setDeleteModal] = useState<{ open: boolean; client?: Client }>({ open: false })
   const [photoModal, setPhotoModal] = useState<{ open: boolean; client?: Client }>({ open: false })
-  const [languageModal, setLanguageModal] = useState<{ open: boolean; client?: Client }>({ open: false })
+  const [languageModal, setLanguageModal] = useState<{ open: boolean; client?: Client; selectedLanguage?: 'en' | 'de' | 'fr' }>({ open: false })
   const [showExportMenu, setShowExportMenu] = useState(false)
   const [activeActionMenu, setActiveActionMenu] = useState<string | null>(null)
 
@@ -143,7 +143,7 @@ export default function ClientsPage() {
     setPhotoModal({ open: true, client })
   }
 
-  const generatePDFInvoice = async (client: Client, language: 'en' | 'de' | 'fr') => {
+  const generateInvoice = async (client: Client, language: 'en' | 'de' | 'fr', action: 'print' | 'pdf') => {
     try {
       // Generate and display invoice
       const response = await fetch('/api/admin/generate-invoice', {
@@ -159,20 +159,40 @@ export default function ClientsPage() {
 
       if (response.ok) {
         const html = await response.text()
-        const printWindow = window.open('', '_blank')
-        if (printWindow) {
-          printWindow.document.write(html)
-          printWindow.document.close()
-          printWindow.onload = () => {
-            setTimeout(() => {
-              printWindow.print()
-            }, 500)
+        
+        if (action === 'print') {
+          const printWindow = window.open('', '_blank')
+          if (printWindow) {
+            printWindow.document.write(html)
+            printWindow.document.close()
+            printWindow.onload = () => {
+              setTimeout(() => {
+                printWindow.print()
+              }, 500)
+            }
           }
+        } else if (action === 'pdf') {
+          toast.loading(t('toast.generatingPdf') || 'Generating PDF...', { id: 'pdf-gen' });
+          const html2pdf = (await import('html2pdf.js')).default;
+          const element = document.createElement('div');
+          element.innerHTML = html;
+          
+          const opt = {
+            margin:       0,
+            filename:     `Invoice-${client.firstName}-${client.lastName}.pdf`,
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2, useCORS: true },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+          };
+          
+          await html2pdf().set(opt).from(element).save();
+          toast.dismiss('pdf-gen');
+          toast.success('PDF downloaded successfully');
         }
 
         // Send invoice via email
         if (client.email) {
-          toast.loading(t('toast.sendingInvoice'))
+          toast.loading(t('toast.sendingInvoice'), { id: 'email-send' })
           const emailResponse = await fetch('/api/admin/send-invoice', {
             method: 'POST',
             headers: {
@@ -185,10 +205,10 @@ export default function ClientsPage() {
           })
 
           if (emailResponse.ok) {
-            toast.dismiss()
+            toast.dismiss('email-send')
             toast.success(t('toast.invoiceOpenedAndSent'))
           } else {
-            toast.dismiss()
+            toast.dismiss('email-send')
             toast.success(t('toast.invoiceOpened'))
             toast.error(t('toast.sendEmailFailed'), { duration: 3000 })
           }
@@ -200,9 +220,10 @@ export default function ClientsPage() {
         toast.error(t('toast.generateInvoiceFailed'))
       }
     } catch (error) {
+      toast.dismiss('pdf-gen')
       toast.error(t('toast.generateInvoiceError'))
     }
-    setLanguageModal({ open: false })
+    setLanguageModal({ open: false, selectedLanguage: undefined })
   }
 
   const getStatusLabel = (status: string) => {
@@ -831,43 +852,74 @@ export default function ClientsPage() {
         onSuccess={fetchClients}
       />
 
-      {/* Language Selection Modal */}
+      {/* Language / Action Selection Modal */}
       {languageModal.open && languageModal.client && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6">
             <div className="text-center mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('invoiceLanguage.title')}</h3>
-              <p className="text-gray-600">{t('invoiceLanguage.subtitle')}</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {!languageModal.selectedLanguage ? t('invoiceLanguage.title') : 'Select Output Format'}
+              </h3>
+              <p className="text-gray-600">
+                {!languageModal.selectedLanguage ? t('invoiceLanguage.subtitle') : 'Choose whether to print or download as PDF.'}
+              </p>
             </div>
 
-            <div className="space-y-3">
-              <button
-                onClick={() => generatePDFInvoice(languageModal.client!, 'de')}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
-              >
-                <span>🇩🇪</span>
-                <span>{t('invoiceLanguage.german')}</span>
-              </button>
+            {!languageModal.selectedLanguage ? (
+              <div className="space-y-3">
+                <button
+                  onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: 'de' })}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                >
+                  <span>🇩🇪</span>
+                  <span>{t('invoiceLanguage.german')}</span>
+                </button>
 
-              <button
-                onClick={() => generatePDFInvoice(languageModal.client!, 'fr')}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
-              >
-                <span>🇫🇷</span>
-                <span>{t('invoiceLanguage.french')}</span>
-              </button>
+                <button
+                  onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: 'fr' })}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                >
+                  <span>🇫🇷</span>
+                  <span>{t('invoiceLanguage.french')}</span>
+                </button>
 
-              <button
-                onClick={() => generatePDFInvoice(languageModal.client!, 'en')}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
-              >
-                <span>🇬🇧</span>
-                <span>{t('invoiceLanguage.english')}</span>
-              </button>
-            </div>
+                <button
+                  onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: 'en' })}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                >
+                  <span>🇬🇧</span>
+                  <span>{t('invoiceLanguage.english')}</span>
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                <button
+                  onClick={() => generateInvoice(languageModal.client!, languageModal.selectedLanguage!, 'print')}
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                >
+                  <FileText className="w-5 h-5" />
+                  <span>Print & Send Email</span>
+                </button>
+
+                <button
+                  onClick={() => generateInvoice(languageModal.client!, languageModal.selectedLanguage!, 'pdf')}
+                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                >
+                  <Download className="w-5 h-5" />
+                  <span>Download PDF & Send Email</span>
+                </button>
+
+                <button
+                  onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: undefined })}
+                  className="w-full mt-2 bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center"
+                >
+                  Back to Languages
+                </button>
+              </div>
+            )}
 
             <button
-              onClick={() => setLanguageModal({ open: false })}
+              onClick={() => setLanguageModal({ open: false, selectedLanguage: undefined })}
               className="w-full mt-4 bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors"
             >
               {t('actions.cancel')}

@@ -27,6 +27,7 @@
     "bcryptjs": "^2.4.3",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
+    "html2pdf.js": "^0.14.0",
     "jsonwebtoken": "^9.0.2",
     "jspdf": "^3.0.4",
     "jspdf-autotable": "^5.0.2",
