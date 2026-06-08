@@ -575,6 +575,10 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <div class="customer-address">
                     ${clientName}<br>
                     <span>${invoiceAddr ? invoiceAddr + '<br>' : ''}${invoiceZip} ${invoiceCity}</span>
+                    <div style="margin-top: 10px; font-size: 11px;">
+                        ${client.phone ? `<div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;"><span style="font-size: 12px; color: #00205B;">📞</span> <span>${client.phone}</span></div>` : ''}
+                        ${client.email ? `<div style="display: flex; align-items: center; gap: 6px;"><span style="font-size: 12px; color: #00205B;">✉</span> <span>${client.email}</span></div>` : ''}
+                    </div>
                 </div>
             </div>
             <div class="order-card">
@@ -593,14 +597,6 @@ function generateInvoiceHTML(client: any, language: string): string {
 
         <!-- Info Columns -->
         <div class="info-columns">
-            <!-- KUNDE -->
-            <div class="info-col">
-                <div class="info-col-title">${t.customer || 'KUNDE'}</div>
-                <div class="info-row"><span class="info-icon">👤</span><span class="info-val"><span>${clientName}</span></span></div>
-                <div class="info-row"><span class="info-icon">📍</span><span class="info-val"><span>${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</span></span></div>
-                <div class="info-row"><span class="info-icon">📞</span><span class="info-val"><span>${client.phone || '-'}</span></span></div>
-                <div class="info-row"><span class="info-icon">✉</span><span class="info-val"><span>${client.email || '-'}</span></span></div>
-            </div>
             <!-- AUFTRAGSDATEN -->
             <div class="info-col">
                 <div class="info-col-title">${t.orderData || 'AUFTRAGSDATEN'}</div>
