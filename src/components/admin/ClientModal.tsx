@@ -55,8 +55,66 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
 
   useEffect(() => {
     if (client) {
+      // Complete mapping to catch German/French DB values and map back to English
+      const serviceMap: Record<string, string[]> = {
+        'House Cleaning': ['house cleaning', 'hausreinigung', 'nettoyage de maison'],
+        'Apartment cleaning': ['apartment cleaning', 'wohnungsreinigung', "nettoyage d'appartement"],
+        'Stairwell Cleaning': ['stairwell cleaning', 'treppenhausreinigung', "nettoyage de cage d'escalier"],
+        'Office Cleaning': ['office cleaning', 'büroreinigung', 'nettoyage de bureau'],
+        'Final Cleaning': ['final cleaning', 'endreinigung / umzugsreinigung', 'nettoyage de fin de bail', 'endreinigung', 'umzugsreinigung'],
+        'Window Cleaning': ['window cleaning', 'fensterreinigung', 'nettoyage de vitres'],
+        'Relocation': ['relocation', 'umzug', 'déménagement'],
+        'Combo Service': ['combo service', 'kombi-angebot', 'offre combinée'],
+        'Disposal': ['disposal', 'räumung / entsorgung', 'débarras / élimination', 'räumung', 'entsorgung'],
+        'Gastronomy Cleaning': ['gastronomy cleaning', 'gastronomiereinigung', 'nettoyage gastronomique'],
+        'Medical Cleaning': ['medical cleaning', 'praxisreinigung', 'nettoyage de cabinet médical'],
+        'Construction Cleaning': ['construction cleaning', 'baureinigung', 'nettoyage de fin de chantier'],
+        'Property Maintenance': ['property maintenance', 'hauswartung', 'conciergerie / entretien', 'conciergerie', 'entretien'],
+        'Special Cleaning': ['special cleaning', 'spezialreinigung', 'nettoyage spécial'],
+        'Household Helping': ['household helping', 'haushaltshilfe', 'aide ménagère'],
+        'Maintenance Cleaning': ['maintenance cleaning', 'unterhaltsreinigung', "nettoyage d'entretien"],
+        'Facility Services': ['facility services', 'facility services', 'services généraux']
+      };
+
+      const buildingMap: Record<string, string[]> = {
+        'Apartment': ['apartment', 'wohnung', 'appartement'],
+        'House': ['house', 'haus', 'maison'],
+        'WG Room': ['wg room', 'wg-zimmer', 'chambre en colocation'],
+        'Office': ['office', 'büro', 'bureau'],
+        'Studio': ['studio', 'studio', 'studio'],
+        'Storage/Cellar': ['storage/cellar', 'lager/keller', 'cave/entrepôt', 'lager', 'keller'],
+        'Restaurant': ['restaurant', 'restaurant', 'restaurant'],
+        'Commercial': ['commercial', 'gewerbe', 'commercial'],
+        'Other': ['other', 'andere', 'sonstiges', 'autre']
+      };
+
+      let matchedService = client.serviceType;
+      if (client.serviceType) {
+        const lowerVal = client.serviceType.toLowerCase();
+        for (const [key, variants] of Object.entries(serviceMap)) {
+          if (variants.includes(lowerVal)) {
+            matchedService = key;
+            break;
+          }
+        }
+      }
+
+      let matchedBuilding = client.buildingType;
+      if (client.buildingType) {
+        const lowerVal = client.buildingType.toLowerCase();
+        for (const [key, variants] of Object.entries(buildingMap)) {
+          if (variants.includes(lowerVal)) {
+            matchedBuilding = key;
+            break;
+          }
+        }
+      }
+
       reset({
         ...client,
+        serviceType: matchedService,
+        buildingType: matchedBuilding,
+        location: client.location || '',
         fromDate: client.fromDate ? new Date(client.fromDate).toISOString().slice(0, 16) : '',
         untilDate: client.untilDate ? new Date(client.untilDate).toISOString().slice(0, 16) : ''
       })

@@ -405,10 +405,37 @@ export async function POST(request: NextRequest) {
             '6+ floor': { en: '6+ floor', de: '6+ Stockwerk', fr: '6ème étage et plus' }
         };
 
-        const serviceKey = client.serviceType ? Object.keys(serviceMap).find(k => k.toLowerCase() === client.serviceType?.toLowerCase()) : undefined;
-        const translatedService = serviceKey ? (serviceMap[serviceKey]?.[language as string] || client.serviceType) : (client.serviceType || '');
-        const floorKey = client.floor ? Object.keys(floorMap).find(k => k.toLowerCase() === client.floor?.toLowerCase()) : undefined;
-        const translatedFloor = floorKey ? (floorMap[floorKey]?.[language as string] || client.floor) : (client.floor || '');
+        const buildingMap: Record<string, Record<string, string>> = {
+            'Apartment': { en: 'Apartment', de: 'Wohnung', fr: 'Appartement' },
+            'House': { en: 'House', de: 'Haus', fr: 'Maison' },
+            'WG Room': { en: 'WG Room', de: 'WG-Zimmer', fr: 'Chambre en colocation' },
+            'Office': { en: 'Office', de: 'Büro', fr: 'Bureau' },
+            'Studio': { en: 'Studio', de: 'Studio', fr: 'Studio' },
+            'Storage/Cellar': { en: 'Storage/Cellar', de: 'Lager/Keller', fr: 'Cave/Entrepôt' },
+            'Restaurant': { en: 'Restaurant', de: 'Restaurant', fr: 'Restaurant' },
+            'Commercial': { en: 'Commercial', de: 'Gewerbe', fr: 'Commercial' },
+            'Other': { en: 'Other', de: 'Andere', fr: 'Autre' }
+        };
+
+        const getBaseKey = (val: string | null | undefined, map: Record<string, Record<string, string>>) => {
+            if (!val) return undefined;
+            const lowerVal = val.toLowerCase();
+            for (const [key, translations] of Object.entries(map)) {
+                if (key.toLowerCase() === lowerVal || Object.values(translations).some(t => t.toLowerCase() === lowerVal)) {
+                    return key;
+                }
+            }
+            return undefined;
+        }
+
+        const serviceKey = getBaseKey(client.serviceType, serviceMap);
+        const translatedService = serviceKey ? (serviceMap[serviceKey][language as string] || client.serviceType) : (client.serviceType || '');
+        
+        const floorKey = getBaseKey(client.floor, floorMap);
+        const translatedFloor = floorKey ? (floorMap[floorKey][language as string] || client.floor) : (client.floor || '');
+        
+        const buildingKey = getBaseKey(client.buildingType, buildingMap);
+        const translatedBuilding = buildingKey ? (buildingMap[buildingKey][language as string] || client.buildingType) : (client.buildingType || '');
 
         if (translatedService) {
             t.title = {
@@ -476,7 +503,7 @@ export async function POST(request: NextRequest) {
             .order-ref-val { font-size: 13px; color: #000; margin-top: 3px; }
 
             /* -- Title Section -- */
-            .main-title { font-size: 32px; font-weight: bold; color: #00205B; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+            .main-title { font-size: 18px; font-weight: bold; color: #00205B; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
             .sub-title { font-size: 13px; color: #555; margin-bottom: 30px; }
 
             /* -- 3 Columns Info -- */
@@ -644,8 +671,8 @@ export async function POST(request: NextRequest) {
             <div class="info-col">
                 <div class="info-col-title">${t.object}</div>
                 <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${client.address || '-'}<br>${client.postalCode || ''} ${client.location || ''}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType}</span><span class="info-val"><span>${(client as any).propertyType || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor || client.floor || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType}</span><span class="info-val"><span>${translatedBuilding || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor || '-'}</span></span></div>
                 <div class="info-row"><span class="info-label" style="width: 70px;">${t.area}</span><span class="info-val"><span>${client.squareMeters ? t.areaPrefix + ' ' + client.squareMeters + ' m²' : '-'}</span></span></div>
             </div>
         </div>
