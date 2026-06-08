@@ -149,278 +149,428 @@ function generateInvoiceHTML(client: any, language: string): string {
     const logoBuffer = readFileSync(logoPath);
     const LOGO_BASE64 = logoBuffer.toString('base64');
 
-    const t: any = {
-        de: {
-            title: 'Reinigung Auftragsbestätigung',
-            orderNumber: 'Bestellnummer',
-            date: 'Reinigungsdatum',
-            clientStartTime: 'Beginn beim Kunden',
-            cleaningCompleted: 'Reinigung Übergabe',
-            paymentCondition: 'Zahlungsbedingung',
-            thankYou: 'Vielen Dank für Ihren Auftrag. Gerne bestätigen wir Ihnen folgendes Angebot.',
-            greeting: 'Sehr geehrte(r)',
-            regards: 'Mit freundlichen Grüßen',
-            companyName: 'SwissCleanMove',
-            service: 'Leistung',
-            details: 'Details',
-            amount: 'Betrag',
-            subtotal: 'Zwischensumme',
-            vat: 'MwSt 8.1%',
-            total: 'Gesamtbetrag',
-            cashPayment: 'Barzahlung nach Übergabedatum beim Teamleiter',
-            serviceDetails: 'Leistungsdetails',
-            additionalInfo: 'Zusätzliche Informationen',
-            location: 'Ort',
-            receiptSlip: 'Empfangsschein',
-            paymentPart: 'Zahlteil',
-            accountPayableTo: 'Konto / Zahlbar an',
-            reference: 'Referenz',
-            payableBy: 'Zahlbar durch',
-            currency: 'Währung',
-            chf: 'CHF',
-            room: 'Zimmer',
-            page: 'Seite',
-            guarantee: 'Übergabegarantie Inkl. 8.1% MwSt Pauschal',
-            customerSignature: 'Unterschrift Kunde',
-            teamSignature: 'Unterschrift Teamleiter',
-            type: 'Typ',
-            livingArea: 'Wohnfläche',
-            floorLabel: 'Stockwerk',
-            elevatorLabel: 'Aufzug',
-            withElevator: 'Mit Lift',
-            withoutElevator: 'Ohne Lift',
-            remarks: 'Bemerkungen:',
-            invoiceRef: 'Referenz',
-            invoiceDate: 'Rechnungsdatum',
-            paymentDeadline: 'Zahlungsfrist',
-            acceptancePoint: 'Annahmestelle',
-            additionalInfoQr: 'Zusätzliche Informationen',
-            invoiceLabel: 'Rechnung'
-        },
-        fr: {
-            title: 'Confirmation de commande de nettoyage',
-            orderNumber: 'Numéro de commande',
-            date: 'Date de nettoyage',
-            clientStartTime: 'Début chez le client',
-            cleaningCompleted: 'Remise du nettoyage',
-            paymentCondition: 'Condition de paiement',
-            thankYou: 'Merci pour votre commande. Nous avons le plaisir de vous confirmer l offre suivante.',
-            greeting: 'Cher/Chère',
-            regards: 'Cordialement',
-            companyName: 'SwissCleanMove',
-            service: 'Service',
-            details: 'Détails',
-            amount: 'Montant',
-            subtotal: 'Sous-total',
-            vat: 'TVA 8.1%',
-            total: 'Total',
-            cashPayment: 'Paiement en espèces après la remise',
-            serviceDetails: 'Détails du service',
-            additionalInfo: 'Informations supplémentaires',
-            location: 'Lieu',
-            receiptSlip: 'Reçu',
-            paymentPart: 'Partie paiement',
-            accountPayableTo: 'Compte / Payable à',
-            reference: 'Référence',
-            payableBy: 'Payable par',
-            currency: 'Devise',
-            chf: 'CHF',
-            room: 'Pièces',
-            page: 'Page',
-            guarantee: 'Garantie de remise incl. 8.1% TVA forfaitaire',
-            customerSignature: 'Signature du client',
-            teamSignature: 'Signature du chef d\'équipe',
-            type: 'Type',
-            livingArea: 'Surface habitable',
-            floorLabel: 'Étage',
-            elevatorLabel: 'Ascenseur',
-            withElevator: 'Avec ascenseur',
-            withoutElevator: 'Sans ascenseur',
-            remarks: 'Remarques:',
-            invoiceRef: 'Référence',
-            invoiceDate: 'Date de facture',
-            paymentDeadline: 'Délai de paiement',
-            acceptancePoint: 'Point de dépôt',
-            additionalInfoQr: 'Informations supplémentaires',
-            invoiceLabel: 'Facture'
-        },
-        en: {
-            title: 'Cleaning Order Confirmation',
-            orderNumber: 'Order Number',
-            date: 'Cleaning Date',
-            clientStartTime: 'Start at Client',
-            cleaningCompleted: 'Cleaning Handover',
-            paymentCondition: 'Payment Condition',
-            thankYou: 'Thank you for your order. We are pleased to confirm the following offer.',
-            greeting: 'Dear',
-            regards: 'Best regards',
-            companyName: 'SwissCleanMove',
-            service: 'Service',
-            details: 'Details',
-            amount: 'Amount',
-            subtotal: 'Subtotal',
-            vat: 'VAT 8.1%',
-            total: 'Total Amount',
-            cashPayment: 'Cash payment after handover',
-            serviceDetails: 'Service Details',
-            additionalInfo: 'Additional Information',
-            location: 'Location',
-            receiptSlip: 'Receipt',
-            paymentPart: 'Payment Part',
-            accountPayableTo: 'Account / Payable to',
-            reference: 'Reference',
-            payableBy: 'Payable by',
-            currency: 'Currency',
-            chf: 'CHF',
-            room: 'Rooms',
-            page: 'Page',
-            guarantee: 'Handover guarantee Incl. 8.1% VAT flat rate',
-            customerSignature: 'Customer Signature',
-            teamSignature: 'Team Leader Signature',
-            type: 'Type',
-            livingArea: 'Living area',
-            floorLabel: 'Floor',
-            elevatorLabel: 'Elevator',
-            withElevator: 'With elevator',
-            withoutElevator: 'Without elevator',
-            remarks: 'Remarks:',
-            invoiceRef: 'Reference',
-            invoiceDate: 'Invoice Date',
-            paymentDeadline: 'Payment Deadline',
-            acceptancePoint: 'Acceptance point',
-            additionalInfoQr: 'Additional information',
-            invoiceLabel: 'Invoice'
-        }
-    }[language] || { /* fallback */ };
-
-    const orderNumber = `#FE-${client.id.substring(client.id.length - 6).toUpperCase()}`
-    const currentDate = new Date().toLocaleDateString()
-    const clientName = `${client.prefix ? client.prefix + ' ' : ''}${client.firstName} ${client.lastName}`
-
-    const translator = createTranslator(language as string);
-    const { tKey, tVal } = translator;
-
-    let formattedRemarks: string[] = [];
-    const SKIP_KEYS = new Set(['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'urgency', 'frequency', 'serviceTimes', 'startDate', 'handoverDate', 'desiredStart', 'handoverTime', 'company']);
-
-    if ((client as any).data && typeof (client as any).data === 'object' && Object.keys((client as any).data).length > 0) {
-        const clientData = (client as any).data as Record<string, any>;
-        Object.entries(clientData).forEach(([key, val]) => {
-            if (SKIP_KEYS.has(key) || !val || (Array.isArray(val) && val.length === 0)) return;
-            
-            let displayVal = '';
-            if (Array.isArray(val)) {
-                displayVal = val.map(v => tVal(String(v))).join(', ');
-            } else if (typeof val === 'boolean') {
-                displayVal = val ? tVal('yes') : tVal('no');
-            } else {
-                displayVal = isNaN(Number(val)) ? tVal(String(val)) : String(val);
+        const t: any = {
+            de: {
+                title: 'Reinigung Auftragsbestätigung',
+                orderNumber: 'Bestellnummer',
+                date: 'Reinigungsdatum',
+                clientStartTime: 'Beginn beim Kunden',
+                cleaningCompleted: 'Reinigung Übergabe',
+                paymentCondition: 'Zahlungsbedingung',
+                thankYou: 'Vielen Dank für Ihren Auftrag. Gerne bestätigen wir Ihnen folgendes Angebot.',
+                greeting: 'Sehr geehrte(r)',
+                regards: 'Mit freundlichen Grüßen',
+                companyName: 'SwissCleanMove',
+                service: 'Leistung',
+                details: 'Details',
+                amount: 'Betrag',
+                subtotal: 'Zwischensumme',
+                vat: 'MwSt 8.1%',
+                total: 'Gesamtbetrag',
+                cashPayment: 'Barzahlung nach Übergabedatum beim Teamleiter',
+                serviceDetails: 'Leistungsdetails',
+                additionalInfo: 'Zusätzliche Informationen',
+                location: 'Ort',
+                receiptSlip: 'Empfangsschein',
+                paymentPart: 'Zahlteil',
+                accountPayableTo: 'Konto / Zahlbar an',
+                reference: 'Referenz',
+                payableBy: 'Zahlbar durch',
+                currency: 'Währung',
+                chf: 'CHF',
+                room: 'Zimmer',
+                page: 'Seite',
+                guarantee: 'Übergabegarantie Inkl. 8.1% MwSt Pauschal',
+                customerSignature: 'Unterschrift Kunde',
+                teamSignature: 'Unterschrift Teamleiter',
+                type: 'Typ',
+                livingArea: 'Wohnfläche',
+                floorLabel: 'Stockwerk',
+                elevatorLabel: 'Aufzug',
+                withElevator: 'Mit Lift',
+                withoutElevator: 'Ohne Lift',
+                remarks: 'Bemerkungen:',
+                invoiceRef: 'Referenz',
+                invoiceDate: 'Rechnungsdatum',
+                paymentDeadline: 'Zahlungsfrist',
+                acceptancePoint: 'Annahmestelle',
+                additionalInfoQr: 'Zusätzliche Informationen',
+                invoiceLabel: 'Rechnung',
+                tagline: 'Reinigung \u00b7 Umzug \u00b7 Facility Service',
+                subTitle: 'Professionelle Reinigungs- und Umzugsdienstleistungen nach Schweizer Qualit\u00e4tsstandard.',
+                customer: 'KUNDE',
+                orderData: 'AUFTRAGSDATEN',
+                object: 'OBJEKT',
+                serviceDate: 'Leistungsdatum:',
+                startTime: 'Startzeit:',
+                handoverTime: 'Abgabezeit:',
+                contactPerson: 'Ansprechpartner:',
+                paymentMethod: 'Zahlungsart:',
+                paymentMethodValue: 'Bar',
+                propertyType: 'Objekttyp:',
+                floor: 'Stockwerk:',
+                area: 'Fl\u00e4che:',
+                areaPrefix: 'ca.',
+                description: 'BESCHREIBUNG',
+                quantity: 'MENGE',
+                unitPrice: 'EINZELPREIS',
+                totalPrice: 'GESAMTPREIS',
+                defaultServiceDesc: 'Professionelle Dienstleistung gem\u00e4ss Schweizer Standard.',
+                scopeOfServices: 'LEISTUNGSUMFANG',
+                swissStandard: 'Alle Arbeiten werden nach h\u00f6chsten Schweizer Qualit\u00e4tsstandards ausgef\u00fchrt.',
+                totalFixedPrice: 'TOTAL FESTPREIS',
+                fixedPriceSub: 'Festpreis - keine zus\u00e4tzlichen Kosten',
+                acceptanceGuarantee: 'ABNAHMEGARANTIE',
+                acceptanceGuaranteeDesc: 'Zufriedenheitsgarantie bei \u00dcbergabe. M\u00e4ngel werden kostenlos nachgebessert.',
+                liabilityInsured: 'HAFTPFLICHTVERSICHERT',
+                liabilityInsuredDesc: 'Vollst\u00e4ndig versichert f\u00fcr Ihre Sicherheit und maximalen Schutz.',
+                swissQuality: 'SCHWEIZER QUALIT\u00c4T',
+                swissQualityDesc: 'Professionell, zuverl\u00e4ssig und p\u00fcnktlich - daf\u00fcr stehen wir ein.',
+                ecoFriendly: 'UMWELTFREUNDLICH',
+                ecoFriendlyDesc: 'Wir verwenden umweltfreundliche Reinigungsmittel und nachhaltige Methoden.',
+                nameLabel: 'Name:',
+                cleaningDateLabel: 'Reinigungsdatum:',
+                signatureLabel: 'Unterschrift:',
+                locationLabel: 'Ort:',
+                performancePeriod: 'LEISTUNGSZEITRAUM',
+                serviceStart: 'Leistungsbeginn:',
+                serviceEnd: 'Leistungsende:',
+                timeUnit: 'Uhr',
+                communication: 'KOMMUNIKATION',
+                communicationText: 'F\u00fcr Fragen oder \u00c4nderungen kontaktieren Sie uns bitte rechtzeitig.',
+                accountInformation: 'KONTOINFORMATIONEN',
+                bankName: 'Bankname',
+                accountHolder: 'Kontoinhaber',
+                accountNo: 'Konto-Nr.',
+                clearingNo: 'Clearing-Nr.'
+            },
+            fr: {
+                title: 'Confirmation de commande de nettoyage',
+                orderNumber: 'Numéro de commande',
+                date: 'Date de nettoyage',
+                clientStartTime: 'Début chez le client',
+                cleaningCompleted: 'Remise du nettoyage',
+                paymentCondition: 'Condition de paiement',
+                thankYou: 'Merci pour votre commande. Nous avons le plaisir de vous confirmer l offre suivante.',
+                greeting: 'Cher/Chère',
+                regards: 'Cordialement',
+                companyName: 'SwissCleanMove',
+                service: 'Service',
+                details: 'Détails',
+                amount: 'Montant',
+                subtotal: 'Sous-total',
+                vat: 'TVA 8.1%',
+                total: 'Total',
+                cashPayment: 'Paiement en espèces après la remise',
+                serviceDetails: 'Détails du service',
+                additionalInfo: 'Informations supplémentaires',
+                location: 'Lieu',
+                receiptSlip: 'Reçu',
+                paymentPart: 'Partie paiement',
+                accountPayableTo: 'Compte / Payable à',
+                reference: 'Référence',
+                payableBy: 'Payable par',
+                currency: 'Devise',
+                chf: 'CHF',
+                room: 'Pièces',
+                page: 'Page',
+                guarantee: 'Garantie de remise incl. 8.1% TVA forfaitaire',
+                customerSignature: 'Signature du client',
+                teamSignature: 'Signature du chef d\'équipe',
+                type: 'Type',
+                livingArea: 'Surface habitable',
+                floorLabel: 'Étage',
+                elevatorLabel: 'Ascenseur',
+                withElevator: 'Avec ascenseur',
+                withoutElevator: 'Sans ascenseur',
+                remarks: 'Remarques:',
+                invoiceRef: 'Référence',
+                invoiceDate: 'Date de facture',
+                paymentDeadline: 'Délai de paiement',
+                acceptancePoint: 'Point de dépôt',
+                additionalInfoQr: 'Informations supplémentaires',
+                invoiceLabel: 'Facture',
+                tagline: 'Nettoyage \u00b7 D\u00e9m\u00e9nagement \u00b7 Facility Service',
+                subTitle: 'Services professionnels de nettoyage et de d\u00e9m\u00e9nagement selon les normes suisses de qualit\u00e9.',
+                customer: 'CLIENT',
+                orderData: 'DONN\u00c9ES DE COMMANDE',
+                object: 'OBJET',
+                serviceDate: 'Date de service:',
+                startTime: 'Heure de d\u00e9but:',
+                handoverTime: 'Heure de remise:',
+                contactPerson: 'Personne de contact:',
+                paymentMethod: 'Mode de paiement:',
+                paymentMethodValue: 'Comptant',
+                propertyType: 'Type d\'objet:',
+                floor: '\u00c9tage:',
+                area: 'Surface:',
+                areaPrefix: 'env.',
+                description: 'DESCRIPTION',
+                quantity: 'QUANTIT\u00c9',
+                unitPrice: 'PRIX UNITAIRE',
+                totalPrice: 'PRIX TOTAL',
+                defaultServiceDesc: 'Service professionnel selon les normes suisses.',
+                scopeOfServices: '\u00c9TENDUE DES SERVICES',
+                swissStandard: 'Tous les travaux sont ex\u00e9cut\u00e9s selon les normes suisses de qualit\u00e9 les plus \u00e9lev\u00e9es.',
+                totalFixedPrice: 'TOTAL PRIX FIXE',
+                fixedPriceSub: 'Prix fixe - pas de frais suppl\u00e9mentaires',
+                acceptanceGuarantee: 'GARANTIE DE R\u00c9CEPTION',
+                acceptanceGuaranteeDesc: 'Garantie de satisfaction \u00e0 la remise. Les d\u00e9fauts sont corrig\u00e9s gratuitement.',
+                liabilityInsured: 'ASSURANCE RESPONSABILIT\u00c9',
+                liabilityInsuredDesc: 'Enti\u00e8rement assur\u00e9 pour votre s\u00e9curit\u00e9 et une protection maximale.',
+                swissQuality: 'QUALIT\u00c9 SUISSE',
+                swissQualityDesc: 'Professionnel, fiable et ponctuel \u2013 c\'est notre engagement.',
+                ecoFriendly: '\u00c9COLOGIQUE',
+                ecoFriendlyDesc: 'Nous utilisons des produits de nettoyage \u00e9cologiques et des m\u00e9thodes durables.',
+                nameLabel: 'Nom:',
+                cleaningDateLabel: 'Date de nettoyage:',
+                signatureLabel: 'Signature:',
+                locationLabel: 'Lieu:',
+                performancePeriod: 'P\u00c9RIODE DE SERVICE',
+                serviceStart: 'D\u00e9but du service:',
+                serviceEnd: 'Fin du service:',
+                timeUnit: 'h',
+                communication: 'COMMUNICATION',
+                communicationText: 'Pour toute question ou modification, veuillez nous contacter \u00e0 temps.',
+                accountInformation: 'INFORMATIONS BANCAIRES',
+                bankName: 'Nom de la banque',
+                accountHolder: 'Titulaire du compte',
+                accountNo: 'N\u00b0 de compte',
+                clearingNo: 'N\u00b0 de clearing'
+            },
+            en: {
+                title: 'Cleaning Order Confirmation',
+                orderNumber: 'Order Number',
+                date: 'Cleaning Date',
+                clientStartTime: 'Start at Client',
+                cleaningCompleted: 'Cleaning Handover',
+                paymentCondition: 'Payment Condition',
+                thankYou: 'Thank you for your order. We are pleased to confirm the following offer.',
+                greeting: 'Dear',
+                regards: 'Best regards',
+                companyName: 'SwissCleanMove',
+                service: 'Service',
+                details: 'Details',
+                amount: 'Amount',
+                subtotal: 'Subtotal',
+                vat: 'VAT 8.1%',
+                total: 'Total Amount',
+                cashPayment: 'Cash payment after handover',
+                serviceDetails: 'Service Details',
+                additionalInfo: 'Additional Information',
+                location: 'Location',
+                receiptSlip: 'Receipt',
+                paymentPart: 'Payment Part',
+                accountPayableTo: 'Account / Payable to',
+                reference: 'Reference',
+                payableBy: 'Payable by',
+                currency: 'Currency',
+                chf: 'CHF',
+                room: 'Rooms',
+                page: 'Page',
+                guarantee: 'Handover guarantee Incl. 8.1% VAT flat rate',
+                customerSignature: 'Customer Signature',
+                teamSignature: 'Team Leader Signature',
+                type: 'Type',
+                livingArea: 'Living area',
+                floorLabel: 'Floor',
+                elevatorLabel: 'Elevator',
+                withElevator: 'With elevator',
+                withoutElevator: 'Without elevator',
+                remarks: 'Remarks:',
+                invoiceRef: 'Reference',
+                invoiceDate: 'Invoice Date',
+                paymentDeadline: 'Payment Deadline',
+                acceptancePoint: 'Acceptance point',
+                additionalInfoQr: 'Additional information',
+                invoiceLabel: 'Invoice',
+                tagline: 'Cleaning \u00b7 Relocation \u00b7 Facility Service',
+                subTitle: 'Professional cleaning and relocation services according to Swiss quality standards.',
+                customer: 'CUSTOMER',
+                orderData: 'ORDER DATA',
+                object: 'PROPERTY',
+                serviceDate: 'Service Date:',
+                startTime: 'Start Time:',
+                handoverTime: 'Handover Time:',
+                contactPerson: 'Contact Person:',
+                paymentMethod: 'Payment Method:',
+                paymentMethodValue: 'Cash',
+                propertyType: 'Property Type:',
+                floor: 'Floor:',
+                area: 'Area:',
+                areaPrefix: 'approx.',
+                description: 'DESCRIPTION',
+                quantity: 'QUANTITY',
+                unitPrice: 'UNIT PRICE',
+                totalPrice: 'TOTAL PRICE',
+                defaultServiceDesc: 'Professional service according to Swiss standards.',
+                scopeOfServices: 'SCOPE OF SERVICES',
+                swissStandard: 'All work is carried out according to the highest Swiss quality standards.',
+                totalFixedPrice: 'TOTAL FIXED PRICE',
+                fixedPriceSub: 'Fixed price - no additional costs',
+                acceptanceGuarantee: 'ACCEPTANCE GUARANTEE',
+                acceptanceGuaranteeDesc: 'Satisfaction guarantee at handover. Defects are corrected free of charge.',
+                liabilityInsured: 'LIABILITY INSURED',
+                liabilityInsuredDesc: 'Fully insured for your safety and maximum protection.',
+                swissQuality: 'SWISS QUALITY',
+                swissQualityDesc: 'Professional, reliable, and punctual \u2013 that is our commitment.',
+                ecoFriendly: 'ECO-FRIENDLY',
+                ecoFriendlyDesc: 'We use eco-friendly cleaning products and sustainable methods.',
+                nameLabel: 'Name:',
+                cleaningDateLabel: 'Cleaning Date:',
+                signatureLabel: 'Signature:',
+                locationLabel: 'Location:',
+                performancePeriod: 'SERVICE PERIOD',
+                serviceStart: 'Service Start:',
+                serviceEnd: 'Service End:',
+                timeUnit: '',
+                communication: 'COMMUNICATION',
+                communicationText: 'For questions or changes, please contact us in a timely manner.',
+                accountInformation: 'ACCOUNT INFORMATION',
+                bankName: 'Bank Name',
+                accountHolder: 'Account Holder',
+                accountNo: 'Account No.',
+                clearingNo: 'Clearing No.'
             }
-            
-            formattedRemarks.push(`${tKey(key)}: ${displayVal}`);
-        });
-    } else if (client.remarks1) {
-        const parts = client.remarks1.split(' | ');
-        parts.forEach((p: string) => {
-            const [k, ...v] = p.split(': ');
-            if (!k || v.length === 0) {
-                formattedRemarks.push(p); return;
-            }
-            const rawKey = k.trim();
-            const rawVal = v.join(': ').trim();
-            const vals = rawVal.split(', ').map((rv: string) => tVal(rv));
-            formattedRemarks.push(`${tKey(rawKey)}: ${vals.join(', ')}`);
-        });
-    }
+        }[language as 'en' | 'de' | 'fr'] || { /* fallback */ };
 
-    let invoiceAddr = client.address || '';
-    let invoiceZip = client.postalCode || '';
-    let invoiceCity = client.location || '';
-    if (invoiceAddr && !invoiceZip && !invoiceCity) {
-        const match = invoiceAddr.match(/(.+?)(?:,\s*|\s+)(\d{4})\s+(.+)/);
-        if (match) {
-            invoiceAddr = match[1].trim();
-            invoiceZip = match[2];
-            invoiceCity = match[3].trim();
+                const d = new Date();
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        const randomNum = String(Math.floor(Math.random() * 1000)).padStart(3, '0');
+        const orderNumber = `SCM-${year}-${month}${day}-${randomNum}`
+        const currentDate = new Date().toLocaleDateString()
+
+        // Name formatting with prefix logic
+        const clientName = `${client.prefix ? client.prefix + ' ' : ''}${client.firstName} ${client.lastName}`
+
+        const translator = createTranslator(language as string);
+        const { tKey, tVal } = translator;
+
+        let formattedRemarks: string[] = [];
+        const SKIP_KEYS = new Set(['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'urgency', 'frequency', 'serviceTimes', 'startDate', 'handoverDate', 'desiredStart', 'handoverTime', 'company']);
+
+        if ((client as any).data && typeof (client as any).data === 'object' && Object.keys((client as any).data).length > 0) {
+            const clientData = (client as any).data as Record<string, any>;
+            Object.entries(clientData).forEach(([key, val]) => {
+                if (SKIP_KEYS.has(key) || !val || (Array.isArray(val) && val.length === 0)) return;
+                
+                let displayVal = '';
+                if (Array.isArray(val)) {
+                    displayVal = val.map(v => tVal(String(v))).join(', ');
+                } else if (typeof val === 'boolean') {
+                    displayVal = val ? tVal('yes') : tVal('no');
+                } else {
+                    displayVal = isNaN(Number(val)) ? tVal(String(val)) : String(val);
+                }
+                
+                formattedRemarks.push(`${tKey(key)}: ${displayVal}`);
+            });
+        } else if (client.remarks1) {
+            const parts = client.remarks1.split(' | ');
+            parts.forEach((p: string) => {
+                const [k, ...v] = p.split(': ');
+                if (!k || v.length === 0) {
+                    formattedRemarks.push(p); return;
+                }
+                const rawKey = k.trim();
+                const rawVal = v.join(': ').trim();
+                const vals = rawVal.split(', ').map((rv: string) => tVal(rv));
+                formattedRemarks.push(`${tKey(rawKey)}: ${vals.join(', ')}`);
+            });
         }
-    }
 
-    const serviceMap: Record<string, Record<string, string>> = {
-        'House Cleaning': { en: 'House Cleaning', de: 'Hausreinigung', fr: 'Nettoyage de maison' },
-        'Apartment Cleaning': { en: 'Apartment Cleaning', de: 'Wohnungsreinigung', fr: "Nettoyage d'appartement" },
-        'Stairwell Cleaning': { en: 'Stairwell Cleaning', de: 'Treppenhausreinigung', fr: "Nettoyage de cage d'escalier" },
-        'Office Cleaning': { en: 'Office Cleaning', de: 'Büroreinigung', fr: 'Nettoyage de bureau' },
-        'Final Cleaning': { en: 'Final Cleaning', de: 'Endreinigung / Umzugsreinigung', fr: 'Nettoyage de fin de bail' },
-        'Window Cleaning': { en: 'Window Cleaning', de: 'Fensterreinigung', fr: 'Nettoyage de vitres' },
-        'Relocation': { en: 'Relocation', de: 'Umzug', fr: 'Déménagement' },
-        'Combo Service': { en: 'Combo Service', de: 'Kombi-Angebot', fr: 'Offre combinée' },
-        'Disposal': { en: 'Disposal', de: 'Räumung / Entsorgung', fr: 'Débarras / Élimination' },
-        'Gastronomy Cleaning': { en: 'Gastronomy Cleaning', de: 'Gastronomiereinigung', fr: 'Nettoyage gastronomique' },
-        'Medical Cleaning': { en: 'Medical Cleaning', de: 'Praxisreinigung', fr: 'Nettoyage de cabinet médical' },
-        'Construction Cleaning': { en: 'Construction Cleaning', de: 'Baureinigung', fr: 'Nettoyage de fin de chantier' },
-        'Property Maintenance': { en: 'Property Maintenance', de: 'Hauswartung', fr: 'Conciergerie / Entretien' },
-        'Special Cleaning': { en: 'Special Cleaning', de: 'Spezialreinigung', fr: 'Nettoyage spécial' },
-        'Household Helping': { en: 'Household Helping', de: 'Haushaltshilfe', fr: 'Aide ménagère' },
-        'Maintenance Cleaning': { en: 'Maintenance Cleaning', de: 'Unterhaltsreinigung', fr: "Nettoyage d'entretien" }
-    };
-
-    const floorMap: Record<string, Record<string, string>> = {
-        'Ground floor': { en: 'Ground floor', de: 'Erdgeschoss', fr: 'Rez-de-chaussée' },
-        '1st floor': { en: '1st floor', de: '1. Stockwerk', fr: '1er étage' },
-        '2nd floor': { en: '2nd floor', de: '2. Stockwerk', fr: '2ème étage' },
-        '3rd floor': { en: '3rd floor', de: '3. Stockwerk', fr: '3ème étage' },
-        '4th floor': { en: '4th floor', de: '4. Stockwerk', fr: '4ème étage' },
-        '5th floor': { en: '5th floor', de: '5. Stockwerk', fr: '5ème étage' },
-        '6+ floor': { en: '6+ floor', de: '6+ Stockwerk', fr: '6ème étage et plus' }
-    };
-
-    const buildingMap: Record<string, Record<string, string>> = {
-        'Apartment': { en: 'Apartment', de: 'Wohnung', fr: 'Appartement' },
-        'House': { en: 'House', de: 'Haus', fr: 'Maison' },
-        'WG Room': { en: 'WG Room', de: 'WG-Zimmer', fr: 'Chambre en colocation' },
-        'Office': { en: 'Office', de: 'Büro', fr: 'Bureau' },
-        'Studio': { en: 'Studio', de: 'Studio', fr: 'Studio' },
-        'Storage/Cellar': { en: 'Storage/Cellar', de: 'Lager/Keller', fr: 'Cave/Entrepôt' },
-        'Restaurant': { en: 'Restaurant', de: 'Restaurant', fr: 'Restaurant' },
-        'Commercial': { en: 'Commercial', de: 'Gewerbe', fr: 'Commercial' },
-        'Other': { en: 'Other', de: 'Andere', fr: 'Autre' }
-    };
-
-    const getBaseKey = (val: string | null | undefined, map: Record<string, Record<string, string>>) => {
-        if (!val) return undefined;
-        const lowerVal = val.toLowerCase();
-        for (const [key, translations] of Object.entries(map)) {
-            if (key.toLowerCase() === lowerVal || Object.values(translations).some(t => t.toLowerCase() === lowerVal)) {
-                return key;
+        let invoiceAddr = client.address || '';
+        let invoiceZip = client.postalCode || '';
+        let invoiceCity = client.location || '';
+        if (invoiceAddr && !invoiceZip && !invoiceCity) {
+            const match = invoiceAddr.match(/(.+?)(?:,\s*|\s+)(\d{4})\s+(.+)/);
+            if (match) {
+                invoiceAddr = match[1].trim();
+                invoiceZip = match[2];
+                invoiceCity = match[3].trim();
             }
         }
-        return undefined;
-    }
 
-    const serviceKey = getBaseKey(client.serviceType, serviceMap);
-    const translatedService = serviceKey ? (serviceMap[serviceKey][language as string] || client.serviceType) : (client.serviceType || '');
-    
-    const floorKey = getBaseKey(client.floor, floorMap);
-    const translatedFloor = floorKey ? (floorMap[floorKey][language as string] || client.floor) : (client.floor || '');
-    
-    const buildingKey = getBaseKey(client.buildingType, buildingMap);
-    const translatedBuilding = buildingKey ? (buildingMap[buildingKey][language as string] || client.buildingType) : (client.buildingType || '');
+        const serviceMap: Record<string, Record<string, string>> = {
+            'House Cleaning': { en: 'House Cleaning', de: 'Hausreinigung', fr: 'Nettoyage de maison' },
+            'Apartment Cleaning': { en: 'Apartment Cleaning', de: 'Wohnungsreinigung', fr: "Nettoyage d'appartement" },
+            'Stairwell Cleaning': { en: 'Stairwell Cleaning', de: 'Treppenhausreinigung', fr: "Nettoyage de cage d'escalier" },
+            'Office Cleaning': { en: 'Office Cleaning', de: 'Büroreinigung', fr: 'Nettoyage de bureau' },
+            'Final Cleaning': { en: 'Final Cleaning', de: 'Endreinigung / Umzugsreinigung', fr: 'Nettoyage de fin de bail' },
+            'Window Cleaning': { en: 'Window Cleaning', de: 'Fensterreinigung', fr: 'Nettoyage de vitres' },
+            'Relocation': { en: 'Relocation', de: 'Umzug', fr: 'Déménagement' },
+            'Combo Service': { en: 'Combo Service', de: 'Kombi-Angebot', fr: 'Offre combinée' },
+            'Disposal': { en: 'Disposal', de: 'Räumung / Entsorgung', fr: 'Débarras / Élimination' },
+            'Gastronomy Cleaning': { en: 'Gastronomy Cleaning', de: 'Gastronomiereinigung', fr: 'Nettoyage gastronomique' },
+            'Medical Cleaning': { en: 'Medical Cleaning', de: 'Praxisreinigung', fr: 'Nettoyage de cabinet médical' },
+            'Construction Cleaning': { en: 'Construction Cleaning', de: 'Baureinigung', fr: 'Nettoyage de fin de chantier' },
+            'Property Maintenance': { en: 'Property Maintenance', de: 'Hauswartung', fr: 'Conciergerie / Entretien' },
+            'Special Cleaning': { en: 'Special Cleaning', de: 'Spezialreinigung', fr: 'Nettoyage spécial' },
+            'Household Helping': { en: 'Household Helping', de: 'Haushaltshilfe', fr: 'Aide ménagère' },
+            'Maintenance Cleaning': { en: 'Maintenance Cleaning', de: 'Unterhaltsreinigung', fr: "Nettoyage d'entretien" }
+        };
 
-    if (translatedService) {
-        t.title = {
-            de: `${translatedService} Auftragsbestätigung`,
-            fr: `Confirmation de commande de ${translatedService.toLowerCase()}`,
-            en: `${translatedService} Order Confirmation`
-        }[language as 'en' | 'de' | 'fr'] || t.title;
-    }
+        const floorMap: Record<string, Record<string, string>> = {
+            'Ground floor': { en: 'Ground floor', de: 'Erdgeschoss', fr: 'Rez-de-chaussée' },
+            '1st floor': { en: '1st floor', de: '1. Stockwerk', fr: '1er étage' },
+            '2nd floor': { en: '2nd floor', de: '2. Stockwerk', fr: '2ème étage' },
+            '3rd floor': { en: '3rd floor', de: '3. Stockwerk', fr: '3ème étage' },
+            '4th floor': { en: '4th floor', de: '4. Stockwerk', fr: '4ème étage' },
+            '5th floor': { en: '5th floor', de: '5. Stockwerk', fr: '5ème étage' },
+            '6+ floor': { en: '6+ floor', de: '6+ Stockwerk', fr: '6ème étage et plus' }
+        };
 
-    const paymentSlip = {
-        account: 'CH86 0900 0000 1636 3866 5',
-        payableTo: ['SwissCleanMove Gebrekristos', 'Orpundstrasse 31', 'CH-2504 Biel/Bienne'],
-        reference: '00 00000 00000 00000 00000 00000'
-    }
+        const buildingMap: Record<string, Record<string, string>> = {
+            'Apartment': { en: 'Apartment', de: 'Wohnung', fr: 'Appartement' },
+            'House': { en: 'House', de: 'Haus', fr: 'Maison' },
+            'WG Room': { en: 'WG Room', de: 'WG-Zimmer', fr: 'Chambre en colocation' },
+            'Office': { en: 'Office', de: 'Büro', fr: 'Bureau' },
+            'Studio': { en: 'Studio', de: 'Studio', fr: 'Studio' },
+            'Storage/Cellar': { en: 'Storage/Cellar', de: 'Lager/Keller', fr: 'Cave/Entrepôt' },
+            'Restaurant': { en: 'Restaurant', de: 'Restaurant', fr: 'Restaurant' },
+            'Commercial': { en: 'Commercial', de: 'Gewerbe', fr: 'Commercial' },
+            'Other': { en: 'Other', de: 'Andere', fr: 'Autre' }
+        };
 
-    return `\n
+        const getBaseKey = (val: string | null | undefined, map: Record<string, Record<string, string>>) => {
+            if (!val) return undefined;
+            const lowerVal = val.toLowerCase();
+            for (const [key, translations] of Object.entries(map)) {
+                if (key.toLowerCase() === lowerVal || Object.values(translations).some(t => t.toLowerCase() === lowerVal)) {
+                    return key;
+                }
+            }
+            return undefined;
+        }
+
+        const serviceKey = getBaseKey(client.serviceType, serviceMap);
+        const translatedService = serviceKey ? (serviceMap[serviceKey][language as string] || client.serviceType) : (client.serviceType || '');
+        
+        const floorKey = getBaseKey(client.floor, floorMap);
+        const translatedFloor = floorKey ? (floorMap[floorKey][language as string] || client.floor) : (client.floor || '');
+        
+        const buildingKey = getBaseKey(client.buildingType, buildingMap);
+        const translatedBuilding = buildingKey ? (buildingMap[buildingKey][language as string] || client.buildingType) : (client.buildingType || '');
+
+        if (translatedService) {
+            t.title = {
+                de: `${translatedService} Auftragsbestätigung`,
+                fr: `Confirmation de commande de ${translatedService.toLowerCase()}`,
+                en: `${translatedService} Order Confirmation`
+            }[language as 'en' | 'de' | 'fr'] || t.title;
+        }
+
+        const paymentSlip = {
+            account: 'CH86 0900 0000 1636 3866 5',
+            payableTo: ['SwissCleanMove Gebrekristos', 'Orpundstrasse 31', 'CH-2504 Biel/Bienne'],
+            reference: '00 00000 00000 00000 00000 00000'
+        }
+
+
+        return `
+
     <!DOCTYPE html>
     <html>
     <head>
@@ -492,9 +642,9 @@ function generateInvoiceHTML(client: any, language: string): string {
             .service-table tr:last-child td { border-bottom: none; }
             
             /* Table Columns Widths */
-            .col-nr { width: 5%; }
-            .col-le { width: 25%; font-weight: bold; }
-            .col-desc { width: 40%; color: #666; }
+            .col-nr { width: 5%; text-align: center; }
+            .col-le { width: 20%; font-weight: bold; }
+            .col-desc { width: 45%; color: #666; }
             .col-qty { width: 10%; text-align: center; }
             .col-price { width: 10%; text-align: right; }
             .col-total { width: 10%; text-align: right; font-weight: bold; }
@@ -513,36 +663,36 @@ function generateInvoiceHTML(client: any, language: string): string {
 
             /* -- Badges -- */
             .badges-row { display: flex; gap: 10px; margin-top: 30px; margin-bottom: 30px; }
-            .badge { flex: 1; display: flex; gap: 8px; align-items: flex-start; border: 1px solid #eee; padding: 10px; border-radius: 8px; }
-            .badge-icon { font-size: 16px; color: #555; margin-top: 2px; }
-            .badge-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 2px; }
-            .badge-text { font-size: 9px; color: #666; line-height: 1.3; }
+            .badge { flex: 1; display: flex; gap: 10px; align-items: flex-start; border: 1px solid #eee; padding: 12px; border-radius: 8px; }
+            .badge-icon { font-size: 22px; color: #00205B; margin-top: 2px; }
+            .badge-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 3px; letter-spacing: 0.5px; }
+            .badge-text { font-size: 11px; color: #555; line-height: 1.4; }
 
             /* -- Signatures -- */
             .signatures-row { display: flex; justify-content: space-between; margin-bottom: 30px; }
             .sig-box { width: 45%; }
-            .sig-title { font-size: 10px; font-weight: bold; color: #555; margin-bottom: 15px; letter-spacing: 1px; }
-            .sig-name { font-size: 14px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
-            .sig-details { font-size: 10px; color: #666; }
+            .sig-title { font-size: 12px; font-weight: bold; color: #00205B; margin-bottom: 15px; letter-spacing: 1px; }
+            .sig-name { font-size: 16px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
+            .sig-details { font-size: 12px; color: #555; }
             .sig-details table { border-collapse: collapse; margin-top: 10px; }
-            .sig-details td { padding: 4px 0; }
+            .sig-details td { padding: 5px 0; }
             .sig-details td:first-child { padding-right: 15px; color: #555; }
-            .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 12px; }
+            .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 14px; }
 
             /* -- Timing & Comm -- */
             .timing-row { display: flex; gap: 15px; margin-bottom: 40px; }
-            .timing-box { flex: 1; border: 1px solid #eee; padding: 12px; border-radius: 8px; display: flex; gap: 12px; align-items: center; }
-            .timing-icon { font-size: 20px; color: #555; }
-            .timing-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 3px; }
-            .timing-text { font-size: 10px; color: #666; display: flex; gap: 10px; }
-            .timing-text div { display: flex; flex-direction: column; gap: 3px; }
+            .timing-box { flex: 1; border: 1px solid #eee; padding: 14px; border-radius: 8px; display: flex; gap: 14px; align-items: center; }
+            .timing-icon { font-size: 24px; color: #00205B; }
+            .timing-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 4px; letter-spacing: 0.5px; }
+            .timing-text { font-size: 12px; color: #555; display: flex; gap: 12px; }
+            .timing-text div { display: flex; flex-direction: column; gap: 4px; }
 
             /* -- Footer -- */
-            .footer-banner { background: transparent; padding: 10px 0; display: flex; align-items: center; margin-top: auto; border-top: 1px solid #eee; margin-bottom: 20px; }
-            .footer-banner-title { display: none; }
-            .footer-banner-items { display: flex; gap: 40px; width: 100%; justify-content: flex-start; }
-            .footer-item { display: flex; flex-direction: column; gap: 5px; color: #0055A4; font-size: 12px; font-weight: normal; }
-            .footer-item span { color: #999; font-size: 10px; font-weight: normal; }
+            .footer-banner { background: #00205B; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 10px; margin-top: auto; }
+            .footer-banner-title { font-weight: bold; display: flex; align-items: center; gap: 8px; letter-spacing: 1px; }
+            .footer-banner-items { display: flex; gap: 20px; }
+            .footer-item { display: flex; flex-direction: column; gap: 3px; }
+            .footer-item span { color: #ccc; font-size: 9px; }
             
             /* -- Payment Slip Styles -- */
             .payment-slip { 
@@ -583,7 +733,7 @@ function generateInvoiceHTML(client: any, language: string): string {
         <div class="header-top">
             <div class="header-logo">
                 <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
-                <div class="header-tagline">Reinigung &middot; Umzug &middot; Facility Service</div>
+                <div class="header-tagline">${t.tagline}</div>
             </div>
             <div class="header-contact">
                 <div class="contact-line"><span class="contact-icon">📞</span> +41 78 215 80 30</div>
@@ -599,7 +749,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             <div class="customer-card">
                 <div class="customer-card-header">
                     <div class="customer-card-icon">👤</div>
-                    <div class="customer-card-title">${t.customer || 'KUNDE'}</div>
+                    <div class="customer-card-title">${t.customer}</div>
                 </div>
                 <div class="customer-address">
                     ${clientName}<br>
@@ -611,10 +761,10 @@ function generateInvoiceHTML(client: any, language: string): string {
                 </div>
             </div>
             <div class="order-card">
-                <div class="order-card-header">${t.orderNumber?.toUpperCase() || 'AUFTRAGSNUMMER'}</div>
+                <div class="order-card-header">${t.orderNumber?.toUpperCase()}</div>
                 <div class="order-card-body">
                     <div class="order-number">${orderNumber}</div>
-                    <div class="order-ref-title">${t.invoiceRef?.toUpperCase() || 'KUNDENREFERENZ'}</div>
+                    <div class="order-ref-title">${t.invoiceRef?.toUpperCase()}</div>
                     <div class="order-ref-val">-</div>
                 </div>
             </div>
@@ -622,26 +772,26 @@ function generateInvoiceHTML(client: any, language: string): string {
 
         <!-- Title -->
         <div class="main-title">${t.title}</div>
-        <div class="sub-title">Professionelle Reinigungs- und Umzugsdienstleistungen nach Schweizer Qualitätsstandard.</div>
+        <div class="sub-title">${t.subTitle}</div>
 
         <!-- Info Columns -->
         <div class="info-columns">
             <!-- AUFTRAGSDATEN -->
             <div class="info-col">
-                <div class="info-col-title">${t.orderData || 'AUFTRAGSDATEN'}</div>
-                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">${t.serviceDate || 'Leistungsdatum:'}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
-                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">${t.startTime || 'Startzeit:'}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
-                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">${t.handoverTime || 'Abgabezeit:'}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
-                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">${t.contactPerson || 'Ansprechpartner:'}</span><span class="info-val">${clientName}</span></div>
-                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">${t.paymentMethod || 'Zahlungsart:'}</span><span class="info-val">Rechnung (QR)</span></div>
+                <div class="info-col-title">${t.orderData}</div>
+                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">${t.serviceDate}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
+                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">${t.startTime}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
+                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">${t.handoverTime}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
+                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">${t.contactPerson}</span><span class="info-val">${clientName}</span></div>
+                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">${t.paymentMethod}</span><span class="info-val">${t.paymentMethodValue}</span></div>
             </div>
             <!-- OBJEKT -->
             <div class="info-col">
-                <div class="info-col-title">${t.object || 'OBJEKT'}</div>
+                <div class="info-col-title">${t.object}</div>
                 <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${client.address || '-'}<br>${client.postalCode || ''} ${client.location || ''}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType || 'Objekttyp:'}</span><span class="info-val"><span>${translatedBuilding || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.floor || 'Stockwerk:'}</span><span class="info-val"><span>${translatedFloor || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.area || 'Fläche:'}</span><span class="info-val"><span>${client.squareMeters ? 'ca. ' + client.squareMeters + ' m²' : '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType}</span><span class="info-val"><span>${translatedBuilding || '-'}</span></span></div>
+                ${translatedFloor ? `<div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor}</span></span></div>` : ''}
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.area}</span><span class="info-val"><span>${client.squareMeters ? t.areaPrefix + ' ' + client.squareMeters + ' m²' : '-'}</span></span></div>
             </div>
         </div>
 
@@ -651,18 +801,18 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <thead>
                     <tr>
                         <th class="col-nr">NR.</th>
-                        <th class="col-le">${t.service || 'LEISTUNG'}</th>
-                        <th class="col-desc">${t.description || 'BESCHREIBUNG'}</th>
-                        <th class="col-qty">${t.quantity || 'MENGE'}</th>
-                        <th class="col-price">${t.unitPrice || 'EINZELPREIS'}</th>
-                        <th class="col-total">${t.totalPrice || 'GESAMTPREIS'}</th>
+                        <th class="col-le">${t.service}</th>
+                        <th class="col-desc">${t.description}</th>
+                        <th class="col-qty">${t.quantity}</th>
+                        <th class="col-price">${t.unitPrice}</th>
+                        <th class="col-total">${t.totalPrice}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="col-nr">1</td>
                         <td class="col-le">${translatedService}</td>
-                        <td class="col-desc">${formattedRemarks.length > 0 ? '<ul style="margin: 0; padding-left: 15px; list-style-type: disc; font-size: 12px; line-height: 1.5;"><li>' + formattedRemarks.join('</li><li>') + '</li></ul>' : (t.defaultServiceDesc || 'Professionelle Dienstleistung gemäss Schweizer Standard.')}</td>
+                        <td class="col-desc">${formattedRemarks.length > 0 ? '<ul style="margin: 0; padding-left: 15px; list-style-type: none; font-size: 11px; line-height: 1.6; column-count: 2; column-gap: 15px;"><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>' + formattedRemarks.join('</li><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>') + '</li></ul>' : t.defaultServiceDesc}</td>
                         <td class="col-qty">1</td>
                         <td class="col-price">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
                         <td class="col-total">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
@@ -674,14 +824,13 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <div class="scope-box">
                     <div class="scope-icon">ℹ️</div>
                     <div class="scope-text">
-                        <strong>${t.scopeOfServices || 'LEISTUNGSUMFANG'}</strong>
-                        ${t.swissStandard || 'Alle Arbeiten werden nach höchsten Schweizer Qualitätsstandards ausgeführt.'} ${t.guarantee}
+                        <strong>${t.scopeOfServices}</strong>
+                        ${t.swissStandard} ${t.guarantee}
                     </div>
                 </div>
                 <div class="total-box">
-                    <div class="total-box-title">${t.totalFixedPrice || 'TOTAL FESTPREIS INKL. MWST.'}</div>
+                    <div class="total-box-title">${t.totalFixedPrice}</div>
                     <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
-                    <div class="total-box-sub">${t.fixedPriceSub || 'Festpreis - keine zusätzlichen Kosten'}</div>
                 </div>
             </div>
         </div>
@@ -690,19 +839,19 @@ function generateInvoiceHTML(client: any, language: string): string {
         <div class="badges-row">
             <div class="badge">
                 <div class="badge-icon">🛡️</div>
-                <div class="badge-text"><strong>${t.acceptanceGuarantee || 'ABNAHMEGARANTIE'}</strong>Zufriedenheitsgarantie bei Übergabe. Mängel werden kostenlos nachgebessert.</div>
+                <div class="badge-text"><strong>${t.acceptanceGuarantee}</strong>${t.acceptanceGuaranteeDesc}</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">✅</div>
-                <div class="badge-text"><strong>${t.liabilityInsured || 'HAFTPFLICHTVERSICHERT'}</strong>Vollständig versichert für Ihre Sicherheit und maximalen Schutz.</div>
+                <div class="badge-text"><strong>${t.liabilityInsured}</strong>${t.liabilityInsuredDesc}</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">⭐</div>
-                <div class="badge-text"><strong>${t.swissQuality || 'SCHWEIZER QUALITÄT'}</strong>Professionell, zuverlässig und pünktlich - dafür stehen wir ein.</div>
+                <div class="badge-text"><strong>${t.swissQuality}</strong>${t.swissQualityDesc}</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">🌿</div>
-                <div class="badge-text"><strong>${t.ecoFriendly || 'UMWELTFREUNDLICH'}</strong>Wir verwenden umweltfreundliche Reinigungsmittel und nachhaltige Methoden.</div>
+                <div class="badge-text"><strong>${t.ecoFriendly}</strong>${t.ecoFriendlyDesc}</div>
             </div>
         </div>
 
@@ -712,9 +861,9 @@ function generateInvoiceHTML(client: any, language: string): string {
                 <div class="sig-title">SWISSCLEANMOVE</div>
                 <div class="sig-details">
                     <table style="width: 100%;">
-                        <tr><td style="width: 80px;">Name:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Cleaning Date:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Unterschrift:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
                     </table>
                 </div>
             </div>
@@ -722,18 +871,18 @@ function generateInvoiceHTML(client: any, language: string): string {
             <!-- Middle Section for Date & Ort -->
             <div class="sig-box" style="width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; margin-bottom: 15px;">
                 <div class="sig-details" style="text-align: center; font-size: 11px; color: #333;">
-                    <strong>Cleaning Date</strong> ${new Date().toLocaleDateString()}<br><br>
-                    <strong>Ort:</strong> Biel
+                    <strong>${t.cleaningDateLabel}</strong> ${new Date().toLocaleDateString()}<br><br>
+                    <strong>${t.locationLabel}</strong> Biel
                 </div>
             </div>
 
             <div class="sig-box" style="width: 30%;">
-                <div class="sig-title">${t.customer || 'KUNDE'}</div>
+                <div class="sig-title"></div>
                 <div class="sig-details">
                     <table style="width: 100%;">
-                        <tr><td style="width: 80px;">Name:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Cleaning Date:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Unterschrift:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
                     </table>
                 </div>
             </div>
@@ -744,27 +893,27 @@ function generateInvoiceHTML(client: any, language: string): string {
             <div class="timing-box">
                 <div class="timing-icon">📅</div>
                 <div class="timing-text">
-                    <div><strong>${t.performancePeriod || 'LEISTUNGSZEITRAUM'}</strong>${t.serviceStart || 'Leistungsbeginn:'}<br>${t.serviceEnd || 'Leistungsende:'}</div>
-                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</div>
+                    <div><strong>${t.performancePeriod}</strong>${t.serviceStart}<br>${t.serviceEnd}</div>
+                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</div>
                 </div>
             </div>
             <div class="timing-box">
                 <div class="timing-icon">👤</div>
                 <div class="timing-text">
-                    <div><strong>${t.communication || 'KOMMUNIKATION'}</strong>${t.communicationText || 'Für Fragen oder Änderungen kontaktieren Sie uns bitte rechtzeitig.'}</div>
+                    <div><strong>${t.communication}</strong>${t.communicationText}</div>
                 </div>
             </div>
         </div>
 
         <!-- Footer Banner -->
         <div class="footer-banner">
-            <div class="footer-banner-title">🏦 ${t.accountInformation || 'KONTOINFORMATIONEN'}</div>
+            <div class="footer-banner-title">🏦 ${t.accountInformation}</div>
             <div class="footer-banner-items">
-                <div class="footer-item"><span>${t.bankName || 'Bankname'}</span>PostFinance AG</div>
+                <div class="footer-item"><span>${t.bankName}</span>PostFinance AG</div>
                 <div class="footer-item"><span>IBAN</span>CH86 0900 0000 1636 3866 5</div>
-                <div class="footer-item"><span>${t.accountHolder || 'Kontoinhaber'}</span>Dawit Gebrekristos / SwissCleanMove</div>
-                <div class="footer-item"><span>${t.accountNo || 'Konto-Nr.'}</span>16-363866-5</div>
-                <div class="footer-item"><span>${t.clearingNo || 'Clearing-Nr.'}</span>09000</div>
+                <div class="footer-item"><span>${t.accountHolder}</span>Dawit Gebrekristos / SwissCleanMove</div>
+                <div class="footer-item"><span>${t.accountNo}</span>16-363866-5</div>
+                <div class="footer-item"><span>${t.clearingNo}</span>09000</div>
             </div>
         </div>
 
@@ -821,16 +970,202 @@ function generateInvoiceHTML(client: any, language: string): string {
                         <div class="payment-part-content">
                             <!-- Left Column of Payment Part -->
                             <div class="payment-col-left">
-                                <div class="qr-code-wrapper">
-                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=174x174&data=https%3A%2F%2Fswisscleanmove.ch&margin=0" alt="QR Code">
-                                    <!-- Swiss Cross Overlay -->
-                                    <div class="qr-cross">
-                                        <div style="width: 28px; height: 28px; background: #000; border: 2px solid #fff; position: relative;">
-                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 18px; height: 4px; background: #fff;"></div>
-                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 4px; height: 18px; background: #fff;"></div>
-                                        </div>
+    
+                                
+                                <div class="amount-area-payment">
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.currency}</span>
+                                        <div class="payment-slip-value">CHF</div>
+                                    </div>
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.amount}</span>
+                                        <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <!-- Right Column of Payment Part -->
+                            <div class="payment-col-right">
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.accountPayableTo}</span>
+                                    <div class="payment-slip-value">${paymentSlip.account}</div>
+                                    <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+                                </div>
+
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.reference}</span>
+                                    <div class="payment-slip-value">${paymentSlip.reference}</div>
+                                </div>
+
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.additionalInfoQr}</span>
+                                    <div class="payment-slip-value">${t.invoiceLabel} ${orderNumber}</div>
+                                </div>
+
+                                <div class="payment-slip-block" style="margin-top: 15px;">
+                                    <span class="payment-slip-label">${t.payableBy}</span>
+                                    <div class="payment-slip-value">${clientName}</div>
+                                    <div class="payment-slip-value">${client.address || ''}<br>${client.postalCode || ''} ${client.location || ''}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <td class="col-price">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
+                        <td class="col-total">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="table-bottom-row">
+                <div class="scope-box">
+                    <div class="scope-icon">ℹ️</div>
+                    <div class="scope-text">
+                        <strong>${t.scopeOfServices}</strong>
+                        ${t.swissStandard} ${t.guarantee}
+                    </div>
+                </div>
+                <div class="total-box">
+                    <div class="total-box-title">${t.totalFixedPrice}</div>
+                    <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="badges-row">
+            <div class="badge">
+                <div class="badge-icon">🛡️</div>
+                <div class="badge-text"><strong>${t.acceptanceGuarantee}</strong>${t.acceptanceGuaranteeDesc}</div>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">✅</div>
+                <div class="badge-text"><strong>${t.liabilityInsured}</strong>${t.liabilityInsuredDesc}</div>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">⭐</div>
+                <div class="badge-text"><strong>${t.swissQuality}</strong>${t.swissQualityDesc}</div>
+            </div>
+            <div class="badge">
+                <div class="badge-icon">🌿</div>
+                <div class="badge-text"><strong>${t.ecoFriendly}</strong>${t.ecoFriendlyDesc}</div>
+            </div>
+        </div>
+
+        <!-- Signatures -->
+        <div class="signatures-row" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;">
+            <div class="sig-box" style="width: 30%;">
+                <div class="sig-title">SWISSCLEANMOVE</div>
+                <div class="sig-details">
+                    <table style="width: 100%;">
+                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Middle Section for Date & Ort -->
+            <div class="sig-box" style="width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; margin-bottom: 15px;">
+                <div class="sig-details" style="text-align: center; font-size: 11px; color: #333;">
+                    <strong>${t.cleaningDateLabel}</strong> ${new Date().toLocaleDateString()}<br><br>
+                    <strong>${t.locationLabel}</strong> Biel
+                </div>
+            </div>
+
+            <div class="sig-box" style="width: 30%;">
+                <div class="sig-title"></div>
+                <div class="sig-details">
+                    <table style="width: 100%;">
+                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timing & Comm -->
+        <div class="timing-row">
+            <div class="timing-box">
+                <div class="timing-icon">📅</div>
+                <div class="timing-text">
+                    <div><strong>${t.performancePeriod}</strong>${t.serviceStart}<br>${t.serviceEnd}</div>
+                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</div>
+                </div>
+            </div>
+            <div class="timing-box">
+                <div class="timing-icon">👤</div>
+                <div class="timing-text">
+                    <div><strong>${t.communication}</strong>${t.communicationText}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Banner -->
+        <div class="footer-banner">
+            <div class="footer-banner-title">🏦 ${t.accountInformation}</div>
+            <div class="footer-banner-items">
+                <div class="footer-item"><span>${t.bankName}</span>PostFinance AG</div>
+                <div class="footer-item"><span>IBAN</span>CH86 0900 0000 1636 3866 5</div>
+                <div class="footer-item"><span>${t.accountHolder}</span>Dawit Gebrekristos / SwissCleanMove</div>
+                <div class="footer-item"><span>${t.accountNo}</span>16-363866-5</div>
+                <div class="footer-item"><span>${t.clearingNo}</span>09000</div>
+            </div>
+        </div>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Payment Slip Header Removed -->
+        <div class="payment-slip">
+            <div class="scissors-line-horizontal">
+                <span class="scissors-icon">✂</span>
+                <span style="background: #fff; padding: 0 10px; font-size: 11px; color: #666;">Vor der Einzahlung abzutrennen / A détacher avant le versement / Da staccare prima del versamento</span>
+            </div>
+            
+            <table class="payment-slip-table">
+                <tr>
+                    <td class="payment-slip-left pt-receipt">
+                        <div class="scissors-line-vertical">
+                            <span class="scissors-icon-v">✂</span>
+                        </div>
+                        <div class="payment-slip-title">${t.receiptSlip}</div>
+                        
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.accountPayableTo}</span>
+                            <div class="payment-slip-value">${paymentSlip.account}</div>
+                            <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+                        </div>
+
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.reference}</span>
+                            <div class="payment-slip-value">${paymentSlip.reference}</div>
+                        </div>
+
+                        <div class="payment-slip-block" style="margin-top: 15px;">
+                            <span class="payment-slip-label">${t.payableBy}</span>
+                            <div class="payment-slip-value">${clientName}</div>
+                            <div class="payment-slip-value">${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</div>
+                        </div>
+
+                        <div class="amount-area-receipt">
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.currency}</span>
+                                <div class="payment-slip-value">CHF</div>
+                            </div>
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.amount}</span>
+                                <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
+                            </div>
+                        </div>
+                        
+                        <div style="font-size: 9px; color: #111; margin-top: 15px; text-align: right;">${t.acceptancePoint}</div>
+                    </td>
+                    <td class="payment-slip-right pt-payment">
+                        <div class="payment-slip-title">${t.paymentPart}</div>
+                        
+                        <div class="payment-part-content">
+                            <!-- Left Column of Payment Part -->
+                            <div class="payment-col-left">
+    
                                 
                                 <div class="amount-area-payment">
                                     <div class="amount-col">
@@ -874,6 +1209,5 @@ function generateInvoiceHTML(client: any, language: string): string {
             </table>
         </div>
     </body>
-    </html>
-    `;
+    </html>`
 }
