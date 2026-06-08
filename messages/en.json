@@ -3201,7 +3201,8 @@
           "options": {
             "moving": "Moving",
             "cleaning": "Move-out cleaning",
-            "combo": "Moving + cleaning"
+            "combo": "Moving + cleaning",
+            "transport": "Transport"
           },
           "preferredDateTitle": "Preferred date *",
           "date": "Date",

@@ -3453,7 +3453,8 @@
           "options": {
             "moving": "Déménagement",
             "cleaning": "Nettoyage de fin de bail",
-            "combo": "Déménagement + Nettoyage"
+            "combo": "Déménagement + Nettoyage",
+            "transport": "Transport"
           },
           "preferredDateTitle": "Date souhaitée *",
           "date": "Date",

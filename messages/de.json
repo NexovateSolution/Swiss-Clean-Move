@@ -3488,7 +3488,8 @@
           "options": {
             "moving": "Umzug",
             "cleaning": "Umzugsreinigung",
-            "combo": "Umzug + Reinigung"
+            "combo": "Umzug + Reinigung",
+            "transport": "Transport"
           },
           "preferredDateTitle": "Gewünschter Termin *",
           "date": "Datum",
