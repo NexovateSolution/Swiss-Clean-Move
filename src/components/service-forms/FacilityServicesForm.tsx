@@ -77,11 +77,11 @@ export function FacilityServicesForm({ step, d, set, tl, v, arrHas, toggleArr, I
           </div>
 
           {/* Property type */}
-          <SH>{tl('wizard.facilityServices.propertyTypeTitle')}</SH>
           <FR
-            label={tl('wizard.facilityServices.propertyTypeTitle')}
+            label={`🏠 ${tl('wizard.facilityServices.propertyTypeTitle')}`}
             value={v('propertyType')}
             onChange={v => set('propertyType', v)}
+            inline
             options={[
               { value: 'apartment', label: tl('wizard.facilityServices.propertyTypes.apartment') },
               { value: 'house', label: tl('wizard.facilityServices.propertyTypes.house') },

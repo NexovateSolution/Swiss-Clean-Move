@@ -25,7 +25,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
   if (step === 0) currentView = 'serviceType';
   else if (step === 1) currentView = 'propertyDetails';
   else {
-    if (reqType === 'moving') {
+    if (reqType === 'moving' || reqType === 'transport') {
       if (step === 2) currentView = 'movingDetails';
       if (step === 3) currentView = 'upload';
       if (step === 4) currentView = 'contact';
@@ -57,7 +57,8 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
             options={[
               { value: 'moving', label: tl('wizard.unified.step1.options.moving') },
               { value: 'cleaning', label: tl('wizard.unified.step1.options.cleaning') },
-              { value: 'combo', label: tl('wizard.unified.step1.options.combo') }
+              { value: 'combo', label: tl('wizard.unified.step1.options.combo') },
+              { value: 'transport', label: tl('wizard.unified.step1.options.transport') }
             ]}
           />
           <SH>{tl('wizard.unified.step1.preferredDateTitle')}</SH>
@@ -76,15 +77,16 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
       return (
         <div>
           <SH>{tl('wizard.stepTitles.property') || 'Property Details'}</SH>
-          <div className="grid grid-cols-2 gap-4">
-            <FS label={tl('wizard.unified.step2.propertyType')} value={v('sharedPropertyType')} onChange={val => set('sharedPropertyType', val)}
-              options={[
-                { value: 'house', label: tl('wizard.unified.step2.types.house') },
-                { value: 'studio', label: tl('wizard.unified.step2.types.studio') },
-                { value: 'wgRoom', label: tl('wizard.unified.step2.types.wgRoom') },
-                { value: 'commercial', label: tl('wizard.unified.step2.types.commercial') }
-              ]}
-            />
+          <FR label={`🏠 ${tl('wizard.unified.step2.propertyType')}`} value={v('sharedPropertyType')} onChange={val => set('sharedPropertyType', val)} inline
+            options={[
+              { value: 'apartment', label: tl('wizard.householdHelping.propertyTypes.apartment') || 'Wohnung' },
+              { value: 'house', label: tl('wizard.unified.step2.types.house') },
+              { value: 'studio', label: tl('wizard.unified.step2.types.studio') },
+              { value: 'wgRoom', label: tl('wizard.unified.step2.types.wgRoom') },
+              { value: 'commercial', label: tl('wizard.unified.step2.types.commercial') || 'Büro' }
+            ]}
+          />
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <FI label={tl('wizard.unified.step2.rooms')} value={v('sharedRooms')} onChange={val => set('sharedRooms', val)} type="number" required />
             <FI label={tl('wizard.unified.step2.livingArea')} value={v('sharedLivingArea')} onChange={val => set('sharedLivingArea', val)} type="number" />
             <FI label={tl('wizard.unified.step2.floor')} value={v('sharedFloor')} onChange={val => set('sharedFloor', val)} type="number" />

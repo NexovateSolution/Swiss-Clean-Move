@@ -31,22 +31,22 @@ export function FS({ label, value, onChange, options, placeholder, hint }: {
   )
 }
 
-export function FR({ label, value, onChange, options }: {
-  label: string; value: string; onChange: (v: string) => void; options: { value: string; label: string }[]
+export function FR({ label, value, onChange, options, inline = false }: {
+  label: string; value: string; onChange: (v: string) => void; options: { value: string; label: string }[]; inline?: boolean
 }) {
   return (
     <div className="mb-4">
-      <label className="block text-sm font-bold text-[#003366] mb-2">{label}</label>
-      <div className="space-y-2">
+      {label && <label className="block text-sm font-bold text-[#003366] mb-2">{label}</label>}
+      <div className={inline ? "flex flex-wrap items-center gap-x-4 gap-y-2" : "space-y-2"}>
         {options.map(o => (
-          <label key={o.value} className="flex items-center gap-3 cursor-pointer">
+          <label key={o.value} className="flex items-center gap-1.5 cursor-pointer">
             <input
-              type="radio" name={label} value={o.value}
+              type="radio" name={label || Math.random().toString()} value={o.value}
               checked={value === o.value}
               onChange={() => onChange(o.value)}
               className="w-4 h-4 text-[#003366] border-[#a8c8e8] focus:ring-[#003366]"
             />
-            <span className="text-sm text-[#003366]">{o.label}</span>
+            <span className="text-sm text-[#003366] whitespace-nowrap">{o.label}</span>
           </label>
         ))}
       </div>

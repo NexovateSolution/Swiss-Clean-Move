@@ -58,6 +58,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
       if (reqType === 'moving') return 5;
       if (reqType === 'cleaning') return 6;
       if (reqType === 'combo') return 7;
+      if (reqType === 'transport') return 5;
     }
     // old logic fallback:
     const isCombo = d.desiredService === 'moving-and-cleaning';

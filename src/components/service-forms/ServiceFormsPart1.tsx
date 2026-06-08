@@ -24,8 +24,7 @@ export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr
           <SH>{tl('wizard.sharedCleaning.propertyLocation')}</SH>
           <FI label={tl('wizard.sharedCleaning.location.streetZipCity')} value={v('address')} onChange={v => set('address', v)} required />
           
-          <SH>{tl('wizard.sharedCleaning.propertyType')}</SH>
-          <FS label={tl('wizard.sharedCleaning.propertyType')} value={v('propertyType')} onChange={v => set('propertyType', v)}
+          <FR label={`🏠 ${tl('wizard.sharedCleaning.propertyType')}`} value={v('propertyType')} onChange={v => set('propertyType', v)} inline
             options={[
               { value: 'multiFamily', label: tl('wizard.sharedCleaning.types.multiFamily') },
               { value: 'residentialComplex', label: tl('wizard.sharedCleaning.types.residentialComplex') },

@@ -8,16 +8,16 @@ export function RelocationForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUp
         <div>
           <SH>{tl('wizard.relocation.movingFrom')}</SH>
           <FI label={tl('wizard.relocation.address')} value={v('movingFromAddress')} onChange={v => set('movingFromAddress', v)} required />
+          <FR label={`🏠 ${tl('wizard.relocation.currentLiving')}`} value={v('currentLiving')} onChange={v => set('currentLiving', v)} inline
+            options={[
+              { value: 'apartment', label: tl('wizard.relocation.currentLivingOptions.apartment') },
+              { value: 'house', label: tl('wizard.relocation.currentLivingOptions.house') },
+              { value: 'wgRoom', label: tl('wizard.relocation.currentLivingOptions.wgRoom') },
+              { value: 'studio', label: tl('wizard.relocation.currentLivingOptions.studio') },
+              { value: 'office', label: tl('wizard.relocation.currentLivingOptions.office') }
+            ]}
+          />
           <div className="grid grid-cols-2 gap-4">
-             <FS label={tl('wizard.relocation.currentLiving')} value={v('currentLiving')} onChange={v => set('currentLiving', v)}
-               options={[
-                 { value: 'apartment', label: tl('wizard.relocation.currentLivingOptions.apartment') },
-                 { value: 'house', label: tl('wizard.relocation.currentLivingOptions.house') },
-                 { value: 'wgRoom', label: tl('wizard.relocation.currentLivingOptions.wgRoom') },
-                 { value: 'studio', label: tl('wizard.relocation.currentLivingOptions.studio') },
-                 { value: 'office', label: tl('wizard.relocation.currentLivingOptions.office') }
-               ]}
-             />
              <FS label={tl('wizard.relocation.currentFloor')} value={v('currentFloor')} onChange={v => set('currentFloor', v)} options={getFloorOptions(tl)} />
              <FR label={tl('wizard.relocation.elevatorAvailable')} value={v('currentElevator')} onChange={v => set('currentElevator', v)}
                options={[{ value: 'yes', label: tl('wizard.relocation.yes') }, { value: 'no', label: tl('wizard.relocation.no') }]}
@@ -31,17 +31,17 @@ export function RelocationForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUp
           
           <SH>{tl('wizard.relocation.movingTo')}</SH>
           <FI label={tl('wizard.relocation.address')} value={v('movingToAddress')} onChange={v => set('movingToAddress', v)} required />
+          <FR label={`🏠 ${tl('wizard.relocation.movingTo')}`} value={v('movingToType')} onChange={v => set('movingToType', v)} inline
+            options={[
+              { value: 'apartment', label: tl('wizard.relocation.movingToOptions.apartment') },
+              { value: 'house', label: tl('wizard.relocation.movingToOptions.house') },
+              { value: 'wgRoom', label: tl('wizard.relocation.movingToOptions.wgRoom') },
+              { value: 'studio', label: tl('wizard.relocation.movingToOptions.studio') },
+              { value: 'office', label: tl('wizard.relocation.movingToOptions.office') },
+              { value: 'storage', label: tl('wizard.relocation.movingToOptions.storage') },
+            ]}
+          />
           <div className="grid grid-cols-2 gap-4">
-             <FS label={tl('wizard.relocation.movingTo')} value={v('movingToType')} onChange={v => set('movingToType', v)}
-               options={[
-                 { value: 'apartment', label: tl('wizard.relocation.movingToOptions.apartment') },
-                 { value: 'house', label: tl('wizard.relocation.movingToOptions.house') },
-                 { value: 'wgRoom', label: tl('wizard.relocation.movingToOptions.wgRoom') },
-                 { value: 'studio', label: tl('wizard.relocation.movingToOptions.studio') },
-                 { value: 'office', label: tl('wizard.relocation.movingToOptions.office') },
-                 { value: 'storage', label: tl('wizard.relocation.movingToOptions.storage') },
-               ]}
-             />
              <FS label={tl('wizard.relocation.floor')} value={v('toFloor')} onChange={v => set('toFloor', v)} options={getFloorOptions(tl)} />
              <FR label={tl('wizard.relocation.newElevator')} value={v('newElevator')} onChange={v => set('newElevator', v)}
                options={[{ value: 'yes', label: tl('wizard.relocation.yes') }, { value: 'no', label: tl('wizard.relocation.no') }]}
@@ -217,12 +217,11 @@ export function HouseholdHelpingForm({ step, d, set, tl, v, arrHas, toggleArr, I
             <FI label={tl('wizard.householdHelping.streetNo')} value={v('streetNo')} onChange={val => set('streetNo', val)} required />
           </div>
 
-          {/* Property Type */}
-          <SH>{tl('wizard.householdHelping.propertyType')}</SH>
           <FR
-            label=""
+            label={`🏠 ${tl('wizard.householdHelping.propertyType')}`}
             value={v('propertyType')}
             onChange={val => set('propertyType', val)}
+            inline
             options={[
               { value: 'apartment', label: tl('wizard.householdHelping.propertyTypes.apartment') },
               { value: 'house', label: tl('wizard.householdHelping.propertyTypes.house') },
