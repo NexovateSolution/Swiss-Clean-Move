@@ -309,7 +309,6 @@ export const valLabels: Record<string, Record<string, string>> = {
             electrical: { en: 'Electrical', de: 'Elektrogeräte', fr: 'Appareils électriques' },
             cardboard: { en: 'Cardboard', de: 'Karton', fr: 'Carton' },
             textiles: { en: 'Textiles', de: 'Textilien', fr: 'Textiles' },
-            piano: { en: 'Piano', de: 'Klavier', fr: 'Piano' },
             safe: { en: 'Safe', de: 'Tresor', fr: 'Coffre-fort' },
             fitness: { en: 'Fitness Equipment', de: 'Fitnessgeräte', fr: 'Équipement fitness' },
             none: { en: 'None', de: 'Keine', fr: 'Aucun' },
