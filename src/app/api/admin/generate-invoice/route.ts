@@ -495,9 +495,9 @@ export async function POST(request: NextRequest) {
             .service-table tr:last-child td { border-bottom: none; }
             
             /* Table Columns Widths */
-            .col-nr { width: 5%; }
-            .col-le { width: 25%; font-weight: bold; }
-            .col-desc { width: 40%; color: #666; }
+            .col-nr { width: 5%; text-align: center; }
+            .col-le { width: 20%; font-weight: bold; }
+            .col-desc { width: 45%; color: #666; }
             .col-qty { width: 10%; text-align: center; }
             .col-price { width: 10%; text-align: right; }
             .col-total { width: 10%; text-align: right; font-weight: bold; }
@@ -665,7 +665,7 @@ export async function POST(request: NextRequest) {
                     <tr>
                         <td class="col-nr">1</td>
                         <td class="col-le">${translatedService}</td>
-                        <td class="col-desc">${formattedRemarks.length > 0 ? '<ul style="margin: 0; padding-left: 15px; list-style-type: disc; font-size: 12px; line-height: 1.5;"><li>' + formattedRemarks.join('</li><li>') + '</li></ul>' : t.defaultServiceDesc}</td>
+                        <td class="col-desc">${formattedRemarks.length > 0 ? '<ul style="margin: 0; padding-left: 15px; list-style-type: none; font-size: 11px; line-height: 1.6; column-count: 2; column-gap: 15px;"><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>' + formattedRemarks.join('</li><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>') + '</li></ul>' : t.defaultServiceDesc}</td>
                         <td class="col-qty">1</td>
                         <td class="col-price">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
                         <td class="col-total">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
