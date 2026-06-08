@@ -42,28 +42,55 @@ export async function PUT(
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const data = await request.json()
+    const rawData = await request.json()
     
-    // Calculate balance
-    const balance = data.totalPrice - (data.paidAmount || 0)
-    
+    // Ensure numeric values are correct
+    const totalPrice = parseFloat(rawData.totalPrice) || 0
+    const paidAmount = parseFloat(rawData.paidAmount || rawData.advancePayment) || 0
+    const balance = totalPrice - paidAmount
+
     // Determine status
     let status = 'UNPAID'
-    if (data.paidAmount > 0 && data.paidAmount < data.totalPrice) {
+    if (paidAmount > 0 && paidAmount < totalPrice) {
       status = 'PARTIAL'
-    } else if (data.paidAmount >= data.totalPrice) {
+    } else if (paidAmount > 0 && paidAmount >= totalPrice) {
       status = 'PAID'
+    }
+
+    const fromDate = rawData.fromDate ? new Date(rawData.fromDate) : undefined
+    const untilDate = rawData.untilDate ? new Date(rawData.untilDate) : undefined
+
+    const prismaData = {
+      firstName: rawData.firstName,
+      lastName: rawData.lastName,
+      email: rawData.email,
+      phone: rawData.phone,
+      address: rawData.address,
+      postalCode: rawData.postalCode,
+      location: rawData.location,
+      squareMeters: parseInt(rawData.squareMeters) || 0,
+      serviceType: rawData.serviceType,
+      buildingType: rawData.buildingType,
+      fromDate,
+      untilDate,
+      totalPrice,
+      paidAmount,
+      balance,
+      status,
+      prefix: rawData.prefix,
+      numberOfRooms: rawData.numberOfRooms?.toString() || '',
+      floor: rawData.floor,
+      elevator: rawData.elevator,
+      remarks1: rawData.remarks1,
+      remarks2: rawData.remarks2,
+      remarks3: rawData.remarks3,
+      deploymentFrequency: rawData.deploymentFrequency,
+      data: rawData.data ? rawData.data : undefined
     }
 
     const client = await prisma.client.update({
       where: { id: params.id },
-      data: {
-        ...data,
-        balance,
-        status,
-        fromDate: data.fromDate ? new Date(data.fromDate) : undefined,
-        untilDate: data.untilDate ? new Date(data.untilDate) : undefined
-      },
+      data: prismaData,
       include: {
         payments: true,
         photos: true,

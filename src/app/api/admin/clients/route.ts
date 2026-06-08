@@ -53,6 +53,10 @@ export async function GET(request: NextRequest) {
   }
 }
 
+import { writeFile, mkdir } from 'fs/promises'
+import { join } from 'path'
+import { existsSync } from 'fs'
+
 export async function POST(request: NextRequest) {
   try {
     const auth = await authenticateRequest(request)
@@ -60,7 +64,22 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const rawData = await request.json()
+    const contentType = request.headers.get('content-type') || ''
+    let rawData: any;
+    let images: File[] = [];
+
+    if (contentType.includes('multipart/form-data')) {
+      const formData = await request.formData()
+      const dataStr = formData.get('data') as string
+      if (!dataStr) {
+        return NextResponse.json({ error: 'Missing form data' }, { status: 400 })
+      }
+      rawData = JSON.parse(dataStr)
+      images = formData.getAll('images') as File[]
+    } else {
+      rawData = await request.json()
+    }
+
     console.log('Creating client with data:', JSON.stringify(rawData, null, 2))
 
     // Ensure numeric values are correct
@@ -77,8 +96,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Prepare data for Prisma, ensuring types match schema.prisma
-    const fromDate = new Date(rawData.fromDate)
-    const untilDate = new Date(rawData.untilDate)
+    const fromDate = rawData.fromDate ? new Date(rawData.fromDate) : new Date()
+    const untilDate = rawData.untilDate ? new Date(rawData.untilDate) : new Date()
 
     if (isNaN(fromDate.getTime()) || isNaN(untilDate.getTime())) {
       return NextResponse.json({
@@ -115,8 +134,40 @@ export async function POST(request: NextRequest) {
       data: rawData.data ? rawData.data : undefined
     }
 
+    // Process images if any
+    const photoCreates = [];
+    if (images.length > 0) {
+      const uploadDir = join(process.cwd(), 'public', 'uploads', 'clients')
+      if (!existsSync(uploadDir)) await mkdir(uploadDir, { recursive: true })
+
+      for (const image of images) {
+        if (image instanceof Blob) {
+          const bytes = await image.arrayBuffer()
+          const buffer = Buffer.from(bytes)
+          const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1E9)}`
+          const ext = image.name.split('.').pop() || 'png'
+          const filename = `${uniqueSuffix}.${ext}`
+          const filepath = join(uploadDir, filename)
+
+          await writeFile(filepath, buffer)
+          const url = `/uploads/clients/${filename}`
+          
+          photoCreates.push({
+            filename,
+            originalName: image.name,
+            url,
+            size: image.size,
+            mimeType: image.type
+          });
+        }
+      }
+    }
+
     const client = await prisma.client.create({
-      data: prismaData,
+      data: {
+        ...prismaData,
+        photos: photoCreates.length > 0 ? { create: photoCreates } : undefined
+      },
       include: {
         payments: true,
         photos: true,

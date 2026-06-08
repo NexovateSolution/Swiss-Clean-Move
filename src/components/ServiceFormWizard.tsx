@@ -170,10 +170,15 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
             data: d
         }
         
+        const formData = new FormData()
+        formData.append('data', JSON.stringify(payload))
+        images.forEach((file) => {
+          formData.append('images', file)
+        })
+
         const res = await fetch('/api/admin/clients', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          body: formData
         })
         if (!res.ok) throw new Error('fail')
         toast.success('Project stored successfully')
