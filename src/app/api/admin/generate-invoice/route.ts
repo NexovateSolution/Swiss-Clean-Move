@@ -464,9 +464,9 @@ export async function POST(request: NextRequest) {
             /* -- Header -- */
             .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; margin-top: -15px; }
             .header-logo img { height: 130px; width: auto; }
-            .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -10px; letter-spacing: 0.5px; }
+            .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -25px; letter-spacing: 0.5px; }
             
-            .header-contact { width: 280px; text-align: left; font-size: 13px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
+            .header-contact { width: 280px; text-align: left; font-size: 13px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; margin-top: 15px; }
             .contact-line { display: flex; align-items: center; gap: 15px; font-size: 14px; margin-bottom: 5px; }
             .contact-icon { font-size: 16px; color: #555; width: 16px; text-align: center; }
 
