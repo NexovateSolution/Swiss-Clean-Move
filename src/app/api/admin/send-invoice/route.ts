@@ -645,7 +645,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             .col-total { width: 10%; text-align: right; font-weight: bold; }
 
             /* -- Bottom of Table Info -- */
-            .table-bottom-row { display: flex; justify-content: space-between; align-items: stretch; margin-top: 15px; gap: 15px; }
+            .table-bottom-row { display: flex; justify-content: flex-end; align-items: stretch; margin-top: 15px; gap: 15px; }
             .scope-box { flex: 1; display: flex; gap: 10px; align-items: center; border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fafafa; }
             .scope-icon { font-size: 20px; color: #555; }
             .scope-text strong { display: block; font-size: 11px; color: #555; margin-bottom: 3px; }
