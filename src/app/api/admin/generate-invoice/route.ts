@@ -459,10 +459,10 @@ export async function POST(request: NextRequest) {
         <meta charset="UTF-8">
         <style>
             * { box-sizing: border-box; }
-            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 13px; line-height: 1.4; color: #333; }
+            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0 20px 80px 20px; font-size: 13px; line-height: 1.4; color: #333; }
             
             /* -- Header -- */
-            .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+            .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; margin-top: -15px; }
             .header-logo img { height: 130px; width: auto; }
             .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -10px; letter-spacing: 0.5px; }
             
