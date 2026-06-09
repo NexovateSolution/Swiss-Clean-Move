@@ -479,7 +479,7 @@ export async function POST(request: NextRequest) {
                 border: 1px solid #ddd; 
                 border-radius: 8px; 
                 padding: 15px; 
-                margin-left: 20px; /* Adjust to window pos */
+                margin-left: 45px; /* Adjust to window pos */
                 margin-top: 10px;
             }
             .customer-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
