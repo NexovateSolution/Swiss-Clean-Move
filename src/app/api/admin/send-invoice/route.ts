@@ -596,7 +596,7 @@ function generateInvoiceHTML(client: any, language: string): string {
                 width: 90mm; /* Fit window envelope */
                 padding: 15px; 
                 margin-left: 90px; /* Adjust to window pos */
-                margin-top: 50px;
+                margin-top: 25px;
             }
             .customer-address { font-size: 14px; line-height: 1.6; color: #000; font-weight: normal; }
             .customer-address span { font-weight: normal; }
