@@ -581,6 +581,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             
             /* -- Header -- */
             .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; margin-top: -15px; }
+            .header-logo { transform: translateY(-25px); }
             .header-logo img { height: 130px; width: auto; }
             .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -25px; letter-spacing: 0.5px; }
             
