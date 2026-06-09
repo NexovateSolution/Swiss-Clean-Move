@@ -780,6 +780,11 @@ function generateInvoiceHTML(client: any, language: string): string {
                 ${translatedFloor ? `<div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor}</span></span></div>` : ''}
                 <div class="info-row"><span class="info-label" style="width: 70px;">${t.area}</span><span class="info-val"><span>${client.squareMeters ? t.areaPrefix + ' ' + client.squareMeters + ' m²' : '-'}</span></span></div>
             </div>
+            <!-- KONTAKT -->
+            <div class="info-col" style="display: flex; flex-direction: column; justify-content: center; padding-top: 40px; gap: 15px;">
+                ${client.phone ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;">📞</span><span class="info-val" style="display: flex; align-items: center;"><span>${client.phone}</span></span></div>` : ''}
+                ${client.email ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;">✉</span><span class="info-val" style="display: flex; align-items: center;"><span>${client.email}</span></span></div>` : ''}
+            </div>
         </div>
 
         <!-- Service Table -->
