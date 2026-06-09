@@ -813,13 +813,7 @@ function generateInvoiceHTML(client: any, language: string): string {
             </table>
 
             <div class="table-bottom-row">
-                <div class="scope-box">
-                    <div class="scope-icon">ℹ️</div>
-                    <div class="scope-text">
-                        <strong>${t.scopeOfServices}</strong>
-                        ${t.swissStandard} ${t.guarantee}
-                    </div>
-                </div>
+
                 <div class="total-box">
                     <div class="total-box-title">${t.totalFixedPrice}</div>
                     <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
