@@ -35,11 +35,6 @@ const fn = `function generateInvoiceHTML(client: any, language: string): string 
 
         return \`
 ` + htmlBlock + `
-
-    } catch (error) {
-        console.error('Error generating invoice HTML:', error);
-        return '';
-    }
 }
 `;
 

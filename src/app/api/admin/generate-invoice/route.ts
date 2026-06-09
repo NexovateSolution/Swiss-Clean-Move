@@ -476,16 +476,11 @@ export async function POST(request: NextRequest) {
             /* Window Envelope position (Left) */
             .customer-card { 
                 width: 90mm; /* Fit window envelope */
-                border: 1px solid #ddd; 
-                border-radius: 8px; 
                 padding: 15px; 
-                margin-left: 45px; /* Adjust to window pos */
-                margin-top: 10px;
+                margin-left: 90px; /* Adjust to window pos */
+                margin-top: 50px;
             }
-            .customer-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-            .customer-card-icon { background: #00205B; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
-            .customer-card-title { font-size: 11px; font-weight: bold; color: #00205B; letter-spacing: 1px; }
-            .customer-address { font-size: 13px; line-height: 1.6; color: #000; font-weight: normal; }
+            .customer-address { font-size: 14px; line-height: 1.6; color: #000; font-weight: normal; }
             .customer-address span { font-weight: normal; }
 
             /* Order Card (Right) */
@@ -629,17 +624,9 @@ export async function POST(request: NextRequest) {
         <!-- Top Cards -->
         <div class="top-cards">
             <div class="customer-card">
-                <div class="customer-card-header">
-                    <div class="customer-card-icon">👤</div>
-                    <div class="customer-card-title">${t.customer}</div>
-                </div>
                 <div class="customer-address">
                     ${clientName}<br>
                     <span>${invoiceAddr ? invoiceAddr + '<br>' : ''}${invoiceZip} ${invoiceCity}</span>
-                    <div style="margin-top: 10px; font-size: 11px;">
-                        ${client.phone ? `<div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;"><span style="font-size: 12px; color: #00205B;">📞</span> <span>${client.phone}</span></div>` : ''}
-                        ${client.email ? `<div style="display: flex; align-items: center; gap: 6px;"><span style="font-size: 12px; color: #00205B;">✉</span> <span>${client.email}</span></div>` : ''}
-                    </div>
                 </div>
             </div>
             <div class="order-card">
