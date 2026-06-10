@@ -331,13 +331,19 @@ export async function POST(request: NextRequest) {
         const translator = createTranslator(language as string);
         const { tKey, tVal } = translator;
 
+        let destStreet = '';
+        let destZipCity = '';
+
         let formattedRemarks: string[] = [];
-        const SKIP_KEYS = new Set(['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'urgency', 'frequency', 'serviceTimes', 'startDate', 'handoverDate', 'desiredStart', 'handoverTime', 'company']);
+        const SKIP_KEYS = new Set(['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'urgency', 'frequency', 'serviceTimes', 'startDate', 'handoverDate', 'desiredStart', 'handoverTime', 'company', 'Street (Origin)', 'ZIP/City (Origin)']);
 
         if ((client as any).data && typeof (client as any).data === 'object' && Object.keys((client as any).data).length > 0) {
             const clientData = (client as any).data as Record<string, any>;
             Object.entries(clientData).forEach(([key, val]) => {
                 if (SKIP_KEYS.has(key) || !val || (Array.isArray(val) && val.length === 0)) return;
+                
+                if (key === 'Street (Destination)') { destStreet = String(val); return; }
+                if (key === 'ZIP/City (Destination)') { destZipCity = String(val); return; }
                 
                 let displayVal = '';
                 if (Array.isArray(val)) {
@@ -359,10 +365,18 @@ export async function POST(request: NextRequest) {
                 }
                 const rawKey = k.trim();
                 const rawVal = v.join(': ').trim();
+                
+                if (SKIP_KEYS.has(rawKey)) return;
+                if (rawKey === 'Street (Destination)') { destStreet = rawVal; return; }
+                if (rawKey === 'ZIP/City (Destination)') { destZipCity = rawVal; return; }
+                
                 const vals = rawVal.split(', ').map((rv: string) => tVal(rv));
                 formattedRemarks.push(`${tKey(rawKey)}: ${vals.join(', ')}`);
             });
         }
+        
+        let propertyStreet = destStreet || client.address || '-';
+        let propertyCity = destZipCity || ((client.postalCode || '') + ' ' + (client.location || '')).trim();
 
         let invoiceAddr = client.address || '';
         let invoiceZip = client.postalCode || '';
@@ -479,7 +493,7 @@ export async function POST(request: NextRequest) {
                 width: 90mm; /* Fit window envelope */
                 padding: 15px; 
                 margin-left: 90px; /* Adjust to window pos */
-                margin-top: 10px;
+                margin-top: -10px;
             }
             .customer-address { font-size: 14px; line-height: 1.6; color: #000; font-weight: normal; }
             .customer-address span { font-weight: normal; }
@@ -658,7 +672,7 @@ export async function POST(request: NextRequest) {
             <!-- OBJEKT -->
             <div class="info-col">
                 <div class="info-col-title">${t.object}</div>
-                <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${client.address || '-'}<br>${client.postalCode || ''} ${client.location || ''}</span></span></div>
+                <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${propertyStreet}${propertyCity ? '<br>' + propertyCity : ''}</span></span></div>
                 <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType}</span><span class="info-val"><span>${translatedBuilding || '-'}</span></span></div>
                 ${translatedFloor ? `<div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor}</span></span></div>` : ''}
                 <div class="info-row"><span class="info-label" style="width: 70px;">${t.area}</span><span class="info-val"><span>${client.squareMeters ? t.areaPrefix + ' ' + client.squareMeters + ' m²' : '-'}</span></span></div>
