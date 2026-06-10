@@ -335,15 +335,16 @@ export async function POST(request: NextRequest) {
         let destZipCity = '';
 
         let formattedRemarks: string[] = [];
-        const SKIP_KEYS = new Set(['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'urgency', 'frequency', 'serviceTimes', 'startDate', 'handoverDate', 'desiredStart', 'handoverTime', 'company', 'Street (Origin)', 'ZIP/City (Origin)']);
+        const SKIP_KEYS = new Set(['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'urgency', 'frequency', 'serviceTimes', 'startDate', 'handoverDate', 'desiredStart', 'handoverTime', 'company', 'moveFromStreet', 'moveFromZipCity', 'moveToStreet', 'moveToZipCity']);
 
         if ((client as any).data && typeof (client as any).data === 'object' && Object.keys((client as any).data).length > 0) {
             const clientData = (client as any).data as Record<string, any>;
+            // Extract destination fields first
+            if (clientData.moveToStreet) destStreet = String(clientData.moveToStreet);
+            if (clientData.moveToZipCity) destZipCity = String(clientData.moveToZipCity);
+            
             Object.entries(clientData).forEach(([key, val]) => {
                 if (SKIP_KEYS.has(key) || !val || (Array.isArray(val) && val.length === 0)) return;
-                
-                if (key === 'Street (Destination)') { destStreet = String(val); return; }
-                if (key === 'ZIP/City (Destination)') { destZipCity = String(val); return; }
                 
                 let displayVal = '';
                 if (Array.isArray(val)) {
@@ -367,8 +368,6 @@ export async function POST(request: NextRequest) {
                 const rawVal = v.join(': ').trim();
                 
                 if (SKIP_KEYS.has(rawKey)) return;
-                if (rawKey === 'Street (Destination)') { destStreet = rawVal; return; }
-                if (rawKey === 'ZIP/City (Destination)') { destZipCity = rawVal; return; }
                 
                 const vals = rawVal.split(', ').map((rv: string) => tVal(rv));
                 formattedRemarks.push(`${tKey(rawKey)}: ${vals.join(', ')}`);
