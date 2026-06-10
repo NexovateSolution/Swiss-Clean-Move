@@ -312,16 +312,6 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
                     { value: 'asRecommended', label: tl('wizard.unified.cleaning.asRecommended') }
                   ]}
                />
-               <FR label={tl('wizard.unified.cleaning.outdoorArea.drillHoles')} value={v('cleanDrillHoles')} onChange={val => set('cleanDrillHoles', val)}
-                  options={[
-                    { value: 'no', label: tl('wizard.unified.step2.no') },
-                    { value: 'yes', label: tl('wizard.unified.step2.yes') },
-                    { value: 'notSure', label: tl('wizard.unified.cleaning.outdoorArea.notSure') }
-                  ]}
-               />
-               {v('cleanDrillHoles') === 'yes' && (
-                  <FI label={tl('wizard.unified.cleaning.outdoorArea.drillHolesCount')} value={v('cleanDrillHolesCount')} onChange={val => set('cleanDrillHolesCount', val)} type="number" />
-               )}
              </>
           )}
 
@@ -339,6 +329,20 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
                { value: 'yes', label: tl('wizard.unified.step2.yes') }
              ]}
           />
+
+          <SH>{tl('wizard.unified.cleaning.outdoorArea.drillHoles')}</SH>
+          <FR label={''} value={v('cleanDrillHoles')} onChange={val => set('cleanDrillHoles', val)}
+             options={[
+               { value: 'no', label: tl('wizard.unified.step2.no') },
+               { value: 'yes', label: tl('wizard.unified.step2.yes') },
+               { value: 'notSure', label: tl('wizard.unified.cleaning.outdoorArea.notSure') }
+             ]}
+          />
+          {v('cleanDrillHoles') === 'yes' && (
+             <div className="mt-2">
+                <FI label={tl('wizard.unified.cleaning.outdoorArea.drillHolesCount')} value={v('cleanDrillHolesCount')} onChange={val => set('cleanDrillHolesCount', val)} type="number" />
+             </div>
+          )}
 
           <SH>{tl('wizard.unified.cleaning.additionalAreasTitle')}</SH>
           <div className="grid grid-cols-2 gap-2 mt-2">
