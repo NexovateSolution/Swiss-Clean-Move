@@ -896,8 +896,6 @@ export async function POST(request: NextRequest) {
             </table>
         </div>
 
-        <div style="page-break-before: always;"></div>
-
         <!-- Signature Section -->
         <div style="margin-top: 40px; padding-top: 20px;">
             <div style="display: flex; justify-content: space-between; font-size: 13px; color: #333;">
