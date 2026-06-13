@@ -799,50 +799,6 @@ export async function POST(request: NextRequest) {
             </div>
         </div>
 
-        <!-- Signature Section -->
-        <div style="margin-top: 40px; padding-top: 20px;">
-            <div style="display: flex; justify-content: space-between; font-size: 13px; color: #333;">
-                <!-- Left: SWISSCLEANMOVE -->
-                <div style="width: 32%;">
-                    <div style="font-weight: bold; color: #003366; margin-bottom: 15px; font-size: 14px;">SWISSCLEANMOVE</div>
-                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                        <span style="width: 110px;">${t.nameLabel}</span>
-                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
-                    </div>
-                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
-                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
-                    </div>
-                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                        <span style="width: 110px;">${t.signatureLabel}</span>
-                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
-                    </div>
-                </div>
-
-                <!-- Middle: Dates -->
-                <div style="width: 25%; text-align: center; margin-top: 40px; font-size: 12px;">
-                    <div style="margin-bottom: 10px;"><strong>${t.cleaningDateLabel || t.date}</strong> ${new Date(client.fromDate || Date.now()).toLocaleDateString('de-CH')}</div>
-                    <div><strong>${t.locationLabel}</strong> ${client.location || invoiceCity || ''}</div>
-                </div>
-
-                <!-- Right: Client Signature -->
-                <div style="width: 32%; margin-top: 30px;">
-                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                        <span style="width: 110px;">${t.nameLabel}</span>
-                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
-                    </div>
-                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
-                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
-                    </div>
-                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
-                        <span style="width: 110px;">${t.signatureLabel}</span>
-                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div style="page-break-before: always;"></div>
 
         <!-- Payment Slip Header Removed -->
@@ -939,6 +895,53 @@ export async function POST(request: NextRequest) {
                 </tr>
             </table>
         </div>
+
+        <div style="page-break-before: always;"></div>
+
+        <!-- Signature Section -->
+        <div style="margin-top: 40px; padding-top: 20px;">
+            <div style="display: flex; justify-content: space-between; font-size: 13px; color: #333;">
+                <!-- Left: SWISSCLEANMOVE -->
+                <div style="width: 32%;">
+                    <div style="font-weight: bold; color: #003366; margin-bottom: 15px; font-size: 14px;">SWISSCLEANMOVE</div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.nameLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.signatureLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                </div>
+
+                <!-- Middle: Dates -->
+                <div style="width: 25%; text-align: center; margin-top: 40px; font-size: 12px;">
+                    <div style="margin-bottom: 10px;"><strong>${t.cleaningDateLabel || t.date}</strong> ${new Date(client.fromDate || Date.now()).toLocaleDateString('de-CH')}</div>
+                    <div><strong>${t.locationLabel}</strong> ${client.location || invoiceCity || ''}</div>
+                </div>
+
+                <!-- Right: Client Signature -->
+                <div style="width: 32%; margin-top: 30px;">
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.nameLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.signatureLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
     </html>`
 
