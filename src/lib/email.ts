@@ -210,6 +210,28 @@ export function formatQuoteEmail(data: {
 }
 
 export function formatServiceFormEmail(data: any): string {
+  const t = {
+    newRequest: 'Neue Anfrage',
+    customerInfo: 'Kundeninformationen',
+    name: 'Name:',
+    address: 'Adresse:',
+    phone: 'Telefon:',
+    email: 'E-Mail:',
+    relocationDetails: 'Umzugsdetails',
+    movingDate: 'Umzugsdatum:',
+    unloadingAddress: 'Abladeadresse:',
+    unloadingCity: 'Abladeort:',
+    rooms: 'Zimmer:',
+    livingSpace: 'Wohnfläche:',
+    cleaningDetails: 'Reinigungsdetails',
+    apartmentType: 'Objekttyp:',
+    area: 'Fläche:',
+    cleaningDate: 'Reinigungsdatum:',
+    additionalRemarks: 'Zusätzliche Bemerkungen',
+    automatedMsg: 'Dies ist eine automatische Benachrichtigung der SwissCleanMove Website',
+    received: 'Empfangen:'
+  };
+
   return `
     <!DOCTYPE html>
     <html>
@@ -229,49 +251,49 @@ export function formatServiceFormEmail(data: any): string {
       <div class="container">
         <div class="header">
           <h1>🏠 SwissCleanMove</h1>
-          <p>New ${data.serviceName} - ${data.formType} Request</p>
+          <p>${t.newRequest} - ${data.serviceName} (${data.formType})</p>
         </div>
         <div class="content">
           <div class="section">
-            <h3>Customer Information</h3>
+            <h3>${t.customerInfo}</h3>
             <div class="field">
-              <span class="label">Name:</span> ${data.salutation} ${data.firstName} ${data.name}
+              <span class="label">${t.name}</span> ${data.salutation || ''} ${data.firstName || ''} ${data.name || ''}
             </div>
             <div class="field">
-              <span class="label">Address:</span> ${data.streetAndNumber}, ${data.postalCodeAndCity}
+              <span class="label">${t.address}</span> ${data.streetAndNumber || ''}, ${data.postalCodeAndCity || ''}
             </div>
             <div class="field">
-              <span class="label">Phone:</span> ${data.telephone}
+              <span class="label">${t.phone}</span> ${data.telephone || ''}
             </div>
             <div class="field">
-              <span class="label">Email:</span> ${data.emailAddress}
+              <span class="label">${t.email}</span> ${data.emailAddress || ''}
             </div>
           </div>
           
-          ${data.formType === 'relocation' ? `
+          ${data.formType === 'relocation' || data.formType === 'unified' ? `
           <div class="section">
-            <h3>Relocation Details</h3>
-            ${data.movingDate ? `<div class="field"><span class="label">Moving Date:</span> ${data.movingDate}</div>` : ''}
-            ${data.unloadingStreetAndNumber ? `<div class="field"><span class="label">Unloading Address:</span> ${data.unloadingStreetAndNumber}</div>` : ''}
-            ${data.unloadingPostalCodeAndCity ? `<div class="field"><span class="label">Unloading City:</span> ${data.unloadingPostalCodeAndCity}</div>` : ''}
-            ${data.numberOfRooms ? `<div class="field"><span class="label">Rooms:</span> ${data.numberOfRooms}</div>` : ''}
-            ${data.livingSpaceInM2 ? `<div class="field"><span class="label">Living Space:</span> ${data.livingSpaceInM2} m²</div>` : ''}
+            <h3>${t.relocationDetails}</h3>
+            ${data.movingDate ? `<div class="field"><span class="label">${t.movingDate}</span> ${data.movingDate}</div>` : ''}
+            ${data.unloadingStreetAndNumber ? `<div class="field"><span class="label">${t.unloadingAddress}</span> ${data.unloadingStreetAndNumber}</div>` : ''}
+            ${data.unloadingPostalCodeAndCity ? `<div class="field"><span class="label">${t.unloadingCity}</span> ${data.unloadingPostalCodeAndCity}</div>` : ''}
+            ${data.numberOfRooms ? `<div class="field"><span class="label">${t.rooms}</span> ${data.numberOfRooms}</div>` : ''}
+            ${data.livingSpaceInM2 ? `<div class="field"><span class="label">${t.livingSpace}</span> ${data.livingSpaceInM2} m²</div>` : ''}
           </div>
           ` : ''}
           
-          ${data.formType === 'cleaning' ? `
+          ${data.formType === 'cleaning' || data.formType === 'unified' ? `
           <div class="section">
-            <h3>Cleaning Details</h3>
-            ${data.numberOfRoomsApartment ? `<div class="field"><span class="label">Rooms:</span> ${data.numberOfRoomsApartment}</div>` : ''}
-            ${data.apartmentType ? `<div class="field"><span class="label">Apartment Type:</span> ${data.apartmentType}</div>` : ''}
-            ${data.areaInM2 ? `<div class="field"><span class="label">Area:</span> ${data.areaInM2} m²</div>` : ''}
-            ${data.cleaningAppointment ? `<div class="field"><span class="label">Cleaning Date:</span> ${data.cleaningAppointment}</div>` : ''}
+            <h3>${t.cleaningDetails}</h3>
+            ${data.numberOfRoomsApartment ? `<div class="field"><span class="label">${t.rooms}</span> ${data.numberOfRoomsApartment}</div>` : ''}
+            ${data.apartmentType ? `<div class="field"><span class="label">${t.apartmentType}</span> ${data.apartmentType}</div>` : ''}
+            ${data.areaInM2 ? `<div class="field"><span class="label">${t.area}</span> ${data.areaInM2} m²</div>` : ''}
+            ${data.cleaningAppointment ? `<div class="field"><span class="label">${t.cleaningDate}</span> ${data.cleaningAppointment}</div>` : ''}
           </div>
           ` : ''}
           
           ${data.remark ? `
           <div class="section">
-            <h3>Additional Remarks</h3>
+            <h3>${t.additionalRemarks}</h3>
             <p style="background: #f0f0f0; padding: 10px;">
               ${data.remark.replace(/\n/g, '<br>')}
             </p>
@@ -279,8 +301,8 @@ export function formatServiceFormEmail(data: any): string {
           ` : ''}
         </div>
         <div class="footer">
-          <p>This is an automated notification from SwissCleanMove website</p>
-          <p>Received: ${new Date().toLocaleString('en-CH', { timeZone: 'Europe/Zurich' })}</p>
+          <p>${t.automatedMsg}</p>
+          <p>${t.received} ${new Date().toLocaleString('de-CH', { timeZone: 'Europe/Zurich' })}</p>
         </div>
       </div>
     </body>

@@ -367,6 +367,41 @@
         "Cuisine et préparation des repas",
         "Soins des animaux et des plantes",
         "Soins aux personnes âgées et courses"
+      ],
+      "gastronomyCleaning": [
+        "Kitchen and equipment cleaning",
+        "Hygienic disinfection",
+        "Exhaust hoods and filters",
+        "Floors and work surfaces",
+        "HACCP-compliant cleaning"
+      ],
+      "buero": [
+        "Büroräume und Arbeitsplätze",
+        "Sanitäranlagen",
+        "Gemeinschaftsbereiche",
+        "Müllentsorgung",
+        "Regelmäßige Termine"
+      ],
+      "hauswartung": [
+        "Treppenhausreinigung",
+        "Außenanlagen pflege",
+        "Kleine Reparaturen",
+        "Winterdienst",
+        "Objektbetreuung"
+      ],
+      "entsorgung": [
+        "Möbel und Hausrat",
+        "Elektronikgeräte",
+        "Sperrmüll",
+        "Fachgerechte Entsorgung",
+        "Umweltfreundlich"
+      ],
+      "umzug": [
+        "Kompletter Umzugsservice",
+        "Verpackung und Transport",
+        "Möbelmontage",
+        "Versicherungsschutz",
+        "Schweizweite Umzüge"
       ]
     },
     "title": "Nos Services",
@@ -791,7 +826,8 @@
       "functional": "Cookies fonctionnels",
       "functionalText": "Ces cookies permettent au site web de fournir des fonctionnalités améliorées et une personnalisation, comme la mémorisation de vos paramètres de langue.",
       "manageText": "Vous pouvez modifier vos paramètres de cookies dans votre navigateur à tout moment. Cependant, veuillez noter que la désactivation de certains cookies peut affecter la fonctionnalité de notre site web."
-    }
+    },
+    "datenschutz": "Privacy Policy"
   },
   "gallery": {
     "badge": "Résultats Réels",
@@ -5010,6 +5046,16 @@
         "summaryCustomer": "Client",
         "summaryTotalLabel": "Total"
       }
+    },
+    "common": {
+      "learnMore": "Learn More",
+      "readMore": "Read More",
+      "formLink": "Form",
+      "getQuote": "Get Quote",
+      "contactUs": "Contact Us",
+      "requestFreeQuote": "Request Free Quote",
+      "getFreeQuote": "Get Free Quote",
+      "freeQuote": "Free Quote"
     }
   },
   "common": {
@@ -5020,7 +5066,10 @@
     "contactUs": "Nous contacter",
     "requestFreeQuote": "Demander un devis gratuit",
     "getFreeQuote": "Obtenir un devis gratuit",
-    "freeQuote": "Devis gratuit"
+    "freeQuote": "Devis gratuit",
+    "yes": "Yes",
+    "no": "No",
+    "notSpecified": "Not specified"
   },
   "regions": {
     "title": "Régions de Service",
@@ -9495,5 +9544,204 @@
         }
       ]
     }
+  },
+  "phone": {
+    "label": "Telephone number"
+  },
+  "postalCodeAndCity": {
+    "label": "ZIP / City"
+  },
+  "streetAndNumber": {
+    "label": "Street, No."
+  },
+  "contactPreferredVia": {
+    "label": "Preferred contact",
+    "options": {
+      "email": "E-mail",
+      "phone": "Phone"
+    }
+  },
+  "viewingIsWelcome": {
+    "label": "Viewing is welcome",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "remark": {
+    "label": "Remark",
+    "placeholder": "Additional note"
+  },
+  "title": {
+    "quote": "Quote",
+    "offer": "Offer"
+  },
+  "sections": {
+    "chargingAddress": "Charging address",
+    "address": "Address",
+    "unloadingAddress": "Unloading address",
+    "special": "Special",
+    "miscellaneous": "Miscellaneous",
+    "apartmentDetails": "Apartment details"
+  },
+  "toasts": {
+    "submitted": "Form submitted successfully!",
+    "submitFailed": "Failed to submit form",
+    "submitFailedRetry": "Failed to submit form. Please try again."
+  },
+  "fields": {
+    "salutation": {
+      "label": "Salutation",
+      "options": {
+        "mister": "Mr.",
+        "woman": "Ms."
+      }
+    },
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter your name"
+    },
+    "firstName": {
+      "label": "First name",
+      "placeholder": "Enter your first name"
+    },
+    "streetAndNumber": {
+      "label": "Street and number",
+      "placeholder": "Enter street and number"
+    },
+    "postalCodeAndCity": {
+      "label": "Postal code and city",
+      "placeholder": "Enter postal code and city"
+    },
+    "telephone": {
+      "label": "Telephone",
+      "placeholder": "Enter your phone number"
+    },
+    "emailAddress": {
+      "label": "Email address",
+      "placeholder": "Enter your email address"
+    },
+    "movingDate": {
+      "label": "Moving date"
+    },
+    "floors": {
+      "label": "Floors"
+    },
+    "assembly": {
+      "label": "Assembly"
+    },
+    "pathToFrontDoor": {
+      "label": "Path to front door"
+    },
+    "lift": {
+      "label": "Lift"
+    },
+    "numberOfRooms": {
+      "label": "Number of rooms"
+    },
+    "heavyLoad": {
+      "label": "Heavy load"
+    },
+    "livingSpaceInM2": {
+      "label": "Living space (m²)"
+    },
+    "liftDisassembly": {
+      "label": "Lift disassembly"
+    },
+    "pathToFrontDoorM": {
+      "label": "Path to front door (m)"
+    },
+    "pack": {
+      "label": "Pack"
+    },
+    "cellar": {
+      "label": "Cellar"
+    },
+    "garage": {
+      "label": "Garage"
+    },
+    "screed": {
+      "label": "Screed"
+    },
+    "craftRoom": {
+      "label": "Craft room"
+    },
+    "unpacking": {
+      "label": "Unpacking"
+    },
+    "cleaning": {
+      "label": "Cleaning"
+    },
+    "disposal": {
+      "label": "Disposal"
+    },
+    "apartment": {
+      "numberOfRooms": {
+        "label": "Number of rooms"
+      },
+      "type": {
+        "label": "Apartment type",
+        "options": {
+          "rentalApartment": "Rental apartment",
+          "ownApartment": "Own apartment",
+          "house": "House"
+        }
+      },
+      "areaInM2": {
+        "label": "Area (m²)"
+      },
+      "awningType": {
+        "label": "Awning type"
+      },
+      "cellar": {
+        "label": "Cellar"
+      },
+      "garage": {
+        "label": "Garage"
+      }
+    },
+    "cleaningAppointment": {
+      "label": "Cleaning appointment"
+    },
+    "submissionDeadline": {
+      "label": "Submission deadline"
+    },
+    "carpetShampooing": {
+      "label": "Carpet shampooing"
+    },
+    "conservatory": {
+      "label": "Conservatory"
+    },
+    "outdoorSeating": {
+      "label": "Outdoor seating"
+    },
+    "parquet": {
+      "label": "Parquet"
+    },
+    "stairpolish": {
+      "label": "Stair polish"
+    },
+    "contactPreferredVia": {
+      "label": "Contact preferred via",
+      "options": {
+        "email": "E-mail",
+        "phone": "Phone"
+      }
+    },
+    "viewingIsWelcome": {
+      "label": "Viewing is welcome.",
+      "options": {
+        "and": "And"
+      }
+    },
+    "remark": {
+      "label": "Remark",
+      "placeholder": "Enter your remark"
+    }
+  },
+  "buttons": {
+    "close": "Close",
+    "submitting": "Submitting...",
+    "submit": "Submit"
   }
 }

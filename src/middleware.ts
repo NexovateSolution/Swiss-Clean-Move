@@ -11,14 +11,6 @@ const intlMiddleware = createMiddleware({
 });
 
 export default function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  if (pathname === '/admin' || pathname.startsWith('/admin/')) {
-    const url = request.nextUrl.clone();
-    url.pathname = `/de${pathname}`;
-    return NextResponse.redirect(url);
-  }
-
   return intlMiddleware(request);
 }
 

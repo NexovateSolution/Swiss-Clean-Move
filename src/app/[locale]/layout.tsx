@@ -16,6 +16,13 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       type: 'website',
       locale: `${locale}_CH`,
     },
+    alternates: {
+      languages: {
+        'en': '/en',
+        'de': '/de',
+        'fr': '/fr'
+      }
+    },
     robots: { index: true, follow: true },
   };
 }

@@ -7,7 +7,10 @@
     "requestFreeQuote": "Request Free Quote",
     "yes": "Yes",
     "no": "No",
-    "notSpecified": "Not specified"
+    "notSpecified": "Not specified",
+    "readMore": "Weiterlesen",
+    "getQuote": "Angebot",
+    "contactUs": "Kontakt"
   },
   "navigation": {
     "home": "Home",
@@ -93,6 +96,30 @@
       "householdHelping": {
         "title": "Household Helping",
         "description": "Professional household assistance including cleaning, cooking, laundry, shopping, and care services"
+      },
+      "umzugsreinigung": {
+        "title": "Umzugsreinigung",
+        "description": "Professionelle Endreinigung für Wohnungen und Häuser mit 100% Abnahmegarantie"
+      },
+      "gastronomie": {
+        "title": "Gastronomie Reinigung",
+        "description": "Spezialisierte Reinigung für Restaurants und Gastronomiebetriebe"
+      },
+      "buero": {
+        "title": "Büro Reinigung",
+        "description": "Regelmässige und gründliche Büroreinigung für ein professionelles Arbeitsumfeld"
+      },
+      "hauswartung": {
+        "title": "Hauswartung",
+        "description": "Umfassende Hauswartungsdienstleistungen für Immobilien"
+      },
+      "entsorgung": {
+        "title": "Entsorgung",
+        "description": "Fachgerechte Entsorgung von Möbeln und Haushaltsgegenständen"
+      },
+      "umzug": {
+        "title": "Umzug",
+        "description": "Komplette Umzugsdienstleistungen mit erfahrenem Team"
       }
     },
     "hero": {
@@ -346,6 +373,48 @@
         "Cooking and meal preparation",
         "Pet care and plant care",
         "Senior care and errands"
+      ],
+      "umzugsreinigung": [
+        "Komplette Wohnungsreinigung",
+        "Küche und Badezimmer gründlich",
+        "Fenster innen und außen",
+        "Böden und Teppiche",
+        "100% Abnahmegarantie"
+      ],
+      "gastronomie": [
+        "Küchen- und Gerätereingung",
+        "Hygienische Desinfektion",
+        "Abzugshauben und Filter",
+        "Böden und Arbeitsflächen",
+        "HACCP-konforme Reinigung"
+      ],
+      "buero": [
+        "Büroräume und Arbeitsplätze",
+        "Sanitäranlagen",
+        "Gemeinschaftsbereiche",
+        "Müllentsorgung",
+        "Regelmäßige Termine"
+      ],
+      "hauswartung": [
+        "Treppenhausreinigung",
+        "Außenanlagen pflege",
+        "Kleine Reparaturen",
+        "Winterdienst",
+        "Objektbetreuung"
+      ],
+      "entsorgung": [
+        "Möbel und Hausrat",
+        "Elektronikgeräte",
+        "Sperrmüll",
+        "Fachgerechte Entsorgung",
+        "Umweltfreundlich"
+      ],
+      "umzug": [
+        "Kompletter Umzugsservice",
+        "Verpackung und Transport",
+        "Möbelmontage",
+        "Versicherungsschutz",
+        "Schweizweite Umzüge"
       ]
     },
     "title": "Our Services",
@@ -697,7 +766,12 @@
       "authority": "Supervisory Authority",
       "liabilityText1": "The contents of our pages have been created with the greatest care. However, we cannot guarantee the accuracy, completeness and timeliness of the content.",
       "liabilityText2": "As a service provider, we are responsible for our own content on these pages according to general laws pursuant to Section 7, Para. 1 of the TMG. However, according to Sections 8 to 10 of the TMG, we are not obligated as a service provider to monitor transmitted or stored third-party information.",
-      "copyrightText": "The content and works created by the site operators on these pages are subject to Swiss copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator."
+      "copyrightText": "The content and works created by the site operators on these pages are subject to Swiss copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator.",
+      "companyInfo": "Firmeninformationen",
+      "legalInfo": "Rechtliche Angaben",
+      "liability": "Haftungsausschluss",
+      "copyright": "Urheberrecht",
+      "companyName": "Firmenname"
     },
     "privacy": {
       "generalInfo": "General Information",
@@ -754,6 +828,18 @@
       "functional": "Functional Cookies",
       "functionalText": "These cookies enable the website to provide enhanced functionality and personalization, such as storing your language settings.",
       "manageText": "You can change your cookie settings in your browser at any time. However, please note that deactivating certain cookies may affect the functionality of our website."
+    },
+    "navigation": {
+      "impressum": "Impressum",
+      "datenschutz": "Datenschutz",
+      "agb": "AGB",
+      "cookies": "Cookie-Richtlinie"
+    },
+    "sections": {
+      "impressum": "Impressum",
+      "datenschutz": "Datenschutzerklärung",
+      "agb": "Allgemeine Geschäftsbedingungen",
+      "cookies": "Cookie-Richtlinie"
     }
   },
   "gallery": {
@@ -1281,7 +1367,8 @@
           "plusMinus1Day": "Plus Minus1 Day",
           "plusMinus3Days": "Plus Minus3 Days",
           "plusMinus1Week": "Plus Minus1 Week"
-        }
+        },
+        "newFloor": "Etage (neuer Ort)"
       },
       "disposal": {
         "pleaseChoose": "Please Choose",
@@ -1482,7 +1569,8 @@
           "piano": "Piano",
           "safe": "Safe",
           "fitness": "Fitness",
-          "none": "None"
+          "none": "None",
+          "aquarium": "Aquarium"
         },
         "extraServices": "Extra Services",
         "services": {
@@ -1935,7 +2023,10 @@
           "5": "5th floor",
           "ground": "Ground floor",
           "6plus": "6th floor or higher"
-        }
+        },
+        "select": "Bitte auswählen",
+        "yes": "Ja",
+        "no": "Nein"
       },
       "propertyMaintenance": {
         "companyOrManagement": "Company Or Management",
@@ -3428,18 +3519,400 @@
           "thankYou": "Thank you for your request.",
           "reviewing": "Our team will review your details and get back to you shortly with a suitable offer."
         }
+      },
+      "steps": {
+        "cleaningService": "Service & Ort",
+        "propertyDetails": "Objektdetails",
+        "areas": "Zu reinigende Bereiche",
+        "windowDetails": "Fensterdetails",
+        "datesAndRequests": "Datum & Wünsche",
+        "relocationFrom": "Umzug von",
+        "relocationTo": "Umzug nach",
+        "boxesAndSupplies": "Kisten & Material",
+        "disposalBasic": "Entsorgung Basis",
+        "disposalWaste": "Abfalldetails",
+        "contact": "Kontaktdaten"
+      },
+      "fields": {
+        "location": {
+          "label": "Ort",
+          "placeholder": "Stadt / Adresse"
+        },
+        "objectType": {
+          "label": "Objekttyp",
+          "options": {
+            "apartment": "Wohnung",
+            "house": "Haus",
+            "office": "Büro"
+          }
+        },
+        "floorsCount": {
+          "label": "Wie viele Stockwerke?"
+        },
+        "roomsCount": {
+          "label": "Anzahl Zimmer"
+        },
+        "livingSpaceM2": {
+          "label": "Wohnfläche (m²)",
+          "placeholder": "z.B. 80"
+        },
+        "cleaningAreas": {
+          "label": "Welche Bereiche müssen gereinigt werden?",
+          "options": {
+            "complete": "Komplette Reinigung aller Räume (inkl. Küche, Bad & WC)",
+            "cellar": "Keller",
+            "attic": "Estrich / Dachboden",
+            "garage": "Garage",
+            "conservatory": "Wintergarten",
+            "individualRooms": "Nur einzelne Räume"
+          }
+        },
+        "desiredCleaningDate": {
+          "label": "Gewünschtes Reinigungsdatum"
+        },
+        "handoverDate": {
+          "label": "Übergabe / Abgabedatum"
+        },
+        "comments": {
+          "label": "Weitere Wünsche / Bemerkungen",
+          "placeholder": "Zugang, Besonderheiten, etc."
+        },
+        "window": {
+          "normalWindows": {
+            "label": "Normale Fenster (Anzahl)"
+          },
+          "frenchDoors": {
+            "label": "Fenstertüren (Balkon/Terrasse)"
+          },
+          "otherGlass": {
+            "label": "Andere große Glasflächen"
+          },
+          "blindsAndShutters": {
+            "label": "Storen & Rollläden",
+            "options": {
+              "venetian": "Jalousien",
+              "roller": "Rollläden",
+              "shutters": "Läden",
+              "other": "Andere / Spezial",
+              "none": "Keine"
+            }
+          },
+          "windowFeatures": {
+            "label": "Besondere Fenstereigenschaften",
+            "options": {
+              "heavilySoiled": "Stark verschmutzt (z.B. Nikotin, Fett, Staub)",
+              "mold": "Schimmel an Fensterrahmen",
+              "manySmall": "Viele kleine Fenster",
+              "roofWindow": "Dachfenster / schwer zugänglich",
+              "safetyFilm": "Sicherheitsfolie / Spezialverglasung",
+              "none": "Keine Besonderheiten"
+            }
+          }
+        },
+        "relocation": {
+          "movingFromAddress": {
+            "label": "Umzug von - PLZ / Ort / Adresse",
+            "placeholder": "Aktuelle Adresse eingeben"
+          },
+          "currentFloor": {
+            "label": "Auf welchem Stock wohnen Sie aktuell?"
+          },
+          "currentElevator": {
+            "label": "Ist aktuell ein Lift vorhanden?"
+          },
+          "movingToAddress": {
+            "label": "Umzug nach - PLZ / Ort / Adresse",
+            "placeholder": "Zieladresse eingeben"
+          },
+          "destinationElevator": {
+            "label": "Ist am Ziel ein Lift vorhanden?"
+          },
+          "movingPeople": {
+            "label": "Wie viele Personen ziehen um?"
+          },
+          "boxesCount": {
+            "label": "Wie viele Umzugskisten müssen transportiert werden?"
+          },
+          "movingSupplies": {
+            "label": "Benötigen Sie zusätzliches Umzugsmaterial?",
+            "options": {
+              "movingBox": "Umzugskarton (10 Stück)",
+              "wardrobeBox": "Kleiderkarton",
+              "bottleCarton": "Flaschenkarton",
+              "tapeDispenser": "Klebeband + Abroller"
+            }
+          }
+        },
+        "disposal": {
+          "disposalType": {
+            "label": "Bitte wählen",
+            "options": {
+              "disposal": "Entsorgung",
+              "eviction": "Räumung",
+              "disposalClearance": "Entsorgung + Räumung"
+            }
+          },
+          "location": {
+            "label": "Ort"
+          },
+          "elevator": {
+            "label": "Ist aktuell ein Lift vorhanden?"
+          },
+          "waste": {
+            "label": "Abfall",
+            "options": {
+              "furniture": "Möbel (Schrank, Bett, Tisch, etc.)",
+              "electrical": "Elektrogeräte (TV, Kühlschrank, PC)",
+              "cardboard": "Karton / Papier / Kleinteile",
+              "constructionDebris": "Bauschutt / Holz / Metall",
+              "gardenWaste": "Gartenabfall / Pflanzen / Erde",
+              "textiles": "Textilien / Teppiche / Matratzen"
+            }
+          },
+          "otherItems": {
+            "label": "Weitere Gegenstände"
+          },
+          "disassemblyNeeded": {
+            "label": "Müssen Gegenstände demontiert werden?"
+          },
+          "amount": {
+            "label": "Wie viel Material muss entsorgt werden?",
+            "options": {
+              "little": "Wenig (z.B. kleiner Raum)",
+              "medium": "Mittel (1-2 Zimmer)",
+              "lots": "Viel (ganze Wohnung / Haus / Lager)"
+            }
+          }
+        },
+        "contact": {
+          "salutation": {
+            "label": "Anrede",
+            "options": {
+              "mister": "Herr",
+              "woman": "Frau"
+            }
+          },
+          "firstName": {
+            "label": "Vorname"
+          },
+          "lastName": {
+            "label": "Nachname"
+          },
+          "email": {
+            "label": "E-Mail-Adresse"
+          },
+          "phone": {
+            "label": "Telefonnummer"
+          },
+          "postalCodeAndCity": {
+            "label": "PLZ / Ort"
+          },
+          "streetAndNumber": {
+            "label": "Strasse, Nr."
+          },
+          "contactPreferredVia": {
+            "label": "Bevorzugter Kontakt",
+            "options": {
+              "email": "E-Mail",
+              "phone": "Telefon"
+            }
+          },
+          "viewingIsWelcome": {
+            "label": "Besichtigung willkommen",
+            "options": {
+              "yes": "Ja",
+              "no": "Nein"
+            }
+          },
+          "remark": {
+            "label": "Bemerkung",
+            "placeholder": "Zusätzliche Notiz"
+          }
+        }
       }
     },
     "toasts": {
       "submitted": "Your request has been submitted successfully!",
-      "submitFailedRetry": "Failed to submit request. Please try again."
+      "submitFailedRetry": "Failed to submit request. Please try again.",
+      "submitFailed": "Formular konnte nicht gesendet werden"
     },
     "upload": {
       "title": "Upload Pictures (Optional)",
       "description": "Attach photos of your property to help us provide a more accurate quote.",
       "button": "Click to select images"
     },
-    " ": " "
+    " ": " ",
+    "common": {
+      "yes": "Ja",
+      "no": "Nein"
+    },
+    "title": {
+      "quote": "Offerte",
+      "offer": "Angebot"
+    },
+    "sections": {
+      "chargingAddress": "Beladeadresse",
+      "address": "Adresse",
+      "unloadingAddress": "Entladeadresse",
+      "special": "Spezial",
+      "miscellaneous": "Verschiedenes",
+      "apartmentDetails": "Wohnungsdetails"
+    },
+    "fields": {
+      "salutation": {
+        "label": "Anrede",
+        "options": {
+          "mister": "Herr",
+          "woman": "Frau"
+        }
+      },
+      "name": {
+        "label": "Name",
+        "placeholder": "Name eingeben"
+      },
+      "firstName": {
+        "label": "Vorname",
+        "placeholder": "Vornamen eingeben"
+      },
+      "streetAndNumber": {
+        "label": "Strasse und Nummer",
+        "placeholder": "Strasse und Nummer eingeben"
+      },
+      "postalCodeAndCity": {
+        "label": "PLZ und Ort",
+        "placeholder": "PLZ und Ort eingeben"
+      },
+      "telephone": {
+        "label": "Telefon",
+        "placeholder": "Telefonnummer eingeben"
+      },
+      "emailAddress": {
+        "label": "E-Mail-Adresse",
+        "placeholder": "E-Mail-Adresse eingeben"
+      },
+      "movingDate": {
+        "label": "Umzugsdatum"
+      },
+      "floors": {
+        "label": "Stockwerke"
+      },
+      "assembly": {
+        "label": "Montage"
+      },
+      "pathToFrontDoor": {
+        "label": "Weg zur Haustür"
+      },
+      "lift": {
+        "label": "Lift"
+      },
+      "numberOfRooms": {
+        "label": "Anzahl Zimmer"
+      },
+      "heavyLoad": {
+        "label": "Schwerlast"
+      },
+      "livingSpaceInM2": {
+        "label": "Wohnfläche (m²)"
+      },
+      "liftDisassembly": {
+        "label": "Lift-Demontage"
+      },
+      "pathToFrontDoorM": {
+        "label": "Weg zur Haustür (m)"
+      },
+      "pack": {
+        "label": "Einpacken"
+      },
+      "cellar": {
+        "label": "Keller"
+      },
+      "garage": {
+        "label": "Garage"
+      },
+      "screed": {
+        "label": "Estrich"
+      },
+      "craftRoom": {
+        "label": "Bastelraum"
+      },
+      "unpacking": {
+        "label": "Auspacken"
+      },
+      "cleaning": {
+        "label": "Reinigung"
+      },
+      "disposal": {
+        "label": "Entsorgung"
+      },
+      "apartment": {
+        "numberOfRooms": {
+          "label": "Anzahl Zimmer"
+        },
+        "type": {
+          "label": "Wohnungstyp",
+          "options": {
+            "rentalApartment": "Mietwohnung",
+            "ownApartment": "Eigentumswohnung",
+            "house": "Haus"
+          }
+        },
+        "areaInM2": {
+          "label": "Fläche (m²)"
+        },
+        "awningType": {
+          "label": "Markisentyp"
+        },
+        "cellar": {
+          "label": "Keller"
+        },
+        "garage": {
+          "label": "Garage"
+        }
+      },
+      "cleaningAppointment": {
+        "label": "Reinigungstermin"
+      },
+      "submissionDeadline": {
+        "label": "Abgabefrist"
+      },
+      "carpetShampooing": {
+        "label": "Teppich-Shampoonierung"
+      },
+      "conservatory": {
+        "label": "Wintergarten"
+      },
+      "outdoorSeating": {
+        "label": "Aussenbestuhlung"
+      },
+      "parquet": {
+        "label": "Parkett"
+      },
+      "stairpolish": {
+        "label": "Treppenpolitur"
+      },
+      "contactPreferredVia": {
+        "label": "Kontakt bevorzugt via",
+        "options": {
+          "email": "E-Mail",
+          "phone": "Telefon"
+        }
+      },
+      "viewingIsWelcome": {
+        "label": "Besichtigung ist willkommen.",
+        "options": {
+          "and": "Und"
+        }
+      },
+      "remark": {
+        "label": "Bemerkung",
+        "placeholder": "Bemerkung eingeben"
+      }
+    },
+    "buttons": {
+      "close": "Schliessen",
+      "submitting": "Wird gesendet...",
+      "submit": "Senden"
+    }
   },
   "phone": {
     "label": "Telephone number"
