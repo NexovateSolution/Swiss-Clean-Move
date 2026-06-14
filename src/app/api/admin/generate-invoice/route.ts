@@ -410,7 +410,7 @@ export async function POST(request: NextRequest) {
             'Moving Cleaning Combo': { en: 'Moving & Final Cleaning Combo Offer', de: 'Umzug & Endreinigung Kombi-Angebot', fr: 'Offre combinée déménagement et nettoyage' },
             'Moving Cleaning Combo 2': { en: 'Moving + Cleaning (Combo)', de: 'Umzug + Reinigung (Kombi)', fr: 'Déménagement + Nettoyage (Combo)' },
             'Facility Services': { en: 'Facility Services', de: 'Facility Services', fr: 'Services de conciergerie' },
-            'Disposal': { en: 'Disposal', de: 'Entsorgung', fr: 'Élimination' }
+            'Disposal 2': { en: 'Disposal', de: 'Entsorgung', fr: 'Élimination' }
         };
 
         const floorMap: Record<string, Record<string, string>> = {
