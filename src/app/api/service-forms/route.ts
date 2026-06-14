@@ -258,6 +258,27 @@ export async function POST(request: NextRequest) {
                     text: `New request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
                     attachments: attachmentsConfig
                 })
+                
+                // --- AUTO REPLY TO CLIENT ---
+                const autoReplyText = {
+                  en: `Good day,\n\nThank you very much for your quotation request and for your trust in SwissCleanMove.\n\nWe confirm receipt of your request and will review it carefully in order to prepare an individual and transparent quote for you.\n\nIf an on-site inspection is required to create a precise offer, we will contact you to arrange a convenient appointment.\n\nYou will receive our offer within the next 24 hours. Should we require any further information, we will contact you immediately.\n\nIf you have any questions, please do not hesitate to contact us at any time. We look forward to supporting you with our professional moving, cleaning, and facility services.\n\nBest regards,\n\nSwissCleanMove\n\n📞 +41 76 488 36 89\n📞 +41 78 215 80 30\n✉️ info@swisscleanmove.ch\n🌐 www.swisscleanmove.ch`,
+                  de: `Guten Tag\n\nHerzlichen Dank für Ihre Offertanfrage und Ihr Vertrauen in SwissCleanMove.\n\nWir bestätigen den Eingang Ihrer Anfrage und werden diese sorgfältig prüfen, um Ihnen eine individuelle und transparente Offerte zu erstellen.\n\nFalls für die Erstellung eines präzisen Angebots eine Besichtigung erforderlich ist, werden wir Sie kontaktieren, um einen passenden Besichtigungstermin zu vereinbaren.\n\nUnser Angebot erhalten Sie innerhalb der nächsten 24 Stunden. Sollten wir weitere Informationen benötigen, melden wir uns umgehend bei Ihnen.\n\nBei Fragen stehen wir Ihnen jederzeit gerne zur Verfügung und freuen uns darauf, Sie mit unseren professionellen Umzugs-, Reinigungs- und Facility-Services unterstützen zu dürfen.\n\nFreundliche Grüsse\n\nSwissCleanMove\n\n📞 +41 76 488 36 89\n📞 +41 78 215 80 30\n✉️ info@swisscleanmove.ch\n🌐 www.swisscleanmove.ch`,
+                  fr: `Bonjour,\n\nUn grand merci pour votre demande d'offre et pour votre confiance envers SwissCleanMove.\n\nNous vous confirmons la réception de votre demande et l'examinerons avec soin afin de vous établir un devis personnalisé et transparent.\n\nSi une visite des lieux s'avère nécessaire pour établir une offre précise, nous vous contacterons afin de convenir d'un rendez-vous.\n\nVous recevrez notre offre dans les prochaines 24 heures. Si nous avons besoin d'informations complémentaires, nous prendrons contact avec vous dans les plus brefs délais.\n\nNous restons à votre entière disposition pour toute question et nous réjouissons d'ores et déjà de vous accompagner grâce à nos services professionnels de déménagement, de nettoyage et de conciergerie.\n\nCordialement,\n\nSwissCleanMove\n\n📞 +41 76 488 36 89\n📞 +41 78 215 80 30\n✉️ info@swisscleanmove.ch\n🌐 www.swisscleanmove.ch`
+                };
+                
+                const clientEmailText = autoReplyText[locale as 'en'|'de'|'fr'] || autoReplyText.de;
+                const clientEmailHtml = '<div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">' + clientEmailText.replace(/\\n/g, '<br/>') + '</div>';
+                
+                const clientSubject = locale === 'fr' ? 'Confirmation de votre demande - SwissCleanMove' : (locale === 'en' ? 'Confirmation of your request - SwissCleanMove' : 'Eingangsbestätigung Ihrer Anfrage - SwissCleanMove');
+                
+                await sendEmailNotification({
+                    to: data.emailAddress,
+                    subject: clientSubject,
+                    html: clientEmailHtml,
+                    text: clientEmailText,
+                    attachments: []
+                });
+                
                 if (emailSent === true) {
                     console.log('✅ Email notification sent')
                     emailDebug += ' | Success';
