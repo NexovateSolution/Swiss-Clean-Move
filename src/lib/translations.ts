@@ -162,7 +162,6 @@ export const keyLabels: Record<string, Record<string, string>> = {
             serviceType: { en: 'Service Type', de: 'Dienstleistungsart', fr: 'Type de service' },
             selectedAddOns: { en: 'Selected Add-ons', de: 'Gewählte Zusatzleistungen', fr: 'Options sélectionnées' },
             hours: { en: 'Hours', de: 'Stunden', fr: 'Heures' },
-            rooms: { en: 'Rooms', de: 'Zimmer', fr: 'Pièces' },
             photos: { en: 'Photos', de: 'Fotos', fr: 'Photos' },
             images: { en: 'Images', de: 'Bilder', fr: 'Images' },
 
