@@ -116,7 +116,7 @@ function generatePDFContent(data: any, translator: ReturnType<typeof createTrans
         </div>
         
         <div class="footer">
-            ${submitLabel} ${currentDate} • SwissCleanMove GmbH
+            ${submitLabel} ${currentDate} • SwissCleanMove
         </div>
     </div>
 </body>

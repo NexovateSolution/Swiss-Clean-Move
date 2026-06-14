@@ -166,6 +166,13 @@ export const keyLabels: Record<string, Record<string, string>> = {
             photos: { en: 'Photos', de: 'Fotos', fr: 'Photos' },
             images: { en: 'Images', de: 'Bilder', fr: 'Images' },
 
+            moveFurnitureQty_sofa: { en: 'Sofa Qty', de: 'Anzahl Sofas', fr: 'Quantité Canapé' },
+            moveFurnitureQty_bed: { en: 'Bed Qty', de: 'Anzahl Betten', fr: 'Quantité Lit' },
+            moveFurnitureQty_wardrobe: { en: 'Wardrobe Qty', de: 'Anzahl Schränke', fr: 'Quantité Armoire' },
+            moveFurnitureQty_tableChairs: { en: 'Table/Chairs Qty', de: 'Anzahl Tische/Stühle', fr: 'Quantité Table/Chaises' },
+            moveFurnitureQty_tv: { en: 'TV Qty', de: 'Anzahl TV', fr: 'Quantité TV' },
+            moveFurnitureQty_washingMachine: { en: 'Washing Machine Qty', de: 'Anzahl Waschmaschinen', fr: 'Quantité Lave-linge' },
+            moveFurnitureQty_refrigerator: { en: 'Refrigerator Qty', de: 'Anzahl Kühlschränke', fr: 'Quantité Réfrigérateur' },
             firstName: { en: 'First Name', de: 'Vorname', fr: 'Prénom' },
             name: { en: 'Last Name', de: 'Nachname', fr: 'Nom de famille' },
             emailAddress: { en: 'Email Address', de: 'E-Mail-Adresse', fr: 'Adresse e-mail' },

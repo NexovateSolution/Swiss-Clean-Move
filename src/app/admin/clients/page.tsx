@@ -143,7 +143,7 @@ export default function ClientsPage() {
     setPhotoModal({ open: true, client })
   }
 
-  const generateInvoice = async (client: Client, language: 'en' | 'de' | 'fr', action: 'print' | 'pdf') => {
+  const generateInvoice = async (client: Client, language: 'en' | 'de' | 'fr', action: 'print' | 'pdf' | 'pdf_only') => {
     try {
       // Generate and display invoice
       const response = await fetch('/api/admin/generate-invoice', {
@@ -171,7 +171,7 @@ export default function ClientsPage() {
               }, 500)
             }
           }
-        } else if (action === 'pdf') {
+        } else if (action === 'pdf' || action === 'pdf_only') {
           toast.loading(t('toast.generatingPdf') || 'Generating PDF...', { id: 'pdf-gen' });
           const html2pdf = (await import('html2pdf.js')).default;
           const element = document.createElement('div');
@@ -191,7 +191,7 @@ export default function ClientsPage() {
         }
 
         // Send invoice via email
-        if (client.email) {
+        if (action !== 'pdf_only' && client.email) {
           toast.loading(t('toast.sendingInvoice'), { id: 'email-send' })
           const emailResponse = await fetch('/api/admin/send-invoice', {
             method: 'POST',
@@ -918,6 +918,14 @@ export default function ClientsPage() {
                 >
                   <Download className="w-5 h-5" />
                   <span>Download PDF & Send Email</span>
+                </button>
+
+                <button
+                  onClick={() => generateInvoice(languageModal.client!, languageModal.selectedLanguage!, 'pdf_only')}
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                >
+                  <Download className="w-5 h-5" />
+                  <span>Download PDF Only</span>
                 </button>
 
                 <button

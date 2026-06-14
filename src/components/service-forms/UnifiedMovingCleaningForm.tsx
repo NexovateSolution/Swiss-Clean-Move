@@ -192,7 +192,12 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           <div className="mt-4 text-sm font-semibold text-[#003366]">{tl('wizard.unified.moving.furnitureTitle')}</div>
           <div className="grid grid-cols-2 gap-2">
              {['sofa','bed','wardrobe','tableChairs','tv','washingMachine','refrigerator'].map(k => (
-                <FC key={k} label={tl(`wizard.unified.moving.furniture.${k}`)} checked={arrHas('moveFurniture', k)} onChange={() => toggleArr('moveFurniture', k)} />
+                <div key={k} className="flex items-center space-x-2">
+                   <FC label={tl(`wizard.unified.moving.furniture.${k}`)} checked={arrHas('moveFurniture', k)} onChange={() => toggleArr('moveFurniture', k)} />
+                   {arrHas('moveFurniture', k) && (
+                     <input type="number" min="1" value={v(`moveFurnitureQty_${k}`)} onChange={e => set(`moveFurnitureQty_${k}`, e.target.value)} placeholder="1" className="w-16 px-2 py-0.5 border border-gray-300 rounded text-sm text-[#003366] bg-white text-center" />
+                   )}
+                </div>
              ))}
           </div>
 

@@ -414,7 +414,7 @@ export async function exportServiceFormToPDF(rawSubmission: any, locale: string 
         </div>
         
         <div class="footer">
-            Form processed on ${currentDate} • SwissCleanMove GmbH
+            Form processed on ${currentDate} • SwissCleanMove
         </div>
     </div>
 </body>
