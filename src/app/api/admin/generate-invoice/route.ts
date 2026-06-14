@@ -405,7 +405,12 @@ export async function POST(request: NextRequest) {
             'Property Maintenance': { en: 'Property Maintenance', de: 'Hauswartung', fr: 'Conciergerie / Entretien' },
             'Special Cleaning': { en: 'Special Cleaning', de: 'Spezialreinigung', fr: 'Nettoyage spécial' },
             'Household Helping': { en: 'Household Helping', de: 'Haushaltshilfe', fr: 'Aide ménagère' },
-            'Maintenance Cleaning': { en: 'Maintenance Cleaning', de: 'Unterhaltsreinigung', fr: "Nettoyage d'entretien" }
+            'Maintenance Cleaning': { en: 'Maintenance Cleaning', de: 'Unterhaltsreinigung', fr: "Nettoyage d'entretien" },
+            'Final Cleaning Guarantee': { en: 'Move-out & Final Cleaning with Acceptance Guarantee', de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie', fr: 'Nettoyage de déménagement & fin de bail avec garantie' },
+            'Moving Cleaning Combo': { en: 'Moving & Final Cleaning Combo Offer', de: 'Umzug & Endreinigung Kombi-Angebot', fr: 'Offre combinée déménagement et nettoyage' },
+            'Moving Cleaning Combo 2': { en: 'Moving + Cleaning (Combo)', de: 'Umzug + Reinigung (Kombi)', fr: 'Déménagement + Nettoyage (Combo)' },
+            'Facility Services': { en: 'Facility Services', de: 'Facility Services', fr: 'Services de conciergerie' },
+            'Disposal': { en: 'Disposal', de: 'Entsorgung', fr: 'Élimination' }
         };
 
         const floorMap: Record<string, Record<string, string>> = {
