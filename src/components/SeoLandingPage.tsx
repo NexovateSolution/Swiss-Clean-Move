@@ -548,14 +548,14 @@ export default function SeoLandingPage({
                 {locale === 'en' ? 'Our Work' : locale === 'fr' ? 'Notre Travail' : 'Unsere Arbeit'}
               </h2>
               <p className="text-swiss-body max-w-2xl mx-auto">
-                {locale === 'en' ? `Impressions of our ${service} team in action.` : locale === 'fr' ? `Impressions de notre équipe de ${service} en action.` : `Eindrücke unseres ${service === 'umzug' ? 'Umzugs-' : 'Reinigungs-'}Teams im Einsatz.`}
+                {locale === 'en' ? `Impressions of our ${service} team in action.` : locale === 'fr' ? `Impressions de notre équipe de ${service} en action.` : `Eindrücke unseres Reinigungs-Teams im Einsatz.`}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[1, 2, 3].map((num) => (
                 <div key={num} className="relative h-64 rounded-2xl overflow-hidden shadow-subtle border border-swiss-border group">
                   <Image 
-                    src={service === 'umzug' ? '/images/transportation.jpg' : '/Gallary/2.jpeg'} 
+                    src={'/Gallary/2.jpeg'} 
                     alt={`${getOptimizedAlt(service, city, false)} - Arbeit ${num}`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
