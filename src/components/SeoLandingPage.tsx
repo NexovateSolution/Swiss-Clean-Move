@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
+import UmzugPricing from '@/components/UmzugPricing';
 import {
   CheckCircle,
   Phone,
@@ -537,6 +538,8 @@ export default function SeoLandingPage({
             </div>
           </div>
         </section>
+      ) : service === 'umzug' ? (
+        <UmzugPricing locale={locale} formService={formService} handleCtaClick={handleCtaClick} />
       ) : (
         <section className="section-padding bg-white">
           <div className="container-max">
