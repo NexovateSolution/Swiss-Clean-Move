@@ -537,6 +537,7 @@ export default function SeoLandingPage({
               </div>
             </div>
           </div>
+        </section>
       ) : (
         <UmzugPricing locale={locale} formService={formService} handleCtaClick={handleCtaClick} />
       )}
