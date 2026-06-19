@@ -3597,7 +3597,9 @@
             "disposal": "Élimination / débarras",
             "storage": "Stockage temporaire",
             "cleaningRequested": "Nettoyage de remise demandé"
-          }
+          },
+          "accessParkingFrom": "Accès & Parking (DE)",
+          "accessParkingTo": "Accès & Parking (À)"
         },
         "cleaning": {
           "title": "NETTOYAGE DE FIN DE BAIL",

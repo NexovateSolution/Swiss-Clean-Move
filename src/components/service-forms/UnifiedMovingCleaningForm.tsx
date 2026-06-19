@@ -127,7 +127,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           <SH>{tl('wizard.unified.moving.fromTitle')}</SH>
           <FI label={tl('wizard.unified.moving.streetNo')} value={v('moveFromStreet')} onChange={val => set('moveFromStreet', val)} />
           <FI label={tl('wizard.unified.moving.zipCity')} value={v('moveFromZipCity')} onChange={val => set('moveFromZipCity', val)} required />
-          <div className="mt-2 text-sm font-semibold text-[#003366]">{tl('wizard.unified.moving.accessParkingTitle')} (FROM)</div>
+          <div className="mt-2 text-sm font-semibold text-[#003366]">{tl('wizard.unified.moving.accessParkingFrom')}</div>
           <div className="grid grid-cols-2 gap-2 mt-2">
              <FC label={tl('wizard.unified.step2.distances.direct')} checked={arrHas('moveFromAccess', 'direct')} onChange={() => toggleArr('moveFromAccess', 'direct')} />
              <FC label={tl('wizard.unified.step2.distances.d0_20')} checked={arrHas('moveFromAccess', 'd0_20')} onChange={() => toggleArr('moveFromAccess', 'd0_20')} />
@@ -145,7 +145,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           <div className="mt-6"><SH>{tl('wizard.unified.moving.toTitle')}</SH></div>
           <FI label={tl('wizard.unified.moving.streetNo')} value={v('moveToStreet')} onChange={val => set('moveToStreet', val)} />
           <FI label={tl('wizard.unified.moving.zipCity')} value={v('moveToZipCity')} onChange={val => set('moveToZipCity', val)} required />
-          <div className="mt-2 text-sm font-semibold text-[#003366]">{tl('wizard.unified.moving.accessParkingTitle')} (TO)</div>
+          <div className="mt-2 text-sm font-semibold text-[#003366]">{tl('wizard.unified.moving.accessParkingTo')}</div>
           <div className="grid grid-cols-2 gap-2 mt-2">
              <FC label={tl('wizard.unified.step2.distances.direct')} checked={arrHas('moveToAccess', 'direct')} onChange={() => toggleArr('moveToAccess', 'direct')} />
              <FC label={tl('wizard.unified.step2.distances.d0_20')} checked={arrHas('moveToAccess', 'd0_20')} onChange={() => toggleArr('moveToAccess', 'd0_20')} />

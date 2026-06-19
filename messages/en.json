@@ -3400,7 +3400,9 @@
             "disposal": "Disposal / clearance",
             "storage": "Temporary storage",
             "cleaningRequested": "Move-out cleaning requested"
-          }
+          },
+          "accessParkingFrom": "Access & Parking (FROM)",
+          "accessParkingTo": "Access & Parking (TO)"
         },
         "cleaning": {
           "title": "MOVE-OUT CLEANING / END CLEANING",

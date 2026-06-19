@@ -3597,7 +3597,9 @@
             "disposal": "Entsorgung / Räumung",
             "storage": "Zwischenlagerung",
             "cleaningRequested": "Umzugsreinigung gewünscht"
-          }
+          },
+          "accessParkingFrom": "Zugang & Parkplatz (VON)",
+          "accessParkingTo": "Zugang & Parkplatz (NACH)"
         },
         "cleaning": {
           "title": "UMZUGSREINIGUNG / ENDREINIGUNG",
