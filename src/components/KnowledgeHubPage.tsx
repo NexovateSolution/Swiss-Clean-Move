@@ -92,9 +92,16 @@ export default function KnowledgeHubPage({ locale }: KnowledgeHubPageProps) {
       {/* Intro & Table of Contents */}
       <section className="section-padding bg-swiss-gray-50 border-b border-swiss-border">
         <div className="container-max">
-          <p className="text-xl md:text-2xl text-swiss-text font-medium max-w-4xl mx-auto text-center leading-relaxed mb-12">
-            {L(data.introText)}
-          </p>
+          <div className="max-w-4xl mx-auto mb-12 bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-swiss-border flex flex-col md:flex-row items-center md:items-start md:space-x-8 text-center md:text-left">
+            <div className="bg-swiss-softRed p-4 rounded-full flex-shrink-0 mb-6 md:mb-0">
+              <Star className="w-8 h-8 text-swiss-red" />
+            </div>
+            <div>
+              <p className="text-lg md:text-xl text-swiss-text leading-relaxed">
+                {L(data.introText)}
+              </p>
+            </div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {data.tocSections.map((toc, i) => {
