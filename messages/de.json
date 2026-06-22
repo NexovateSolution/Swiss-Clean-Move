@@ -237,7 +237,7 @@
     "authority": {
       "umzug": "Ob privater Wohnungswechsel oder Firmenumzug: Wir organisieren Ihren Umzug in der ganzen Schweiz professionell, pünktlich und stressfrei.",
       "reinigung": "Von der regelmässigen Unterhaltsreinigung bis zur Spezialreinigung – wir sorgen schweizweit für strahlende Sauberkeit in Ihren Immobilien.",
-      "facility": "Unser umfassendes Facility Management für Liegenschaften und Geschäftskunden. Wir kümmern uns um Hauswartung, Technik und Unterhalt.",
+      "facility": "Unser umfassendes Facility Service für Liegenschaften und Geschäftskunden. Wir kümmern uns um Hauswartung, Technik und Unterhalt.",
       "umzugsreinigung": "Stressfreie Wohnungsabgabe dank unserer professionellen Endreinigung mit 100% Abnahmegarantie – in allen Schweizer Kantonen.",
       "umzugTitle": "Umzugsfirma Schweiz",
       "reinigungTitle": "Reinigungsfirma Schweiz",
@@ -5579,7 +5579,7 @@
           "answer": "Ja, wir haben die Kapazität und Erfahrung, auch für grosse Büro- und Gewerbekomplexe massgeschneiderte Facility Services anzubieten."
         },
         {
-          "question": "Kann ich einzelne Services aus dem Facility Management buchen?",
+          "question": "Kann ich einzelne Services aus dem Facility Service buchen?",
           "answer": "Selbstverständlich. Sie können aus unserem Portfolio flexibel die Dienstleistungen wählen, die Sie benötigen."
         },
         {
@@ -9454,7 +9454,7 @@
         "description": "Ihr Partner für umfassende Facility Services in der Schweiz. Professionelles Gebäudemanagement für Unternehmen und Immobilien."
       },
       "badge": "Facility Services die Schweiz",
-      "h1": "Facility Services die Schweiz – Professionelle Facility Management",
+      "h1": "Facility Services die Schweiz – Professioneller Facility Service",
       "heroSubtitle": "Ihr zuverlässiger Partner für Facility Services in der ganzen Schweiz.",
       "intro": "Suchen Sie eine professionelle Facility Services für die Schweiz? SwissCleanMove ist Ihr Partner für höchste Qualität.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
@@ -9467,7 +9467,7 @@
       "sections": [
         {
           "heading": "Unser Angebot für Facility Services",
-          "body": "Wir bieten umfassende Lösungen im Bereich Facility Management.",
+          "body": "Wir bieten umfassende Lösungen im Bereich Facility Service.",
           "bullets": []
         }
       ],

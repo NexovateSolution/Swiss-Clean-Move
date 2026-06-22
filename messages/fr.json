@@ -94,7 +94,7 @@
       },
       "propertyMaintenance": {
         "title": "Conciergerie / Gestion immobilière",
-        "description": "Entretien complet des propriétés et services de facility management"
+        "description": "Entretien complet des propriétés et services de facility service"
       },
       "specialCleaning": {
         "title": "Nettoyage spécial",
@@ -237,7 +237,7 @@
     "authority": {
       "umzug": "Déménagement privé ou d'entreprise : nous organisons votre déménagement dans toute la Suisse de manière professionnelle, ponctuelle et sans stress.",
       "reinigung": "De l'entretien régulier au nettoyage spécial - nous assurons une propreté éclatante de vos biens immobiliers dans toute la Suisse.",
-      "facility": "Notre facility management complet pour les biens immobiliers et les entreprises. Nous nous occupons de la conciergerie, de la technique et de l'entretien.",
+      "facility": "Notre facility service complet pour les biens immobiliers et les entreprises. Nous nous occupons de la conciergerie, de la technique et de l'entretien.",
       "umzugsreinigung": "Remise d'appartement sans stress grâce à notre nettoyage final professionnel avec garantie de remise à 100% - dans tous les cantons suisses.",
       "umzugTitle": "Entreprise de déménagement Suisse",
       "reinigungTitle": "Entreprise de nettoyage Suisse",
@@ -9451,10 +9451,10 @@
     "facilityServiceSchweiz": {
       "meta": {
         "title": "Facility Service Suisse | Gestion de Bâtiments | SwissCleanMove",
-        "description": "Votre partenaire pour des services de facility management complets en Suisse. Gestion professionnelle de bâtiments pour entreprises."
+        "description": "Votre partenaire pour des services de facility service complets en Suisse. Gestion professionnelle de bâtiments pour entreprises."
       },
       "badge": "Services Généraux la Suisse",
-      "h1": "Services Généraux la Suisse – Professionelle Facility Management",
+      "h1": "Services Généraux la Suisse – Professionnel Facility Service",
       "heroSubtitle": "Votre partenaire fiable pour Services Généraux dans toute la Suisse.",
       "intro": "Cherchez-vous une Services Généraux professionnelle pour la Suisse? SwissCleanMove est votre partenaire pour la plus haute qualité.",
       "ctaSoft": "Demander un devis gratuit",
@@ -9467,7 +9467,7 @@
       "sections": [
         {
           "heading": "Notre offre pour Services Généraux",
-          "body": "Nous offrons des solutions complètes en Facility Management.",
+          "body": "Nous offrons des solutions complètes en Facility Service.",
           "bullets": []
         }
       ],

@@ -67,6 +67,48 @@ export default function KnowledgeHubPage({ locale }: KnowledgeHubPageProps) {
         "name": L(step.phase),
         "text": step.tasks.map(t => L(t)).join(". ")
       }))
+    },
+    // 3. BreadcrumbList Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SwissCleanMove",
+          "item": `https://www.swisscleanmove.ch/${locale}`
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": L(data.hero.badge),
+          "item": `https://www.swisscleanmove.ch/${locale}/preise-und-ratgeber`
+        }
+      ]
+    },
+    // 4. LocalBusiness Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SwissCleanMove",
+      "url": `https://www.swisscleanmove.ch/${locale}`,
+      "telephone": "+41782158030",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Orpundstrasse 31",
+        "addressLocality": "Biel/Bienne",
+        "postalCode": "2504",
+        "addressCountry": "CH"
+      }
+    },
+    // 5. WebPage Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": L(data.hero.h1),
+      "description": L(data.hero.subtitle)
     }
   ];
 
@@ -246,10 +288,11 @@ export default function KnowledgeHubPage({ locale }: KnowledgeHubPageProps) {
             <p className="text-lg text-swiss-body">{L(data.preparation.subtitle)}</p>
           </div>
 
-          <div className="relative border-l-2 border-swiss-red ml-4 md:ml-8 space-y-10 py-4">
+          <div className="relative ml-4 md:ml-8 space-y-10 py-4">
+            <div className="absolute top-0 bottom-0 left-0 w-[2px] bg-swiss-red"></div>
             {data.preparation.steps.map((step, i) => (
               <div key={i} className="relative pl-8 md:pl-12">
-                <div className="absolute w-6 h-6 bg-swiss-red rounded-full -left-[13px] top-1 border-4 border-white shadow-sm"></div>
+                <div className="absolute w-6 h-6 bg-swiss-red rounded-full -left-[11px] top-1 border-4 border-white shadow-sm z-10"></div>
                 <h3 className="text-xl font-bold text-swiss-text mb-4">{L(step.phase)}</h3>
                 <div className="bg-swiss-gray-50 border border-swiss-border rounded-xl p-6 shadow-subtle">
                   <ul className="space-y-3">

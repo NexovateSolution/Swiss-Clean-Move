@@ -250,7 +250,7 @@
     "authority": {
       "umzug": "Whether a private move or corporate relocation: We organize your move throughout Switzerland professionally, punctually, and stress-free.",
       "reinigung": "From regular maintenance cleaning to special cleaning – we ensure brilliant cleanliness in your properties across Switzerland.",
-      "facility": "Our comprehensive facility management for real estate and corporate clients. We take care of property maintenance, technology, and upkeep.",
+      "facility": "Our comprehensive facility service for real estate and corporate clients. We take care of property maintenance, technology, and upkeep.",
       "umzugsreinigung": "Stress-free apartment handover thanks to our professional final cleaning with a 100% handover guarantee – in all Swiss cantons.",
       "umzugTitle": "Moving Company Switzerland",
       "reinigungTitle": "Cleaning Company Switzerland",
@@ -5565,7 +5565,7 @@
           "answer": "Yes, we have the capacity and experience to offer tailored facility services even for large office and commercial complexes."
         },
         {
-          "question": "Can I book individual services from Facility Management?",
+          "question": "Can I book individual services from Facility Service?",
           "answer": "Of course. You can flexibly choose the services you need from our portfolio."
         },
         {
@@ -7251,7 +7251,7 @@
       },
       "badge": "Cleaning Company Lyss",
       "h1": "Cleaning Company Lyss – Cleaning, Cleaning & Moving in Lyss",
-      "heroSubtitle": "Your partner for maintenance cleaning, facility management, and office cleaning in Lyss.",
+      "heroSubtitle": "Your partner for maintenance cleaning, facility service, and office cleaning in Lyss.",
       "ctaSoft": "Fast feedback within 24h",
       "intro": "Lyss is a growing business location – and wherever people work and live, cleanliness is essential. SwissCleanMove is your cleaning company in Lyss. We offer professional cleaning solutions for businesses, administrations, and private individuals. Our focus is on regular maintenance cleaning. With state-of-the-art equipment, environmentally friendly cleaning products, and trained staff, we guarantee value retention of your properties and a well-kept appearance in Lyss. from CHF 35/hour. Regular weekly or monthly. Eco-friendly cleaning products. centrally located in Lyss. Fast response time guaranteed.",
       "sections": [
@@ -7500,7 +7500,7 @@
           "body": "Our service range in Aarberg covers all areas of regular building cleaning. We clean to the highest standards and flexibly adapt to your wishes.",
           "bullets": [
             "Office and commercial cleaning",
-            "Stairwell and facility management",
+            "Stairwell and facility service",
             "Weekly apartment cleaning",
             "Special cleanings on request"
           ]
@@ -9653,7 +9653,7 @@
         "description": "Your partner for comprehensive facility services in Switzerland. Professional building management for businesses and real estate."
       },
       "badge": "Facility Services Switzerland",
-      "h1": "Facility Services Switzerland – Professionelle Facility Management",
+      "h1": "Facility Services Switzerland – Professional Facility Service",
       "heroSubtitle": "Your reliable partner for Facility Services throughout Switzerland.",
       "intro": "Are you looking for a professional Facility Services for Switzerland? SwissCleanMove is your partner for top quality.",
       "ctaSoft": "Request free quote now",
@@ -9666,7 +9666,7 @@
       "sections": [
         {
           "heading": "Our offer for Facility Services",
-          "body": "We offer comprehensive solutions in Facility Management.",
+          "body": "We offer comprehensive solutions in Facility Service.",
           "bullets": []
         }
       ],

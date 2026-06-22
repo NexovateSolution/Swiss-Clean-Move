@@ -134,7 +134,7 @@ const data: KnowledgeHubContent = {
   },
   facilityCards: [
     {
-      title: { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie' },
+      title: { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Service de conciergerie' },
       desc: { de: 'Regelmässige Gebäudereinigung, Aussenunterhalt, Winterdienst, Grünpflege und technische Objektbetreuung.', en: 'Regular building cleaning, exterior maintenance, winter service, green care and technical property management.', fr: 'Nettoyage régulier de bâtiments, entretien extérieur, service hivernal, entretien des espaces verts et gestion technique.' },
       price: { de: 'Auf Anfrage – individuell kalkuliert', en: 'Upon request – individually calculated', fr: 'Sur demande – calculé individuellement' }
     },
@@ -172,7 +172,7 @@ const data: KnowledgeHubContent = {
           price: { de: 'Ab CHF 400.–', en: 'From CHF 400.–', fr: 'Dès CHF 400.–' }
         },
         right: {
-          title: { de: 'Umzugsreinigung', en: 'Move-Out Cleaning', fr: 'Nettoyage de fin de bail' },
+          title: { de: 'Umzugsreinigung mit Abnahmegarantie', en: 'Move-Out Cleaning with Handover Guarantee', fr: 'Nettoyage de fin de bail avec garantie de remise' },
           points: [
             { de: 'Komplette Wohnungsreinigung nach Mietrecht', en: 'Complete apartment cleaning per tenancy law', fr: 'Nettoyage complet selon droit du bail' },
             { de: '100% Abnahmegarantie inklusive', en: '100% handover guarantee included', fr: 'Garantie de remise à 100% incluse' },
@@ -247,7 +247,7 @@ const data: KnowledgeHubContent = {
           price: { de: 'Individuell – auf Anfrage', en: 'Individual – upon request', fr: 'Individuel – sur demande' }
         },
         right: {
-          title: { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie' },
+          title: { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Service de conciergerie' },
           points: [
             { de: 'Fokus auf Reinigung und Aussenunterhalt', en: 'Focus on cleaning and exterior maintenance', fr: 'Focus sur nettoyage et entretien extérieur' },
             { de: 'Winterdienst und Grünpflege', en: 'Winter service and green care', fr: 'Service hivernal et entretien des espaces verts' },
@@ -265,39 +265,53 @@ const data: KnowledgeHubContent = {
     subtitle: { de: 'Schritt für Schritt zum stressfreien Umzug', en: 'Step by step to a stress-free move', fr: 'Étape par étape vers un déménagement sans stress' },
     steps: [
       {
-        phase: { de: '4 Wochen vorher', en: '4 Weeks Before', fr: '4 Semaines Avant' },
+        phase: { de: '6–8 Wochen vorher', en: '6–8 Weeks Before', fr: '6–8 Semaines Avant' },
         tasks: [
-          { de: 'Umzugsfirma beauftragen und Termin fixieren', en: 'Hire moving company and fix date', fr: 'Engager une entreprise de déménagement et fixer la date' },
-          { de: 'Alte Wohnung kündigen oder Übergabetermin vereinbaren', en: 'Cancel old apartment or arrange handover date', fr: 'Résilier l\'ancien appartement ou convenir d\'une date de remise' },
-          { de: 'Umzugsreinigung buchen (mit Abnahmegarantie)', en: 'Book move-out cleaning (with handover guarantee)', fr: 'Réserver le nettoyage de fin de bail (avec garantie de remise)' },
-          { de: 'Adressänderungen vorbereiten (Post, Versicherung, Bank)', en: 'Prepare address changes (post, insurance, bank)', fr: 'Préparer les changements d\'adresse (poste, assurance, banque)' },
+          { de: 'Mietvertrag prüfen', en: 'Check rental agreement', fr: 'Vérifier le contrat de location' },
+          { de: 'Alten Mietvertrag kündigen', en: 'Cancel old rental contract', fr: 'Résilier l\'ancien contrat de location' },
+          { de: 'Umzugstermin festlegen', en: 'Set moving date', fr: 'Fixer la date de déménagement' },
+          { de: 'Offerten für Umzug und Reinigung einholen', en: 'Request quotations for moving and cleaning', fr: 'Demander des devis pour le déménagement et le nettoyage' },
+          { de: 'Budget planen', en: 'Plan your budget', fr: 'Planifier votre budget' },
         ]
       },
       {
-        phase: { de: '1 Woche vorher', en: '1 Week Before', fr: '1 Semaine Avant' },
+        phase: { de: '4 Wochen vorher', en: '4 Weeks Before', fr: '4 Semaines Avant' },
         tasks: [
-          { de: 'Nicht benötigte Gegenstände entsorgen oder spenden', en: 'Dispose of or donate unnecessary items', fr: 'Éliminer ou donner les objets inutiles' },
-          { de: 'Kartons packen und beschriften', en: 'Pack and label boxes', fr: 'Emballer et étiqueter les cartons' },
-          { de: 'Zählerstände ablesen (Strom, Wasser, Gas)', en: 'Read meter readings (electricity, water, gas)', fr: 'Relever les compteurs (électricité, eau, gaz)' },
-          { de: 'Parkplatzbewilligung für Umzugswagen organisieren', en: 'Arrange parking permit for moving truck', fr: 'Organiser un permis de stationnement pour le camion' },
+          { de: 'Adressänderung vornehmen', en: 'Change address', fr: 'Changer d\'adresse' },
+          { de: 'Internet, TV und Telefonanschluss ummelden', en: 'Transfer internet, TV and phone services', fr: 'Transférer les services internet, TV et téléphone' },
+          { de: 'Nachsendeauftrag bei der Post einrichten', en: 'Arrange mail forwarding with the post office', fr: 'Organiser le suivi du courrier avec la poste' },
+          { de: 'Umzugskartons organisieren', en: 'Organize moving boxes', fr: 'Organiser les cartons de déménagement' },
+          { de: 'Keller und Estrich räumen', en: 'Empty basement and attic', fr: 'Vider la cave et le grenier' },
+        ]
+      },
+      {
+        phase: { de: '2 Wochen vorher', en: '2 Weeks Before', fr: '2 Semaines Avant' },
+        tasks: [
+          { de: 'Kartons beschriften', en: 'Label boxes', fr: 'Étiqueter les cartons' },
+          { de: 'Möbel vorbereiten', en: 'Prepare furniture', fr: 'Préparer les meubles' },
+          { de: 'Parkplatz für Umzugswagen reservieren', en: 'Reserve parking space', fr: 'Réserver une place de parc' },
+          { de: 'Umzugsreinigung mit Abnahmegarantie buchen', en: 'Book move-out cleaning', fr: 'Réserver le nettoyage de fin de bail' },
+          { de: 'Übergabetermin mit Verwaltung bestätigen', en: 'Confirm handover appointment with property management', fr: 'Confirmer le rendez-vous de remise avec la gérance' },
         ]
       },
       {
         phase: { de: 'Am Umzugstag', en: 'Moving Day', fr: 'Jour du Déménagement' },
         tasks: [
-          { de: 'Wohnung vor dem Umzug fotografieren', en: 'Photograph apartment before moving', fr: 'Photographier l\'appartement avant le déménagement' },
-          { de: 'Umzugsteam koordinieren und einweisen', en: 'Coordinate and brief moving team', fr: 'Coordonner et briefer l\'équipe de déménagement' },
-          { de: 'Alle Räume auf vergessene Gegenstände prüfen', en: 'Check all rooms for forgotten items', fr: 'Vérifier toutes les pièces pour objets oubliés' },
-          { de: 'Schlüssel für Übergabe bereitlegen', en: 'Prepare keys for handover', fr: 'Préparer les clés pour la remise' },
+          { de: 'Wertsachen separat transportieren', en: 'Transport valuables separately', fr: 'Transporter les objets de valeur séparément' },
+          { de: 'Persönliche Dokumente griffbereit halten', en: 'Keep personal documents accessible', fr: 'Garder les documents personnels accessibles' },
+          { de: 'Wohnung überprüfen', en: 'Inspect the apartment', fr: 'Inspecter l\'appartement' },
+          { de: 'Schlüssel für Übergabe bereithalten', en: 'Keep keys ready', fr: 'Garder les clés prêtes' },
+          { de: 'Zählerstände fotografieren', en: 'Photograph meter readings', fr: 'Photographier les relevés de compteurs' },
         ]
       },
       {
         phase: { de: 'Nach dem Umzug', en: 'After the Move', fr: 'Après le Déménagement' },
         tasks: [
-          { de: 'Umzugsreinigung durchführen lassen (Abnahmegarantie)', en: 'Have move-out cleaning done (handover guarantee)', fr: 'Faire exécuter le nettoyage de fin de bail (garantie de remise)' },
-          { de: 'Wohnungsübergabe mit Verwaltung und Protokoll', en: 'Property handover with management and protocol', fr: 'Remise de l\'appartement avec la gérance et protocole' },
-          { de: 'Neue Wohnung einrichten und Adressänderungen abschliessen', en: 'Set up new apartment and finalize address changes', fr: 'Aménager le nouvel appartement et finaliser les changements d\'adresse' },
-          { de: 'Mietkaution der alten Wohnung zurückfordern', en: 'Reclaim rental deposit from old apartment', fr: 'Réclamer la caution de l\'ancien appartement' },
+          { de: 'Umzugsreinigung durchführen lassen', en: 'Have move-out cleaning completed', fr: 'Faire effectuer le nettoyage de fin de bail' },
+          { de: 'Wohnungsübergabe mit Verwaltung', en: 'Handover with property management', fr: 'Remise avec la gérance' },
+          { de: 'Adressänderungen abschliessen', en: 'Finalize address updates', fr: 'Finaliser les changements d\'adresse' },
+          { de: 'Neue Wohnung einrichten', en: 'Organize new apartment', fr: 'Aménager le nouvel appartement' },
+          { de: 'Mietkautionsrückgabe prüfen', en: 'Check deposit return process', fr: 'Vérifier le processus de restitution de la caution' },
         ]
       }
     ]
