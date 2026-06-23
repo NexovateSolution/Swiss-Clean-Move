@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
+import { PRICING_RULES } from '@/lib/pricingRules';
 
 interface UmzugPricingProps {
   locale: string;
@@ -115,13 +116,13 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
   const getT = (key: keyof typeof t) => t[key][locale as 'en'|'de'|'fr'] || t[key].de;
 
   const movingPrices = [
-    { label: { en: '1 – 1.5 room apartment', de: '1 – 1.5 Zimmer Wohnung', fr: 'Appartement 1 – 1.5 pièces' }, price: 'CHF 490.–' },
-    { label: { en: '2 – 2.5 room apartment', de: '2 – 2.5 Zimmer Wohnung', fr: 'Appartement 2 – 2.5 pièces' }, price: 'CHF 790.–' },
-    { label: { en: '3 – 3.5 room apartment', de: '3 – 3.5 Zimmer Wohnung', fr: 'Appartement 3 – 3.5 pièces' }, price: "CHF 1'190.–" },
-    { label: { en: '4 – 4.5 room apartment', de: '4 – 4.5 Zimmer Wohnung', fr: 'Appartement 4 – 4.5 pièces' }, price: "CHF 1'590.–" },
-    { label: { en: '5 – 5.5 room apartment', de: '5 – 5.5 Zimmer Wohnung', fr: 'Appartement 5 – 5.5 pièces' }, price: "CHF 1'990.–" },
-    { label: { en: 'Single-family house', de: 'Einfamilienhaus', fr: 'Maison individuelle' }, price: `${getT('from')} CHF 2'490.–` },
-    { label: { en: 'Single furniture transport', de: 'Einzelmöbel-Transport', fr: 'Transport de meuble individuel' }, price: `${getT('from')} CHF 250.–` },
+    { label: { en: '1 – 1.5 room apartment', de: '1 – 1.5 Zimmer Wohnung', fr: 'Appartement 1 – 1.5 pièces' }, price: `CHF ${PRICING_RULES.moving.basePriceByRooms[1]}.–` },
+    { label: { en: '2 – 2.5 room apartment', de: '2 – 2.5 Zimmer Wohnung', fr: 'Appartement 2 – 2.5 pièces' }, price: `CHF ${PRICING_RULES.moving.basePriceByRooms[2]}.–` },
+    { label: { en: '3 – 3.5 room apartment', de: '3 – 3.5 Zimmer Wohnung', fr: 'Appartement 3 – 3.5 pièces' }, price: `CHF ${PRICING_RULES.moving.basePriceByRooms[3].toLocaleString('de-CH')}.–` },
+    { label: { en: '4 – 4.5 room apartment', de: '4 – 4.5 Zimmer Wohnung', fr: 'Appartement 4 – 4.5 pièces' }, price: `CHF ${PRICING_RULES.moving.basePriceByRooms[4].toLocaleString('de-CH')}.–` },
+    { label: { en: '5 – 5.5 room apartment', de: '5 – 5.5 Zimmer Wohnung', fr: 'Appartement 5 – 5.5 pièces' }, price: `CHF ${PRICING_RULES.moving.basePriceByRooms[5].toLocaleString('de-CH')}.–` },
+    { label: { en: 'Single-family house', de: 'Einfamilienhaus', fr: 'Maison individuelle' }, price: `${getT('from')} CHF ${PRICING_RULES.moving.houseBasePrice.toLocaleString('de-CH')}.–` },
+    { label: { en: 'Single furniture transport', de: 'Einzelmöbel-Transport', fr: 'Transport de meuble individuel' }, price: `${getT('from')} CHF ${PRICING_RULES.transport.basePrice}.–` },
   ];
 
   const movingIncluded = [
@@ -135,14 +136,14 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
   ];
 
   const cleaningPrices = [
-    { label: { en: 'Studio / 1 room', de: 'Studio / 1 Zimmer', fr: 'Studio / 1 pièce' }, price: 'CHF 490.–' },
-    { label: { en: '2 room apartment', de: '2 Zimmer Wohnung', fr: 'Appartement 2 pièces' }, price: 'CHF 590.–' },
-    { label: { en: '2.5 room apartment', de: '2.5 Zimmer Wohnung', fr: 'Appartement 2.5 pièces' }, price: 'CHF 690.–' },
-    { label: { en: '3 room apartment', de: '3 Zimmer Wohnung', fr: 'Appartement 3 pièces' }, price: 'CHF 790.–' },
-    { label: { en: '3.5 room apartment', de: '3.5 Zimmer Wohnung', fr: 'Appartement 3.5 pièces' }, price: 'CHF 890.–' },
-    { label: { en: '4 room apartment', de: '4 Zimmer Wohnung', fr: 'Appartement 4 pièces' }, price: 'CHF 990.–' },
-    { label: { en: '4.5 room apartment', de: '4.5 Zimmer Wohnung', fr: 'Appartement 4.5 pièces' }, price: "CHF 1'190.–" },
-    { label: { en: '5 room apartment', de: '5 Zimmer Wohnung', fr: 'Appartement 5 pièces' }, price: "CHF 1'390.–" },
+    { label: { en: 'Studio / 1 room', de: 'Studio / 1 Zimmer', fr: 'Studio / 1 pièce' }, price: `CHF ${PRICING_RULES.cleaning.basePriceByRooms[1]}.–` },
+    { label: { en: '2 room apartment', de: '2 Zimmer Wohnung', fr: 'Appartement 2 pièces' }, price: `CHF ${PRICING_RULES.cleaning.basePriceByRooms[2]}.–` },
+    { label: { en: '2.5 room apartment', de: '2.5 Zimmer Wohnung', fr: 'Appartement 2.5 pièces' }, price: `CHF ${PRICING_RULES.cleaning.basePriceByRooms[2.5]}.–` },
+    { label: { en: '3 room apartment', de: '3 Zimmer Wohnung', fr: 'Appartement 3 pièces' }, price: `CHF ${PRICING_RULES.cleaning.basePriceByRooms[3]}.–` },
+    { label: { en: '3.5 room apartment', de: '3.5 Zimmer Wohnung', fr: 'Appartement 3.5 pièces' }, price: `CHF ${PRICING_RULES.cleaning.basePriceByRooms[3.5]}.–` },
+    { label: { en: '4 room apartment', de: '4 Zimmer Wohnung', fr: 'Appartement 4 pièces' }, price: `CHF ${PRICING_RULES.cleaning.basePriceByRooms[4]}.–` },
+    { label: { en: '4.5 room apartment', de: '4.5 Zimmer Wohnung', fr: 'Appartement 4.5 pièces' }, price: `CHF ${PRICING_RULES.cleaning.basePriceByRooms[4.5].toLocaleString('de-CH')}.–` },
+    { label: { en: '5 room apartment', de: '5 Zimmer Wohnung', fr: 'Appartement 5 pièces' }, price: `CHF ${PRICING_RULES.cleaning.basePriceByRooms[5].toLocaleString('de-CH')}.–` },
     { label: { en: 'House / Villa', de: 'Haus / Villa', fr: 'Maison / Villa' }, price: getT('uponRequest') },
   ];
 
@@ -157,11 +158,11 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
   ];
 
   const disposalPrices = [
-    { label: { en: 'Small disposal service', de: 'Kleine Entsorgung', fr: 'Petit service d\'élimination' }, price: 'CHF 150.–' },
-    { label: { en: 'Furniture disposal', de: 'Möbelentsorgung', fr: 'Élimination de meubles' }, price: 'CHF 250.–' },
-    { label: { en: 'Basement or attic clearance', de: 'Keller- oder Estrichräumung', fr: 'Débarras de cave ou grenier' }, price: 'CHF 300.–' },
-    { label: { en: 'Apartment clearance', de: 'Wohnungsräumung', fr: 'Débarras d\'appartement' }, price: 'CHF 690.–' },
-    { label: { en: 'House clearance', de: 'Hausräumung', fr: 'Débarras de maison' }, price: "CHF 1'490.–" },
+    { label: { en: 'Small disposal service', de: 'Kleine Entsorgung', fr: 'Petit service d\'élimination' }, price: `CHF ${PRICING_RULES.disposal.flatRates.small}.–` },
+    { label: { en: 'Furniture disposal', de: 'Möbelentsorgung', fr: 'Élimination de meubles' }, price: `CHF ${PRICING_RULES.disposal.flatRates.furniture}.–` },
+    { label: { en: 'Basement or attic clearance', de: 'Keller- oder Estrichräumung', fr: 'Débarras de cave ou grenier' }, price: `CHF ${PRICING_RULES.disposal.flatRates.basement}.–` },
+    { label: { en: 'Apartment clearance', de: 'Wohnungsräumung', fr: 'Débarras d\'appartement' }, price: `CHF ${PRICING_RULES.disposal.flatRates.apartment}.–` },
+    { label: { en: 'House clearance', de: 'Hausräumung', fr: 'Débarras de maison' }, price: `CHF ${PRICING_RULES.disposal.flatRates.house.toLocaleString('de-CH')}.–` },
     { label: { en: 'Business liquidation', de: 'Geschäftsauflösung', fr: 'Liquidation d\'entreprise' }, price: getT('uponRequest') },
   ];
 

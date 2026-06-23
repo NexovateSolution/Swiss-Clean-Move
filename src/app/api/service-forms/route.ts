@@ -6,6 +6,8 @@ import { jsPDF } from 'jspdf'
 import { sendEmailNotification } from '@/lib/email'
 import { prisma } from '../../../../lib/db'
 import { createTranslator } from '@/lib/translations'
+import { generateQuote } from '@/utils/pricingEngine'
+import { generateQuoteEmailHtml } from '@/utils/quoteEmailTemplate'
 
 function generatePDFContent(data: any, translator: ReturnType<typeof createTranslator>, locale: string): string {
     const { tKey, tVal } = translator;
@@ -20,7 +22,7 @@ function generatePDFContent(data: any, translator: ReturnType<typeof createTrans
 
     const SKIP_KEYS = new Set([
         'serviceName', 'formType', 'status', 'pdfPath', 'submissionDate',
-        'createdAt', 'updatedAt', 'data', 'id', 'locale'
+        'createdAt', 'updatedAt', 'data', 'id', 'locale', 'quoteResult'
     ])
 
     function prettifyKey(key: string): string {
@@ -50,7 +52,6 @@ function generatePDFContent(data: any, translator: ReturnType<typeof createTrans
         } else if (typeof val === 'object') {
             display = `<pre class="remark-box">${JSON.stringify(val, null, 2)}</pre>`;
         } else {
-            // Check if string matches a dict key without mapping numbers natively
             display = isNaN(Number(val)) ? tVal(String(val)) : String(val);
         }
 
@@ -114,6 +115,17 @@ function generatePDFContent(data: any, translator: ReturnType<typeof createTrans
                 ${dynamicRows || '<p style="color: #6b7280; font-style: italic;">No additional data submitted.</p>'}
             </div>
         </div>
+
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">💰</div>
+                <h2 class="section-title">Automated Quotation Estimate</h2>
+            </div>
+            <div class="data-list">
+                <p><strong>Quote Number:</strong> ${data.quoteResult?.quoteNumber}</p>
+                <p><strong>Total Estimate:</strong> CHF ${data.quoteResult?.totalWithVat.toFixed(2)} (incl. VAT)</p>
+            </div>
+        </div>
         
         <div class="footer">
             ${submitLabel} ${currentDate} • SwissCleanMove
@@ -139,7 +151,11 @@ export async function POST(request: NextRequest) {
         }
         
         const translator = createTranslator(locale);
-        const { tKey, tVal } = translator;
+        
+        // --- PRICING ENGINE ---
+        // Calculate the quote estimate directly on the backend
+        const quoteResult = generateQuote(data);
+        data.quoteResult = quoteResult; // Inject into data payload for DB
 
         // Process images
         const images = formData.getAll('images') as File[]
@@ -164,7 +180,6 @@ export async function POST(request: NextRequest) {
             }
         }
 
-        // Add image paths to the data blob for admin display
         if (imagePaths.length > 0) {
             data.imagePaths = imagePaths
         }
@@ -177,68 +192,101 @@ export async function POST(request: NextRequest) {
                 name: data.name,
                 emailAddress: data.emailAddress,
                 telephone: data.telephone,
-                streetAndNumber: data.streetAndNumber,
-                postalCodeAndCity: data.postalCodeAndCity,
-                contactPreferredVia: data.contactPreferredVia,
-                viewingIsWelcome: data.viewingIsWelcome,
-                remark: data.remark,
+                streetAndNumber: data.streetAndNumber || '',
+                postalCodeAndCity: data.postalCodeAndCity || '',
+                contactPreferredVia: data.contactPreferredVia || '',
+                viewingIsWelcome: data.viewingIsWelcome || '',
+                remark: data.remark || '',
                 data: data,
                 status: 'NEW'
             }
         })
 
-        // Send email notification FIRST (this is the critical path)
         let emailDebug = 'Not attempted';
-        // generate a real PDF using jsPDF for the attachment
         let pdfBuffer: Buffer | null = null;
+        
         try {
+            // Generate a Professional Quote PDF using jsPDF
             const doc = new jsPDF();
-            doc.setFontSize(16);
-            doc.text(`SwissCleanMove - ${data.serviceName}`, 10, 20);
+            
+            // Header
+            doc.setFillColor(0, 75, 135);
+            doc.rect(0, 0, 210, 40, 'F');
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(22);
+            doc.setFont('helvetica', 'bold');
+            doc.text('SwissCleanMove', 15, 25);
             doc.setFontSize(12);
-            doc.text(`${tKey(data.formType || 'service').toUpperCase()} Request`, 10, 30);
+            doc.setFont('helvetica', 'normal');
+            doc.text('Umzug & Reinigung', 15, 32);
             
-            let y = 45;
-            const skips = new Set(['serviceName', 'formType', 'status', 'pdfPath', 'submissionDate', 'createdAt', 'updatedAt', 'data', 'id', 'locale']);
+            doc.setTextColor(0, 0, 0);
+            doc.setFontSize(18);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Quotation Estimate', 15, 55);
             
-            for (const key of Object.keys(data)) {
-                if (skips.has(key) || data[key] === null || data[key] === undefined || data[key] === '') continue;
+            // Quote Details
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'normal');
+            doc.text(`Quote No: ${quoteResult.quoteNumber}`, 15, 65);
+            doc.text(`Date: ${new Date().toLocaleDateString()}`, 15, 70);
+            doc.text(`Customer: ${data.firstName} ${data.name}`, 15, 75);
+            doc.text(`Service: ${data.serviceName}`, 15, 80);
+
+            // Table Header
+            let y = 95;
+            doc.setFillColor(240, 240, 240);
+            doc.rect(15, y - 5, 180, 8, 'F');
+            doc.setFont('helvetica', 'bold');
+            doc.text('Description', 20, y);
+            doc.text('Price (CHF)', 170, y);
+            
+            // Line Items
+            doc.setFont('helvetica', 'normal');
+            y += 10;
+            
+            quoteResult.lineItems.forEach(item => {
+                let desc = item.description;
+                if (locale === 'de' && item.descriptionDe) desc = item.descriptionDe;
+                if (locale === 'fr' && item.descriptionFr) desc = item.descriptionFr;
                 
-                let display = String(data[key]);
-                if (typeof data[key] === 'object') {
-                    if (Array.isArray(data[key])) {
-                        display = data[key].map((v:any) => tVal(String(v))).join(', ');
-                    } else {
-                        display = JSON.stringify(data[key]);
-                    }
-                }
-                else if (typeof data[key] === 'boolean') {
-                    display = data[key] ? tVal('yes') : tVal('no');
-                }
-                else if (['yes', 'true'].includes(String(data[key]).toLowerCase())) {
-                    display = tVal('yes');
-                }
-                else if (['no', 'false'].includes(String(data[key]).toLowerCase())) {
-                    display = tVal('no');
-                }
-                else {
-                    display = isNaN(Number(data[key])) ? tVal(String(data[key])) : String(data[key]);
-                }
-                
-                const label = tKey(key).toUpperCase();
-                
-                doc.text(`${label}: ${display.substring(0, 70)}`, 10, y);
-                y += 10;
-                if (y > 280) { doc.addPage(); y = 20; }
-            }
+                doc.text(desc, 20, y);
+                doc.text(item.price.toFixed(2), 170, y);
+                y += 8;
+            });
+            
+            y += 5;
+            doc.line(15, y, 195, y);
+            y += 8;
+            
+            // Totals
+            doc.text('Subtotal:', 140, y);
+            doc.text(quoteResult.totalPrice.toFixed(2), 170, y);
+            y += 8;
+            doc.text('VAT (8.1%):', 140, y);
+            doc.text(quoteResult.vatAmount.toFixed(2), 170, y);
+            y += 8;
+            
+            doc.setFont('helvetica', 'bold');
+            doc.text('Total Estimate:', 140, y);
+            doc.setTextColor(204, 0, 0);
+            doc.text(quoteResult.totalWithVat.toFixed(2), 170, y);
+            
+            // Disclaimer Footer
+            doc.setTextColor(100, 100, 100);
+            doc.setFontSize(8);
+            doc.setFont('helvetica', 'italic');
+            doc.text('* This quote is an automated estimate and is valid for 30 days.', 15, y + 20);
+            doc.text('* Final price may vary upon physical inspection.', 15, y + 25);
+            
             pdfBuffer = Buffer.from(doc.output('arraybuffer'));
         } catch (pdfErr) {
             console.warn('Failed to generate jsPDF attachment:', pdfErr);
         }
 
         try {
-            // Use the rich "PDF" HTML template for both the email body and as an attachment!
-            const emailHtml = generatePDFContent(data, translator, locale);
+            // HTML Email for Admin (Internal raw data)
+            const adminEmailHtml = generatePDFContent(data, translator, locale);
             
             if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
                 emailDebug = `Missing credentials.`;
@@ -246,41 +294,34 @@ export async function POST(request: NextRequest) {
                 emailDebug = `Using credentials.`;
                 
                 const attachmentsConfig = pdfBuffer ? [{
-                    filename: `Service-Request-${data.name}-${new Date().toISOString().split('T')[0]}.pdf`,
+                    filename: `Quote-${quoteResult.quoteNumber}.pdf`,
                     content: pdfBuffer,
                     contentType: 'application/pdf'
                 }] : [];
 
-                const emailSent = await sendEmailNotification({
+                // 1. Send Internal Notification to Admin
+                await sendEmailNotification({
                     to: 'info@swisscleanmove.ch, Swisscleanmove.ch@gmail.com',
-                    subject: `New ${data.serviceName} Request`,
-                    html: emailHtml,
-                    text: `New request for ${data.serviceName} from ${data.firstName} ${data.name} (${data.emailAddress})`,
+                    subject: `New Request + Quote [${quoteResult.quoteNumber}] - ${data.serviceName}`,
+                    html: adminEmailHtml,
+                    text: `New request for ${data.serviceName} from ${data.firstName} ${data.name}. Est. Total: CHF ${quoteResult.totalWithVat.toFixed(2)}`,
                     attachments: attachmentsConfig
                 })
                 
-                // --- AUTO REPLY TO CLIENT ---
-                const autoReplyText = {
-                  en: `Good day,\n\nThank you very much for your quotation request and for your trust in SwissCleanMove.\n\nWe confirm receipt of your request and will review it carefully in order to prepare an individual and transparent quote for you.\n\nIf an on-site inspection is required to create a precise offer, we will contact you to arrange a convenient appointment.\n\nYou will receive our offer within the next 24 hours. Should we require any further information, we will contact you immediately.\n\nIf you have any questions, please do not hesitate to contact us at any time. We look forward to supporting you with our professional moving, cleaning, and facility services.\n\nBest regards,\n\nSwissCleanMove\n\n📞 +41 76 488 36 89\n📞 +41 78 215 80 30\n✉️ info@swisscleanmove.ch\n🌐 www.swisscleanmove.ch`,
-                  de: `Guten Tag\n\nHerzlichen Dank für Ihre Offertanfrage und Ihr Vertrauen in SwissCleanMove.\n\nWir bestätigen den Eingang Ihrer Anfrage und werden diese sorgfältig prüfen, um Ihnen eine individuelle und transparente Offerte zu erstellen.\n\nFalls für die Erstellung eines präzisen Angebots eine Besichtigung erforderlich ist, werden wir Sie kontaktieren, um einen passenden Besichtigungstermin zu vereinbaren.\n\nUnser Angebot erhalten Sie innerhalb der nächsten 24 Stunden. Sollten wir weitere Informationen benötigen, melden wir uns umgehend bei Ihnen.\n\nBei Fragen stehen wir Ihnen jederzeit gerne zur Verfügung und freuen uns darauf, Sie mit unseren professionellen Umzugs-, Reinigungs- und Facility-Services unterstützen zu dürfen.\n\nFreundliche Grüsse\n\nSwissCleanMove\n\n📞 +41 76 488 36 89\n📞 +41 78 215 80 30\n✉️ info@swisscleanmove.ch\n🌐 www.swisscleanmove.ch`,
-                  fr: `Bonjour,\n\nUn grand merci pour votre demande d'offre et pour votre confiance envers SwissCleanMove.\n\nNous vous confirmons la réception de votre demande et l'examinerons avec soin afin de vous établir un devis personnalisé et transparent.\n\nSi une visite des lieux s'avère nécessaire pour établir une offre précise, nous vous contacterons afin de convenir d'un rendez-vous.\n\nVous recevrez notre offre dans les prochaines 24 heures. Si nous avons besoin d'informations complémentaires, nous prendrons contact avec vous dans les plus brefs délais.\n\nNous restons à votre entière disposition pour toute question et nous réjouissons d'ores et déjà de vous accompagner grâce à nos services professionnels de déménagement, de nettoyage et de conciergerie.\n\nCordialement,\n\nSwissCleanMove\n\n📞 +41 76 488 36 89\n📞 +41 78 215 80 30\n✉️ info@swisscleanmove.ch\n🌐 www.swisscleanmove.ch`
-                };
+                // 2. Send Professional Quotation Email to Customer
+                const clientEmailHtml = generateQuoteEmailHtml(quoteResult, data, locale);
+                const clientSubject = locale === 'fr' ? 'Votre devis estimatif - SwissCleanMove' : (locale === 'en' ? 'Your quotation estimate - SwissCleanMove' : 'Ihr Kostenvoranschlag - SwissCleanMove');
                 
-                const clientEmailText = autoReplyText[locale as 'en'|'de'|'fr'] || autoReplyText.de;
-                const clientEmailHtml = '<div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #333;">' + clientEmailText.replace(/\\n/g, '<br/>') + '</div>';
-                
-                const clientSubject = locale === 'fr' ? 'Confirmation de votre demande - SwissCleanMove' : (locale === 'en' ? 'Confirmation of your request - SwissCleanMove' : 'Eingangsbestätigung Ihrer Anfrage - SwissCleanMove');
-                
-                await sendEmailNotification({
+                const emailSent = await sendEmailNotification({
                     to: data.emailAddress,
                     subject: clientSubject,
                     html: clientEmailHtml,
-                    text: clientEmailText,
-                    attachments: []
+                    text: `Please view this email in an HTML compatible client.`,
+                    attachments: attachmentsConfig
                 });
                 
                 if (emailSent === true) {
-                    console.log('✅ Email notification sent')
+                    console.log('✅ Email notifications sent successfully')
                     emailDebug += ' | Success';
                 } else {
                     console.warn('⚠️ Email notification failed but form was saved')
@@ -292,13 +333,13 @@ export async function POST(request: NextRequest) {
             emailDebug = 'Exception thrown: ' + emailError.toString();
         }
 
-        // Save files locally only (skip on Vercel — read-only filesystem)
+        // Save files locally only
         if (!process.env.VERCEL) {
             try {
                 const submissionsDir = join(process.cwd(), 'public', 'submissions')
                 if (!existsSync(submissionsDir)) await mkdir(submissionsDir, { recursive: true })
                 const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
-                const filename = `${data.serviceName.replace(/\s+/g, '-')}-${data.name}-${timestamp}`
+                const filename = `${data.serviceName.replace(/\\s+/g, '-')}-${data.name}-${timestamp}`
                 const pdfContent = generatePDFContent(data, translator, locale)
                 const pdfPath = join(submissionsDir, `${filename}.html`)
                 await writeFile(pdfPath, pdfContent, 'utf8')
@@ -310,7 +351,7 @@ export async function POST(request: NextRequest) {
             }
         }
 
-        return NextResponse.json({ success: true, message: 'Form submitted successfully', emailDebug, submissionId: submission.id })
+        return NextResponse.json({ success: true, message: 'Quote generated successfully', emailDebug, submissionId: submission.id })
     } catch (error) {
         console.error('Error processing form submission:', error)
         return NextResponse.json({ error: 'Internal server error', details: String(error) }, { status: 500 })

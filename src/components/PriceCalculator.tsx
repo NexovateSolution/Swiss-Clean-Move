@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Calculator } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { PRICING_RULES } from '@/lib/pricingRules'
 
 export default function PriceCalculator() {
     const t = useTranslations('priceCalculator')
@@ -59,7 +60,6 @@ export default function PriceCalculator() {
         { id: 'addonDisposalM3', label: t('addons.disposalPerM3'), priceFrom: 30 },
     ] as const
 
-    // Price calculation logic
     const calculatePrice = () => {
         let basePriceMin = 0
         let display: string | null = null
@@ -67,17 +67,18 @@ export default function PriceCalculator() {
         if (serviceCategory === 'cleaning') {
             switch (serviceType) {
                 case 'endOfTenancyApartment': {
-                    if (rooms <= 1) { basePriceMin = 250; display = t('display.fromChf', { amount: 250 }) }
-                    else if (rooms <= 2) { basePriceMin = 350; display = t('display.fromChf', { amount: 350 }) }
-                    else if (rooms <= 3) { basePriceMin = 480; display = t('display.fromChf', { amount: 480 }) }
-                    else if (rooms <= 4) { basePriceMin = 620; display = t('display.fromChf', { amount: 620 }) }
-                    else if (rooms <= 5) { basePriceMin = 780; display = t('display.fromChf', { amount: 780 }) }
-                    else { display = t('display.priceOnRequest') }
-                    break
+                    const price = PRICING_RULES.cleaning.basePriceByRooms[rooms];
+                    if (price) {
+                        basePriceMin = price;
+                        display = t('display.fromChf', { amount: price });
+                    } else {
+                        display = t('display.priceOnRequest');
+                    }
+                    break;
                 }
                 case 'endOfTenancyHouse':
-                    basePriceMin = 900
-                    display = t('display.fromChf', { amount: 900 })
+                    basePriceMin = PRICING_RULES.cleaning.houseBasePrice;
+                    display = t('display.fromChf', { amount: PRICING_RULES.cleaning.houseBasePrice })
                     break
                 case 'apartmentHouseCleaning':
                     basePriceMin = 45 * hours
@@ -115,16 +116,16 @@ export default function PriceCalculator() {
                     display = t('display.hourlyRangePerPerson', { min: 70, max: 95, base: basePriceMin })
                     break
                 case 'movingTeam2':
-                    basePriceMin = 160 * hours
-                    display = t('display.fromChfPerHourMin', { amount: 160, base: basePriceMin })
+                    basePriceMin = PRICING_RULES.transport.hourlyTwoMen * hours
+                    display = t('display.fromChfPerHourMin', { amount: PRICING_RULES.transport.hourlyTwoMen, base: basePriceMin })
                     break
                 case 'vanWithDriver':
-                    basePriceMin = 140 * hours
-                    display = t('display.fromChfPerHourMin', { amount: 140, base: basePriceMin })
+                    basePriceMin = PRICING_RULES.transport.hourlyVanDriver * hours
+                    display = t('display.fromChfPerHourMin', { amount: PRICING_RULES.transport.hourlyVanDriver, base: basePriceMin })
                     break
                 case 'assembly':
-                    basePriceMin = 70 * hours
-                    display = t('display.hourlyRange', { min: 70, max: 90, base: basePriceMin })
+                    basePriceMin = PRICING_RULES.transport.surcharges.assemblyHourly * hours
+                    display = t('display.hourlyRange', { min: PRICING_RULES.transport.surcharges.assemblyHourly, max: 90, base: basePriceMin })
                     break
             }
         } else if (serviceCategory === 'maintenance') {
@@ -149,24 +150,25 @@ export default function PriceCalculator() {
         } else if (serviceCategory === 'disposal') {
             switch (serviceType) {
                 case 'disposalPerM3':
-                    basePriceMin = 30
-                    display = t('display.fromChfPerM3', { amount: 30 })
+                    basePriceMin = PRICING_RULES.disposal.perCubicMeter
+                    display = t('display.fromChfPerM3', { amount: PRICING_RULES.disposal.perCubicMeter })
                     break
             }
         } else if (serviceCategory === 'combo') {
             switch (serviceType) {
                 case 'comboApartment': {
-                    if (rooms <= 1) { basePriceMin = 650; display = t('display.fromChf', { amount: 650 }) }
-                    else if (rooms <= 2) { basePriceMin = 850; display = t('display.fromChf', { amount: 850 }) }
-                    else if (rooms <= 3) { basePriceMin = 1150; display = t('display.fromChf', { amount: '1,150' }) }
-                    else if (rooms <= 4) { basePriceMin = 1450; display = t('display.fromChf', { amount: '1,450' }) }
-                    else if (rooms <= 5) { basePriceMin = 1750; display = t('display.fromChf', { amount: '1,750' }) }
-                    else { display = t('display.priceOnRequest') }
-                    break
+                    const price = PRICING_RULES.combo.basePriceByRooms[rooms];
+                    if (price) {
+                        basePriceMin = price;
+                        display = t('display.fromChf', { amount: price.toLocaleString('de-CH') });
+                    } else {
+                        display = t('display.priceOnRequest');
+                    }
+                    break;
                 }
                 case 'comboHouse':
-                    basePriceMin = 1950
-                    display = t('display.fromChf', { amount: '1,950' })
+                    basePriceMin = PRICING_RULES.combo.houseBasePrice;
+                    display = t('display.fromChf', { amount: PRICING_RULES.combo.houseBasePrice.toLocaleString('de-CH') })
                     break
             }
         }

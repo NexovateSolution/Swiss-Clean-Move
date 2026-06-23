@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslations, useLocale } from 'next-intl'
 import {
@@ -16,13 +16,21 @@ import {
   MapPin,
   Clock,
   CheckCircle,
-  AlertCircle
+  AlertCircle,
+  DollarSign,
+  Edit3,
+  Save,
+  Plus,
+  Trash2,
+  RefreshCw,
+  Loader2
 } from 'lucide-react'
 import toast, { Toaster } from 'react-hot-toast'
 import AdminLayout from '@/components/admin/AdminLayout'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { exportServiceFormToPDF } from '@/utils/pdfExport'
 import { translateValue } from '@/utils/formTranslations'
+import { PRICING_RULES } from '@/lib/pricingRules'
 
 interface ServiceFormSubmission {
   id: string
@@ -67,6 +75,13 @@ export default function ServiceFormsPage() {
   const [selectedSubmission, setSelectedSubmission] = useState<ServiceFormSubmission | null>(null)
   const [showDetails, setShowDetails] = useState(false)
 
+  // Quote editing state
+  const [quoteLineItems, setQuoteLineItems] = useState<any[]>([])
+  const [quoteNumber, setQuoteNumber] = useState('')
+  const [isEditingQuote, setIsEditingQuote] = useState(false)
+  const [quoteSaving, setQuoteSaving] = useState(false)
+  const [adminNotes, setAdminNotes] = useState('')
+
   useEffect(() => {
     fetchSubmissions()
   }, [])
@@ -102,6 +117,20 @@ export default function ServiceFormsPage() {
   const handleViewDetails = (submission: ServiceFormSubmission) => {
     setSelectedSubmission(submission)
     setShowDetails(true)
+    setIsEditingQuote(false)
+
+    // Extract quote data from the submission's data payload
+    const data = (submission as any).data || {}
+    const qr = data.quoteResult
+    if (qr) {
+      setQuoteLineItems(qr.lineItems || [])
+      setQuoteNumber(qr.quoteNumber || '')
+      setAdminNotes(qr.adminNotes || '')
+    } else {
+      setQuoteLineItems([])
+      setQuoteNumber('')
+      setAdminNotes('')
+    }
   }
 
   const handleDownloadPDF = (submission: ServiceFormSubmission) => {
@@ -124,6 +153,50 @@ export default function ServiceFormsPage() {
       'Facility Services': 'bg-purple-100 text-purple-800',
     }
     return colors[serviceName] || 'bg-gray-100 text-gray-800'
+  }
+
+  // --- Quote Editing Helpers ---
+  const calculateSubtotal = () => quoteLineItems.reduce((sum, item) => sum + (Number(item.price) || 0), 0)
+  const calculateVat = () => Math.round(calculateSubtotal() * PRICING_RULES.vatRate * 100) / 100
+  const calculateTotal = () => calculateSubtotal() + calculateVat()
+
+  const handleLineItemChange = (index: number, field: string, value: string | number) => {
+    setQuoteLineItems(prev => {
+      const updated = [...prev]
+      updated[index] = { ...updated[index], [field]: field === 'price' ? Number(value) : value }
+      return updated
+    })
+  }
+
+  const handleAddLineItem = () => {
+    setQuoteLineItems(prev => [...prev, { description: '', descriptionDe: '', descriptionFr: '', price: 0 }])
+  }
+
+  const handleRemoveLineItem = (index: number) => {
+    setQuoteLineItems(prev => prev.filter((_, i) => i !== index))
+  }
+
+  const handleSaveQuote = async () => {
+    if (!selectedSubmission) return
+    setQuoteSaving(true)
+    try {
+      const res = await fetch(`/api/service-forms/${selectedSubmission.id}/quote`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ lineItems: quoteLineItems, adminNotes })
+      })
+      if (res.ok) {
+        toast.success('Quote updated successfully')
+        setIsEditingQuote(false)
+        fetchSubmissions() // Refresh list
+      } else {
+        toast.error('Failed to save quote')
+      }
+    } catch {
+      toast.error('Network error saving quote')
+    } finally {
+      setQuoteSaving(false)
+    }
   }
 
   const uniqueServices = Array.from(new Set(submissions.map(s => s.serviceName)))
@@ -202,6 +275,9 @@ export default function ServiceFormsPage() {
                     {t('table.submitted')}
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                    Estimate
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     {t('table.actions')}
                   </th>
                 </tr>
@@ -209,7 +285,7 @@ export default function ServiceFormsPage() {
               <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                 {filteredSubmissions.length === 0 ? (
                   <tr>
-                    <td colSpan={5} className="px-6 py-12 text-center">
+                    <td colSpan={6} className="px-6 py-12 text-center">
                       <FileText className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                       <p className="text-gray-500 dark:text-gray-400">{t('empty')}</p>
                     </td>
@@ -267,6 +343,22 @@ export default function ServiceFormsPage() {
                           {new Date(submission.submissionDate).toLocaleTimeString()}
                         </div>
                       </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        {(() => {
+                          const qr = (submission as any).data?.quoteResult
+                          if (qr && qr.totalWithVat) {
+                            return (
+                              <div>
+                                <span className="text-sm font-bold text-gray-900 dark:text-white">CHF {Number(qr.totalWithVat).toFixed(2)}</span>
+                                {qr.adminOverride && (
+                                  <span className="ml-1 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-orange-100 text-orange-700">edited</span>
+                                )}
+                              </div>
+                            )
+                          }
+                          return <span className="text-xs text-gray-400 italic">—</span>
+                        })()}
+                      </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                         <div className="flex space-x-2">
                           <button
@@ -298,7 +390,7 @@ export default function ServiceFormsPage() {
         {/* Details Modal */}
         {showDetails && selectedSubmission && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                   {t('modal.title')}
@@ -374,6 +466,169 @@ export default function ServiceFormsPage() {
                       </div>
                     </div>
                   </div>
+                </div>
+
+                {/* ===== QUOTE BREAKDOWN SECTION ===== */}
+                <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                      <DollarSign className="w-5 h-5 text-green-600" />
+                      Quotation Estimate
+                      {quoteNumber && <span className="text-sm font-normal text-gray-500 ml-2">({quoteNumber})</span>}
+                    </h3>
+                    <div className="flex items-center gap-2">
+                      {!isEditingQuote ? (
+                        <button
+                          onClick={() => setIsEditingQuote(true)}
+                          className="flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-blue-700 bg-blue-100 hover:bg-blue-200 rounded-md transition-colors"
+                        >
+                          <Edit3 className="w-3 h-3" />
+                          Edit Quote
+                        </button>
+                      ) : (
+                        <>
+                          <button
+                            onClick={() => setIsEditingQuote(false)}
+                            className="flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
+                          >
+                            Cancel
+                          </button>
+                          <button
+                            onClick={handleSaveQuote}
+                            disabled={quoteSaving}
+                            className="flex items-center gap-1 px-3 py-1.5 text-xs font-medium text-white bg-green-600 hover:bg-green-700 rounded-md transition-colors disabled:opacity-50"
+                          >
+                            {quoteSaving ? <Loader2 className="w-3 h-3 animate-spin" /> : <Save className="w-3 h-3" />}
+                            Save
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </div>
+
+                  {quoteLineItems.length > 0 ? (
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="bg-gray-100 dark:bg-gray-600">
+                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-600 dark:text-gray-300 uppercase">Description</th>
+                            <th className="px-4 py-2 text-right text-xs font-medium text-gray-600 dark:text-gray-300 uppercase w-32">Price (CHF)</th>
+                            {isEditingQuote && <th className="px-2 py-2 w-10"></th>}
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-200 dark:divide-gray-600">
+                          {quoteLineItems.map((item, idx) => (
+                            <tr key={idx} className="hover:bg-gray-100 dark:hover:bg-gray-650">
+                              <td className="px-4 py-2">
+                                {isEditingQuote ? (
+                                  <input
+                                    type="text"
+                                    value={item.description}
+                                    onChange={(e) => handleLineItemChange(idx, 'description', e.target.value)}
+                                    className="w-full px-2 py-1 border border-gray-300 rounded text-sm bg-white dark:bg-gray-800 dark:text-white dark:border-gray-500"
+                                  />
+                                ) : (
+                                  <span className="text-gray-900 dark:text-white">{item.description}</span>
+                                )}
+                              </td>
+                              <td className="px-4 py-2 text-right">
+                                {isEditingQuote ? (
+                                  <input
+                                    type="number"
+                                    step="0.01"
+                                    value={item.price}
+                                    onChange={(e) => handleLineItemChange(idx, 'price', e.target.value)}
+                                    className="w-full px-2 py-1 border border-gray-300 rounded text-sm text-right bg-white dark:bg-gray-800 dark:text-white dark:border-gray-500"
+                                  />
+                                ) : (
+                                  <span className="text-gray-900 dark:text-white font-medium">CHF {Number(item.price).toFixed(2)}</span>
+                                )}
+                              </td>
+                              {isEditingQuote && (
+                                <td className="px-2 py-2 text-center">
+                                  <button
+                                    onClick={() => handleRemoveLineItem(idx)}
+                                    className="text-red-500 hover:text-red-700 p-1"
+                                    title="Remove line item"
+                                  >
+                                    <Trash2 className="w-4 h-4" />
+                                  </button>
+                                </td>
+                              )}
+                            </tr>
+                          ))}
+                        </tbody>
+                        <tfoot>
+                          {isEditingQuote && (
+                            <tr>
+                              <td colSpan={3} className="px-4 py-2">
+                                <button
+                                  onClick={handleAddLineItem}
+                                  className="flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 font-medium"
+                                >
+                                  <Plus className="w-3 h-3" /> Add line item
+                                </button>
+                              </td>
+                            </tr>
+                          )}
+                          <tr className="border-t-2 border-gray-300 dark:border-gray-500">
+                            <td className="px-4 py-2 text-right font-medium text-gray-600 dark:text-gray-300">Subtotal:</td>
+                            <td className="px-4 py-2 text-right font-bold text-gray-900 dark:text-white">CHF {calculateSubtotal().toFixed(2)}</td>
+                            {isEditingQuote && <td></td>}
+                          </tr>
+                          <tr>
+                            <td className="px-4 py-1 text-right text-gray-500 dark:text-gray-400 text-xs">VAT ({(PRICING_RULES.vatRate * 100).toFixed(1)}%):</td>
+                            <td className="px-4 py-1 text-right text-gray-500 dark:text-gray-400 text-xs">CHF {calculateVat().toFixed(2)}</td>
+                            {isEditingQuote && <td></td>}
+                          </tr>
+                          <tr className="bg-gray-100 dark:bg-gray-600">
+                            <td className="px-4 py-3 text-right font-bold text-gray-900 dark:text-white">Total Estimate:</td>
+                            <td className="px-4 py-3 text-right font-bold text-lg text-red-600 dark:text-red-400">CHF {calculateTotal().toFixed(2)}</td>
+                            {isEditingQuote && <td></td>}
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  ) : (
+                    <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 text-center">
+                      <AlertCircle className="w-6 h-6 text-yellow-500 mx-auto mb-2" />
+                      <p className="text-sm text-yellow-700 dark:text-yellow-400">No automated quote was generated for this submission.</p>
+                      <button
+                        onClick={() => { setIsEditingQuote(true); handleAddLineItem(); }}
+                        className="mt-2 text-xs text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        + Create manual quote
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Admin notes */}
+                  {isEditingQuote && (
+                    <div className="mt-4">
+                      <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Admin Notes</label>
+                      <textarea
+                        value={adminNotes}
+                        onChange={(e) => setAdminNotes(e.target.value)}
+                        rows={2}
+                        placeholder="Internal notes about price adjustments..."
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-sm bg-white dark:bg-gray-700 dark:text-white"
+                      />
+                    </div>
+                  )}
+                  {!isEditingQuote && adminNotes && (
+                    <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                      <p className="text-xs font-medium text-blue-600 dark:text-blue-400 mb-1">Admin Notes:</p>
+                      <p className="text-sm text-blue-800 dark:text-blue-300">{adminNotes}</p>
+                    </div>
+                  )}
+
+                  {/* Admin override indicator */}
+                  {((selectedSubmission as any).data?.quoteResult?.adminOverride) && (
+                    <div className="mt-2 flex items-center gap-1 text-xs text-orange-600 dark:text-orange-400">
+                      <Edit3 className="w-3 h-3" />
+                      Manually adjusted on {new Date((selectedSubmission as any).data.quoteResult.adminOverrideDate).toLocaleDateString()}
+                    </div>
+                  )}
                 </div>
 
                 {/* Dynamic: ALL submitted form data */}
