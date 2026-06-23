@@ -328,6 +328,31 @@ export async function exportServiceFormToPDF(rawSubmission: any, locale: string 
             display = `<span class="badge badge-green">✓ Yes</span>`;
         } else if (val === 'no' || val === 'No' || val === false) {
             display = `<span class="badge badge-gray">✗ No</span>`;
+        } else if (key === 'quoteResult' && val) {
+            let quoteHtml = '<div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 15px; width: 100%; box-sizing: border-box;">';
+            quoteHtml += `<p style="margin-top: 0; margin-bottom: 10px; font-weight: 600;">Quote ${val.quoteNumber ? '(' + val.quoteNumber + ')' : ''}</p>`;
+            quoteHtml += '<table style="width: 100%; border-collapse: collapse; font-size: 14px;">';
+            quoteHtml += '<tr style="border-bottom: 1px solid #e5e7eb; text-align: left;"><th style="padding-bottom: 8px;">Description</th><th style="padding-bottom: 8px; text-align: right;">Price (CHF)</th></tr>';
+            
+            if (val.lineItems && Array.isArray(val.lineItems)) {
+                val.lineItems.forEach((item: any) => {
+                    const desc = locale === 'de' && item.descriptionDe ? item.descriptionDe : 
+                                 locale === 'fr' && item.descriptionFr ? item.descriptionFr : 
+                                 item.description;
+                    quoteHtml += `<tr style="border-bottom: 1px solid #f3f4f6;"><td style="padding: 8px 0;">${desc}</td><td style="padding: 8px 0; text-align: right;">${Number(item.price).toFixed(2)}</td></tr>`;
+                });
+            }
+            
+            quoteHtml += `<tr><td style="padding: 8px 0; text-align: right;">Subtotal:</td><td style="padding: 8px 0; text-align: right; font-weight: 500;">${Number(val.totalPrice || 0).toFixed(2)}</td></tr>`;
+            quoteHtml += `<tr><td style="padding: 4px 0; text-align: right; color: #6b7280; font-size: 12px;">VAT:</td><td style="padding: 4px 0; text-align: right; color: #6b7280; font-size: 12px;">${Number(val.vatAmount || 0).toFixed(2)}</td></tr>`;
+            quoteHtml += `<tr><td style="padding: 8px 0; text-align: right; font-weight: 600; color: #dc2626;">Total:</td><td style="padding: 8px 0; text-align: right; font-weight: 600; color: #dc2626;">${Number(val.totalWithVat || 0).toFixed(2)}</td></tr>`;
+            quoteHtml += '</table></div>';
+            
+            if (val.adminOverride) {
+                 quoteHtml += '<div style="margin-top: 8px;"><span class="badge" style="background-color: #ffedd5; color: #c2410c; border: 1px solid #fdba74;">✎ Manually Edited</span></div>';
+            }
+            
+            display = quoteHtml;
         } else if (typeof val === 'object') {
             display = `<pre class="remark-box">${JSON.stringify(val, null, 2)}</pre>`;
         } else {
