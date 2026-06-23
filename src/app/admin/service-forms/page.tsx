@@ -89,7 +89,7 @@ export default function ServiceFormsPage() {
   const fetchSubmissions = async () => {
     try {
       setLoading(true)
-      const response = await fetch('/api/service-forms/list')
+      const response = await fetch('/api/service-forms/list?t=' + Date.now(), { cache: 'no-store' })
       if (response.ok) {
         const data = await response.json()
         setSubmissions(data.submissions || [])
@@ -186,8 +186,14 @@ export default function ServiceFormsPage() {
         body: JSON.stringify({ lineItems: quoteLineItems, adminNotes })
       })
       if (res.ok) {
+        const data = await res.json()
         toast.success('Quote updated successfully')
         setIsEditingQuote(false)
+        
+        // Update selectedSubmission locally so UI updates immediately
+        const updatedData = { ...((selectedSubmission as any).data || {}), quoteResult: data.quoteResult }
+        setSelectedSubmission({ ...selectedSubmission, data: updatedData } as any)
+        
         fetchSubmissions() // Refresh list
       } else {
         toast.error('Failed to save quote')
