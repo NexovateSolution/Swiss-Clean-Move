@@ -122,8 +122,8 @@ function generatePDFContent(data: any, translator: ReturnType<typeof createTrans
                 <h2 class="section-title">Automated Quotation Estimate</h2>
             </div>
             <div class="data-list">
-                <p><strong>Quote Number:</strong> ${data.quoteResult?.quoteNumber}</p>
-                <p><strong>Total Estimate:</strong> CHF ${data.quoteResult?.totalWithVat.toFixed(2)} (incl. VAT)</p>
+                <p><strong>Quote Number:</strong> ${data.quoteResult?.quoteNumber || 'N/A'}</p>
+                <p><strong>Total Estimate:</strong> CHF ${data.quoteResult?.totalPrice?.toFixed(2) || '0.00'}</p>
             </div>
         </div>
         
