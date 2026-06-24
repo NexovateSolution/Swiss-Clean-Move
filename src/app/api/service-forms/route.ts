@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { writeFile, mkdir } from 'fs/promises'
 import { join } from 'path'
-import { existsSync } from 'fs'
+import { existsSync, readFileSync } from 'fs'
 import { jsPDF } from 'jspdf'
 import { sendEmailNotification } from '@/lib/email'
 import { prisma } from '../../../../lib/db'
@@ -209,75 +209,186 @@ export async function POST(request: NextRequest) {
             // Generate a Professional Quote PDF using jsPDF
             const doc = new jsPDF();
             
-            // Header
-            doc.setFillColor(0, 75, 135);
-            doc.rect(0, 0, 210, 40, 'F');
-            doc.setTextColor(255, 255, 255);
-            doc.setFontSize(22);
-            doc.setFont('helvetica', 'bold');
-            doc.text('SwissCleanMove', 15, 25);
-            doc.setFontSize(12);
-            doc.setFont('helvetica', 'normal');
-            doc.text('Umzug & Reinigung', 15, 32);
+            // --- HEADER ---
+            try {
+                const logoPath = join(process.cwd(), 'public', 'images', 'logo.png');
+                if (existsSync(logoPath)) {
+                    const logoBase64 = 'data:image/png;base64,' + readFileSync(logoPath, 'base64');
+                    doc.addImage(logoBase64, 'PNG', 15, 10, 45, 15);
+                } else {
+                    doc.setTextColor(0, 32, 96);
+                    doc.setFontSize(24);
+                    doc.setFont('helvetica', 'bold');
+                    doc.text('SCM', 15, 20);
+                }
+            } catch (e) {
+                doc.setTextColor(0, 32, 96);
+                doc.setFontSize(24);
+                doc.setFont('helvetica', 'bold');
+                doc.text('SCM', 15, 20);
+            }
             
-            doc.setTextColor(0, 0, 0);
-            doc.setFontSize(18);
-            doc.setFont('helvetica', 'bold');
-            doc.text('Quotation Estimate', 15, 55);
-            
-            // Quote Details
-            doc.setFontSize(10);
+            // Company Info (Right)
+            doc.setTextColor(80, 80, 80);
+            doc.setFontSize(9);
             doc.setFont('helvetica', 'normal');
-            doc.text(`Quote No: ${quoteResult.quoteNumber}`, 15, 65);
-            doc.text(`Date: ${new Date().toLocaleDateString()}`, 15, 70);
-            doc.text(`Customer: ${data.firstName} ${data.name}`, 15, 75);
-            doc.text(`Service: ${data.serviceName}`, 15, 80);
+            doc.text('+41 78 215 80 30', 195, 15, { align: 'right' });
+            doc.text('info@swisscleanmove.ch', 195, 20, { align: 'right' });
+            doc.text('www.swisscleanmove.ch', 195, 25, { align: 'right' });
+            doc.text('Orpundstrasse 31, 2504 Biel', 195, 30, { align: 'right' });
+            doc.text('UID: CHE-457.949.122 MWST', 195, 35, { align: 'right' });
 
-            // Table Header
-            let y = 95;
-            doc.setFillColor(240, 240, 240);
-            doc.rect(15, y - 5, 180, 8, 'F');
+            // --- CUSTOMER & ORDER INFO ---
+            let currentY = 50;
+            doc.setTextColor(0, 0, 0);
+            doc.setFontSize(10);
+            doc.text(`${data.firstName} ${data.name}`, 15, currentY);
+            doc.text(data.streetAndNumber || '', 15, currentY + 5);
+            doc.text(data.postalCodeAndCity || '', 15, currentY + 10);
+
+            // Quote Number Box (Right)
+            doc.setDrawColor(0, 32, 96);
+            doc.setFillColor(255, 255, 255);
+            doc.roundedRect(135, currentY - 5, 60, 25, 2, 2, 'FD');
+            doc.setFillColor(0, 32, 96);
+            doc.rect(135, currentY - 5, 60, 8, 'F');
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(8);
             doc.setFont('helvetica', 'bold');
-            doc.text('Description', 20, y);
-            doc.text('Price (CHF)', 170, y);
+            doc.text('QUOTE NUMBER', 165, currentY, { align: 'center' });
+            doc.setTextColor(0, 0, 0);
+            doc.setFontSize(12);
+            doc.text(quoteResult.quoteNumber || '', 165, currentY + 12, { align: 'center' });
+
+            currentY += 35;
+
+            // --- TITLE ---
+            doc.setTextColor(0, 32, 96);
+            doc.setFontSize(14);
+            doc.setFont('helvetica', 'bold');
+            const serviceNameUpper = (data.serviceName || '').toUpperCase();
             
-            // Line Items
+            // Handle long titles that might span multiple lines
+            const splitTitle = doc.splitTextToSize(serviceNameUpper, 180);
+            doc.text(splitTitle, 15, currentY);
+            
+            currentY += (splitTitle.length * 6) + 2;
+            doc.setFontSize(12);
+            doc.text('QUOTATION ESTIMATE', 15, currentY);
+            
+            currentY += 10;
+            
+            // --- INFO CARDS ---
+            doc.setFillColor(248, 250, 252);
+            doc.setDrawColor(226, 232, 240);
+            doc.roundedRect(15, currentY, 55, 30, 2, 2, 'FD');
+            doc.roundedRect(75, currentY, 55, 30, 2, 2, 'FD');
+            doc.roundedRect(135, currentY, 60, 30, 2, 2, 'FD');
+            
+            doc.setTextColor(0, 32, 96);
+            doc.setFontSize(7);
+            doc.setFont('helvetica', 'bold');
+            doc.text('ORDER DATA', 18, currentY + 5);
+            doc.text('PROPERTY', 78, currentY + 5);
+            doc.text('CONTACT', 138, currentY + 5);
+            
+            doc.setTextColor(50, 50, 50);
             doc.setFont('helvetica', 'normal');
-            y += 10;
+            doc.text(`Date: ${new Date().toLocaleDateString()}`, 18, currentY + 12);
+            doc.text(`Contact: ${data.firstName}`, 18, currentY + 18);
             
-            quoteResult.lineItems.forEach(item => {
+            doc.text(`${data.streetAndNumber || ''}`, 78, currentY + 12);
+            doc.text(`${data.postalCodeAndCity || ''}`, 78, currentY + 18);
+            
+            doc.text(`Tel: ${data.telephone || ''}`, 138, currentY + 12);
+            doc.text(`Email: ${data.emailAddress || ''}`, 138, currentY + 18);
+
+            currentY += 40;
+
+            // --- TABLE HEADER ---
+            doc.setFillColor(0, 32, 96);
+            doc.rect(15, currentY, 180, 8, 'F');
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(8);
+            doc.setFont('helvetica', 'bold');
+            doc.text('NR.', 18, currentY + 5);
+            doc.text('DESCRIPTION', 35, currentY + 5);
+            doc.text('PRICE (CHF)', 190, currentY + 5, { align: 'right' });
+            
+            currentY += 8;
+            
+            // --- LINE ITEMS ---
+            doc.setTextColor(0, 0, 0);
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(9);
+            
+            let itemNr = 1;
+            quoteResult.lineItems.forEach((item: any) => {
+                if (currentY > 250) {
+                    doc.addPage();
+                    currentY = 20;
+                    
+                    // Re-draw header on new page
+                    doc.setFillColor(0, 32, 96);
+                    doc.rect(15, currentY, 180, 8, 'F');
+                    doc.setTextColor(255, 255, 255);
+                    doc.setFontSize(8);
+                    doc.setFont('helvetica', 'bold');
+                    doc.text('NR.', 18, currentY + 5);
+                    doc.text('DESCRIPTION', 35, currentY + 5);
+                    doc.text('PRICE (CHF)', 190, currentY + 5, { align: 'right' });
+                    currentY += 8;
+                    doc.setTextColor(0, 0, 0);
+                    doc.setFont('helvetica', 'normal');
+                    doc.setFontSize(9);
+                }
+                
                 let desc = item.description;
                 if (locale === 'de' && item.descriptionDe) desc = item.descriptionDe;
                 if (locale === 'fr' && item.descriptionFr) desc = item.descriptionFr;
                 
-                doc.text(desc, 20, y);
-                doc.text(item.price.toFixed(2), 170, y);
-                y += 8;
+                doc.text(itemNr.toString(), 18, currentY + 6);
+                
+                const splitDesc = doc.splitTextToSize(desc, 120);
+                doc.text(splitDesc, 35, currentY + 6);
+                
+                doc.text(Number(item.price).toFixed(2), 190, currentY + 6, { align: 'right' });
+                
+                const height = splitDesc.length * 5;
+                currentY += height + 3;
+                
+                doc.setDrawColor(240, 240, 240);
+                doc.line(15, currentY, 195, currentY);
+                currentY += 2;
+                itemNr++;
             });
             
-            y += 5;
-            doc.line(15, y, 195, y);
-            y += 8;
+            currentY += 5;
             
-            // Totals
-            doc.text('Subtotal:', 140, y);
-            doc.text(quoteResult.totalPrice.toFixed(2), 170, y);
-            y += 8;
-            doc.text('VAT (8.1%):', 140, y);
-            doc.text(quoteResult.vatAmount.toFixed(2), 170, y);
-            y += 8;
+            // --- TOTALS ---
+            if (currentY > 240) {
+                doc.addPage();
+                currentY = 20;
+            }
+            
+            doc.setFontSize(10);
+            doc.text('Subtotal:', 140, currentY);
+            doc.text(Number(quoteResult.totalPrice).toFixed(2), 190, currentY, { align: 'right' });
+            currentY += 8;
+            doc.text('VAT (8.1%):', 140, currentY);
+            doc.text(Number(quoteResult.vatAmount).toFixed(2), 190, currentY, { align: 'right' });
+            currentY += 8;
             
             doc.setFont('helvetica', 'bold');
-            doc.text('Total Estimate:', 140, y);
-            doc.setTextColor(204, 0, 0);
-            doc.text(quoteResult.totalWithVat.toFixed(2), 170, y);
+            doc.text('Total Estimate:', 140, currentY);
+            doc.text(Number(quoteResult.totalWithVat).toFixed(2), 190, currentY, { align: 'right' });
             
             // Disclaimer Footer
             doc.setTextColor(100, 100, 100);
             doc.setFontSize(8);
             doc.setFont('helvetica', 'italic');
-            doc.text('* This quote is an automated estimate and is valid for 30 days.', 15, y + 20);
-            doc.text('* Final price may vary upon physical inspection.', 15, y + 25);
+            doc.text('* This quote is an automated estimate and is valid for 30 days.', 15, 280);
+            doc.text('* Final price may vary upon physical inspection.', 15, 285);
             
             pdfBuffer = Buffer.from(doc.output('arraybuffer'));
         } catch (pdfErr) {
