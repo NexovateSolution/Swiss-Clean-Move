@@ -388,54 +388,65 @@ export async function POST(request: NextRequest) {
             console.warn('Failed to generate jsPDF attachment:', pdfErr);
         }
 
-        try {
-            // HTML Email for Admin (Internal raw data)
-            const adminEmailHtml = generatePDFContent(data, translator, locale);
+        // --- EMAIL SENDING (each email wrapped separately for resilience) ---
+        if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+            emailDebug = `Missing credentials: GMAIL_USER=${!!process.env.GMAIL_USER}, GMAIL_APP_PASSWORD=${!!process.env.GMAIL_APP_PASSWORD}`;
+            console.warn('⚠️ Email skipped:', emailDebug);
+        } else {
+            emailDebug = 'Credentials found.';
             
-            if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-                emailDebug = `Missing credentials.`;
-            } else {
-                emailDebug = `Using credentials.`;
-                
-                const attachmentsConfig = pdfBuffer ? [{
-                    filename: `Quote-${quoteResult.quoteNumber}.pdf`,
-                    content: pdfBuffer,
-                    contentType: 'application/pdf'
-                }] : [];
+            const attachmentsConfig = pdfBuffer ? [{
+                filename: `Quote-${quoteResult.quoteNumber}.pdf`,
+                content: pdfBuffer,
+                contentType: 'application/pdf'
+            }] : [];
 
-                // 1. Send Internal Notification to Admin
-                await sendEmailNotification({
+            // 1. Send Internal Notification to Admin
+            try {
+                const adminEmailHtml = generatePDFContent(data, translator, locale);
+                const adminResult = await sendEmailNotification({
                     to: 'info@swisscleanmove.ch, Swisscleanmove.ch@gmail.com',
                     subject: `New Request + Quote [${quoteResult.quoteNumber}] - ${data.serviceName}`,
                     html: adminEmailHtml,
                     text: `New request for ${data.serviceName} from ${data.firstName} ${data.name}. Est. Total: CHF ${quoteResult.totalPrice.toFixed(2)}`,
                     attachments: attachmentsConfig
-                })
-                
-                // 2. Send Professional Quotation Email to Customer
+                });
+                emailDebug += adminResult === true ? ' | Admin email: OK' : ` | Admin email FAILED: ${adminResult}`;
+            } catch (adminErr: any) {
+                console.error('❌ Admin email error:', adminErr);
+                emailDebug += ` | Admin email EXCEPTION: ${adminErr.message || adminErr}`;
+            }
+            
+            // 2. Send Professional Quotation Email to Customer
+            try {
                 const clientEmailHtml = generateQuoteEmailHtml(quoteResult, data, locale);
                 const clientSubject = locale === 'fr' ? 'Votre devis estimatif - SwissCleanMove' : (locale === 'en' ? 'Your quotation estimate - SwissCleanMove' : 'Ihr Kostenvoranschlag - SwissCleanMove');
                 
-                const emailSent = await sendEmailNotification({
+                const clientResult = await sendEmailNotification({
                     to: data.emailAddress,
                     subject: clientSubject,
                     html: clientEmailHtml,
                     text: `Please view this email in an HTML compatible client.`,
                     attachments: attachmentsConfig
                 });
-                
-                if (emailSent === true) {
-                    console.log('✅ Email notifications sent successfully')
-                    emailDebug += ' | Success';
-                } else {
-                    console.warn('⚠️ Email notification failed but form was saved')
-                    emailDebug += ' | sendEmailNotification failed';
-                }
+                emailDebug += clientResult === true ? ' | Client email: OK' : ` | Client email FAILED: ${clientResult}`;
+            } catch (clientErr: any) {
+                console.error('❌ Client email error:', clientErr);
+                emailDebug += ` | Client email EXCEPTION: ${clientErr.message || clientErr}`;
             }
-        } catch (emailError: any) {
-            console.error('❌ Email notification error:', emailError)
-            emailDebug = 'Exception thrown: ' + emailError.toString();
         }
+        
+        // Save emailDebug to DB for debugging
+        try {
+            await prisma.serviceFormSubmission.update({
+                where: { id: submission.id },
+                data: { data: { ...data, emailDebug } }
+            });
+        } catch (dbErr) {
+            console.warn('Failed to save emailDebug to DB:', dbErr);
+        }
+        
+        console.log(`📧 Email debug for submission ${submission.id}: ${emailDebug}`);
 
         // Save files locally only
         if (!process.env.VERCEL) {

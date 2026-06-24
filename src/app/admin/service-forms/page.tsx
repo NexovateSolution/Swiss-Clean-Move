@@ -639,7 +639,7 @@ export default function ServiceFormsPage() {
                     const DEDUPLICATED_KEYS = new Set([
                       ...Array.from(SKIP_KEYS),
                       'firstName', 'name', 'emailAddress', 'telephone', 'streetAndNumber',
-                      'postalCodeAndCity', 'contactPreferredVia', 'viewingIsWelcome', 'salutation'
+                      'postalCodeAndCity', 'contactPreferredVia', 'viewingIsWelcome', 'salutation', 'quoteResult'
                     ])
 
                     const allKeys = Object.keys(raw).filter(
