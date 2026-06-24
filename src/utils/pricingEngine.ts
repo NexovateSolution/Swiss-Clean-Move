@@ -9,9 +9,9 @@ export interface LineItem {
 }
 
 export interface QuoteResult {
+    adminNotes: string;
     totalPrice: number;
-    vatAmount: number;
-    totalWithVat: number;
+    adminOverride?: boolean;
     lineItems: LineItem[];
     quoteNumber: string;
 }
@@ -246,15 +246,11 @@ export function generateQuote(formData: any): QuoteResult {
         subtotal += expressFee;
     }
 
-    // --- 5. VAT (MwSt.) ---
-    const vatAmount = Math.round(subtotal * PRICING_RULES.vatRate * 100) / 100; // Round to 2 decimals
-    const totalWithVat = subtotal + vatAmount;
-
+    // --- 5. Totals ---
     return {
-        totalPrice: subtotal,
-        vatAmount,
-        totalWithVat,
         lineItems,
+        totalPrice: subtotal,
+        adminNotes: '',
         quoteNumber: generateQuoteNumber()
     };
 }

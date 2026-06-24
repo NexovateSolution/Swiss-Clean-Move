@@ -16,8 +16,6 @@ const getTranslator = (locale: string) => {
         service: isEn ? 'Service' : (isFr ? 'Service' : 'Dienstleistung'),
         description: isEn ? 'Description' : (isFr ? 'Description' : 'Beschreibung'),
         price: isEn ? 'Price' : (isFr ? 'Prix' : 'Preis'),
-        subtotal: isEn ? 'Subtotal' : (isFr ? 'Sous-total' : 'Zwischentotal'),
-        vat: isEn ? 'VAT (8.1%)' : (isFr ? 'TVA (8.1%)' : 'MwSt. (8.1%)'),
         total: isEn ? 'Total Estimate' : (isFr ? 'Total Estimatif' : 'Geschätztes Total'),
         cta: isEn ? 'Confirm Request' : (isFr ? 'Confirmer la demande' : 'Anfrage bestätigen'),
         footer: isEn 
@@ -81,17 +79,9 @@ export function generateQuoteEmailHtml(quoteResult: QuoteResult, data: any, loca
                         ${lineItemsHtml}
                     </tbody>
                     <tfoot>
-                        <tr>
-                            <td style="padding: 12px; text-align: right; font-weight: bold;">${t.subtotal}:</td>
-                            <td style="padding: 12px; text-align: right; font-weight: bold;">CHF ${quoteResult.totalPrice.toFixed(2)}</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 12px; text-align: right; color: #64748b;">${t.vat}:</td>
-                            <td style="padding: 12px; text-align: right; color: #64748b;">CHF ${quoteResult.vatAmount.toFixed(2)}</td>
-                        </tr>
                         <tr style="background-color: #f8fafc;">
                             <td style="padding: 15px 12px; text-align: right; font-size: 18px; font-weight: bold; color: #004b87;">${t.total}:</td>
-                            <td style="padding: 15px 12px; text-align: right; font-size: 18px; font-weight: bold; color: #cc0000;">CHF ${quoteResult.totalWithVat.toFixed(2)}</td>
+                            <td style="padding: 15px 12px; text-align: right; font-size: 18px; font-weight: bold; color: #cc0000;">CHF ${quoteResult.totalPrice.toFixed(2)}</td>
                         </tr>
                     </tfoot>
                 </table>

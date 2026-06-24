@@ -156,9 +156,7 @@ export default function ServiceFormsPage() {
   }
 
   // --- Quote Editing Helpers ---
-  const calculateSubtotal = () => quoteLineItems.reduce((sum, item) => sum + (Number(item.price) || 0), 0)
-  const calculateVat = () => Math.round(calculateSubtotal() * PRICING_RULES.vatRate * 100) / 100
-  const calculateTotal = () => calculateSubtotal() + calculateVat()
+  const calculateTotal = () => quoteLineItems.reduce((sum, item) => sum + (Number(item.price) || 0), 0)
 
   const handleLineItemChange = (index: number, field: string, value: string | number) => {
     setQuoteLineItems(prev => {
@@ -352,10 +350,10 @@ export default function ServiceFormsPage() {
                       <td className="px-6 py-4 whitespace-nowrap">
                         {(() => {
                           const qr = (submission as any).data?.quoteResult
-                          if (qr && qr.totalWithVat) {
+                          if (qr && qr.totalPrice) {
                             return (
                               <div>
-                                <span className="text-sm font-bold text-gray-900 dark:text-white">CHF {Number(qr.totalWithVat).toFixed(2)}</span>
+                                <span className="text-sm font-bold text-gray-900 dark:text-white">CHF {Number(qr.totalPrice).toFixed(2)}</span>
                                 {qr.adminOverride && (
                                   <span className="ml-1 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-orange-100 text-orange-700">edited</span>
                                 )}
@@ -577,16 +575,7 @@ export default function ServiceFormsPage() {
                               </td>
                             </tr>
                           )}
-                          <tr className="border-t-2 border-gray-300 dark:border-gray-500">
-                            <td className="px-4 py-2 text-right font-medium text-gray-600 dark:text-gray-300">Subtotal:</td>
-                            <td className="px-4 py-2 text-right font-bold text-gray-900 dark:text-white">CHF {calculateSubtotal().toFixed(2)}</td>
-                            {isEditingQuote && <td></td>}
-                          </tr>
-                          <tr>
-                            <td className="px-4 py-1 text-right text-gray-500 dark:text-gray-400 text-xs">VAT ({(PRICING_RULES.vatRate * 100).toFixed(1)}%):</td>
-                            <td className="px-4 py-1 text-right text-gray-500 dark:text-gray-400 text-xs">CHF {calculateVat().toFixed(2)}</td>
-                            {isEditingQuote && <td></td>}
-                          </tr>
+
                           <tr className="bg-gray-100 dark:bg-gray-600">
                             <td className="px-4 py-3 text-right font-bold text-gray-900 dark:text-white">Total Estimate:</td>
                             <td className="px-4 py-3 text-right font-bold text-lg text-red-600 dark:text-red-400">CHF {calculateTotal().toFixed(2)}</td>

@@ -343,9 +343,7 @@ export async function exportServiceFormToPDF(rawSubmission: any, locale: string 
                 });
             }
             
-            quoteHtml += `<tr><td style="padding: 8px 0; text-align: right;">Subtotal:</td><td style="padding: 8px 0; text-align: right; font-weight: 500;">${Number(val.totalPrice || 0).toFixed(2)}</td></tr>`;
-            quoteHtml += `<tr><td style="padding: 4px 0; text-align: right; color: #6b7280; font-size: 12px;">VAT:</td><td style="padding: 4px 0; text-align: right; color: #6b7280; font-size: 12px;">${Number(val.vatAmount || 0).toFixed(2)}</td></tr>`;
-            quoteHtml += `<tr><td style="padding: 8px 0; text-align: right; font-weight: 600; color: #dc2626;">Total:</td><td style="padding: 8px 0; text-align: right; font-weight: 600; color: #dc2626;">${Number(val.totalWithVat || 0).toFixed(2)}</td></tr>`;
+            quoteHtml += `<tr><td style="padding: 8px 0; text-align: right; font-weight: 600; color: #dc2626;">Total:</td><td style="padding: 8px 0; text-align: right; font-weight: 600; color: #dc2626;">${Number(val.totalPrice || 0).toFixed(2)}</td></tr>`;
             quoteHtml += '</table></div>';
             
             if (val.adminOverride) {

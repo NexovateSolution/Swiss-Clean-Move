@@ -371,17 +371,10 @@ export async function POST(request: NextRequest) {
                 currentY = 20;
             }
             
-            doc.setFontSize(10);
-            doc.text('Subtotal:', 140, currentY);
-            doc.text(Number(quoteResult.totalPrice).toFixed(2), 190, currentY, { align: 'right' });
-            currentY += 8;
-            doc.text('VAT (8.1%):', 140, currentY);
-            doc.text(Number(quoteResult.vatAmount).toFixed(2), 190, currentY, { align: 'right' });
-            currentY += 8;
-            
+            doc.setFontSize(11);
             doc.setFont('helvetica', 'bold');
             doc.text('Total Estimate:', 140, currentY);
-            doc.text(Number(quoteResult.totalWithVat).toFixed(2), 190, currentY, { align: 'right' });
+            doc.text(Number(quoteResult.totalPrice).toFixed(2), 190, currentY, { align: 'right' });
             
             // Disclaimer Footer
             doc.setTextColor(100, 100, 100);

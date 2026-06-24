@@ -63,15 +63,11 @@ export async function PATCH(
 
         // Recalculate totals from the admin-edited line items
         const totalPrice = lineItems.reduce((sum: number, item: any) => sum + (Number(item.price) || 0), 0)
-        const vatAmount = Math.round(totalPrice * PRICING_RULES.vatRate * 100) / 100
-        const totalWithVat = totalPrice + vatAmount
 
         const updatedQuoteResult = {
             ...oldQuote,
             lineItems,
             totalPrice,
-            vatAmount,
-            totalWithVat,
             adminOverride: true,
             adminOverrideDate: new Date().toISOString(),
             adminNotes: adminNotes || oldQuote.adminNotes || ''
