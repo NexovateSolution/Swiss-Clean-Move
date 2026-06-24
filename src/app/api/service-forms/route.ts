@@ -408,7 +408,7 @@ export async function POST(request: NextRequest) {
                     to: 'info@swisscleanmove.ch, Swisscleanmove.ch@gmail.com',
                     subject: `New Request + Quote [${quoteResult.quoteNumber}] - ${data.serviceName}`,
                     html: adminEmailHtml,
-                    text: `New request for ${data.serviceName} from ${data.firstName} ${data.name}. Est. Total: CHF ${quoteResult.totalWithVat.toFixed(2)}`,
+                    text: `New request for ${data.serviceName} from ${data.firstName} ${data.name}. Est. Total: CHF ${quoteResult.totalPrice.toFixed(2)}`,
                     attachments: attachmentsConfig
                 })
                 
