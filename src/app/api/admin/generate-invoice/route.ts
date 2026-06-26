@@ -563,7 +563,7 @@ export async function POST(request: NextRequest) {
         </tr>
         <tr>
             <td><div class="label">Firma</div></td>
-            <td colspan="3"><div class="value">${client.company || ''}</div></td>
+            <td colspan="3"><div class="value">${(client as any).company || ''}</div></td>
         </tr>
         <tr>
             <td><div class="label">Adresse</div></td>
