@@ -1,4 +1,4 @@
-import { PRICING_RULES, calculateDistanceSurcharge, normalizeRooms } from '../lib/pricingRules';
+import { PRICING_RULES, calculateDistanceSurcharge, normalizeRooms, calculateBasePrice } from '../lib/pricingRules';
 
 export interface LineItem {
     description: string;
@@ -56,8 +56,7 @@ export function generateQuote(formData: any): QuoteResult {
     let basePrice = 0;
 
     if (requestType === 'moving') {
-        basePrice = isHouse ? PRICING_RULES.moving.houseBasePrice : (PRICING_RULES.moving.basePriceByRooms[rooms] || 0);
-        if (basePrice === 0 && !isHouse) basePrice = PRICING_RULES.moving.basePriceByRooms[1]; // fallback
+        basePrice = isHouse ? PRICING_RULES.moving.houseBasePrice : calculateBasePrice(rooms, PRICING_RULES.moving.basePriceByRooms);
 
         lineItems.push({
             description: `Moving Service Base Price (${isHouse ? 'House' : rooms + ' Rooms'})`,
@@ -68,8 +67,7 @@ export function generateQuote(formData: any): QuoteResult {
         });
 
     } else if (requestType === 'cleaning') {
-        basePrice = isHouse ? PRICING_RULES.cleaning.houseBasePrice : (PRICING_RULES.cleaning.basePriceByRooms[rooms] || 0);
-        if (basePrice === 0 && !isHouse) basePrice = PRICING_RULES.cleaning.basePriceByRooms[1];
+        basePrice = isHouse ? PRICING_RULES.cleaning.houseBasePrice : calculateBasePrice(rooms, PRICING_RULES.cleaning.basePriceByRooms);
 
         lineItems.push({
             description: `Move-Out Cleaning Base Price (${isHouse ? 'House' : rooms + ' Rooms'})`,
@@ -80,8 +78,7 @@ export function generateQuote(formData: any): QuoteResult {
         });
 
     } else if (requestType === 'combo') {
-        basePrice = isHouse ? PRICING_RULES.combo.houseBasePrice : (PRICING_RULES.combo.basePriceByRooms[rooms] || 0);
-        if (basePrice === 0 && !isHouse) basePrice = PRICING_RULES.combo.basePriceByRooms[1];
+        basePrice = isHouse ? PRICING_RULES.combo.houseBasePrice : calculateBasePrice(rooms, PRICING_RULES.combo.basePriceByRooms);
 
         lineItems.push({
             description: `Combo (Moving + Cleaning) Base Price (${isHouse ? 'House' : rooms + ' Rooms'})`,

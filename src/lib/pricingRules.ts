@@ -123,3 +123,37 @@ export function normalizeRooms(roomStr: string | number | undefined | null): num
     if (isNaN(num)) return 0;
     return num;
 }
+
+/**
+ * Calculates the base price for a given number of rooms, extrapolating if the room count is larger than defined.
+ */
+export function calculateBasePrice(rooms: number, basePriceByRooms: Record<number, number>): number {
+    if (basePriceByRooms[rooms] !== undefined) {
+        return basePriceByRooms[rooms];
+    }
+
+    const definedRooms = Object.keys(basePriceByRooms).map(Number).sort((a, b) => a - b);
+    if (definedRooms.length === 0) return 0;
+    
+    const maxRoom = definedRooms[definedRooms.length - 1];
+
+    if (rooms > maxRoom) {
+        // Find price diff between maxRoom and maxRoom - 1 for extrapolation
+        const priceAtMax = basePriceByRooms[maxRoom];
+        const priceAtMaxMinusOne = basePriceByRooms[maxRoom - 1];
+        
+        if (priceAtMax !== undefined && priceAtMaxMinusOne !== undefined) {
+            const ratePerRoom = priceAtMax - priceAtMaxMinusOne;
+            const extraRooms = rooms - maxRoom;
+            return priceAtMax + (extraRooms * ratePerRoom);
+        }
+    }
+
+    // Fallback: find the nearest lower room defined
+    const lowerRoom = definedRooms.slice().reverse().find(r => r <= rooms);
+    if (lowerRoom !== undefined) {
+        return basePriceByRooms[lowerRoom];
+    }
+
+    return 0;
+}
