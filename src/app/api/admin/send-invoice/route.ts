@@ -584,437 +584,176 @@ function generateInvoiceHTML(client: any, language: string): string {
         }
 
 
+
+        const serviceTypeStr = (client.serviceType || '').toLowerCase();
+        const isUmzug = serviceTypeStr.includes('relocation') || serviceTypeStr.includes('umzug') || serviceTypeStr.includes('combo') ? '■' : '□';
+        const isUmzugsreinigung = serviceTypeStr.includes('final cleaning') || serviceTypeStr.includes('combo') || serviceTypeStr.includes('umzugsreinigung') ? '■' : '□';
+        const isReinigung = ((serviceTypeStr.includes('cleaning') || serviceTypeStr.includes('reinigung')) && isUmzugsreinigung === '□') ? '■' : '□';
+        const isEntsorgung = serviceTypeStr.includes('disposal') || serviceTypeStr.includes('entsorgung') ? '■' : '□';
+        const isFacility = serviceTypeStr.includes('facility') || serviceTypeStr.includes('maintenance') || serviceTypeStr.includes('hauswartung') ? '■' : '□';
+        const isHaushalt = serviceTypeStr.includes('household') || serviceTypeStr.includes('haushalt') ? '■' : '□';
+        
+        let checkedCount = [isUmzug, isUmzugsreinigung, isReinigung, isEntsorgung, isFacility, isHaushalt].filter(x => x === '■').length;
+        const isSonstiges = (checkedCount === 0) ? '■' : '□';
+
+        const qrPlaceholder = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent('https://www.swisscleanmove.ch');
+
         return `
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 20px; font-size: 13px; color: #000; }
+        
+        /* Header */
+        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+        .header-qr { width: 120px; height: 120px; }
+        .header-qr img { width: 100%; height: 100%; object-fit: contain; }
+        .header-info { flex: 1; margin-left: 20px; font-size: 12px; line-height: 1.3; }
+        .header-info strong { font-size: 13px; display: block; margin-bottom: 2px; }
+        .header-logo { width: 180px; }
+        .header-logo img { width: 100%; height: auto; object-fit: contain; }
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <style>
-            * { box-sizing: border-box; }
-            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0 20px 80px 20px; font-size: 13px; line-height: 1.4; color: #333; }
-            
-            /* -- Header -- */
-            .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; margin-top: -15px; }
-            .header-logo { transform: translateY(-25px); }
-            .header-logo img { height: 130px; width: auto; }
-            .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -25px; letter-spacing: 0.5px; }
-            
-            .header-contact { width: 280px; text-align: left; font-size: 13px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; margin-top: 15px; }
-            .contact-line { display: flex; align-items: center; gap: 15px; font-size: 14px; margin-bottom: 5px; }
-            .contact-icon { font-size: 16px; color: #555; width: 16px; text-align: center; }
+        /* Title */
+        .title { text-align: center; font-size: 22px; font-weight: bold; margin: 30px 0 20px 0; letter-spacing: 0.5px; }
 
-            /* -- Top Cards (Address & Order Num) -- */
-            .top-cards { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
-            
-            /* Window Envelope position (Left) */
-            .customer-card { 
-                width: 90mm; /* Fit window envelope */
-                padding: 15px; 
-                margin-left: 90px; /* Adjust to window pos */
-                margin-top: -25px;
-            }
-            .customer-address { font-size: 14px; line-height: 1.6; color: #000; font-weight: normal; }
-            .customer-address span { font-weight: normal; }
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+        td { border: 1px solid #000; padding: 5px 8px; vertical-align: top; }
+        
+        .label { font-size: 11px; color: #000; margin-bottom: 2px; }
+        .value { font-size: 13px; font-weight: normal; min-height: 18px; }
 
-            /* Order Card (Right) */
-            .order-card { 
-                width: 280px; 
-                border: 1px solid #555; 
-                border-radius: 8px; 
-                overflow: hidden; 
-                text-align: center;
-            }
-            .order-card-header { background: #00205B; color: white; padding: 8px; font-size: 11px; font-weight: bold; letter-spacing: 1px; }
-            .order-card-body { padding: 15px; background: #fff; }
-            .order-number { font-size: 16px; font-weight: bold; color: #000; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 10px; }
-            .order-ref-title { font-size: 10px; color: #555; font-weight: bold; }
-            .order-ref-val { font-size: 13px; color: #000; margin-top: 3px; }
+        /* Description Box */
+        .desc-box td { height: 120px; vertical-align: top; }
 
-            /* -- Title Section -- */
-            .main-title { font-size: 18px; font-weight: bold; color: #00205B; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-            .sub-title { font-size: 13px; color: #555; margin-bottom: 30px; }
+        /* Flex helpers */
+        .checkbox-row { display: flex; flex-wrap: wrap; gap: 15px; align-items: center; font-size: 12px; }
+        .checkbox-item { display: flex; align-items: center; gap: 4px; }
+        
+        /* Specific widths */
+        .col-1 { width: 25%; }
+        .col-2 { width: 45%; }
+        .col-3 { width: 10%; }
+        .col-4 { width: 20%; }
+        
+        .sign-col { width: 33.33%; height: 60px; }
+    </style>
+</head>
+<body>
 
-            /* -- 3 Columns Info -- */
-            .info-columns { display: flex; gap: 15px; margin-bottom: 30px; }
-            .info-col { flex: 1; border: 1px solid #eee; border-radius: 8px; padding: 15px; background: #fafafa; }
-            .info-col-title { font-size: 11px; font-weight: bold; color: #00205B; margin-bottom: 12px; letter-spacing: 1px; }
-            .info-row { display: flex; margin-bottom: 8px; align-items: flex-start; }
-            .info-icon { font-size: 14px; color: #00205B; width: 22px; margin-top: 1px; }
-            .info-label { width: 100px; color: #00205B; font-size: 12px; font-weight: bold; }
-            .info-val { flex: 1; color: #000; font-weight: bold; font-size: 12px; }
-            .info-val span { font-weight: normal; }
-
-            /* -- Service Table -- */
-            .service-section { margin-bottom: 20px; }
-            .service-table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
-            .service-table th { background: #00205B; color: white; padding: 10px; text-align: left; font-size: 10px; letter-spacing: 1px; }
-            .service-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 11px; color: #333; vertical-align: top; }
-            .service-table tr:last-child td { border-bottom: none; }
-            
-            /* Table Columns Widths */
-            .col-nr { width: 5%; text-align: center; }
-            .col-le { width: 20%; font-weight: bold; }
-            .col-desc { width: 45%; color: #666; }
-            .col-qty { width: 10%; text-align: center; }
-            .col-price { width: 10%; text-align: right; }
-            .col-total { width: 10%; text-align: right; font-weight: bold; }
-
-            /* -- Bottom of Table Info -- */
-            .table-bottom-row { display: flex; justify-content: flex-end; align-items: stretch; margin-top: 15px; gap: 15px; }
-            .scope-box { flex: 1; display: flex; gap: 10px; align-items: center; border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fafafa; }
-            .scope-icon { font-size: 20px; color: #555; }
-            .scope-text strong { display: block; font-size: 11px; color: #555; margin-bottom: 3px; }
-            .scope-text { font-size: 10px; color: #666; }
-
-            .total-box { background: #00205B; color: white; padding: 15px 25px; border-radius: 8px; text-align: center; width: 250px; }
-            .total-box-title { font-size: 10px; font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; text-transform: uppercase; }
-            .total-box-amount { font-size: 22px; font-weight: bold; margin-bottom: 5px; }
-            .total-box-sub { font-size: 10px; color: #ccc; }
-
-            /* -- Badges -- */
-            .badges-row { display: flex; gap: 10px; margin-top: 30px; margin-bottom: 30px; }
-            .badge { flex: 1; display: flex; gap: 10px; align-items: flex-start; border: 1px solid #eee; padding: 12px; border-radius: 8px; }
-            .badge-icon { font-size: 22px; color: #00205B; margin-top: 2px; }
-            .badge-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 3px; letter-spacing: 0.5px; }
-            .badge-text { font-size: 11px; color: #555; line-height: 1.4; }
-
-            /* -- Signatures -- */
-            .signatures-row { display: flex; justify-content: space-between; margin-bottom: 30px; }
-            .sig-box { width: 45%; }
-            .sig-title { font-size: 12px; font-weight: bold; color: #00205B; margin-bottom: 15px; letter-spacing: 1px; }
-            .sig-name { font-size: 16px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
-            .sig-details { font-size: 12px; color: #555; }
-            .sig-details table { border-collapse: collapse; margin-top: 10px; }
-            .sig-details td { padding: 5px 0; }
-            .sig-details td:first-child { padding-right: 15px; color: #555; }
-            .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 14px; }
-
-            /* -- Timing & Comm -- */
-            .timing-row { display: flex; gap: 15px; margin-bottom: 40px; }
-            .timing-box { flex: 1; border: 1px solid #eee; padding: 14px; border-radius: 8px; display: flex; gap: 14px; align-items: center; }
-            .timing-icon { font-size: 24px; color: #00205B; }
-            .timing-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 4px; letter-spacing: 0.5px; }
-            .timing-text { font-size: 12px; color: #555; display: flex; gap: 12px; }
-            .timing-text div { display: flex; flex-direction: column; gap: 4px; }
-
-            /* -- Footer -- */
-            .footer-banner { background: #00205B; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 10px; margin-top: auto; }
-            .footer-banner-title { font-weight: bold; display: flex; align-items: center; gap: 8px; letter-spacing: 1px; }
-            .footer-banner-items { display: flex; gap: 20px; }
-            .footer-item { display: flex; flex-direction: column; gap: 3px; }
-            .footer-item span { color: #ccc; font-size: 9px; }
-            
-            /* -- Payment Slip Styles -- */
-            .payment-slip { 
-                margin-top: 40px; 
-                position: relative;
-                width: 100%;
-                height: 396px; 
-            }
-            .scissors-line-horizontal { position: absolute; top: 0; left: 0; width: 100%; border-top: 1px dashed #666; text-align: center; height: 0; }
-            .scissors-icon { position: absolute; left: 10px; top: -10px; font-size: 14px; color: #666; background: #fff; }
-            .payment-slip-table { width: 100%; height: 100%; border-collapse: collapse; margin-top: 10px; table-layout: fixed; }
-            .payment-slip-table td { vertical-align: top; }
-            .payment-slip-left { width: 62mm; position: relative; }
-            .payment-slip-right { width: 148mm; padding-left: 5mm; }
-            .scissors-line-vertical { position: absolute; right: -1px; top: -10px; height: 100%; border-right: 1px dashed #666; }
-            .scissors-icon-v { position: absolute; top: 20px; right: -6px; font-size: 14px; color: #666; background: #fff; transform: rotate(-90deg); }
-            .pt-receipt { padding-top: 5mm; padding-right: 5mm; }
-            .pt-payment { padding-top: 5mm; }
-            .payment-slip-title { margin: 0 0 14px 0; font-size: 11pt; font-weight: bold; letter-spacing: 0.2px; font-family: Helvetica, Arial, sans-serif; }
-            .payment-slip-label { display: block; font-size: 6pt; font-weight: bold; color: #111; margin-bottom: 2px; line-height: 1.1; }
-            .payment-slip-value { font-size: 8pt; color: #111; line-height: 1.2; }
-            .payment-slip-block { margin-bottom: 3mm; }
-            .payment-part-content { display: flex; gap: 5mm; }
-            .payment-col-left { width: 46mm; }
-            .payment-col-right { flex: 1; }
-            .qr-code-wrapper { width: 46mm; height: 46mm; position: relative; margin-bottom: 5mm; }
-            .qr-code-wrapper img { width: 100%; height: 100%; object-fit: contain; }
-            .qr-cross { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 7mm; height: 7mm; background: #000; display: flex; align-items: center; justify-content: center; }
-            .amount-area-receipt, .amount-area-payment { display: flex; margin-top: 5mm; }
-            .amount-area-receipt { gap: 10px; }
-            .amount-area-payment { gap: 15px; }
-            .amount-col { display: flex; flex-direction: column; }
-            .amount-col .payment-slip-value { font-size: 10pt; margin-top: 4px; }
-</style>
-    </head>
-    <body>
-        <!-- Header -->
-        <div class="header-top">
-            <div class="header-logo">
-                <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
-                <div class="header-tagline">${t.tagline}</div>
-            </div>
-            <div class="header-contact">
-                <div class="contact-line"><span class="contact-icon">📞</span> +41 78 215 80 30</div>
-                <div class="contact-line"><span class="contact-icon">✉</span> info@swisscleanmove.ch</div>
-                <div class="contact-line"><span class="contact-icon">🌐</span> www.swisscleanmove.ch</div>
-                <div class="contact-line"><span class="contact-icon">📍</span> Orpundstrasse 31, 2504 Biel</div>
-                <div class="contact-line"><span class="contact-icon">🏢</span> UID: CHE-457.949.122 MWST</div>
-            </div>
+    <div class="header">
+        <div class="header-qr">
+            <img src="${qrPlaceholder}" alt="QR Code" />
         </div>
+        <div class="header-info">
+            <strong>SWISSCLEANMOVE</strong>
+            Orpundstrasse 31, 2504 Biel/Bienne<br>
+            UID: CHE-457.949.122<br>
+            +41 76 488 36 89 | +41 78 215 80 30<br>
+            info@swisscleanmove.ch<br>
+            www.swisscleanmove.ch
+        </div>
+        <div class="header-logo">
+            <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove" />
+        </div>
+    </div>
 
-        <!-- Top Cards -->
-        <div class="top-cards">
-            <div class="customer-card">
-                <div class="customer-address">
-                    ${clientName}<br>
-                    <span>${invoiceAddr ? invoiceAddr + '<br>' : ''}${invoiceZip} ${invoiceCity}</span>
+    <div class="title">QUITTUNG / ZAHLUNGSBESTÄTIGUNG</div>
+
+    <table>
+        <tr>
+            <td class="col-1"><div class="label">Quittungs-Nr.</div><div class="value">${orderNumber}</div></td>
+            <td class="col-2"></td>
+            <td class="col-3"><div class="label">Datum</div></td>
+            <td class="col-4"><div class="value">${currentDate}</div></td>
+        </tr>
+        <tr>
+            <td><div class="label">Kundenname</div></td>
+            <td colspan="3"><div class="value">${clientName}</div></td>
+        </tr>
+        <tr>
+            <td><div class="label">Firma</div></td>
+            <td colspan="3"><div class="value">${(client as any).company || ''}</div></td>
+        </tr>
+        <tr>
+            <td><div class="label">Adresse</div></td>
+            <td colspan="3"><div class="value">${invoiceAddr}</div></td>
+        </tr>
+        <tr>
+            <td><div class="label">PLZ / Ort</div></td>
+            <td colspan="3"><div class="value">${invoiceZip} ${invoiceCity}</div></td>
+        </tr>
+        <tr>
+            <td><div class="label">Telefon</div></td>
+            <td><div class="value">${client.phone || ''}</div></td>
+            <td><div class="label">E-Mail</div></td>
+            <td><div class="value">${client.email || ''}</div></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>
+                <div class="label">Dienstleistung</div>
+                <div class="checkbox-row" style="margin-top: 5px;">
+                    <div class="checkbox-item"><span style="font-size:16px;">${isUmzug}</span> Umzug</div>
+                    <div class="checkbox-item"><span style="font-size:16px;">${isReinigung}</span> Reinigung</div>
+                    <div class="checkbox-item"><span style="font-size:16px;">${isUmzugsreinigung}</span> Umzugsreinigung</div>
+                    <div class="checkbox-item"><span style="font-size:16px;">${isEntsorgung}</span> Entsorgung</div>
+                    <div class="checkbox-item"><span style="font-size:16px;">${isFacility}</span> Facility Service</div>
+                    <div class="checkbox-item"><span style="font-size:16px;">${isHaushalt}</span> Haushaltshilfe</div>
+                    <div class="checkbox-item"><span style="font-size:16px;">${isSonstiges}</span> Sonstiges</div>
                 </div>
-            </div>
-            <div class="order-card">
-                <div class="order-card-header">${t.orderNumber?.toUpperCase()}</div>
-                <div class="order-card-body">
-                    <div class="order-number">${orderNumber}</div>
-                    <div class="order-ref-title">${t.invoiceRef?.toUpperCase()}</div>
-                    <div class="order-ref-val">-</div>
+            </td>
+        </tr>
+    </table>
+
+    <table class="desc-box">
+        <tr>
+            <td>
+                <div class="label">Leistungsbeschreibung</div>
+                <div class="value" style="margin-top: 5px; line-height: 1.5;">
+                    ${formattedRemarks.length > 0 ? formattedRemarks.join(', ') : (translatedService || t.defaultServiceDesc || '')}
                 </div>
-            </div>
-        </div>
+            </td>
+        </tr>
+    </table>
 
-        <!-- Title -->
-        <div class="main-title">${t.title}</div>
-        <div class="sub-title">${t.subTitle}</div>
-
-        <!-- Info Columns -->
-        <div class="info-columns">
-            <!-- AUFTRAGSDATEN -->
-            <div class="info-col">
-                <div class="info-col-title">${t.orderData}</div>
-                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">${t.serviceDate}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
-                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">${t.startTime}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
-                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">${t.handoverTime}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
-                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">${t.contactPerson}</span><span class="info-val">${clientName}</span></div>
-                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">${t.paymentMethod}</span><span class="info-val">${t.paymentMethodValue}</span></div>
-            </div>
-            <!-- OBJEKT -->
-            <div class="info-col">
-                <div class="info-col-title">${t.object}</div>
-                <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${propertyStreet}${propertyCity ? '<br>' + propertyCity : ''}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType}</span><span class="info-val"><span>${translatedBuilding || '-'}</span></span></div>
-                ${translatedFloor ? `<div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor}</span></span></div>` : ''}
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.area}</span><span class="info-val"><span>${client.squareMeters ? t.areaPrefix + ' ' + client.squareMeters + ' m²' : '-'}</span></span></div>
-            </div>
-            <!-- KONTAKT -->
-            <div class="info-col" style="display: flex; flex-direction: column; justify-content: center; padding-top: 40px; gap: 15px;">
-                ${client.phone ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;">📞</span><span class="info-val" style="display: flex; align-items: center;"><span>${client.phone}</span></span></div>` : ''}
-                ${client.email ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;">✉</span><span class="info-val" style="display: flex; align-items: center;"><span>${client.email}</span></span></div>` : ''}
-            </div>
-        </div>
-
-        <!-- Service Table -->
-        <div class="service-section">
-            <table class="service-table">
-                <thead>
-                    <tr>
-                        <th class="col-nr">NR.</th>
-                        <th class="col-le">${t.service}</th>
-                        <th class="col-desc">${t.description}</th>
-                        <th class="col-qty">${t.quantity}</th>
-                        <th class="col-price">${t.unitPrice}</th>
-                        <th class="col-total">${t.totalPrice}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="col-nr">1</td>
-                        <td class="col-le">${translatedService}</td>
-                        <td class="col-desc">${formattedRemarks.length > 0 ? '<ul style="margin: 0; padding-left: 15px; list-style-type: none; font-size: 11px; line-height: 1.6; column-count: 2; column-gap: 15px;"><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>' + formattedRemarks.join('</li><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>') + '</li></ul>' : t.defaultServiceDesc}</td>
-                        <td class="col-qty">1</td>
-                        <td class="col-price">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
-                        <td class="col-total">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="table-bottom-row">
-
-                <div class="total-box">
-                    <div class="total-box-title">${t.totalFixedPrice}</div>
-                    <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
+    <table>
+        <tr>
+            <td style="width: 33.33%;"><div class="label">Gesamtbetrag CHF</div><div class="value" style="margin-top:10px; border-bottom:1px solid #000; width: 80%;">${(client.totalPrice || 0).toFixed(2)}</div></td>
+            <td style="width: 33.33%;"><div class="label">Bezahlter Betrag CHF</div><div class="value" style="margin-top:10px; border-bottom:1px solid #000; width: 80%;"></div></td>
+            <td style="width: 33.33%;"><div class="label">Restbetrag CHF</div><div class="value" style="margin-top:10px; border-bottom:1px solid #000; width: 80%;"></div></td>
+        </tr>
+        <tr>
+            <td><div class="label">Zahlungsart</div></td>
+            <td>
+                <div class="checkbox-row">
+                    <div class="checkbox-item"><span style="font-size:16px;">□</span> TWINT</div>
+                    <div class="checkbox-item"><span style="font-size:16px;">□</span> Bar</div>
+                    <div class="checkbox-item"><span style="font-size:16px;">□</span> Bank</div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Badges -->
-        <div class="badges-row">
-            <div class="badge">
-                <div class="badge-icon">🛡️</div>
-                <div class="badge-text"><strong>${t.acceptanceGuarantee}</strong>${t.acceptanceGuaranteeDesc}</div>
-            </div>
-            <div class="badge">
-                <div class="badge-icon">✅</div>
-                <div class="badge-text"><strong>${t.liabilityInsured}</strong>${t.liabilityInsuredDesc}</div>
-            </div>
-            <div class="badge">
-                <div class="badge-icon">⭐</div>
-                <div class="badge-text"><strong>${t.swissQuality}</strong>${t.swissQualityDesc}</div>
-            </div>
-            <div class="badge">
-                <div class="badge-icon">🌿</div>
-                <div class="badge-text"><strong>${t.ecoFriendly}</strong>${t.ecoFriendlyDesc}</div>
-            </div>
-        </div>
-
-        <!-- Signatures -->
-        <div class="signatures-row" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;">
-            <div class="sig-box" style="width: 30%;">
-                <div class="sig-title">SWISSCLEANMOVE</div>
-                <div class="sig-details">
-                    <table style="width: 100%;">
-                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                    </table>
+            </td>
+            <td>
+                <div class="checkbox-row">
+                    <div class="checkbox-item"><span style="font-size:16px;">□</span> Karte</div>
                 </div>
-            </div>
+            </td>
+        </tr>
+    </table>
 
-            <!-- Middle Section for Date & Ort -->
-            <div class="sig-box" style="width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; margin-bottom: 15px;">
-                <div class="sig-details" style="text-align: center; font-size: 11px; color: #333;">
-                    <strong>${t.cleaningDateLabel}</strong> ${new Date().toLocaleDateString()}<br><br>
-                    <strong>${t.locationLabel}</strong> Biel
-                </div>
-            </div>
+    <table>
+        <tr>
+            <td class="sign-col"><div class="label">Ort / Datum</div><div class="value" style="margin-top:30px; border-bottom:1px solid #000; width: 80%;"></div></td>
+            <td class="sign-col"><div class="label">Unterschrift Kunde</div><div class="value" style="margin-top:30px; border-bottom:1px solid #000; width: 80%;"></div></td>
+            <td class="sign-col"><div class="label">Unterschrift SwissCleanMove</div><div class="value" style="margin-top:30px; border-bottom:1px solid #000; width: 80%;"></div></td>
+        </tr>
+    </table>
 
-            <div class="sig-box" style="width: 30%;">
-                <div class="sig-title"></div>
-                <div class="sig-details">
-                    <table style="width: 100%;">
-                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                    </table>
-                </div>
-            </div>
-        </div>
+</body>
+</html>`;
 
-        <!-- Timing & Comm -->
-        <div class="timing-row">
-            <div class="timing-box">
-                <div class="timing-icon">📅</div>
-                <div class="timing-text">
-                    <div><strong>${t.performancePeriod}</strong>${t.serviceStart}<br>${t.serviceEnd}</div>
-                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</div>
-                </div>
-            </div>
-            <div class="timing-box">
-                <div class="timing-icon">👤</div>
-                <div class="timing-text">
-                    <div><strong>${t.communication}</strong>${t.communicationText}</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Banner -->
-        <div class="footer-banner">
-            <div class="footer-banner-title">🏦 ${t.accountInformation}</div>
-            <div class="footer-banner-items">
-                <div class="footer-item"><span>${t.bankName}</span>PostFinance AG</div>
-                <div class="footer-item"><span>IBAN</span>CH86 0900 0000 1636 3866 5</div>
-                <div class="footer-item"><span>${t.accountHolder}</span>Dawit Gebrekristos / SwissCleanMove</div>
-                <div class="footer-item"><span>${t.accountNo}</span>16-363866-5</div>
-                <div class="footer-item"><span>${t.clearingNo}</span>09000</div>
-            </div>
-        </div>
-
-        <div style="page-break-before: always;"></div>
-
-        <!-- Payment Slip Header Removed -->
-        <div class="payment-slip">
-            <div class="scissors-line-horizontal">
-                <span class="scissors-icon">✂</span>
-                <span style="background: #fff; padding: 0 10px; font-size: 11px; color: #666;">Vor der Einzahlung abzutrennen / A détacher avant le versement / Da staccare prima del versamento</span>
-            </div>
-            
-            <table class="payment-slip-table">
-                <tr>
-                    <td class="payment-slip-left pt-receipt">
-                        <div class="scissors-line-vertical">
-                            <span class="scissors-icon-v">✂</span>
-                        </div>
-                        <div class="payment-slip-title">${t.receiptSlip}</div>
-                        
-                        <div class="payment-slip-block">
-                            <span class="payment-slip-label">${t.accountPayableTo}</span>
-                            <div class="payment-slip-value">${paymentSlip.account}</div>
-                            <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
-                        </div>
-
-                        <div class="payment-slip-block">
-                            <span class="payment-slip-label">${t.reference}</span>
-                            <div class="payment-slip-value">${paymentSlip.reference}</div>
-                        </div>
-
-                        <div class="payment-slip-block" style="margin-top: 15px;">
-                            <span class="payment-slip-label">${t.payableBy}</span>
-                            <div class="payment-slip-value">${clientName}</div>
-                            <div class="payment-slip-value">${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</div>
-                        </div>
-
-                        <div class="amount-area-receipt">
-                            <div class="amount-col">
-                                <span class="payment-slip-label">${t.currency}</span>
-                                <div class="payment-slip-value">CHF</div>
-                            </div>
-                            <div class="amount-col">
-                                <span class="payment-slip-label">${t.amount}</span>
-                                <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
-                            </div>
-                        </div>
-                        
-                        <div style="font-size: 9px; color: #111; margin-top: 15px; text-align: right;">${t.acceptancePoint}</div>
-                    </td>
-                    <td class="payment-slip-right pt-payment">
-                        <div class="payment-slip-title">${t.paymentPart}</div>
-                        
-                        <div class="payment-part-content">
-                            <!-- Left Column of Payment Part -->
-                            <div class="payment-col-left">
-    
-                                
-                                <div class="amount-area-payment">
-                                    <div class="amount-col">
-                                        <span class="payment-slip-label">${t.currency}</span>
-                                        <div class="payment-slip-value">CHF</div>
-                                    </div>
-                                    <div class="amount-col">
-                                        <span class="payment-slip-label">${t.amount}</span>
-                                        <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right Column of Payment Part -->
-                            <div class="payment-col-right">
-                                <div class="payment-slip-block">
-                                    <span class="payment-slip-label">${t.accountPayableTo}</span>
-                                    <div class="payment-slip-value">${paymentSlip.account}</div>
-                                    <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
-                                </div>
-
-                                <div class="payment-slip-block">
-                                    <span class="payment-slip-label">${t.reference}</span>
-                                    <div class="payment-slip-value">${paymentSlip.reference}</div>
-                                </div>
-
-                                <div class="payment-slip-block">
-                                    <span class="payment-slip-label">${t.additionalInfoQr}</span>
-                                    <div class="payment-slip-value">${t.invoiceLabel} ${orderNumber}</div>
-                                </div>
-
-                                <div class="payment-slip-block" style="margin-top: 15px;">
-                                    <span class="payment-slip-label">${t.payableBy}</span>
-                                    <div class="payment-slip-value">${clientName}</div>
-                                    <div class="payment-slip-value">${client.address || ''}<br>${client.postalCode || ''} ${client.location || ''}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </body>
-    </html>`
 }
