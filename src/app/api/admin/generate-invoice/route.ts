@@ -602,8 +602,8 @@ export async function POST(request: NextRequest) {
         <tr>
             <td>
                 <div class="label">Leistungsbeschreibung</div>
-                <div class="value" style="margin-top: 5px; line-height: 1.5;">
-                    ${formattedRemarks.length > 0 ? formattedRemarks.join(', ') : (translatedService || t.defaultServiceDesc || '')}
+                <div class="value" style="margin-top: 5px;">
+                    ${formattedRemarks.length > 0 ? '<ul style="margin: 0; padding-left: 15px; font-size: 11px; line-height: 1.8; column-count: 3; column-gap: 20px; list-style-type: disc;">' + formattedRemarks.map(r => '<li>' + r + '</li>').join('') + '</ul>' : (translatedService || t.defaultServiceDesc || '')}
                 </div>
             </td>
         </tr>
@@ -612,8 +612,8 @@ export async function POST(request: NextRequest) {
     <table>
         <tr>
             <td style="width: 33.33%;"><div class="label">Gesamtbetrag CHF</div><div class="value" style="margin-top:10px; border-bottom:1px solid #000; width: 80%;">${(client.totalPrice || 0).toFixed(2)}</div></td>
-            <td style="width: 33.33%;"><div class="label">Bezahlter Betrag CHF</div><div class="value" style="margin-top:10px; border-bottom:1px solid #000; width: 80%;"></div></td>
-            <td style="width: 33.33%;"><div class="label">Restbetrag CHF</div><div class="value" style="margin-top:10px; border-bottom:1px solid #000; width: 80%;"></div></td>
+            <td style="width: 33.33%;"><div class="label">Bezahlter Betrag CHF</div><div class="value" style="margin-top:10px; border-bottom:1px solid #000; width: 80%;">${(client.paidAmount || 0).toFixed(2)}</div></td>
+            <td style="width: 33.33%;"><div class="label">Restbetrag CHF</div><div class="value" style="margin-top:10px; border-bottom:1px solid #000; width: 80%;">${((client.totalPrice || 0) - (client.paidAmount || 0)).toFixed(2)}</div></td>
         </tr>
         <tr>
             <td><div class="label">Zahlungsart</div></td>
