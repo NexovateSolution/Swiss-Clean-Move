@@ -68,7 +68,7 @@ export default function ClientsPage() {
   const [paymentModal, setPaymentModal] = useState<{ open: boolean; client?: Client }>({ open: false })
   const [deleteModal, setDeleteModal] = useState<{ open: boolean; client?: Client }>({ open: false })
   const [photoModal, setPhotoModal] = useState<{ open: boolean; client?: Client }>({ open: false })
-  const [languageModal, setLanguageModal] = useState<{ open: boolean; client?: Client; selectedLanguage?: 'en' | 'de' | 'fr' }>({ open: false })
+  const [languageModal, setLanguageModal] = useState<{ open: boolean; client?: Client; selectedLanguage?: 'en' | 'de' | 'fr'; type?: 'invoice' | 'receipt' }>({ open: false })
   const [showExportMenu, setShowExportMenu] = useState(false)
   const [activeActionMenu, setActiveActionMenu] = useState<string | null>(null)
 
@@ -136,17 +136,25 @@ export default function ClientsPage() {
   }
 
   const handleInvoice = (client: Client) => {
-    setLanguageModal({ open: true, client })
+    setLanguageModal({ open: true, client, type: 'invoice' })
+  }
+
+  const handleReceipt = (client: Client) => {
+    setLanguageModal({ open: true, client, type: 'receipt' })
   }
 
   const handlePhoto = (client: Client) => {
     setPhotoModal({ open: true, client })
   }
 
-  const generateInvoice = async (client: Client, language: 'en' | 'de' | 'fr', action: 'print' | 'pdf' | 'pdf_only') => {
+  const generateDocument = async (client: Client, language: 'en' | 'de' | 'fr', action: 'print' | 'pdf' | 'pdf_only', type: 'invoice' | 'receipt') => {
     try {
-      // Generate and display invoice
-      const response = await fetch('/api/admin/generate-invoice', {
+      const generateEndpoint = type === 'invoice' ? '/api/admin/generate-invoice' : '/api/admin/generate-receipt';
+      const sendEndpoint = type === 'invoice' ? '/api/admin/send-invoice' : '/api/admin/send-receipt';
+      const documentPrefix = type === 'invoice' ? 'Invoice' : 'Receipt';
+
+      // Generate and display document
+      const response = await fetch(generateEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -179,7 +187,7 @@ export default function ClientsPage() {
           
           const opt = {
             margin:       0,
-            filename:     `Invoice-${client.firstName}-${client.lastName}.pdf`,
+            filename:     `${documentPrefix}-${client.firstName}-${client.lastName}.pdf`,
             image:        { type: 'jpeg' as const, quality: 0.98 },
             html2canvas:  { scale: 2, useCORS: true },
             jsPDF:        { unit: 'in' as const, format: 'letter' as const, orientation: 'portrait' as const }
@@ -190,10 +198,10 @@ export default function ClientsPage() {
           toast.success('PDF downloaded successfully');
         }
 
-        // Send invoice via email
+        // Send document via email
         if (action !== 'pdf_only' && client.email) {
           toast.loading(t('toast.sendingInvoice'), { id: 'email-send' })
-          const emailResponse = await fetch('/api/admin/send-invoice', {
+          const emailResponse = await fetch(sendEndpoint, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -223,7 +231,7 @@ export default function ClientsPage() {
       toast.dismiss('pdf-gen')
       toast.error(t('toast.generateInvoiceError'))
     }
-    setLanguageModal({ open: false, selectedLanguage: undefined })
+    setLanguageModal({ open: false, selectedLanguage: undefined, type: undefined })
   }
 
   const getStatusLabel = (status: string) => {
@@ -755,6 +763,17 @@ export default function ClientsPage() {
                                 <button
                                   onClick={(e) => {
                                     e.stopPropagation()
+                                    handleReceipt(client)
+                                    setActiveActionMenu(null)
+                                  }}
+                                  className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                                >
+                                  <FileText className="w-4 h-4 mr-3 text-orange-500" />
+                                  Receipt / Quittung
+                                </button>
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation()
                                     handlePhoto(client)
                                     setActiveActionMenu(null)
                                   }}
@@ -905,7 +924,7 @@ export default function ClientsPage() {
             ) : (
               <div className="space-y-3">
                 <button
-                  onClick={() => generateInvoice(languageModal.client!, languageModal.selectedLanguage!, 'print')}
+                  onClick={() => generateDocument(languageModal.client!, languageModal.selectedLanguage!, 'print', languageModal.type || 'invoice')}
                   className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <FileText className="w-5 h-5" />
@@ -913,7 +932,7 @@ export default function ClientsPage() {
                 </button>
 
                 <button
-                  onClick={() => generateInvoice(languageModal.client!, languageModal.selectedLanguage!, 'pdf')}
+                  onClick={() => generateDocument(languageModal.client!, languageModal.selectedLanguage!, 'pdf', languageModal.type || 'invoice')}
                   className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <Download className="w-5 h-5" />
@@ -921,7 +940,7 @@ export default function ClientsPage() {
                 </button>
 
                 <button
-                  onClick={() => generateInvoice(languageModal.client!, languageModal.selectedLanguage!, 'pdf_only')}
+                  onClick={() => generateDocument(languageModal.client!, languageModal.selectedLanguage!, 'pdf_only', languageModal.type || 'invoice')}
                   className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <Download className="w-5 h-5" />
