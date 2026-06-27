@@ -377,7 +377,7 @@ function generateInvoiceHTML(client: any, language: string): string {
     };
 
     const translatedService = client.serviceType ? (serviceMap[client.serviceType]?.[language as string] || client.serviceType) : '';
-    const translatedFloor = client.floor ? (floorMap[client.floor]?.[language as string] || client.floor) : '';
+    const translatedFloor = (client as any).floor ? (floorMap[(client as any).floor]?.[language as string] || (client as any).floor) : '';
 
     if (translatedService) {
         t.title = {
@@ -616,8 +616,8 @@ function generateInvoiceHTML(client: any, language: string): string {
             <div class="info-col">
                 <div class="info-col-title">${t.object || 'OBJEKT'}</div>
                 <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${client.address || '-'}<br>${client.postalCode || ''} ${client.location || ''}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType || 'Objekttyp:'}</span><span class="info-val"><span>${client.propertyType || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.floor || 'Stockwerk:'}</span><span class="info-val"><span>${translatedFloor || client.floor || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType || 'Objekttyp:'}</span><span class="info-val"><span>${(client as any).propertyType || '-'}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.floor || 'Stockwerk:'}</span><span class="info-val"><span>${translatedFloor || (client as any).floor || '-'}</span></span></div>
                 <div class="info-row"><span class="info-label" style="width: 70px;">${t.area || 'Fläche:'}</span><span class="info-val"><span>${client.squareMeters ? 'ca. ' + client.squareMeters + ' m²' : '-'}</span></span></div>
             </div>
         </div>
