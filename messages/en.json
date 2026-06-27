@@ -4695,10 +4695,11 @@
         "clientActionsTitle": "Client actions",
         "editClient": "Edit Client",
         "addPayment": "Add Payment",
-        "createInvoice": "Create Invoice",
+        "createInvoice": "Create Contract",
         "addPhotos": "Add Photos",
         "deleteClient": "Delete Client",
-        "cancel": "Cancel"
+        "cancel": "Cancel",
+        "createReceipt": "Create Invoice"
       },
       "table": {
         "client": "Client",

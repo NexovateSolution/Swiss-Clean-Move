@@ -53,14 +53,14 @@ export async function POST(request: NextRequest) {
 
         // Email subjects and messages
         const subjects: any = {
-            en: `Receipt - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            de: `Quittung - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            fr: `Reçu - SwissCleanMove - ${client.firstName} ${client.lastName}`
+            en: `Invoice - SwissCleanMove - ${client.firstName} ${client.lastName}`,
+            de: `Rechnung - SwissCleanMove - ${client.firstName} ${client.lastName}`,
+            fr: `Facture - SwissCleanMove - ${client.firstName} ${client.lastName}`
         }
 
         const messages: any = {
-            en: `Dear ${client.firstName} ${client.lastName},\n\nPlease find attached your receipt from SwissCleanMove.\n\nThank you for your business!\n\nBest regards,\nSwissCleanMove Team`,
-            de: `Sehr geehrte/r ${client.firstName} ${client.lastName},\n\nAnbei finden Sie Ihre Quittung von SwissCleanMove.\n\nVielen Dank für Ihr Vertrauen!\n\nMit freundlichen Grüßen,\nSwissCleanMove Team`,
+            en: `Dear ${client.firstName} ${client.lastName},\n\nPlease find attached your invoice from SwissCleanMove.\n\nThank you for your business!\n\nBest regards,\nSwissCleanMove Team`,
+            de: `Sehr geehrte/r ${client.firstName} ${client.lastName},\n\nAnbei finden Sie Ihre Rechnung von SwissCleanMove.\n\nVielen Dank für Ihr Vertrauen!\n\nMit freundlichen Grüßen,\nSwissCleanMove Team`,
             fr: `Cher/Chère ${client.firstName} ${client.lastName},\n\nVeuillez trouver ci-joint votre reçu de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`
         }
 
@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
           <div style="text-align: center; margin-bottom: 30px;">
             <img src="https://swisscleanmove.ch/images/logo.png" alt="SwissCleanMove" style="height: 100px; width: auto;">
           </div>
-          <h2 style="color: #555;">Quittung / Receipt</h2>
+          <h2 style="color: #555;">Rechnung / Invoice</h2>
           <p>${(messages[language] || messages.en).replace(/\n/g, '<br>')}</p>
           <div style="margin-top: 30px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 12px; color: #666;">
             <strong>SwissCleanMove</strong><br>
@@ -661,11 +661,11 @@ function generateInvoiceHTML(client: any, language: string): string {
         </div>
     </div>
 
-    <div class="title">QUITTUNG / ZAHLUNGSBESTÄTIGUNG</div>
+    <div class="title">RECHNUNG / INVOICE</div>
 
     <table>
         <tr>
-            <td class="col-1"><div class="label">Quittungs-Nr.</div><div class="value">${orderNumber}</div></td>
+            <td class="col-1"><div class="label">Rechnungs-Nr.</div><div class="value">${orderNumber}</div></td>
             <td class="col-2"></td>
             <td class="col-3"><div class="label">Datum</div></td>
             <td class="col-4"><div class="value">${currentDate}</div></td>

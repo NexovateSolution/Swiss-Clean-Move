@@ -769,7 +769,7 @@ export default function ClientsPage() {
                                   className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                                 >
                                   <FileText className="w-4 h-4 mr-3 text-orange-500" />
-                                  Receipt / Quittung
+                                  {t('actions.createReceipt')}
                                 </button>
                                 <button
                                   onClick={(e) => {

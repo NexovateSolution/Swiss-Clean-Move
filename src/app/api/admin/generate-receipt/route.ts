@@ -548,11 +548,11 @@ export async function POST(request: NextRequest) {
         </div>
     </div>
 
-    <div class="title">QUITTUNG / ZAHLUNGSBESTÄTIGUNG</div>
+    <div class="title">RECHNUNG / INVOICE</div>
 
     <table>
         <tr>
-            <td class="col-1"><div class="label">Quittungs-Nr.</div><div class="value">${orderNumber}</div></td>
+            <td class="col-1"><div class="label">Rechnungs-Nr.</div><div class="value">${orderNumber}</div></td>
             <td class="col-2"></td>
             <td class="col-3"><div class="label">Datum</div></td>
             <td class="col-4"><div class="value">${currentDate}</div></td>

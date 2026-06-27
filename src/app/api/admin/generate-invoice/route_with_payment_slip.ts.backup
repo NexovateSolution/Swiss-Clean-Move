@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { verifyToken } from '../../../../../lib/auth'
 import { prisma } from '../../../../../lib/db'
-import { authenticateRequest } from '../../../../../lib/auth'
-import nodemailer from 'nodemailer'
-import puppeteerCore from 'puppeteer-core'
-import chromium from '@sparticuz/chromium'
 import { join } from 'path'
 import { readFileSync } from 'fs'
 
@@ -11,143 +8,29 @@ import { createTranslator } from '@/lib/translations';
 
 export async function POST(request: NextRequest) {
     try {
-        const auth = await authenticateRequest(request)
-        if (!auth) {
+        const logoPath = join(process.cwd(), 'public', 'images', 'logo.png');
+        const logoBuffer = readFileSync(logoPath);
+        const LOGO_BASE64 = logoBuffer.toString('base64');
+
+        const token = request.cookies.get('auth-token')?.value
+        if (!token || !verifyToken(token)) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
         }
 
         const { clientId, language = 'de' } = await request.json()
 
-        // Fetch client details
+        if (!clientId) {
+            return NextResponse.json({ error: 'Client ID is required' }, { status: 400 })
+        }
+
+        // Fetch client data
         const client = await prisma.client.findUnique({
-            where: { id: clientId },
-            include: {
-                payments: {
-                    orderBy: { createdAt: 'desc' }
-                }
-            }
+            where: { id: clientId }
         })
 
         if (!client) {
             return NextResponse.json({ error: 'Client not found' }, { status: 404 })
         }
-
-        if (!client.email) {
-            return NextResponse.json({ error: 'Client has no email address' }, { status: 400 })
-        }
-
-        // Generate invoice HTML
-        const invoiceHtml = generateInvoiceHTML(client, language)
-
-        const invoicePdf = await renderPdfFromHtml(invoiceHtml)
-        const pdfFilename = `invoice-${client.firstName}-${client.lastName}.pdf`
-
-        // Configure email transporter
-        const transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: process.env.GMAIL_USER,
-                pass: process.env.GMAIL_APP_PASSWORD,
-            },
-        })
-
-        // Email subjects and messages
-        const subjects: any = {
-            en: `Invoice - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            de: `Rechnung - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            fr: `Facture - SwissCleanMove - ${client.firstName} ${client.lastName}`
-        }
-
-        const messages: any = {
-            en: `Dear ${client.firstName} ${client.lastName},\n\nPlease find attached your invoice from SwissCleanMove.\n\nThank you for your business!\n\nBest regards,\nSwissCleanMove Team`,
-            de: `Sehr geehrte/r ${client.firstName} ${client.lastName},\n\nAnbei finden Sie Ihre Rechnung von SwissCleanMove.\n\nVielen Dank für Ihr Vertrauen!\n\nMit freundlichen Grüßen,\nSwissCleanMove Team`,
-            fr: `Cher/Chère ${client.firstName} ${client.lastName},\n\nVeuillez trouver ci-joint votre facture de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`
-        }
-
-        // Send email
-        await transporter.sendMail({
-            from: `"SwissCleanMove" <${process.env.GMAIL_USER}>`,
-            to: client.email,
-            subject: subjects[language] || subjects.en,
-            text: messages[language] || messages.en,
-            html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0;">
-          <div style="text-align: center; margin-bottom: 30px;">
-            <img src="https://swisscleanmove.ch/images/logo.png" alt="SwissCleanMove" style="height: 100px; width: auto;">
-          </div>
-          <h2 style="color: #555;">Rechnung / Invoice</h2>
-          <p>${(messages[language] || messages.en).replace(/\n/g, '<br>')}</p>
-          <div style="margin-top: 30px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 12px; color: #666;">
-            <strong>SwissCleanMove</strong><br>
-            Orpundstrasse 31, 2504 Biel/Bienne<br>
-            info@swisscleanmove.ch
-          </div>
-        </div>
-      `,
-            attachments: [
-                {
-                    filename: pdfFilename,
-                    content: invoicePdf,
-                    contentType: 'application/pdf'
-                }
-            ]
-        })
-
-        return NextResponse.json({
-            success: true,
-            message: 'Invoice sent successfully'
-        })
-    } catch (error: any) {
-        console.error('Error sending invoice:', error)
-        return NextResponse.json({
-            error: 'Failed to send invoice',
-            details: error.message
-        }, { status: 500 })
-    }
-}
-
-
-async function renderPdfFromHtml(html: string): Promise<Buffer> {
-    const isLocal = !!!process.env.VERCEL
-    let browser
-
-    if (isLocal) {
-        const puppeteerLocal = require('puppeteer')
-        browser = await puppeteerLocal.launch({
-            headless: 'new',
-            args: ['--no-sandbox', '--disable-setuid-sandbox']
-        })
-    } else {
-        browser = await puppeteerCore.launch({
-            args: chromium.args,
-            // @ts-ignore
-            defaultViewport: chromium.defaultViewport || { width: 1920, height: 1080 },
-            executablePath: await chromium.executablePath(),
-            // @ts-ignore
-            headless: chromium.headless === false ? false : true,
-        })
-    }
-
-    try {
-        const page = await browser.newPage()
-        await page.setContent(html, { waitUntil: 'networkidle0' })
-        const pdf = await page.pdf({
-            format: 'A4',
-            printBackground: true,
-            margin: { top: '20mm', right: '12mm', bottom: '30mm', left: '12mm' }
-        })
-        return Buffer.from(pdf)
-    } finally {
-        await browser.close()
-    }
-}
-
-function generateInvoiceHTML(client: any, language: string): string {
-    const { join } = require('path');
-    const { readFileSync } = require('fs');
-    const logoPath = join(process.cwd(), 'public', 'images', 'logo.png');
-    const logoBuffer = readFileSync(logoPath);
-    const LOGO_BASE64 = logoBuffer.toString('base64');
 
         const t: any = {
             de: {
@@ -923,8 +806,158 @@ function generateInvoiceHTML(client: any, language: string): string {
             </div>
         </div>
 
-        </body>
+        <div style="page-break-before: always;"></div>
+
+        <!-- Payment Slip Header Removed -->
+        <div class="payment-slip">
+            <div class="scissors-line-horizontal">
+                <span class="scissors-icon">✂</span>
+                <span style="background: #fff; padding: 0 10px; font-size: 11px; color: #666;">Vor der Einzahlung abzutrennen / A détacher avant le versement / Da staccare prima del versamento</span>
+            </div>
+            
+            <table class="payment-slip-table">
+                <tr>
+                    <td class="payment-slip-left pt-receipt">
+                        <div class="scissors-line-vertical">
+                            <span class="scissors-icon-v">✂</span>
+                        </div>
+                        <div class="payment-slip-title">${t.receiptSlip}</div>
+                        
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.accountPayableTo}</span>
+                            <div class="payment-slip-value">${paymentSlip.account}</div>
+                            <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+                        </div>
+
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.reference}</span>
+                            <div class="payment-slip-value">${paymentSlip.reference}</div>
+                        </div>
+
+                        <div class="payment-slip-block" style="margin-top: 15px;">
+                            <span class="payment-slip-label">${t.payableBy}</span>
+                            <div class="payment-slip-value">${clientName}</div>
+                            <div class="payment-slip-value">${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</div>
+                        </div>
+
+                        <div class="amount-area-receipt">
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.currency}</span>
+                                <div class="payment-slip-value">CHF</div>
+                            </div>
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.amount}</span>
+                                <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
+                            </div>
+                        </div>
+                        
+                        <div style="font-size: 9px; color: #111; margin-top: 15px; text-align: right;">${t.acceptancePoint}</div>
+                    </td>
+                    <td class="payment-slip-right pt-payment">
+                        <div class="payment-slip-title">${t.paymentPart}</div>
+                        
+                        <div class="payment-part-content">
+                            <!-- Left Column of Payment Part -->
+                            <div class="payment-col-left">
+    
+                                
+                                <div class="amount-area-payment">
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.currency}</span>
+                                        <div class="payment-slip-value">CHF</div>
+                                    </div>
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.amount}</span>
+                                        <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column of Payment Part -->
+                            <div class="payment-col-right">
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.accountPayableTo}</span>
+                                    <div class="payment-slip-value">${paymentSlip.account}</div>
+                                    <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+                                </div>
+
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.reference}</span>
+                                    <div class="payment-slip-value">${paymentSlip.reference}</div>
+                                </div>
+
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.additionalInfoQr}</span>
+                                    <div class="payment-slip-value">${t.invoiceLabel} ${orderNumber}</div>
+                                </div>
+
+                                <div class="payment-slip-block" style="margin-top: 15px;">
+                                    <span class="payment-slip-label">${t.payableBy}</span>
+                                    <div class="payment-slip-value">${clientName}</div>
+                                    <div class="payment-slip-value">${client.address || ''}<br>${client.postalCode || ''} ${client.location || ''}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Signature Section -->
+        <div style="margin-top: 40px; padding-top: 20px;">
+            <div style="display: flex; justify-content: space-between; font-size: 13px; color: #333;">
+                <!-- Left: SWISSCLEANMOVE -->
+                <div style="width: 32%;">
+                    <div style="font-weight: bold; color: #003366; margin-bottom: 15px; font-size: 14px;">SWISSCLEANMOVE</div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.nameLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.signatureLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                </div>
+
+                <!-- Middle: Dates -->
+                <div style="width: 25%; text-align: center; margin-top: 40px; font-size: 12px;">
+                    <div style="margin-bottom: 10px;"><strong>${t.cleaningDateLabel || t.date}</strong> ${new Date(client.fromDate || Date.now()).toLocaleDateString('de-CH')}</div>
+                    <div><strong>${t.locationLabel}</strong> ${client.location || invoiceCity || ''}</div>
+                </div>
+
+                <!-- Right: Client Signature -->
+                <div style="width: 32%; margin-top: 30px;">
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.nameLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.signatureLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
     </html>`
 
-    return html;
+        return new NextResponse(html, {
+            headers: {
+                'Content-Type': 'text/html',
+                'Content-Disposition': `inline; filename="invoice-${client.firstName}-${client.lastName}.html"`
+            }
+        })
+    } catch (error) {
+        console.error('Error generating invoice:', error)
+        return NextResponse.json({ error: 'Failed to generate invoice' }, { status: 500 })
+    }
 }

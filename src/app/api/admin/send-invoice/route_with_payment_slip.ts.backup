@@ -923,7 +923,148 @@ function generateInvoiceHTML(client: any, language: string): string {
             </div>
         </div>
 
-        </body>
+        <div style="page-break-before: always;"></div>
+
+        <!-- Payment Slip Header Removed -->
+        <div class="payment-slip">
+            <div class="scissors-line-horizontal">
+                <span class="scissors-icon">✂</span>
+                <span style="background: #fff; padding: 0 10px; font-size: 11px; color: #666;">Vor der Einzahlung abzutrennen / A détacher avant le versement / Da staccare prima del versamento</span>
+            </div>
+            
+            <table class="payment-slip-table">
+                <tr>
+                    <td class="payment-slip-left pt-receipt">
+                        <div class="scissors-line-vertical">
+                            <span class="scissors-icon-v">✂</span>
+                        </div>
+                        <div class="payment-slip-title">${t.receiptSlip}</div>
+                        
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.accountPayableTo}</span>
+                            <div class="payment-slip-value">${paymentSlip.account}</div>
+                            <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+                        </div>
+
+                        <div class="payment-slip-block">
+                            <span class="payment-slip-label">${t.reference}</span>
+                            <div class="payment-slip-value">${paymentSlip.reference}</div>
+                        </div>
+
+                        <div class="payment-slip-block" style="margin-top: 15px;">
+                            <span class="payment-slip-label">${t.payableBy}</span>
+                            <div class="payment-slip-value">${clientName}</div>
+                            <div class="payment-slip-value">${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</div>
+                        </div>
+
+                        <div class="amount-area-receipt">
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.currency}</span>
+                                <div class="payment-slip-value">CHF</div>
+                            </div>
+                            <div class="amount-col">
+                                <span class="payment-slip-label">${t.amount}</span>
+                                <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
+                            </div>
+                        </div>
+                        
+                        <div style="font-size: 9px; color: #111; margin-top: 15px; text-align: right;">${t.acceptancePoint}</div>
+                    </td>
+                    <td class="payment-slip-right pt-payment">
+                        <div class="payment-slip-title">${t.paymentPart}</div>
+                        
+                        <div class="payment-part-content">
+                            <!-- Left Column of Payment Part -->
+                            <div class="payment-col-left">
+    
+                                
+                                <div class="amount-area-payment">
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.currency}</span>
+                                        <div class="payment-slip-value">CHF</div>
+                                    </div>
+                                    <div class="amount-col">
+                                        <span class="payment-slip-label">${t.amount}</span>
+                                        <div class="payment-slip-value">${(client.totalPrice || 0).toFixed(2)}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column of Payment Part -->
+                            <div class="payment-col-right">
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.accountPayableTo}</span>
+                                    <div class="payment-slip-value">${paymentSlip.account}</div>
+                                    <div class="payment-slip-value">${paymentSlip.payableTo.join('<br>')}</div>
+                                </div>
+
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.reference}</span>
+                                    <div class="payment-slip-value">${paymentSlip.reference}</div>
+                                </div>
+
+                                <div class="payment-slip-block">
+                                    <span class="payment-slip-label">${t.additionalInfoQr}</span>
+                                    <div class="payment-slip-value">${t.invoiceLabel} ${orderNumber}</div>
+                                </div>
+
+                                <div class="payment-slip-block" style="margin-top: 15px;">
+                                    <span class="payment-slip-label">${t.payableBy}</span>
+                                    <div class="payment-slip-value">${clientName}</div>
+                                    <div class="payment-slip-value">${client.address || ''}<br>${client.postalCode || ''} ${client.location || ''}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Signature Section -->
+        <div style="margin-top: 40px; padding-top: 20px;">
+            <div style="display: flex; justify-content: space-between; font-size: 13px; color: #333;">
+                <!-- Left: SWISSCLEANMOVE -->
+                <div style="width: 32%;">
+                    <div style="font-weight: bold; color: #003366; margin-bottom: 15px; font-size: 14px;">SWISSCLEANMOVE</div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.nameLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.signatureLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                </div>
+
+                <!-- Middle: Dates -->
+                <div style="width: 25%; text-align: center; margin-top: 40px; font-size: 12px;">
+                    <div style="margin-bottom: 10px;"><strong>${t.cleaningDateLabel || t.date}</strong> ${new Date(client.fromDate || Date.now()).toLocaleDateString('de-CH')}</div>
+                    <div><strong>${t.locationLabel}</strong> ${client.location || invoiceCity || ''}</div>
+                </div>
+
+                <!-- Right: Client Signature -->
+                <div style="width: 32%; margin-top: 30px;">
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.nameLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.signatureLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
     </html>`
 
     return html;

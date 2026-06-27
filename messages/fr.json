@@ -4483,10 +4483,11 @@
         "clientActionsTitle": "Actions client",
         "editClient": "Modifier le client",
         "addPayment": "Ajouter un paiement",
-        "createInvoice": "Créer une facture",
+        "createInvoice": "Créer un contrat",
         "addPhotos": "Ajouter des photos",
         "deleteClient": "Supprimer le client",
-        "cancel": "Annuler"
+        "cancel": "Annuler",
+        "createReceipt": "Créer une facture"
       },
       "table": {
         "client": "Client",
