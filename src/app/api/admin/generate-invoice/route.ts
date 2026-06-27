@@ -78,7 +78,54 @@ export async function POST(request: NextRequest) {
                 paymentDeadline: 'Zahlungsfrist',
                 acceptancePoint: 'Annahmestelle',
                 additionalInfoQr: 'Zusätzliche Informationen',
-                invoiceLabel: 'Rechnung'
+                invoiceLabel: 'Rechnung',
+                tagline: 'Reinigung \u00b7 Umzug \u00b7 Facility Service',
+                subTitle: 'Professionelle Reinigungs- und Umzugsdienstleistungen nach Schweizer Qualit\u00e4tsstandard.',
+                customer: 'KUNDE',
+                orderData: 'AUFTRAGSDATEN',
+                object: 'OBJEKT',
+                serviceDate: 'Leistungsdatum:',
+                startTime: 'Startzeit:',
+                handoverTime: 'Abgabezeit:',
+                contactPerson: 'Ansprechpartner:',
+                paymentMethod: 'Zahlungsart:',
+                paymentMethodValue: 'Bar',
+                propertyType: 'Objekttyp:',
+                floor: 'Stockwerk:',
+                area: 'Fl\u00e4che:',
+                areaPrefix: 'ca.',
+                description: 'BESCHREIBUNG',
+                quantity: 'MENGE',
+                unitPrice: 'EINZELPREIS',
+                totalPrice: 'GESAMTPREIS',
+                defaultServiceDesc: 'Professionelle Dienstleistung gem\u00e4ss Schweizer Standard.',
+                scopeOfServices: 'LEISTUNGSUMFANG',
+                swissStandard: 'Alle Arbeiten werden nach h\u00f6chsten Schweizer Qualit\u00e4tsstandards ausgef\u00fchrt.',
+                totalFixedPrice: 'TOTAL FESTPREIS',
+                fixedPriceSub: 'Festpreis - keine zus\u00e4tzlichen Kosten',
+                acceptanceGuarantee: 'ABNAHMEGARANTIE',
+                acceptanceGuaranteeDesc: 'Zufriedenheitsgarantie bei \u00dcbergabe. M\u00e4ngel werden kostenlos nachgebessert.',
+                liabilityInsured: 'HAFTPFLICHTVERSICHERT',
+                liabilityInsuredDesc: 'Vollst\u00e4ndig versichert f\u00fcr Ihre Sicherheit und maximalen Schutz.',
+                swissQuality: 'SCHWEIZER QUALIT\u00c4T',
+                swissQualityDesc: 'Professionell, zuverl\u00e4ssig und p\u00fcnktlich - daf\u00fcr stehen wir ein.',
+                ecoFriendly: 'UMWELTFREUNDLICH',
+                ecoFriendlyDesc: 'Wir verwenden umweltfreundliche Reinigungsmittel und nachhaltige Methoden.',
+                nameLabel: 'Name:',
+                cleaningDateLabel: 'Reinigungsdatum:',
+                signatureLabel: 'Unterschrift:',
+                locationLabel: 'Ort:',
+                performancePeriod: 'LEISTUNGSZEITRAUM',
+                serviceStart: 'Leistungsbeginn:',
+                serviceEnd: 'Leistungsende:',
+                timeUnit: 'Uhr',
+                communication: 'KOMMUNIKATION',
+                communicationText: 'F\u00fcr Fragen oder \u00c4nderungen kontaktieren Sie uns bitte rechtzeitig.',
+                accountInformation: 'KONTOINFORMATIONEN',
+                bankName: 'Bankname',
+                accountHolder: 'Kontoinhaber',
+                accountNo: 'Konto-Nr.',
+                clearingNo: 'Clearing-Nr.'
             },
             fr: {
                 title: 'Confirmation de commande de nettoyage',
@@ -125,7 +172,54 @@ export async function POST(request: NextRequest) {
                 paymentDeadline: 'Délai de paiement',
                 acceptancePoint: 'Point de dépôt',
                 additionalInfoQr: 'Informations supplémentaires',
-                invoiceLabel: 'Facture'
+                invoiceLabel: 'Facture',
+                tagline: 'Nettoyage \u00b7 D\u00e9m\u00e9nagement \u00b7 Facility Service',
+                subTitle: 'Services professionnels de nettoyage et de d\u00e9m\u00e9nagement selon les normes suisses de qualit\u00e9.',
+                customer: 'CLIENT',
+                orderData: 'DONN\u00c9ES DE COMMANDE',
+                object: 'OBJET',
+                serviceDate: 'Date de service:',
+                startTime: 'Heure de d\u00e9but:',
+                handoverTime: 'Heure de remise:',
+                contactPerson: 'Personne de contact:',
+                paymentMethod: 'Mode de paiement:',
+                paymentMethodValue: 'Comptant',
+                propertyType: 'Type d\'objet:',
+                floor: '\u00c9tage:',
+                area: 'Surface:',
+                areaPrefix: 'env.',
+                description: 'DESCRIPTION',
+                quantity: 'QUANTIT\u00c9',
+                unitPrice: 'PRIX UNITAIRE',
+                totalPrice: 'PRIX TOTAL',
+                defaultServiceDesc: 'Service professionnel selon les normes suisses.',
+                scopeOfServices: '\u00c9TENDUE DES SERVICES',
+                swissStandard: 'Tous les travaux sont ex\u00e9cut\u00e9s selon les normes suisses de qualit\u00e9 les plus \u00e9lev\u00e9es.',
+                totalFixedPrice: 'TOTAL PRIX FIXE',
+                fixedPriceSub: 'Prix fixe - pas de frais suppl\u00e9mentaires',
+                acceptanceGuarantee: 'GARANTIE DE R\u00c9CEPTION',
+                acceptanceGuaranteeDesc: 'Garantie de satisfaction \u00e0 la remise. Les d\u00e9fauts sont corrig\u00e9s gratuitement.',
+                liabilityInsured: 'ASSURANCE RESPONSABILIT\u00c9',
+                liabilityInsuredDesc: 'Enti\u00e8rement assur\u00e9 pour votre s\u00e9curit\u00e9 et une protection maximale.',
+                swissQuality: 'QUALIT\u00c9 SUISSE',
+                swissQualityDesc: 'Professionnel, fiable et ponctuel \u2013 c\'est notre engagement.',
+                ecoFriendly: '\u00c9COLOGIQUE',
+                ecoFriendlyDesc: 'Nous utilisons des produits de nettoyage \u00e9cologiques et des m\u00e9thodes durables.',
+                nameLabel: 'Nom:',
+                cleaningDateLabel: 'Date de nettoyage:',
+                signatureLabel: 'Signature:',
+                locationLabel: 'Lieu:',
+                performancePeriod: 'P\u00c9RIODE DE SERVICE',
+                serviceStart: 'D\u00e9but du service:',
+                serviceEnd: 'Fin du service:',
+                timeUnit: 'h',
+                communication: 'COMMUNICATION',
+                communicationText: 'Pour toute question ou modification, veuillez nous contacter \u00e0 temps.',
+                accountInformation: 'INFORMATIONS BANCAIRES',
+                bankName: 'Nom de la banque',
+                accountHolder: 'Titulaire du compte',
+                accountNo: 'N\u00b0 de compte',
+                clearingNo: 'N\u00b0 de clearing'
             },
             en: {
                 title: 'Cleaning Order Confirmation',
@@ -172,7 +266,54 @@ export async function POST(request: NextRequest) {
                 paymentDeadline: 'Payment Deadline',
                 acceptancePoint: 'Acceptance point',
                 additionalInfoQr: 'Additional information',
-                invoiceLabel: 'Invoice'
+                invoiceLabel: 'Invoice',
+                tagline: 'Cleaning \u00b7 Relocation \u00b7 Facility Service',
+                subTitle: 'Professional cleaning and relocation services according to Swiss quality standards.',
+                customer: 'CUSTOMER',
+                orderData: 'ORDER DATA',
+                object: 'PROPERTY',
+                serviceDate: 'Service Date:',
+                startTime: 'Start Time:',
+                handoverTime: 'Handover Time:',
+                contactPerson: 'Contact Person:',
+                paymentMethod: 'Payment Method:',
+                paymentMethodValue: 'Cash',
+                propertyType: 'Property Type:',
+                floor: 'Floor:',
+                area: 'Area:',
+                areaPrefix: 'approx.',
+                description: 'DESCRIPTION',
+                quantity: 'QUANTITY',
+                unitPrice: 'UNIT PRICE',
+                totalPrice: 'TOTAL PRICE',
+                defaultServiceDesc: 'Professional service according to Swiss standards.',
+                scopeOfServices: 'SCOPE OF SERVICES',
+                swissStandard: 'All work is carried out according to the highest Swiss quality standards.',
+                totalFixedPrice: 'TOTAL FIXED PRICE',
+                fixedPriceSub: 'Fixed price - no additional costs',
+                acceptanceGuarantee: 'ACCEPTANCE GUARANTEE',
+                acceptanceGuaranteeDesc: 'Satisfaction guarantee at handover. Defects are corrected free of charge.',
+                liabilityInsured: 'LIABILITY INSURED',
+                liabilityInsuredDesc: 'Fully insured for your safety and maximum protection.',
+                swissQuality: 'SWISS QUALITY',
+                swissQualityDesc: 'Professional, reliable, and punctual \u2013 that is our commitment.',
+                ecoFriendly: 'ECO-FRIENDLY',
+                ecoFriendlyDesc: 'We use eco-friendly cleaning products and sustainable methods.',
+                nameLabel: 'Name:',
+                cleaningDateLabel: 'Cleaning Date:',
+                signatureLabel: 'Signature:',
+                locationLabel: 'Location:',
+                performancePeriod: 'SERVICE PERIOD',
+                serviceStart: 'Service Start:',
+                serviceEnd: 'Service End:',
+                timeUnit: '',
+                communication: 'COMMUNICATION',
+                communicationText: 'For questions or changes, please contact us in a timely manner.',
+                accountInformation: 'ACCOUNT INFORMATION',
+                bankName: 'Bank Name',
+                accountHolder: 'Account Holder',
+                accountNo: 'Account No.',
+                clearingNo: 'Clearing No.'
             }
         }[language as 'en' | 'de' | 'fr'] || { /* fallback */ };
 
@@ -190,11 +331,18 @@ export async function POST(request: NextRequest) {
         const translator = createTranslator(language as string);
         const { tKey, tVal } = translator;
 
+        let destStreet = '';
+        let destZipCity = '';
+
         let formattedRemarks: string[] = [];
-        const SKIP_KEYS = new Set(['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'urgency', 'frequency', 'serviceTimes', 'startDate', 'handoverDate', 'desiredStart', 'handoverTime', 'company']);
+        const SKIP_KEYS = new Set(['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'urgency', 'frequency', 'serviceTimes', 'startDate', 'handoverDate', 'desiredStart', 'handoverTime', 'company', 'moveFromStreet', 'moveFromZipCity', 'moveToStreet', 'moveToZipCity']);
 
         if ((client as any).data && typeof (client as any).data === 'object' && Object.keys((client as any).data).length > 0) {
             const clientData = (client as any).data as Record<string, any>;
+            // Extract destination fields first
+            if (clientData.moveToStreet) destStreet = String(clientData.moveToStreet);
+            if (clientData.moveToZipCity) destZipCity = String(clientData.moveToZipCity);
+            
             Object.entries(clientData).forEach(([key, val]) => {
                 if (SKIP_KEYS.has(key) || !val || (Array.isArray(val) && val.length === 0)) return;
                 
@@ -218,10 +366,16 @@ export async function POST(request: NextRequest) {
                 }
                 const rawKey = k.trim();
                 const rawVal = v.join(': ').trim();
+                
+                if (SKIP_KEYS.has(rawKey)) return;
+                
                 const vals = rawVal.split(', ').map((rv: string) => tVal(rv));
                 formattedRemarks.push(`${tKey(rawKey)}: ${vals.join(', ')}`);
             });
         }
+        
+        let propertyStreet = destStreet || client.address || '-';
+        let propertyCity = destZipCity || ((client.postalCode || '') + ' ' + (client.location || '')).trim();
 
         let invoiceAddr = client.address || '';
         let invoiceZip = client.postalCode || '';
@@ -247,13 +401,18 @@ export async function POST(request: NextRequest) {
             'Disposal': { en: 'Disposal', de: 'Räumung / Entsorgung', fr: 'Débarras / Élimination' },
             'Gastronomy Cleaning': { en: 'Gastronomy Cleaning', de: 'Gastronomiereinigung', fr: 'Nettoyage gastronomique' },
             'Medical Cleaning': { en: 'Medical Cleaning', de: 'Praxisreinigung', fr: 'Nettoyage de cabinet médical' },
-                        'Construction Cleaning': { en: 'Construction Cleaning', de: 'Baureinigung', fr: 'Nettoyage de fin de chantier' },
+            'Construction Cleaning': { en: 'Construction Cleaning', de: 'Baureinigung', fr: 'Nettoyage de fin de chantier' },
             'Cleaning & Property Maintenance': { en: 'Cleaning & Property Maintenance', de: 'Reinigung & Hauswartung', fr: 'Nettoyage & Conciergerie' },
             'Cleaning and Property Maintenance': { en: 'Cleaning and Property Maintenance', de: 'Reinigung & Hauswartung', fr: 'Nettoyage & Conciergerie' },
             'Property Maintenance': { en: 'Property Maintenance', de: 'Hauswartung', fr: 'Conciergerie / Entretien' },
             'Special Cleaning': { en: 'Special Cleaning', de: 'Spezialreinigung', fr: 'Nettoyage spécial' },
             'Household Helping': { en: 'Household Helping', de: 'Haushaltshilfe', fr: 'Aide ménagère' },
-            'Maintenance Cleaning': { en: 'Maintenance Cleaning', de: 'Unterhaltsreinigung', fr: "Nettoyage d'entretien" }
+            'Maintenance Cleaning': { en: 'Maintenance Cleaning', de: 'Unterhaltsreinigung', fr: "Nettoyage d'entretien" },
+            'Final Cleaning Guarantee': { en: 'Move-out & Final Cleaning with Acceptance Guarantee', de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie', fr: 'Nettoyage de déménagement & fin de bail avec garantie' },
+            'Moving Cleaning Combo': { en: 'Moving & Final Cleaning Combo Offer', de: 'Umzug & Endreinigung Kombi-Angebot', fr: 'Offre combinée déménagement et nettoyage' },
+            'Moving Cleaning Combo 2': { en: 'Moving + Cleaning (Combo)', de: 'Umzug + Reinigung (Kombi)', fr: 'Déménagement + Nettoyage (Combo)' },
+            'Facility Services': { en: 'Facility Services', de: 'Facility Services', fr: 'Services de conciergerie' },
+            'Disposal 2': { en: 'Disposal', de: 'Entsorgung', fr: 'Élimination' }
         };
 
         const floorMap: Record<string, Record<string, string>> = {
@@ -266,8 +425,37 @@ export async function POST(request: NextRequest) {
             '6+ floor': { en: '6+ floor', de: '6+ Stockwerk', fr: '6ème étage et plus' }
         };
 
-        const translatedService = client.serviceType ? (serviceMap[client.serviceType]?.[language as string] || client.serviceType) : '';
-        const translatedFloor = (client as any).floor ? (floorMap[(client as any).floor]?.[language as string] || (client as any).floor) : '';
+        const buildingMap: Record<string, Record<string, string>> = {
+            'Apartment': { en: 'Apartment', de: 'Wohnung', fr: 'Appartement' },
+            'House': { en: 'House', de: 'Haus', fr: 'Maison' },
+            'WG Room': { en: 'WG Room', de: 'WG-Zimmer', fr: 'Chambre en colocation' },
+            'Office': { en: 'Office', de: 'Büro', fr: 'Bureau' },
+            'Studio': { en: 'Studio', de: 'Studio', fr: 'Studio' },
+            'Storage/Cellar': { en: 'Storage/Cellar', de: 'Lager/Keller', fr: 'Cave/Entrepôt' },
+            'Restaurant': { en: 'Restaurant', de: 'Restaurant', fr: 'Restaurant' },
+            'Commercial': { en: 'Commercial', de: 'Gewerbe', fr: 'Commercial' },
+            'Other': { en: 'Other', de: 'Andere', fr: 'Autre' }
+        };
+
+        const getBaseKey = (val: string | null | undefined, map: Record<string, Record<string, string>>) => {
+            if (!val) return undefined;
+            const lowerVal = val.toLowerCase();
+            for (const [key, translations] of Object.entries(map)) {
+                if (key.toLowerCase() === lowerVal || Object.values(translations).some(t => t.toLowerCase() === lowerVal)) {
+                    return key;
+                }
+            }
+            return undefined;
+        }
+
+        const serviceKey = getBaseKey(client.serviceType, serviceMap);
+        const translatedService = serviceKey ? (serviceMap[serviceKey][language as string] || client.serviceType) : (client.serviceType || '');
+        
+        const floorKey = getBaseKey(client.floor, floorMap);
+        const translatedFloor = floorKey ? (floorMap[floorKey][language as string] || client.floor) : (client.floor || '');
+        
+        const buildingKey = getBaseKey(client.buildingType, buildingMap);
+        const translatedBuilding = buildingKey ? (buildingMap[buildingKey][language as string] || client.buildingType) : (client.buildingType || '');
 
         if (translatedService) {
             t.title = {
@@ -291,14 +479,15 @@ export async function POST(request: NextRequest) {
         <meta charset="UTF-8">
         <style>
             * { box-sizing: border-box; }
-            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 20px; padding-bottom: 80px; font-size: 13px; line-height: 1.4; color: #333; }
+            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0 20px 80px 20px; font-size: 13px; line-height: 1.4; color: #333; }
             
             /* -- Header -- */
-            .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+            .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; margin-top: -15px; }
+            .header-logo { transform: translateY(-25px); }
             .header-logo img { height: 130px; width: auto; }
-            .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -10px; letter-spacing: 0.5px; }
+            .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -25px; letter-spacing: 0.5px; }
             
-            .header-contact { width: 280px; text-align: left; font-size: 13px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; }
+            .header-contact { width: 280px; text-align: left; font-size: 13px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; margin-top: 15px; }
             .contact-line { display: flex; align-items: center; gap: 15px; font-size: 14px; margin-bottom: 5px; }
             .contact-icon { font-size: 16px; color: #555; width: 16px; text-align: center; }
 
@@ -308,16 +497,11 @@ export async function POST(request: NextRequest) {
             /* Window Envelope position (Left) */
             .customer-card { 
                 width: 90mm; /* Fit window envelope */
-                border: 1px solid #ddd; 
-                border-radius: 8px; 
                 padding: 15px; 
-                margin-left: 20px; /* Adjust to window pos */
-                margin-top: 10px;
+                margin-left: 90px; /* Adjust to window pos */
+                margin-top: -25px;
             }
-            .customer-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-            .customer-card-icon { background: #00205B; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
-            .customer-card-title { font-size: 11px; font-weight: bold; color: #00205B; letter-spacing: 1px; }
-            .customer-address { font-size: 13px; line-height: 1.6; color: #000; font-weight: normal; }
+            .customer-address { font-size: 14px; line-height: 1.6; color: #000; font-weight: normal; }
             .customer-address span { font-weight: normal; }
 
             /* Order Card (Right) */
@@ -335,7 +519,7 @@ export async function POST(request: NextRequest) {
             .order-ref-val { font-size: 13px; color: #000; margin-top: 3px; }
 
             /* -- Title Section -- */
-            .main-title { font-size: 32px; font-weight: bold; color: #00205B; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+            .main-title { font-size: 18px; font-weight: bold; color: #00205B; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
             .sub-title { font-size: 13px; color: #555; margin-bottom: 30px; }
 
             /* -- 3 Columns Info -- */
@@ -356,15 +540,15 @@ export async function POST(request: NextRequest) {
             .service-table tr:last-child td { border-bottom: none; }
             
             /* Table Columns Widths */
-            .col-nr { width: 5%; }
-            .col-le { width: 25%; font-weight: bold; }
-            .col-desc { width: 40%; color: #666; }
+            .col-nr { width: 5%; text-align: center; }
+            .col-le { width: 20%; font-weight: bold; }
+            .col-desc { width: 45%; color: #666; }
             .col-qty { width: 10%; text-align: center; }
             .col-price { width: 10%; text-align: right; }
             .col-total { width: 10%; text-align: right; font-weight: bold; }
 
             /* -- Bottom of Table Info -- */
-            .table-bottom-row { display: flex; justify-content: space-between; align-items: stretch; margin-top: 15px; gap: 15px; }
+            .table-bottom-row { display: flex; justify-content: flex-end; align-items: stretch; margin-top: 15px; gap: 15px; }
             .scope-box { flex: 1; display: flex; gap: 10px; align-items: center; border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fafafa; }
             .scope-icon { font-size: 20px; color: #555; }
             .scope-text strong { display: block; font-size: 11px; color: #555; margin-bottom: 3px; }
@@ -377,36 +561,36 @@ export async function POST(request: NextRequest) {
 
             /* -- Badges -- */
             .badges-row { display: flex; gap: 10px; margin-top: 30px; margin-bottom: 30px; }
-            .badge { flex: 1; display: flex; gap: 8px; align-items: flex-start; border: 1px solid #eee; padding: 10px; border-radius: 8px; }
-            .badge-icon { font-size: 16px; color: #555; margin-top: 2px; }
-            .badge-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 2px; }
-            .badge-text { font-size: 9px; color: #666; line-height: 1.3; }
+            .badge { flex: 1; display: flex; gap: 10px; align-items: flex-start; border: 1px solid #eee; padding: 12px; border-radius: 8px; }
+            .badge-icon { font-size: 22px; color: #00205B; margin-top: 2px; }
+            .badge-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 3px; letter-spacing: 0.5px; }
+            .badge-text { font-size: 11px; color: #555; line-height: 1.4; }
 
             /* -- Signatures -- */
             .signatures-row { display: flex; justify-content: space-between; margin-bottom: 30px; }
             .sig-box { width: 45%; }
-            .sig-title { font-size: 10px; font-weight: bold; color: #555; margin-bottom: 15px; letter-spacing: 1px; }
-            .sig-name { font-size: 14px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
-            .sig-details { font-size: 10px; color: #666; }
+            .sig-title { font-size: 12px; font-weight: bold; color: #00205B; margin-bottom: 15px; letter-spacing: 1px; }
+            .sig-name { font-size: 16px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
+            .sig-details { font-size: 12px; color: #555; }
             .sig-details table { border-collapse: collapse; margin-top: 10px; }
-            .sig-details td { padding: 4px 0; }
+            .sig-details td { padding: 5px 0; }
             .sig-details td:first-child { padding-right: 15px; color: #555; }
-            .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 12px; }
+            .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 14px; }
 
             /* -- Timing & Comm -- */
             .timing-row { display: flex; gap: 15px; margin-bottom: 40px; }
-            .timing-box { flex: 1; border: 1px solid #eee; padding: 12px; border-radius: 8px; display: flex; gap: 12px; align-items: center; }
-            .timing-icon { font-size: 20px; color: #555; }
-            .timing-text strong { display: block; font-size: 10px; color: #555; margin-bottom: 3px; }
-            .timing-text { font-size: 10px; color: #666; display: flex; gap: 10px; }
-            .timing-text div { display: flex; flex-direction: column; gap: 3px; }
+            .timing-box { flex: 1; border: 1px solid #eee; padding: 14px; border-radius: 8px; display: flex; gap: 14px; align-items: center; }
+            .timing-icon { font-size: 24px; color: #00205B; }
+            .timing-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 4px; letter-spacing: 0.5px; }
+            .timing-text { font-size: 12px; color: #555; display: flex; gap: 12px; }
+            .timing-text div { display: flex; flex-direction: column; gap: 4px; }
 
             /* -- Footer -- */
-            .footer-banner { background: transparent; padding: 10px 0; display: flex; align-items: center; margin-top: auto; border-top: 1px solid #eee; margin-bottom: 20px; }
-            .footer-banner-title { display: none; }
-            .footer-banner-items { display: flex; gap: 40px; width: 100%; justify-content: flex-start; }
-            .footer-item { display: flex; flex-direction: column; gap: 5px; color: #0055A4; font-size: 12px; font-weight: normal; }
-            .footer-item span { color: #999; font-size: 10px; font-weight: normal; }
+            .footer-banner { background: #00205B; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 10px; margin-top: auto; }
+            .footer-banner-title { font-weight: bold; display: flex; align-items: center; gap: 8px; letter-spacing: 1px; }
+            .footer-banner-items { display: flex; gap: 20px; }
+            .footer-item { display: flex; flex-direction: column; gap: 3px; }
+            .footer-item span { color: #ccc; font-size: 9px; }
             
             /* -- Payment Slip Styles -- */
             .payment-slip { 
@@ -447,7 +631,7 @@ export async function POST(request: NextRequest) {
         <div class="header-top">
             <div class="header-logo">
                 <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
-                <div class="header-tagline">Reinigung &middot; Umzug &middot; Facility Service</div>
+                <div class="header-tagline">${t.tagline}</div>
             </div>
             <div class="header-contact">
                 <div class="contact-line"><span class="contact-icon">📞</span> +41 78 215 80 30</div>
@@ -461,20 +645,16 @@ export async function POST(request: NextRequest) {
         <!-- Top Cards -->
         <div class="top-cards">
             <div class="customer-card">
-                <div class="customer-card-header">
-                    <div class="customer-card-icon">👤</div>
-                    <div class="customer-card-title">${t.customer || 'KUNDE'}</div>
-                </div>
                 <div class="customer-address">
                     ${clientName}<br>
                     <span>${invoiceAddr ? invoiceAddr + '<br>' : ''}${invoiceZip} ${invoiceCity}</span>
                 </div>
             </div>
             <div class="order-card">
-                <div class="order-card-header">${t.orderNumber?.toUpperCase() || 'AUFTRAGSNUMMER'}</div>
+                <div class="order-card-header">${t.orderNumber?.toUpperCase()}</div>
                 <div class="order-card-body">
                     <div class="order-number">${orderNumber}</div>
-                    <div class="order-ref-title">${t.invoiceRef?.toUpperCase() || 'KUNDENREFERENZ'}</div>
+                    <div class="order-ref-title">${t.invoiceRef?.toUpperCase()}</div>
                     <div class="order-ref-val">-</div>
                 </div>
             </div>
@@ -482,34 +662,31 @@ export async function POST(request: NextRequest) {
 
         <!-- Title -->
         <div class="main-title">${t.title}</div>
-        <div class="sub-title">Professionelle Reinigungs- und Umzugsdienstleistungen nach Schweizer Qualitätsstandard.</div>
+        <div class="sub-title">${t.subTitle}</div>
 
         <!-- Info Columns -->
         <div class="info-columns">
-            <!-- KUNDE -->
-            <div class="info-col">
-                <div class="info-col-title">${t.customer || 'KUNDE'}</div>
-                <div class="info-row"><span class="info-icon">👤</span><span class="info-val"><span>${clientName}</span></span></div>
-                <div class="info-row"><span class="info-icon">📍</span><span class="info-val"><span>${invoiceAddr}<br>${invoiceZip} ${invoiceCity}</span></span></div>
-                <div class="info-row"><span class="info-icon">📞</span><span class="info-val"><span>${client.phone || '-'}</span></span></div>
-                <div class="info-row"><span class="info-icon">✉</span><span class="info-val"><span>${client.email || '-'}</span></span></div>
-            </div>
             <!-- AUFTRAGSDATEN -->
             <div class="info-col">
-                <div class="info-col-title">${t.orderData || 'AUFTRAGSDATEN'}</div>
-                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">${t.serviceDate || 'Leistungsdatum:'}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
-                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">${t.startTime || 'Startzeit:'}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
-                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">${t.handoverTime || 'Abgabezeit:'}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</span></div>
-                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">${t.contactPerson || 'Ansprechpartner:'}</span><span class="info-val">${clientName}</span></div>
-                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">${t.paymentMethod || 'Zahlungsart:'}</span><span class="info-val">Rechnung (QR)</span></div>
+                <div class="info-col-title">${t.orderData}</div>
+                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">${t.serviceDate}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
+                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">${t.startTime}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
+                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">${t.handoverTime}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
+                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">${t.contactPerson}</span><span class="info-val">${clientName}</span></div>
+                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">${t.paymentMethod}</span><span class="info-val">${t.paymentMethodValue}</span></div>
             </div>
             <!-- OBJEKT -->
             <div class="info-col">
-                <div class="info-col-title">${t.object || 'OBJEKT'}</div>
-                <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${client.address || '-'}<br>${client.postalCode || ''} ${client.location || ''}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType || 'Objekttyp:'}</span><span class="info-val"><span>${(client as any).propertyType || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.floor || 'Stockwerk:'}</span><span class="info-val"><span>${translatedFloor || (client as any).floor || '-'}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.area || 'Fläche:'}</span><span class="info-val"><span>${client.squareMeters ? 'ca. ' + client.squareMeters + ' m²' : '-'}</span></span></div>
+                <div class="info-col-title">${t.object}</div>
+                <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${propertyStreet}${propertyCity ? '<br>' + propertyCity : ''}</span></span></div>
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType}</span><span class="info-val"><span>${translatedBuilding || '-'}</span></span></div>
+                ${translatedFloor ? `<div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor}</span></span></div>` : ''}
+                <div class="info-row"><span class="info-label" style="width: 70px;">${t.area}</span><span class="info-val"><span>${client.squareMeters ? t.areaPrefix + ' ' + client.squareMeters + ' m²' : '-'}</span></span></div>
+            </div>
+            <!-- KONTAKT -->
+            <div class="info-col" style="display: flex; flex-direction: column; justify-content: center; padding-top: 40px; gap: 15px;">
+                ${client.phone ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;">📞</span><span class="info-val" style="display: flex; align-items: center;"><span>${client.phone}</span></span></div>` : ''}
+                ${client.email ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;">✉</span><span class="info-val" style="display: flex; align-items: center;"><span>${client.email}</span></span></div>` : ''}
             </div>
         </div>
 
@@ -519,18 +696,18 @@ export async function POST(request: NextRequest) {
                 <thead>
                     <tr>
                         <th class="col-nr">NR.</th>
-                        <th class="col-le">${t.service || 'LEISTUNG'}</th>
-                        <th class="col-desc">${t.description || 'BESCHREIBUNG'}</th>
-                        <th class="col-qty">${t.quantity || 'MENGE'}</th>
-                        <th class="col-price">${t.unitPrice || 'EINZELPREIS'}</th>
-                        <th class="col-total">${t.totalPrice || 'GESAMTPREIS'}</th>
+                        <th class="col-le">${t.service}</th>
+                        <th class="col-desc">${t.description}</th>
+                        <th class="col-qty">${t.quantity}</th>
+                        <th class="col-price">${t.unitPrice}</th>
+                        <th class="col-total">${t.totalPrice}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="col-nr">1</td>
                         <td class="col-le">${translatedService}</td>
-                        <td class="col-desc">${formattedRemarks.length > 0 ? formattedRemarks.join(', ') : 'Professionelle Dienstleistung gemäss Schweizer Standard.'}</td>
+                        <td class="col-desc">${formattedRemarks.length > 0 ? '<ul style="margin: 0; padding-left: 15px; list-style-type: none; font-size: 11px; line-height: 1.6; column-count: 2; column-gap: 15px;"><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>' + formattedRemarks.join('</li><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>') + '</li></ul>' : t.defaultServiceDesc}</td>
                         <td class="col-qty">1</td>
                         <td class="col-price">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
                         <td class="col-total">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
@@ -539,17 +716,10 @@ export async function POST(request: NextRequest) {
             </table>
 
             <div class="table-bottom-row">
-                <div class="scope-box">
-                    <div class="scope-icon">ℹ️</div>
-                    <div class="scope-text">
-                        <strong>${t.scopeOfServices || 'LEISTUNGSUMFANG'}</strong>
-                        ${t.swissStandard || 'Alle Arbeiten werden nach höchsten Schweizer Qualitätsstandards ausgeführt.'} ${t.guarantee}
-                    </div>
-                </div>
+
                 <div class="total-box">
-                    <div class="total-box-title">${t.totalFixedPrice || 'TOTAL FESTPREIS INKL. MWST.'}</div>
+                    <div class="total-box-title">${t.totalFixedPrice}</div>
                     <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
-                    <div class="total-box-sub">${t.fixedPriceSub || 'Festpreis - keine zusätzlichen Kosten'}</div>
                 </div>
             </div>
         </div>
@@ -558,19 +728,19 @@ export async function POST(request: NextRequest) {
         <div class="badges-row">
             <div class="badge">
                 <div class="badge-icon">🛡️</div>
-                <div class="badge-text"><strong>${t.acceptanceGuarantee || 'ABNAHMEGARANTIE'}</strong>Zufriedenheitsgarantie bei Übergabe. Mängel werden kostenlos nachgebessert.</div>
+                <div class="badge-text"><strong>${t.acceptanceGuarantee}</strong>${t.acceptanceGuaranteeDesc}</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">✅</div>
-                <div class="badge-text"><strong>${t.liabilityInsured || 'HAFTPFLICHTVERSICHERT'}</strong>Vollständig versichert für Ihre Sicherheit und maximalen Schutz.</div>
+                <div class="badge-text"><strong>${t.liabilityInsured}</strong>${t.liabilityInsuredDesc}</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">⭐</div>
-                <div class="badge-text"><strong>${t.swissQuality || 'SCHWEIZER QUALITÄT'}</strong>Professionell, zuverlässig und pünktlich - dafür stehen wir ein.</div>
+                <div class="badge-text"><strong>${t.swissQuality}</strong>${t.swissQualityDesc}</div>
             </div>
             <div class="badge">
                 <div class="badge-icon">🌿</div>
-                <div class="badge-text"><strong>${t.ecoFriendly || 'UMWELTFREUNDLICH'}</strong>Wir verwenden umweltfreundliche Reinigungsmittel und nachhaltige Methoden.</div>
+                <div class="badge-text"><strong>${t.ecoFriendly}</strong>${t.ecoFriendlyDesc}</div>
             </div>
         </div>
 
@@ -580,9 +750,9 @@ export async function POST(request: NextRequest) {
                 <div class="sig-title">SWISSCLEANMOVE</div>
                 <div class="sig-details">
                     <table style="width: 100%;">
-                        <tr><td style="width: 80px;">Name:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Cleaning Date:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Unterschrift:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
                     </table>
                 </div>
             </div>
@@ -590,18 +760,18 @@ export async function POST(request: NextRequest) {
             <!-- Middle Section for Date & Ort -->
             <div class="sig-box" style="width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; margin-bottom: 15px;">
                 <div class="sig-details" style="text-align: center; font-size: 11px; color: #333;">
-                    <strong>Cleaning Date</strong> ${new Date().toLocaleDateString()}<br><br>
-                    <strong>Ort:</strong> Biel
+                    <strong>${t.cleaningDateLabel}</strong> ${new Date().toLocaleDateString()}<br><br>
+                    <strong>${t.locationLabel}</strong> Biel
                 </div>
             </div>
 
             <div class="sig-box" style="width: 30%;">
-                <div class="sig-title">${t.customer || 'KUNDE'}</div>
+                <div class="sig-title"></div>
                 <div class="sig-details">
                     <table style="width: 100%;">
-                        <tr><td style="width: 80px;">Name:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Cleaning Date:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>Unterschrift:</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
+                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
                     </table>
                 </div>
             </div>
@@ -612,27 +782,27 @@ export async function POST(request: NextRequest) {
             <div class="timing-box">
                 <div class="timing-icon">📅</div>
                 <div class="timing-text">
-                    <div><strong>${t.performancePeriod || 'LEISTUNGSZEITRAUM'}</strong>${t.serviceStart || 'Leistungsbeginn:'}<br>${t.serviceEnd || 'Leistungsende:'}</div>
-                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} Uhr</div>
+                    <div><strong>${t.performancePeriod}</strong>${t.serviceStart}<br>${t.serviceEnd}</div>
+                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</div>
                 </div>
             </div>
             <div class="timing-box">
                 <div class="timing-icon">👤</div>
                 <div class="timing-text">
-                    <div><strong>${t.communication || 'KOMMUNIKATION'}</strong>${t.communicationText || 'Für Fragen oder Änderungen kontaktieren Sie uns bitte rechtzeitig.'}</div>
+                    <div><strong>${t.communication}</strong>${t.communicationText}</div>
                 </div>
             </div>
         </div>
 
         <!-- Footer Banner -->
         <div class="footer-banner">
-            <div class="footer-banner-title">🏦 ${t.accountInformation || 'KONTOINFORMATIONEN'}</div>
+            <div class="footer-banner-title">🏦 ${t.accountInformation}</div>
             <div class="footer-banner-items">
-                <div class="footer-item"><span>${t.bankName || 'Bankname'}</span>PostFinance AG</div>
+                <div class="footer-item"><span>${t.bankName}</span>PostFinance AG</div>
                 <div class="footer-item"><span>IBAN</span>CH86 0900 0000 1636 3866 5</div>
-                <div class="footer-item"><span>${t.accountHolder || 'Kontoinhaber'}</span>Dawit Gebrekristos / SwissCleanMove</div>
-                <div class="footer-item"><span>${t.accountNo || 'Konto-Nr.'}</span>16-363866-5</div>
-                <div class="footer-item"><span>${t.clearingNo || 'Clearing-Nr.'}</span>09000</div>
+                <div class="footer-item"><span>${t.accountHolder}</span>Dawit Gebrekristos / SwissCleanMove</div>
+                <div class="footer-item"><span>${t.accountNo}</span>16-363866-5</div>
+                <div class="footer-item"><span>${t.clearingNo}</span>09000</div>
             </div>
         </div>
 
@@ -689,16 +859,7 @@ export async function POST(request: NextRequest) {
                         <div class="payment-part-content">
                             <!-- Left Column of Payment Part -->
                             <div class="payment-col-left">
-                                <div class="qr-code-wrapper">
-                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=174x174&data=https%3A%2F%2Fswisscleanmove.ch&margin=0" alt="QR Code">
-                                    <!-- Swiss Cross Overlay -->
-                                    <div class="qr-cross">
-                                        <div style="width: 28px; height: 28px; background: #000; border: 2px solid #fff; position: relative;">
-                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 18px; height: 4px; background: #fff;"></div>
-                                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 4px; height: 18px; background: #fff;"></div>
-                                        </div>
-                                    </div>
-                                </div>
+    
                                 
                                 <div class="amount-area-payment">
                                     <div class="amount-col">
@@ -741,6 +902,51 @@ export async function POST(request: NextRequest) {
                 </tr>
             </table>
         </div>
+
+        <!-- Signature Section -->
+        <div style="margin-top: 40px; padding-top: 20px;">
+            <div style="display: flex; justify-content: space-between; font-size: 13px; color: #333;">
+                <!-- Left: SWISSCLEANMOVE -->
+                <div style="width: 32%;">
+                    <div style="font-weight: bold; color: #003366; margin-bottom: 15px; font-size: 14px;">SWISSCLEANMOVE</div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.nameLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.signatureLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                </div>
+
+                <!-- Middle: Dates -->
+                <div style="width: 25%; text-align: center; margin-top: 40px; font-size: 12px;">
+                    <div style="margin-bottom: 10px;"><strong>${t.cleaningDateLabel || t.date}</strong> ${new Date(client.fromDate || Date.now()).toLocaleDateString('de-CH')}</div>
+                    <div><strong>${t.locationLabel}</strong> ${client.location || invoiceCity || ''}</div>
+                </div>
+
+                <!-- Right: Client Signature -->
+                <div style="width: 32%; margin-top: 30px;">
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.nameLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.cleaningDateLabel || t.date}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                    <div style="display: flex; margin-bottom: 15px; align-items: flex-end;">
+                        <span style="width: 110px;">${t.signatureLabel}</span>
+                        <span style="border-bottom: 1px solid #666; flex-grow: 1; height: 15px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
     </html>`
 
