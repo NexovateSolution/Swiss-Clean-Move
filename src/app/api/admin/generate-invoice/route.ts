@@ -634,11 +634,11 @@ export async function POST(request: NextRequest) {
                 <div class="header-tagline">${t.tagline}</div>
             </div>
             <div class="header-contact">
-                <div class="contact-line"><span class="contact-icon">📞</span> +41 78 215 80 30</div>
-                <div class="contact-line"><span class="contact-icon">✉</span> info@swisscleanmove.ch</div>
-                <div class="contact-line"><span class="contact-icon">🌐</span> www.swisscleanmove.ch</div>
-                <div class="contact-line"><span class="contact-icon">📍</span> Orpundstrasse 31, 2504 Biel</div>
-                <div class="contact-line"><span class="contact-icon">🏢</span> UID: CHE-457.949.122 MWST</div>
+                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span> +41 78 215 80 30</div>
+                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span> info@swisscleanmove.ch</div>
+                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg></span> www.swisscleanmove.ch</div>
+                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span> Orpundstrasse 31, 2504 Biel</div>
+                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></span> UID: CHE-457.949.122 MWST</div>
             </div>
         </div>
 
@@ -669,24 +669,24 @@ export async function POST(request: NextRequest) {
             <!-- AUFTRAGSDATEN -->
             <div class="info-col">
                 <div class="info-col-title">${t.orderData}</div>
-                <div class="info-row"><span class="info-icon">📅</span><span class="info-label">${t.serviceDate}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
-                <div class="info-row"><span class="info-icon">🕒</span><span class="info-label">${t.startTime}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
-                <div class="info-row"><span class="info-icon">🕛</span><span class="info-label">${t.handoverTime}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
-                <div class="info-row"><span class="info-icon">👤</span><span class="info-label">${t.contactPerson}</span><span class="info-val">${clientName}</span></div>
-                <div class="info-row"><span class="info-icon">💳</span><span class="info-label">${t.paymentMethod}</span><span class="info-val">${t.paymentMethodValue}</span></div>
+                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span><span class="info-label">${t.serviceDate}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
+                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><span class="info-label">${t.startTime}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
+                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><span class="info-label">${t.handoverTime}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
+                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><span class="info-label">${t.contactPerson}</span><span class="info-val">${clientName}</span></div>
+                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></span><span class="info-label">${t.paymentMethod}</span><span class="info-val">${t.paymentMethodValue}</span></div>
             </div>
             <!-- OBJEKT -->
             <div class="info-col">
                 <div class="info-col-title">${t.object}</div>
-                <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon">🏢</span><span class="info-val"><span>${propertyStreet}${propertyCity ? '<br>' + propertyCity : ''}</span></span></div>
+                <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></span><span class="info-val"><span>${propertyStreet}${propertyCity ? '<br>' + propertyCity : ''}</span></span></div>
                 <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType}</span><span class="info-val"><span>${translatedBuilding || '-'}</span></span></div>
                 ${translatedFloor ? `<div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor}</span></span></div>` : ''}
                 <div class="info-row"><span class="info-label" style="width: 70px;">${t.area}</span><span class="info-val"><span>${client.squareMeters ? t.areaPrefix + ' ' + client.squareMeters + ' m²' : '-'}</span></span></div>
             </div>
             <!-- KONTAKT -->
             <div class="info-col" style="display: flex; flex-direction: column; justify-content: center; padding-top: 40px; gap: 15px;">
-                ${client.phone ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;">📞</span><span class="info-val" style="display: flex; align-items: center;"><span>${client.phone}</span></span></div>` : ''}
-                ${client.email ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;">✉</span><span class="info-val" style="display: flex; align-items: center;"><span>${client.email}</span></span></div>` : ''}
+                ${client.phone ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span><span class="info-val" style="display: flex; align-items: center;"><span>${client.phone}</span></span></div>` : ''}
+                ${client.email ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span><span class="info-val" style="display: flex; align-items: center;"><span>${client.email}</span></span></div>` : ''}
             </div>
         </div>
 
@@ -727,19 +727,19 @@ export async function POST(request: NextRequest) {
         <!-- Badges -->
         <div class="badges-row">
             <div class="badge">
-                <div class="badge-icon">🛡️</div>
+                <div class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
                 <div class="badge-text"><strong>${t.acceptanceGuarantee}</strong>${t.acceptanceGuaranteeDesc}</div>
             </div>
             <div class="badge">
-                <div class="badge-icon">✅</div>
+                <div class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
                 <div class="badge-text"><strong>${t.liabilityInsured}</strong>${t.liabilityInsuredDesc}</div>
             </div>
             <div class="badge">
-                <div class="badge-icon">⭐</div>
+                <div class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
                 <div class="badge-text"><strong>${t.swissQuality}</strong>${t.swissQualityDesc}</div>
             </div>
             <div class="badge">
-                <div class="badge-icon">🌿</div>
+                <div class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
                 <div class="badge-text"><strong>${t.ecoFriendly}</strong>${t.ecoFriendlyDesc}</div>
             </div>
         </div>
@@ -780,14 +780,14 @@ export async function POST(request: NextRequest) {
         <!-- Timing & Comm -->
         <div class="timing-row">
             <div class="timing-box">
-                <div class="timing-icon">📅</div>
+                <div class="timing-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
                 <div class="timing-text">
                     <div><strong>${t.performancePeriod}</strong>${t.serviceStart}<br>${t.serviceEnd}</div>
                     <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</div>
                 </div>
             </div>
             <div class="timing-box">
-                <div class="timing-icon">👤</div>
+                <div class="timing-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                 <div class="timing-text">
                     <div><strong>${t.communication}</strong>${t.communicationText}</div>
                 </div>
@@ -796,7 +796,7 @@ export async function POST(request: NextRequest) {
 
         <!-- Footer Banner -->
         <div class="footer-banner">
-            <div class="footer-banner-title">🏦 ${t.accountInformation}</div>
+            <div class="footer-banner-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg> ${t.accountInformation}</div>
             <div class="footer-banner-items">
                 <div class="footer-item"><span>${t.bankName}</span>PostFinance AG</div>
                 <div class="footer-item"><span>IBAN</span>CH86 0900 0000 1636 3866 5</div>
