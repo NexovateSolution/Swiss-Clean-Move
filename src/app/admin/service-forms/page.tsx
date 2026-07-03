@@ -168,7 +168,7 @@ export default function ServiceFormsPage() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = \`Contract_\${submission.firstName || 'Client'}.pdf\`;
+      a.download = `Contract_${submission.firstName || 'Client'}.pdf`;
       document.body.appendChild(a);
       a.click();
       a.remove();
