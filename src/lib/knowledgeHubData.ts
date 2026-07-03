@@ -115,7 +115,7 @@ const data: KnowledgeHubContent = {
     },
     {
       label: { de: 'Entsorgung & Räumung', en: 'Disposal & clearance', fr: 'Élimination & débarras' },
-      desc: { de: `Schweizer Durchschnitt: CHF 500 – CHF 3'000 (Wohnungsräumung). SwissCleanMove: ab CHF ${PRICING_RULES.disposal.apartmentClearance.apartment}.– inkl. fachgerechter Entsorgung und Recycling.`, en: `Swiss average: CHF 500 – CHF 3,000 (apartment clearance). SwissCleanMove: from CHF ${PRICING_RULES.disposal.apartmentClearance.apartment}.– incl. professional disposal and recycling.`, fr: `Moyenne suisse : CHF 500 – CHF 3'000 (débarras d'appartement). SwissCleanMove : dès CHF ${PRICING_RULES.disposal.apartmentClearance.apartment}.– incl. élimination professionnelle et recyclage.` }
+      desc: { de: `Schweizer Durchschnitt: CHF 500 – CHF 3'000 (Wohnungsräumung). SwissCleanMove: ab CHF ${PRICING_RULES.disposal.volumePricing['1']}.– inkl. fachgerechter Entsorgung und Recycling.`, en: `Swiss average: CHF 500 – CHF 3,000 (apartment clearance). SwissCleanMove: from CHF ${PRICING_RULES.disposal.volumePricing['1']}.– incl. professional disposal and recycling.`, fr: `Moyenne suisse : CHF 500 – CHF 3'000 (débarras d'appartement). SwissCleanMove : dès CHF ${PRICING_RULES.disposal.volumePricing['1']}.– incl. élimination professionnelle et recyclage.` }
     }
   ],
   avgPricesNote: {
