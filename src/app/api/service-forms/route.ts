@@ -32,7 +32,7 @@ export async function POST(req: Request) {
           postalCodeAndCity: body.city || 'N/A',
           data: body,
           estimatedPrice: quoteResult.totalEstimatedPrice,
-          lineItems: quoteResult.lineItems,
+          lineItems: quoteResult.lineItems as any,
           quoteSent: true,
           locale: locale
         }
