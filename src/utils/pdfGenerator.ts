@@ -41,9 +41,9 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     }
     
     return `
-    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; padding: 5px 0;">
-      <span>${label}</span>
-      <span>CHF ${item.price.toFixed(2)}</span>
+    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #eaeaea; padding: 8px 0; font-size: 14px;">
+      <span style="color: #333;">${label}</span>
+      <span style="font-weight: 500; color: #111;">CHF ${item.price.toFixed(2)}</span>
     </div>
   `}).join('');
 
@@ -51,24 +51,31 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
   const totalStr = quote.isFallback ? 'On Request' : `CHF ${quote.totalEstimatedPrice?.toFixed(2)}`;
 
   const overlayHtml = `
-    <div id="quote-overlay" style="position: absolute; top: 400px; left: 80px; width: 630px; background: white; padding: 20px; z-index: 9999; font-family: sans-serif;">
-      <h3 style="color: #003366; margin-bottom: 15px;">Cost Breakdown / Kostenaufstellung</h3>
+    <div id="quote-overlay" style="position: absolute; top: 400px; left: 80px; width: 630px; background: white; padding: 25px; z-index: 9999; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; line-height: 1.5;">
+      <h3 style="color: #003366; margin: 0 0 20px 0; font-size: 18px; border-bottom: 2px solid #003366; padding-bottom: 8px;">Kostenaufstellung / Cost Breakdown</h3>
       
-      <div style="margin-bottom: 20px;">
-        <strong>Customer:</strong> ${customer.firstName} ${customer.name || customer.lastName}<br>
-        <strong>Address:</strong> ${customer.streetAndNumber}, ${customer.postalCodeAndCity}
-      </div>
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px;">
+        <tr>
+          <td style="width: 120px; font-weight: bold; padding: 4px 0; color: #555;">Kunde / Customer:</td>
+          <td style="padding: 4px 0;">${customer.firstName} ${customer.name || customer.lastName}</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold; padding: 4px 0; color: #555;">Adresse / Address:</td>
+          <td style="padding: 4px 0;">${customer.streetAndNumber}, ${customer.postalCodeAndCity}</td>
+        </tr>
+      </table>
 
-      <div style="width: 100%;">
+      <div style="width: 100%; margin-bottom: 20px;">
         ${lineItemsHtml}
       </div>
 
-      <div style="display: flex; justify-content: space-between; margin-top: 15px; font-weight: bold; font-size: 1.1em; color: #003366;">
-        <span>Total Estimated Price:</span>
+      <div style="display: flex; justify-content: space-between; margin-top: 20px; font-weight: bold; font-size: 1.2em; color: #003366; border-top: 2px solid #003366; padding-top: 12px;">
+        <span>Total / Total Estimated Price:</span>
         <span>${totalStr}</span>
       </div>
-      <div style="margin-top: 30px; font-size: 0.8em; color: #666;">
-        *This is an automated estimate. Final price is subject to inspection.
+      <div style="margin-top: 35px; font-size: 0.85em; color: #777; font-style: italic;">
+        * Diese Offerte wurde automatisch anhand Ihrer Angaben erstellt. Der endgültige Preis kann nach einer Besichtigung variieren.<br/>
+        * This is an automated estimate based on provided details. Final price is subject to inspection.
       </div>
     </div>
   `;

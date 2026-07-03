@@ -121,23 +121,57 @@ export async function POST(req: Request) {
       contentType: 'application/pdf'
     }] : [];
 
-    // Send Customer Email (Confirmation only, NO LIVE ESTIMATE)
+    // Send Customer Email
     if (body.email) {
+      let subject = 'Your Quote - SwissCleanMove';
+      let emailTextHtml = '';
+
+      if (locale === 'de') {
+        subject = 'Ihre Offerte - SwissCleanMove';
+        emailTextHtml = `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333; line-height: 1.6;">
+            <p><strong>Hinweis zur Offerte</strong></p>
+            <p>Diese Offerte wurde automatisch anhand Ihrer Angaben und unserer aktuellen Preisrichtlinien erstellt.</p>
+            <p>SwissCleanMove steht für faire Preise, höchste Qualität und zuverlässigen Service nach Schweizer Standard.</p>
+            <p>Haben Sie Fragen oder wünschen Sie Anpassungen? Wir beraten Sie gerne persönlich und finden die passende Lösung für Ihr Anliegen.</p>
+            <p>Vielen Dank für Ihr Vertrauen. Wir freuen uns darauf, Sie bald als Kundin oder Kunden begrüssen zu dürfen.</p>
+            <br/>
+            <p>Freundliche Grüsse<br/><strong>Ihr SwissCleanMove Team</strong></p>
+          </div>
+        `;
+      } else if (locale === 'fr') {
+        subject = 'Votre Devis - SwissCleanMove';
+        emailTextHtml = `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333; line-height: 1.6;">
+            <p><strong>Remarque concernant l'offre</strong></p>
+            <p>Cette offre a été générée automatiquement sur la base des informations que vous avez fournies et de nos directives tarifaires actuelles.</p>
+            <p>SwissCleanMove est synonyme de prix équitables, de qualité supérieure et de service fiable selon les normes suisses.</p>
+            <p>Avez-vous des questions ou souhaitez-vous des ajustements ? Nous nous ferons un plaisir de vous conseiller personnellement et de trouver la solution adaptée à vos besoins.</p>
+            <p>Nous vous remercions de votre confiance. Nous nous réjouissons de vous accueillir prochainement comme client.</p>
+            <br/>
+            <p>Meilleures salutations,<br/><strong>Votre équipe SwissCleanMove</strong></p>
+          </div>
+        `;
+      } else {
+        subject = 'Your Quote - SwissCleanMove';
+        emailTextHtml = `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333; line-height: 1.6;">
+            <p><strong>Note Regarding the Quote</strong></p>
+            <p>This quote was automatically generated based on the information you provided and our current pricing guidelines.</p>
+            <p>SwissCleanMove stands for fair pricing, highest quality, and reliable service according to Swiss standards.</p>
+            <p>Do you have any questions or would you like adjustments? We are happy to advise you personally and find the right solution for your needs.</p>
+            <p>Thank you for your trust. We look forward to welcoming you soon as a valued customer.</p>
+            <br/>
+            <p>Kind regards,<br/><strong>Your SwissCleanMove Team</strong></p>
+          </div>
+        `;
+      }
+
       await sendEmailNotification({
         to: body.email,
-        subject: 'Thank You for Your Request - SwissCleanMove',
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
-            <h2 style="color: #003366;">Thank You for Your Request!</h2>
-            <p>Dear ${body.firstName || 'Customer'},</p>
-            <p>We have successfully received your service request for <strong>${serviceType}</strong>.</p>
-            <p>Our team is currently reviewing your details. We will process your inquiry as soon as possible and contact you shortly with a personalized, accurate offer.</p>
-            <p>If you have any immediate questions, feel free to reply to this email or call us directly.</p>
-            <br/>
-            <p>Best regards,<br/><strong>The SwissCleanMove Team</strong><br/><a href="https://swisscleanmove.ch">swisscleanmove.ch</a></p>
-          </div>
-        `,
-        attachments: [] // No PDF for the customer automatically
+        subject: subject,
+        html: emailTextHtml,
+        attachments: attachments // Re-attach the PDF!
       });
     }
 

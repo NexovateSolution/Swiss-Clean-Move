@@ -133,13 +133,51 @@ export default function ServiceFormsPage() {
     }
   }
 
-  const handleDownloadPDF = (submission: ServiceFormSubmission) => {
+  const handleDownloadPDF = async (submission: ServiceFormSubmission) => {
     try {
-      exportServiceFormToPDF(submission, locale)
-      toast.success(t('toast.pdfDownloaded'))
+      const toastId = toast.loading('Generating premium contract...');
+      
+      // We pass the raw data and let the backend construct the quote object
+      // wait, the backend endpoint expects quoteResult and customer!
+      // Let's pass the locally stored quoteResult, or recalculate if not present.
+      let quoteRes = (submission as any).data?.quoteResult || submission.lineItems;
+      if (!quoteRes || !quoteRes.lineItems) {
+         // Fallback to basic structure if we don't have it
+         quoteRes = {
+            totalEstimatedPrice: submission.estimatedPrice || 0,
+            isFallback: false,
+            quoteNumber: 'Q-000',
+            lineItems: Array.isArray(submission.lineItems) ? submission.lineItems : []
+         };
+      }
+      
+      const payload = {
+         quoteResult: quoteRes,
+         customer: { ...submission, ...((submission as any).data || {}) }
+      };
+
+      const res = await fetch('/api/admin/generate-pdf', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (!res.ok) throw new Error('Failed to generate PDF');
+
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = \`Contract_\${submission.firstName || 'Client'}.pdf\`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+      
+      toast.success(t('toast.pdfDownloaded'), { id: toastId });
     } catch (error) {
-      console.error('Error generating PDF:', error)
-      toast.error(t('errors.generatePdf'))
+      console.error('Error generating PDF:', error);
+      toast.error(t('errors.generatePdf') || 'Error generating PDF');
     }
   }
 
