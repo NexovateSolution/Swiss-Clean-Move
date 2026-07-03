@@ -30,7 +30,7 @@ export function generateQuoteEmailHtml(quoteResult: QuoteResult, data: any, loca
 
     let lineItemsHtml = '';
     quoteResult.lineItems.forEach(item => {
-        let desc = item.description;
+        let desc = item.descriptionEn;
         if (locale === 'de' && item.descriptionDe) desc = item.descriptionDe;
         if (locale === 'fr' && item.descriptionFr) desc = item.descriptionFr;
 
