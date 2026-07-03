@@ -46,6 +46,7 @@ export default function PriceCalculator() {
         ],
         disposal: [
             { id: 'disposalPerM3', name: t('services.disposal.disposalPerM3'), unit: 'perM3From' }
+        ]
     }
 
     // Add-on options (optional extras)
