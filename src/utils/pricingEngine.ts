@@ -386,8 +386,17 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
   if (result.isFallback) {
     result.totalEstimatedPrice = null;
   } else {
-    // Round to nearest integer for clean display
-    result.totalEstimatedPrice = Math.round(result.totalEstimatedPrice!);
+    // Apply automatic 5% discount
+    const discountAmount = result.totalEstimatedPrice! * 0.05;
+    result.lineItems.push({ 
+      id: 'quote.items.discount', 
+      price: -discountAmount,
+      isDiscount: true 
+    });
+    result.totalEstimatedPrice! -= discountAmount;
+
+    // Round to nearest integer (or .50) for clean display, but let's keep it exact for now and format in UI
+    result.totalEstimatedPrice = Math.round(result.totalEstimatedPrice! * 100) / 100;
   }
 
   return result;

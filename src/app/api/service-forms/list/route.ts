@@ -11,10 +11,13 @@ export async function GET(request: NextRequest) {
       }
     })
 
+    // Safely serialize to avoid circular or unexpected type crashes in NextResponse.json
+    const safeSubmissions = JSON.parse(JSON.stringify(submissions));
+
     return NextResponse.json({
       success: true,
-      submissions,
-      total: submissions.length
+      submissions: safeSubmissions,
+      total: safeSubmissions.length
     })
 
   } catch (error) {

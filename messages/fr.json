@@ -3898,6 +3898,7 @@
     },
     "quote": {
       "items": {
+        "discount": "Remise 5%",
         "moving": {
           "base": "Prix de base du déménagement",
           "distance": {

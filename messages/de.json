@@ -3898,7 +3898,8 @@
     },
     "quote": {
       "items": {
-        "moving": {
+          "discount": "Rabatt 5%",
+          "moving": {
           "base": "Umzug Grundpreis",
           "distance": {
             "11_30": "Distanzzuschlag (11-30 km)",
