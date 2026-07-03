@@ -73,7 +73,7 @@ export async function POST(req: Request) {
       return `
       <tr>
         <td style="padding: 10px; border-bottom: 1px solid #ddd;">${label}</td>
-        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: right;">CHF ${item.amount.toFixed(2)}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: right;">CHF ${item.price.toFixed(2)}</td>
       </tr>
       `}).join('');
 
