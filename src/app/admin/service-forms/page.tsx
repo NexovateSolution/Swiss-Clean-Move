@@ -137,23 +137,20 @@ export default function ServiceFormsPage() {
     try {
       const toastId = toast.loading('Generating premium contract...');
       
-      // We pass the raw data and let the backend construct the quote object
-      // wait, the backend endpoint expects quoteResult and customer!
-      // Let's pass the locally stored quoteResult, or recalculate if not present.
-      let quoteRes = (submission as any).data?.quoteResult || submission.lineItems;
+      const subData = (submission.data || {}) as Record<string, any>;
+      let quoteRes = subData.quoteResult;
       if (!quoteRes || !quoteRes.lineItems) {
-         // Fallback to basic structure if we don't have it
          quoteRes = {
-            totalEstimatedPrice: submission.estimatedPrice || 0,
+            totalEstimatedPrice: subData.estimatedPrice || 0,
             isFallback: false,
             quoteNumber: 'Q-000',
-            lineItems: Array.isArray(submission.lineItems) ? submission.lineItems : []
+            lineItems: Array.isArray(subData.lineItems) ? subData.lineItems : []
          };
       }
       
       const payload = {
          quoteResult: quoteRes,
-         customer: { ...submission, ...((submission as any).data || {}) }
+         customer: { ...submission, ...subData }
       };
 
       const res = await fetch('/api/admin/generate-pdf', {
