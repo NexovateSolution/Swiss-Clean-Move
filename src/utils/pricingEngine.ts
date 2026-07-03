@@ -16,6 +16,7 @@ export interface QuoteResult {
   totalEstimatedPrice: number | null;
   isFallback: boolean; // True if price says "On Request" or "Individuelle Offerte"
   lineItems: QuoteLineItem[];
+  quoteNumber?: string;
 }
 
 /**

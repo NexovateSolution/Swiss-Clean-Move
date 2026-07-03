@@ -82,7 +82,7 @@ export function generateQuoteEmailHtml(quoteResult: QuoteResult, data: any, loca
                     <tfoot>
                         <tr style="background-color: #f8fafc;">
                             <td style="padding: 15px 12px; text-align: right; font-size: 18px; font-weight: bold; color: #004b87;">${t.total}:</td>
-                            <td style="padding: 15px 12px; text-align: right; font-size: 18px; font-weight: bold; color: #cc0000;">CHF ${quoteResult.totalPrice.toFixed(2)}</td>
+                            <td style="padding: 15px 12px; text-align: right; font-size: 18px; font-weight: bold; color: #cc0000;">CHF ${(quoteResult.totalEstimatedPrice ?? 0).toFixed(2)}</td>
                         </tr>
                     </tfoot>
                 </table>
