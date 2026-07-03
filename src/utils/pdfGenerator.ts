@@ -43,7 +43,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     return `
     <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; padding: 5px 0;">
       <span>${label}</span>
-      <span>CHF ${item.amount.toFixed(2)}</span>
+      <span>CHF ${item.price.toFixed(2)}</span>
     </div>
   `}).join('');
 

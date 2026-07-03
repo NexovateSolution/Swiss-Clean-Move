@@ -2,10 +2,14 @@ import { PRICING_RULES } from '../lib/pricingRules';
 
 export interface QuoteLineItem {
   id: string; // Translation key
-  amount: number;
+  price: number;
+  description?: string;
   isSurcharge?: boolean;
   isDiscount?: boolean;
   isFallback?: boolean;
+  descriptionEn?: string;
+  descriptionDe?: string;
+  descriptionFr?: string;
 }
 
 export interface QuoteResult {
@@ -79,22 +83,22 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
     let subtotal = 0;
     if (isExpress && ruleset.expressWithin48h) {
       const surcharge = basePrice * ruleset.expressWithin48h;
-      result.lineItems.push({ id: 'quote.items.surcharge.express', amount: surcharge, isSurcharge: true });
+      result.lineItems.push({ id: 'quote.items.surcharge.express', price: surcharge, isSurcharge: true });
       subtotal += surcharge;
     }
     if (isSaturday && ruleset.saturday) {
       const surcharge = basePrice * ruleset.saturday;
-      result.lineItems.push({ id: 'quote.items.surcharge.saturday', amount: surcharge, isSurcharge: true });
+      result.lineItems.push({ id: 'quote.items.surcharge.saturday', price: surcharge, isSurcharge: true });
       subtotal += surcharge;
     }
     if (isSunday && ruleset.sunday) {
       const surcharge = basePrice * ruleset.sunday;
-      result.lineItems.push({ id: 'quote.items.surcharge.sunday', amount: surcharge, isSurcharge: true });
+      result.lineItems.push({ id: 'quote.items.surcharge.sunday', price: surcharge, isSurcharge: true });
       subtotal += surcharge;
     }
     if (isHoliday && ruleset.holiday && !isSunday) { // Don't double charge sunday/holiday usually
       const surcharge = basePrice * ruleset.holiday;
-      result.lineItems.push({ id: 'quote.items.surcharge.holiday', amount: surcharge, isSurcharge: true });
+      result.lineItems.push({ id: 'quote.items.surcharge.holiday', price: surcharge, isSurcharge: true });
       subtotal += surcharge;
     }
     return subtotal;
@@ -112,57 +116,57 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
         break;
       }
 
-      result.lineItems.push({ id: 'quote.items.moving.base', amount: basePrice });
+      result.lineItems.push({ id: 'quote.items.moving.base', price: basePrice });
       result.totalEstimatedPrice! += basePrice;
 
       // Distance
       const distance = extractNumber(formData.distance) || 0;
       if (distance > 10 && distance <= 30) {
-        result.lineItems.push({ id: 'quote.items.moving.distance.11_30', amount: rules.distance['11-30'], isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.moving.distance.11_30', price: rules.distance['11-30'], isSurcharge: true });
         result.totalEstimatedPrice! += rules.distance['11-30'];
       } else if (distance > 30 && distance <= 50) {
-        result.lineItems.push({ id: 'quote.items.moving.distance.31_50', amount: rules.distance['31-50'], isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.moving.distance.31_50', price: rules.distance['31-50'], isSurcharge: true });
         result.totalEstimatedPrice! += rules.distance['31-50'];
       } else if (distance > 50 && distance <= 100) {
-        result.lineItems.push({ id: 'quote.items.moving.distance.51_100', amount: rules.distance['51-100'], isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.moving.distance.51_100', price: rules.distance['51-100'], isSurcharge: true });
         result.totalEstimatedPrice! += rules.distance['51-100'];
       } else if (distance > 100) {
         const extraKm = distance - 100;
         const distCost = rules.distance['51-100'] + (extraKm * rules.distance.perKmOver100);
-        result.lineItems.push({ id: 'quote.items.moving.distance.over100', amount: distCost, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.moving.distance.over100', price: distCost, isSurcharge: true });
         result.totalEstimatedPrice! += distCost;
       }
 
       // Floors without elevator
       if (noElevator && floor >= rules.floorWithoutElevator.thresholdFloor) {
         const floorCost = floor * rules.floorWithoutElevator.perFloor;
-        result.lineItems.push({ id: 'quote.items.surcharge.floor', amount: floorCost, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.surcharge.floor', price: floorCost, isSurcharge: true });
         result.totalEstimatedPrice! += floorCost;
       }
 
       // Carrying distance
       const carryingDistance = extractNumber(formData.carryingDistance) || 0;
       if (carryingDistance >= 20 && carryingDistance <= 50) {
-        result.lineItems.push({ id: 'quote.items.moving.carry.20_50', amount: rules.carryingDistance['20-50'], isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.moving.carry.20_50', price: rules.carryingDistance['20-50'], isSurcharge: true });
         result.totalEstimatedPrice! += rules.carryingDistance['20-50'];
       } else if (carryingDistance > 50) {
-        result.lineItems.push({ id: 'quote.items.moving.carry.over50', amount: rules.carryingDistance.over50, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.moving.carry.over50', price: rules.carryingDistance.over50, isSurcharge: true });
         result.totalEstimatedPrice! += rules.carryingDistance.over50;
       }
 
       // Additional Services
-      if (formData.packingService) { result.lineItems.push({ id: 'quote.items.moving.addon.packing', amount: rules.additionalServices.packingService, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.packingService; }
-      if (formData.unpackingService) { result.lineItems.push({ id: 'quote.items.moving.addon.unpacking', amount: rules.additionalServices.unpackingService, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.unpackingService; }
-      if (formData.furnitureAssembly) { result.lineItems.push({ id: 'quote.items.moving.addon.assembly', amount: rules.additionalServices.furnitureAssembly, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.furnitureAssembly; }
-      if (formData.furnitureDisassembly) { result.lineItems.push({ id: 'quote.items.moving.addon.disassembly', amount: rules.additionalServices.furnitureDisassembly, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.furnitureDisassembly; }
-      if (formData.furnitureLift) { result.lineItems.push({ id: 'quote.items.moving.addon.lift', amount: rules.additionalServices.furnitureLift, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.furnitureLift; }
+      if (formData.packingService) { result.lineItems.push({ id: 'quote.items.moving.addon.packing', price: rules.additionalServices.packingService, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.packingService; }
+      if (formData.unpackingService) { result.lineItems.push({ id: 'quote.items.moving.addon.unpacking', price: rules.additionalServices.unpackingService, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.unpackingService; }
+      if (formData.furnitureAssembly) { result.lineItems.push({ id: 'quote.items.moving.addon.assembly', price: rules.additionalServices.furnitureAssembly, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.furnitureAssembly; }
+      if (formData.furnitureDisassembly) { result.lineItems.push({ id: 'quote.items.moving.addon.disassembly', price: rules.additionalServices.furnitureDisassembly, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.furnitureDisassembly; }
+      if (formData.furnitureLift) { result.lineItems.push({ id: 'quote.items.moving.addon.lift', price: rules.additionalServices.furnitureLift, isSurcharge: true }); result.totalEstimatedPrice! += rules.additionalServices.furnitureLift; }
 
       // Heavy Items
       if (formData.heavyItems && Array.isArray(formData.heavyItems)) {
         formData.heavyItems.forEach((item: string) => {
           const key = item as keyof typeof rules.heavyItems;
           if (rules.heavyItems[key]) {
-            result.lineItems.push({ id: `quote.items.moving.heavy.${key}`, amount: rules.heavyItems[key], isSurcharge: true });
+            result.lineItems.push({ id: `quote.items.moving.heavy.${key}`, price: rules.heavyItems[key], isSurcharge: true });
             result.totalEstimatedPrice! += rules.heavyItems[key];
           }
         });
@@ -173,7 +177,7 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
       const extraHours = extractNumber(formData.extraHours) || 1;
       if (extraWorkers > 0) {
         const staffCost = extraWorkers * rules.extraStaff.additionalWorkerPerHour * extraHours;
-        result.lineItems.push({ id: 'quote.items.moving.extraStaff', amount: staffCost, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.moving.extraStaff', price: staffCost, isSurcharge: true });
         result.totalEstimatedPrice! += staffCost;
       }
 
@@ -192,18 +196,18 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
         break;
       }
 
-      result.lineItems.push({ id: 'quote.items.cleaning.base', amount: basePrice });
+      result.lineItems.push({ id: 'quote.items.cleaning.base', price: basePrice });
       result.totalEstimatedPrice! += basePrice;
 
       // Surcharges
       if (formData.hasBalcony) {
-        const amount = formData.largeBalcony ? rules.surcharges.largeBalcony : rules.surcharges.balcony;
-        result.lineItems.push({ id: 'quote.items.cleaning.addon.balcony', amount, isSurcharge: true });
-        result.totalEstimatedPrice! += amount;
+        const price = formData.largeBalcony ? rules.surcharges.largeBalcony : rules.surcharges.balcony;
+        result.lineItems.push({ id: 'quote.items.cleaning.addon.balcony', price, isSurcharge: true });
+        result.totalEstimatedPrice! += price;
       }
-      if (formData.hasBasement) { result.lineItems.push({ id: 'quote.items.cleaning.addon.basement', amount: rules.surcharges.basement, isSurcharge: true }); result.totalEstimatedPrice! += rules.surcharges.basement; }
-      if (formData.hasAttic) { result.lineItems.push({ id: 'quote.items.cleaning.addon.attic', amount: rules.surcharges.attic, isSurcharge: true }); result.totalEstimatedPrice! += rules.surcharges.attic; }
-      if (formData.hasGarage) { result.lineItems.push({ id: 'quote.items.cleaning.addon.garage', amount: rules.surcharges.garage, isSurcharge: true }); result.totalEstimatedPrice! += rules.surcharges.garage; }
+      if (formData.hasBasement) { result.lineItems.push({ id: 'quote.items.cleaning.addon.basement', price: rules.surcharges.basement, isSurcharge: true }); result.totalEstimatedPrice! += rules.surcharges.basement; }
+      if (formData.hasAttic) { result.lineItems.push({ id: 'quote.items.cleaning.addon.attic', price: rules.surcharges.attic, isSurcharge: true }); result.totalEstimatedPrice! += rules.surcharges.attic; }
+      if (formData.hasGarage) { result.lineItems.push({ id: 'quote.items.cleaning.addon.garage', price: rules.surcharges.garage, isSurcharge: true }); result.totalEstimatedPrice! += rules.surcharges.garage; }
 
       // Dirt Level
       if (dirtLevel === 'extreme' || dirtLevel === 'extrem') {
@@ -211,11 +215,11 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
         break;
       } else if (dirtLevel === 'veryHeavy' || dirtLevel === 'sehr_stark') {
         const dirtCost = basePrice * rules.dirtLevel.veryHeavy;
-        result.lineItems.push({ id: 'quote.items.cleaning.dirtLevel.veryHeavy', amount: dirtCost, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.cleaning.dirtLevel.veryHeavy', price: dirtCost, isSurcharge: true });
         result.totalEstimatedPrice! += dirtCost;
       } else if (dirtLevel === 'heavy' || dirtLevel === 'stark') {
         const dirtCost = basePrice * rules.dirtLevel.heavy;
-        result.lineItems.push({ id: 'quote.items.cleaning.dirtLevel.heavy', amount: dirtCost, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.cleaning.dirtLevel.heavy', price: dirtCost, isSurcharge: true });
         result.totalEstimatedPrice! += dirtCost;
       }
       
@@ -240,7 +244,7 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
         break;
       }
 
-      result.lineItems.push({ id: 'quote.items.disposal.base', amount: basePrice });
+      result.lineItems.push({ id: 'quote.items.disposal.base', price: basePrice });
       result.totalEstimatedPrice! += basePrice;
       break;
     }
@@ -255,21 +259,21 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
       }
       
       let hourlyRate: number = rules.hourlyRates.residential;
-      if (propertyType.includes('office') || propertyType.includes('b├╝ro') || propertyType.includes('praxis')) hourlyRate = rules.hourlyRates.office;
+      if (propertyType.includes('office') || propertyType.includes('büro') || propertyType.includes('praxis')) hourlyRate = rules.hourlyRates.office;
       if (propertyType.includes('commercial') || propertyType.includes('restaurant') || propertyType.includes('gewerbe')) hourlyRate = rules.hourlyRates.commercial;
 
       const basePrice = hourlyRate * hours;
-      result.lineItems.push({ id: `quote.items.maintenance.base`, amount: basePrice });
+      result.lineItems.push({ id: `quote.items.maintenance.base`, price: basePrice });
       result.totalEstimatedPrice! += basePrice;
       
       // Access surcharges
       if (noElevator && floor >= 2) {
         const floorCost = floor * rules.access.noElevatorPerFloor;
-        result.lineItems.push({ id: 'quote.items.surcharge.floor', amount: floorCost, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.surcharge.floor', price: floorCost, isSurcharge: true });
         result.totalEstimatedPrice! += floorCost;
       }
       if (noParking) {
-        result.lineItems.push({ id: 'quote.items.surcharge.noParking', amount: rules.access.noParking, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.surcharge.noParking', price: rules.access.noParking, isSurcharge: true });
         result.totalEstimatedPrice! += rules.access.noParking;
       }
 
@@ -291,17 +295,17 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
       if (isSunday || isHoliday) hourlyRate = rules.hourlyRates.sundayHoliday;
 
       const basePrice = hourlyRate * hours;
-      result.lineItems.push({ id: `quote.items.household.base`, amount: basePrice });
+      result.lineItems.push({ id: `quote.items.household.base`, price: basePrice });
       result.totalEstimatedPrice! += basePrice;
       
       // Access surcharges
       if (noElevator && floor >= 2) {
         const floorCost = floor * rules.access.noElevatorPerFloor;
-        result.lineItems.push({ id: 'quote.items.surcharge.floor', amount: floorCost, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.surcharge.floor', price: floorCost, isSurcharge: true });
         result.totalEstimatedPrice! += floorCost;
       }
       if (noParking) {
-        result.lineItems.push({ id: 'quote.items.surcharge.noParking', amount: rules.access.noParking, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.surcharge.noParking', price: rules.access.noParking, isSurcharge: true });
         result.totalEstimatedPrice! += rules.access.noParking;
       }
 
@@ -328,17 +332,17 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
         break;
       }
 
-      result.lineItems.push({ id: 'quote.items.gastronomy.base', amount: basePrice });
+      result.lineItems.push({ id: 'quote.items.gastronomy.base', price: basePrice });
       result.totalEstimatedPrice! += basePrice;
 
       // Access surcharges
       if (noElevator && floor >= 2) {
         const floorCost = floor * rules.access.noElevatorPerFloor;
-        result.lineItems.push({ id: 'quote.items.surcharge.floor', amount: floorCost, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.surcharge.floor', price: floorCost, isSurcharge: true });
         result.totalEstimatedPrice! += floorCost;
       }
       if (noParking) {
-        result.lineItems.push({ id: 'quote.items.surcharge.noParking', amount: rules.access.noParking, isSurcharge: true });
+        result.lineItems.push({ id: 'quote.items.surcharge.noParking', price: rules.access.noParking, isSurcharge: true });
         result.totalEstimatedPrice! += rules.access.noParking;
       }
 
@@ -367,7 +371,7 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
         break;
       }
 
-      result.lineItems.push({ id: 'quote.items.facilityService.base', amount: basePrice });
+      result.lineItems.push({ id: 'quote.items.facilityService.base', price: basePrice });
       result.totalEstimatedPrice! += basePrice;
       result.totalEstimatedPrice! += applyDateSurcharges(basePrice, rules.dateSurcharges);
       break;
