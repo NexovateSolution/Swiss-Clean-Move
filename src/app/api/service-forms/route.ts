@@ -121,13 +121,23 @@ export async function POST(req: Request) {
       contentType: 'application/pdf'
     }] : [];
 
-    // Send Customer Email
+    // Send Customer Email (Confirmation only, NO LIVE ESTIMATE)
     if (body.email) {
       await sendEmailNotification({
         to: body.email,
-        subject: 'Your Estimated Quote - SwissCleanMove',
-        html: htmlContent,
-        attachments
+        subject: 'Thank You for Your Request - SwissCleanMove',
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+            <h2 style="color: #003366;">Thank You for Your Request!</h2>
+            <p>Dear ${body.firstName || 'Customer'},</p>
+            <p>We have successfully received your service request for <strong>${serviceType}</strong>.</p>
+            <p>Our team is currently reviewing your details. We will process your inquiry as soon as possible and contact you shortly with a personalized, accurate offer.</p>
+            <p>If you have any immediate questions, feel free to reply to this email or call us directly.</p>
+            <br/>
+            <p>Best regards,<br/><strong>The SwissCleanMove Team</strong><br/><a href="https://swisscleanmove.ch">swisscleanmove.ch</a></p>
+          </div>
+        `,
+        attachments: [] // No PDF for the customer automatically
       });
     }
 
