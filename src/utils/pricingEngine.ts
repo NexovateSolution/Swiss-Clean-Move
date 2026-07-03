@@ -1,4 +1,4 @@
-﻿import { PRICING_RULES } from '../lib/pricingRules';
+import { PRICING_RULES } from '../lib/pricingRules';
 
 export interface QuoteLineItem {
   id: string; // Translation key
@@ -254,7 +254,7 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
         break;
       }
       
-      let hourlyRate = rules.hourlyRates.residential;
+      let hourlyRate: number = rules.hourlyRates.residential;
       if (propertyType.includes('office') || propertyType.includes('b├╝ro') || propertyType.includes('praxis')) hourlyRate = rules.hourlyRates.office;
       if (propertyType.includes('commercial') || propertyType.includes('restaurant') || propertyType.includes('gewerbe')) hourlyRate = rules.hourlyRates.commercial;
 
@@ -286,7 +286,7 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
         break;
       }
       
-      let hourlyRate = rules.hourlyRates.weekday;
+      let hourlyRate: number = rules.hourlyRates.weekday;
       if (isSaturday) hourlyRate = rules.hourlyRates.saturday;
       if (isSunday || isHoliday) hourlyRate = rules.hourlyRates.sundayHoliday;
 
