@@ -4,9 +4,21 @@ import fs from 'fs';
 import path from 'path';
 
 export async function generateQuotePdf(quote: QuoteResult, customer: any): Promise<Buffer> {
-  // Read the premium template HTML
-  const templatePath = path.join(process.cwd(), 'public', 'SwissCleanMove_Offerte_A4_Premium.html');
-  let htmlTemplate = fs.readFileSync(templatePath, 'utf8');
+  // Read the premium template HTML (handle Vercel serverless environment)
+  let htmlTemplate = '';
+  try {
+    const templatePath = path.join(process.cwd(), 'public', 'SwissCleanMove_Offerte_A4_Premium.html');
+    htmlTemplate = fs.readFileSync(templatePath, 'utf8');
+  } catch (e) {
+    console.warn("Could not read template locally, trying URL fetch", e);
+    const origin = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+    const res = await fetch(`${origin}/SwissCleanMove_Offerte_A4_Premium.html`);
+    if (res.ok) {
+       htmlTemplate = await res.text();
+    } else {
+       throw new Error("Failed to load PDF template from public directory or URL.");
+    }
+  }
 
   // We inject a script/style block at the end of the body to overlay the dynamic quote data
   // perfectly on top of the blank sections of the pdf2htmlEX output.
@@ -83,10 +95,23 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
   // Inject before closing body tag
   htmlTemplate = htmlTemplate.replace('</body>', `${overlayHtml}</body>`);
 
-  const browser = await puppeteer.launch({
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    headless: "new"
-  });
+  let browser;
+  if (process.env.VERCEL_ENV || process.env.VERCEL_URL || process.env.VERCEL) {
+    const puppeteerCore = require('puppeteer-core');
+    const chromium = require('@sparticuz/chromium');
+    browser = await puppeteerCore.launch({
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
+  } else {
+    const puppeteer = require('puppeteer');
+    browser = await puppeteer.launch({
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      headless: "new"
+    });
+  }
   
   const page = await browser.newPage();
   

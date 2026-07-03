@@ -30,11 +30,14 @@ export async function POST(req: Request) {
           telephone: body.phone || body.telephone || 'N/A',
           streetAndNumber: body.street || 'N/A',
           postalCodeAndCity: body.city || 'N/A',
-          data: body,
-          estimatedPrice: quoteResult.totalEstimatedPrice,
-          lineItems: quoteResult.lineItems as any,
-          quoteSent: true,
-          locale: locale
+          data: {
+            ...body,
+            estimatedPrice: quoteResult.totalEstimatedPrice,
+            lineItems: quoteResult.lineItems,
+            quoteSent: true,
+            locale: locale,
+            quoteResult: quoteResult
+          }
         }
       });
     } catch(dbErr) {
