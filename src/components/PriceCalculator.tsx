@@ -63,7 +63,7 @@ export default function PriceCalculator() {
             squareMeters: squareMeters
         };
         
-        let mappedServiceType = serviceCategory;
+        let mappedServiceType: string = serviceCategory;
         
         // Map specific UI options to engine identifiers
         if (serviceType === 'endOfTenancyHouse') {
