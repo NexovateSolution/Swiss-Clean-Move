@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react';
+import { PRICING_RULES } from '@/lib/pricingRules';
 
 interface HaushaltshilfePricingProps {
   locale: string;
@@ -10,16 +11,17 @@ interface HaushaltshilfePricingProps {
 
 export default function HaushaltshilfePricing({ locale, formService, handleCtaClick }: HaushaltshilfePricingProps) {
   const L = (en: string, fr: string, de: string) => locale === 'en' ? en : locale === 'fr' ? fr : de;
+  const r = PRICING_RULES.household;
 
   const prices = [
-    { en: 'Regular Household Help (weekly)', fr: 'Aide ménagère régulière (hebdomadaire)', de: 'Regelmässige Haushaltshilfe (wöchentlich)', price: 'CHF 42.–' },
-    { en: 'Household Help (every 2 weeks)', fr: 'Aide ménagère (toutes les 2 semaines)', de: 'Haushaltshilfe (14-täglich)', price: 'CHF 45.–' },
-    { en: 'One-Time Household Help', fr: 'Aide ménagère ponctuelle', de: 'Einmalige Haushaltshilfe', price: 'CHF 48.–' },
-    { en: 'Premium Household Help', fr: 'Aide ménagère premium', de: 'Premium Haushaltshilfe', price: 'CHF 49.–' },
-    { en: 'Deep Cleaning / Spring Cleaning', fr: 'Nettoyage en profondeur / Nettoyage de printemps', de: 'Grundreinigung / Frühlingsputz', price: 'CHF 55.–' },
-    { en: 'Ironing Service', fr: 'Service de repassage', de: 'Bügelservice', price: 'CHF 42.–' },
-    { en: 'Window Cleaning', fr: 'Nettoyage de vitres', de: 'Fensterreinigung', price: L('from CHF 7.– / m²', 'à partir de CHF 7.– / m²', 'ab CHF 7.– / m²') },
-    { en: 'Minimum Order', fr: 'Commande minimum', de: 'Mindestauftrag', price: 'CHF 120.–' },
+    { en: 'Regular Household Help (weekly)', fr: 'Aide ménagère régulière (hebdomadaire)', de: 'Regelmässige Haushaltshilfe (wöchentlich)', price: `CHF ${r.regular}.–` },
+    { en: 'Household Help (every 2 weeks)', fr: 'Aide ménagère (toutes les 2 semaines)', de: 'Haushaltshilfe (14-täglich)', price: `CHF ${r.fourteenDays}.–` },
+    { en: 'One-Time Household Help', fr: 'Aide ménagère ponctuelle', de: 'Einmalige Haushaltshilfe', price: `CHF ${r.oneTime}.–` },
+    { en: 'Premium Household Help', fr: 'Aide ménagère premium', de: 'Premium Haushaltshilfe', price: `CHF ${r.premium}.–` },
+    { en: 'Deep Cleaning / Spring Cleaning', fr: 'Nettoyage en profondeur / Nettoyage de printemps', de: 'Grundreinigung / Frühlingsputz', price: `CHF ${r.deepCleaning}.–` },
+    { en: 'Ironing Service', fr: 'Service de repassage', de: 'Bügelservice', price: `CHF ${r.ironing}.–` },
+    { en: 'Window Cleaning', fr: 'Nettoyage de vitres', de: 'Fensterreinigung', price: L(`from CHF ${r.windowPerSqm}.– / m²`, `à partir de CHF ${r.windowPerSqm}.– / m²`, `ab CHF ${r.windowPerSqm}.– / m²`) },
+    { en: 'Minimum Order', fr: 'Commande minimum', de: 'Mindestauftrag', price: `CHF ${r.minOrder}.–` },
   ];
 
   const included = [
@@ -73,7 +75,7 @@ export default function HaushaltshilfePricing({ locale, formService, handleCtaCl
               {prices.map((row, i) => (
                 <tr key={i} className="hover:bg-white transition-colors">
                   <td className="p-4 text-swiss-text font-medium">{row[locale as 'en'|'fr'|'de'] || row.de}</td>
-                  <td className="p-4 text-swiss-text">{row.price.includes('CHF') && !row.price.includes('m²') && row.price !== 'CHF 120.–' ? `${row.price} ${perHour}` : row.price}</td>
+                  <td className="p-4 text-swiss-text">{row.price.includes('CHF') && !row.price.includes('m²') && row.price !== `CHF ${r.minOrder}.–` ? `${row.price} ${perHour}` : row.price}</td>
                 </tr>
               ))}
             </tbody>

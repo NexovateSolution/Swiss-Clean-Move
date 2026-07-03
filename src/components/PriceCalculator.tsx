@@ -3,12 +3,12 @@
 import { useState, useEffect } from 'react'
 import { Calculator } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import { PRICING_RULES } from '@/lib/pricingRules'
+import { calculateQuote } from '@/utils/pricingEngine'
 
 export default function PriceCalculator() {
     const t = useTranslations('priceCalculator')
     const [mounted, setMounted] = useState(false)
-    const [serviceCategory, setServiceCategory] = useState<'cleaning' | 'moving' | 'maintenance' | 'disposal' | 'combo'>('cleaning')
+    const [serviceCategory, setServiceCategory] = useState<'cleaning' | 'moving' | 'maintenance' | 'disposal'>('cleaning')
     const [serviceType, setServiceType] = useState('endOfTenancyApartment')
     const [squareMeters, setSquareMeters] = useState(50)
     const [rooms, setRooms] = useState(1)
@@ -46,139 +46,64 @@ export default function PriceCalculator() {
         ],
         disposal: [
             { id: 'disposalPerM3', name: t('services.disposal.disposalPerM3'), unit: 'perM3From' }
-        ],
-        combo: [
-            { id: 'comboApartment', name: t('services.combo.comboApartment'), unit: 'rooms' },
-            { id: 'comboHouse', name: t('services.combo.comboHouse'), unit: 'fixed' }
-        ]
     }
 
     // Add-on options (optional extras)
     const addOnOptions = [
-        { id: 'addonBasementAttic', label: t('addons.basementAttic'), priceFrom: 80 },
-        { id: 'addonBalconyTerrace', label: t('addons.balconyTerrace'), priceFrom: 70 },
-        { id: 'addonDisposalM3', label: t('addons.disposalPerM3'), priceFrom: 30 },
+        { id: 'addonBasementAttic', label: t('addons.basementAttic'), formDataKey: 'hasBasement' },
+        { id: 'addonBalconyTerrace', label: t('addons.balconyTerrace'), formDataKey: 'hasBalcony' }
     ] as const
 
+    // Price calculation logic
     const calculatePrice = () => {
-        let basePriceMin = 0
-        let display: string | null = null
-
-        if (serviceCategory === 'cleaning') {
-            switch (serviceType) {
-                case 'endOfTenancyApartment': {
-                    const price = PRICING_RULES.cleaning.basePriceByRooms[rooms];
-                    if (price) {
-                        basePriceMin = price;
-                        display = t('display.fromChf', { amount: price });
-                    } else {
-                        display = t('display.priceOnRequest');
-                    }
-                    break;
-                }
-                case 'endOfTenancyHouse':
-                    basePriceMin = PRICING_RULES.cleaning.houseBasePrice;
-                    display = t('display.fromChf', { amount: PRICING_RULES.cleaning.houseBasePrice })
-                    break
-                case 'apartmentHouseCleaning':
-                    basePriceMin = 45 * hours
-                    display = t('display.hourlyRangePerStaff', { min: 45, max: 65, base: basePriceMin })
-                    break
-                case 'deepCleaning':
-                    basePriceMin = 8 * squareMeters
-                    display = t('display.sqmRangeFrom', { min: 8, max: 15, base: basePriceMin })
-                    break
-                case 'constructionCleaning':
-                    basePriceMin = 5 * squareMeters
-                    display = t('display.sqmRangeFrom', { min: 5, max: 8, base: basePriceMin })
-                    break
-                case 'gastronomyKitchenDeep':
-                    basePriceMin = 400
-                    display = t('display.chfRange', { min: 400, max: 1200 })
-                    break
-                case 'gastronomyRegular':
-                    basePriceMin = 150
-                    display = t('display.fromChfPerService', { amount: 150 })
-                    break
-                case 'gastronomySanitary':
-                    basePriceMin = 120
-                    display = t('display.fromChf', { amount: 120 })
-                    break
-                case 'windowCleaning':
-                    basePriceMin = 8
-                    display = t('display.perWindow', { min: 8, max: 15, framesMin: 3, framesMax: 6 })
-                    break
-            }
-        } else if (serviceCategory === 'moving') {
-            switch (serviceType) {
-                case 'movingAssistant':
-                    basePriceMin = 70 * hours
-                    display = t('display.hourlyRangePerPerson', { min: 70, max: 95, base: basePriceMin })
-                    break
-                case 'movingTeam2':
-                    basePriceMin = PRICING_RULES.transport.hourlyTwoMen * hours
-                    display = t('display.fromChfPerHourMin', { amount: PRICING_RULES.transport.hourlyTwoMen, base: basePriceMin })
-                    break
-                case 'vanWithDriver':
-                    basePriceMin = PRICING_RULES.transport.hourlyVanDriver * hours
-                    display = t('display.fromChfPerHourMin', { amount: PRICING_RULES.transport.hourlyVanDriver, base: basePriceMin })
-                    break
-                case 'assembly':
-                    basePriceMin = PRICING_RULES.transport.surcharges.assemblyHourly * hours
-                    display = t('display.hourlyRange', { min: PRICING_RULES.transport.surcharges.assemblyHourly, max: 90, base: basePriceMin })
-                    break
-            }
-        } else if (serviceCategory === 'maintenance') {
-            switch (serviceType) {
-                case 'residentialBuildings':
-                    basePriceMin = 0.6 * squareMeters
-                    display = t('display.sqmRange', { min: 0.6, max: 1.2, base: Math.round(basePriceMin) })
-                    break
-                case 'officesPractices':
-                    basePriceMin = 0.8 * squareMeters
-                    display = t('display.sqmRange', { min: 0.8, max: 1.5, base: Math.round(basePriceMin) })
-                    break
-                case 'stairwellsFlat':
-                    basePriceMin = 120
-                    display = t('display.flatRateFrom', { amount: 120 })
-                    break
-                case 'hourlyRate':
-                    basePriceMin = 45 * hours
-                    display = t('display.hourlyRange', { min: 45, max: 65, base: basePriceMin })
-                    break
-            }
-        } else if (serviceCategory === 'disposal') {
-            switch (serviceType) {
-                case 'disposalPerM3':
-                    basePriceMin = PRICING_RULES.disposal.perCubicMeter
-                    display = t('display.fromChfPerM3', { amount: PRICING_RULES.disposal.perCubicMeter })
-                    break
-            }
-        } else if (serviceCategory === 'combo') {
-            switch (serviceType) {
-                case 'comboApartment': {
-                    const price = PRICING_RULES.combo.basePriceByRooms[rooms];
-                    if (price) {
-                        basePriceMin = price;
-                        display = t('display.fromChf', { amount: price.toLocaleString('de-CH') });
-                    } else {
-                        display = t('display.priceOnRequest');
-                    }
-                    break;
-                }
-                case 'comboHouse':
-                    basePriceMin = PRICING_RULES.combo.houseBasePrice;
-                    display = t('display.fromChf', { amount: PRICING_RULES.combo.houseBasePrice.toLocaleString('de-CH') })
-                    break
-            }
+        const formData: any = {
+            numberOfRooms: rooms,
+            hours: hours,
+            squareMeters: squareMeters
+        };
+        
+        let mappedServiceType = serviceCategory;
+        
+        // Map specific UI options to engine identifiers
+        if (serviceType === 'endOfTenancyHouse') {
+            formData.propertyType = 'house';
+            mappedServiceType = 'cleaning';
+        } else if (serviceType.includes('gastronomy')) {
+            mappedServiceType = 'gastronomy';
+        } else if (serviceType === 'apartmentHouseCleaning') {
+            mappedServiceType = 'household';
+        } else if (serviceType.includes('construction') || serviceType === 'deepCleaning' || serviceType === 'windowCleaning') {
+            mappedServiceType = 'cleaning'; // Engine handles these via fallback or specific rules later
         }
 
-        return { basePriceMin: Math.round(basePriceMin), display: display ?? t('display.priceOnRequest') }
+        if (serviceCategory === 'disposal') {
+            if (serviceType === 'disposalPerM3') mappedServiceType = 'disposal_volume';
+            else mappedServiceType = 'disposal';
+        }
+
+
+        // Apply addons
+        addOnOptions.forEach(a => {
+            if (selectedAddOns[a.id]) {
+                formData[a.formDataKey] = true;
+            }
+        });
+        
+        const quote = calculateQuote(mappedServiceType, formData);
+        
+        let display: string | null = null;
+        if (quote.isFallback) {
+             display = t('display.priceOnRequest');
+        } else if (quote.totalEstimatedPrice) {
+             display = t('display.fromChf', { amount: quote.totalEstimatedPrice });
+        } else {
+             display = t('display.priceOnRequest');
+        }
+
+        return { basePriceMin: Math.round(quote.totalEstimatedPrice || 0), display: display }
     }
 
     const price = calculatePrice()
-    const addOnsTotal = addOnOptions.reduce((sum, a) => sum + (selectedAddOns[a.id] ? a.priceFrom : 0), 0)
-    const totalWithAddOns = price.basePriceMin + addOnsTotal
     const currentService = serviceOptions[serviceCategory].find(s => s.id === serviceType)
 
     // Reset service type when category changes
@@ -218,9 +143,6 @@ export default function PriceCalculator() {
                         <div className="text-2xl md:text-3xl font-bold text-swiss-red text-center">
                             {price.display}
                         </div>
-                        <div className="text-xs text-gray-500">
-                            {t('addonsLine', { addOnsTotal, totalWithAddOns })}
-                        </div>
                     </div>
                     {(currentService?.unit === 'hourlyRange' || currentService?.unit === 'hourlyRangePerPerson' || currentService?.unit === 'hourlyFrom') && (
                         <p className="text-xs text-gray-500 mt-2">{t('forHours', { hours })}</p>
@@ -246,7 +168,6 @@ export default function PriceCalculator() {
                         <option value="moving">{t('categories.moving')}</option>
                         <option value="maintenance">{t('categories.maintenance')}</option>
                         <option value="disposal">{t('categories.disposal')}</option>
-                        <option value="combo">{t('categories.combo')}</option>
                     </select>
                 </div>
 
@@ -342,7 +263,6 @@ export default function PriceCalculator() {
                                     />
                                     <span className="text-sm text-gray-700">{a.label}</span>
                                 </div>
-                                <span className="text-sm font-medium text-gray-900">{t('addonPriceFrom', { amount: a.priceFrom })}</span>
                             </label>
                         ))}
                     </div>

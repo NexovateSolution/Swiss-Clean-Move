@@ -129,6 +129,10 @@ model ServiceFormSubmission {
   remark              String?
   data                Json
   status              String   @default("NEW")
+  estimatedPrice      Float?
+  lineItems           Json?
+  quoteSent           Boolean  @default(false)
+  locale              String?
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt
 }

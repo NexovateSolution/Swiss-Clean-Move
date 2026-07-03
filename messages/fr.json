@@ -3896,6 +3896,75 @@
       "submitting": "Envoi...",
       "submit": "Envoyer"
     },
+    "quote": {
+      "items": {
+        "moving": {
+          "base": "Prix de base du déménagement",
+          "distance": {
+            "11_30": "Supplément de distance (11-30 km)",
+            "31_50": "Supplément de distance (31-50 km)",
+            "51_100": "Supplément de distance (51-100 km)",
+            "over100": "Supplément de distance (>100 km)"
+          },
+          "carry": {
+            "20_50": "Distance de portage (20-50m)",
+            "over50": "Distance de portage (>50m)"
+          },
+          "addon": {
+            "packing": "Service d'emballage",
+            "unpacking": "Service de déballage",
+            "assembly": "Montage de meubles",
+            "disassembly": "Démontage de meubles",
+            "lift": "Monte-meubles"
+          },
+          "heavy": {
+            "piano": "Piano",
+            "grandPiano": "Piano à queue",
+            "safe": "Coffre-fort",
+            "aquarium": "Aquarium",
+            "fitnessEquipment": "Équipement de fitness",
+            "sideBySideFridge": "Réfrigérateur Side-by-Side"
+          },
+          "extraStaff": "Personnel/Véhicule supplémentaire"
+        },
+        "cleaning": {
+          "base": "Prix de base du nettoyage de fin de bail",
+          "addon": {
+            "balcony": "Balcon/Terrasse",
+            "basement": "Cave",
+            "attic": "Grenier",
+            "garage": "Garage"
+          },
+          "dirtLevel": {
+            "heavy": "Fortement encrassé (+15%)",
+            "veryHeavy": "Très fortement encrassé (+30%)"
+          }
+        },
+        "disposal": {
+          "base": "Prix de base de l'élimination"
+        },
+        "maintenance": {
+          "base": "Prix de base du nettoyage d'entretien"
+        },
+        "household": {
+          "base": "Prix de base de l'aide ménagère"
+        },
+        "gastronomy": {
+          "base": "Prix de base du nettoyage de gastronomie"
+        },
+        "facilityService": {
+          "base": "Prix de base des services de conciergerie"
+        },
+        "surcharge": {
+          "floor": "Supplément d'étage (sans ascenseur)",
+          "noParking": "Supplément (pas de parking)",
+          "express": "Supplément express (20%)",
+          "saturday": "Supplément samedi (20%)",
+          "sunday": "Supplément dimanche (30%)",
+          "holiday": "Supplément jours fériés (30%)"
+        }
+      }
+    },
     "upload": {
       "title": "Télécharger des photos (Optionnel)",
       "description": "Joignez des photos de votre propriété pour nous aider à vous fournir un devis plus précis.",

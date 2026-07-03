@@ -3894,7 +3894,76 @@
     "buttons": {
       "close": "Schliessen",
       "submitting": "Wird gesendet...",
-      "submit": "Senden"
+      "submit": "Absenden"
+    },
+    "quote": {
+      "items": {
+        "moving": {
+          "base": "Umzug Grundpreis",
+          "distance": {
+            "11_30": "Distanzzuschlag (11-30 km)",
+            "31_50": "Distanzzuschlag (31-50 km)",
+            "51_100": "Distanzzuschlag (51-100 km)",
+            "over100": "Distanzzuschlag (>100 km)"
+          },
+          "carry": {
+            "20_50": "Trageweg (20-50m)",
+            "over50": "Trageweg (>50m)"
+          },
+          "addon": {
+            "packing": "Einpackservice",
+            "unpacking": "Auspackservice",
+            "assembly": "Möbelmontage",
+            "disassembly": "Möbeldemontage",
+            "lift": "Möbellift"
+          },
+          "heavy": {
+            "piano": "Klavier",
+            "grandPiano": "Flügel",
+            "safe": "Tresor",
+            "aquarium": "Aquarium",
+            "fitnessEquipment": "Fitnessgeräte",
+            "sideBySideFridge": "Kühlschrank Side-by-Side"
+          },
+          "extraStaff": "Zusätzliches Personal/Fahrzeug"
+        },
+        "cleaning": {
+          "base": "Endreinigung Grundpreis",
+          "addon": {
+            "balcony": "Balkon/Terrasse",
+            "basement": "Keller",
+            "attic": "Estrich",
+            "garage": "Garage"
+          },
+          "dirtLevel": {
+            "heavy": "Stark verschmutzt (+15%)",
+            "veryHeavy": "Sehr stark verschmutzt (+30%)"
+          }
+        },
+        "disposal": {
+          "base": "Entsorgung Grundpreis"
+        },
+        "maintenance": {
+          "base": "Unterhaltsreinigung Grundpreis"
+        },
+        "household": {
+          "base": "Haushaltshilfe Grundpreis"
+        },
+        "gastronomy": {
+          "base": "Gastronomiereinigung Grundpreis"
+        },
+        "facilityService": {
+          "base": "Facility Services Grundpreis"
+        },
+        "surcharge": {
+          "floor": "Etagenzuschlag (ohne Lift)",
+          "noParking": "Zuschlag (kein Parkplatz)",
+          "express": "Express-Zuschlag (20%)",
+          "saturday": "Samstagszuschlag (20%)",
+          "sunday": "Sonntagszuschlag (30%)",
+          "holiday": "Feiertagszuschlag (30%)"
+        }
+      }
     },
     "upload": {
       "title": "Bilder hochladen (Optional)",

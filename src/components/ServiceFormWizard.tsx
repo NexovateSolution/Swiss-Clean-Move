@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import toast from 'react-hot-toast'
 import { Upload, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { calculateQuote } from '@/utils/pricingEngine'
 
 // Imports of the forms
 import { MaintenanceCleaningForm } from './service-forms/ServiceFormsPart1'
@@ -342,6 +343,18 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
           </motion.div>
         </AnimatePresence>
       </div>
+      
+      {!isAdmin && (
+        <div className="mt-4 p-4 bg-[#f0f7ff] border-l-4 border-[#003366] rounded-r-lg shadow-sm flex justify-between items-center">
+           <div>
+              <p className="text-sm text-[#003366] font-semibold">Live Estimate</p>
+              <p className="text-xs text-swiss-body">Based on standard pricing rules</p>
+           </div>
+           <div className="text-xl font-bold text-[#003366]">
+              {calculateQuote(service, d).isFallback ? 'Upon Request' : `CHF ${calculateQuote(service, d).totalEstimatedPrice?.toFixed(2)}`}
+           </div>
+        </div>
+      )}
 
       <div className="flex justify-between mt-6">
         {!isFirst ? (
