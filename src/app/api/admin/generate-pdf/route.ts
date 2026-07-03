@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
     const pdfBuffer = await generateQuotePdf(quoteResult as QuoteResult, customer);
 
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(new Uint8Array(pdfBuffer), {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
