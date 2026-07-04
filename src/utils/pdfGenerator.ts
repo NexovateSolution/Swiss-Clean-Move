@@ -98,13 +98,15 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     `;
   }
 
-  const skipKeys = ['firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 'locale', 'serviceName', 'formType', 'quoteResult', 'estimatedPrice', 'lineItems', 'quoteSent', 'data', 'id', 'status', 'createdAt', 'updatedAt', 'pdfPath', 'submissionDate'];
+  const skipKeys = ['firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 'cleanStreet', 'cleanZipCity', 'cleanAddress', 'movingStreet', 'movingZipCity', 'unloadingStreetAndNumber', 'unloadingPostalCodeAndCity', 'locale', 'serviceName', 'formType', 'quoteResult', 'estimatedPrice', 'lineItems', 'quoteSent', 'data', 'id', 'status', 'createdAt', 'updatedAt', 'pdfPath', 'submissionDate'];
   
   const additionalAttributesHtml = Object.entries(customer)
     .filter(([key, val]) => {
       if (skipKeys.includes(key)) return false;
       if (val === '' || val === null || val === undefined || val === false) return false;
       if (typeof val === 'object' && !Array.isArray(val)) return false; // skip raw json blocks
+      // Filter out typical object-daten keys since they are already shown manually
+      if (['apartmentType', 'numberOfRooms', 'numberOfRoomsApartment', 'livingSpaceInM2', 'areaInM2', 'elevatorSizes', 'parkingDistance', 'cleaningTypes', 'frequency', 'cleaningAppointment', 'movingDate'].includes(key)) return false;
       return true;
     })
     .map(([key, val]) => {
@@ -112,7 +114,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
        let formattedVal = val;
        if (val === true) formattedVal = 'Ja';
        if (Array.isArray(val)) formattedVal = val.join(', ');
-       return `<div><strong>${formattedKey}:</strong> ${formattedVal}</div>`;
+       return `<div class="scope-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <strong>${formattedKey}:</strong> ${formattedVal}</div>`;
     }).join('');
 
   const subtotal = regularItems.reduce((sum, item) => sum + item.price, 0);
@@ -465,7 +467,13 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
         <div class="info-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
           <div><strong>Service:</strong> ${customer.serviceName || customer.formType || 'Reinigung / Umzug'}</div>
           <div><strong>Datum:</strong> ${customer.cleaningAppointment || customer.movingDate || 'Nach Absprache'}</div>
-          ${additionalAttributesHtml}
+          ${customer.apartmentType ? `<div><strong>Objekt-Typ:</strong> ${customer.apartmentType}</div>` : ''}
+          ${customer.numberOfRooms || customer.numberOfRoomsApartment ? `<div><strong>Zimmer:</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment} Zi.</div>` : ''}
+          ${customer.livingSpaceInM2 || customer.areaInM2 ? `<div><strong>Fläche:</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2} m²</div>` : ''}
+          ${customer.elevatorSizes ? `<div><strong>Lift:</strong> ${customer.elevatorSizes}</div>` : ''}
+          ${customer.parkingDistance ? `<div><strong>Parkplatz:</strong> ${customer.parkingDistance}</div>` : ''}
+          ${customer.cleaningTypes ? `<div><strong>Reinigungsart:</strong> ${customer.cleaningTypes}</div>` : ''}
+          ${customer.frequency ? `<div><strong>Turnus:</strong> ${customer.frequency}</div>` : ''}
         </div>
       </div>
     </div>
@@ -477,6 +485,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       </div>
       <p style="font-size: 11px; color: #777; margin-top: 0;">Professionelle Erledigung gemäss Ihren Angaben:</p>
       <div class="scope-list">
+        ${additionalAttributesHtml}
         <div class="scope-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Transparente Pauschalpreise</div>
         <div class="scope-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Keine versteckten Kosten</div>
         <div class="scope-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Material & Spesen inklusive</div>
