@@ -13,8 +13,18 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     console.warn("Could not load translations for PDF", e);
   }
 
+  const formatKey = (key: string) => {
+    const parts = key.split('.');
+    const last = parts[parts.length - 1];
+    const secondLast = parts.length > 1 ? parts[parts.length - 2] : '';
+    let combined = secondLast && secondLast !== 'items' && secondLast !== 'quote' && secondLast !== 'serviceForm' && secondLast !== 'wizard'
+       ? `${secondLast} - ${last}` 
+       : last;
+    
+    return combined.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+  };
+
   const t = (key: string) => {
-    // Hardcoded fallback for the discount key if missing from dictionary
     if (key === 'quote.items.discount') {
       if (locale === 'de') return 'Rabatt 5%';
       if (locale === 'fr') return 'Remise 5%';
@@ -27,10 +37,10 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       if (current && current[part]) {
         current = current[part];
       } else {
-        return key; 
+        return formatKey(key); 
       }
     }
-    return typeof current === 'string' ? current : key;
+    return typeof current === 'string' ? current : formatKey(key);
   };
 
   // Convert Logo to Base64 to guarantee it renders in PDF
@@ -58,8 +68,11 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
 
   const lineItemsHtml = regularItems.map(item => {
     let label = t(item.id);
-    if (label === item.id) {
-       label = t('serviceForm.' + item.id);
+    if (label === formatKey(item.id) || label === item.id) {
+       let attempt2 = t('serviceForm.' + item.id);
+       if (attempt2 !== formatKey('serviceForm.' + item.id) && attempt2 !== 'serviceForm.' + item.id) {
+         label = attempt2;
+       }
     }
     return `
     <tr>
@@ -84,6 +97,23 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     </div>
     `;
   }
+
+  const skipKeys = ['firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 'locale', 'serviceName', 'formType', 'quoteResult', 'estimatedPrice', 'lineItems', 'quoteSent', 'data', 'id', 'status', 'createdAt', 'updatedAt', 'pdfPath', 'submissionDate'];
+  
+  const additionalAttributesHtml = Object.entries(customer)
+    .filter(([key, val]) => {
+      if (skipKeys.includes(key)) return false;
+      if (val === '' || val === null || val === undefined || val === false) return false;
+      if (typeof val === 'object' && !Array.isArray(val)) return false; // skip raw json blocks
+      return true;
+    })
+    .map(([key, val]) => {
+       const formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).replace(/([A-Z]+)/g, str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase());
+       let formattedVal = val;
+       if (val === true) formattedVal = 'Ja';
+       if (Array.isArray(val)) formattedVal = val.join(', ');
+       return `<div><strong>${formattedKey}:</strong> ${formattedVal}</div>`;
+    }).join('');
 
   const subtotal = regularItems.reduce((sum, item) => sum + item.price, 0);
   const subtotalRow = `
@@ -397,7 +427,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
         </div>
         <div class="quote-meta-details">
           <div><strong>OFFERTE-NR:</strong> <span>${quoteNumber}</span></div>
-          <div style="margin-top: 5px;"><strong>OFFERTDATUM:</strong> ${quoteDate}</div>
+          <div style="margin-top: 5px;"><strong>OFFERTDATUM:&nbsp;</strong>${quoteDate}</div>
         </div>
       </div>
     </div>
@@ -435,14 +465,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
         <div class="info-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
           <div><strong>Service:</strong> ${customer.serviceName || customer.formType || 'Reinigung / Umzug'}</div>
           <div><strong>Datum:</strong> ${customer.cleaningAppointment || customer.movingDate || 'Nach Absprache'}</div>
-          ${customer.apartmentType ? `<div><strong>Objekt-Typ:</strong> ${customer.apartmentType}</div>` : ''}
-          ${customer.numberOfRooms || customer.numberOfRoomsApartment ? `<div><strong>Zimmer:</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment} Zi.</div>` : ''}
-          ${customer.livingSpaceInM2 || customer.areaInM2 ? `<div><strong>Fläche:</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2} m²</div>` : ''}
-          ${customer.elevatorSizes ? `<div><strong>Lift:</strong> ${customer.elevatorSizes}</div>` : ''}
-          ${customer.parkingDistance ? `<div><strong>Parkplatz:</strong> ${customer.parkingDistance}</div>` : ''}
-          ${customer.unloadingPostalCodeAndCity ? `<div><strong>Abladeort:</strong> ${customer.unloadingPostalCodeAndCity}</div>` : ''}
-          ${customer.cleaningTypes ? `<div><strong>Reinigungsart:</strong> ${customer.cleaningTypes}</div>` : ''}
-          ${customer.frequency ? `<div><strong>Turnus:</strong> ${customer.frequency}</div>` : ''}
+          ${additionalAttributesHtml}
         </div>
       </div>
     </div>

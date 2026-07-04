@@ -92,6 +92,9 @@ export default function ServiceFormsPage() {
       const response = await fetch('/api/service-forms/list?t=' + Date.now(), { cache: 'no-store' })
       if (response.ok) {
         const data = await response.json()
+        if (data.success === false) {
+          toast.error(data.details || data.error || t('errors.fetchSubmissions'))
+        }
         setSubmissions(data.submissions || [])
       } else {
         toast.error(t('errors.fetchSubmissions'))
