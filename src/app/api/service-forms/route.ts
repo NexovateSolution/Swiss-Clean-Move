@@ -171,24 +171,48 @@ export async function POST(req: Request) {
       console.warn("Could not load translations for Email", e);
     }
   
+    const formatKey = (key: string) => {
+      const parts = key.split('.');
+      const last = parts[parts.length - 1];
+      const secondLast = parts.length > 1 ? parts[parts.length - 2] : '';
+      let combined = secondLast && secondLast !== 'items' && secondLast !== 'quote' && secondLast !== 'serviceForm' && secondLast !== 'wizard'
+         ? `${secondLast} - ${last}` 
+         : last;
+      
+      let formatted = combined.replace(/([A-Z])/g, ' $1').replace(/\b\w/g, str => str.toUpperCase());
+      if (locale === 'de') {
+        formatted = formatted.replace(/Base/g, 'Basis');
+      }
+      return formatted;
+    };
+
     const t = (key: string) => {
+      if (key === 'quote.items.discount') {
+        if (locale === 'de') return 'Rabatt 5%';
+        if (locale === 'fr') return 'Remise 5%';
+        return 'Discount 5%';
+      }
+
       const parts = key.split('.');
       let current = messages;
       for (const part of parts) {
         if (current && current[part]) {
           current = current[part];
         } else {
-          return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()); // Fallback
+          return formatKey(key); 
         }
       }
-      return typeof current === 'string' ? current : key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+      return typeof current === 'string' ? current : formatKey(key);
     };
   
     // Format Email HTML
     const lineItemsHtml = quoteResult.lineItems.map(item => {
       let label = t(item.id);
-      if (label === item.id || label === item.id.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())) {
-         label = t('serviceForm.' + item.id);
+      if (label === formatKey(item.id) || label === item.id) {
+         let attempt2 = t('serviceForm.' + item.id);
+         if (attempt2 !== formatKey('serviceForm.' + item.id) && attempt2 !== 'serviceForm.' + item.id) {
+           label = attempt2;
+         }
       }
       return `
       <tr>
@@ -199,7 +223,7 @@ export async function POST(req: Request) {
 
 
     const totalHtml = quoteResult.isFallback 
-      ? `Price Upon Request` 
+      ? (locale === 'de' ? 'Auf Anfrage' : locale === 'fr' ? 'Sur Demande' : 'Price Upon Request') 
       : `CHF ${quoteResult.totalEstimatedPrice?.toFixed(2)}`;
 
     let translatedIntro = '';

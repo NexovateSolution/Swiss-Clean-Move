@@ -3,8 +3,153 @@ import fs from 'fs';
 import path from 'path';
 
 export async function generateQuotePdf(quote: QuoteResult, customer: any): Promise<Buffer> {
-  const locale = customer.locale || 'de';
+  const locale = (customer.locale || 'de') as 'de' | 'en' | 'fr';
+
+  const pdfDict = {
+    de: {
+      thankYou: 'Herzlichen Dank',
+      thankYouDesc: 'FÜR IHRE ANFRAGE UND DAS VERTRAUEN IN SWISSCLEANMOVE',
+      offer: 'OFFERTE',
+      transparent: 'TRANSPARENT, ZUVERLÄSSIG, PROFESSIONELL',
+      quoteNo: 'OFFERTE-NR:',
+      quoteDate: 'OFFERTDATUM:',
+      customer: 'KUNDEN',
+      objectData: 'OBJEKTDATEN',
+      date: 'Datum:',
+      propertyType: 'Objektart:',
+      area: 'Fläche:',
+      rooms: 'Zimmer:',
+      lift: 'Lift:',
+      parking: 'Parkplatz:',
+      cleaningType: 'Reinigungsart:',
+      frequency: 'Turnus:',
+      destinationAddress: 'Zieladresse:',
+      destinationType: 'Ziel Objektart:',
+      destinationArea: 'Ziel Fläche:',
+      destinationLift: 'Ziel Lift:',
+      destinationParking: 'Ziel Parkplatz:',
+      scope: 'LEISTUNGSUMFANG',
+      scopeDesc: 'Professionelle Erledigung gemäss Ihren Angaben:',
+      quoteFixed: 'ANGEBOT – FESTPREIS',
+      position: 'POSITION',
+      price: 'PREIS (CHF)',
+      subtotal: 'ZWISCHENSUMME',
+      discount: 'RABATT 5 %',
+      youSave: 'SIE SPAREN',
+      totalFixed: 'GESAMTPREIS (Festpreis)',
+      guaranteeTitle: '100 % ABNAHMEGARANTIE',
+      guaranteeDesc: 'Wir reinigen professionell inkl. Schweizer Übergabegarantie.',
+      validTitle: 'DIESE OFFERTE IST GÜLTIG',
+      validDesc: 'Diese Offerte ist während 30 Tagen gültig. Wir danken Ihnen für das Vertrauen und freuen uns auf die Zusammenarbeit.',
+      confirmation: 'KUNDENBESTÄTIGUNG',
+      signature: 'Unterschrift:',
+      lookingForward: 'WIR FREUEN UNS AUF IHREN AUFTRAG',
+      questions: 'Bei Fragen stehen wir Ihnen jederzeit gerne zur Verfügung.',
+      regards: 'Freundliche Grüsse',
+      team: 'Ihr SwissCleanMove Team',
+      footerQuality: 'PREMIUM QUALITÄT',
+      footerReliable: 'ZUVERLÄSSIG & PÜNKTLICH',
+      footerSolution: 'IMMER LÖSUNGSORIENTIERT',
+      footerCleanliness: 'SAUBERKEIT AUF DIE SIE SICH VERLASSEN KÖNNEN',
+      onRequest: 'Auf Anfrage'
+    },
+    en: {
+      thankYou: 'Thank You',
+      thankYouDesc: 'FOR YOUR INQUIRY AND TRUST IN SWISSCLEANMOVE',
+      offer: 'QUOTE',
+      transparent: 'TRANSPARENT, RELIABLE, PROFESSIONAL',
+      quoteNo: 'QUOTE NO:',
+      quoteDate: 'QUOTE DATE:',
+      customer: 'CUSTOMER',
+      objectData: 'PROPERTY DATA',
+      date: 'Date:',
+      propertyType: 'Property Type:',
+      area: 'Area:',
+      rooms: 'Rooms:',
+      lift: 'Lift:',
+      parking: 'Parking:',
+      cleaningType: 'Cleaning Type:',
+      frequency: 'Frequency:',
+      destinationAddress: 'Destination Address:',
+      destinationType: 'Destination Type:',
+      destinationArea: 'Destination Area:',
+      destinationLift: 'Destination Lift:',
+      destinationParking: 'Destination Parking:',
+      scope: 'SCOPE OF SERVICES',
+      scopeDesc: 'Professional execution according to your specifications:',
+      quoteFixed: 'QUOTE - FIXED PRICE',
+      position: 'POSITION',
+      price: 'PRICE (CHF)',
+      subtotal: 'SUBTOTAL',
+      discount: 'DISCOUNT 5 %',
+      youSave: 'YOU SAVE',
+      totalFixed: 'TOTAL (Fixed Price)',
+      guaranteeTitle: '100% ACCEPTANCE GUARANTEE',
+      guaranteeDesc: 'We clean professionally incl. Swiss handover guarantee.',
+      validTitle: 'THIS QUOTE IS VALID',
+      validDesc: 'This quote is valid for 30 days. We thank you for your trust and look forward to working with you.',
+      confirmation: 'CUSTOMER CONFIRMATION',
+      signature: 'Signature:',
+      lookingForward: 'WE LOOK FORWARD TO YOUR ORDER',
+      questions: 'If you have any questions, please do not hesitate to contact us.',
+      regards: 'Kind regards',
+      team: 'Your SwissCleanMove Team',
+      footerQuality: 'PREMIUM QUALITY',
+      footerReliable: 'RELIABLE & PUNCTUAL',
+      footerSolution: 'ALWAYS SOLUTION-ORIENTED',
+      footerCleanliness: 'CLEANLINESS YOU CAN RELY ON',
+      onRequest: 'On Request'
+    },
+    fr: {
+      thankYou: 'Merci Beaucoup',
+      thankYouDesc: 'POUR VOTRE DEMANDE ET VOTRE CONFIANCE EN SWISSCLEANMOVE',
+      offer: 'DEVIS',
+      transparent: 'TRANSPARENT, FIABLE, PROFESSIONNEL',
+      quoteNo: 'DEVIS N°:',
+      quoteDate: 'DATE DU DEVIS:',
+      customer: 'CLIENT',
+      objectData: 'DONNÉES DE LA PROPRIÉTÉ',
+      date: 'Date:',
+      propertyType: 'Type de Propriété:',
+      area: 'Surface:',
+      rooms: 'Pièces:',
+      lift: 'Ascenseur:',
+      parking: 'Parking:',
+      cleaningType: 'Type de Nettoyage:',
+      frequency: 'Fréquence:',
+      destinationAddress: 'Adresse de Dest.:',
+      destinationType: 'Type de Dest.:',
+      destinationArea: 'Surface de Dest.:',
+      destinationLift: 'Ascenseur Dest.:',
+      destinationParking: 'Parking Dest.:',
+      scope: 'ÉTENDUE DES SERVICES',
+      scopeDesc: 'Exécution professionnelle selon vos spécifications:',
+      quoteFixed: 'DEVIS - PRIX FIXE',
+      position: 'POSITION',
+      price: 'PRIX (CHF)',
+      subtotal: 'SOUS-TOTAL',
+      discount: 'REMISE 5 %',
+      youSave: 'VOUS ÉCONOMISEZ',
+      totalFixed: 'TOTAL (Prix Fixe)',
+      guaranteeTitle: 'GARANTIE D\'ACCEPTATION À 100%',
+      guaranteeDesc: 'Nous nettoyons professionnellement incl. garantie de remise suisse.',
+      validTitle: 'CE DEVIS EST VALABLE',
+      validDesc: 'Ce devis est valable pendant 30 jours. Nous vous remercions de votre confiance.',
+      confirmation: 'CONFIRMATION DU CLIENT',
+      signature: 'Signature:',
+      lookingForward: 'NOUS ATTENDONS VOTRE COMMANDE',
+      questions: 'Si vous avez des questions, n\'hésitez pas à nous contacter.',
+      regards: 'Meilleures salutations',
+      team: 'Votre équipe SwissCleanMove',
+      footerQuality: 'QUALITÉ PREMIUM',
+      footerReliable: 'FIABLE & PONCTUEL',
+      footerSolution: 'TOUJOURS ORIENTÉ SOLUTION',
+      footerCleanliness: 'UNE PROPRETÉ SUR LAQUELLE VOUS POUVEZ COMPTER',
+      onRequest: 'Sur Demande'
+    }
+  };
   
+  const locDict = pdfDict[locale] || pdfDict.de;
   let messages: any = {};
   try {
     const messagesPath = path.join(process.cwd(), 'messages', `${locale}.json`);
@@ -86,14 +231,14 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
   if (discountItem) {
     discountRow = `
     <tr>
-      <td style="padding: 8px 0; border-bottom: 1px solid #001233; color: #cc0000; font-weight: bold; font-size: 13px;">RABATT 5 %</td>
+      <td style="padding: 8px 0; border-bottom: 1px solid #001233; color: #cc0000; font-weight: bold; font-size: 13px;">${locDict.discount}</td>
       <td style="padding: 8px 0; border-bottom: 1px solid #001233; text-align: right; color: #cc0000; font-size: 13px;">- CHF ${Math.abs(discountItem.price).toFixed(2)}</td>
     </tr>
     `;
     discountBox = `
     <div style="background-color: #f8f9fa; border-radius: 8px; padding: 15px; text-align: center; margin-bottom: 15px;">
-      <div style="color: #cc0000; font-weight: bold; font-size: 14px; border-bottom: 1px solid #ddd; padding-bottom: 8px; margin-bottom: 8px;">5 % RABATT</div>
-      <div style="color: #333; font-size: 12px;">SIE SPAREN</div>
+      <div style="color: #cc0000; font-weight: bold; font-size: 14px; border-bottom: 1px solid #ddd; padding-bottom: 8px; margin-bottom: 8px;">${locDict.discount}</div>
+      <div style="color: #333; font-size: 12px;">${locDict.youSave}</div>
       <div style="color: #cc0000; font-weight: bold; font-size: 18px;">CHF ${Math.abs(discountItem.price).toFixed(2)}</div>
     </div>
     `;
@@ -139,7 +284,17 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     cleanSpecialGlass: { de: 'Spezialglas', en: 'Special Glass', fr: 'Verre Spécial' },
     cleanShuttersBlinds: { de: 'Storen / Rollläden', en: 'Shutters / Blinds', fr: 'Stores / Volets' },
     cleanCondition: { de: 'Zustand', en: 'Condition', fr: 'État' },
-    cleanOutdoorArea: { de: 'Aussenbereich', en: 'Outdoor Area', fr: 'Espace Extérieur' }
+    cleanOutdoorArea: { de: 'Aussenbereich', en: 'Outdoor Area', fr: 'Espace Extérieur' },
+    facilityServiceType: { de: 'Facility Service Art', en: 'Facility Service Type', fr: 'Type de Facility Service' },
+    flexibility: { de: 'Flexibilität', en: 'Flexibility', fr: 'Flexibilité' },
+    accessType: { de: 'Zugangsart', en: 'Access Type', fr: 'Type d\'Accès' },
+    parkingOptions: { de: 'Parkmöglichkeiten', en: 'Parking Options', fr: 'Options de Stationnement' },
+    cleaningFrequency: { de: 'Reinigungsintervall', en: 'Cleaning Frequency', fr: 'Fréquence de Nettoyage' },
+    maintenanceCleaningItems: { de: 'Unterhaltsreinigung Elemente', en: 'Maintenance Cleaning Items', fr: 'Éléments d\'Entretien' },
+    parkingAvailable: { de: 'Parkplatz Vorhanden', en: 'Parking Available', fr: 'Parking Disponible' },
+    streetNo: { de: 'Strasse Nr', en: 'Street No', fr: 'Rue No' },
+    zipCity: { de: 'PLZ Ort', en: 'Zip City', fr: 'NPA Localité' },
+    officeCleaningItems: { de: 'Büroreinigung Elemente', en: 'Office Cleaning Items', fr: 'Éléments de Nettoyage de Bureau' }
   };
 
   const translatedValues: Record<string, any> = {
@@ -153,7 +308,16 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     d50plus: { de: '> 50m', en: '> 50m', fr: '> 50m' },
     email: { de: 'E-Mail', en: 'Email', fr: 'E-mail' },
     phone: { de: 'Telefon', en: 'Phone', fr: 'Téléphone' },
-    whatsapp: { de: 'WhatsApp', en: 'WhatsApp', fr: 'WhatsApp' }
+    whatsapp: { de: 'WhatsApp', en: 'WhatsApp', fr: 'WhatsApp' },
+    maintenanceCleaning: { de: 'Unterhaltsreinigung', en: 'Maintenance Cleaning', fr: 'Nettoyage d\'Entretien' },
+    flexible: { de: 'Flexibel', en: 'Flexible', fr: 'Flexible' },
+    keyMailbox: { de: 'Schlüssel im Briefkasten', en: 'Key in Mailbox', fr: 'Clé dans la Boîte aux Lettres' },
+    mustReserve: { de: 'Muss Reserviert Werden', en: 'Must be Reserved', fr: 'Doit être Réservé' },
+    daily: { de: 'Täglich', en: 'Daily', fr: 'Quotidiennement' },
+    weekly: { de: 'Wöchentlich', en: 'Weekly', fr: 'Hebdomadaire' },
+    staircaseCleaning: { de: 'Treppenhausreinigung', en: 'Staircase Cleaning', fr: 'Nettoyage des Escaliers' },
+    yes: { de: 'Ja', en: 'Yes', fr: 'Oui' },
+    no: { de: 'Nein', en: 'No', fr: 'Non' }
   };
   
   const additionalAttributesHtml = Object.entries(customer)
@@ -184,7 +348,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
   const subtotal = regularItems.reduce((sum, item) => sum + item.price, 0);
   const subtotalRow = `
     <tr>
-      <td style="padding: 8px 0; font-weight: bold; color: #001233; font-size: 13px;">ZWISCHENSUMME</td>
+      <td style="padding: 8px 0; font-weight: bold; color: #001233; font-size: 13px;">${locDict.subtotal}</td>
       <td style="padding: 8px 0; text-align: right; font-weight: bold; color: #001233; font-size: 13px;">CHF ${subtotal.toFixed(2)}</td>
     </tr>
   `;
@@ -477,23 +641,23 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     <div class="separator"></div>
     
     <div class="thank-you">
-      <h2>Herzlichen Dank</h2>
-      <p>Für Ihre Anfrage und das Vertrauen in SwissCleanMove</p>
+      <h2>${locDict.thankYou}</h2>
+      <p>${locDict.thankYouDesc}</p>
     </div>
     
     <div class="title-section">
       <div class="title-left">
-        <h1>OFFERTE</h1>
-        <p>${locale === 'de' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Umzug' : (customer.serviceName === 'house-cleaning' || customer.formType === 'cleaning' ? 'Hausreinigung' : 'Reinigung')) : (locale === 'fr' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Déménagement' : 'Nettoyage') : (customer.serviceName || customer.formType || 'Service'))} – Offerte</p>
-        <span style="font-size: 10px; color: #777;">TRANSPARENT, ZUVERLÄSSIG, PROFESSIONELL</span>
+        <h1>${locDict.offer}</h1>
+        <p>${locale === 'de' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Umzug' : (customer.serviceName === 'house-cleaning' || customer.formType === 'cleaning' ? 'Hausreinigung' : 'Reinigung')) : (locale === 'fr' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Déménagement' : 'Nettoyage') : (customer.serviceName || customer.formType || 'Service'))} – ${locDict.offer.charAt(0).toUpperCase() + locDict.offer.slice(1).toLowerCase()}</p>
+        <span style="font-size: 10px; color: #777;">${locDict.transparent}</span>
       </div>
       <div class="quote-meta">
         <div class="quote-meta-icon">
           <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
         </div>
         <div class="quote-meta-details">
-          <div><strong>OFFERTE-NR:</strong> <span>${quoteNumber}</span></div>
-          <div style="margin-top: 5px;"><strong>OFFERTDATUM:&nbsp;</strong>${quoteDate}</div>
+          <div><strong>${locDict.quoteNo}</strong> <span>${quoteNumber}</span></div>
+          <div style="margin-top: 5px;"><strong>${locDict.quoteDate}&nbsp;</strong>${quoteDate}</div>
         </div>
       </div>
     </div>
@@ -502,7 +666,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       <div class="info-box">
         <div class="info-header">
           <svg style="fill: #cc0000;" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          KUNDEN
+          ${locDict.customer}
         </div>
         <div class="info-content">
           <strong style="font-size: 14px; display: block; margin-bottom: 5px;">${customer.firstName} ${customer.lastName || customer.name}</strong>
@@ -526,27 +690,27 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       <div class="info-box">
         <div class="info-header">
           <svg style="fill: #001233;" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.82L17.18 19H6.82L12 5.82zM11 10h2v4h-2v-4zm0 6h2v2h-2v-2z" transform="translate(0, 0) scale(1)"/><path d="M4 10v11h16V10L12 3 4 10zm7 9H9v-4h2v4zm4 0h-2v-4h2v4zm2-6H7V8h10v5z"/></svg>
-          OBJEKTDATEN
+          ${locDict.objectData}
         </div>
         <div class="info-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-          <div style="grid-column: span 2;"><strong>Datum:</strong> ${customer.cleaningAppointment || customer.movingDate || 'Nach Absprache'}</div>
+          <div style="grid-column: span 2;"><strong>${locDict.date}</strong> ${customer.cleaningAppointment || customer.movingDate || locDict.onRequest}</div>
           
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
-          ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>Property Type:</strong> ${customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType}</div>` : ''}
-          ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters ? `<div><strong>Area:</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters} m²</div>` : ''}
-          ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms ? `<div><strong>Zimmer:</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms} Zi.</div>` : ''}
-          ${customer.elevatorSizes || customer.elevator ? `<div><strong>Lift:</strong> ${customer.elevatorSizes || customer.elevator}</div>` : ''}
-          ${customer.parkingDistance ? `<div><strong>Parkplatz:</strong> ${customer.parkingDistance}</div>` : ''}
-          ${customer.cleaningTypes ? `<div><strong>Reinigungsart:</strong> ${customer.cleaningTypes}</div>` : ''}
-          ${customer.frequency ? `<div><strong>Turnus:</strong> ${customer.frequency}</div>` : ''}
+          ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>${locDict.propertyType}</strong> ${customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType}</div>` : ''}
+          ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters ? `<div><strong>${locDict.area}</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters} m²</div>` : ''}
+          ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms ? `<div><strong>${locDict.rooms}</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms} Zi.</div>` : ''}
+          ${customer.elevatorSizes || customer.elevator ? `<div><strong>${locDict.lift}</strong> ${customer.elevatorSizes || customer.elevator}</div>` : ''}
+          ${customer.parkingDistance ? `<div><strong>${locDict.parking}</strong> ${customer.parkingDistance}</div>` : ''}
+          ${customer.cleaningTypes ? `<div><strong>${locDict.cleaningType}</strong> ${customer.cleaningTypes}</div>` : ''}
+          ${customer.frequency ? `<div><strong>${locDict.frequency}</strong> ${customer.frequency}</div>` : ''}
           
           ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet ? `
             <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
-            <div style="grid-column: span 2;"><strong>Destination Address:</strong> ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || 'N/A'}, ${customer.unloadingPostalCodeAndCity || customer.movingZipCity || customer.destinationCity || 'N/A'}</div>
-            ${customer.unloadingApartmentType || customer.destinationPropertyType ? `<div><strong>Destination Type:</strong> ${customer.unloadingApartmentType || customer.destinationPropertyType}</div>` : ''}
-            ${customer.unloadingAreaInM2 || customer.destinationArea ? `<div><strong>Destination Area:</strong> ca. ${customer.unloadingAreaInM2 || customer.destinationArea} m²</div>` : ''}
-            ${customer.unloadingElevatorSizes || customer.destinationElevator ? `<div><strong>Destination Lift:</strong> ${customer.unloadingElevatorSizes || customer.destinationElevator}</div>` : ''}
-            ${customer.unloadingParkingDistance || customer.destinationParking ? `<div><strong>Destination Parkplatz:</strong> ${customer.unloadingParkingDistance || customer.destinationParking}</div>` : ''}
+            <div style="grid-column: span 2;"><strong>${locDict.destinationAddress || 'Destination Address:'}</strong> ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || 'N/A'}, ${customer.unloadingPostalCodeAndCity || customer.movingZipCity || customer.destinationCity || 'N/A'}</div>
+            ${customer.unloadingApartmentType || customer.destinationPropertyType ? `<div><strong>${locDict.destinationType}</strong> ${customer.unloadingApartmentType || customer.destinationPropertyType}</div>` : ''}
+            ${customer.unloadingAreaInM2 || customer.destinationArea ? `<div><strong>${locDict.destinationArea}</strong> ca. ${customer.unloadingAreaInM2 || customer.destinationArea} m²</div>` : ''}
+            ${customer.unloadingElevatorSizes || customer.destinationElevator ? `<div><strong>${locDict.destinationLift}</strong> ${customer.unloadingElevatorSizes || customer.destinationElevator}</div>` : ''}
+            ${customer.unloadingParkingDistance || customer.destinationParking ? `<div><strong>${locDict.destinationParking}</strong> ${customer.unloadingParkingDistance || customer.destinationParking}</div>` : ''}
           ` : ''}
         </div>
       </div>
@@ -555,9 +719,9 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     <div class="scope-box">
       <div class="scope-header">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        LEISTUNGSUMFANG
+        ${locDict.scope}
       </div>
-      <p style="font-size: 11px; color: #777; margin-top: 0;">Professionelle Erledigung gemäss Ihren Angaben:</p>
+      <p style="font-size: 11px; color: #777; margin-top: 0;">${locDict.scopeDesc}</p>
       <div class="scope-list">
         ${additionalAttributesHtml}
       </div>
@@ -567,14 +731,14 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       <div class="pricing-table-container">
         <div class="pricing-header">
           <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.41l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.41zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
-          ANGEBOT – FESTPREIS
+          ${locDict.quoteFixed}
         </div>
         <div style="padding: 15px;">
           <table class="pricing-table">
             <thead>
               <tr>
-                <th>POSITION</th>
-                <th>PREIS (CHF)</th>
+                <th>${locDict.position}</th>
+                <th>${locDict.price}</th>
               </tr>
             </thead>
             <tbody>
@@ -585,8 +749,8 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
           </table>
         </div>
         <div class="total-row">
-          <div class="total-label">GESAMTPREIS (Festpreis)</div>
-          <div class="total-amount">${isFallback ? 'Auf Anfrage' : 'CHF ' + totalPrice.toFixed(2)}</div>
+          <div class="total-label">${locDict.totalFixed}</div>
+          <div class="total-amount">${isFallback ? locDict.onRequest : 'CHF ' + totalPrice.toFixed(2)}</div>
         </div>
       </div>
       
@@ -594,37 +758,37 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
         ${discountBox}
         <div class="guarantee-box">
           <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          <div class="guarantee-title">100 %<br>ABNAHMEGARANTIE</div>
-          <p style="margin: 0; color: #555;">Wir reinigen professionell inkl. Schweizer Übergabegarantie.</p>
+          <div class="guarantee-title">${locDict.guaranteeTitle.replace(' ', '<br>')}</div>
+          <p style="margin: 0; color: #555;">${locDict.guaranteeDesc}</p>
         </div>
       </div>
     </div>
     
     <div class="footer-grid">
       <div class="footer-col">
-        <h4><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg> DIESE OFFERTE IST GÜLTIG</h4>
-        <p style="margin:0; color:#555;">Diese Offerte ist während 30 Tagen gültig. Wir danken Ihnen für das Vertrauen und freuen uns auf die Zusammenarbeit.</p>
+        <h4><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg> ${locDict.validTitle}</h4>
+        <p style="margin:0; color:#555;">${locDict.validDesc}</p>
       </div>
       <div class="footer-col">
-        <h4>KUNDENBESTÄTIGUNG</h4>
+        <h4>${locDict.confirmation}</h4>
         <div style="margin-top: 15px; display: flex; align-items: flex-end; gap: 10px;">
-          <span>Datum:</span> <div class="signature-line"></div>
+          <span>${locDict.date}</span> <div class="signature-line"></div>
         </div>
         <div style="margin-top: 15px; display: flex; align-items: flex-end; gap: 10px;">
-          <span>Unterschrift:</span> <div class="signature-line"></div>
+          <span>${locDict.signature}</span> <div class="signature-line"></div>
         </div>
       </div>
       <div class="footer-col">
-        <h4><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg> WIR FREUEN UNS AUF IHREN AUFTRAG</h4>
-        <p style="margin:0; color:#555;">Bei Fragen stehen wir Ihnen jederzeit gerne zur Verfügung.<br><br>Freundliche Grüsse<br>Ihr SwissCleanMove Team</p>
+        <h4><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg> ${locDict.lookingForward}</h4>
+        <p style="margin:0; color:#555;">${locDict.questions}<br><br>${locDict.regards}<br>${locDict.team}</p>
       </div>
     </div>
     
     <div class="features">
-      <div class="feature"><svg style="fill:#001233;" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> PREMIUM QUALITÄT</div>
-      <div class="feature"><svg style="fill:#001233;" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> ZUVERLÄSSIG & PÜNKTLICH</div>
-      <div class="feature"><svg style="fill:#001233;" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg> IMMER LÖSUNGSORIENTIERT</div>
-      <div class="feature"><svg style="fill:#001233;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> SAUBERKEIT AUF DIE SIE SICH VERLASSEN KÖNNEN</div>
+      <div class="feature"><svg style="fill:#001233;" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> ${locDict.footerQuality}</div>
+      <div class="feature"><svg style="fill:#001233;" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> ${locDict.footerReliable}</div>
+      <div class="feature"><svg style="fill:#001233;" viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg> ${locDict.footerSolution}</div>
+      <div class="feature"><svg style="fill:#001233;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> ${locDict.footerCleanliness}</div>
     </div>
   </body>
   </html>
