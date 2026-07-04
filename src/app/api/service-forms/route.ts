@@ -7,11 +7,128 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
+/**
+ * Normalizes wizard form field names to canonical names expected by
+ * pricingEngine.ts and pdfGenerator.ts.
+ * 
+ * The wizard uses prefixed names like "sharedPropertyType", "sharedRooms",
+ * "moveFromStreet", "moveToStreet", etc. but the pricing engine and PDF
+ * generator expect "propertyType", "rooms", "numberOfRooms", etc.
+ */
+function normalizeFormFields(body: any): any {
+  const normalized = { ...body };
+
+  // Property details (from the "propertyDetails" wizard step)
+  if (body.sharedPropertyType && !body.propertyType) {
+    normalized.propertyType = body.sharedPropertyType;
+    normalized.apartmentType = body.sharedPropertyType;
+  }
+  if (body.sharedRooms && !body.numberOfRooms) {
+    normalized.numberOfRooms = body.sharedRooms;
+    normalized.rooms = body.sharedRooms;
+    normalized.numberOfRoomsApartment = body.sharedRooms;
+  }
+  if (body.sharedLivingArea && !body.livingSpaceInM2) {
+    normalized.livingSpaceInM2 = body.sharedLivingArea;
+    normalized.areaInM2 = body.sharedLivingArea;
+    normalized.squareMeters = body.sharedLivingArea;
+    normalized.area = body.sharedLivingArea;
+  }
+  if (body.sharedFloor && !body.floor) {
+    normalized.floor = body.sharedFloor;
+  }
+  if (body.sharedElevator !== undefined && body.elevator === undefined) {
+    normalized.elevator = body.sharedElevator;
+    normalized.elevatorSizes = body.sharedElevator === 'yes' ? 'Yes' : 'No';
+    // Pricing engine checks: elevator === 'no' or elevator === false
+    if (body.sharedElevator === 'no') {
+      normalized.hasElevator = false;
+    }
+  }
+  if (body.sharedParking !== undefined && body.parking === undefined) {
+    normalized.parking = body.sharedParking;
+    if (body.sharedParking === 'no') {
+      normalized.noParking = true;
+    }
+  }
+  if (body.sharedParkingDistance && !body.parkingDistance) {
+    normalized.parkingDistance = body.sharedParkingDistance;
+  }
+
+  // Moving origin address
+  if (body.moveFromStreet && !body.streetAndNumber) {
+    normalized.streetAndNumber = body.moveFromStreet;
+    normalized.street = body.moveFromStreet;
+  }
+  if (body.moveFromZipCity && !body.postalCodeAndCity) {
+    normalized.postalCodeAndCity = body.moveFromZipCity;
+    normalized.city = body.moveFromZipCity;
+  }
+
+  // Moving destination address
+  if (body.moveToStreet) {
+    normalized.unloadingStreetAndNumber = body.moveToStreet;
+    normalized.destinationStreet = body.moveToStreet;
+    normalized.movingStreet = body.moveToStreet;
+  }
+  if (body.moveToZipCity) {
+    normalized.unloadingPostalCodeAndCity = body.moveToZipCity;
+    normalized.destinationCity = body.moveToZipCity;
+    normalized.movingZipCity = body.moveToZipCity;
+  }
+
+  // Moving specific fields mapped to pricing engine names
+  if (body.moveFromConditions && Array.isArray(body.moveFromConditions)) {
+    if (body.moveFromConditions.includes('noElevator')) {
+      normalized.hasElevator = false;
+      normalized.elevator = 'no';
+    }
+  }
+
+  // Cleaning address
+  if (body.cleanStreet && !body.streetAndNumber) {
+    normalized.streetAndNumber = body.cleanStreet;
+    normalized.street = body.cleanStreet;
+  }
+  if (body.cleanZipCity && !body.postalCodeAndCity) {
+    normalized.postalCodeAndCity = body.cleanZipCity;
+    normalized.city = body.cleanZipCity;
+  }
+
+  // Map the "requestType" to a proper service type for normalizeServiceType
+  if (body.requestType === 'moving' && !body.formType) {
+    normalized.formType = 'moving';
+  } else if (body.requestType === 'cleaning' && !body.formType) {
+    normalized.formType = 'cleaning';
+  } else if (body.requestType === 'combo' && !body.formType) {
+    normalized.formType = 'cleaning'; // combo defaults to cleaning pricing
+  }
+
+  // Outdoor area -> hasBalcony for pricing
+  if (body.cleanOutdoorArea === 'balcony' || body.cleanOutdoorArea === 'both') {
+    normalized.hasBalcony = true;
+  }
+
+  // Preferred date mapping
+  if (body.preferredDate && !body.cleaningAppointment && !body.movingDate) {
+    normalized.cleaningAppointment = body.preferredDate;
+    normalized.movingDate = body.preferredDate;
+  }
+
+  // Map isExpress string to boolean
+  if (body.isExpress === 'true') {
+    normalized.isExpress = true;
+  }
+
+  return normalized;
+}
+
 export async function POST(req: Request) {
   try {
     const rawData = await req.formData();
     const dataString = rawData.get('data') as string;
-    const body = JSON.parse(dataString || '{}');
+    const rawBody = JSON.parse(dataString || '{}');
+    const body = normalizeFormFields(rawBody);
     const serviceType = body.formType || body.serviceName || 'moving';
     const locale = rawData.get('locale') || body.locale || 'en';
     

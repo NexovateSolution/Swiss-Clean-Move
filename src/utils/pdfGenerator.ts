@@ -74,10 +74,11 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
          label = attempt2;
        }
     }
+    const priceDisplay = item.price === 0 ? 'Inklusive' : `CHF ${item.price.toFixed(2)}`;
     return `
     <tr>
       <td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #333; font-size: 13px;">${label}</td>
-      <td style="padding: 8px 0; border-bottom: 1px solid #eee; text-align: right; color: #555; font-size: 13px;">Inklusive</td>
+      <td style="padding: 8px 0; border-bottom: 1px solid #eee; text-align: right; color: #555; font-size: 13px;">${priceDisplay}</td>
     </tr>
     `;
   }).join('');
@@ -98,15 +99,36 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     `;
   }
 
-  const skipKeys = ['firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 'cleanStreet', 'cleanZipCity', 'cleanAddress', 'movingStreet', 'movingZipCity', 'unloadingStreetAndNumber', 'unloadingPostalCodeAndCity', 'locale', 'serviceName', 'formType', 'quoteResult', 'estimatedPrice', 'lineItems', 'quoteSent', 'data', 'id', 'status', 'createdAt', 'updatedAt', 'pdfPath', 'submissionDate'];
+  const skipKeys = [
+    // Personal info
+    'firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'nameFirstName',
+    // Address fields (all variants)
+    'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 'address',
+    'cleanStreet', 'cleanZipCity', 'cleanAddress',
+    'movingStreet', 'movingZipCity', 'unloadingStreetAndNumber', 'unloadingPostalCodeAndCity',
+    'moveFromStreet', 'moveFromZipCity', 'moveToStreet', 'moveToZipCity',
+    'destinationStreet', 'destinationCity', 'destinationPropertyType', 'destinationArea', 'destinationElevator', 'destinationParking',
+    // Meta / internal
+    'locale', 'serviceName', 'formType', 'requestType', 'quoteResult', 'estimatedPrice', 'lineItems', 'quoteSent',
+    'data', 'id', 'status', 'createdAt', 'updatedAt', 'pdfPath', 'submissionDate',
+    // Wizard-specific property fields (already shown in OBJEKTDATEN)
+    'sharedPropertyType', 'sharedRooms', 'sharedLivingArea', 'sharedFloor', 'sharedElevator', 'sharedParking', 'sharedParkingDistance',
+    // Normalized property fields (already shown in OBJEKTDATEN)  
+    'apartmentType', 'propertyType', 'typeOfProperty', 'objectType',
+    'numberOfRooms', 'numberOfRoomsApartment', 'rooms',
+    'livingSpaceInM2', 'areaInM2', 'area', 'squareMeters',
+    'elevatorSizes', 'elevator', 'hasElevator', 'noParking', 'parking', 'parkingDistance',
+    'floor', 'floorsLevel',
+    'cleaningTypes', 'frequency', 'cleaningAppointment', 'movingDate', 'preferredDate', 'preferredTime',
+    // Unloading fields (shown in OBJEKTDATEN destination)
+    'unloadingApartmentType', 'unloadingAreaInM2', 'unloadingElevatorSizes', 'unloadingParkingDistance',
+  ];
   
   const additionalAttributesHtml = Object.entries(customer)
     .filter(([key, val]) => {
       if (skipKeys.includes(key)) return false;
       if (val === '' || val === null || val === undefined || val === false) return false;
       if (typeof val === 'object' && !Array.isArray(val)) return false; // skip raw json blocks
-      // Filter out typical object-daten keys since they are already shown manually
-      if (['apartmentType', 'numberOfRooms', 'numberOfRoomsApartment', 'livingSpaceInM2', 'areaInM2', 'elevatorSizes', 'parkingDistance', 'cleaningTypes', 'frequency', 'cleaningAppointment', 'movingDate'].includes(key)) return false;
       return true;
     })
     .map(([key, val]) => {
