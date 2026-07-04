@@ -26,10 +26,10 @@ export async function POST(req: Request) {
           formType: serviceType,
           firstName: body.firstName || 'N/A',
           name: body.lastName || body.name || 'N/A',
-          emailAddress: body.email || 'N/A',
+          emailAddress: body.email || body.emailAddress || 'N/A',
           telephone: body.phone || body.telephone || 'N/A',
-          streetAndNumber: body.street || 'N/A',
-          postalCodeAndCity: body.city || 'N/A',
+          streetAndNumber: body.street || body.streetAndNumber || 'N/A',
+          postalCodeAndCity: body.city || body.postalCodeAndCity || body.cleanZipCity || 'N/A',
           data: {
             ...body,
             estimatedPrice: quoteResult.totalEstimatedPrice,
@@ -141,7 +141,7 @@ export async function POST(req: Request) {
             <br/>
             <p>Freundliche Grüsse<br/><strong>Ihr SwissCleanMove Team</strong></p>
           </div>
-        `;
+        ` + htmlContent;
       } else if (locale === 'fr') {
         subject = 'Votre Devis - SwissCleanMove';
         emailTextHtml = `
@@ -154,7 +154,7 @@ export async function POST(req: Request) {
             <br/>
             <p>Meilleures salutations,<br/><strong>Votre équipe SwissCleanMove</strong></p>
           </div>
-        `;
+        ` + htmlContent;
       } else {
         subject = 'Your Quote - SwissCleanMove';
         emailTextHtml = `
@@ -167,7 +167,7 @@ export async function POST(req: Request) {
             <br/>
             <p>Kind regards,<br/><strong>Your SwissCleanMove Team</strong></p>
           </div>
-        `;
+        ` + htmlContent;
       }
 
       await sendEmailNotification({
@@ -178,11 +178,11 @@ export async function POST(req: Request) {
       });
     }
 
-    // Send Admin Email
+    // Send Admin Email (Formatted without raw data if possible, or keep it clean)
     await sendEmailNotification({
       to: process.env.ADMIN_EMAIL || process.env.GMAIL_USER || 'admin@swisscleanmove.ch',
       subject: `New Request: ${serviceType} - ${body.firstName} ${body.lastName}`,
-      html: `<h2>New Form Submission</h2><p>Customer: ${body.firstName} ${body.lastName} (${body.email})</p>` + htmlContent + `<h3>Raw Data</h3><pre>${JSON.stringify(body, null, 2)}</pre>`,
+      html: `<h2>New Form Submission</h2><p>Customer: ${body.firstName} ${body.lastName} (${body.email || body.emailAddress})</p>` + htmlContent,
       attachments
     });
 

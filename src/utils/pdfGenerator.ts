@@ -467,13 +467,26 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
         <div class="info-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
           <div><strong>Service:</strong> ${customer.serviceName || customer.formType || 'Reinigung / Umzug'}</div>
           <div><strong>Datum:</strong> ${customer.cleaningAppointment || customer.movingDate || 'Nach Absprache'}</div>
-          ${customer.apartmentType ? `<div><strong>Objekt-Typ:</strong> ${customer.apartmentType}</div>` : ''}
+          
+          <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
+          
+          <div style="grid-column: span 2;"><strong>Property Location:</strong> ${customer.streetAndNumber || customer.cleanStreet || customer.street || 'N/A'}, ${customer.postalCodeAndCity || customer.cleanZipCity || customer.city || 'N/A'}</div>
+          ${customer.apartmentType ? `<div><strong>Property Type:</strong> ${customer.apartmentType}</div>` : ''}
+          ${customer.livingSpaceInM2 || customer.areaInM2 ? `<div><strong>Area:</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2} m²</div>` : ''}
           ${customer.numberOfRooms || customer.numberOfRoomsApartment ? `<div><strong>Zimmer:</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment} Zi.</div>` : ''}
-          ${customer.livingSpaceInM2 || customer.areaInM2 ? `<div><strong>Fläche:</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2} m²</div>` : ''}
           ${customer.elevatorSizes ? `<div><strong>Lift:</strong> ${customer.elevatorSizes}</div>` : ''}
           ${customer.parkingDistance ? `<div><strong>Parkplatz:</strong> ${customer.parkingDistance}</div>` : ''}
           ${customer.cleaningTypes ? `<div><strong>Reinigungsart:</strong> ${customer.cleaningTypes}</div>` : ''}
           ${customer.frequency ? `<div><strong>Turnus:</strong> ${customer.frequency}</div>` : ''}
+          
+          ${customer.unloadingStreetAndNumber || customer.movingStreet ? `
+            <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
+            <div style="grid-column: span 2;"><strong>Destination Address:</strong> ${customer.unloadingStreetAndNumber || customer.movingStreet}, ${customer.unloadingPostalCodeAndCity || customer.movingZipCity}</div>
+            ${customer.unloadingApartmentType ? `<div><strong>Destination Type:</strong> ${customer.unloadingApartmentType}</div>` : ''}
+            ${customer.unloadingAreaInM2 ? `<div><strong>Destination Area:</strong> ca. ${customer.unloadingAreaInM2} m²</div>` : ''}
+            ${customer.unloadingElevatorSizes ? `<div><strong>Destination Lift:</strong> ${customer.unloadingElevatorSizes}</div>` : ''}
+            ${customer.unloadingParkingDistance ? `<div><strong>Destination Parkplatz:</strong> ${customer.unloadingParkingDistance}</div>` : ''}
+          ` : ''}
         </div>
       </div>
     </div>

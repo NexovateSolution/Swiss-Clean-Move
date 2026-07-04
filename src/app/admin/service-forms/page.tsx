@@ -65,6 +65,18 @@ const SKIP_KEYS = new Set([
   'createdAt', 'updatedAt', 'data'
 ])
 
+// Format quote item keys to readable text if description is missing
+function formatQuoteKey(key: string): string {
+  if (!key) return '';
+  const parts = key.split('.');
+  const last = parts[parts.length - 1];
+  const secondLast = parts.length > 1 ? parts[parts.length - 2] : '';
+  let combined = secondLast && secondLast !== 'items' && secondLast !== 'quote' && secondLast !== 'serviceForm' && secondLast !== 'wizard'
+      ? `${secondLast} - ${last}` 
+      : last;
+  return combined.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+}
+
 export default function ServiceFormsPage() {
   const t = useTranslations('admin.serviceForms')
   const locale = useLocale()
@@ -565,12 +577,12 @@ export default function ServiceFormsPage() {
                                 {isEditingQuote ? (
                                   <input
                                     type="text"
-                                    value={item.description}
+                                    value={item.description || formatQuoteKey(item.id)}
                                     onChange={(e) => handleLineItemChange(idx, 'description', e.target.value)}
                                     className="w-full px-2 py-1 border border-gray-300 rounded text-sm bg-white dark:bg-gray-800 dark:text-white dark:border-gray-500"
                                   />
                                 ) : (
-                                  <span className="text-gray-900 dark:text-white">{item.description}</span>
+                                  <span className="text-gray-900 dark:text-white">{item.description || formatQuoteKey(item.id) || 'Service Item'}</span>
                                 )}
                               </td>
                               <td className="px-4 py-2 text-right">
@@ -583,7 +595,9 @@ export default function ServiceFormsPage() {
                                     className="w-full px-2 py-1 border border-gray-300 rounded text-sm text-right bg-white dark:bg-gray-800 dark:text-white dark:border-gray-500"
                                   />
                                 ) : (
-                                  <span className="text-gray-900 dark:text-white font-medium">CHF {Number(item.price).toFixed(2)}</span>
+                                  <span className="text-gray-900 dark:text-white font-medium">
+                                    {Number(item.price) === 0 ? 'Included' : `CHF ${Number(item.price).toFixed(2)}`}
+                                  </span>
                                 )}
                               </td>
                               {isEditingQuote && (

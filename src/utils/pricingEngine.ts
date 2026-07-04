@@ -382,6 +382,28 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
       result.isFallback = true;
   }
 
+  // Add any unhandled checkboxes as "Included" (Price: 0) to ensure they show up in the Admin quote breakdown
+  const skipCheckboxes = new Set([
+    'firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 
+    'cleanStreet', 'cleanZipCity', 'cleanAddress', 'movingStreet', 'movingZipCity', 'unloadingStreetAndNumber', 'unloadingPostalCodeAndCity', 
+    'locale', 'serviceName', 'formType', 'quoteResult', 'estimatedPrice', 'lineItems', 'quoteSent', 'data', 'id', 'status', 'createdAt', 'updatedAt', 
+    'pdfPath', 'submissionDate', 'apartmentType', 'numberOfRooms', 'numberOfRoomsApartment', 'livingSpaceInM2', 'areaInM2', 'elevatorSizes', 
+    'parkingDistance', 'cleaningTypes', 'frequency', 'cleaningAppointment', 'movingDate', 'isExpress', 'isSaturday', 'isSunday', 'isHoliday',
+    'packingService', 'unpackingService', 'furnitureAssembly', 'furnitureDisassembly', 'furnitureLift', 'hasBalcony', 'hasBasement', 'hasAttic', 'hasGarage'
+  ]);
+  
+  if (!result.isFallback && formData) {
+    Object.entries(formData).forEach(([key, val]) => {
+      if (val === true && !skipCheckboxes.has(key)) {
+        // If it's a true boolean that wasn't handled, add it
+        result.lineItems.push({ id: `quote.items.addon.${key}`, price: 0 });
+      } else if (Array.isArray(val) && val.length > 0 && !skipCheckboxes.has(key)) {
+        // If it's an array of selections, add it
+        result.lineItems.push({ id: `quote.items.addon.${key}`, price: 0 });
+      }
+    });
+  }
+
   // If at any point it was marked as fallback, clear the total price
   if (result.isFallback) {
     result.totalEstimatedPrice = null;
