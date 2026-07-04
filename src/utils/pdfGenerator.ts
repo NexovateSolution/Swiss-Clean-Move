@@ -262,22 +262,34 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     // Normalized property fields (already shown in OBJEKTDATEN)  
     'apartmentType', 'propertyType', 'typeOfProperty', 'objectType',
     'numberOfRooms', 'numberOfRoomsApartment', 'rooms',
-    'livingSpaceInM2', 'areaInM2', 'area', 'squareMeters',
+    'livingSpaceInM2', 'areaInM2', 'area', 'squareMeters', 'cleaningAreaInM2', 'cleaningApartmentType',
     'elevatorSizes', 'elevator', 'hasElevator', 'noParking', 'parking', 'parkingDistance',
     'floor', 'floorsLevel',
     'cleaningTypes', 'frequency', 'cleaningAppointment', 'movingDate', 'preferredDate', 'preferredTime',
     // Unloading fields (shown in OBJEKTDATEN destination)
     'unloadingApartmentType', 'unloadingAreaInM2', 'unloadingElevatorSizes', 'unloadingParkingDistance',
+    // Backend/Client model specific fields to skip in Scope
+    'totalPrice', 'paidAmount', 'balance', 'clientId', 'fromDate', 'untilDate', 'location', 'postalCode', 'serviceType', 'buildingType'
   ];
 
   const translatedLabels: Record<string, any> = {
     isExpress: { de: 'Express Service', en: 'Express Service', fr: 'Service Express' },
+    isFlexible: { de: 'Flexibles Datum', en: 'Flexible Date', fr: 'Date Flexible' },
     moveVolume: { de: 'Umzugsvolumen', en: 'Move Volume', fr: 'Volume de Déménagement' },
+    umzugsvolumen: { de: 'Umzugsvolumen', en: 'Move Volume', fr: 'Volume de Déménagement' },
     moveToAccess: { de: 'Zugang Zielort', en: 'Access Destination', fr: 'Accès Destination' },
+    zugangZielort: { de: 'Zugang Zielort', en: 'Access Destination', fr: 'Accès Destination' },
     moveFromAccess: { de: 'Zugang Startort', en: 'Access Origin', fr: 'Accès Origine' },
+    zugangStartort: { de: 'Zugang Startort', en: 'Access Origin', fr: 'Accès Origine' },
     contactMethods: { de: 'Kontaktmethode', en: 'Contact Method', fr: 'Méthode de Contact' },
+    kontaktmethode: { de: 'Kontaktmethode', en: 'Contact Method', fr: 'Méthode de Contact' },
     moveBoxTypes: { de: 'Umzugskartons', en: 'Moving Boxes', fr: 'Cartons de Déménagement' },
     movePackingMaterials: { de: 'Verpackungsmaterial', en: 'Packing Materials', fr: "Matériel d'Emballage" },
+    additionalMovingServices: { de: 'Zusatzleistungen', en: 'Additional Services', fr: 'Services Supplémentaires' },
+    cleaningFrequency: { de: 'Reinigungsintervall', en: 'Cleaning Frequency', fr: 'Fréquence de Nettoyage' },
+    maintenanceCleaningItems: { de: 'Reinigungsbereiche', en: 'Cleaning Areas', fr: 'Zones de Nettoyage' },
+    moveFromConditions: { de: 'Bedingungen Startort', en: 'Conditions Origin', fr: 'Conditions Origine' },
+    moveToConditions: { de: 'Bedingungen Zielort', en: 'Conditions Destination', fr: 'Conditions Destination' },
     moveFurniture: { de: 'Möbel', en: 'Furniture', fr: 'Meubles' },
     moveSpecialItems: { de: 'Spezialgegenstände', en: 'Special Items', fr: 'Objets Spéciaux' },
     moveServices: { de: 'Zusatzleistungen', en: 'Additional Services', fr: 'Services Supplémentaires' },
@@ -304,10 +316,12 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     large: { de: 'Gross', en: 'Large', fr: 'Grand' },
     veryLarge: { de: 'Sehr Gross', en: 'Very Large', fr: 'Très Grand' },
     direct: { de: 'Direkt', en: 'Direct', fr: 'Direct' },
+    Direkt: { de: 'Direkt', en: 'Direct', fr: 'Direct' },
     d0_20: { de: '0 - 20m', en: '0 - 20m', fr: '0 - 20m' },
     d20_50: { de: '20 - 50m', en: '20 - 50m', fr: '20 - 50m' },
     d50plus: { de: '> 50m', en: '> 50m', fr: '> 50m' },
     email: { de: 'E-Mail', en: 'Email', fr: 'E-mail' },
+    Telefon: { de: 'Telefon', en: 'Phone', fr: 'Téléphone' },
     phone: { de: 'Telefon', en: 'Phone', fr: 'Téléphone' },
     whatsapp: { de: 'WhatsApp', en: 'WhatsApp', fr: 'WhatsApp' },
     maintenanceCleaning: { de: 'Unterhaltsreinigung', en: 'Maintenance Cleaning', fr: 'Nettoyage d\'Entretien' },
@@ -318,7 +332,14 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     weekly: { de: 'Wöchentlich', en: 'Weekly', fr: 'Hebdomadaire' },
     staircaseCleaning: { de: 'Treppenhausreinigung', en: 'Staircase Cleaning', fr: 'Nettoyage des Escaliers' },
     yes: { de: 'Ja', en: 'Yes', fr: 'Oui' },
-    no: { de: 'Nein', en: 'No', fr: 'Non' }
+    no: { de: 'Nein', en: 'No', fr: 'Non' },
+    narrowStairs: { de: 'Enge Treppen', en: 'Narrow Stairs', fr: 'Escaliers Étroits' },
+    House: { de: 'Haus', en: 'House', fr: 'Maison' },
+    Apartment: { de: 'Wohnung', en: 'Apartment', fr: 'Appartement' },
+    Office: { de: 'Büro', en: 'Office', fr: 'Bureau' },
+    Klein: { de: 'Klein', en: 'Small', fr: 'Petit' },
+    Mittel: { de: 'Mittel', en: 'Medium', fr: 'Moyen' },
+    Gross: { de: 'Gross', en: 'Large', fr: 'Grand' }
   };
   
   const additionalAttributesHtml = Object.entries(customer)
