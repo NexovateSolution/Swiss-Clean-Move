@@ -4,10 +4,7 @@ import { authenticateRequest } from '../../../../../lib/auth'
 import nodemailer from 'nodemailer'
 import puppeteerCore from 'puppeteer-core'
 import chromium from '@sparticuz/chromium'
-import { join } from 'path'
-import { readFileSync } from 'fs'
-
-import { createTranslator } from '@/lib/translations';
+import { generateQuoteHtml } from '@/utils/pdfGenerator'
 
 export async function POST(request: NextRequest) {
     try {
@@ -36,11 +33,42 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Client has no email address' }, { status: 400 })
         }
 
-        // Generate invoice HTML
-        const invoiceHtml = generateInvoiceHTML(client, language)
+        // Map Client Data to Quote HTML Format
+        let subData: any = {};
+        if (client.data && typeof client.data === 'object') {
+           subData = client.data;
+        }
+
+        const customer = {
+            firstName: client.firstName,
+            lastName: client.lastName,
+            email: client.email || '',
+            phone: client.phone || '',
+            streetAndNumber: client.address || '',
+            postalCodeAndCity: `${client.postalCode || ''} ${client.location || ''}`.trim(),
+            cleaningAreaInM2: client.squareMeters,
+            cleaningApartmentType: client.buildingType,
+            cleaningTypes: client.serviceType,
+            locale: language,
+            ...subData
+        };
+
+        let quoteRes = subData.quoteResult;
+        if (!quoteRes || !quoteRes.lineItems) {
+           quoteRes = {
+              totalEstimatedPrice: client.totalPrice || 0,
+              isFallback: false,
+              lineItems: [
+                 { id: client.serviceType || 'Reinigung', price: client.totalPrice || 0 }
+              ]
+           };
+        }
+
+        // Generate invoice HTML using the shared Contract template
+        const invoiceHtml = generateQuoteHtml(quoteRes, customer, 'contract');
 
         const invoicePdf = await renderPdfFromHtml(invoiceHtml)
-        const pdfFilename = `invoice-${client.firstName}-${client.lastName}.pdf`
+        const pdfFilename = `contract-${client.firstName}-${client.lastName}.pdf`
 
         // Configure email transporter
         const transporter = nodemailer.createTransport({
@@ -53,15 +81,15 @@ export async function POST(request: NextRequest) {
 
         // Email subjects and messages
         const subjects: any = {
-            en: `Invoice - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            de: `Rechnung - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            fr: `Facture - SwissCleanMove - ${client.firstName} ${client.lastName}`
+            en: `Contract - SwissCleanMove - ${client.firstName} ${client.lastName}`,
+            de: `Vertrag - SwissCleanMove - ${client.firstName} ${client.lastName}`,
+            fr: `Contrat - SwissCleanMove - ${client.firstName} ${client.lastName}`
         }
 
         const messages: any = {
-            en: `Dear ${client.firstName} ${client.lastName},\n\nPlease find attached your invoice from SwissCleanMove.\n\nThank you for your business!\n\nBest regards,\nSwissCleanMove Team`,
-            de: `Sehr geehrte/r ${client.firstName} ${client.lastName},\n\nAnbei finden Sie Ihre Rechnung von SwissCleanMove.\n\nVielen Dank für Ihr Vertrauen!\n\nMit freundlichen Grüßen,\nSwissCleanMove Team`,
-            fr: `Cher/Chère ${client.firstName} ${client.lastName},\n\nVeuillez trouver ci-joint votre facture de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`
+            en: `Dear ${client.firstName} ${client.lastName},\n\nPlease find attached your contract from SwissCleanMove.\n\nThank you for your business!\n\nBest regards,\nSwissCleanMove Team`,
+            de: `Sehr geehrte/r ${client.firstName} ${client.lastName},\n\nAnbei finden Sie Ihren Vertrag von SwissCleanMove.\n\nVielen Dank für Ihr Vertrauen!\n\nMit freundlichen Grüßen,\nSwissCleanMove Team`,
+            fr: `Cher/Chère ${client.firstName} ${client.lastName},\n\nVeuillez trouver ci-joint votre contrat de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`
         }
 
         // Send email
@@ -75,7 +103,7 @@ export async function POST(request: NextRequest) {
           <div style="text-align: center; margin-bottom: 30px;">
             <img src="https://swisscleanmove.ch/images/logo.png" alt="SwissCleanMove" style="height: 100px; width: auto;">
           </div>
-          <h2 style="color: #555;">Rechnung / Invoice</h2>
+          <h2 style="color: #555;">Vertrag / Contract</h2>
           <p>${(messages[language] || messages.en).replace(/\n/g, '<br>')}</p>
           <div style="margin-top: 30px; border-top: 1px solid #e0e0e0; padding-top: 20px; font-size: 12px; color: #666;">
             <strong>SwissCleanMove</strong><br>
@@ -95,12 +123,12 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json({
             success: true,
-            message: 'Invoice sent successfully'
+            message: 'Contract sent successfully'
         })
     } catch (error: any) {
-        console.error('Error sending invoice:', error)
+        console.error('Error sending contract:', error)
         return NextResponse.json({
-            error: 'Failed to send invoice',
+            error: 'Failed to send contract',
             details: error.message
         }, { status: 500 })
     }
@@ -140,791 +168,4 @@ async function renderPdfFromHtml(html: string): Promise<Buffer> {
     } finally {
         await browser.close()
     }
-}
-
-function generateInvoiceHTML(client: any, language: string): string {
-    const { join } = require('path');
-    const { readFileSync } = require('fs');
-    const logoPath = join(process.cwd(), 'public', 'images', 'logo.png');
-    const logoBuffer = readFileSync(logoPath);
-    const LOGO_BASE64 = logoBuffer.toString('base64');
-
-        const t: any = {
-            de: {
-                title: 'Reinigung Auftragsbestätigung',
-                orderNumber: 'Bestellnummer',
-                date: 'Reinigungsdatum',
-                clientStartTime: 'Beginn beim Kunden',
-                cleaningCompleted: 'Reinigung Übergabe',
-                paymentCondition: 'Zahlungsbedingung',
-                thankYou: 'Vielen Dank für Ihren Auftrag. Gerne bestätigen wir Ihnen folgendes Angebot.',
-                greeting: 'Sehr geehrte(r)',
-                regards: 'Mit freundlichen Grüßen',
-                companyName: 'SwissCleanMove',
-                service: 'Leistung',
-                details: 'Details',
-                amount: 'Betrag',
-                subtotal: 'Zwischensumme',
-                vat: 'MwSt 8.1%',
-                total: 'Gesamtbetrag',
-                cashPayment: 'Barzahlung nach Übergabedatum beim Teamleiter',
-                serviceDetails: 'Leistungsdetails',
-                additionalInfo: 'Zusätzliche Informationen',
-                location: 'Ort',
-                receiptSlip: 'Empfangsschein',
-                paymentPart: 'Zahlteil',
-                accountPayableTo: 'Konto / Zahlbar an',
-                reference: 'Referenz',
-                payableBy: 'Zahlbar durch',
-                currency: 'Währung',
-                chf: 'CHF',
-                room: 'Zimmer',
-                page: 'Seite',
-                guarantee: 'Übergabegarantie Inkl. 8.1% MwSt Pauschal',
-                customerSignature: 'Unterschrift Kunde',
-                teamSignature: 'Unterschrift Teamleiter',
-                type: 'Typ',
-                livingArea: 'Wohnfläche',
-                floorLabel: 'Stockwerk',
-                elevatorLabel: 'Aufzug',
-                withElevator: 'Mit Lift',
-                withoutElevator: 'Ohne Lift',
-                remarks: 'Bemerkungen:',
-                invoiceRef: 'Referenz',
-                invoiceDate: 'Rechnungsdatum',
-                paymentDeadline: 'Zahlungsfrist',
-                acceptancePoint: 'Annahmestelle',
-                additionalInfoQr: 'Zusätzliche Informationen',
-                invoiceLabel: 'Rechnung',
-                tagline: 'Reinigung \u00b7 Umzug \u00b7 Facility Service',
-                subTitle: 'Professionelle Reinigungs- und Umzugsdienstleistungen nach Schweizer Qualit\u00e4tsstandard.',
-                customer: 'KUNDE',
-                orderData: 'AUFTRAGSDATEN',
-                object: 'OBJEKT',
-                serviceDate: 'Leistungsdatum:',
-                startTime: 'Startzeit:',
-                handoverTime: 'Abgabezeit:',
-                contactPerson: 'Ansprechpartner:',
-                paymentMethod: 'Zahlungsart:',
-                paymentMethodValue: 'Bar',
-                propertyType: 'Objekttyp:',
-                floor: 'Stockwerk:',
-                area: 'Fl\u00e4che:',
-                areaPrefix: 'ca.',
-                description: 'BESCHREIBUNG',
-                quantity: 'MENGE',
-                unitPrice: 'EINZELPREIS',
-                totalPrice: 'GESAMTPREIS',
-                defaultServiceDesc: 'Professionelle Dienstleistung gem\u00e4ss Schweizer Standard.',
-                scopeOfServices: 'LEISTUNGSUMFANG',
-                swissStandard: 'Alle Arbeiten werden nach h\u00f6chsten Schweizer Qualit\u00e4tsstandards ausgef\u00fchrt.',
-                totalFixedPrice: 'TOTAL FESTPREIS',
-                fixedPriceSub: 'Festpreis - keine zus\u00e4tzlichen Kosten',
-                acceptanceGuarantee: 'ABNAHMEGARANTIE',
-                acceptanceGuaranteeDesc: 'Zufriedenheitsgarantie bei \u00dcbergabe. M\u00e4ngel werden kostenlos nachgebessert.',
-                liabilityInsured: 'HAFTPFLICHTVERSICHERT',
-                liabilityInsuredDesc: 'Vollst\u00e4ndig versichert f\u00fcr Ihre Sicherheit und maximalen Schutz.',
-                swissQuality: 'SCHWEIZER QUALIT\u00c4T',
-                swissQualityDesc: 'Professionell, zuverl\u00e4ssig und p\u00fcnktlich - daf\u00fcr stehen wir ein.',
-                ecoFriendly: 'UMWELTFREUNDLICH',
-                ecoFriendlyDesc: 'Wir verwenden umweltfreundliche Reinigungsmittel und nachhaltige Methoden.',
-                nameLabel: 'Name:',
-                cleaningDateLabel: 'Reinigungsdatum:',
-                signatureLabel: 'Unterschrift:',
-                locationLabel: 'Ort:',
-                performancePeriod: 'LEISTUNGSZEITRAUM',
-                serviceStart: 'Leistungsbeginn:',
-                serviceEnd: 'Leistungsende:',
-                timeUnit: 'Uhr',
-                communication: 'KOMMUNIKATION',
-                communicationText: 'F\u00fcr Fragen oder \u00c4nderungen kontaktieren Sie uns bitte rechtzeitig.',
-                accountInformation: 'KONTOINFORMATIONEN',
-                bankName: 'Bankname',
-                accountHolder: 'Kontoinhaber',
-                accountNo: 'Konto-Nr.',
-                clearingNo: 'Clearing-Nr.'
-            },
-            fr: {
-                title: 'Confirmation de commande de nettoyage',
-                orderNumber: 'Numéro de commande',
-                date: 'Date de nettoyage',
-                clientStartTime: 'Début chez le client',
-                cleaningCompleted: 'Remise du nettoyage',
-                paymentCondition: 'Condition de paiement',
-                thankYou: 'Merci pour votre commande. Nous avons le plaisir de vous confirmer l offre suivante.',
-                greeting: 'Cher/Chère',
-                regards: 'Cordialement',
-                companyName: 'SwissCleanMove',
-                service: 'Service',
-                details: 'Détails',
-                amount: 'Montant',
-                subtotal: 'Sous-total',
-                vat: 'TVA 8.1%',
-                total: 'Total',
-                cashPayment: 'Paiement en espèces après la remise',
-                serviceDetails: 'Détails du service',
-                additionalInfo: 'Informations supplémentaires',
-                location: 'Lieu',
-                receiptSlip: 'Reçu',
-                paymentPart: 'Partie paiement',
-                accountPayableTo: 'Compte / Payable à',
-                reference: 'Référence',
-                payableBy: 'Payable par',
-                currency: 'Devise',
-                chf: 'CHF',
-                room: 'Pièces',
-                page: 'Page',
-                guarantee: 'Garantie de remise incl. 8.1% TVA forfaitaire',
-                customerSignature: 'Signature du client',
-                teamSignature: 'Signature du chef d\'équipe',
-                type: 'Type',
-                livingArea: 'Surface habitable',
-                floorLabel: 'Étage',
-                elevatorLabel: 'Ascenseur',
-                withElevator: 'Avec ascenseur',
-                withoutElevator: 'Sans ascenseur',
-                remarks: 'Remarques:',
-                invoiceRef: 'Référence',
-                invoiceDate: 'Date de facture',
-                paymentDeadline: 'Délai de paiement',
-                acceptancePoint: 'Point de dépôt',
-                additionalInfoQr: 'Informations supplémentaires',
-                invoiceLabel: 'Facture',
-                tagline: 'Nettoyage \u00b7 D\u00e9m\u00e9nagement \u00b7 Facility Service',
-                subTitle: 'Services professionnels de nettoyage et de d\u00e9m\u00e9nagement selon les normes suisses de qualit\u00e9.',
-                customer: 'CLIENT',
-                orderData: 'DONN\u00c9ES DE COMMANDE',
-                object: 'OBJET',
-                serviceDate: 'Date de service:',
-                startTime: 'Heure de d\u00e9but:',
-                handoverTime: 'Heure de remise:',
-                contactPerson: 'Personne de contact:',
-                paymentMethod: 'Mode de paiement:',
-                paymentMethodValue: 'Comptant',
-                propertyType: 'Type d\'objet:',
-                floor: '\u00c9tage:',
-                area: 'Surface:',
-                areaPrefix: 'env.',
-                description: 'DESCRIPTION',
-                quantity: 'QUANTIT\u00c9',
-                unitPrice: 'PRIX UNITAIRE',
-                totalPrice: 'PRIX TOTAL',
-                defaultServiceDesc: 'Service professionnel selon les normes suisses.',
-                scopeOfServices: '\u00c9TENDUE DES SERVICES',
-                swissStandard: 'Tous les travaux sont ex\u00e9cut\u00e9s selon les normes suisses de qualit\u00e9 les plus \u00e9lev\u00e9es.',
-                totalFixedPrice: 'TOTAL PRIX FIXE',
-                fixedPriceSub: 'Prix fixe - pas de frais suppl\u00e9mentaires',
-                acceptanceGuarantee: 'GARANTIE DE R\u00c9CEPTION',
-                acceptanceGuaranteeDesc: 'Garantie de satisfaction \u00e0 la remise. Les d\u00e9fauts sont corrig\u00e9s gratuitement.',
-                liabilityInsured: 'ASSURANCE RESPONSABILIT\u00c9',
-                liabilityInsuredDesc: 'Enti\u00e8rement assur\u00e9 pour votre s\u00e9curit\u00e9 et une protection maximale.',
-                swissQuality: 'QUALIT\u00c9 SUISSE',
-                swissQualityDesc: 'Professionnel, fiable et ponctuel \u2013 c\'est notre engagement.',
-                ecoFriendly: '\u00c9COLOGIQUE',
-                ecoFriendlyDesc: 'Nous utilisons des produits de nettoyage \u00e9cologiques et des m\u00e9thodes durables.',
-                nameLabel: 'Nom:',
-                cleaningDateLabel: 'Date de nettoyage:',
-                signatureLabel: 'Signature:',
-                locationLabel: 'Lieu:',
-                performancePeriod: 'P\u00c9RIODE DE SERVICE',
-                serviceStart: 'D\u00e9but du service:',
-                serviceEnd: 'Fin du service:',
-                timeUnit: 'h',
-                communication: 'COMMUNICATION',
-                communicationText: 'Pour toute question ou modification, veuillez nous contacter \u00e0 temps.',
-                accountInformation: 'INFORMATIONS BANCAIRES',
-                bankName: 'Nom de la banque',
-                accountHolder: 'Titulaire du compte',
-                accountNo: 'N\u00b0 de compte',
-                clearingNo: 'N\u00b0 de clearing'
-            },
-            en: {
-                title: 'Cleaning Order Confirmation',
-                orderNumber: 'Order Number',
-                date: 'Cleaning Date',
-                clientStartTime: 'Start at Client',
-                cleaningCompleted: 'Cleaning Handover',
-                paymentCondition: 'Payment Condition',
-                thankYou: 'Thank you for your order. We are pleased to confirm the following offer.',
-                greeting: 'Dear',
-                regards: 'Best regards',
-                companyName: 'SwissCleanMove',
-                service: 'Service',
-                details: 'Details',
-                amount: 'Amount',
-                subtotal: 'Subtotal',
-                vat: 'VAT 8.1%',
-                total: 'Total Amount',
-                cashPayment: 'Cash payment after handover',
-                serviceDetails: 'Service Details',
-                additionalInfo: 'Additional Information',
-                location: 'Location',
-                receiptSlip: 'Receipt',
-                paymentPart: 'Payment Part',
-                accountPayableTo: 'Account / Payable to',
-                reference: 'Reference',
-                payableBy: 'Payable by',
-                currency: 'Currency',
-                chf: 'CHF',
-                room: 'Rooms',
-                page: 'Page',
-                guarantee: 'Handover guarantee Incl. 8.1% VAT flat rate',
-                customerSignature: 'Customer Signature',
-                teamSignature: 'Team Leader Signature',
-                type: 'Type',
-                livingArea: 'Living area',
-                floorLabel: 'Floor',
-                elevatorLabel: 'Elevator',
-                withElevator: 'With elevator',
-                withoutElevator: 'Without elevator',
-                remarks: 'Remarks:',
-                invoiceRef: 'Reference',
-                invoiceDate: 'Invoice Date',
-                paymentDeadline: 'Payment Deadline',
-                acceptancePoint: 'Acceptance point',
-                additionalInfoQr: 'Additional information',
-                invoiceLabel: 'Invoice',
-                tagline: 'Cleaning \u00b7 Relocation \u00b7 Facility Service',
-                subTitle: 'Professional cleaning and relocation services according to Swiss quality standards.',
-                customer: 'CUSTOMER',
-                orderData: 'ORDER DATA',
-                object: 'PROPERTY',
-                serviceDate: 'Service Date:',
-                startTime: 'Start Time:',
-                handoverTime: 'Handover Time:',
-                contactPerson: 'Contact Person:',
-                paymentMethod: 'Payment Method:',
-                paymentMethodValue: 'Cash',
-                propertyType: 'Property Type:',
-                floor: 'Floor:',
-                area: 'Area:',
-                areaPrefix: 'approx.',
-                description: 'DESCRIPTION',
-                quantity: 'QUANTITY',
-                unitPrice: 'UNIT PRICE',
-                totalPrice: 'TOTAL PRICE',
-                defaultServiceDesc: 'Professional service according to Swiss standards.',
-                scopeOfServices: 'SCOPE OF SERVICES',
-                swissStandard: 'All work is carried out according to the highest Swiss quality standards.',
-                totalFixedPrice: 'TOTAL FIXED PRICE',
-                fixedPriceSub: 'Fixed price - no additional costs',
-                acceptanceGuarantee: 'ACCEPTANCE GUARANTEE',
-                acceptanceGuaranteeDesc: 'Satisfaction guarantee at handover. Defects are corrected free of charge.',
-                liabilityInsured: 'LIABILITY INSURED',
-                liabilityInsuredDesc: 'Fully insured for your safety and maximum protection.',
-                swissQuality: 'SWISS QUALITY',
-                swissQualityDesc: 'Professional, reliable, and punctual \u2013 that is our commitment.',
-                ecoFriendly: 'ECO-FRIENDLY',
-                ecoFriendlyDesc: 'We use eco-friendly cleaning products and sustainable methods.',
-                nameLabel: 'Name:',
-                cleaningDateLabel: 'Cleaning Date:',
-                signatureLabel: 'Signature:',
-                locationLabel: 'Location:',
-                performancePeriod: 'SERVICE PERIOD',
-                serviceStart: 'Service Start:',
-                serviceEnd: 'Service End:',
-                timeUnit: '',
-                communication: 'COMMUNICATION',
-                communicationText: 'For questions or changes, please contact us in a timely manner.',
-                accountInformation: 'ACCOUNT INFORMATION',
-                bankName: 'Bank Name',
-                accountHolder: 'Account Holder',
-                accountNo: 'Account No.',
-                clearingNo: 'Clearing No.'
-            }
-        }[language as 'en' | 'de' | 'fr'] || { /* fallback */ };
-
-                const d = new Date();
-        const year = d.getFullYear();
-        const month = String(d.getMonth() + 1).padStart(2, '0');
-        const day = String(d.getDate()).padStart(2, '0');
-        const randomNum = String(Math.floor(Math.random() * 1000)).padStart(3, '0');
-        const orderNumber = `SCM-${year}-${month}${day}-${randomNum}`
-        const currentDate = new Date().toLocaleDateString()
-
-        // Name formatting with prefix logic
-        const clientName = `${client.prefix ? client.prefix + ' ' : ''}${client.firstName} ${client.lastName}`
-
-        const translator = createTranslator(language as string);
-        const { tKey, tVal } = translator;
-
-        let destStreet = '';
-        let destZipCity = '';
-
-        let formattedRemarks: string[] = [];
-        const SKIP_KEYS = new Set(['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'urgency', 'frequency', 'serviceTimes', 'startDate', 'handoverDate', 'desiredStart', 'handoverTime', 'company', 'moveFromStreet', 'moveFromZipCity', 'moveToStreet', 'moveToZipCity']);
-
-        if ((client as any).data && typeof (client as any).data === 'object' && Object.keys((client as any).data).length > 0) {
-            const clientData = (client as any).data as Record<string, any>;
-            // Extract destination fields first
-            if (clientData.moveToStreet) destStreet = String(clientData.moveToStreet);
-            if (clientData.moveToZipCity) destZipCity = String(clientData.moveToZipCity);
-            
-            Object.entries(clientData).forEach(([key, val]) => {
-                if (SKIP_KEYS.has(key) || !val || (Array.isArray(val) && val.length === 0)) return;
-                
-                let displayVal = '';
-                if (Array.isArray(val)) {
-                    displayVal = val.map(v => tVal(String(v))).join(', ');
-                } else if (typeof val === 'boolean') {
-                    displayVal = val ? tVal('yes') : tVal('no');
-                } else {
-                    displayVal = isNaN(Number(val)) ? tVal(String(val)) : String(val);
-                }
-                
-                formattedRemarks.push(`${tKey(key)}: ${displayVal}`);
-            });
-        } else if (client.remarks1) {
-            const parts = client.remarks1.split(' | ');
-            parts.forEach((p: string) => {
-                const [k, ...v] = p.split(': ');
-                if (!k || v.length === 0) {
-                    formattedRemarks.push(p); return;
-                }
-                const rawKey = k.trim();
-                const rawVal = v.join(': ').trim();
-                
-                if (SKIP_KEYS.has(rawKey)) return;
-                
-                const vals = rawVal.split(', ').map((rv: string) => tVal(rv));
-                formattedRemarks.push(`${tKey(rawKey)}: ${vals.join(', ')}`);
-            });
-        }
-        
-        let propertyStreet = destStreet || client.address || '-';
-        let propertyCity = destZipCity || ((client.postalCode || '') + ' ' + (client.location || '')).trim();
-
-        let invoiceAddr = client.address || '';
-        let invoiceZip = client.postalCode || '';
-        let invoiceCity = client.location || '';
-        if (invoiceAddr && !invoiceZip && !invoiceCity) {
-            const match = invoiceAddr.match(/(.+?)(?:,\s*|\s+)(\d{4})\s+(.+)/);
-            if (match) {
-                invoiceAddr = match[1].trim();
-                invoiceZip = match[2];
-                invoiceCity = match[3].trim();
-            }
-        }
-
-        const serviceMap: Record<string, Record<string, string>> = {
-            'House Cleaning': { en: 'House Cleaning', de: 'Hausreinigung', fr: 'Nettoyage de maison' },
-            'Apartment Cleaning': { en: 'Apartment Cleaning', de: 'Wohnungsreinigung', fr: "Nettoyage d'appartement" },
-            'Stairwell Cleaning': { en: 'Stairwell Cleaning', de: 'Treppenhausreinigung', fr: "Nettoyage de cage d'escalier" },
-            'Office Cleaning': { en: 'Office Cleaning', de: 'Büroreinigung', fr: 'Nettoyage de bureau' },
-            'Final Cleaning': { en: 'Final Cleaning', de: 'Endreinigung / Umzugsreinigung', fr: 'Nettoyage de fin de bail' },
-            'Window Cleaning': { en: 'Window Cleaning', de: 'Fensterreinigung', fr: 'Nettoyage de vitres' },
-            'Relocation': { en: 'Relocation', de: 'Umzug', fr: 'Déménagement' },
-            'Combo Service': { en: 'Combo Service', de: 'Kombi-Angebot', fr: 'Offre combinée' },
-            'Disposal': { en: 'Disposal', de: 'Räumung / Entsorgung', fr: 'Débarras / Élimination' },
-            'Gastronomy Cleaning': { en: 'Gastronomy Cleaning', de: 'Gastronomiereinigung', fr: 'Nettoyage gastronomique' },
-            'Medical Cleaning': { en: 'Medical Cleaning', de: 'Praxisreinigung', fr: 'Nettoyage de cabinet médical' },
-            'Construction Cleaning': { en: 'Construction Cleaning', de: 'Baureinigung', fr: 'Nettoyage de fin de chantier' },
-            'Cleaning & Property Maintenance': { en: 'Cleaning & Property Maintenance', de: 'Reinigung & Hauswartung', fr: 'Nettoyage & Conciergerie' },
-            'Cleaning and Property Maintenance': { en: 'Cleaning and Property Maintenance', de: 'Reinigung & Hauswartung', fr: 'Nettoyage & Conciergerie' },
-            'Property Maintenance': { en: 'Property Maintenance', de: 'Hauswartung', fr: 'Conciergerie / Entretien' },
-            'Special Cleaning': { en: 'Special Cleaning', de: 'Spezialreinigung', fr: 'Nettoyage spécial' },
-            'Household Helping': { en: 'Household Helping', de: 'Haushaltshilfe', fr: 'Aide ménagère' },
-            'Maintenance Cleaning': { en: 'Maintenance Cleaning', de: 'Unterhaltsreinigung', fr: "Nettoyage d'entretien" },
-            'Final Cleaning Guarantee': { en: 'Move-out & Final Cleaning with Acceptance Guarantee', de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie', fr: 'Nettoyage de déménagement & fin de bail avec garantie' },
-            'Moving Cleaning Combo': { en: 'Moving & Final Cleaning Combo Offer', de: 'Umzug & Endreinigung Kombi-Angebot', fr: 'Offre combinée déménagement et nettoyage' },
-            'Moving Cleaning Combo 2': { en: 'Moving + Cleaning (Combo)', de: 'Umzug + Reinigung (Kombi)', fr: 'Déménagement + Nettoyage (Combo)' },
-            'Facility Services': { en: 'Facility Services', de: 'Facility Services', fr: 'Services de conciergerie' },
-            'Disposal 2': { en: 'Disposal', de: 'Entsorgung', fr: 'Élimination' }
-        };
-
-        const floorMap: Record<string, Record<string, string>> = {
-            'Ground floor': { en: 'Ground floor', de: 'Erdgeschoss', fr: 'Rez-de-chaussée' },
-            '1st floor': { en: '1st floor', de: '1. Stockwerk', fr: '1er étage' },
-            '2nd floor': { en: '2nd floor', de: '2. Stockwerk', fr: '2ème étage' },
-            '3rd floor': { en: '3rd floor', de: '3. Stockwerk', fr: '3ème étage' },
-            '4th floor': { en: '4th floor', de: '4. Stockwerk', fr: '4ème étage' },
-            '5th floor': { en: '5th floor', de: '5. Stockwerk', fr: '5ème étage' },
-            '6+ floor': { en: '6+ floor', de: '6+ Stockwerk', fr: '6ème étage et plus' }
-        };
-
-        const buildingMap: Record<string, Record<string, string>> = {
-            'Apartment': { en: 'Apartment', de: 'Wohnung', fr: 'Appartement' },
-            'House': { en: 'House', de: 'Haus', fr: 'Maison' },
-            'WG Room': { en: 'WG Room', de: 'WG-Zimmer', fr: 'Chambre en colocation' },
-            'Office': { en: 'Office', de: 'Büro', fr: 'Bureau' },
-            'Studio': { en: 'Studio', de: 'Studio', fr: 'Studio' },
-            'Storage/Cellar': { en: 'Storage/Cellar', de: 'Lager/Keller', fr: 'Cave/Entrepôt' },
-            'Restaurant': { en: 'Restaurant', de: 'Restaurant', fr: 'Restaurant' },
-            'Commercial': { en: 'Commercial', de: 'Gewerbe', fr: 'Commercial' },
-            'Other': { en: 'Other', de: 'Andere', fr: 'Autre' }
-        };
-
-        const getBaseKey = (val: string | null | undefined, map: Record<string, Record<string, string>>) => {
-            if (!val) return undefined;
-            const lowerVal = val.toLowerCase();
-            for (const [key, translations] of Object.entries(map)) {
-                if (key.toLowerCase() === lowerVal || Object.values(translations).some(t => t.toLowerCase() === lowerVal)) {
-                    return key;
-                }
-            }
-            return undefined;
-        }
-
-        const serviceKey = getBaseKey(client.serviceType, serviceMap);
-        const translatedService = serviceKey ? (serviceMap[serviceKey][language as string] || client.serviceType) : (client.serviceType || '');
-        
-        const floorKey = getBaseKey(client.floor, floorMap);
-        const translatedFloor = floorKey ? (floorMap[floorKey][language as string] || client.floor) : (client.floor || '');
-        
-        const buildingKey = getBaseKey(client.buildingType, buildingMap);
-        const translatedBuilding = buildingKey ? (buildingMap[buildingKey][language as string] || client.buildingType) : (client.buildingType || '');
-
-        if (translatedService) {
-            t.title = {
-                de: `${translatedService} Auftragsbestätigung`,
-                fr: `Confirmation de commande de ${translatedService.toLowerCase()}`,
-                en: `${translatedService} Order Confirmation`
-            }[language as 'en' | 'de' | 'fr'] || t.title;
-        }
-
-        const paymentSlip = {
-            account: 'CH86 0900 0000 1636 3866 5',
-            payableTo: ['SwissCleanMove Gebrekristos', 'Orpundstrasse 31', 'CH-2504 Biel/Bienne'],
-            reference: '00 00000 00000 00000 00000 00000'
-        }
-
-        const html = `
-
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="UTF-8">
-        <style>
-            * { box-sizing: border-box; }
-            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0 20px 80px 20px; font-size: 13px; line-height: 1.4; color: #333; }
-            
-            /* -- Header -- */
-            .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; margin-top: -15px; }
-            .header-logo { transform: translateY(-25px); }
-            .header-logo img { height: 130px; width: auto; }
-            .header-tagline { font-size: 11px; color: #00205B; font-weight: bold; margin-top: -25px; letter-spacing: 0.5px; }
-            
-            .header-contact { width: 280px; text-align: left; font-size: 13px; color: #333; border-left: 2px solid #ddd; padding-left: 20px; align-items: flex-start; display: flex; flex-direction: column; justify-content: center; gap: 5px; margin-top: 15px; }
-            .contact-line { display: flex; align-items: center; gap: 15px; font-size: 14px; margin-bottom: 5px; }
-            .contact-icon { font-size: 16px; color: #555; width: 16px; text-align: center; }
-
-            /* -- Top Cards (Address & Order Num) -- */
-            .top-cards { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
-            
-            /* Window Envelope position (Left) */
-            .customer-card { 
-                width: 90mm; /* Fit window envelope */
-                padding: 15px; 
-                margin-left: 90px; /* Adjust to window pos */
-                margin-top: -25px;
-            }
-            .customer-address { font-size: 14px; line-height: 1.6; color: #000; font-weight: normal; }
-            .customer-address span { font-weight: normal; }
-
-            /* Order Card (Right) */
-            .order-card { 
-                width: 280px; 
-                border: 1px solid #555; 
-                border-radius: 8px; 
-                overflow: hidden; 
-                text-align: center;
-            }
-            .order-card-header { background: #00205B; color: white; padding: 8px; font-size: 11px; font-weight: bold; letter-spacing: 1px; }
-            .order-card-body { padding: 15px; background: #fff; }
-            .order-number { font-size: 16px; font-weight: bold; color: #000; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 10px; }
-            .order-ref-title { font-size: 10px; color: #555; font-weight: bold; }
-            .order-ref-val { font-size: 13px; color: #000; margin-top: 3px; }
-
-            /* -- Title Section -- */
-            .main-title { font-size: 18px; font-weight: bold; color: #00205B; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-            .sub-title { font-size: 13px; color: #555; margin-bottom: 30px; }
-
-            /* -- 3 Columns Info -- */
-            .info-columns { display: flex; gap: 15px; margin-bottom: 30px; }
-            .info-col { flex: 1; border: 1px solid #eee; border-radius: 8px; padding: 15px; background: #fafafa; }
-            .info-col-title { font-size: 11px; font-weight: bold; color: #00205B; margin-bottom: 12px; letter-spacing: 1px; }
-            .info-row { display: flex; margin-bottom: 8px; align-items: flex-start; }
-            .info-icon { font-size: 14px; color: #00205B; width: 22px; margin-top: 1px; }
-            .info-label { width: 100px; color: #00205B; font-size: 12px; font-weight: bold; }
-            .info-val { flex: 1; color: #000; font-weight: bold; font-size: 12px; }
-            .info-val span { font-weight: normal; }
-
-            /* -- Service Table -- */
-            .service-section { margin-bottom: 20px; }
-            .service-table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }
-            .service-table th { background: #00205B; color: white; padding: 10px; text-align: left; font-size: 10px; letter-spacing: 1px; }
-            .service-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 11px; color: #333; vertical-align: top; }
-            .service-table tr:last-child td { border-bottom: none; }
-            
-            /* Table Columns Widths */
-            .col-nr { width: 5%; text-align: center; }
-            .col-le { width: 20%; font-weight: bold; }
-            .col-desc { width: 45%; color: #666; }
-            .col-qty { width: 10%; text-align: center; }
-            .col-price { width: 10%; text-align: right; }
-            .col-total { width: 10%; text-align: right; font-weight: bold; }
-
-            /* -- Bottom of Table Info -- */
-            .table-bottom-row { display: flex; justify-content: flex-end; align-items: stretch; margin-top: 15px; gap: 15px; }
-            .scope-box { flex: 1; display: flex; gap: 10px; align-items: center; border: 1px solid #eee; padding: 12px; border-radius: 8px; background: #fafafa; }
-            .scope-icon { font-size: 20px; color: #555; }
-            .scope-text strong { display: block; font-size: 11px; color: #555; margin-bottom: 3px; }
-            .scope-text { font-size: 10px; color: #666; }
-
-            .total-box { background: #00205B; color: white; padding: 15px 25px; border-radius: 8px; text-align: center; width: 250px; }
-            .total-box-title { font-size: 10px; font-weight: bold; letter-spacing: 1px; margin-bottom: 5px; text-transform: uppercase; }
-            .total-box-amount { font-size: 22px; font-weight: bold; margin-bottom: 5px; }
-            .total-box-sub { font-size: 10px; color: #ccc; }
-
-            /* -- Badges -- */
-            .badges-row { display: flex; gap: 10px; margin-top: 30px; margin-bottom: 30px; }
-            .badge { flex: 1; display: flex; gap: 10px; align-items: flex-start; border: 1px solid #eee; padding: 12px; border-radius: 8px; }
-            .badge-icon { font-size: 22px; color: #00205B; margin-top: 2px; }
-            .badge-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 3px; letter-spacing: 0.5px; }
-            .badge-text { font-size: 11px; color: #555; line-height: 1.4; }
-
-            /* -- Signatures -- */
-            .signatures-row { display: flex; justify-content: space-between; margin-bottom: 30px; }
-            .sig-box { width: 45%; }
-            .sig-title { font-size: 12px; font-weight: bold; color: #00205B; margin-bottom: 15px; letter-spacing: 1px; }
-            .sig-name { font-size: 16px; font-family: 'Brush Script MT', cursive; color: #555; margin-bottom: 5px; }
-            .sig-details { font-size: 12px; color: #555; }
-            .sig-details table { border-collapse: collapse; margin-top: 10px; }
-            .sig-details td { padding: 5px 0; }
-            .sig-details td:first-child { padding-right: 15px; color: #555; }
-            .sig-line { border-bottom: 1px solid #333; display: inline-block; width: 150px; height: 14px; }
-
-            /* -- Timing & Comm -- */
-            .timing-row { display: flex; gap: 15px; margin-bottom: 40px; }
-            .timing-box { flex: 1; border: 1px solid #eee; padding: 14px; border-radius: 8px; display: flex; gap: 14px; align-items: center; }
-            .timing-icon { font-size: 24px; color: #00205B; }
-            .timing-text strong { display: block; font-size: 12px; color: #00205B; font-weight: bold; margin-bottom: 4px; letter-spacing: 0.5px; }
-            .timing-text { font-size: 12px; color: #555; display: flex; gap: 12px; }
-            .timing-text div { display: flex; flex-direction: column; gap: 4px; }
-
-            /* -- Footer -- */
-            .footer-banner { background: #00205B; color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 8px; font-size: 10px; margin-top: auto; }
-            .footer-banner-title { font-weight: bold; display: flex; align-items: center; gap: 8px; letter-spacing: 1px; }
-            .footer-banner-items { display: flex; gap: 20px; }
-            .footer-item { display: flex; flex-direction: column; gap: 3px; }
-            .footer-item span { color: #ccc; font-size: 9px; }
-            
-            /* -- Payment Slip Styles -- */
-            .payment-slip { 
-                margin-top: 40px; 
-                position: relative;
-                width: 100%;
-                height: 396px; 
-            }
-            .scissors-line-horizontal { position: absolute; top: 0; left: 0; width: 100%; border-top: 1px dashed #666; text-align: center; height: 0; }
-            .scissors-icon { position: absolute; left: 10px; top: -10px; font-size: 14px; color: #666; background: #fff; }
-            .payment-slip-table { width: 100%; height: 100%; border-collapse: collapse; margin-top: 10px; table-layout: fixed; }
-            .payment-slip-table td { vertical-align: top; }
-            .payment-slip-left { width: 62mm; position: relative; }
-            .payment-slip-right { width: 148mm; padding-left: 5mm; }
-            .scissors-line-vertical { position: absolute; right: -1px; top: -10px; height: 100%; border-right: 1px dashed #666; }
-            .scissors-icon-v { position: absolute; top: 20px; right: -6px; font-size: 14px; color: #666; background: #fff; transform: rotate(-90deg); }
-            .pt-receipt { padding-top: 5mm; padding-right: 5mm; }
-            .pt-payment { padding-top: 5mm; }
-            .payment-slip-title { margin: 0 0 14px 0; font-size: 11pt; font-weight: bold; letter-spacing: 0.2px; font-family: Helvetica, Arial, sans-serif; }
-            .payment-slip-label { display: block; font-size: 6pt; font-weight: bold; color: #111; margin-bottom: 2px; line-height: 1.1; }
-            .payment-slip-value { font-size: 8pt; color: #111; line-height: 1.2; }
-            .payment-slip-block { margin-bottom: 3mm; }
-            .payment-part-content { display: flex; gap: 5mm; }
-            .payment-col-left { width: 46mm; }
-            .payment-col-right { flex: 1; }
-            .qr-code-wrapper { width: 46mm; height: 46mm; position: relative; margin-bottom: 5mm; }
-            .qr-code-wrapper img { width: 100%; height: 100%; object-fit: contain; }
-            .qr-cross { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 7mm; height: 7mm; background: #000; display: flex; align-items: center; justify-content: center; }
-            .amount-area-receipt, .amount-area-payment { display: flex; margin-top: 5mm; }
-            .amount-area-receipt { gap: 10px; }
-            .amount-area-payment { gap: 15px; }
-            .amount-col { display: flex; flex-direction: column; }
-            .amount-col .payment-slip-value { font-size: 10pt; margin-top: 4px; }
-</style>
-    </head>
-    <body>
-        <!-- Header -->
-        <div class="header-top">
-            <div class="header-logo">
-                <img src="data:image/png;base64,${LOGO_BASE64}" alt="SwissCleanMove">
-                <div class="header-tagline">${t.tagline}</div>
-            </div>
-            <div class="header-contact">
-                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span> +41 78 215 80 30</div>
-                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span> info@swisscleanmove.ch</div>
-                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg></span> www.swisscleanmove.ch</div>
-                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span> Orpundstrasse 31, 2504 Biel</div>
-                <div class="contact-line"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></span> UID: CHE-457.949.122 MWST</div>
-            </div>
-        </div>
-
-        <!-- Top Cards -->
-        <div class="top-cards">
-            <div class="customer-card">
-                <div class="customer-address">
-                    ${clientName}<br>
-                    <span>${invoiceAddr ? invoiceAddr + '<br>' : ''}${invoiceZip} ${invoiceCity}</span>
-                </div>
-            </div>
-            <div class="order-card">
-                <div class="order-card-header">${t.orderNumber?.toUpperCase()}</div>
-                <div class="order-card-body">
-                    <div class="order-number">${orderNumber}</div>
-                    <div class="order-ref-title">${t.invoiceRef?.toUpperCase()}</div>
-                    <div class="order-ref-val">-</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Title -->
-        <div class="main-title">${t.title}</div>
-        <div class="sub-title">${t.subTitle}</div>
-
-        <!-- Info Columns -->
-        <div class="info-columns">
-            <!-- AUFTRAGSDATEN -->
-            <div class="info-col">
-                <div class="info-col-title">${t.orderData}</div>
-                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span><span class="info-label">${t.serviceDate}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleDateString()}</span></div>
-                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><span class="info-label">${t.startTime}</span><span class="info-val">${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
-                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><span class="info-label">${t.handoverTime}</span><span class="info-val">${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</span></div>
-                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><span class="info-label">${t.contactPerson}</span><span class="info-val">${clientName}</span></div>
-                <div class="info-row"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></span><span class="info-label">${t.paymentMethod}</span><span class="info-val">${t.paymentMethodValue}</span></div>
-            </div>
-            <!-- OBJEKT -->
-            <div class="info-col">
-                <div class="info-col-title">${t.object}</div>
-                <div class="info-row" style="margin-bottom: 15px;"><span class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg></span><span class="info-val"><span>${propertyStreet}${propertyCity ? '<br>' + propertyCity : ''}</span></span></div>
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.propertyType}</span><span class="info-val"><span>${translatedBuilding || '-'}</span></span></div>
-                ${translatedFloor ? `<div class="info-row"><span class="info-label" style="width: 70px;">${t.floor}</span><span class="info-val"><span>${translatedFloor}</span></span></div>` : ''}
-                <div class="info-row"><span class="info-label" style="width: 70px;">${t.area}</span><span class="info-val"><span>${client.squareMeters ? t.areaPrefix + ' ' + client.squareMeters + ' m²' : '-'}</span></span></div>
-            </div>
-            <!-- KONTAKT -->
-            <div class="info-col" style="display: flex; flex-direction: column; justify-content: center; padding-top: 40px; gap: 15px;">
-                ${client.phone ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span><span class="info-val" style="display: flex; align-items: center;"><span>${client.phone}</span></span></div>` : ''}
-                ${client.email ? `<div class="info-row"><span class="info-icon" style="font-size: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span><span class="info-val" style="display: flex; align-items: center;"><span>${client.email}</span></span></div>` : ''}
-            </div>
-        </div>
-
-        <!-- Service Table -->
-        <div class="service-section">
-            <table class="service-table">
-                <thead>
-                    <tr>
-                        <th class="col-nr">NR.</th>
-                        <th class="col-le">${t.service}</th>
-                        <th class="col-desc">${t.description}</th>
-                        <th class="col-qty">${t.quantity}</th>
-                        <th class="col-price">${t.unitPrice}</th>
-                        <th class="col-total">${t.totalPrice}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="col-nr">1</td>
-                        <td class="col-le">${translatedService}</td>
-                        <td class="col-desc">${formattedRemarks.length > 0 ? '<ul style="margin: 0; padding-left: 15px; list-style-type: none; font-size: 11px; line-height: 1.6; column-count: 2; column-gap: 15px;"><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>' + formattedRemarks.join('</li><li style="position: relative; padding-left: 8px; margin-bottom: 2px;"><span style="position: absolute; left: -2px; top: 0;">&bull;</span>') + '</li></ul>' : t.defaultServiceDesc}</td>
-                        <td class="col-qty">1</td>
-                        <td class="col-price">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
-                        <td class="col-total">CHF ${(client.totalPrice || 0).toFixed(2)}</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="table-bottom-row">
-
-                <div class="total-box">
-                    <div class="total-box-title">${t.totalFixedPrice}</div>
-                    <div class="total-box-amount">CHF ${(client.totalPrice || 0).toFixed(2)}</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Badges -->
-        <div class="badges-row">
-            <div class="badge">
-                <div class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-                <div class="badge-text"><strong>${t.acceptanceGuarantee}</strong>${t.acceptanceGuaranteeDesc}</div>
-            </div>
-            <div class="badge">
-                <div class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
-                <div class="badge-text"><strong>${t.liabilityInsured}</strong>${t.liabilityInsuredDesc}</div>
-            </div>
-            <div class="badge">
-                <div class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
-                <div class="badge-text"><strong>${t.swissQuality}</strong>${t.swissQualityDesc}</div>
-            </div>
-            <div class="badge">
-                <div class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg></div>
-                <div class="badge-text"><strong>${t.ecoFriendly}</strong>${t.ecoFriendlyDesc}</div>
-            </div>
-        </div>
-
-        <!-- Signatures -->
-        <div class="signatures-row" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;">
-            <div class="sig-box" style="width: 30%;">
-                <div class="sig-title">SWISSCLEANMOVE</div>
-                <div class="sig-details">
-                    <table style="width: 100%;">
-                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Middle Section for Date & Ort -->
-            <div class="sig-box" style="width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; margin-bottom: 15px;">
-                <div class="sig-details" style="text-align: center; font-size: 11px; color: #333;">
-                    <strong>${t.cleaningDateLabel}</strong> ${new Date().toLocaleDateString()}<br><br>
-                    <strong>${t.locationLabel}</strong> Biel
-                </div>
-            </div>
-
-            <div class="sig-box" style="width: 30%;">
-                <div class="sig-title"></div>
-                <div class="sig-details">
-                    <table style="width: 100%;">
-                        <tr><td style="width: 80px;">${t.nameLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>${t.cleaningDateLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                        <tr><td>${t.signatureLabel}</td><td><span class="sig-line" style="width: 100%;"></span></td></tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <!-- Timing & Comm -->
-        <div class="timing-row">
-            <div class="timing-box">
-                <div class="timing-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-                <div class="timing-text">
-                    <div><strong>${t.performancePeriod}</strong>${t.serviceStart}<br>${t.serviceEnd}</div>
-                    <div><br>${new Date(client.fromDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}<br>${new Date(client.untilDate || Date.now()).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ${t.timeUnit}</div>
-                </div>
-            </div>
-            <div class="timing-box">
-                <div class="timing-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                <div class="timing-text">
-                    <div><strong>${t.communication}</strong>${t.communicationText}</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Banner -->
-        <div class="footer-banner">
-            <div class="footer-banner-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg> ${t.accountInformation}</div>
-            <div class="footer-banner-items">
-                <div class="footer-item"><span>${t.bankName}</span>PostFinance AG</div>
-                <div class="footer-item"><span>IBAN</span>CH86 0900 0000 1636 3866 5</div>
-                <div class="footer-item"><span>${t.accountHolder}</span>Dawit Gebrekristos / SwissCleanMove</div>
-                <div class="footer-item"><span>${t.accountNo}</span>16-363866-5</div>
-                <div class="footer-item"><span>${t.clearingNo}</span>09000</div>
-            </div>
-        </div>
-
-        </body>
-    </html>`
-
-    return html;
 }
