@@ -487,8 +487,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
           OBJEKTDATEN
         </div>
         <div class="info-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-          <div><strong>Service:</strong> ${customer.serviceName || customer.formType || 'Reinigung / Umzug'}</div>
-          <div><strong>Datum:</strong> ${customer.cleaningAppointment || customer.movingDate || 'Nach Absprache'}</div>
+          <div style="grid-column: span 2;"><strong>Datum:</strong> ${customer.cleaningAppointment || customer.movingDate || 'Nach Absprache'}</div>
           
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
           

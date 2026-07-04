@@ -382,50 +382,10 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
       result.isFallback = true;
   }
 
-  // Add any unhandled checkboxes as "Included" (Price: 0) to ensure they show up in the Admin quote breakdown
-  const skipCheckboxes = new Set([
-    // Personal info
-    'firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'nameFirstName',
-    // Address fields (all variants)
-    'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 'address',
-    'cleanStreet', 'cleanZipCity', 'cleanAddress',
-    'movingStreet', 'movingZipCity', 'unloadingStreetAndNumber', 'unloadingPostalCodeAndCity',
-    'moveFromStreet', 'moveFromZipCity', 'moveToStreet', 'moveToZipCity',
-    'destinationStreet', 'destinationCity', 'destinationPropertyType', 'destinationArea', 'destinationElevator', 'destinationParking',
-    // Meta / internal
-    'locale', 'serviceName', 'formType', 'requestType', 'quoteResult', 'estimatedPrice', 'lineItems', 'quoteSent',
-    'data', 'id', 'status', 'createdAt', 'updatedAt', 'pdfPath', 'submissionDate',
-    // Wizard property fields
-    'sharedPropertyType', 'sharedRooms', 'sharedLivingArea', 'sharedFloor', 'sharedElevator', 'sharedParking', 'sharedParkingDistance',
-    // Normalized property fields
-    'apartmentType', 'propertyType', 'typeOfProperty', 'objectType',
-    'numberOfRooms', 'numberOfRoomsApartment', 'rooms',
-    'livingSpaceInM2', 'areaInM2', 'area', 'squareMeters',
-    'elevatorSizes', 'elevator', 'hasElevator', 'noParking', 'parking', 'parkingDistance',
-    'floor', 'floorsLevel',
-    'cleaningTypes', 'frequency', 'cleaningAppointment', 'movingDate', 'preferredDate', 'preferredTime',
-    // Date/surcharge modifiers
-    'isExpress', 'isSaturday', 'isSunday', 'isHoliday', 'isFlexible',
-    // Already handled pricing items
-    'packingService', 'unpackingService', 'furnitureAssembly', 'furnitureDisassembly', 'furnitureLift',
-    'hasBalcony', 'hasBasement', 'hasAttic', 'hasGarage', 'largeBalcony',
-    'dirtLevel', 'condition',
-    // Unloading fields
-    'unloadingApartmentType', 'unloadingAreaInM2', 'unloadingElevatorSizes', 'unloadingParkingDistance',
-  ]);
+  // We previously added unhandled checkboxes to lineItems here with price: 0.
+  // However, the client requested that the pricing table be transparent and only contain actual priced items.
+  // These unhandled fields are already displayed in the LEISTUNGSUMFANG section of the PDF.
   
-  if (!result.isFallback && formData) {
-    Object.entries(formData).forEach(([key, val]) => {
-      if (val === true && !skipCheckboxes.has(key)) {
-        // If it's a true boolean that wasn't handled, add it
-        result.lineItems.push({ id: `quote.items.addon.${key}`, price: 0 });
-      } else if (Array.isArray(val) && val.length > 0 && !skipCheckboxes.has(key)) {
-        // If it's an array of selections, add it
-        result.lineItems.push({ id: `quote.items.addon.${key}`, price: 0 });
-      }
-    });
-  }
-
   // If at any point it was marked as fallback, clear the total price
   if (result.isFallback) {
     result.totalEstimatedPrice = null;
