@@ -178,16 +178,16 @@ export async function POST(req: Request) {
         if (current && current[part]) {
           current = current[part];
         } else {
-          return key; // Fallback to key
+          return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()); // Fallback
         }
       }
-      return typeof current === 'string' ? current : key;
+      return typeof current === 'string' ? current : key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
     };
   
     // Format Email HTML
     const lineItemsHtml = quoteResult.lineItems.map(item => {
       let label = t(item.id);
-      if (label === item.id) {
+      if (label === item.id || label === item.id.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())) {
          label = t('serviceForm.' + item.id);
       }
       return `
@@ -234,6 +234,9 @@ export async function POST(req: Request) {
       `;
     }
 
+    const subjectName = [body.name, body.firstName].filter(n => !!n && n !== 'N/A').join(' ') || 'Customer';
+    const translatedService = locale === 'de' ? (serviceType === 'moving' ? 'Umzug' : (serviceType === 'house-cleaning' ? 'Hausreinigung' : 'Reinigung')) : (locale === 'fr' ? (serviceType === 'moving' ? 'Déménagement' : 'Nettoyage') : serviceType);
+
     const htmlContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333; line-height: 1.6;">
         <h2 style="color: #003366;">${translatedTitle}</h2>
@@ -270,7 +273,7 @@ export async function POST(req: Request) {
     }
 
     const attachments = pdfBuffer ? [{
-      filename: `Quote_${serviceType}_${new Date().getTime()}.pdf`,
+      filename: `Quote_${translatedService}_${new Date().getTime()}.pdf`,
       content: pdfBuffer,
       contentType: 'application/pdf'
     }] : [];
@@ -292,8 +295,8 @@ export async function POST(req: Request) {
     // Send Admin Email (Formatted without raw data if possible, or keep it clean)
     await sendEmailNotification({
       to: process.env.ADMIN_EMAIL || process.env.GMAIL_USER || 'admin@swisscleanmove.ch',
-      subject: `New Request: ${serviceType} - ${body.firstName} ${body.lastName}`,
-      html: `<h2>New Form Submission</h2><p>Customer: ${body.firstName} ${body.lastName} (${body.email || body.emailAddress})</p>` + htmlContent,
+      subject: `New Request: ${translatedService} - ${subjectName}`,
+      html: `<h2>New Form Submission</h2><p>Customer: ${subjectName} (${body.email || body.emailAddress})</p>` + htmlContent,
       attachments
     });
 

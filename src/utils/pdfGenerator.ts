@@ -101,7 +101,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
 
   const skipKeys = [
     // Personal info
-    'firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'nameFirstName',
+    'firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'nameFirstName', 'acceptPrivacy',
     // Address fields (all variants)
     'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 'address',
     'cleanStreet', 'cleanZipCity', 'cleanAddress',
@@ -123,6 +123,38 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     // Unloading fields (shown in OBJEKTDATEN destination)
     'unloadingApartmentType', 'unloadingAreaInM2', 'unloadingElevatorSizes', 'unloadingParkingDistance',
   ];
+
+  const translatedLabels: Record<string, any> = {
+    isExpress: { de: 'Express Service', en: 'Express Service', fr: 'Service Express' },
+    moveVolume: { de: 'Umzugsvolumen', en: 'Move Volume', fr: 'Volume de Déménagement' },
+    moveToAccess: { de: 'Zugang Zielort', en: 'Access Destination', fr: 'Accès Destination' },
+    moveFromAccess: { de: 'Zugang Startort', en: 'Access Origin', fr: 'Accès Origine' },
+    contactMethods: { de: 'Kontaktmethode', en: 'Contact Method', fr: 'Méthode de Contact' },
+    moveBoxTypes: { de: 'Umzugskartons', en: 'Moving Boxes', fr: 'Cartons de Déménagement' },
+    movePackingMaterials: { de: 'Verpackungsmaterial', en: 'Packing Materials', fr: 'Matériel d\\'Emballage' },
+    moveFurniture: { de: 'Möbel', en: 'Furniture', fr: 'Meubles' },
+    moveSpecialItems: { de: 'Spezialgegenstände', en: 'Special Items', fr: 'Objets Spéciaux' },
+    moveServices: { de: 'Zusatzleistungen', en: 'Additional Services', fr: 'Services Supplémentaires' },
+    cleanWindowTypes: { de: 'Fensterarten', en: 'Window Types', fr: 'Types de Fenêtres' },
+    cleanSpecialGlass: { de: 'Spezialglas', en: 'Special Glass', fr: 'Verre Spécial' },
+    cleanShuttersBlinds: { de: 'Storen / Rollläden', en: 'Shutters / Blinds', fr: 'Stores / Volets' },
+    cleanCondition: { de: 'Zustand', en: 'Condition', fr: 'État' },
+    cleanOutdoorArea: { de: 'Aussenbereich', en: 'Outdoor Area', fr: 'Espace Extérieur' }
+  };
+
+  const translatedValues: Record<string, any> = {
+    small: { de: 'Klein', en: 'Small', fr: 'Petit' },
+    medium: { de: 'Mittel', en: 'Medium', fr: 'Moyen' },
+    large: { de: 'Gross', en: 'Large', fr: 'Grand' },
+    veryLarge: { de: 'Sehr Gross', en: 'Very Large', fr: 'Très Grand' },
+    direct: { de: 'Direkt', en: 'Direct', fr: 'Direct' },
+    d0_20: { de: '0 - 20m', en: '0 - 20m', fr: '0 - 20m' },
+    d20_50: { de: '20 - 50m', en: '20 - 50m', fr: '20 - 50m' },
+    d50plus: { de: '> 50m', en: '> 50m', fr: '> 50m' },
+    email: { de: 'E-Mail', en: 'Email', fr: 'E-mail' },
+    phone: { de: 'Telefon', en: 'Phone', fr: 'Téléphone' },
+    whatsapp: { de: 'WhatsApp', en: 'WhatsApp', fr: 'WhatsApp' }
+  };
   
   const additionalAttributesHtml = Object.entries(customer)
     .filter(([key, val]) => {
@@ -132,11 +164,21 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       return true;
     })
     .map(([key, val]) => {
-       const formattedKey = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).replace(/([A-Z]+)/g, str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase());
+       const lblObj = translatedLabels[key];
+       const formattedKey = lblObj ? (lblObj[locale] || lblObj.en) : key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).replace(/([A-Z]+)/g, str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase());
+       
        let formattedVal = val;
-       if (val === true) formattedVal = 'Ja';
-       if (Array.isArray(val)) formattedVal = val.join(', ');
-       return `<div class="scope-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <strong>${formattedKey}:</strong> ${formattedVal}</div>`;
+       if (val === true) formattedVal = locale === 'de' ? 'Ja' : (locale === 'fr' ? 'Oui' : 'Yes');
+       else if (typeof val === 'string') {
+         const valObj = translatedValues[val];
+         if (valObj) formattedVal = valObj[locale] || valObj.en;
+       } else if (Array.isArray(val)) {
+         formattedVal = val.map(v => {
+           const vObj = translatedValues[v];
+           return vObj ? (vObj[locale] || vObj.en) : v;
+         }).join(', ');
+       }
+       return `<div class="scope-item"><svg style="fill: #003366; flex-shrink: 0;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <strong>${formattedKey}:</strong> <span style="color: #333;">${formattedVal}</span></div>`;
     }).join('');
 
   const subtotal = regularItems.reduce((sum, item) => sum + item.price, 0);
@@ -442,7 +484,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     <div class="title-section">
       <div class="title-left">
         <h1>OFFERTE</h1>
-        <p>Facility Services – Offerte</p>
+        <p>${locale === 'de' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Umzug' : (customer.serviceName === 'house-cleaning' || customer.formType === 'cleaning' ? 'Hausreinigung' : 'Reinigung')) : (locale === 'fr' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Déménagement' : 'Nettoyage') : (customer.serviceName || customer.formType || 'Service'))} – Offerte</p>
         <span style="font-size: 10px; color: #777;">TRANSPARENT, ZUVERLÄSSIG, PROFESSIONELL</span>
       </div>
       <div class="quote-meta">
@@ -490,8 +532,6 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
           <div style="grid-column: span 2;"><strong>Datum:</strong> ${customer.cleaningAppointment || customer.movingDate || 'Nach Absprache'}</div>
           
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
-          
-          <div style="grid-column: span 2;"><strong>Property Location:</strong> ${customer.streetAndNumber || customer.cleanStreet || customer.street || 'N/A'}, ${customer.postalCodeAndCity || customer.cleanZipCity || customer.city || 'N/A'}</div>
           ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>Property Type:</strong> ${customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType}</div>` : ''}
           ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters ? `<div><strong>Area:</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters} m²</div>` : ''}
           ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms ? `<div><strong>Zimmer:</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms} Zi.</div>` : ''}
@@ -520,10 +560,6 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       <p style="font-size: 11px; color: #777; margin-top: 0;">Professionelle Erledigung gemäss Ihren Angaben:</p>
       <div class="scope-list">
         ${additionalAttributesHtml}
-        <div class="scope-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Transparente Pauschalpreise</div>
-        <div class="scope-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Keine versteckten Kosten</div>
-        <div class="scope-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Material & Spesen inklusive</div>
-        <div class="scope-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Abnahmegarantie (bei Reinigung)</div>
       </div>
     </div>
     
