@@ -2,17 +2,17 @@ import { QuoteResult } from './pricingEngine';
 import fs from 'fs';
 import path from 'path';
 
-export async function generateQuotePdf(quote: QuoteResult, customer: any): Promise<Buffer> {
+export function generateQuoteHtml(quote: QuoteResult, customer: any, documentType: 'quote' | 'contract' = 'quote'): string {
   const locale = (customer.locale || 'de') as 'de' | 'en' | 'fr';
 
   const pdfDict = {
     de: {
       thankYou: 'Herzlichen Dank',
-      thankYouDesc: 'FÜR IHRE ANFRAGE UND DAS VERTRAUEN IN SWISSCLEANMOVE',
-      offer: 'OFFERTE',
+      thankYouDesc: documentType === 'quote' ? 'FÜR IHRE ANFRAGE UND DAS VERTRAUEN IN SWISSCLEANMOVE' : 'FÜR IHREN AUFTRAG UND DAS VERTRAUEN IN SWISSCLEANMOVE',
+      offer: documentType === 'quote' ? 'OFFERTE' : 'AUFTRAGSBESTÄTIGUNG',
       transparent: 'TRANSPARENT, ZUVERLÄSSIG, PROFESSIONELL',
-      quoteNo: 'OFFERTE-NR:',
-      quoteDate: 'OFFERTDATUM:',
+      quoteNo: documentType === 'quote' ? 'OFFERTE-NR:' : 'VERTRAGS-NR:',
+      quoteDate: documentType === 'quote' ? 'OFFERTDATUM:' : 'VERTRAGSDATUM:',
       customer: 'KUNDEN',
       objectData: 'OBJEKTDATEN',
       date: 'Datum:',
@@ -39,8 +39,8 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       totalFixed: 'GESAMTPREIS (Festpreis)',
       guaranteeTitle: '100 % ABNAHMEGARANTIE',
       guaranteeDesc: 'Wir reinigen professionell inkl. Schweizer Übergabegarantie.',
-      validTitle: 'DIESE OFFERTE IST GÜLTIG',
-      validDesc: 'Diese Offerte ist während 30 Tagen gültig. Wir danken Ihnen für das Vertrauen und freuen uns auf die Zusammenarbeit.',
+      validTitle: documentType === 'quote' ? 'DIESE OFFERTE IST GÜLTIG' : 'VERTRAGSDAUER',
+      validDesc: documentType === 'quote' ? 'Diese Offerte ist während 30 Tagen gültig. Wir danken Ihnen für das Vertrauen und freuen uns auf die Zusammenarbeit.' : 'Dieser Vertrag ist verbindlich. Wir danken Ihnen für das Vertrauen und freuen uns auf die Zusammenarbeit.',
       confirmation: 'KUNDENBESTÄTIGUNG',
       signature: 'Unterschrift:',
       lookingForward: 'WIR FREUEN UNS AUF IHREN AUFTRAG',
@@ -55,11 +55,11 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     },
     en: {
       thankYou: 'Thank You',
-      thankYouDesc: 'FOR YOUR INQUIRY AND TRUST IN SWISSCLEANMOVE',
-      offer: 'QUOTE',
+      thankYouDesc: documentType === 'quote' ? 'FOR YOUR INQUIRY AND TRUST IN SWISSCLEANMOVE' : 'FOR YOUR ORDER AND TRUST IN SWISSCLEANMOVE',
+      offer: documentType === 'quote' ? 'QUOTE' : 'CONTRACT',
       transparent: 'TRANSPARENT, RELIABLE, PROFESSIONAL',
-      quoteNo: 'QUOTE NO:',
-      quoteDate: 'QUOTE DATE:',
+      quoteNo: documentType === 'quote' ? 'QUOTE NO:' : 'CONTRACT NO:',
+      quoteDate: documentType === 'quote' ? 'QUOTE DATE:' : 'CONTRACT DATE:',
       customer: 'CUSTOMER',
       objectData: 'PROPERTY DATA',
       date: 'Date:',
@@ -86,8 +86,8 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       totalFixed: 'TOTAL (Fixed Price)',
       guaranteeTitle: '100% ACCEPTANCE GUARANTEE',
       guaranteeDesc: 'We clean professionally incl. Swiss handover guarantee.',
-      validTitle: 'THIS QUOTE IS VALID',
-      validDesc: 'This quote is valid for 30 days. We thank you for your trust and look forward to working with you.',
+      validTitle: documentType === 'quote' ? 'THIS QUOTE IS VALID' : 'CONTRACT VALIDITY',
+      validDesc: documentType === 'quote' ? 'This quote is valid for 30 days. We thank you for your trust and look forward to working with you.' : 'This contract is binding. We thank you for your trust and look forward to working with you.',
       confirmation: 'CUSTOMER CONFIRMATION',
       signature: 'Signature:',
       lookingForward: 'WE LOOK FORWARD TO YOUR ORDER',
@@ -102,11 +102,11 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     },
     fr: {
       thankYou: 'Merci Beaucoup',
-      thankYouDesc: 'POUR VOTRE DEMANDE ET VOTRE CONFIANCE EN SWISSCLEANMOVE',
-      offer: 'DEVIS',
+      thankYouDesc: documentType === 'quote' ? 'POUR VOTRE DEMANDE ET VOTRE CONFIANCE EN SWISSCLEANMOVE' : 'POUR VOTRE COMMANDE ET VOTRE CONFIANCE EN SWISSCLEANMOVE',
+      offer: documentType === 'quote' ? 'DEVIS' : 'CONTRAT',
       transparent: 'TRANSPARENT, FIABLE, PROFESSIONNEL',
-      quoteNo: 'DEVIS N°:',
-      quoteDate: 'DATE DU DEVIS:',
+      quoteNo: documentType === 'quote' ? 'DEVIS N°:' : 'CONTRAT N°:',
+      quoteDate: documentType === 'quote' ? 'DATE DU DEVIS:' : 'DATE DU CONTRAT:',
       customer: 'CLIENT',
       objectData: 'DONNÉES DE LA PROPRIÉTÉ',
       date: 'Date:',
@@ -133,8 +133,8 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
       totalFixed: 'TOTAL (Prix Fixe)',
       guaranteeTitle: 'GARANTIE D\'ACCEPTATION À 100%',
       guaranteeDesc: 'Nous nettoyons professionnellement incl. garantie de remise suisse.',
-      validTitle: 'CE DEVIS EST VALABLE',
-      validDesc: 'Ce devis est valable pendant 30 jours. Nous vous remercions de votre confiance.',
+      validTitle: documentType === 'quote' ? 'CE DEVIS EST VALABLE' : 'VALIDITÉ DU CONTRAT',
+      validDesc: documentType === 'quote' ? 'Ce devis est valable pendant 30 jours. Nous vous remercions de votre confiance.' : 'Ce contrat est contraignant. Nous vous remercions de votre confiance.',
       confirmation: 'CONFIRMATION DU CLIENT',
       signature: 'Signature:',
       lookingForward: 'NOUS ATTENDONS VOTRE COMMANDE',
@@ -200,7 +200,8 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
 
   // Format Date and Quote Number
   const quoteDate = new Date().toLocaleDateString('de-CH');
-  const quoteNumber = `SCM-${new Date().getFullYear().toString().slice(-2)}${(new Date().getMonth() + 1).toString().padStart(2, '0')}-${Math.floor(Math.random() * 9000 + 1000)}`;
+  const quoteNumberPrefix = documentType === 'quote' ? 'OFF' : 'VER';
+  const quoteNumber = `${quoteNumberPrefix}-${new Date().getFullYear().toString().slice(-2)}${(new Date().getMonth() + 1).toString().padStart(2, '0')}-${Math.floor(Math.random() * 9000 + 1000)}`;
 
   const isFallback = quote.isFallback;
   const totalPrice = quote.totalEstimatedPrice || 0;
@@ -793,7 +794,12 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
   </body>
   </html>
   `;
+  return htmlTemplate;
+}
 
+export async function generateQuotePdf(quote: QuoteResult, customer: any, documentType: 'quote' | 'contract' = 'quote'): Promise<Buffer> {
+  const htmlTemplate = generateQuoteHtml(quote, customer, documentType);
+  
   let browser;
   if (process.env.VERCEL_ENV || process.env.VERCEL_URL || process.env.VERCEL) {
     const puppeteerCore = require('puppeteer-core');
