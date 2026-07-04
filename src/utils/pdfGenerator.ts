@@ -131,7 +131,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
     moveFromAccess: { de: 'Zugang Startort', en: 'Access Origin', fr: 'Accès Origine' },
     contactMethods: { de: 'Kontaktmethode', en: 'Contact Method', fr: 'Méthode de Contact' },
     moveBoxTypes: { de: 'Umzugskartons', en: 'Moving Boxes', fr: 'Cartons de Déménagement' },
-    movePackingMaterials: { de: 'Verpackungsmaterial', en: 'Packing Materials', fr: 'Matériel d\\'Emballage' },
+    movePackingMaterials: { de: 'Verpackungsmaterial', en: 'Packing Materials', fr: "Matériel d'Emballage" },
     moveFurniture: { de: 'Möbel', en: 'Furniture', fr: 'Meubles' },
     moveSpecialItems: { de: 'Spezialgegenstände', en: 'Special Items', fr: 'Objets Spéciaux' },
     moveServices: { de: 'Zusatzleistungen', en: 'Additional Services', fr: 'Services Supplémentaires' },
