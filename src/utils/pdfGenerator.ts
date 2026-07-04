@@ -396,8 +396,8 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
           <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
         </div>
         <div class="quote-meta-details">
-          <div><strong>OFFERTE-NR:</strong> <span>\${quoteNumber}</span></div>
-          <div style="margin-top: 5px;"><strong>OFFERTDATUM:</strong> \${quoteDate}</div>
+          <div><strong>OFFERTE-NR:</strong> <span>${quoteNumber}</span></div>
+          <div style="margin-top: 5px;"><strong>OFFERTDATUM:</strong> ${quoteDate}</div>
         </div>
       </div>
     </div>
@@ -409,19 +409,19 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
           KUNDEN
         </div>
         <div class="info-content">
-          <strong style="font-size: 14px; display: block; margin-bottom: 5px;">\${customer.firstName} \${customer.lastName || customer.name}</strong>
+          <strong style="font-size: 14px; display: block; margin-bottom: 5px;">${customer.firstName} ${customer.lastName || customer.name}</strong>
           <table style="border-spacing: 0;">
             <tr>
               <td style="width: 20px;"><svg style="width:12px; height:12px; fill:#555;" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></td>
-              <td>\${customer.streetAndNumber || ''}<br>\${customer.postalCodeAndCity || ''}</td>
+              <td>${customer.streetAndNumber || ''}<br>${customer.postalCodeAndCity || ''}</td>
             </tr>
             <tr>
               <td><svg style="width:12px; height:12px; fill:#555;" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></td>
-              <td>\${customer.email || customer.emailAddress || 'N/A'}</td>
+              <td>${customer.email || customer.emailAddress || 'N/A'}</td>
             </tr>
             <tr>
               <td><svg style="width:12px; height:12px; fill:#555;" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></td>
-              <td>\${customer.phone || customer.telephone || 'N/A'}</td>
+              <td>${customer.phone || customer.telephone || 'N/A'}</td>
             </tr>
           </table>
         </div>
@@ -433,10 +433,16 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
           OBJEKTDATEN
         </div>
         <div class="info-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-          <div><strong>Service:</strong> \${customer.serviceName || customer.formType || 'Reinigung / Umzug'}</div>
-          <div><strong>Datum:</strong> \${customer.cleaningAppointment || customer.movingDate || 'Nach Absprache'}</div>
-          <div><strong>Grösse:</strong> \${customer.numberOfRooms || customer.numberOfRoomsApartment || '-'} Zi. / \${customer.livingSpaceInM2 || customer.areaInM2 || '-'} m²</div>
-          <div><strong>Adresse:</strong> \${customer.unloadingPostalCodeAndCity || customer.postalCodeAndCity || '-'}</div>
+          <div><strong>Service:</strong> ${customer.serviceName || customer.formType || 'Reinigung / Umzug'}</div>
+          <div><strong>Datum:</strong> ${customer.cleaningAppointment || customer.movingDate || 'Nach Absprache'}</div>
+          ${customer.apartmentType ? `<div><strong>Objekt-Typ:</strong> ${customer.apartmentType}</div>` : ''}
+          ${customer.numberOfRooms || customer.numberOfRoomsApartment ? `<div><strong>Zimmer:</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment} Zi.</div>` : ''}
+          ${customer.livingSpaceInM2 || customer.areaInM2 ? `<div><strong>Fläche:</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2} m²</div>` : ''}
+          ${customer.elevatorSizes ? `<div><strong>Lift:</strong> ${customer.elevatorSizes}</div>` : ''}
+          ${customer.parkingDistance ? `<div><strong>Parkplatz:</strong> ${customer.parkingDistance}</div>` : ''}
+          ${customer.unloadingPostalCodeAndCity ? `<div><strong>Abladeort:</strong> ${customer.unloadingPostalCodeAndCity}</div>` : ''}
+          ${customer.cleaningTypes ? `<div><strong>Reinigungsart:</strong> ${customer.cleaningTypes}</div>` : ''}
+          ${customer.frequency ? `<div><strong>Turnus:</strong> ${customer.frequency}</div>` : ''}
         </div>
       </div>
     </div>
@@ -470,20 +476,20 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
               </tr>
             </thead>
             <tbody>
-              \${lineItemsHtml}
-              \${subtotalRow}
-              \${discountRow}
+              ${lineItemsHtml}
+              ${subtotalRow}
+              ${discountRow}
             </tbody>
           </table>
         </div>
         <div class="total-row">
           <div class="total-label">GESAMTPREIS (Festpreis)</div>
-          <div class="total-amount">\${isFallback ? 'Auf Anfrage' : 'CHF ' + totalPrice.toFixed(2)}</div>
+          <div class="total-amount">${isFallback ? 'Auf Anfrage' : 'CHF ' + totalPrice.toFixed(2)}</div>
         </div>
       </div>
       
       <div>
-        \${discountBox}
+        ${discountBox}
         <div class="guarantee-box">
           <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
           <div class="guarantee-title">100 %<br>ABNAHMEGARANTIE</div>
