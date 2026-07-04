@@ -471,21 +471,21 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any): Promi
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
           
           <div style="grid-column: span 2;"><strong>Property Location:</strong> ${customer.streetAndNumber || customer.cleanStreet || customer.street || 'N/A'}, ${customer.postalCodeAndCity || customer.cleanZipCity || customer.city || 'N/A'}</div>
-          ${customer.apartmentType ? `<div><strong>Property Type:</strong> ${customer.apartmentType}</div>` : ''}
-          ${customer.livingSpaceInM2 || customer.areaInM2 ? `<div><strong>Area:</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2} m²</div>` : ''}
-          ${customer.numberOfRooms || customer.numberOfRoomsApartment ? `<div><strong>Zimmer:</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment} Zi.</div>` : ''}
-          ${customer.elevatorSizes ? `<div><strong>Lift:</strong> ${customer.elevatorSizes}</div>` : ''}
+          ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>Property Type:</strong> ${customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType}</div>` : ''}
+          ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters ? `<div><strong>Area:</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters} m²</div>` : ''}
+          ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms ? `<div><strong>Zimmer:</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms} Zi.</div>` : ''}
+          ${customer.elevatorSizes || customer.elevator ? `<div><strong>Lift:</strong> ${customer.elevatorSizes || customer.elevator}</div>` : ''}
           ${customer.parkingDistance ? `<div><strong>Parkplatz:</strong> ${customer.parkingDistance}</div>` : ''}
           ${customer.cleaningTypes ? `<div><strong>Reinigungsart:</strong> ${customer.cleaningTypes}</div>` : ''}
           ${customer.frequency ? `<div><strong>Turnus:</strong> ${customer.frequency}</div>` : ''}
           
-          ${customer.unloadingStreetAndNumber || customer.movingStreet ? `
+          ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet ? `
             <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
-            <div style="grid-column: span 2;"><strong>Destination Address:</strong> ${customer.unloadingStreetAndNumber || customer.movingStreet}, ${customer.unloadingPostalCodeAndCity || customer.movingZipCity}</div>
-            ${customer.unloadingApartmentType ? `<div><strong>Destination Type:</strong> ${customer.unloadingApartmentType}</div>` : ''}
-            ${customer.unloadingAreaInM2 ? `<div><strong>Destination Area:</strong> ca. ${customer.unloadingAreaInM2} m²</div>` : ''}
-            ${customer.unloadingElevatorSizes ? `<div><strong>Destination Lift:</strong> ${customer.unloadingElevatorSizes}</div>` : ''}
-            ${customer.unloadingParkingDistance ? `<div><strong>Destination Parkplatz:</strong> ${customer.unloadingParkingDistance}</div>` : ''}
+            <div style="grid-column: span 2;"><strong>Destination Address:</strong> ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || 'N/A'}, ${customer.unloadingPostalCodeAndCity || customer.movingZipCity || customer.destinationCity || 'N/A'}</div>
+            ${customer.unloadingApartmentType || customer.destinationPropertyType ? `<div><strong>Destination Type:</strong> ${customer.unloadingApartmentType || customer.destinationPropertyType}</div>` : ''}
+            ${customer.unloadingAreaInM2 || customer.destinationArea ? `<div><strong>Destination Area:</strong> ca. ${customer.unloadingAreaInM2 || customer.destinationArea} m²</div>` : ''}
+            ${customer.unloadingElevatorSizes || customer.destinationElevator ? `<div><strong>Destination Lift:</strong> ${customer.unloadingElevatorSizes || customer.destinationElevator}</div>` : ''}
+            ${customer.unloadingParkingDistance || customer.destinationParking ? `<div><strong>Destination Parkplatz:</strong> ${customer.unloadingParkingDistance || customer.destinationParking}</div>` : ''}
           ` : ''}
         </div>
       </div>

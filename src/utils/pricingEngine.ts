@@ -44,8 +44,8 @@ const getRoomKey = (rooms: number): string => {
  */
 const normalizeServiceType = (serviceType: string): string => {
   const type = serviceType.toLowerCase();
-  if (type.includes('umzug') || type.includes('moving') || type.includes('relocation')) return 'moving';
-  if (type.includes('reinigung') && !type.includes('unterhalt') && !type.includes('gastronomie') && !type.includes('bau')) return 'cleaning';
+  if (type.includes('umzug') || type.includes('relocation') || (type.includes('moving') && !type.includes('cleaning'))) return 'moving';
+  if ((type.includes('reinigung') || type.includes('cleaning')) && !type.includes('unterhalt') && !type.includes('maintenance') && !type.includes('gastronomie') && !type.includes('restaurant') && !type.includes('bau')) return 'cleaning';
   if (type.includes('entsorgung') || type.includes('disposal') || type.includes('clearance')) return 'disposal';
   if (type.includes('unterhaltsreinigung') || type.includes('maintenance')) return 'maintenance';
   if (type.includes('haushaltshilfe') || type.includes('household')) return 'household';
@@ -386,8 +386,10 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
   const skipCheckboxes = new Set([
     'firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 
     'cleanStreet', 'cleanZipCity', 'cleanAddress', 'movingStreet', 'movingZipCity', 'unloadingStreetAndNumber', 'unloadingPostalCodeAndCity', 
+    'destinationStreet', 'destinationCity', 'destinationPropertyType', 'destinationArea', 'destinationElevator', 'destinationParking',
     'locale', 'serviceName', 'formType', 'quoteResult', 'estimatedPrice', 'lineItems', 'quoteSent', 'data', 'id', 'status', 'createdAt', 'updatedAt', 
-    'pdfPath', 'submissionDate', 'apartmentType', 'numberOfRooms', 'numberOfRoomsApartment', 'livingSpaceInM2', 'areaInM2', 'elevatorSizes', 
+    'pdfPath', 'submissionDate', 'apartmentType', 'propertyType', 'typeOfProperty', 'objectType', 'numberOfRooms', 'numberOfRoomsApartment', 'rooms', 
+    'livingSpaceInM2', 'areaInM2', 'area', 'squareMeters', 'elevatorSizes', 'elevator',
     'parkingDistance', 'cleaningTypes', 'frequency', 'cleaningAppointment', 'movingDate', 'isExpress', 'isSaturday', 'isSunday', 'isHoliday',
     'packingService', 'unpackingService', 'furnitureAssembly', 'furnitureDisassembly', 'furnitureLift', 'hasBalcony', 'hasBasement', 'hasAttic', 'hasGarage'
   ]);
