@@ -286,8 +286,6 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     moveBoxTypes: { de: 'Umzugskartons', en: 'Moving Boxes', fr: 'Cartons de Déménagement' },
     movePackingMaterials: { de: 'Verpackungsmaterial', en: 'Packing Materials', fr: "Matériel d'Emballage" },
     additionalMovingServices: { de: 'Zusatzleistungen', en: 'Additional Services', fr: 'Services Supplémentaires' },
-    cleaningFrequency: { de: 'Reinigungsintervall', en: 'Cleaning Frequency', fr: 'Fréquence de Nettoyage' },
-    maintenanceCleaningItems: { de: 'Reinigungsbereiche', en: 'Cleaning Areas', fr: 'Zones de Nettoyage' },
     moveFromConditions: { de: 'Bedingungen Startort', en: 'Conditions Origin', fr: 'Conditions Origine' },
     moveToConditions: { de: 'Bedingungen Zielort', en: 'Conditions Destination', fr: 'Conditions Destination' },
     moveFurniture: { de: 'Möbel', en: 'Furniture', fr: 'Meubles' },
