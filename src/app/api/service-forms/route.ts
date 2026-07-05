@@ -317,7 +317,7 @@ export async function POST(req: Request) {
     }
 
     // Send Admin Email with detailed form data
-    const adminHtml = formatServiceFormEmail(normalized);
+    const adminHtml = formatServiceFormEmail(body);
 
     await sendEmailNotification({
       to: process.env.ADMIN_EMAIL || process.env.GMAIL_USER || 'admin@swisscleanmove.ch',
