@@ -263,10 +263,10 @@ export function formatServiceFormEmail(data: any): string {
               <span class="label">${t.address}</span> ${data.streetAndNumber || ''}, ${data.postalCodeAndCity || ''}
             </div>
             <div class="field">
-              <span class="label">${t.phone}</span> ${data.telephone || ''}
+              <span class="label">${t.phone}</span> ${data.telephone || data.phone || ''}
             </div>
             <div class="field">
-              <span class="label">${t.email}</span> ${data.emailAddress || ''}
+              <span class="label">${t.email}</span> ${data.emailAddress || data.email || ''}
             </div>
           </div>
           

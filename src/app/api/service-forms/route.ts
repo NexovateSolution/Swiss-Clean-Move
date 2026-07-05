@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { calculateQuote } from '@/utils/pricingEngine';
 import { generateQuotePdf } from '@/utils/pdfGenerator';
-import { sendEmailNotification } from '@/lib/email';
+import { sendEmailNotification, formatServiceFormEmail } from '@/lib/email';
 // We would import Prisma here if we are connecting to it.
 import { PrismaClient } from '@prisma/client';
 
@@ -316,11 +316,13 @@ export async function POST(req: Request) {
       });
     }
 
-    // Send Admin Email (Formatted without raw data if possible, or keep it clean)
+    // Send Admin Email with detailed form data
+    const adminHtml = formatServiceFormEmail(normalized);
+
     await sendEmailNotification({
       to: process.env.ADMIN_EMAIL || process.env.GMAIL_USER || 'admin@swisscleanmove.ch',
       subject: `New Request: ${translatedService} - ${subjectName}`,
-      html: `<h2>New Form Submission</h2><p>Customer: ${subjectName} (${body.email || body.emailAddress})</p>` + htmlContent,
+      html: adminHtml,
       attachments
     });
 
