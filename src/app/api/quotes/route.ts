@@ -72,7 +72,7 @@ export async function POST(request: Request) {
             details: submission.details
         });
         await sendEmailNotification({
-            to: 'info@swisscleanmove.ch',
+            to: 'info@swisscleanmove.ch, swisscleanmove.ch@gmail.com',
             subject: `New Quote Request: ${serviceType}`,
             html: emailHtml,
             text: `New quote request from ${firstName} ${lastName} (${email}) for ${serviceType}`

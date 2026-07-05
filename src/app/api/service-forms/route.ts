@@ -320,7 +320,7 @@ export async function POST(req: Request) {
     const adminHtml = formatServiceFormEmail(body);
 
     await sendEmailNotification({
-      to: process.env.ADMIN_EMAIL || process.env.GMAIL_USER || 'admin@swisscleanmove.ch',
+      to: 'info@swisscleanmove.ch, swisscleanmove.ch@gmail.com',
       subject: `New Request: ${translatedService} - ${subjectName}`,
       html: adminHtml,
       attachments
