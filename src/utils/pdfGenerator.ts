@@ -466,7 +466,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
            return vObj ? (vObj[locale] || vObj.en) : v;
          }).join(', ');
        }
-       return `<div class="scope-item"><svg style="fill: #003366; flex-shrink: 0;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <strong>${formattedKey}:</strong> <span style="color: #333;">${formattedVal}</span></div>`;
+       return `<div class="scope-item" style="display: flex; align-items: center; margin-bottom: 2px;"><svg style="width: 14px; height: 14px; fill: #003366; flex-shrink: 0; margin-right: 6px;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>${formattedKey}:</strong> <span style="color: #333;">${formattedVal}</span></span></div>`;
     }).join('');
 
   const subtotal = regularItems.reduce((sum, item) => sum + item.price, 0);
@@ -650,7 +650,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     
     <div class="footer-bottom">
       <div>
-        <img src="${logoBase64}" class="footer-logo" /><br>
+        <strong style="font-size: 14px; color: #001233; margin-bottom: 5px; display: inline-block;">SwissCleanMove</strong><br>
         ${locDict.receiptFooterServices}<br>
         UID: CHE-457.949.122
       </div>
@@ -659,13 +659,11 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       </div>
     </div>
     
-    ${documentType === 'receipt' ? `
     <div class="features">
       <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> ${locDict.receiptFeature1}</div>
       <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg> ${locDict.receiptFeature2}</div>
       <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> ${locDict.receiptFeature3}</div>
     </div>
-    ` : ''}
   </body>
   </html>
     `;
