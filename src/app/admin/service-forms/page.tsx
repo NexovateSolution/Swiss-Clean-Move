@@ -165,7 +165,7 @@ export default function ServiceFormsPage() {
       
       const payload = {
          quoteResult: quoteRes,
-         customer: { ...submission, ...subData }
+         customer: { ...submission, ...subData, ...(subData.data || {}) }
       };
 
       const res = await fetch('/api/admin/generate-pdf', {

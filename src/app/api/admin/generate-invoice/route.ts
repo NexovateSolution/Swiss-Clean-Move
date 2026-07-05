@@ -41,8 +41,10 @@ export async function POST(request: NextRequest) {
             cleaningAreaInM2: client.squareMeters,
             cleaningApartmentType: client.buildingType,
             cleaningTypes: client.serviceType,
+            cleaningAppointment: client.fromDate ? new Date(client.fromDate).toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '',
             locale: language,
-            ...subData
+            ...subData,
+            ...(subData.data || {})
         };
 
         let quoteRes = subData.quoteResult;
@@ -56,7 +58,7 @@ export async function POST(request: NextRequest) {
            };
         }
 
-        const html = generateQuoteHtml(quoteRes, customer, 'contract');
+        const html = generateQuoteHtml(quoteRes, customer, 'receipt');
 
         return new NextResponse(html, {
             headers: {

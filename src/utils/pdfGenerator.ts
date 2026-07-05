@@ -2,7 +2,7 @@ import { QuoteResult } from './pricingEngine';
 import fs from 'fs';
 import path from 'path';
 
-export function generateQuoteHtml(quote: QuoteResult, customer: any, documentType: 'quote' | 'contract' = 'quote'): string {
+export function generateQuoteHtml(quote: QuoteResult, customer: any, documentType: 'quote' | 'contract' | 'receipt' | 'invoice' = 'quote'): string {
   const locale = (customer.locale || 'de') as 'de' | 'en' | 'fr';
 
   const pdfDict = {
@@ -51,7 +51,30 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       footerReliable: 'ZUVERLÄSSIG & PÜNKTLICH',
       footerSolution: 'IMMER LÖSUNGSORIENTIERT',
       footerCleanliness: 'SAUBERKEIT AUF DIE SIE SICH VERLASSEN KÖNNEN',
-      onRequest: 'Auf Anfrage'
+      onRequest: 'Auf Anfrage',
+      receiptOffer: 'QUITTUNG',
+      receiptThankYouDesc: 'Vielen Dank für Ihr Vertrauen und den erteilten Auftrag.',
+      receiptDate: 'QUITTUNGSDATUM',
+      receiptNo: 'QUITTUNGSNUMMER',
+      receiptPaymentMethod: 'ZAHLUNGSART',
+      receiptPaymentMethodValue: 'Barzahlung',
+      receiptIssuedBy: 'AUSGESTELLT VON',
+      receiptIssuedByValue: 'SwissCleanMove',
+      receiptDesc: 'BESCHREIBUNG',
+      receiptAmount: 'BETRAG (CHF)',
+      receiptTotal: 'GESAMTBETRAG',
+      receiptConfirm: 'Wir bestätigen den Erhalt des oben genannten Betrags.<br><strong>Herzlichen Dank für Ihr Vertrauen!</strong>',
+      receiptObjectAddress: 'Objektadresse',
+      receiptArea: 'Fläche',
+      receiptSpecialNotes: 'Besonderheit',
+      receiptAppointment: 'Reinigungstermin',
+      receiptPaymentTitle: 'ZAHLUNG',
+      receiptPaymentDesc: 'Barzahlung<br>nach Abschluss der Reinigung.',
+      receiptFooterServices: 'Reinigung • Umzug • Facility Services',
+      receiptFooterThanks: 'Für Ihre Unterlagen – Danke für Ihren Auftrag!',
+      receiptFeature1: 'Zuverlässig. Wir sind für Sie da.',
+      receiptFeature2: 'Schweizer Qualität. Professionell & effizient.',
+      receiptFeature3: 'Schweizweit im Einsatz. Für Privat & Gewerbe.'
     },
     en: {
       thankYou: 'Thank You',
@@ -98,7 +121,30 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       footerReliable: 'RELIABLE & PUNCTUAL',
       footerSolution: 'ALWAYS SOLUTION-ORIENTED',
       footerCleanliness: 'CLEANLINESS YOU CAN RELY ON',
-      onRequest: 'On Request'
+      onRequest: 'On Request',
+      receiptOffer: 'RECEIPT',
+      receiptThankYouDesc: 'Thank you for your trust and your order.',
+      receiptDate: 'RECEIPT DATE',
+      receiptNo: 'RECEIPT NUMBER',
+      receiptPaymentMethod: 'PAYMENT METHOD',
+      receiptPaymentMethodValue: 'Cash',
+      receiptIssuedBy: 'ISSUED BY',
+      receiptIssuedByValue: 'SwissCleanMove',
+      receiptDesc: 'DESCRIPTION',
+      receiptAmount: 'AMOUNT (CHF)',
+      receiptTotal: 'TOTAL AMOUNT',
+      receiptConfirm: 'We confirm receipt of the above amount.<br><strong>Thank you for your trust!</strong>',
+      receiptObjectAddress: 'Property Address',
+      receiptArea: 'Area',
+      receiptSpecialNotes: 'Special Notes',
+      receiptAppointment: 'Cleaning Appointment',
+      receiptPaymentTitle: 'PAYMENT',
+      receiptPaymentDesc: 'Cash payment<br>upon completion of service.',
+      receiptFooterServices: 'Cleaning • Moving • Facility Services',
+      receiptFooterThanks: 'For your records – Thank you for your order!',
+      receiptFeature1: 'Reliable. We are here for you.',
+      receiptFeature2: 'Swiss Quality. Professional & efficient.',
+      receiptFeature3: 'Active throughout Switzerland. For private & commercial.'
     },
     fr: {
       thankYou: 'Merci Beaucoup',
@@ -145,7 +191,30 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       footerReliable: 'FIABLE & PONCTUEL',
       footerSolution: 'TOUJOURS ORIENTÉ SOLUTION',
       footerCleanliness: 'UNE PROPRETÉ SUR LAQUELLE VOUS POUVEZ COMPTER',
-      onRequest: 'Sur Demande'
+      onRequest: 'Sur Demande',
+      receiptOffer: 'REÇU',
+      receiptThankYouDesc: 'Nous vous remercions de votre confiance et de votre commande.',
+      receiptDate: 'DATE DU REÇU',
+      receiptNo: 'NUMÉRO DE REÇU',
+      receiptPaymentMethod: 'MÉTHODE DE PAIEMENT',
+      receiptPaymentMethodValue: 'Espèces',
+      receiptIssuedBy: 'ÉMIS PAR',
+      receiptIssuedByValue: 'SwissCleanMove',
+      receiptDesc: 'DESCRIPTION',
+      receiptAmount: 'MONTANT (CHF)',
+      receiptTotal: 'MONTANT TOTAL',
+      receiptConfirm: 'Nous confirmons la réception du montant ci-dessus.<br><strong>Merci pour votre confiance !</strong>',
+      receiptObjectAddress: 'Adresse de l\'objet',
+      receiptArea: 'Surface',
+      receiptSpecialNotes: 'Particularités',
+      receiptAppointment: 'Rendez-vous de nettoyage',
+      receiptPaymentTitle: 'PAIEMENT',
+      receiptPaymentDesc: 'Paiement en espèces<br>après achèvement du service.',
+      receiptFooterServices: 'Nettoyage • Déménagement • Facility Services',
+      receiptFooterThanks: 'Pour vos archives – Merci pour votre commande !',
+      receiptFeature1: 'Fiable. Nous sommes là pour vous.',
+      receiptFeature2: 'Qualité suisse. Professionnel & efficace.',
+      receiptFeature3: 'En service dans toute la Suisse. Privé & entreprise.'
     }
   };
   
@@ -305,7 +374,15 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     parkingAvailable: { de: 'Parkplatz Vorhanden', en: 'Parking Available', fr: 'Parking Disponible' },
     streetNo: { de: 'Strasse Nr', en: 'Street No', fr: 'Rue No' },
     zipCity: { de: 'PLZ Ort', en: 'Zip City', fr: 'NPA Localité' },
-    officeCleaningItems: { de: 'Büroreinigung Elemente', en: 'Office Cleaning Items', fr: 'Éléments de Nettoyage de Bureau' }
+    officeCleaningItems: { de: 'Büroreinigung Elemente', en: 'Office Cleaning Items', fr: 'Éléments de Nettoyage de Bureau' },
+    cleanBathrooms: { de: 'Badezimmer', en: 'Bathrooms', fr: 'Salles de Bain' },
+    cleanKitchen: { de: 'Küche', en: 'Kitchen', fr: 'Cuisine' },
+    cleanToilets: { de: 'Toiletten', en: 'Toilets', fr: 'Toilettes' },
+    cleanDrillHoles: { de: 'Bohrlöcher', en: 'Drill Holes', fr: 'Trous de perçage' },
+    accessIndependent: { de: 'Zugang Unabhängig', en: 'Independent Access', fr: 'Accès Indépendant' },
+    accessOptions: { de: 'Zugangsoptionen', en: 'Access Options', fr: 'Options d\'Accès' },
+    accessKey: { de: 'Schlüsselzugang', en: 'Key Access', fr: 'Accès par clé' },
+    cleanWindowsCount: { de: 'Anzahl Fenster', en: 'Number of Windows', fr: 'Nombre de Fenêtres' }
   };
 
   const translatedValues: Record<string, any> = {
@@ -329,15 +406,42 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     daily: { de: 'Täglich', en: 'Daily', fr: 'Quotidiennement' },
     weekly: { de: 'Wöchentlich', en: 'Weekly', fr: 'Hebdomadaire' },
     staircaseCleaning: { de: 'Treppenhausreinigung', en: 'Staircase Cleaning', fr: 'Nettoyage des Escaliers' },
-    yes: { de: 'Ja', en: 'Yes', fr: 'Oui' },
-    no: { de: 'Nein', en: 'No', fr: 'Non' },
     narrowStairs: { de: 'Enge Treppen', en: 'Narrow Stairs', fr: 'Escaliers Étroits' },
+    // Property types - capitalized
     House: { de: 'Haus', en: 'House', fr: 'Maison' },
     Apartment: { de: 'Wohnung', en: 'Apartment', fr: 'Appartement' },
     Office: { de: 'Büro', en: 'Office', fr: 'Bureau' },
     Klein: { de: 'Klein', en: 'Small', fr: 'Petit' },
     Mittel: { de: 'Mittel', en: 'Medium', fr: 'Moyen' },
-    Gross: { de: 'Gross', en: 'Large', fr: 'Grand' }
+    Gross: { de: 'Gross', en: 'Large', fr: 'Grand' },
+    // Property types - lowercase (from form submission)
+    apartment: { de: 'Wohnung', en: 'Apartment', fr: 'Appartement' },
+    house: { de: 'Haus', en: 'House', fr: 'Maison' },
+    studio: { de: 'Studio', en: 'Studio', fr: 'Studio' },
+    wgRoom: { de: 'WG-Zimmer', en: 'Shared Room', fr: 'Chambre Partagée' },
+    commercial: { de: 'Büro / Gewerbe', en: 'Commercial', fr: 'Commercial' },
+    office: { de: 'Büro', en: 'Office', fr: 'Bureau' },
+    'storage-cellar': { de: 'Keller / Lager', en: 'Storage / Cellar', fr: 'Cave / Stockage' },
+    // Boolean / general values
+    yes: { de: 'Ja', en: 'Yes', fr: 'Oui' },
+    no: { de: 'Nein', en: 'No', fr: 'Non' },
+    Yes: { de: 'Ja', en: 'Yes', fr: 'Oui' },
+    No: { de: 'Nein', en: 'No', fr: 'Non' },
+    true: { de: 'Ja', en: 'Yes', fr: 'Oui' },
+    false: { de: 'Nein', en: 'No', fr: 'Non' },
+    // Contact & access
+    personal: { de: 'Persönlich', en: 'Personal', fr: 'Personnel' },
+    inspection: { de: 'Besichtigung', en: 'Inspection', fr: 'Inspection' },
+    window: { de: 'Fenster', en: 'Window', fr: 'Fenêtre' },
+    // Cleaning types
+    movingCleaning: { de: 'Umzugsreinigung', en: 'Moving Cleaning', fr: 'Nettoyage de Déménagement' },
+    basicCleaning: { de: 'Grundreinigung', en: 'Basic Cleaning', fr: 'Nettoyage de Base' },
+    constructionCleaning: { de: 'Baureinigung', en: 'Construction Cleaning', fr: 'Nettoyage de Chantier' },
+    // Outdoor area
+    balcony: { de: 'Balkon', en: 'Balcony', fr: 'Balcon' },
+    garden: { de: 'Garten', en: 'Garden', fr: 'Jardin' },
+    both: { de: 'Beides', en: 'Both', fr: 'Les Deux' },
+    none: { de: 'Keines', en: 'None', fr: 'Aucun' }
   };
   
   const additionalAttributesHtml = Object.entries(customer)
@@ -372,6 +476,193 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       <td style="padding: 8px 0; text-align: right; font-weight: bold; color: #001233; font-size: 13px;">CHF ${subtotal.toFixed(2)}</td>
     </tr>
   `;
+
+  if (documentType === 'receipt' || documentType === 'invoice') {
+    let receiptDate = quoteDate;
+    if (customer.submissionDate) receiptDate = new Date(customer.submissionDate).toLocaleDateString(locale === 'de' ? 'de-CH' : locale === 'fr' ? 'fr-CH' : 'en-US');
+    
+    const serviceTitle = customer.serviceType === 'moving' ? (locale === 'de' ? 'Umzug' : locale === 'fr' ? 'Déménagement' : 'Moving') : (locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : 'Cleaning');
+    const area = customer.cleaningAreaInM2 || customer.areaInM2 || customer.livingSpaceInM2 || customer.squareMeters || 'N/A';
+    const cleanDate = customer.cleaningAppointment || customer.movingDate || locDict.onRequest;
+    const address = customer.streetAndNumber ? `${customer.streetAndNumber}, ${customer.postalCodeAndCity || customer.city || ''}` : '';
+    
+    return `
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 40px 60px; box-sizing: border-box; }
+      .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+      .logo { max-width: 200px; }
+      .contact-info { text-align: left; font-size: 11px; color: #555; line-height: 1.6; }
+      .contact-info svg { width: 12px; height: 12px; margin-right: 5px; vertical-align: middle; fill: #cc0000; }
+      .separator { height: 4px; background: linear-gradient(to right, #cc0000 20%, #001233 20%); margin-bottom: 30px; }
+      .title { text-align: center; margin-bottom: 30px; }
+      .title h1 { color: #001233; font-size: 36px; font-weight: 800; letter-spacing: 1px; margin: 0 0 10px 0; }
+      .title p { margin: 0; font-size: 13px; color: #555; }
+      .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px; }
+      
+      .customer-box { padding-top: 10px; }
+      .customer-header { display: flex; align-items: center; gap: 10px; font-weight: bold; color: #001233; margin-bottom: 15px; font-size: 14px; }
+      .customer-header svg { width: 24px; height: 24px; fill: #001233; }
+      .customer-content { font-size: 13px; line-height: 1.6; color: #333; }
+      
+      .meta-box { border: 1px solid #eee; border-radius: 8px; padding: 15px; background-color: #fafafa; }
+      .meta-item { display: flex; gap: 15px; margin-bottom: 10px; align-items: flex-start; }
+      .meta-item:last-child { margin-bottom: 0; }
+      .meta-icon { margin-top: 2px; }
+      .meta-icon svg { width: 20px; height: 20px; fill: #555; }
+      .meta-text label { display: block; font-size: 10px; color: #777; font-weight: bold; text-transform: uppercase; margin-bottom: 2px; }
+      .meta-text div { font-size: 12px; color: #333; }
+      
+      .table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+      .table th { background-color: #001233; color: white; padding: 12px 15px; text-align: left; font-size: 12px; }
+      .table th:last-child { text-align: right; }
+      .table td { border: 1px solid #eee; padding: 15px; vertical-align: top; font-size: 13px; line-height: 1.8; color: #333; }
+      .table td:last-child { text-align: right; font-weight: bold; }
+      
+      .total-row { display: flex; justify-content: space-between; align-items: center; background-color: #f8f9fa; border: 1px solid #eee; border-radius: 8px; padding: 15px 20px; margin-bottom: 30px; }
+      .total-label { font-weight: bold; color: #001233; font-size: 15px; }
+      .total-val { font-weight: bold; color: #cc0000; font-size: 18px; }
+      
+      .confirm-text { margin-bottom: 40px; font-size: 13px; color: #333; line-height: 1.6; }
+      
+      .guarantee-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
+      .guarantee-box { border: 1px solid #eee; border-radius: 8px; padding: 15px; display: flex; align-items: center; gap: 15px; }
+      .guarantee-box svg { width: 36px; height: 36px; fill: #001233; }
+      .g-title { font-weight: bold; color: #001233; font-size: 12px; margin-bottom: 4px; }
+      .g-desc { font-size: 11px; color: #555; line-height: 1.4; }
+      
+      .footer-bottom { display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid #eee; padding-top: 20px; font-size: 11px; color: #777; line-height: 1.6; }
+      .footer-logo { width: 120px; margin-bottom: 5px; }
+      
+      .features { display: flex; justify-content: space-between; background-color: #001233; color: white; padding: 15px; border-radius: 8px; margin-top: 30px; font-size: 10px; }
+      .feature { display: flex; align-items: center; gap: 8px; }
+      .feature svg { width: 16px; height: 16px; fill: white !important; }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="${logoBase64}" class="logo" />
+      <div class="contact-info">
+        <div style="font-weight: bold; font-size: 12px; color: #001233; margin-bottom: 5px;">SwissCleanMove</div>
+        <div><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Orpundstrasse 31, 2504 Biel/Bienne</div>
+        <div><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> +41 78 215 80 30</div>
+        <div><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> info@swisscleanmove.ch</div>
+        <div><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.987 7.987 0 015.08 16zm2.95-8H5.08a7.987 7.987 0 013.9-3.56C8.37 5.55 7.91 6.75 7.59 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.34.16-2h4.68c.09.66.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 01-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg> www.swisscleanmove.ch</div>
+      </div>
+    </div>
+    <div class="separator"></div>
+    
+    <div class="title">
+      <h1>${locDict.receiptOffer}</h1>
+      <p>${locDict.receiptThankYouDesc}</p>
+    </div>
+    
+    <div class="info-grid">
+      <div class="customer-box">
+        <div class="customer-header">
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> ${locDict.customer}
+        </div>
+        <div class="customer-content">
+          <strong>${customer.firstName || ''} ${customer.lastName || ''}</strong><br>
+          ${customer.streetAndNumber ? customer.streetAndNumber + '<br>' : ''}
+          ${customer.postalCodeAndCity || customer.city || ''}
+        </div>
+      </div>
+      <div class="meta-box">
+        <div class="meta-item">
+          <div class="meta-icon"><svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg></div>
+          <div class="meta-text"><label>${locDict.receiptDate}</label><div>${receiptDate}</div></div>
+        </div>
+        <div style="border-bottom: 1px solid #ddd; margin: 8px 0;"></div>
+        <div class="meta-item">
+          <div class="meta-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div>
+          <div class="meta-text"><label>${locDict.receiptNo}</label><div>${quoteNumber}</div></div>
+        </div>
+        <div style="border-bottom: 1px solid #ddd; margin: 8px 0;"></div>
+        <div class="meta-item">
+          <div class="meta-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <div class="meta-text"><label>${locDict.receiptPaymentMethod}</label><div>${locDict.receiptPaymentMethodValue}</div></div>
+        </div>
+        <div style="border-bottom: 1px solid #ddd; margin: 8px 0;"></div>
+        <div class="meta-item">
+          <div class="meta-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+          <div class="meta-text"><label>${locDict.receiptIssuedBy}</label><div>${locDict.receiptIssuedByValue}</div></div>
+        </div>
+      </div>
+    </div>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>${locDict.receiptDesc}</th>
+          <th>${locDict.receiptAmount}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <strong>${serviceTitle}</strong><br><br>
+            ${address ? `${locDict.receiptObjectAddress}: ${address}<br>` : ''}
+            ${locDict.receiptArea}: ca. ${area} m²<br>
+            ${customer.adminNotes ? `${locDict.receiptSpecialNotes}: ${customer.adminNotes}<br>` : ''}
+            ${locDict.receiptAppointment}: ${cleanDate}
+          </td>
+          <td>
+            CHF ${totalPrice.toFixed(2)}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="total-row">
+      <div class="total-label">${locDict.receiptTotal}</div>
+      <div class="total-val">CHF ${totalPrice.toFixed(2)}</div>
+    </div>
+    
+    <div class="confirm-text">
+      ${locDict.receiptConfirm}
+    </div>
+    
+    <div class="guarantee-grid">
+      <div class="guarantee-box">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <div>
+          <div class="g-title">${locDict.guaranteeTitle}</div>
+          <div class="g-desc">${locDict.guaranteeDesc}</div>
+        </div>
+      </div>
+      <div class="guarantee-box">
+        <svg viewBox="0 0 24 24"><path d="M21 3H3C1.89 3 1 3.89 1 5v14c0 1.11.89 2 2 2h18c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 16H3V5h18v14zm-9-2c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0-8c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3z"/></svg>
+        <div>
+          <div class="g-title">${locDict.receiptPaymentTitle}</div>
+          <div class="g-desc">${locDict.receiptPaymentDesc}</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>
+        <img src="${logoBase64}" class="footer-logo" /><br>
+        ${locDict.receiptFooterServices}<br>
+        UID: CHE-457.949.122
+      </div>
+      <div style="text-align: right;">
+        ${locDict.receiptFooterThanks}
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> ${locDict.receiptFeature1}</div>
+      <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg> ${locDict.receiptFeature2}</div>
+      <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> ${locDict.receiptFeature3}</div>
+    </div>
+  </body>
+  </html>
+    `;
+  }
 
   // HTML Template
   const htmlTemplate = `
@@ -716,7 +1007,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           <div style="grid-column: span 2;"><strong>${locDict.date}</strong> ${customer.cleaningAppointment || customer.movingDate || locDict.onRequest}</div>
           
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
-          ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>${locDict.propertyType}</strong> ${customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType}</div>` : ''}
+          ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>${locDict.propertyType}</strong> ${(() => { const rawPt = customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType; const ptObj = translatedValues[rawPt]; return ptObj ? (ptObj[locale] || ptObj.en) : rawPt; })()}</div>` : ''}
           ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters ? `<div><strong>${locDict.area}</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters} m²</div>` : ''}
           ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms ? `<div><strong>${locDict.rooms}</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms} Zi.</div>` : ''}
           ${customer.elevatorSizes || customer.elevator ? `<div><strong>${locDict.lift}</strong> ${customer.elevatorSizes || customer.elevator}</div>` : ''}
@@ -724,10 +1015,10 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           ${customer.cleaningTypes ? `<div><strong>${locDict.cleaningType}</strong> ${customer.cleaningTypes}</div>` : ''}
           ${customer.frequency ? `<div><strong>${locDict.frequency}</strong> ${customer.frequency}</div>` : ''}
           
-          ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet ? `
+          ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || customer.moveToStreet ? `
             <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
-            <div style="grid-column: span 2;"><strong>${locDict.destinationAddress || 'Destination Address:'}</strong> ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || 'N/A'}, ${customer.unloadingPostalCodeAndCity || customer.movingZipCity || customer.destinationCity || 'N/A'}</div>
-            ${customer.unloadingApartmentType || customer.destinationPropertyType ? `<div><strong>${locDict.destinationType}</strong> ${customer.unloadingApartmentType || customer.destinationPropertyType}</div>` : ''}
+            <div style="grid-column: span 2;"><strong>${locDict.destinationAddress || 'Destination Address:'}</strong> ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || customer.moveToStreet || 'N/A'}, ${customer.unloadingPostalCodeAndCity || customer.movingZipCity || customer.destinationCity || customer.moveToZipCity || 'N/A'}</div>
+            ${customer.unloadingApartmentType || customer.destinationPropertyType ? `<div><strong>${locDict.destinationType}</strong> ${(() => { const rawDt = customer.unloadingApartmentType || customer.destinationPropertyType; const dtObj = translatedValues[rawDt]; return dtObj ? (dtObj[locale] || dtObj.en) : rawDt; })()}</div>` : ''}
             ${customer.unloadingAreaInM2 || customer.destinationArea ? `<div><strong>${locDict.destinationArea}</strong> ca. ${customer.unloadingAreaInM2 || customer.destinationArea} m²</div>` : ''}
             ${customer.unloadingElevatorSizes || customer.destinationElevator ? `<div><strong>${locDict.destinationLift}</strong> ${customer.unloadingElevatorSizes || customer.destinationElevator}</div>` : ''}
             ${customer.unloadingParkingDistance || customer.destinationParking ? `<div><strong>${locDict.destinationParking}</strong> ${customer.unloadingParkingDistance || customer.destinationParking}</div>` : ''}
@@ -816,7 +1107,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   return htmlTemplate;
 }
 
-export async function generateQuotePdf(quote: QuoteResult, customer: any, documentType: 'quote' | 'contract' = 'quote'): Promise<Buffer> {
+export async function generateQuotePdf(quote: QuoteResult, customer: any, documentType: 'quote' | 'contract' | 'receipt' | 'invoice' = 'quote'): Promise<Buffer> {
   const htmlTemplate = generateQuoteHtml(quote, customer, documentType);
   
   let browser;

@@ -234,27 +234,30 @@ export async function POST(req: Request) {
       translatedIntro = `
         <p><strong>Hinweis zur Offerte</strong></p>
         <p>Diese Offerte wurde automatisch anhand Ihrer Angaben und unserer aktuellen Preisrichtlinien erstellt.</p>
-        <p>SwissCleanMove steht für faire Preise, höchste Qualität und zuverlässigen Service nach Schweizer Standard.</p>
-        <p>Haben Sie Fragen oder wünschen Sie Anpassungen? Wir beraten Sie gerne persönlich und finden die passende Lösung für Ihr Anliegen.</p>
-        <p>Vielen Dank für Ihr Vertrauen. Wir freuen uns darauf, Sie bald als Kundin oder Kunden begrüssen zu dürfen.</p>
+        <p>Bei Fragen oder gewünschten Anpassungen beraten wir Sie gerne persönlich.</p>
+        <p>Sind Sie mit dieser Offerte einverstanden, bitten wir Sie, diese zu unterzeichnen und an uns zurückzusenden. Nach Erhalt der unterzeichneten Offerte bestätigen wir Ihren Auftrag.</p>
+        <p>Vielen Dank für Ihr Vertrauen. Wir freuen uns auf Ihren Auftrag.</p>
+        <p>Freundliche Grüsse<br>Ihr SwissCleanMove Team</p>
       `;
     } else if (locale === 'fr') {
       translatedTitle = 'SwissCleanMove - Votre Devis';
       translatedIntro = `
         <p><strong>Remarque concernant le devis</strong></p>
         <p>Ce devis a été généré automatiquement sur la base des informations que vous avez fournies et de nos directives tarifaires actuelles.</p>
-        <p>SwissCleanMove est synonyme de prix équitables, de qualité supérieure et de service fiable selon les normes suisses.</p>
-        <p>Avez-vous des questions ou souhaitez-vous des ajustements ? Nous nous ferons un plaisir de vous conseiller personnellement et de trouver la solution adaptée à vos besoins.</p>
-        <p>Nous vous remercions de votre confiance. Nous nous réjouissons de vous accueillir prochainement comme client.</p>
+        <p>Si vous avez des questions ou si vous souhaitez des ajustements, nous nous ferons un plaisir de vous conseiller personnellement.</p>
+        <p>Si vous êtes d'accord avec ce devis, nous vous prions de le signer et de nous le retourner. Dès réception du devis signé, nous confirmerons votre commande.</p>
+        <p>Nous vous remercions de votre confiance. Nous attendons votre commande avec impatience.</p>
+        <p>Meilleures salutations,<br>Votre équipe SwissCleanMove</p>
       `;
     } else {
       translatedTitle = 'SwissCleanMove - Your Quote Estimate';
       translatedIntro = `
         <p><strong>Note Regarding the Quote</strong></p>
         <p>This quote was automatically generated based on the information you provided and our current pricing guidelines.</p>
-        <p>SwissCleanMove stands for fair pricing, highest quality, and reliable service according to Swiss standards.</p>
-        <p>Do you have any questions or would you like adjustments? We are happy to advise you personally and find the right solution for your needs.</p>
-        <p>Thank you for your trust. We look forward to welcoming you soon as a valued customer.</p>
+        <p>If you have any questions or would like adjustments, we would be happy to advise you personally.</p>
+        <p>If you agree with this quote, please sign and return it to us. Upon receipt of the signed quote, we will confirm your order.</p>
+        <p>Thank you for your trust. We look forward to your order.</p>
+        <p>Kind regards,<br>Your SwissCleanMove Team</p>
       `;
     }
 

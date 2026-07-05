@@ -23,14 +23,15 @@ export async function GET(request: NextRequest) {
     })
 
   } catch (error) {
-    console.error('Error fetching submissions from database. This usually means the Prisma Client needs to be regenerated (npx prisma generate) after stopping the dev server.', error)
+    console.error('Error fetching submissions from database:', error)
     return NextResponse.json(
       {
+        success: false,
         error: 'Internal server error',
-        details: error instanceof Error ? error.message : 'Unknown error',
-        hint: 'Try stopping the dev server and running "npx prisma generate"'
+        details: error instanceof Error ? error.message : String(error),
+        submissions: []
       },
-      { status: 500 }
+      { status: 200 } // Return 200 to allow the frontend to gracefully read the error instead of blocking it
     )
   }
 }
