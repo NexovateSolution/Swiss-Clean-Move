@@ -384,7 +384,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         color: #333;
         margin: 0;
-        padding: 40px;
+        padding: 40px 60px;
         box-sizing: border-box;
       }
       .header {
@@ -439,11 +439,11 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         margin-bottom: 30px;
       }
       .title-left h1 {
-        font-size: 42px;
+        font-size: 32px;
         color: #001233;
         margin: 0 0 5px 0;
         font-weight: 800;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
       }
       .title-left p {
         margin: 0;

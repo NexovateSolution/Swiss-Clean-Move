@@ -303,13 +303,14 @@ export async function POST(req: Request) {
     }] : [];
 
     // Send Customer Email
-    if (body.email) {
+    const clientEmail = body.email || body.emailAddress;
+    if (clientEmail) {
       let subject = 'Your Quote - SwissCleanMove';
       if (locale === 'de') subject = 'Ihre Offerte - SwissCleanMove';
       else if (locale === 'fr') subject = 'Votre Devis - SwissCleanMove';
 
       await sendEmailNotification({
-        to: body.email,
+        to: clientEmail,
         subject: subject,
         html: htmlContent,
         attachments: attachments
