@@ -439,7 +439,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         margin-bottom: 30px;
       }
       .title-left h1 {
-        font-size: 32px;
+        font-size: 26px;
         color: #001233;
         margin: 0 0 5px 0;
         font-weight: 800;
