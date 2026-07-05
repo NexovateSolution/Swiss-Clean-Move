@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
            };
         }
 
-        const html = generateQuoteHtml(quoteRes, customer, 'receipt');
+        const html = generateQuoteHtml(quoteRes, customer, 'contract');
 
         return new NextResponse(html, {
             headers: {

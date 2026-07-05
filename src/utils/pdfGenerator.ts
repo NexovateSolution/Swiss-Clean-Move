@@ -605,10 +605,13 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         <tr>
           <td>
             <strong>${serviceTitle}</strong><br><br>
-            ${address ? `${locDict.receiptObjectAddress}: ${address}<br>` : ''}
-            ${locDict.receiptArea}: ca. ${area} m²<br>
-            ${customer.adminNotes ? `${locDict.receiptSpecialNotes}: ${customer.adminNotes}<br>` : ''}
-            ${locDict.receiptAppointment}: ${cleanDate}
+            <div style="margin-bottom: 15px; font-size: 12px; line-height: 1.6;">
+              ${address ? `<strong>${locDict.receiptObjectAddress}:</strong> <span style="color: #333;">${address}</span><br>` : ''}
+              <strong>${locDict.receiptArea}:</strong> <span style="color: #333;">ca. ${area} m²</span><br>
+              ${customer.adminNotes ? `<strong>${locDict.receiptSpecialNotes}:</strong> <span style="color: #333;">${customer.adminNotes}</span><br>` : ''}
+              <strong>${locDict.receiptAppointment}:</strong> <span style="color: #333;">${cleanDate}</span>
+            </div>
+            ${additionalAttributesHtml}
           </td>
           <td>
             CHF ${totalPrice.toFixed(2)}
@@ -626,6 +629,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       ${locDict.receiptConfirm}
     </div>
     
+    ${documentType === 'receipt' ? `
     <div class="guarantee-grid">
       <div class="guarantee-box">
         <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
@@ -642,6 +646,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         </div>
       </div>
     </div>
+    ` : ''}
     
     <div class="footer-bottom">
       <div>
@@ -654,11 +659,13 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       </div>
     </div>
     
+    ${documentType === 'receipt' ? `
     <div class="features">
       <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> ${locDict.receiptFeature1}</div>
       <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg> ${locDict.receiptFeature2}</div>
       <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> ${locDict.receiptFeature3}</div>
     </div>
+    ` : ''}
   </body>
   </html>
     `;
