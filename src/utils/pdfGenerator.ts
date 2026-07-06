@@ -52,7 +52,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       footerSolution: 'IMMER LÖSUNGSORIENTIERT',
       footerCleanliness: 'SAUBERKEIT AUF DIE SIE SICH VERLASSEN KÖNNEN',
       onRequest: 'Auf Anfrage',
-      receiptOffer: documentType === 'invoice' ? 'RECHNUNG / INVOICE' : 'QUITTUNG',
+      receiptOffer: 'QUITTUNG',
       receiptThankYouDesc: documentType === 'invoice' ? 'Vielen Dank für Ihren Auftrag. Gerne stellen wir Ihnen Folgendes in Rechnung.' : 'Vielen Dank für Ihr Vertrauen und den erteilten Auftrag.',
       receiptDate: documentType === 'invoice' ? 'RECHNUNGSDATUM' : 'QUITTUNGSDATUM',
       receiptNo: documentType === 'invoice' ? 'RECHNUNGSNUMMER' : 'QUITTUNGSNUMMER',
@@ -63,7 +63,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       receiptDesc: 'BESCHREIBUNG',
       receiptAmount: 'BETRAG (CHF)',
       receiptTotal: 'GESAMTBETRAG',
-      receiptConfirm: documentType === 'invoice' ? 'Bitte überweisen Sie den Betrag innert 10 Tagen.<br><strong>Herzlichen Dank für Ihr Vertrauen!</strong>' : 'Wir bestätigen den Erhalt des oben genannten Betrags.<br><strong>Herzlichen Dank für Ihr Vertrauen!</strong>',
+      receiptConfirm: 'Hiermit bestätigen wir den Erhalt des Gesamtbetrags von CHF {total}.<br><strong>Vielen Dank für Ihr Vertrauen!</strong>',
       receiptObjectAddress: 'Objektadresse',
       receiptArea: 'Fläche',
       receiptSpecialNotes: 'Besonderheit',
@@ -133,7 +133,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       receiptDesc: 'DESCRIPTION',
       receiptAmount: 'AMOUNT (CHF)',
       receiptTotal: 'TOTAL AMOUNT',
-      receiptConfirm: documentType === 'invoice' ? 'Please transfer the amount within 10 days.<br><strong>Thank you for your trust!</strong>' : 'We confirm receipt of the above amount.<br><strong>Thank you for your trust!</strong>',
+      receiptConfirm: 'We hereby confirm receipt of the total amount of CHF {total}.<br><strong>Thank you for your trust!</strong>',
       receiptObjectAddress: 'Property Address',
       receiptArea: 'Area',
       receiptSpecialNotes: 'Special Notes',
@@ -203,7 +203,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       receiptDesc: 'DESCRIPTION',
       receiptAmount: 'MONTANT (CHF)',
       receiptTotal: 'MONTANT TOTAL',
-      receiptConfirm: documentType === 'invoice' ? 'Veuillez transférer le montant sous 10 jours.<br><strong>Merci pour votre confiance !</strong>' : 'Nous confirmons la réception du montant ci-dessus.<br><strong>Merci pour votre confiance !</strong>',
+      receiptConfirm: 'Nous confirmons par la présente la réception du montant total de CHF {total}.<br><strong>Merci pour votre confiance !</strong>',
       receiptObjectAddress: 'Adresse de l\'objet',
       receiptArea: 'Surface',
       receiptSpecialNotes: 'Particularités',
@@ -583,11 +583,6 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         </div>
         <div style="border-bottom: 1px solid #ddd; margin: 8px 0;"></div>
         <div class="meta-item">
-          <div class="meta-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
-          <div class="meta-text"><label>${locDict.receiptPaymentMethod}</label><div>${locDict.receiptPaymentMethodValue}</div></div>
-        </div>
-        <div style="border-bottom: 1px solid #ddd; margin: 8px 0;"></div>
-        <div class="meta-item">
           <div class="meta-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
           <div class="meta-text"><label>${locDict.receiptIssuedBy}</label><div>${locDict.receiptIssuedByValue}</div></div>
         </div>
@@ -625,8 +620,13 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       <div class="total-val">CHF ${totalPrice.toFixed(2)}</div>
     </div>
     
-    <div class="confirm-text">
-      ${locDict.receiptConfirm}
+    <div class="confirm-text" style="display: flex; align-items: center; gap: 15px; margin-bottom: 40px; font-size: 14px; color: #333; line-height: 1.6;">
+      <div style="border: 1px solid #eee; border-radius: 8px; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <svg style="width: 28px; height: 28px; fill: #4caf50;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <div>
+        ${locDict.receiptConfirm.replace('{total}', totalPrice.toFixed(2))}
+      </div>
     </div>
     
     ${documentType === 'receipt' ? `
