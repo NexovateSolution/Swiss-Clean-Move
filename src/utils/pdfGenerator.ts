@@ -378,11 +378,18 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     cleanBathrooms: { de: 'Badezimmer', en: 'Bathrooms', fr: 'Salles de Bain' },
     cleanKitchen: { de: 'Küche', en: 'Kitchen', fr: 'Cuisine' },
     cleanToilets: { de: 'Toiletten', en: 'Toilets', fr: 'Toilettes' },
-    cleanDrillHoles: { de: 'Bohrlöcher', en: 'Drill Holes', fr: 'Trous de perçage' },
+    cleanDrillHoles: { de: 'Dübellöcher', en: 'Dowel Holes', fr: 'Trous de cheville' },
+    cleanDrillHolesCount: { de: 'Anzahl Dübellöcher', en: 'Number of Dowel Holes', fr: 'Nombre de trous de cheville' },
     accessIndependent: { de: 'Zugang Unabhängig', en: 'Independent Access', fr: 'Accès Indépendant' },
     accessOptions: { de: 'Zugangsoptionen', en: 'Access Options', fr: 'Options d\'Accès' },
     accessKey: { de: 'Schlüsselzugang', en: 'Key Access', fr: 'Accès par clé' },
     cleanWindowsCount: { de: 'Anzahl Fenster', en: 'Number of Windows', fr: 'Nombre de Fenêtres' },
+    cleanAreas: { de: 'Reinigungsbereiche', en: 'Cleaning Areas', fr: 'Zones de Nettoyage' },
+    accessHandoverDate: { de: 'Übergabetermin', en: 'Handover Date', fr: 'Date de Remise' },
+    cleanShuttersBlindsClean: { de: 'Storen / Rollläden Reinigung', en: 'Shutters / Blinds Cleaning', fr: 'Nettoyage Stores / Volets' },
+    cleanKitchenState: { de: 'Küchenzustand', en: 'Kitchen Condition', fr: 'État de la Cuisine' },
+    cleanPressureWashing: { de: 'Hochdruckreinigung', en: 'Pressure Washing', fr: 'Nettoyage Haute Pression' },
+    cleanOutdoorCondition: { de: 'Zustand Aussenbereich', en: 'Outdoor Condition', fr: 'État Extérieur' },
     moveBoxQty_standard: { de: 'Anzahl Standardkartons', en: 'Box Qty (Standard)', fr: 'Qté cartons standard' },
     moveBoxQty_book: { de: 'Anzahl Bücherkartons', en: 'Box Qty (Books)', fr: 'Qté cartons livres' },
     moveBoxQty_wardrobe: { de: 'Anzahl Kleiderboxen', en: 'Box Qty (Wardrobe)', fr: 'Qté cartons penderie' },
@@ -472,7 +479,37 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     balcony: { de: 'Balkon', en: 'Balcony', fr: 'Balcon' },
     garden: { de: 'Garten', en: 'Garden', fr: 'Jardin' },
     both: { de: 'Beides', en: 'Both', fr: 'Les Deux' },
-    none: { de: 'Keines', en: 'None', fr: 'Aucun' }
+    none: { de: 'Keines', en: 'None', fr: 'Aucun' },
+    // Cleaning areas
+    basement: { de: 'Keller', en: 'Basement', fr: 'Sous-sol' },
+    attic: { de: 'Dachboden', en: 'Attic', fr: 'Grenier' },
+    garage: { de: 'Garage', en: 'Garage', fr: 'Garage' },
+    // Window types
+    floorToCeiling: { de: 'Bodentiefe Fenster', en: 'Floor to Ceiling', fr: 'Du Sol au Plafond' },
+    skylight: { de: 'Dachfenster', en: 'Skylight', fr: 'Velux' },
+    // Moving additional services
+    assembly: { de: 'Montage / Demontage', en: 'Assembly / Disassembly', fr: 'Montage / Démontage' },
+    packingMaterials: { de: 'Verpackungsmaterial', en: 'Packing Materials', fr: "Matériel d'Emballage" },
+    disposal: { de: 'Entsorgung', en: 'Disposal', fr: 'Élimination' },
+    cleaning: { de: 'Reinigung', en: 'Cleaning', fr: 'Nettoyage' },
+    // Condition values
+    nicotine: { de: 'Nikotin', en: 'Nicotine', fr: 'Nicotine' },
+    normal: { de: 'Normal', en: 'Normal', fr: 'Normal' },
+    heavy: { de: 'Stark verschmutzt', en: 'Heavily Soiled', fr: 'Très Sale' },
+    notSure: { de: 'Nicht sicher', en: 'Not Sure', fr: 'Pas Sûr' },
+    // Special items
+    aquarium: { de: 'Aquarium', en: 'Aquarium', fr: 'Aquarium' },
+    piano: { de: 'Klavier', en: 'Piano', fr: 'Piano' },
+    safe: { de: 'Tresor', en: 'Safe', fr: 'Coffre-fort' },
+    // Special glass
+    winterGarden: { de: 'Wintergarten', en: 'Winter Garden', fr: 'Jardin d\'Hiver' },
+    glassFront: { de: 'Glasfront', en: 'Glass Front', fr: 'Façade Vitrée' },
+    sliding: { de: 'Schiebefenster', en: 'Sliding Windows', fr: 'Fenêtres Coulissantes' },
+    // Shutters/blinds
+    roller: { de: 'Rollläden', en: 'Roller Shutters', fr: 'Volets Roulants' },
+    venetian: { de: 'Jalousien', en: 'Venetian Blinds', fr: 'Stores Vénitiens' },
+    // Pressure washing / outdoor
+    asRecommended: { de: 'Wie empfohlen', en: 'As Recommended', fr: 'Selon Recommandation' }
   };
   
   const additionalAttributesHtml = Object.entries(customer)
@@ -523,7 +560,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   <head>
     <meta charset="utf-8">
     <style>
-      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 40px 60px; box-sizing: border-box; }
+      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 40px 80px; box-sizing: border-box; }
       .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
       .logo { max-width: 200px; }
       .contact-info { text-align: left; font-size: 11px; color: #555; line-height: 1.6; }
@@ -799,7 +836,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       }
       .quote-meta-icon svg { width: 20px; height: 20px; fill: currentColor; }
       .quote-meta-details { font-size: 11px; }
-      .quote-meta-details strong { display: inline-block; width: 80px; }
+      .quote-meta-details strong { display: inline-block; width: 120px; }
       .quote-meta-details span { color: #cc0000; font-weight: bold; }
       
       .info-grid {
