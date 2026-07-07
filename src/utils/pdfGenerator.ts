@@ -560,7 +560,14 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   <head>
     <meta charset="utf-8">
     <style>
-      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 0; box-sizing: border-box; }
+      @page { margin: 15mm 20mm; }
+      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; box-sizing: border-box; }
+      @media screen {
+        body { margin: 20px auto; padding: 40px; max-width: 800px; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; background: white; }
+      }
+      @media print {
+        body { margin: 0; padding: 0; max-width: none; box-shadow: none; }
+      }
       .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
       .logo { max-width: 200px; }
       .contact-info { text-align: left; font-size: 11px; color: #555; line-height: 1.6; }
@@ -758,12 +765,13 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   <head>
     <meta charset="utf-8">
     <style>
-      body {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      @page { margin: 15mm 20mm; }
+      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; box-sizing: border-box; }
+      @media screen {
+        body { margin: 20px auto; padding: 40px; max-width: 800px; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; background: white; }
+      }
+      @media print {
+        body { margin: 0; padding: 0; max-width: none; box-shadow: none; }
       }
       .header {
         display: flex;
@@ -1223,13 +1231,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
   // Print to PDF
   const pdfBuffer = await page.pdf({
     format: 'A4',
-    printBackground: true,
-    margin: {
-      top: '40px',
-      right: '65px',
-      bottom: '40px',
-      left: '65px'
-    }
+    printBackground: true
   });
 
   await browser.close();
