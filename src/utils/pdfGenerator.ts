@@ -560,7 +560,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   <head>
     <meta charset="utf-8">
     <style>
-      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 50px 80px; box-sizing: border-box; }
+      body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; margin: 0; padding: 0; box-sizing: border-box; }
       .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
       .logo { max-width: 200px; }
       .contact-info { text-align: left; font-size: 11px; color: #555; line-height: 1.6; }
@@ -762,7 +762,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         color: #333;
         margin: 0;
-        padding: 40px 60px;
+        padding: 0;
         box-sizing: border-box;
       }
       .header {
@@ -1225,10 +1225,10 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
     format: 'A4',
     printBackground: true,
     margin: {
-      top: '0px',
-      right: '0px',
-      bottom: '0px',
-      left: '0px'
+      top: '40px',
+      right: '65px',
+      bottom: '40px',
+      left: '65px'
     }
   });
 
