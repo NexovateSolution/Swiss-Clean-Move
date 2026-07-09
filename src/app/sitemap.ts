@@ -25,31 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/legal'
   ];
 
-  // Local SEO pages (21 pages total)
-  const seoClusters = ['umzug', 'reinigung', 'endreinigung'];
-  const seelandCities = ['biel', 'nidau', 'lyss', 'bruegg', 'ipsach', 'aarberg', 'pieterlen'];
-
-  const localPages = seoClusters.flatMap(cluster => 
-    seelandCities.map(city => `/${cluster}-${city}`)
-  );
-
-  // Haushaltshilfe landing page
-  const householdPages = ['/haushaltshilfe-biel'];
-
-  // Authority SEO pages (Biel Focus)
-  const authorityPages = [
-    '/reinigungsfirma-biel',
-    '/umzugsfirma-biel',
-    '/unterhaltsreinigung-biel',
-    '/fensterreinigung-biel',
-    '/transportfirma-biel',
-    '/entsorgung-biel',
-    '/facility-service-biel',
-    '/hauswartung-biel',
-    '/baureinigung-biel',
-    '/gastronomie-reinigung-biel'
-  ];
-
   // Blog pages
   const blogPages = [
     '/blog',
@@ -61,7 +36,71 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/abgabegarantie-erklaert'
   ];
 
-  const allPaths = [...staticPages, ...localPages, ...householdPages, ...authorityPages, ...blogPages];
+  // Auto-discovered SEO Landing Pages (60 pages)
+  const seoPages = [
+    '/aargau',
+    '/basel',
+    '/baureinigung-biel',
+    '/bern',
+    '/biel-bienne-seeland',
+    '/endreinigung-aarberg',
+    '/endreinigung-biel',
+    '/endreinigung-bruegg',
+    '/endreinigung-ipsach',
+    '/endreinigung-lyss',
+    '/endreinigung-nidau',
+    '/endreinigung-pieterlen',
+    '/entsorgung-biel',
+    '/facility-service-biel',
+    '/facility-service-schweiz',
+    '/fensterreinigung-biel',
+    '/fribourg',
+    '/gastronomie-reinigung-biel',
+    '/geneve',
+    '/haushaltshilfe-biel',
+    '/hauswartung-biel',
+    '/hauswartung-schweiz',
+    '/jura',
+    '/lausanne-vaud',
+    '/luzern',
+    '/neuchatel',
+    '/reinigung-aarberg',
+    '/reinigung-biel',
+    '/reinigung-bruegg',
+    '/reinigung-ipsach',
+    '/reinigung-lyss',
+    '/reinigung-nidau',
+    '/reinigung-pieterlen',
+    '/reinigungsfirma-biel',
+    '/reinigungsfirma-schweiz',
+    '/schwyz',
+    '/solothurn',
+    '/st-gallen',
+    '/thurgau',
+    '/transportfirma-biel',
+    '/umzug-aarberg',
+    '/umzug-basel',
+    '/umzug-bern',
+    '/umzug-biel',
+    '/umzug-bruegg',
+    '/umzug-fribourg',
+    '/umzug-ipsach',
+    '/umzug-lyss',
+    '/umzug-neuchatel',
+    '/umzug-nidau',
+    '/umzug-pieterlen',
+    '/umzug-schweiz',
+    '/umzug-solothurn',
+    '/umzug-zurich',
+    '/umzugsfirma-biel',
+    '/umzugsreinigung-schweiz',
+    '/unterhaltsreinigung-biel',
+    '/wallis-valais',
+    '/zuerich',
+    '/zug'
+  ];
+
+  const allPaths = [...staticPages, ...blogPages, ...seoPages];
 
   return allPaths.map((path) => {
     // Generate alternate languages
