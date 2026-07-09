@@ -275,6 +275,16 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
                 <input type="datetime-local" value={v('untilDate')} onChange={e => set('untilDate', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" required />
              </div>
           </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+             <div className="mb-2">
+                <label className="block text-sm font-bold text-[#003366] mb-2">Handover Date</label>
+                <input type="date" value={v('accessHandoverDate')} onChange={e => set('accessHandoverDate', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" />
+             </div>
+             <div className="mb-2">
+                <label className="block text-sm font-bold text-[#003366] mb-2">Handover Time</label>
+                <input type="time" value={v('accessHandoverTime')} onChange={e => set('accessHandoverTime', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" />
+             </div>
+          </div>
         </div>
       )
     }

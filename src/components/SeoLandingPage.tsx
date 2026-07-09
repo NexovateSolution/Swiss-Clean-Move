@@ -147,6 +147,13 @@ export default function SeoLandingPage({
     '@context': 'https://schema.org',
     '@graph': [
       baseSchema,
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `https://swisscleanmove.ch/${locale}` },
+          { '@type': 'ListItem', position: 2, name: p('meta.title'), item: `https://swisscleanmove.ch/${locale}/${pageKey}` }
+        ]
+      },
       faqs.length > 0 && {
         '@type': 'FAQPage',
         mainEntity: faqs.map(faq => ({
