@@ -688,14 +688,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       <tbody>
         <tr>
           <td>
-            <strong>${serviceTitle}</strong><br><br>
-            <div style="margin-bottom: 15px; font-size: 12px; line-height: 1.6;">
-              ${address ? `<strong>${locDict.receiptObjectAddress}:</strong> <span style="color: #333;">${address}</span><br>` : ''}
-              <strong>${locDict.receiptArea}:</strong> <span style="color: #333;">ca. ${area} m²</span><br>
-              ${customer.adminNotes ? `<strong>${locDict.receiptSpecialNotes}:</strong> <span style="color: #333;">${customer.adminNotes}</span><br>` : ''}
-              <strong>${locDict.receiptAppointment}:</strong> <span style="color: #333;">${cleanDate}</span>
-            </div>
-            ${additionalAttributesHtml}
+            <strong>${serviceTitle}</strong>
           </td>
           <td>
             CHF ${totalPrice.toFixed(2)}

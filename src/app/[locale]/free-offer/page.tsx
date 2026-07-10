@@ -84,6 +84,17 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
       title: t('home.services.householdHelping.title'),
       description: t('home.services.householdHelping.description'),
       formHref: `/${locale}/form?service=household-helping`
+    {
+      id: 'window',
+      icon: (
+        <div className="relative">
+          <Home className="w-12 h-12 lg:w-14 lg:h-14 text-[#003366]" strokeWidth={1.5} />
+          <Sparkles className="w-5 h-5 lg:w-6 lg:h-6 text-[#003366] absolute -top-1 -right-1 bg-white rounded-full p-0.5" strokeWidth={1.5} />
+        </div>
+      ),
+      title: t('home.services.windowCleaning.title'),
+      description: t('home.services.windowCleaning.description'),
+      formHref: `/${locale}/form?service=window-cleaning`
     }
   ];
 
@@ -168,10 +179,48 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
 
           {/* Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.slice(0, 2).map((svc) => (
+            {services.map((svc) => (
               <ServiceCard key={svc.id} service={svc} />
             ))}
-            
+
+            {/* Google Reviews Card */}
+            <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
+              <div className="w-16 h-16 rounded-full border border-gray-100 shadow-sm flex items-center justify-center mb-4 bg-white overflow-hidden p-2">
+                <Image src="/images/logo.png" alt="SwissCleanMove" width={60} height={20} className="object-contain" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-1">SwissCleanMove</h3>
+              
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl font-bold text-[#e7711b]">4.4</span>
+                <div className="flex gap-0.5">
+                  {[1,2,3,4].map(i => (
+                    <StarIcon key={i} className="w-5 h-5 text-[#fbbc04] fill-current" />
+                  ))}
+                  <div className="relative w-5 h-5 text-[#fbbc04]">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 left-0">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" clipPath="url(#half-star)" />
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+                      <defs>
+                        <clipPath id="half-star">
+                          <rect x="0" y="0" width="12" height="24" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 mb-1">
+                {locale === 'de' ? 'Basierend auf 10 Bewertungen' : locale === 'fr' ? 'Basé sur 10 avis' : 'Based on 10 reviews'}
+              </p>
+              <div className="flex items-center justify-center gap-1 text-xs text-gray-500 mb-4">
+                powered by <span className="font-semibold text-[#4285f4] text-sm">Google</span>
+              </div>
+              
+              <a href="https://g.page/r/CU9rQ4QxM5xVEAI/review" target="_blank" rel="noopener noreferrer" className="mt-auto w-full py-2.5 px-4 rounded-full border border-gray-200 text-black font-semibold text-sm flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors shadow-sm">
+                {locale === 'de' ? 'Bewerten Sie uns auf' : locale === 'fr' ? 'Évaluez-nous sur' : 'Review us on'} <GoogleGIcon className="w-4 h-4" />
+              </a>
+            </div>
+
             {/* Personal Consultation Card */}
             <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between">
               <div>
@@ -193,26 +242,6 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                 <Phone className="w-5 h-5 fill-current" />
                 {t('freeOffer.layout.consultation.callNow')}
               </a>
-            </div>
-
-            {services.slice(2, 6).map((svc) => (
-              <ServiceCard key={svc.id} service={svc} />
-            ))}
-
-            {/* Google Reviews Card */}
-            <div className="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col items-center justify-center text-center">
-              <div className="flex gap-1 mb-2">
-                {[1,2,3,4,5].map(i => (
-                  <StarIcon key={i} className="w-6 h-6 text-[#fbbc04] fill-current" />
-                ))}
-              </div>
-              <h3 className="text-3xl font-extrabold text-[#001f3f] mb-2 flex items-center gap-2">
-                {t('freeOffer.layout.reviews.rating')} <span className="text-lg text-gray-400 font-semibold">{t('freeOffer.layout.reviews.outOf')}</span>
-              </h3>
-              <div className="flex items-center gap-2 text-sm text-gray-600 font-medium whitespace-pre-line leading-snug">
-                <GoogleGIcon className="w-8 h-8" />
-                <span className="text-left">{t('freeOffer.layout.reviews.text')}</span>
-              </div>
             </div>
           </div>
         </div>
