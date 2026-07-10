@@ -84,6 +84,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
       title: t('home.services.householdHelping.title'),
       description: t('home.services.householdHelping.description'),
       formHref: `/${locale}/form?service=household-helping`
+    },
     {
       id: 'window',
       icon: (
