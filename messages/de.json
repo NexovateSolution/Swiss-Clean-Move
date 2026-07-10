@@ -736,6 +736,55 @@
         "contact": "zu und erkläre mich damit einverstanden, dass SwissCleanMove mich bezüglich meiner Anfrage kontaktiert.",
         "newsletter": "Ich möchte gelegentlich Informationen über neue Dienstleistungen und Angebote erhalten."
       }
+    },
+    "layout": {
+      "mainTitle": "Was benötigen Sie?",
+      "mainSubtitle": "Wählen Sie den passenden Service und erhalten Sie in wenigen Schritten Ihre unverbindliche Offerte.",
+      "guarantees": {
+        "abnahme": {
+          "title": "100% Abnahmegarantie",
+          "subtitle": "Bei Wohnungsübergabe"
+        },
+        "festpreis": {
+          "title": "Transparente Festpreise",
+          "subtitle": "Keine versteckten Kosten"
+        },
+        "haftpflicht": {
+          "title": "Haftpflichtversichert",
+          "subtitle": "Für Ihre Sicherheit"
+        },
+        "schweizweit": {
+          "title": "Schweizweit für Sie da",
+          "subtitle": "Schnell & zuverlässig"
+        }
+      },
+      "steps": {
+        "service": "Service",
+        "adresse": "Adresse",
+        "details": "Details",
+        "extras": "Extras",
+        "offerte": "Offerte"
+      },
+      "consultation": {
+        "title": "Persönliche Beratung",
+        "subtitle": "Wir sind für Sie da!",
+        "free": "Kostenlos & unverbindlich",
+        "fast": "Schnelle Antwort",
+        "custom": "Individuelle Lösung",
+        "callNow": "Jetzt anrufen"
+      },
+      "reviews": {
+        "rating": "5.0",
+        "outOf": "/5",
+        "text": "100+ Bewertungen\\nauf Google"
+      },
+      "bottomBar": {
+        "call": "Anrufen",
+        "whatsapp": "WhatsApp",
+        "message": "Nachricht senden",
+        "freeQuote": "Kostenlose Offerte",
+        "requestNow": "Jetzt anfordern"
+      }
     }
   },
   "legal": {
@@ -2819,7 +2868,7 @@
           "takeAway": "Take-away",
           "cafe": "Café",
           "bar": "Bar",
-          "takeaway": "Takeaway",
+          "takeaway2": "Takeaway",
           "club": "Club"
         },
         "area": "Fläche (m²)",

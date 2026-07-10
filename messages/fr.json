@@ -736,6 +736,55 @@
         "contact": "et consens à ce que SwissCleanMove me contacte concernant ma demande.",
         "newsletter": "Je souhaite recevoir occasionnellement des informations sur les nouveaux services et offres."
       }
+    },
+    "layout": {
+      "mainTitle": "De quoi avez-vous besoin ?",
+      "mainSubtitle": "Choisissez le service approprié et recevez votre devis gratuit en quelques étapes.",
+      "guarantees": {
+        "abnahme": {
+          "title": "Garantie de remise 100%",
+          "subtitle": "Pour la remise d'appartement"
+        },
+        "festpreis": {
+          "title": "Prix fixes transparents",
+          "subtitle": "Pas de frais cachés"
+        },
+        "haftpflicht": {
+          "title": "Assurance responsabilité civile",
+          "subtitle": "Pour votre sécurité"
+        },
+        "schweizweit": {
+          "title": "Disponible dans toute la Suisse",
+          "subtitle": "Rapide et fiable"
+        }
+      },
+      "steps": {
+        "service": "Service",
+        "adresse": "Adresse",
+        "details": "Détails",
+        "extras": "Extras",
+        "offerte": "Devis"
+      },
+      "consultation": {
+        "title": "Consultation personnelle",
+        "subtitle": "Nous sommes là pour vous !",
+        "free": "Gratuit & sans engagement",
+        "fast": "Réponse rapide",
+        "custom": "Solution sur mesure",
+        "callNow": "Appelez maintenant"
+      },
+      "reviews": {
+        "rating": "5.0",
+        "outOf": "/5",
+        "text": "100+ Avis\\nsur Google"
+      },
+      "bottomBar": {
+        "call": "Appeler",
+        "whatsapp": "WhatsApp",
+        "message": "Envoyer un message",
+        "freeQuote": "Devis Gratuit",
+        "requestNow": "Demander maintenant"
+      }
     }
   },
   "legal": {
@@ -2819,7 +2868,7 @@
           "takeAway": "À emporter",
           "cafe": "Café",
           "bar": "Bar",
-          "takeaway": "À emporter",
+          "takeaway2": "À emporter",
           "club": "Club"
         },
         "area": "Surface (m²)",

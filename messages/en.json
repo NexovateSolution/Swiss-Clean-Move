@@ -749,6 +749,55 @@
         "contact": "and consent to SwissCleanMove contacting me regarding my inquiry.",
         "newsletter": "I would like to occasionally receive information about new services and offers."
       }
+    },
+    "layout": {
+      "mainTitle": "What do you need?",
+      "mainSubtitle": "Choose the appropriate service and receive your free quote in just a few steps.",
+      "guarantees": {
+        "abnahme": {
+          "title": "100% Handover Guarantee",
+          "subtitle": "For apartment handover"
+        },
+        "festpreis": {
+          "title": "Transparent Fixed Prices",
+          "subtitle": "No hidden costs"
+        },
+        "haftpflicht": {
+          "title": "Liability Insured",
+          "subtitle": "For your safety"
+        },
+        "schweizweit": {
+          "title": "Available Nationwide",
+          "subtitle": "Fast & reliable"
+        }
+      },
+      "steps": {
+        "service": "Service",
+        "adresse": "Address",
+        "details": "Details",
+        "extras": "Extras",
+        "offerte": "Quote"
+      },
+      "consultation": {
+        "title": "Personal Consultation",
+        "subtitle": "We are here for you!",
+        "free": "Free & non-binding",
+        "fast": "Fast response",
+        "custom": "Custom solution",
+        "callNow": "Call now"
+      },
+      "reviews": {
+        "rating": "5.0",
+        "outOf": "/5",
+        "text": "100+ Reviews\\non Google"
+      },
+      "bottomBar": {
+        "call": "Call",
+        "whatsapp": "WhatsApp",
+        "message": "Send message",
+        "freeQuote": "Free Quote",
+        "requestNow": "Request now"
+      }
     }
   },
   "legal": {
@@ -2622,7 +2671,7 @@
           "takeAway": "Take-away",
           "cafe": "Cafe",
           "bar": "Bar",
-          "takeaway": "Takeaway",
+          "takeaway2": "Takeaway",
           "club": "Club"
         },
         "area": "Area (m²)",
