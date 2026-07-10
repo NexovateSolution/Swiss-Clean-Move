@@ -251,30 +251,30 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
       {/* Bottom Bar (Moved from fixed position to the end of the page) */}
       <div className="bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.05)] border-t border-gray-200 mt-12 py-6">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col items-center gap-5">
             
-            {/* Desktop only bottom guarantees */}
-            <div className="hidden lg:flex items-center gap-8 text-xs">
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-gray-700" />
-                <div><span className="font-bold text-[#001f3f]">{t('freeOffer.layout.guarantees.abnahme.title')}</span><br/><span className="text-gray-500">{t('freeOffer.layout.guarantees.abnahme.subtitle')}</span></div>
+            {/* Desktop only bottom guarantees - now its own row */}
+            <div className="hidden lg:flex items-center justify-center gap-6 xl:gap-8 text-xs w-full flex-wrap">
+              <div className="flex items-center gap-2 min-w-0">
+                <Shield className="w-5 h-5 text-gray-700 flex-shrink-0" />
+                <div className="whitespace-nowrap"><span className="font-bold text-[#001f3f]">{t('freeOffer.layout.guarantees.abnahme.title')}</span><br/><span className="text-gray-500">{t('freeOffer.layout.guarantees.abnahme.subtitle')}</span></div>
               </div>
-              <div className="flex items-center gap-2">
-                <Tag className="w-5 h-5 text-gray-700" />
-                <div><span className="font-bold text-[#001f3f]">{t('freeOffer.layout.guarantees.festpreis.title')}</span><br/><span className="text-gray-500">{t('freeOffer.layout.guarantees.festpreis.subtitle')}</span></div>
+              <div className="flex items-center gap-2 min-w-0">
+                <Tag className="w-5 h-5 text-gray-700 flex-shrink-0" />
+                <div className="whitespace-nowrap"><span className="font-bold text-[#001f3f]">{t('freeOffer.layout.guarantees.festpreis.title')}</span><br/><span className="text-gray-500">{t('freeOffer.layout.guarantees.festpreis.subtitle')}</span></div>
               </div>
-              <div className="flex items-center gap-2">
-                <Umbrella className="w-5 h-5 text-gray-700" />
-                <div><span className="font-bold text-[#001f3f]">{t('freeOffer.layout.guarantees.haftpflicht.title')}</span><br/><span className="text-gray-500">{t('freeOffer.layout.guarantees.haftpflicht.subtitle')}</span></div>
+              <div className="flex items-center gap-2 min-w-0">
+                <Umbrella className="w-5 h-5 text-gray-700 flex-shrink-0" />
+                <div className="whitespace-nowrap"><span className="font-bold text-[#001f3f]">{t('freeOffer.layout.guarantees.haftpflicht.title')}</span><br/><span className="text-gray-500">{t('freeOffer.layout.guarantees.haftpflicht.subtitle')}</span></div>
               </div>
-              <div className="flex items-center gap-2">
-                <Plus className="w-5 h-5 text-swiss-red" />
-                <div><span className="font-bold text-[#001f3f]">{t('freeOffer.layout.guarantees.schweizweit.title')}</span><br/><span className="text-gray-500">{t('freeOffer.layout.guarantees.schweizweit.subtitle')}</span></div>
+              <div className="flex items-center gap-2 min-w-0">
+                <Plus className="w-5 h-5 text-swiss-red flex-shrink-0" />
+                <div className="whitespace-nowrap"><span className="font-bold text-[#001f3f]">{t('freeOffer.layout.guarantees.schweizweit.title')}</span><br/><span className="text-gray-500">{t('freeOffer.layout.guarantees.schweizweit.subtitle')}</span></div>
               </div>
             </div>
 
             {/* Buttons */}
-            <div className="flex w-full lg:w-auto items-center justify-center gap-2 sm:gap-4">
+            <div className="flex w-full items-center justify-center gap-2 sm:gap-4">
               <a href="tel:+41782158030" className="flex-1 lg:flex-none flex items-center justify-center gap-2 bg-[#001f3f] text-white py-3 px-4 sm:px-6 rounded-xl hover:bg-[#003366] transition-colors font-medium">
                 <Phone className="w-5 h-5" />
                 <div className="text-left leading-tight hidden sm:block">
