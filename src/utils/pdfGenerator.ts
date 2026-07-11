@@ -401,7 +401,15 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     moveFurnitureQty_tableChairs: { de: 'Anzahl Tisch & Stühle', en: 'Qty Table/Chairs', fr: 'Qté Tables/Chaises' },
     moveFurnitureQty_tv: { de: 'Anzahl TVs', en: 'Qty TVs', fr: 'Qté TVs' },
     moveFurnitureQty_washingMachine: { de: 'Anzahl Waschmaschinen', en: 'Qty Washing Mach.', fr: 'Qté Machines à laver' },
-    moveFurnitureQty_refrigerator: { de: 'Anzahl Kühlschränke', en: 'Qty Refrigerators', fr: 'Qté Réfrigérateurs' }
+    moveFurnitureQty_refrigerator: { de: 'Anzahl Kühlschränke', en: 'Qty Refrigerators', fr: 'Qté Réfrigérateurs' },
+    notes: { de: 'Bemerkungen', en: 'Notes', fr: 'Remarques' },
+    startDate: { de: 'Startdatum', en: 'Start Date', fr: 'Date de Début' },
+    desiredService: { de: 'Gewünschte Leistung', en: 'Desired Service', fr: 'Service Souhaité' },
+    cleaningServices: { de: 'Reinigungsleistungen', en: 'Cleaning Services', fr: 'Services de Nettoyage' },
+    units: { de: 'Einheiten', en: 'Units', fr: 'Unités' },
+    workingHours: { de: 'Arbeitszeiten', en: 'Working Hours', fr: 'Heures de Travail' },
+    cleaningLocation: { de: 'Reinigungsort', en: 'Cleaning Location', fr: 'Lieu de Nettoyage' },
+    timeSlot: { de: 'Zeitfenster', en: 'Time Slot', fr: 'Créneau Horaire' }
   };
 
   const translatedValues: Record<string, any> = {
@@ -509,7 +517,15 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     roller: { de: 'Rollläden', en: 'Roller Shutters', fr: 'Volets Roulants' },
     venetian: { de: 'Jalousien', en: 'Venetian Blinds', fr: 'Stores Vénitiens' },
     // Pressure washing / outdoor
-    asRecommended: { de: 'Wie empfohlen', en: 'As Recommended', fr: 'Selon Recommandation' }
+    asRecommended: { de: 'Wie empfohlen', en: 'As Recommended', fr: 'Selon Recommandation' },
+    'cleaning-only': { de: 'Nur Reinigung', en: 'Cleaning Only', fr: 'Nettoyage Uniquement' },
+    'moving-only': { de: 'Nur Umzug', en: 'Moving Only', fr: 'Déménagement Uniquement' },
+    'moving-and-cleaning': { de: 'Umzug & Reinigung', en: 'Moving & Cleaning', fr: 'Déménagement & Nettoyage' },
+    windows: { de: 'Fenster', en: 'Windows', fr: 'Fenêtres' },
+    afternoon: { de: 'Nachmittag', en: 'Afternoon', fr: 'Après-midi' },
+    morning: { de: 'Vormittag', en: 'Morning', fr: 'Matin' },
+    evening: { de: 'Abend', en: 'Evening', fr: 'Soir' },
+    'full-day': { de: 'Ganzer Tag', en: 'Full Day', fr: 'Toute la Journée' }
   };
   
   const additionalAttributesHtml = Object.entries(customer)
