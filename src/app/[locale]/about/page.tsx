@@ -152,7 +152,7 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
               { icon: Layers, key: 'oneSource' },
               { icon: ShieldCheck, key: 'handoverGuarantee' },
               { icon: Star, key: 'swissQuality' },
-              { icon: null, key: 'transparentPricing', customIcon: true },
+              { icon: Star, key: 'transparentPricing', customIcon: true },
               { icon: Zap, key: 'fastQuote' },
               { icon: MapPin, key: 'flexible' }
             ].map((item, index) => {
