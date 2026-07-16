@@ -466,14 +466,16 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 {/* Content */}
                 <div className="flex-1 space-y-3">
                   <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-                    {locale === 'en' ? 'Property Maintenance Biel/Bienne & Facility Service' : locale === 'fr' ? 'Entretien de Propriétés Bienne/Bienne' : 'Hauswartung Reinigung Biel/Bienne'}
+                    {locale === 'en' ? 'Property Maintenance Biel/Bienne & Facility Service' : locale === 'fr' ? 'Entretien de Propriétés Bienne/Bienne' : locale === 'it' ? 'Manutenzione Immobili Biel/Bienne & Facility Service' : 'Hauswartung Reinigung Biel/Bienne'}
                   </h2>
                   <p className="text-swiss-body leading-relaxed">
                     {locale === 'en'
                       ? 'Professional property maintenance, facility services, and building cleaning for B2B clients in Biel/Bienne & Seeland — technical building services, stairwell cleaning, and winter service.'
                       : locale === 'fr'
                         ? 'Entretien professionnel de propriétés, facility services et nettoyage de bâtiments pour les clients B2B à Bienne & Seeland — service technique, nettoyage des escaliers et service hivernal.'
-                        : 'Professionelle Hauswartung Reinigung und Facility Services für B2B-Kunden in Biel/Bienne & Seeland — technischer Hausdienst, Treppenhausreinigung und Winterdienst.'}
+                        : locale === 'it'
+                          ? 'Manutenzione professionale di immobili, facility services e pulizia di edifici per clienti B2B a Biel/Bienne e Seeland — servizi tecnici, pulizia delle scale e servizio invernale.'
+                          : 'Professionelle Hauswartung Reinigung und Facility Services für B2B-Kunden in Biel/Bienne & Seeland — technischer Hausdienst, Treppenhausreinigung und Winterdienst.'}
                   </p>
                 </div>
 
@@ -483,7 +485,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                     href={`/${locale}/hauswartung-biel`}
                     className="btn-primary inline-flex items-center space-x-2 whitespace-nowrap"
                   >
-                    <span>{locale === 'en' ? 'Learn More' : locale === 'fr' ? 'En savoir plus' : 'Mehr erfahren'}</span>
+                    <span>{locale === 'en' ? 'Learn More' : locale === 'fr' ? 'En savoir plus' : locale === 'it' ? 'Scopri di più' : 'Mehr erfahren'}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -504,14 +506,16 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 {/* Content */}
                 <div className="flex-1 space-y-3">
                   <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-                    {locale === 'en' ? 'Household Help & Private Cleaning' : locale === 'fr' ? 'Aide ménagère & Nettoyage privé' : 'Haushaltshilfe & Privatreinigung'}
+                    {locale === 'en' ? 'Household Help & Private Cleaning' : locale === 'fr' ? 'Aide ménagère & Nettoyage privé' : locale === 'it' ? 'Aiuto Domestico & Pulizia Privata' : 'Haushaltshilfe & Privatreinigung'}
                   </h2>
                   <p className="text-swiss-body leading-relaxed">
                     {locale === 'en'
                       ? 'Professional household help and regular apartment cleaning for private clients in Biel & Seeland — flexible, reliable, and to Swiss quality standards.'
                       : locale === 'fr'
                         ? 'Aide ménagère professionnelle et nettoyage régulier d\'appartement pour les particuliers à Bienne & Seeland — flexible, fiable et selon les standards de qualité suisses.'
-                        : 'Professionelle Haushaltshilfe und regelmässige Wohnungsreinigung für Privatkunden in Biel & Seeland — flexibel, zuverlässig und nach Schweizer Qualitätsstandard.'}
+                        : locale === 'it'
+                          ? 'Aiuto domestico professionale e pulizia regolare di appartamenti per clienti privati a Biel & Seeland — flessibile, affidabile e secondo gli standard di qualità svizzeri.'
+                          : 'Professionelle Haushaltshilfe und regelmässige Wohnungsreinigung für Privatkunden in Biel & Seeland — flexibel, zuverlässig und nach Schweizer Qualitätsstandard.'}
                   </p>
                 </div>
 
@@ -521,7 +525,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                     href={`/${locale}/haushaltshilfe-biel`}
                     className="btn-primary inline-flex items-center space-x-2 whitespace-nowrap"
                   >
-                    <span>{locale === 'en' ? 'Learn More' : locale === 'fr' ? 'En savoir plus' : 'Mehr erfahren'}</span>
+                    <span>{locale === 'en' ? 'Learn More' : locale === 'fr' ? 'En savoir plus' : locale === 'it' ? 'Scopri di più' : 'Mehr erfahren'}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
