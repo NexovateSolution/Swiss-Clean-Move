@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Canton+of+Schwyz,Switzerland'
   }
+,
+  it: {
+    slug: 'schwyz', regionName: 'Cantone di Svitto',
+    seoTitle: 'Muoversi a Svitto | Impresa di pulizie Svitto | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie di trasloco, pulizie di manutenzione, servizi di strutture e smaltimento nel Canton Svitto.',
+    h1: 'Impresa di traslochi e pulizie nel Canton Svitto',
+    highSeoKeywords: ['Muoversi a Svitto','Impresa di pulizie Svitto'],
+    localKeywords: ['Schwyz','Freienbach','Einsiedeln','Küssnacht','Wollerau','Pfäffikon','Lachen'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi professionali, pulizia finale, pulizia di manutenzione, servizi per strutture, manutenzione e smaltimento di immobili nel Canton Svitto.',
+      'Lavoriamo a Svitto, Freienbach, Einsiedeln, Küssnacht, Wollerau, Pfäffikon e Lachen. SwissCleanMove offre servizi affidabili per clienti privati, aziende e amministrazioni.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Svitto?', answer: 'Sì, offriamo traslochi professionali nel Canton Svitto.' },
+      { question: 'Sono disponibili la pulizia e la manutenzione della proprietà?', answer: 'Sì, offriamo pulizie di manutenzione, manutenzione della proprietà e servizi per le strutture.' },
+      { question: 'SwissCleanMove funziona a Pfäffikon e Lachen?', answer: 'Sì, lavoriamo anche a Pfäffikon, Lachen e dintorni.' },
+    ],
+    mapQuery: 'Canton+of+Schwyz,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

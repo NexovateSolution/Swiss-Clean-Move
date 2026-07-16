@@ -14,35 +14,35 @@ export default function HaushaltshilfePricing({ locale, formService, handleCtaCl
   const r = PRICING_RULES.household;
 
   const prices = [
-    { en: 'Regular Household Help (weekly)', fr: 'Aide ménagère régulière (hebdomadaire)', de: 'Regelmässige Haushaltshilfe (wöchentlich)', price: `CHF ${r.regular}.–` },
-    { en: 'Household Help (every 2 weeks)', fr: 'Aide ménagère (toutes les 2 semaines)', de: 'Haushaltshilfe (14-täglich)', price: `CHF ${r.fourteenDays}.–` },
-    { en: 'One-Time Household Help', fr: 'Aide ménagère ponctuelle', de: 'Einmalige Haushaltshilfe', price: `CHF ${r.oneTime}.–` },
-    { en: 'Premium Household Help', fr: 'Aide ménagère premium', de: 'Premium Haushaltshilfe', price: `CHF ${r.premium}.–` },
-    { en: 'Deep Cleaning / Spring Cleaning', fr: 'Nettoyage en profondeur / Nettoyage de printemps', de: 'Grundreinigung / Frühlingsputz', price: `CHF ${r.deepCleaning}.–` },
-    { en: 'Ironing Service', fr: 'Service de repassage', de: 'Bügelservice', price: `CHF ${r.ironing}.–` },
-    { en: 'Window Cleaning', fr: 'Nettoyage de vitres', de: 'Fensterreinigung', price: L(`from CHF ${r.windowPerSqm}.– / m²`, `à partir de CHF ${r.windowPerSqm}.– / m²`, `ab CHF ${r.windowPerSqm}.– / m²`) },
-    { en: 'Minimum Order', fr: 'Commande minimum', de: 'Mindestauftrag', price: `CHF ${r.minOrder}.–` },
+    { en: 'Regular Household Help (weekly)', fr: 'Aide ménagère régulière (hebdomadaire)', de: 'Regelmässige Haushaltshilfe (wöchentlich)', price: `CHF ${r.regular}.–`, it: `Aiuto domestico regolare (settimanale)` },
+    { en: 'Household Help (every 2 weeks)', fr: 'Aide ménagère (toutes les 2 semaines)', de: 'Haushaltshilfe (14-täglich)', price: `CHF ${r.fourteenDays}.–`, it: `Aiuto domestico (ogni 2 settimane)` },
+    { en: 'One-Time Household Help', fr: 'Aide ménagère ponctuelle', de: 'Einmalige Haushaltshilfe', price: `CHF ${r.oneTime}.–`, it: `Aiuto domestico una tantum` },
+    { en: 'Premium Household Help', fr: 'Aide ménagère premium', de: 'Premium Haushaltshilfe', price: `CHF ${r.premium}.–`, it: `Aiuto domestico premium` },
+    { en: 'Deep Cleaning / Spring Cleaning', fr: 'Nettoyage en profondeur / Nettoyage de printemps', de: 'Grundreinigung / Frühlingsputz', price: `CHF ${r.deepCleaning}.–`, it: `Pulizie profonde/pulizie di primavera` },
+    { en: 'Ironing Service', fr: 'Service de repassage', de: 'Bügelservice', price: `CHF ${r.ironing}.–`, it: `Servizio stireria` },
+    { en: 'Window Cleaning', fr: 'Nettoyage de vitres', de: 'Fensterreinigung', price: L(`from CHF ${r.windowPerSqm}.– / m²`, `à partir de CHF ${r.windowPerSqm}.– / m²`, `ab CHF ${r.windowPerSqm}.– / m²`), it: `Pulizia delle finestre` },
+    { en: 'Minimum Order', fr: 'Commande minimum', de: 'Mindestauftrag', price: `CHF ${r.minOrder}.–`, it: `Ordine minimo` },
   ];
 
   const included = [
-    { en: 'Vacuuming and floor cleaning', fr: 'Passage de l\'aspirateur et nettoyage des sols', de: 'Staubsaugen und Bodenreinigung' },
-    { en: 'Kitchen and bathroom cleaning', fr: 'Nettoyage de la cuisine et de la salle de bain', de: 'Reinigung von Küche und Badezimmer' },
-    { en: 'Toilet cleaning and disinfection', fr: 'Nettoyage et désinfection des toilettes', de: 'WC-Reinigung und Desinfektion' },
-    { en: 'Dusting all surfaces', fr: 'Dépoussiérage de toutes les surfaces', de: 'Abstauben aller Oberflächen' },
-    { en: 'Bed making and changing linens', fr: 'Faire les lits et changer les draps', de: 'Betten beziehen' },
-    { en: 'Laundry washing and hanging', fr: 'Laver et étendre le linge', de: 'Wäsche waschen und aufhängen' },
-    { en: 'Ironing service upon request', fr: 'Service de repassage sur demande', de: 'Bügelservice auf Wunsch' },
-    { en: 'Tidying and household assistance', fr: 'Rangement et aide au ménage', de: 'Aufräum- und Haushaltshilfe' },
-    { en: 'Additional customized services as needed', fr: 'Services personnalisés supplémentaires selon les besoins', de: 'Individuelle Zusatzleistungen nach Bedarf' },
+    { en: 'Vacuuming and floor cleaning', fr: 'Passage de l\'aspirateur et nettoyage des sols', de: 'Staubsaugen und Bodenreinigung', it: `Aspirazione e pulizia dei pavimenti` },
+    { en: 'Kitchen and bathroom cleaning', fr: 'Nettoyage de la cuisine et de la salle de bain', de: 'Reinigung von Küche und Badezimmer', it: `Pulizia cucina e bagno` },
+    { en: 'Toilet cleaning and disinfection', fr: 'Nettoyage et désinfection des toilettes', de: 'WC-Reinigung und Desinfektion', it: `Pulizia e disinfezione dei servizi igienici` },
+    { en: 'Dusting all surfaces', fr: 'Dépoussiérage de toutes les surfaces', de: 'Abstauben aller Oberflächen', it: `Spolverare tutte le superfici` },
+    { en: 'Bed making and changing linens', fr: 'Faire les lits et changer les draps', de: 'Betten beziehen', it: `Rifacimento letti e cambio biancheria` },
+    { en: 'Laundry washing and hanging', fr: 'Laver et étendre le linge', de: 'Wäsche waschen und aufhängen', it: `Lavare e stendere la biancheria` },
+    { en: 'Ironing service upon request', fr: 'Service de repassage sur demande', de: 'Bügelservice auf Wunsch', it: `Servizio stireria su richiesta` },
+    { en: 'Tidying and household assistance', fr: 'Rangement et aide au ménage', de: 'Aufräum- und Haushaltshilfe', it: `Riordino e assistenza domestica` },
+    { en: 'Additional customized services as needed', fr: 'Services personnalisés supplémentaires selon les besoins', de: 'Individuelle Zusatzleistungen nach Bedarf', it: `Ulteriori servizi personalizzati secondo necessità` },
   ];
 
   const benefits = [
-    { en: 'Reliable and experienced household helpers', fr: 'Aides ménagères fiables et expérimentées', de: 'Zuverlässige und erfahrene Haushaltshilfen' },
-    { en: 'Flexible appointment scheduling', fr: 'Prise de rendez-vous flexible', de: 'Flexible Terminvereinbarung' },
-    { en: 'Transparent pricing with no hidden costs', fr: 'Prix transparents sans frais cachés', de: 'Transparente Preise ohne versteckte Kosten' },
-    { en: 'Environmentally friendly cleaning products', fr: 'Produits de nettoyage écologiques', de: 'Umweltfreundliche Reinigungsmittel' },
-    { en: 'Personal and professional service', fr: 'Service personnel et professionnel', de: 'Persönlicher und professioneller Service' },
-    { en: 'Suitable for apartments, houses, and senior households', fr: 'Convient aux appartements, maisons et ménages de personnes âgées', de: 'Für Wohnungen, Häuser und Seniorenhaushalte' },
+    { en: 'Reliable and experienced household helpers', fr: 'Aides ménagères fiables et expérimentées', de: 'Zuverlässige und erfahrene Haushaltshilfen', it: `Collaboratrici domestiche affidabili ed esperte` },
+    { en: 'Flexible appointment scheduling', fr: 'Prise de rendez-vous flexible', de: 'Flexible Terminvereinbarung', it: `Pianificazione flessibile degli appuntamenti` },
+    { en: 'Transparent pricing with no hidden costs', fr: 'Prix transparents sans frais cachés', de: 'Transparente Preise ohne versteckte Kosten', it: `Prezzi trasparenti senza costi nascosti` },
+    { en: 'Environmentally friendly cleaning products', fr: 'Produits de nettoyage écologiques', de: 'Umweltfreundliche Reinigungsmittel', it: `Prodotti per la pulizia ecologici` },
+    { en: 'Personal and professional service', fr: 'Service personnel et professionnel', de: 'Persönlicher und professioneller Service', it: `Servizio personale e professionale` },
+    { en: 'Suitable for apartments, houses, and senior households', fr: 'Convient aux appartements, maisons et ménages de personnes âgées', de: 'Für Wohnungen, Häuser und Seniorenhaushalte', it: `Adatto per appartamenti, case e famiglie anziane` },
   ];
 
   const perHour = L('/ hour', '/ heure', '/ Stunde');

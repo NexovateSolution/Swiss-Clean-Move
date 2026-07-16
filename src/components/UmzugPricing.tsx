@@ -14,191 +14,191 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
     title: {
       en: 'Prices for Moving, Move-Out Cleaning & Disposal',
       de: 'Preise für Umzug, Umzugsreinigung & Entsorgung',
-      fr: 'Prix pour Déménagement, Nettoyage de fin de bail & Élimination'
+      fr: 'Prix pour Déménagement, Nettoyage de fin de bail & Élimination', it: `Prezzi per trasloco, pulizia e smaltimento`
     },
     subtitle: {
       en: 'Transparent fixed prices. Professional service. Available throughout Switzerland.',
       de: 'Transparente Festpreise. Professioneller Service. Schweizweit.',
-      fr: 'Prix fixes transparents. Service professionnel. Dans toute la Suisse.'
+      fr: 'Prix fixes transparents. Service professionnel. Dans toute la Suisse.', it: `Prezzi fissi trasparenti. Servizio professionale. Disponibile in tutta la Svizzera.`
     },
     desc: {
       en: 'SwissCleanMove is your reliable partner for professional moving services, move-out cleaning with handover guarantee, transport, disposal, and clearance services across Switzerland. Our experienced teams ensure a smooth, efficient, and stress-free execution of your project.',
       de: 'SwissCleanMove ist Ihr zuverlässiger Partner für professionelle Umzüge, Umzugsreinigungen mit Abnahmegarantie, Transporte, Entsorgungen und Räumungen in der ganzen Schweiz. Unsere erfahrenen Teams sorgen für eine reibungslose, effiziente und stressfreie Durchführung Ihres Auftrags.',
-      fr: 'SwissCleanMove est votre partenaire fiable pour les déménagements professionnels, les nettoyages de fin de bail avec garantie de remise, les transports, les éliminations et les débarras dans toute la Suisse. Nos équipes expérimentées assurent une exécution fluide, efficace et sans stress de votre projet.'
+      fr: 'SwissCleanMove est votre partenaire fiable pour les déménagements professionnels, les nettoyages de fin de bail avec garantie de remise, les transports, les éliminations et les débarras dans toute la Suisse. Nos équipes expérimentées assurent une exécution fluide, efficace et sans stress de votre projet.', it: `SwissCleanMove è il vostro partner affidabile per servizi di trasloco professionali, pulizie di trasloco con garanzia di consegna, trasporto, smaltimento e sgombero in tutta la Svizzera. I nostri team esperti garantiscono un’esecuzione fluida, efficiente e senza stress del tuo progetto.`
     },
     movingTitle: {
       en: 'Moving Prices',
       de: 'Umzug Preise',
-      fr: 'Déménagement - Prix'
+      fr: 'Déménagement - Prix', it: `Prezzi in movimento`
     },
     movingSubtitle: {
       en: 'Professional moving service for private and business clients',
       de: 'Professioneller Umzugsservice für Privat- und Geschäftskunden',
-      fr: 'Service de déménagement professionnel pour clients privés et commerciaux'
+      fr: 'Service de déménagement professionnel pour clients privés et commerciaux', it: `Servizio di trasloco professionale per clienti privati ​​e aziendali`
     },
     cleaningTitle: {
       en: 'Move-Out Cleaning with Handover Guarantee',
       de: 'Umzugsreinigung mit Abnahmegarantie',
-      fr: 'Nettoyage de fin de bail avec garantie de remise'
+      fr: 'Nettoyage de fin de bail avec garantie de remise', it: `Pulizie di trasloco con garanzia di consegna`
     },
     cleaningSubtitle: {
       en: 'Professional end-of-tenancy cleaning for a stress-free property handover',
       de: 'Professionelle Endreinigung für eine sorgenfreie Wohnungsübergabe',
-      fr: 'Nettoyage de fin de bail professionnel pour une remise de propriété sans stress'
+      fr: 'Nettoyage de fin de bail professionnel pour une remise de propriété sans stress', it: `Pulizie professionali di fine locazione per una consegna dell'immobile senza stress`
     },
     disposalTitle: {
       en: 'Disposal & Clearance Services',
       de: 'Entsorgung & Räumung',
-      fr: 'Services d\'Élimination & Débarras'
+      fr: 'Services d\'Élimination & Débarras', it: `Servizi di smaltimento e sgombero`
     },
     disposalSubtitle: {
       en: 'Fast, reliable, and environmentally friendly',
       de: 'Schnell, zuverlässig und umweltgerecht',
-      fr: 'Rapide, fiable et respectueux de l\'environnement'
+      fr: 'Rapide, fiable et respectueux de l\'environnement', it: `Veloce, affidabile e rispettoso dell'ambiente`
     },
     popularTitle: {
       en: 'Popular Complete Packages',
       de: 'Beliebte Komplettpakete',
-      fr: 'Forfaits Complets Populaires'
+      fr: 'Forfaits Complets Populaires', it: `Pacchetti completi popolari`
     },
     whyTitle: {
       en: 'Why SwissCleanMove?',
       de: 'Warum SwissCleanMove?',
-      fr: 'Pourquoi SwissCleanMove ?'
+      fr: 'Pourquoi SwissCleanMove ?', it: `Perché SwissCleanMove?`
     },
     ctaTitle: {
       en: 'Request a Free Quote Today',
       de: 'Kostenlose Offerte anfordern',
-      fr: 'Demander un devis gratuit'
+      fr: 'Demander un devis gratuit', it: `Richiedi un preventivo gratuito oggi`
     },
     ctaDesc: {
       en: 'Planning a move, move-out cleaning, or disposal service? Contact us for a free consultation and a non-binding fixed-price quotation.',
       de: 'Planen Sie einen Umzug, eine Umzugsreinigung oder eine Entsorgung? Kontaktieren Sie uns für eine kostenlose Beratung und eine unverbindliche Festpreisofferte.',
-      fr: 'Vous planifiez un déménagement, un nettoyage de fin de bail ou un service d\'élimination ? Contactez-nous pour une consultation gratuite et un devis à prix fixe sans engagement.'
+      fr: 'Vous planifiez un déménagement, un nettoyage de fin de bail ou un service d\'élimination ? Contactez-nous pour une consultation gratuite et un devis à prix fixe sans engagement.', it: `Stai pianificando un trasloco, una pulizia di trasloco o un servizio di smaltimento? Contattaci per una consulenza gratuita e un preventivo a prezzo fisso non vincolante.`
     },
     ctaBtn: {
       en: 'Request Quote',
       de: 'Offerte anfordern',
-      fr: 'Demander un devis'
+      fr: 'Demander un devis', it: `Richiedi preventivo`
     },
     footerDesc: {
       en: 'SwissCleanMove – Your partner for moving, move-out cleaning, disposal, and transport services throughout Switzerland.',
       de: 'SwissCleanMove – Ihr Partner für Umzug, Umzugsreinigung, Entsorgung und Transport in der ganzen Schweiz.',
-      fr: 'SwissCleanMove – Votre partenaire pour le déménagement, le nettoyage de fin de bail, l\'élimination et le transport dans toute la Suisse.'
+      fr: 'SwissCleanMove – Votre partenaire pour le déménagement, le nettoyage de fin de bail, l\'élimination et le transport dans toute la Suisse.', it: `SwissCleanMove – Il vostro partner per servizi di trasloco, pulizia, smaltimento e trasporto in tutta la Svizzera.`
     },
     from: {
       en: 'from',
       de: 'ab',
-      fr: 'dès'
+      fr: 'dès', it: `da`
     },
     uponRequest: {
       en: 'Upon request',
       de: 'auf Anfrage',
-      fr: 'Sur demande'
+      fr: 'Sur demande', it: `Su richiesta`
     },
     priceFrom: {
       en: 'Price from',
       de: 'Preis ab',
-      fr: 'Prix à partir de'
+      fr: 'Prix à partir de', it: `Prezzo da`
     },
     included: {
       en: 'Included in the Price',
       de: 'Im Preis inbegriffen',
-      fr: 'Inclus dans le prix'
+      fr: 'Inclus dans le prix', it: `Incluso nel prezzo`
     },
     includedServices: {
       en: 'Included Services',
       de: 'Inklusive Leistungen',
-      fr: 'Services Inclus'
+      fr: 'Services Inclus', it: `Servizi inclusi`
     }
   };
 
   const getT = (key: keyof typeof t) => t[key][locale as 'en'|'de'|'fr'] || t[key].de;
 
   const movingPrices = [
-    { label: { en: '1 room apartment', de: '1 Zimmer Wohnung', fr: 'Appartement 1 pièce' }, price: `CHF ${PRICING_RULES.moving.baseRates['1']}.–` },
-    { label: { en: '1.5 room apartment', de: '1.5 Zimmer Wohnung', fr: 'Appartement 1.5 pièces' }, price: `CHF ${PRICING_RULES.moving.baseRates['1.5']}.–` },
-    { label: { en: '2.5 room apartment', de: '2.5 Zimmer Wohnung', fr: 'Appartement 2.5 pièces' }, price: `CHF ${PRICING_RULES.moving.baseRates['2.5']}.–` },
-    { label: { en: '3.5 room apartment', de: '3.5 Zimmer Wohnung', fr: 'Appartement 3.5 pièces' }, price: `CHF ${PRICING_RULES.moving.baseRates['3.5']}.–` },
-    { label: { en: '4.5 room apartment', de: '4.5 Zimmer Wohnung', fr: 'Appartement 4.5 pièces' }, price: `CHF ${PRICING_RULES.moving.baseRates['4.5']}.–` },
-    { label: { en: 'Single-family house', de: 'Einfamilienhaus', fr: 'Maison individuelle' }, price: `${getT('from')} CHF ${PRICING_RULES.moving.baseRates['house']}.–` }
+    { label: { en: '1 room apartment', de: '1 Zimmer Wohnung', fr: 'Appartement 1 pièce', it: `Appartamento di 1 camera` }, price: `CHF ${PRICING_RULES.moving.baseRates['1']}.–` },
+    { label: { en: '1.5 room apartment', de: '1.5 Zimmer Wohnung', fr: 'Appartement 1.5 pièces', it: `Appartamento di 1,5 locali` }, price: `CHF ${PRICING_RULES.moving.baseRates['1.5']}.–` },
+    { label: { en: '2.5 room apartment', de: '2.5 Zimmer Wohnung', fr: 'Appartement 2.5 pièces', it: `Appartamento di 2,5 locali` }, price: `CHF ${PRICING_RULES.moving.baseRates['2.5']}.–` },
+    { label: { en: '3.5 room apartment', de: '3.5 Zimmer Wohnung', fr: 'Appartement 3.5 pièces', it: `Appartamento di 3,5 locali` }, price: `CHF ${PRICING_RULES.moving.baseRates['3.5']}.–` },
+    { label: { en: '4.5 room apartment', de: '4.5 Zimmer Wohnung', fr: 'Appartement 4.5 pièces', it: `Appartamento di 4,5 locali` }, price: `CHF ${PRICING_RULES.moving.baseRates['4.5']}.–` },
+    { label: { en: 'Single-family house', de: 'Einfamilienhaus', fr: 'Maison individuelle', it: `Casa unifamiliare` }, price: `${getT('from')} CHF ${PRICING_RULES.moving.baseRates['house']}.–` }
   ];
 
   const movingIncluded = [
-    { en: 'Professional moving team', de: 'Professionelles Umzugsteam', fr: 'Équipe de déménagement professionnelle' },
-    { en: 'Modern transport vehicle', de: 'Modernes Transportfahrzeug', fr: 'Véhicule de transport moderne' },
-    { en: 'Transport insurance', de: 'Transportversicherung', fr: 'Assurance transport' },
-    { en: 'Furniture protection and packing materials', de: 'Möbelschutz und Verpackungsmaterial', fr: 'Protection des meubles et matériel d\'emballage' },
-    { en: 'Loading and unloading', de: 'Be- und Entladen', fr: 'Chargement et déchargement' },
-    { en: 'Careful furniture transportation', de: 'Sorgfältiger Möbeltransport', fr: 'Transport soigneux des meubles' },
-    { en: 'Planning and coordination', de: 'Planung und Koordination', fr: 'Planification et coordination' }
+    { en: 'Professional moving team', de: 'Professionelles Umzugsteam', fr: 'Équipe de déménagement professionnelle', it: `Squadra di traslochi professionale` },
+    { en: 'Modern transport vehicle', de: 'Modernes Transportfahrzeug', fr: 'Véhicule de transport moderne', it: `Veicolo da trasporto moderno` },
+    { en: 'Transport insurance', de: 'Transportversicherung', fr: 'Assurance transport', it: `Assicurazione sul trasporto` },
+    { en: 'Furniture protection and packing materials', de: 'Möbelschutz und Verpackungsmaterial', fr: 'Protection des meubles et matériel d\'emballage', it: `Protezione dei mobili e materiali di imballaggio` },
+    { en: 'Loading and unloading', de: 'Be- und Entladen', fr: 'Chargement et déchargement', it: `Carico e scarico` },
+    { en: 'Careful furniture transportation', de: 'Sorgfältiger Möbeltransport', fr: 'Transport soigneux des meubles', it: `Trasporto accurato dei mobili` },
+    { en: 'Planning and coordination', de: 'Planung und Koordination', fr: 'Planification et coordination', it: `Pianificazione e coordinamento` }
   ];
 
   const cleaningPrices = [
-    { label: { en: 'Studio / 1 room', de: 'Studio / 1 Zimmer', fr: 'Studio / 1 pièce' }, price: `CHF ${PRICING_RULES.cleaning.apartment['1']}.–` },
-    { label: { en: '1.5 room apartment', de: '1.5 Zimmer Wohnung', fr: 'Appartement 1.5 pièces' }, price: `CHF ${PRICING_RULES.cleaning.apartment['1.5']}.–` },
-    { label: { en: '2.5 room apartment', de: '2.5 Zimmer Wohnung', fr: 'Appartement 2.5 pièces' }, price: `CHF ${PRICING_RULES.cleaning.apartment['2.5']}.–` },
-    { label: { en: '3.5 room apartment', de: '3.5 Zimmer Wohnung', fr: 'Appartement 3.5 pièces' }, price: `CHF ${PRICING_RULES.cleaning.apartment['3.5']}.–` },
-    { label: { en: '4.5 room apartment', de: '4.5 Zimmer Wohnung', fr: 'Appartement 4.5 pièces' }, price: `CHF ${PRICING_RULES.cleaning.apartment['4.5']}.–` },
-    { label: { en: '5.5 room apartment', de: '5.5 Zimmer Wohnung', fr: 'Appartement 5.5 pièces' }, price: `CHF ${PRICING_RULES.cleaning.apartment['5.5']}.–` },
-    { label: { en: 'House / Villa', de: 'Haus / Villa', fr: 'Maison / Villa' }, price: getT('uponRequest') },
+    { label: { en: 'Studio / 1 room', de: 'Studio / 1 Zimmer', fr: 'Studio / 1 pièce', it: `Monolocale/1 camera` }, price: `CHF ${PRICING_RULES.cleaning.apartment['1']}.–` },
+    { label: { en: '1.5 room apartment', de: '1.5 Zimmer Wohnung', fr: 'Appartement 1.5 pièces', it: `Appartamento di 1,5 locali` }, price: `CHF ${PRICING_RULES.cleaning.apartment['1.5']}.–` },
+    { label: { en: '2.5 room apartment', de: '2.5 Zimmer Wohnung', fr: 'Appartement 2.5 pièces', it: `Appartamento di 2,5 locali` }, price: `CHF ${PRICING_RULES.cleaning.apartment['2.5']}.–` },
+    { label: { en: '3.5 room apartment', de: '3.5 Zimmer Wohnung', fr: 'Appartement 3.5 pièces', it: `Appartamento di 3,5 locali` }, price: `CHF ${PRICING_RULES.cleaning.apartment['3.5']}.–` },
+    { label: { en: '4.5 room apartment', de: '4.5 Zimmer Wohnung', fr: 'Appartement 4.5 pièces', it: `Appartamento di 4,5 locali` }, price: `CHF ${PRICING_RULES.cleaning.apartment['4.5']}.–` },
+    { label: { en: '5.5 room apartment', de: '5.5 Zimmer Wohnung', fr: 'Appartement 5.5 pièces', it: `Appartamento di 5,5 locali` }, price: `CHF ${PRICING_RULES.cleaning.apartment['5.5']}.–` },
+    { label: { en: 'House / Villa', de: 'Haus / Villa', fr: 'Maison / Villa', it: `Casa/Villa` }, price: getT('uponRequest') },
   ];
 
   const cleaningIncluded = [
-    { en: '100% handover guarantee', de: '100 % Abnahmegarantie', fr: 'Garantie de remise à 100 %' },
-    { en: 'Interior and exterior window cleaning', de: 'Fensterreinigung innen und aussen', fr: 'Nettoyage des vitres intérieur et extérieur' },
-    { en: 'Cleaning of all blinds/shutters', de: 'Reinigung aller Storen', fr: 'Nettoyage de tous les stores/volets' },
-    { en: 'Complete kitchen cleaning', de: 'Komplette Küchenreinigung', fr: 'Nettoyage complet de la cuisine' },
-    { en: 'Descaling of bathrooms and sanitary facilities', de: 'Entkalkung von Bad und Sanitäranlagen', fr: 'Détartrage des salles de bains et sanitaires' },
-    { en: 'Floor and surface cleaning', de: 'Boden- und Oberflächenreinigung', fr: 'Nettoyage des sols et surfaces' },
-    { en: 'Re-cleaning in case of complaints', de: 'Nachreinigung bei Beanstandungen', fr: 'Nettoyage ultérieur en cas de réclamation' }
+    { en: '100% handover guarantee', de: '100 % Abnahmegarantie', fr: 'Garantie de remise à 100 %', it: `Garanzia di consegna al 100%.` },
+    { en: 'Interior and exterior window cleaning', de: 'Fensterreinigung innen und aussen', fr: 'Nettoyage des vitres intérieur et extérieur', it: `Pulizia vetri interni ed esterni` },
+    { en: 'Cleaning of all blinds/shutters', de: 'Reinigung aller Storen', fr: 'Nettoyage de tous les stores/volets', it: `Pulizia di tutte le persiane/persiane` },
+    { en: 'Complete kitchen cleaning', de: 'Komplette Küchenreinigung', fr: 'Nettoyage complet de la cuisine', it: `Pulizia completa della cucina` },
+    { en: 'Descaling of bathrooms and sanitary facilities', de: 'Entkalkung von Bad und Sanitäranlagen', fr: 'Détartrage des salles de bains et sanitaires', it: `Disincrostazione di bagni e sanitari` },
+    { en: 'Floor and surface cleaning', de: 'Boden- und Oberflächenreinigung', fr: 'Nettoyage des sols et surfaces', it: `Pulizia pavimenti e superfici` },
+    { en: 'Re-cleaning in case of complaints', de: 'Nachreinigung bei Beanstandungen', fr: 'Nettoyage ultérieur en cas de réclamation', it: `Nuova pulizia in caso di reclami` }
   ];
 
   const disposalPrices = [
-    { label: { en: 'Up to 1 m3', de: 'Bis 1 m3', fr: 'Jusqu\'à 1 m3' }, price: `CHF ${PRICING_RULES.disposal.volumePricing['1']}.–` },
-    { label: { en: 'Up to 5 m3', de: 'Bis 5 m3', fr: 'Jusqu\'à 5 m3' }, price: `CHF ${PRICING_RULES.disposal.volumePricing['5']}.–` },
-    { label: { en: 'Up to 10 m3', de: 'Bis 10 m3', fr: 'Jusqu\'à 10 m3' }, price: `CHF ${PRICING_RULES.disposal.volumePricing['10']}.–` },
-    { label: { en: 'Up to 20 m3', de: 'Bis 20 m3', fr: 'Jusqu\'à 20 m3' }, price: `CHF ${PRICING_RULES.disposal.volumePricing['20']}.–` },
-    { label: { en: 'Business liquidation', de: 'Geschäftsauflösung', fr: 'Liquidation d\'entreprise' }, price: getT('uponRequest') },
+    { label: { en: 'Up to 1 m3', de: 'Bis 1 m3', fr: 'Jusqu\'à 1 m3', it: `Fino a 1 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['1']}.–` },
+    { label: { en: 'Up to 5 m3', de: 'Bis 5 m3', fr: 'Jusqu\'à 5 m3', it: `Fino a 5 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['5']}.–` },
+    { label: { en: 'Up to 10 m3', de: 'Bis 10 m3', fr: 'Jusqu\'à 10 m3', it: `Fino a 10 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['10']}.–` },
+    { label: { en: 'Up to 20 m3', de: 'Bis 20 m3', fr: 'Jusqu\'à 20 m3', it: `Fino a 20 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['20']}.–` },
+    { label: { en: 'Business liquidation', de: 'Geschäftsauflösung', fr: 'Liquidation d\'entreprise', it: `Liquidazione aziendale` }, price: getT('uponRequest') },
   ];
 
   const disposalIncluded = [
-    { en: 'Professional disposal', de: 'Fachgerechte Entsorgung', fr: 'Élimination professionnelle' },
-    { en: 'Recycling according to Swiss standards', de: 'Recycling nach Schweizer Standards', fr: 'Recyclage selon les normes suisses' },
-    { en: 'Loading and transportation', de: 'Verladung und Abtransport', fr: 'Chargement et transport' },
-    { en: 'Swept-clean handover', de: 'Besenreine Übergabe', fr: 'Remise balayée' }
+    { en: 'Professional disposal', de: 'Fachgerechte Entsorgung', fr: 'Élimination professionnelle', it: `Smaltimento professionale` },
+    { en: 'Recycling according to Swiss standards', de: 'Recycling nach Schweizer Standards', fr: 'Recyclage selon les normes suisses', it: `Riciclaggio secondo gli standard svizzeri` },
+    { en: 'Loading and transportation', de: 'Verladung und Abtransport', fr: 'Chargement et transport', it: `Carico e trasporto` },
+    { en: 'Swept-clean handover', de: 'Besenreine Übergabe', fr: 'Remise balayée', it: `Consegna perfetta` }
   ];
 
   const packages = [
     {
-      title: { en: 'Moving + Move-Out Cleaning', de: 'Umzug + Umzugsreinigung', fr: 'Déménagement + Nettoyage de fin de bail' },
+      title: { en: 'Moving + Move-Out Cleaning', de: 'Umzug + Umzugsreinigung', fr: 'Déménagement + Nettoyage de fin de bail', it: `Trasloco + Trasloco Pulizia` },
       price: `${getT('from')} CHF ${PRICING_RULES.moving.baseRates['1.5'] + PRICING_RULES.cleaning.apartment['1.5']}.–`
     },
     {
-      title: { en: 'Cleaning + Disposal', de: 'Reinigung + Entsorgung', fr: 'Nettoyage + Élimination' },
+      title: { en: 'Cleaning + Disposal', de: 'Reinigung + Entsorgung', fr: 'Nettoyage + Élimination', it: `Pulizia + Smaltimento` },
       price: `${getT('from')} CHF ${PRICING_RULES.cleaning.apartment['1.5'] + PRICING_RULES.disposal.volumePricing['1']}.–`
     },
     {
-      title: { en: 'Moving + Disposal', de: 'Umzug + Entsorgung', fr: 'Déménagement + Élimination' },
+      title: { en: 'Moving + Disposal', de: 'Umzug + Entsorgung', fr: 'Déménagement + Élimination', it: `Trasloco + Smaltimento` },
       price: `${getT('from')} CHF ${PRICING_RULES.moving.baseRates['1.5'] + PRICING_RULES.disposal.volumePricing['1']}.–`
     },
     {
-      title: { en: 'Premium Complete Package', de: 'Premium Komplettpaket', fr: 'Forfait Complet Premium' },
-      subtitle: { en: 'Moving + Move-Out Cleaning + Disposal', de: 'Umzug + Umzugsreinigung + Entsorgung', fr: 'Déménagement + Nettoyage + Élimination' },
+      title: { en: 'Premium Complete Package', de: 'Premium Komplettpaket', fr: 'Forfait Complet Premium', it: `Pacchetto completo premium` },
+      subtitle: { en: 'Moving + Move-Out Cleaning + Disposal', de: 'Umzug + Umzugsreinigung + Entsorgung', fr: 'Déménagement + Nettoyage + Élimination', it: `Trasloco + Trasloco Pulizia + Smaltimento` },
       price: `${getT('from')} CHF ${PRICING_RULES.moving.baseRates['1.5'] + PRICING_RULES.cleaning.apartment['1.5'] + PRICING_RULES.disposal.volumePricing['1']}.–`,
       highlight: true
     }
   ];
 
   const whyUs = [
-    { en: 'Free and non-binding quotation', de: 'Kostenlose und unverbindliche Offerte', fr: 'Devis gratuit et sans engagement' },
-    { en: 'Transparent prices with no hidden costs', de: 'Transparente Preise ohne versteckte Kosten', fr: 'Prix transparents sans frais cachés' },
-    { en: 'Professional and experienced teams', de: 'Professionelle und erfahrene Teams', fr: 'Équipes professionnelles et expérimentées' },
-    { en: 'Move-out cleaning with handover guarantee', de: 'Umzugsreinigung mit Abnahmegarantie', fr: 'Nettoyage de fin de bail avec garantie de remise' },
-    { en: 'Fast appointment scheduling', de: 'Schnelle Terminvergabe', fr: 'Prise de rendez-vous rapide' },
-    { en: 'Switzerland-wide service', de: 'Schweizweiter Service', fr: 'Service dans toute la Suisse' },
-    { en: 'Highest quality standards', de: 'Höchste Qualitätsstandards', fr: 'Normes de qualité les plus élevées' },
-    { en: 'Personal consultation and on-site inspection', de: 'Persönliche Beratung und Besichtigung vor Ort', fr: 'Conseil personnel et visite sur place' }
+    { en: 'Free and non-binding quotation', de: 'Kostenlose und unverbindliche Offerte', fr: 'Devis gratuit et sans engagement', it: `Preventivo gratuito e senza impegno` },
+    { en: 'Transparent prices with no hidden costs', de: 'Transparente Preise ohne versteckte Kosten', fr: 'Prix transparents sans frais cachés', it: `Prezzi trasparenti senza costi nascosti` },
+    { en: 'Professional and experienced teams', de: 'Professionelle und erfahrene Teams', fr: 'Équipes professionnelles et expérimentées', it: `Squadre professionali ed esperte` },
+    { en: 'Move-out cleaning with handover guarantee', de: 'Umzugsreinigung mit Abnahmegarantie', fr: 'Nettoyage de fin de bail avec garantie de remise', it: `Pulizie di trasloco con garanzia di consegna` },
+    { en: 'Fast appointment scheduling', de: 'Schnelle Terminvergabe', fr: 'Prise de rendez-vous rapide', it: `Pianificazione rapida degli appuntamenti` },
+    { en: 'Switzerland-wide service', de: 'Schweizweiter Service', fr: 'Service dans toute la Suisse', it: `Servizio in tutta la Svizzera` },
+    { en: 'Highest quality standards', de: 'Höchste Qualitätsstandards', fr: 'Normes de qualité les plus élevées', it: `Massimi standard di qualità` },
+    { en: 'Personal consultation and on-site inspection', de: 'Persönliche Beratung und Besichtigung vor Ort', fr: 'Conseil personnel et visite sur place', it: `Consulenza personale e sopralluogo in loco` }
   ];
 
   const renderTable = (title: string, subtitle: string, items: any[], col1Label: string) => (

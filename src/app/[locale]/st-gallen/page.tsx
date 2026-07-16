@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'St.+Gallen,Switzerland'
   }
+,
+  it: {
+    slug: 'st-gallen', regionName: 'San Gallo',
+    seoTitle: 'Trasloco a San Gallo | Impresa di pulizie San Gallo | SwissCleanMove',
+    metaDescription: 'Traslochi, pulizie, pulizie manutentive, servizi di strutture e smaltimento professionali a San Gallo.',
+    h1: 'Impresa di traslochi e pulizie a San Gallo',
+    highSeoKeywords: ['Trasloco a San Gallo','Impresa di pulizie San Gallo'],
+    localKeywords: ['St. Gallen','Rapperswil-Jona','Wil','Gossau','Buchs','Uzwil','Wattwil'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi professionali, pulizie, pulizie di manutenzione, servizi per strutture, manutenzione e smaltimento di immobili nel Canton San Gallo.',
+      'Lavoriamo a San Gallo, Rapperswil-Jona, Wil, Gossau, Buchs, Uzwil e Wattwil. I nostri servizi sono adatti a privati, aziende, amministrazioni ed esercizi commerciali.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a San Gallo?', answer: 'Sì, offriamo traslochi nel Canton San Gallo.' },
+      { question: 'È disponibile il servizio di pulizia a San Gallo?', answer: 'Sì, offriamo pulizia finale, pulizia uffici e pulizia di manutenzione.' },
+      { question: 'SwissCleanMove funziona a Wil e Gossau?', answer: 'Sì, lavoriamo anche a Wil, Gossau e dintorni.' },
+    ],
+    mapQuery: 'St.+Gallen,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

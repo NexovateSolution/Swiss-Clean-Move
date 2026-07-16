@@ -4,12 +4,12 @@ export const blogArticles = [
     title: {
       de: 'Umzug Kosten Schweiz: Was Sie wirklich erwartet',
       en: 'Moving Costs Switzerland: What to really expect',
-      fr: 'Coûts de déménagement en Suisse : à quoi s\'attendre'
+      fr: 'Coûts de déménagement en Suisse : à quoi s\'attendre', it: `Costi di trasloco in Svizzera: cosa aspettarsi veramente`
     },
     excerpt: {
       de: 'Erfahren Sie, wie sich die Umzugskosten in der Schweiz zusammensetzen und wo Sie sparen können.',
       en: 'Learn how moving costs are calculated in Switzerland and where you can save.',
-      fr: 'Découvrez comment les coûts de déménagement sont calculés en Suisse et où vous pouvez économiser.'
+      fr: 'Découvrez comment les coûts de déménagement sont calculés en Suisse et où vous pouvez économiser.', it: `Scopri come vengono calcolati i costi di trasloco in Svizzera e dove puoi risparmiare.`
     },
     date: '2026-05-01',
     content: {
@@ -48,7 +48,16 @@ Avez-vous besoin d'un service d'emballage et de déballage ? Devons-nous démont
 
 ### Conclusion
 Un déménagement sans stress ne doit pas nécessairement être cher. Demandez votre devis sur mesure dès aujourd'hui !
-      `
+      `, it: `I costi per un trasloco in Svizzera possono variare molto a seconda delle dimensioni dell'appartamento, della distanza e dei servizi aggiuntivi desiderati. Un <a href="/it/umzug-biel" class="text-swiss-red hover:underline font-semibold">trasloco professionale a Biel</a> per un appartamento di 3 locali costa in media tra CHF 800 e CHF 1'500.
+
+### 1. Dimensioni e volume dell'appartamento
+Più mobili e scatoloni hai, più grande dovrà essere il furgone per traslochi e maggiore sarà il numero di traslocatori necessari.
+
+### 2. Servizi aggiuntivi
+Hai bisogno di un servizio di imballaggio e disimballaggio? Dovremmo smontare e rimontare i tuoi mobili? Tutti questi fattori influenzano il prezzo. Offriamo prezzi fissi trasparenti senza costi nascosti.
+
+### Conclusione
+Un trasloco senza stress non deve essere necessariamente costoso. Richiedi oggi stesso il tuo preventivo personalizzato!`
     }
   },
   {
@@ -56,12 +65,12 @@ Un déménagement sans stress ne doit pas nécessairement être cher. Demandez v
     title: {
       de: 'Die ultimative Umzug-Checkliste für die Schweiz',
       en: 'The Ultimate Moving Checklist for Switzerland',
-      fr: 'La liste de contrôle ultime pour déménager en Suisse'
+      fr: 'La liste de contrôle ultime pour déménager en Suisse', it: `La lista di controllo definitiva per il trasloco in Svizzera`
     },
     excerpt: {
       de: 'Mit unserer umfassenden Checkliste vergessen Sie beim Zügeln garantiert nichts mehr.',
       en: 'With our comprehensive checklist, you are guaranteed not to forget anything when moving.',
-      fr: 'Avec notre liste de contrôle complète, vous êtes assuré de ne rien oublier lors de votre déménagement.'
+      fr: 'Avec notre liste de contrôle complète, vous êtes assuré de ne rien oublier lors de votre déménagement.', it: `Con la nostra lista di controllo completa avete la garanzia di non dimenticare nulla durante il trasloco.`
     },
     date: '2026-05-02',
     content: {
@@ -109,7 +118,19 @@ Un déménagement demande beaucoup d'organisation. Si vous prévoyez un déména
 - Fixer le rendez-vous de remise avec la gérance
 
 N'oubliez pas : Une entreprise de déménagement professionnelle vous déchargera de la majeure partie du travail !
-      `
+      `, it: `Un trasloco richiede molta pianificazione. Se state pianificando un trasloco nella regione del Seeland, ad esempio un <a href="/en/umzug-lyss" class="text-swiss-red hover:underline font-semibold">trasloco a Lyss</a>, questa lista di controllo vi aiuterà.
+
+### 3 mesi prima
+- Risoluzione del contratto di locazione
+- Declutter e smaltire
+- Contattare la ditta di traslochi
+
+### 1 mese prima
+- Cambio indirizzo presso ufficio postale, banca, assicurazione
+- Organizzare le scatole per il trasloco
+- Organizzare l'appuntamento per la consegna con la gestione della proprietà
+
+Ricorda: una ditta di traslochi professionale ti toglierà la maggior parte del lavoro dalle mani!`
     }
   },
   {
@@ -117,12 +138,12 @@ N'oubliez pas : Une entreprise de déménagement professionnelle vous décharger
     title: {
       de: '5 Tipps für die perfekte Endreinigung',
       en: '5 Tips for the Perfect End-of-Tenancy Cleaning',
-      fr: '5 conseils pour un nettoyage de fin de bail parfait'
+      fr: '5 conseils pour un nettoyage de fin de bail parfait', it: `5 consigli per una perfetta pulizia di fine locazione`
     },
     excerpt: {
       de: 'So klappt die Wohnungsübergabe problemlos und ohne Beanstandungen durch die Verwaltung.',
       en: 'How to ensure a smooth apartment handover without any complaints from the property management.',
-      fr: 'Comment garantir une remise d\'appartement sans problème et sans réclamation de la gérance.'
+      fr: 'Comment garantir une remise d\'appartement sans problème et sans réclamation de la gérance.', it: `Come garantire una consegna dell'appartamento senza intoppi e senza lamentele da parte della direzione dell'immobile.`
     },
     date: '2026-05-03',
     content: {
@@ -161,7 +182,16 @@ La graisse et la saleté s'y accumulent au fil des ans. Des nettoyants spéciaux
 
 ### 3. Engager des professionnels
 La méthode la plus sûre est une entreprise de nettoyage avec garantie de remise. Ainsi, vous n'avez à vous soucier de rien et êtes assuré de récupérer votre caution.
-      `
+      `, it: `La pulizia della consegna è spesso la parte più stressante del trasloco. Soprattutto per una <a href="/en/endreinigung-biel" class="text-swiss-red hover:underline font-semibold">pulizia di fine locazione a Biel</a>, la gestione della proprietà è molto severa.
+
+### 1. Non dimenticare gli infissi
+Non basta pulire solo il vetro. Anche le scanalature e le cornici devono essere prive di polvere.
+
+### 2. Forno e cappa aspirante
+Grasso e sporco si accumulano qui nel corso degli anni. Sono essenziali detergenti speciali.
+
+### 3. Assumi professionisti
+Il metodo più sicuro è un'impresa di pulizie con garanzia di consegna. In questo modo non dovrai preoccuparti di nulla e avrai la garanzia di riavere indietro il tuo deposito.`
     }
   },
   {
@@ -169,12 +199,12 @@ La méthode la plus sûre est une entreprise de nettoyage avec garantie de remis
     title: {
       de: 'Wie finde ich die richtige Reinigungsfirma?',
       en: 'How to find the right cleaning company?',
-      fr: 'Comment trouver la bonne entreprise de nettoyage ?'
+      fr: 'Comment trouver la bonne entreprise de nettoyage ?', it: `Come trovare l'impresa di pulizie giusta?`
     },
     excerpt: {
       de: 'Wichtige Kriterien bei der Wahl Ihres Reinigungspartners in der Schweiz.',
       en: 'Important criteria when choosing your cleaning partner in Switzerland.',
-      fr: 'Critères importants lors du choix de votre partenaire de nettoyage en Suisse.'
+      fr: 'Critères importants lors du choix de votre partenaire de nettoyage en Suisse.', it: `Criteri importanti nella scelta del vostro partner per le pulizie in Svizzera.`
     },
     date: '2026-05-04',
     content: {
@@ -210,7 +240,15 @@ Faites attention à :
 - Avis clients positifs
 
 SwissCleanMove répond à tous ces critères.
-      `
+      `, it: `Che si tratti della <a href="/it/reinigung-nidau" class="text-swiss-red hover:underline font-semibold">pulizia dell'appartamento a Nidau</a> regolare o di una pulizia di primavera una tantum: la qualità è fondamentale.
+
+Cerca:
+- Prezzi trasparenti senza costi nascosti
+- Personale formato e assicurato
+- Presenza locale nella regione del Seeland
+- Recensioni positive dei clienti
+
+SwissCleanMove soddisfa tutti questi criteri.`
     }
   },
   {
@@ -218,12 +256,12 @@ SwissCleanMove répond à tous ces critères.
     title: {
       de: 'Umzugskartons richtig packen',
       en: 'Packing moving boxes properly',
-      fr: 'Bien emballer les cartons de déménagement'
+      fr: 'Bien emballer les cartons de déménagement', it: `Imballare correttamente le scatole per il trasloco`
     },
     excerpt: {
       de: 'Tipps und Tricks, wie Sie Ihr Hab und Gut bruchsicher verpacken.',
       en: 'Tips and tricks on how to pack your belongings safely.',
-      fr: 'Conseils et astuces pour emballer vos biens en toute sécurité.'
+      fr: 'Conseils et astuces pour emballer vos biens en toute sécurité.', it: `Consigli e trucchi su come imballare le tue cose in sicurezza.`
     },
     date: '2026-05-05',
     content: {
@@ -256,7 +294,14 @@ Ne jetez pas tout pêle-mêle. Si vous nous engagez pour votre <a href="/fr/umzu
 - Étiqueter tous les cartons !
 
 Ou réservez tout simplement notre service d'emballage pratique.
-      `
+      `, it: `Non mettere semplicemente tutto insieme. Se ci prenoti per il tuo <a href="/en/umzug-aarberg" class="text-swiss-red hover:underline font-semibold">trasloco ad Aarberg</a>, ti consigliamo:
+
+- Oggetti pesanti (libri) in basso, oggetti leggeri in alto
+- Non riempire eccessivamente le scatole (max. 20 kg)
+- Avvolgere bene i piatti con la carta velina
+- Etichetta tutte le scatole!
+
+Oppure prenota semplicemente il nostro comodo servizio di imballaggio.`
     }
   },
   {
@@ -264,12 +309,12 @@ Ou réservez tout simplement notre service d'emballage pratique.
     title: {
       de: 'Was bedeutet eigentlich Abgabegarantie?',
       en: 'What exactly does handover guarantee mean?',
-      fr: 'Que signifie exactement la garantie de remise ?'
+      fr: 'Que signifie exactement la garantie de remise ?', it: `Cosa significa esattamente la garanzia di consegna?`
     },
     excerpt: {
       de: 'Warum Sie bei der Endreinigung immer auf eine Abnahmegarantie bestehen sollten.',
       en: 'Why you should always insist on a handover guarantee for end-of-tenancy cleaning.',
-      fr: 'Pourquoi vous devriez toujours exiger une garantie de remise pour le nettoyage de fin de bail.'
+      fr: 'Pourquoi vous devriez toujours exiger une garantie de remise pour le nettoyage de fin de bail.', it: `Perché dovresti sempre insistere su una garanzia di consegna per le pulizie di fine locazione.`
     },
     date: '2026-05-06',
     content: {
@@ -284,7 +329,8 @@ We are on site at the handover appointment with the property management. If the 
       fr: `
 Un <a href="/fr/endreinigung-bruegg" class="text-swiss-red hover:underline font-semibold">nettoyage d'appartement à Brügg</a> avec garantie de remise signifie :
 Nous sommes sur place lors du rendez-vous de remise avec la gérance. Si le propriétaire a des réclamations, nous nettoyons immédiatement à nouveau gratuitement. Vous n'avez à vous soucier de rien et n'avez aucun stress.
-      `
+      `, it: `Una <a href="/it/endreinigung-bruegg" class="text-swiss-red hover:underline font-semibold">pulizia dell'appartamento a Brügg</a> con garanzia di consegna significa:
+Siamo presenti all'appuntamento di consegna con la direzione dell'immobile. Se il proprietario si lamenta di qualcosa, provvederemo immediatamente a pulire di nuovo gratuitamente. Non devi preoccuparti di nulla e non avere stress.`
     }
   }
 ];

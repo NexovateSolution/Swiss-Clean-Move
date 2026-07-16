@@ -18,7 +18,7 @@ export default function GastronomieReinigungBielPage({ params: { locale } }: { p
       service="gastronomieReinigung"
       city="Biel/Bienne"
       isPillar={true}
-      formService="house-cleaning"
+      formService="facility-services"
       noindex={false}
       mapQuery="Biel/Bienne,Seeland,Switzerland"
       areaCities={['Biel/Bienne', 'Nidau', 'Brügg', 'Ipsach', 'Port', 'Lyss', 'Aarberg', 'Pieterlen', 'Studen', 'Orpund']}

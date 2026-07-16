@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Zurich,Switzerland'
   }
+,
+  it: {
+    slug: 'zuerich', regionName: 'Zurigo',
+    seoTitle: 'Muoversi a Zurigo | Impresa di pulizie Zurigo | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie di trasloco con garanzia, pulizie di manutenzione, servizi di struttura e smaltimento a Zurigo.',
+    h1: 'Impresa di traslochi e pulizie a Zurigo',
+    highSeoKeywords: ['Muoversi a Zurigo','Ditta di traslochi Zurigo','Impresa di pulizie Zurigo'],
+    localKeywords: ['Zürich','Winterthur','Uster','Dübendorf','Dietikon','Kloten','Schlieren','Horgen','Wädenswil'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi professionali, pulizie, pulizie di trasloco con garanzia di consegna, pulizie di uffici, pulizie di mantenimento, pulizie di ristoranti, servizi di strutture, manutenzione e smaltimento di immobili a Zurigo e dintorni.',
+      'Lavoriamo a Zurigo, Winterthur, Uster, Dübendorf, Dietikon, Kloten, Schlieren, Horgen e Wädenswil. Che si tratti di traslochi privati, traslochi di uffici, pulizie finali o manutenzione di edifici, SwissCleanMove garantisce processi fluidi e qualità professionale.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Zurigo?', answer: 'Sì, offriamo traslochi privati, traslochi di uffici e trasporto di mobili a Zurigo.' },
+      { question: 'La pulizia finale con garanzia è disponibile a Zurigo?', answer: 'Sì, offriamo la pulizia del trasloco con garanzia di consegna.' },
+      { question: 'SwissCleanMove funziona a Winterthur e Uster?', answer: 'Sì, lavoriamo a Zurigo, Winterthur, Uster e dintorni.' },
+    ],
+    mapQuery: 'Zurich,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

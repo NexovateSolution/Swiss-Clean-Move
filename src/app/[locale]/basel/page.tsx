@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Basel,Switzerland'
   }
+,
+  it: {
+    slug: 'basel', regionName: 'Basilea',
+    seoTitle: 'Muoversi a Basilea | Impresa di pulizie Basilea | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie, pulizie manutentive, servizi di strutture, manutenzione e smaltimento di immobili a Basilea Città e Basilea Campagna.',
+    h1: 'Impresa di traslochi e pulizie a Basilea',
+    highSeoKeywords: ['Basilea in movimento','Impresa di pulizie Basilea'],
+    localKeywords: ['Basel','Basel-Stadt','Basel-Landschaft','Allschwil','Binningen','Bottmingen','Muttenz','Münchenstein','Reinach','Pratteln'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi, pulizia finale, servizi di pulizia, pulizia di manutenzione, pulizia di ristoranti, servizi per strutture, manutenzione e smaltimento di immobili a Basilea e dintorni.',
+      'Serviamo clienti a Basilea Città, Basilea Campagna, Allschwil, Binningen, Bottmingen, Muttenz, Münchenstein, Reinach e Pratteln. SwissCleanMove combina la pianificazione professionale del trasloco con una pulizia approfondita e servizi affidabili per la struttura.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Basilea?', answer: 'Sì, offriamo traslochi, trasporto di mobili e traslochi di uffici a Basilea.' },
+      { question: 'Il servizio di pulizia è disponibile a Basilea?', answer: 'Sì, offriamo pulizia finale, pulizia di mantenimento, pulizia degli uffici e pulizia del ristorante.' },
+      { question: 'SwissCleanMove funziona a Basilea Città e Basilea Campagna?', answer: 'Sì, lavoriamo in entrambe le regioni.' },
+    ],
+    mapQuery: 'Basel,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

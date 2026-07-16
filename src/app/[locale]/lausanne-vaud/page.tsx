@@ -56,6 +56,24 @@ const D: Record<string, RegionPageData> = {
       { question: 'Do you work in Vevey, Montreux and Nyon?', answer: 'Yes, we work in Vevey, Montreux, Nyon and throughout the region.' }
     ],
     mapQuery: 'Lausanne,Vaud,Switzerland'
+  },
+  it: {
+    slug: 'lausanne-vaud', regionName: 'Losanna & Vaud',
+    seoTitle: 'Trasloco Losanna | Pulizie Losanna | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie di fine locazione, servizi di facility e smaltimento a Losanna e Vaud.',
+    h1: 'Traslochi & Pulizie a Losanna e Vaud',
+    highSeoKeywords: ['Trasloco Losanna','Pulizie Losanna'],
+    localKeywords: ['Lausanne','Vaud','Vevey','Montreux','Nyon','Yverdon-les-Bains','Morges','Renens'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi, pulizie di fine locazione, pulizie di manutenzione, pulizie uffici, facility services, manutenzione immobili e smaltimento a Losanna e nel Canton Vaud.',
+      'Operiamo a Losanna, Vevey, Montreux, Nyon, Yverdon-les-Bains, Morges e Renens.'
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Losanna?', answer: 'Sì, offriamo traslochi professionali a Losanna e nel Canton Vaud.' },
+      { question: 'Offrite pulizie di fine locazione?', answer: 'Sì, offriamo pulizie di fine locazione professionali.' },
+      { question: 'Lavorate anche a Vevey, Montreux e Nyon?', answer: 'Sì, operiamo a Vevey, Montreux, Nyon e in tutta la regione.' }
+    ],
+    mapQuery: 'Lausanne,Vaud,Switzerland'
   }
 };
 

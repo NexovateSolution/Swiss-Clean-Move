@@ -66,21 +66,21 @@ const SERVICES = [
 ];
 
 const SERVICE_LABELS: Record<string, Record<string, string>> = {
-  umzugTransport: { de: 'Umzug & Transport', en: 'Moving & Transport', fr: 'Déménagement & Transport' },
-  privatumzug: { de: 'Privatumzug', en: 'Private Move', fr: 'Déménagement privé' },
-  firmenumzug: { de: 'Firmenumzug', en: 'Office Move', fr: 'Déménagement d\'entreprise' },
-  moebeltransport: { de: 'Möbeltransport', en: 'Furniture Transport', fr: 'Transport de meubles' },
-  umzugsreinigung: { de: 'Umzugsreinigung mit Abnahmegarantie', en: 'Move-out Cleaning with Guarantee', fr: 'Nettoyage de fin de bail avec garantie' },
-  endreinigung: { de: 'Endreinigung', en: 'Final Cleaning', fr: 'Nettoyage final' },
-  unterhaltsreinigung: { de: 'Unterhaltsreinigung', en: 'Maintenance Cleaning', fr: 'Nettoyage d\'entretien' },
-  bueroreinigung: { de: 'Büroreinigung', en: 'Office Cleaning', fr: 'Nettoyage de bureaux' },
-  fensterreinigung: { de: 'Fensterreinigung', en: 'Window Cleaning', fr: 'Nettoyage de vitres' },
-  gastroReinigung: { de: 'Gastronomie Reinigung', en: 'Restaurant Cleaning', fr: 'Nettoyage gastronomie' },
-  facilityServices: { de: 'Facility Services', en: 'Facility Services', fr: 'Facility Services' },
-  hauswartung: { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie' },
-  gebaeudeunterhalt: { de: 'Gebäudeunterhalt', en: 'Building Maintenance', fr: 'Entretien d\'immeuble' },
-  entsorgung: { de: 'Entsorgung', en: 'Disposal', fr: 'Débarras' },
-  raeumung: { de: 'Räumung', en: 'Clearance', fr: 'Évacuation' },
+  umzugTransport: { de: 'Umzug & Transport', en: 'Moving & Transport', fr: 'Déménagement & Transport', it: `Traslochi e trasporti` },
+  privatumzug: { de: 'Privatumzug', en: 'Private Move', fr: 'Déménagement privé', it: `Trasloco privato` },
+  firmenumzug: { de: 'Firmenumzug', en: 'Office Move', fr: 'Déménagement d\'entreprise', it: `Trasloco d'ufficio` },
+  moebeltransport: { de: 'Möbeltransport', en: 'Furniture Transport', fr: 'Transport de meubles', it: `Trasporto Mobili` },
+  umzugsreinigung: { de: 'Umzugsreinigung mit Abnahmegarantie', en: 'Move-out Cleaning with Guarantee', fr: 'Nettoyage de fin de bail avec garantie', it: `Pulizie di trasloco con garanzia` },
+  endreinigung: { de: 'Endreinigung', en: 'Final Cleaning', fr: 'Nettoyage final', it: `Pulizia finale` },
+  unterhaltsreinigung: { de: 'Unterhaltsreinigung', en: 'Maintenance Cleaning', fr: 'Nettoyage d\'entretien', it: `Pulizia di manutenzione` },
+  bueroreinigung: { de: 'Büroreinigung', en: 'Office Cleaning', fr: 'Nettoyage de bureaux', it: `Pulizie d'ufficio` },
+  fensterreinigung: { de: 'Fensterreinigung', en: 'Window Cleaning', fr: 'Nettoyage de vitres', it: `Pulizia delle finestre` },
+  gastroReinigung: { de: 'Gastronomie Reinigung', en: 'Restaurant Cleaning', fr: 'Nettoyage gastronomie', it: `Pulizia del ristorante` },
+  facilityServices: { de: 'Facility Services', en: 'Facility Services', fr: 'Facility Services', it: `Servizi della struttura` },
+  hauswartung: { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: `Manutenzione della proprietà` },
+  gebaeudeunterhalt: { de: 'Gebäudeunterhalt', en: 'Building Maintenance', fr: 'Entretien d\'immeuble', it: `Manutenzione dell'edificio` },
+  entsorgung: { de: 'Entsorgung', en: 'Disposal', fr: 'Débarras', it: `Disposizione` },
+  raeumung: { de: 'Räumung', en: 'Clearance', fr: 'Évacuation', it: `Liquidazione` },
 };
 
 function getCTAs(locale: string) {

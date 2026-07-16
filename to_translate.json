@@ -1,0 +1,3538 @@
+{
+  "1": {
+    "original": "1",
+    "it": "1"
+  },
+  "4": {
+    "original": "4",
+    "it": "4"
+  },
+  "✓ Handover Guarantee": {
+    "original": "✓ Handover Guarantee",
+    "it": "✓ Garanzia di consegna"
+  },
+  "✓ Liability Insured": {
+    "original": "✓ Liability Insured",
+    "it": "✓ Responsabilità civile assicurata"
+  },
+  "✓ Nationwide Service Across Switzerland": {
+    "original": "✓ Nationwide Service Across Switzerland",
+    "it": "✓ Servizio nazionale in tutta la Svizzera"
+  },
+  "✓ Transparent Pricing": {
+    "original": "✓ Transparent Pricing",
+    "it": "✓ Prezzi trasparenti"
+  },
+  "Biel/Bienne & Seeland": {
+    "original": "Biel/Bienne & Seeland",
+    "it": "Biel/Bienne e Seeland"
+  },
+  "Canton of Bern": {
+    "original": "Canton of Bern",
+    "it": "Cantone di Berna"
+  },
+  "Canton of Zurich": {
+    "original": "Canton of Zurich",
+    "it": "Cantone di Zurigo"
+  },
+  "Canton of Basel": {
+    "original": "Canton of Basel",
+    "it": "Cantone di Basilea"
+  },
+  "Canton of Aargau": {
+    "original": "Canton of Aargau",
+    "it": "Canton Argovia"
+  },
+  "Canton of Solothurn": {
+    "original": "Canton of Solothurn",
+    "it": "Canton Soletta"
+  },
+  "Canton of Lucerne": {
+    "original": "Canton of Lucerne",
+    "it": "Cantone di Lucerna"
+  },
+  "Canton of Zug": {
+    "original": "Canton of Zug",
+    "it": "Cantone di Zugo"
+  },
+  "Canton of St. Gallen": {
+    "original": "Canton of St. Gallen",
+    "it": "Cantone di San Gallo"
+  },
+  "Canton of Thurgau": {
+    "original": "Canton of Thurgau",
+    "it": "Canton Turgovia"
+  },
+  "Canton of Schwyz": {
+    "original": "Canton of Schwyz",
+    "it": "Cantone di Svitto"
+  },
+  "Canton of Neuchâtel": {
+    "original": "Canton of Neuchâtel",
+    "it": "Cantone di Neuchâtel"
+  },
+  "Canton of Fribourg": {
+    "original": "Canton of Fribourg",
+    "it": "Canton Friburgo"
+  },
+  "Canton of Vaud": {
+    "original": "Canton of Vaud",
+    "it": "Cantone di Vaud"
+  },
+  "Canton of Jura": {
+    "original": "Canton of Jura",
+    "it": "Canton Giura"
+  },
+  "Valais": {
+    "original": "Valais",
+    "it": "Vallese"
+  },
+  "Regular Household Help (weekly)": {
+    "original": "Regular Household Help (weekly)",
+    "it": "Aiuto domestico regolare (settimanale)"
+  },
+  "Household Help (every 2 weeks)": {
+    "original": "Household Help (every 2 weeks)",
+    "it": "Aiuto domestico (ogni 2 settimane)"
+  },
+  "One-Time Household Help": {
+    "original": "One-Time Household Help",
+    "it": "Aiuto domestico una tantum"
+  },
+  "Premium Household Help": {
+    "original": "Premium Household Help",
+    "it": "Aiuto domestico premium"
+  },
+  "Deep Cleaning / Spring Cleaning": {
+    "original": "Deep Cleaning / Spring Cleaning",
+    "it": "Pulizie profonde/pulizie di primavera"
+  },
+  "Ironing Service": {
+    "original": "Ironing Service",
+    "it": "Servizio stireria"
+  },
+  "Window Cleaning": {
+    "original": "Window Cleaning",
+    "it": "Pulizia delle finestre"
+  },
+  "Minimum Order": {
+    "original": "Minimum Order",
+    "it": "Ordine minimo"
+  },
+  "Vacuuming and floor cleaning": {
+    "original": "Vacuuming and floor cleaning",
+    "it": "Aspirazione e pulizia dei pavimenti"
+  },
+  "Kitchen and bathroom cleaning": {
+    "original": "Kitchen and bathroom cleaning",
+    "it": "Pulizia cucina e bagno"
+  },
+  "Toilet cleaning and disinfection": {
+    "original": "Toilet cleaning and disinfection",
+    "it": "Pulizia e disinfezione dei servizi igienici"
+  },
+  "Dusting all surfaces": {
+    "original": "Dusting all surfaces",
+    "it": "Spolverare tutte le superfici"
+  },
+  "Bed making and changing linens": {
+    "original": "Bed making and changing linens",
+    "it": "Rifacimento letti e cambio biancheria"
+  },
+  "Laundry washing and hanging": {
+    "original": "Laundry washing and hanging",
+    "it": "Lavare e stendere la biancheria"
+  },
+  "Ironing service upon request": {
+    "original": "Ironing service upon request",
+    "it": "Servizio stireria su richiesta"
+  },
+  "Tidying and household assistance": {
+    "original": "Tidying and household assistance",
+    "it": "Riordino e assistenza domestica"
+  },
+  "Additional customized services as needed": {
+    "original": "Additional customized services as needed",
+    "it": "Ulteriori servizi personalizzati secondo necessità"
+  },
+  "Reliable and experienced household helpers": {
+    "original": "Reliable and experienced household helpers",
+    "it": "Collaboratrici domestiche affidabili ed esperte"
+  },
+  "Flexible appointment scheduling": {
+    "original": "Flexible appointment scheduling",
+    "it": "Pianificazione flessibile degli appuntamenti"
+  },
+  "Transparent pricing with no hidden costs": {
+    "original": "Transparent pricing with no hidden costs",
+    "it": "Prezzi trasparenti senza costi nascosti"
+  },
+  "Environmentally friendly cleaning products": {
+    "original": "Environmentally friendly cleaning products",
+    "it": "Prodotti per la pulizia ecologici"
+  },
+  "Personal and professional service": {
+    "original": "Personal and professional service",
+    "it": "Servizio personale e professionale"
+  },
+  "Suitable for apartments, houses, and senior households": {
+    "original": "Suitable for apartments, houses, and senior households",
+    "it": "Adatto per appartamenti, case e famiglie anziane"
+  },
+  "Moving & Transport": {
+    "original": "Moving & Transport",
+    "it": "Traslochi e trasporti"
+  },
+  "Private Move": {
+    "original": "Private Move",
+    "it": "Trasloco privato"
+  },
+  "Office Move": {
+    "original": "Office Move",
+    "it": "Trasloco d'ufficio"
+  },
+  "Furniture Transport": {
+    "original": "Furniture Transport",
+    "it": "Trasporto Mobili"
+  },
+  "Move-out Cleaning with Guarantee": {
+    "original": "Move-out Cleaning with Guarantee",
+    "it": "Pulizie di trasloco con garanzia"
+  },
+  "Final Cleaning": {
+    "original": "Final Cleaning",
+    "it": "Pulizia finale"
+  },
+  "Maintenance Cleaning": {
+    "original": "Maintenance Cleaning",
+    "it": "Pulizia di manutenzione"
+  },
+  "Office Cleaning": {
+    "original": "Office Cleaning",
+    "it": "Pulizie d'ufficio"
+  },
+  "Restaurant Cleaning": {
+    "original": "Restaurant Cleaning",
+    "it": "Pulizia del ristorante"
+  },
+  "Facility Services": {
+    "original": "Facility Services",
+    "it": "Servizi della struttura"
+  },
+  "Property Maintenance": {
+    "original": "Property Maintenance",
+    "it": "Manutenzione della proprietà"
+  },
+  "Building Maintenance": {
+    "original": "Building Maintenance",
+    "it": "Manutenzione dell'edificio"
+  },
+  "Disposal": {
+    "original": "Disposal",
+    "it": "Disposizione"
+  },
+  "Clearance": {
+    "original": "Clearance",
+    "it": "Liquidazione"
+  },
+  "Prices for Moving, Move-Out Cleaning & Disposal": {
+    "original": "Prices for Moving, Move-Out Cleaning & Disposal",
+    "it": "Prezzi per trasloco, pulizia e smaltimento"
+  },
+  "Transparent fixed prices. Professional service. Available throughout Switzerland.": {
+    "original": "Transparent fixed prices. Professional service. Available throughout Switzerland.",
+    "it": "Prezzi fissi trasparenti. Servizio professionale. Disponibile in tutta la Svizzera."
+  },
+  "SwissCleanMove is your reliable partner for professional moving services, move-out cleaning with handover guarantee, transport, disposal, and clearance services across Switzerland. Our experienced teams ensure a smooth, efficient, and stress-free execution of your project.": {
+    "original": "SwissCleanMove is your reliable partner for professional moving services, move-out cleaning with handover guarantee, transport, disposal, and clearance services across Switzerland. Our experienced teams ensure a smooth, efficient, and stress-free execution of your project.",
+    "it": "SwissCleanMove è il vostro partner affidabile per servizi di trasloco professionali, pulizie di trasloco con garanzia di consegna, trasporto, smaltimento e sgombero in tutta la Svizzera. I nostri team esperti garantiscono un’esecuzione fluida, efficiente e senza stress del tuo progetto."
+  },
+  "Moving Prices": {
+    "original": "Moving Prices",
+    "it": "Prezzi in movimento"
+  },
+  "Professional moving service for private and business clients": {
+    "original": "Professional moving service for private and business clients",
+    "it": "Servizio di trasloco professionale per clienti privati ​​e aziendali"
+  },
+  "Move-Out Cleaning with Handover Guarantee": {
+    "original": "Move-Out Cleaning with Handover Guarantee",
+    "it": "Pulizie di trasloco con garanzia di consegna"
+  },
+  "Professional end-of-tenancy cleaning for a stress-free property handover": {
+    "original": "Professional end-of-tenancy cleaning for a stress-free property handover",
+    "it": "Pulizie professionali di fine locazione per una consegna dell'immobile senza stress"
+  },
+  "Disposal & Clearance Services": {
+    "original": "Disposal & Clearance Services",
+    "it": "Servizi di smaltimento e sgombero"
+  },
+  "Fast, reliable, and environmentally friendly": {
+    "original": "Fast, reliable, and environmentally friendly",
+    "it": "Veloce, affidabile e rispettoso dell'ambiente"
+  },
+  "Popular Complete Packages": {
+    "original": "Popular Complete Packages",
+    "it": "Pacchetti completi popolari"
+  },
+  "Why SwissCleanMove?": {
+    "original": "Why SwissCleanMove?",
+    "it": "Perché SwissCleanMove?"
+  },
+  "Request a Free Quote Today": {
+    "original": "Request a Free Quote Today",
+    "it": "Richiedi un preventivo gratuito oggi"
+  },
+  "Planning a move, move-out cleaning, or disposal service? Contact us for a free consultation and a non-binding fixed-price quotation.": {
+    "original": "Planning a move, move-out cleaning, or disposal service? Contact us for a free consultation and a non-binding fixed-price quotation.",
+    "it": "Stai pianificando un trasloco, una pulizia di trasloco o un servizio di smaltimento? Contattaci per una consulenza gratuita e un preventivo a prezzo fisso non vincolante."
+  },
+  "Request Quote": {
+    "original": "Request Quote",
+    "it": "Richiedi preventivo"
+  },
+  "SwissCleanMove – Your partner for moving, move-out cleaning, disposal, and transport services throughout Switzerland.": {
+    "original": "SwissCleanMove – Your partner for moving, move-out cleaning, disposal, and transport services throughout Switzerland.",
+    "it": "SwissCleanMove – Il vostro partner per servizi di trasloco, pulizia, smaltimento e trasporto in tutta la Svizzera."
+  },
+  "from": {
+    "original": "from",
+    "it": "da"
+  },
+  "Upon request": {
+    "original": "Upon request",
+    "it": "Su richiesta"
+  },
+  "Price from": {
+    "original": "Price from",
+    "it": "Prezzo da"
+  },
+  "Included in the Price": {
+    "original": "Included in the Price",
+    "it": "Incluso nel prezzo"
+  },
+  "Included Services": {
+    "original": "Included Services",
+    "it": "Servizi inclusi"
+  },
+  "1 room apartment": {
+    "original": "1 room apartment",
+    "it": "Appartamento di 1 camera"
+  },
+  "1.5 room apartment": {
+    "original": "1.5 room apartment",
+    "it": "Appartamento di 1,5 locali"
+  },
+  "2.5 room apartment": {
+    "original": "2.5 room apartment",
+    "it": "Appartamento di 2,5 locali"
+  },
+  "3.5 room apartment": {
+    "original": "3.5 room apartment",
+    "it": "Appartamento di 3,5 locali"
+  },
+  "4.5 room apartment": {
+    "original": "4.5 room apartment",
+    "it": "Appartamento di 4,5 locali"
+  },
+  "Single-family house": {
+    "original": "Single-family house",
+    "it": "Casa unifamiliare"
+  },
+  "Professional moving team": {
+    "original": "Professional moving team",
+    "it": "Squadra di traslochi professionale"
+  },
+  "Modern transport vehicle": {
+    "original": "Modern transport vehicle",
+    "it": "Veicolo da trasporto moderno"
+  },
+  "Transport insurance": {
+    "original": "Transport insurance",
+    "it": "Assicurazione sul trasporto"
+  },
+  "Furniture protection and packing materials": {
+    "original": "Furniture protection and packing materials",
+    "it": "Protezione dei mobili e materiali di imballaggio"
+  },
+  "Loading and unloading": {
+    "original": "Loading and unloading",
+    "it": "Carico e scarico"
+  },
+  "Careful furniture transportation": {
+    "original": "Careful furniture transportation",
+    "it": "Trasporto accurato dei mobili"
+  },
+  "Planning and coordination": {
+    "original": "Planning and coordination",
+    "it": "Pianificazione e coordinamento"
+  },
+  "Studio / 1 room": {
+    "original": "Studio / 1 room",
+    "it": "Monolocale/1 camera"
+  },
+  "5.5 room apartment": {
+    "original": "5.5 room apartment",
+    "it": "Appartamento di 5,5 locali"
+  },
+  "House / Villa": {
+    "original": "House / Villa",
+    "it": "Casa/Villa"
+  },
+  "100% handover guarantee": {
+    "original": "100% handover guarantee",
+    "it": "Garanzia di consegna al 100%."
+  },
+  "Interior and exterior window cleaning": {
+    "original": "Interior and exterior window cleaning",
+    "it": "Pulizia vetri interni ed esterni"
+  },
+  "Cleaning of all blinds/shutters": {
+    "original": "Cleaning of all blinds/shutters",
+    "it": "Pulizia di tutte le persiane/persiane"
+  },
+  "Complete kitchen cleaning": {
+    "original": "Complete kitchen cleaning",
+    "it": "Pulizia completa della cucina"
+  },
+  "Descaling of bathrooms and sanitary facilities": {
+    "original": "Descaling of bathrooms and sanitary facilities",
+    "it": "Disincrostazione di bagni e sanitari"
+  },
+  "Floor and surface cleaning": {
+    "original": "Floor and surface cleaning",
+    "it": "Pulizia pavimenti e superfici"
+  },
+  "Re-cleaning in case of complaints": {
+    "original": "Re-cleaning in case of complaints",
+    "it": "Nuova pulizia in caso di reclami"
+  },
+  "Up to 1 m3": {
+    "original": "Up to 1 m3",
+    "it": "Fino a 1 m3"
+  },
+  "Up to 5 m3": {
+    "original": "Up to 5 m3",
+    "it": "Fino a 5 m3"
+  },
+  "Up to 10 m3": {
+    "original": "Up to 10 m3",
+    "it": "Fino a 10 m3"
+  },
+  "Up to 20 m3": {
+    "original": "Up to 20 m3",
+    "it": "Fino a 20 m3"
+  },
+  "Business liquidation": {
+    "original": "Business liquidation",
+    "it": "Liquidazione aziendale"
+  },
+  "Professional disposal": {
+    "original": "Professional disposal",
+    "it": "Smaltimento professionale"
+  },
+  "Recycling according to Swiss standards": {
+    "original": "Recycling according to Swiss standards",
+    "it": "Riciclaggio secondo gli standard svizzeri"
+  },
+  "Loading and transportation": {
+    "original": "Loading and transportation",
+    "it": "Carico e trasporto"
+  },
+  "Swept-clean handover": {
+    "original": "Swept-clean handover",
+    "it": "Consegna perfetta"
+  },
+  "Moving + Move-Out Cleaning": {
+    "original": "Moving + Move-Out Cleaning",
+    "it": "Trasloco + Trasloco Pulizia"
+  },
+  "Cleaning + Disposal": {
+    "original": "Cleaning + Disposal",
+    "it": "Pulizia + Smaltimento"
+  },
+  "Moving + Disposal": {
+    "original": "Moving + Disposal",
+    "it": "Trasloco + Smaltimento"
+  },
+  "Premium Complete Package": {
+    "original": "Premium Complete Package",
+    "it": "Pacchetto completo premium"
+  },
+  "Moving + Move-Out Cleaning + Disposal": {
+    "original": "Moving + Move-Out Cleaning + Disposal",
+    "it": "Trasloco + Trasloco Pulizia + Smaltimento"
+  },
+  "Free and non-binding quotation": {
+    "original": "Free and non-binding quotation",
+    "it": "Preventivo gratuito e senza impegno"
+  },
+  "Transparent prices with no hidden costs": {
+    "original": "Transparent prices with no hidden costs",
+    "it": "Prezzi trasparenti senza costi nascosti"
+  },
+  "Professional and experienced teams": {
+    "original": "Professional and experienced teams",
+    "it": "Squadre professionali ed esperte"
+  },
+  "Move-out cleaning with handover guarantee": {
+    "original": "Move-out cleaning with handover guarantee",
+    "it": "Pulizie di trasloco con garanzia di consegna"
+  },
+  "Fast appointment scheduling": {
+    "original": "Fast appointment scheduling",
+    "it": "Pianificazione rapida degli appuntamenti"
+  },
+  "Switzerland-wide service": {
+    "original": "Switzerland-wide service",
+    "it": "Servizio in tutta la Svizzera"
+  },
+  "Highest quality standards": {
+    "original": "Highest quality standards",
+    "it": "Massimi standard di qualità"
+  },
+  "Personal consultation and on-site inspection": {
+    "original": "Personal consultation and on-site inspection",
+    "it": "Consulenza personale e sopralluogo in loco"
+  },
+  "Moving Costs Switzerland: What to really expect": {
+    "original": "Moving Costs Switzerland: What to really expect",
+    "it": "Costi di trasloco in Svizzera: cosa aspettarsi veramente"
+  },
+  "Learn how moving costs are calculated in Switzerland and where you can save.": {
+    "original": "Learn how moving costs are calculated in Switzerland and where you can save.",
+    "it": "Scopri come vengono calcolati i costi di trasloco in Svizzera e dove puoi risparmiare."
+  },
+  "The costs for moving in Switzerland can vary greatly depending on the size of the apartment, distance, and desired additional services. A professional <a href=\"/en/umzug-biel\" class=\"text-swiss-red hover:underline font-semibold\">move in Biel</a> for a 3-room apartment costs on average between CHF 800 and CHF 1,500. ### 1. Apartment Size and Volume The more furniture and boxes you have, the larger the moving van needs to be and the more movers are required. ### 2. Additional Services Do you need a packing and unpacking service? Should we dismantle and reassemble your furniture? All these factors influence the price. We offer transparent fixed prices without hidden costs. ### Conclusion A stress-free move doesn't have to be expensive. Request your customized quote today!": {
+    "original": "\nThe costs for moving in Switzerland can vary greatly depending on the size of the apartment, distance, and desired additional services. A professional <a href=\"/en/umzug-biel\" class=\"text-swiss-red hover:underline font-semibold\">move in Biel</a> for a 3-room apartment costs on average between CHF 800 and CHF 1,500.\n\n### 1. Apartment Size and Volume\nThe more furniture and boxes you have, the larger the moving van needs to be and the more movers are required.\n\n### 2. Additional Services\nDo you need a packing and unpacking service? Should we dismantle and reassemble your furniture? All these factors influence the price. We offer transparent fixed prices without hidden costs.\n\n### Conclusion\nA stress-free move doesn't have to be expensive. Request your customized quote today!\n      ",
+    "it": "I costi per un trasloco in Svizzera possono variare molto a seconda delle dimensioni dell'appartamento, della distanza e dei servizi aggiuntivi desiderati. Un <a href=\"/it/umzug-biel\" class=\"text-swiss-red hover:underline font-semibold\">trasloco professionale a Biel</a> per un appartamento di 3 locali costa in media tra CHF 800 e CHF 1'500.\n\n### 1. Dimensioni e volume dell'appartamento\nPiù mobili e scatoloni hai, più grande dovrà essere il furgone per traslochi e maggiore sarà il numero di traslocatori necessari.\n\n### 2. Servizi aggiuntivi\nHai bisogno di un servizio di imballaggio e disimballaggio? Dovremmo smontare e rimontare i tuoi mobili? Tutti questi fattori influenzano il prezzo. Offriamo prezzi fissi trasparenti senza costi nascosti.\n\n### Conclusione\nUn trasloco senza stress non deve essere necessariamente costoso. Richiedi oggi stesso il tuo preventivo personalizzato!"
+  },
+  "The Ultimate Moving Checklist for Switzerland": {
+    "original": "The Ultimate Moving Checklist for Switzerland",
+    "it": "La lista di controllo definitiva per il trasloco in Svizzera"
+  },
+  "With our comprehensive checklist, you are guaranteed not to forget anything when moving.": {
+    "original": "With our comprehensive checklist, you are guaranteed not to forget anything when moving.",
+    "it": "Con la nostra lista di controllo completa avete la garanzia di non dimenticare nulla durante il trasloco."
+  },
+  "A move requires a lot of planning. If you are planning a move within the Seeland region, for example a <a href=\"/en/umzug-lyss\" class=\"text-swiss-red hover:underline font-semibold\">move in Lyss</a>, this checklist will help you. ### 3 months before - Terminate lease - Declutter and dispose - Contact moving company ### 1 month before - Address change at post office, bank, insurance - Organize moving boxes - Arrange handover appointment with property management Remember: A professional moving company will take most of the work off your hands!": {
+    "original": "\nA move requires a lot of planning. If you are planning a move within the Seeland region, for example a <a href=\"/en/umzug-lyss\" class=\"text-swiss-red hover:underline font-semibold\">move in Lyss</a>, this checklist will help you.\n\n### 3 months before\n- Terminate lease\n- Declutter and dispose\n- Contact moving company\n\n### 1 month before\n- Address change at post office, bank, insurance\n- Organize moving boxes\n- Arrange handover appointment with property management\n\nRemember: A professional moving company will take most of the work off your hands!\n      ",
+    "it": "Un trasloco richiede molta pianificazione. Se state pianificando un trasloco nella regione del Seeland, ad esempio un <a href=\"/en/umzug-lyss\" class=\"text-swiss-red hover:underline font-semibold\">trasloco a Lyss</a>, questa lista di controllo vi aiuterà.\n\n### 3 mesi prima\n- Risoluzione del contratto di locazione\n- Declutter e smaltire\n- Contattare la ditta di traslochi\n\n### 1 mese prima\n- Cambio indirizzo presso ufficio postale, banca, assicurazione\n- Organizzare le scatole per il trasloco\n- Organizzare l'appuntamento per la consegna con la gestione della proprietà\n\nRicorda: una ditta di traslochi professionale ti toglierà la maggior parte del lavoro dalle mani!"
+  },
+  "5 Tips for the Perfect End-of-Tenancy Cleaning": {
+    "original": "5 Tips for the Perfect End-of-Tenancy Cleaning",
+    "it": "5 consigli per una perfetta pulizia di fine locazione"
+  },
+  "How to ensure a smooth apartment handover without any complaints from the property management.": {
+    "original": "How to ensure a smooth apartment handover without any complaints from the property management.",
+    "it": "Come garantire una consegna dell'appartamento senza intoppi e senza lamentele da parte della direzione dell'immobile."
+  },
+  "The handover cleaning is often the most stressful part of moving. Especially for an <a href=\"/en/endreinigung-biel\" class=\"text-swiss-red hover:underline font-semibold\">end-of-tenancy cleaning in Biel</a>, property managements are very strict. ### 1. Don't forget window frames It's not enough to just clean the glass. The grooves and frames must also be dust-free. ### 2. Oven and extractor hood Grease and dirt accumulate here over years. Special cleaners are essential. ### 3. Hire professionals The safest method is a cleaning company with a handover guarantee. That way, you don't have to worry about anything and are guaranteed to get your deposit back.": {
+    "original": "\nThe handover cleaning is often the most stressful part of moving. Especially for an <a href=\"/en/endreinigung-biel\" class=\"text-swiss-red hover:underline font-semibold\">end-of-tenancy cleaning in Biel</a>, property managements are very strict.\n\n### 1. Don't forget window frames\nIt's not enough to just clean the glass. The grooves and frames must also be dust-free.\n\n### 2. Oven and extractor hood\nGrease and dirt accumulate here over years. Special cleaners are essential.\n\n### 3. Hire professionals\nThe safest method is a cleaning company with a handover guarantee. That way, you don't have to worry about anything and are guaranteed to get your deposit back.\n      ",
+    "it": "La pulizia della consegna è spesso la parte più stressante del trasloco. Soprattutto per una <a href=\"/en/endreinigung-biel\" class=\"text-swiss-red hover:underline font-semibold\">pulizia di fine locazione a Biel</a>, la gestione della proprietà è molto severa.\n\n### 1. Non dimenticare gli infissi\nNon basta pulire solo il vetro. Anche le scanalature e le cornici devono essere prive di polvere.\n\n### 2. Forno e cappa aspirante\nGrasso e sporco si accumulano qui nel corso degli anni. Sono essenziali detergenti speciali.\n\n### 3. Assumi professionisti\nIl metodo più sicuro è un'impresa di pulizie con garanzia di consegna. In questo modo non dovrai preoccuparti di nulla e avrai la garanzia di riavere indietro il tuo deposito."
+  },
+  "How to find the right cleaning company?": {
+    "original": "How to find the right cleaning company?",
+    "it": "Come trovare l'impresa di pulizie giusta?"
+  },
+  "Important criteria when choosing your cleaning partner in Switzerland.": {
+    "original": "Important criteria when choosing your cleaning partner in Switzerland.",
+    "it": "Criteri importanti nella scelta del vostro partner per le pulizie in Svizzera."
+  },
+  "Whether regular <a href=\"/en/reinigung-nidau\" class=\"text-swiss-red hover:underline font-semibold\">apartment cleaning in Nidau</a> or a one-off spring cleaning: Quality is crucial. Look out for: - Transparent prices without hidden costs - Trained and insured staff - Local presence in the Seeland region - Positive customer reviews SwissCleanMove meets all these criteria.": {
+    "original": "\nWhether regular <a href=\"/en/reinigung-nidau\" class=\"text-swiss-red hover:underline font-semibold\">apartment cleaning in Nidau</a> or a one-off spring cleaning: Quality is crucial.\n\nLook out for:\n- Transparent prices without hidden costs\n- Trained and insured staff\n- Local presence in the Seeland region\n- Positive customer reviews\n\nSwissCleanMove meets all these criteria.\n      ",
+    "it": "Che si tratti della <a href=\"/it/reinigung-nidau\" class=\"text-swiss-red hover:underline font-semibold\">pulizia dell'appartamento a Nidau</a> regolare o di una pulizia di primavera una tantum: la qualità è fondamentale.\n\nCerca:\n- Prezzi trasparenti senza costi nascosti\n- Personale formato e assicurato\n- Presenza locale nella regione del Seeland\n- Recensioni positive dei clienti\n\nSwissCleanMove soddisfa tutti questi criteri."
+  },
+  "Packing moving boxes properly": {
+    "original": "Packing moving boxes properly",
+    "it": "Imballare correttamente le scatole per il trasloco"
+  },
+  "Tips and tricks on how to pack your belongings safely.": {
+    "original": "Tips and tricks on how to pack your belongings safely.",
+    "it": "Consigli e trucchi su come imballare le tue cose in sicurezza."
+  },
+  "Don't just throw everything together. If you book us for your <a href=\"/en/umzug-aarberg\" class=\"text-swiss-red hover:underline font-semibold\">move in Aarberg</a>, we recommend: - Heavy items (books) at the bottom, light items at the top - Don't overfill boxes (max. 20 kg) - Wrap dishes well with tissue paper - Label all boxes! Or simply book our convenient packing service.": {
+    "original": "\nDon't just throw everything together. If you book us for your <a href=\"/en/umzug-aarberg\" class=\"text-swiss-red hover:underline font-semibold\">move in Aarberg</a>, we recommend:\n\n- Heavy items (books) at the bottom, light items at the top\n- Don't overfill boxes (max. 20 kg)\n- Wrap dishes well with tissue paper\n- Label all boxes!\n\nOr simply book our convenient packing service.\n      ",
+    "it": "Non mettere semplicemente tutto insieme. Se ci prenoti per il tuo <a href=\"/en/umzug-aarberg\" class=\"text-swiss-red hover:underline font-semibold\">trasloco ad Aarberg</a>, ti consigliamo:\n\n- Oggetti pesanti (libri) in basso, oggetti leggeri in alto\n- Non riempire eccessivamente le scatole (max. 20 kg)\n- Avvolgere bene i piatti con la carta velina\n- Etichetta tutte le scatole!\n\nOppure prenota semplicemente il nostro comodo servizio di imballaggio."
+  },
+  "What exactly does handover guarantee mean?": {
+    "original": "What exactly does handover guarantee mean?",
+    "it": "Cosa significa esattamente la garanzia di consegna?"
+  },
+  "Why you should always insist on a handover guarantee for end-of-tenancy cleaning.": {
+    "original": "Why you should always insist on a handover guarantee for end-of-tenancy cleaning.",
+    "it": "Perché dovresti sempre insistere su una garanzia di consegna per le pulizie di fine locazione."
+  },
+  "An <a href=\"/en/endreinigung-bruegg\" class=\"text-swiss-red hover:underline font-semibold\">apartment cleaning in Brügg</a> with handover guarantee means: We are on site at the handover appointment with the property management. If the landlord complains about anything, we will immediately clean it again free of charge. You don't have to worry about anything and have no stress.": {
+    "original": "\nAn <a href=\"/en/endreinigung-bruegg\" class=\"text-swiss-red hover:underline font-semibold\">apartment cleaning in Brügg</a> with handover guarantee means:\nWe are on site at the handover appointment with the property management. If the landlord complains about anything, we will immediately clean it again free of charge. You don't have to worry about anything and have no stress.\n      ",
+    "it": "Una <a href=\"/it/endreinigung-bruegg\" class=\"text-swiss-red hover:underline font-semibold\">pulizia dell'appartamento a Brügg</a> con garanzia di consegna significa:\nSiamo presenti all'appuntamento di consegna con la direzione dell'immobile. Se il proprietario si lamenta di qualcosa, provvederemo immediatamente a pulire di nuovo gratuitamente. Non devi preoccuparti di nulla e non avere stress."
+  },
+  "Pricing & Guides - Moving, Cleaning, Household Help Switzerland | SwissCleanMove": {
+    "original": "Pricing & Guides - Moving, Cleaning, Household Help Switzerland | SwissCleanMove",
+    "it": "Prezzi e guide - Traslochi, pulizie, aiuto domestico Svizzera | SwissCleanMove"
+  },
+  "Transparent prices for moving, move-out cleaning, household help, facility services and disposal in Switzerland. Guides, checklists and answers to common questions.": {
+    "original": "Transparent prices for moving, move-out cleaning, household help, facility services and disposal in Switzerland. Guides, checklists and answers to common questions.",
+    "it": "Prezzi trasparenti per traslochi, pulizie di trasloco, aiuto domestico, servizi infrastrutturali e smaltimento in Svizzera. Guide, liste di controllo e risposte a domande comuni."
+  },
+  "Pricing & Guides": {
+    "original": "Pricing & Guides",
+    "it": "Prezzi e guide"
+  },
+  "SwissCleanMove - Pricing, Services & Guides Switzerland": {
+    "original": "SwissCleanMove - Pricing, Services & Guides Switzerland",
+    "it": "SwissCleanMove - Prezzi, servizi e guide Svizzera"
+  },
+  "Transparent fixed prices, professional consultation and comprehensive information on moving, cleaning, household help, facility services and disposal throughout Switzerland.": {
+    "original": "Transparent fixed prices, professional consultation and comprehensive information on moving, cleaning, household help, facility services and disposal throughout Switzerland.",
+    "it": "Prezzi fissi trasparenti, consulenza professionale e informazioni complete su traslochi, pulizie, aiuto domestico, servizi di ristrutturazione e smaltimento in tutta la Svizzera."
+  },
+  "Moving & Cleaning Prices": {
+    "original": "Moving & Cleaning Prices",
+    "it": "Prezzi di trasloco e pulizia"
+  },
+  "Household Help Prices": {
+    "original": "Household Help Prices",
+    "it": "Prezzi degli aiuti domestici"
+  },
+  "Average Prices Switzerland": {
+    "original": "Average Prices Switzerland",
+    "it": "Prezzi medi Svizzera"
+  },
+  "Facility Service & Maintenance": {
+    "original": "Facility Service & Maintenance",
+    "it": "Assistenza e manutenzione della struttura"
+  },
+  "Service Comparisons": {
+    "original": "Service Comparisons",
+    "it": "Confronti di servizi"
+  },
+  "Moving Preparation": {
+    "original": "Moving Preparation",
+    "it": "Preparazione in movimento"
+  },
+  "Common Questions": {
+    "original": "Common Questions",
+    "it": "Domande comuni"
+  },
+  "Our Regions": {
+    "original": "Our Regions",
+    "it": "Le nostre Regioni"
+  },
+  "SwissCleanMove is your trusted partner for premium moving services, move-out cleaning with a 100% handover guarantee, household help, facility management, and comprehensive disposal services across Switzerland. Here, you will find transparent pricing, detailed service overviews, and expert answers to your most pressing questions about moving and cleaning in Switzerland.": {
+    "original": "SwissCleanMove is your trusted partner for premium moving services, move-out cleaning with a 100% handover guarantee, household help, facility management, and comprehensive disposal services across Switzerland. Here, you will find transparent pricing, detailed service overviews, and expert answers to your most pressing questions about moving and cleaning in Switzerland.",
+    "it": "SwissCleanMove è il tuo partner di fiducia per servizi di trasloco premium, pulizia di trasloco con garanzia di consegna al 100%, aiuto domestico, gestione delle strutture e servizi di smaltimento completi in tutta la Svizzera. Qui troverai prezzi trasparenti, panoramiche dettagliate dei servizi e risposte di esperti alle tue domande più urgenti sui traslochi e sulle pulizie in Svizzera."
+  },
+  "Average Prices in Switzerland": {
+    "original": "Average Prices in Switzerland",
+    "it": "Prezzi medi in Svizzera"
+  },
+  "Prices for moving and cleaning in Switzerland vary depending on the provider, region and scope of services. SwissCleanMove offers transparent fixed prices that include all essential services - with no hidden costs.": {
+    "original": "Prices for moving and cleaning in Switzerland vary depending on the provider, region and scope of services. SwissCleanMove offers transparent fixed prices that include all essential services - with no hidden costs.",
+    "it": "I prezzi per il trasloco e la pulizia in Svizzera variano a seconda del fornitore, della regione e della portata dei servizi. SwissCleanMove offre prezzi fissi trasparenti che includono tutti i servizi essenziali, senza costi nascosti."
+  },
+  "Moving (3.5-room apartment)": {
+    "original": "Moving (3.5-room apartment)",
+    "it": "Trasloco (appartamento di 3,5 locali)"
+  },
+  "Move-out cleaning (3.5-room apt)": {
+    "original": "Move-out cleaning (3.5-room apt)",
+    "it": "Pulizie di trasloco (app. 3,5 locali)"
+  },
+  "Household help": {
+    "original": "Household help",
+    "it": "Aiuto domestico"
+  },
+  "Disposal & clearance": {
+    "original": "Disposal & clearance",
+    "it": "Smaltimento e sgombero"
+  },
+  "What influences prices? Apartment size, floor level, elevator, distance, cleaning condition, furniture quantity and regional differences. Cheap providers often cut costs on insurance, materials or staff quality. SwissCleanMove relies on Swiss quality standards, insured services and transparent fixed prices.": {
+    "original": "What influences prices? Apartment size, floor level, elevator, distance, cleaning condition, furniture quantity and regional differences. Cheap providers often cut costs on insurance, materials or staff quality. SwissCleanMove relies on Swiss quality standards, insured services and transparent fixed prices.",
+    "it": "Cosa influenza i prezzi? Dimensioni dell'appartamento, livello del piano, ascensore, distanza, condizioni di pulizia, quantità di mobili e differenze regionali. I fornitori economici spesso riducono i costi di assicurazione, materiali o qualità del personale. SwissCleanMove si basa su standard di qualità svizzeri, servizi assicurati e prezzi fissi trasparenti."
+  },
+  "Facility Service & Property Maintenance": {
+    "original": "Facility Service & Property Maintenance",
+    "it": "Servizio di struttura e manutenzione della proprietà"
+  },
+  "Professional building management and property care for administrations, businesses and property owners.": {
+    "original": "Professional building management and property care for administrations, businesses and property owners.",
+    "it": "Gestione professionale degli edifici e cura degli immobili per amministrazioni, imprese e proprietari immobiliari."
+  },
+  "Regular building cleaning, exterior maintenance, winter service, green care and technical property management.": {
+    "original": "Regular building cleaning, exterior maintenance, winter service, green care and technical property management.",
+    "it": "Pulizie periodiche dell'edificio, manutenzione degli esterni, servizio invernale, cura del verde e gestione tecnica dell'immobile."
+  },
+  "Upon request - individually calculated": {
+    "original": "Upon request - individually calculated",
+    "it": "Su richiesta - calcolato individualmente"
+  },
+  "Regular stairwell cleaning, office cleaning, common areas and commercial properties.": {
+    "original": "Regular stairwell cleaning, office cleaning, common areas and commercial properties.",
+    "it": "Pulizia regolare del vano scale, pulizia uffici, aree comuni e immobili commerciali."
+  },
+  "Professional kitchen cleaning, hygiene standards, regular deep cleaning for restaurants and hotels.": {
+    "original": "Professional kitchen cleaning, hygiene standards, regular deep cleaning for restaurants and hotels.",
+    "it": "Pulizia professionale della cucina, norme igieniche, pulizia profonda periodica per ristoranti e hotel."
+  },
+  "Construction Cleaning": {
+    "original": "Construction Cleaning",
+    "it": "Pulizia della costruzione"
+  },
+  "Post-construction cleaning, fine cleaning after renovation, new build cleaning and handover cleaning.": {
+    "original": "Post-construction cleaning, fine cleaning after renovation, new build cleaning and handover cleaning.",
+    "it": "Pulizie post-costruzione, pulizie finali dopo ristrutturazioni, pulizie di nuove costruzioni e pulizie di passaggio."
+  },
+  "Which service is right for you?": {
+    "original": "Which service is right for you?",
+    "it": "Qual è il servizio giusto per te?"
+  },
+  "Final Cleaning vs. Move-Out Cleaning": {
+    "original": "Final Cleaning vs. Move-Out Cleaning",
+    "it": "Pulizia finale vs. pulizia di trasloco"
+  },
+  "General deep cleaning": {
+    "original": "General deep cleaning",
+    "it": "Pulizia profonda generale"
+  },
+  "No handover guarantee": {
+    "original": "No handover guarantee",
+    "it": "Nessuna garanzia di consegna"
+  },
+  "Suitable for interim cleaning": {
+    "original": "Suitable for interim cleaning",
+    "it": "Adatto per la pulizia intermedia"
+  },
+  "Shorter work time": {
+    "original": "Shorter work time",
+    "it": "Tempo di lavoro più breve"
+  },
+  "Ideal for renovations or interim cleanings": {
+    "original": "Ideal for renovations or interim cleanings",
+    "it": "Ideale per ristrutturazioni o pulizie intermedie"
+  },
+  "From CHF 400.-": {
+    "original": "From CHF 400.-",
+    "it": "Da CHF 400.-"
+  },
+  "Move-Out Cleaning": {
+    "original": "Move-Out Cleaning",
+    "it": "Pulizia del trasloco"
+  },
+  "Complete apartment cleaning per tenancy law": {
+    "original": "Complete apartment cleaning per tenancy law",
+    "it": "Pulizia completa dell'appartamento secondo la legge sulla locazione"
+  },
+  "100% handover guarantee included": {
+    "original": "100% handover guarantee included",
+    "it": "Garanzia di consegna al 100% inclusa"
+  },
+  "Free re-cleaning if complaints": {
+    "original": "Free re-cleaning if complaints",
+    "it": "Ripulitura gratuita in caso di reclami"
+  },
+  "Windows, blinds, kitchen, bathroom complete": {
+    "original": "Windows, blinds, kitchen, bathroom complete",
+    "it": "Finestre, persiane, cucina, bagno completi"
+  },
+  "Recommended for property handover to management": {
+    "original": "Recommended for property handover to management",
+    "it": "Consigliato per la consegna dell'immobile alla direzione"
+  },
+  "Household Help vs. Maintenance Cleaning": {
+    "original": "Household Help vs. Maintenance Cleaning",
+    "it": "Aiuto domestico vs. pulizia di manutenzione"
+  },
+  "Household Help": {
+    "original": "Household Help",
+    "it": "Aiuto domestico"
+  },
+  "Individual household support": {
+    "original": "Individual household support",
+    "it": "Sostegno familiare individuale"
+  },
+  "Cooking, washing, ironing, shopping": {
+    "original": "Cooking, washing, ironing, shopping",
+    "it": "Cucinare, lavare, stirare, fare la spesa"
+  },
+  "Flexible scheduling": {
+    "original": "Flexible scheduling",
+    "it": "Pianificazione flessibile"
+  },
+  "For private households and seniors": {
+    "original": "For private households and seniors",
+    "it": "Per famiglie private e anziani"
+  },
+  "Ideal for families, professionals and seniors": {
+    "original": "Ideal for families, professionals and seniors",
+    "it": "Ideale per famiglie, professionisti e anziani"
+  },
+  "Regular building and office cleaning": {
+    "original": "Regular building and office cleaning",
+    "it": "Pulizie periodiche di edifici e uffici"
+  },
+  "Stairwells, entrances, common areas": {
+    "original": "Stairwells, entrances, common areas",
+    "it": "Vani scale, ingressi, aree comuni"
+  },
+  "According to fixed cleaning schedule": {
+    "original": "According to fixed cleaning schedule",
+    "it": "Secondo il programma di pulizia fisso"
+  },
+  "For administrations and businesses": {
+    "original": "For administrations and businesses",
+    "it": "Per amministrazioni e imprese"
+  },
+  "Ideal for property managers and companies": {
+    "original": "Ideal for property managers and companies",
+    "it": "Ideale per amministratori immobiliari e aziende"
+  },
+  "DIY Move vs. Professional Moving Company": {
+    "original": "DIY Move vs. Professional Moving Company",
+    "it": "Trasloco fai da te contro azienda di traslochi professionale"
+  },
+  "DIY Moving": {
+    "original": "DIY Moving",
+    "it": "Movimento fai da te"
+  },
+  "Rent van yourself (CHF 150-300/day)": {
+    "original": "Rent van yourself (CHF 150-300/day)",
+    "it": "Noleggia tu stesso il furgone (CHF 150-300/giorno)"
+  },
+  "Organize helpers yourself": {
+    "original": "Organize helpers yourself",
+    "it": "Organizza tu stesso gli aiutanti"
+  },
+  "Risk of furniture damage": {
+    "original": "Risk of furniture damage",
+    "it": "Rischio di danni ai mobili"
+  },
+  "Time: 1-3 days": {
+    "original": "Time: 1-3 days",
+    "it": "Tempo: 1-3 giorni"
+  },
+  "Only for small apartments and short distances": {
+    "original": "Only for small apartments and short distances",
+    "it": "Solo per piccoli appartamenti e brevi distanze"
+  },
+  "CHF 300 - CHF 800 (+ own work time)": {
+    "original": "CHF 300 - CHF 800 (+ own work time)",
+    "it": "CHF 300 - CHF 800 (+ tempo di lavoro proprio)"
+  },
+  "Professional Moving Company": {
+    "original": "Professional Moving Company",
+    "it": "Azienda di traslochi professionale"
+  },
+  "Complete service incl. packing": {
+    "original": "Complete service incl. packing",
+    "it": "Servizio completo incl. imballaggio"
+  },
+  "Transport insurance included": {
+    "original": "Transport insurance included",
+    "it": "Assicurazione trasporto inclusa"
+  },
+  "Professional furniture protection": {
+    "original": "Professional furniture protection",
+    "it": "Protezione professionale dei mobili"
+  },
+  "Done in a few hours": {
+    "original": "Done in a few hours",
+    "it": "Fatto in poche ore"
+  },
+  "Recommended from 2.5 rooms or with valuable furniture": {
+    "original": "Recommended from 2.5 rooms or with valuable furniture",
+    "it": "Consigliato da 2,5 locali o con arredamento di pregio"
+  },
+  "Facility Service vs. Property Maintenance": {
+    "original": "Facility Service vs. Property Maintenance",
+    "it": "Servizio della struttura e manutenzione della proprietà"
+  },
+  "Facility Service": {
+    "original": "Facility Service",
+    "it": "Servizio di struttura"
+  },
+  "Holistic building management": {
+    "original": "Holistic building management",
+    "it": "Gestione olistica dell'edificio"
+  },
+  "Cleaning, technical, security": {
+    "original": "Cleaning, technical, security",
+    "it": "Pulizia, tecnica, sicurezza"
+  },
+  "For large properties and commercial": {
+    "original": "For large properties and commercial",
+    "it": "Per grandi immobili e commerciali"
+  },
+  "Individual service contracts": {
+    "original": "Individual service contracts",
+    "it": "Contratti di servizio individuali"
+  },
+  "Ideal for managers with multiple properties": {
+    "original": "Ideal for managers with multiple properties",
+    "it": "Ideale per gestori con più proprietà"
+  },
+  "Individual - upon request": {
+    "original": "Individual - upon request",
+    "it": "Individuale - su richiesta"
+  },
+  "Focus on cleaning and exterior maintenance": {
+    "original": "Focus on cleaning and exterior maintenance",
+    "it": "Concentrarsi sulla pulizia e sulla manutenzione esterna"
+  },
+  "Winter service and green care": {
+    "original": "Winter service and green care",
+    "it": "Servizio invernale e cura del verde"
+  },
+  "For individual residential buildings and SMEs": {
+    "original": "For individual residential buildings and SMEs",
+    "it": "Per singoli edifici residenziali e PMI"
+  },
+  "Regular maintenance": {
+    "original": "Regular maintenance",
+    "it": "Manutenzione regolare"
+  },
+  "Ideal for residential buildings and small commercial properties": {
+    "original": "Ideal for residential buildings and small commercial properties",
+    "it": "Ideale per edifici residenziali e piccoli immobili commerciali"
+  },
+  "Moving Preparation - Your Checklist": {
+    "original": "Moving Preparation - Your Checklist",
+    "it": "Preparazione al trasloco: la tua lista di controllo"
+  },
+  "Step by step to a stress-free move": {
+    "original": "Step by step to a stress-free move",
+    "it": "Passo dopo passo verso un trasloco senza stress"
+  },
+  "4 Weeks Before": {
+    "original": "4 Weeks Before",
+    "it": "4 settimane prima"
+  },
+  "Hire moving company and fix date": {
+    "original": "Hire moving company and fix date",
+    "it": "Assumi una ditta di traslochi e fissa la data"
+  },
+  "Cancel old apartment or arrange handover date": {
+    "original": "Cancel old apartment or arrange handover date",
+    "it": "Disdire il vecchio appartamento o concordare la data di consegna"
+  },
+  "Book move-out cleaning (with handover guarantee)": {
+    "original": "Book move-out cleaning (with handover guarantee)",
+    "it": "Prenotazione pulizia di trasloco (con garanzia di consegna)"
+  },
+  "Prepare address changes (post, insurance, bank)": {
+    "original": "Prepare address changes (post, insurance, bank)",
+    "it": "Preparare i cambi di indirizzo (posta, assicurazione, banca)"
+  },
+  "1 Week Before": {
+    "original": "1 Week Before",
+    "it": "1 settimana prima"
+  },
+  "Dispose of or donate unnecessary items": {
+    "original": "Dispose of or donate unnecessary items",
+    "it": "Smaltire o donare oggetti non necessari"
+  },
+  "Pack and label boxes": {
+    "original": "Pack and label boxes",
+    "it": "Imballare ed etichettare le scatole"
+  },
+  "Read meter readings (electricity, water, gas)": {
+    "original": "Read meter readings (electricity, water, gas)",
+    "it": "Leggere le letture dei contatori (elettricità, acqua, gas)"
+  },
+  "Arrange parking permit for moving truck": {
+    "original": "Arrange parking permit for moving truck",
+    "it": "Organizzare il permesso di parcheggio per il camion in movimento"
+  },
+  "Moving Day": {
+    "original": "Moving Day",
+    "it": "Giornata in movimento"
+  },
+  "Photograph apartment before moving": {
+    "original": "Photograph apartment before moving",
+    "it": "Fotografa l'appartamento prima di traslocare"
+  },
+  "Coordinate and brief moving team": {
+    "original": "Coordinate and brief moving team",
+    "it": "Coordinare e istruire la squadra in movimento"
+  },
+  "Check all rooms for forgotten items": {
+    "original": "Check all rooms for forgotten items",
+    "it": "Controlla tutte le stanze per verificare la presenza di oggetti dimenticati"
+  },
+  "Prepare keys for handover": {
+    "original": "Prepare keys for handover",
+    "it": "Preparare le chiavi per la consegna"
+  },
+  "After the Move": {
+    "original": "After the Move",
+    "it": "Dopo il trasloco"
+  },
+  "Have move-out cleaning done (handover guarantee)": {
+    "original": "Have move-out cleaning done (handover guarantee)",
+    "it": "Effettuare le pulizie di trasloco (garanzia di consegna)"
+  },
+  "Property handover with management and protocol": {
+    "original": "Property handover with management and protocol",
+    "it": "Consegna della proprietà con gestione e protocollo"
+  },
+  "Set up new apartment and finalize address changes": {
+    "original": "Set up new apartment and finalize address changes",
+    "it": "Configura il nuovo appartamento e finalizza i cambiamenti di indirizzo"
+  },
+  "Reclaim rental deposit from old apartment": {
+    "original": "Reclaim rental deposit from old apartment",
+    "it": "Recuperare il deposito cauzionale dal vecchio appartamento"
+  },
+  "Moving & Costs": {
+    "original": "Moving & Costs",
+    "it": "Trasloco e costi"
+  },
+  "How much does a move cost in Switzerland?": {
+    "original": "How much does a move cost in Switzerland?",
+    "it": "Quanto costa un trasloco in Svizzera?"
+  },
+  "How do you prepare for a move?": {
+    "original": "How do you prepare for a move?",
+    "it": "Come ti prepari per un trasloco?"
+  },
+  "Moving preparation ideally starts 4 weeks before the move date. Most important steps: book a moving company, organize move-out cleaning, initiate address changes and pack systematically.": {
+    "original": "Moving preparation ideally starts 4 weeks before the move date. Most important steps: book a moving company, organize move-out cleaning, initiate address changes and pack systematically.",
+    "it": "La preparazione al trasloco inizia idealmente 4 settimane prima della data del trasloco. I passaggi più importanti: prenotare una ditta di traslochi, organizzare la pulizia del trasloco, avviare i cambi di indirizzo e fare le valigie in modo sistematico."
+  },
+  "Thorough preparation saves time, money and stress. Start 4 weeks ahead by booking a professional moving company and move-out cleaning with handover guarantee. Inform the post office, insurance companies and bank of your new address. One week before the move, systematically pack boxes, read meter readings and arrange a parking permit for the moving truck. On moving day, photograph the apartment for the handover protocol and coordinate the moving team. After the move, have the professional move-out cleaning done and complete the property handover with management. With SwissCleanMove you can book moving, cleaning and disposal as a complete package.": {
+    "original": "Thorough preparation saves time, money and stress. Start 4 weeks ahead by booking a professional moving company and move-out cleaning with handover guarantee. Inform the post office, insurance companies and bank of your new address. One week before the move, systematically pack boxes, read meter readings and arrange a parking permit for the moving truck. On moving day, photograph the apartment for the handover protocol and coordinate the moving team. After the move, have the professional move-out cleaning done and complete the property handover with management. With SwissCleanMove you can book moving, cleaning and disposal as a complete package.",
+    "it": "Una preparazione approfondita fa risparmiare tempo, denaro e stress. Inizia con 4 settimane di anticipo prenotando una ditta di traslochi professionale e pulizia del trasloco con garanzia di consegna. Comunica il tuo nuovo indirizzo all'ufficio postale, alle assicurazioni e alla banca. Una settimana prima del trasloco, imballate sistematicamente gli scatoloni, leggete le letture dei contatori e procuratevi un permesso di parcheggio per il camion in trasloco. Il giorno del trasloco fotografa l'appartamento per il protocollo di consegna e coordina la squadra del trasloco. Dopo il trasloco, fai eseguire la pulizia professionale e completa la consegna della proprietà con la direzione. Con SwissCleanMove potete prenotare il trasloco, la pulizia e lo smaltimento come un pacchetto completo."
+  },
+  "Move-Out & End Cleaning": {
+    "original": "Move-Out & End Cleaning",
+    "it": "Trasferimento e fine pulizia"
+  },
+  "How much does move-out cleaning cost?": {
+    "original": "How much does move-out cleaning cost?",
+    "it": "Quanto costano le pulizie di trasloco?"
+  },
+  "What does handover guarantee mean?": {
+    "original": "What does handover guarantee mean?",
+    "it": "Cosa significa garanzia di consegna?"
+  },
+  "The handover guarantee means that SwissCleanMove guarantees the apartment meets the cleaning standard during handover to management. Free re-cleaning is provided if there are complaints.": {
+    "original": "The handover guarantee means that SwissCleanMove guarantees the apartment meets the cleaning standard during handover to management. Free re-cleaning is provided if there are complaints.",
+    "it": "La garanzia di consegna significa che SwissCleanMove garantisce che l'appartamento soddisfa gli standard di pulizia durante la consegna alla direzione. In caso di reclami è prevista una nuova pulizia gratuita."
+  },
+  "The handover guarantee is a quality promise from SwissCleanMove. It means our professional move-out cleaning meets the strict standards that property managers require during apartment handover. Specifically, this includes the complete cleaning of all rooms, windows (interior and exterior), blinds, kitchen including oven, fridge and extractor hood, bathroom and sanitary facilities and all floors and surfaces. If management has complaints during the inspection, our team returns free of charge to make corrections. This promise protects you from additional claims and gives you the certainty that your rental deposit will not be withheld due to cleaning deficiencies. The handover guarantee is automatically included in the price of every SwissCleanMove move-out cleaning.": {
+    "original": "The handover guarantee is a quality promise from SwissCleanMove. It means our professional move-out cleaning meets the strict standards that property managers require during apartment handover. Specifically, this includes the complete cleaning of all rooms, windows (interior and exterior), blinds, kitchen including oven, fridge and extractor hood, bathroom and sanitary facilities and all floors and surfaces. If management has complaints during the inspection, our team returns free of charge to make corrections. This promise protects you from additional claims and gives you the certainty that your rental deposit will not be withheld due to cleaning deficiencies. The handover guarantee is automatically included in the price of every SwissCleanMove move-out cleaning.",
+    "it": "La garanzia di consegna è una promessa di qualità di SwissCleanMove. Ciò significa che la nostra pulizia professionale dei traslochi soddisfa i rigorosi standard richiesti dai gestori delle proprietà durante la consegna dell'appartamento. Nello specifico si tratta della pulizia completa di tutte le stanze, delle finestre (interne ed esterne), delle persiane, della cucina comprensiva di forno, frigorifero e cappa aspirante, del bagno e dei sanitari e di tutti i pavimenti e superfici. Se la direzione presenta reclami durante l'ispezione, il nostro team ritorna gratuitamente per apportare correzioni. Questa promessa vi protegge da ulteriori pretese e vi dà la certezza che la vostra cauzione d'affitto non verrà trattenuta a causa di carenze di pulizia. La garanzia di consegna è automaticamente inclusa nel prezzo di ogni pulizia di trasloco SwissCleanMove."
+  },
+  "What is the difference between end cleaning and move-out cleaning?": {
+    "original": "What is the difference between end cleaning and move-out cleaning?",
+    "it": "Qual è la differenza tra pulizia finale e pulizia trasloco?"
+  },
+  "Move-out cleaning is a complete apartment cleaning with handover guarantee specifically for property handover. End cleaning is a general deep cleaning without handover guarantee.": {
+    "original": "Move-out cleaning is a complete apartment cleaning with handover guarantee specifically for property handover. End cleaning is a general deep cleaning without handover guarantee.",
+    "it": "La pulizia di trasloco è una pulizia completa dell'appartamento con garanzia di consegna specifica per la consegna della proprietà. La pulizia finale è una pulizia generale profonda senza garanzia di consegna."
+  },
+  "Although the terms are often used interchangeably, there is an important difference. Move-out cleaning (also called handover cleaning) is specifically tailored to Swiss tenancy law requirements and includes the 100% handover guarantee. It covers all areas checked during an official apartment inspection: windows inside and outside, blinds, complete kitchen, sanitary facilities and all floors. Free re-cleaning is provided if there are complaints. A general end cleaning or deep cleaning, on the other hand, is an intensive cleaning without specific reference to tenancy law inspection and without guarantee. When moving and handing over the apartment to management, we always recommend move-out cleaning with handover guarantee - for your security and a stress-free move-out.": {
+    "original": "Although the terms are often used interchangeably, there is an important difference. Move-out cleaning (also called handover cleaning) is specifically tailored to Swiss tenancy law requirements and includes the 100% handover guarantee. It covers all areas checked during an official apartment inspection: windows inside and outside, blinds, complete kitchen, sanitary facilities and all floors. Free re-cleaning is provided if there are complaints. A general end cleaning or deep cleaning, on the other hand, is an intensive cleaning without specific reference to tenancy law inspection and without guarantee. When moving and handing over the apartment to management, we always recommend move-out cleaning with handover guarantee - for your security and a stress-free move-out.",
+    "it": "Sebbene i termini siano spesso usati in modo intercambiabile, esiste una differenza importante. La pulizia di trasloco (chiamata anche pulizia di riconsegna) è specificatamente adattata ai requisiti del diritto svizzero sulla locazione e comprende la garanzia di consegna al 100%. Copre tutte le aree controllate durante un'ispezione ufficiale dell'appartamento: finestre interne ed esterne, persiane, cucina completa, servizi igienici e tutti i pavimenti. In caso di reclami è prevista una nuova pulizia gratuita. La pulizia finale generale o pulizia profonda è invece una pulizia intensiva senza riferimento specifico al controllo del diritto di locazione e senza garanzia. In caso di trasloco e di consegna dell'appartamento alla direzione, consigliamo sempre la pulizia di trasloco con garanzia di consegna - per la vostra sicurezza e per un trasloco senza stress."
+  },
+  "Household Help & Cleaning Lady": {
+    "original": "Household Help & Cleaning Lady",
+    "it": "Aiuto domestico e donna delle pulizie"
+  },
+  "How much does a household helper cost?": {
+    "original": "How much does a household helper cost?",
+    "it": "Quanto costa un aiuto domestico?"
+  },
+  "How much does a cleaning lady cost per hour?": {
+    "original": "How much does a cleaning lady cost per hour?",
+    "it": "Quanto costa all'ora una donna delle pulizie?"
+  },
+  "How much does facility service cost in Switzerland?": {
+    "original": "How much does facility service cost in Switzerland?",
+    "it": "Quanto costa il servizio facility in Svizzera?"
+  },
+  "How much does maintenance cleaning cost?": {
+    "original": "How much does maintenance cleaning cost?",
+    "it": "Quanto costa la pulizia di manutenzione?"
+  },
+  "Disposal & Clearance": {
+    "original": "Disposal & Clearance",
+    "it": "Smaltimento e liquidazione"
+  },
+  "How much does apartment clearance cost?": {
+    "original": "How much does apartment clearance cost?",
+    "it": "Quanto costa lo sgombero dell'appartamento?"
+  },
+  "Service & Trust": {
+    "original": "Service & Trust",
+    "it": "Servizio e fiducia"
+  },
+  "Which regions does SwissCleanMove serve?": {
+    "original": "Which regions does SwissCleanMove serve?",
+    "it": "Quali regioni serve SwissCleanMove?"
+  },
+  "SwissCleanMove operates Switzerland-wide with focus on Biel/Bienne, Seeland, Bern, Solothurn, Basel, Zurich, Fribourg, NeuchÃ¢tel and other cantons.": {
+    "original": "SwissCleanMove operates Switzerland-wide with focus on Biel/Bienne, Seeland, Bern, Solothurn, Basel, Zurich, Fribourg, NeuchÃ¢tel and other cantons.",
+    "it": "SwissCleanMove opera in tutta la Svizzera con particolare attenzione a Biel/Bienne, Seeland, Berna, Soletta, Basilea, Zurigo, Friburgo, Neuchâtel e altri cantoni."
+  },
+  "SwissCleanMove offers all services - moving, move-out cleaning, household help, facility service, property maintenance and disposal - throughout Switzerland. Our headquarters is in Biel/Bienne (Orpundstrasse 31, 2504 Biel). From there we intensively serve the Seeland region (Nidau, BrÃ¼gg, Ipsach, Lyss, Aarberg, Pieterlen) as well as the cantons of Bern, Solothurn, Basel, Zurich, Aargau, Fribourg, NeuchÃ¢tel, Lucerne, St. Gallen, Thurgau, Schwyz, Zug, Jura, Geneva, Lausanne/Vaud and Wallis/Valais. For each location we adapt our services to regional requirements and provide local contacts.": {
+    "original": "SwissCleanMove offers all services - moving, move-out cleaning, household help, facility service, property maintenance and disposal - throughout Switzerland. Our headquarters is in Biel/Bienne (Orpundstrasse 31, 2504 Biel). From there we intensively serve the Seeland region (Nidau, BrÃ¼gg, Ipsach, Lyss, Aarberg, Pieterlen) as well as the cantons of Bern, Solothurn, Basel, Zurich, Aargau, Fribourg, NeuchÃ¢tel, Lucerne, St. Gallen, Thurgau, Schwyz, Zug, Jura, Geneva, Lausanne/Vaud and Wallis/Valais. For each location we adapt our services to regional requirements and provide local contacts.",
+    "it": "SwissCleanMove offre tutti i servizi - traslochi, pulizie di trasloco, aiuto domestico, servizi per strutture, manutenzione e smaltimento di immobili - in tutta la Svizzera. La nostra sede è a Bienne/Bienne (Orpundstrasse 31, 2504 Bienne). Da lì serviamo intensamente la regione del Seeland (Nidau, Brügg, Ipsach, Lyss, Aarberg, Pieterlen) nonché i cantoni di Berna, Soletta, Basilea, Zurigo, Argovia, Friburgo, Neuchâtel, Lucerna, San Gallo, Turgovia, Svitto, Zugo, Giura, Ginevra, Losanna/Vaud e Vallese/Vallese. Per ogni località adattiamo i nostri servizi ai requisiti regionali e forniamo contatti locali."
+  },
+  "Why Trust SwissCleanMove?": {
+    "original": "Why Trust SwissCleanMove?",
+    "it": "Perché affidarsi a SwissCleanMove?"
+  },
+  "Insured Services": {
+    "original": "Insured Services",
+    "it": "Servizi assicurati"
+  },
+  "All moves and cleanings are fully insured. Your furniture and property are in safe hands with us.": {
+    "original": "All moves and cleanings are fully insured. Your furniture and property are in safe hands with us.",
+    "it": "Tutti i traslochi e le pulizie sono completamente assicurati. Con noi i tuoi mobili e i tuoi beni sono in buone mani."
+  },
+  "Trained Teams": {
+    "original": "Trained Teams",
+    "it": "Squadre addestrate"
+  },
+  "Our staff are professionally trained and work according to Swiss quality standards. Regular training ensures consistently high quality.": {
+    "original": "Our staff are professionally trained and work according to Swiss quality standards. Regular training ensures consistently high quality.",
+    "it": "Il nostro personale è formato professionalmente e lavora secondo gli standard di qualità svizzeri. La formazione regolare garantisce una qualità costantemente elevata."
+  },
+  "100% Handover Guarantee": {
+    "original": "100% Handover Guarantee",
+    "it": "Garanzia di consegna al 100%."
+  },
+  "We guarantee successful apartment handover with every move-out cleaning. Free re-cleaning in case of complaints.": {
+    "original": "We guarantee successful apartment handover with every move-out cleaning. Free re-cleaning in case of complaints.",
+    "it": "Garantiamo la corretta consegna dell'appartamento ad ogni pulizia di trasloco. Ripulitura gratuita in caso di reclami."
+  },
+  "Fast Scheduling": {
+    "original": "Fast Scheduling",
+    "it": "Pianificazione veloce"
+  },
+  "Flexible and fast scheduling - even on short notice. We adapt to your schedule and are available on weekends.": {
+    "original": "Flexible and fast scheduling - even on short notice. We adapt to your schedule and are available on weekends.",
+    "it": "Pianificazione flessibile e veloce, anche con breve preavviso. Ci adattiamo al tuo programma e siamo disponibili nei fine settimana."
+  },
+  "Transparent Fixed Prices": {
+    "original": "Transparent Fixed Prices",
+    "it": "Prezzi fissi trasparenti"
+  },
+  "No hidden costs, no surprises. You receive a binding fixed-price quote before placing the order.": {
+    "original": "No hidden costs, no surprises. You receive a binding fixed-price quote before placing the order.",
+    "it": "Nessun costo nascosto, nessuna sorpresa. Riceverete un preventivo vincolante a prezzo fisso prima di effettuare l'ordine."
+  },
+  "Local Swiss Expertise": {
+    "original": "Local Swiss Expertise",
+    "it": "Competenza locale svizzera"
+  },
+  "Based in Biel/Bienne, we know local requirements and work closely with property managers throughout Switzerland.": {
+    "original": "Based in Biel/Bienne, we know local requirements and work closely with property managers throughout Switzerland.",
+    "it": "Con sede a Biel/Bienne, conosciamo le esigenze locali e lavoriamo a stretto contatto con gestori immobiliari in tutta la Svizzera."
+  },
+  "Moving": {
+    "original": "Moving",
+    "it": "In movimento"
+  },
+  "Moving Switzerland": {
+    "original": "Moving Switzerland",
+    "it": "Muovere la Svizzera"
+  },
+  "Moving Biel": {
+    "original": "Moving Biel",
+    "it": "Bienne in movimento"
+  },
+  "Moving Bern": {
+    "original": "Moving Bern",
+    "it": "Berna in movimento"
+  },
+  "Moving Zurich": {
+    "original": "Moving Zurich",
+    "it": "Muoversi a Zurigo"
+  },
+  "Moving Basel": {
+    "original": "Moving Basel",
+    "it": "Basilea in movimento"
+  },
+  "Moving Company Biel": {
+    "original": "Moving Company Biel",
+    "it": "Ditta di traslochi Bienne"
+  },
+  "Cleaning": {
+    "original": "Cleaning",
+    "it": "Pulizia"
+  },
+  "Move-Out Cleaning CH": {
+    "original": "Move-Out Cleaning CH",
+    "it": "Pulizia trasloco CH"
+  },
+  "Cleaning Company CH": {
+    "original": "Cleaning Company CH",
+    "it": "Impresa di pulizie CH"
+  },
+  "End Cleaning Biel": {
+    "original": "End Cleaning Biel",
+    "it": "Fine pulizia Bienne"
+  },
+  "Cleaning Biel": {
+    "original": "Cleaning Biel",
+    "it": "Pulizia Bienne"
+  },
+  "Window Cleaning Biel": {
+    "original": "Window Cleaning Biel",
+    "it": "Pulizia delle finestre Bienne"
+  },
+  "Household & Facility": {
+    "original": "Household & Facility",
+    "it": "Famiglia e struttura"
+  },
+  "Household Help Biel": {
+    "original": "Household Help Biel",
+    "it": "Aiuto domestico Bienne"
+  },
+  "Facility Service CH": {
+    "original": "Facility Service CH",
+    "it": "Servizio strutture CH"
+  },
+  "Maintenance CH": {
+    "original": "Maintenance CH",
+    "it": "Manutenzione CAP"
+  },
+  "Maintenance Cleaning Biel": {
+    "original": "Maintenance Cleaning Biel",
+    "it": "Manutenzione Pulizia Bienne"
+  },
+  "Disposal Biel": {
+    "original": "Disposal Biel",
+    "it": "Smaltimento Bienne"
+  },
+  "Regions": {
+    "original": "Regions",
+    "it": "Regioni"
+  },
+  "Canton Bern": {
+    "original": "Canton Bern",
+    "it": "Canton Berna"
+  },
+  "Canton Zurich": {
+    "original": "Canton Zurich",
+    "it": "Cantone Zurigo"
+  },
+  "Canton Basel": {
+    "original": "Canton Basel",
+    "it": "Canton Basilea"
+  },
+  "Canton Solothurn": {
+    "original": "Canton Solothurn",
+    "it": "Canton Soletta"
+  },
+  "All Regions": {
+    "original": "All Regions",
+    "it": "Tutte le regioni"
+  },
+  "Request a Free Quote": {
+    "original": "Request a Free Quote",
+    "it": "Richiedi un preventivo gratuito"
+  },
+  "Planning a move, move-out cleaning, household help or disposal? Contact us for a free consultation and a non-binding fixed-price quote.": {
+    "original": "Planning a move, move-out cleaning, household help or disposal? Contact us for a free consultation and a non-binding fixed-price quote.",
+    "it": "Stai pianificando un trasloco, una pulizia di trasloco, un aiuto domestico o uno smaltimento? Contattaci per una consulenza gratuita e un preventivo a prezzo fisso senza impegno."
+  },
+  "Is Flexible": {
+    "original": "Is Flexible",
+    "it": "È flessibile"
+  },
+  "Move Volume": {
+    "original": "Move Volume",
+    "it": "Sposta volume"
+  },
+  "Request Type": {
+    "original": "Request Type",
+    "it": "Tipo di richiesta"
+  },
+  "Floor": {
+    "original": "Floor",
+    "it": "Pavimento"
+  },
+  "Rooms": {
+    "original": "Rooms",
+    "it": "Camere"
+  },
+  "Box Types": {
+    "original": "Box Types",
+    "it": "Tipi di scatole"
+  },
+  "Move Services": {
+    "original": "Move Services",
+    "it": "Servizi di spostamento"
+  },
+  "Access (Destination)": {
+    "original": "Access (Destination)",
+    "it": "Accesso (Destinazione)"
+  },
+  "Street (Destination)": {
+    "original": "Street (Destination)",
+    "it": "Via (destinazione)"
+  },
+  "Privacy Accepted": {
+    "original": "Privacy Accepted",
+    "it": "Privacy accettata"
+  },
+  "Furniture": {
+    "original": "Furniture",
+    "it": "Mobilia"
+  },
+  "ZIP/City (Destination)": {
+    "original": "ZIP/City (Destination)",
+    "it": "CAP/Città (Destinazione)"
+  },
+  "Preferred Date": {
+    "original": "Preferred Date",
+    "it": "Data preferita"
+  },
+  "Preferred Time": {
+    "original": "Preferred Time",
+    "it": "Orario preferito"
+  },
+  "Parking": {
+    "original": "Parking",
+    "it": "Parcheggio"
+  },
+  "Contact Methods": {
+    "original": "Contact Methods",
+    "it": "Metodi di contatto"
+  },
+  "Access (Origin)": {
+    "original": "Access (Origin)",
+    "it": "Accesso (Origine)"
+  },
+  "Street (Origin)": {
+    "original": "Street (Origin)",
+    "it": "Strada (origine)"
+  },
+  "Elevator": {
+    "original": "Elevator",
+    "it": "Ascensore"
+  },
+  "Further Requests": {
+    "original": "Further Requests",
+    "it": "Ulteriori richieste"
+  },
+  "ZIP/City (Origin)": {
+    "original": "ZIP/City (Origin)",
+    "it": "CAP/Città (Origine)"
+  },
+  "Special Items": {
+    "original": "Special Items",
+    "it": "Articoli speciali"
+  },
+  "Conditions (Destination)": {
+    "original": "Conditions (Destination)",
+    "it": "Condizioni (Destinazione)"
+  },
+  "Living Area (m²)": {
+    "original": "Living Area (m²)",
+    "it": "Superficie abitabile (m²)"
+  },
+  "Conditions (Origin)": {
+    "original": "Conditions (Origin)",
+    "it": "Condizioni (Origine)"
+  },
+  "Property Type": {
+    "original": "Property Type",
+    "it": "Tipo di proprietà"
+  },
+  "Standard Box Qty": {
+    "original": "Standard Box Qty",
+    "it": "Qtà scatola standard"
+  },
+  "Packing Materials": {
+    "original": "Packing Materials",
+    "it": "Materiali da imballaggio"
+  },
+  "Parking Distance": {
+    "original": "Parking Distance",
+    "it": "Distanza di parcheggio"
+  },
+  "Clothes Box Qty": {
+    "original": "Clothes Box Qty",
+    "it": "Quantità di scatole per vestiti"
+  },
+  "Fragile Box Qty": {
+    "original": "Fragile Box Qty",
+    "it": "Qtà scatola fragile"
+  },
+  "Items for Assembly": {
+    "original": "Items for Assembly",
+    "it": "Articoli per l'assemblaggio"
+  },
+  "Items for Disassembly": {
+    "original": "Items for Disassembly",
+    "it": "Articoli per lo smontaggio"
+  },
+  "Desired Service": {
+    "original": "Desired Service",
+    "it": "Servizio desiderato"
+  },
+  "Cleaning Location": {
+    "original": "Cleaning Location",
+    "it": "Posizione della pulizia"
+  },
+  "Number of Rooms": {
+    "original": "Number of Rooms",
+    "it": "Numero di stanze"
+  },
+  "Bedrooms": {
+    "original": "Bedrooms",
+    "it": "Camere da letto"
+  },
+  "Living Rooms": {
+    "original": "Living Rooms",
+    "it": "Soggiorni"
+  },
+  "Bathrooms": {
+    "original": "Bathrooms",
+    "it": "Bagni"
+  },
+  "Separate WC": {
+    "original": "Separate WC",
+    "it": "WC separato"
+  },
+  "Kitchens": {
+    "original": "Kitchens",
+    "it": "Cucine"
+  },
+  "Cleaning Areas": {
+    "original": "Cleaning Areas",
+    "it": "Aree di pulizia"
+  },
+  "Sanitary Features": {
+    "original": "Sanitary Features",
+    "it": "Caratteristiche sanitarie"
+  },
+  "Kitchen Features": {
+    "original": "Kitchen Features",
+    "it": "Caratteristiche della cucina"
+  },
+  "Normal Windows": {
+    "original": "Normal Windows",
+    "it": "Finestre normali"
+  },
+  "French Doors": {
+    "original": "French Doors",
+    "it": "Porte francesi"
+  },
+  "Other Glass Surfaces": {
+    "original": "Other Glass Surfaces",
+    "it": "Altre superfici in vetro"
+  },
+  "Panoramic Windows": {
+    "original": "Panoramic Windows",
+    "it": "Finestre panoramiche"
+  },
+  "Number of Windows": {
+    "original": "Number of Windows",
+    "it": "Numero di finestre"
+  },
+  "Window Type": {
+    "original": "Window Type",
+    "it": "Tipo di finestra"
+  },
+  "Shading Type": {
+    "original": "Shading Type",
+    "it": "Tipo di ombreggiatura"
+  },
+  "Blinds/Shutters": {
+    "original": "Blinds/Shutters",
+    "it": "Persiane/persiane"
+  },
+  "Window Special Features": {
+    "original": "Window Special Features",
+    "it": "Caratteristiche speciali della finestra"
+  },
+  "Floor Types": {
+    "original": "Floor Types",
+    "it": "Tipi di pavimento"
+  },
+  "Other Rooms": {
+    "original": "Other Rooms",
+    "it": "Altre stanze"
+  },
+  "Condition": {
+    "original": "Condition",
+    "it": "Condizione"
+  },
+  "Pets": {
+    "original": "Pets",
+    "it": "Animali domestici"
+  },
+  "Handover Date": {
+    "original": "Handover Date",
+    "it": "Data di consegna"
+  },
+  "Cleaning Date": {
+    "original": "Cleaning Date",
+    "it": "Data di pulizia"
+  },
+  "Desired Cleaning Date": {
+    "original": "Desired Cleaning Date",
+    "it": "Data di pulizia desiderata"
+  },
+  "Delivery/Handover Date": {
+    "original": "Delivery/Handover Date",
+    "it": "Data di consegna/consegna"
+  },
+  "Handover Options": {
+    "original": "Handover Options",
+    "it": "Opzioni di consegna"
+  },
+  "Management Contact": {
+    "original": "Management Contact",
+    "it": "Contatto della direzione"
+  },
+  "Key Handover": {
+    "original": "Key Handover",
+    "it": "Consegna delle chiavi"
+  },
+  "Notes": {
+    "original": "Notes",
+    "it": "Note"
+  },
+  "Cleaning Services": {
+    "original": "Cleaning Services",
+    "it": "Servizi di pulizia"
+  },
+  "Outdoor Services": {
+    "original": "Outdoor Services",
+    "it": "Servizi all'aperto"
+  },
+  "Winter Services": {
+    "original": "Winter Services",
+    "it": "Servizi invernali"
+  },
+  "Technical Services": {
+    "original": "Technical Services",
+    "it": "Servizi tecnici"
+  },
+  "Waste Services": {
+    "original": "Waste Services",
+    "it": "Servizi per i rifiuti"
+  },
+  "Organisation": {
+    "original": "Organisation",
+    "it": "Organizzazione"
+  },
+  "Additional Services": {
+    "original": "Additional Services",
+    "it": "Servizi aggiuntivi"
+  },
+  "Access Type": {
+    "original": "Access Type",
+    "it": "Tipo di accesso"
+  },
+  "Contract Type": {
+    "original": "Contract Type",
+    "it": "Tipo di contratto"
+  },
+  "Area (m²)": {
+    "original": "Area (m²)",
+    "it": "Superficie (m²)"
+  },
+  "Units": {
+    "original": "Units",
+    "it": "Unità"
+  },
+  "Floors": {
+    "original": "Floors",
+    "it": "Pavimenti"
+  },
+  "Staircases": {
+    "original": "Staircases",
+    "it": "Scale"
+  },
+  "Elevators": {
+    "original": "Elevators",
+    "it": "Ascensori"
+  },
+  "Entrances": {
+    "original": "Entrances",
+    "it": "Ingressi"
+  },
+  "Parking Spaces": {
+    "original": "Parking Spaces",
+    "it": "Parcheggi"
+  },
+  "Special Requirements": {
+    "original": "Special Requirements",
+    "it": "Requisiti speciali"
+  },
+  "Desired Date": {
+    "original": "Desired Date",
+    "it": "Data desiderata"
+  },
+  "Current Living": {
+    "original": "Current Living",
+    "it": "Vita attuale"
+  },
+  "Current Floor": {
+    "original": "Current Floor",
+    "it": "Piano attuale"
+  },
+  "Current Living Area": {
+    "original": "Current Living Area",
+    "it": "Zona giorno attuale"
+  },
+  "Current Rooms": {
+    "original": "Current Rooms",
+    "it": "Stanze attuali"
+  },
+  "Moving To Address": {
+    "original": "Moving To Address",
+    "it": "Spostamento all'indirizzo"
+  },
+  "New Living Area": {
+    "original": "New Living Area",
+    "it": "Nuova zona giorno"
+  },
+  "New Rooms": {
+    "original": "New Rooms",
+    "it": "Nuove stanze"
+  },
+  "People Moving": {
+    "original": "People Moving",
+    "it": "Persone in movimento"
+  },
+  "Moving Boxes": {
+    "original": "Moving Boxes",
+    "it": "Scatole per il trasloco"
+  },
+  "Disposal Type": {
+    "original": "Disposal Type",
+    "it": "Tipo di smaltimento"
+  },
+  "Estimated Volume": {
+    "original": "Estimated Volume",
+    "it": "Volume stimato"
+  },
+  "Material Amount": {
+    "original": "Material Amount",
+    "it": "Importo materiale"
+  },
+  "Materials": {
+    "original": "Materials",
+    "it": "Materiali"
+  },
+  "Waste Items": {
+    "original": "Waste Items",
+    "it": "Articoli di scarto"
+  },
+  "Heavy Items": {
+    "original": "Heavy Items",
+    "it": "Oggetti pesanti"
+  },
+  "Disassembly Needed": {
+    "original": "Disassembly Needed",
+    "it": "È necessario lo smontaggio"
+  },
+  "Extra Services": {
+    "original": "Extra Services",
+    "it": "Servizi aggiuntivi"
+  },
+  "Project Phase": {
+    "original": "Project Phase",
+    "it": "Fase del progetto"
+  },
+  "Contamination": {
+    "original": "Contamination",
+    "it": "Contaminazione"
+  },
+  "Window Issues": {
+    "original": "Window Issues",
+    "it": "Problemi di finestra"
+  },
+  "Site Conditions": {
+    "original": "Site Conditions",
+    "it": "Condizioni del sito"
+  },
+  "Facility Type": {
+    "original": "Facility Type",
+    "it": "Tipo di struttura"
+  },
+  "Kitchen Area": {
+    "original": "Kitchen Area",
+    "it": "Zona cucina"
+  },
+  "Dining Area": {
+    "original": "Dining Area",
+    "it": "Sala da pranzo"
+  },
+  "Seating": {
+    "original": "Seating",
+    "it": "Posti a sedere"
+  },
+  "Restrooms": {
+    "original": "Restrooms",
+    "it": "Servizi igienici"
+  },
+  "Staff Restrooms": {
+    "original": "Staff Restrooms",
+    "it": "Servizi igienici per il personale"
+  },
+  "Kitchen Items": {
+    "original": "Kitchen Items",
+    "it": "Articoli da cucina"
+  },
+  "Dining Items": {
+    "original": "Dining Items",
+    "it": "Articoli da pranzo"
+  },
+  "Special Areas": {
+    "original": "Special Areas",
+    "it": "Aree Speciali"
+  },
+  "Sanitary Rooms": {
+    "original": "Sanitary Rooms",
+    "it": "Locali sanitari"
+  },
+  "Deployment Frequency": {
+    "original": "Deployment Frequency",
+    "it": "Frequenza di distribuzione"
+  },
+  "Cleaning Duration": {
+    "original": "Cleaning Duration",
+    "it": "Durata della pulizia"
+  },
+  "Usage": {
+    "original": "Usage",
+    "it": "Utilizzo"
+  },
+  "Moving Type": {
+    "original": "Moving Type",
+    "it": "Tipo in movimento"
+  },
+  "Inventory": {
+    "original": "Inventory",
+    "it": "Inventario"
+  },
+  "Special Transport": {
+    "original": "Special Transport",
+    "it": "Trasporti speciali"
+  },
+  "Access": {
+    "original": "Access",
+    "it": "Accesso"
+  },
+  "Difficulties": {
+    "original": "Difficulties",
+    "it": "Difficoltà"
+  },
+  "Material": {
+    "original": "Material",
+    "it": "Materiale"
+  },
+  "Desired Hours": {
+    "original": "Desired Hours",
+    "it": "Orari desiderati"
+  },
+  "Cleaning Type": {
+    "original": "Cleaning Type",
+    "it": "Tipo di pulizia"
+  },
+  "Regular Tasks": {
+    "original": "Regular Tasks",
+    "it": "Compiti regolari"
+  },
+  "Extra Tasks": {
+    "original": "Extra Tasks",
+    "it": "Compiti aggiuntivi"
+  },
+  "Has Pets": {
+    "original": "Has Pets",
+    "it": "Ha animali domestici"
+  },
+  "Persons": {
+    "original": "Persons",
+    "it": "Persone"
+  },
+  "Wish Day": {
+    "original": "Wish Day",
+    "it": "Giorno dei desideri"
+  },
+  "Equipment": {
+    "original": "Equipment",
+    "it": "Attrezzatura"
+  },
+  "Desired Services": {
+    "original": "Desired Services",
+    "it": "Servizi desiderati"
+  },
+  "Desired Frequency": {
+    "original": "Desired Frequency",
+    "it": "Frequenza desiderata"
+  },
+  "Facility Service Type": {
+    "original": "Facility Service Type",
+    "it": "Tipo di servizio della struttura"
+  },
+  "Cleaning Frequency": {
+    "original": "Cleaning Frequency",
+    "it": "Frequenza di pulizia"
+  },
+  "Flexibility": {
+    "original": "Flexibility",
+    "it": "Flessibilità"
+  },
+  "General Cleaning": {
+    "original": "General Cleaning",
+    "it": "Pulizia generale"
+  },
+  "Maintenance Cleaning Items": {
+    "original": "Maintenance Cleaning Items",
+    "it": "Articoli per la pulizia della manutenzione"
+  },
+  "Special Cleaning Items": {
+    "original": "Special Cleaning Items",
+    "it": "Articoli speciali per la pulizia"
+  },
+  "Access & Organisation": {
+    "original": "Access & Organisation",
+    "it": "Accesso e organizzazione"
+  },
+  "Working Hours": {
+    "original": "Working Hours",
+    "it": "Orario di lavoro"
+  },
+  "Property Information": {
+    "original": "Property Information",
+    "it": "Informazioni sulla proprietà"
+  },
+  "Total Area (m²)": {
+    "original": "Total Area (m²)",
+    "it": "Superficie totale (m²)"
+  },
+  "Outdoor Area (m²)": {
+    "original": "Outdoor Area (m²)",
+    "it": "Area esterna (m²)"
+  },
+  "Number of Floors": {
+    "original": "Number of Floors",
+    "it": "Numero di piani"
+  },
+  "Street / ZIP / City": {
+    "original": "Street / ZIP / City",
+    "it": "Via/CAP/Città"
+  },
+  "Square Meters": {
+    "original": "Square Meters",
+    "it": "Metri quadrati"
+  },
+  "Service Category": {
+    "original": "Service Category",
+    "it": "Categoria di servizio"
+  },
+  "Service Type": {
+    "original": "Service Type",
+    "it": "Tipo di servizio"
+  },
+  "Selected Add-ons": {
+    "original": "Selected Add-ons",
+    "it": "Componenti aggiuntivi selezionati"
+  },
+  "Hours": {
+    "original": "Hours",
+    "it": "Ore"
+  },
+  "Photos": {
+    "original": "Photos",
+    "it": "Foto"
+  },
+  "Images": {
+    "original": "Images",
+    "it": "Immagini"
+  },
+  "Sofa Qty": {
+    "original": "Sofa Qty",
+    "it": "Divano Qtà"
+  },
+  "Bed Qty": {
+    "original": "Bed Qty",
+    "it": "Letto Qtà"
+  },
+  "Wardrobe Qty": {
+    "original": "Wardrobe Qty",
+    "it": "Qtà guardaroba"
+  },
+  "Table/Chairs Qty": {
+    "original": "Table/Chairs Qty",
+    "it": "Tavolo/Sedie Q.tà"
+  },
+  "TV Qty": {
+    "original": "TV Qty",
+    "it": "TV Qtà"
+  },
+  "Washing Machine Qty": {
+    "original": "Washing Machine Qty",
+    "it": "Quantità lavatrice"
+  },
+  "Refrigerator Qty": {
+    "original": "Refrigerator Qty",
+    "it": "Quantità frigorifero"
+  },
+  "First Name": {
+    "original": "First Name",
+    "it": "Nome di battesimo"
+  },
+  "Last Name": {
+    "original": "Last Name",
+    "it": "Cognome"
+  },
+  "Email Address": {
+    "original": "Email Address",
+    "it": "Indirizzo e-mail"
+  },
+  "Telephone": {
+    "original": "Telephone",
+    "it": "Telefono"
+  },
+  "Street and Number": {
+    "original": "Street and Number",
+    "it": "Via e numero"
+  },
+  "Postal Code and City": {
+    "original": "Postal Code and City",
+    "it": "Codice postale e città"
+  },
+  "Salutation": {
+    "original": "Salutation",
+    "it": "Saluto"
+  },
+  "Toilets": {
+    "original": "Toilets",
+    "it": "Servizi igienici"
+  },
+  "Clean Kitchen": {
+    "original": "Clean Kitchen",
+    "it": "Cucina pulita"
+  },
+  "Kitchen State": {
+    "original": "Kitchen State",
+    "it": "Stato della cucina"
+  },
+  "Street (Cleaning)": {
+    "original": "Street (Cleaning)",
+    "it": "Strada (pulizia)"
+  },
+  "ZIP/City (Cleaning)": {
+    "original": "ZIP/City (Cleaning)",
+    "it": "CAP/Città (Pulizia)"
+  },
+  "Window Types": {
+    "original": "Window Types",
+    "it": "Tipi di finestre"
+  },
+  "Special Glass": {
+    "original": "Special Glass",
+    "it": "Vetro speciale"
+  },
+  "Clean Shutters/Blinds": {
+    "original": "Clean Shutters/Blinds",
+    "it": "Pulire persiane/persiane"
+  },
+  "Outdoor Area": {
+    "original": "Outdoor Area",
+    "it": "Area esterna"
+  },
+  "Outdoor Condition": {
+    "original": "Outdoor Condition",
+    "it": "Condizioni esterne"
+  },
+  "Pressure Washing": {
+    "original": "Pressure Washing",
+    "it": "Lavaggio a pressione"
+  },
+  "Cleaning Condition": {
+    "original": "Cleaning Condition",
+    "it": "Condizioni di pulizia"
+  },
+  "Close Drill Holes": {
+    "original": "Close Drill Holes",
+    "it": "Chiudere i fori"
+  },
+  "Areas to Clean": {
+    "original": "Areas to Clean",
+    "it": "Aree da pulire"
+  },
+  "Independent Access": {
+    "original": "Independent Access",
+    "it": "Accesso Indipendente"
+  },
+  "Name & First Name": {
+    "original": "Name & First Name",
+    "it": "Nome e nome"
+  },
+  "Privacy Policy Accepted": {
+    "original": "Privacy Policy Accepted",
+    "it": "Informativa sulla privacy accettata"
+  },
+  "Key handover in person": {
+    "original": "Key handover in person",
+    "it": "Consegna delle chiavi di persona"
+  },
+  "Key in mailbox": {
+    "original": "Key in mailbox",
+    "it": "Digitare nella casella di posta"
+  },
+  "Key at property management": {
+    "original": "Key at property management",
+    "it": "Chiave nella gestione della proprietà"
+  },
+  "Intensive kitchen cleaning": {
+    "original": "Intensive kitchen cleaning",
+    "it": "Pulizia intensiva della cucina"
+  },
+  "Grease removal": {
+    "original": "Grease removal",
+    "it": "Rimozione del grasso"
+  },
+  "Hood cleaning": {
+    "original": "Hood cleaning",
+    "it": "Pulizia cappa"
+  },
+  "Deep fryer cleaning": {
+    "original": "Deep fryer cleaning",
+    "it": "Pulizia della friggitrice"
+  },
+  "Storage / Back rooms": {
+    "original": "Storage / Back rooms",
+    "it": "Magazzino/Stanze sul retro"
+  },
+  "Nicotine cleaning": {
+    "original": "Nicotine cleaning",
+    "it": "Pulizia della nicotina"
+  },
+  "Glass facade": {
+    "original": "Glass facade",
+    "it": "Facciata in vetro"
+  },
+  "Must reserve parking": {
+    "original": "Must reserve parking",
+    "it": "È necessario prenotare il parcheggio"
+  },
+  "Assist with reservation": {
+    "original": "Assist with reservation",
+    "it": "Aiutare con la prenotazione"
+  },
+  "No parking zone": {
+    "original": "No parking zone",
+    "it": "Nessuna zona di parcheggio"
+  },
+  "Restricted access": {
+    "original": "Restricted access",
+    "it": "Accesso limitato"
+  },
+  "Sales floor": {
+    "original": "Sales floor",
+    "it": "Piano vendite"
+  },
+  "Shop windows": {
+    "original": "Shop windows",
+    "it": "Vetrine"
+  },
+  "Shelves and displays": {
+    "original": "Shelves and displays",
+    "it": "Scaffali ed espositori"
+  },
+  "Checkout area": {
+    "original": "Checkout area",
+    "it": "Zona cassa"
+  },
+  "Rough cleaning": {
+    "original": "Rough cleaning",
+    "it": "Pulizia approssimativa"
+  },
+  "Intermediate cleaning": {
+    "original": "Intermediate cleaning",
+    "it": "Pulizia intermedia"
+  },
+  "Final construction cleaning": {
+    "original": "Final construction cleaning",
+    "it": "Pulizia finale della costruzione"
+  },
+  "Carpet cleaning": {
+    "original": "Carpet cleaning",
+    "it": "Pulizia della moquette"
+  },
+  "Hard to reach windows": {
+    "original": "Hard to reach windows",
+    "it": "Finestre difficili da raggiungere"
+  },
+  "Disinfection": {
+    "original": "Disinfection",
+    "it": "Disinfezione"
+  },
+  "Moving & Cleaning": {
+    "original": "Moving & Cleaning",
+    "it": "Traslochi e pulizie"
+  },
+  "Assembly/Disassembly": {
+    "original": "Assembly/Disassembly",
+    "it": "Montaggio/Smontaggio"
+  },
+  "Direct": {
+    "original": "Direct",
+    "it": "Diretto"
+  },
+  "0-20m": {
+    "original": "0-20m",
+    "it": "0-20 metri"
+  },
+  "20-50m": {
+    "original": "20-50m",
+    "it": "20-50 metri"
+  },
+  "More than 50m": {
+    "original": "More than 50m",
+    "it": "Più di 50 metri"
+  },
+  "Phone": {
+    "original": "Phone",
+    "it": "Telefono"
+  },
+  "Email": {
+    "original": "Email",
+    "it": "E-mail"
+  },
+  "WhatsApp": {
+    "original": "WhatsApp",
+    "it": "Whatsapp"
+  },
+  "Long Distances": {
+    "original": "Long Distances",
+    "it": "Lunghe distanze"
+  },
+  "Provide Boxes": {
+    "original": "Provide Boxes",
+    "it": "Fornire scatole"
+  },
+  "Yes": {
+    "original": "Yes",
+    "it": "SÌ"
+  },
+  "No": {
+    "original": "No",
+    "it": "NO"
+  },
+  "Sofa": {
+    "original": "Sofa",
+    "it": "Divano"
+  },
+  "Wardrobe": {
+    "original": "Wardrobe",
+    "it": "Armadio"
+  },
+  "TV": {
+    "original": "TV",
+    "it": "TV"
+  },
+  "Table & Chairs": {
+    "original": "Table & Chairs",
+    "it": "Tavolo e sedie"
+  },
+  "Bed": {
+    "original": "Bed",
+    "it": "Letto"
+  },
+  "Washing Machine": {
+    "original": "Washing Machine",
+    "it": "Lavatrice"
+  },
+  "Aquarium": {
+    "original": "Aquarium",
+    "it": "Acquario"
+  },
+  "Piano": {
+    "original": "Piano",
+    "it": "Pianoforte"
+  },
+  "Safe": {
+    "original": "Safe",
+    "it": "Sicuro"
+  },
+  "Fitness Equipment": {
+    "original": "Fitness Equipment",
+    "it": "Attrezzature per il fitness"
+  },
+  "House": {
+    "original": "House",
+    "it": "Casa"
+  },
+  "Apartment": {
+    "original": "Apartment",
+    "it": "Appartamento"
+  },
+  "Narrow Stairs": {
+    "original": "Narrow Stairs",
+    "it": "Scale strette"
+  },
+  "Medium": {
+    "original": "Medium",
+    "it": "Medio"
+  },
+  "Large": {
+    "original": "Large",
+    "it": "Grande"
+  },
+  "Small": {
+    "original": "Small",
+    "it": "Piccolo"
+  },
+  "Standard": {
+    "original": "Standard",
+    "it": "Standard"
+  },
+  "Cleaning Only": {
+    "original": "Cleaning Only",
+    "it": "Solo pulizia"
+  },
+  "Shared Room (WG)": {
+    "original": "Shared Room (WG)",
+    "it": "Stanza condivisa (WG)"
+  },
+  "Office": {
+    "original": "Office",
+    "it": "Ufficio"
+  },
+  "Storage/Cellar": {
+    "original": "Storage/Cellar",
+    "it": "Deposito/cantina"
+  },
+  "Studio": {
+    "original": "Studio",
+    "it": "Studio"
+  },
+  "Storage": {
+    "original": "Storage",
+    "it": "Magazzinaggio"
+  },
+  "Ground Floor": {
+    "original": "Ground Floor",
+    "it": "Pianterreno"
+  },
+  "Complete / All": {
+    "original": "Complete / All",
+    "it": "Completo/Tutto"
+  },
+  "Cellar": {
+    "original": "Cellar",
+    "it": "Cantina"
+  },
+  "Attic": {
+    "original": "Attic",
+    "it": "Attico"
+  },
+  "Garage": {
+    "original": "Garage",
+    "it": "Garage"
+  },
+  "Conservatory": {
+    "original": "Conservatory",
+    "it": "Conservatorio"
+  },
+  "Individual Rooms": {
+    "original": "Individual Rooms",
+    "it": "Camere individuali"
+  },
+  "Shower": {
+    "original": "Shower",
+    "it": "Doccia"
+  },
+  "Bathtub": {
+    "original": "Bathtub",
+    "it": "Vasca"
+  },
+  "Double Sink": {
+    "original": "Double Sink",
+    "it": "Doppio lavabo"
+  },
+  "Guest WC": {
+    "original": "Guest WC",
+    "it": "WC per gli ospiti"
+  },
+  "Glass Shower Wall": {
+    "original": "Glass Shower Wall",
+    "it": "Parete doccia in vetro"
+  },
+  "Mirrors": {
+    "original": "Mirrors",
+    "it": "Specchi"
+  },
+  "Fittings": {
+    "original": "Fittings",
+    "it": "Raccordi"
+  },
+  "Oven": {
+    "original": "Oven",
+    "it": "Forno"
+  },
+  "Cooktop": {
+    "original": "Cooktop",
+    "it": "Piano cottura"
+  },
+  "Refrigerator": {
+    "original": "Refrigerator",
+    "it": "Frigorifero"
+  },
+  "Freezer": {
+    "original": "Freezer",
+    "it": "Congelatore"
+  },
+  "Dishwasher": {
+    "original": "Dishwasher",
+    "it": "Lavastoviglie"
+  },
+  "Extractor Hood": {
+    "original": "Extractor Hood",
+    "it": "Cappa aspirante"
+  },
+  "Venetian Blinds": {
+    "original": "Venetian Blinds",
+    "it": "Tende alla veneziana"
+  },
+  "Roller Shutters": {
+    "original": "Roller Shutters",
+    "it": "Tapparelle"
+  },
+  "Shutters": {
+    "original": "Shutters",
+    "it": "Persiane"
+  },
+  "Slat Blinds": {
+    "original": "Slat Blinds",
+    "it": "Tende a lamelle"
+  },
+  "Adjustable": {
+    "original": "Adjustable",
+    "it": "Regolabile"
+  },
+  "Window Shutters": {
+    "original": "Window Shutters",
+    "it": "Persiane"
+  },
+  "Other/Special": {
+    "original": "Other/Special",
+    "it": "Altro/Speciale"
+  },
+  "Heavily Soiled": {
+    "original": "Heavily Soiled",
+    "it": "Molto sporco"
+  },
+  "Mold on Frames": {
+    "original": "Mold on Frames",
+    "it": "Muffa sui telai"
+  },
+  "Small Casement": {
+    "original": "Small Casement",
+    "it": "Piccolo battente"
+  },
+  "Roof Window": {
+    "original": "Roof Window",
+    "it": "Finestra sul tetto"
+  },
+  "Safety Film": {
+    "original": "Safety Film",
+    "it": "Pellicola di sicurezza"
+  },
+  "None": {
+    "original": "None",
+    "it": "Nessuno"
+  },
+  "Parquet": {
+    "original": "Parquet",
+    "it": "Parquet"
+  },
+  "Laminate": {
+    "original": "Laminate",
+    "it": "Laminato"
+  },
+  "Tiles": {
+    "original": "Tiles",
+    "it": "Piastrelle"
+  },
+  "Stone": {
+    "original": "Stone",
+    "it": "Calcolo"
+  },
+  "Carpet": {
+    "original": "Carpet",
+    "it": "Tappeto"
+  },
+  "PVC/Vinyl": {
+    "original": "PVC/Vinyl",
+    "it": "PVC/vinile"
+  },
+  "Concrete": {
+    "original": "Concrete",
+    "it": "Calcestruzzo"
+  },
+  "Epoxy": {
+    "original": "Epoxy",
+    "it": "Epossidico"
+  },
+  "Basement": {
+    "original": "Basement",
+    "it": "Seminterrato"
+  },
+  "Storage Room": {
+    "original": "Storage Room",
+    "it": "Ripostiglio"
+  },
+  "Normal": {
+    "original": "Normal",
+    "it": "Normale"
+  },
+  "Nicotine Damage": {
+    "original": "Nicotine Damage",
+    "it": "Danni alla nicotina"
+  },
+  "Construction Dirt": {
+    "original": "Construction Dirt",
+    "it": "Sporco di costruzione"
+  },
+  "Inspection": {
+    "original": "Inspection",
+    "it": "Ispezione"
+  },
+  "Guarantee": {
+    "original": "Guarantee",
+    "it": "Garanzia"
+  },
+  "In Person": {
+    "original": "In Person",
+    "it": "Di persona"
+  },
+  "Mailbox": {
+    "original": "Mailbox",
+    "it": "Cassetta postale"
+  },
+  "Management": {
+    "original": "Management",
+    "it": "Gestione"
+  },
+  "Key Box": {
+    "original": "Key Box",
+    "it": "Cassetta portachiavi"
+  },
+  "Floor to Ceiling": {
+    "original": "Floor to Ceiling",
+    "it": "Dal pavimento al soffitto"
+  },
+  "Roof Windows": {
+    "original": "Roof Windows",
+    "it": "Finestre da tetto"
+  },
+  "Large Surfaces": {
+    "original": "Large Surfaces",
+    "it": "Grandi superfici"
+  },
+  "Hard to Access": {
+    "original": "Hard to Access",
+    "it": "Difficile accesso"
+  },
+  "Stairwell": {
+    "original": "Stairwell",
+    "it": "Tromba delle scale"
+  },
+  "Outdoor Maintenance": {
+    "original": "Outdoor Maintenance",
+    "it": "Manutenzione esterna"
+  },
+  "Landscaping": {
+    "original": "Landscaping",
+    "it": "Paesaggistica"
+  },
+  "Outdoor Cleaning": {
+    "original": "Outdoor Cleaning",
+    "it": "Pulizia esterna"
+  },
+  "Snow Removal": {
+    "original": "Snow Removal",
+    "it": "Rimozione della neve"
+  },
+  "Gritting Service": {
+    "original": "Gritting Service",
+    "it": "Servizio di grinta"
+  },
+  "Tech Inspections": {
+    "original": "Tech Inspections",
+    "it": "Ispezioni tecniche"
+  },
+  "Routine Checks": {
+    "original": "Routine Checks",
+    "it": "Controlli di routine"
+  },
+  "Minor Repairs": {
+    "original": "Minor Repairs",
+    "it": "Piccole riparazioni"
+  },
+  "Lighting Checks": {
+    "original": "Lighting Checks",
+    "it": "Controlli sull'illuminazione"
+  },
+  "Waste Handling": {
+    "original": "Waste Handling",
+    "it": "Gestione dei rifiuti"
+  },
+  "Container Cleaning": {
+    "original": "Container Cleaning",
+    "it": "Pulizia dei contenitori"
+  },
+  "Disposal/Recycling": {
+    "original": "Disposal/Recycling",
+    "it": "Smaltimento/Riciclaggio"
+  },
+  "Emergency Service": {
+    "original": "Emergency Service",
+    "it": "Servizio di emergenza"
+  },
+  "24h Availability": {
+    "original": "24h Availability",
+    "it": "Disponibilità 24 ore su 24"
+  },
+  "Reports": {
+    "original": "Reports",
+    "it": "Rapporti"
+  },
+  "Photo Documentation": {
+    "original": "Photo Documentation",
+    "it": "Documentazione fotografica"
+  },
+  "Free Access": {
+    "original": "Free Access",
+    "it": "Accesso gratuito"
+  },
+  "Key": {
+    "original": "Key",
+    "it": "Chiave"
+  },
+  "Access Code": {
+    "original": "Access Code",
+    "it": "Codice di accesso"
+  },
+  "Ongoing": {
+    "original": "Ongoing",
+    "it": "In corso"
+  },
+  "Trial Period": {
+    "original": "Trial Period",
+    "it": "Periodo di prova"
+  },
+  "One-Time": {
+    "original": "One-Time",
+    "it": "Una volta"
+  },
+  "Weekly": {
+    "original": "Weekly",
+    "it": "Settimanale"
+  },
+  "Bi-weekly": {
+    "original": "Bi-weekly",
+    "it": "Bisettimanale"
+  },
+  "Monthly": {
+    "original": "Monthly",
+    "it": "Mensile"
+  },
+  "Custom": {
+    "original": "Custom",
+    "it": "Costume"
+  },
+  "Daily": {
+    "original": "Daily",
+    "it": "Quotidiano"
+  },
+  "2-3 Times/Week": {
+    "original": "2-3 Times/Week",
+    "it": "2-3 volte a settimana"
+  },
+  "Daytime": {
+    "original": "Daytime",
+    "it": "Giorno"
+  },
+  "Early Morning": {
+    "original": "Early Morning",
+    "it": "Mattina presto"
+  },
+  "Morning": {
+    "original": "Morning",
+    "it": "Mattina"
+  },
+  "Afternoon": {
+    "original": "Afternoon",
+    "it": "Pomeriggio"
+  },
+  "Evening": {
+    "original": "Evening",
+    "it": "Sera"
+  },
+  "Night": {
+    "original": "Night",
+    "it": "Notte"
+  },
+  "Flexible": {
+    "original": "Flexible",
+    "it": "Flessibile"
+  },
+  "House Rules": {
+    "original": "House Rules",
+    "it": "Regole della casa"
+  },
+  "Key Available": {
+    "original": "Key Available",
+    "it": "Chiave disponibile"
+  },
+  "Contact on Site": {
+    "original": "Contact on Site",
+    "it": "Contatto sul sito"
+  },
+  "Service Specifications": {
+    "original": "Service Specifications",
+    "it": "Specifiche del servizio"
+  },
+  "Eviction": {
+    "original": "Eviction",
+    "it": "Sfratto"
+  },
+  "Direct Access": {
+    "original": "Direct Access",
+    "it": "Accesso diretto"
+  },
+  "Parking Available": {
+    "original": "Parking Available",
+    "it": "Parcheggio disponibile"
+  },
+  "Very Large": {
+    "original": "Very Large",
+    "it": "Molto grande"
+  },
+  "Don't Know": {
+    "original": "Don't Know",
+    "it": "Non lo so"
+  },
+  "Little": {
+    "original": "Little",
+    "it": "Poco"
+  },
+  "A Lot": {
+    "original": "A Lot",
+    "it": "Molto"
+  },
+  "Electronics": {
+    "original": "Electronics",
+    "it": "Elettronica"
+  },
+  "Wood": {
+    "original": "Wood",
+    "it": "Legna"
+  },
+  "Metal": {
+    "original": "Metal",
+    "it": "Metallo"
+  },
+  "Paper": {
+    "original": "Paper",
+    "it": "Carta"
+  },
+  "Garden Waste": {
+    "original": "Garden Waste",
+    "it": "Rifiuti del giardino"
+  },
+  "Hazardous": {
+    "original": "Hazardous",
+    "it": "Pericoloso"
+  },
+  "Electrical": {
+    "original": "Electrical",
+    "it": "Elettrico"
+  },
+  "Cardboard": {
+    "original": "Cardboard",
+    "it": "Cartone"
+  },
+  "Textiles": {
+    "original": "Textiles",
+    "it": "Tessili"
+  },
+  "Demolition": {
+    "original": "Demolition",
+    "it": "Demolizione"
+  },
+  "Packing": {
+    "original": "Packing",
+    "it": "Imballaggio"
+  },
+  "Painting": {
+    "original": "Painting",
+    "it": "Pittura"
+  },
+  "Broom Cleaning": {
+    "original": "Broom Cleaning",
+    "it": "Pulizia della scopa"
+  },
+  "Immediately": {
+    "original": "Immediately",
+    "it": "Immediatamente"
+  },
+  "This Week": {
+    "original": "This Week",
+    "it": "Questa settimana"
+  },
+  "This Month": {
+    "original": "This Month",
+    "it": "Questo mese"
+  },
+  "Rough Cleaning": {
+    "original": "Rough Cleaning",
+    "it": "Pulizia approssimativa"
+  },
+  "Intermediate Cleaning": {
+    "original": "Intermediate Cleaning",
+    "it": "Pulizia intermedia"
+  },
+  "Fine Cleaning": {
+    "original": "Fine Cleaning",
+    "it": "Pulizia raffinata"
+  },
+  "Handover Cleaning": {
+    "original": "Handover Cleaning",
+    "it": "Pulizie alla consegna"
+  },
+  "Paint": {
+    "original": "Paint",
+    "it": "Colore"
+  },
+  "Cement": {
+    "original": "Cement",
+    "it": "Cemento"
+  },
+  "Glue": {
+    "original": "Glue",
+    "it": "Colla"
+  },
+  "Dust": {
+    "original": "Dust",
+    "it": "Polvere"
+  },
+  "Silicone": {
+    "original": "Silicone",
+    "it": "Silicone"
+  },
+  "Paint Spoils": {
+    "original": "Paint Spoils",
+    "it": "Bottini di vernice"
+  },
+  "Stickers": {
+    "original": "Stickers",
+    "it": "Adesivi"
+  },
+  "Waste Disposal": {
+    "original": "Waste Disposal",
+    "it": "Smaltimento dei rifiuti"
+  },
+  "Container": {
+    "original": "Container",
+    "it": "Contenitore"
+  },
+  "Facade Cleaning": {
+    "original": "Facade Cleaning",
+    "it": "Pulizia della facciata"
+  },
+  "High Pressure": {
+    "original": "High Pressure",
+    "it": "Alta pressione"
+  },
+  "Sealing": {
+    "original": "Sealing",
+    "it": "Sigillatura"
+  },
+  "Water Available": {
+    "original": "Water Available",
+    "it": "Acqua disponibile"
+  },
+  "Electricity Available": {
+    "original": "Electricity Available",
+    "it": "Elettricità disponibile"
+  },
+  "Restaurant": {
+    "original": "Restaurant",
+    "it": "Ristorante"
+  },
+  "Café": {
+    "original": "Café",
+    "it": "Caffetteria"
+  },
+  "Bar": {
+    "original": "Bar",
+    "it": "Sbarra"
+  },
+  "Canteen": {
+    "original": "Canteen",
+    "it": "Mensa"
+  },
+  "Hotel": {
+    "original": "Hotel",
+    "it": "Albergo"
+  },
+  "Takeaway": {
+    "original": "Takeaway",
+    "it": "Porta via"
+  },
+  "Club": {
+    "original": "Club",
+    "it": "Club"
+  },
+  "Extractor Hoods": {
+    "original": "Extractor Hoods",
+    "it": "Cappe aspiranti"
+  },
+  "Grease Traps": {
+    "original": "Grease Traps",
+    "it": "Trappole per grasso"
+  },
+  "Ovens": {
+    "original": "Ovens",
+    "it": "Forni"
+  },
+  "Deep Fryers": {
+    "original": "Deep Fryers",
+    "it": "Friggitrici"
+  },
+  "Cooling Units": {
+    "original": "Cooling Units",
+    "it": "Unità di raffreddamento"
+  },
+  "Drains": {
+    "original": "Drains",
+    "it": "Scarichi"
+  },
+  "Walls": {
+    "original": "Walls",
+    "it": "Muri"
+  },
+  "Cold Storage": {
+    "original": "Cold Storage",
+    "it": "Conservazione frigorifera"
+  },
+  "Staff Rooms": {
+    "original": "Staff Rooms",
+    "it": "Camere del personale"
+  },
+  "Smoking Area": {
+    "original": "Smoking Area",
+    "it": "Zona fumatori"
+  },
+  "Pest Control": {
+    "original": "Pest Control",
+    "it": "Controllo dei parassiti"
+  },
+  "Laundry": {
+    "original": "Laundry",
+    "it": "Lavanderia"
+  },
+  "Consumables": {
+    "original": "Consumables",
+    "it": "Materiali di consumo"
+  },
+  "HACCP Documentation": {
+    "original": "HACCP Documentation",
+    "it": "Documentazione HACCP"
+  },
+  "Vacuuming": {
+    "original": "Vacuuming",
+    "it": "Aspirare"
+  },
+  "Wet Mopping": {
+    "original": "Wet Mopping",
+    "it": "Lavaggio a umido"
+  },
+  "Dusting": {
+    "original": "Dusting",
+    "it": "Spolverare"
+  },
+  "Kitchen": {
+    "original": "Kitchen",
+    "it": "Cucina"
+  },
+  "Offices/Rooms": {
+    "original": "Offices/Rooms",
+    "it": "Uffici/Stanze"
+  },
+  "Windows": {
+    "original": "Windows",
+    "it": "Finestre"
+  },
+  "Waste": {
+    "original": "Waste",
+    "it": "Sciupare"
+  },
+  "1-2 Hours": {
+    "original": "1-2 Hours",
+    "it": "1-2 ore"
+  },
+  "2-3 Hours": {
+    "original": "2-3 Hours",
+    "it": "2-3 ore"
+  },
+  "3-5 Hours": {
+    "original": "3-5 Hours",
+    "it": "3-5 ore"
+  },
+  "Half Day": {
+    "original": "Half Day",
+    "it": "Mezza giornata"
+  },
+  "Children": {
+    "original": "Children",
+    "it": "Bambini"
+  },
+  "Alarm System": {
+    "original": "Alarm System",
+    "it": "Sistema di allarme"
+  },
+  "Private": {
+    "original": "Private",
+    "it": "Privato"
+  },
+  "Commercial": {
+    "original": "Commercial",
+    "it": "Commerciale"
+  },
+  "High Traffic": {
+    "original": "High Traffic",
+    "it": "Traffico elevato"
+  },
+  "Industrial": {
+    "original": "Industrial",
+    "it": "Industriale"
+  },
+  "Public": {
+    "original": "Public",
+    "it": "Pubblico"
+  },
+  "Apartment Building": {
+    "original": "Apartment Building",
+    "it": "Edificio di appartamenti"
+  },
+  "Commercial Property": {
+    "original": "Commercial Property",
+    "it": "Proprietà commerciale"
+  },
+  "Residential Complex": {
+    "original": "Residential Complex",
+    "it": "Complesso residenziale"
+  },
+  "Office Building": {
+    "original": "Office Building",
+    "it": "Edificio per uffici"
+  },
+  "Practice": {
+    "original": "Practice",
+    "it": "Pratica"
+  },
+  "Retail Store": {
+    "original": "Retail Store",
+    "it": "Negozio al dettaglio"
+  },
+  "Every other week": {
+    "original": "Every other week",
+    "it": "Ogni due settimane"
+  },
+  "Several times/week": {
+    "original": "Several times/week",
+    "it": "Più volte alla settimana"
+  },
+  "Several Times/Week": {
+    "original": "Several Times/Week",
+    "it": "Più volte alla settimana"
+  },
+  "On Demand": {
+    "original": "On Demand",
+    "it": "Su richiesta"
+  },
+  "Deep Cleaning": {
+    "original": "Deep Cleaning",
+    "it": "Pulizia profonda"
+  },
+  "Client Provides": {
+    "original": "Client Provides",
+    "it": "Il cliente fornisce"
+  },
+  "Special Cleaning": {
+    "original": "Special Cleaning",
+    "it": "Pulizie speciali"
+  },
+  "Gastronomy Cleaning": {
+    "original": "Gastronomy Cleaning",
+    "it": "Pulizia della gastronomia"
+  },
+  "Pharmacy/Medical Cleaning": {
+    "original": "Pharmacy/Medical Cleaning",
+    "it": "Pulizie farmaceutiche/mediche"
+  },
+  "Shop/Retail Cleaning": {
+    "original": "Shop/Retail Cleaning",
+    "it": "Pulizia di negozi/negozi al dettaglio"
+  },
+  "Combination": {
+    "original": "Combination",
+    "it": "Combinazione"
+  },
+  "Commercial Cleaning": {
+    "original": "Commercial Cleaning",
+    "it": "Pulizie commerciali"
+  },
+  "Fixed": {
+    "original": "Fixed",
+    "it": "Fisso"
+  },
+  "Shared Room": {
+    "original": "Shared Room",
+    "it": "Stanza condivisa"
+  },
+  "Multi-Family": {
+    "original": "Multi-Family",
+    "it": "Multifamiliare"
+  },
+  "Practice/Clinic": {
+    "original": "Practice/Clinic",
+    "it": "Pratica/clinica"
+  },
+  "Special Property": {
+    "original": "Special Property",
+    "it": "Proprietà speciale"
+  },
+  "Construction Site": {
+    "original": "Construction Site",
+    "it": "Cantiere"
+  },
+  "Medical Practice": {
+    "original": "Medical Practice",
+    "it": "Pratica medica"
+  },
+  "Pharmacy": {
+    "original": "Pharmacy",
+    "it": "Farmacia"
+  },
+  "Other": {
+    "original": "Other",
+    "it": "Altro"
+  },
+  "Transport": {
+    "original": "Transport",
+    "it": "Trasporto"
+  },
+  "No Elevator": {
+    "original": "No Elevator",
+    "it": "Senza ascensore"
+  },
+  "Limited Access": {
+    "original": "Limited Access",
+    "it": "Accesso limitato"
+  },
+  "50m+": {
+    "original": "50m+",
+    "it": "50 metri+"
+  },
+  "Agency Provides": {
+    "original": "Agency Provides",
+    "it": "L'agenzia fornisce"
+  },
+  "Express Request": {
+    "original": "Express Request",
+    "it": "Richiesta espressa"
+  },
+  "Kitchen/Break Room": {
+    "original": "Kitchen/Break Room",
+    "it": "Cucina/sala relax"
+  },
+  "Windows Inside/Outside": {
+    "original": "Windows Inside/Outside",
+    "it": "Finestre interne/esterne"
+  },
+  "Window Frames": {
+    "original": "Window Frames",
+    "it": "Cornici delle finestre"
+  },
+  "Doors & Frames": {
+    "original": "Doors & Frames",
+    "it": "Porte e telai"
+  },
+  "Walls/Ceilings": {
+    "original": "Walls/Ceilings",
+    "it": "Pareti/soffitti"
+  },
+  "Staircase/Entrance": {
+    "original": "Staircase/Entrance",
+    "it": "Scala/Ingresso"
+  },
+  "Elevator Cleaning": {
+    "original": "Elevator Cleaning",
+    "it": "Pulizia dell'ascensore"
+  },
+  "Basement/Attic/Garage": {
+    "original": "Basement/Attic/Garage",
+    "it": "Seminterrato/Soffitta/Garage"
+  },
+  "Balcony/Terrace": {
+    "original": "Balcony/Terrace",
+    "it": "Balcone/terrazzo"
+  },
+  "During Business Hours": {
+    "original": "During Business Hours",
+    "it": "Durante l'orario lavorativo"
+  },
+  "After Business Hours": {
+    "original": "After Business Hours",
+    "it": "Dopo l'orario lavorativo"
+  },
+  "Keys Available": {
+    "original": "Keys Available",
+    "it": "Chiavi disponibili"
+  },
+  "Caretaker on Site": {
+    "original": "Caretaker on Site",
+    "it": "Custode sul posto"
+  },
+  "Admin on Site": {
+    "original": "Admin on Site",
+    "it": "Amministratore sul sito"
+  },
+  "House Rules Available": {
+    "original": "House Rules Available",
+    "it": "Regole della casa disponibili"
+  },
+  "Cleaning Plan Available": {
+    "original": "Cleaning Plan Available",
+    "it": "Piano di pulizia disponibile"
+  },
+  "Regular Cleaning": {
+    "original": "Regular Cleaning",
+    "it": "Pulizia regolare"
+  },
+  "Cooking": {
+    "original": "Cooking",
+    "it": "Cucina"
+  },
+  "Shopping": {
+    "original": "Shopping",
+    "it": "Shopping"
+  },
+  "Ironing": {
+    "original": "Ironing",
+    "it": "Stiro"
+  },
+  "Child Care": {
+    "original": "Child Care",
+    "it": "Cura dei bambini"
+  },
+  "Elder Care": {
+    "original": "Elder Care",
+    "it": "Cura degli anziani"
+  },
+  "Pet Care": {
+    "original": "Pet Care",
+    "it": "Cura degli animali domestici"
+  },
+  "Garden Care": {
+    "original": "Garden Care",
+    "it": "Cura del giardino"
+  },
+  "Errands": {
+    "original": "Errands",
+    "it": "Commissioni"
+  },
+  "Terrace": {
+    "original": "Terrace",
+    "it": "Terrazza"
+  },
+  "Balcony": {
+    "original": "Balcony",
+    "it": "Balcone"
+  },
+  "As Recommended": {
+    "original": "As Recommended",
+    "it": "Come consigliato"
+  },
+  "Sliding Windows": {
+    "original": "Sliding Windows",
+    "it": "Finestre scorrevoli"
+  },
+  "Glass Front": {
+    "original": "Glass Front",
+    "it": "Frontale in vetro"
+  },
+  "Mr.": {
+    "original": "Mr.",
+    "it": "Sig."
+  },
+  "Ms.": {
+    "original": "Ms.",
+    "it": "SM."
+  },
+  "Rental Apartment": {
+    "original": "Rental Apartment",
+    "it": "Appartamento in affitto"
+  },
+  "Own Apartment": {
+    "original": "Own Apartment",
+    "it": "Appartamento proprio"
+  },
+  "1 Room": {
+    "original": "1 Room",
+    "it": "1 stanza"
+  },
+  "2 Rooms": {
+    "original": "2 Rooms",
+    "it": "2 stanze"
+  },
+  "3 Rooms": {
+    "original": "3 Rooms",
+    "it": "3 stanze"
+  },
+  "4 Rooms": {
+    "original": "4 Rooms",
+    "it": "4 stanze"
+  },
+  "5+ Rooms": {
+    "original": "5+ Rooms",
+    "it": "5+ camere"
+  },
+  "5+": {
+    "original": "5+",
+    "it": "5+"
+  },
+  "6+": {
+    "original": "6+",
+    "it": "6+"
+  },
+  "And": {
+    "original": "And",
+    "it": "E"
+  },
+  "Apartment Cleaning": {
+    "original": "Apartment Cleaning",
+    "it": "Pulizia dell'appartamento"
+  },
+  "House Cleaning": {
+    "original": "House Cleaning",
+    "it": "Pulizia della casa"
+  },
+  "Combo Service": {
+    "original": "Combo Service",
+    "it": "Servizio combinato"
+  },
+  "Household Helping": {
+    "original": "Household Helping",
+    "it": "Aiuto domestico"
+  },
+  "Medical Cleaning": {
+    "original": "Medical Cleaning",
+    "it": "Pulizia medica"
+  },
+  "Own apartment": {
+    "original": "Own apartment",
+    "it": "Appartamento proprio"
+  },
+  "Relocation": {
+    "original": "Relocation",
+    "it": "Trasferimento"
+  },
+  "Rental apartment": {
+    "original": "Rental apartment",
+    "it": "Appartamento in affitto"
+  },
+  "Stairwell Cleaning": {
+    "original": "Stairwell Cleaning",
+    "it": "Pulizia delle scale"
+  },
+  "WG Room": {
+    "original": "WG Room",
+    "it": "Sala WG"
+  },
+  "approx. 10 m²": {
+    "original": "approx. 10 m²",
+    "it": "ca. 10 mq"
+  },
+  "approx. 25 m²": {
+    "original": "approx. 25 m²",
+    "it": "ca. 25 mq"
+  },
+  "approx. 50 m²": {
+    "original": "approx. 50 m²",
+    "it": "ca. 50 mq"
+  },
+  "approx. 75 m²": {
+    "original": "approx. 75 m²",
+    "it": "ca. 75 mq"
+  },
+  "approx. 100 m²": {
+    "original": "approx. 100 m²",
+    "it": "ca. 100 mq"
+  },
+  "approx. 150 m²": {
+    "original": "approx. 150 m²",
+    "it": "ca. 150 mq"
+  },
+  "approx. 200+ m²": {
+    "original": "approx. 200+ m²",
+    "it": "ca. 200+ mq"
+  },
+  "E-mail": {
+    "original": "E-mail",
+    "it": "E-mail"
+  },
+  "Express Service": {
+    "original": "Express Service",
+    "it": "Servizio espresso"
+  },
+  "Flexible Date": {
+    "original": "Flexible Date",
+    "it": "Data flessibile"
+  },
+  "Access Destination": {
+    "original": "Access Destination",
+    "it": "Accedi alla destinazione"
+  },
+  "Access Origin": {
+    "original": "Access Origin",
+    "it": "Accedi a Origine"
+  },
+  "Contact Method": {
+    "original": "Contact Method",
+    "it": "Metodo di contatto"
+  },
+  "Conditions Origin": {
+    "original": "Conditions Origin",
+    "it": "Condizioni Origine"
+  },
+  "Conditions Destination": {
+    "original": "Conditions Destination",
+    "it": "Condizioni Destinazione"
+  },
+  "Shutters / Blinds": {
+    "original": "Shutters / Blinds",
+    "it": "Persiane/persiane"
+  },
+  "Parking Options": {
+    "original": "Parking Options",
+    "it": "Opzioni di parcheggio"
+  },
+  "Street No": {
+    "original": "Street No",
+    "it": "Via n"
+  },
+  "Zip City": {
+    "original": "Zip City",
+    "it": "Città postale"
+  },
+  "Office Cleaning Items": {
+    "original": "Office Cleaning Items",
+    "it": "Articoli per la pulizia dell'ufficio"
+  },
+  "Dowel Holes": {
+    "original": "Dowel Holes",
+    "it": "Fori per tasselli"
+  },
+  "Number of Dowel Holes": {
+    "original": "Number of Dowel Holes",
+    "it": "Numero di fori per tasselli"
+  },
+  "Access Options": {
+    "original": "Access Options",
+    "it": "Opzioni di accesso"
+  },
+  "Key Access": {
+    "original": "Key Access",
+    "it": "Accesso chiave"
+  },
+  "Shutters / Blinds Cleaning": {
+    "original": "Shutters / Blinds Cleaning",
+    "it": "Pulizia persiane/veneziane"
+  },
+  "Kitchen Condition": {
+    "original": "Kitchen Condition",
+    "it": "Condizioni della cucina"
+  },
+  "Box Qty (Standard)": {
+    "original": "Box Qty (Standard)",
+    "it": "Quantità scatola (standard)"
+  },
+  "Box Qty (Books)": {
+    "original": "Box Qty (Books)",
+    "it": "Quantità scatola (libri)"
+  },
+  "Box Qty (Wardrobe)": {
+    "original": "Box Qty (Wardrobe)",
+    "it": "Quantità scatola (guardaroba)"
+  },
+  "Box Qty (Dishes/Glass)": {
+    "original": "Box Qty (Dishes/Glass)",
+    "it": "Quantità scatola (piatti/bicchiere)"
+  },
+  "Box Qty (TV/Paintings)": {
+    "original": "Box Qty (TV/Paintings)",
+    "it": "Quantità scatola (TV/dipinti)"
+  },
+  "Qty Sofas": {
+    "original": "Qty Sofas",
+    "it": "Quantità Divani"
+  },
+  "Qty Beds": {
+    "original": "Qty Beds",
+    "it": "Quantità letti"
+  },
+  "Qty Wardrobes": {
+    "original": "Qty Wardrobes",
+    "it": "Qtà armadi"
+  },
+  "Qty Table/Chairs": {
+    "original": "Qty Table/Chairs",
+    "it": "Qtà tavolo/sedie"
+  },
+  "Qty TVs": {
+    "original": "Qty TVs",
+    "it": "Quantità di televisori"
+  },
+  "Qty Washing Mach.": {
+    "original": "Qty Washing Mach.",
+    "it": "Qtà lavatrice"
+  },
+  "Qty Refrigerators": {
+    "original": "Qty Refrigerators",
+    "it": "Quantità frigoriferi"
+  },
+  "Start Date": {
+    "original": "Start Date",
+    "it": "Data di inizio"
+  },
+  "Time Slot": {
+    "original": "Time Slot",
+    "it": "Fascia oraria"
+  },
+  "0 - 20m": {
+    "original": "0 - 20m",
+    "it": "0 - 20 metri"
+  },
+  "20 - 50m": {
+    "original": "20 - 50m",
+    "it": "20 - 50 metri"
+  },
+  "> 50m": {
+    "original": "> 50m",
+    "it": "> 50 metri"
+  },
+  "Key in Mailbox": {
+    "original": "Key in Mailbox",
+    "it": "Digitare la casella di posta"
+  },
+  "Must be Reserved": {
+    "original": "Must be Reserved",
+    "it": "Deve essere prenotato"
+  },
+  "Staircase Cleaning": {
+    "original": "Staircase Cleaning",
+    "it": "Pulizia delle scale"
+  },
+  "Standard Boxes": {
+    "original": "Standard Boxes",
+    "it": "Scatole standard"
+  },
+  "Book Boxes": {
+    "original": "Book Boxes",
+    "it": "Scatole di libri"
+  },
+  "Wardrobe Boxes": {
+    "original": "Wardrobe Boxes",
+    "it": "Scatole per guardaroba"
+  },
+  "Dishes/Glass": {
+    "original": "Dishes/Glass",
+    "it": "Piatti/Bicchiere"
+  },
+  "Special TV/Paintings": {
+    "original": "Special TV/Paintings",
+    "it": "Speciale TV/Dipinti"
+  },
+  "Bubble Wrap": {
+    "original": "Bubble Wrap",
+    "it": "Pluriball"
+  },
+  "Packing Paper": {
+    "original": "Packing Paper",
+    "it": "Carta da imballaggio"
+  },
+  "Stretch Film": {
+    "original": "Stretch Film",
+    "it": "Pellicola estensibile"
+  },
+  "Moving Blankets": {
+    "original": "Moving Blankets",
+    "it": "Coperte in movimento"
+  },
+  "Storage / Cellar": {
+    "original": "Storage / Cellar",
+    "it": "Deposito/cantina"
+  },
+  "Personal": {
+    "original": "Personal",
+    "it": "Personale"
+  },
+  "Window": {
+    "original": "Window",
+    "it": "Finestra"
+  },
+  "Moving Cleaning": {
+    "original": "Moving Cleaning",
+    "it": "Pulizia in movimento"
+  },
+  "Basic Cleaning": {
+    "original": "Basic Cleaning",
+    "it": "Pulizia di base"
+  },
+  "Garden": {
+    "original": "Garden",
+    "it": "Giardino"
+  },
+  "Both": {
+    "original": "Both",
+    "it": "Entrambi"
+  },
+  "Skylight": {
+    "original": "Skylight",
+    "it": "Lucernario"
+  },
+  "Assembly / Disassembly": {
+    "original": "Assembly / Disassembly",
+    "it": "Montaggio/Smontaggio"
+  },
+  "Nicotine": {
+    "original": "Nicotine",
+    "it": "Nicotina"
+  },
+  "Not Sure": {
+    "original": "Not Sure",
+    "it": "Non è sicuro"
+  },
+  "Winter Garden": {
+    "original": "Winter Garden",
+    "it": "Giardino d'inverno"
+  },
+  "Moving Only": {
+    "original": "Moving Only",
+    "it": "Solo spostamento"
+  },
+  "Full Day": {
+    "original": "Full Day",
+    "it": "Giornata intera"
+  }
+}

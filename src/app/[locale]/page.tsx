@@ -227,10 +227,10 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
               {[
-                { de: '✓ Abnahmegarantie', en: '✓ Handover Guarantee', fr: '✓ Garantie de remise' },
-                { de: '✓ Haftpflichtversichert', en: '✓ Liability Insured', fr: '✓ Assurance responsabilité civile' },
-                { de: '✓ Schweizweiter Service', en: '✓ Nationwide Service Across Switzerland', fr: '✓ Service dans toute la Suisse' },
-                { de: '✓ Transparente Preise', en: '✓ Transparent Pricing', fr: '✓ Prix transparents' },
+                { de: '✓ Abnahmegarantie', en: '✓ Handover Guarantee', fr: '✓ Garantie de remise', it: `✓ Garanzia di consegna` },
+                { de: '✓ Haftpflichtversichert', en: '✓ Liability Insured', fr: '✓ Assurance responsabilité civile', it: `✓ Responsabilità civile assicurata` },
+                { de: '✓ Schweizweiter Service', en: '✓ Nationwide Service Across Switzerland', fr: '✓ Service dans toute la Suisse', it: `✓ Servizio nazionale in tutta la Svizzera` },
+                { de: '✓ Transparente Preise', en: '✓ Transparent Pricing', fr: '✓ Prix transparents', it: `✓ Prezzi trasparenti` },
               ].map((item, i) => (
                 <div key={i} className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-swiss-red flex-shrink-0" />

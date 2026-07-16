@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Canton+of+Jura,Switzerland'
   }
+,
+  it: {
+    slug: 'jura', regionName: 'Canton Giura',
+    seoTitle: 'Giura in movimento | Impresa di pulizie Giura | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie, servizi di strutture, manutenzione e smaltimento di immobili nel Canton Giura.',
+    h1: 'Impresa di traslochi e pulizie nel Canton Giura',
+    highSeoKeywords: ['Giura in movimento','Pulizia del Giura'],
+    localKeywords: ['Delémont','Porrentruy','Saignelégier','Courgenay','Bassecourt'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi, pulizie, pulizie di manutenzione, servizi per strutture, manutenzione e smaltimento di immobili nel Canton Giura.',
+      'Serviamo Delémont, Porrentruy, Saignelégier, Courgenay e Bassecourt.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi nel Giura?', answer: 'Sì, offriamo traslochi professionali nel Canton Giura.' },
+      { question: 'Esiste un\'impresa di pulizie nel Giura?', answer: 'Sì, SwissCleanMove offre pulizia, pulizia finale e pulizia di mantenimento.' },
+      { question: 'SwissCleanMove funziona a Delémont e Porrentruy?', answer: 'Sì, lavoriamo a Delémont, Porrentruy e dintorni.' },
+    ],
+    mapQuery: 'Canton+of+Jura,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

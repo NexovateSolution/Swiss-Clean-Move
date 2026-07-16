@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Zug,Switzerland'
   }
+,
+  it: {
+    slug: 'zug', regionName: 'Zugo',
+    seoTitle: 'Muoversi a Zugo | Impresa di pulizie Zugo | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie, servizi di strutture, manutenzione e smaltimento immobili a Zugo.',
+    h1: 'Impresa di traslochi e pulizie a Zugo',
+    highSeoKeywords: ['Muoversi a Zugo','Impresa di pulizie Zugo'],
+    localKeywords: ['Zug','Baar','Cham','Hünenberg','Steinhausen','Rotkreuz','Risch'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi, pulizie di trasloco, pulizie finali con garanzia di consegna, pulizie di mantenimento, servizi per strutture, manutenzione e smaltimento di immobili a Zugo e dintorni.',
+      'Lavoriamo a Zugo, Baar, Cham, Hünenberg, Steinhausen, Rotkreuz e Risch. SwissCleanMove è sinonimo di pianificazione professionale, esecuzione affidabile e risultati puliti.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Zugo?', answer: 'Sì, offriamo traslochi professionali a Zugo e dintorni.' },
+      { question: 'Sono disponibili servizi per le strutture a Zugo?', answer: 'Sì, offriamo servizi per strutture, manutenzione di proprietà e manutenzione di edifici.' },
+      { question: 'Posso avere un preventivo gratuito?', answer: 'Sì, i clienti possono richiedere un preventivo gratuito.' },
+    ],
+    mapQuery: 'Zug,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

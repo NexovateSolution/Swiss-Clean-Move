@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Canton+of+Thurgau,Switzerland'
   }
+,
+  it: {
+    slug: 'thurgau', regionName: 'Canton Turgovia',
+    seoTitle: 'Movimento Turgovia | Impresa di pulizie Turgovia | SwissCleanMove',
+    metaDescription: 'Traslochi, pulizie, pulizie di trasloco, pulizie di manutenzione, servizi di strutture e smaltimento nel Canton Turgovia.',
+    h1: 'Impresa di traslochi e pulizie nel Canton Turgovia',
+    highSeoKeywords: ['Turgovia in movimento','Impresa di pulizie Turgovia'],
+    localKeywords: ['Frauenfeld','Kreuzlingen','Weinfelden','Amriswil','Romanshorn','Arbon'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi, pulizie, pulizie manutentive, servizi per strutture, manutenzione e smaltimento immobili nel Canton Turgovia.',
+      'Serviamo Frauenfeld, Kreuzlingen, Weinfelden, Amriswil, Romanshorn e Arbon. SwissCleanMove è il vostro partner per traslochi professionali, pulizia approfondita, manutenzione degli edifici e smaltimento affidabile.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi in Turgovia?', answer: 'Sì, offriamo traslochi in tutto il Canton Turgovia.' },
+      { question: 'È disponibile la pulizia di trasloco con garanzia?', answer: 'Sì, SwissCleanMove offre la pulizia finale con garanzia di consegna.' },
+      { question: 'Quali città sono servite?', answer: 'Frauenfeld, Kreuzlingen, Weinfelden, Amriswil, Romanshorn e Arbon.' },
+    ],
+    mapQuery: 'Canton+of+Thurgau,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Canton+of+Bern,Switzerland'
   }
+,
+  it: {
+    slug: 'bern', regionName: 'Cantone di Berna',
+    seoTitle: 'Muoversi a Berna | Impresa di pulizie Berna | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie di trasloco con garanzia, pulizie di manutenzione, servizi di strutture e smaltimento nel Canton Berna.',
+    h1: 'Impresa di traslochi e pulizie nel Canton Berna',
+    highSeoKeywords: ['Berna in movimento','Ditta di traslochi Berna','Impresa di pulizie Berna'],
+    localKeywords: ['Bern','Biel/Bienne','Thun','Lyss','Burgdorf','Langenthal','Nidau','Brügg','Ipsach','Aarberg','Pieterlen'],
+    introParagraphs: [
+      'SwissCleanMove è il vostro partner professionale per traslochi, pulizie, pulizie di trasloco con garanzia di consegna, pulizie di manutenzione, pulizie di ristoranti, servizi di strutture, manutenzione e smaltimento di immobili in tutto il Canton Berna.',
+      'Supportiamo clienti privati, aziende, amministrazioni e ristoranti a Berna, Biel/Bienne, Thun, Burgdorf, Langenthal, Lyss, Nidau, Brügg, Ipsach, Aarberg e Pieterlen.',
+    ],
+    faqs: [
+      { question: 'Quanto costa un trasloco nel Canton Berna?', answer: 'I costi dipendono dalle dimensioni dell\'appartamento, dalla distanza, dal piano, dall\'ascensore e dallo sforzo richiesto.' },
+      { question: 'SwissCleanMove offre pulizie a Berna?', answer: 'Sì, offriamo pulizia di trasloco, pulizia finale, pulizia di manutenzione, pulizia di uffici e pulizia di ristoranti.' },
+      { question: 'Sono disponibili servizi per le strutture nel Canton Berna?', answer: 'Sì, SwissCleanMove offre servizi di manutenzione immobiliare, manutenzione degli edifici e strutture nel Canton Berna.' },
+    ],
+    mapQuery: 'Canton+of+Bern,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

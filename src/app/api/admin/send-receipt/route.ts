@@ -88,13 +88,15 @@ export async function POST(request: NextRequest) {
         const subjects: any = {
             en: `Invoice - SwissCleanMove - ${client.firstName} ${client.lastName}`,
             de: `Rechnung - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            fr: `Facture - SwissCleanMove - ${client.firstName} ${client.lastName}`
+            fr: `Facture - SwissCleanMove - ${client.firstName} ${client.lastName}`,
+            it: `Fattura - SwissCleanMove - ${client.firstName} ${client.lastName}`
         }
 
         const messages: any = {
             en: `Dear ${client.firstName} ${client.lastName},\n\nPlease find attached your invoice from SwissCleanMove.\n\nThank you for your business!\n\nBest regards,\nSwissCleanMove Team`,
             de: `Sehr geehrte/r ${client.firstName} ${client.lastName},\n\nAnbei finden Sie Ihre Rechnung von SwissCleanMove.\n\nVielen Dank für Ihr Vertrauen!\n\nMit freundlichen Grüßen,\nSwissCleanMove Team`,
-            fr: `Cher/Chère ${client.firstName} ${client.lastName},\n\nVeuillez trouver ci-joint votre facture de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`
+            fr: `Cher/Chère ${client.firstName} ${client.lastName},\n\nVeuillez trouver ci-joint votre facture de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`,
+            it: `Gentile ${client.firstName} ${client.lastName},\n\nIn allegato trova la Sua fattura da SwissCleanMove.\n\nGrazie per la Sua fiducia!\n\nCordiali saluti,\nTeam SwissCleanMove`
         }
 
         // Send email

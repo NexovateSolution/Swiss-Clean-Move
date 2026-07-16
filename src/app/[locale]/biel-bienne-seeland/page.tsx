@@ -59,6 +59,25 @@ const DATA: Record<string, RegionPageData> = {
       { question: 'Travaillez-vous aussi à Nidau, Brügg et Lyss?', answer: 'Oui, nous travaillons à Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg et environs.' }
     ],
     mapQuery: 'Biel/Bienne,Seeland,Switzerland'
+  },
+  it: {
+    slug: 'biel-bienne-seeland',
+    regionName: 'Biel/Bienne & Seeland',
+    seoTitle: 'Trasloco Biel/Bienne | Impresa di pulizie Biel | SwissCleanMove',
+    metaDescription: 'Trasloco professionale, pulizia di fine locazione con garanzia, pulizia di manutenzione, pulizia gastronomica, facility services, manutenzione casa e smaltimento a Biel/Bienne e Seeland.',
+    h1: 'Impresa di traslochi e pulizie a Biel/Bienne e Seeland',
+    highSeoKeywords: ['Trasloco Biel','Trasloco Biel/Bienne','Impresa di traslochi Biel','Impresa di pulizie Biel','Pulizia di trasloco Biel','Pulizia di fine locazione Biel','Pulizia di manutenzione Biel','Pulizia uffici Biel','Pulizia gastronomica Biel','Facility Services Biel','Manutenzione casa Biel','Smaltimento Biel','Sgombero Biel'],
+    localKeywords: ['Biel','Bienne','Nidau','Brügg','Ipsach','Port','Bellmund','Studen','Lyss','Pieterlen','Aarberg','Orpund','Seeland'],
+    introParagraphs: [
+      'SwissCleanMove è la vostra impresa professionale di traslochi e pulizie a Biel/Bienne e in tutta la regione del Seeland. Offriamo trasloco, pulizia di fine locazione con garanzia di consegna, pulizia finale, pulizia di manutenzione, pulizia uffici, pulizia gastronomica, facility services, manutenzione casa, smaltimento e sgombero da un\'unica fonte.',
+      'Il nostro team lavora in modo affidabile a Biel, Bienne, Nidau, Brügg, Ipsach, Port, Bellmund, Studen, Lyss, Pieterlen, Aarberg, Orpund e in tutta la regione del Seeland. Che si tratti di un trasloco privato, di un trasloco aziendale, della pulizia di un appartamento, della manutenzione di una casa o della manutenzione di un edificio, SwissCleanMove è sinonimo di qualità svizzera, prezzi trasparenti ed esecuzione professionale.'
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Biel/Bienne?', answer: 'Sì, SwissCleanMove offre traslochi professionali a Biel/Bienne e in tutta la regione del Seeland.' },
+      { question: 'Offrite pulizie di fine locazione con garanzia di consegna?', answer: 'Sì, offriamo pulizia di trasloco e pulizia di fine locazione con garanzia di consegna.' },
+      { question: 'Lavorate anche a Nidau, Brügg e Lyss?', answer: 'Sì, lavoriamo a Biel, Nidau, Brügg, Ipsach, Lyss, Aarberg e dintorni.' }
+    ],
+    mapQuery: 'Biel/Bienne,Seeland,Switzerland'
   }
 };
 

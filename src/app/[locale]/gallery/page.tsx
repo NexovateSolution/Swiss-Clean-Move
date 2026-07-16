@@ -72,9 +72,9 @@ export default function GalleryPage() {
     const getServiceLabel = (serviceId: string) => {
       const loc = typeof locale === 'string' ? locale : 'de';
       const labels: Record<string, Record<string, string>> = {
-        'umzugsreinigung': { 'en': 'Move-out Cleaning', 'fr': 'Nettoyage de fin de bail', 'de': 'Umzugsreinigung' },
-        'unterhaltsreinigung': { 'en': 'Maintenance Cleaning', 'fr': 'Nettoyage d\'entretien', 'de': 'Unterhaltsreinigung' },
-        'baureinigung': { 'en': 'Construction Cleaning', 'fr': 'Nettoyage de chantier', 'de': 'Baureinigung' }
+        'umzugsreinigung': { 'en': 'Move-out Cleaning', 'fr': 'Nettoyage de fin de bail', 'de': 'Umzugsreinigung', it: `Pulizie di trasloco con garanzia` },
+        'unterhaltsreinigung': { 'en': 'Maintenance Cleaning', 'fr': 'Nettoyage d\'entretien', 'de': 'Unterhaltsreinigung', it: `Pulizia di manutenzione` },
+        'baureinigung': { 'en': 'Construction Cleaning', 'fr': 'Nettoyage de chantier', 'de': 'Baureinigung', it: `Pulizia della costruzione` }
       };
       return labels[serviceId]?.[loc] || (serviceId.charAt(0).toUpperCase() + serviceId.slice(1));
     };

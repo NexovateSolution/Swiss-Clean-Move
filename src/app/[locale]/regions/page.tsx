@@ -7,22 +7,22 @@ import SwissHero from '@/components/SwissHero';
 import { MapPin, ArrowRight, Phone } from 'lucide-react';
 
 const REGIONS = [
-  { slug: 'biel-bienne-seeland', de: 'Biel/Bienne & Seeland', en: 'Biel/Bienne & Seeland', fr: 'Bienne & Seeland', keywords: ['Biel','Bienne','Nidau','Brügg','Lyss','Aarberg','Seeland'] },
-  { slug: 'bern', de: 'Kanton Bern', en: 'Canton of Bern', fr: 'Canton de Berne', keywords: ['Bern','Thun','Burgdorf','Langenthal','Lyss'] },
-  { slug: 'zuerich', de: 'Kanton Zürich', en: 'Canton of Zurich', fr: 'Canton de Zurich', keywords: ['Zürich','Winterthur','Uster','Dübendorf','Dietikon'] },
-  { slug: 'basel', de: 'Kanton Basel', en: 'Canton of Basel', fr: 'Canton de Bâle', keywords: ['Basel','Allschwil','Binningen','Muttenz','Reinach'] },
-  { slug: 'aargau', de: 'Kanton Aargau', en: 'Canton of Aargau', fr: 'Canton d\'Argovie', keywords: ['Aarau','Baden','Wettingen','Brugg','Lenzburg'] },
-  { slug: 'solothurn', de: 'Kanton Solothurn', en: 'Canton of Solothurn', fr: 'Canton de Soleure', keywords: ['Solothurn','Grenchen','Olten','Zuchwil'] },
-  { slug: 'luzern', de: 'Kanton Luzern', en: 'Canton of Lucerne', fr: 'Canton de Lucerne', keywords: ['Luzern','Emmen','Kriens','Horw','Sursee'] },
-  { slug: 'zug', de: 'Kanton Zug', en: 'Canton of Zug', fr: 'Canton de Zoug', keywords: ['Zug','Baar','Cham','Hünenberg','Steinhausen'] },
-  { slug: 'st-gallen', de: 'Kanton St. Gallen', en: 'Canton of St. Gallen', fr: 'Canton de Saint-Gall', keywords: ['St. Gallen','Rapperswil-Jona','Wil','Gossau'] },
-  { slug: 'thurgau', de: 'Kanton Thurgau', en: 'Canton of Thurgau', fr: 'Canton de Thurgovie', keywords: ['Frauenfeld','Kreuzlingen','Weinfelden','Amriswil'] },
-  { slug: 'schwyz', de: 'Kanton Schwyz', en: 'Canton of Schwyz', fr: 'Canton de Schwyz', keywords: ['Schwyz','Freienbach','Einsiedeln','Pfäffikon'] },
-  { slug: 'neuchatel', de: 'Kanton Neuenburg', en: 'Canton of Neuchâtel', fr: 'Canton de Neuchâtel', keywords: ['Neuchâtel','La Chaux-de-Fonds','Le Locle'] },
-  { slug: 'fribourg', de: 'Kanton Fribourg', en: 'Canton of Fribourg', fr: 'Canton de Fribourg', keywords: ['Fribourg','Bulle','Murten','Düdingen'] },
-  { slug: 'lausanne-vaud', de: 'Kanton Waadt', en: 'Canton of Vaud', fr: 'Canton de Vaud', keywords: ['Lausanne','Vevey','Montreux','Nyon','Morges'] },
-  { slug: 'jura', de: 'Kanton Jura', en: 'Canton of Jura', fr: 'Canton du Jura', keywords: ['Delémont','Porrentruy','Saignelégier'] },
-  { slug: 'wallis-valais', de: 'Wallis / Valais', en: 'Valais', fr: 'Valais', keywords: ['Sion','Sierre','Martigny','Monthey','Brig'] },
+  { slug: 'biel-bienne-seeland', de: 'Biel/Bienne & Seeland', en: 'Biel/Bienne & Seeland', fr: 'Bienne & Seeland', keywords: ['Biel','Bienne','Nidau','Brügg','Lyss','Aarberg','Seeland'], it: `Biel/Bienne e Seeland` },
+  { slug: 'bern', de: 'Kanton Bern', en: 'Canton of Bern', fr: 'Canton de Berne', keywords: ['Bern','Thun','Burgdorf','Langenthal','Lyss'], it: `Cantone di Berna` },
+  { slug: 'zuerich', de: 'Kanton Zürich', en: 'Canton of Zurich', fr: 'Canton de Zurich', keywords: ['Zürich','Winterthur','Uster','Dübendorf','Dietikon'], it: `Cantone di Zurigo` },
+  { slug: 'basel', de: 'Kanton Basel', en: 'Canton of Basel', fr: 'Canton de Bâle', keywords: ['Basel','Allschwil','Binningen','Muttenz','Reinach'], it: `Cantone di Basilea` },
+  { slug: 'aargau', de: 'Kanton Aargau', en: 'Canton of Aargau', fr: 'Canton d\'Argovie', keywords: ['Aarau','Baden','Wettingen','Brugg','Lenzburg'], it: `Canton Argovia` },
+  { slug: 'solothurn', de: 'Kanton Solothurn', en: 'Canton of Solothurn', fr: 'Canton de Soleure', keywords: ['Solothurn','Grenchen','Olten','Zuchwil'], it: `Canton Soletta` },
+  { slug: 'luzern', de: 'Kanton Luzern', en: 'Canton of Lucerne', fr: 'Canton de Lucerne', keywords: ['Luzern','Emmen','Kriens','Horw','Sursee'], it: `Cantone di Lucerna` },
+  { slug: 'zug', de: 'Kanton Zug', en: 'Canton of Zug', fr: 'Canton de Zoug', keywords: ['Zug','Baar','Cham','Hünenberg','Steinhausen'], it: `Cantone di Zugo` },
+  { slug: 'st-gallen', de: 'Kanton St. Gallen', en: 'Canton of St. Gallen', fr: 'Canton de Saint-Gall', keywords: ['St. Gallen','Rapperswil-Jona','Wil','Gossau'], it: `Cantone di San Gallo` },
+  { slug: 'thurgau', de: 'Kanton Thurgau', en: 'Canton of Thurgau', fr: 'Canton de Thurgovie', keywords: ['Frauenfeld','Kreuzlingen','Weinfelden','Amriswil'], it: `Canton Turgovia` },
+  { slug: 'schwyz', de: 'Kanton Schwyz', en: 'Canton of Schwyz', fr: 'Canton de Schwyz', keywords: ['Schwyz','Freienbach','Einsiedeln','Pfäffikon'], it: `Cantone di Svitto` },
+  { slug: 'neuchatel', de: 'Kanton Neuenburg', en: 'Canton of Neuchâtel', fr: 'Canton de Neuchâtel', keywords: ['Neuchâtel','La Chaux-de-Fonds','Le Locle'], it: `Cantone di Neuchâtel` },
+  { slug: 'fribourg', de: 'Kanton Fribourg', en: 'Canton of Fribourg', fr: 'Canton de Fribourg', keywords: ['Fribourg','Bulle','Murten','Düdingen'], it: `Canton Friburgo` },
+  { slug: 'lausanne-vaud', de: 'Kanton Waadt', en: 'Canton of Vaud', fr: 'Canton de Vaud', keywords: ['Lausanne','Vevey','Montreux','Nyon','Morges'], it: `Cantone di Vaud` },
+  { slug: 'jura', de: 'Kanton Jura', en: 'Canton of Jura', fr: 'Canton du Jura', keywords: ['Delémont','Porrentruy','Saignelégier'], it: `Canton Giura` },
+  { slug: 'wallis-valais', de: 'Wallis / Valais', en: 'Valais', fr: 'Valais', keywords: ['Sion','Sierre','Martigny','Monthey','Brig'], it: `Vallese` },
 ];
 
 export default function RegionsPage({ params: { locale } }: { params: { locale: string } }) {

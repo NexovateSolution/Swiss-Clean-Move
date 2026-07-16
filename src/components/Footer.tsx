@@ -176,16 +176,16 @@ export default function Footer() {
                 Biel Spezial
               </h5>
               <ul className="space-y-2">
-                <li><Link href={`/${locale}/reinigungsfirma-biel`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">{t("cleaningCompany")}</Link></li>
-                <li><Link href={`/${locale}/umzugsfirma-biel`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">{t("movingCompany")}</Link></li>
-                <li><Link href={`/${locale}/unterhaltsreinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("maintenanceCleaning")}</Link></li>
-                <li><Link href={`/${locale}/fensterreinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("windowCleaning")}</Link></li>
-                <li><Link href={`/${locale}/baureinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("constructionCleaning")}</Link></li>
-                <li><Link href={`/${locale}/gastronomie-reinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("gastroCleaning")}</Link></li>
-                <li><Link href={`/${locale}/transportfirma-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("transportCompany")}</Link></li>
-                <li><Link href={`/${locale}/entsorgung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("disposal")}</Link></li>
-                <li><Link href={`/${locale}/facility-service-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("facilityService")}</Link></li>
-                <li><Link href={`/${locale}/hauswartung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("propertyMaintenance")}</Link></li>
+                <li><Link href={`/${locale}/reinigungsfirma-biel`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">{t("components.footer.cleaningCompany")}</Link></li>
+                <li><Link href={`/${locale}/umzugsfirma-biel`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">{t("components.footer.movingCompany")}</Link></li>
+                <li><Link href={`/${locale}/unterhaltsreinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.maintenanceCleaning")}</Link></li>
+                <li><Link href={`/${locale}/fensterreinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.windowCleaning")}</Link></li>
+                <li><Link href={`/${locale}/baureinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.constructionCleaning")}</Link></li>
+                <li><Link href={`/${locale}/gastronomie-reinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.gastroCleaning")}</Link></li>
+                <li><Link href={`/${locale}/transportfirma-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.transportCompany")}</Link></li>
+                <li><Link href={`/${locale}/entsorgung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.disposal")}</Link></li>
+                <li><Link href={`/${locale}/facility-service-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.facilityService")}</Link></li>
+                <li><Link href={`/${locale}/hauswartung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.propertyMaintenance")}</Link></li>
               </ul>
             </div>
 

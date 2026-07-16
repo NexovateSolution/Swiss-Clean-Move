@@ -83,13 +83,15 @@ export async function POST(request: NextRequest) {
         const subjects: any = {
             en: `Contract - SwissCleanMove - ${client.firstName} ${client.lastName}`,
             de: `Vertrag - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            fr: `Contrat - SwissCleanMove - ${client.firstName} ${client.lastName}`
+            fr: `Contrat - SwissCleanMove - ${client.firstName} ${client.lastName}`,
+            it: `Contratto - SwissCleanMove - ${client.firstName} ${client.lastName}`
         }
 
         const messages: any = {
             en: `Dear ${client.firstName} ${client.lastName},\n\nPlease find attached your contract from SwissCleanMove.\n\nThank you for your business!\n\nBest regards,\nSwissCleanMove Team`,
             de: `Sehr geehrte/r ${client.firstName} ${client.lastName},\n\nAnbei finden Sie Ihren Vertrag von SwissCleanMove.\n\nVielen Dank für Ihr Vertrauen!\n\nMit freundlichen Grüßen,\nSwissCleanMove Team`,
-            fr: `Cher/Chère ${client.firstName} ${client.lastName},\n\nVeuillez trouver ci-joint votre contrat de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`
+            fr: `Cher/Chère ${client.firstName} ${client.lastName},\n\nVeuillez trouver ci-joint votre contrat de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`,
+            it: `Gentile ${client.firstName} ${client.lastName},\n\nIn allegato trova il Suo contratto da SwissCleanMove.\n\nGrazie per la Sua fiducia!\n\nCordiali saluti,\nTeam SwissCleanMove`
         }
 
         // Send email

@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Canton+of+Valais,Switzerland'
   }
+,
+  it: {
+    slug: 'wallis-valais', regionName: 'Vallese',
+    seoTitle: 'Muoversi nel Vallese | Pulizia Vallese | SwissCleanMove',
+    metaDescription: 'Traslochi, pulizie, servizi di facility e smaltimento professionali nel Vallese.',
+    h1: 'Traslochi e pulizie nel Vallese',
+    highSeoKeywords: ['Muoversi nel Vallese','Pulizia del Vallese'],
+    localKeywords: ['Sion','Sierre','Martigny','Monthey','Brig','Visp','Naters'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi, pulizie, pulizie di manutenzione, servizi per strutture, manutenzione e smaltimento di immobili nel Vallese.',
+      'Serviamo Sion, Sierre, Martigny, Monthey, Briga, Visp e Naters.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi nel Vallese?', answer: 'Sì, offriamo traslochi nel Vallese.' },
+      { question: 'È possibile effettuare il servizio di pulizia in Vallese?', answer: 'Sì, offriamo pulizie di trasloco, pulizie finali, pulizie di manutenzione e pulizie uffici.' },
+      { question: 'SwissCleanMove funziona a Sion e Martigny?', answer: 'Sì, lavoriamo a Sion, Martigny, Sierre, Monthey, Briga e dintorni.' },
+    ],
+    mapQuery: 'Canton+of+Valais,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

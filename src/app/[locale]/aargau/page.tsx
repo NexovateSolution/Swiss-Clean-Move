@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Canton+of+Aargau,Switzerland'
   }
+,
+  it: {
+    slug: 'aargau', regionName: 'Canton Argovia',
+    seoTitle: 'Argovia in movimento | Impresa di pulizie Argovia | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie di trasloco, pulizie di manutenzione, servizi di strutture e smaltimento nel Canton Argovia.',
+    h1: 'Impresa di traslochi e pulizie nel Canton Argovia',
+    highSeoKeywords: ['Argovia in movimento','Impresa di pulizie Argovia'],
+    localKeywords: ['Aarau','Baden','Wettingen','Brugg','Lenzburg','Wohlen','Rheinfelden','Zofingen'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi professionali, pulizie, pulizie di trasloco con garanzia di consegna, pulizie di mantenimento, servizi di strutture, manutenzione e smaltimento di immobili nel Canton Argovia.',
+      'Serviamo Aarau, Baden, Wettingen, Brugg, Lenzburg, Wohlen, Rheinfelden e Zofingen. SwissCleanMove fornisce servizi affidabili per traslochi, pulizia, manutenzione degli edifici e smaltimento.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi in Argovia?', answer: 'Sì, SwissCleanMove offre traslochi in tutto il Canton Argovia.' },
+      { question: 'È disponibile la pulizia di trasloco con garanzia?', answer: 'Sì, offriamo la pulizia finale con garanzia di consegna.' },
+      { question: 'Quali località sono servite?', answer: 'Aarau, Baden, Wettingen, Brugg, Lenzburg, Wohlen, Rheinfelden e Zofingen.' },
+    ],
+    mapQuery: 'Canton+of+Aargau,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

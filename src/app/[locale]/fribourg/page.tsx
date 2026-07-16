@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Fribourg,Switzerland'
   }
+,
+  it: {
+    slug: 'fribourg', regionName: 'Friburgo',
+    seoTitle: 'Muoversi a Friburgo | Pulizia Friburgo | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie, pulizie manutentive, servizi di strutture e smaltimento a Friburgo.',
+    h1: 'Traslochi e pulizie a Friburgo',
+    highSeoKeywords: ['Muoversi a Friburgo','Pulizia di Friburgo'],
+    localKeywords: ['Fribourg','Freiburg','Bulle','Murten','Düdingen','Tafers','Estavayer'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi, pulizie, pulizie finali con garanzia di consegna, pulizie di mantenimento, servizi per strutture, manutenzione e smaltimento di immobili nel Canton Friburgo.',
+      'Serviamo Friburgo, Bulle, Morat, Düdingen, Tafers e Estavayer. Team bilingue per clienti di lingua francese e tedesca.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Friburgo?', answer: 'Sì, offriamo traslochi a Friburgo e dintorni.' },
+      { question: 'Il servizio di pulizia è disponibile a Friburgo?', answer: 'Sì, offriamo pulizie di trasloco, pulizie finali, pulizie di manutenzione e pulizie uffici.' },
+      { question: 'SwissCleanMove funziona a Bulle e Morat?', answer: 'Sì, lavoriamo anche a Bulle, Morat e dintorni.' },
+    ],
+    mapQuery: 'Fribourg,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

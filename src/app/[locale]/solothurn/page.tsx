@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Solothurn,Switzerland'
   }
+,
+  it: {
+    slug: 'solothurn', regionName: 'Soletta',
+    seoTitle: 'Muoversi a Soletta | Impresa di pulizie Soletta | SwissCleanMove',
+    metaDescription: 'Traslochi, pulizie di trasloco, pulizie di manutenzione, servizi di strutture, manutenzione e smaltimento immobili a Soletta.',
+    h1: 'Impresa di traslochi e pulizie a Soletta',
+    highSeoKeywords: ['Movimento a Soletta','Impresa di pulizie Soletta'],
+    localKeywords: ['Solothurn','Grenchen','Olten','Zuchwil','Derendingen','Oensingen'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi, pulizie, pulizie manutentive, servizi per strutture, manutenzione e smaltimento di immobili a Soletta e dintorni.',
+      'Lavoriamo a Soletta, Grenchen, Olten, Zuchwil, Derendingen e Oensingen. SwissCleanMove vi supporta con traslochi privati, traslochi di uffici, pulizie finali, pulizie di uffici, manutenzione di edifici e smaltimento professionale.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Soletta?', answer: 'Sì, offriamo traslochi professionali a Soletta e dintorni.' },
+      { question: 'È prevista la pulizia dopo un trasloco?', answer: 'Sì, offriamo la pulizia di trasloco e la pulizia finale.' },
+      { question: 'SwissCleanMove funziona a Grenchen e Olten?', answer: 'Sì, lavoriamo a Grenchen, Olten e in altre località del Canton Soletta.' },
+    ],
+    mapQuery: 'Solothurn,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

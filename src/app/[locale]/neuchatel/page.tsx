@@ -56,6 +56,24 @@ const D: Record<string, RegionPageData> = {
       { question: 'Do you work in La Chaux-de-Fonds?', answer: 'Yes, we work in La Chaux-de-Fonds, Le Locle and throughout the canton.' }
     ],
     mapQuery: 'Neuchatel,Switzerland'
+  },
+  it: {
+    slug: 'neuchatel', regionName: 'Neuchâtel',
+    seoTitle: 'Trasloco Neuchâtel | Impresa di pulizie Neuchâtel | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie di fine locazione, pulizie di manutenzione, facility services e smaltimento a Neuchâtel.',
+    h1: 'Traslochi & Pulizie professionali a Neuchâtel',
+    highSeoKeywords: ['Trasloco Neuchâtel','Pulizie Neuchâtel'],
+    localKeywords: ['Neuchâtel','La Chaux-de-Fonds','Le Locle','Boudry','Val-de-Ruz','Cortaillod'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi professionali, pulizie di fine locazione, pulizie di manutenzione, facility services, manutenzione immobili e smaltimento nel Canton Neuchâtel.',
+      'Operiamo a Neuchâtel, La Chaux-de-Fonds, Le Locle, Boudry, Val-de-Ruz e Cortaillod. Servizio bilingue in francese e tedesco.'
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Neuchâtel?', answer: 'Sì, offriamo traslochi professionali a Neuchâtel.' },
+      { question: 'Offrite pulizie di fine locazione?', answer: 'Sì, offriamo pulizie di fine locazione con garanzia di consegna.' },
+      { question: 'Lavorate a La Chaux-de-Fonds?', answer: 'Sì, lavoriamo a La Chaux-de-Fonds, Le Locle e in tutto il cantone.' }
+    ],
+    mapQuery: 'Neuchatel,Switzerland'
   }
 };
 

@@ -57,6 +57,25 @@ const D: Record<string, RegionPageData> = {
     ],
     mapQuery: 'Lucerne,Switzerland'
   }
+,
+  it: {
+    slug: 'luzern', regionName: 'Lucerna',
+    seoTitle: 'Muoversi a Lucerna | Impresa di pulizie Lucerna | SwissCleanMove',
+    metaDescription: 'Traslochi professionali, pulizie, pulizie di trasloco, pulizie di manutenzione, servizi di strutture e smaltimento a Lucerna.',
+    h1: 'Impresa di traslochi e pulizie a Lucerna',
+    highSeoKeywords: ['Spostamento di Lucerna','Impresa di pulizie Lucerna'],
+    localKeywords: ['Luzern','Emmen','Kriens','Horw','Sursee','Ebikon','Rothenburg'],
+    introParagraphs: [
+      'SwissCleanMove offre traslochi professionali, pulizie di trasloco con garanzia di consegna, pulizie di mantenimento, pulizie di uffici, servizi di strutture, manutenzione e smaltimento di immobili a Lucerna e dintorni.',
+      'Serviamo Lucerna, Emmen, Kriens, Horw, Sursee, Ebikon e Rothenburg. Con SwissCleanMove i clienti ricevono supporto professionale per traslochi, pulizia e manutenzione degli edifici da un unico fornitore.',
+    ],
+    faqs: [
+      { question: 'SwissCleanMove offre traslochi a Lucerna?', answer: 'Sì, offriamo traslochi, trasporti e traslochi di uffici a Lucerna.' },
+      { question: 'Esiste un\'impresa di pulizie a Lucerna?', answer: 'Sì, SwissCleanMove offre pulizie professionali a Lucerna.' },
+      { question: 'Quali servizi sono disponibili?', answer: 'Traslochi, pulizie di trasloco, pulizie di manutenzione, servizi di struttura, manutenzione e smaltimento immobili.' },
+    ],
+    mapQuery: 'Lucerne,Switzerland'
+  }
 };
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
