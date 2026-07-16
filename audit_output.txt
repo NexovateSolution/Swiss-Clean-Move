@@ -1,0 +1,189 @@
+[src\app\admin\clients\page.tsx:334] Hardcoded text: "= 10 && index"
+[src\app\admin\clients\page.tsx:412] Hardcoded text: "SwissClean Move"
+[src\app\admin\clients\page.tsx:904] Hardcoded text: "🇩🇪"
+[src\app\admin\clients\page.tsx:912] Hardcoded text: "🇫🇷"
+[src\app\admin\clients\page.tsx:920] Hardcoded text: "🇬🇧"
+[src\app\admin\service-forms\page.tsx:408] Hardcoded text: "edited"
+[src\app\admin\test\page.tsx:9] Hardcoded text: "Test Dashboard"
+[src\app\admin\test\page.tsx:11] Hardcoded text: "Dashboard is working!"
+[src\app\admin\test\page.tsx:12] Hardcoded text: "If you can see this, the basic layout is functioning correctly."
+[src\app\admin\test\page.tsx:16] Hardcoded text: "Test Card 1"
+[src\app\admin\test\page.tsx:20] Hardcoded text: "Test Card 2"
+[src\app\admin\test\page.tsx:24] Hardcoded text: "Test Card 3"
+[src\app\admin\test\page.tsx:28] Hardcoded text: "Test Card 4"
+[src\app\api\service-forms\route.ts:226] Ternary translation: ? (locale === 'de' ? 'Auf Anfrage' : locale === 'fr' ? 'Sur Demande' : 'Price Upon Request')
+[src\app\api\service-forms\route.ts:265] Ternary translation: const translatedService = locale === 'de' ? (serviceType === 'moving' ? 'Umzug' : (serviceType === 'house-cleaning' ? 'Hausreinigung' : 'Reinigung')) : (locale === 'fr' ? (serviceType === 'moving' ? 'Déménagement' : 'Nettoyage') : serviceType);
+[src\app\api\service-forms\route.ts:290] Ternary translation: <p>${locale === 'de' ? 'Freundliche Grüsse' : locale === 'fr' ? 'Meilleures salutations' : 'Kind regards'},<br/><strong>${locale === 'de' ? 'Ihr' : locale === 'fr' ? 'Votre équipe' : 'Your'} SwissCleanMove Team</strong></p>
+[src\app\[locale]\blog\page.tsx:9] Ternary translation: const title = locale === 'en' ? 'Blog & Tips | SwissCleanMove' : locale === 'fr' ? 'Blog & Astuces | SwissCleanMove' : 'Blog & Tipps | SwissCleanMove';
+[src\app\[locale]\blog\page.tsx:10] Ternary translation: const description = locale === 'en' ? 'Helpful tips for your move and cleaning in Switzerland.' : locale === 'fr' ? 'Conseils utiles pour votre déménagement et nettoyage en Suisse.' : 'Hilfreiche Tipps rund um Umzug und Reinigung in der Schweiz.';
+[src\app\[locale]\blog\page.tsx:20] Ternary translation: const heroTitle = locale === 'en' ? 'Blog & Tips' : locale === 'fr' ? 'Blog & Astuces' : 'Blog & Tipps';
+[src\app\[locale]\blog\page.tsx:21] Ternary translation: const heroSubtitle = locale === 'en' ? 'Expert advice for a stress-free move.' : locale === 'fr' ? 'Conseils d\'experts pour un déménagement sans stress.' : 'Expertenratgeber für einen stressfreien Umzug.';
+[src\app\[locale]\blog\page.tsx:50] Ternary translation: <span>{locale === 'en' ? 'Read more' : locale === 'fr' ? 'Lire la suite' : 'Weiterlesen'}</span>
+[src\app\[locale]\blog\[slug]\page.tsx:43] Ternary translation: <span>{locale === 'en' ? 'Back to Blog' : locale === 'fr' ? 'Retour au Blog' : 'Zurück zum Blog'}</span>
+[src\app\[locale]\dashboard\page.tsx:105] Hardcoded text: "Schnellaktionen"
+[src\app\[locale]\dashboard\page.tsx:111] Hardcoded text: "Neuen Auftrag erstellen"
+[src\app\[locale]\dashboard\page.tsx:116] Hardcoded text: "Dokument hochladen"
+[src\app\[locale]\dashboard\page.tsx:121] Hardcoded text: "Termin buchen"
+[src\app\[locale]\dashboard\page.tsx:132] Hardcoded text: "Meine Verträge"
+[src\app\[locale]\dashboard\page.tsx:155] Hardcoded text: "Signieren"
+[src\app\[locale]\dashboard\page.tsx:171] Hardcoded text: "Rechnungen"
+[src\app\[locale]\dashboard\page.tsx:178] Hardcoded text: "Rechnung"
+[src\app\[locale]\dashboard\page.tsx:179] Hardcoded text: "Betrag"
+[src\app\[locale]\dashboard\page.tsx:180] Hardcoded text: "Datum"
+[src\app\[locale]\dashboard\page.tsx:181] Hardcoded text: "Status"
+[src\app\[locale]\dashboard\page.tsx:182] Hardcoded text: "Aktionen"
+[src\app\[locale]\dashboard\page.tsx:232] Hardcoded text: "Digitale Verträge"
+[src\app\[locale]\dashboard\page.tsx:233] Hardcoded text: "Verträge online signieren und verwalten"
+[src\app\[locale]\dashboard\page.tsx:240] Hardcoded text: "Dokument Upload"
+[src\app\[locale]\dashboard\page.tsx:241] Hardcoded text: "Fotos und Dokumente sicher hochladen"
+[src\app\[locale]\dashboard\page.tsx:248] Hardcoded text: "Online Zahlung"
+[src\app\[locale]\dashboard\page.tsx:249] Hardcoded text: "Rechnungen online bezahlen"
+[src\app\[locale]\faq\page.tsx:223] Hardcoded text: "+41 78 215 80 30"
+[src\app\[locale]\faq\page.tsx:232] Hardcoded text: "info@swisscleanmove.ch"
+[src\app\[locale]\form\page.tsx:116] Hardcoded text: "Loading..."
+[src\app\[locale]\free-offer\page.tsx:193] Hardcoded text: "SwissCleanMove"
+[src\app\[locale]\free-offer\page.tsx:204] Ternary translation: {locale === 'en' ? 'Based on 10 reviews' : locale === 'fr' ? 'Basé sur 10 avis' : 'Basierend auf 10 Bewertungen'}
+[src\app\[locale]\free-offer\page.tsx:207] Hardcoded text: "Google"
+[src\app\[locale]\free-offer\page.tsx:216] Ternary translation: <span>{locale === 'en' ? 'review us on' : locale === 'fr' ? 'évaluez-nous sur' : 'Bewerten Sie uns auf'}</span>
+[src\app\[locale]\free-offer\page.tsx:283] Hardcoded text: "+41 78 215 80 30"
+[src\app\[locale]\gallery\page.tsx:73] Ternary translation: const loc = typeof locale === 'string' ? locale : 'de';
+[src\app\[locale]\gallery\page.tsx:117] Ternary translation: <option value="all">{locale === 'en' ? 'All Services' : locale === 'fr' ? 'Tous les services' : 'Alle Dienstleistungen'}</option>
+[src\app\[locale]\gallery\page.tsx:128] Ternary translation: <option value="all">{locale === 'en' ? 'All Cities' : locale === 'fr' ? 'Toutes les villes' : 'Alle Städte'}</option>
+[src\app\[locale]\legal\page.tsx:71] Hardcoded text: "SwissCleanMove GmbH"
+[src\app\[locale]\legal\page.tsx:72] Hardcoded text: "Orpundstrasse 31, 2504 Biel/Bienne, Schweiz"
+[src\app\[locale]\legal\page.tsx:73] Hardcoded text: "+41 78 215 80 30 • +41 76 488 36 89"
+[src\app\[locale]\legal\page.tsx:74] Hardcoded text: "info@swisscleanmove.ch"
+[src\app\[locale]\legal\page.tsx:75] Hardcoded text: "www.swisscleanmove.ch"
+[src\app\[locale]\legal\page.tsx:82] Hardcoded text: "CHE-123.456.789"
+[src\app\[locale]\legal\page.tsx:83] Hardcoded text: "CHE-123.456.789 MWST"
+[src\app\[locale]\legal\page.tsx:84] Hardcoded text: "Marco Müller"
+[src\app\[locale]\legal\page.tsx:85] Hardcoded text: "Handelsregisteramt Bern"
+[src\app\[locale]\page.tsx:138] Ternary translation: const testimonials = locale === 'fr' ? [
+[src\app\[locale]\page.tsx:154] Ternary translation: ] : locale === 'en' ? [
+[src\app\[locale]\page.tsx:195] Hardcoded text: "Swiss"
+[src\app\[locale]\page.tsx:196] Hardcoded text: "CleanMove"
+[src\app\[locale]\page.tsx:224] Hardcoded text: "+41 78 215 80 30"
+[src\app\[locale]\page.tsx:431] Ternary translation: {locale === 'en' ? 'Pricing & Guides' : locale === 'fr' ? 'Prix & Conseils' : 'Preise & Ratgeber'}
+[src\app\[locale]\page.tsx:448] Ternary translation: <span>{locale === 'en' ? 'Learn More' : locale === 'fr' ? 'En savoir plus' : 'Mehr erfahren'}</span>
+[src\app\[locale]\page.tsx:469] Ternary translation: {locale === 'en' ? 'Property Maintenance Biel/Bienne & Facility Service' : locale === 'fr' ? 'Entretien de Propriétés Bienne/Bienne' : 'Hauswartung Reinigung Biel/Bienne'}
+[src\app\[locale]\page.tsx:486] Ternary translation: <span>{locale === 'en' ? 'Learn More' : locale === 'fr' ? 'En savoir plus' : 'Mehr erfahren'}</span>
+[src\app\[locale]\page.tsx:507] Ternary translation: {locale === 'en' ? 'Household Help & Private Cleaning' : locale === 'fr' ? 'Aide ménagère & Nettoyage privé' : 'Haushaltshilfe & Privatreinigung'}
+[src\app\[locale]\page.tsx:524] Ternary translation: <span>{locale === 'en' ? 'Learn More' : locale === 'fr' ? 'En savoir plus' : 'Mehr erfahren'}</span>
+[src\app\[locale]\page.tsx:570] Ternary translation: {locale === 'en' ? 'Operational Throughout Switzerland' : locale === 'fr' ? 'Opérationnel dans toute la Suisse' : 'Schweizweit im Einsatz'}
+[src\app\[locale]\page.tsx:692] Hardcoded text: "50+"
+[src\app\[locale]\page.tsx:697] Hardcoded text: "50+"
+[src\app\[locale]\page.tsx:742] Hardcoded text: "SwissCleanMove"
+[src\app\[locale]\page.tsx:753] Ternary translation: {locale === 'en' ? 'Based on 10 reviews' : locale === 'fr' ? 'Basé sur 10 avis' : 'Basierend auf 10 Bewertungen'}
+[src\app\[locale]\page.tsx:756] Hardcoded text: "Google"
+[src\app\[locale]\page.tsx:765] Ternary translation: <span>{locale === 'en' ? 'review us on' : locale === 'fr' ? 'évaluez-nous sur' : 'Bewerten Sie uns auf'}</span>
+[src\app\[locale]\page.tsx:801] Ternary translation: ? (locale === 'en' ? '3 months ago' : locale === 'fr' ? 'il y a 3 mois' : 'vor 3 Monaten')
+[src\app\[locale]\page.tsx:803] Ternary translation: ? (locale === 'en' ? '1 month ago' : locale === 'fr' ? 'il y a 1 mois' : 'vor 1 Monat')
+[src\app\[locale]\page.tsx:804] Ternary translation: : (locale === 'en' ? '2 weeks ago' : locale === 'fr' ? 'il y a 2 semaines' : 'vor 2 Wochen')}
+[src\app\[locale]\page.tsx:909] Hardcoded text: "+41 78 215 80 30"
+[src\app\[locale]\pricing\page.tsx:227] Hardcoded text: "+41 78 215 80 30"
+[src\app\[locale]\regions\page.tsx:35] Ternary translation: badge={locale === 'en' ? 'Our Regions' : locale === 'fr' ? 'Nos Régions' : 'Unsere Regionen'}
+[src\app\[locale]\regions\page.tsx:38] Ternary translation: {locale === 'en' ? 'Moving & Cleaning Company Switzerland – All Regions' : locale === 'fr' ? 'Déménagement & Nettoyage Suisse – Toutes les régions' : 'Umzugsfirma & Reinigungsfirma Schweiz – Alle Regionen'}
+[src\app\[locale]\regions\page.tsx:41] Ternary translation: subtitle={locale === 'en' ? 'Professional moving and cleaning services across 16 Swiss cantons and regions.' : locale === 'fr' ? 'Services professionnels de déménagement et de nettoyage dans 16 cantons et régions suisses.' : 'Professionelle Umzugs- und Reinigungsdienste in 16 Schweizer Kantonen und Regionen.'}
+[src\app\[locale]\regions\page.tsx:73] Ternary translation: {locale === 'en' ? '16 Regions — One Partner' : locale === 'fr' ? '16 Régions — Un Partenaire' : '16 Regionen — Ein Partner'}
+[src\app\[locale]\regions\page.tsx:76] Ternary translation: {locale === 'en' ? 'Click on any region for detailed information about our local services.' : locale === 'fr' ? 'Cliquez sur une région pour des informations détaillées sur nos services locaux.' : 'Klicken Sie auf eine Region für detaillierte Informationen zu unseren lokalen Dienstleistungen.'}
+[src\app\[locale]\regions\page.tsx:101] Ternary translation: <span>{locale === 'en' ? 'View Region' : locale === 'fr' ? 'Voir la région' : 'Region ansehen'}</span>
+[src\app\[locale]\regions\page.tsx:116] Ternary translation: {locale === 'en' ? 'Your Region Not Listed?' : locale === 'fr' ? 'Votre région n\'est pas listée ?' : 'Ihre Region nicht dabei?'}
+[src\app\[locale]\regions\page.tsx:119] Ternary translation: {locale === 'en' ? 'Contact us — we operate throughout Switzerland and can help you anywhere.' : locale === 'fr' ? 'Contactez-nous — nous opérons dans toute la Suisse et pouvons vous aider partout.' : 'Kontaktieren Sie uns — wir sind schweizweit im Einsatz und können Ihnen überall helfen.'}
+[src\app\[locale]\regions\page.tsx:123] Ternary translation: {locale === 'en' ? 'Request Free Quote' : locale === 'fr' ? 'Demander un devis' : 'Kostenlose Offerte anfordern'}
+[src\app\[locale]\regions\page.tsx:126] Hardcoded text: "+41 78 215 80 30"
+[src\app\[locale]\services\page.tsx:249] Hardcoded text: "+41 78 215 80 30"
+[src\components\admin\AdminLayout.tsx:143] Hardcoded text: "admin@swissclean.com"
+[src\components\admin\AdminLayout.tsx:211] Ternary translation: className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${locale === l.code ? 'text-swiss-blue font-medium' : 'text-gray-700 dark:text-gray-200'
+[src\components\Footer.tsx:74] Hardcoded text: "Orpundstrasse 31, 2504 Biel/Bienne"
+[src\components\HaushaltshilfePricing.tsx:13] Ternary translation: const L = (en: string, fr: string, de: string) => locale === 'en' ? en : locale === 'fr' ? fr : de;
+[src\components\HaushaltshilfePricing.tsx:135] Hardcoded text: "+41 78 215 80 30"
+[src\components\HaushaltshilfePricing.tsx:141] Hardcoded text: "info@swisscleanmove.ch"
+[src\components\Header.tsx:61] Ternary translation: <div className={`flex justify-between items-center py-0.5 px-4 ${locale === 'de' ? 'lg:px-4 gap-2' : 'lg:px-6 gap-4'
+[src\components\Header.tsx:103] Ternary translation: <div className={`hidden lg:flex items-center ${locale === 'de' ? 'space-x-1.5' : 'space-x-1.5 xl:space-x-2'
+[src\components\Header.tsx:108] Ternary translation: className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text rounded-lg transition-all duration-150 whitespace-nowrap group border border-swiss-border ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
+[src\components\Header.tsx:112] Hardcoded text: "+41 78 215 80 30"
+[src\components\Header.tsx:112] Ternary translation: <span className={`font-medium ${locale === 'de' ? 'text-xs' : 'text-xs xl:text-sm'}`}>+41 78 215 80 30</span>
+[src\components\Header.tsx:119] Ternary translation: className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-lg transition-all duration-150 group ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
+[src\components\Header.tsx:134] Ternary translation: className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${locale === 'en' ? 'text-swiss-blue font-medium' : 'text-gray-700'
+[src\components\Header.tsx:144] Ternary translation: className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${locale === 'de' ? 'text-swiss-blue font-medium' : 'text-gray-700'
+[src\components\Header.tsx:154] Ternary translation: className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${locale === 'fr' ? 'text-swiss-blue font-medium' : 'text-gray-700'
+[src\components\Header.tsx:202] Hardcoded text: "Language"
+[src\components\Header.tsx:251] Hardcoded text: "+41 78 215 80 30"
+[src\components\KnowledgeHubPage.tsx:253] Ternary translation: <p className="text-sm font-semibold text-swiss-text mb-1">{locale === 'en' ? 'Best for:' : locale === 'fr' ? 'Idéal pour:' : 'Ideal für:'}</p>
+[src\components\KnowledgeHubPage.tsx:271] Ternary translation: <p className="text-sm font-semibold text-swiss-text mb-1">{locale === 'en' ? 'Best for:' : locale === 'fr' ? 'Idéal pour:' : 'Ideal für:'}</p>
+[src\components\KnowledgeHubPage.tsx:317] Hardcoded text: "Häufige Fragen & Ratgeber"
+[src\components\KnowledgeHubPage.tsx:318] Hardcoded text: "Ausführliche Antworten auf Ihre wichtigsten Fragen."
+[src\components\KnowledgeHubPage.tsx:433] Hardcoded text: "+41 78 215 80 30"
+[src\components\LoadingSpinner.tsx:22] Hardcoded text: "Loading..."
+[src\components\MobileCTABar.tsx:65] Hardcoded text: "WhatsApp"
+[src\components\RegionLandingPage.tsx:87] Ternary translation: { label: locale === 'en' ? 'Request Free Quote' : locale === 'fr' ? 'Demander un devis gratuit' : 'Kostenlose Offerte anfordern', href: `/${locale}/free-offer`, icon: Mail, variant: 'primary' as const },
+[src\components\RegionLandingPage.tsx:88] Ternary translation: { label: locale === 'en' ? 'Call Now' : locale === 'fr' ? 'Appeler maintenant' : 'Jetzt anrufen', href: 'tel:+41782158030', icon: Phone, variant: 'secondary' as const },
+[src\components\RegionLandingPage.tsx:89] Ternary translation: { label: locale === 'en' ? 'WhatsApp Inquiry' : locale === 'fr' ? 'Demande WhatsApp' : 'WhatsApp Anfrage senden', href: 'https://wa.me/41782158030', icon: MessageCircle, variant: 'secondary' as const },
+[src\components\RegionLandingPage.tsx:90] Ternary translation: { label: locale === 'en' ? 'Request Cleaning' : locale === 'fr' ? 'Demander un nettoyage' : 'Reinigung anfragen', href: `/${locale}/form?service=cleaning`, icon: Sparkles, variant: 'outline' as const },
+[src\components\RegionLandingPage.tsx:91] Ternary translation: { label: locale === 'en' ? 'Plan Move' : locale === 'fr' ? 'Planifier déménagement' : 'Umzug planen', href: `/${locale}/form?service=relocation`, icon: Truck, variant: 'outline' as const },
+[src\components\RegionLandingPage.tsx:92] Ternary translation: { label: locale === 'en' ? 'Request Facility Service' : locale === 'fr' ? 'Demander facility service' : 'Facility Service anfragen', href: `/${locale}/form?service=facility`, icon: Settings, variant: 'outline' as const },
+[src\components\RegionLandingPage.tsx:98] Ternary translation: { label: locale === 'en' ? 'Moving Switzerland' : locale === 'fr' ? 'Déménagement Suisse' : 'Umzug Schweiz', href: `/${locale}/umzug-schweiz` },
+[src\components\RegionLandingPage.tsx:99] Ternary translation: { label: locale === 'en' ? 'Cleaning Switzerland' : locale === 'fr' ? 'Nettoyage Suisse' : 'Reinigungsfirma Schweiz', href: `/${locale}/reinigungsfirma-schweiz` },
+[src\components\RegionLandingPage.tsx:100] Ternary translation: { label: locale === 'en' ? 'Facility Services Switzerland' : locale === 'fr' ? 'Facility Services Suisse' : 'Facility Service Schweiz', href: `/${locale}/facility-service-schweiz` },
+[src\components\RegionLandingPage.tsx:101] Ternary translation: { label: locale === 'en' ? 'Property Maintenance Switzerland' : locale === 'fr' ? 'Conciergerie Suisse' : 'Hauswartung Schweiz', href: `/${locale}/hauswartung-schweiz` },
+[src\components\RegionLandingPage.tsx:102] Ternary translation: { label: locale === 'en' ? 'Move-out Cleaning Switzerland' : locale === 'fr' ? 'Nettoyage de fin de bail Suisse' : 'Umzugsreinigung Schweiz', href: `/${locale}/umzugsreinigung-schweiz` },
+[src\components\RegionLandingPage.tsx:103] Ternary translation: { label: locale === 'en' ? 'FAQ' : locale === 'fr' ? 'FAQ' : 'Häufige Fragen (FAQ)', href: `/${locale}/faq` },
+[src\components\RegionLandingPage.tsx:135] Ternary translation: { '@type': 'ListItem', position: 2, name: locale === 'en' ? 'Regions' : locale === 'fr' ? 'Régions' : 'Regionen', item: `https://swisscleanmove.ch/${locale}/regions` },
+[src\components\RegionLandingPage.tsx:162] Ternary translation: {locale === 'en' ? '📋 Request Free Quote' : locale === 'fr' ? '📋 Demander un devis' : '📋 Kostenlose Offerte anfordern'}
+[src\components\RegionLandingPage.tsx:166] Hardcoded text: "+41 78 215 80 30"
+[src\components\RegionLandingPage.tsx:199] Ternary translation: {locale === 'en' ? `Our Services in ${data.regionName}` : locale === 'fr' ? `Nos services à ${data.regionName}` : `Unsere Leistungen in ${data.regionName}`}
+[src\components\RegionLandingPage.tsx:213] Ternary translation: {locale === 'en' ? 'Our Service Areas' : locale === 'fr' ? 'Nos zones d\'intervention' : 'Unsere Einsatzgebiete'}
+[src\components\RegionLandingPage.tsx:232] Ternary translation: {locale === 'en' ? `SwissCleanMove Services in ${data.regionName}` : locale === 'fr' ? `Services SwissCleanMove à ${data.regionName}` : `SwissCleanMove Dienstleistungen in ${data.regionName}`}
+[src\components\RegionLandingPage.tsx:256] Ternary translation: {locale === 'en' ? 'Get Started Today' : locale === 'fr' ? 'Commencez aujourd\'hui' : 'Jetzt starten'}
+[src\components\RegionLandingPage.tsx:289] Ternary translation: {locale === 'en' ? `${data.regionName} on the Map` : locale === 'fr' ? `${data.regionName} sur la carte` : `${data.regionName} auf der Karte`}
+[src\components\RegionLandingPage.tsx:308] Ternary translation: {locale === 'en' ? 'Frequently Asked Questions' : locale === 'fr' ? 'Questions fréquentes' : 'Häufig gestellte Fragen (FAQ)'}
+[src\components\RegionLandingPage.tsx:338] Ternary translation: {locale === 'en' ? 'More from SwissCleanMove' : locale === 'fr' ? 'Plus de SwissCleanMove' : 'Mehr von SwissCleanMove'}
+[src\components\RegionLandingPage.tsx:358] Ternary translation: {locale === 'en' ? `Your Partner in ${data.regionName}` : locale === 'fr' ? `Votre partenaire à ${data.regionName}` : `Ihr Partner in ${data.regionName}`}
+[src\components\RegionLandingPage.tsx:361] Ternary translation: {locale === 'en' ? 'Contact us now for a free, no-obligation quote.' : locale === 'fr' ? 'Contactez-nous maintenant pour un devis gratuit et sans engagement.' : 'Kontaktieren Sie uns jetzt für eine kostenlose und unverbindliche Offerte.'}
+[src\components\RegionLandingPage.tsx:365] Ternary translation: {locale === 'en' ? 'Request Free Quote' : locale === 'fr' ? 'Demander un devis' : 'Kostenlose Offerte anfordern'}
+[src\components\RegionLandingPage.tsx:368] Hardcoded text: "+41 78 215 80 30"
+[src\components\SeoLandingPage.tsx:269] Hardcoded text: "+41 78 215 80 30"
+[src\components\SeoLandingPage.tsx:470] Ternary translation: {locale === 'en' ? 'Operational Areas' : locale === 'fr' ? 'Zones d\'intervention' : 'Einsatzgebiete'}
+[src\components\SeoLandingPage.tsx:474] Ternary translation: {locale === 'en' ? 'Our teams are in daily operation in:' : locale === 'fr' ? 'Nos équipes interviennent quotidiennement à :' : 'Unsere Teams sind täglich im Einsatz in:'}
+[src\components\SeoLandingPage.tsx:494] Ternary translation: {locale === 'en' ? `Fast availability in the ${city} region` : locale === 'fr' ? `Disponibilité rapide dans la région de ${city}` : `Schnelle Verfügbarkeit in der Region ${city}`}
+[src\components\SeoLandingPage.tsx:504] Ternary translation: {locale === 'en' ? `${city} on the Map` : locale === 'fr' ? `${city} sur la carte` : `${city} auf der Karte`}
+[src\components\SeoLandingPage.tsx:532] Ternary translation: {locale === 'en' ? 'Frequently Asked Questions' : locale === 'fr' ? 'Questions Fréquentes' : 'Häufig gestellte Fragen (FAQ)'}
+[src\components\SeoLandingPage.tsx:563] Ternary translation: {p('internalLinksHeading') || (locale === 'en' ? 'Related Links' : locale === 'fr' ? 'Liens Connexes' : 'Weiterführende Links')}
+[src\components\SeoLandingPage.tsx:587] Ternary translation: {locale === 'en' ? 'Service throughout Switzerland' : locale === 'fr' ? 'Service dans toute la Suisse' : 'Service schweizweit'}
+[src\components\SeoLandingPage.tsx:597] Ternary translation: {locale === 'en' ? 'FAQ' : locale === 'fr' ? 'FAQ' : 'Häufige Fragen (FAQ)'}
+[src\components\SeoLandingPage.tsx:606] Ternary translation: {locale === 'en' ? 'All Regions' : locale === 'fr' ? 'Toutes les Régions' : 'Alle Regionen'}
+[src\components\SeoLandingPage.tsx:639] Hardcoded text: "+41 78 215 80 30"
+[src\components\ServiceForm.tsx:417] Hardcoded text: "approx. 10 m2"
+[src\components\ServiceForm.tsx:418] Hardcoded text: "approx. 25 m2"
+[src\components\ServiceForm.tsx:419] Hardcoded text: "approx. 50 m2"
+[src\components\ServiceForm.tsx:420] Hardcoded text: "approx. 75 m2"
+[src\components\ServiceForm.tsx:421] Hardcoded text: "approx. 100 m2"
+[src\components\ServiceForm.tsx:422] Hardcoded text: "approx. 150 m2"
+[src\components\ServiceForm.tsx:423] Hardcoded text: "approx. 200+ m2"
+[src\components\ServiceForm.tsx:638] Hardcoded text: "ca 10 m2"
+[src\components\ServiceForm.tsx:639] Hardcoded text: "ca 25 m2"
+[src\components\ServiceForm.tsx:640] Hardcoded text: "ca 50 m2"
+[src\components\ServiceForm.tsx:641] Hardcoded text: "ca 75 m2"
+[src\components\ServiceForm.tsx:642] Hardcoded text: "ca 100 m2"
+[src\components\ServiceForm.tsx:643] Hardcoded text: "ca 150 m2"
+[src\components\ServiceForm.tsx:644] Hardcoded text: "ca 200+ m2"
+[src\components\ServiceFormWizard.tsx:260] Hardcoded text: "Total Price (CHF) *"
+[src\components\ServiceFormWizard.tsx:264] Hardcoded text: "Paid Amount (CHF)"
+[src\components\ServiceFormWizard.tsx:270] Hardcoded text: "Project Execution Start *"
+[src\components\ServiceFormWizard.tsx:274] Hardcoded text: "Project Execution End *"
+[src\components\ServiceFormWizard.tsx:280] Hardcoded text: "Handover Date"
+[src\components\ServiceFormWizard.tsx:284] Hardcoded text: "Handover Time"
+[src\components\ServiceFormWizard.tsx:311] Hardcoded text: "= getStepCount(service) - 1 && step"
+[src\components\UmzugPricing.tsx:261] Ternary translation: locale === 'en' ? 'Apartment Size' : locale === 'fr' ? 'Taille de l\'appartement' : 'Wohnungsgrösse'
+[src\components\UmzugPricing.tsx:276] Ternary translation: locale === 'en' ? 'Property Size' : locale === 'fr' ? 'Taille de la propriété' : 'Objektgrösse'
+[src\components\UmzugPricing.tsx:291] Ternary translation: locale === 'en' ? 'Service' : locale === 'fr' ? 'Service' : 'Dienstleistung'
+[src\components\UmzugPricing.tsx:357] Hardcoded text: "+41 78 215 80 30"
+[src\components\UmzugPricing.tsx:365] Hardcoded text: "+41 76 488 36 89"
+[src\components\UmzugPricing.tsx:369] Hardcoded text: "info@swisscleanmove.ch"
+[src\utils\pdfExport.ts:339] Ternary translation: const desc = locale === 'de' && item.descriptionDe ? item.descriptionDe :
+[src\utils\pdfExport.ts:340] Ternary translation: locale === 'fr' && item.descriptionFr ? item.descriptionFr :
+[src\utils\pdfGenerator.ts:543] Ternary translation: if (val === true) formattedVal = locale === 'de' ? 'Ja' : (locale === 'fr' ? 'Oui' : 'Yes');
+[src\utils\pdfGenerator.ts:566] Ternary translation: if (customer.submissionDate) receiptDate = new Date(customer.submissionDate).toLocaleDateString(locale === 'de' ? 'de-CH' : locale === 'fr' ? 'fr-CH' : 'en-US');
+[src\utils\pdfGenerator.ts:568] Ternary translation: const serviceTitle = customer.serviceType === 'moving' ? (locale === 'de' ? 'Umzug' : locale === 'fr' ? 'Déménagement' : 'Moving') : (locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : 'Cleaning');
+[src\utils\pdfGenerator.ts:1066] Ternary translation: <p>${locale === 'de' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Umzug' : (customer.serviceName === 'house-cleaning' || customer.formType === 'cleaning' ? 'Hausreinigung' : 'Reinigung')) : (locale === 'fr' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Déménagement' : 'Nettoyage') : (customer.serviceName || customer.formType || 'Service'))} – ${locDict.offer.charAt(0).toUpperCase() + locDict.offer.slice(1).toLowerCase()}</p>
+Total potential hardcoded strings found: 188

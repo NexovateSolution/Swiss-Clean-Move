@@ -102,23 +102,23 @@ export default function DashboardPage({ params: { locale } }: { params: { locale
               <div className="card p-6 space-y-6">
                 <h3 className="text-xl font-bold text-swiss-gray-800 flex items-center space-x-2">
                   <User className="w-5 h-5 text-swiss-blue" />
-                  <span>Schnellaktionen</span>
+                  <span>{t("dashboard.quickActions", { fallback: "Schnellaktionen" })}</span>
                 </h3>
                 
                 <div className="space-y-3">
                   <button className="w-full flex items-center space-x-3 p-3 bg-swiss-blue text-white rounded-lg hover:bg-swiss-blue/90 transition-colors">
                     <FileText className="w-5 h-5" />
-                    <span>Neuen Auftrag erstellen</span>
+                    <span>{t("dashboard.createNewOrder", { fallback: "Neuen Auftrag erstellen" })}</span>
                   </button>
                   
                   <button className="w-full flex items-center space-x-3 p-3 bg-swiss-green text-white rounded-lg hover:bg-swiss-green/90 transition-colors">
                     <Upload className="w-5 h-5" />
-                    <span>Dokument hochladen</span>
+                    <span>{t("dashboard.uploadDocument", { fallback: "Dokument hochladen" })}</span>
                   </button>
                   
                   <button className="w-full flex items-center space-x-3 p-3 bg-swiss-gray-600 text-white rounded-lg hover:bg-swiss-gray-700 transition-colors">
                     <Calendar className="w-5 h-5" />
-                    <span>Termin buchen</span>
+                    <span>{t("dashboard.bookAppointment", { fallback: "Termin buchen" })}</span>
                   </button>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function DashboardPage({ params: { locale } }: { params: { locale
               <div className="card p-6">
                 <h3 className="text-xl font-bold text-swiss-gray-800 mb-6 flex items-center space-x-2">
                   <FileText className="w-5 h-5 text-swiss-blue" />
-                  <span>Meine Verträge</span>
+                  <span>{t("dashboard.myContracts", { fallback: "Meine Verträge" })}</span>
                 </h3>
                 
                 <div className="space-y-4">
@@ -152,7 +152,7 @@ export default function DashboardPage({ params: { locale } }: { params: { locale
                           </span>
                           <button className="flex items-center space-x-1 text-swiss-blue hover:text-swiss-blue/80">
                             <PenTool className="w-4 h-4" />
-                            <span className="text-sm">Signieren</span>
+                            <span className="text-sm">{t("dashboard.sign", { fallback: "Signieren" })}</span>
                           </button>
                         </div>
                       </div>
@@ -168,18 +168,18 @@ export default function DashboardPage({ params: { locale } }: { params: { locale
             <div className="card p-6">
               <h3 className="text-xl font-bold text-swiss-gray-800 mb-6 flex items-center space-x-2">
                 <CreditCard className="w-5 h-5 text-swiss-blue" />
-                <span>Rechnungen</span>
+                <span>{t("dashboard.invoices", { fallback: "Rechnungen" })}</span>
               </h3>
               
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-swiss-gray-200">
-                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">Rechnung</th>
-                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">Betrag</th>
-                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">Datum</th>
-                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">Status</th>
-                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">Aktionen</th>
+                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">{t("dashboard.invoice", { fallback: "Rechnung" })}</th>
+                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">{t("dashboard.amount", { fallback: "Betrag" })}</th>
+                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">{t("dashboard.date", { fallback: "Datum" })}</th>
+                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">{t("dashboard.status", { fallback: "Status" })}</th>
+                      <th className="text-left py-3 px-4 font-semibold text-swiss-gray-800">{t("dashboard.actions", { fallback: "Aktionen" })}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -229,24 +229,24 @@ export default function DashboardPage({ params: { locale } }: { params: { locale
               <div className="w-12 h-12 bg-swiss-blue/10 rounded-lg flex items-center justify-center mx-auto">
                 <PenTool className="w-6 h-6 text-swiss-blue" />
               </div>
-              <h3 className="text-lg font-semibold text-swiss-gray-800">Digitale Verträge</h3>
-              <p className="text-swiss-gray-600">Verträge online signieren und verwalten</p>
+              <h3 className="text-lg font-semibold text-swiss-gray-800">{t("dashboard.digitalContracts", { fallback: "Digitale Verträge" })}</h3>
+              <p className="text-swiss-gray-600">{t("dashboard.signAndManage", { fallback: "Verträge online signieren und verwalten" })}</p>
             </div>
 
             <div className="card p-6 text-center space-y-4">
               <div className="w-12 h-12 bg-swiss-green/10 rounded-lg flex items-center justify-center mx-auto">
                 <Upload className="w-6 h-6 text-swiss-green" />
               </div>
-              <h3 className="text-lg font-semibold text-swiss-gray-800">Dokument Upload</h3>
-              <p className="text-swiss-gray-600">Fotos und Dokumente sicher hochladen</p>
+              <h3 className="text-lg font-semibold text-swiss-gray-800">{t("dashboard.documentUpload", { fallback: "Dokument Upload" })}</h3>
+              <p className="text-swiss-gray-600">{t("dashboard.uploadPhotosSecurely", { fallback: "Fotos und Dokumente sicher hochladen" })}</p>
             </div>
 
             <div className="card p-6 text-center space-y-4">
               <div className="w-12 h-12 bg-swiss-red/10 rounded-lg flex items-center justify-center mx-auto">
                 <CreditCard className="w-6 h-6 text-swiss-red" />
               </div>
-              <h3 className="text-lg font-semibold text-swiss-gray-800">Online Zahlung</h3>
-              <p className="text-swiss-gray-600">Rechnungen online bezahlen</p>
+              <h3 className="text-lg font-semibold text-swiss-gray-800">{t("dashboard.onlinePayment", { fallback: "Online Zahlung" })}</h3>
+              <p className="text-swiss-gray-600">{t("dashboard.payInvoicesOnline", { fallback: "Rechnungen online bezahlen" })}</p>
             </div>
           </div>
         </div>

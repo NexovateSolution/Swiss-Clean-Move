@@ -3,7 +3,7 @@ import { getRequestConfig } from 'next-intl/server';
 // Trigger HMR for translations
 
 // Can be imported from a shared config
-export const locales = ['de', 'fr', 'en'];
+export const locales = ['de', 'fr', 'en', 'it'];
 
 function isPlainObject(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);

@@ -254,7 +254,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
     if (isAdmin && step === totalSteps - 1) {
       return (
         <div>
-          <h3 className="text-xl font-bold text-[#003366] mb-6">Admin Dashboard: Finalizing Project Setup</h3>
+          <h3 className="text-xl font-bold text-[#003366] mb-6">{tl("admin.finalizingProjectSetup")}</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
              <div className="mb-2">
                 <label className="block text-sm font-bold text-[#003366] mb-2">Total Price (CHF) *</label>

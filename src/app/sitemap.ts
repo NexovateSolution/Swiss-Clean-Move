@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const locales = ['de', 'fr', 'en'];
+const locales = ['de', 'fr', 'en', 'it'];
 const baseUrl = 'https://swisscleanmove.ch';
 
 export default function sitemap(): MetadataRoute.Sitemap {

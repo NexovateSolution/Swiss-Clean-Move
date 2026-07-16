@@ -467,11 +467,11 @@ export default function SeoLandingPage({
             {/* Einsatzgebiete */}
             <div className="space-y-6">
               <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-                {locale === 'en' ? 'Operational Areas' : locale === 'fr' ? 'Zones d\'intervention' : 'Einsatzgebiete'}
+                {t('seoLanding.operationalAreas', { fallback: 'Einsatzgebiete' })}
               </h2>
               <div className="bg-swiss-section p-6 md:p-8 rounded-2xl border border-swiss-border">
                 <p className="text-swiss-text font-medium mb-4">
-                  {locale === 'en' ? 'Our teams are in daily operation in:' : locale === 'fr' ? 'Nos équipes interviennent quotidiennement à :' : 'Unsere Teams sind täglich im Einsatz in:'}
+                  {t('seoLanding.teamsDailyOperation', { fallback: 'Unsere Teams sind täglich im Einsatz in:' })}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {(areaCities || ['Biel/Bienne', 'Nidau', 'Lyss', 'Brügg', 'Ipsach', 'Aarberg', 'Pieterlen']).map(areaCity => (
@@ -491,7 +491,7 @@ export default function SeoLandingPage({
                 <div className="flex items-start space-x-3 text-swiss-text font-medium bg-white p-4 rounded-xl border border-swiss-border shadow-subtle">
                   <span className="text-xl">👉</span>
                   <p>
-                    {locale === 'en' ? `Fast availability in the ${city} region` : locale === 'fr' ? `Disponibilité rapide dans la région de ${city}` : `Schnelle Verfügbarkeit in der Region ${city}`}
+                    {t('seoLanding.fastAvailability', { city, fallback: `Schnelle Verfügbarkeit in der Region ${city}` })}
                   </p>
                 </div>
               </div>
@@ -501,7 +501,7 @@ export default function SeoLandingPage({
             {mapQuery && (
               <div className="space-y-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-                  {locale === 'en' ? `${city} on the Map` : locale === 'fr' ? `${city} sur la carte` : `${city} auf der Karte`}
+                  {t('seoLanding.onTheMap', { city, fallback: `${city} auf der Karte` })}
                 </h2>
                 <div className="rounded-2xl overflow-hidden border border-swiss-border shadow-sm">
                   <iframe
@@ -529,7 +529,7 @@ export default function SeoLandingPage({
             <div className="max-w-3xl mx-auto space-y-8">
               <div className="text-center">
                 <h2 className="text-3xl font-bold text-swiss-text">
-                  {locale === 'en' ? 'Frequently Asked Questions' : locale === 'fr' ? 'Questions Fréquentes' : 'Häufig gestellte Fragen (FAQ)'}
+                  {t('seoLanding.faq', { fallback: 'Häufig gestellte Fragen (FAQ)' })}
                 </h2>
               </div>
               <div className="space-y-4">
@@ -584,7 +584,7 @@ export default function SeoLandingPage({
                 >
                   <ArrowRight className="w-5 h-5 text-swiss-red group-hover:translate-x-1 transition-transform" />
                   <span className="font-medium text-swiss-text group-hover:text-swiss-red transition-colors">
-                    {locale === 'en' ? 'Service throughout Switzerland' : locale === 'fr' ? 'Service dans toute la Suisse' : 'Service schweizweit'}
+                    {t('seoLanding.serviceThroughoutCh', { fallback: 'Service schweizweit' })}
                   </span>
                 </Link>
               )}
@@ -594,7 +594,7 @@ export default function SeoLandingPage({
               >
                 <ArrowRight className="w-5 h-5 text-swiss-red group-hover:translate-x-1 transition-transform" />
                 <span className="font-medium text-swiss-text group-hover:text-swiss-red transition-colors">
-                  {locale === 'en' ? 'FAQ' : locale === 'fr' ? 'FAQ' : 'Häufige Fragen (FAQ)'}
+                  {t('seoLanding.faqShort', { fallback: 'Häufige Fragen (FAQ)' })}
                 </span>
               </Link>
               <Link
@@ -603,7 +603,7 @@ export default function SeoLandingPage({
               >
                 <ArrowRight className="w-5 h-5 text-swiss-red group-hover:translate-x-1 transition-transform" />
                 <span className="font-medium text-swiss-text group-hover:text-swiss-red transition-colors">
-                  {locale === 'en' ? 'All Regions' : locale === 'fr' ? 'Toutes les Régions' : 'Alle Regionen'}
+                  {t('seoLanding.allRegions', { fallback: 'Alle Regionen' })}
                 </span>
               </Link>
             </div>

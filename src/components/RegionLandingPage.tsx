@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 'use client';
 
 import Link from 'next/link';
@@ -105,6 +106,8 @@ function getInternalLinks(locale: string) {
 }
 
 export default function RegionLandingPage({ data, locale }: { data: RegionPageData; locale: string }) {
+  const t = useTranslations('dynamic');
+
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const ctas = getCTAs(locale);
   const internalLinks = getInternalLinks(locale);
@@ -159,7 +162,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
         cta={
           <div className="flex flex-col sm:flex-row gap-3 justify-start">
             <Link href={`/${locale}/free-offer`} className="btn-primary text-lg px-8 py-4">
-              {locale === 'en' ? '📋 Request Free Quote' : locale === 'fr' ? '📋 Demander un devis' : '📋 Kostenlose Offerte anfordern'}
+              {t('regionLanding.requestQuote', { fallback: '📋 Kostenlose Offerte anfordern' })}
             </Link>
             <a href="tel:+41782158030" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
               <Phone className="w-5 h-5 text-swiss-red" />
@@ -196,7 +199,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
             {/* High SEO Keywords */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-swiss-text mb-4 text-center">
-                {locale === 'en' ? `Our Services in ${data.regionName}` : locale === 'fr' ? `Nos services à ${data.regionName}` : `Unsere Leistungen in ${data.regionName}`}
+                {t('regionLanding.ourServicesIn', { region: data.regionName, fallback: `Unsere Leistungen in ${data.regionName}` })}
               </h2>
               <div className="flex flex-wrap gap-2 justify-center">
                 {data.highSeoKeywords.map(kw => (
@@ -210,7 +213,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
             {/* Local Keywords / Einsatzgebiete */}
             <div>
               <h3 className="text-xl font-bold text-swiss-text mb-4 text-center">
-                {locale === 'en' ? 'Our Service Areas' : locale === 'fr' ? 'Nos zones d\'intervention' : 'Unsere Einsatzgebiete'}
+                {t('regionLanding.ourServiceAreas', { fallback: 'Unsere Einsatzgebiete' })}
               </h3>
               <div className="flex flex-wrap gap-2 justify-center">
                 {data.localKeywords.map(kw => (
@@ -229,7 +232,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
         <div className="container-max">
           <div className="text-center space-y-4 mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-              {locale === 'en' ? `SwissCleanMove Services in ${data.regionName}` : locale === 'fr' ? `Services SwissCleanMove à ${data.regionName}` : `SwissCleanMove Dienstleistungen in ${data.regionName}`}
+              {t('regionLanding.scmServicesIn', { region: data.regionName, fallback: `SwissCleanMove Dienstleistungen in ${data.regionName}` })}
             </h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
@@ -253,7 +256,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
         <div className="container-max">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-              {locale === 'en' ? 'Get Started Today' : locale === 'fr' ? 'Commencez aujourd\'hui' : 'Jetzt starten'}
+              {t('regionLanding.getStartedToday', { fallback: 'Jetzt starten' })}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {ctas.map((cta, i) => {
@@ -286,7 +289,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
         <div className="container-max">
           <div className="max-w-4xl mx-auto space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold text-swiss-text text-center">
-              {locale === 'en' ? `${data.regionName} on the Map` : locale === 'fr' ? `${data.regionName} sur la carte` : `${data.regionName} auf der Karte`}
+              {t('regionLanding.onTheMap', { region: data.regionName, fallback: `${data.regionName} auf der Karte` })}
             </h2>
             <div className="rounded-2xl overflow-hidden border border-swiss-border shadow-sm">
               <iframe
@@ -305,7 +308,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
           <div className="container-max">
             <div className="max-w-3xl mx-auto space-y-8">
               <h2 className="text-2xl md:text-3xl font-bold text-swiss-text text-center">
-                {locale === 'en' ? 'Frequently Asked Questions' : locale === 'fr' ? 'Questions fréquentes' : 'Häufig gestellte Fragen (FAQ)'}
+                {t('regionLanding.faq', { fallback: 'Häufig gestellte Fragen (FAQ)' })}
               </h2>
               <div className="space-y-4">
                 {data.faqs.map((faq, index) => (
@@ -335,7 +338,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
         <div className="container-max">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-2xl font-bold text-swiss-text">
-              {locale === 'en' ? 'More from SwissCleanMove' : locale === 'fr' ? 'Plus de SwissCleanMove' : 'Mehr von SwissCleanMove'}
+              {t('regionLanding.moreFromScm', { fallback: 'Mehr von SwissCleanMove' })}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {internalLinks.map((link, i) => (
@@ -355,14 +358,14 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
           <div className="max-w-3xl mx-auto">
             <div className="card p-8 md:p-10 bg-swiss-softRed border border-swiss-border text-center space-y-6">
               <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-                {locale === 'en' ? `Your Partner in ${data.regionName}` : locale === 'fr' ? `Votre partenaire à ${data.regionName}` : `Ihr Partner in ${data.regionName}`}
+                {t('regionLanding.yourPartnerIn', { region: data.regionName, fallback: `Ihr Partner in ${data.regionName}` })}
               </h2>
               <p className="text-lg text-swiss-body">
-                {locale === 'en' ? 'Contact us now for a free, no-obligation quote.' : locale === 'fr' ? 'Contactez-nous maintenant pour un devis gratuit et sans engagement.' : 'Kontaktieren Sie uns jetzt für eine kostenlose und unverbindliche Offerte.'}
+                {t('regionLanding.contactUsNow', { fallback: 'Kontaktieren Sie uns jetzt für eine kostenlose und unverbindliche Offerte.' })}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href={`/${locale}/free-offer`} className="btn-primary text-lg px-8 py-4">
-                  {locale === 'en' ? 'Request Free Quote' : locale === 'fr' ? 'Demander un devis' : 'Kostenlose Offerte anfordern'}
+                  {t('regionLanding.requestQuoteBtn', { fallback: 'Kostenlose Offerte anfordern' })}
                 </Link>
                 <a href="tel:+41782158030" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-swiss-red" /><span>+41 78 215 80 30</span>

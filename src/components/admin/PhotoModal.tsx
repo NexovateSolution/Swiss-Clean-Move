@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 'use client'
 
 import { useState, useRef } from 'react'
@@ -29,7 +30,9 @@ interface PhotoModalProps {
   onSuccess: () => void
 }
 
-export default function PhotoModal({ isOpen, onClose, client, onSuccess }: PhotoModalProps) {
+export default function PhotoModal({ isOpen, onClose, client, onSuccess }: PhotoModalProps) { 
+  const t = useTranslations('admin.photoModal');
+
   const [loading, setLoading] = useState(false)
   const [dragOver, setDragOver] = useState(false)
   const [photos, setPhotos] = useState<Photo[]>(client?.photos || [])
@@ -147,7 +150,7 @@ export default function PhotoModal({ isOpen, onClose, client, onSuccess }: Photo
                     <Camera className="w-5 h-5 text-indigo-600" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-semibold text-gray-900">Photo Album</h2>
+                    <h2 className="text-xl font-semibold text-gray-900">{t("photoAlbum")}</h2>
                     <p className="text-sm text-gray-500">{client.firstName} {client.lastName}</p>
                   </div>
                 </div>
@@ -178,8 +181,8 @@ export default function PhotoModal({ isOpen, onClose, client, onSuccess }: Photo
                         <Upload className="w-8 h-8 text-gray-600" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-medium text-gray-900">Upload Photos</h3>
-                        <p className="text-gray-600">Drag and drop photos here, or click to select</p>
+                        <h3 className="text-lg font-medium text-gray-900">{t("uploadPhotos")}</h3>
+                        <p className="text-gray-600">{t("dragDrop")}</p>
                         <p className="text-sm text-gray-500 mt-1">
                           Supports: JPG, PNG, GIF, WebP (Max 10MB each)
                         </p>
@@ -250,8 +253,8 @@ export default function PhotoModal({ isOpen, onClose, client, onSuccess }: Photo
                       <div className="bg-gray-100 p-4 rounded-full w-16 h-16 mx-auto mb-4">
                         <ImageIcon className="w-8 h-8 text-gray-400 mx-auto" />
                       </div>
-                      <h3 className="text-lg font-medium text-gray-900 mb-2">No Photos Yet</h3>
-                      <p className="text-gray-600">Upload some photos to get started</p>
+                      <h3 className="text-lg font-medium text-gray-900 mb-2">{t("noPhotos")}</h3>
+                      <p className="text-gray-600">{t("uploadSome")}</p>
                     </div>
                   )}
                 </div>

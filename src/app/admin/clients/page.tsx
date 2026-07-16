@@ -928,7 +928,7 @@ export default function ClientsPage() {
                   className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <FileText className="w-5 h-5" />
-                  <span>Print & Send Email</span>
+                  <span>{t("printSendEmail")}</span>
                 </button>
 
                 <button
@@ -936,7 +936,7 @@ export default function ClientsPage() {
                   className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <Download className="w-5 h-5" />
-                  <span>Download PDF & Send Email</span>
+                  <span>{t("downloadSendEmail")}</span>
                 </button>
 
                 <button
@@ -944,7 +944,7 @@ export default function ClientsPage() {
                   className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <Download className="w-5 h-5" />
-                  <span>Download PDF Only</span>
+                  <span>{t("downloadOnly")}</span>
                 </button>
 
                 <button

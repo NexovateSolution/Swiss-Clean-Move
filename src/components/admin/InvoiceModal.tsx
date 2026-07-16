@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 'use client'
 
 import { useState } from 'react'
@@ -33,7 +34,9 @@ interface InvoiceModalProps {
   onSuccess: () => void
 }
 
-export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: InvoiceModalProps) {
+export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: InvoiceModalProps) { 
+  const t = useTranslations('admin.invoiceModal');
+
   const [loading, setLoading] = useState(false)
 
   const {
@@ -150,7 +153,7 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
                   <div className="bg-purple-100 p-2 rounded-lg">
                     <FileText className="w-5 h-5 text-purple-600" />
                   </div>
-                  <h2 className="text-xl font-semibold text-gray-900">Create Invoice</h2>
+                  <h2 className="text-xl font-semibold text-gray-900">{t("createInvoice")}</h2>
                 </div>
                 <button
                   onClick={onClose}
@@ -162,30 +165,30 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
 
               {/* Client Info */}
               <div className="p-6 bg-gray-50 border-b border-gray-200">
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Client Information</h3>
+                <h3 className="text-lg font-medium text-gray-900 mb-4">{t("clientInfo")}</h3>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="text-gray-500">Client:</span>
+                    <span className="text-gray-500">{t("clientLabel")}</span>
                     <p className="font-medium text-gray-900">{client.firstName} {client.lastName}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Phone:</span>
+                    <span className="text-gray-500">{t("phoneLabel")}</span>
                     <p className="font-medium text-gray-900">{client.phone}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Email:</span>
+                    <span className="text-gray-500">{t("emailLabel")}</span>
                     <p className="font-medium text-gray-900">{client.email || 'N/A'}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Service:</span>
+                    <span className="text-gray-500">{t("serviceLabel")}</span>
                     <p className="font-medium text-gray-900">{client.serviceType}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Address:</span>
+                    <span className="text-gray-500">{t("addressLabel")}</span>
                     <p className="font-medium text-gray-900">{client.address}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Location:</span>
+                    <span className="text-gray-500">{t("locationLabel")}</span>
                     <p className="font-medium text-gray-900">{client.postalCode} {client.location}</p>
                   </div>
                 </div>
@@ -193,7 +196,7 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
 
               {/* Invoice Form */}
               <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-6">
-                <h3 className="text-lg font-medium text-gray-900">Invoice Details</h3>
+                <h3 className="text-lg font-medium text-gray-900">{t("invoiceDetails")}</h3>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -232,22 +235,22 @@ export default function InvoiceModal({ isOpen, onClose, client, onSuccess }: Inv
 
                 {/* Invoice Preview */}
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-medium text-blue-900 mb-2">Invoice Preview</h4>
+                  <h4 className="font-medium text-blue-900 mb-2">{t("invoicePreview")}</h4>
                   <div className="space-y-1 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-blue-700">Service:</span>
+                      <span className="text-blue-700">{t("serviceLabel")}</span>
                       <span className="font-medium text-blue-900">{client.serviceType}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-blue-700">Subtotal:</span>
+                      <span className="text-blue-700">{t("subtotal")}</span>
                       <span className="font-medium text-blue-900">CHF {client.balance.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-blue-700">VAT (7.7%):</span>
+                      <span className="text-blue-700">{t("vat")}</span>
                       <span className="font-medium text-blue-900">CHF {(client.balance * 0.077).toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between border-t border-blue-200 pt-1">
-                      <span className="text-blue-700 font-medium">Total:</span>
+                      <span className="text-blue-700 font-medium">{t("total")}</span>
                       <span className="font-bold text-blue-900">CHF {(client.balance * 1.077).toLocaleString()}</span>
                     </div>
                   </div>

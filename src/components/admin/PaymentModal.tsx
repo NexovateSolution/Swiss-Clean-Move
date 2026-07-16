@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 'use client'
 
 import { useState } from 'react'
@@ -30,7 +31,9 @@ interface PaymentModalProps {
   onSuccess: () => void
 }
 
-export default function PaymentModal({ isOpen, onClose, client, onSuccess }: PaymentModalProps) {
+export default function PaymentModal({ isOpen, onClose, client, onSuccess }: PaymentModalProps) { 
+  const t = useTranslations('admin.paymentModal');
+
   const [loading, setLoading] = useState(false)
 
   const {
@@ -109,7 +112,7 @@ export default function PaymentModal({ isOpen, onClose, client, onSuccess }: Pay
                   <div className="bg-green-100 p-2 rounded-lg">
                     <CreditCard className="w-5 h-5 text-green-600" />
                   </div>
-                  <h2 className="text-xl font-semibold text-gray-900">Add Payment</h2>
+                  <h2 className="text-xl font-semibold text-gray-900">{t("addPayment")}</h2>
                 </div>
                 <button
                   onClick={onClose}
@@ -121,30 +124,30 @@ export default function PaymentModal({ isOpen, onClose, client, onSuccess }: Pay
 
               {/* Client Info */}
               <div className="p-6 bg-gray-50 border-b border-gray-200">
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Project Details</h3>
+                <h3 className="text-lg font-medium text-gray-900 mb-4">{t("projectDetails")}</h3>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="text-gray-500">Client:</span>
+                    <span className="text-gray-500">{t("clientLabel")}</span>
                     <p className="font-medium text-gray-900">{client.firstName} {client.lastName}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Phone:</span>
+                    <span className="text-gray-500">{t("phoneLabel")}</span>
                     <p className="font-medium text-gray-900">{client.phone}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Email:</span>
+                    <span className="text-gray-500">{t("emailLabel")}</span>
                     <p className="font-medium text-gray-900">{client.email || 'N/A'}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Total Price:</span>
+                    <span className="text-gray-500">{t("totalPrice")}</span>
                     <p className="font-medium text-gray-900">CHF {client.totalPrice.toLocaleString()}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Paid Amount:</span>
+                    <span className="text-gray-500">{t("paidAmount")}</span>
                     <p className="font-medium text-gray-900">CHF {client.paidAmount.toLocaleString()}</p>
                   </div>
                   <div>
-                    <span className="text-gray-500">Balance:</span>
+                    <span className="text-gray-500">{t("balance")}</span>
                     <p className="font-medium text-red-600">CHF {client.balance.toLocaleString()}</p>
                   </div>
                 </div>
@@ -152,7 +155,7 @@ export default function PaymentModal({ isOpen, onClose, client, onSuccess }: Pay
 
               {/* Payment Form */}
               <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-6">
-                <h3 className="text-lg font-medium text-gray-900">Payment Details</h3>
+                <h3 className="text-lg font-medium text-gray-900">{t("paymentDetails")}</h3>
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -184,10 +187,10 @@ export default function PaymentModal({ isOpen, onClose, client, onSuccess }: Pay
                       {...register('method', { required: 'Payment method is required' })}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      <option value="CASH">Cash</option>
-                      <option value="BANK_TRANSFER">Bank Transfer</option>
-                      <option value="CREDIT_CARD">Credit Card</option>
-                      <option value="PAYPAL">PayPal</option>
+                      <option value="CASH">{t("cash")}</option>
+                      <option value="BANK_TRANSFER">{t("bankTransfer")}</option>
+                      <option value="CREDIT_CARD">{t("creditCard")}</option>
+                      <option value="PAYPAL">{t("payPal")}</option>
                     </select>
                     {errors.method && (
                       <p className="mt-1 text-sm text-red-600">{errors.method.message}</p>
@@ -209,14 +212,14 @@ export default function PaymentModal({ isOpen, onClose, client, onSuccess }: Pay
 
                 {/* Payment Summary */}
                 <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-medium text-blue-900 mb-2">Payment Summary</h4>
+                  <h4 className="font-medium text-blue-900 mb-2">{t("paymentSummary")}</h4>
                   <div className="space-y-1 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-blue-700">Payment Amount:</span>
+                      <span className="text-blue-700">{t("paymentAmount")}</span>
                       <span className="font-medium text-blue-900">CHF {paymentAmount.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-blue-700">Remaining Balance:</span>
+                      <span className="text-blue-700">{t("remainingBalance")}</span>
                       <span className="font-medium text-blue-900">
                         CHF {(client.balance - paymentAmount).toLocaleString()}
                       </span>

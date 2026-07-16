@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 'use client'
 
 import { useState } from 'react'
@@ -22,7 +23,9 @@ interface DeleteModalProps {
   onSuccess: () => void
 }
 
-export default function DeleteModal({ isOpen, onClose, client, onSuccess }: DeleteModalProps) {
+export default function DeleteModal({ isOpen, onClose, client, onSuccess }: DeleteModalProps) { 
+  const t = useTranslations('admin.deleteModal');
+
   const [loading, setLoading] = useState(false)
 
   const handleDelete = async () => {
@@ -77,7 +80,7 @@ export default function DeleteModal({ isOpen, onClose, client, onSuccess }: Dele
                   <div className="bg-red-100 p-2 rounded-lg">
                     <AlertTriangle className="w-5 h-5 text-red-600" />
                   </div>
-                  <h2 className="text-xl font-semibold text-gray-900">Delete Client</h2>
+                  <h2 className="text-xl font-semibold text-gray-900">{t("deleteClient")}</h2>
                 </div>
                 <button
                   onClick={onClose}
@@ -94,35 +97,35 @@ export default function DeleteModal({ isOpen, onClose, client, onSuccess }: Dele
                     Are you sure you want to delete this client? This action cannot be undone and will permanently remove:
                   </p>
                   <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 mb-4">
-                    <li>Client information and project details</li>
-                    <li>All payment records</li>
-                    <li>All uploaded photos</li>
-                    <li>All invoices</li>
+                    <li>{t("clientInfo")}</li>
+                    <li>{t("allPayment")}</li>
+                    <li>{t("allPhotos")}</li>
+                    <li>{t("allInvoices")}</li>
                   </ul>
                 </div>
 
                 {/* Client Info */}
                 <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                  <h3 className="text-lg font-medium text-gray-900 mb-3">Project Details</h3>
+                  <h3 className="text-lg font-medium text-gray-900 mb-3">{t("projectDetails")}</h3>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <span className="text-gray-500">Client:</span>
+                      <span className="text-gray-500">{t("clientLabel")}</span>
                       <p className="font-medium text-gray-900">{client.firstName} {client.lastName}</p>
                     </div>
                     <div>
-                      <span className="text-gray-500">Phone:</span>
+                      <span className="text-gray-500">{t("phoneLabel")}</span>
                       <p className="font-medium text-gray-900">{client.phone}</p>
                     </div>
                     <div>
-                      <span className="text-gray-500">Email:</span>
+                      <span className="text-gray-500">{t("emailLabel")}</span>
                       <p className="font-medium text-gray-900">{client.email || 'N/A'}</p>
                     </div>
                     <div>
-                      <span className="text-gray-500">Total Price:</span>
+                      <span className="text-gray-500">{t("totalPrice")}</span>
                       <p className="font-medium text-gray-900">CHF {client.totalPrice.toLocaleString()}</p>
                     </div>
                     <div className="col-span-2">
-                      <span className="text-gray-500">Outstanding Balance:</span>
+                      <span className="text-gray-500">{t("outstandingBalance")}</span>
                       <p className="font-medium text-red-600">CHF {client.balance.toLocaleString()}</p>
                     </div>
                   </div>
@@ -133,7 +136,7 @@ export default function DeleteModal({ isOpen, onClose, client, onSuccess }: Dele
                     <div className="flex items-start space-x-3">
                       <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
                       <div>
-                        <h4 className="text-sm font-medium text-yellow-800">Outstanding Balance Warning</h4>
+                        <h4 className="text-sm font-medium text-yellow-800">{t("outstandingWarning")}</h4>
                         <p className="text-sm text-yellow-700 mt-1">
                           This client has an outstanding balance of CHF {client.balance.toLocaleString()}. 
                           Deleting this client will permanently remove all payment records.
@@ -162,7 +165,7 @@ export default function DeleteModal({ isOpen, onClose, client, onSuccess }: Dele
                     ) : (
                       <Trash2 className="w-4 h-4" />
                     )}
-                    <span>{loading ? 'Deleting...' : 'Delete Client'}</span>
+                    <span>{loading ? 'Deleting...' : '{t("deleteClient")}'}</span>
                   </button>
                 </div>
               </div>

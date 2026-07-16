@@ -565,8 +565,8 @@ export default function ServiceFormsPage() {
                       <table className="w-full text-sm">
                         <thead>
                           <tr className="bg-gray-100 dark:bg-gray-600">
-                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-600 dark:text-gray-300 uppercase">Description</th>
-                            <th className="px-4 py-2 text-right text-xs font-medium text-gray-600 dark:text-gray-300 uppercase w-32">Price (CHF)</th>
+                            <th className="px-4 py-2 text-left text-xs font-medium text-gray-600 dark:text-gray-300 uppercase">{t("descriptionLabel")}</th>
+                            <th className="px-4 py-2 text-right text-xs font-medium text-gray-600 dark:text-gray-300 uppercase w-32">{t("priceLabel")}</th>
                             {isEditingQuote && <th className="px-2 py-2 w-10"></th>}
                           </tr>
                         </thead>
@@ -629,7 +629,7 @@ export default function ServiceFormsPage() {
                           )}
 
                           <tr className="bg-gray-100 dark:bg-gray-600">
-                            <td className="px-4 py-3 text-right font-bold text-gray-900 dark:text-white">Total Estimate:</td>
+                            <td className="px-4 py-3 text-right font-bold text-gray-900 dark:text-white">{t("totalEstimate")}</td>
                             <td className="px-4 py-3 text-right font-bold text-lg text-red-600 dark:text-red-400">CHF {calculateTotal().toFixed(2)}</td>
                             {isEditingQuote && <td></td>}
                           </tr>
@@ -639,7 +639,7 @@ export default function ServiceFormsPage() {
                   ) : (
                     <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 text-center">
                       <AlertCircle className="w-6 h-6 text-yellow-500 mx-auto mb-2" />
-                      <p className="text-sm text-yellow-700 dark:text-yellow-400">No automated quote was generated for this submission.</p>
+                      <p className="text-sm text-yellow-700 dark:text-yellow-400">{t("noAutomatedQuote")}</p>
                       <button
                         onClick={() => { setIsEditingQuote(true); handleAddLineItem(); }}
                         className="mt-2 text-xs text-blue-600 hover:text-blue-800 font-medium"
@@ -652,7 +652,7 @@ export default function ServiceFormsPage() {
                   {/* Admin notes */}
                   {isEditingQuote && (
                     <div className="mt-4">
-                      <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">Admin Notes</label>
+                      <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">{t("adminNotes")}</label>
                       <textarea
                         value={adminNotes}
                         onChange={(e) => setAdminNotes(e.target.value)}
@@ -664,7 +664,7 @@ export default function ServiceFormsPage() {
                   )}
                   {!isEditingQuote && adminNotes && (
                     <div className="mt-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                      <p className="text-xs font-medium text-blue-600 dark:text-blue-400 mb-1">Admin Notes:</p>
+                      <p className="text-xs font-medium text-blue-600 dark:text-blue-400 mb-1">{t("adminNotes")}:</p>
                       <p className="text-sm text-blue-800 dark:text-blue-300">{adminNotes}</p>
                     </div>
                   )}
@@ -699,7 +699,7 @@ export default function ServiceFormsPage() {
                     )
 
                     if (allKeys.length === 0) {
-                      return <p className="text-gray-500 dark:text-gray-400 italic">No additional data submitted.</p>
+                      return <p className="text-gray-500 dark:text-gray-400 italic">{t("noAdditionalData")}</p>
                     }
                     return (
                       <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">

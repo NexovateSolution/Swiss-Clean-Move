@@ -606,11 +606,11 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
                         onChange={(e) => handleInputChange('numberOfRoomsApartment', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
-                        <option value="1 Zimmer">1 Zimmer</option>
-                        <option value="2 Zimmer">2 Zimmer</option>
-                        <option value="3 Zimmer">3 Zimmer</option>
-                        <option value="4 Zimmer">4 Zimmer</option>
-                        <option value="5+ Zimmer">5+ Zimmer</option>
+                        <option value="1 Zimmer">{t("room1")}</option>
+                        <option value="2 Zimmer">{t("room2")}</option>
+                        <option value="3 Zimmer">{t("room3")}</option>
+                        <option value="4 Zimmer">{t("room4")}</option>
+                        <option value="5+ Zimmer">{t("room5")}</option>
                       </select>
                     </div>
                     <div>

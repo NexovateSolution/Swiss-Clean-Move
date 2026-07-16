@@ -542,7 +542,7 @@ export default function CalendarPage() {
                   <form onSubmit={handleCreateAppointment} className="space-y-5">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Title *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("titleLabel")}</label>
                         <input
                           value={newAppointment.title}
                           onChange={(e) => setNewAppointment(prev => ({ ...prev, title: e.target.value }))}
@@ -551,7 +551,7 @@ export default function CalendarPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Service Type *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("serviceType")}</label>
                         <input
                           value={newAppointment.serviceType}
                           onChange={(e) => setNewAppointment(prev => ({ ...prev, serviceType: e.target.value }))}
@@ -563,7 +563,7 @@ export default function CalendarPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Client *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("clientLabel")}</label>
                         <input
                           value={newAppointment.clientName}
                           onChange={(e) => setNewAppointment(prev => ({ ...prev, clientName: e.target.value }))}
@@ -578,7 +578,7 @@ export default function CalendarPage() {
                         </datalist>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Address *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("addressLabel")}</label>
                         <input
                           value={newAppointment.address}
                           onChange={(e) => setNewAppointment(prev => ({ ...prev, address: e.target.value }))}
@@ -590,7 +590,7 @@ export default function CalendarPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Date *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("dateLabel")}</label>
                         <input
                           type="date"
                           value={newAppointment.date}
@@ -599,7 +599,7 @@ export default function CalendarPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Start *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("startLabel")}</label>
                         <input
                           type="time"
                           value={newAppointment.startTime}
@@ -608,7 +608,7 @@ export default function CalendarPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">End *</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("endLabel")}</label>
                         <input
                           type="time"
                           value={newAppointment.endTime}
@@ -620,7 +620,7 @@ export default function CalendarPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("phoneLabel")}</label>
                         <input
                           value={newAppointment.clientPhone}
                           onChange={(e) => setNewAppointment(prev => ({ ...prev, clientPhone: e.target.value }))}
@@ -629,7 +629,7 @@ export default function CalendarPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("emailLabel")}</label>
                         <input
                           type="email"
                           value={newAppointment.clientEmail}
@@ -639,7 +639,7 @@ export default function CalendarPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">{t("statusLabel")}</label>
                         <select
                           value={newAppointment.status}
                           onChange={(e) => setNewAppointment(prev => ({ ...prev, status: e.target.value as Appointment['status'] }))}
@@ -654,7 +654,7 @@ export default function CalendarPage() {
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">{t("notesLabel")}</label>
                       <textarea
                         value={newAppointment.notes ?? ''}
                         onChange={(e) => setNewAppointment(prev => ({ ...prev, notes: e.target.value }))}
