@@ -1,6 +1,6 @@
 'use client';
-import { useTranslations } from 'next-intl';;
 
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';

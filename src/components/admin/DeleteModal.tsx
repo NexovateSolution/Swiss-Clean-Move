@@ -1,6 +1,6 @@
 'use client';
-import { useTranslations } from 'next-intl';
 
+import { useTranslations } from 'next-intl';
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Trash2, AlertTriangle, Loader2 } from 'lucide-react'

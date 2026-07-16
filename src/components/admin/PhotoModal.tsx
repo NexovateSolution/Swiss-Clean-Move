@@ -1,6 +1,6 @@
 'use client';
-import { useTranslations } from 'next-intl';
 
+import { useTranslations } from 'next-intl';
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Camera, Upload, Loader2, Image as ImageIcon, Trash2 } from 'lucide-react'
