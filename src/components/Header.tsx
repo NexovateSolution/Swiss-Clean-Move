@@ -46,7 +46,7 @@ export default function Header() {
   const switchLocale = useCallback((newLocale: string) => {
     const segments = pathname.split('/');
     // Check if the first segment is a locale
-    const currentPath = segments.length > 1 && ['de', 'fr', 'en', 'nl'].includes(segments[1])
+    const currentPath = segments.length > 1 && ['de', 'fr', 'en', 'it', 'nl'].includes(segments[1])
       ? '/' + segments.slice(2).join('/')
       : pathname;
 
