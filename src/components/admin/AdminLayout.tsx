@@ -200,6 +200,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                       { code: 'en', label: 'English' },
                       { code: 'de', label: 'Deutsch' },
                       { code: 'fr', label: 'Français' },
+                      { code: 'it', label: 'Italiano' },
                     ] as const).map((l) => (
                       <button
                         key={l.code}

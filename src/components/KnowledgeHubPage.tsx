@@ -27,7 +27,7 @@ export default function KnowledgeHubPage({ locale }: KnowledgeHubPageProps) {
   const [openFAQ, setOpenFAQ] = useState<string | null>(null);
 
   // Helper to extract translation
-  const L = (obj: { en: string; de: string; fr: string }) => {
+  const L = (obj: { en: string; de: string; fr: string; it?: string }) => {
     if (!obj) return '';
     return obj[locale as keyof typeof obj] || obj.de;
   };
@@ -250,7 +250,7 @@ export default function KnowledgeHubPage({ locale }: KnowledgeHubPageProps) {
                       ))}
                     </ul>
                     <div className="bg-swiss-gray-50 p-4 rounded-xl border border-swiss-border mb-4">
-                      <p className="text-sm font-semibold text-swiss-text mb-1">{locale === 'en' ? 'Best for:' : locale === 'fr' ? 'Idéal pour:' : 'Ideal für:'}</p>
+                      <p className="text-sm font-semibold text-swiss-text mb-1">{locale === 'en' ? 'Best for:' : locale === 'fr' ? 'Idéal pour:' : locale === 'it' ? 'Ideale per:' : 'Ideal für:'}</p>
                       <p className="text-swiss-body text-sm">{L(comp.left.bestFor)}</p>
                     </div>
                     <div className="text-xl font-bold text-swiss-text">{L(comp.left.price)}</div>
@@ -268,7 +268,7 @@ export default function KnowledgeHubPage({ locale }: KnowledgeHubPageProps) {
                       ))}
                     </ul>
                     <div className="bg-white p-4 rounded-xl border border-swiss-border mb-4 shadow-sm">
-                      <p className="text-sm font-semibold text-swiss-text mb-1">{locale === 'en' ? 'Best for:' : locale === 'fr' ? 'Idéal pour:' : 'Ideal für:'}</p>
+                      <p className="text-sm font-semibold text-swiss-text mb-1">{locale === 'en' ? 'Best for:' : locale === 'fr' ? 'Idéal pour:' : locale === 'it' ? 'Ideale per:' : 'Ideal für:'}</p>
                       <p className="text-swiss-body text-sm">{L(comp.right.bestFor)}</p>
                     </div>
                     <div className="text-xl font-bold text-swiss-red">{L(comp.right.price)}</div>

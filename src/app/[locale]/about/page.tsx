@@ -13,7 +13,7 @@ import {
   Layers,
   ShieldCheck,
   Star,
-  DollarSign,
+
   Zap,
   MapPin,
   Sparkles,
@@ -152,7 +152,7 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
               { icon: Layers, key: 'oneSource' },
               { icon: ShieldCheck, key: 'handoverGuarantee' },
               { icon: Star, key: 'swissQuality' },
-              { icon: DollarSign, key: 'transparentPricing' },
+              { icon: null, key: 'transparentPricing', customIcon: true },
               { icon: Zap, key: 'fastQuote' },
               { icon: MapPin, key: 'flexible' }
             ].map((item, index) => {
@@ -164,7 +164,11 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
                 >
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-swiss-red to-swiss-red/60 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="w-14 h-14 bg-swiss-red/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-swiss-red/20 transition-colors duration-300">
-                    <IconComp className="w-7 h-7 text-swiss-red" />
+                    {(item as any).customIcon ? (
+                      <span className="text-swiss-red font-bold text-sm">CHF</span>
+                    ) : (
+                      <IconComp className="w-7 h-7 text-swiss-red" />
+                    )}
                   </div>
                   <h3 className="text-lg font-bold text-swiss-text mb-3">
                     {t(`about.whyChoose.benefits.${item.key}.title`)}
