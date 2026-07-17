@@ -466,7 +466,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 {/* Content */}
                 <div className="flex-1 space-y-3">
                   <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-                    {locale === 'en' ? 'Property Maintenance Biel/Bienne & Facility Service' : locale === 'fr' ? 'Entretien de Propriétés Bienne/Bienne' : locale === 'it' ? 'Manutenzione Immobili Biel/Bienne & Facility Service' : 'Hauswartung Reinigung Biel/Bienne'}
+                    {locale === 'en' ? 'Property Maintenance Biel/Bienne & Facility Service' : locale === 'fr' ? 'Entretien de Propriétés Bienne/Bienne' : locale === 'it' ? 'Manutenzione Immobili e Pulizie Biel/Bienne' : 'Hauswartung Reinigung Biel/Bienne'}
                   </h2>
                   <p className="text-swiss-body leading-relaxed">
                     {locale === 'en'
@@ -571,7 +571,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           {/* Switzerland-wide Einsatzgebiete */}
           <div className="max-w-4xl mx-auto space-y-6 text-center pt-12 border-t border-swiss-border">
             <h3 className="text-2xl font-bold text-swiss-text">
-              {locale === 'en' ? 'Operational Throughout Switzerland' : locale === 'fr' ? 'Opérationnel dans toute la Suisse' : 'Schweizweit im Einsatz'}
+              {locale === 'en' ? 'Operational Throughout Switzerland' : locale === 'fr' ? 'Opérationnel dans toute la Suisse' : locale === 'it' ? 'Operativo in tutta la Svizzera' : 'Schweizweit im Einsatz'}
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
@@ -582,7 +582,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 { name: 'Fribourg', slug: 'fribourg' },
                 { name: 'Basel', slug: 'basel' },
                 { name: 'Aargau', slug: 'aargau' },
-                { name: 'Ganze Schweiz', slug: '' },
+                { name: locale === 'en' ? 'All of Switzerland' : locale === 'fr' ? 'Toute la Suisse' : locale === 'it' ? 'Tutta la Svizzera' : 'Ganze Schweiz', slug: '' },
               ].map((loc, i) =>
                 loc.slug ? (
                   <Link key={i} href={`/${locale}/${loc.slug}`} className="px-5 py-2.5 bg-swiss-section border border-swiss-border rounded-xl shadow-subtle font-medium text-swiss-text flex items-center space-x-2 hover:border-swiss-red/40 hover:shadow-medium transition-all cursor-pointer">
