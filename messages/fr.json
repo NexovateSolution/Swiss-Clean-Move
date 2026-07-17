@@ -814,8 +814,6 @@
       "website": "Site web",
       "commercialRegister": "Registre du commerce",
       "uid": "UID",
-      "manager": "Directeur général",
-      "authority": "Autorité de surveillance",
       "liabilityText1": "Le contenu de nos pages a été créé avec le plus grand soin. Cependant, nous ne pouvons garantir l'exactitude, l'exhaustivité et l'actualité du contenu.",
       "liabilityText2": "En tant que prestataire de services, nous sommes responsables de notre propre contenu sur ces pages selon les lois générales conformément à la section 7, para. 1 du TMG. Cependant, selon les sections 8 à 10 du TMG, nous ne sommes pas obligés en tant que prestataire de services de surveiller les informations tierces transmises ou stockées.",
       "copyrightText": "Le contenu et les œuvres créés par les exploitants du site sur ces pages sont soumis au droit d'auteur suisse. La reproduction, l'édition, la distribution et tout type d'exploitation en dehors des limites du droit d'auteur nécessitent le consentement écrit de l'auteur ou du créateur respectif."
@@ -849,7 +847,7 @@
       "pricing": "§ 4 Prix et conditions de paiement",
       "warranty": "§ 5 Garantie",
       "liability": "§ 6 Responsabilité",
-      "scopeText": "Ces conditions générales s'appliquent à tous les contrats entre SwissCleanMove GmbH et ses clients pour la fourniture de services de nettoyage et de déménagement.",
+      "scopeText": "Ces conditions générales s'appliquent à tous les contrats entre SwissCleanMove et ses clients pour la fourniture de services de nettoyage, de déménagement et de facility services.",
       "contractText": "Le contrat est conclu par l'acceptation de l'offre par le client. L'acceptation peut être faite par écrit, oralement ou par un comportement concluant.",
       "servicesText": "Nos services comprennent:",
       "servicesList": [
@@ -860,8 +858,7 @@
         "Services de déménagement",
         "Services d'élimination"
       ],
-      "pricingText1": "Les prix incluent la TVA légale. Le paiement est dû dans les 30 jours nets après facturation.",
-      "pricingText2": "En cas de retard de paiement, des intérêts de retard de 5% au-dessus du taux de base seront facturés.",
+      "pricingText1": "Le paiement s'effectue en espèces directement au chef d'équipe après la réalisation réussie des services convenus, sauf accord contraire par écrit.",
       "warrantyText": "Nous garantissons l'exécution correcte de nos services. En cas de défauts, vous avez le droit à une rectification gratuite. Pour le nettoyage de déménagement, nous offrons une garantie d'acceptation à 100%.",
       "liabilityText": "Nous ne sommes responsables des dommages qu'en cas d'intention et de négligence grave. La responsabilité est limitée au montant de la somme d'assurance. Tous nos employés sont entièrement assurés."
     },

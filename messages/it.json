@@ -811,8 +811,6 @@
       "website": "Sito web",
       "commercialRegister": "Registro delle imprese",
       "uid": "UID",
-      "manager": "Consigliere delegato",
-      "authority": "Autorità di vigilanza",
       "liabilityText1": "I contenuti delle nostre pagine sono stati creati con la massima cura. Tuttavia, non possiamo garantire l’accuratezza, la completezza e la tempestività dei contenuti.",
       "liabilityText2": "As a service provider, we are responsible for our own content on these pages according to general laws pursuant to Section 7, Para. 1 della TMG. Tuttavia, ai sensi degli artt. da 8 a 10 TMG, in quanto fornitori di servizi non siamo obbligati a monitorare le informazioni di terzi trasmesse o memorizzate.",
       "copyrightText": "I contenuti e le opere create dai gestori del sito su queste pagine sono soggetti al diritto d'autore svizzero. La riproduzione, la modifica, la distribuzione e qualsiasi tipo di sfruttamento al di fuori dei limiti della legge sul diritto d'autore richiedono il consenso scritto del rispettivo autore o creatore.",
@@ -851,7 +849,7 @@
       "pricing": "§ 4 Prezzi e condizioni di pagamento",
       "warranty": "§ 5 Garanzia",
       "liability": "§ 6 Responsabilità",
-      "scopeText": "Le presenti Condizioni generali si applicano a tutti i contratti tra SwissCleanMove GmbH e i suoi clienti per la fornitura di servizi di pulizia e trasloco.",
+      "scopeText": "Le presenti Condizioni generali si applicano a tutti i contratti tra SwissCleanMove e i suoi clienti per la fornitura di servizi di pulizia, trasloco e facility.",
       "contractText": "Il contratto viene concluso con l'accettazione dell'offerta da parte del cliente. L'accettazione può avvenire per iscritto, oralmente o mediante comportamento conclusivo.",
       "servicesText": "I nostri servizi includono:",
       "servicesList": [
@@ -862,8 +860,7 @@
         "Servizi di trasloco",
         "Servizi di smaltimento"
       ],
-      "pricingText1": "I prezzi includono l'IVA prevista dalla legge. Il pagamento è dovuto entro 30 giorni netti dalla fatturazione.",
-      "pricingText2": "In caso di ritardo nel pagamento verranno addebitati interessi di mora pari al 5% sopra il tasso base.",
+      "pricingText1": "Il pagamento viene effettuato in contanti direttamente al caposquadra dopo il completamento con successo dei servizi concordati, se non diversamente concordato per iscritto.",
       "warrantyText": "Garantiamo la corretta esecuzione dei nostri servizi. In caso di difetti avete diritto alla rettifica gratuita. Per la pulizia del trasloco offriamo una garanzia di accettazione al 100%.",
       "liabilityText": "Siamo responsabili per i danni solo in caso di dolo e colpa grave. La responsabilità è limitata all’importo della somma assicurativa. Tutti i nostri dipendenti sono completamente assicurati."
     },

@@ -68,7 +68,7 @@ export default function LegalPage({ params: { locale } }: { params: { locale: st
                 <div>
                   <h3 className="text-xl font-semibold text-swiss-gray-800 mb-3">{t('legal.impressum.companyInfo')}</h3>
                   <div className="space-y-2 text-swiss-gray-700">
-                    <p><strong>{t('legal.impressum.companyName')}:</strong> SwissCleanMove GmbH</p>
+                    <p><strong>{t('legal.impressum.companyName')}:</strong> SwissCleanMove</p>
                     <p><strong>{t('legal.impressum.address')}:</strong> Orpundstrasse 31, 2504 Biel/Bienne, Schweiz</p>
                     <p><strong>{t('legal.impressum.phone')}:</strong> +41 78 215 80 30 • +41 76 488 36 89</p>
                     <p><strong>{t('legal.impressum.email')}:</strong> info@swisscleanmove.ch</p>
@@ -79,10 +79,8 @@ export default function LegalPage({ params: { locale } }: { params: { locale: st
                 <div>
                   <h3 className="text-xl font-semibold text-swiss-gray-800 mb-3">{t('legal.impressum.legalInfo')}</h3>
                   <div className="space-y-2 text-swiss-gray-700">
-                    <p><strong>{t('legal.impressum.commercialRegister')}:</strong> CHE-123.456.789</p>
-                    <p><strong>{t('legal.impressum.uid')}:</strong> CHE-123.456.789 MWST</p>
-                    <p><strong>{t('legal.impressum.manager')}:</strong> Marco Müller</p>
-                    <p><strong>{t('legal.impressum.authority')}:</strong> Handelsregisteramt Bern</p>
+                    <p><strong>{t('legal.impressum.commercialRegister')}:</strong> CHE-457.949.122</p>
+                    <p><strong>{t('legal.impressum.uid')}:</strong> CHE-457.949.122</p>
                   </div>
                 </div>
 
@@ -212,9 +210,6 @@ export default function LegalPage({ params: { locale } }: { params: { locale: st
                   <div className="space-y-2 text-swiss-gray-700">
                     <p>
                       {t('legal.terms.pricingText1')}
-                    </p>
-                    <p>
-                      {t('legal.terms.pricingText2')}
                     </p>
                   </div>
                 </div>

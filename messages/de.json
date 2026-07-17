@@ -814,8 +814,6 @@
       "website": "Website",
       "commercialRegister": "Handelsregister",
       "uid": "UID",
-      "manager": "Geschäftsführer",
-      "authority": "Aufsichtsbehörde",
       "liabilityText1": "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
       "liabilityText2": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen.",
       "copyrightText": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
@@ -849,7 +847,7 @@
       "pricing": "§ 4 Preise und Zahlungsbedingungen",
       "warranty": "§ 5 Gewährleistung",
       "liability": "§ 6 Haftung",
-      "scopeText": "Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen SwissCleanMove GmbH und ihren Kunden über die Erbringung von Reinigungs- und Umzugsdienstleistungen.",
+      "scopeText": "Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen SwissCleanMove und ihren Kunden über die Erbringung von Reinigungs-, Umzugs- und Facility-Services.",
       "contractText": "Der Vertrag kommt durch die Annahme des Angebots durch den Kunden zustande. Die Annahme kann schriftlich, mündlich oder durch konkludentes Verhalten erfolgen.",
       "servicesText": "Unsere Dienstleistungen umfassen:",
       "servicesList": [
@@ -860,8 +858,7 @@
         "Umzugsdienstleistungen",
         "Entsorgungsdienstleistungen"
       ],
-      "pricingText1": "Die Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer. Die Zahlung erfolgt nach Rechnungsstellung innerhalb von 30 Tagen netto.",
-      "pricingText2": "Bei Zahlungsverzug werden Verzugszinsen in Höhe von 5% über dem Basiszinssatz berechnet.",
+      "pricingText1": "Die Zahlung erfolgt in bar direkt an den Teamleiter nach erfolgreichem Abschluss der vereinbarten Dienstleistungen, sofern nicht schriftlich etwas anderes vereinbart wurde.",
       "warrantyText": "Wir gewährleisten die ordnungsgemäße Ausführung unserer Dienstleistungen. Bei Mängeln haben Sie das Recht auf kostenlose Nachbesserung. Für Umzugsreinigungen bieten wir eine 100%ige Abnahmegarantie.",
       "liabilityText": "Wir haften für Schäden nur bei Vorsatz und grober Fahrlässigkeit. Die Haftung ist auf die Höhe der Versicherungssumme begrenzt. Alle unsere Mitarbeiter sind vollständig versichert."
     },

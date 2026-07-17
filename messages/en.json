@@ -811,8 +811,6 @@
       "website": "Website",
       "commercialRegister": "Commercial Register",
       "uid": "UID",
-      "manager": "Managing Director",
-      "authority": "Supervisory Authority",
       "liabilityText1": "The contents of our pages have been created with the greatest care. However, we cannot guarantee the accuracy, completeness and timeliness of the content.",
       "liabilityText2": "As a service provider, we are responsible for our own content on these pages according to general laws pursuant to Section 7, Para. 1 of the TMG. However, according to Sections 8 to 10 of the TMG, we are not obligated as a service provider to monitor transmitted or stored third-party information.",
       "copyrightText": "The content and works created by the site operators on these pages are subject to Swiss copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator.",
@@ -851,7 +849,7 @@
       "pricing": "§ 4 Prices and Payment Terms",
       "warranty": "§ 5 Warranty",
       "liability": "§ 6 Liability",
-      "scopeText": "These General Terms and Conditions apply to all contracts between SwissCleanMove GmbH and its customers for the provision of cleaning and moving services.",
+      "scopeText": "These Terms and Conditions apply to all contracts between SwissCleanMove and its customers for the provision of cleaning, moving, and facility services.",
       "contractText": "The contract is concluded by the customer's acceptance of the offer. Acceptance can be made in writing, orally or through conclusive behavior.",
       "servicesText": "Our services include:",
       "servicesList": [
@@ -862,8 +860,7 @@
         "Moving services",
         "Disposal services"
       ],
-      "pricingText1": "Prices include statutory VAT. Payment is due within 30 days net after invoicing.",
-      "pricingText2": "In case of payment delay, default interest of 5% above the base rate will be charged.",
+      "pricingText1": "Payment is made in cash directly to the team leader after the successful completion of the agreed services, unless otherwise agreed in writing.",
       "warrantyText": "We guarantee the proper execution of our services. In case of defects, you have the right to free rectification. For move-out cleaning, we offer a 100% acceptance guarantee.",
       "liabilityText": "We are only liable for damages in cases of intent and gross negligence. Liability is limited to the amount of the insurance sum. All our employees are fully insured."
     },
