@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/contexts/ThemeContext';
+import GoogleAdsScript from '@/components/GoogleAdsScript';
 
 export const metadata: Metadata = {
   title: {
@@ -53,6 +54,7 @@ export default async function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className="font-inter antialiased">
+        <GoogleAdsScript />
         <ThemeProvider>
           {children}
         </ThemeProvider>
