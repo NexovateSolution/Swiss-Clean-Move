@@ -53,12 +53,14 @@ export default function Header() {
     router.push(`/${newLocale}${currentPath}`);
   }, [pathname, router]);
 
+  const isCompactLocale = locale === 'de' || locale === 'it';
+
   return (
     <header className="bg-white shadow-subtle fixed top-0 w-full z-50 border-b border-swiss-border">
       {/* Red accent line at the top */}
       <div className="h-[3px] w-full bg-swiss-red" />
       <div className="container-max">
-        <div className={`flex justify-between items-center py-0.5 px-4 ${locale === 'de' ? 'lg:px-4 gap-2' : 'lg:px-6 gap-4'
+        <div className={`flex justify-between items-center py-0.5 px-4 ${isCompactLocale ? 'lg:px-4 gap-2' : 'lg:px-6 gap-4'
           }`}>
           {/* Logo (image only) */}
           <Link href={`/${locale}`} className="flex items-center flex-shrink-0 min-w-fit" prefetch={true}>
@@ -70,7 +72,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className={`hidden lg:flex items-center flex-1 justify-center ml-4 ${locale === 'de'
+          <nav className={`hidden lg:flex items-center flex-1 justify-center ml-4 ${isCompactLocale
             ? 'space-x-0.5 xl:space-x-1 2xl:space-x-1.5 max-w-4xl'
             : 'space-x-0.5 lg:space-x-1 xl:space-x-1.5 2xl:space-x-2 max-w-5xl'
             }`}>
@@ -81,7 +83,7 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   prefetch={true}
-                  className={`relative py-2 transition-colors duration-150 whitespace-nowrap group font-medium ${locale === 'de'
+                  className={`relative py-2 transition-colors duration-150 whitespace-nowrap group font-medium ${isCompactLocale
                     ? 'px-1.5 lg:px-2 text-xs'
                     : 'px-1.5 lg:px-2 xl:px-2.5 text-xs lg:text-sm'
                     } ${isActive
@@ -100,23 +102,23 @@ export default function Header() {
           </nav>
 
           {/* Right Side Actions */}
-          <div className={`hidden lg:flex items-center ${locale === 'de' ? 'space-x-1.5' : 'space-x-1.5 xl:space-x-2'
+          <div className={`hidden lg:flex items-center ${isCompactLocale ? 'space-x-1.5' : 'space-x-1.5 xl:space-x-2'
             }`}>
             {/* Phone */}
             <a
               href="tel:+41782158030"
-              className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text rounded-lg transition-all duration-150 whitespace-nowrap group border border-swiss-border ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
+              className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text rounded-lg transition-all duration-150 whitespace-nowrap group border border-swiss-border ${isCompactLocale ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                 }`}
             >
               <Phone className="w-4 h-4 text-swiss-red" />
-              <span className={`font-medium ${locale === 'de' ? 'text-xs' : 'text-xs xl:text-sm'}`}>+41 78 215 80 30</span>
+              <span className={`font-medium ${isCompactLocale ? 'text-xs' : 'text-xs xl:text-sm'}`}>+41 78 215 80 30</span>
             </a>
 
             {/* Language Dropdown */}
             <div className="relative" ref={langDropdownRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
-                className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-lg transition-all duration-150 group ${locale === 'de' ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
+                className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-lg transition-all duration-150 group ${isCompactLocale ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                   }`}
               >
                 <Globe className="w-4 h-4 text-swiss-gray-500" />
