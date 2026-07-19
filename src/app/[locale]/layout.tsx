@@ -20,16 +20,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       languages: {
         'en': '/en',
         'de': '/de',
-        'fr': '/fr', it: `I costi per un trasloco in Svizzera possono variare molto a seconda delle dimensioni dell'appartamento, della distanza e dei servizi aggiuntivi desiderati. Un <a href="/it/umzug-biel" class="text-swiss-red hover:underline font-semibold">trasloco professionale a Biel</a> per un appartamento di 3 locali costa in media tra CHF 800 e CHF 1'500.
-
-### 1. Dimensioni e volume dell'appartamento
-Più mobili e scatoloni hai, più grande dovrà essere il furgone per traslochi e maggiore sarà il numero di traslocatori necessari.
-
-### 2. Servizi aggiuntivi
-Hai bisogno di un servizio di imballaggio e disimballaggio? Dovremmo smontare e rimontare i tuoi mobili? Tutti questi fattori influenzano il prezzo. Offriamo prezzi fissi trasparenti senza costi nascosti.
-
-### Conclusione
-Un trasloco senza stress non deve essere necessariamente costoso. Richiedi oggi stesso il tuo preventivo personalizzato!`
+        'fr': '/fr',
+        'it': '/it',
       }
     },
     robots: { index: true, follow: true },
