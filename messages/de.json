@@ -10360,6 +10360,10 @@
         {
           "label": "Umzugsfirma Biel/Bienne",
           "href": "umzug-biel"
+        },
+        {
+          "label": "Reinigungsfirma Solothurn",
+          "href": "reinigungsfirma-solothurn"
         }
       ],
       "ctaStrongHeading": "Umzugsofferte anfordern – Kostenlos",
@@ -12910,7 +12914,12 @@
       "serviceAreaHeading": "Schweizweiter Einsatz",
       "serviceAreaBody": "Wir sind in allen Kantonen für Sie da.",
       "internalLinksHeading": "Weitere Dienstleistungen",
-      "internalLinks": [],
+      "internalLinks": [
+        {
+          "label": "Reinigungsfirma Solothurn",
+          "href": "reinigungsfirma-solothurn"
+        }
+      ],
       "testimonial": {
         "quote": "Super Service in der ganzen Schweiz!",
         "author": "Max M.",
@@ -13333,6 +13342,144 @@
         {
           "question": "Ist es immer dieselbe Person, die zu mir kommt?",
           "answer": "Bei wiederkehrenden Aufträgen (wie Haushaltshilfe, Hauswartung oder Unterhaltsreinigung) stellen wir sicher, dass Ihnen ein festes Team oder eine feste Bezugsperson zugewiesen wird. Nur bei Ferien oder Krankheit organisieren wir eine Vertretung, die dank des detaillierten Pflichtenhefts sofort weiss, was zu tun ist."
+        }
+      ]
+    },
+    "reinigungsfirmaSolothurn": {
+      "meta": {
+        "title": "Reinigungsfirma Solothurn — Ihre professionelle Reinigungsfirma im Kanton Solothurn | SwissCleanMove",
+        "description": "Professionelle Reinigungsfirma in Solothurn: Endreinigung, Unterhaltsreinigung, Büroreinigung, Fensterreinigung, Baureinigung und Gastronomie-Reinigung. Solothurn, Grenchen, Olten, Zuchwil & Umgebung. Jetzt kostenlose Offerte anfordern."
+      },
+      "badge": "REINIGUNGSFIRMA SOLOTHURN",
+      "h1": "Reinigungsfirma Solothurn — Ihre professionelle Reinigungsfirma im Kanton Solothurn",
+      "heroSubtitle": "SwissCleanMove ist Ihre lokale Reinigungsfirma in Solothurn. Zuverlässig, professionell und nach Schweizer Qualitätsstandard — für Privatkunden, Unternehmen und Verwaltungen im gesamten Kanton Solothurn.",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "sections": [
+        {
+          "heading": "Professionelle Reinigungsdienstleistungen in Solothurn und Umgebung",
+          "body": "SwissCleanMove ist Ihre erfahrene und zuverlässige Reinigungsfirma für den gesamten Kanton Solothurn. Ob Privatkunde, KMU, Hausverwaltung oder öffentliche Institution — wir bieten ein komplettes Spektrum an professionellen Reinigungsdienstleistungen, die exakt auf Ihre individuellen Bedürfnisse zugeschnitten sind.",
+          "bullets": [
+            "Endreinigung (Umzugsreinigung) mit 100% Abnahmegarantie",
+            "Regelmässige Unterhaltsreinigung für Treppenhäuser & Gemeinschaftsräume",
+            "Professionelle Büro- und Gewerbereinigung",
+            "Fensterreinigung (innen & aussen, inkl. Rahmen & Rollläden)",
+            "Baureinigung (Grob- und Feinreinigung nach Renovation/Neubau)",
+            "Gastronomie-Reinigung (Küchen, Abzugshauben, HACCP-konform)",
+            "Grundreinigung & Spezialreinigung (Steinböden, Parkett, Teppich)",
+            "Saisonreinigung (Frühjahrsputz, Herbstreinigung)"
+          ]
+        },
+        {
+          "heading": "Unsere Einsatzgebiete im Kanton Solothurn",
+          "body": "SwissCleanMove ist im gesamten Kanton Solothurn aktiv. Unsere Teams sind in folgenden Gemeinden und Städten regelmässig im Einsatz:",
+          "bullets": [
+            "Solothurn (Stadt) — Hauptsitz unserer regionalen Einsatzleitung",
+            "Grenchen — Industriestadt mit hohem Bedarf an Gewerbereinigung",
+            "Olten — Verkehrsknotenpunkt mit Büro- und Geschäftsreinigungen",
+            "Zuchwil — Wohngebiet mit regelmässiger Unterhaltsreinigung",
+            "Derendingen — Wohn- und Gewerbezone",
+            "Bettlach, Luterbach, Langendorf, Bellach, Selzach",
+            "Oensingen, Balsthal, Trimbach, Dulliken, Wangen bei Olten"
+          ]
+        },
+        {
+          "heading": "Warum SwissCleanMove als Ihre Reinigungsfirma in Solothurn?",
+          "body": "Unsere Kunden im Kanton Solothurn schätzen unsere Kombination aus lokaler Präsenz, Schweizer Qualität und transparenter Preisgestaltung. Wir setzen ausschliesslich auf fest angestelltes, geschultes Personal und verwenden nur umweltschonende, professionelle Reinigungsmittel.",
+          "bullets": [
+            "Lokale Reinigungsfirma mit Einsatzteams direkt im Kanton Solothurn",
+            "Fest angestelltes, geschultes und geprüftes Personal",
+            "Umfassende Betriebs- und Berufshaftpflichtversicherung",
+            "Transparente Festpreise ohne versteckte Kosten",
+            "Kostenlose Vor-Ort-Besichtigung und verbindliche Offerte",
+            "Flexible Einsatzzeiten (Abend, Wochenende, Notfalleinsätze)",
+            "Persönlicher Ansprechpartner für alle Anliegen"
+          ]
+        }
+      ],
+      "serviceBulletsHeading": "Ihre Premium-Vorteile für professionelle Reinigungsdienstleistungen in Solothurn",
+      "serviceBullets": [
+        "Kostenlose Vor-Ort-Besichtigung und transparente, verbindliche Offerten",
+        "Ausschliesslich fest angestelltes, geschultes und geprüftes Personal",
+        "Umfassende Betriebshaftpflichtversicherung für maximale Sicherheit",
+        "Einsatz modernster, umweltschonender Maschinen und Reinigungsmittel",
+        "Lokale Verankerung und Expertise im Kanton Solothurn",
+        "Massgeschneiderte Pflichtenhefte, perfekt auf Ihre Bedürfnisse abgestimmt",
+        "Flexible Einsatzzeiten (Abend, Wochenende, Notfälle innert 24h)",
+        "Ein einziger, persönlicher Ansprechpartner für alle Belange",
+        "Lückenlose Qualitätskontrolle durch unsere erfahrenen Teamleiter",
+        "Keine versteckten Gebühren, keine unklaren Zuschläge, kein administrativer Aufwand"
+      ],
+      "trustPoints": [
+        "Lokale Reinigungsfirma mit Schweizer Qualität",
+        "Haftpflichtversichert und zuverlässig",
+        "Transparente Preise ohne versteckte Kosten"
+      ],
+      "ctaMidHeading": "Reinigungsfirma in Solothurn gesucht?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
+      "ctaMid": "Kostenlose Offerte anfordern",
+      "internalLinksHeading": "Weitere Dienstleistungen in Solothurn",
+      "internalLinks": [
+        {
+          "label": "Umzug & Transport in Solothurn",
+          "href": "umzug-solothurn"
+        },
+        {
+          "label": "Endreinigung & Umzugsreinigung Solothurn",
+          "href": "solothurn"
+        },
+        {
+          "label": "Hauswartung & Gebäudeunterhalt Schweiz",
+          "href": "hauswartung-schweiz"
+        },
+        {
+          "label": "Facility Service Schweiz",
+          "href": "facility-service-schweiz"
+        },
+        {
+          "label": "Reinigungsfirma Schweiz — Übersicht",
+          "href": "reinigungsfirma-schweiz"
+        }
+      ],
+      "ctaStrongHeading": "Ihre Reinigungsfirma in Solothurn — jetzt kontaktieren",
+      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innert 24 Stunden eine transparente Offerte für Ihre Reinigung in Solothurn.",
+      "ctaStrong": "Offerte anfordern",
+      "testimonial": {
+        "quote": "SwissCleanMove ist unsere Reinigungsfirma des Vertrauens in Solothurn. Zuverlässig, gründlich und immer pünktlich.",
+        "author": "Unternehmen in Solothurn",
+        "trust": "Vertrauen durch Schweizer Qualität"
+      },
+      "faqs": [
+        {
+          "question": "Wie wird der Preis für professionelle Reinigungsdienstleistungen in Solothurn berechnet?",
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen ab CHF 490), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort im Kanton Solothurn, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können."
+        },
+        {
+          "question": "Arbeiten Sie mit eigenem Equipment?",
+          "answer": "In den allermeisten Fällen bringen wir alles selbst mit. Für gewerbliche Reinigungen, Baureinigungen, Endreinigungen und Umzüge sind unsere Fahrzeuge komplett ausgestattet mit Profi-Staubsaugern, Einscheibenmaschinen, Reinigungsmitteln, Leitern und Werkzeugen."
+        },
+        {
+          "question": "Wie schnell können Sie in Solothurn vor Ort sein?",
+          "answer": "Dank unserer regionalen Struktur im Kanton Solothurn sind wir extrem reaktionsschnell. In Notfällen können wir oft innerhalb von 24 bis 48 Stunden ein professionelles Einsatzteam mobilisieren. Für planbare Arbeiten empfehlen wir eine Vorlaufzeit von 1-2 Wochen."
+        },
+        {
+          "question": "Was passiert, wenn während der Arbeit etwas beschädigt wird?",
+          "answer": "Sicherheit hat bei uns oberste Priorität. Wir verfügen über eine sehr weitreichende Betriebs- und Berufshaftpflichtversicherung, die Schäden an Ihrem Eigentum anstandslos reguliert."
+        },
+        {
+          "question": "Setzen Sie Subunternehmer oder Freelancer ein?",
+          "answer": "Nein, ganz bewusst nicht. Um unsere hohen Qualitätsstandards zu halten, vertrauen wir ausschliesslich auf unser eigenes, fest angestelltes Personal."
+        },
+        {
+          "question": "Welche Reinigungsmittel verwenden Sie?",
+          "answer": "Wir verwenden professionelle, biologisch abbaubare und ökozertifizierte Schweizer Reinigungsmittel, die effektiv gegen Schmutz und Bakterien vorgehen, aber die Oberflächen Ihrer Immobilie schonen."
+        },
+        {
+          "question": "Bieten Sie Garantien auf Ihre Arbeit in Solothurn?",
+          "answer": "Ja. Bei Endreinigungen nach einem Auszug gewähren wir eine 100% Abnahmegarantie. Auch bei allen anderen Dienstleistungen garantieren wir, dass das vereinbarte Pflichtenheft fehlerfrei umgesetzt wird."
+        },
+        {
+          "question": "In welchen Gemeinden im Kanton Solothurn sind Sie aktiv?",
+          "answer": "Wir sind im gesamten Kanton Solothurn aktiv, insbesondere in Solothurn Stadt, Grenchen, Olten, Zuchwil, Derendingen, Bettlach, Luterbach, Langendorf, Bellach, Selzach, Oensingen, Balsthal, Trimbach, Dulliken und Wangen bei Olten."
         }
       ]
     }

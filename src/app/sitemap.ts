@@ -73,6 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/reinigung-pieterlen',
     '/reinigungsfirma-biel',
     '/reinigungsfirma-schweiz',
+    '/reinigungsfirma-solothurn',
     '/schwyz',
     '/solothurn',
     '/st-gallen',

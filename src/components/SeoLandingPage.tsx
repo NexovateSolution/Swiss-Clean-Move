@@ -254,7 +254,7 @@ export default function SeoLandingPage({
         cta={
           <div className="flex flex-col sm:flex-row gap-4 justify-start">
             <Link
-              href={`/${locale}/form?service=${formService}`}
+              href={`/${locale}/free-offer`}
               className="btn-secondary text-lg px-8 py-4"
               onClick={() => handleCtaClick('hero_form_btn')}
             >
@@ -471,7 +471,7 @@ export default function SeoLandingPage({
               <h3 className="text-xl font-bold text-swiss-text">{p('ctaMidHeading')}</h3>
               <p className="text-swiss-body">{p('ctaMidBody')}</p>
               <Link
-                href={`/${locale}/form?service=${formService}`}
+                href={`/${locale}/free-offer`}
                 className="btn-primary text-lg px-8 py-4 inline-block"
                 onClick={() => handleCtaClick('mid_form_btn')}
               >
@@ -647,7 +647,7 @@ export default function SeoLandingPage({
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href={`/${locale}/form?service=${formService}`}
+                  href={`/${locale}/free-offer`}
                   className="btn-primary text-lg px-8 py-4"
                   onClick={() => handleCtaClick('footer_form_btn')}
                 >

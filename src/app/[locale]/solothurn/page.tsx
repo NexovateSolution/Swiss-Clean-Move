@@ -12,7 +12,8 @@ const D: Record<string, RegionPageData> = {
     localKeywords: ['Solothurn','Grenchen','Olten','Zuchwil','Derendingen','Oensingen'],
     introParagraphs: [
       'SwissCleanMove bietet Umzug, Reinigung, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung in Solothurn und Umgebung.',
-      'Wir arbeiten in Solothurn, Grenchen, Olten, Zuchwil, Derendingen und Oensingen. SwissCleanMove unterstützt Sie bei Privatumzügen, Firmenumzügen, Endreinigung, Büroreinigung, Gebäudeunterhalt und fachgerechter Entsorgung.'
+      'Wir arbeiten in Solothurn, Grenchen, Olten, Zuchwil, Derendingen und Oensingen. SwissCleanMove unterstützt Sie bei Privatumzügen, Firmenumzügen, Endreinigung, Büroreinigung, Gebäudeunterhalt und fachgerechter Entsorgung.',
+      'Suchen Sie eine professionelle Reinigungsfirma in Solothurn? Besuchen Sie unsere Seite Reinigungsfirma Solothurn für alle Details zu Endreinigung, Unterhaltsreinigung und Spezialreinigung im Kanton Solothurn.'
     ],
     faqs: [
       { question: 'Bietet SwissCleanMove Umzug in Solothurn an?', answer: 'Ja, wir bieten professionelle Umzüge in Solothurn und Umgebung.' },
@@ -30,7 +31,8 @@ const D: Record<string, RegionPageData> = {
     localKeywords: ['Solothurn','Grenchen','Olten','Zuchwil','Derendingen','Oensingen'],
     introParagraphs: [
       'SwissCleanMove offers moving, cleaning, maintenance cleaning, facility services, property maintenance and disposal in Solothurn and surrounding areas.',
-      'We work in Solothurn, Grenchen, Olten, Zuchwil, Derendingen and Oensingen. SwissCleanMove supports you with private moves, office relocations, final cleaning, office cleaning, building maintenance and professional disposal.'
+      'We work in Solothurn, Grenchen, Olten, Zuchwil, Derendingen and Oensingen. SwissCleanMove supports you with private moves, office relocations, final cleaning, office cleaning, building maintenance and professional disposal.',
+      'Looking for a professional cleaning company in Solothurn? Visit our Cleaning Company Solothurn page for all details on end-of-tenancy cleaning, maintenance cleaning and specialist cleaning in Canton Solothurn.'
     ],
     faqs: [
       { question: 'Does SwissCleanMove offer moving in Solothurn?', answer: 'Yes, we offer professional moves in Solothurn and surrounding areas.' },
@@ -48,7 +50,8 @@ const D: Record<string, RegionPageData> = {
     localKeywords: ['Solothurn','Grenchen','Olten','Zuchwil','Derendingen','Oensingen'],
     introParagraphs: [
       'SwissCleanMove propose déménagement, nettoyage, facility services et débarras à Soleure et environs.',
-      'Nous intervenons à Soleure, Granges, Olten, Zuchwil, Derendingen et Oensingen.'
+      'Nous intervenons à Soleure, Granges, Olten, Zuchwil, Derendingen et Oensingen.',
+      'Vous recherchez une entreprise de nettoyage professionnelle à Soleure ? Visitez notre page Entreprise de nettoyage Soleure pour tous les détails sur le nettoyage de fin de bail, le nettoyage d\'entretien et le nettoyage spécialisé dans le canton de Soleure.'
     ],
     faqs: [
       { question: 'SwissCleanMove propose-t-il un déménagement à Soleure?', answer: 'Oui, nous proposons des déménagements professionnels à Soleure et environs.' },
@@ -56,8 +59,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Travaillez-vous à Granges et Olten?', answer: 'Oui, nous travaillons à Granges, Olten et dans tout le canton de Soleure.' }
     ],
     mapQuery: 'Solothurn,Switzerland'
-  }
-,
+  },
   it: {
     slug: 'solothurn', regionName: 'Soletta',
     seoTitle: 'Muoversi a Soletta | Impresa di pulizie Soletta | SwissCleanMove',
@@ -68,6 +70,7 @@ const D: Record<string, RegionPageData> = {
     introParagraphs: [
       'SwissCleanMove offre traslochi, pulizie, pulizie manutentive, servizi per strutture, manutenzione e smaltimento di immobili a Soletta e dintorni.',
       'Lavoriamo a Soletta, Grenchen, Olten, Zuchwil, Derendingen e Oensingen. SwissCleanMove vi supporta con traslochi privati, traslochi di uffici, pulizie finali, pulizie di uffici, manutenzione di edifici e smaltimento professionale.',
+      'Cercate un\'impresa di pulizie professionale a Soletta? Visitate la nostra pagina Impresa di pulizie Soletta per tutti i dettagli sulla pulizia di fine locazione, pulizia di manutenzione e pulizia specializzata nel Canton Soletta.'
     ],
     faqs: [
       { question: 'SwissCleanMove offre traslochi a Soletta?', answer: 'Sì, offriamo traslochi professionali a Soletta e dintorni.' },
