@@ -455,6 +455,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     cleanWindowsCount: { de: 'Anzahl Fenster', en: 'Number of Windows', fr: 'Nombre de Fenêtres', it: `Numero di finestre` },
     cleanAreas: { de: 'Reinigungsbereiche', en: 'Cleaning Areas', fr: 'Zones de Nettoyage', it: `Aree di pulizia` },
     accessHandoverDate: { de: 'Übergabetermin', en: 'Handover Date', fr: 'Date de Remise', it: `Data di consegna` },
+    accessHandoverTime: { de: 'Übergabezeit', en: 'Handover Time', fr: 'Heure de Remise', it: `Orario di consegna` },
     cleanShuttersBlindsClean: { de: 'Storen / Rollläden Reinigung', en: 'Shutters / Blinds Cleaning', fr: 'Nettoyage Stores / Volets', it: `Pulizia persiane/veneziane` },
     cleanKitchenState: { de: 'Küchenzustand', en: 'Kitchen Condition', fr: 'État de la Cuisine', it: `Condizioni della cucina` },
     cleanPressureWashing: { de: 'Hochdruckreinigung', en: 'Pressure Washing', fr: 'Nettoyage Haute Pression', it: `Lavaggio a pressione` },
