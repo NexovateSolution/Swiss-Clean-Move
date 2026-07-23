@@ -457,6 +457,10 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     accessHandoverDate: { de: 'Übergabetermin', en: 'Handover Date', fr: 'Date de Remise', it: `Data di consegna` },
     accessHandoverTime: { de: 'Übergabezeit', en: 'Handover Time', fr: 'Heure de Remise', it: `Orario di consegna` },
     cleanShuttersBlindsClean: { de: 'Storen / Rollläden Reinigung', en: 'Shutters / Blinds Cleaning', fr: 'Nettoyage Stores / Volets', it: `Pulizia persiane/veneziane` },
+    cleanShuttersBlindsQty: { de: 'Anzahl Storen / Rollläden', en: 'Shutters / Blinds Qty', fr: 'Nombre Stores / Volets', it: 'Quantità Persiane / Tapparelle' },
+    cleanBalconyCount: { de: 'Anzahl Balkone', en: 'Balcony Count', fr: 'Nombre de Balcons', it: 'Numero di Balconi' },
+    cleanPets: { de: 'Haustiere', en: 'Pets', fr: 'Animaux', it: 'Animali Domestici' },
+    hasBalcony: { de: 'Balkon vorhanden', en: 'Has Balcony', fr: 'A un Balcon', it: 'Ha un Balcone' },
     cleanKitchenState: { de: 'Küchenzustand', en: 'Kitchen Condition', fr: 'État de la Cuisine', it: `Condizioni della cucina` },
     cleanPressureWashing: { de: 'Hochdruckreinigung', en: 'Pressure Washing', fr: 'Nettoyage Haute Pression', it: `Lavaggio a pressione` },
     cleanOutdoorCondition: { de: 'Zustand Aussenbereich', en: 'Outdoor Condition', fr: 'État Extérieur', it: `Condizioni esterne` },
@@ -548,6 +552,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     // Contact & access
     personal: { de: 'Persönlich', en: 'Personal', fr: 'Personnel', it: `Personale` },
     inspection: { de: 'Besichtigung', en: 'Inspection', fr: 'Inspection', it: `Ispezione` },
+    Besichtigung: { de: 'Besichtigung', en: 'Inspection', fr: 'Inspection', it: `Ispezione` },
     window: { de: 'Fenster', en: 'Window', fr: 'Fenêtre', it: `Finestra` },
     // Cleaning types
     movingCleaning: { de: 'Umzugsreinigung', en: 'Moving Cleaning', fr: 'Nettoyage de Déménagement', it: `Pulizia in movimento` },
@@ -588,6 +593,19 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     venetian: { de: 'Jalousien', en: 'Venetian Blinds', fr: 'Stores Vénitiens', it: `Tende alla veneziana` },
     // Pressure washing / outdoor
     asRecommended: { de: 'Wie empfohlen', en: 'As Recommended', fr: 'Selon Recommandation', it: `Come consigliato` },
+    // Missing German string keys for reverse lookup
+    'Bodentiefe Fenster': { de: 'Bodentiefe Fenster', en: 'Floor to Ceiling', fr: 'Du Sol au Plafond', it: `Dal pavimento al soffitto` },
+    'Jalousien': { de: 'Jalousien', en: 'Venetian Blinds', fr: 'Stores Vénitiens', it: `Tende alla veneziana` },
+    'Fenster': { de: 'Fenster', en: 'Windows', fr: 'Fenêtres', it: `Finestre` },
+    'Balkon': { de: 'Balkon', en: 'Balcony', fr: 'Balcon', it: `Balcone` },
+    'Normal': { de: 'Normal', en: 'Normal', fr: 'Normal', it: `Normale` },
+    'Persönlich': { de: 'Persönlich', en: 'Personal', fr: 'Personnel', it: `Personale` },
+    'E-Mail': { de: 'E-Mail', en: 'Email', fr: 'E-mail', it: `E-mail` },
+    'WhatsApp': { de: 'WhatsApp', en: 'WhatsApp', fr: 'WhatsApp', it: `Whatsapp` },
+    'Ja': { de: 'Ja', en: 'Yes', fr: 'Oui', it: `Sì` },
+    'Nein': { de: 'Nein', en: 'No', fr: 'Non', it: `No` },
+    // End missing German keys
+    
     'cleaning-only': { de: 'Nur Reinigung', en: 'Cleaning Only', fr: 'Nettoyage Uniquement', it: `Solo pulizia` },
     'moving-only': { de: 'Nur Umzug', en: 'Moving Only', fr: 'Déménagement Uniquement', it: `Solo spostamento` },
     'moving-and-cleaning': { de: 'Umzug & Reinigung', en: 'Moving & Cleaning', fr: 'Déménagement & Nettoyage', it: `Traslochi e pulizie` },
@@ -595,7 +613,9 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     afternoon: { de: 'Nachmittag', en: 'Afternoon', fr: 'Après-midi', it: `Pomeriggio` },
     morning: { de: 'Vormittag', en: 'Morning', fr: 'Matin', it: `Mattina` },
     evening: { de: 'Abend', en: 'Evening', fr: 'Soir', it: `Sera` },
-    'full-day': { de: 'Ganzer Tag', en: 'Full Day', fr: 'Toute la Journée', it: `Giornata intera` }
+    'full-day': { de: 'Ganzer Tag', en: 'Full Day', fr: 'Toute la Journée', it: `Giornata intera` },
+    undecided: { de: 'Unentschieden', en: 'Undecided', fr: 'Indécis', it: 'Indeciso' },
+    guarantee: { de: 'Abnahmegarantie', en: 'Handover Guarantee', fr: 'Garantie de Remise', it: 'Garanzia di Consegna' }
   };
   
   const additionalAttributesHtml = Object.entries(customer)
@@ -613,7 +633,15 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
        if (val === true) formattedVal = locale === 'de' ? 'Ja' : (locale === 'fr' ? 'Oui' : 'Yes');
        else if (typeof val === 'string') {
          const valObj = translatedValues[val];
-         if (valObj) formattedVal = valObj[locale] || valObj.en;
+         if (valObj) {
+           formattedVal = valObj[locale] || valObj.en;
+         } else if (val.includes(',')) {
+           formattedVal = val.split(',').map(v => {
+             const trimmed = v.trim();
+             const vObj = translatedValues[trimmed];
+             return vObj ? (vObj[locale] || vObj.en) : trimmed;
+           }).join(', ');
+         }
        } else if (Array.isArray(val)) {
          formattedVal = val.map(v => {
            const vObj = translatedValues[v];
