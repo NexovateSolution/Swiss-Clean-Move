@@ -615,7 +615,9 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     evening: { de: 'Abend', en: 'Evening', fr: 'Soir', it: `Sera` },
     'full-day': { de: 'Ganzer Tag', en: 'Full Day', fr: 'Toute la Journée', it: `Giornata intera` },
     undecided: { de: 'Unentschieden', en: 'Undecided', fr: 'Indécis', it: 'Indeciso' },
-    guarantee: { de: 'Abnahmegarantie', en: 'Handover Guarantee', fr: 'Garantie de Remise', it: 'Garanzia di Consegna' }
+    guarantee: { de: 'Abnahmegarantie', en: 'Handover Guarantee', fr: 'Garantie de Remise', it: 'Garanzia di Consegna' },
+    'Unentschieden': { de: 'Unentschieden', en: 'Undecided', fr: 'Indécis', it: 'Indeciso' },
+    'Abnahmegarantie': { de: 'Abnahmegarantie', en: 'Handover Guarantee', fr: 'Garantie de Remise', it: 'Garanzia di Consegna' }
   };
   
   const additionalAttributesHtml = Object.entries(customer)
@@ -632,19 +634,21 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
        let formattedVal = val;
        if (val === true) formattedVal = locale === 'de' ? 'Ja' : (locale === 'fr' ? 'Oui' : 'Yes');
        else if (typeof val === 'string') {
-         const valObj = translatedValues[val];
+         const trimmedVal = val.trim();
+         const valObj = translatedValues[trimmedVal] || translatedValues[trimmedVal.toLowerCase()] || translatedValues[val];
          if (valObj) {
            formattedVal = valObj[locale] || valObj.en;
          } else if (val.includes(',')) {
            formattedVal = val.split(',').map(v => {
              const trimmed = v.trim();
-             const vObj = translatedValues[trimmed];
+             const vObj = translatedValues[trimmed] || translatedValues[trimmed.toLowerCase()] || translatedValues[v];
              return vObj ? (vObj[locale] || vObj.en) : trimmed;
            }).join(', ');
          }
        } else if (Array.isArray(val)) {
          formattedVal = val.map(v => {
-           const vObj = translatedValues[v];
+           const trimmedV = typeof v === 'string' ? v.trim() : v;
+           const vObj = translatedValues[trimmedV] || (typeof trimmedV === 'string' ? translatedValues[trimmedV.toLowerCase()] : undefined) || translatedValues[v];
            return vObj ? (vObj[locale] || vObj.en) : v;
          }).join(', ');
        }
