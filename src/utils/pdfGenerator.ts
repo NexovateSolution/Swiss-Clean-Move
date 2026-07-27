@@ -407,9 +407,9 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     // Unloading fields (shown in OBJEKTDATEN destination)
     'unloadingApartmentType', 'unloadingAreaInM2', 'unloadingElevatorSizes', 'unloadingParkingDistance',
     // Backend/Client model specific fields to skip in Scope
-    'totalPrice', 'paidAmount', 'balance', 'clientId', 'fromDate', 'untilDate', 'location', 'postalCode', 'serviceType', 'buildingType'
+    'totalPrice', 'paidAmount', 'balance', 'clientId', 'fromDate', 'untilDate', 'location', 'postalCode', 'serviceType', 'buildingType',
+    'accessHandoverDate'
   ];
-
   const translatedLabels: Record<string, any> = {
     isExpress: { de: 'Express Service', en: 'Express Service', fr: 'Service Express', it: `Servizio espresso` },
     isFlexible: { de: 'Flexibles Datum', en: 'Flexible Date', fr: 'Date Flexible', it: `Data flessibile` },
@@ -1210,7 +1210,8 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           ${locDict.objectData}
         </div>
         <div class="info-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-          <div style="grid-column: span 2;"><strong>${locDict.date}</strong> ${customer.cleaningAppointment || customer.movingDate || locDict.onRequest}</div>
+          <div><strong>${locDict.date}</strong> ${customer.cleaningAppointment || customer.movingDate || locDict.onRequest}</div>
+          ${customer.accessHandoverDate ? `<div><strong>${translatedLabels.accessHandoverDate ? (translatedLabels.accessHandoverDate[locale] || translatedLabels.accessHandoverDate.en) : 'Handover Date'}:</strong> ${customer.accessHandoverDate}</div>` : '<div></div>'}
           
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
           ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>${locDict.propertyType}</strong> ${(() => { const rawPt = customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType; const ptObj = translatedValues[rawPt]; return ptObj ? (ptObj[locale] || ptObj.en) : rawPt; })()}</div>` : ''}
