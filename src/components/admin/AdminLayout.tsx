@@ -22,7 +22,8 @@ import {
   ChevronDown,
   MessageSquare,
   ClipboardList,
-  Mail
+  Mail,
+  FileEdit
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -52,6 +53,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     { name: t('sidebar.contactMessages'), href: `/${locale}/admin/contacts`, icon: MessageSquare },
     { name: t('sidebar.serviceForms'), href: `/${locale}/admin/service-forms`, icon: FileText },
     { name: t('sidebar.emailCommunication'), href: `/${locale}/admin/email`, icon: Mail },
+    { name: t('sidebar.notepad') || 'Notepad', href: `/${locale}/admin/notepad`, icon: FileEdit },
     { name: t('sidebar.gallery'), href: `/${locale}/admin/gallery`, icon: Camera },
     { name: t('sidebar.calendar'), href: `/${locale}/admin/calendar`, icon: Calendar },
   ]
