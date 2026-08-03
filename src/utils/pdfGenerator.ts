@@ -408,7 +408,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     'unloadingApartmentType', 'unloadingAreaInM2', 'unloadingElevatorSizes', 'unloadingParkingDistance',
     // Backend/Client model specific fields to skip in Scope
     'totalPrice', 'paidAmount', 'balance', 'clientId', 'fromDate', 'untilDate', 'location', 'postalCode', 'serviceType', 'buildingType',
-    'accessHandoverDate'
+    'accessHandoverDate', 'accessHandoverTime'
   ];
   const translatedLabels: Record<string, any> = {
     isExpress: { de: 'Express Service', en: 'Express Service', fr: 'Service Express', it: `Servizio espresso` },
@@ -696,7 +696,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       .title p { margin: 0; font-size: 13px; color: #555; }
       .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px; }
       
-      .customer-box { padding-top: 10px; }
+      .customer-box { padding-top: 10px; padding-left: 20px; }
       .customer-header { display: flex; align-items: center; gap: 10px; font-weight: bold; color: #001233; margin-bottom: 15px; font-size: 14px; }
       .customer-header svg { width: 24px; height: 24px; fill: #001233; }
       .customer-content { font-size: 13px; line-height: 1.6; color: #333; }
@@ -1210,8 +1210,13 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           ${locDict.objectData}
         </div>
         <div class="info-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-          <div><strong>${locDict.date}</strong> ${customer.cleaningAppointment || customer.movingDate || locDict.onRequest}</div>
-          ${customer.accessHandoverDate ? `<div><strong>${translatedLabels.accessHandoverDate ? (translatedLabels.accessHandoverDate[locale] || translatedLabels.accessHandoverDate.en) : 'Handover Date'}:</strong> ${customer.accessHandoverDate}</div>` : '<div></div>'}
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            <div><strong>${locDict.date}</strong> ${customer.cleaningAppointment || customer.movingDate || locDict.onRequest}</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 4px;">
+            ${customer.accessHandoverDate ? `<div><strong>${translatedLabels.accessHandoverDate ? (translatedLabels.accessHandoverDate[locale] || translatedLabels.accessHandoverDate.en) : 'Handover Date'}:</strong> ${customer.accessHandoverDate}</div>` : ''}
+            ${customer.accessHandoverTime ? `<div><strong>${translatedLabels.accessHandoverTime ? (translatedLabels.accessHandoverTime[locale] || translatedLabels.accessHandoverTime.en) : 'Handover Time'}:</strong> ${customer.accessHandoverTime}</div>` : ''}
+          </div>
           
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
           ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>${locDict.propertyType}</strong> ${(() => { const rawPt = customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType; const ptObj = translatedValues[rawPt]; return ptObj ? (ptObj[locale] || ptObj.en) : rawPt; })()}</div>` : ''}
