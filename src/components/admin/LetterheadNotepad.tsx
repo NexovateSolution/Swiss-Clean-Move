@@ -56,13 +56,24 @@ export default function LetterheadNotepad() {
 
   const handleSendWhatsApp = () => {
     if (!editorRef.current) return
-    const text = editorRef.current.innerText
+    let text = editorRef.current.innerText || ''
+    if (!text.trim()) {
+      // Fallback: remove html tags and nbsp
+      text = content.replace(/<[^>]+>/g, '\n').replace(/&nbsp;/g, ' ').trim()
+    }
     if (!text.trim()) {
       toast.error('Document is empty')
       return
     }
     const encoded = encodeURIComponent(text)
-    window.open(`https://wa.me/?text=${encoded}`, '_blank')
+    
+    // Create an anchor tag to ensure popups aren't blocked by Safari/Mobile
+    const link = document.createElement('a')
+    link.href = `https://wa.me/?text=${encoded}`
+    link.target = '_blank'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   const handleSendEmail = async () => {
@@ -230,25 +241,22 @@ export default function LetterheadNotepad() {
               </div>
             </div>
 
-            {/* Red Swoosh */}
-            <div 
-              className="absolute bottom-0 right-0 w-full h-full bg-[#cc0000]"
-              style={{
-                clipPath: 'polygon(0 100%, 100% 30%, 100% 100%)'
-              }}
-            ></div>
-            
-            {/* Dark Blue Swoosh */}
-            <div 
-              className="absolute bottom-0 right-0 w-full h-[85%] bg-[#001233]"
-              style={{
-                clipPath: 'polygon(0 100%, 100% 30%, 100% 100%)'
-              }}
+            {/* SVG Swoosh Background */}
+            <svg 
+              className="absolute bottom-0 right-0 w-full h-full z-10" 
+              viewBox="0 0 100 100" 
+              preserveAspectRatio="none"
+              style={{ display: 'block' }}
             >
-              <div className="absolute bottom-4 right-12 text-white text-[10px] flex items-center gap-2">
-                <Globe size={12} />
-                <span>www.swisscleanmove.ch</span>
-              </div>
+              {/* Red Swoosh */}
+              <polygon points="0,100 100,30 100,100" fill="#cc0000" />
+              {/* Dark Blue Swoosh */}
+              <polygon points="0,100 100,40.5 100,100" fill="#001233" />
+            </svg>
+            
+            <div className="absolute bottom-4 right-12 z-30 text-white text-[10px] flex items-center gap-2">
+              <Globe size={12} />
+              <span>www.swisscleanmove.ch</span>
             </div>
           </div>
         </div>

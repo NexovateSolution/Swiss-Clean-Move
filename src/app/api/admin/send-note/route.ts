@@ -5,9 +5,9 @@ import jwt from 'jsonwebtoken';
 
 export async function POST(req: NextRequest) {
   try {
-    // Admin check (similar to other admin routes, we can just do a basic check if token exists)
+    // Admin check
     const cookieStore = cookies();
-    const token = cookieStore.get('admin_token')?.value;
+    const token = cookieStore.get('auth-token')?.value;
 
     if (!token) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
