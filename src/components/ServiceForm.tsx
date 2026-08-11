@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { X } from 'lucide-react'
 import toast from 'react-hot-toast'
 import { useTranslations } from 'next-intl'
+import { trackConversion } from '@/lib/gtag'
 
 interface ServiceFormProps {
   serviceName: string
@@ -102,6 +103,9 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
       })
 
       if (response.ok) {
+        // Form submitted successfully, safe to fire conversion tracking
+        trackConversion('FREE_QUOTE_SUBMIT')
+        
         toast.success(t('toasts.submitted'))
         onClose()
         // Reset form

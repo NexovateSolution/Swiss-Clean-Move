@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import toast from 'react-hot-toast';
+import { trackConversion } from '@/lib/gtag';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
 import {
@@ -52,6 +53,9 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
       if (!response.ok) {
         throw new Error(t('contact.errors.submitFailed'));
       }
+
+      // Form submitted successfully, safe to fire conversion tracking
+      trackConversion('CONTACT_FORM_SUBMIT');
 
       toast.success(t('contact.success.title'));
       setIsSubmitted(true);

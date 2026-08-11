@@ -21,11 +21,11 @@ export const GA_ADS_ID = 'AW-18285523751';
 // Format: 'AW-18285523751/XXXXXXXXX'
 export const ConversionLabels = {
   /** Free‑offer / quote form submission */
-  FREE_QUOTE_SUBMIT: '',
+  FREE_QUOTE_SUBMIT: 'AW-18285523751/jBUQCJ6q8gcEKfmm49E',
   /** Contact‑form submission */
-  CONTACT_FORM_SUBMIT: '',
+  CONTACT_FORM_SUBMIT: 'AW-18285523751/jBUQCJ6q8gcEKfmm49E',
   /** Quote Wizard completion (final step) */
-  QUOTE_WIZARD_COMPLETE: '',
+  QUOTE_WIZARD_COMPLETE: 'AW-18285523751/jBUQCJ6q8gcEKfmm49E',
   /** Phone‑number click (tel: link) */
   PHONE_CLICK: '',
   /** WhatsApp button click */

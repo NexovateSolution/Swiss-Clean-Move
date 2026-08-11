@@ -7,6 +7,7 @@ import toast from 'react-hot-toast'
 import { Upload, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { calculateQuote } from '@/utils/pricingEngine'
+import { trackConversion } from '@/lib/gtag'
 
 // Imports of the forms
 import { MaintenanceCleaningForm } from './service-forms/ServiceFormsPart1'
@@ -234,13 +235,8 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
         })
         if (!res.ok) throw new Error('fail')
         
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'generate_lead', {
-            event_category: 'form_submission',
-            event_label: serviceName,
-            value: 1
-          });
-        }
+        // Form submitted successfully, safe to fire conversion tracking
+        trackConversion('QUOTE_WIZARD_COMPLETE')
 
         toast.success(tl('toasts.submitted'))
         router.push(`/${locale}`)
