@@ -255,7 +255,7 @@ export default function SeoLandingPage({
           <div className="flex flex-col sm:flex-row gap-4 justify-start">
             <Link
               href={`/${locale}/free-offer`}
-              className="btn-secondary text-lg px-8 py-4"
+              className="btn-primary text-lg px-8 py-4 flex items-center justify-center"
               onClick={() => handleCtaClick('hero_form_btn')}
             >
               {p('ctaSoft')}
