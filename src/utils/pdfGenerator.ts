@@ -341,8 +341,8 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   const quoteNumberPrefix = documentType === 'quote' ? 'OFF' : 'VER';
   const quoteNumber = `${quoteNumberPrefix}-${new Date().getFullYear().toString().slice(-2)}${(new Date().getMonth() + 1).toString().padStart(2, '0')}-${Math.floor(Math.random() * 9000 + 1000)}`;
 
-  const isFallback = quote.isFallback;
-  const totalPrice = quote.totalEstimatedPrice || 0;
+  const isFallback = quote.isFallback && !quote.adminOverride;
+  const totalPrice = quote.adminOverride && quote.totalPrice !== undefined ? quote.totalPrice : (quote.totalEstimatedPrice || 0);
   
   let discountRow = '';
   let discountBox = '';

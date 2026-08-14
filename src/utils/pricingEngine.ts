@@ -17,6 +17,10 @@ export interface QuoteResult {
   isFallback: boolean; // True if price says "On Request" or "Individuelle Offerte"
   lineItems: QuoteLineItem[];
   quoteNumber?: string;
+  adminOverride?: boolean;
+  totalPrice?: number;
+  adminNotes?: string;
+  adminOverrideDate?: string;
 }
 
 /**
