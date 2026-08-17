@@ -19,8 +19,8 @@ const getTranslator = (locale: string) => {
         total: isEn ? 'Total Estimate' : (isFr ? 'Total Estimatif' : 'Geschätztes Total'),
         cta: isEn ? 'Confirm Request' : (isFr ? 'Confirmer la demande' : 'Anfrage bestätigen'),
         footer: isEn 
-            ? 'If you have any questions, reply to this email or call us at +41 78 215 80 30.' 
-            : (isFr ? 'Si vous avez des questions, répondez à cet e-mail ou appelez-nous au +41 78 215 80 30.' : 'Bei Fragen antworten Sie auf diese E-Mail oder rufen Sie uns an unter +41 78 215 80 30.')
+            ? 'If you have any questions, reply to this email or call us at +41 78 215 80 30 or +41 76 488 36 89.' 
+            : (isFr ? 'Si vous avez des questions, répondez à cet e-mail ou appelez-nous au +41 78 215 80 30 ou +41 76 488 36 89.' : 'Bei Fragen antworten Sie auf diese E-Mail oder rufen Sie uns an unter +41 78 215 80 30 oder +41 76 488 36 89.')
     };
 };
 

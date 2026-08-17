@@ -11,21 +11,38 @@ interface EmailOptions {
 
 export async function sendEmailNotification(options: EmailOptions): Promise<boolean | string> {
   try {
-    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-      console.warn('⚠️ Gmail credentials not configured. Email not sent.');
+    let transporter;
+    let senderEmail;
+
+    if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASSWORD) {
+      // Use generic SMTP if configured
+      transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST.trim(),
+        port: parseInt(process.env.SMTP_PORT || '465'),
+        secure: parseInt(process.env.SMTP_PORT || '465') === 465, // true for 465, false for other ports
+        auth: {
+          user: process.env.SMTP_USER.trim(),
+          pass: process.env.SMTP_PASSWORD.trim(),
+        },
+      });
+      senderEmail = process.env.SMTP_USER.trim();
+    } else if (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD) {
+      // Fallback to Gmail
+      transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.GMAIL_USER.trim(),
+          pass: process.env.GMAIL_APP_PASSWORD.trim(),
+        },
+      });
+      senderEmail = process.env.GMAIL_USER.trim();
+    } else {
+      console.warn('⚠️ SMTP/Gmail credentials not configured. Email not sent.');
       return true; // Return true so form submission still succeeds
     }
 
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.GMAIL_USER.trim(),
-        pass: process.env.GMAIL_APP_PASSWORD.trim(),
-      },
-    });
-
     await transporter.sendMail({
-      from: `"SwissCleanMove" <${process.env.GMAIL_USER.trim()}>`,
+      from: `"SwissCleanMove" <${senderEmail}>`,
       to: options.to,
       subject: options.subject,
       text: options.text || '',
