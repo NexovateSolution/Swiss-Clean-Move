@@ -1,4 +1,10 @@
 {
+  "thankYouPage": {
+    "title": "Merci",
+    "subtitle": "Votre demande a été soumise avec succès",
+    "description": "Nous vous contacterons dans les plus brefs délais.",
+    "backHome": "Retour à l'accueil"
+  },
   "navigation": {
     "home": "Accueil",
     "about": "À propos",

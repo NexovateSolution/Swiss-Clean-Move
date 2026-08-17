@@ -1,4 +1,10 @@
 {
+  "thankYouPage": {
+    "title": "Grazie",
+    "subtitle": "La tua richiesta è stata inviata con successo",
+    "description": "Ti contatteremo il prima possibile.",
+    "backHome": "Torna alla Home"
+  },
   "common": {
     "learnMore": "Saperne di più",
     "formLink": "Modulo",

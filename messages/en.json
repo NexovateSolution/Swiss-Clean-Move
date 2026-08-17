@@ -1,4 +1,10 @@
 {
+  "thankYouPage": {
+    "title": "Thank You",
+    "subtitle": "Your request has been successfully submitted",
+    "description": "We will contact you as soon as possible.",
+    "backHome": "Back to Homepage"
+  },
   "common": {
     "learnMore": "Learn More",
     "formLink": "Form",

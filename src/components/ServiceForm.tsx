@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import { X } from 'lucide-react'
 import toast from 'react-hot-toast'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
+import { useRouter } from 'next/navigation'
 import { trackConversion } from '@/lib/gtag'
 
 interface ServiceFormProps {
@@ -80,6 +81,8 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const router = useRouter()
+  const locale = useLocale()
 
   const handleInputChange = (field: keyof FormData, value: any) => {
     setFormData(prev => ({ ...prev, [field]: value }))
@@ -106,7 +109,15 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
         // Form submitted successfully, safe to fire conversion tracking
         trackConversion('FREE_QUOTE_SUBMIT')
         
-        toast.success(t('toasts.submitted'))
+        // Redirect to localized thank you page
+        const thankYouPaths: Record<string, string> = {
+          de: '/de/danke',
+          en: '/en/thank-you',
+          fr: '/fr/merci',
+          it: '/it/grazie'
+        }
+        router.push(thankYouPaths[locale] || '/de/danke')
+        
         onClose()
         // Reset form
         setFormData({

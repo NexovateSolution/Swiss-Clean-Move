@@ -238,8 +238,13 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
         // Form submitted successfully, safe to fire conversion tracking
         trackConversion('QUOTE_WIZARD_COMPLETE')
 
-        toast.success(tl('toasts.submitted'))
-        router.push(`/${locale}`)
+        const thankYouPaths: Record<string, string> = {
+          de: '/de/danke',
+          en: '/en/thank-you',
+          fr: '/fr/merci',
+          it: '/it/grazie'
+        }
+        router.push(thankYouPaths[locale] || '/de/danke')
       }
     } catch { toast.error(tl('toasts.submitFailedRetry')) } finally { setBusy(false) }
   }

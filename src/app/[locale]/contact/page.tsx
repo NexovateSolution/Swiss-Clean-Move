@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 import { trackConversion } from '@/lib/gtag';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
@@ -22,6 +23,7 @@ import {
 
 export default function ContactPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations();
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -57,7 +59,14 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
       // Form submitted successfully, safe to fire conversion tracking
       trackConversion('CONTACT_FORM_SUBMIT');
 
-      toast.success(t('contact.success.title'));
+      const thankYouPaths: Record<string, string> = {
+        de: '/de/danke',
+        en: '/en/thank-you',
+        fr: '/fr/merci',
+        it: '/it/grazie'
+      };
+      router.push(thankYouPaths[locale] || '/de/danke');
+      
       setIsSubmitted(true);
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
     } catch (error) {
