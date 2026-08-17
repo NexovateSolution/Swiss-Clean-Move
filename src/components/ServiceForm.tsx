@@ -107,7 +107,7 @@ export default function ServiceForm({ serviceName, isOpen, onClose, formType }: 
 
       if (response.ok) {
         // Form submitted successfully, safe to fire conversion tracking
-        trackConversion('FREE_QUOTE_SUBMIT')
+        await trackConversion('FREE_QUOTE_SUBMIT')
         
         // Redirect to localized thank you page
         const thankYouPaths: Record<string, string> = {

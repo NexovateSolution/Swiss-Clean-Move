@@ -236,7 +236,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
         if (!res.ok) throw new Error('fail')
         
         // Form submitted successfully, safe to fire conversion tracking
-        trackConversion('QUOTE_WIZARD_COMPLETE')
+        await trackConversion('QUOTE_WIZARD_COMPLETE')
 
         const thankYouPaths: Record<string, string> = {
           de: '/de/danke',

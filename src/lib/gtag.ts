@@ -75,21 +75,51 @@ export function trackPageView(url: string): void {
 export function trackConversion(
   event: ConversionEvent,
   options: Record<string, unknown> = {},
-): void {
-  const label = ConversionLabels[event];
-  if (!label) {
-    // Label not yet configured — silently skip in production
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(
-        `[gtag] Conversion label for "${event}" is not configured yet.`,
-      );
+): Promise<void> {
+  return new Promise((resolve) => {
+    const label = ConversionLabels[event];
+    if (!label) {
+      // Label not yet configured — silently skip in production
+      if (process.env.NODE_ENV === 'development') {
+        console.warn(
+          `[gtag] Conversion label for "${event}" is not configured yet.`,
+        );
+      }
+      return resolve();
     }
-    return;
-  }
 
-  gtag('event', 'conversion', {
-    send_to: label,
-    ...options,
+    if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('[gtag] window.gtag is not available, skipping conversion.');
+      }
+      return resolve();
+    }
+
+    let callbackFired = false;
+    const fallbackTimeout = setTimeout(() => {
+      if (!callbackFired) {
+        callbackFired = true;
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`[gtag] Conversion timeout reached for ${label}, proceeding.`);
+        }
+        resolve();
+      }
+    }, 2000);
+
+    window.gtag('event', 'conversion', {
+      send_to: label,
+      event_callback: () => {
+        if (!callbackFired) {
+          callbackFired = true;
+          clearTimeout(fallbackTimeout);
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`[gtag] Conversion event_callback fired for ${label}`);
+          }
+          resolve();
+        }
+      },
+      ...options,
+    });
   });
 }
 

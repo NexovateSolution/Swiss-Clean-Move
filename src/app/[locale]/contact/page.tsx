@@ -57,7 +57,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
       }
 
       // Form submitted successfully, safe to fire conversion tracking
-      trackConversion('CONTACT_FORM_SUBMIT');
+      await trackConversion('CONTACT_FORM_SUBMIT');
 
       const thankYouPaths: Record<string, string> = {
         de: '/de/danke',
