@@ -16,16 +16,20 @@ export async function POST(request: Request) {
     // Send actual email using Gmail (FREE - no subscription needed!)
     let emailSent = false;
     
-    if (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD) {
+    let senderEmail = '';
+    
+    if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASSWORD) {
       try {
-        // Create transporter using Gmail
         const transporter = nodemailer.createTransport({
-          service: 'gmail',
+          host: process.env.SMTP_HOST.trim(),
+          port: parseInt(process.env.SMTP_PORT || '465'),
+          secure: parseInt(process.env.SMTP_PORT || '465') === 465,
           auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_APP_PASSWORD,
+            user: process.env.SMTP_USER.trim(),
+            pass: process.env.SMTP_PASSWORD.trim(),
           },
         });
+        senderEmail = process.env.SMTP_USER.trim();
 
         // Email HTML template
         const htmlContent = `
@@ -52,7 +56,7 @@ export async function POST(request: Request) {
 
         // Send email
         const info = await transporter.sendMail({
-          from: `"SwissCleanMove" <${process.env.GMAIL_USER}>`,
+          from: `"SwissCleanMove" <${senderEmail}>`,
           to: to,
           subject: subject,
           text: body,
