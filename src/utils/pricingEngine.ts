@@ -256,7 +256,18 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
 
     case 'maintenance': {
       const rules = PRICING_RULES.maintenance;
-      const hours = extractNumber(formData.hours);
+      let hours = extractNumber(formData.hours);
+      
+      // Attempt to estimate hours if not explicitly provided
+      if (!hours) {
+        if (formData.cleaningDuration === 'hours12') hours = 1.5;
+        else if (formData.cleaningDuration === 'hours23') hours = 2.5;
+        else if (formData.cleaningDuration === 'hours35') hours = 4;
+        else if (formData.cleaningDuration === 'halfDay') hours = 4;
+        else if (formData.cleaningDuration === 'fullDay') hours = 8;
+        else if (squareMeters) hours = Math.max(2, Math.round(squareMeters / 25)); // roughly 1 hr per 25 sqm
+        else if (rooms) hours = Math.max(2, rooms); // roughly 1 hr per room
+      }
       
       if (!hours) {
         result.isFallback = true;
@@ -288,7 +299,18 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
 
     case 'household': {
       const rules = PRICING_RULES.household;
-      const hours = extractNumber(formData.hours);
+      let hours = extractNumber(formData.hours);
+      
+      // Attempt to estimate hours if not explicitly provided
+      if (!hours) {
+        if (formData.cleaningDuration === 'hours12') hours = 1.5;
+        else if (formData.cleaningDuration === 'hours23') hours = 2.5;
+        else if (formData.cleaningDuration === 'hours35') hours = 4;
+        else if (formData.cleaningDuration === 'halfDay') hours = 4;
+        else if (formData.cleaningDuration === 'fullDay') hours = 8;
+        else if (squareMeters) hours = Math.max(2, Math.round(squareMeters / 25));
+        else if (rooms) hours = Math.max(2, rooms);
+      }
       
       if (!hours) {
         result.isFallback = true;

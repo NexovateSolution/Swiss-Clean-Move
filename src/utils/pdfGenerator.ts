@@ -659,7 +659,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   const subtotalRow = `
     <tr>
       <td style="padding: 8px 0; font-weight: bold; color: #001233; font-size: 13px;">${locDict.subtotal}</td>
-      <td style="padding: 8px 0; text-align: right; font-weight: bold; color: #001233; font-size: 13px;">CHF ${subtotal.toFixed(2)}</td>
+      <td style="padding: 8px 0; text-align: right; font-weight: bold; color: #001233; font-size: 13px;">${isFallback ? locDict.onRequest : 'CHF ' + subtotal.toFixed(2)}</td>
     </tr>
   `;
 
