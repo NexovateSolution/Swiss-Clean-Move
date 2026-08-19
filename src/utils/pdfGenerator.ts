@@ -408,7 +408,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     'unloadingApartmentType', 'unloadingAreaInM2', 'unloadingElevatorSizes', 'unloadingParkingDistance',
     // Backend/Client model specific fields to skip in Scope
     'totalPrice', 'paidAmount', 'balance', 'clientId', 'fromDate', 'untilDate', 'location', 'postalCode', 'serviceType', 'buildingType',
-    'accessHandoverDate', 'accessHandoverTime'
+    'accessHandoverDate', 'accessHandoverTime', 'calcHours', 'calcFrequency', 'hours', 'price'
   ];
   const translatedLabels: Record<string, any> = {
     isExpress: { de: 'Express Service', en: 'Express Service', fr: 'Service Express', it: `Servizio espresso` },
@@ -628,6 +628,8 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     'Abnahmegarantie': { de: 'Abnahmegarantie', en: 'Handover Guarantee', fr: 'Garantie de Remise', it: 'Garanzia di Consegna' },
     householdHelp: { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide Ménagère', it: 'Aiuto Domestico' },
     combination: { de: 'Kombination', en: 'Combination', fr: 'Combinaison', it: 'Combinazione' },
+    custom: { de: 'Individuell', en: 'Custom', fr: 'Personnalisé', it: 'Personalizzato' },
+    'Household Helping': { de: 'Haushaltshilfe', en: 'Household Helping', fr: 'Aide Ménagère', it: 'Aiuto Domestico' },
     fixed: { de: 'Fix', en: 'Fixed', fr: 'Fixe', it: 'Fisso' },
     other: { de: 'Andere', en: 'Other', fr: 'Autre', it: 'Altro' },
     inPerson: { de: 'Persönlich', en: 'In Person', fr: 'En Personne', it: 'Di Persona' },
@@ -1253,10 +1255,10 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>${locDict.propertyType}</strong> ${(() => { const rawPt = customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType; const ptObj = translatedValues[rawPt]; return ptObj ? (ptObj[locale] || ptObj.en) : rawPt; })()}</div>` : ''}
           ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters ? `<div><strong>${locDict.area}</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters} m²</div>` : ''}
           ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms ? `<div><strong>${locDict.rooms}</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms} Zi.</div>` : ''}
-          ${customer.elevatorSizes || customer.elevator ? `<div><strong>${locDict.lift}</strong> ${customer.elevatorSizes || customer.elevator}</div>` : ''}
-          ${customer.parkingDistance ? `<div><strong>${locDict.parking}</strong> ${customer.parkingDistance}</div>` : ''}
-          ${customer.cleaningTypes ? `<div><strong>${locDict.cleaningType}</strong> ${customer.cleaningTypes}</div>` : ''}
-          ${customer.frequency ? `<div><strong>${locDict.frequency}</strong> ${customer.frequency}</div>` : ''}
+          ${customer.elevatorSizes || customer.elevator ? `<div><strong>${locDict.lift}</strong> ${(() => { const v = customer.elevatorSizes || customer.elevator; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
+          ${customer.parkingDistance ? `<div><strong>${locDict.parking}</strong> ${(() => { const v = customer.parkingDistance; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
+          ${customer.cleaningTypes ? `<div><strong>${locDict.cleaningType}</strong> ${(() => { const v = customer.cleaningTypes; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
+          ${customer.frequency ? `<div><strong>${locDict.frequency}</strong> ${(() => { const v = customer.frequency; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
           
           ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || customer.moveToStreet ? `
             <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
