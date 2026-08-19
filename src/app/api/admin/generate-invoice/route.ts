@@ -49,11 +49,15 @@ export async function POST(request: NextRequest) {
 
         let quoteRes = subData.quoteResult;
         if (!quoteRes || !quoteRes.lineItems) {
+           let fallbackId = client.serviceType || 'Reinigung';
+           if (client.serviceType === 'Household Helping' && subData.supportType) {
+              fallbackId = subData.supportType;
+           }
            quoteRes = {
               totalEstimatedPrice: client.totalPrice || 0,
               isFallback: false,
               lineItems: [
-                 { id: client.serviceType || 'Reinigung', price: client.totalPrice || 0 }
+                 { id: fallbackId, price: client.totalPrice || 0 }
               ]
            };
         }

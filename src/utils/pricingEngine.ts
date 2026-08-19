@@ -322,7 +322,8 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
       if (isSunday || isHoliday) hourlyRate = rules.hourlyRates.sundayHoliday;
 
       const basePrice = hourlyRate * hours;
-      result.lineItems.push({ id: `quote.items.household.base`, price: basePrice });
+      const itemId = formData.supportType || 'quote.items.household.base';
+      result.lineItems.push({ id: itemId, price: basePrice });
       result.totalEstimatedPrice! += basePrice;
       
       // Access surcharges

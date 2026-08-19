@@ -13749,5 +13749,8 @@
       }
     }
   },
-  "Household Helping": "Haushaltshilfe"
+  "Household Helping": "Haushaltshilfe",
+  "householdHelp": "Haushaltshilfe (alltägliche Unterstützung / Betreuung)",
+  "maintenanceCleaning": "Unterhaltsreinigung (regelmäßig)",
+  "combination": "Kombination"
 }

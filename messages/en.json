@@ -13679,5 +13679,8 @@
       }
     }
   },
-  "Household Helping": "Household Helping"
+  "Household Helping": "Household Helping",
+  "householdHelp": "Household help (daily support / assistance)",
+  "maintenanceCleaning": "Maintenance cleaning (regular)",
+  "combination": "Combination"
 }
