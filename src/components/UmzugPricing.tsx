@@ -121,7 +121,7 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
     { label: { en: '2.5 room apartment', de: '2.5 Zimmer Wohnung', fr: 'Appartement 2.5 pièces', it: `Appartamento di 2,5 locali` }, price: `CHF ${PRICING_RULES.moving.baseRates['2.5']}.–` },
     { label: { en: '3.5 room apartment', de: '3.5 Zimmer Wohnung', fr: 'Appartement 3.5 pièces', it: `Appartamento di 3,5 locali` }, price: `CHF ${PRICING_RULES.moving.baseRates['3.5']}.–` },
     { label: { en: '4.5 room apartment', de: '4.5 Zimmer Wohnung', fr: 'Appartement 4.5 pièces', it: `Appartamento di 4,5 locali` }, price: `CHF ${PRICING_RULES.moving.baseRates['4.5']}.–` },
-    { label: { en: 'Single-family house', de: 'Einfamilienhaus', fr: 'Maison individuelle', it: `Casa unifamiliare` }, price: `${getT('from')} CHF ${PRICING_RULES.moving.baseRates['house']}.–` }
+    { label: { en: 'Single-family house', de: 'Einfamilienhaus', fr: 'Maison individuelle', it: `Casa unifamiliare` }, price: getT('uponRequest') }
   ];
 
   const movingIncluded = [

@@ -5467,7 +5467,8 @@
       "requestFreeQuote": "Richiedi preventivo gratuito",
       "getFreeQuote": "Ottieni un preventivo gratuito",
       "freeQuote": "Preventivo gratuito"
-    }
+    },
+    "finalizingProjectSetup": "Finalizzazione del progetto"
   },
   "pricing": {
     "title": "Prezzi trasparenti",
@@ -13735,6 +13736,13 @@
     },
     "loadingSpinner": {
       "loading": "Caricamento..."
+    }
+  },
+  "quote": {
+    "items": {
+      "household": {
+        "base": "Aiuto domestico prezzo base"
+      }
     }
   }
 }

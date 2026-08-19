@@ -5397,7 +5397,8 @@
       "requestFreeQuote": "Request Free Quote",
       "getFreeQuote": "Get Free Quote",
       "freeQuote": "Free Quote"
-    }
+    },
+    "finalizingProjectSetup": "Finalizing Project Setup"
   },
   "pricing": {
     "title": "Transparent Pricing",
@@ -13665,6 +13666,13 @@
     },
     "loadingSpinner": {
       "loading": "Loading..."
+    }
+  },
+  "quote": {
+    "items": {
+      "household": {
+        "base": "Household Helping Base Price"
+      }
     }
   }
 }

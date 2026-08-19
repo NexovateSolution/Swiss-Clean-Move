@@ -483,7 +483,15 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     units: { de: 'Einheiten', en: 'Units', fr: 'Unités', it: `Unità` },
     workingHours: { de: 'Arbeitszeiten', en: 'Working Hours', fr: 'Heures de Travail', it: `Orario di lavoro` },
     cleaningLocation: { de: 'Reinigungsort', en: 'Cleaning Location', fr: 'Lieu de Nettoyage', it: `Posizione della pulizia` },
-    timeSlot: { de: 'Zeitfenster', en: 'Time Slot', fr: 'Créneau Horaire', it: `Fascia oraria` }
+    timeSlot: { de: 'Zeitfenster', en: 'Time Slot', fr: 'Créneau Horaire', it: `Fascia oraria` },
+    supportType: { de: 'Support Typ', en: 'Support Type', fr: 'Type de Soutien', it: 'Tipo di Supporto' },
+    accessApartment: { de: 'Wohnungszugang', en: 'Access Apartment', fr: 'Accès Appartement', it: 'Accesso Appartamento' },
+    pets: { de: 'Haustiere', en: 'Pets', fr: 'Animaux', it: 'Animali Domestici' },
+    standardCleaning: { de: 'Standardreinigung', en: 'Standard Cleaning', fr: 'Nettoyage Standard', it: 'Pulizia Standard' },
+    additionalServices: { de: 'Zusätzliche Dienstleistungen', en: 'Additional Services', fr: 'Services Supplémentaires', it: 'Servizi Aggiuntivi' },
+    householdHelpServices: { de: 'Haushaltshilfe Dienstleistungen', en: 'Household Help Services', fr: 'Services d\'Aide Ménagère', it: 'Servizi di Aiuto Domestico' },
+    accessOtherSpec: { de: 'Zugang Sonstiges', en: 'Access Other Spec', fr: 'Accès Autre Spécification', it: 'Accesso Altra Specifica' },
+    specialNotes: { de: 'Spezielle Bemerkungen', en: 'Special Notes', fr: 'Notes Spéciales', it: 'Note Speciali' }
   };
 
   const translatedValues: Record<string, any> = {
@@ -617,7 +625,30 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     undecided: { de: 'Unentschieden', en: 'Undecided', fr: 'Indécis', it: 'Indeciso' },
     guarantee: { de: 'Abnahmegarantie', en: 'Handover Guarantee', fr: 'Garantie de Remise', it: 'Garanzia di Consegna' },
     'Unentschieden': { de: 'Unentschieden', en: 'Undecided', fr: 'Indécis', it: 'Indeciso' },
-    'Abnahmegarantie': { de: 'Abnahmegarantie', en: 'Handover Guarantee', fr: 'Garantie de Remise', it: 'Garanzia di Consegna' }
+    'Abnahmegarantie': { de: 'Abnahmegarantie', en: 'Handover Guarantee', fr: 'Garantie de Remise', it: 'Garanzia di Consegna' },
+    householdHelp: { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide Ménagère', it: 'Aiuto Domestico' },
+    combination: { de: 'Kombination', en: 'Combination', fr: 'Combinaison', it: 'Combinazione' },
+    fixed: { de: 'Fix', en: 'Fixed', fr: 'Fixe', it: 'Fisso' },
+    other: { de: 'Andere', en: 'Other', fr: 'Autre', it: 'Altro' },
+    inPerson: { de: 'Persönlich', en: 'In Person', fr: 'En Personne', it: 'Di Persona' },
+    keyAvailable: { de: 'Schlüssel hinterlegt', en: 'Key Available', fr: 'Clé Disponible', it: 'Chiave Disponibile' },
+    vacuuming: { de: 'Staubsaugen', en: 'Vacuuming', fr: 'Passer l\'aspirateur', it: 'Passare l\'aspirapolvere' },
+    moppingFloors: { de: 'Böden feucht aufnehmen', en: 'Mopping Floors', fr: 'Laver les sols', it: 'Lavare i pavimenti' },
+    dusting: { de: 'Staubwischen', en: 'Dusting', fr: 'Dépoussiérer', it: 'Spolverare' },
+    cleaningKitchen: { de: 'Küche reinigen', en: 'Cleaning Kitchen', fr: 'Nettoyer la cuisine', it: 'Pulire la cucina' },
+    cleaningBathroom: { de: 'Badezimmer reinigen', en: 'Cleaning Bathroom', fr: 'Nettoyer la salle de bain', it: 'Pulire il bagno' },
+    cleaningSurfaces: { de: 'Oberflächen reinigen', en: 'Cleaning Surfaces', fr: 'Nettoyer les surfaces', it: 'Pulire le superfici' },
+    windowsInside: { de: 'Fenster (innen)', en: 'Windows (Inside)', fr: 'Fenêtres (intérieur)', it: 'Finestre (interno)' },
+    windowsOutside: { de: 'Fenster (aussen)', en: 'Windows (Outside)', fr: 'Fenêtres (extérieur)', it: 'Finestre (esterno)' },
+    blindsShutters: { de: 'Storen / Rollläden', en: 'Blinds / Shutters', fr: 'Stores / Volets', it: 'Persiane / Tapparelle' },
+    cleaningRefrigerator: { de: 'Kühlschrank', en: 'Cleaning Refrigerator', fr: 'Nettoyer le réfrigérateur', it: 'Pulire il frigorifero' },
+    cleaningOven: { de: 'Backofen', en: 'Cleaning Oven', fr: 'Nettoyer le four', it: 'Pulire il forno' },
+    balconyTerrace: { de: 'Balkon / Terrasse', en: 'Balcony / Terrace', fr: 'Balcon / Terrasse', it: 'Balcone / Terrazza' },
+    laundry: { de: 'Wäsche waschen', en: 'Laundry', fr: 'Lessive', it: 'Bucato' },
+    ironing: { de: 'Bügeln', en: 'Ironing', fr: 'Repassage', it: 'Stiratura' },
+    changingBedLinen: { de: 'Bettwäsche wechseln', en: 'Changing Bed Linen', fr: 'Changer les draps', it: 'Cambiare le lenzuola' },
+    tidyingUp: { de: 'Aufräumen', en: 'Tidying Up', fr: 'Rangement', it: 'Riordinare' },
+    shopping: { de: 'Einkaufen', en: 'Shopping', fr: 'Courses', it: 'Spesa' }
   };
   
   const additionalAttributesHtml = Object.entries(customer)

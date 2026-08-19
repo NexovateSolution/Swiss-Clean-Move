@@ -7,6 +7,7 @@ import toast from 'react-hot-toast'
 import { Upload, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { calculateQuote } from '@/utils/pricingEngine'
+import { PRICING_RULES } from '@/lib/pricingRules'
 import { trackConversion } from '@/lib/gtag'
 
 // Imports of the forms
@@ -85,8 +86,8 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
 
   const validate = (): boolean => {
     if (isAdmin && step === totalSteps - 1) {
-      if (!d.totalPrice || !d.fromDate || !d.untilDate) {
-        toast.error('Admin details missing (Price, Dates)');
+      if (!d.totalPrice) {
+        toast.error('Admin details missing (Price)');
         return false;
       }
     } else if (isAdmin ? (step === totalSteps - 2) : isLast) {
@@ -256,6 +257,68 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
       return (
         <div>
           <h3 className="text-xl font-bold text-[#003366] mb-6">{tl("admin.finalizingProjectSetup")}</h3>
+
+          {service === 'household-helping' && (
+            <div className="mb-6 p-4 border-2 border-blue-200 bg-blue-50 rounded-lg">
+              <h4 className="font-bold text-[#003366] mb-4 flex items-center gap-2">
+                <span className="text-lg">🧮</span> Household Price Calculator
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label className="block text-sm font-bold text-[#003366] mb-2">Frequency</label>
+                  <select 
+                    value={v('calcFrequency')} 
+                    onChange={e => set('calcFrequency', e.target.value)} 
+                    className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white"
+                  >
+                    <option value="">Select frequency...</option>
+                    <option value="oneTime">{tl('wizard.householdHelping.frequency.oneTime')}</option>
+                    <option value="weekly">{tl('wizard.householdHelping.frequency.weekly')}</option>
+                    <option value="twoThreePerWeek">{tl('wizard.householdHelping.frequency.twoThreePerWeek')}</option>
+                    <option value="everyTwoWeeks">{tl('wizard.householdHelping.frequency.everyTwoWeeks')}</option>
+                    <option value="monthly">{tl('wizard.householdHelping.frequency.monthly')}</option>
+                    <option value="custom">{tl('wizard.householdHelping.frequency.custom')}</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-bold text-[#003366] mb-2">Estimated Hours / Visit</label>
+                  <input 
+                    type="number" 
+                    step="0.5" 
+                    min="2"
+                    value={v('calcHours')} 
+                    onChange={e => set('calcHours', e.target.value)} 
+                    className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" 
+                    placeholder="e.g. 3" 
+                  />
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  const freq = v('calcFrequency');
+                  const hours = parseFloat(v('calcHours') || '0');
+                  if (!freq || hours <= 0) {
+                    toast.error("Please select a frequency and enter valid hours.");
+                    return;
+                  }
+                  
+                  let rate = 45;
+                  if (freq === 'weekly' || freq === 'twoThreePerWeek') rate = PRICING_RULES.household.regular;
+                  else if (freq === 'everyTwoWeeks') rate = PRICING_RULES.household.fourteenDays;
+                  else if (freq === 'oneTime' || freq === 'monthly' || freq === 'custom') rate = PRICING_RULES.household.oneTime;
+                  
+                  const total = rate * hours;
+                  set('totalPrice', total.toFixed(2));
+                  toast.success(`Calculated: ${hours} hours @ ${rate} CHF/hr`);
+                }}
+                className="w-full sm:w-auto px-6 py-2 bg-[#003366] text-white font-bold rounded-lg hover:bg-blue-800 transition-colors"
+              >
+                Calculate & Set Total Price
+              </button>
+            </div>
+          )}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
              <div className="mb-2">
                 <label className="block text-sm font-bold text-[#003366] mb-2">Total Price (CHF) *</label>
@@ -268,12 +331,12 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
              <div className="mb-2">
-                <label className="block text-sm font-bold text-[#003366] mb-2">Project Execution Start *</label>
-                <input type="datetime-local" value={v('fromDate')} onChange={e => set('fromDate', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" required />
+                <label className="block text-sm font-bold text-[#003366] mb-2">Project Execution Start</label>
+                <input type="datetime-local" value={v('fromDate')} onChange={e => set('fromDate', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" />
              </div>
              <div className="mb-2">
-                <label className="block text-sm font-bold text-[#003366] mb-2">Project Execution End *</label>
-                <input type="datetime-local" value={v('untilDate')} onChange={e => set('untilDate', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" required />
+                <label className="block text-sm font-bold text-[#003366] mb-2">Project Execution End</label>
+                <input type="datetime-local" value={v('untilDate')} onChange={e => set('untilDate', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" />
              </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
