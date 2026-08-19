@@ -4023,7 +4023,11 @@
       "description": "Joignez des photos de votre propriété pour nous aider à vous fournir un devis plus précis.",
       "button": "Cliquez pour sélectionner des images"
     },
-    " ": " "
+    " ": " ",
+    "admin": {
+      "finalizingProjectSetup": "Finalisation du projet"
+    },
+    "Household Helping": "Aide ménagère"
   },
   "priceCalculator": {
     "title": "Calculateur de prix",
@@ -13744,5 +13748,6 @@
         "base": "Aide ménagère prix de base"
       }
     }
-  }
+  },
+  "Household Helping": "Aide ménagère"
 }

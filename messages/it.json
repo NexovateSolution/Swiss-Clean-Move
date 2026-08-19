@@ -4036,7 +4036,11 @@
           "holiday": "Supplemento ferie (30%)"
         }
       }
-    }
+    },
+    "admin": {
+      "finalizingProjectSetup": "Finalizzazione del progetto"
+    },
+    "Household Helping": "Aiuto domestico"
   },
   "phone": {
     "label": "Numero di telefono"
@@ -13744,5 +13748,6 @@
         "base": "Aiuto domestico prezzo base"
       }
     }
-  }
+  },
+  "Household Helping": "Aiuto domestico"
 }

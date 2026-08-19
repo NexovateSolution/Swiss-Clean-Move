@@ -4023,7 +4023,11 @@
       "description": "Hängen Sie Fotos Ihrer Immobilie an, damit wir ein genaueres Angebot erstellen können.",
       "button": "Klicken Sie, um Bilder auszuwählen"
     },
-    " ": " "
+    " ": " ",
+    "admin": {
+      "finalizingProjectSetup": "Projektabschluss"
+    },
+    "Household Helping": "Haushaltshilfe"
   },
   "priceCalculator": {
     "title": "Preisrechner",
@@ -13744,5 +13748,6 @@
         "base": "Haushaltshilfe Grundpreis"
       }
     }
-  }
+  },
+  "Household Helping": "Haushaltshilfe"
 }

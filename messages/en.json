@@ -3966,7 +3966,11 @@
       "close": "Schliessen",
       "submitting": "Wird gesendet...",
       "submit": "Senden"
-    }
+    },
+    "admin": {
+      "finalizingProjectSetup": "Finalizing Project Setup"
+    },
+    "Household Helping": "Household Helping"
   },
   "phone": {
     "label": "Telephone number"
@@ -13674,5 +13678,6 @@
         "base": "Household Helping Base Price"
       }
     }
-  }
+  },
+  "Household Helping": "Household Helping"
 }
