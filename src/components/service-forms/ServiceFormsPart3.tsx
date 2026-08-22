@@ -213,8 +213,8 @@ export function HouseholdHelpingForm({ step, d, set, tl, v, arrHas, toggleArr, I
           {/* Address */}
           <SH>{tl('wizard.householdHelping.address')}</SH>
           <div className="grid grid-cols-2 gap-4">
-            <FI label={tl('wizard.householdHelping.zipCity')} value={v('zipCity')} onChange={val => set('zipCity', val)} required />
             <FI label={tl('wizard.householdHelping.streetNo')} value={v('streetNo')} onChange={val => set('streetNo', val)} required />
+            <FI label={tl('wizard.householdHelping.zipCity')} value={v('zipCity')} onChange={val => set('zipCity', val)} required />
           </div>
 
           <FR

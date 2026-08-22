@@ -72,8 +72,8 @@ export function FacilityServicesForm({ step, d, set, tl, v, arrHas, toggleArr, I
 
           {/* Address */}
           <div className="grid grid-cols-2 gap-4">
-            <FI label={tl('wizard.facilityServices.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
             <FI label={tl('wizard.facilityServices.streetNo')} value={v('streetNo')} onChange={v => set('streetNo', v)} required />
+            <FI label={tl('wizard.facilityServices.zipCity')} value={v('zipCity')} onChange={v => set('zipCity', v)} required />
           </div>
 
           {/* Property type */}
