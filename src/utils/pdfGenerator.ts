@@ -484,7 +484,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     workingHours: { de: 'Arbeitszeiten', en: 'Working Hours', fr: 'Heures de Travail', it: `Orario di lavoro` },
     cleaningLocation: { de: 'Reinigungsort', en: 'Cleaning Location', fr: 'Lieu de Nettoyage', it: `Posizione della pulizia` },
     timeSlot: { de: 'Zeitfenster', en: 'Time Slot', fr: 'Créneau Horaire', it: `Fascia oraria` },
-    supportType: { de: 'Support Typ', en: 'Support Type', fr: 'Type de Soutien', it: 'Tipo di Supporto' },
+    supportType: { de: 'Unterstützungsart', en: 'Support Type', fr: 'Type de Soutien', it: 'Tipo di Supporto' },
     accessApartment: { de: 'Wohnungszugang', en: 'Access Apartment', fr: 'Accès Appartement', it: 'Accesso Appartamento' },
     pets: { de: 'Haustiere', en: 'Pets', fr: 'Animaux', it: 'Animali Domestici' },
     standardCleaning: { de: 'Standardreinigung', en: 'Standard Cleaning', fr: 'Nettoyage Standard', it: 'Pulizia Standard' },
