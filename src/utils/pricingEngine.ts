@@ -318,6 +318,16 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
       }
       
       let hourlyRate: number = rules.hourlyRates.weekday;
+      
+      const frequency = formData.cleaningFrequency || formData.frequency;
+      if (frequency === 'weekly' || frequency === 'twoThreePerWeek' || frequency === 'daily' || frequency === 'twoThreeTimes') {
+        hourlyRate = rules.regular;
+      } else if (frequency === 'everyTwoWeeks' || frequency === 'biweekly') {
+        hourlyRate = rules.fourteenDays;
+      } else if (frequency === 'oneTime' || frequency === 'custom' || frequency === 'monthly') {
+        hourlyRate = rules.oneTime;
+      }
+      
       if (isSaturday) hourlyRate = rules.hourlyRates.saturday;
       if (isSunday || isHoliday) hourlyRate = rules.hourlyRates.sundayHoliday;
 
@@ -325,19 +335,7 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
       const itemId = formData.supportType || 'quote.items.household.base';
       result.lineItems.push({ id: itemId, price: basePrice });
       result.totalEstimatedPrice! += basePrice;
-      
-      // Access surcharges
-      if (noElevator && floor >= 2) {
-        const floorCost = floor * rules.access.noElevatorPerFloor;
-        result.lineItems.push({ id: 'quote.items.surcharge.floor', price: floorCost, isSurcharge: true });
-        result.totalEstimatedPrice! += floorCost;
-      }
-      if (noParking) {
-        result.lineItems.push({ id: 'quote.items.surcharge.noParking', price: rules.access.noParking, isSurcharge: true });
-        result.totalEstimatedPrice! += rules.access.noParking;
-      }
 
-      result.totalEstimatedPrice! += applyDateSurcharges(basePrice, rules.dateSurcharges);
       break;
     }
 
