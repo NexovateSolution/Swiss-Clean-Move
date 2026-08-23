@@ -308,8 +308,7 @@ export function calculateQuote(rawServiceType: string, formData: any): QuoteResu
         else if (formData.cleaningDuration === 'hours35') hours = 4;
         else if (formData.cleaningDuration === 'halfDay') hours = 4;
         else if (formData.cleaningDuration === 'fullDay') hours = 8;
-        else if (squareMeters) hours = Math.max(2, Math.round(squareMeters / 25));
-        else if (rooms) hours = Math.max(2, rooms);
+        else hours = 2; // Fixed estimation of 2 hours for everything else
       }
       
       if (!hours) {
