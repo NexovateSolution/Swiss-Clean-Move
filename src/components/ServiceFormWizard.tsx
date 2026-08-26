@@ -277,6 +277,9 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
                     <option value="twoThreePerWeek">{tl('wizard.householdHelping.frequency.twoThreePerWeek')}</option>
                     <option value="everyTwoWeeks">{tl('wizard.householdHelping.frequency.everyTwoWeeks')}</option>
                     <option value="monthly">{tl('wizard.householdHelping.frequency.monthly')}</option>
+                    <option value="3months">3 Months</option>
+                    <option value="6months">6 Months</option>
+                    <option value="1year">1 Year</option>
                     <option value="custom">{tl('wizard.householdHelping.frequency.custom')}</option>
                   </select>
                 </div>
@@ -304,13 +307,28 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
                   }
                   
                   let rate = 45;
-                  if (freq === 'weekly' || freq === 'twoThreePerWeek') rate = PRICING_RULES.household.regular;
-                  else if (freq === 'everyTwoWeeks') rate = PRICING_RULES.household.fourteenDays;
-                  else if (freq === 'oneTime' || freq === 'monthly' || freq === 'custom') rate = PRICING_RULES.household.oneTime;
+                  let multiplier = 1;
+
+                  if (freq === 'weekly' || freq === 'twoThreePerWeek') {
+                    rate = PRICING_RULES.household.regular;
+                  } else if (freq === 'everyTwoWeeks') {
+                    rate = PRICING_RULES.household.fourteenDays;
+                  } else if (freq === 'oneTime' || freq === 'monthly' || freq === 'custom') {
+                    rate = PRICING_RULES.household.oneTime;
+                  } else if (freq === '3months') {
+                    rate = PRICING_RULES.household.regular;
+                    multiplier = 12; // 3 months = 12 weeks
+                  } else if (freq === '6months') {
+                    rate = PRICING_RULES.household.regular;
+                    multiplier = 24; // 6 months = 24 weeks
+                  } else if (freq === '1year') {
+                    rate = PRICING_RULES.household.regular;
+                    multiplier = 52; // 1 year = 52 weeks
+                  }
                   
-                  const total = rate * hours;
+                  const total = rate * hours * multiplier;
                   set('totalPrice', total.toFixed(2));
-                  toast.success(`Calculated: ${hours} hours @ ${rate} CHF/hr`);
+                  toast.success(`Calculated: ${hours} hours @ ${rate} CHF/hr ${multiplier > 1 ? `x ${multiplier} weeks` : ''}`);
                 }}
                 className="w-full sm:w-auto px-6 py-2 bg-[#003366] text-white font-bold rounded-lg hover:bg-blue-800 transition-colors"
               >
