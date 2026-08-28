@@ -46,21 +46,31 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
   }
 
   switch (currentView) {
-    case 'serviceType':
+    case 'serviceType': {
+      const availableOptions = [
+        { value: 'moving', label: tl('wizard.unified.step1.options.moving') },
+        { value: 'cleaning', label: tl('wizard.unified.step1.options.cleaning') },
+        { value: 'combo', label: tl('wizard.unified.step1.options.combo') },
+        { value: 'transport', label: tl('wizard.unified.step1.options.transport') }
+      ].filter(opt => {
+        if (service === 'house-cleaning') return opt.value === 'cleaning';
+        if (service === 'relocation') return opt.value === 'moving' || opt.value === 'transport';
+        return true;
+      });
+
       return (
         <div className="animate-in fade-in duration-300">
-          <SH>{tl('wizard.unified.step1.title')}</SH>
-          <FR
-            label={tl('wizard.unified.step1.requestType')}
-            value={reqType}
-            onChange={val => set('requestType', val)}
-            options={[
-              { value: 'moving', label: tl('wizard.unified.step1.options.moving') },
-              { value: 'cleaning', label: tl('wizard.unified.step1.options.cleaning') },
-              { value: 'combo', label: tl('wizard.unified.step1.options.combo') },
-              { value: 'transport', label: tl('wizard.unified.step1.options.transport') }
-            ]}
-          />
+          {availableOptions.length > 1 && (
+            <>
+              <SH>{tl('wizard.unified.step1.title')}</SH>
+              <FR
+                label={tl('wizard.unified.step1.requestType')}
+                value={reqType}
+                onChange={val => set('requestType', val)}
+                options={availableOptions}
+              />
+            </>
+          )}
           <SH>{tl('wizard.unified.step1.preferredDateTitle')}</SH>
           <div className="grid grid-cols-2 gap-4">
              <FI label={tl('wizard.unified.step1.date')} value={v('preferredDate')} onChange={val => set('preferredDate', val)} type="date" required />
