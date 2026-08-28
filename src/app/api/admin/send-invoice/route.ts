@@ -164,6 +164,14 @@ async function renderPdfFromHtml(html: string): Promise<Buffer> {
         const pdf = await page.pdf({
             format: 'A4',
             printBackground: true,
+            displayHeaderFooter: true,
+            headerTemplate: '<span></span>',
+            footerTemplate: `
+              <div style="width: 100%; font-size: 10px; padding: 0 12mm; display: flex; justify-content: space-between; align-items: center; color: #555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <span></span>
+                <span><span class="pageNumber"></span> / <span class="totalPages"></span></span>
+              </div>
+            `,
             margin: { top: '20mm', right: '12mm', bottom: '30mm', left: '12mm' }
         })
         return Buffer.from(pdf)

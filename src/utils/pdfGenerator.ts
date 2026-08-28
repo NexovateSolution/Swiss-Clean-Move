@@ -1381,7 +1381,18 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
   // Print to PDF
   const pdfBuffer = await page.pdf({
     format: 'A4',
-    printBackground: true
+    printBackground: true,
+    displayHeaderFooter: true,
+    headerTemplate: '<span></span>', // Empty header
+    footerTemplate: `
+      <div style="width: 100%; font-size: 10px; padding: 0 20mm; display: flex; justify-content: space-between; align-items: center; color: #555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        <span></span>
+        <span><span class="pageNumber"></span> / <span class="totalPages"></span></span>
+      </div>
+    `,
+    margin: {
+      bottom: '15mm', // Ensure there is space for the footer
+    }
   });
 
   await browser.close();
