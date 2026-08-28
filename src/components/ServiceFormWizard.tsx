@@ -181,7 +181,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
             buildingType: mappedBuildingType,
             fromDate: d.fromDate,
             untilDate: d.untilDate,
-            totalPrice: d.totalPrice,
+            totalPrice: d.totalPrice || '0.00',
             paidAmount: d.paidAmount || 0,
             remarks1: Object.entries(d).filter(([k]) => !['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'moveFromStreet', 'cleanStreet', 'moveFromZipCity', 'cleanZipCity'].includes(k)).map(([k,v]) => `${k}: ${Array.isArray(v) ? v.join(', ') : v}`).join(' | '),
             data: d
@@ -340,7 +340,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
              <div className="mb-2">
                 <label className="block text-sm font-bold text-[#003366] mb-2">Total Price (CHF) *</label>
-                <input type="number" step="0.01" value={v('totalPrice')} onChange={e => set('totalPrice', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" placeholder="0.00" required />
+                <input type="number" step="0.01" value={v('totalPrice')} onChange={e => set('totalPrice', e.target.value)} className="w-full px-4 py-3 border-2 border-[#a8c8e8] rounded-lg bg-white" placeholder="0.00" />
              </div>
              <div className="mb-2">
                 <label className="block text-sm font-bold text-[#003366] mb-2">Paid Amount (CHF)</label>
