@@ -87,6 +87,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           </div>
         </div>
       );
+    }
 
     case 'propertyDetails':
       return (
