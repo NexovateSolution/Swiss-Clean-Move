@@ -313,6 +313,13 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       if (locale === 'fr') return 'Remise 5%';
       return 'Discount 5%';
     }
+    
+    if (key === 'Apartment cleaning' || key === 'apartmentCleaning' || key === 'Apartment Cleaning') {
+        if (locale === 'de') return 'Wohnungsreinigung';
+        if (locale === 'fr') return 'Nettoyage d\'appartement';
+        if (locale === 'it') return 'Pulizia appartamento';
+        return 'Apartment cleaning';
+    }
 
     const parts = key.split('.');
     let current = messages;
@@ -428,6 +435,9 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     moveToConditions: { de: 'Bedingungen Zielort', en: 'Conditions Destination', fr: 'Conditions Destination', it: `Condizioni Destinazione` },
     moveFurniture: { de: 'Möbel', en: 'Furniture', fr: 'Meubles', it: `Mobilia` },
     moveSpecialItems: { de: 'Spezialgegenstände', en: 'Special Items', fr: 'Objets Spéciaux', it: `Articoli speciali` },
+    'Apartment cleaning': { de: 'Wohnungsreinigung', en: 'Apartment cleaning', fr: 'Nettoyage d\'appartement', it: 'Pulizia appartamento' },
+    'furtherRequests': { de: 'Weitere Anfragen', en: 'Further Requests', fr: 'Autres Demandes', it: 'Ulteriori richieste' },
+    'Further Requests': { de: 'Weitere Anfragen', en: 'Further Requests', fr: 'Autres Demandes', it: 'Ulteriori richieste' },
     moveServices: { de: 'Zusatzleistungen', en: 'Additional Services', fr: 'Services Supplémentaires', it: `Servizi aggiuntivi` },
     cleanWindowTypes: { de: 'Fensterarten', en: 'Window Types', fr: 'Types de Fenêtres', it: `Tipi di finestre` },
     cleanSpecialGlass: { de: 'Spezialglas', en: 'Special Glass', fr: 'Verre Spécial', it: `Vetro speciale` },
@@ -612,6 +622,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     'WhatsApp': { de: 'WhatsApp', en: 'WhatsApp', fr: 'WhatsApp', it: `Whatsapp` },
     'Ja': { de: 'Ja', en: 'Yes', fr: 'Oui', it: `Sì` },
     'Nein': { de: 'Nein', en: 'No', fr: 'Non', it: `No` },
+    'Apartment cleaning': { de: 'Wohnungsreinigung', en: 'Apartment cleaning', fr: 'Nettoyage d\'appartement', it: 'Pulizia appartamento' },
     // End missing German keys
     
     'cleaning-only': { de: 'Nur Reinigung', en: 'Cleaning Only', fr: 'Nettoyage Uniquement', it: `Solo pulizia` },
@@ -658,6 +669,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       if (skipKeys.includes(key)) return false;
       if (val === '' || val === null || val === undefined || val === false) return false;
       if (typeof val === 'object' && !Array.isArray(val)) return false; // skip raw json blocks
+      if (Array.isArray(val) && val.length === 0) return false;
       return true;
     })
     .map(([key, val]) => {
