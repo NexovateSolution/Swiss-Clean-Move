@@ -1407,6 +1407,10 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
   await browser.close();
 
   // Add page numbers reliably using pdf-lib
+  return addPageNumbersToPdf(pdfBuffer as Buffer);
+}
+
+export async function addPageNumbersToPdf(pdfBuffer: Buffer): Promise<Buffer> {
   try {
     const pdfDoc = await PDFDocument.load(pdfBuffer);
     const pages = pdfDoc.getPages();
@@ -1434,6 +1438,6 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
     return Buffer.from(finalPdfBytes);
   } catch (error) {
     console.error('Failed to add page numbers with pdf-lib:', error);
-    return pdfBuffer as Buffer;
+    return pdfBuffer;
   }
 }

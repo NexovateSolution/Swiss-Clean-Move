@@ -4,7 +4,7 @@ import { authenticateRequest } from '../../../../../lib/auth'
 import nodemailer from 'nodemailer'
 import puppeteerCore from 'puppeteer-core'
 import chromium from '@sparticuz/chromium'
-import { generateQuoteHtml } from '@/utils/pdfGenerator'
+import { generateQuoteHtml, addPageNumbersToPdf } from '@/utils/pdfGenerator'
 
 export async function POST(request: NextRequest) {
     try {
@@ -164,17 +164,11 @@ async function renderPdfFromHtml(html: string): Promise<Buffer> {
         const pdf = await page.pdf({
             format: 'A4',
             printBackground: true,
-            displayHeaderFooter: true,
-            headerTemplate: '<span></span>',
-            footerTemplate: `
-              <div style="width: 100%; font-size: 10px; padding: 0 12mm; display: flex; justify-content: space-between; align-items: center; color: #555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-                <span></span>
-                <span><span class="pageNumber"></span> / <span class="totalPages"></span></span>
-              </div>
-            `,
-            margin: { top: '20mm', right: '12mm', bottom: '30mm', left: '12mm' }
+            displayHeaderFooter: false,
+            margin: { top: '20mm', right: '12mm', bottom: '20mm', left: '12mm' }
         })
-        return Buffer.from(pdf)
+        const finalPdf = await addPageNumbersToPdf(Buffer.from(pdf))
+        return finalPdf
     } finally {
         await browser.close()
     }
