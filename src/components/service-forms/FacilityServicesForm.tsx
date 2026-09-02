@@ -311,7 +311,7 @@ export function FacilityServicesForm({ step, d, set, tl, v, arrHas, toggleArr, I
           {/* Contact info */}
           <SH>{tl('wizard.facilityServices.contact.title')}</SH>
           <FI label={tl('wizard.facilityServices.contact.name')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
-          <FI label={tl('wizard.facilityServices.contact.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required />
+          <FI label={tl('wizard.facilityServices.contact.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required={!isAdmin} />
           <FI label={tl('wizard.facilityServices.contact.phone')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
         </div>
       );

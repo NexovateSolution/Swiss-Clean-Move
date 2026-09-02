@@ -133,7 +133,7 @@ export function DisposalForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUplo
 
           <SH>{tl('wizard.disposal.contact')}</SH>
           <FI label={tl('wizard.disposal.nameCompany')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
-          <FI label={tl('wizard.disposal.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required />
+          <FI label={tl('wizard.disposal.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required={!isAdmin} />
           <FI label={tl('wizard.disposal.phone')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
         </div>
       );

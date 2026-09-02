@@ -46,7 +46,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
   }
 
   switch (currentView) {
-    case 'serviceType': {
+    case 'serviceType':
       const availableOptions = [
         { value: 'moving', label: tl('wizard.unified.step1.options.moving') },
         { value: 'cleaning', label: tl('wizard.unified.step1.options.cleaning') },
@@ -87,7 +87,6 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           </div>
         </div>
       );
-    }
 
     case 'propertyDetails':
       return (
@@ -419,7 +418,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           <SH>{tl('wizard.unified.contact.detailsTitle')}</SH>
           <FI label={tl('wizard.unified.contact.nameCompany')} value={v('nameFirstName')} onChange={val => set('nameFirstName', val)} required />
           <FI label={tl('wizard.unified.contact.phone')} value={v('telephone')} onChange={val => set('telephone', val)} required type="tel" />
-          <FI label={tl('wizard.unified.contact.email')} value={v('emailAddress')} onChange={val => set('emailAddress', val)} required type={isAdmin ? 'text' : 'email'} />
+          <FI label={tl('wizard.unified.contact.email')} value={v('emailAddress')} onChange={val => set('emailAddress', val)} required={!isAdmin} type={isAdmin ? 'text' : 'email'} />
 
           <SH>{tl('wizard.unified.contact.methodTitle')}</SH>
           <div className="grid grid-cols-2 gap-2 mt-2 border-b border-gray-200 pb-4">

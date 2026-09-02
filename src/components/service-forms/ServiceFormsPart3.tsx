@@ -147,7 +147,7 @@ export function RelocationForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUp
           <SH>{tl('wizard.relocation.contact')}</SH>
           <FI label={tl('wizard.relocation.nameFirstName')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
           <FI label={tl('wizard.relocation.company')} value={v('company')} onChange={v => set('company', v)} />
-          <FI label={tl('wizard.relocation.emailAddress')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required />
+          <FI label={tl('wizard.relocation.emailAddress')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required={!isAdmin} />
           <FI label={tl('wizard.relocation.telephoneNumber')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
         </div>
       );
@@ -343,7 +343,7 @@ export function HouseholdHelpingForm({ step, d, set, tl, v, arrHas, toggleArr, I
           {/* Contact Details */}
           <SH>{tl('wizard.householdHelping.contactDetails')}</SH>
           <FI label={tl('wizard.householdHelping.name')} value={v('nameFirstName')} onChange={val => set('nameFirstName', val)} required />
-          <FI label={tl('wizard.householdHelping.email')} value={v('emailAddress')} onChange={val => set('emailAddress', val)} type={isAdmin ? 'text' : 'email'} required />
+          <FI label={tl('wizard.householdHelping.email')} value={v('emailAddress')} onChange={val => set('emailAddress', val)} type={isAdmin ? 'text' : 'email'} required={!isAdmin} />
           <FI label={tl('wizard.householdHelping.phone')} value={v('telephone')} onChange={val => set('telephone', val)} type="tel" required />
         </div>
       );
@@ -411,7 +411,7 @@ export function ComboServiceForm({ step, d, set, tl, v, arrHas, toggleArr, Image
 
           <SH>{tl('wizard.comboService.contact')}</SH>
           <FI label={tl('wizard.comboService.nameContact')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
-          <FI label={tl('wizard.comboService.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required />
+          <FI label={tl('wizard.comboService.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required={!isAdmin} />
           <FI label={tl('wizard.comboService.phone')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
         </div>
       );
