@@ -290,7 +290,7 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                           {t('email')}
                         </label>
                         <input
-                          type="email"
+                          type="text"
                           {...register('email')}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           placeholder={t('emailPlaceholder')}

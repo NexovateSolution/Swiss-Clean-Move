@@ -91,6 +91,7 @@ export interface FormStepProps {
   toggleArr: (key: string, val: string) => void;
   ImageUpload: () => JSX.Element;
   service?: string;
+  isAdmin?: boolean;
 }
 
 export const getFloorOptions = (t: any) => [

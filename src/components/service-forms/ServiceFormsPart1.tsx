@@ -5,7 +5,7 @@ import { FormStepProps, FI, FS, FR, FC, FTA, SH, getFloorOptions, roomNumbers, l
 
 
 
-export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUpload, service }: FormStepProps) {
+export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUpload, service, isAdmin }: FormStepProps) {
   switch (step) {
     case 0:
       return (
@@ -203,7 +203,7 @@ export function MaintenanceCleaningForm({ step, d, set, tl, v, arrHas, toggleArr
           <FI label={tl('wizard.cleaning.deliveryHandoverDate')} value={v('deliveryHandoverDate')} onChange={v => set('deliveryHandoverDate', v)} type="datetime-local" />
           <SH>{tl('wizard.maintenanceCleaning.contact')}</SH>
           <FI label={tl('wizard.maintenanceCleaning.nameCompany')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
-          <FI label={tl('wizard.maintenanceCleaning.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type="email" required />
+          <FI label={tl('wizard.maintenanceCleaning.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required />
           <FI label={tl('wizard.maintenanceCleaning.phone')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
           <FTA label={tl('wizard.maintenanceCleaning.notes')} value={v('notes')} onChange={v => set('notes', v)} />
           <ImageUpload />

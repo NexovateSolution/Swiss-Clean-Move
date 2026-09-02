@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { FormStepProps, FI, FS, FR, FC, FTA, SH, getFloorOptions, roomNumbers, livingSpaceOptions, peopleOptions } from '../FormControls';
 
-export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUpload, service }: FormStepProps) {
+export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUpload, service, isAdmin }: FormStepProps) {
   // Initialize default requestType based on the URL context if it hasn't been set yet
   useEffect(() => {
     if (!v('requestType')) {
@@ -419,7 +419,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           <SH>{tl('wizard.unified.contact.detailsTitle')}</SH>
           <FI label={tl('wizard.unified.contact.nameCompany')} value={v('nameFirstName')} onChange={val => set('nameFirstName', val)} required />
           <FI label={tl('wizard.unified.contact.phone')} value={v('telephone')} onChange={val => set('telephone', val)} required type="tel" />
-          <FI label={tl('wizard.unified.contact.email')} value={v('emailAddress')} onChange={val => set('emailAddress', val)} required type="email" />
+          <FI label={tl('wizard.unified.contact.email')} value={v('emailAddress')} onChange={val => set('emailAddress', val)} required type={isAdmin ? 'text' : 'email'} />
 
           <SH>{tl('wizard.unified.contact.methodTitle')}</SH>
           <div className="grid grid-cols-2 gap-2 mt-2 border-b border-gray-200 pb-4">

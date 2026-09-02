@@ -250,7 +250,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
     } catch { toast.error(tl('toasts.submitFailedRetry')) } finally { setBusy(false) }
   }
 
-  const formProps: FormStepProps = { step, d, set, tl, v, arrHas, toggleArr, ImageUpload, service }
+  const formProps: FormStepProps = { step, d, set, tl, v, arrHas, toggleArr, ImageUpload, service, isAdmin }
 
   const renderCurrentStep = () => {
     if (isAdmin && step === totalSteps - 1) {

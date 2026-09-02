@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormStepProps, FI, FR, FC, SH } from '../FormControls';
 
-export function FacilityServicesForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUpload }: FormStepProps) {
+export function FacilityServicesForm({ step, d, set, tl, v, arrHas, toggleArr, ImageUpload, isAdmin }: FormStepProps) {
   const selectedService = v('facilityServiceType');
 
   switch (step) {
@@ -311,7 +311,7 @@ export function FacilityServicesForm({ step, d, set, tl, v, arrHas, toggleArr, I
           {/* Contact info */}
           <SH>{tl('wizard.facilityServices.contact.title')}</SH>
           <FI label={tl('wizard.facilityServices.contact.name')} value={v('nameFirstName')} onChange={v => set('nameFirstName', v)} required />
-          <FI label={tl('wizard.facilityServices.contact.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type="email" required />
+          <FI label={tl('wizard.facilityServices.contact.email')} value={v('emailAddress')} onChange={v => set('emailAddress', v)} type={isAdmin ? 'text' : 'email'} required />
           <FI label={tl('wizard.facilityServices.contact.phone')} value={v('telephone')} onChange={v => set('telephone', v)} type="tel" required />
         </div>
       );
