@@ -1397,14 +1397,13 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
     displayHeaderFooter: true,
     headerTemplate: '<span></span>', // Empty header
     footerTemplate: `
-      <div style="width: 100%; font-size: 10px; display: flex; justify-content: space-between; align-items: center; color: #555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-        <span></span>
-        <span><span class="pageNumber"></span> / <span class="totalPages"></span></span>
+      <div style="width: 100%; font-size: 11px; text-align: right; padding-right: 20mm; color: #555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-print-color-adjust: exact;">
+        <span class="pageNumber"></span> / <span class="totalPages"></span>
       </div>
     `,
     margin: {
-      top: '15mm',
-      bottom: '15mm',
+      top: '20mm',
+      bottom: '20mm',
       left: '20mm',
       right: '20mm'
     }
