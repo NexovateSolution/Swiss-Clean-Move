@@ -46,7 +46,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
   }
 
   switch (currentView) {
-    case 'serviceType':
+    case 'serviceType': {
       const availableOptions = [
         { value: 'moving', label: tl('wizard.unified.step1.options.moving') },
         { value: 'cleaning', label: tl('wizard.unified.step1.options.cleaning') },
@@ -87,6 +87,7 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
           </div>
         </div>
       );
+    }
 
     case 'propertyDetails':
       return (
