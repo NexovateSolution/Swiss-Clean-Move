@@ -193,7 +193,7 @@ export default function ClientsPage() {
             jsPDF:        { unit: 'in' as const, format: 'letter' as const, orientation: 'portrait' as const }
           };
           
-          await html2pdf().set(opt).from(element).toPdf().get('pdf').then((pdf: any) => {
+          await (html2pdf().set(opt).from(element).toPdf().get('pdf').then((pdf: any) => {
             const totalPages = pdf.internal.getNumberOfPages();
             for (let i = 1; i <= totalPages; i++) {
               pdf.setPage(i);
@@ -204,7 +204,7 @@ export default function ClientsPage() {
               const y = pdf.internal.pageSize.getHeight() - 0.5;
               pdf.text(text, x, y);
             }
-          }).save();
+          }) as any).save();
           
           toast.dismiss('pdf-gen');
           toast.success('PDF downloaded successfully');
