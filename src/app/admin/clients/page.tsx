@@ -193,7 +193,19 @@ export default function ClientsPage() {
             jsPDF:        { unit: 'in' as const, format: 'letter' as const, orientation: 'portrait' as const }
           };
           
-          await html2pdf().set(opt).from(element).save();
+          await html2pdf().set(opt).from(element).toPdf().get('pdf').then((pdf: any) => {
+            const totalPages = pdf.internal.getNumberOfPages();
+            for (let i = 1; i <= totalPages; i++) {
+              pdf.setPage(i);
+              pdf.setFontSize(10);
+              pdf.setTextColor(150);
+              const text = `${i} / ${totalPages}`;
+              const x = pdf.internal.pageSize.getWidth() - 0.8;
+              const y = pdf.internal.pageSize.getHeight() - 0.5;
+              pdf.text(text, x, y);
+            }
+          }).save();
+          
           toast.dismiss('pdf-gen');
           toast.success('PDF downloaded successfully');
         }
