@@ -723,7 +723,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   <head>
     <meta charset="utf-8">
     <style>
-      @page { margin: 15mm 20mm; }
+      /* @page margin removed in favor of Puppeteer options for footer */
       body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; box-sizing: border-box; }
       @media screen {
         body { margin: 20px auto; padding: 40px; max-width: 800px; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; background: white; }
@@ -921,7 +921,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   <head>
     <meta charset="utf-8">
     <style>
-      @page { margin: 15mm 20mm; }
+      /* @page margin removed in favor of Puppeteer options for footer */
       body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; box-sizing: border-box; }
       @media screen {
         body { margin: 20px auto; padding: 40px; max-width: 800px; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; background: white; }
@@ -1397,13 +1397,16 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
     displayHeaderFooter: true,
     headerTemplate: '<span></span>', // Empty header
     footerTemplate: `
-      <div style="width: 100%; font-size: 10px; padding: 0 20mm; display: flex; justify-content: space-between; align-items: center; color: #555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+      <div style="width: 100%; font-size: 10px; display: flex; justify-content: space-between; align-items: center; color: #555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
         <span></span>
         <span><span class="pageNumber"></span> / <span class="totalPages"></span></span>
       </div>
     `,
     margin: {
-      bottom: '15mm', // Ensure there is space for the footer
+      top: '15mm',
+      bottom: '15mm',
+      left: '20mm',
+      right: '20mm'
     }
   });
 
