@@ -1,4 +1,5 @@
 import { QuoteResult } from './pricingEngine';
+import { PDFDocument, rgb } from 'pdf-lib';
 import fs from 'fs';
 import path from 'path';
 
@@ -1394,15 +1395,9 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
   const pdfBuffer = await page.pdf({
     format: 'A4',
     printBackground: true,
-    displayHeaderFooter: true,
-    headerTemplate: '<span></span>', // Empty header
-    footerTemplate: `
-      <div style="width: 100%; font-size: 11px; text-align: right; padding-right: 20mm; color: #555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-print-color-adjust: exact;">
-        <span class="pageNumber"></span> / <span class="totalPages"></span>
-      </div>
-    `,
+    displayHeaderFooter: false,
     margin: {
-      top: '20mm',
+      top: '15mm',
       bottom: '20mm',
       left: '20mm',
       right: '20mm'
@@ -1411,5 +1406,34 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
 
   await browser.close();
 
-  return pdfBuffer as Buffer;
+  // Add page numbers reliably using pdf-lib
+  try {
+    const pdfDoc = await PDFDocument.load(pdfBuffer);
+    const pages = pdfDoc.getPages();
+    const totalPages = pages.length;
+    
+    for (let i = 0; i < totalPages; i++) {
+      const page = pages[i];
+      const { width } = page.getSize();
+      
+      const text = `${i + 1} / ${totalPages}`;
+      const fontSize = 10;
+      
+      // Calculate approximate text width for right-alignment
+      const textWidth = text.length * 6;
+      
+      page.drawText(text, {
+        x: width - 56 - textWidth, // 56 points is roughly 20mm
+        y: 25, // Distance from bottom
+        size: fontSize,
+        color: rgb(0.33, 0.33, 0.33), // #555555
+      });
+    }
+    
+    const finalPdfBytes = await pdfDoc.save();
+    return Buffer.from(finalPdfBytes);
+  } catch (error) {
+    console.error('Failed to add page numbers with pdf-lib:', error);
+    return pdfBuffer as Buffer;
+  }
 }
