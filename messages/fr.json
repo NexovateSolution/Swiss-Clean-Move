@@ -79,7 +79,7 @@
         "description": "Services complets de déménagement avec équipe expérimentée"
       },
       "relocation": {
-        "title": "Transport",
+        "title": "Transport + déménagement",
         "description": "Services complets de déménagement avec équipe expérimentée"
       },
       "disposal": {
@@ -107,7 +107,7 @@
         "description": "Nettoyages spécialisés pour des besoins uniques"
       },
       "comboService": {
-        "title": "Déménagement + Nettoyage (Combo)",
+        "title": "Nettoyage",
         "description": "Service combiné de déménagement avec nettoyage final et garantie de reprise"
       },
       "householdHelping": {

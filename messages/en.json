@@ -68,7 +68,7 @@
         "description": "Professional window cleaning services for residential and commercial properties"
       },
       "relocation": {
-        "title": "Transportation",
+        "title": "Transportation + moving",
         "description": "Complete relocation services with experienced team and professional equipment"
       },
       "disposal": {
@@ -96,7 +96,7 @@
         "description": "Specialized cleaning for unique needs and situations"
       },
       "comboService": {
-        "title": "Moving + Cleaning (Combo)",
+        "title": "Cleaning",
         "description": "Combined moving service with final cleaning and handover guarantee"
       },
       "householdHelping": {

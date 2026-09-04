@@ -68,7 +68,7 @@
         "description": "Servizi professionali di pulizia vetri per immobili residenziali e commerciali"
       },
       "relocation": {
-        "title": "Trasporti",
+        "title": "Trasporto + trasloco",
         "description": "Servizi di trasloco completi con team esperto e attrezzature professionali"
       },
       "disposal": {
@@ -96,7 +96,7 @@
         "description": "Pulizie specializzate per esigenze e situazioni uniche"
       },
       "comboService": {
-        "title": "Spostamento + Pulizia (Combo)",
+        "title": "Pulizia",
         "description": "Servizio di trasloco combinato con pulizia finale e garanzia di consegna"
       },
       "householdHelping": {

@@ -55,7 +55,7 @@
         "description": "Professionelle Fenster- und Glasreinigungsdienstleistungen"
       },
       "relocation": {
-        "title": "Transport",
+        "title": "Transport + Umzug",
         "description": "Komplette Umzugsdienstleistungen mit erfahrenem Team"
       },
       "disposal": {
@@ -83,7 +83,7 @@
         "description": "Spezialisierte Reinigung für besondere Anforderungen"
       },
       "comboService": {
-        "title": "Umzug + Reinigung (Kombi)",
+        "title": "Reinigung",
         "description": "Kombinierter Umzugsservice mit Endreinigung und Abnahmegarantie"
       },
       "umzugsreinigung": {
