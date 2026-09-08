@@ -260,15 +260,22 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
             {/* Left Google Stats */}
             <div className="lg:col-span-1 flex flex-col items-center lg:items-center text-center space-y-2">
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl font-bold text-[#4285F4]">G</span>
-                <span className="text-2xl font-bold text-[#EA4335]">o</span>
-                <span className="text-2xl font-bold text-[#FBBC05]">o</span>
-                <span className="text-2xl font-bold text-[#4285F4]">g</span>
-                <span className="text-2xl font-bold text-[#34A853]">l</span>
-                <span className="text-2xl font-bold text-[#EA4335]">e</span>
-                <span className="text-2xl font-bold text-black ml-1">{tNew('reviews.google')}</span>
-              </div>
+              <a 
+                href="https://g.page/r/CaR3s0KCpz1O/review" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center space-x-2 hover:opacity-80 transition-opacity cursor-pointer"
+              >
+                <div className="flex items-center">
+                  <span className="text-2xl font-bold text-[#4285F4]">G</span>
+                  <span className="text-2xl font-bold text-[#EA4335]">o</span>
+                  <span className="text-2xl font-bold text-[#FBBC05]">o</span>
+                  <span className="text-2xl font-bold text-[#4285F4]">g</span>
+                  <span className="text-2xl font-bold text-[#34A853]">l</span>
+                  <span className="text-2xl font-bold text-[#EA4335]">e</span>
+                </div>
+                <span className="text-2xl font-bold text-black">{tNew('reviews.google')}</span>
+              </a>
               <div className="flex space-x-1 py-2">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-6 h-6 text-[#FBBC05] fill-current" />

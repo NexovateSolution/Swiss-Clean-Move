@@ -76,11 +76,15 @@ export function UnifiedMovingCleaningForm({ step, d, set, tl, v, arrHas, toggleA
              <FI label={tl('wizard.unified.step1.date')} value={v('preferredDate')} onChange={val => set('preferredDate', val)} type="date" required />
              <FI label={tl('wizard.unified.step1.time')} value={v('preferredTime')} onChange={val => set('preferredTime', val)} type="time" />
           </div>
-          <SH>{tl('wizard.unified.access.handoverTitle') || 'Handover'}</SH>
-          <div className="grid grid-cols-2 gap-4">
-             <FI label={tl('wizard.unified.access.handoverDate')} value={v('accessHandoverDate')} onChange={val => set('accessHandoverDate', val)} type="date" />
-             <FI label={tl('wizard.unified.step1.time') || 'Time'} value={v('accessHandoverTime')} onChange={val => set('accessHandoverTime', val)} type="time" />
-          </div>
+          {reqType !== 'moving' && reqType !== 'transport' && (
+            <>
+              <SH>{tl('wizard.unified.access.handoverTitle') || 'Handover'}</SH>
+              <div className="grid grid-cols-2 gap-4">
+                 <FI label={tl('wizard.unified.access.handoverDate')} value={v('accessHandoverDate')} onChange={val => set('accessHandoverDate', val)} type="date" />
+                 <FI label={tl('wizard.unified.step1.time') || 'Time'} value={v('accessHandoverTime')} onChange={val => set('accessHandoverTime', val)} type="time" />
+              </div>
+            </>
+          )}
           <div className="mt-4">
             <FC label={tl('wizard.unified.step1.flexible')} checked={v('isFlexible') === 'true'} onChange={() => set('isFlexible', v('isFlexible') === 'true' ? 'false' : 'true')} />
             <FC label={tl('wizard.unified.step1.express')} checked={v('isExpress') === 'true'} onChange={() => set('isExpress', v('isExpress') === 'true' ? 'false' : 'true')} />
