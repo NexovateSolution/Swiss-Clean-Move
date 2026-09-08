@@ -283,7 +283,8 @@
       "reviews": {
         "rating": "4.9 sur 5",
         "count": "Plus de 100+ avis",
-        "google": "Avis"
+        "google": "Avis",
+        "writeReview": "Écrire un avis"
       },
       "process": {
         "title": "Comment obtenir votre offre facilement",

@@ -283,7 +283,8 @@
       "reviews": {
         "rating": "4.9 von 5",
         "count": "Über 100+ Bewertungen",
-        "google": "Bewertungen"
+        "google": "Bewertungen",
+        "writeReview": "Bewertung schreiben"
       },
       "process": {
         "title": "So einfach erhalten Sie Ihre Offerte",

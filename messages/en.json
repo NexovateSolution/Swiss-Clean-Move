@@ -296,7 +296,8 @@
       "reviews": {
         "rating": "4.9 out of 5",
         "count": "Over 100+ Reviews",
-        "google": "Reviews"
+        "google": "Reviews",
+        "writeReview": "Write a review"
       },
       "process": {
         "title": "How easily you get your offer",
