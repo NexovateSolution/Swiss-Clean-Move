@@ -262,7 +262,8 @@
           "insurance": "Haftpflichtversichert",
           "contact": "Direkter Ansprechpartner",
           "transparent": "Transparente Preise"
-        }
+        },
+        "tagline": "Saubere Lösungen. Einfacher Leben."
       },
       "services": {
         "header": "Wofür benötigen Sie eine Offerte?",
@@ -281,7 +282,8 @@
       },
       "reviews": {
         "rating": "4.9 von 5",
-        "count": "Über 100+ Bewertungen"
+        "count": "Über 100+ Bewertungen",
+        "google": "Bewertungen"
       },
       "process": {
         "title": "So einfach erhalten Sie Ihre Offerte",
@@ -301,7 +303,11 @@
       "cta": {
         "title": "Jetzt kostenlose Offerte anfordern",
         "subtitle": "Für Reinigung, Umzug, Entsorgung und Facility Service.",
-        "whatsapp": "Jetzt schreiben"
+        "whatsapp": "Jetzt schreiben",
+        "hours": "Mo-Sa 7-20 Uhr"
+      },
+      "regions": {
+        "title": "Lokal in Biel/Bienne & Seeland – schweizweit im Einsatz"
       }
     }
   },

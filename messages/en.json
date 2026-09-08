@@ -275,7 +275,8 @@
           "insurance": "Liability Insured",
           "contact": "Direct Contact Person",
           "transparent": "Transparent Prices"
-        }
+        },
+        "tagline": "Clean Solutions. Simpler Life."
       },
       "services": {
         "header": "What do you need an offer for?",
@@ -294,7 +295,8 @@
       },
       "reviews": {
         "rating": "4.9 out of 5",
-        "count": "Over 100+ Reviews"
+        "count": "Over 100+ Reviews",
+        "google": "Reviews"
       },
       "process": {
         "title": "How easily you get your offer",
@@ -314,7 +316,11 @@
       "cta": {
         "title": "Request a free offer now",
         "subtitle": "For cleaning, moving, disposal, and facility service.",
-        "whatsapp": "Write now"
+        "whatsapp": "Write now",
+        "hours": "Mon-Sat 7am-8pm"
+      },
+      "regions": {
+        "title": "Local in Biel/Bienne & Seeland – operating throughout Switzerland"
       }
     }
   },

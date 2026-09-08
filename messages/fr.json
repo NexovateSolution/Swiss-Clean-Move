@@ -262,7 +262,8 @@
           "insurance": "Assurance responsabilité civile",
           "contact": "Interlocuteur direct",
           "transparent": "Prix transparents"
-        }
+        },
+        "tagline": "Solutions Propres. Vie Plus Simple."
       },
       "services": {
         "header": "Pour quoi avez-vous besoin d'une offre ?",
@@ -281,7 +282,8 @@
       },
       "reviews": {
         "rating": "4.9 sur 5",
-        "count": "Plus de 100+ avis"
+        "count": "Plus de 100+ avis",
+        "google": "Avis"
       },
       "process": {
         "title": "Comment obtenir votre offre facilement",
@@ -301,7 +303,11 @@
       "cta": {
         "title": "Demander une offre gratuite maintenant",
         "subtitle": "Pour nettoyage, déménagement, débarras et facility service.",
-        "whatsapp": "Écrire maintenant"
+        "whatsapp": "Écrire maintenant",
+        "hours": "Lun-Sam 7h-20h"
+      },
+      "regions": {
+        "title": "Local à Bienne & Seeland – opérationnel dans toute la Suisse"
       }
     }
   },

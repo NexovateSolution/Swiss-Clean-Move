@@ -275,7 +275,8 @@
           "insurance": "Responsabilità civile assicurata",
           "contact": "Interlocutore diretto",
           "transparent": "Prezzi trasparenti"
-        }
+        },
+        "tagline": "Soluzioni Pulite. Vita Più Semplice."
       },
       "services": {
         "header": "Per cosa ti serve un'offerta?",
@@ -294,7 +295,8 @@
       },
       "reviews": {
         "rating": "4.9 su 5",
-        "count": "Oltre 100+ Recensioni"
+        "count": "Oltre 100+ Recensioni",
+        "google": "Recensioni"
       },
       "process": {
         "title": "Come ricevere facilmente la tua offerta",
@@ -314,7 +316,11 @@
       "cta": {
         "title": "Richiedi ora un'offerta gratuita",
         "subtitle": "Per pulizia, trasloco, smaltimento e facility service.",
-        "whatsapp": "Scrivi ora"
+        "whatsapp": "Scrivi ora",
+        "hours": "Lun-Sab 7-20"
+      },
+      "regions": {
+        "title": "Locale a Biel/Bienne e Seeland – operativo in tutta la Svizzera"
       }
     }
   },

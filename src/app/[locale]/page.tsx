@@ -171,7 +171,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <div className="flex items-center space-x-2 mb-2 md:mb-0">
                 <div className="w-8 h-1 bg-swiss-red"></div>
                 <span className="text-xs md:text-sm font-bold text-black tracking-widest uppercase">
-                  Saubere Lösungen. Einfacher Leben.
+                  {tNew('hero.tagline')}
                 </span>
               </div>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight tracking-tight">
@@ -267,7 +267,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 <span className="text-2xl font-bold text-[#4285F4]">g</span>
                 <span className="text-2xl font-bold text-[#34A853]">l</span>
                 <span className="text-2xl font-bold text-[#EA4335]">e</span>
-                <span className="text-2xl font-bold text-black ml-1">Bewertungen</span>
+                <span className="text-2xl font-bold text-black ml-1">{tNew('reviews.google')}</span>
               </div>
               <div className="flex space-x-1 py-2">
                 {[...Array(5)].map((_, i) => (
@@ -366,7 +366,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <div className="flex items-center space-x-3 mb-6">
             <MapPin className="w-6 h-6 text-swiss-red" />
             <h2 className="text-xl md:text-2xl font-bold text-black">
-              Lokal in Biel/Bienne & Seeland – schweizweit im Einsatz
+              {tNew('regions.title')}
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -409,7 +409,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               <a href="tel:+41782158030" className="flex items-center justify-center space-x-2 px-6 py-3 border-2 border-white/20 rounded-lg text-white font-bold hover:bg-white/10 transition-colors text-lg">
                 <Phone className="w-5 h-5" />
                 <div className="text-left leading-tight">
-                  <div className="text-sm font-medium text-gray-300">Mo-Sa 7-20 Uhr</div>
+                  <div className="text-sm font-medium text-gray-300">{tNew('cta.hours')}</div>
                   <div>+41 78 215 80 30</div>
                 </div>
               </a>
