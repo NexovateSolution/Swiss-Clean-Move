@@ -6,7 +6,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'admin' })
   
   return {
-    title: `Notepad | ${t('dashboard')} - SwissCleanMove`,
+    title: `Notepad | ${t('sidebar.dashboard')} - SwissCleanMove`,
     description: 'SwissCleanMove Admin Notepad',
   }
 }
