@@ -252,6 +252,57 @@
       "learnMore": "Mehr erfahren",
       "facilityServices": "Facility Services",
       "hauswartung": "Hauswartung"
+    },
+    "newDesign": {
+      "hero": {
+        "title": "Reinigungsfirma, Umzugsfirma & Facility Service in der Schweiz",
+        "subtitle": "SwissCleanMove ist Ihr Partner für Umzugsreinigung mit Abnahmegarantie, Endreinigung, Privatreinigung, Unterhaltsreinigung, Umzug, Transport, Entsorgung und Hauswartung – professionell, zuverlässig und schnell.",
+        "badges": {
+          "guarantee": "Abnahmegarantie",
+          "insurance": "Haftpflichtversichert",
+          "contact": "Direkter Ansprechpartner",
+          "transparent": "Transparente Preise"
+        }
+      },
+      "services": {
+        "header": "Wofür benötigen Sie eine Offerte?",
+        "freeObligation": "Kostenlos & unverbindlich",
+        "reinigung": "Umzugsreinigung, Endreinigung, Privatreinigung",
+        "umzug": "Privatumzug, Firmenumzug, Möbeltransport",
+        "entsorgung": "Möbelentsorgung, Sperrgut, Räumungen",
+        "facility": "Liegenschaften, Treppenhaus, Unterhalt",
+        "haushalt": "Regelmässige Wohnungsreinigung",
+        "offerteBtn": "Offerte",
+        "reinigung_title": "Reinigung",
+        "umzug_title": "Umzug & Transport",
+        "entsorgung_title": "Entsorgung & Räumung",
+        "facility_title": "Hauswartung & Facility Service",
+        "haushalt_title": "Haushaltshilfe"
+      },
+      "reviews": {
+        "rating": "4.9 von 5",
+        "count": "Über 100+ Bewertungen"
+      },
+      "process": {
+        "title": "So einfach erhalten Sie Ihre Offerte",
+        "step1": {
+          "title": "Service wählen",
+          "desc": "Wählen Sie die gewünschte Dienstleistung aus."
+        },
+        "step2": {
+          "title": "Angaben senden",
+          "desc": "Beantworten Sie einige kurze Fragen und laden Sie bei Bedarf Fotos hoch."
+        },
+        "step3": {
+          "title": "Persönliche Offerte erhalten",
+          "desc": "Wir erstellen Ihnen ein massgeschneidertes Angebot - kostenlos und unverbindlich."
+        }
+      },
+      "cta": {
+        "title": "Jetzt kostenlose Offerte anfordern",
+        "subtitle": "Für Reinigung, Umzug, Entsorgung und Facility Service.",
+        "whatsapp": "Jetzt schreiben"
+      }
     }
   },
   "services": {

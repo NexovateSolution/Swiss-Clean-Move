@@ -265,6 +265,57 @@
       "learnMore": "Saperne di più",
       "facilityServices": "Servizi della struttura",
       "hauswartung": "Manutenzione della proprietà"
+    },
+    "newDesign": {
+      "hero": {
+        "title": "Impresa di pulizie, traslochi e Facility Service in Svizzera",
+        "subtitle": "SwissCleanMove è il tuo partner per pulizie di trasloco con garanzia di consegna, pulizie di fine locazione, pulizie private, pulizie di manutenzione, traslochi, trasporti, smaltimento e custodia – professionale, affidabile e veloce.",
+        "badges": {
+          "guarantee": "Garanzia di consegna",
+          "insurance": "Responsabilità civile assicurata",
+          "contact": "Interlocutore diretto",
+          "transparent": "Prezzi trasparenti"
+        }
+      },
+      "services": {
+        "header": "Per cosa ti serve un'offerta?",
+        "freeObligation": "Gratuito e senza impegno",
+        "reinigung": "Pulizie di trasloco, fine locazione, private",
+        "umzug": "Trasloco privato, aziendale, trasporto mobili",
+        "entsorgung": "Smaltimento mobili, ingombranti, sgomberi",
+        "facility": "Immobili, vano scale, manutenzione",
+        "haushalt": "Pulizia regolare di appartamenti",
+        "offerteBtn": "Offerta",
+        "reinigung_title": "Pulizia",
+        "umzug_title": "Trasloco & Trasporto",
+        "entsorgung_title": "Smaltimento & Sgombero",
+        "facility_title": "Custodia & Facility Service",
+        "haushalt_title": "Aiuto domestico"
+      },
+      "reviews": {
+        "rating": "4.9 su 5",
+        "count": "Oltre 100+ Recensioni"
+      },
+      "process": {
+        "title": "Come ricevere facilmente la tua offerta",
+        "step1": {
+          "title": "Scegli il servizio",
+          "desc": "Seleziona il servizio desiderato."
+        },
+        "step2": {
+          "title": "Invia i dettagli",
+          "desc": "Rispondi a qualche breve domanda e carica foto se necessario."
+        },
+        "step3": {
+          "title": "Ricevi l'offerta personale",
+          "desc": "Creeremo per te un'offerta su misura – gratuitamente e senza impegno."
+        }
+      },
+      "cta": {
+        "title": "Richiedi ora un'offerta gratuita",
+        "subtitle": "Per pulizia, trasloco, smaltimento e facility service.",
+        "whatsapp": "Scrivi ora"
+      }
     }
   },
   "services": {

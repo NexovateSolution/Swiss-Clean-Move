@@ -265,6 +265,57 @@
       "learnMore": "Learn more",
       "facilityServices": "Facility Services",
       "hauswartung": "Property Maintenance"
+    },
+    "newDesign": {
+      "hero": {
+        "title": "Cleaning Company, Moving Company & Facility Service in Switzerland",
+        "subtitle": "SwissCleanMove is your partner for move-out cleaning with handover guarantee, end of tenancy cleaning, private cleaning, maintenance cleaning, moving, transport, disposal, and facility management – professional, reliable, and fast.",
+        "badges": {
+          "guarantee": "Handover Guarantee",
+          "insurance": "Liability Insured",
+          "contact": "Direct Contact Person",
+          "transparent": "Transparent Prices"
+        }
+      },
+      "services": {
+        "header": "What do you need an offer for?",
+        "freeObligation": "Free & non-binding",
+        "reinigung": "Move-out cleaning, end of tenancy cleaning, private cleaning",
+        "umzug": "Private move, company move, furniture transport",
+        "entsorgung": "Furniture disposal, bulky waste, clearances",
+        "facility": "Properties, staircases, maintenance",
+        "haushalt": "Regular apartment cleaning",
+        "offerteBtn": "Offer",
+        "reinigung_title": "Cleaning",
+        "umzug_title": "Moving & Transport",
+        "entsorgung_title": "Disposal & Clearance",
+        "facility_title": "Property Maintenance & Facility",
+        "haushalt_title": "Household Help"
+      },
+      "reviews": {
+        "rating": "4.9 out of 5",
+        "count": "Over 100+ Reviews"
+      },
+      "process": {
+        "title": "How easily you get your offer",
+        "step1": {
+          "title": "Select Service",
+          "desc": "Choose your desired service."
+        },
+        "step2": {
+          "title": "Send Details",
+          "desc": "Answer a few short questions and upload photos if needed."
+        },
+        "step3": {
+          "title": "Receive Personal Offer",
+          "desc": "We will create a customized offer for you – free of charge and non-binding."
+        }
+      },
+      "cta": {
+        "title": "Request a free offer now",
+        "subtitle": "For cleaning, moving, disposal, and facility service.",
+        "whatsapp": "Write now"
+      }
     }
   },
   "services": {

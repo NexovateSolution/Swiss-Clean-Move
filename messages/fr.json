@@ -252,6 +252,57 @@
       "learnMore": "En savoir plus",
       "facilityServices": "Services généraux",
       "hauswartung": "Conciergerie"
+    },
+    "newDesign": {
+      "hero": {
+        "title": "Entreprise de nettoyage, de déménagement & Facility Service en Suisse",
+        "subtitle": "SwissCleanMove est votre partenaire pour le nettoyage de déménagement avec garantie de remise, nettoyage de fin de bail, nettoyage privé, nettoyage d'entretien, déménagement, transport, débarras et conciergerie – professionnel, fiable et rapide.",
+        "badges": {
+          "guarantee": "Garantie de remise",
+          "insurance": "Assurance responsabilité civile",
+          "contact": "Interlocuteur direct",
+          "transparent": "Prix transparents"
+        }
+      },
+      "services": {
+        "header": "Pour quoi avez-vous besoin d'une offre ?",
+        "freeObligation": "Gratuit & sans engagement",
+        "reinigung": "Nettoyage de déménagement, de fin de bail, privé",
+        "umzug": "Déménagement privé, d'entreprise, transport de meubles",
+        "entsorgung": "Débarras de meubles, objets encombrants, vidages",
+        "facility": "Immeubles, cages d'escalier, entretien",
+        "haushalt": "Nettoyage régulier d'appartement",
+        "offerteBtn": "Offre",
+        "reinigung_title": "Nettoyage",
+        "umzug_title": "Déménagement & Transport",
+        "entsorgung_title": "Débarras & Vidage",
+        "facility_title": "Conciergerie & Facility Service",
+        "haushalt_title": "Aide ménagère"
+      },
+      "reviews": {
+        "rating": "4.9 sur 5",
+        "count": "Plus de 100+ avis"
+      },
+      "process": {
+        "title": "Comment obtenir votre offre facilement",
+        "step1": {
+          "title": "Choisir le service",
+          "desc": "Sélectionnez le service souhaité."
+        },
+        "step2": {
+          "title": "Envoyer les détails",
+          "desc": "Répondez à quelques courtes questions et téléchargez des photos si nécessaire."
+        },
+        "step3": {
+          "title": "Recevoir l'offre personnelle",
+          "desc": "Nous créons pour vous une offre sur mesure – gratuitement et sans engagement."
+        }
+      },
+      "cta": {
+        "title": "Demander une offre gratuite maintenant",
+        "subtitle": "Pour nettoyage, déménagement, débarras et facility service.",
+        "whatsapp": "Écrire maintenant"
+      }
     }
   },
   "services": {
