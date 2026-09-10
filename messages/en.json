@@ -268,15 +268,17 @@
     },
     "newDesign": {
       "hero": {
-        "title": "Cleaning Company, Moving Company & Facility Service in Switzerland",
-        "subtitle": "SwissCleanMove is your partner for move-out cleaning with handover guarantee, end of tenancy cleaning, private cleaning, maintenance cleaning, moving, transport, disposal, and facility management – professional, reliable, and fast.",
+        "title": "Your Cleaning & Moving Company in Switzerland",
+        "subtitle": "Move-out cleaning with handover guarantee, moving, transport & facility services – professional from a single source.",
         "badges": {
           "guarantee": "Handover Guarantee",
           "insurance": "Liability Insured",
           "contact": "Direct Contact Person",
           "transparent": "Transparent Prices"
         },
-        "tagline": "Clean Solutions. Simpler Life."
+        "tagline": "Clean Solutions. Simpler Life.",
+        "topText": "CLEANING • MOVING • FACILITY SERVICES",
+        "contactBtn": "Contact"
       },
       "services": {
         "header": "What do you need an offer for?",

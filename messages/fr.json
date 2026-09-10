@@ -255,15 +255,17 @@
     },
     "newDesign": {
       "hero": {
-        "title": "Entreprise de nettoyage, de déménagement & Facility Service en Suisse",
-        "subtitle": "SwissCleanMove est votre partenaire pour le nettoyage de déménagement avec garantie de remise, nettoyage de fin de bail, nettoyage privé, nettoyage d'entretien, déménagement, transport, débarras et conciergerie – professionnel, fiable et rapide.",
+        "title": "Votre Entreprise de Nettoyage & Déménagement en Suisse",
+        "subtitle": "Nettoyage de fin de bail avec garantie de remise, déménagement, transport & conciergerie - un service professionnel complet.",
         "badges": {
           "guarantee": "Garantie de remise",
           "insurance": "Assurance responsabilité civile",
           "contact": "Interlocuteur direct",
           "transparent": "Prix transparents"
         },
-        "tagline": "Solutions Propres. Vie Plus Simple."
+        "tagline": "Solutions Propres. Vie Plus Simple.",
+        "topText": "NETTOYAGE • DÉMÉNAGEMENT • CONCIERGERIE",
+        "contactBtn": "Contact"
       },
       "services": {
         "header": "Pour quoi avez-vous besoin d'une offre ?",

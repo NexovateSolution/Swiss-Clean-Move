@@ -255,15 +255,17 @@
     },
     "newDesign": {
       "hero": {
-        "title": "Reinigungsfirma, Umzugsfirma & Facility Service in der Schweiz",
-        "subtitle": "SwissCleanMove ist Ihr Partner für Umzugsreinigung mit Abnahmegarantie, Endreinigung, Privatreinigung, Unterhaltsreinigung, Umzug, Transport, Entsorgung und Hauswartung – professionell, zuverlässig und schnell.",
+        "title": "Ihre Reinigungs- & Umzugsfirma in der Schweiz",
+        "subtitle": "Umzugsreinigung mit Abnahmegarantie, Umzug, Transport & Hauswartung - professionell aus einer Hand.",
         "badges": {
           "guarantee": "Abnahmegarantie",
           "insurance": "Haftpflichtversichert",
           "contact": "Direkter Ansprechpartner",
           "transparent": "Transparente Preise"
         },
-        "tagline": "Saubere Lösungen. Einfacher Leben."
+        "tagline": "Saubere Lösungen. Einfacher Leben.",
+        "topText": "REINIGUNG • UMZUG • HAUSWARTUNG",
+        "contactBtn": "Kontakt"
       },
       "services": {
         "header": "Wofür benötigen Sie eine Offerte?",

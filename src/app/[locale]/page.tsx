@@ -18,6 +18,8 @@ import {
   Droplets,
   MousePointerClick,
   ClipboardEdit,
+  Users,
+  Mail,
   CheckCircle2,
   MessageCircle,
   Clock,
@@ -141,14 +143,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   return (
     <Layout>
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-swiss-section pb-12 pt-4 lg:pt-0">
+      <section className="relative overflow-hidden bg-white pb-12 pt-8 lg:pt-16">
         <div className="absolute inset-0 z-0">
           {slideImages.map((slide, index) => (
             <img 
               key={index}
               src={slide.url} 
               alt="Background" 
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentSlide ? 'opacity-30 md:opacity-40' : 'opacity-0'}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentSlide ? 'opacity-10' : 'opacity-0'}`}
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
                 if (!img.dataset.fallback) {
@@ -161,52 +163,52 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               }}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70 md:via-white/90 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/90"></div>
         </div>
         
-        <div className="container-max relative z-10 pt-8 md:pt-16 lg:pt-24 pb-8 md:pb-12">
-          <div className="flex flex-col lg:flex-row items-center">
-            {/* Left Content */}
-            <div className="w-full lg:w-3/5 space-y-4 md:space-y-6">
-              <div className="flex items-center space-x-2 mb-2 md:mb-0">
-                <div className="w-8 h-1 bg-swiss-red"></div>
-                <span className="text-xs md:text-sm font-bold text-black tracking-widest uppercase">
-                  {tNew('hero.tagline')}
-                </span>
-              </div>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight tracking-tight">
-                {tNew('hero.title')}
-              </h1>
-              <p className="text-base md:text-lg text-black font-medium max-w-2xl leading-relaxed">
-                {tNew('hero.subtitle')}
-              </p>
-              
-              {/* Badges */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 md:pt-6">
-                {[
-                  tNew('hero.badges.guarantee'),
-                  tNew('hero.badges.insurance'),
-                  tNew('hero.badges.contact'),
-                  tNew('hero.badges.transparent')
-                ].map((badge, i) => (
-                  <div key={i} className="flex items-center space-x-3 bg-white/50 md:bg-transparent p-2 rounded-lg md:p-0 md:rounded-none">
-                    <div className="w-6 h-6 rounded-full bg-swiss-red flex items-center justify-center flex-shrink-0">
-                      {i < 2 ? <CheckCircle className="w-4 h-4 text-white" /> : <span className="text-white font-bold text-sm">+</span>}
-                    </div>
-                    <span className="text-sm font-bold text-black">{badge}</span>
-                  </div>
-                ))}
-              </div>
+        <div className="container-max relative z-10 pt-4 pb-8 md:pb-12 text-center">
+          <div className="flex flex-col items-center justify-center max-w-5xl mx-auto space-y-6 md:space-y-8">
+            
+            {/* Top Text */}
+            <div className="text-[10px] md:text-sm font-bold text-[#001f3f] tracking-[0.2em] md:tracking-[0.3em] uppercase">
+              {tNew('hero.topText')}
             </div>
 
-            {/* Right Image Placeholder (If they provide team photo later) */}
-            <div className="hidden lg:block w-full lg:w-2/5 relative h-[500px]">
-              <img 
-                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="SwissCleanMove Team" 
-                className="w-full h-full object-cover rounded-2xl shadow-xl border-4 border-white opacity-0"
-              />
+            {/* Main Title */}
+            <h1 className="text-3xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.1] tracking-tight text-[#001f3f]">
+              <span className="text-swiss-red">Swiss</span>CleanMove – {tNew('hero.title')}
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-base md:text-xl text-[#001f3f]/80 font-medium max-w-3xl leading-relaxed">
+              {tNew('hero.subtitle')}
+            </p>
+
+            {/* CTA Button */}
+            <div className="pt-2 md:pt-4">
+              <Link href={`/${locale}/free-offer`} className="inline-flex items-center justify-center space-x-2 bg-swiss-red text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl">
+                <span>{tNew('services.offerteBtn')}</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
+
+            {/* Badges */}
+            <div className="flex flex-wrap justify-center gap-6 md:gap-12 pt-8 w-full border-t border-gray-200 mt-8">
+              {[
+                { icon: CheckCircle, text: tNew('hero.badges.guarantee'), bg: 'bg-red-50', color: 'text-swiss-red' },
+                { icon: ClipboardEdit, text: tNew('hero.badges.insurance'), bg: 'bg-red-50', color: 'text-swiss-red' },
+                { icon: Sparkles, text: tNew('hero.badges.transparent'), bg: 'bg-red-50', color: 'text-swiss-red' },
+                { icon: Users, text: tNew('hero.badges.contact'), bg: 'bg-red-50', color: 'text-swiss-red' }
+              ].map((badge, i) => (
+                <div key={i} className="flex flex-col items-center space-y-3 mt-6">
+                  <div className={`w-14 h-14 rounded-full ${badge.bg} flex items-center justify-center`}>
+                    <badge.icon className={`w-7 h-7 ${badge.color}`} />
+                  </div>
+                  <span className="text-sm font-bold text-[#001f3f]">{badge.text}</span>
+                </div>
+              ))}
+            </div>
+
           </div>
         </div>
       </section>
@@ -422,25 +424,32 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-              <Link href={`/${locale}/free-offer`} className="btn-primary py-3 px-8 text-center text-lg shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center space-x-2 font-bold">
+            <div className="flex flex-wrap justify-center lg:justify-end gap-4 w-full lg:w-auto">
+              <Link href={`/${locale}/free-offer`} className="btn-primary py-3 px-6 text-center shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center space-x-2 font-bold">
                 <span>{tNew('services.freeObligation').split(' ')[0]} Offerte</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <a href="tel:+41782158030" className="flex items-center justify-center space-x-2 px-6 py-3 border-2 border-white/20 rounded-lg text-white font-bold hover:bg-white/10 transition-colors text-lg">
+              <a href="tel:+41782158030" className="flex items-center justify-center space-x-2 px-5 py-3 border-2 border-white/20 rounded-lg text-white font-bold hover:bg-white/10 transition-colors">
                 <Phone className="w-5 h-5" />
                 <div className="text-left leading-tight">
-                  <div className="text-sm font-medium text-gray-300">{tNew('cta.hours')}</div>
-                  <div>+41 78 215 80 30</div>
+                  <div className="text-xs font-medium text-gray-300">{tNew('cta.hours')}</div>
+                  <div className="text-sm">+41 78 215 80 30</div>
                 </div>
               </a>
-              <a href="https://wa.me/41782158030" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 px-6 py-3 bg-[#25D366]/10 border-2 border-[#25D366] rounded-lg text-white font-bold hover:bg-[#25D366]/20 transition-colors text-lg">
+              <a href="https://wa.me/41782158030" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 px-5 py-3 bg-[#25D366]/10 border-2 border-[#25D366] rounded-lg text-white font-bold hover:bg-[#25D366]/20 transition-colors">
                 <MessageCircle className="w-5 h-5 text-[#25D366]" />
                 <div className="text-left leading-tight">
-                  <div className="text-sm font-medium text-[#25D366]">{tNew('cta.whatsapp')}</div>
-                  <div>WhatsApp</div>
+                  <div className="text-xs font-medium text-[#25D366]">{tNew('cta.whatsapp')}</div>
+                  <div className="text-sm">WhatsApp</div>
                 </div>
               </a>
+              <Link href={`/${locale}/contact`} className="flex items-center justify-center space-x-2 px-5 py-3 border-2 border-blue-400/50 rounded-lg text-white font-bold hover:bg-blue-500/10 transition-colors">
+                <Mail className="w-5 h-5 text-blue-400" />
+                <div className="text-left leading-tight">
+                  <div className="text-xs font-medium text-blue-300">{tNew('hero.contactBtn')}</div>
+                  <div className="text-sm">Email / Form</div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

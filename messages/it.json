@@ -268,15 +268,17 @@
     },
     "newDesign": {
       "hero": {
-        "title": "Impresa di pulizie, traslochi e Facility Service in Svizzera",
-        "subtitle": "SwissCleanMove è il tuo partner per pulizie di trasloco con garanzia di consegna, pulizie di fine locazione, pulizie private, pulizie di manutenzione, traslochi, trasporti, smaltimento e custodia – professionale, affidabile e veloce.",
+        "title": "La Vostra Impresa di Pulizie e Traslochi in Svizzera",
+        "subtitle": "Pulizia di fine locazione con garanzia di consegna, traslochi, trasporti e custodia - un servizio professionale completo.",
         "badges": {
           "guarantee": "Garanzia di consegna",
           "insurance": "Responsabilità civile assicurata",
           "contact": "Interlocutore diretto",
           "transparent": "Prezzi trasparenti"
         },
-        "tagline": "Soluzioni Pulite. Vita Più Semplice."
+        "tagline": "Soluzioni Pulite. Vita Più Semplice.",
+        "topText": "PULIZIA • TRASLOCHI • CUSTODIA",
+        "contactBtn": "Contatto"
       },
       "services": {
         "header": "Per cosa ti serve un'offerta?",
