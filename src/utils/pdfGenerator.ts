@@ -19,6 +19,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       date: 'Datum:',
       propertyType: 'Objektart:',
       area: 'Fläche:',
+      floor: 'Etage:',
       rooms: 'Zimmer:',
       lift: 'Lift:',
       parking: 'Parkplatz:',
@@ -89,6 +90,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       date: 'Date:',
       propertyType: 'Property Type:',
       area: 'Area:',
+      floor: 'Floor:',
       rooms: 'Rooms:',
       lift: 'Lift:',
       parking: 'Parking:',
@@ -159,6 +161,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       date: 'Date:',
       propertyType: 'Type de Propriété:',
       area: 'Surface:',
+      floor: 'Étage:',
       rooms: 'Pièces:',
       lift: 'Ascenseur:',
       parking: 'Parking:',
@@ -228,6 +231,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       date: 'Data:',
       propertyType: 'Tipo di immobile:',
       area: 'Superficie:',
+      floor: 'Piano:',
       rooms: 'Locali:',
       lift: 'Ascensore:',
       parking: 'Parcheggio:',
@@ -1266,7 +1270,8 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
           ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType) ? `<div><strong>${locDict.propertyType}</strong> ${(() => { const rawPt = customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType; const ptObj = translatedValues[rawPt]; return ptObj ? (ptObj[locale] || ptObj.en) : rawPt; })()}</div>` : ''}
-          ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters ? `<div><strong>${locDict.area}</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters} m²</div>` : ''}
+          ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters || customer.sharedLivingArea ? `<div><strong>${locDict.area}</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters || customer.sharedLivingArea} m²</div>` : ''}
+          ${customer.floor || customer.floorsLevel || customer.sharedFloor ? `<div><strong>${locDict.floor}</strong> ${customer.floor || customer.floorsLevel || customer.sharedFloor}</div>` : ''}
           ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms ? `<div><strong>${locDict.rooms}</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms} Zi.</div>` : ''}
           ${customer.elevatorSizes || customer.elevator ? `<div><strong>${locDict.lift}</strong> ${(() => { const v = customer.elevatorSizes || customer.elevator; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
           ${customer.parkingDistance ? `<div><strong>${locDict.parking}</strong> ${(() => { const v = customer.parkingDistance; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
