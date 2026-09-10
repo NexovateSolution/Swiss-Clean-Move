@@ -143,7 +143,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   return (
     <Layout>
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-white pb-12 pt-8 lg:pt-16">
+      <section className="relative overflow-hidden bg-white pb-6 pt-8 lg:pt-16">
         <div className="absolute inset-0 z-0">
           {slideImages.map((slide, index) => (
             <img 
@@ -166,7 +166,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/90"></div>
         </div>
         
-        <div className="container-max relative z-10 pt-4 pb-8 md:pb-12 text-center">
+        <div className="container-max relative z-10 pt-4 pb-4 md:pb-6 text-center">
           <div className="flex flex-col items-center justify-center max-w-5xl mx-auto space-y-6 md:space-y-8">
             
             {/* Top Text */}
@@ -187,20 +187,20 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             {/* CTA Button */}
             <div className="pt-2 md:pt-4">
               <Link href={`/${locale}/free-offer`} className="inline-flex items-center justify-center space-x-2 bg-swiss-red text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl">
-                <span>{tNew('services.offerteBtn')}</span>
+                <span>{tNew('hero.offerteBtn')}</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
 
             {/* Badges */}
-            <div className="flex flex-wrap justify-center gap-6 md:gap-12 pt-8 w-full border-t border-gray-200 mt-8">
+            <div className="flex flex-wrap justify-center gap-6 md:gap-12 pt-4 md:pt-6 w-full">
               {[
                 { icon: CheckCircle, text: tNew('hero.badges.guarantee'), bg: 'bg-red-50', color: 'text-swiss-red' },
                 { icon: ClipboardEdit, text: tNew('hero.badges.insurance'), bg: 'bg-red-50', color: 'text-swiss-red' },
                 { icon: Sparkles, text: tNew('hero.badges.transparent'), bg: 'bg-red-50', color: 'text-swiss-red' },
                 { icon: Users, text: tNew('hero.badges.contact'), bg: 'bg-red-50', color: 'text-swiss-red' }
               ].map((badge, i) => (
-                <div key={i} className="flex flex-col items-center space-y-3 mt-6">
+                <div key={i} className="flex flex-col items-center space-y-3">
                   <div className={`w-14 h-14 rounded-full ${badge.bg} flex items-center justify-center`}>
                     <badge.icon className={`w-7 h-7 ${badge.color}`} />
                   </div>

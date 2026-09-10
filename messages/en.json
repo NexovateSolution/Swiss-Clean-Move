@@ -278,7 +278,8 @@
         },
         "tagline": "Clean Solutions. Simpler Life.",
         "topText": "CLEANING • MOVING • FACILITY SERVICES",
-        "contactBtn": "Contact"
+        "contactBtn": "Contact",
+        "offerteBtn": "Request a free offer"
       },
       "services": {
         "header": "What do you need an offer for?",

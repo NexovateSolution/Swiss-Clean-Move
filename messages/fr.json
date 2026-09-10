@@ -265,7 +265,8 @@
         },
         "tagline": "Solutions Propres. Vie Plus Simple.",
         "topText": "NETTOYAGE • DÉMÉNAGEMENT • CONCIERGERIE",
-        "contactBtn": "Contact"
+        "contactBtn": "Contact",
+        "offerteBtn": "Demander une offre gratuite"
       },
       "services": {
         "header": "Pour quoi avez-vous besoin d'une offre ?",
