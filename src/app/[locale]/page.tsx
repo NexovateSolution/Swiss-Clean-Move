@@ -33,6 +33,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slideImages = [
+    { url: '/images/swisscleanmove-logo.jpeg' },
     { url: '/images/transportation.jpg' },
     { url: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
     { url: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
@@ -150,7 +151,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               key={index}
               src={slide.url} 
               alt="Background" 
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentSlide ? 'opacity-10' : 'opacity-0'}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === currentSlide ? 'opacity-30' : 'opacity-0'}`}
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
                 if (!img.dataset.fallback) {
@@ -163,7 +164,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               }}
             />
           ))}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-white/95"></div>
         </div>
         
         <div className="container-max relative z-10 pt-4 pb-4 md:pb-6 text-center">
