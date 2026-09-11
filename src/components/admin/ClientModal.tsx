@@ -25,6 +25,15 @@ interface Client {
   paidAmount: number
   balance: number
   status: string
+  elevator?: string
+  floor?: string
+  numberOfRooms?: string
+  prefix?: string
+  remarks1?: string
+  remarks2?: string
+  remarks3?: string
+  deploymentFrequency?: string
+  data?: any
 }
 
 interface ClientModalProps {
@@ -116,7 +125,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
         buildingType: matchedBuilding,
         location: client.location || '',
         fromDate: client.fromDate ? new Date(client.fromDate).toISOString().slice(0, 16) : '',
-        untilDate: client.untilDate ? new Date(client.untilDate).toISOString().slice(0, 16) : ''
+        untilDate: client.untilDate ? new Date(client.untilDate).toISOString().slice(0, 16) : '',
+        elevator: client.elevator || '',
+        floor: client.floor || '',
+        numberOfRooms: client.numberOfRooms || '',
+        prefix: client.prefix || '',
+        deploymentFrequency: client.deploymentFrequency || ''
       })
     } else {
       reset({
@@ -135,7 +149,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
         totalPrice: 0,
         paidAmount: 0,
         balance: 0,
-        status: 'UNPAID'
+        status: 'UNPAID',
+        elevator: '',
+        floor: '',
+        numberOfRooms: '',
+        prefix: '',
+        deploymentFrequency: ''
       })
     }
   }, [client, reset])
@@ -406,6 +425,63 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                         {errors.buildingType && (
                           <p className="mt-1 text-sm text-red-600">{errors.buildingType.message}</p>
                         )}
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Number of Rooms
+                        </label>
+                        <input
+                          {...register('numberOfRooms')}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="e.g. 3.5"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Floor
+                        </label>
+                        <input
+                          {...register('floor')}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="e.g. 2nd Floor"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Elevator
+                        </label>
+                        <select
+                          {...register('elevator')}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                          <option value="">Select...</option>
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Prefix
+                        </label>
+                        <input
+                          {...register('prefix')}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="Mr. / Ms."
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Deployment Frequency
+                        </label>
+                        <input
+                          {...register('deploymentFrequency')}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="e.g. Weekly, Monthly"
+                        />
                       </div>
                     </div>
                   </div>
