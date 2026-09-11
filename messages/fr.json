@@ -4504,7 +4504,9 @@
         "sendEmailFailed": "Échec de l'envoi de l'e-mail au client",
         "noEmail": "Le client n'a pas d'adresse e-mail",
         "generateInvoiceFailed": "Impossible de générer la facture",
-        "generateInvoiceError": "Erreur lors de la génération de la facture"
+        "generateInvoiceError": "Erreur lors de la génération de la facture",
+        "generatingPdf": "Generating PDF...",
+        "pdfDownloaded": "PDF téléchargé avec succès"
       },
       "export": {
         "totalClients": "Total clients",

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test html2pdf</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div id="content" style="height: 2000px; background: linear-gradient(to bottom, #eee, #ccc);">
+    <h1>Hello World</h1>
+  </div>
+  <script>
+    async function generate() {
+      const element = document.getElementById('content');
+      const opt = {
+        margin:       0,
+        filename:     'test.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      
+      const worker = html2pdf().set(opt).from(element).toPdf().get('pdf');
+      await worker.then((pdf) => {
+        const totalPages = pdf.internal.getNumberOfPages();
+        for (let i = 1; i <= totalPages; i++) {
+          pdf.setPage(i);
+          pdf.setFontSize(10);
+          pdf.setTextColor(150);
+          const text = i + " / " + totalPages;
+          const x = pdf.internal.pageSize.getWidth() - 0.8;
+          const y = pdf.internal.pageSize.getHeight() - 0.5;
+          pdf.text(text, x, y);
+        }
+      }).save();
+    }
+    setTimeout(generate, 1000);
+  </script>
+</body>
+</html>

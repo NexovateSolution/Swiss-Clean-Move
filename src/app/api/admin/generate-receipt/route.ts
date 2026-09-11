@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
         }
 
-        const { clientId, language = 'de' } = await request.json()
+        const { clientId, language = 'de', format = 'html' } = await request.json()
 
         if (!clientId) {
             return NextResponse.json({ error: 'Client ID is required' }, { status: 400 })
@@ -65,12 +65,31 @@ export async function POST(request: NextRequest) {
            };
         }
 
-        const html = generateQuoteHtml(quoteRes, customer, 'invoice');
+        if (format === 'pdf') {
+            console.log(`Generating PDF receipt for client ${clientId}...`);
+            const { generateQuotePdf } = await import('@/utils/pdfGenerator');
+            try {
+                const pdfBuffer = await generateQuotePdf(quoteRes, customer, 'receipt');
+                console.log(`PDF receipt generated successfully, size: ${pdfBuffer.length} bytes`);
+                return new NextResponse(new Uint8Array(pdfBuffer), {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/pdf',
+                        'Content-Disposition': `attachment; filename="receipt-${client.firstName}-${client.lastName}.pdf"`
+                    }
+                });
+            } catch (err) {
+                console.error(`Error generating PDF receipt for ${clientId}:`, err);
+                return NextResponse.json({ error: 'Failed to generate PDF' }, { status: 500 });
+            }
+        }
+
+        const html = generateQuoteHtml(quoteRes, customer, 'receipt');
 
         return new NextResponse(html, {
             headers: {
                 'Content-Type': 'text/html',
-                'Content-Disposition': `inline; filename="invoice-${client.firstName}-${client.lastName}.html"`
+                'Content-Disposition': `inline; filename="receipt-${client.firstName}-${client.lastName}.html"`
             }
         })
     } catch (error) {

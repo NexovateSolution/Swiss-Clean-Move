@@ -161,57 +161,61 @@ export default function ClientsPage() {
         },
         body: JSON.stringify({
           clientId: client.id,
-          language: language
+          language: language,
+          format: action === 'print' ? 'html' : 'pdf'
         })
       })
 
-      if (response.ok) {
-        const html = await response.text()
-        
-        if (action === 'print') {
-          const printWindow = window.open('', '_blank')
-          if (printWindow) {
-            printWindow.document.write(html)
-            printWindow.document.close()
-            printWindow.onload = () => {
-              setTimeout(() => {
-                printWindow.print()
-              }, 500)
-            }
-          }
-        } else if (action === 'pdf' || action === 'pdf_only') {
-          toast.loading(t('toast.generatingPdf') || 'Generating PDF...', { id: 'pdf-gen' });
-          const html2pdf = (await import('html2pdf.js')).default;
-          const element = document.createElement('div');
-          element.innerHTML = html;
-          
-          const opt = {
-            margin:       0,
-            filename:     `${documentPrefix}-${client.firstName}-${client.lastName}.pdf`,
-            image:        { type: 'jpeg' as const, quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true },
-            jsPDF:        { unit: 'in' as const, format: 'letter' as const, orientation: 'portrait' as const }
-          };
-          
-          await (html2pdf().set(opt).from(element).toPdf().get('pdf').then((pdf: any) => {
-            const totalPages = pdf.internal.getNumberOfPages();
-            for (let i = 1; i <= totalPages; i++) {
-              pdf.setPage(i);
-              pdf.setFontSize(10);
-              pdf.setTextColor(150);
-              const text = `${i} / ${totalPages}`;
-              const x = pdf.internal.pageSize.getWidth() - 0.8;
-              const y = pdf.internal.pageSize.getHeight() - 0.5;
-              pdf.text(text, x, y);
-            }
-          }) as any).save();
-          
-          toast.dismiss('pdf-gen');
-          toast.success('PDF downloaded successfully');
-        }
+      if (!response.ok) {
+        throw new Error('Failed to generate document')
+      }
 
-        // Send document via email
-        if (action !== 'pdf_only' && client.email) {
+      if (action === 'print') {
+        const html = await response.text()
+        const printWindow = window.open('', '_blank')
+        if (printWindow) {
+          printWindow.document.write(html)
+          printWindow.document.close()
+          printWindow.onload = () => {
+            setTimeout(() => {
+              printWindow.print()
+            }, 500)
+          }
+        }
+      } else if (action === 'pdf' || action === 'pdf_only') {
+        toast.loading(t('toast.generatingPdf') || 'Generating PDF...', { id: 'pdf-gen' });
+        const blob = await response.blob();
+        
+        if (blob.size < 100) {
+            toast.dismiss('pdf-gen');
+            toast.error('Generated PDF is empty or invalid');
+            return;
+        }
+        
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        
+        // Sanitize filename to prevent silent browser download failures
+        const safeFirst = (client.firstName || '').replace(/[^a-zA-Z0-9\-_]/g, '_');
+        const safeLast = (client.lastName || '').replace(/[^a-zA-Z0-9\-_]/g, '_');
+        a.download = `${documentPrefix}-${safeFirst}-${safeLast}.pdf`;
+        
+        document.body.appendChild(a);
+        a.click();
+        
+        setTimeout(() => {
+          a.remove();
+          window.URL.revokeObjectURL(url);
+        }, 500);
+        
+        toast.dismiss('pdf-gen');
+        toast.success(t('toast.pdfDownloaded') || 'PDF downloaded successfully');
+      }
+
+      // Send document via email
+      if (action !== 'pdf_only') {
+        if (client.email) {
           toast.loading(t('toast.sendingInvoice'), { id: 'email-send' })
           const emailResponse = await fetch(sendEndpoint, {
             method: 'POST',
@@ -236,8 +240,6 @@ export default function ClientsPage() {
           toast.success(t('toast.invoiceOpened'))
           toast(t('toast.noEmail'), { icon: '⚠️' })
         }
-      } else {
-        toast.error(t('toast.generateInvoiceFailed'))
       }
     } catch (error) {
       toast.dismiss('pdf-gen')

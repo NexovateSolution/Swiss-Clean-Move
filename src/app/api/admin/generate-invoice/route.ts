@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
         }
 
-        const { clientId, language = 'de' } = await request.json()
+        const { clientId, language = 'de', format = 'html' } = await request.json()
 
         if (!clientId) {
             return NextResponse.json({ error: 'Client ID is required' }, { status: 400 })
@@ -42,6 +42,9 @@ export async function POST(request: NextRequest) {
             cleaningApartmentType: client.buildingType,
             cleaningTypes: client.serviceType,
             cleaningAppointment: client.fromDate ? new Date(client.fromDate).toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '',
+            numberOfRooms: client.numberOfRooms,
+            elevator: client.elevator,
+            floor: client.floor,
             locale: language,
             ...subData,
             ...(subData.data || {})
@@ -60,6 +63,25 @@ export async function POST(request: NextRequest) {
                  { id: fallbackId, price: client.totalPrice || 0 }
               ]
            };
+        }
+
+        if (format === 'pdf') {
+            console.log(`Generating PDF for client ${clientId}...`);
+            const { generateQuotePdf } = await import('@/utils/pdfGenerator');
+            try {
+                const pdfBuffer = await generateQuotePdf(quoteRes, customer, 'contract');
+                console.log(`PDF generated successfully, size: ${pdfBuffer.length} bytes`);
+                return new NextResponse(new Uint8Array(pdfBuffer), {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/pdf',
+                        'Content-Disposition': `attachment; filename="invoice-${client.firstName}-${client.lastName}.pdf"`
+                    }
+                });
+            } catch (err) {
+                console.error(`Error generating PDF for ${clientId}:`, err);
+                return NextResponse.json({ error: 'Failed to generate PDF' }, { status: 500 });
+            }
         }
 
         const html = generateQuoteHtml(quoteRes, customer, 'contract');

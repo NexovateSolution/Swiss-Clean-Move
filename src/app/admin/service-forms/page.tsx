@@ -177,14 +177,26 @@ export default function ServiceFormsPage() {
       if (!res.ok) throw new Error('Failed to generate PDF');
 
       const blob = await res.blob();
+      
+      if (blob.size < 100) {
+        toast.error('Generated PDF is empty or invalid', { id: toastId });
+        return;
+      }
+      
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `Contract_${submission.firstName || 'Client'}.pdf`;
+      
+      const safeFirst = (submission.firstName || 'Client').replace(/[^a-zA-Z0-9\-_]/g, '_');
+      a.download = `Contract_${safeFirst}.pdf`;
+      
       document.body.appendChild(a);
       a.click();
-      a.remove();
-      window.URL.revokeObjectURL(url);
+      
+      setTimeout(() => {
+        a.remove();
+        window.URL.revokeObjectURL(url);
+      }, 500);
       
       toast.success(t('toast.pdfDownloaded'), { id: toastId });
     } catch (error) {
