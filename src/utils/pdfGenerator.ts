@@ -326,6 +326,26 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         return 'Apartment cleaning';
     }
 
+    const fallbackDict: Record<string, any> = {
+      'Fensterreinigung': { de: 'Fensterreinigung', en: 'Window Cleaning', fr: 'Nettoyage de vitres', it: 'Pulizia vetri' },
+      'Umzugsreinigung': { de: 'Umzugsreinigung', en: 'Move-out Cleaning', fr: 'Nettoyage de fin de bail', it: 'Pulizia di trasloco' },
+      'Endreinigung': { de: 'Endreinigung', en: 'Final Cleaning', fr: 'Nettoyage final', it: 'Pulizia finale' },
+      'Wohnungsreinigung': { de: 'Wohnungsreinigung', en: 'Apartment Cleaning', fr: 'Nettoyage d\'appartement', it: 'Pulizia appartamento' },
+      'Hausreinigung': { de: 'Hausreinigung', en: 'House Cleaning', fr: 'Nettoyage de maison', it: 'Pulizia della casa' },
+      'Büroreinigung': { de: 'Büroreinigung', en: 'Office Cleaning', fr: 'Nettoyage de bureau', it: 'Pulizia uffici' },
+      'Baureinigung': { de: 'Baureinigung', en: 'Construction Cleaning', fr: 'Nettoyage de chantier', it: 'Pulizia di cantiere' },
+      'Unterhaltsreinigung': { de: 'Unterhaltsreinigung', en: 'Maintenance Cleaning', fr: 'Nettoyage d\'entretien', it: 'Pulizia di manutenzione' },
+      'Umzug': { de: 'Umzug', en: 'Relocation', fr: 'Déménagement', it: 'Trasloco' },
+      'Räumung': { de: 'Räumung / Entsorgung', en: 'Disposal', fr: 'Débarras', it: 'Smaltimento' },
+      'Entsorgung': { de: 'Entsorgung', en: 'Disposal', fr: 'Débarras', it: 'Smaltimento' },
+      'Haushaltshilfe': { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide ménagère', it: 'Aiuto domestico' },
+      'Hauswartung': { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: 'Manutenzione' }
+    };
+
+    if (fallbackDict[key]) {
+      return fallbackDict[key][locale] || fallbackDict[key].en;
+    }
+
     const parts = key.split('.');
     let current = messages;
     for (const part of parts) {
