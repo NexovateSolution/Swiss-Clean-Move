@@ -327,6 +327,17 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     }
 
     const fallbackDict: Record<string, any> = {
+      'Facility Services': { de: 'Facility Services', en: 'Facility Services', fr: 'Services généraux', it: 'Servizi di facility' },
+      'shopRetail': { de: 'Laden-/Verkaufsflächenreinigung', en: 'Shop/Retail Cleaning', fr: 'Nettoyage commerce', it: 'Pulizia di negozi/negozi al dettaglio' },
+      'salesFloor': { de: 'Verkaufsfläche', en: 'Sales floor', fr: 'Surface de vente', it: 'Piano vendite' },
+      'oneTime': { de: 'Einmalig', en: 'One-Time', fr: 'Unique', it: 'Una volta' },
+      'retailItems': { de: 'Verkaufsbereiche', en: 'Retail Areas', fr: 'Surfaces de vente', it: 'Aree di vendita' },
+      'Move-out cleaning & end-of-tenancy cleaning with handover guarantee': {
+         de: 'Umzugsreinigung mit Abnahmegarantie',
+         en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+         fr: 'Nettoyage de fin de bail avec garantie de remise',
+         it: 'Pulizie di trasloco con garanzia di consegna'
+      },
       'Fensterreinigung': { de: 'Fensterreinigung', en: 'Window Cleaning', fr: 'Nettoyage de vitres', it: 'Pulizia vetri' },
       'Umzugsreinigung': { de: 'Umzugsreinigung', en: 'Move-out Cleaning', fr: 'Nettoyage de fin de bail', it: 'Pulizia di trasloco' },
       'Endreinigung': { de: 'Endreinigung', en: 'Final Cleaning', fr: 'Nettoyage final', it: 'Pulizia finale' },
