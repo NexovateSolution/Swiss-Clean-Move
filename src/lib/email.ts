@@ -6,6 +6,7 @@ interface EmailOptions {
   subject: string;
   html: string;
   text?: string;
+  replyTo?: string;
   attachments?: any[];
 }
 
@@ -44,6 +45,7 @@ export async function sendEmailNotification(options: EmailOptions): Promise<bool
     await transporter.sendMail({
       from: `"SwissCleanMove" <${senderEmail}>`,
       to: options.to,
+      replyTo: options.replyTo || senderEmail,
       subject: options.subject,
       text: options.text || '',
       html: options.html,

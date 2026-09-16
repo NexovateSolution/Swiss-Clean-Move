@@ -307,21 +307,40 @@ export async function POST(req: Request) {
 
     // Send Customer Email
     const clientEmail = body.email || body.emailAddress;
+    let clientEmailError = '';
     if (clientEmail) {
       let subject = 'Your Quote - SwissCleanMove';
       if (locale === 'de') subject = 'Ihre Offerte - SwissCleanMove';
       else if (locale === 'fr') subject = 'Votre Devis - SwissCleanMove';
 
-      await sendEmailNotification({
+      const result = await sendEmailNotification({
         to: clientEmail,
         subject: subject,
         html: htmlContent,
         attachments: attachments
       });
+      if (typeof result === 'string' && result.startsWith('Error:')) {
+        clientEmailError = result;
+      }
+    } else {
+      clientEmailError = 'No client email address provided in form submission.';
     }
 
     // Send Admin Email with detailed form data
-    const adminHtml = formatServiceFormEmail(body);
+    let adminHtml = formatServiceFormEmail(body);
+    if (!pdfBuffer) {
+      adminHtml = `<div style="background: #ffcccc; padding: 10px; border: 1px solid red; margin-bottom: 20px;">
+        <strong>⚠️ WARNING: PDF Generation Failed!</strong><br>
+        The contract PDF could not be generated and was not attached to this email or the client's email.
+      </div>` + adminHtml;
+    }
+    if (clientEmailError) {
+      adminHtml = `<div style="background: #fff3cd; padding: 10px; border: 1px solid orange; margin-bottom: 20px;">
+        <strong>⚠️ WARNING: Client Email Failed to Send!</strong><br>
+        Failed to send the confirmation email to the client (${clientEmail}).<br>
+        Reason: ${clientEmailError}
+      </div>` + adminHtml;
+    }
 
     await sendEmailNotification({
       to: 'info@swisscleanmove.ch, swisscleanmove.ch@gmail.com',
