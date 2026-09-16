@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '../../../../../lib/db'
 import { authenticateRequest } from '../../../../../lib/auth'
 import nodemailer from 'nodemailer'
-import puppeteerCore from 'puppeteer-core'
-import chromium from '@sparticuz/chromium'
+
 import { generateQuoteHtml, addPageNumbersToPdf } from '@/utils/pdfGenerator'
 
 export async function POST(request: NextRequest) {
@@ -148,11 +147,15 @@ async function renderPdfFromHtml(html: string): Promise<Buffer> {
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         })
     } else {
+        const puppeteerCore = require('puppeteer-core')
+        const chromium = require('@sparticuz/chromium')
+        // Fix for Sparticuz chromium pack on Vercel
+        const executablePath = await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v123.0.1/chromium-v123.0.1-pack.tar')
         browser = await puppeteerCore.launch({
             args: chromium.args,
             // @ts-ignore
             defaultViewport: chromium.defaultViewport || { width: 1920, height: 1080 },
-            executablePath: await chromium.executablePath(),
+            executablePath: executablePath,
             // @ts-ignore
             headless: chromium.headless === false ? false : true,
         })
