@@ -66,23 +66,6 @@ export async function POST(request: NextRequest) {
         // Generate invoice HTML using the shared Contract template
         const invoiceHtml = generateQuoteHtml(quoteRes, customer, 'contract');
 
-        let invoicePdf: Buffer | undefined;
-        try {
-            const timeoutPromise = new Promise<never>((_, reject) => {
-                setTimeout(() => reject(new Error('PDF Generation timed out (5s)')), 5000);
-            });
-            invoicePdf = await Promise.race([
-                renderPdfFromHtml(invoiceHtml),
-                timeoutPromise
-            ]);
-        } catch (pdfErr) {
-            console.error('PDF Generation failed or timed out:', pdfErr);
-            return NextResponse.json({
-                error: 'Failed to generate PDF contract',
-                details: 'The PDF generation took too long or crashed. Please try again or use the print option.'
-            }, { status: 500 });
-        }
-
         const pdfFilename = `contract-${client.firstName}-${client.lastName}.pdf`
 
         // Email subjects and messages
@@ -120,14 +103,7 @@ export async function POST(request: NextRequest) {
             info@swisscleanmove.ch
           </div>
         </div>
-      `,
-            attachments: invoicePdf ? [
-                {
-                    filename: pdfFilename,
-                    content: invoicePdf,
-                    contentType: 'application/pdf'
-                }
-            ] : []
+      `
         })
 
         if (typeof emailResult === 'string' && emailResult.startsWith('Error:')) {
