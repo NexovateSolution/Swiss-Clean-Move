@@ -1412,7 +1412,7 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
   if (process.env.VERCEL_ENV || process.env.VERCEL_URL || process.env.VERCEL) {
     const puppeteerCore = require('puppeteer-core');
     const chromium = require('@sparticuz/chromium');
-    const executablePath = await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v123.0.1/chromium-v123.0.1-pack.tar');
+    const executablePath = await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v143.0.4/chromium-v143.0.4-pack.x64.tar');
     browser = await puppeteerCore.launch({
       args: chromium.args,
       defaultViewport: chromium.defaultViewport,

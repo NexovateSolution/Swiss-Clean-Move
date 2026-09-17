@@ -150,7 +150,7 @@ async function renderPdfFromHtml(html: string): Promise<Buffer> {
         const puppeteerCore = require('puppeteer-core')
         const chromium = require('@sparticuz/chromium')
         // Fix for Sparticuz chromium pack on Vercel
-        const executablePath = await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v123.0.1/chromium-v123.0.1-pack.tar')
+        const executablePath = await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v143.0.4/chromium-v143.0.4-pack.x64.tar')
         browser = await puppeteerCore.launch({
             args: chromium.args,
             // @ts-ignore
