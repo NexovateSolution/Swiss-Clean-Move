@@ -752,7 +752,25 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     let receiptDate = quoteDate;
     if (customer.submissionDate) receiptDate = new Date(customer.submissionDate).toLocaleDateString(locale === 'de' ? 'de-CH' : locale === 'fr' ? 'fr-CH' : 'en-US');
     
-    const serviceTitle = customer.serviceType === 'moving' ? (locale === 'de' ? 'Umzug' : locale === 'fr' ? 'Déménagement' : 'Moving') : (locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : 'Cleaning');
+    let serviceTitle = 'Service';
+    const sType = (customer.serviceType || customer.serviceName || customer.formType || '').toLowerCase();
+    
+    if (sType.includes('transport')) {
+      serviceTitle = locale === 'de' ? 'Transport' : locale === 'fr' ? 'Transport' : 'Transport';
+    } else if (sType.includes('disposal') || sType.includes('entsorgung') || sType.includes('räumung') || sType.includes('clearance')) {
+      serviceTitle = locale === 'de' ? 'Räumung & Entsorgung' : locale === 'fr' ? 'Débarras' : 'Disposal & Clearance';
+    } else if (sType.includes('moving-and-cleaning') || (sType.includes('moving') && sType.includes('cleaning'))) {
+      serviceTitle = locale === 'de' ? 'Umzug & Reinigung' : locale === 'fr' ? 'Déménagement & Nettoyage' : 'Moving & Cleaning';
+    } else if (sType.includes('moving') || sType.includes('umzug')) {
+      serviceTitle = locale === 'de' ? 'Umzug' : locale === 'fr' ? 'Déménagement' : 'Moving';
+    } else if (sType.includes('house-cleaning')) {
+      serviceTitle = locale === 'de' ? 'Hausreinigung' : locale === 'fr' ? 'Nettoyage de maison' : 'House Cleaning';
+    } else if (sType.includes('cleaning') || sType.includes('reinigung')) {
+      serviceTitle = locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : 'Cleaning';
+    } else {
+      // Fallback capitalized
+      serviceTitle = sType.charAt(0).toUpperCase() + sType.slice(1);
+    }
     const area = customer.cleaningAreaInM2 || customer.areaInM2 || customer.livingSpaceInM2 || customer.squareMeters || 'N/A';
     const cleanDate = customer.cleaningAppointment || customer.movingDate || locDict.onRequest;
     const address = customer.streetAndNumber ? `${customer.streetAndNumber}, ${customer.postalCodeAndCity || customer.city || ''}` : '';
@@ -1250,7 +1268,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     <div class="title-section">
       <div class="title-left">
         <h1>${locDict.offer}</h1>
-        <p>${locale === 'de' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Umzug' : (customer.serviceName === 'house-cleaning' || customer.formType === 'cleaning' ? 'Hausreinigung' : 'Reinigung')) : (locale === 'fr' ? (customer.serviceName === 'moving' || customer.formType === 'moving' ? 'Déménagement' : 'Nettoyage') : (customer.serviceName || customer.formType || 'Service'))} – ${locDict.offer.charAt(0).toUpperCase() + locDict.offer.slice(1).toLowerCase()}</p>
+        <p>${serviceTitle} – ${locDict.offer.charAt(0).toUpperCase() + locDict.offer.slice(1).toLowerCase()}</p>
         <span style="font-size: 10px; color: #777;">${locDict.transparent}</span>
       </div>
       <div class="quote-meta">
