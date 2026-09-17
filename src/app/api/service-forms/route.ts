@@ -291,10 +291,16 @@ export async function POST(req: Request) {
       </div>
     `;
 
-    // Generate PDF Overlay
+    // Generate PDF Overlay with a 5-second timeout to prevent Vercel 10s function crash
     let pdfBuffer: Buffer | undefined;
     try {
-      pdfBuffer = await generateQuotePdf(quoteResult, body);
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        setTimeout(() => reject(new Error('PDF Generation timed out (5s)')), 5000);
+      });
+      pdfBuffer = await Promise.race([
+        generateQuotePdf(quoteResult, body),
+        timeoutPromise
+      ]);
     } catch (pdfErr) {
       console.warn("Failed to generate PDF overlay:", pdfErr);
     }
