@@ -749,7 +749,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   `;
 
   let serviceTitle = 'Service';
-  const sType = (customer.serviceType || customer.serviceName || customer.formType || '').toLowerCase();
+  const sType = (customer.serviceType || customer.serviceName || customer.formType || customer.cleaningType || customer.movingType || '').toLowerCase();
   
   if (sType.includes('transport')) {
     serviceTitle = locale === 'de' ? 'Transport' : locale === 'fr' ? 'Transport' : 'Transport';
@@ -763,9 +763,12 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     serviceTitle = locale === 'de' ? 'Hausreinigung' : locale === 'fr' ? 'Nettoyage de maison' : 'House Cleaning';
   } else if (sType.includes('cleaning') || sType.includes('reinigung')) {
     serviceTitle = locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : 'Cleaning';
-  } else {
+  } else if (sType.length > 0) {
     // Fallback capitalized
     serviceTitle = sType.charAt(0).toUpperCase() + sType.slice(1);
+  } else {
+    // Absolute fallback
+    serviceTitle = locale === 'de' ? 'Service' : locale === 'fr' ? 'Service' : 'Service';
   }
 
   if (documentType === 'receipt' || documentType === 'invoice') {
