@@ -85,15 +85,6 @@ export async function POST(request: NextRequest) {
 
         const pdfFilename = `contract-${client.firstName}-${client.lastName}.pdf`
 
-        // Configure email transporter
-        const transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: process.env.GMAIL_USER,
-                pass: process.env.GMAIL_APP_PASSWORD,
-            },
-        })
-
         // Email subjects and messages
         const subjects: any = {
             en: `Contract - SwissCleanMove - ${client.firstName} ${client.lastName}`,
@@ -109,9 +100,10 @@ export async function POST(request: NextRequest) {
             it: `Gentile ${client.firstName} ${client.lastName},\n\nIn allegato trova il Suo contratto da SwissCleanMove.\n\nGrazie per la Sua fiducia!\n\nCordiali saluti,\nTeam SwissCleanMove`
         }
 
-        // Send email
-        await transporter.sendMail({
-            from: `"SwissCleanMove" <${process.env.GMAIL_USER}>`,
+        // Send email using shared email utility
+        const { sendEmailNotification } = await import('@/lib/email')
+        
+        const emailResult = await sendEmailNotification({
             to: client.email,
             subject: subjects[language] || subjects.en,
             text: messages[language] || messages.en,
@@ -129,14 +121,18 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-            attachments: [
+            attachments: invoicePdf ? [
                 {
                     filename: pdfFilename,
                     content: invoicePdf,
                     contentType: 'application/pdf'
                 }
-            ]
+            ] : []
         })
+
+        if (typeof emailResult === 'string' && emailResult.startsWith('Error:')) {
+            throw new Error(`Email sending failed: ${emailResult}`);
+        }
 
         return NextResponse.json({
             success: true,
