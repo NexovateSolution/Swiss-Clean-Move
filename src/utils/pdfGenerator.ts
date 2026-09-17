@@ -763,6 +763,14 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     serviceTitle = locale === 'de' ? 'Hausreinigung' : locale === 'fr' ? 'Nettoyage de maison' : 'House Cleaning';
   } else if (sType.includes('cleaning') || sType.includes('reinigung')) {
     serviceTitle = locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : 'Cleaning';
+  } else if (sType.includes('household') || sType.includes('haushalt')) {
+    serviceTitle = locale === 'de' ? 'Haushaltshilfe' : locale === 'fr' ? 'Aide ménagère' : 'Household Help';
+  } else if (sType.includes('painting') || sType.includes('maler')) {
+    serviceTitle = locale === 'de' ? 'Malerarbeiten' : locale === 'fr' ? 'Peinture' : 'Painting';
+  } else if (sType.includes('handyman') || sType.includes('handwerker')) {
+    serviceTitle = locale === 'de' ? 'Handwerker' : locale === 'fr' ? 'Bricoleur' : 'Handyman';
+  } else if (sType.includes('storage') || sType.includes('lager')) {
+    serviceTitle = locale === 'de' ? 'Lagerung' : locale === 'fr' ? 'Stockage' : 'Storage';
   } else if (sType.length > 0) {
     // Fallback capitalized
     serviceTitle = sType.charAt(0).toUpperCase() + sType.slice(1);
