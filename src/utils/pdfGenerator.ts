@@ -749,7 +749,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   `;
 
   let serviceTitle = 'Service';
-  const sType = (customer.serviceType || customer.serviceName || customer.formType || customer.cleaningType || customer.movingType || '').toLowerCase();
+  const sType = (customer.serviceType || customer.serviceName || customer.formType || customer.cleaningTypes || customer.cleaningType || customer.movingType || '').toLowerCase();
   
   if (sType.includes('transport')) {
     serviceTitle = locale === 'de' ? 'Transport' : locale === 'fr' ? 'Transport' : 'Transport';
