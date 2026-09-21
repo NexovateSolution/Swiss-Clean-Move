@@ -13979,6 +13979,9 @@
       "moving": "Moving / Transport",
       "facility": "Facility Management",
       "other": "Other"
+    },
+    "buttons": {
+      "submitRequest": "Submit Request"
     }
   }
 }

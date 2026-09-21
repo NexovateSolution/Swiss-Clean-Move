@@ -14049,6 +14049,9 @@
       "moving": "Déménagement / Transport",
       "facility": "Conciergerie / Facility",
       "other": "Autre"
+    },
+    "buttons": {
+      "submitRequest": "Soumettre la demande"
     }
   }
 }

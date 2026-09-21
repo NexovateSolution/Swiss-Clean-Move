@@ -14049,6 +14049,9 @@
       "moving": "Trasloco / Trasporto",
       "facility": "Custodia / Facility",
       "other": "Altro"
+    },
+    "buttons": {
+      "submitRequest": "Invia richiesta"
     }
   }
 }

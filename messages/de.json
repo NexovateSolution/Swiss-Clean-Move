@@ -14049,6 +14049,9 @@
       "moving": "Umzug / Transport",
       "facility": "Hauswartung / Facility",
       "other": "Sonstiges"
+    },
+    "buttons": {
+      "submitRequest": "Anfrage senden"
     }
   }
 }
