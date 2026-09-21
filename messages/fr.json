@@ -864,10 +864,10 @@
       "cookies": "Politique des Cookies"
     },
     "sections": {
-      "impressum": "Mentions Légales",
-      "datenschutz": "Politique de Confidentialité",
-      "agb": "Conditions Générales de Vente",
-      "cookies": "Politique des Cookies"
+      "impressum": "Mentions légales",
+      "datenschutz": "Politique de confidentialité",
+      "agb": "Conditions générales",
+      "cookies": "Politique relative aux cookies"
     },
     "impressum": {
       "companyInfo": "Informations sur l'entreprise",
@@ -882,8 +882,10 @@
       "commercialRegister": "Registre du commerce",
       "uid": "UID",
       "liabilityText1": "Le contenu de nos pages a été créé avec le plus grand soin. Cependant, nous ne pouvons garantir l'exactitude, l'exhaustivité et l'actualité du contenu.",
-      "liabilityText2": "En tant que prestataire de services, nous sommes responsables de notre propre contenu sur ces pages selon les lois générales conformément à la section 7, para. 1 du TMG. Cependant, selon les sections 8 à 10 du TMG, nous ne sommes pas obligés en tant que prestataire de services de surveiller les informations tierces transmises ou stockées.",
-      "copyrightText": "Le contenu et les œuvres créés par les exploitants du site sur ces pages sont soumis au droit d'auteur suisse. La reproduction, l'édition, la distribution et tout type d'exploitation en dehors des limites du droit d'auteur nécessitent le consentement écrit de l'auteur ou du créateur respectif."
+      "liabilityText2": "En tant que prestataire de services, nous sommes responsables de nos propres contenus sur ces pages selon les lois générales. Cependant, nous ne sommes pas tenus de surveiller les informations tierces transmises ou stockées, ni d'enquêter sur les circonstances indiquant une activité illégale.",
+      "copyrightText": "Le contenu et les œuvres créés par les exploitants du site sur ces pages sont soumis au droit d'auteur suisse. La reproduction, l'édition, la distribution et tout type d'exploitation en dehors des limites du droit d'auteur nécessitent le consentement écrit de l'auteur ou du créateur respectif.",
+      "vatStatus": "Non soumis à la TVA",
+      "owner": "Propriétaire / responsable"
     },
     "privacy": {
       "generalInfo": "Informations générales",
@@ -925,7 +927,7 @@
         "Services de déménagement",
         "Services d'élimination"
       ],
-      "pricingText1": "Le paiement s'effectue en espèces directement au chef d'équipe après la réalisation réussie des services convenus, sauf accord contraire par écrit.",
+      "pricingText1": "Le paiement est dû après l'achèvement du service, conformément au devis accepté. Pour les paiements en espèces, le client recevra une quittance.",
       "warrantyText": "Nous garantissons l'exécution correcte de nos services. En cas de défauts, vous avez le droit à une rectification gratuite. Pour le nettoyage de déménagement, nous offrons une garantie d'acceptation à 100%.",
       "liabilityText": "Nous ne sommes responsables des dommages qu'en cas d'intention et de négligence grave. La responsabilité est limitée au montant de la somme d'assurance. Tous nos employés sont entièrement assurés."
     },
@@ -13815,5 +13817,238 @@
   "Household Helping": "Aide ménagère",
   "householdHelp": "Aide ménagère (soutien quotidien / assistance)",
   "maintenanceCleaning": "Nettoyage d'entretien (régulier)",
-  "combination": "Combinaison"
+  "combination": "Combinaison",
+  "universalForm": {
+    "title": "Demande de Devis",
+    "subtitle": "Gratuit & sans engagement",
+    "steps": {
+      "customer": "Détails du Client",
+      "services": "Services",
+      "property": "Lieu & Propriété",
+      "dateContact": "Date & Contact",
+      "cleaning": "Nettoyage",
+      "moving": "Déménagement / Transport",
+      "review": "Vérifier & Envoyer"
+    },
+    "customer": {
+      "firstName": "Prénom / Nom *",
+      "company": "Entreprise (optionnel)",
+      "email": "E-mail *",
+      "phone": "Téléphone / Mobile *"
+    },
+    "services": {
+      "movingOutCleaning": "Nettoyage de déménagement",
+      "maintenanceCleaning": "Nettoyage d'entretien",
+      "officeCleaning": "Nettoyage de bureaux",
+      "restaurantCleaning": "Nettoyage gastronomie",
+      "windowCleaning": "Nettoyage de vitres/stores",
+      "constructionCleaning": "Nettoyage de fin de chantier",
+      "caretaking": "Conciergerie",
+      "movingTransport": "Déménagement & Transport",
+      "packingService": "Service d'emballage",
+      "furnitureAssembly": "Montage/démontage de meubles",
+      "disposalClearance": "Élimination & Débarras",
+      "highPressureCleaning": "Nettoyage haute pression",
+      "stairwellCleaning": "Nettoyage cage d'escalier",
+      "specialistCleaning": "Nettoyage spécial",
+      "otherService": "Autre service",
+      "subtitle": "Sélectionnez un ou plusieurs services",
+      "selectedCount": "{count} service(s) sélectionné(s)"
+    },
+    "property": {
+      "streetNo": "Rue / N° *",
+      "postcodeCity": "NPA / Localité *",
+      "type": "Type de propriété",
+      "types": {
+        "apartment": "Appartement",
+        "house": "Maison",
+        "office": "Bureau",
+        "commercial": "Commerce",
+        "restaurant": "Restaurant",
+        "other": "Autre"
+      },
+      "rooms": "Pièces",
+      "area": "Surface habitable (m²)",
+      "floor": "Étage",
+      "lift": "Ascenseur (Oui/Non)",
+      "parking": "Parking / Accès",
+      "subtitleSingle": "Veuillez indiquer le lieu d'intervention",
+      "subtitleMoving": "Veuillez indiquer les adresses de départ et de destination"
+    },
+    "dateContact": {
+      "preferredDate": "Date souhaitée",
+      "timeWindow": "Heure / Créneau horaire",
+      "handover": "Remise de la propriété",
+      "preferredContact": "Mode de contact préféré",
+      "contactOptions": {
+        "phone": "Téléphone",
+        "email": "E-mail",
+        "whatsapp": "WhatsApp"
+      },
+      "photosVia": "Photos / plans envoyés par",
+      "photosOptions": {
+        "email": "E-mail",
+        "whatsapp": "WhatsApp",
+        "none": "Aucun"
+      },
+      "selectTime": "Choisir l'heure"
+    },
+    "cleaning": {
+      "type": "Type de nettoyage (plusieurs sélections possibles)",
+      "frequency": "Fréquence des services",
+      "frequencies": {
+        "daily": "Quotidien",
+        "weekly": "Hebdomadaire",
+        "twiceWeekly": "2x par semaine",
+        "threeWeekly": "3x par semaine",
+        "fiveWeekly": "5x par semaine",
+        "monthly": "Mensuel",
+        "other": "Autre"
+      },
+      "areas": "Pièces / zones à nettoyer",
+      "windows": "Fenêtres - quantité et type",
+      "windowTypes": {
+        "standard": "Fenêtres standard",
+        "floorToCeiling": "Fenêtres du sol au plafond",
+        "roof": "Fenêtres de toit",
+        "glassDoors": "Portes vitrées"
+      },
+      "blinds": "Stores / protections solaires",
+      "blindTypes": {
+        "venetian": "Stores à lamelles",
+        "roller": "Volets roulants",
+        "shutters": "Volets",
+        "awnings": "Stores bannes"
+      },
+      "sanitary": "Installations sanitaires",
+      "sanitaryTypes": {
+        "toilets": "Toilettes",
+        "bathtubs": "Baignoires",
+        "showers": "Douches",
+        "washbasins": "Lavabos",
+        "kitchens": "Cuisines"
+      },
+      "floors": "Types de sols",
+      "floorTypes": {
+        "parquet": "Parquet",
+        "laminate": "Stratifié",
+        "tiles": "Carrelage",
+        "carpet": "Tapis",
+        "pvc": "PVC/Vinyle",
+        "naturalStone": "Pierre naturelle"
+      },
+      "vacuumCarpetOnly": "Aspirer le tapis uniquement",
+      "deepCarpetCleaning": "Nettoyage en profondeur des tapis",
+      "balconyCleaning": "Nettoyage de balcon / terrasse",
+      "balconyArea": "Surface balcon / terrasse (m²)",
+      "highPressure": "Nettoyage haute pression",
+      "repairWallHoles": "Réparation des trous",
+      "holesCount": "Nombre de trous",
+      "condition": "État & exigences particulières",
+      "conditions": {
+        "empty": "Propriété vide",
+        "furnished": "Meublé",
+        "petHair": "Poils d'animaux",
+        "nicotine": "Nicotine",
+        "heavilySoiled": "Très sale",
+        "mould": "Moisissure"
+      },
+      "additionalDetails": "Détails supplémentaires (accès, saleté spéciale, etc.)",
+      "typeSubtitle": "Type de nettoyage (sélections multiples possibles)"
+    },
+    "moving": {
+      "collectionAddress": "Adresse de départ (rue, NPA, ville)",
+      "deliveryAddress": "Adresse d'arrivée (rue, NPA, ville)",
+      "floorCollection": "Étage de départ",
+      "liftCollection": "Ascenseur de départ",
+      "distanceCollection": "Distance de portage départ (m)",
+      "floorDelivery": "Étage d'arrivée",
+      "liftDelivery": "Ascenseur d'arrivée",
+      "distanceDelivery": "Distance de portage arrivée (m)",
+      "scope": "Étendue des services",
+      "scopes": {
+        "transport": "Transport",
+        "packing": "Emballage",
+        "unpacking": "Déballage",
+        "dismantling": "Démontage",
+        "assembly": "Montage",
+        "boxes": "Cartons",
+        "disposal": "Élimination",
+        "clearance": "Débarras",
+        "storage": "Stockage temporaire"
+      },
+      "inventory": "Inventaire - quantité approximative",
+      "inventories": {
+        "boxes": "Cartons",
+        "wardrobes": "Armoires",
+        "beds": "Lits",
+        "sofas": "Canapés",
+        "tables": "Tables",
+        "chairs": "Chaises",
+        "dressers": "Commodes",
+        "largeAppliances": "Gros électroménager"
+      },
+      "additionalInventory": "Mobilier supplémentaire / liste d'inventaire",
+      "specialItems": "Objets spéciaux, élimination & organisation",
+      "specialItemTypes": {
+        "piano": "Piano",
+        "safe": "Coffre-fort",
+        "aquarium": "Aquarium",
+        "antiques": "Antiquités",
+        "heavy": "Objet de plus de 100 kg",
+        "none": "Aucun objet spécial"
+      },
+      "specialItemsDetails": "Objets spéciaux - détails, poids et dimensions",
+      "noParkingCollection": "Zone d'interdiction de stationnement au départ",
+      "noParkingDelivery": "Zone d'interdiction de stationnement à l'arrivée",
+      "preferredDate": "Date de déménagement souhaitée",
+      "dateFlexible": "Date flexible ?",
+      "staffCount": "Nombre d'employés souhaité"
+    },
+    "review": {
+      "consent": "J'accepte que mes données soient utilisées pour traiter cette demande sans engagement.",
+      "placeDate": "Lieu / Date",
+      "signature": "Signature",
+      "note": "Note : L'offre définitive sera préparée après examen des informations et, si nécessaire, des photos.",
+      "back": "Retour",
+      "next": "Suivant",
+      "submit": "Soumettre",
+      "submitting": "Envoi en cours...",
+      "photosLabel": "Photos / Plans (facultatif)",
+      "photosDesc": "Sélectionner des fichiers (Images/PDFs)"
+    },
+    "validation": {
+      "name": "Veuillez indiquer votre nom",
+      "email": "Veuillez indiquer votre adresse e-mail",
+      "phone": "Veuillez indiquer votre numéro de téléphone",
+      "services": "Veuillez sélectionner au moins un service",
+      "terms": "Veuillez confirmer votre consentement"
+    },
+    "common": {
+      "yes": "Oui",
+      "no": "Non"
+    },
+    "placeholders": {
+      "parking": "ex. Parking disponible / Accès limité",
+      "distance": "ex. 20m",
+      "movingItems": "ex. Lave-linge, sèche-linge, aquarium...",
+      "number": "ex. 2",
+      "timeWindow": "ex. 08:00–12:00 / matins",
+      "cleaningRooms": "ex. Cuisine, salle de bain, salon, chambre..."
+    },
+    "sectionTitles": {
+      "cleaning4A": "Nettoyage - type et zones",
+      "cleaning4B": "Fenêtres, stores & sanitaires",
+      "cleaning4C": "Sols, extérieurs & travaux supplémentaires",
+      "cleaning4D": "État & particularités",
+      "moving4B": "Étendue & services souhaités",
+      "moving4C": "Objets spéciaux, élimination & organisation"
+    },
+    "mainCategories": {
+      "cleaning": "Nettoyage",
+      "moving": "Déménagement / Transport",
+      "facility": "Conciergerie / Facility",
+      "other": "Autre"
+    }
+  }
 }

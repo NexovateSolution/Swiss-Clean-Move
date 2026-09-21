@@ -879,13 +879,15 @@
       "commercialRegister": "Commercial Register",
       "uid": "UID",
       "liabilityText1": "The contents of our pages have been created with the greatest care. However, we cannot guarantee the accuracy, completeness and timeliness of the content.",
-      "liabilityText2": "As a service provider, we are responsible for our own content on these pages according to general laws pursuant to Section 7, Para. 1 of the TMG. However, according to Sections 8 to 10 of the TMG, we are not obligated as a service provider to monitor transmitted or stored third-party information.",
+      "liabilityText2": "As a service provider, we are responsible for our own content on these pages according to general laws. However, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
       "copyrightText": "The content and works created by the site operators on these pages are subject to Swiss copyright law. Reproduction, editing, distribution and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator.",
       "companyInfo": "Firmeninformationen",
       "legalInfo": "Rechtliche Angaben",
       "liability": "Haftungsausschluss",
       "copyright": "Urheberrecht",
-      "companyName": "Firmenname"
+      "companyName": "Firmenname",
+      "vatStatus": "Not registered for VAT",
+      "owner": "Owner / responsible person"
     },
     "privacy": {
       "generalInfo": "General Information",
@@ -927,7 +929,7 @@
         "Moving services",
         "Disposal services"
       ],
-      "pricingText1": "Payment is made in cash directly to the team leader after the successful completion of the agreed services, unless otherwise agreed in writing.",
+      "pricingText1": "Payment is due after completion of the service, in accordance with the accepted quotation. For cash payments, the customer will receive a receipt.",
       "warrantyText": "We guarantee the proper execution of our services. In case of defects, you have the right to free rectification. For move-out cleaning, we offer a 100% acceptance guarantee.",
       "liabilityText": "We are only liable for damages in cases of intent and gross negligence. Liability is limited to the amount of the insurance sum. All our employees are fully insured."
     },
@@ -949,10 +951,10 @@
       "cookies": "Cookie-Richtlinie"
     },
     "sections": {
-      "impressum": "Impressum",
-      "datenschutz": "Datenschutzerklärung",
-      "agb": "Allgemeine Geschäftsbedingungen",
-      "cookies": "Cookie-Richtlinie"
+      "impressum": "Legal Notice",
+      "datenschutz": "Privacy Policy",
+      "agb": "Terms and Conditions",
+      "cookies": "Cookie Policy"
     }
   },
   "gallery": {
@@ -13745,5 +13747,238 @@
   "Household Helping": "Household Helping",
   "householdHelp": "Household help (daily support / assistance)",
   "maintenanceCleaning": "Maintenance cleaning (regular)",
-  "combination": "Combination"
+  "combination": "Combination",
+  "universalForm": {
+    "title": "Quote Request",
+    "subtitle": "Free & non-binding",
+    "steps": {
+      "customer": "Customer Details",
+      "services": "Services",
+      "property": "Property & Location",
+      "dateContact": "Schedule & Contact",
+      "cleaning": "Cleaning",
+      "moving": "Moving / Transport / Disposal",
+      "review": "Review & Submit"
+    },
+    "customer": {
+      "firstName": "First name / Last name *",
+      "company": "Company (optional)",
+      "email": "Email *",
+      "phone": "Telephone / Mobile *"
+    },
+    "services": {
+      "movingOutCleaning": "Moving / end-of-tenancy cleaning",
+      "maintenanceCleaning": "Maintenance / household cleaning",
+      "officeCleaning": "Office / medical practice cleaning",
+      "restaurantCleaning": "Restaurant cleaning",
+      "windowCleaning": "Window / blind cleaning",
+      "constructionCleaning": "Construction / deep cleaning",
+      "caretaking": "Caretaking / property maintenance",
+      "movingTransport": "Moving & transport",
+      "packingService": "Packing / unpacking service",
+      "furnitureAssembly": "Furniture assembly / dismantling",
+      "disposalClearance": "Disposal & clearance",
+      "highPressureCleaning": "High-pressure cleaning",
+      "stairwellCleaning": "Stairwell cleaning",
+      "specialistCleaning": "Specialist cleaning",
+      "otherService": "Other service",
+      "subtitle": "Select one or more services",
+      "selectedCount": "{count} service(s) selected"
+    },
+    "property": {
+      "streetNo": "Street / No. *",
+      "postcodeCity": "Postcode / City *",
+      "type": "Property type",
+      "types": {
+        "apartment": "Apartment",
+        "house": "House",
+        "office": "Office",
+        "commercial": "Commercial",
+        "restaurant": "Restaurant",
+        "other": "Other"
+      },
+      "rooms": "Rooms",
+      "area": "Living / usable area (m²)",
+      "floor": "Floor",
+      "lift": "Lift (Yes/No)",
+      "parking": "Parking / access",
+      "subtitleSingle": "Please provide the service location",
+      "subtitleMoving": "Please provide the collection and delivery addresses"
+    },
+    "dateContact": {
+      "preferredDate": "Preferred date",
+      "timeWindow": "Time / time window",
+      "handover": "Property handover",
+      "preferredContact": "Preferred contact method",
+      "contactOptions": {
+        "phone": "Telephone",
+        "email": "Email",
+        "whatsapp": "WhatsApp"
+      },
+      "photosVia": "Photos / plans will be sent by",
+      "photosOptions": {
+        "email": "Email",
+        "whatsapp": "WhatsApp",
+        "none": "None"
+      },
+      "selectTime": "Select Time"
+    },
+    "cleaning": {
+      "type": "Type of cleaning (multiple selections possible)",
+      "frequency": "Recurring service frequency",
+      "frequencies": {
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "twiceWeekly": "2x weekly",
+        "threeWeekly": "3x weekly",
+        "fiveWeekly": "5x weekly",
+        "monthly": "Monthly",
+        "other": "Other"
+      },
+      "areas": "Rooms / areas to be cleaned",
+      "windows": "Windows - quantity and type",
+      "windowTypes": {
+        "standard": "Standard windows",
+        "floorToCeiling": "Floor-to-ceiling windows",
+        "roof": "Roof windows",
+        "glassDoors": "Glass / balcony doors"
+      },
+      "blinds": "Blinds / sun protection - type and quantity",
+      "blindTypes": {
+        "venetian": "Venetian blinds",
+        "roller": "Roller shutters",
+        "shutters": "Window shutters",
+        "awnings": "Awnings"
+      },
+      "sanitary": "Sanitary facilities - quantity",
+      "sanitaryTypes": {
+        "toilets": "Toilets",
+        "bathtubs": "Bathtubs",
+        "showers": "Showers",
+        "washbasins": "Washbasins",
+        "kitchens": "Kitchens"
+      },
+      "floors": "Floor types",
+      "floorTypes": {
+        "parquet": "Parquet",
+        "laminate": "Laminate",
+        "tiles": "Tiles",
+        "carpet": "Carpet",
+        "pvc": "PVC/Vinyl",
+        "naturalStone": "Natural stone"
+      },
+      "vacuumCarpetOnly": "Vacuum carpet only",
+      "deepCarpetCleaning": "Deep carpet cleaning",
+      "balconyCleaning": "Balcony / terrace cleaning",
+      "balconyArea": "Balcony / terrace area (m²)",
+      "highPressure": "High-pressure cleaning",
+      "repairWallHoles": "Repair wall holes",
+      "holesCount": "Number of holes",
+      "condition": "Condition & special requirements",
+      "conditions": {
+        "empty": "Property empty",
+        "furnished": "Furnished",
+        "petHair": "Pet hair",
+        "nicotine": "Nicotine",
+        "heavilySoiled": "Heavily soiled",
+        "mould": "Mould / moisture"
+      },
+      "additionalDetails": "Additional details (access, keys, special dirt or requests)",
+      "typeSubtitle": "Type of cleaning (multiple selections possible)"
+    },
+    "moving": {
+      "collectionAddress": "Collection address (street, postcode, city)",
+      "deliveryAddress": "Delivery address (street, postcode, city)",
+      "floorCollection": "Floor - collection",
+      "liftCollection": "Lift - collection",
+      "distanceCollection": "Carry distance start (m)",
+      "floorDelivery": "Floor - delivery",
+      "liftDelivery": "Lift - delivery",
+      "distanceDelivery": "Carry distance end (m)",
+      "scope": "Scope & requested services",
+      "scopes": {
+        "transport": "Transport",
+        "packing": "Packing service",
+        "unpacking": "Unpacking service",
+        "dismantling": "Dismantling",
+        "assembly": "Assembly",
+        "boxes": "Moving boxes",
+        "disposal": "Disposal",
+        "clearance": "Clearance",
+        "storage": "Temporary storage"
+      },
+      "inventory": "Inventory - approximate quantity",
+      "inventories": {
+        "boxes": "Boxes",
+        "wardrobes": "Wardrobes",
+        "beds": "Beds",
+        "sofas": "Sofas",
+        "tables": "Tables",
+        "chairs": "Chairs",
+        "dressers": "Dressers",
+        "largeAppliances": "Large appliances"
+      },
+      "additionalInventory": "Additional furniture / inventory list",
+      "specialItems": "Special items, disposal & organisation",
+      "specialItemTypes": {
+        "piano": "Piano / grand piano",
+        "safe": "Safe",
+        "aquarium": "Aquarium",
+        "antiques": "Art / antiques",
+        "heavy": "Item over 100 kg",
+        "none": "No special items"
+      },
+      "specialItemsDetails": "Special items / disposal - details, weight and dimensions",
+      "noParkingCollection": "No-parking zone required at collection",
+      "noParkingDelivery": "No-parking zone required at delivery",
+      "preferredDate": "Preferred moving date",
+      "dateFlexible": "Date flexible?",
+      "staffCount": "Preferred number of staff"
+    },
+    "review": {
+      "consent": "I agree that my information may be used to process this non-binding request.",
+      "placeDate": "Place / Date",
+      "signature": "Signature (for printed form)",
+      "note": "Note: The final quote will be prepared after reviewing the information and, where necessary, the photos.",
+      "back": "Back",
+      "next": "Next",
+      "submit": "Submit Request",
+      "submitting": "Submitting...",
+      "photosLabel": "Photos / Plans (optional)",
+      "photosDesc": "Select files (Images/PDFs)"
+    },
+    "validation": {
+      "name": "Please provide your name",
+      "email": "Please provide your email",
+      "phone": "Please provide your phone number",
+      "services": "Please select at least one service",
+      "terms": "Please confirm your consent"
+    },
+    "common": {
+      "yes": "Yes",
+      "no": "No"
+    },
+    "placeholders": {
+      "parking": "e.g. Parking available / Limited access",
+      "distance": "e.g. 20m",
+      "movingItems": "e.g. Washing machine, dryer, aquarium...",
+      "number": "e.g. 2",
+      "timeWindow": "e.g. 08:00–12:00 / mornings",
+      "cleaningRooms": "e.g. Kitchen, bathroom, living room, bedroom..."
+    },
+    "sectionTitles": {
+      "cleaning4A": "Cleaning - type and areas",
+      "cleaning4B": "Windows, blinds & sanitary",
+      "cleaning4C": "Floors, outdoor areas & additional work",
+      "cleaning4D": "Condition & special features",
+      "moving4B": "Scope & requested services",
+      "moving4C": "Special items, disposal & organization"
+    },
+    "mainCategories": {
+      "cleaning": "Cleaning",
+      "moving": "Moving / Transport",
+      "facility": "Facility Management",
+      "other": "Other"
+    }
+  }
 }

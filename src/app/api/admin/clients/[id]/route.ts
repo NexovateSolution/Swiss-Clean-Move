@@ -85,7 +85,11 @@ export async function PUT(
       remarks2: rawData.remarks2,
       remarks3: rawData.remarks3,
       deploymentFrequency: rawData.deploymentFrequency,
-      data: rawData.data ? rawData.data : undefined
+      data: rawData.data ? {
+        ...rawData.data,
+        accessHandoverDate: rawData.accessHandoverDate,
+        accessHandoverTime: rawData.accessHandoverTime
+      } : undefined
     }
 
     const client = await prisma.client.update({

@@ -3,7 +3,8 @@
 import { useLocale, useTranslations } from 'next-intl'
 import { useRouter, usePathname } from 'next/navigation'
 import AdminLayout from '@/components/admin/AdminLayout'
-import ServiceFormWizard, { ServiceSlug } from '@/components/ServiceFormWizard'
+import UniversalQuoteForm from '@/components/universal-form/UniversalQuoteForm'
+import { ServiceSlug } from '@/components/ServiceFormWizard'
 import { useState, useEffect } from 'react'
 
 const SERVICES: { slug: ServiceSlug; tKey: string }[] = [
@@ -76,7 +77,7 @@ export default function NewProjectPage() {
             </div>
           </div>
         ) : (
-          /* ServiceFormWizard — same form the client uses */
+          /* UniversalQuoteForm — the new universal form */
           <div>
             <button
               onClick={handleClear}
@@ -84,13 +85,8 @@ export default function NewProjectPage() {
             >
               ← {t('changeService')}
             </button>
-            <ServiceFormWizard
-              service={selected}
-              serviceName={
-                SERVICES.find(s => s.slug === selected)
-                  ? t(`services.${SERVICES.find(s => s.slug === selected)!.tKey}` as any)
-                  : selected
-              }
+            <UniversalQuoteForm
+              preselectedService={selected}
               locale={locale}
               isAdmin={true}
             />

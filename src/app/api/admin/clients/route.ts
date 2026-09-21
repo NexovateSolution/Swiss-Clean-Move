@@ -131,7 +131,14 @@ export async function POST(request: NextRequest) {
       remarks2: rawData.remarks2,
       remarks3: rawData.remarks3,
       deploymentFrequency: rawData.deploymentFrequency,
-      data: rawData.data ? rawData.data : undefined
+      data: rawData.data ? {
+        ...rawData.data,
+        accessHandoverDate: rawData.accessHandoverDate,
+        accessHandoverTime: rawData.accessHandoverTime
+      } : (rawData.accessHandoverDate || rawData.accessHandoverTime ? {
+        accessHandoverDate: rawData.accessHandoverDate,
+        accessHandoverTime: rawData.accessHandoverTime
+      } : undefined)
     }
 
     // Process images if any

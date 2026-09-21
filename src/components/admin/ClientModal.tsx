@@ -34,6 +34,8 @@ interface Client {
   remarks3?: string
   deploymentFrequency?: string
   data?: any
+  accessHandoverDate?: string
+  accessHandoverTime?: string
 }
 
 interface ClientModalProps {
@@ -119,18 +121,26 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
         }
       }
 
+      const lastNameParts = (client.lastName || '').trim().split(' ');
+      const autoFirstName = client.firstName || (lastNameParts.length > 1 ? lastNameParts[0] : '') || '';
+      const autoLastName = client.firstName ? client.lastName : (lastNameParts.length > 1 ? lastNameParts.slice(1).join(' ') : client.lastName);
+
       reset({
         ...client,
+        firstName: autoFirstName,
+        lastName: autoLastName,
         serviceType: matchedService,
         buildingType: matchedBuilding,
         location: client.location || '',
         fromDate: client.fromDate ? new Date(client.fromDate).toISOString().slice(0, 16) : '',
         untilDate: client.untilDate ? new Date(client.untilDate).toISOString().slice(0, 16) : '',
-        elevator: client.elevator || '',
-        floor: client.floor || '',
-        numberOfRooms: client.numberOfRooms || '',
+        elevator: client.elevator || (client.data?.lift === 'yes' ? 'Yes' : (client.data?.lift === 'no' ? 'No' : '')) || '',
+        floor: client.floor || client.data?.floors || '',
+        numberOfRooms: client.numberOfRooms || client.data?.numberOfRooms || '',
         prefix: client.prefix || '',
-        deploymentFrequency: client.deploymentFrequency || ''
+        deploymentFrequency: client.deploymentFrequency || client.data?.recurringFrequency || '',
+        accessHandoverDate: client.data?.accessHandoverDate || '',
+        accessHandoverTime: client.data?.accessHandoverTime || ''
       })
     } else {
       reset({
@@ -154,7 +164,9 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
         floor: '',
         numberOfRooms: '',
         prefix: '',
-        deploymentFrequency: ''
+        deploymentFrequency: '',
+        accessHandoverDate: '',
+        accessHandoverTime: ''
       })
     }
   }, [client, reset])
@@ -377,28 +389,12 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           {t('serviceType')}
                         </label>
-                        <select
+                        <input
+                          type="text"
                           {...register('serviceType', { required: 'Service type is required' })}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        >
-                          <option value="House Cleaning">{tServices('houseCleaning')}</option>
-                          <option value="Apartment cleaning">{tServices('apartmentCleaning')}</option>
-                          <option value="Stairwell Cleaning">{tServices('stairwellCleaning')}</option>
-                          <option value="Office Cleaning">{tServices('officeCleaning')}</option>
-                          <option value="Final Cleaning">{tServices('finalCleaning')}</option>
-                          <option value="Window Cleaning">{tServices('windowCleaning')}</option>
-                          <option value="Relocation">{tServices('relocation')}</option>
-                          <option value="Disposal">{tServices('disposal')}</option>
-                          <option value="Gastronomy Cleaning">{tServices('gastronomyCleaning')}</option>
-                          <option value="Medical Cleaning">{tServices('medicalCleaning')}</option>
-                          <option value="Construction Cleaning">{tServices('constructionCleaning')}</option>
-                          <option value="Property Maintenance">{tServices('propertyMaintenance')}</option>
-                          <option value="Special Cleaning">{tServices('specialCleaning')}</option>
-                          <option value="Combo Service">{tServices('comboService')}</option>
-                          <option value="Maintenance Cleaning">{tServices('maintenanceCleaning')}</option>
-                          <option value="Household Helping">{tServices('householdHelping')}</option>
-                          <option value="Facility Services">{tServices('facilityServices')}</option>
-                        </select>
+                          placeholder="e.g. Move-out Cleaning, Window Cleaning"
+                        />
                         {errors.serviceType && (
                           <p className="mt-1 text-sm text-red-600">{errors.serviceType.message}</p>
                         )}
@@ -462,16 +458,7 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                         </select>
                       </div>
 
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
-                          Prefix
-                        </label>
-                        <input
-                          {...register('prefix')}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="Mr. / Ms."
-                        />
-                      </div>
+
 
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -481,6 +468,28 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                           {...register('deploymentFrequency')}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           placeholder="e.g. Weekly, Monthly"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Handover Date
+                        </label>
+                        <input
+                          type="date"
+                          {...register('accessHandoverDate')}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Handover Time
+                        </label>
+                        <input
+                          type="time"
+                          {...register('accessHandoverTime')}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
                     </div>

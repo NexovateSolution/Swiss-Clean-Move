@@ -61,6 +61,10 @@ export async function POST(request: NextRequest) {
                  { id: client.serviceType || 'Reinigung', price: client.totalPrice || 0 }
               ]
            };
+        } else {
+           // If admin edited the price in the DB, enforce it in the PDF
+           quoteRes.adminOverride = true;
+           quoteRes.totalPrice = client.totalPrice || quoteRes.totalEstimatedPrice;
         }
 
         // Generate invoice HTML using the shared Contract template
@@ -69,7 +73,7 @@ export async function POST(request: NextRequest) {
         let invoicePdf: Buffer | undefined;
         try {
             const timeoutPromise = new Promise<never>((_, reject) => {
-                setTimeout(() => reject(new Error('PDF Generation timed out')), 8500);
+                setTimeout(() => reject(new Error('PDF Generation timed out')), 30000);
             });
             invoicePdf = await Promise.race([
                 renderPdfFromHtml(invoiceHtml),
@@ -171,7 +175,7 @@ async function renderPdfFromHtml(html: string): Promise<Buffer> {
 
     try {
         const page = await browser.newPage()
-        await page.setContent(html, { waitUntil: 'networkidle0' })
+        await page.setContent(html, { waitUntil: 'load', timeout: 20000 })
         const pdf = await page.pdf({
             format: 'A4',
             printBackground: true,

@@ -451,7 +451,10 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     'unloadingApartmentType', 'unloadingAreaInM2', 'unloadingElevatorSizes', 'unloadingParkingDistance',
     // Backend/Client model specific fields to skip in Scope
     'totalPrice', 'paidAmount', 'balance', 'clientId', 'fromDate', 'untilDate', 'location', 'postalCode', 'serviceType', 'buildingType',
-    'accessHandoverDate', 'accessHandoverTime', 'calcHours', 'calcFrequency', 'hours', 'price'
+    'accessHandoverDate', 'accessHandoverTime', 'calcHours', 'calcFrequency', 'hours', 'price',
+    // Universal form keys
+    'salutation', 'company', 'agreeToTerms', 'timeWindow', 'propertyHandover',
+    'photosVia', 'contactPreferredVia', 'services', 'remark'
   ];
   const translatedLabels: Record<string, any> = {
     isExpress: { de: 'Express Service', en: 'Express Service', fr: 'Service Express', it: `Servizio espresso` },
@@ -540,7 +543,51 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     additionalServices: { de: 'Zusätzliche Dienstleistungen', en: 'Additional Services', fr: 'Services Supplémentaires', it: 'Servizi Aggiuntivi' },
     householdHelpServices: { de: 'Haushaltshilfe Dienstleistungen', en: 'Household Help Services', fr: 'Services d\'Aide Ménagère', it: 'Servizi di Aiuto Domestico' },
     accessOtherSpec: { de: 'Zugang Sonstiges', en: 'Access Other Spec', fr: 'Accès Autre Spécification', it: 'Accesso Altra Specifica' },
-    specialNotes: { de: 'Spezielle Bemerkungen', en: 'Special Notes', fr: 'Notes Spéciales', it: 'Note Speciali' }
+    specialNotes: { de: 'Spezielle Bemerkungen', en: 'Special Notes', fr: 'Notes Spéciales', it: 'Note Speciali' },
+    
+    // Universal Form new labels
+    areasToClean: { de: 'Zu reinigende Bereiche', en: 'Areas to Clean', fr: 'Zones à nettoyer', it: 'Aree da pulire' },
+    windowStandard: { de: 'Standardfenster', en: 'Standard Windows', fr: 'Fenêtres standard', it: 'Finestre standard' },
+    windowFloorToCeiling: { de: 'Bodentiefe Fenster', en: 'Floor-to-ceiling Windows', fr: 'Fenêtres du sol au plafond', it: 'Finestre a tutta altezza' },
+    windowRoof: { de: 'Dachfenster', en: 'Roof Windows', fr: 'Fenêtres de toit', it: 'Finestre da tetto' },
+    windowGlassDoors: { de: 'Glastüren', en: 'Glass Doors', fr: 'Portes vitrées', it: 'Porte a vetri' },
+    blindVenetian: { de: 'Lamellenstoren', en: 'Venetian Blinds', fr: 'Stores à lamelles', it: 'Tende veneziane' },
+    blindRoller: { de: 'Rollläden', en: 'Roller Shutters', fr: 'Volets roulants', it: 'Tapparelle' },
+    blindShutters: { de: 'Fensterläden', en: 'Window Shutters', fr: 'Volets', it: 'Imposte' },
+    blindAwnings: { de: 'Markisen', en: 'Awnings', fr: 'Stores bannes', it: 'Tende da sole' },
+    sanitaryToilets: { de: 'Toiletten', en: 'Toilets', fr: 'Toilettes', it: 'Servizi igienici' },
+    sanitaryBathtubs: { de: 'Badewannen', en: 'Bathtubs', fr: 'Baignoires', it: 'Vasche da bagno' },
+    sanitaryShowers: { de: 'Duschen', en: 'Showers', fr: 'Douches', it: 'Docce' },
+    sanitaryWashbasins: { de: 'Lavabos', en: 'Washbasins', fr: 'Lavabos', it: 'Lavatesta' },
+    sanitaryKitchens: { de: 'Küchen', en: 'Kitchens', fr: 'Cuisines', it: 'Cucine' },
+    floorTypes: { de: 'Bodenarten', en: 'Floor Types', fr: 'Types de sols', it: 'Tipi di pavimento' },
+    vacuumCarpetOnly: { de: 'Teppich nur staubsaugen', en: 'Vacuum carpet only', fr: 'Aspirer le tapis uniquement', it: 'Solo aspirazione tappeto' },
+    deepCarpetCleaning: { de: 'Teppich-Tiefenreinigung', en: 'Deep carpet cleaning', fr: 'Nettoyage en profondeur des tapis', it: 'Pulizia profonda tappeto' },
+    balconyCleaning: { de: 'Balkon-/Terrassenreinigung', en: 'Balcony/terrace cleaning', fr: 'Nettoyage de balcon / terrasse', it: 'Pulizia balcone / terrazza' },
+    balconyArea: { de: 'Balkonfläche', en: 'Balcony Area', fr: 'Surface du balcon', it: 'Area del balcone' },
+    highPressureCleaning: { de: 'Hochdruckreinigung', en: 'High-pressure cleaning', fr: 'Nettoyage haute pression', it: 'Pulizia ad alta pressione' },
+    repairWallHoles: { de: 'Wandlöcher ausbessern', en: 'Repair wall holes', fr: 'Réparation des trous', it: 'Riparazione buchi nei muri' },
+    holesCount: { de: 'Anzahl Löcher', en: 'Number of holes', fr: 'Nombre de trous', it: 'Numero di buchi' },
+    propertyCondition: { de: 'Zustand der Immobilie', en: 'Property Condition', fr: 'État de la propriété', it: 'Condizioni della proprietà' },
+    additionalDetails: { de: 'Weitere Angaben', en: 'Additional Details', fr: 'Détails supplémentaires', it: 'Dettagli aggiuntivi' },
+    movingScope: { de: 'Umfang Umzug', en: 'Moving Scope', fr: 'Étendue du déménagement', it: 'Ambito del trasloco' },
+    inventoryBoxes: { de: 'Kartons', en: 'Boxes', fr: 'Cartons', it: 'Scatole' },
+    inventoryWardrobes: { de: 'Schränke', en: 'Wardrobes', fr: 'Armoires', it: 'Armadi' },
+    inventoryBeds: { de: 'Betten', en: 'Beds', fr: 'Lits', it: 'Letti' },
+    inventorySofas: { de: 'Sofas', en: 'Sofas', fr: 'Canapés', it: 'Divani' },
+    inventoryTables: { de: 'Tische', en: 'Tables', fr: 'Tables', it: 'Tavoli' },
+    inventoryChairs: { de: 'Stühle', en: 'Chairs', fr: 'Chaises', it: 'Sedie' },
+    inventoryDressers: { de: 'Kommoden', en: 'Dressers', fr: 'Commodes', it: 'Cassettiere' },
+    inventoryLargeAppliances: { de: 'Grossgeräte', en: 'Large Appliances', fr: 'Gros électroménager', it: 'Grandi elettrodomestici' },
+    additionalInventory: { de: 'Zusätzliches Inventar', en: 'Additional Inventory', fr: 'Inventaire supplémentaire', it: 'Inventario aggiuntivo' },
+    specialItemsDetails: { de: 'Details Spezialgut', en: 'Special Items Details', fr: 'Détails des objets spéciaux', it: 'Dettagli degli oggetti speciali' },
+    noParkingCollection: { de: 'Halteverbot Startort', en: 'No-parking collection', fr: 'Interdiction de stationner au départ', it: 'Divieto di sosta alla partenza' },
+    noParkingDelivery: { de: 'Halteverbot Zielort', en: 'No-parking delivery', fr: 'Interdiction de stationner à l\'arrivée', it: 'Divieto di sosta all\'arrivo' },
+    movingDateFlexible: { de: 'Umzugsdatum flexibel', en: 'Moving date flexible', fr: 'Date de déménagement flexible', it: 'Data di trasloco flessibile' },
+    staffCount: { de: 'Anzahl Mitarbeitende', en: 'Number of staff', fr: 'Nombre d\'employés', it: 'Numero di addetti' },
+    recurringFrequency: { de: 'Reinigungsintervall', en: 'Cleaning Frequency', fr: 'Fréquence de Nettoyage', it: 'Frequenza di pulizia' },
+    floors: { de: 'Etagen', en: 'Floors', fr: 'Étages', it: 'Piani' },
+    viewingIsWelcome: { de: 'Besichtigung erwünscht', en: 'Viewing is welcome', fr: 'Visite souhaitée', it: 'La visione è gradita' }
   };
 
   const translatedValues: Record<string, any> = {
@@ -701,7 +748,26 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     ironing: { de: 'Bügeln', en: 'Ironing', fr: 'Repassage', it: 'Stiratura' },
     changingBedLinen: { de: 'Bettwäsche wechseln', en: 'Changing Bed Linen', fr: 'Changer les draps', it: 'Cambiare le lenzuola' },
     tidyingUp: { de: 'Aufräumen', en: 'Tidying Up', fr: 'Rangement', it: 'Riordinare' },
-    shopping: { de: 'Einkaufen', en: 'Shopping', fr: 'Courses', it: 'Spesa' }
+    shopping: { de: 'Einkaufen', en: 'Shopping', fr: 'Courses', it: 'Spesa' },
+    
+    // Universal Form specific values
+    parquet: { de: 'Parkett', en: 'Parquet', fr: 'Parquet', it: 'Parquet' },
+    laminate: { de: 'Laminat', en: 'Laminate', fr: 'Stratifié', it: 'Laminato' },
+    tiles: { de: 'Platten', en: 'Tiles', fr: 'Carrelage', it: 'Piastrelle' },
+    carpet: { de: 'Teppich', en: 'Carpet', fr: 'Tapis', it: 'Tappeto' },
+    pvc: { de: 'PVC/Vinyl', en: 'PVC/Vinyl', fr: 'PVC/Vinyle', it: 'PVC/Vinile' },
+    naturalStone: { de: 'Naturstein', en: 'Natural stone', fr: 'Pierre naturelle', it: 'Pietra naturale' },
+    empty: { de: 'Leer', en: 'Empty', fr: 'Vide', it: 'Vuoto' },
+    furnished: { de: 'Möbliert', en: 'Furnished', fr: 'Meublé', it: 'Arredato' },
+    petHair: { de: 'Tierhaare', en: 'Pet hair', fr: 'Poils d\'animaux', it: 'Peli di animali' },
+    heavilySoiled: { de: 'Stark verschmutzt', en: 'Heavily soiled', fr: 'Très sale', it: 'Molto sporco' },
+    mould: { de: 'Schimmel/Feuchtigkeit', en: 'Mould/moisture', fr: 'Moisissure/humidité', it: 'Muffa/umidità' },
+    packing: { de: 'Einpackservice', en: 'Packing', fr: 'Emballage', it: 'Imballaggio' },
+    unpacking: { de: 'Auspackservice', en: 'Unpacking', fr: 'Déballage', it: 'Disimballaggio' },
+    dismantling: { de: 'Demontage', en: 'Dismantling', fr: 'Démontage', it: 'Smontaggio' },
+    boxes: { de: 'Kartons', en: 'Boxes', fr: 'Cartons', it: 'Scatole' },
+    clearance: { de: 'Räumung', en: 'Clearance', fr: 'Débarras', it: 'Sgombero' },
+    storage: { de: 'Zwischenlagerung', en: 'Storage', fr: 'Stockage', it: 'Stoccaggio' }
   };
   
   const additionalAttributesHtml = Object.entries(customer)
@@ -749,31 +815,32 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   `;
 
   let serviceTitle = 'Service';
-  const sType = (customer.serviceType || customer.serviceName || customer.formType || customer.cleaningTypes || customer.cleaningType || customer.movingType || '').toLowerCase();
+  const combinedType = `${customer.serviceType || ''} ${customer.serviceName || ''} ${customer.formType || ''} ${customer.cleaningTypes || ''} ${customer.cleaningType || ''} ${customer.movingType || ''}`.toLowerCase();
   
-  if (sType.includes('transport')) {
+  if (combinedType.includes('transport')) {
     serviceTitle = locale === 'de' ? 'Transport' : locale === 'fr' ? 'Transport' : 'Transport';
-  } else if (sType.includes('disposal') || sType.includes('entsorgung') || sType.includes('räumung') || sType.includes('clearance')) {
+  } else if (combinedType.includes('disposal') || combinedType.includes('entsorgung') || combinedType.includes('räumung') || combinedType.includes('clearance')) {
     serviceTitle = locale === 'de' ? 'Räumung & Entsorgung' : locale === 'fr' ? 'Débarras' : 'Disposal & Clearance';
-  } else if (sType.includes('moving-and-cleaning') || (sType.includes('moving') && sType.includes('cleaning'))) {
+  } else if (combinedType.includes('moving-and-cleaning') || (combinedType.includes('moving') && combinedType.includes('cleaning')) || (combinedType.includes('umzug') && combinedType.includes('reinigung'))) {
     serviceTitle = locale === 'de' ? 'Umzug & Reinigung' : locale === 'fr' ? 'Déménagement & Nettoyage' : 'Moving & Cleaning';
-  } else if (sType.includes('moving') || sType.includes('umzug')) {
+  } else if (combinedType.includes('moving') || combinedType.includes('umzug')) {
     serviceTitle = locale === 'de' ? 'Umzug' : locale === 'fr' ? 'Déménagement' : 'Moving';
-  } else if (sType.includes('house-cleaning')) {
+  } else if (combinedType.includes('house-cleaning')) {
     serviceTitle = locale === 'de' ? 'Hausreinigung' : locale === 'fr' ? 'Nettoyage de maison' : 'House Cleaning';
-  } else if (sType.includes('cleaning') || sType.includes('reinigung')) {
+  } else if (combinedType.includes('cleaning') || combinedType.includes('reinigung')) {
     serviceTitle = locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : 'Cleaning';
-  } else if (sType.includes('household') || sType.includes('haushalt')) {
+  } else if (combinedType.includes('household') || combinedType.includes('haushalt')) {
     serviceTitle = locale === 'de' ? 'Haushaltshilfe' : locale === 'fr' ? 'Aide ménagère' : 'Household Help';
-  } else if (sType.includes('painting') || sType.includes('maler')) {
+  } else if (combinedType.includes('painting') || combinedType.includes('maler')) {
     serviceTitle = locale === 'de' ? 'Malerarbeiten' : locale === 'fr' ? 'Peinture' : 'Painting';
-  } else if (sType.includes('handyman') || sType.includes('handwerker')) {
+  } else if (combinedType.includes('handyman') || combinedType.includes('handwerker')) {
     serviceTitle = locale === 'de' ? 'Handwerker' : locale === 'fr' ? 'Bricoleur' : 'Handyman';
-  } else if (sType.includes('storage') || sType.includes('lager')) {
+  } else if (combinedType.includes('storage') || combinedType.includes('lager')) {
     serviceTitle = locale === 'de' ? 'Lagerung' : locale === 'fr' ? 'Stockage' : 'Storage';
-  } else if (sType.length > 0) {
-    // Fallback capitalized
-    serviceTitle = sType.charAt(0).toUpperCase() + sType.slice(1);
+  } else if (combinedType.trim().length > 0) {
+    // Fallback capitalized to the first word
+    const firstWord = combinedType.trim().split(' ')[0];
+    serviceTitle = firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
   } else {
     // Absolute fallback
     serviceTitle = locale === 'de' ? 'Service' : locale === 'fr' ? 'Service' : 'Service';
@@ -1458,8 +1525,8 @@ export async function generateQuotePdf(quote: QuoteResult, customer: any, docume
   
   const page = await browser.newPage();
   
-  // Set content and wait for network idle to ensure everything renders
-  await page.setContent(htmlTemplate, { waitUntil: 'networkidle0' });
+  // Set content and wait for load to ensure everything renders quickly without hanging
+  await page.setContent(htmlTemplate, { waitUntil: 'load' });
   
   // Print to PDF
   const pdfBuffer = await page.pdf({

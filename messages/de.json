@@ -882,8 +882,10 @@
       "commercialRegister": "Handelsregister",
       "uid": "UID",
       "liabilityText1": "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
-      "liabilityText2": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen.",
-      "copyrightText": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+      "liabilityText2": "Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+      "copyrightText": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+      "vatStatus": "Nicht MWST-pflichtig",
+      "owner": "Inhaber / Verantwortliche Person"
     },
     "privacy": {
       "generalInfo": "Allgemeine Hinweise",
@@ -925,7 +927,7 @@
         "Umzugsdienstleistungen",
         "Entsorgungsdienstleistungen"
       ],
-      "pricingText1": "Die Zahlung erfolgt in bar direkt an den Teamleiter nach erfolgreichem Abschluss der vereinbarten Dienstleistungen, sofern nicht schriftlich etwas anderes vereinbart wurde.",
+      "pricingText1": "Die Zahlung ist nach Abschluss der Dienstleistung gemäss der akzeptierten Offerte fällig. Bei Barzahlung erhält der Kunde eine Quittung.",
       "warrantyText": "Wir gewährleisten die ordnungsgemäße Ausführung unserer Dienstleistungen. Bei Mängeln haben Sie das Recht auf kostenlose Nachbesserung. Für Umzugsreinigungen bieten wir eine 100%ige Abnahmegarantie.",
       "liabilityText": "Wir haften für Schäden nur bei Vorsatz und grober Fahrlässigkeit. Die Haftung ist auf die Höhe der Versicherungssumme begrenzt. Alle unsere Mitarbeiter sind vollständig versichert."
     },
@@ -13815,5 +13817,238 @@
   "Household Helping": "Haushaltshilfe",
   "householdHelp": "Haushaltshilfe (alltägliche Unterstützung / Betreuung)",
   "maintenanceCleaning": "Unterhaltsreinigung (regelmäßig)",
-  "combination": "Kombination"
+  "combination": "Kombination",
+  "universalForm": {
+    "title": "Offertanfrage",
+    "subtitle": "Kostenlos & unverbindlich",
+    "steps": {
+      "customer": "Kundendaten",
+      "services": "Dienstleistungen",
+      "property": "Objekt & Einsatzort",
+      "dateContact": "Termin & Kontakt",
+      "cleaning": "Reinigung",
+      "moving": "Umzug / Transport / Entsorgung",
+      "review": "Prüfen & absenden"
+    },
+    "customer": {
+      "firstName": "Vorname / Nachname *",
+      "company": "Firma (optional)",
+      "email": "E-Mail *",
+      "phone": "Telefon / Mobile *"
+    },
+    "services": {
+      "movingOutCleaning": "Umzugs-/Endreinigung",
+      "maintenanceCleaning": "Unterhalts-/Haushaltsreinigung",
+      "officeCleaning": "Büro-/Praxisreinigung",
+      "restaurantCleaning": "Gastronomiereinigung",
+      "windowCleaning": "Fenster-/Storenreinigung",
+      "constructionCleaning": "Bau-/Grundreinigung",
+      "caretaking": "Hauswartung",
+      "movingTransport": "Umzug & Transport",
+      "packingService": "Ein-/Auspackservice",
+      "furnitureAssembly": "Möbelmontage/-demontage",
+      "disposalClearance": "Entsorgung & Räumung",
+      "highPressureCleaning": "Hochdruckreinigung",
+      "stairwellCleaning": "Treppenhausreinigung",
+      "specialistCleaning": "Spezialreinigung",
+      "otherService": "Andere Dienstleistung",
+      "subtitle": "Wählen Sie eine oder mehrere Dienstleistungen",
+      "selectedCount": "{count} Dienstleistung(en) ausgewählt"
+    },
+    "property": {
+      "streetNo": "Strasse / Nr. *",
+      "postcodeCity": "PLZ / Ort *",
+      "type": "Objektart",
+      "types": {
+        "apartment": "Wohnung",
+        "house": "Haus",
+        "office": "Büro",
+        "commercial": "Gewerbe",
+        "restaurant": "Gastronomie",
+        "other": "Andere"
+      },
+      "rooms": "Zimmer",
+      "area": "Wohn-/Nutzfläche (m²)",
+      "floor": "Etage",
+      "lift": "Lift (Ja/Nein)",
+      "parking": "Parkplatz/Zufahrt",
+      "subtitleSingle": "Bitte geben Sie den Einsatzort an",
+      "subtitleMoving": "Bitte geben Sie die Start- und Zieladresse an"
+    },
+    "dateContact": {
+      "preferredDate": "Gewünschtes Datum",
+      "timeWindow": "Uhrzeit / Zeitraum",
+      "handover": "Wohnungs-/Objektabgabe",
+      "preferredContact": "Bevorzugte Kontaktart",
+      "contactOptions": {
+        "phone": "Telefon",
+        "email": "E-Mail",
+        "whatsapp": "WhatsApp"
+      },
+      "photosVia": "Fotos / Pläne werden gesendet per",
+      "photosOptions": {
+        "email": "E-Mail",
+        "whatsapp": "WhatsApp",
+        "none": "Keine"
+      },
+      "selectTime": "Zeit wählen"
+    },
+    "cleaning": {
+      "type": "Reinigungsart (Mehrfachauswahl möglich)",
+      "frequency": "Turnus für wiederkehrende Einsätze",
+      "frequencies": {
+        "daily": "Täglich",
+        "weekly": "1x/Woche",
+        "twiceWeekly": "2x/Woche",
+        "threeWeekly": "3x/Woche",
+        "fiveWeekly": "5x/Woche",
+        "monthly": "Monatlich",
+        "other": "Andere"
+      },
+      "areas": "Räume / Bereiche, die gereinigt werden sollen",
+      "windows": "Fenster – Anzahl und Ausführung",
+      "windowTypes": {
+        "standard": "Fenster (Standard)",
+        "floorToCeiling": "Bodentiefe Fenster",
+        "roof": "Dachfenster",
+        "glassDoors": "Glas-/Balkontüren"
+      },
+      "blinds": "Storen / Sonnenschutz – Art und Anzahl",
+      "blindTypes": {
+        "venetian": "Lamellenstoren",
+        "roller": "Rollläden",
+        "shutters": "Fensterläden",
+        "awnings": "Markisen"
+      },
+      "sanitary": "Sanitär – Anzahl",
+      "sanitaryTypes": {
+        "toilets": "Toiletten (WC)",
+        "bathtubs": "Badewannen",
+        "showers": "Duschen",
+        "washbasins": "Lavabos",
+        "kitchens": "Küchen"
+      },
+      "floors": "Bodenarten",
+      "floorTypes": {
+        "parquet": "Parkett",
+        "laminate": "Laminat",
+        "tiles": "Platten",
+        "carpet": "Teppich",
+        "pvc": "PVC/Vinyl",
+        "naturalStone": "Naturstein"
+      },
+      "vacuumCarpetOnly": "Teppich nur staubsaugen",
+      "deepCarpetCleaning": "Teppich-Tiefenreinigung",
+      "balconyCleaning": "Balkon-/Terrassenreinigung",
+      "balconyArea": "Fläche Balkon/Terrasse (m²)",
+      "highPressure": "Hochdruckreinigung",
+      "repairWallHoles": "Wandlöcher ausbessern",
+      "holesCount": "Anzahl Löcher",
+      "condition": "Zustand & Besonderheiten",
+      "conditions": {
+        "empty": "Objekt leer",
+        "furnished": "Möbliert",
+        "petHair": "Tierhaare",
+        "nicotine": "Nikotin",
+        "heavilySoiled": "Stark verschmutzt",
+        "mould": "Schimmel/Feuchtigkeit"
+      },
+      "additionalDetails": "Weitere Angaben (Zugang, Schlüssel, besondere Verschmutzungen oder Wünsche)",
+      "typeSubtitle": "Reinigungsart (Mehrfachauswahl möglich)"
+    },
+    "moving": {
+      "collectionAddress": "Startadresse (Strasse, PLZ, Ort)",
+      "deliveryAddress": "Zieladresse (Strasse, PLZ, Ort)",
+      "floorCollection": "Etage Start",
+      "liftCollection": "Lift Start",
+      "distanceCollection": "Tragweg Start (m)",
+      "floorDelivery": "Etage Ziel",
+      "liftDelivery": "Lift Ziel",
+      "distanceDelivery": "Tragweg Ziel (m)",
+      "scope": "Umfang & gewünschte Leistungen",
+      "scopes": {
+        "transport": "Transport",
+        "packing": "Einpackservice",
+        "unpacking": "Auspackservice",
+        "dismantling": "Demontage",
+        "assembly": "Montage",
+        "boxes": "Umzugskartons",
+        "disposal": "Entsorgung",
+        "clearance": "Räumung",
+        "storage": "Zwischenlagerung"
+      },
+      "inventory": "Inventar – ungefähre Anzahl",
+      "inventories": {
+        "boxes": "Kartons",
+        "wardrobes": "Schränke",
+        "beds": "Betten",
+        "sofas": "Sofas",
+        "tables": "Tische",
+        "chairs": "Stühle",
+        "dressers": "Kommoden",
+        "largeAppliances": "Grossgeräte"
+      },
+      "additionalInventory": "Weitere Möbel / Inventarliste",
+      "specialItems": "Spezialgut, Entsorgung & Organisation",
+      "specialItemTypes": {
+        "piano": "Klavier/Flügel",
+        "safe": "Tresor",
+        "aquarium": "Aquarium",
+        "antiques": "Kunst/Antiquitäten",
+        "heavy": "Gegenstand über 100 kg",
+        "none": "Kein Spezialgut"
+      },
+      "specialItemsDetails": "Spezialgut / Entsorgung - Details, Gewicht und Masse",
+      "noParkingCollection": "Halteverbotszone am Start nötig",
+      "noParkingDelivery": "Halteverbotszone am Ziel nötig",
+      "preferredDate": "Gewünschtes Umzugsdatum",
+      "dateFlexible": "Datum flexibel?",
+      "staffCount": "Gewünschte Anzahl Mitarbeitende"
+    },
+    "review": {
+      "consent": "Ich bestätige, dass meine Angaben zur Bearbeitung dieser unverbindlichen Anfrage verwendet werden dürfen.",
+      "placeDate": "Ort / Datum",
+      "signature": "Unterschrift (bei Ausdruck)",
+      "note": "Hinweis: Die definitive Offerte wird nach Prüfung der Angaben und gegebenenfalls der Fotos erstellt.",
+      "back": "Zurück",
+      "next": "Weiter",
+      "submit": "Formular absenden",
+      "submitting": "Wird gesendet...",
+      "photosLabel": "Fotos / Pläne (optional)",
+      "photosDesc": "Dateien auswählen (Bilder/PDFs)"
+    },
+    "validation": {
+      "name": "Bitte Name angeben",
+      "email": "Bitte E-Mail angeben",
+      "phone": "Bitte Telefon angeben",
+      "services": "Bitte mindestens eine Dienstleistung wählen",
+      "terms": "Bitte Einwilligung bestätigen"
+    },
+    "common": {
+      "yes": "Ja",
+      "no": "Nein"
+    },
+    "placeholders": {
+      "parking": "z.B. Parkplatz vorhanden / Zufahrt eingeschränkt",
+      "distance": "z.B. 20m",
+      "movingItems": "z.B. Waschmaschine, Trockner, Aquarium...",
+      "number": "z.B. 2",
+      "timeWindow": "z.B. 08:00–12:00 / vormittags",
+      "cleaningRooms": "z.B. Küche, Bad, Wohnzimmer, Schlafzimmer..."
+    },
+    "sectionTitles": {
+      "cleaning4A": "Reinigung - Art und Bereiche",
+      "cleaning4B": "Fenster, Storen & Sanitär",
+      "cleaning4C": "Böden, Aussenbereiche & Zusatzarbeiten",
+      "cleaning4D": "Zustand & Besonderheiten",
+      "moving4B": "Umfang & gewünschte Leistungen",
+      "moving4C": "Spezialgut, Entsorgung & Organisation"
+    },
+    "mainCategories": {
+      "cleaning": "Reinigung",
+      "moving": "Umzug / Transport",
+      "facility": "Hauswartung / Facility",
+      "other": "Sonstiges"
+    }
+  }
 }

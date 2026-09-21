@@ -69,8 +69,9 @@ export default function LegalPage({ params: { locale } }: { params: { locale: st
                   <h3 className="text-xl font-semibold text-swiss-gray-800 mb-3">{t('legal.impressum.companyInfo')}</h3>
                   <div className="space-y-2 text-swiss-gray-700">
                     <p><strong>{t('legal.impressum.companyName')}:</strong> SwissCleanMove</p>
+                    <p><strong>{t('legal.impressum.owner')}:</strong> Dawit Gebrekristos</p>
                     <p><strong>{t('legal.impressum.address')}:</strong> Orpundstrasse 31, 2504 Biel/Bienne</p>
-                    <p><strong>{t('legal.impressum.phone')}:</strong> +41 78 215 80 30 • +41 76 488 36 89</p>
+                    <p><strong>{t('legal.impressum.phone')}:</strong> +41 78 215 80 30</p>
                     <p><strong>{t('legal.impressum.email')}:</strong> info@swisscleanmove.ch</p>
                     <p><strong>{t('legal.impressum.website')}:</strong> www.swisscleanmove.ch</p>
                   </div>
@@ -79,8 +80,9 @@ export default function LegalPage({ params: { locale } }: { params: { locale: st
                 <div>
                   <h3 className="text-xl font-semibold text-swiss-gray-800 mb-3">{t('legal.impressum.legalInfo')}</h3>
                   <div className="space-y-2 text-swiss-gray-700">
-                    <p><strong>{t('legal.impressum.commercialRegister')}:</strong> CHE-457.949.122</p>
                     <p><strong>{t('legal.impressum.uid')}:</strong> CHE-457.949.122</p>
+                    <p><strong>{t('legal.impressum.commercialRegister')}:</strong> CH-036.1.098.153-4</p>
+                    <p><strong>VAT Status:</strong> {t('legal.impressum.vatStatus')}</p>
                   </div>
                 </div>
 
