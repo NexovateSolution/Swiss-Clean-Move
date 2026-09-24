@@ -40,27 +40,7 @@ export default function ReviewSubmitSlice({ data, updateData, t, images, onImage
         </span>
       </label>
 
-      {/* Ort/Datum and Signature Fields */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-        <div>
-          <label className={labelClass}>
-            {t('universalForm.review.placeDate')}
-          </label>
-          <input
-            type="text"
-            className={inputClass}
-          />
-        </div>
-        <div>
-          <label className={labelClass}>
-            {t('universalForm.review.signature')}
-          </label>
-          <input
-            type="text"
-            className={inputClass}
-          />
-        </div>
-      </div>
+
 
       <p className="text-xs text-swiss-body mt-2">
         {t('universalForm.review.note')}
