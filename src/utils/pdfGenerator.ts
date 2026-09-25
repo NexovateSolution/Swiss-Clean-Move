@@ -781,6 +781,40 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     storage: { de: 'Zwischenlagerung', en: 'Storage', fr: 'Stockage', it: 'Stoccaggio' }
   };
   
+  const formatVal = (rawVal: any): string => {
+    if (rawVal === true) return locale === 'de' ? 'Ja' : (locale === 'fr' ? 'Oui' : 'Yes');
+    if (rawVal === false) return locale === 'de' ? 'Nein' : (locale === 'fr' ? 'Non' : 'No');
+    if (rawVal === '' || rawVal === null || rawVal === undefined) return '';
+    
+    let parsedVal = rawVal;
+    if (typeof rawVal === 'string') {
+      try {
+        if (rawVal.trim().startsWith('[')) parsedVal = JSON.parse(rawVal);
+      } catch(e) {}
+    }
+    
+    if (Array.isArray(parsedVal)) {
+      return parsedVal.map(v => {
+        const trimmedV = typeof v === 'string' ? v.trim() : v;
+        const vObj = translatedValues[trimmedV] || (typeof trimmedV === 'string' ? translatedValues[trimmedV.toLowerCase()] : undefined) || translatedValues[v];
+        return vObj ? (vObj[locale] || vObj.en) : v;
+      }).join(', ');
+    } else if (typeof parsedVal === 'string') {
+      const trimmedVal = parsedVal.trim();
+      const valObj = translatedValues[trimmedVal] || translatedValues[trimmedVal.toLowerCase()] || translatedValues[parsedVal];
+      if (valObj) {
+        return valObj[locale] || valObj.en;
+      } else if (parsedVal.includes(',')) {
+        return parsedVal.split(',').map(v => {
+          const trimmed = v.trim();
+          const vObj = translatedValues[trimmed] || translatedValues[trimmed.toLowerCase()] || translatedValues[v];
+          return vObj ? (vObj[locale] || vObj.en) : trimmed;
+        }).join(', ');
+      }
+    }
+    return String(parsedVal);
+  };
+  
   const additionalAttributesHtml = Object.entries(customer)
     .filter(([key, val]) => {
       if (skipKeys.includes(key)) return false;
@@ -793,27 +827,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
        const lblObj = translatedLabels[key];
        const formattedKey = lblObj ? (lblObj[locale] || lblObj.en) : key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).replace(/([A-Z]+)/g, str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase());
        
-       let formattedVal = val;
-       if (val === true) formattedVal = locale === 'de' ? 'Ja' : (locale === 'fr' ? 'Oui' : 'Yes');
-       else if (typeof val === 'string') {
-         const trimmedVal = val.trim();
-         const valObj = translatedValues[trimmedVal] || translatedValues[trimmedVal.toLowerCase()] || translatedValues[val];
-         if (valObj) {
-           formattedVal = valObj[locale] || valObj.en;
-         } else if (val.includes(',')) {
-           formattedVal = val.split(',').map(v => {
-             const trimmed = v.trim();
-             const vObj = translatedValues[trimmed] || translatedValues[trimmed.toLowerCase()] || translatedValues[v];
-             return vObj ? (vObj[locale] || vObj.en) : trimmed;
-           }).join(', ');
-         }
-       } else if (Array.isArray(val)) {
-         formattedVal = val.map(v => {
-           const trimmedV = typeof v === 'string' ? v.trim() : v;
-           const vObj = translatedValues[trimmedV] || (typeof trimmedV === 'string' ? translatedValues[trimmedV.toLowerCase()] : undefined) || translatedValues[v];
-           return vObj ? (vObj[locale] || vObj.en) : v;
-         }).join(', ');
-       }
+       const formattedVal = formatVal(val);
        return `<div class="scope-item" style="display: flex; align-items: center; margin-bottom: 2px;"><svg style="width: 14px; height: 14px; fill: #003366; flex-shrink: 0; margin-right: 6px;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>${formattedKey}:</strong> <span style="color: #333;">${formattedVal}</span></span></div>`;
     }).join('');
 
@@ -1411,22 +1425,22 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           </div>
           
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
-          ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType || customer.sharedPropertyType) ? `<div><strong>${locDict.propertyType}</strong> ${(() => { const rawPt = customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType || customer.sharedPropertyType; const ptObj = translatedValues[rawPt]; return ptObj ? (ptObj[locale] || ptObj.en) : rawPt; })()}</div>` : ''}
+          ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType || customer.sharedPropertyType) ? `<div><strong>${locDict.propertyType}</strong> ${formatVal(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType || customer.sharedPropertyType)}</div>` : ''}
           ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters || customer.sharedLivingArea ? `<div><strong>${locDict.area}</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters || customer.sharedLivingArea} m²</div>` : ''}
           ${customer.floor || customer.floorsLevel || customer.sharedFloor ? `<div><strong>${locDict.floor}</strong> ${customer.floor || customer.floorsLevel || customer.sharedFloor}</div>` : ''}
           ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms || customer.sharedRooms ? `<div><strong>${locDict.rooms}</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms || customer.sharedRooms} Zi.</div>` : ''}
-          ${customer.elevatorSizes || customer.elevator ? `<div><strong>${locDict.lift}</strong> ${(() => { const v = customer.elevatorSizes || customer.elevator; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
-          ${customer.parkingDistance ? `<div><strong>${locDict.parking}</strong> ${(() => { const v = customer.parkingDistance; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
-          ${customer.cleaningTypes ? `<div><strong>${locDict.cleaningType}</strong> ${(() => { const v = customer.cleaningTypes; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
-          ${customer.frequency ? `<div><strong>${locDict.frequency}</strong> ${(() => { const v = customer.frequency; const vo = translatedValues[typeof v === 'string' ? v.trim() : v] || translatedValues[typeof v === 'string' ? v.trim().toLowerCase() : v]; return vo ? (vo[locale] || vo.en) : v; })()}</div>` : ''}
+          ${customer.elevatorSizes || customer.elevator ? `<div><strong>${locDict.lift}</strong> ${formatVal(customer.elevatorSizes || customer.elevator)}</div>` : ''}
+          ${customer.parkingDistance ? `<div><strong>${locDict.parking}</strong> ${formatVal(customer.parkingDistance)}</div>` : ''}
+          ${customer.cleaningTypes ? `<div><strong>${locDict.cleaningType}</strong> ${formatVal(customer.cleaningTypes)}</div>` : ''}
+          ${customer.frequency ? `<div><strong>${locDict.frequency}</strong> ${formatVal(customer.frequency)}</div>` : ''}
           
           ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || customer.moveToStreet ? `
             <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
             <div style="grid-column: span 2;"><strong>${locDict.destinationAddress || 'Destination Address:'}</strong> ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || customer.moveToStreet || 'N/A'}, ${customer.unloadingPostalCodeAndCity || customer.movingZipCity || customer.destinationCity || customer.moveToZipCity || 'N/A'}</div>
-            ${customer.unloadingApartmentType || customer.destinationPropertyType ? `<div><strong>${locDict.destinationType}</strong> ${(() => { const rawDt = customer.unloadingApartmentType || customer.destinationPropertyType; const dtObj = translatedValues[rawDt]; return dtObj ? (dtObj[locale] || dtObj.en) : rawDt; })()}</div>` : ''}
+            ${customer.unloadingApartmentType || customer.destinationPropertyType ? `<div><strong>${locDict.destinationType}</strong> ${formatVal(customer.unloadingApartmentType || customer.destinationPropertyType)}</div>` : ''}
             ${customer.unloadingAreaInM2 || customer.destinationArea ? `<div><strong>${locDict.destinationArea}</strong> ca. ${customer.unloadingAreaInM2 || customer.destinationArea} m²</div>` : ''}
-            ${customer.unloadingElevatorSizes || customer.destinationElevator ? `<div><strong>${locDict.destinationLift}</strong> ${customer.unloadingElevatorSizes || customer.destinationElevator}</div>` : ''}
-            ${customer.unloadingParkingDistance || customer.destinationParking ? `<div><strong>${locDict.destinationParking}</strong> ${customer.unloadingParkingDistance || customer.destinationParking}</div>` : ''}
+            ${customer.unloadingElevatorSizes || customer.destinationElevator ? `<div><strong>${locDict.destinationLift}</strong> ${formatVal(customer.unloadingElevatorSizes || customer.destinationElevator)}</div>` : ''}
+            ${customer.unloadingParkingDistance || customer.destinationParking ? `<div><strong>${locDict.destinationParking}</strong> ${formatVal(customer.unloadingParkingDistance || customer.destinationParking)}</div>` : ''}
           ` : ''}
         </div>
       </div>
