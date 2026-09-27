@@ -80,7 +80,7 @@ export default function Footer() {
                     +41 78 215 80 30
                   </a>
                   <a href="tel:+41764883689" className="hover:text-swiss-blue transition-colors">
-                    +41 76 488 36 89
+                    
                   </a>
                 </div>
               </div>

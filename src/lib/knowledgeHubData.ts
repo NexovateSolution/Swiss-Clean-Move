@@ -79,7 +79,7 @@ const data: KnowledgeHubContent = {
     { id: 'umzug-preise', label: { de: 'Umzug & Reinigung Preise', en: 'Moving & Cleaning Prices', fr: 'Prix DÃ©mÃ©nagement & Nettoyage', it: `Prezzi di trasloco e pulizia` }, icon: 'Truck' },
     { id: 'haushaltshilfe-preise', label: { de: 'Haushaltshilfe Preise', en: 'Household Help Prices', fr: 'Prix Aide MÃ©nagÃ¨re', it: `Prezzi degli aiuti domestici` }, icon: 'Heart' },
     { id: 'durchschnittspreise', label: { de: 'Durchschnittspreise Schweiz', en: 'Average Prices Switzerland', fr: 'Prix Moyens Suisse', it: `Prezzi medi Svizzera` }, icon: 'BarChart3' },
-    { id: 'facility-service', label: { de: 'Facility Service & Hauswartung', en: 'Facility Service & Maintenance', fr: 'Facility Service & Conciergerie', it: `Assistenza e manutenzione della struttura` }, icon: 'Building2' },
+    { id: 'facility-service', label: { de: 'Hauswartung & Gebäudeunterhalt', en: 'Facility Service & Maintenance', fr: 'Facility Service & Conciergerie', it: `Assistenza e manutenzione della struttura` }, icon: 'Building2' },
     { id: 'vergleiche', label: { de: 'Service-Vergleiche', en: 'Service Comparisons', fr: 'Comparaisons de Services', it: `Confronti di servizi` }, icon: 'ArrowLeftRight' },
     { id: 'umzugsvorbereitung', label: { de: 'Umzugsvorbereitung', en: 'Moving Preparation', fr: 'PrÃ©paration au DÃ©mÃ©nagement', it: `Preparazione in movimento` }, icon: 'ClipboardList' },
     { id: 'fragen', label: { de: 'HÃ¤ufige Fragen', en: 'Common Questions', fr: 'Questions FrÃ©quentes', it: `Domande comuni` }, icon: 'HelpCircle' },
@@ -124,7 +124,7 @@ const data: KnowledgeHubContent = {
     fr: 'Qu\'est-ce qui influence les prix ? Taille de l\'appartement, Ã©tage, ascenseur, distance, Ã©tat de propretÃ©, quantitÃ© de meubles et diffÃ©rences rÃ©gionales. Les prestataires bon marchÃ© Ã©conomisent souvent sur l\'assurance, le matÃ©riel ou la qualitÃ© du personnel. SwissCleanMove mise sur les standards de qualitÃ© suisses, des services assurÃ©s et des prix fixes transparents.', it: `Cosa influenza i prezzi? Dimensioni dell'appartamento, livello del piano, ascensore, distanza, condizioni di pulizia, quantità di mobili e differenze regionali. I fornitori economici spesso riducono i costi di assicurazione, materiali o qualità del personale. SwissCleanMove si basa su standard di qualità svizzeri, servizi assicurati e prezzi fissi trasparenti.`
   },
   facilityTitle: {
-    de: 'Facility Service & Hauswartung',
+    de: 'Hauswartung & Gebäudeunterhalt',
     en: 'Facility Service & Property Maintenance',
     fr: 'Facility Service & Conciergerie', it: `Servizio di struttura e manutenzione della proprietà`
   },
@@ -237,7 +237,7 @@ const data: KnowledgeHubContent = {
       {
         sectionTitle: { de: 'Facility Service vs. Hauswartung', en: 'Facility Service vs. Property Maintenance', fr: 'Facility Service vs. Conciergerie', it: `Servizio della struttura e manutenzione della proprietà` },
         left: {
-          title: { de: 'Facility Service', en: 'Facility Service', fr: 'Facility Service', it: `Servizio di struttura` },
+          title: { de: 'Hauswartung', en: 'Facility Service', fr: 'Facility Service', it: `Servizio di struttura` },
           points: [
             { de: 'Ganzheitliches GebÃ¤udemanagement', en: 'Holistic building management', fr: 'Gestion globale de bÃ¢timent', it: `Gestione olistica dell'edificio` },
             { de: 'Reinigung, Technik, Sicherheit', en: 'Cleaning, technical, security', fr: 'Nettoyage, technique, sÃ©curitÃ©', it: `Pulizia, tecnica, sicurezza` },
@@ -362,7 +362,7 @@ const data: KnowledgeHubContent = {
       ]
     },
     {
-      category: { de: 'Facility Service & Hauswartung', en: 'Facility Service & Maintenance', fr: 'Facility Service & Conciergerie', it: `Assistenza e manutenzione della struttura` },
+      category: { de: 'Hauswartung & Gebäudeunterhalt', en: 'Facility Service & Maintenance', fr: 'Facility Service & Conciergerie', it: `Assistenza e manutenzione della struttura` },
       questions: [
         {
           q: { de: 'Was kostet Facility Service in der Schweiz?', en: 'How much does facility service cost in Switzerland?', fr: 'Combien coÃ»te le facility service en Suisse ?', it: `Quanto costa il servizio facility in Svizzera?` },

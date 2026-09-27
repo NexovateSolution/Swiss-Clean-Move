@@ -109,17 +109,10 @@ export default function SeoLandingPage({
           addressCountry: 'CH',
         },
         telephone: '+41 78 215 80 30',
-        url: `https://swisscleanmove.ch/${locale}/${pageKey}`,
+        url: `https://swisscleanmove.ch/${locale}/${pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}`,
         areaServed: {
           '@type': 'Place',
           name: `${city}, Seeland, Schweiz`,
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          reviewCount: '52',
-          bestRating: '5',
-          worstRating: '1'
         }
       }
     : {
@@ -133,13 +126,6 @@ export default function SeoLandingPage({
         areaServed: {
           '@type': 'City',
           name: city,
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          reviewCount: '28',
-          bestRating: '5',
-          worstRating: '1'
         }
       };
 

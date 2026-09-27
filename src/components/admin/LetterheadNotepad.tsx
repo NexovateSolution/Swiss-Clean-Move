@@ -175,7 +175,7 @@ export default function LetterheadNotepad() {
             
             <div className="flex flex-col gap-2 text-[11px] text-gray-700 font-medium">
               <div className="flex items-center gap-3 justify-end">
-                <span>+41 76 488 36 89</span>
+                
                 <div className="bg-[#001233] text-white p-1 rounded">
                   <Phone size={12} fill="currentColor" />
                 </div>

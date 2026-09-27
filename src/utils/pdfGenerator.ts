@@ -72,7 +72,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       receiptAppointment: 'Reinigungstermin',
       receiptPaymentTitle: 'ZAHLUNG',
       receiptPaymentDesc: documentType === 'invoice' ? 'Zahlbar innert 10 Tagen' : 'Barzahlung<br>nach Abschluss der Reinigung.',
-      receiptFooterServices: 'Reinigung • Umzug • Facility Services',
+      receiptFooterServices: 'Reinigung • Umzug • Hauswartung',
       receiptFooterThanks: documentType === 'invoice' ? 'Wir danken für Ihren Auftrag!' : 'Für Ihre Unterlagen – Danke für Ihren Auftrag!',
       receiptFeature1: 'Zuverlässig. Wir sind für Sie da.',
       receiptFeature2: 'Schweizer Qualität. Professionell & effizient.',
@@ -327,7 +327,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     }
 
     const fallbackDict: Record<string, any> = {
-      'Facility Services': { de: 'Facility Services', en: 'Facility Services', fr: 'Services généraux', it: 'Servizi di facility' },
+      'Facility Services': { de: 'Hauswartung & Gebäudeunterhalt', en: 'Facility Services', fr: 'Services généraux', it: 'Servizi di facility' },
       'shopRetail': { de: 'Laden-/Verkaufsflächenreinigung', en: 'Shop/Retail Cleaning', fr: 'Nettoyage commerce', it: 'Pulizia di negozi/negozi al dettaglio' },
       'salesFloor': { de: 'Verkaufsfläche', en: 'Sales floor', fr: 'Surface de vente', it: 'Piano vendite' },
       'oneTime': { de: 'Einmalig', en: 'One-Time', fr: 'Unique', it: 'Una volta' },
@@ -483,7 +483,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     cleanShuttersBlinds: { de: 'Storen / Rollläden', en: 'Shutters / Blinds', fr: 'Stores / Volets', it: `Persiane/persiane` },
     cleanCondition: { de: 'Zustand', en: 'Condition', fr: 'État', it: `Condizione` },
     cleanOutdoorArea: { de: 'Aussenbereich', en: 'Outdoor Area', fr: 'Espace Extérieur', it: `Area esterna` },
-    facilityServiceType: { de: 'Facility Service Art', en: 'Facility Service Type', fr: 'Type de Facility Service', it: `Tipo di servizio della struttura` },
+    facilityServiceType: { de: 'Hauswartung Art', en: 'Facility Service Type', fr: 'Type de Facility Service', it: `Tipo di servizio della struttura` },
     flexibility: { de: 'Flexibilität', en: 'Flexibility', fr: 'Flexibilité', it: `Flessibilità` },
     accessType: { de: 'Zugangsart', en: 'Access Type', fr: 'Type d\'Accès', it: `Tipo di accesso` },
     parkingOptions: { de: 'Parkmöglichkeiten', en: 'Parking Options', fr: 'Options de Stationnement', it: `Opzioni di parcheggio` },
@@ -953,7 +953,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           </tr>
           <tr>
             <td style="padding-right: 10px; padding-bottom: 5px;"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></td>
-            <td style="padding-bottom: 5px;">+41 78 215 80 30<br>+41 76 488 36 89</td>
+            <td style="padding-bottom: 5px;">+41 78 215 80 30</td>
           </tr>
           <tr>
             <td style="padding-right: 10px; padding-bottom: 5px;"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></td>
@@ -1337,7 +1337,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           </tr>
           <tr>
             <td><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></td>
-            <td>+41 78 215 80 30<br>+41 76 488 36 89</td>
+            <td>+41 78 215 80 30</td>
           </tr>
           <tr>
             <td><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></td>

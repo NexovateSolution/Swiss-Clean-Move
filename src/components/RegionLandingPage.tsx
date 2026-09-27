@@ -76,7 +76,7 @@ const SERVICE_LABELS: Record<string, Record<string, string>> = {
   bueroreinigung: { de: 'Büroreinigung', en: 'Office Cleaning', fr: 'Nettoyage de bureaux', it: `Pulizie d'ufficio` },
   fensterreinigung: { de: 'Fensterreinigung', en: 'Window Cleaning', fr: 'Nettoyage de vitres', it: `Pulizia delle finestre` },
   gastroReinigung: { de: 'Gastronomie Reinigung', en: 'Restaurant Cleaning', fr: 'Nettoyage gastronomie', it: `Pulizia del ristorante` },
-  facilityServices: { de: 'Facility Services', en: 'Facility Services', fr: 'Facility Services', it: `Servizi della struttura` },
+  facilityServices: { de: 'Hauswartung', en: 'Facility Services', fr: 'Facility Services', it: `Servizi della struttura` },
   hauswartung: { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: `Manutenzione della proprietà` },
   gebaeudeunterhalt: { de: 'Gebäudeunterhalt', en: 'Building Maintenance', fr: 'Entretien d\'immeuble', it: `Manutenzione dell'edificio` },
   entsorgung: { de: 'Entsorgung', en: 'Disposal', fr: 'Débarras', it: `Disposizione` },
@@ -90,7 +90,7 @@ function getCTAs(locale: string) {
     { label: locale === 'en' ? 'WhatsApp Inquiry' : locale === 'fr' ? 'Demande WhatsApp' : 'WhatsApp Anfrage senden', href: 'https://wa.me/41782158030', icon: MessageCircle, variant: 'secondary' as const },
     { label: locale === 'en' ? 'Request Cleaning' : locale === 'fr' ? 'Demander un nettoyage' : 'Reinigung anfragen', href: `/${locale}/form?service=cleaning`, icon: Sparkles, variant: 'outline' as const },
     { label: locale === 'en' ? 'Plan Move' : locale === 'fr' ? 'Planifier déménagement' : 'Umzug planen', href: `/${locale}/form?service=relocation`, icon: Truck, variant: 'outline' as const },
-    { label: locale === 'en' ? 'Request Facility Service' : locale === 'fr' ? 'Demander facility service' : 'Facility Service anfragen', href: `/${locale}/form?service=facility`, icon: Settings, variant: 'outline' as const },
+    { label: locale === 'en' ? 'Request Facility Service' : locale === 'fr' ? 'Demander facility service' : 'Hauswartung anfragen', href: `/${locale}/form?service=facility`, icon: Settings, variant: 'outline' as const },
   ];
 }
 
@@ -98,7 +98,7 @@ function getInternalLinks(locale: string) {
   return [
     { label: locale === 'en' ? 'Moving Switzerland' : locale === 'fr' ? 'Déménagement Suisse' : 'Umzug Schweiz', href: `/${locale}/umzug-schweiz` },
     { label: locale === 'en' ? 'Cleaning Switzerland' : locale === 'fr' ? 'Nettoyage Suisse' : 'Reinigungsfirma Schweiz', href: `/${locale}/reinigungsfirma-schweiz` },
-    { label: locale === 'en' ? 'Facility Services Switzerland' : locale === 'fr' ? 'Facility Services Suisse' : 'Facility Service Schweiz', href: `/${locale}/facility-service-schweiz` },
+    { label: locale === 'en' ? 'Facility Services Switzerland' : locale === 'fr' ? 'Facility Services Suisse' : 'Hauswartung Schweiz', href: `/${locale}/facility-service-schweiz` },
     { label: locale === 'en' ? 'Property Maintenance Switzerland' : locale === 'fr' ? 'Conciergerie Suisse' : 'Hauswartung Schweiz', href: `/${locale}/hauswartung-schweiz` },
     { label: locale === 'en' ? 'Move-out Cleaning Switzerland' : locale === 'fr' ? 'Nettoyage de fin de bail Suisse' : 'Umzugsreinigung Schweiz', href: `/${locale}/umzugsreinigung-schweiz` },
     { label: locale === 'en' ? 'FAQ' : locale === 'fr' ? 'FAQ' : 'Häufige Fragen (FAQ)', href: `/${locale}/faq` },

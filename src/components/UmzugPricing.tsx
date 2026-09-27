@@ -362,7 +362,7 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-swiss-body">
               <a href="tel:+41764883689" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>+41 76 488 36 89</span>
+                
               </a>
               <a href="mailto:info@swisscleanmove.ch" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
                 <Mail className="w-4 h-4" />

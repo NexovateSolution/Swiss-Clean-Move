@@ -23,11 +23,11 @@
   "home": {
     "services": {
       "facilityServices": {
-        "title": "Facility Services",
+        "title": "Hauswartung & Gebäudeunterhalt",
         "description": "Umfassende Reinigungslösungen für alle Arten von Immobilien und Unternehmen."
       },
       "title": "Unsere Dienstleistungen entdecken & kostenlose Offerte anfordern",
-      "subtitle": "Alles aus einer Hand: Umzug, Umzugsreinigung mit Abnahmegarantie und Facility Service – schnell, sauber und zuverlässig.",
+      "subtitle": "Alles aus einer Hand: Umzug, Umzugsreinigung mit Abnahmegarantie und Hauswartung & Gebäudeunterhalt – schnell, sauber und zuverlässig.",
       "viewAll": "Alle Services ansehen",
       "customSolution": "Sie benötigen eine individuelle Lösung? Wir passen unseren Service an Ihre Bedürfnisse an.",
       "houseCleaning": {
@@ -39,7 +39,7 @@
         "description": "Professionelle Wohnungsreinigungsdienstleistungen einschließlich Endreinigung mit Abnahmegarantie"
       },
       "stairwellCleaning": {
-        "title": "Facility Service Reinigung",
+        "title": "Hauswartung & Gebäudeunterhalt Reinigung",
         "description": "Regelmäßige Treppenhausreinigung für Mehrfamilienhäuser"
       },
       "officeCleaning": {
@@ -118,7 +118,7 @@
     "hero": {
       "badge": "",
       "title": "Ihre Reinigungsfirma & Umzugsfirma für die ganze Schweiz",
-      "subtitle": "Professionelle Reinigungs-, Umzugs- & Facility Services für Privatkunden, Unternehmen und Verwaltungen.",
+      "subtitle": "Professionelle Reinigungs-, Umzugs- & Hauswartung & Gebäudeunterhalt für Privatkunden, Unternehmen und Verwaltungen.",
       "subtitle2": "Effizient organisiert. Zuverlässig ausgeführt. Nach Schweizer Qualitätsstandard.",
       "slides": {
         "transport": {
@@ -193,7 +193,7 @@
     },
     "cta": {
       "badge": "Jetzt starten",
-      "title": "Bereit für professionelle Umzugs-, Reinigungs- und Facility Services?",
+      "title": "Bereit für professionelle Umzugs-, Reinigungs- und Hauswartung & Gebäudeunterhalt?",
       "subtitle": "Kontaktieren Sie uns noch heute für ein kostenloses Angebot",
       "button": "Kostenloses Angebot",
       "trust": {
@@ -203,7 +203,7 @@
       }
     },
     "servicesCta": {
-      "title": "Bereit für professionelle Umzugs-, Reinigungs- und Facility Services?",
+      "title": "Bereit für professionelle Umzugs-, Reinigungs- und Hauswartung & Gebäudeunterhalt?",
       "subtitle": "Kontaktieren Sie uns noch heute für ein kostenloses und unverbindliches Angebot"
     },
     "trustIndicators": {
@@ -243,14 +243,14 @@
     "authority": {
       "umzug": "Ob privater Wohnungswechsel oder Firmenumzug: Wir organisieren Ihren Umzug in der ganzen Schweiz professionell, pünktlich und stressfrei.",
       "reinigung": "Von der regelmässigen Unterhaltsreinigung bis zur Spezialreinigung – wir sorgen schweizweit für strahlende Sauberkeit in Ihren Immobilien.",
-      "facility": "Unser umfassendes Facility Service für Liegenschaften und Geschäftskunden. Wir kümmern uns um Hauswartung, Technik und Unterhalt.",
+      "facility": "Unser umfassendes Hauswartung & Gebäudeunterhalt für Liegenschaften und Geschäftskunden. Wir kümmern uns um Hauswartung, Technik und Unterhalt.",
       "umzugsreinigung": "Stressfreie Wohnungsabgabe dank unserer professionellen Endreinigung mit 100% Abnahmegarantie – in allen Schweizer Kantonen.",
       "umzugTitle": "Umzugsfirma Schweiz",
       "reinigungTitle": "Reinigungsfirma Schweiz",
-      "facilityTitle": "Facility Service & Hauswartung",
+      "facilityTitle": "Hauswartung & Gebäudeunterhalt & Hauswartung",
       "umzugsreinigungTitle": "Umzugsreinigung Schweiz",
       "learnMore": "Mehr erfahren",
-      "facilityServices": "Facility Services",
+      "facilityServices": "Hauswartung & Gebäudeunterhalt",
       "hauswartung": "Hauswartung"
     },
     "newDesign": {
@@ -280,7 +280,7 @@
         "reinigung_title": "Reinigung",
         "umzug_title": "Umzug & Transport",
         "entsorgung_title": "Entsorgung & Räumung",
-        "facility_title": "Hauswartung & Facility Service",
+        "facility_title": "Hauswartung & Hauswartung & Gebäudeunterhalt",
         "haushalt_title": "Haushaltshilfe"
       },
       "reviews": {
@@ -306,7 +306,7 @@
       },
       "cta": {
         "title": "Jetzt kostenlose Offerte anfordern",
-        "subtitle": "Für Reinigung, Umzug, Entsorgung und Facility Service.",
+        "subtitle": "Für Reinigung, Umzug, Entsorgung und Hauswartung & Gebäudeunterhalt.",
         "whatsapp": "Jetzt schreiben",
         "hours": "Mo-Sa 7-20 Uhr"
       },
@@ -577,7 +577,7 @@
     },
     "story": {
       "title": "Über uns",
-      "description": "SwissCleanMove ist Ihr professioneller Partner für Umzug, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung und Facility Services in der Schweiz.\n\nMit Sitz in Biel/Bienne betreuen wir Privatkunden, Unternehmen und Verwaltungen in Bern, Zürich und der ganzen Schweiz mit zuverlässigen Dienstleistungen nach Schweizer Qualitätsstandards.\n\nProfessionell. Zuverlässig. Schweizweit.",
+      "description": "SwissCleanMove ist Ihr professioneller Partner für Umzug, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung und Hauswartung & Gebäudeunterhalt in der Schweiz.\n\nMit Sitz in Biel/Bienne betreuen wir Privatkunden, Unternehmen und Verwaltungen in Bern, Zürich und der ganzen Schweiz mit zuverlässigen Dienstleistungen nach Schweizer Qualitätsstandards.\n\nProfessionell. Zuverlässig. Schweizweit.",
       "qualityBadge": "Schweizer Qualität seit 2024",
       "teamImage": "Unser professionelles Team"
     },
@@ -623,7 +623,7 @@
       "benefits": {
         "oneSource": {
           "title": "Alles aus einer Hand",
-          "description": "Umzug, Reinigung, Entsorgung und Facility Services — professionell koordiniert von einem zuverlässigen Partner."
+          "description": "Umzug, Reinigung, Entsorgung und Hauswartung & Gebäudeunterhalt — professionell koordiniert von einem zuverlässigen Partner."
         },
         "handoverGuarantee": {
           "title": "Endreinigung mit Abnahmegarantie",
@@ -650,7 +650,7 @@
         "moving": "Umzug",
         "moveOutCleaning": "Endreinigung",
         "maintenanceCleaning": "Unterhaltsreinigung",
-        "facilityServices": "Facility Services",
+        "facilityServices": "Hauswartung & Gebäudeunterhalt",
         "propertyMaintenance": "Liegenschaftsunterhalt",
         "constructionCleaning": "Baureinigung",
         "restaurantCleaning": "Restaurant- & Gastronomiereinigung",
@@ -999,7 +999,7 @@
         "serviceTypes": {
           "maintenanceCleaning": "Unterhaltsreinigung (regelmäßig)",
           "propertyMaintenance": "Hauswartung",
-          "facilityServices": "Facility Services",
+          "facilityServices": "Hauswartung & Gebäudeunterhalt",
           "constructionCleaning": "Baureinigung",
           "specialCleaning": "Spezialreinigung",
           "gastronomyCleaning": "Gastronomiereinigung (Restaurant, Küche)",
@@ -4069,7 +4069,7 @@
           "base": "Gastronomiereinigung Grundpreis"
         },
         "facilityService": {
-          "base": "Facility Services Grundpreis"
+          "base": "Hauswartung & Gebäudeunterhalt Grundpreis"
         },
         "surcharge": {
           "floor": "Etagenzuschlag (ohne Lift)",
@@ -4424,7 +4424,7 @@
         "specialCleaning": "Spezialreinigung",
         "comboService": "Kombi-Service",
         "householdHelping": "Haushaltshilfe",
-        "facilityServices": "Facility Services"
+        "facilityServices": "Hauswartung & Gebäudeunterhalt"
       },
       "actions": {
         "addNewClient": "Neuen Kunden hinzufügen",
@@ -4792,7 +4792,7 @@
         "specialCleaning": "Spezialreinigung",
         "comboService": "Kombi-Service",
         "householdHelping": "Haushaltshilfe",
-        "facilityServices": "Facility Services"
+        "facilityServices": "Hauswartung & Gebäudeunterhalt"
       }
     },
     "sidebar": {
@@ -5342,7 +5342,7 @@
   },
   "regions": {
     "title": "Serviceregionen",
-    "subtitle": "SwissCleanMove bietet professionelle Umzug, Reinigung und Facility Services in Biel/Bienne, Bern, Zürich und in der ganzen Schweiz.",
+    "subtitle": "SwissCleanMove bietet professionelle Umzug, Reinigung und Hauswartung & Gebäudeunterhalt in Biel/Bienne, Bern, Zürich und in der ganzen Schweiz.",
     "coverageAreas": "Unsere Abdeckungsgebiete",
     "citiesCount": "50+ Städte",
     "citiesDesc": "Wir bedienen über 50 Städte in der ganzen Schweiz",
@@ -5520,7 +5520,7 @@
       },
       "h1": "Reinigungsfirma & Umzug Genf",
       "introParagraphs": [
-        "SwissCleanMove ist Ihr zuverlässiger Partner in Genf für Umzüge, Endreinigungen und Facility Services."
+        "SwissCleanMove ist Ihr zuverlässiger Partner in Genf für Umzüge, Endreinigungen und Hauswartung & Gebäudeunterhalt."
       ],
       "faqs": [
         {
@@ -5654,14 +5654,14 @@
       "pricing": "Preise & Zahlung",
       "umzugsreinigung": "Umzugsreinigung",
       "hauswartung": "Hauswartung",
-      "facility": "Facility Services",
+      "facility": "Hauswartung & Gebäudeunterhalt",
       "guarantees": "Garantien & Versicherungen"
     },
     "questions": {
       "general": [
         {
           "question": "Ist SwissCleanMove in der ganzen Schweiz tätig?",
-          "answer": "Ja, wir bieten unsere Dienstleistungen (Umzug, Reinigung, Facility Services) schweizweit an, mit Schwerpunkten im Seeland, Bern, Zürich, Basel und weiteren Regionen."
+          "answer": "Ja, wir bieten unsere Dienstleistungen (Umzug, Reinigung, Hauswartung & Gebäudeunterhalt) schweizweit an, mit Schwerpunkten im Seeland, Bern, Zürich, Basel und weiteren Regionen."
         },
         {
           "question": "Wie kann ich eine Offerte einholen?",
@@ -5838,15 +5838,15 @@
       ],
       "facility": [
         {
-          "question": "Was sind Facility Services?",
-          "answer": "Facility Services umfassen das ganzheitliche Management und den Unterhalt von Gebäuden, inkl. Reinigung, Technik, Sicherheit und Aussenanlagen."
+          "question": "Was sind Hauswartung & Gebäudeunterhalt?",
+          "answer": "Hauswartung & Gebäudeunterhalt umfassen das ganzheitliche Management und den Unterhalt von Gebäuden, inkl. Reinigung, Technik, Sicherheit und Aussenanlagen."
         },
         {
-          "question": "Bieten Sie Facility Services für Grossunternehmen an?",
-          "answer": "Ja, wir haben die Kapazität und Erfahrung, auch für grosse Büro- und Gewerbekomplexe massgeschneiderte Facility Services anzubieten."
+          "question": "Bieten Sie Hauswartung & Gebäudeunterhalt für Grossunternehmen an?",
+          "answer": "Ja, wir haben die Kapazität und Erfahrung, auch für grosse Büro- und Gewerbekomplexe massgeschneiderte Hauswartung & Gebäudeunterhalt anzubieten."
         },
         {
-          "question": "Kann ich einzelne Services aus dem Facility Service buchen?",
+          "question": "Kann ich einzelne Services aus dem Hauswartung & Gebäudeunterhalt buchen?",
           "answer": "Selbstverständlich. Sie können aus unserem Portfolio flexibel die Dienstleistungen wählen, die Sie benötigen."
         },
         {
@@ -5858,7 +5858,7 @@
           "answer": "Ja, wir analysieren Ihre Liegenschaft und erstellen einen massgeschneiderten Unterhalts- und Wartungsplan."
         },
         {
-          "question": "Wie stellen Sie die Qualität der Facility Services sicher?",
+          "question": "Wie stellen Sie die Qualität der Hauswartung & Gebäudeunterhalt sicher?",
           "answer": "Durch regelmässige Qualitätskontrollen, geschultes Personal und transparente Dokumentation unserer Leistungen."
         }
       ],
@@ -5939,7 +5939,7 @@
     },
     "faq": {
       "title": "FAQ | Fragen zu Umzug & Reinigung – SwissCleanMove Schweiz",
-      "description": "Häufig gestellte Fragen zu unseren Umzugsdienstleistungen, Endreinigungen mit Abnahmegarantie, Unterhaltsreinigung, Facility Service und Preisen."
+      "description": "Häufig gestellte Fragen zu unseren Umzugsdienstleistungen, Endreinigungen mit Abnahmegarantie, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Preisen."
     },
     "freeQuote": {
       "title": "Free Quote | Moving & Cleaning Switzerland – SwissCleanMove",
@@ -6293,7 +6293,7 @@
           "body": "Nach einem Neu- oder Umbau ist die Vorfreude gross, aber die Baustelle meist voller Bohrstaub, Farbspritzer und Zementresten. Unsere professionelle Baureinigung gliedert sich in die Baugrobreinigung (während der Bauphase) und die Baufeinreinigung (vor dem Einzug). Wir entfernen den feinen Baustaub von allen Oberflächen, befreien Fliesen von Zementschleier und reinigen neu installierte Sanitäranlagen schonsend, ohne Kratzer zu hinterlassen. Dieser Service richtet sich an Architekten, Bauherren und Eigentümer im Seeland. Kunden wählen SwissCleanMove, weil wir flexibel auf Bauverzögerungen reagieren können und die Immobilie pünktlich in einem schlüsselfertigen, bezugsbereiten Zustand übergeben. Wir legen grössten Wert darauf, dass diese Arbeiten gemäss den höchsten Schweizer Branchenstandards ausgeführt werden. Unsere langjährige Erfahrung in dieser Region zeigt, dass eine detaillierte Vorplanung und der Einsatz von geschultem Fachpersonal der Schlüssel zum Erfolg sind. Dabei achten wir stets auf eine umweltschonende Arbeitsweise und den Schutz Ihrer Immobilien und Möbel. Wir garantieren Ihnen absolute Transparenz und eine reibungslose Ausführung, auf die Sie sich zu 100% verlassen können."
         },
         {
-          "heading": "Hauswartung und Facility Services",
+          "heading": "Hauswartung und Hauswartung & Gebäudeunterhalt",
           "body": "Die ganzheitliche Betreuung einer Liegenschaft erfordert Expertise in verschiedenen Bereichen. Unsere Hauswartung umfasst die regelmässige Treppenhausreinigung, die Kontrolle der Haustechnik (Heizung, Lüftung), das Auswechseln von Leuchtmitteln und die Pflege der Aussenanlagen inklusive Winterdienst (Schneeräumung und Salzen). Dieser Service richtet sich an Immobilienverwaltungen, Stockwerkeigentümergemeinschaften und Besitzer von Mehrfamilienhäusern in der Region Biel. Die Zusammenarbeit mit uns lohnt sich, weil wir durch proaktive Kontrollen kleine Mängel beheben, bevor sie zu teuren Reparaturen werden, und den Mietern als freundlicher Ansprechpartner vor Ort zur Verfügung stehen. Wir legen grössten Wert darauf, dass diese Arbeiten gemäss den höchsten Schweizer Branchenstandards ausgeführt werden. Unsere langjährige Erfahrung in dieser Region zeigt, dass eine detaillierte Vorplanung und der Einsatz von geschultem Fachpersonal der Schlüssel zum Erfolg sind. Dabei achten wir stets auf eine umweltschonende Arbeitsweise und den Schutz Ihrer Immobilien und Möbel. Wir garantieren Ihnen absolute Transparenz und eine reibungslose Ausführung, auf die Sie sich zu 100% verlassen können."
         },
         {
@@ -6864,7 +6864,7 @@
       "h1": "Umzugsfirma Brügg – Umzug, Umzugsreinigung & Reinigung in Brügg",
       "heroSubtitle": "Suchen Sie ein zuverlässiges Umzugsunternehmen in Brügg? Wir sind Ihr Partner vor Ort.",
       "ctaSoft": "Unverbindlich anfragen",
-      "intro": "Willkommen bei SwissCleanMove. Planen Sie einen Umzug in, nach oder von Brügg? Ein Ortswechsel erfordert viel Zeit, Kraft und logistisches Geschick. Als Ihre lokale Umzugsfirma aus dem Seeland steht Ihnen SwissCleanMove bei jedem Schritt zur Seite. Wir bieten Ihnen professionelle Umzüge für private Haushalte und Firmen – zuverlässig, sorgfältig und zu absolut fairen Preisen. Wir kennen die Region Brügg und das gesamte Seeland bestens und gewährleisten dadurch kurze Anfahrtswege und eine effiziente Durchführung. Versteckte Kosten gibt es bei uns nicht: Sie erhalten transparente Pauschalpreise ab CHF 490, die bereits den Zügelwagen (3.5t oder 7.5t), 2 bis 4 erfahrene Zügelhelfer und eine vollumfängliche Transportversicherung beinhalten. Ganz gleich, ob Sie ein Einfamilienhaus räumen, eine kleine Wohnung wechseln oder mit Ihrem Büro umziehen – wir bringen Ihr Hab und Gut sicher ans Ziel. Wir sind nicht nur erfahren, sondern auch ausserordentlich flexibel: Bei dringendem Bedarf können wir in Brügg oft schon innerhalb von 24 Stunden für Sie im Einsatz sein. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Planen Sie einen Umzug in, nach oder von Brügg? Ein Ortswechsel erfordert viel Zeit, Kraft und logistisches Geschick. Als Ihre lokale Umzugsfirma aus dem Seeland steht Ihnen SwissCleanMove bei jedem Schritt zur Seite. Wir bieten Ihnen professionelle Umzüge für private Haushalte und Firmen – zuverlässig, sorgfältig und zu absolut fairen Preisen. Wir kennen die Region Brügg und das gesamte Seeland bestens und gewährleisten dadurch kurze Anfahrtswege und eine effiziente Durchführung. Versteckte Kosten gibt es bei uns nicht: Sie erhalten transparente Pauschalpreise ab CHF 490, die bereits den Zügelwagen (3.5t oder 7.5t), 2 bis 4 erfahrene Zügelhelfer und eine vollumfängliche Transportversicherung beinhalten. Ganz gleich, ob Sie ein Einfamilienhaus räumen, eine kleine Wohnung wechseln oder mit Ihrem Büro umziehen – wir bringen Ihr Hab und Gut sicher ans Ziel. Wir sind nicht nur erfahren, sondern auch ausserordentlich flexibel: Bei dringendem Bedarf können wir in Brügg oft schon innerhalb von 24 Stunden für Sie im Einsatz sein. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Professioneller Umzugsservice in Brügg",
@@ -7834,7 +7834,7 @@
       "h1": "Endreinigungsfirma Lyss – Endreinigung, Wohnungsreinigung & Reinigung in Lyss",
       "heroSubtitle": "Stressfreie Wohnungsübergabe in Lyss: Wir garantieren die reibungslose Abnahme Ihrer Wohnung.",
       "ctaSoft": "Schnelle Rückmeldung innerhalb 24h",
-      "intro": "Willkommen bei SwissCleanMove. Der Umzug ist geschafft, doch die alte Wohnung in Lyss wartet noch auf die gefürchtete Endreinigung? Sparen Sie sich Zeit, Schmutz und Nerven – übergeben Sie diese anspruchsvolle Aufgabe an die Profis von SwissCleanMove. Wir sind Ihr lokaler Experte für Wohnungsreinigungen mit 100% Abnahmegarantie in Lyss und dem umliegenden Seeland. Schweizer Immobilienverwaltungen sind bei der Übergabe extrem streng. Ein übersehener Kalkfleck im Bad oder schmutzige Fensterfälze können dazu führen, dass die Abnahme verweigert und die Kaution blockiert wird. Mit uns gehen Sie kein Risiko ein: Wir reinigen Ihre Wohnung tiefgründig und garantieren, dass sie beim ersten Termin abgenommen wird. Sollte doch etwas beanstandet werden, bessert unser Reinigungsteam vor Ort sofort und kostenlos nach. Wir bieten Ihnen transparente, fixe Pauschalpreise ab CHF 350 ohne versteckte Kosten. Eine Reinigung dauert in der Regel 4 bis 8 Stunden. Verlassen Sie sich auf ein etabliertes, régionales Team aus dem Seeland, das auch für kurzfristige Einsätze (innerhalb 24h) in Lyss zur Verfügung steht. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Der Umzug ist geschafft, doch die alte Wohnung in Lyss wartet noch auf die gefürchtete Endreinigung? Sparen Sie sich Zeit, Schmutz und Nerven – übergeben Sie diese anspruchsvolle Aufgabe an die Profis von SwissCleanMove. Wir sind Ihr lokaler Experte für Wohnungsreinigungen mit 100% Abnahmegarantie in Lyss und dem umliegenden Seeland. Schweizer Immobilienverwaltungen sind bei der Übergabe extrem streng. Ein übersehener Kalkfleck im Bad oder schmutzige Fensterfälze können dazu führen, dass die Abnahme verweigert und die Kaution blockiert wird. Mit uns gehen Sie kein Risiko ein: Wir reinigen Ihre Wohnung tiefgründig und garantieren, dass sie beim ersten Termin abgenommen wird. Sollte doch etwas beanstandet werden, bessert unser Reinigungsteam vor Ort sofort und kostenlos nach. Wir bieten Ihnen transparente, fixe Pauschalpreise ab CHF 350 ohne versteckte Kosten. Eine Reinigung dauert in der Regel 4 bis 8 Stunden. Verlassen Sie sich auf ein etabliertes, régionales Team aus dem Seeland, das auch für kurzfristige Einsätze (innerhalb 24h) in Lyss zur Verfügung steht. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Ihr Reinigungs-Partner für eine sorgenfreie Übergabe in Lyss",
@@ -8792,7 +8792,7 @@
       "h1": "Reinigungsfirma Nidau – Reinigung, Wohnungsreinigung & Reinigung in Nidau",
       "heroSubtitle": "Regelmässige Unterhaltsreinigung in Nidau für Privathaushalte und Unternehmen.",
       "ctaSoft": "Offerte in 2 Minuten sichern",
-      "intro": "Willkommen bei SwissCleanMove. Suchen Sie eine zuverlässige Reinigungsfirma in Nidau, die höchste Schweizer Qualitätsstandards mit lokaler Flexibilität verbindet? SwissCleanMove ist Ihr Partner für alle Reinigungsanliegen. Wir betreuen Privathaushalte, Büros, Gewerbeflächen und Liegenschaften in Nidau und dem gesamten Seeland. Seit 2024 überzeugen wir durch Diskretion, Gründlichkeit und umweltbewusstes Arbeiten. Ob Sie eine wöchentliche Haushaltshilfe wünschen, eine professionelle Unterhaltsreinigung für Ihre Geschäftsräume benötigen oder eine Bauendreinigung nach einer Renovation ansteht – wir haben das richtige Personal und das passende Equipment. Wir arbeiten mit transparenten, fairen Pauschal- oder Stundenpreisen ohne versteckte Kosten. Unsere Reinigungskräfte sind fest angestellt, versichert und bringen jahrelange Erfahrung mit. Wir passen uns Ihrem Terminplan an – sei es früh am Morgen, spät am Abend oder flexibel am Wochenende. Überlassen Sie die Sauberkeit den Profis und geniessen Sie mehr Freizeit am Bielersee oder konzentrieren Sie sich auf Ihr Kerngeschäft. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Suchen Sie eine zuverlässige Reinigungsfirma in Nidau, die höchste Schweizer Qualitätsstandards mit lokaler Flexibilität verbindet? SwissCleanMove ist Ihr Partner für alle Reinigungsanliegen. Wir betreuen Privathaushalte, Büros, Gewerbeflächen und Liegenschaften in Nidau und dem gesamten Seeland. Seit 2024 überzeugen wir durch Diskretion, Gründlichkeit und umweltbewusstes Arbeiten. Ob Sie eine wöchentliche Haushaltshilfe wünschen, eine professionelle Unterhaltsreinigung für Ihre Geschäftsräume benötigen oder eine Bauendreinigung nach einer Renovation ansteht – wir haben das richtige Personal und das passende Equipment. Wir arbeiten mit transparenten, fairen Pauschal- oder Stundenpreisen ohne versteckte Kosten. Unsere Reinigungskräfte sind fest angestellt, versichert und bringen jahrelange Erfahrung mit. Wir passen uns Ihrem Terminplan an – sei es früh am Morgen, spät am Abend oder flexibel am Wochenende. Überlassen Sie die Sauberkeit den Profis und geniessen Sie mehr Freizeit am Bielersee oder konzentrieren Sie sich auf Ihr Kerngeschäft. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Professionelle Reinigung in Nidau",
@@ -9758,7 +9758,7 @@
       "h1": "Reinigungsfirma Pieterlen – Reinigung, Wohnungsreinigung & Reinigung in Pieterlen",
       "heroSubtitle": "Ihre Immobilie in Pieterlen in besten Händen: Wir übernehmen die regelmässige Pflege.",
       "ctaSoft": "Schnelle Rückmeldung innerhalb 24h",
-      "intro": "Willkommen bei SwissCleanMove. Eine saubere und gepflegte Umgebung trägt massgeblich zu unserem Wohlbefinden bei. Ob zu Hause in Pieterlen oder am Arbeitsplatz – Sauberkeit ist das Aushängeschild jedes Gebäudes. SwissCleanMove ist Ihr verlässlicher, lokaler Partner für professionelle Reinigungsdienstleistungen in Pieterlen und der gesamten Region Seeland. Unser engagiertes Team unterstützt Privathaushalte, Unternehmen und Hausverwaltungen mit massgeschneiderten Reinigungslösungen. Wir setzen auf Diskretion, Zuverlässigkeit und höchste Schweizer Qualitätsstandards. Von der wöchentlichen Wohnungsreinigung über die tägliche Unterhaltsreinigung in Büros bis hin zur anspruchsvollen Bau- und Fensterreinigung – wir übernehmen die schwere Arbeit für Sie. Bei uns gibt es keine versteckten Kosten: Sie profitieren von transparenten Pauschal- oder fairen Stundenpreisen. Dank unserer lokalen Verankerung im Seeland sind wir schnell vor Ort, extrem flexibel und können auch auf kurzfristige Anfragen reagieren. Lehnen Sie sich zurück und geniessen Sie mehr Freizeit in Pieterlen – wir sorgen für makellose Sauberkeit. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Eine saubere und gepflegte Umgebung trägt massgeblich zu unserem Wohlbefinden bei. Ob zu Hause in Pieterlen oder am Arbeitsplatz – Sauberkeit ist das Aushängeschild jedes Gebäudes. SwissCleanMove ist Ihr verlässlicher, lokaler Partner für professionelle Reinigungsdienstleistungen in Pieterlen und der gesamten Region Seeland. Unser engagiertes Team unterstützt Privathaushalte, Unternehmen und Hausverwaltungen mit massgeschneiderten Reinigungslösungen. Wir setzen auf Diskretion, Zuverlässigkeit und höchste Schweizer Qualitätsstandards. Von der wöchentlichen Wohnungsreinigung über die tägliche Unterhaltsreinigung in Büros bis hin zur anspruchsvollen Bau- und Fensterreinigung – wir übernehmen die schwere Arbeit für Sie. Bei uns gibt es keine versteckten Kosten: Sie profitieren von transparenten Pauschal- oder fairen Stundenpreisen. Dank unserer lokalen Verankerung im Seeland sind wir schnell vor Ort, extrem flexibel und können auch auf kurzfristige Anfragen reagieren. Lehnen Sie sich zurück und geniessen Sie mehr Freizeit in Pieterlen – wir sorgen für makellose Sauberkeit. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Warum SwissCleanMove die beste Wahl für Pieterlen ist",
@@ -9945,7 +9945,7 @@
     "umzugBern": {
       "meta": {
         "title": "Umzugsfirma Bern | SwissCleanMove",
-        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Bern. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Bern. Umzug, Reinigung & Hauswartung & Gebäudeunterhalt. Jetzt kostenlose Offerte anfordern."
       },
       "badge": "Umzugsfirma Bern",
       "h1": "Umzugsfirma Bern – Umzug, Reinigung & Zügelservice",
@@ -10146,7 +10146,7 @@
     "umzugZurich": {
       "meta": {
         "title": "Umzugsfirma Zürich | SwissCleanMove",
-        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Zürich. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Zürich. Umzug, Reinigung & Hauswartung & Gebäudeunterhalt. Jetzt kostenlose Offerte anfordern."
       },
       "badge": "Umzugsfirma Zürich",
       "h1": "Umzugsfirma Zürich – Umzug, Reinigung & Zügelservice",
@@ -10347,7 +10347,7 @@
     "umzugSolothurn": {
       "meta": {
         "title": "Umzugsfirma Solothurn | SwissCleanMove",
-        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Solothurn. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Solothurn. Umzug, Reinigung & Hauswartung & Gebäudeunterhalt. Jetzt kostenlose Offerte anfordern."
       },
       "badge": "Umzugsfirma Solothurn",
       "h1": "Umzugsfirma Solothurn – Umzug, Reinigung & Zügelservice",
@@ -10552,7 +10552,7 @@
     "umzugNeuchatel": {
       "meta": {
         "title": "Umzugsfirma Neuenburg | SwissCleanMove",
-        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Neuenburg. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Neuenburg. Umzug, Reinigung & Hauswartung & Gebäudeunterhalt. Jetzt kostenlose Offerte anfordern."
       },
       "badge": "Umzugsfirma Neuenburg",
       "h1": "Umzugsfirma Neuenburg – Umzug, Reinigung & Zügelservice",
@@ -10745,13 +10745,13 @@
     "umzugFribourg": {
       "meta": {
         "title": "Umzugsfirma Freiburg | SwissCleanMove",
-        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Freiburg. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Freiburg. Umzug, Reinigung & Hauswartung & Gebäudeunterhalt. Jetzt kostenlose Offerte anfordern."
       },
       "badge": "Umzugsfirma Freiburg",
       "h1": "Umzugsfirma Freiburg – Umzug, Reinigung & Zügelservice",
       "heroSubtitle": "Professionelle Umzüge in Freiburg – sorgfältig geplant, effizient durchgeführt und fair bepreist.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove. Der Kanton Freiburg (Fribourg), als wichtiges Bindeglied zwischen der Deutschschweiz und der Romandie, verzeichnet eine hohe Zuzugsrate. Planen Sie einen Umzug innerhalb dieses zweisprachigen Kantons oder einen Wohnungswechsel über die Kantonsgrenzen hinweg? Ein Umzug verlangt nicht nur körperlichen Einsatz, sondern auch perfekte Logistik. SwissCleanMove ist Ihr verlässlicher Umzugspartner für den gesamten Kanton Fribourg. Wir begleiten Privatpersonen, Familien und Unternehmen bei ihrem Standortwechsel. Unser erfahrenes Team nimmt Ihnen den gesamten Stress ab – von der ersten gepackten Kiste bis zum Aufbau des letzten Möbels. Wir arbeiten mit absolut transparenten und garantierten Pauschalpreisen. Bei uns sind die professionellen Zügelmänner, unsere luftgefederten Transportwagen sowie eine vollumfängliche Transport- und Betriebshaftpflichtversicherung immer im Preis inbegriffen. Egal, ob Ihr neues Zuhause im mittelalterlichen Stadtkern von Fribourg, in Bulle, Murten oder Estavayer-le-Lac liegt – wir sorgen für einen reibungslosen Ablauf. Wir reagieren flexibel auf Ihre Wünsche und bieten bei Notfällen auch schnelle Einsätze an. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Der Kanton Freiburg (Fribourg), als wichtiges Bindeglied zwischen der Deutschschweiz und der Romandie, verzeichnet eine hohe Zuzugsrate. Planen Sie einen Umzug innerhalb dieses zweisprachigen Kantons oder einen Wohnungswechsel über die Kantonsgrenzen hinweg? Ein Umzug verlangt nicht nur körperlichen Einsatz, sondern auch perfekte Logistik. SwissCleanMove ist Ihr verlässlicher Umzugspartner für den gesamten Kanton Fribourg. Wir begleiten Privatpersonen, Familien und Unternehmen bei ihrem Standortwechsel. Unser erfahrenes Team nimmt Ihnen den gesamten Stress ab – von der ersten gepackten Kiste bis zum Aufbau des letzten Möbels. Wir arbeiten mit absolut transparenten und garantierten Pauschalpreisen. Bei uns sind die professionellen Zügelmänner, unsere luftgefederten Transportwagen sowie eine vollumfängliche Transport- und Betriebshaftpflichtversicherung immer im Preis inbegriffen. Egal, ob Ihr neues Zuhause im mittelalterlichen Stadtkern von Fribourg, in Bulle, Murten oder Estavayer-le-Lac liegt – wir sorgen für einen reibungslosen Ablauf. Wir reagieren flexibel auf Ihre Wünsche und bieten bei Notfällen auch schnelle Einsätze an. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster Schweizer Qualität, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Professioneller Umzugsservice im Kanton Fribourg",
@@ -10938,7 +10938,7 @@
     "umzugBasel": {
       "meta": {
         "title": "Umzugsfirma Basel | SwissCleanMove",
-        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Basel. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Basel. Umzug, Reinigung & Hauswartung & Gebäudeunterhalt. Jetzt kostenlose Offerte anfordern."
       },
       "badge": "Umzugsfirma Basel",
       "h1": "Umzugsfirma Basel – Umzug, Reinigung & Zügelservice",
@@ -11131,7 +11131,7 @@
     "umzugSchweiz": {
       "meta": {
         "title": "Umzugsfirma Schweiz | SwissCleanMove",
-        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Schweiz. Umzug, Reinigung & Facility Services. Jetzt kostenlose Offerte anfordern."
+        "description": "SwissCleanMove – Ihre professionelle Umzugsfirma in Schweiz. Umzug, Reinigung & Hauswartung & Gebäudeunterhalt. Jetzt kostenlose Offerte anfordern."
       },
       "badge": "Umzugsfirma Schweiz",
       "h1": "Umzugsfirma Schweiz – Umzug, Reinigung & Zügelservice",
@@ -11330,7 +11330,7 @@
       "h1": "Haushaltshilfe & Putzfrau in Biel und Seeland",
       "heroSubtitle": "SwissCleanMove bietet zuverlässige Haushaltshilfe, regelmässige Wohnungsreinigung und professionelle Privatreinigung für Privatkunden, Familien und Senioren.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für private Haushaltshilfe in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Führen eines Haushalts neben Beruf und Familie ist eine enorme Herausforderung. Wir nehmen Ihnen den Stress und schenken Ihnen wertvolle Freizeit zurück. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Mit über 500 regelmässig betreuten Haushalten im Raum Biel sind wir der Marktführer für private Haushaltsdienstleistungen. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für private Haushaltshilfe in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Führen eines Haushalts neben Beruf und Familie ist eine enorme Herausforderung. Wir nehmen Ihnen den Stress und schenken Ihnen wertvolle Freizeit zurück. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Mit über 500 regelmässig betreuten Haushalten im Raum Biel sind wir der Marktführer für private Haushaltsdienstleistungen. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum private Haushaltshilfe in Biel/Bienne und das gesamte Seeland?",
@@ -11497,142 +11497,121 @@
     },
     "reinigungsfirmaBiel": {
       "meta": {
-        "title": "Reinigungsfirma Biel | Professionelle Reinigung mit Schweizer Qualität | SwissCleanMove",
-        "description": "SwissCleanMove ist Ihre Reinigungsfirma in Biel/Bienne. Professionelle Reinigung, Unterhaltsreinigung und Gebäudereinigung im Seeland. Jetzt kostenlose Offerte."
+        "title": "Reinigungsfirma Biel | Reinigung & Hauswartung | SwissCleanMove",
+        "description": "Professionelle Reinigungsfirma in Biel und im Seeland für Haushalte, Büros, Praxen, Umzugsreinigungen und Hauswartung. Kostenlose Offerte anfordern."
       },
-      "badge": "Reinigungsfirma Biel & Seeland",
-      "h1": "Reinigungsfirma Biel — Ihre professionelle Reinigungsfirma im Seeland",
-      "heroSubtitle": "SwissCleanMove ist Ihre lokale Reinigungsfirma in Biel/Bienne. Zuverlässig, professionell und nach Schweizer Qualitätsstandard — für Privatkunden, Unternehmen und Verwaltungen.",
-      "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für professionelle Reinigungsdienstleistungen in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Eine saubere Umgebung fördert die Produktivität im Büro und das Wohlbefinden zu Hause. Vertrauen Sie der führenden Reinigungsfirma in Biel. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Täglich reinigen unsere Teams über 10'000 Quadratmeter Fläche im gesamten Seeland. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.\n\nAls führende Reinigungsfirma in Biel/Bienne und dem gesamten Seeland bieten wir Ihnen massgeschneiderte Dienstleistungen. Egal ob Sie eine professionelle Gebäudereinigung, Wohnungsreinigung oder Privatreinigung in Biel benötigen – wir sind Ihr Ansprechpartner. Unser Angebot umfasst zudem zuverlässige Haushaltshilfe, regelmässige Unterhaltsreinigung und Büroreinigung für Unternehmen. Für streifenfreie Sicht sorgen wir mit unserer Fensterreinigung und Storenreinigung. Steht ein Umzug an? Vertrauen Sie auf unsere Umzugsreinigung, Endreinigung und Wohnungsendreinigung mit 100% Abnahmegarantie. Auch bei komplexen Aufgaben wie Baureinigung, Treppenhausreinigung, Praxisreinigung, Apothekenreinigung und Gastronomie-Reinigung liefern wir höchste Qualität. Abgerundet wird unser Portfolio durch professionelle Hauswartung, Facility Service, Gebäudeunterhalt und Objektbetreuung im ganzen Seeland.",
+      "h1": "Reinigungsfirma Biel – Professionelle Reinigung im Seeland",
+      "heroSubtitle": "Ihre zuverlässige Reinigungsfirma in Biel/Bienne und im gesamten Seeland. Wir bieten massgeschneiderte Reinigungslösungen für Privatpersonen, Unternehmen und Liegenschaftsverwaltungen.",
+      "trustPoints": [
+        "Kostenlose & transparente Offerten",
+        "Geschultes & fest angestelltes Personal",
+        "Umfassende Haftpflichtversicherung"
+      ],
+      "ctaPrimary": "Kostenlose Offerte anfordern",
+      "ctaSecondary": "Jetzt anrufen: +41 78 215 80 30",
+      "ctaWhatsapp": "WhatsApp Nachricht senden",
       "sections": [
         {
-          "heading": "Warum professionelle Reinigungsdienstleistungen in Biel/Bienne und das gesamte Seeland?",
-          "body": "Die Wahl des richtigen Dienstleisters für professionelle Reinigungsdienstleistungen ist entscheidend für Ihre Zufriedenheit. In Biel/Bienne und das gesamte Seeland gibt es viele Anbieter, doch SwissCleanMove sticht durch einen kompromisslosen Fokus auf Schweizer Qualitätsstandards hervor. Wir kennen die spezifischen Anforderungen der Kunden in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen genau. Unser Personal ist lokal verankert, was kurze Anfahrtswege, schnelle Reaktionszeiten und eine hohe Flexibilität ermöglicht. Ob Spezialreinigung von Fassaden, tiefengründliche Teppichreinigung oder tägliche Bürohygiene – wir meistern jede Herausforderung. Ein weiterer wesentlicher Aspekt ist unsere absolute Transparenz. Bei uns gibt es keine versteckten Kosten, keine unklaren Stundenzuschläge und keine bösen Überraschungen auf der Rechnung. Wir erstellen Ihnen detaillierte, faire Offerten, an die wir uns strikt halten. Zudem sind alle unsere Mitarbeiter umfassend versichert (Betriebshaftpflicht, Unfall), sodass Sie als Auftraggeber stets auf der sicheren Seite sind. Wir übernehmen die komplette administrative Abwicklung, was für Sie maximale Entlastung bedeutet. Lehnen Sie sich zurück und überlassen Sie die harte Arbeit den Profis."
+          "heading": "Ihre zuverlässige Reinigungsfirma in Biel/Bienne",
+          "body": "SwissCleanMove ist Ihr verlässlicher Partner für alle Anliegen rund um die Reinigung in Biel/Bienne und im gesamten Seeland. Wir verstehen, dass Sauberkeit eine Vertrauenssache ist. Deshalb setzen wir ausschliesslich auf fest angestelltes, sorgfältig geschultes Personal und umweltschonende Reinigungsmittel. Ob für Ihren Privathaushalt, Ihr Büro oder eine komplette Liegenschaft – wir reinigen mit höchster Präzision und garantieren Ihnen einwandfreie Ergebnisse. Zählen Sie auf Schweizer Qualität und eine professionelle Betreuung von der ersten kostenlosen Besichtigung bis zum Abschluss der Arbeiten."
         },
         {
-          "heading": "Unser detaillierter Arbeitsprozess",
-          "body": "Ein professionelles Ergebnis bei der professionelle Reinigungsdienstleistungen erfordert strukturierte Abläufe. Bei SwissCleanMove überlassen wir nichts dem Zufall. Der erste Schritt ist immer eine gründliche Bedarfsanalyse. Oft führen wir in Biel/Bienne und das gesamte Seeland eine kostenlose Vor-Ort-Besichtigung durch, um die genauen Gegebenheiten zu erfassen. Wir definieren Reinigungszonen nach Hygieneanforderungen (z.B. Sanitärbereiche vs. Empfangshalle). Auf Basis dieser Besichtigung erstellen wir ein massgeschneidertes Pflichtenheft, in dem alle Aufgaben und Intervalle detailliert festgehalten werden. Am Tag der Ausführung erscheint unser Team pünktlich mit modernstem Equipment und professionellen, materialschonenden Reinigungsmitteln oder Werkzeugen. Unsere Teamleiter überwachen die Ausführung vor Ort und garantieren, dass das Pflichtenheft Punkt für Punkt abgearbeitet wird. Nach Abschluss der Arbeiten führen wir eine strenge Qualitätskontrolle durch. Erst wenn wir selbst zu 100% zufrieden sind, übergeben wir das Ergebnis an Sie. Dieser strukturierte Prozess ist das Geheimnis unseres langjährigen Erfolgs und der hohen Kundenzufriedenheit in Biel/Bienne und das gesamte Seeland."
+          "heading": "Unsere Reinigungsleistungen in Biel und im Seeland",
+          "body": "Wir bieten ein umfassendes Spektrum an professionellen Reinigungsdienstleistungen, die exakt auf Ihre Bedürfnisse abgestimmt werden können. Entdecken Sie unser Angebot:"
         },
         {
-          "heading": "Lokale Expertise und schnelle Verfügbarkeit",
-          "body": "Dank unserer starken Präsenz in Biel/Bienne und das gesamte Seeland können wir Dienstleistungen für professionelle Reinigungsdienstleistungen nicht nur in höchster Qualität, sondern auch mit bemerkenswerter Schnelligkeit anbieten. Wir sind vertraut mit den Besonderheiten der Region, von den engen Gassen in der Altstadt bis hin zu grossen Gewerbeparks. Unsere Fahrzeugflotte ist zentral in Biel stationiert, was uns extrem agil macht. Gerade in Notfällen, sei es ein kurzfristig ausgefallener Reinigungstermin, ein dringender Umzug oder ein Wasserschaden, der sofortige Reinigung erfordert, beweist unser Pikettdienst seine Stärke. Oft sind wir in der Lage, innerhalb von 24 Stunden ein kompetentes Team vor Ort in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen zu haben. Wir passen uns Ihrem Terminplan an und bieten Einsätze auch am Wochenende, am Abend oder in den frühen Morgenstunden an, um Ihren privaten oder geschäftlichen Ablauf nicht zu stören."
-        },
-        {
-          "heading": "Umweltbewusstsein und Nachhaltigkeit",
-          "body": "Als modernes Schweizer Unternehmen übernehmen wir Verantwortung für unsere Umwelt. Dies gilt ganz besonders im Bereich der Reinigung. Wir haben unsere Prozesse für professionelle Reinigungsdienstleistungen in den letzten Jahren konsequent auf Nachhaltigkeit ausgerichtet. Als ISO-konforme Reinigungsfirma halten wir strenge Umweltschutzvorgaben ein. Wir verwenden primär biologisch abbaubare und ökozertifizierte Reinigungsmittel, die effektiv gegen Schmutz sind, aber die Flora und Fauna rund um den Bielersee und in der Schweiz nicht belasten. Zudem dosieren wir durch moderne Mikrofasersysteme und spezielle Dosieranlagen den Wasser- und Chemikalienverbrauch exakt. Dies schont nicht nur die Umwelt, sondern schützt auch die wertvollen Oberflächen Ihrer Möbel, Böden und Immobilien. Auch im Bereich Umzug und Transport achten wir auf optimierte Routenplanung, um den CO2-Ausstoss unserer modernen Fahrzeugflotte so gering wie möglich zu halten."
-        },
-        {
-          "heading": "Sicherheit, Versicherung und Vertrauen",
-          "body": "Wenn Sie fremden Personen Zugang zu Ihrer Wohnung oder Ihren Geschäftsräumen in Biel/Bienne und das gesamte Seeland gewähren, ist Vertrauen das wichtigste Gut. SwissCleanMove ist sich dieser Verantwortung bewusst. Alle unsere Mitarbeiter, die im Bereich professionelle Reinigungsdienstleistungen eingesetzt werden, durchlaufen vor ihrer Festanstellung einen strengen Selektionsprozess inklusive Prüfung des Betreibungs- und Strafregisters. Gerade bei der Reinigung von Anwaltskanzleien oder Arztpraxen in Biel ist unsere Diskretion sprichwörtlich. Darüber hinaus verfügen wir über eine umfassende Betriebs- und Berufshaftpflichtversicherung. Sollte während unserer Arbeit tatsächlich einmal ein Kratzer im Parkett entstehen oder ein Gegenstand beschädigt werden, sind Sie vollumfänglich abgesichert. Wir übernehmen die Verantwortung – ohne Diskussionen. Diese Kombination aus sorgfältiger Personalauswahl und starkem Versicherungsschutz gibt unseren Kunden in der ganzen Schweiz das beruhigende Gefühl, in den besten Händen zu sein."
-        },
-        {
-          "heading": "Die Vorteile einer Festanstellung",
-          "body": "Im Gegensatz zu vielen Vermittlungsplattformen, die lediglich Aufträge an Freelancer oder Subunternehmer weiterreichen, sind wir ein echter Arbeitgeber. Was bedeutet das für Sie bei der Buchung von professionelle Reinigungsdienstleistungen? Es bedeutet konstante Qualität. Unsere Mitarbeiter identifizieren sich mit SwissCleanMove. Sie erhalten regelmässige interne Schulungen zu neuen Reinigungstechniken, Ergonomie am Arbeitsplatz und Sicherheitsvorschriften. Wir schulen auf das Farbcode-System, um Kreuzkontaminationen absolut zu verhindern. Zudem profitieren Sie davon, dass Sie oft dieselben vertrauten Gesichter bei sich begrüssen dürfen, was besonders bei regelmässigen Unterhaltsreinigungen oder Hauswartungen enorm wichtig ist. Für Sie entfällt jeglicher administrative Aufwand bezüglich AHV, SUVA oder Quellensteuer – all dies erledigen wir. Sie erhalten lediglich eine transparente, monatliche Rechnung."
-        },
-        {
-          "heading": "Massgeschneiderte Lösungen für Privat und Gewerbe",
-          "body": "Jeder Kunde hat unterschiedliche Bedürfnisse. Ein Privathaushalt in Biel benötigt eine andere Herangehensweise als ein Grossraumbüro in Bern oder ein Filialbetrieb in Zürich. Im Bereich professionelle Reinigungsdienstleistungen bieten wir deshalb keine starren Pakete an, sondern vollkommen flexible, modulare Lösungen. Ein Coiffeursalon benötigt eine andere Reinigung als eine Maschinenbauhalle – wir passen uns an. Privatkunden schätzen unsere Diskretion und die Möglichkeit, spezielle Wünsche wie das Bügeln von Wäsche oder die Reinigung von Kellerabteilen in den Vertrag aufzunehmen. Gewerbliche Kunden wiederum profitieren von unseren SLA (Service Level Agreements), festen Ansprechpartnern und der Möglichkeit, Reinigungszeiten so zu legen, dass der Geschäftsbetrieb in keiner Weise gestört wird. Wir skalieren unsere Dienstleistungen mit Ihrem Unternehmen: Wenn Sie wachsen, wächst unser Reinigungsteam einfach mit."
+          "heading": "Warum SwissCleanMove in Biel?",
+          "body": "Als lokal verankerte Reinigungsfirma in Biel/Bienne profitieren Sie von kurzen Wegen, hoher Flexibilität und einer starken Verbundenheit mit der Region. Wir sind rasch vor Ort, wenn Sie uns brauchen – sei es für geplante Unterhaltsreinigungen oder kurzfristige Notfälle im Seeland. Wir legen grossen Wert auf eine transparente Preisgestaltung ohne versteckte Kosten und einen persönlichen Ansprechpartner, der Ihre individuellen Anforderungen genau kennt."
         }
       ],
-      "serviceBulletsHeading": "Ihre Premium-Vorteile für professionelle Reinigungsdienstleistungen",
+      "serviceBulletsHeading": "Unsere Reinigungsleistungen im Überblick",
       "serviceBullets": [
-        "Kostenlose Vor-Ort-Besichtigung und transparente, verbindliche Offerten",
-        "Ausschliesslich fest angestelltes, geschultes und geprüftes Personal",
-        "Umfassende Betriebshaftpflichtversicherung für maximale Sicherheit",
-        "Einsatz modernster, umweltschonender Maschinen und Reinigungsmittel",
-        "Lokale Verankerung und Expertise in Biel/Bienne und das gesamte Seeland",
-        "Massgeschneiderte Pflichtenhefte, perfekt auf Ihre Bedürfnisse abgestimmt",
-        "Flexible Einsatzzeiten (Abend, Wochenende, Notfälle innert 24h)",
-        "Ein einziger, persönlicher Ansprechpartner für alle Belange",
-        "Lückenlose Qualitätskontrolle durch unsere erfahrenen Teamleiter",
-        "Keine versteckten Gebühren, keine unklaren Zuschläge, kein administrativer Aufwand"
+        "Umzugsreinigung mit Abnahmegarantie",
+        "Unterhaltsreinigung",
+        "Haushaltsreinigung",
+        "Büro- und Praxisreinigung",
+        "Fenster- und Storenreinigung",
+        "Gastronomiereinigung",
+        "Treppenhausreinigung und Hauswartung",
+        "Bau- und Spezialreinigung"
       ],
-      "trustPoints": [
-        "Lokale Reinigungsfirma seit 2024",
-        "Haftpflichtversichert und zuverlässig",
-        "Transparente Preise ohne versteckte Kosten"
-      ],
-      "ctaMidHeading": "Reinigungsfirma in Biel gesucht?",
-      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an. Wir melden uns innerhalb von 24 Stunden.",
-      "ctaMid": "Kostenlose Offerte anfordern",
       "internalLinksHeading": "Weitere Dienstleistungen in Biel",
       "internalLinks": [
         {
-          "label": "Professionelle Umzüge & Möbeltransport Biel",
-          "href": "umzugsfirma-biel"
+          "label": "Unterhaltsreinigung Biel",
+          "href": "unterhaltsreinigung-biel"
         },
         {
-          "label": "Umzugsreinigung mit 100% Abnahmegarantie",
+          "label": "Umzugsreinigung Biel",
           "href": "endreinigung-biel"
         },
         {
-          "label": "Gebäudeunterhalt & Facility Service Seeland",
+          "label": "Fensterreinigung Biel",
+          "href": "fensterreinigung-biel"
+        },
+        {
+          "label": "Baureinigung Biel",
+          "href": "baureinigung-biel"
+        },
+        {
+          "label": "Gastronomiereinigung Biel",
+          "href": "gastronomie-reinigung-biel"
+        },
+        {
+          "label": "Hauswartung Biel",
           "href": "hauswartung-biel"
         },
         {
-          "label": "Kostenlose Reinigungs-Offerte anfordern",
-          "href": "reinigungsfirma-biel"
+          "label": "Haushaltshilfe",
+          "href": "haushaltshilfe-biel"
         }
       ],
-      "ctaStrongHeading": "Ihre Reinigungsfirma in Biel — jetzt kontaktieren",
-      "ctaStrongBody": "Rufen Sie uns an oder füllen Sie unser Formular aus. Wir erstellen Ihnen innert 24 Stunden eine transparente Offerte für Ihre Reinigung.",
-      "ctaStrong": "Offerte anfordern",
-      "testimonial": {
-        "quote": "SwissCleanMove ist unsere Reinigungsfirma des Vertrauens in Biel. Zuverlässig, gründlich und immer pünktlich.",
-        "author": "Unternehmen in Biel",
-        "trust": "Vertrauen durch Schweizer Qualität"
-      },
+      "ctaMidHeading": "Reinigungsfirma in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an. Wir beraten Sie gerne persönlich vor Ort.",
+      "ctaMid": "Offerte anfordern",
+      "ctaStrongHeading": "Kontaktieren Sie Ihre Reinigungsfirma in Biel",
+      "ctaStrongBody": "Wir sind gerne für Sie da. Rufen Sie uns an oder füllen Sie das Kontaktformular aus, um ein massgeschneidertes Angebot für Ihre Reinigung im Seeland zu erhalten.",
+      "ctaStrong": "Jetzt Offerte anfordern",
       "faqs": [
         {
-          "question": "Wie wird der Preis für professionelle Reinigungsdienstleistungen genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen ab CHF 490), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "question": "Welche Reinigungsdienstleistungen bieten Sie in Biel an?",
+          "answer": "Wir bieten eine breite Palette an Dienstleistungen: Umzugsreinigung mit Abnahmegarantie, regelmässige Unterhalts- und Büroreinigung, Fensterreinigung, Baureinigung sowie umfassende Hauswartung für Liegenschaften in Biel und dem gesamten Seeland."
         },
         {
-          "question": "Arbeiten Sie bei professionelle Reinigungsdienstleistungen mit eigenem Equipment?",
-          "answer": "In den allermeisten Fällen bringen wir alles selbst mit. Für gewerbliche Reinigungen, Baureinigungen, Endreinigungen und Umzüge sind unsere Fahrzeuge komplett ausgestattet mit Profi-Staubsaugern, Einscheibenmaschinen, Reinigungsmitteln, Leitern und Werkzeugen. Lediglich bei privaten Haushaltshilfen nutzen wir auf Wunsch der Kunden manchmal deren bevorzugte Geräte vor Ort."
+          "question": "Ist die Erstellung einer Offerte kostenlos?",
+          "answer": "Ja, wir führen in der Region Biel gerne eine kostenlose Besichtigung vor Ort durch und erstellen Ihnen daraufhin eine unverbindliche, transparente Offerte ohne versteckte Kosten."
         },
         {
-          "question": "Wie schnell können Sie in Biel/Bienne und das gesamte Seeland vor Ort sein?",
-          "answer": "Dank unserer starken regionalen Struktur sind wir extrem reaktionsschnell. In Notfällen, etwa bei Ausfall einer Putzkraft oder nach einem Wasserschaden, können wir in der Region oft innerhalb von 24 bis 48 Stunden ein professionelles Einsatzteam mobilisieren. Für planbare Arbeiten empfehlen wir eine Vorlaufzeit von 1-2 Wochen."
+          "question": "Bieten Sie bei der Umzugsreinigung eine Abnahmegarantie?",
+          "answer": "Selbstverständlich. Unsere Umzugsreinigungen in Biel beinhalten stets eine 100% Abnahmegarantie. Wir sind bei der Wohnungsübergabe anwesend und reinigen falls nötig sofort und kostenlos nach."
         },
         {
-          "question": "Was passiert, wenn während der Arbeit etwas beschädigt wird?",
-          "answer": "Sicherheit hat bei uns oberste Priorität. Dennoch kann auch bei grösster Vorsicht einmal etwas zu Bruch gehen. In diesem seltenen Fall sind Sie als Kunde komplett abgesichert. Wir verfügen über eine sehr weitreichende Betriebs- und Berufshaftpflichtversicherung, die Schäden an Ihrem Eigentum in der Schweiz anstandslos reguliert."
+          "question": "Bringen Sie das Reinigungsmaterial und die Ausrüstung selbst mit?",
+          "answer": "Ja, unsere Reinigungsteams sind vollständig mit professionellen, umweltschonenden Reinigungsmitteln und modernsten Geräten ausgestattet. Sie müssen sich um nichts kümmern."
         },
         {
-          "question": "Setzen Sie Subunternehmer oder Freelancer ein?",
-          "answer": "Nein, ganz bewusst nicht. Um unsere hohen Qualitätsstandards bei professionelle Reinigungsdienstleistungen zu halten, vertrauen wir ausschliesslich auf unser eigenes, fest angestelltes Personal. Dies garantiert nicht nur Qualität, sondern schützt Sie als Kunden auch vor jeglichen Haftungsrisiken im Zusammenhang mit Schwarzarbeit oder fehlenden Versicherungen."
+          "question": "Bieten Sie auch regelmässige Reinigungen an?",
+          "answer": "Ja, wir bieten regelmässige Unterhaltsreinigungen (z.B. wöchentlich oder zweiwöchentlich) für Privathaushalte, Büros und Praxen in Biel an. Die Intervalle passen wir flexibel Ihren Wünschen an."
         },
         {
-          "question": "Sind Ihre Mitarbeiter in den Bereichen Diskretion und Datenschutz geschult?",
-          "answer": "Absolut. Dies ist besonders bei der Büroreinigung und in privaten Haushalten von enormer Wichtigkeit. Jeder unserer Mitarbeiter unterzeichnet eine strenge Verschwiegenheitserklärung. Daten, Akten oder private Gegenstände werden mit absolutem Respekt und absoluter Diskretion behandelt."
+          "question": "In welchen Regionen sind Sie tätig?",
+          "answer": "Unser Hauptfokus liegt auf Biel/Bienne und dem gesamten Seeland. Dazu gehören auch umliegende Gemeinden wie Nidau, Brügg, Ipsach, Port, Lyss, Aarberg, Pieterlen und Orpund."
         },
         {
-          "question": "Welche Reinigungsmittel verwenden Sie?",
-          "answer": "Wir setzen den Fokus auf Nachhaltigkeit und Materialschonung. Wir verwenden professionelle, biologisch abbaubare und ökozertifizierte Schweizer Reinigungsmittel, die effektiv gegen Schmutz und Bakterien vorgehen, aber die Oberflächen Ihrer Immobilie (wie Echtholzparkett oder Naturstein) schonen und keine giftigen Dämpfe hinterlassen."
+          "question": "Wie setzen sich Ihre Preise zusammen?",
+          "answer": "Unsere Preise basieren auf dem effektiven Aufwand oder festgelegten Fixpreisen nach einer Besichtigung. Sie erhalten eine transparente Offerte, in der alle Kosten (Material, Fahrspesen, Versicherungen, Sozialleistungen) bereits enthalten sind."
         },
         {
-          "question": "Kann ich den Termin für professionelle Reinigungsdienstleistungen flexibel verschieben oder absagen?",
-          "answer": "Wir legen Wert auf Flexibilität. Termine können gemäss unseren Allgemeinen Geschäftsbedingungen verschoben werden. Bei Krankheit oder Ferien können Sie Einsätze der Unterhaltsreinigung in Absprache mit uns pausieren oder verschieben, ohne dass Ihnen dabei zusätzliche Kosten entstehen."
-        },
-        {
-          "question": "Wie erfolgt die Bezahlung der Dienstleistungen?",
-          "answer": "Die Bezahlung ist unkompliziert. Nach erbrachter Leistung bei Endreinigungen oder Umzügen erhalten Sie eine detaillierte Rechnung (zahlbar innert 10-30 Tagen). Bei regelmässigen Dienstleistungen wie der Büroreinigung oder Hauswartung stellen wir am Ende des Monats eine übersichtliche Sammelrechnung aus."
-        },
-        {
-          "question": "Bieten Sie Garantien auf Ihre Arbeit?",
-          "answer": "Ja. Bei Endreinigungen nach einem Auszug gewähren wir eine 100% Abnahmegarantie, die uns vertraglich dazu verpflichtet, bei Mängeln durch die Verwaltung kostenlos nachzureinigen. Auch bei allen anderen Dienstleistungen garantieren wir, dass das vereinbarte Pflichtenheft fehlerfrei umgesetzt wird."
-        },
-        {
-          "question": "Muss ich während der Arbeiten vor Ort in Biel/Bienne und das gesamte Seeland sein?",
-          "answer": "Das ist nicht zwingend notwendig. Viele unserer Kunden übergeben uns den Schlüssel (oft mit einer Schlüsselquittung dokumentiert), damit wir die Arbeiten während ihrer Abwesenheit (oder ausserhalb der Bürozeiten) ausführen können. Sie können aber selbstverständlich auch gerne anwesend sein."
-        },
-        {
-          "question": "Ist es immer dieselbe Person, die zu mir kommt?",
-          "answer": "Bei wiederkehrenden Aufträgen (wie Haushaltshilfe, Hauswartung oder Unterhaltsreinigung) stellen wir sicher, dass Ihnen ein festes Team oder eine feste Bezugsperson zugewiesen wird. Nur bei Ferien oder Krankheit organisieren wir eine Vertretung, die dank des detaillierten Pflichtenhefts sofort weiss, was zu tun ist."
+          "question": "Wie kann ich SwissCleanMove kontaktieren?",
+          "answer": "Sie können uns telefonisch unter +41 78 215 80 30 erreichen, eine E-Mail an info@swisscleanmove.ch senden oder ganz einfach unser Kontaktformular auf der Website ausfüllen."
         }
-      ]
+      ],
+      "badge": "",
+      "ctaSoft": "Kostenlose Offerte anfordern",
+      "intro": "",
+      "serviceCardsHeading": "",
+      "serviceCards": [],
+      "testimonial": ""
     },
     "umzugsfirmaBiel": {
       "meta": {
@@ -11643,7 +11622,7 @@
       "h1": "Umzugsfirma Biel — Ihr zuverlässiger Umzugspartner im Seeland",
       "heroSubtitle": "SwissCleanMove ist Ihre lokale Umzugsfirma in Biel/Bienne. Professionelle Umzüge für Privatkunden und Unternehmen — stressfrei, pünktlich und transparent.",
       "ctaSoft": "Kostenlose Umzugsofferte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für stressfreie Umzüge in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Ein Wohnungswechsel zählt zu den stressigsten Erlebnissen im Leben. Mit der richtigen Umzugsfirma aus Biel wird dieser Tag jedoch zu einem entspannten Erlebnis. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir haben in den letzten Jahren hunderte von Familien und Unternehmen im Seeland erfolgreich und schadenfrei umgezogen. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für stressfreie Umzüge in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Ein Wohnungswechsel zählt zu den stressigsten Erlebnissen im Leben. Mit der richtigen Umzugsfirma aus Biel wird dieser Tag jedoch zu einem entspannten Erlebnis. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir haben in den letzten Jahren hunderte von Familien und Unternehmen im Seeland erfolgreich und schadenfrei umgezogen. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum stressfreie Umzüge in Biel/Bienne und das gesamte Seeland?",
@@ -11782,7 +11761,7 @@
       "h1": "Unterhaltsreinigung Biel — Regelmässige Reinigung für Büros & Gebäude",
       "heroSubtitle": "Professionelle Unterhaltsreinigung in Biel/Bienne für Büros, Treppenhäuser, Gewerbeimmobilien und Liegenschaften — flexibel, zuverlässig und nach Schweizer Standard.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Gewerbliche Unterhaltsreinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der erste Eindruck Ihres Unternehmens beginnt bereits im Eingangsbereich. Ein gepflegtes Büro ist Ihre beste Visitenkarte. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Zahlreiche namhafte KMU und Verwaltungen im Seeland vertrauen ihre Unterhaltsreinigung täglich uns an. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Gewerbliche Unterhaltsreinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der erste Eindruck Ihres Unternehmens beginnt bereits im Eingangsbereich. Ein gepflegtes Büro ist Ihre beste Visitenkarte. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Zahlreiche namhafte KMU und Verwaltungen im Seeland vertrauen ihre Unterhaltsreinigung täglich uns an. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum Gewerbliche Unterhaltsreinigung in Biel/Bienne und das gesamte Seeland?",
@@ -11845,7 +11824,7 @@
           "href": "fensterreinigung-biel"
         },
         {
-          "label": "Facility Service Biel",
+          "label": "Hauswartung & Gebäudeunterhalt Biel",
           "href": "facility-service-biel"
         },
         {
@@ -11921,7 +11900,7 @@
       "h1": "Fensterreinigung Biel — Streifenfreie Fenster für Wohnungen & Büros",
       "heroSubtitle": "Professionelle Fensterreinigung in Biel/Bienne und im Seeland. Kristallklare Fenster für Privathaushalte, Büros und Gewerbeimmobilien — zuverlässig und streifenfrei.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für streifenfreie Fensterreinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Strahlender Glanz für Ihr Zuhause oder Ihre Schaufenster. Wir lassen das Licht zurück in Ihre Räume. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Jährlich reinigen unsere Glas- und Gebäudereiniger tausende von Fenstern, Wintergärten und Glasfassaden in der Region. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für streifenfreie Fensterreinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Strahlender Glanz für Ihr Zuhause oder Ihre Schaufenster. Wir lassen das Licht zurück in Ihre Räume. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Jährlich reinigen unsere Glas- und Gebäudereiniger tausende von Fenstern, Wintergärten und Glasfassaden in der Region. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum streifenfreie Fensterreinigung in Biel/Bienne und das gesamte Seeland?",
@@ -11988,7 +11967,7 @@
           "href": "hauswartung-biel"
         },
         {
-          "label": "Facility Service Biel",
+          "label": "Hauswartung & Gebäudeunterhalt Biel",
           "href": "facility-service-biel"
         }
       ],
@@ -12060,7 +12039,7 @@
       "h1": "Transportfirma Biel — Möbeltransport & Lieferservice im Seeland",
       "heroSubtitle": "SwissCleanMove ist Ihre lokale Transportfirma in Biel/Bienne. Professioneller Möbeltransport, Lieferservice und Logistik — schnell, sicher und versichert.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Sichere Transporte und Kurierdienste in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Wenn es um den sicheren Transport Ihrer wertvollen Güter geht, dürfen Sie keine Kompromisse eingehen. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir liefern Pakete, Paletten und empfindliche Möbelstücke täglich termingerecht für unsere Bieler Kunden aus. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Sichere Transporte und Kurierdienste in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Wenn es um den sicheren Transport Ihrer wertvollen Güter geht, dürfen Sie keine Kompromisse eingehen. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir liefern Pakete, Paletten und empfindliche Möbelstücke täglich termingerecht für unsere Bieler Kunden aus. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum Sichere Transporte und Kurierdienste in Biel/Bienne und das gesamte Seeland?",
@@ -12199,7 +12178,7 @@
       "h1": "Entsorgung Biel — Fachgerechte Möbelentsorgung & Räumung im Seeland",
       "heroSubtitle": "SwissCleanMove bietet professionelle Entsorgung in Biel/Bienne. Möbelentsorgung, Wohnungsräumung und Entrümpelung — fachgerecht, schnell und umweltbewusst.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Professionelle Räumung und Entsorgung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Trennen von Altlasten kann befreiend sein. Wir übernehmen das schwere Heben und die fachgerechte Entsorgung für Sie. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Jährlich recyceln wir über 500 Tonnen Altmaterial, Möbel und Elektronikschrott fachgerecht. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Professionelle Räumung und Entsorgung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Trennen von Altlasten kann befreiend sein. Wir übernehmen das schwere Heben und die fachgerechte Entsorgung für Sie. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Jährlich recyceln wir über 500 Tonnen Altmaterial, Möbel und Elektronikschrott fachgerecht. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum Professionelle Räumung und Entsorgung in Biel/Bienne und das gesamte Seeland?",
@@ -12331,45 +12310,45 @@
     },
     "facilityServiceBiel": {
       "meta": {
-        "title": "Facility Service Biel | Gebäudemanagement & Reinigung | SwissCleanMove",
-        "description": "Facility Service in Biel/Bienne. Gebäudemanagement, Unterhaltsreinigung und Liegenschaftsbetreuung im Seeland. Alles aus einer Hand."
+        "title": "Hauswartung & Gebäudeunterhalt Biel | Gebäudemanagement & Reinigung | SwissCleanMove",
+        "description": "Hauswartung & Gebäudeunterhalt in Biel/Bienne. Gebäudemanagement, Unterhaltsreinigung und Liegenschaftsbetreuung im Seeland. Alles aus einer Hand."
       },
-      "badge": "Facility Service Biel",
-      "h1": "Facility Service Biel — Gebäudemanagement & Unterhaltsreinigung",
-      "heroSubtitle": "SwissCleanMove bietet umfassenden Facility Service in Biel/Bienne. Gebäudemanagement, Unterhaltsreinigung, Hauswartung und technische Betreuung — alles aus einer Hand.",
+      "badge": "Hauswartung & Gebäudeunterhalt Biel",
+      "h1": "Hauswartung & Gebäudeunterhalt Biel — Gebäudemanagement & Unterhaltsreinigung",
+      "heroSubtitle": "SwissCleanMove bietet umfassenden Hauswartung & Gebäudeunterhalt in Biel/Bienne. Gebäudemanagement, Unterhaltsreinigung, Hauswartung und technische Betreuung — alles aus einer Hand.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Umfassendes Facility Service in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der Werterhalt einer Immobilie erfordert eine 360-Grad-Betreuung. Wir sind Ihr Single Point of Contact für alle Belange. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir betreuen Millionenwerte an Immobilienvermögen für private Eigentümer und grosse Verwaltungen in Biel. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Umfassendes Hauswartung & Gebäudeunterhalt in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der Werterhalt einer Immobilie erfordert eine 360-Grad-Betreuung. Wir sind Ihr Single Point of Contact für alle Belange. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir betreuen Millionenwerte an Immobilienvermögen für private Eigentümer und grosse Verwaltungen in Biel. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
-          "heading": "Warum Umfassendes Facility Service in Biel/Bienne und das gesamte Seeland?",
-          "body": "Die Wahl des richtigen Dienstleisters für Umfassendes Facility Service ist entscheidend für Ihre Zufriedenheit. In Biel/Bienne und das gesamte Seeland gibt es viele Anbieter, doch SwissCleanMove sticht durch einen kompromisslosen Fokus auf Schweizer Qualitätsstandards hervor. Wir kennen die spezifischen Anforderungen der Kunden in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen genau. Unser Personal ist lokal verankert, was kurze Anfahrtswege, schnelle Reaktionszeiten und eine hohe Flexibilität ermöglicht. Sie sparen enorm viel Zeit und Administration, wenn Sie Reinigung, Technik und Garten aus einer Hand beziehen. Ein weiterer wesentlicher Aspekt ist unsere absolute Transparenz. Bei uns gibt es keine versteckten Kosten, keine unklaren Stundenzuschläge und keine bösen Überraschungen auf der Rechnung. Wir erstellen Ihnen detaillierte, faire Offerten, an die wir uns strikt halten. Zudem sind alle unsere Mitarbeiter umfassend versichert (Betriebshaftpflicht, Unfall), sodass Sie als Auftraggeber stets auf der sicheren Seite sind. Wir übernehmen die komplette administrative Abwicklung, was für Sie maximale Entlastung bedeutet. Lehnen Sie sich zurück und überlassen Sie die harte Arbeit den Profis."
+          "heading": "Warum Umfassendes Hauswartung & Gebäudeunterhalt in Biel/Bienne und das gesamte Seeland?",
+          "body": "Die Wahl des richtigen Dienstleisters für Umfassendes Hauswartung & Gebäudeunterhalt ist entscheidend für Ihre Zufriedenheit. In Biel/Bienne und das gesamte Seeland gibt es viele Anbieter, doch SwissCleanMove sticht durch einen kompromisslosen Fokus auf Schweizer Qualitätsstandards hervor. Wir kennen die spezifischen Anforderungen der Kunden in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen genau. Unser Personal ist lokal verankert, was kurze Anfahrtswege, schnelle Reaktionszeiten und eine hohe Flexibilität ermöglicht. Sie sparen enorm viel Zeit und Administration, wenn Sie Reinigung, Technik und Garten aus einer Hand beziehen. Ein weiterer wesentlicher Aspekt ist unsere absolute Transparenz. Bei uns gibt es keine versteckten Kosten, keine unklaren Stundenzuschläge und keine bösen Überraschungen auf der Rechnung. Wir erstellen Ihnen detaillierte, faire Offerten, an die wir uns strikt halten. Zudem sind alle unsere Mitarbeiter umfassend versichert (Betriebshaftpflicht, Unfall), sodass Sie als Auftraggeber stets auf der sicheren Seite sind. Wir übernehmen die komplette administrative Abwicklung, was für Sie maximale Entlastung bedeutet. Lehnen Sie sich zurück und überlassen Sie die harte Arbeit den Profis."
         },
         {
           "heading": "Unser detaillierter Arbeitsprozess",
-          "body": "Ein professionelles Ergebnis bei der Umfassendes Facility Service erfordert strukturierte Abläufe. Bei SwissCleanMove überlassen wir nichts dem Zufall. Der erste Schritt ist immer eine gründliche Bedarfsanalyse. Oft führen wir in Biel/Bienne und das gesamte Seeland eine kostenlose Vor-Ort-Besichtigung durch, um die genauen Gegebenheiten zu erfassen. Gemeinsam mit der Verwaltung erarbeiten wir detaillierte Service-Level-Agreements und Checklisten. Auf Basis dieser Besichtigung erstellen wir ein massgeschneidertes Pflichtenheft, in dem alle Aufgaben und Intervalle detailliert festgehalten werden. Am Tag der Ausführung erscheint unser Team pünktlich mit modernstem Equipment und professionellen, materialschonenden Reinigungsmitteln oder Werkzeugen. Unsere Teamleiter überwachen die Ausführung vor Ort und garantieren, dass das Pflichtenheft Punkt für Punkt abgearbeitet wird. Nach Abschluss der Arbeiten führen wir eine strenge Qualitätskontrolle durch. Erst wenn wir selbst zu 100% zufrieden sind, übergeben wir das Ergebnis an Sie. Dieser strukturierte Prozess ist das Geheimnis unseres langjährigen Erfolgs und der hohen Kundenzufriedenheit in Biel/Bienne und das gesamte Seeland."
+          "body": "Ein professionelles Ergebnis bei der Umfassendes Hauswartung & Gebäudeunterhalt erfordert strukturierte Abläufe. Bei SwissCleanMove überlassen wir nichts dem Zufall. Der erste Schritt ist immer eine gründliche Bedarfsanalyse. Oft führen wir in Biel/Bienne und das gesamte Seeland eine kostenlose Vor-Ort-Besichtigung durch, um die genauen Gegebenheiten zu erfassen. Gemeinsam mit der Verwaltung erarbeiten wir detaillierte Service-Level-Agreements und Checklisten. Auf Basis dieser Besichtigung erstellen wir ein massgeschneidertes Pflichtenheft, in dem alle Aufgaben und Intervalle detailliert festgehalten werden. Am Tag der Ausführung erscheint unser Team pünktlich mit modernstem Equipment und professionellen, materialschonenden Reinigungsmitteln oder Werkzeugen. Unsere Teamleiter überwachen die Ausführung vor Ort und garantieren, dass das Pflichtenheft Punkt für Punkt abgearbeitet wird. Nach Abschluss der Arbeiten führen wir eine strenge Qualitätskontrolle durch. Erst wenn wir selbst zu 100% zufrieden sind, übergeben wir das Ergebnis an Sie. Dieser strukturierte Prozess ist das Geheimnis unseres langjährigen Erfolgs und der hohen Kundenzufriedenheit in Biel/Bienne und das gesamte Seeland."
         },
         {
           "heading": "Lokale Expertise und schnelle Verfügbarkeit",
-          "body": "Dank unserer starken Präsenz in Biel/Bienne und das gesamte Seeland können wir Dienstleistungen für Umfassendes Facility Service nicht nur in höchster Qualität, sondern auch mit bemerkenswerter Schnelligkeit anbieten. Wir sind vertraut mit den Besonderheiten der Region, von den engen Gassen in der Altstadt bis hin zu grossen Gewerbeparks. Da unsere Techniker in Biel stationiert sind, sind sie bei Liftstörungen oder Heizungsausfällen innert Kürze vor Ort. Gerade in Notfällen, sei es ein kurzfristig ausgefallener Reinigungstermin, ein dringender Umzug oder ein Wasserschaden, der sofortige Reinigung erfordert, beweist unser Pikettdienst seine Stärke. Oft sind wir in der Lage, innerhalb von 24 Stunden ein kompetentes Team vor Ort in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen zu haben. Wir passen uns Ihrem Terminplan an und bieten Einsätze auch am Wochenende, am Abend oder in den frühen Morgenstunden an, um Ihren privaten oder geschäftlichen Ablauf nicht zu stören."
+          "body": "Dank unserer starken Präsenz in Biel/Bienne und das gesamte Seeland können wir Dienstleistungen für Umfassendes Hauswartung & Gebäudeunterhalt nicht nur in höchster Qualität, sondern auch mit bemerkenswerter Schnelligkeit anbieten. Wir sind vertraut mit den Besonderheiten der Region, von den engen Gassen in der Altstadt bis hin zu grossen Gewerbeparks. Da unsere Techniker in Biel stationiert sind, sind sie bei Liftstörungen oder Heizungsausfällen innert Kürze vor Ort. Gerade in Notfällen, sei es ein kurzfristig ausgefallener Reinigungstermin, ein dringender Umzug oder ein Wasserschaden, der sofortige Reinigung erfordert, beweist unser Pikettdienst seine Stärke. Oft sind wir in der Lage, innerhalb von 24 Stunden ein kompetentes Team vor Ort in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen zu haben. Wir passen uns Ihrem Terminplan an und bieten Einsätze auch am Wochenende, am Abend oder in den frühen Morgenstunden an, um Ihren privaten oder geschäftlichen Ablauf nicht zu stören."
         },
         {
           "heading": "Umweltbewusstsein und Nachhaltigkeit",
-          "body": "Als modernes Schweizer Unternehmen übernehmen wir Verantwortung für unsere Umwelt. Dies gilt ganz besonders im Bereich der Reinigung. Wir haben unsere Prozesse für Umfassendes Facility Service in den letzten Jahren konsequent auf Nachhaltigkeit ausgerichtet. Beim Winterdienst auf Ihren Vorplätzen nutzen wir umweltschonendes Streusalz, um das Grundwasser zu schützen. Wir verwenden primär biologisch abbaubare und ökozertifizierte Reinigungsmittel, die effektiv gegen Schmutz sind, aber die Flora und Fauna rund um den Bielersee und in der Schweiz nicht belasten. Zudem dosieren wir durch moderne Mikrofasersysteme und spezielle Dosieranlagen den Wasser- und Chemikalienverbrauch exakt. Dies schont nicht nur die Umwelt, sondern schützt auch die wertvollen Oberflächen Ihrer Möbel, Böden und Immobilien. Auch im Bereich Umzug und Transport achten wir auf optimierte Routenplanung, um den CO2-Ausstoss unserer modernen Fahrzeugflotte so gering wie möglich zu halten."
+          "body": "Als modernes Schweizer Unternehmen übernehmen wir Verantwortung für unsere Umwelt. Dies gilt ganz besonders im Bereich der Reinigung. Wir haben unsere Prozesse für Umfassendes Hauswartung & Gebäudeunterhalt in den letzten Jahren konsequent auf Nachhaltigkeit ausgerichtet. Beim Winterdienst auf Ihren Vorplätzen nutzen wir umweltschonendes Streusalz, um das Grundwasser zu schützen. Wir verwenden primär biologisch abbaubare und ökozertifizierte Reinigungsmittel, die effektiv gegen Schmutz sind, aber die Flora und Fauna rund um den Bielersee und in der Schweiz nicht belasten. Zudem dosieren wir durch moderne Mikrofasersysteme und spezielle Dosieranlagen den Wasser- und Chemikalienverbrauch exakt. Dies schont nicht nur die Umwelt, sondern schützt auch die wertvollen Oberflächen Ihrer Möbel, Böden und Immobilien. Auch im Bereich Umzug und Transport achten wir auf optimierte Routenplanung, um den CO2-Ausstoss unserer modernen Fahrzeugflotte so gering wie möglich zu halten."
         },
         {
           "heading": "Sicherheit, Versicherung und Vertrauen",
-          "body": "Wenn Sie fremden Personen Zugang zu Ihrer Wohnung oder Ihren Geschäftsräumen in Biel/Bienne und das gesamte Seeland gewähren, ist Vertrauen das wichtigste Gut. SwissCleanMove ist sich dieser Verantwortung bewusst. Alle unsere Mitarbeiter, die im Bereich Umfassendes Facility Service eingesetzt werden, durchlaufen vor ihrer Festanstellung einen strengen Selektionsprozess inklusive Prüfung des Betreibungs- und Strafregisters. Wir übernehmen die Kommunikation mit den Mietern, was die Immobilienverwaltung signifikant entlastet. Darüber hinaus verfügen wir über eine umfassende Betriebs- und Berufshaftpflichtversicherung. Sollte während unserer Arbeit tatsächlich einmal ein Kratzer im Parkett entstehen oder ein Gegenstand beschädigt werden, sind Sie vollumfänglich abgesichert. Wir übernehmen die Verantwortung – ohne Diskussionen. Diese Kombination aus sorgfältiger Personalauswahl und starkem Versicherungsschutz gibt unseren Kunden in der ganzen Schweiz das beruhigende Gefühl, in den besten Händen zu sein."
+          "body": "Wenn Sie fremden Personen Zugang zu Ihrer Wohnung oder Ihren Geschäftsräumen in Biel/Bienne und das gesamte Seeland gewähren, ist Vertrauen das wichtigste Gut. SwissCleanMove ist sich dieser Verantwortung bewusst. Alle unsere Mitarbeiter, die im Bereich Umfassendes Hauswartung & Gebäudeunterhalt eingesetzt werden, durchlaufen vor ihrer Festanstellung einen strengen Selektionsprozess inklusive Prüfung des Betreibungs- und Strafregisters. Wir übernehmen die Kommunikation mit den Mietern, was die Immobilienverwaltung signifikant entlastet. Darüber hinaus verfügen wir über eine umfassende Betriebs- und Berufshaftpflichtversicherung. Sollte während unserer Arbeit tatsächlich einmal ein Kratzer im Parkett entstehen oder ein Gegenstand beschädigt werden, sind Sie vollumfänglich abgesichert. Wir übernehmen die Verantwortung – ohne Diskussionen. Diese Kombination aus sorgfältiger Personalauswahl und starkem Versicherungsschutz gibt unseren Kunden in der ganzen Schweiz das beruhigende Gefühl, in den besten Händen zu sein."
         },
         {
           "heading": "Die Vorteile einer Festanstellung",
-          "body": "Im Gegensatz zu vielen Vermittlungsplattformen, die lediglich Aufträge an Freelancer oder Subunternehmer weiterreichen, sind wir ein echter Arbeitgeber. Was bedeutet das für Sie bei der Buchung von Umfassendes Facility Service? Es bedeutet konstante Qualität. Unsere Mitarbeiter identifizieren sich mit SwissCleanMove. Sie erhalten regelmässige interne Schulungen zu neuen Reinigungstechniken, Ergonomie am Arbeitsplatz und Sicherheitsvorschriften. Die lückenlose digitale Dokumentation unserer Rundgänge gibt Ihnen volle Kontrolle und Transparenz. Zudem profitieren Sie davon, dass Sie oft dieselben vertrauten Gesichter bei sich begrüssen dürfen, was besonders bei regelmässigen Unterhaltsreinigungen oder Hauswartungen enorm wichtig ist. Für Sie entfällt jeglicher administrative Aufwand bezüglich AHV, SUVA oder Quellensteuer – all dies erledigen wir. Sie erhalten lediglich eine transparente, monatliche Rechnung."
+          "body": "Im Gegensatz zu vielen Vermittlungsplattformen, die lediglich Aufträge an Freelancer oder Subunternehmer weiterreichen, sind wir ein echter Arbeitgeber. Was bedeutet das für Sie bei der Buchung von Umfassendes Hauswartung & Gebäudeunterhalt? Es bedeutet konstante Qualität. Unsere Mitarbeiter identifizieren sich mit SwissCleanMove. Sie erhalten regelmässige interne Schulungen zu neuen Reinigungstechniken, Ergonomie am Arbeitsplatz und Sicherheitsvorschriften. Die lückenlose digitale Dokumentation unserer Rundgänge gibt Ihnen volle Kontrolle und Transparenz. Zudem profitieren Sie davon, dass Sie oft dieselben vertrauten Gesichter bei sich begrüssen dürfen, was besonders bei regelmässigen Unterhaltsreinigungen oder Hauswartungen enorm wichtig ist. Für Sie entfällt jeglicher administrative Aufwand bezüglich AHV, SUVA oder Quellensteuer – all dies erledigen wir. Sie erhalten lediglich eine transparente, monatliche Rechnung."
         },
         {
           "heading": "Massgeschneiderte Lösungen für Privat und Gewerbe",
-          "body": "Jeder Kunde hat unterschiedliche Bedürfnisse. Ein Privathaushalt in Biel benötigt eine andere Herangehensweise als ein Grossraumbüro in Bern oder ein Filialbetrieb in Zürich. Im Bereich Umfassendes Facility Service bieten wir deshalb keine starren Pakete an, sondern vollkommen flexible, modulare Lösungen. Von der reinen Treppenhausreinigung bis zum 24/7 Pikettdienst – Sie wählen die Module, die Sie benötigen. Privatkunden schätzen unsere Diskretion und die Möglichkeit, spezielle Wünsche wie das Bügeln von Wäsche oder die Reinigung von Kellerabteilen in den Vertrag aufzunehmen. Gewerbliche Kunden wiederum profitieren von unseren SLA (Service Level Agreements), festen Ansprechpartnern und der Möglichkeit, Reinigungszeiten so zu legen, dass der Geschäftsbetrieb in keiner Weise gestört wird. Wir skalieren unsere Dienstleistungen mit Ihrem Unternehmen: Wenn Sie wachsen, wächst unser Reinigungsteam einfach mit."
+          "body": "Jeder Kunde hat unterschiedliche Bedürfnisse. Ein Privathaushalt in Biel benötigt eine andere Herangehensweise als ein Grossraumbüro in Bern oder ein Filialbetrieb in Zürich. Im Bereich Umfassendes Hauswartung & Gebäudeunterhalt bieten wir deshalb keine starren Pakete an, sondern vollkommen flexible, modulare Lösungen. Von der reinen Treppenhausreinigung bis zum 24/7 Pikettdienst – Sie wählen die Module, die Sie benötigen. Privatkunden schätzen unsere Diskretion und die Möglichkeit, spezielle Wünsche wie das Bügeln von Wäsche oder die Reinigung von Kellerabteilen in den Vertrag aufzunehmen. Gewerbliche Kunden wiederum profitieren von unseren SLA (Service Level Agreements), festen Ansprechpartnern und der Möglichkeit, Reinigungszeiten so zu legen, dass der Geschäftsbetrieb in keiner Weise gestört wird. Wir skalieren unsere Dienstleistungen mit Ihrem Unternehmen: Wenn Sie wachsen, wächst unser Reinigungsteam einfach mit."
         }
       ],
-      "serviceBulletsHeading": "Ihre Premium-Vorteile für Umfassendes Facility Service",
+      "serviceBulletsHeading": "Ihre Premium-Vorteile für Umfassendes Hauswartung & Gebäudeunterhalt",
       "serviceBullets": [
         "Kostenlose Vor-Ort-Besichtigung und transparente, verbindliche Offerten",
         "Ausschliesslich fest angestelltes, geschultes und geprüftes Personal",
@@ -12387,8 +12366,8 @@
         "Erfahrene Facility-Teams",
         "Massgeschneiderte Lösungen"
       ],
-      "ctaMidHeading": "Facility Service in Biel gesucht?",
-      "ctaMidBody": "Fordern Sie Ihre Offerte für professionellen Facility Service an.",
+      "ctaMidHeading": "Hauswartung & Gebäudeunterhalt in Biel gesucht?",
+      "ctaMidBody": "Fordern Sie Ihre Offerte für professionellen Hauswartung & Gebäudeunterhalt an.",
       "ctaMid": "Offerte anfordern",
       "internalLinksHeading": "Weitere Dienstleistungen in Biel",
       "internalLinks": [
@@ -12409,21 +12388,21 @@
           "href": "fensterreinigung-biel"
         }
       ],
-      "ctaStrongHeading": "Jetzt Facility Service buchen",
+      "ctaStrongHeading": "Jetzt Hauswartung & Gebäudeunterhalt buchen",
       "ctaStrongBody": "Kontaktieren Sie uns für eine massgeschneiderte Facility-Lösung in Biel.",
       "ctaStrong": "Offerte anfordern",
       "testimonial": {
         "quote": "SwissCleanMove betreut unsere Liegenschaft in Biel seit Monaten — alles läuft reibungslos.",
         "author": "Verwaltung, Biel",
-        "trust": "Zuverlässiger Facility Service"
+        "trust": "Zuverlässiger Hauswartung & Gebäudeunterhalt"
       },
       "faqs": [
         {
-          "question": "Wie wird der Preis für Umfassendes Facility Service genau berechnet?",
+          "question": "Wie wird der Preis für Umfassendes Hauswartung & Gebäudeunterhalt genau berechnet?",
           "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen ab CHF 490), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
-          "question": "Arbeiten Sie bei Umfassendes Facility Service mit eigenem Equipment?",
+          "question": "Arbeiten Sie bei Umfassendes Hauswartung & Gebäudeunterhalt mit eigenem Equipment?",
           "answer": "In den allermeisten Fällen bringen wir alles selbst mit. Für gewerbliche Reinigungen, Baureinigungen, Endreinigungen und Umzüge sind unsere Fahrzeuge komplett ausgestattet mit Profi-Staubsaugern, Einscheibenmaschinen, Reinigungsmitteln, Leitern und Werkzeugen. Lediglich bei privaten Haushaltshilfen nutzen wir auf Wunsch der Kunden manchmal deren bevorzugte Geräte vor Ort."
         },
         {
@@ -12436,7 +12415,7 @@
         },
         {
           "question": "Setzen Sie Subunternehmer oder Freelancer ein?",
-          "answer": "Nein, ganz bewusst nicht. Um unsere hohen Qualitätsstandards bei Umfassendes Facility Service zu halten, vertrauen wir ausschliesslich auf unser eigenes, fest angestelltes Personal. Dies garantiert nicht nur Qualität, sondern schützt Sie als Kunden auch vor jeglichen Haftungsrisiken im Zusammenhang mit Schwarzarbeit oder fehlenden Versicherungen."
+          "answer": "Nein, ganz bewusst nicht. Um unsere hohen Qualitätsstandards bei Umfassendes Hauswartung & Gebäudeunterhalt zu halten, vertrauen wir ausschliesslich auf unser eigenes, fest angestelltes Personal. Dies garantiert nicht nur Qualität, sondern schützt Sie als Kunden auch vor jeglichen Haftungsrisiken im Zusammenhang mit Schwarzarbeit oder fehlenden Versicherungen."
         },
         {
           "question": "Sind Ihre Mitarbeiter in den Bereichen Diskretion und Datenschutz geschult?",
@@ -12447,7 +12426,7 @@
           "answer": "Wir setzen den Fokus auf Nachhaltigkeit und Materialschonung. Wir verwenden professionelle, biologisch abbaubare und ökozertifizierte Schweizer Reinigungsmittel, die effektiv gegen Schmutz und Bakterien vorgehen, aber die Oberflächen Ihrer Immobilie (wie Echtholzparkett oder Naturstein) schonen und keine giftigen Dämpfe hinterlassen."
         },
         {
-          "question": "Kann ich den Termin für Umfassendes Facility Service flexibel verschieben oder absagen?",
+          "question": "Kann ich den Termin für Umfassendes Hauswartung & Gebäudeunterhalt flexibel verschieben oder absagen?",
           "answer": "Wir legen Wert auf Flexibilität. Termine können gemäss unseren Allgemeinen Geschäftsbedingungen verschoben werden. Bei Krankheit oder Ferien können Sie Einsätze der Unterhaltsreinigung in Absprache mit uns pausieren oder verschieben, ohne dass Ihnen dabei zusätzliche Kosten entstehen."
         },
         {
@@ -12470,14 +12449,14 @@
     },
     "hauswartungBiel": {
       "meta": {
-        "title": "Hauswartung Biel/Bienne | Facility Service & Gebäudeunterhalt | SwissCleanMove",
-        "description": "Professionelle Hauswartung & Facility Service in Biel/Bienne. Objektbetreuung, Gebäudeservice, Treppenhausreinigung & Winterdienst für Immobilienverwaltungen im Seeland."
+        "title": "Hauswartung Biel/Bienne | Hauswartung & Gebäudeunterhalt & Gebäudeunterhalt | SwissCleanMove",
+        "description": "Professionelle Hauswartung & Hauswartung & Gebäudeunterhalt in Biel/Bienne. Objektbetreuung, Gebäudeservice, Treppenhausreinigung & Winterdienst für Immobilienverwaltungen im Seeland."
       },
       "badge": "Premium Hauswartung & Objektbetreuung Biel",
       "h1": "Hauswartung reinigung Biel/Bienne",
-      "heroSubtitle": "Als Schweizer Qualitätsanbieter für Hauswartung und Facility Service betreuen wir Immobilienverwaltungen, Wohnüberbauungen und Gewerbeliegenschaften im gesamten Seeland.",
+      "heroSubtitle": "Als Schweizer Qualitätsanbieter für Hauswartung und Hauswartung & Gebäudeunterhalt betreuen wir Immobilienverwaltungen, Wohnüberbauungen und Gewerbeliegenschaften im gesamten Seeland.",
       "ctaSoft": "B2B Beratung anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Zuverlässige Hauswartung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Ein guter Hauswart ist die Seele einer Liegenschaft. Er sorgt nicht nur für Sauberkeit, sondern auch für Sicherheit. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Aktuell stellen wir den Hauswartdienst für über 120 Liegenschaften im Seeland sicher. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Zuverlässige Hauswartung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Ein guter Hauswart ist die Seele einer Liegenschaft. Er sorgt nicht nur für Sauberkeit, sondern auch für Sicherheit. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Aktuell stellen wir den Hauswartdienst für über 120 Liegenschaften im Seeland sicher. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum Zuverlässige Hauswartung in Biel/Bienne und das gesamte Seeland?",
@@ -12532,7 +12511,7 @@
       "internalLinksHeading": "Verwandte Dienstleistungen für Verwaltungen & Unternehmen",
       "internalLinks": [
         {
-          "label": "Facility Service Biel — Gebäudeservice",
+          "label": "Hauswartung & Gebäudeunterhalt Biel — Gebäudeservice",
           "href": "facility-service-biel"
         },
         {
@@ -12606,7 +12585,7 @@
           "answer": "Bei wiederkehrenden Aufträgen (wie Haushaltshilfe, Hauswartung oder Unterhaltsreinigung) stellen wir sicher, dass Ihnen ein festes Team oder eine feste Bezugsperson zugewiesen wird. Nur bei Ferien oder Krankheit organisieren wir eine Vertretung, die dank des detaillierten Pflichtenhefts sofort weiss, was zu tun ist."
         }
       ],
-      "serviceCardsHeading": "Unsere Premium Hauswartung & Facility Services",
+      "serviceCardsHeading": "Unsere Premium Hauswartung & Hauswartung & Gebäudeunterhalt",
       "serviceCards": [
         {
           "title": "Technischer Hausdienst",
@@ -12655,7 +12634,7 @@
       "h1": "Baureinigung Biel — Reinigung nach Bau- & Renovationsarbeiten",
       "heroSubtitle": "Professionelle Baureinigung in Biel/Bienne. Nach Neubau, Umbau oder Renovation — wir machen Ihre Räume staubfrei und bezugsfertig.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Baugrobreinigung und Feinreinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Nach dem Umbau ist vor dem Einzug. Wir entfernen den letzten Baustaub und Zementschleier zuverlässig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir haben hunderte von Neubauprojekten und privaten Renovationen erfolgreich baugereinigt und termingerecht übergeben. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Baugrobreinigung und Feinreinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Nach dem Umbau ist vor dem Einzug. Wir entfernen den letzten Baustaub und Zementschleier zuverlässig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir haben hunderte von Neubauprojekten und privaten Renovationen erfolgreich baugereinigt und termingerecht übergeben. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum Baugrobreinigung und Feinreinigung in Biel/Bienne und das gesamte Seeland?",
@@ -12794,7 +12773,7 @@
       "h1": "Gastronomie Reinigung Biel — Hygienische Küchen- & Restaurantreinigung",
       "heroSubtitle": "Professionelle Gastronomie Reinigung in Biel/Bienne. Küchen, Restaurants und Gastrobetriebe — hygienisch sauber nach Schweizer Standards.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für professionelle Gastronomiereinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. In der Gastronomie ist Hygiene das oberste Gebot. Mit uns bestehen Sie jede Kontrolle des Lebensmittelinspektorats mühelos. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir reinigen nachts Dutzende von Grossküchen, Restaurants und Cafés im Seeland, damit morgens alles bereit ist. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für professionelle Gastronomiereinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. In der Gastronomie ist Hygiene das oberste Gebot. Mit uns bestehen Sie jede Kontrolle des Lebensmittelinspektorats mühelos. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Wir reinigen nachts Dutzende von Grossküchen, Restaurants und Cafés im Seeland, damit morgens alles bereit ist. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum professionelle Gastronomiereinigung in Biel/Bienne und das gesamte Seeland?",
@@ -12857,7 +12836,7 @@
           "href": "unterhaltsreinigung-biel"
         },
         {
-          "label": "Facility Service Biel",
+          "label": "Hauswartung & Gebäudeunterhalt Biel",
           "href": "facility-service-biel"
         },
         {
@@ -12932,7 +12911,7 @@
       "badge": "Reinigungsfirma die Schweiz",
       "h1": "Reinigungsfirma die Schweiz – Professionelle Reinigung",
       "heroSubtitle": "Ihr zuverlässiger Partner für Reinigungsfirma in der ganzen Schweiz.",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für schweizweite Reinigung in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Egal in welchem Kanton Sie sich befinden: Vertrauen Sie auf einen Reinigungspartner mit nationaler Reichweite und lokalen Teams. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir betreuen Filialnetze und Grosskunden in allen Sprachregionen der Schweiz mit einheitlichen Qualitätsstandards. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für schweizweite Reinigung in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Egal in welchem Kanton Sie sich befinden: Vertrauen Sie auf einen Reinigungspartner mit nationaler Reichweite und lokalen Teams. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir betreuen Filialnetze und Grosskunden in allen Sprachregionen der Schweiz mit einheitlichen Qualitätsstandards. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
       "ctaMidHeading": "Planen Sie einen Service?",
       "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an.",
@@ -13060,7 +13039,7 @@
       "badge": "Umzugsreinigung die Schweiz",
       "h1": "Umzugsreinigung die Schweiz – Professionelle Endreinigung",
       "heroSubtitle": "Ihr zuverlässiger Partner für Umzugsreinigung in der ganzen Schweiz.",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Umzugsreinigung mit Abnahmegarantie in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der Umzug in der Schweiz ist stressig genug. Überlassen Sie die anstrengende Endreinigung den Profis und sichern Sie Ihre Kaution. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir haben schweizweit tausende von Endreinigungen durchgeführt – alle mit 100% erfolgreicher Wohnungsabnahme. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Umzugsreinigung mit Abnahmegarantie in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der Umzug in der Schweiz ist stressig genug. Überlassen Sie die anstrengende Endreinigung den Profis und sichern Sie Ihre Kaution. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir haben schweizweit tausende von Endreinigungen durchgeführt – alle mit 100% erfolgreicher Wohnungsabnahme. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
       "ctaMidHeading": "Planen Sie einen Service?",
       "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an.",
@@ -13177,13 +13156,13 @@
     },
     "facilityServiceSchweiz": {
       "meta": {
-        "title": "Facility Service Schweiz | Gebäudemanagement | SwissCleanMove",
-        "description": "Ihr Partner für umfassende Facility Services in der Schweiz. Professionelles Gebäudemanagement für Unternehmen und Immobilien."
+        "title": "Hauswartung & Gebäudeunterhalt Schweiz | Gebäudemanagement | SwissCleanMove",
+        "description": "Ihr Partner für umfassende Hauswartung & Gebäudeunterhalt in der Schweiz. Professionelles Gebäudemanagement für Unternehmen und Immobilien."
       },
-      "badge": "Facility Services die Schweiz",
-      "h1": "Facility Services die Schweiz – Professioneller Facility Service",
-      "heroSubtitle": "Ihr zuverlässiger Partner für Facility Services in der ganzen Schweiz.",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für nationales Facility Service in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Management eines nationalen Immobilienportfolios erfordert einen starken Partner im Hintergrund. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir entlasten grosse Pensionskassen und Verwaltungen durch infrastrukturelle Services in der ganzen Schweiz. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "badge": "Hauswartung & Gebäudeunterhalt die Schweiz",
+      "h1": "Hauswartung & Gebäudeunterhalt die Schweiz – Professioneller Hauswartung & Gebäudeunterhalt",
+      "heroSubtitle": "Ihr zuverlässiger Partner für Hauswartung & Gebäudeunterhalt in der ganzen Schweiz.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für nationales Hauswartung & Gebäudeunterhalt in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Management eines nationalen Immobilienportfolios erfordert einen starken Partner im Hintergrund. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir entlasten grosse Pensionskassen und Verwaltungen durch infrastrukturelle Services in der ganzen Schweiz. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
       "ctaMidHeading": "Planen Sie einen Service?",
       "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an.",
@@ -13193,35 +13172,35 @@
       "ctaStrong": "Schnelle Rückmeldung innerhalb 24h",
       "sections": [
         {
-          "heading": "Warum nationales Facility Service in die gesamte Schweiz?",
-          "body": "Die Wahl des richtigen Dienstleisters für nationales Facility Service ist entscheidend für Ihre Zufriedenheit. In die gesamte Schweiz gibt es viele Anbieter, doch SwissCleanMove sticht durch einen kompromisslosen Fokus auf Schweizer Qualitätsstandards hervor. Wir kennen die spezifischen Anforderungen der Kunden in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura genau. Unser Personal ist lokal verankert, was kurze Anfahrtswege, schnelle Reaktionszeiten und eine hohe Flexibilität ermöglicht. Mit SwissCleanMove reduzieren Sie Ihre Lieferanten in der Schweiz auf einen einzigen, verlässlichen Partner. Ein weiterer wesentlicher Aspekt ist unsere absolute Transparenz. Bei uns gibt es keine versteckten Kosten, keine unklaren Stundenzuschläge und keine bösen Überraschungen auf der Rechnung. Wir erstellen Ihnen detaillierte, faire Offerten, an die wir uns strikt halten. Zudem sind alle unsere Mitarbeiter umfassend versichert (Betriebshaftpflicht, Unfall), sodass Sie als Auftraggeber stets auf der sicheren Seite sind. Wir übernehmen die komplette administrative Abwicklung, was für Sie maximale Entlastung bedeutet. Lehnen Sie sich zurück und überlassen Sie die harte Arbeit den Profis."
+          "heading": "Warum nationales Hauswartung & Gebäudeunterhalt in die gesamte Schweiz?",
+          "body": "Die Wahl des richtigen Dienstleisters für nationales Hauswartung & Gebäudeunterhalt ist entscheidend für Ihre Zufriedenheit. In die gesamte Schweiz gibt es viele Anbieter, doch SwissCleanMove sticht durch einen kompromisslosen Fokus auf Schweizer Qualitätsstandards hervor. Wir kennen die spezifischen Anforderungen der Kunden in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura genau. Unser Personal ist lokal verankert, was kurze Anfahrtswege, schnelle Reaktionszeiten und eine hohe Flexibilität ermöglicht. Mit SwissCleanMove reduzieren Sie Ihre Lieferanten in der Schweiz auf einen einzigen, verlässlichen Partner. Ein weiterer wesentlicher Aspekt ist unsere absolute Transparenz. Bei uns gibt es keine versteckten Kosten, keine unklaren Stundenzuschläge und keine bösen Überraschungen auf der Rechnung. Wir erstellen Ihnen detaillierte, faire Offerten, an die wir uns strikt halten. Zudem sind alle unsere Mitarbeiter umfassend versichert (Betriebshaftpflicht, Unfall), sodass Sie als Auftraggeber stets auf der sicheren Seite sind. Wir übernehmen die komplette administrative Abwicklung, was für Sie maximale Entlastung bedeutet. Lehnen Sie sich zurück und überlassen Sie die harte Arbeit den Profis."
         },
         {
           "heading": "Unser detaillierter Arbeitsprozess",
-          "body": "Ein professionelles Ergebnis bei der nationales Facility Service erfordert strukturierte Abläufe. Bei SwissCleanMove überlassen wir nichts dem Zufall. Der erste Schritt ist immer eine gründliche Bedarfsanalyse. Oft führen wir in die gesamte Schweiz eine kostenlose Vor-Ort-Besichtigung durch, um die genauen Gegebenheiten zu erfassen. Wir überwachen Ihre Haustechnik, warten Lüftungsanlagen und übernehmen die gesamte Treppenhausreinigung. Auf Basis dieser Besichtigung erstellen wir ein massgeschneidertes Pflichtenheft, in dem alle Aufgaben und Intervalle detailliert festgehalten werden. Am Tag der Ausführung erscheint unser Team pünktlich mit modernstem Equipment und professionellen, materialschonenden Reinigungsmitteln oder Werkzeugen. Unsere Teamleiter überwachen die Ausführung vor Ort und garantieren, dass das Pflichtenheft Punkt für Punkt abgearbeitet wird. Nach Abschluss der Arbeiten führen wir eine strenge Qualitätskontrolle durch. Erst wenn wir selbst zu 100% zufrieden sind, übergeben wir das Ergebnis an Sie. Dieser strukturierte Prozess ist das Geheimnis unseres langjährigen Erfolgs und der hohen Kundenzufriedenheit in die gesamte Schweiz."
+          "body": "Ein professionelles Ergebnis bei der nationales Hauswartung & Gebäudeunterhalt erfordert strukturierte Abläufe. Bei SwissCleanMove überlassen wir nichts dem Zufall. Der erste Schritt ist immer eine gründliche Bedarfsanalyse. Oft führen wir in die gesamte Schweiz eine kostenlose Vor-Ort-Besichtigung durch, um die genauen Gegebenheiten zu erfassen. Wir überwachen Ihre Haustechnik, warten Lüftungsanlagen und übernehmen die gesamte Treppenhausreinigung. Auf Basis dieser Besichtigung erstellen wir ein massgeschneidertes Pflichtenheft, in dem alle Aufgaben und Intervalle detailliert festgehalten werden. Am Tag der Ausführung erscheint unser Team pünktlich mit modernstem Equipment und professionellen, materialschonenden Reinigungsmitteln oder Werkzeugen. Unsere Teamleiter überwachen die Ausführung vor Ort und garantieren, dass das Pflichtenheft Punkt für Punkt abgearbeitet wird. Nach Abschluss der Arbeiten führen wir eine strenge Qualitätskontrolle durch. Erst wenn wir selbst zu 100% zufrieden sind, übergeben wir das Ergebnis an Sie. Dieser strukturierte Prozess ist das Geheimnis unseres langjährigen Erfolgs und der hohen Kundenzufriedenheit in die gesamte Schweiz."
         },
         {
           "heading": "Lokale Expertise und schnelle Verfügbarkeit",
-          "body": "Dank unserer starken Präsenz in die gesamte Schweiz können wir Dienstleistungen für nationales Facility Service nicht nur in höchster Qualität, sondern auch mit bemerkenswerter Schnelligkeit anbieten. Wir sind vertraut mit den Besonderheiten der Region, von den engen Gassen in der Altstadt bis hin zu grossen Gewerbeparks. Unser 24-Stunden-Pikettdienst ist schweizweit vernetzt und leitet bei Notfällen sofort Massnahmen ein. Gerade in Notfällen, sei es ein kurzfristig ausgefallener Reinigungstermin, ein dringender Umzug oder ein Wasserschaden, der sofortige Reinigung erfordert, beweist unser Pikettdienst seine Stärke. Oft sind wir in der Lage, innerhalb von 24 Stunden ein kompetentes Team vor Ort in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura zu haben. Wir passen uns Ihrem Terminplan an und bieten Einsätze auch am Wochenende, am Abend oder in den frühen Morgenstunden an, um Ihren privaten oder geschäftlichen Ablauf nicht zu stören."
+          "body": "Dank unserer starken Präsenz in die gesamte Schweiz können wir Dienstleistungen für nationales Hauswartung & Gebäudeunterhalt nicht nur in höchster Qualität, sondern auch mit bemerkenswerter Schnelligkeit anbieten. Wir sind vertraut mit den Besonderheiten der Region, von den engen Gassen in der Altstadt bis hin zu grossen Gewerbeparks. Unser 24-Stunden-Pikettdienst ist schweizweit vernetzt und leitet bei Notfällen sofort Massnahmen ein. Gerade in Notfällen, sei es ein kurzfristig ausgefallener Reinigungstermin, ein dringender Umzug oder ein Wasserschaden, der sofortige Reinigung erfordert, beweist unser Pikettdienst seine Stärke. Oft sind wir in der Lage, innerhalb von 24 Stunden ein kompetentes Team vor Ort in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura zu haben. Wir passen uns Ihrem Terminplan an und bieten Einsätze auch am Wochenende, am Abend oder in den frühen Morgenstunden an, um Ihren privaten oder geschäftlichen Ablauf nicht zu stören."
         },
         {
           "heading": "Umweltbewusstsein und Nachhaltigkeit",
-          "body": "Als modernes Schweizer Unternehmen übernehmen wir Verantwortung für unsere Umwelt. Dies gilt ganz besonders im Bereich der Reinigung. Wir haben unsere Prozesse für nationales Facility Service in den letzten Jahren konsequent auf Nachhaltigkeit ausgerichtet. Im Winter übernehmen wir die Haftung für die Schneeräumung vor all Ihren Schweizer Liegenschaften. Wir verwenden primär biologisch abbaubare und ökozertifizierte Reinigungsmittel, die effektiv gegen Schmutz sind, aber die Flora und Fauna rund um den Bielersee und in der Schweiz nicht belasten. Zudem dosieren wir durch moderne Mikrofasersysteme und spezielle Dosieranlagen den Wasser- und Chemikalienverbrauch exakt. Dies schont nicht nur die Umwelt, sondern schützt auch die wertvollen Oberflächen Ihrer Möbel, Böden und Immobilien. Auch im Bereich Umzug und Transport achten wir auf optimierte Routenplanung, um den CO2-Ausstoss unserer modernen Fahrzeugflotte so gering wie möglich zu halten."
+          "body": "Als modernes Schweizer Unternehmen übernehmen wir Verantwortung für unsere Umwelt. Dies gilt ganz besonders im Bereich der Reinigung. Wir haben unsere Prozesse für nationales Hauswartung & Gebäudeunterhalt in den letzten Jahren konsequent auf Nachhaltigkeit ausgerichtet. Im Winter übernehmen wir die Haftung für die Schneeräumung vor all Ihren Schweizer Liegenschaften. Wir verwenden primär biologisch abbaubare und ökozertifizierte Reinigungsmittel, die effektiv gegen Schmutz sind, aber die Flora und Fauna rund um den Bielersee und in der Schweiz nicht belasten. Zudem dosieren wir durch moderne Mikrofasersysteme und spezielle Dosieranlagen den Wasser- und Chemikalienverbrauch exakt. Dies schont nicht nur die Umwelt, sondern schützt auch die wertvollen Oberflächen Ihrer Möbel, Böden und Immobilien. Auch im Bereich Umzug und Transport achten wir auf optimierte Routenplanung, um den CO2-Ausstoss unserer modernen Fahrzeugflotte so gering wie möglich zu halten."
         },
         {
           "heading": "Sicherheit, Versicherung und Vertrauen",
-          "body": "Wenn Sie fremden Personen Zugang zu Ihrer Wohnung oder Ihren Geschäftsräumen in die gesamte Schweiz gewähren, ist Vertrauen das wichtigste Gut. SwissCleanMove ist sich dieser Verantwortung bewusst. Alle unsere Mitarbeiter, die im Bereich nationales Facility Service eingesetzt werden, durchlaufen vor ihrer Festanstellung einen strengen Selektionsprozess inklusive Prüfung des Betreibungs- und Strafregisters. Ein zentrales, digitales Reporting-Tool gibt der Immobilienverwaltung in Echtzeit Übersicht über alle Objekte. Darüber hinaus verfügen wir über eine umfassende Betriebs- und Berufshaftpflichtversicherung. Sollte während unserer Arbeit tatsächlich einmal ein Kratzer im Parkett entstehen oder ein Gegenstand beschädigt werden, sind Sie vollumfänglich abgesichert. Wir übernehmen die Verantwortung – ohne Diskussionen. Diese Kombination aus sorgfältiger Personalauswahl und starkem Versicherungsschutz gibt unseren Kunden in der ganzen Schweiz das beruhigende Gefühl, in den besten Händen zu sein."
+          "body": "Wenn Sie fremden Personen Zugang zu Ihrer Wohnung oder Ihren Geschäftsräumen in die gesamte Schweiz gewähren, ist Vertrauen das wichtigste Gut. SwissCleanMove ist sich dieser Verantwortung bewusst. Alle unsere Mitarbeiter, die im Bereich nationales Hauswartung & Gebäudeunterhalt eingesetzt werden, durchlaufen vor ihrer Festanstellung einen strengen Selektionsprozess inklusive Prüfung des Betreibungs- und Strafregisters. Ein zentrales, digitales Reporting-Tool gibt der Immobilienverwaltung in Echtzeit Übersicht über alle Objekte. Darüber hinaus verfügen wir über eine umfassende Betriebs- und Berufshaftpflichtversicherung. Sollte während unserer Arbeit tatsächlich einmal ein Kratzer im Parkett entstehen oder ein Gegenstand beschädigt werden, sind Sie vollumfänglich abgesichert. Wir übernehmen die Verantwortung – ohne Diskussionen. Diese Kombination aus sorgfältiger Personalauswahl und starkem Versicherungsschutz gibt unseren Kunden in der ganzen Schweiz das beruhigende Gefühl, in den besten Händen zu sein."
         },
         {
           "heading": "Die Vorteile einer Festanstellung",
-          "body": "Im Gegensatz zu vielen Vermittlungsplattformen, die lediglich Aufträge an Freelancer oder Subunternehmer weiterreichen, sind wir ein echter Arbeitgeber. Was bedeutet das für Sie bei der Buchung von nationales Facility Service? Es bedeutet konstante Qualität. Unsere Mitarbeiter identifizieren sich mit SwissCleanMove. Sie erhalten regelmässige interne Schulungen zu neuen Reinigungstechniken, Ergonomie am Arbeitsplatz und Sicherheitsvorschriften. Wir pflegen Aussenanlagen und Grünflächen, damit Ihre Immobilien stets repräsentativ wirken. Zudem profitieren Sie davon, dass Sie oft dieselben vertrauten Gesichter bei sich begrüssen dürfen, was besonders bei regelmässigen Unterhaltsreinigungen oder Hauswartungen enorm wichtig ist. Für Sie entfällt jeglicher administrative Aufwand bezüglich AHV, SUVA oder Quellensteuer – all dies erledigen wir. Sie erhalten lediglich eine transparente, monatliche Rechnung."
+          "body": "Im Gegensatz zu vielen Vermittlungsplattformen, die lediglich Aufträge an Freelancer oder Subunternehmer weiterreichen, sind wir ein echter Arbeitgeber. Was bedeutet das für Sie bei der Buchung von nationales Hauswartung & Gebäudeunterhalt? Es bedeutet konstante Qualität. Unsere Mitarbeiter identifizieren sich mit SwissCleanMove. Sie erhalten regelmässige interne Schulungen zu neuen Reinigungstechniken, Ergonomie am Arbeitsplatz und Sicherheitsvorschriften. Wir pflegen Aussenanlagen und Grünflächen, damit Ihre Immobilien stets repräsentativ wirken. Zudem profitieren Sie davon, dass Sie oft dieselben vertrauten Gesichter bei sich begrüssen dürfen, was besonders bei regelmässigen Unterhaltsreinigungen oder Hauswartungen enorm wichtig ist. Für Sie entfällt jeglicher administrative Aufwand bezüglich AHV, SUVA oder Quellensteuer – all dies erledigen wir. Sie erhalten lediglich eine transparente, monatliche Rechnung."
         },
         {
           "heading": "Massgeschneiderte Lösungen für Privat und Gewerbe",
-          "body": "Jeder Kunde hat unterschiedliche Bedürfnisse. Ein Privathaushalt in Biel benötigt eine andere Herangehensweise als ein Grossraumbüro in Bern oder ein Filialbetrieb in Zürich. Im Bereich nationales Facility Service bieten wir deshalb keine starren Pakete an, sondern vollkommen flexible, modulare Lösungen. Von der reinen Überwachung bis zum Voll-Service-Vertrag inkl. Kleinreparaturen – alles ist modular. Privatkunden schätzen unsere Diskretion und die Möglichkeit, spezielle Wünsche wie das Bügeln von Wäsche oder die Reinigung von Kellerabteilen in den Vertrag aufzunehmen. Gewerbliche Kunden wiederum profitieren von unseren SLA (Service Level Agreements), festen Ansprechpartnern und der Möglichkeit, Reinigungszeiten so zu legen, dass der Geschäftsbetrieb in keiner Weise gestört wird. Wir skalieren unsere Dienstleistungen mit Ihrem Unternehmen: Wenn Sie wachsen, wächst unser Reinigungsteam einfach mit."
+          "body": "Jeder Kunde hat unterschiedliche Bedürfnisse. Ein Privathaushalt in Biel benötigt eine andere Herangehensweise als ein Grossraumbüro in Bern oder ein Filialbetrieb in Zürich. Im Bereich nationales Hauswartung & Gebäudeunterhalt bieten wir deshalb keine starren Pakete an, sondern vollkommen flexible, modulare Lösungen. Von der reinen Überwachung bis zum Voll-Service-Vertrag inkl. Kleinreparaturen – alles ist modular. Privatkunden schätzen unsere Diskretion und die Möglichkeit, spezielle Wünsche wie das Bügeln von Wäsche oder die Reinigung von Kellerabteilen in den Vertrag aufzunehmen. Gewerbliche Kunden wiederum profitieren von unseren SLA (Service Level Agreements), festen Ansprechpartnern und der Möglichkeit, Reinigungszeiten so zu legen, dass der Geschäftsbetrieb in keiner Weise gestört wird. Wir skalieren unsere Dienstleistungen mit Ihrem Unternehmen: Wenn Sie wachsen, wächst unser Reinigungsteam einfach mit."
         }
       ],
-      "serviceBulletsHeading": "Ihre Premium-Vorteile für nationales Facility Service",
+      "serviceBulletsHeading": "Ihre Premium-Vorteile für nationales Hauswartung & Gebäudeunterhalt",
       "serviceBullets": [
         "Kostenlose Vor-Ort-Besichtigung und transparente, verbindliche Offerten",
         "Ausschliesslich fest angestelltes, geschultes und geprüftes Personal",
@@ -13249,11 +13228,11 @@
       },
       "faqs": [
         {
-          "question": "Wie wird der Preis für nationales Facility Service genau berechnet?",
+          "question": "Wie wird der Preis für nationales Hauswartung & Gebäudeunterhalt genau berechnet?",
           "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen ab CHF 490), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in die gesamte Schweiz, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
-          "question": "Arbeiten Sie bei nationales Facility Service mit eigenem Equipment?",
+          "question": "Arbeiten Sie bei nationales Hauswartung & Gebäudeunterhalt mit eigenem Equipment?",
           "answer": "In den allermeisten Fällen bringen wir alles selbst mit. Für gewerbliche Reinigungen, Baureinigungen, Endreinigungen und Umzüge sind unsere Fahrzeuge komplett ausgestattet mit Profi-Staubsaugern, Einscheibenmaschinen, Reinigungsmitteln, Leitern und Werkzeugen. Lediglich bei privaten Haushaltshilfen nutzen wir auf Wunsch der Kunden manchmal deren bevorzugte Geräte vor Ort."
         },
         {
@@ -13266,7 +13245,7 @@
         },
         {
           "question": "Setzen Sie Subunternehmer oder Freelancer ein?",
-          "answer": "Nein, ganz bewusst nicht. Um unsere hohen Qualitätsstandards bei nationales Facility Service zu halten, vertrauen wir ausschliesslich auf unser eigenes, fest angestelltes Personal. Dies garantiert nicht nur Qualität, sondern schützt Sie als Kunden auch vor jeglichen Haftungsrisiken im Zusammenhang mit Schwarzarbeit oder fehlenden Versicherungen."
+          "answer": "Nein, ganz bewusst nicht. Um unsere hohen Qualitätsstandards bei nationales Hauswartung & Gebäudeunterhalt zu halten, vertrauen wir ausschliesslich auf unser eigenes, fest angestelltes Personal. Dies garantiert nicht nur Qualität, sondern schützt Sie als Kunden auch vor jeglichen Haftungsrisiken im Zusammenhang mit Schwarzarbeit oder fehlenden Versicherungen."
         },
         {
           "question": "Sind Ihre Mitarbeiter in den Bereichen Diskretion und Datenschutz geschult?",
@@ -13277,7 +13256,7 @@
           "answer": "Wir setzen den Fokus auf Nachhaltigkeit und Materialschonung. Wir verwenden professionelle, biologisch abbaubare und ökozertifizierte Schweizer Reinigungsmittel, die effektiv gegen Schmutz und Bakterien vorgehen, aber die Oberflächen Ihrer Immobilie (wie Echtholzparkett oder Naturstein) schonen und keine giftigen Dämpfe hinterlassen."
         },
         {
-          "question": "Kann ich den Termin für nationales Facility Service flexibel verschieben oder absagen?",
+          "question": "Kann ich den Termin für nationales Hauswartung & Gebäudeunterhalt flexibel verschieben oder absagen?",
           "answer": "Wir legen Wert auf Flexibilität. Termine können gemäss unseren Allgemeinen Geschäftsbedingungen verschoben werden. Bei Krankheit oder Ferien können Sie Einsätze der Unterhaltsreinigung in Absprache mit uns pausieren oder verschieben, ohne dass Ihnen dabei zusätzliche Kosten entstehen."
         },
         {
@@ -13306,7 +13285,7 @@
       "badge": "Hauswartung die Schweiz",
       "h1": "Hauswartung die Schweiz – Professionelle Liegenschaftsservice",
       "heroSubtitle": "Ihr zuverlässiger Partner für Hauswartung in der ganzen Schweiz.",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für professionelle Hauswartung in der Schweiz in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der Hauswart ist die gute Seele jeder Liegenschaft und der erste Ansprechpartner für Ihre Mieter. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Facility Service absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir stellen täglich den Hauswartdienst für hunderte Wohn- und Gewerbeobjekte quer durch die Schweiz sicher. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für professionelle Hauswartung in der Schweiz in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der Hauswart ist die gute Seele jeder Liegenschaft und der erste Ansprechpartner für Ihre Mieter. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir stellen täglich den Hauswartdienst für hunderte Wohn- und Gewerbeobjekte quer durch die Schweiz sicher. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
       "ctaMidHeading": "Planen Sie einen Service?",
       "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an.",
@@ -13508,7 +13487,7 @@
           "href": "hauswartung-schweiz"
         },
         {
-          "label": "Facility Service Schweiz",
+          "label": "Hauswartung & Gebäudeunterhalt Schweiz",
           "href": "facility-service-schweiz"
         },
         {
@@ -13792,7 +13771,7 @@
       "gastroCleaning": "Gastro Reinigung",
       "transportCompany": "Transportfirma",
       "disposal": "Entsorgung",
-      "facilityService": "Facility Service",
+      "facilityService": "Hauswartung & Gebäudeunterhalt",
       "propertyMaintenance": "Hauswartung"
     },
     "header": {
@@ -14053,5 +14032,15 @@
     "buttons": {
       "submitRequest": "Anfrage senden"
     }
+  },
+  "seoLanding": {
+    "operationalAreas": "Einsatzgebiete",
+    "teamsDailyOperation": "Unsere Teams sind täglich im Einsatz in:",
+    "fastAvailability": "Schnelle Verfügbarkeit in der Region {city}",
+    "onTheMap": "{city} auf der Karte",
+    "faq": "Häufig gestellte Fragen (FAQ)",
+    "faqShort": "Häufige Fragen (FAQ)",
+    "allRegions": "Alle Regionen",
+    "serviceThroughoutCh": "Service schweizweit"
   }
 }

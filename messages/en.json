@@ -13983,5 +13983,15 @@
     "buttons": {
       "submitRequest": "Submit Request"
     }
+  },
+  "seoLanding": {
+    "operationalAreas": "Service Areas",
+    "teamsDailyOperation": "Our teams operate daily in:",
+    "fastAvailability": "Fast availability in the {city} region",
+    "onTheMap": "{city} on the map",
+    "faq": "Frequently Asked Questions (FAQ)",
+    "faqShort": "FAQ",
+    "allRegions": "All Regions",
+    "serviceThroughoutCh": "Service throughout Switzerland"
   }
 }

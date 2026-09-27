@@ -14053,5 +14053,15 @@
     "buttons": {
       "submitRequest": "Soumettre la demande"
     }
+  },
+  "seoLanding": {
+    "operationalAreas": "Zones d'intervention",
+    "teamsDailyOperation": "Nos équipes interviennent quotidiennement à :",
+    "fastAvailability": "Disponibilité rapide dans la région de {city}",
+    "onTheMap": "{city} sur la carte",
+    "faq": "Foire Aux Questions (FAQ)",
+    "faqShort": "FAQ",
+    "allRegions": "Toutes les régions",
+    "serviceThroughoutCh": "Service dans toute la Suisse"
   }
 }
