@@ -240,13 +240,15 @@ export default function SeoLandingPage({
         subtitle={p('heroSubtitle')}
         cta={
           <div className="flex flex-col sm:flex-row gap-4 justify-start">
-            <Link
-              href={`/${locale}/free-offer`}
-              className="btn-primary text-lg px-8 py-4 flex items-center justify-center"
-              onClick={() => handleCtaClick('hero_form_btn')}
-            >
-              {p('ctaSoft')}
-            </Link>
+            {(has('ctaSoft') || has('ctaPrimary')) && (
+              <Link
+                href={`/${locale}/free-offer`}
+                className="btn-primary text-lg px-8 py-4 flex items-center justify-center"
+                onClick={() => handleCtaClick('hero_form_btn')}
+              >
+                {has('ctaSoft') ? p('ctaSoft') : p('ctaPrimary')}
+              </Link>
+            )}
             <a
               href="tel:+41782158030"
               className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
@@ -276,15 +278,17 @@ export default function SeoLandingPage({
       />
 
       {/* Intro Section */}
-      <section className="section-padding">
-        <div className="container-max">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-swiss-body leading-relaxed">
-              {p('intro')}
-            </p>
+      {has('intro') && (
+        <section className="section-padding">
+          <div className="container-max">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-lg text-swiss-body leading-relaxed">
+                {p('intro')}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Testimonial Section */}
       {testimonial && (
