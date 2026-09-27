@@ -11504,8 +11504,8 @@
       "heroSubtitle": "Ihre zuverlässige Reinigungsfirma in Biel/Bienne und im gesamten Seeland. Wir bieten massgeschneiderte Reinigungslösungen für Privatpersonen, Unternehmen und Liegenschaftsverwaltungen.",
       "trustPoints": [
         "Kostenlose & transparente Offerten",
-        "Geschultes & fest angestelltes Personal",
-        "Umfassende Haftpflichtversicherung"
+        "Umzugsreinigung mit Abnahmegarantie",
+        "Lokale Betreuung im Seeland"
       ],
       "ctaPrimary": "Kostenlose Offerte anfordern",
       "ctaSecondary": "Jetzt anrufen: +41 78 215 80 30",
@@ -11513,7 +11513,7 @@
       "sections": [
         {
           "heading": "Ihre zuverlässige Reinigungsfirma in Biel/Bienne",
-          "body": "SwissCleanMove ist Ihr verlässlicher Partner für alle Anliegen rund um die Reinigung in Biel/Bienne und im gesamten Seeland. Wir verstehen, dass Sauberkeit eine Vertrauenssache ist. Deshalb setzen wir ausschliesslich auf fest angestelltes, sorgfältig geschultes Personal und umweltschonende Reinigungsmittel. Ob für Ihren Privathaushalt, Ihr Büro oder eine komplette Liegenschaft – wir reinigen mit höchster Präzision und garantieren Ihnen einwandfreie Ergebnisse. Zählen Sie auf Schweizer Qualität und eine professionelle Betreuung von der ersten kostenlosen Besichtigung bis zum Abschluss der Arbeiten."
+          "body": "SwissCleanMove ist Ihr verlässlicher Partner für alle Anliegen rund um die Reinigung in Biel/Bienne und im gesamten Seeland. Ob für Ihren Privathaushalt, Ihr Büro oder eine komplette Liegenschaft – wir reinigen gründlich und zuverlässig. Zählen Sie auf eine professionelle Betreuung von der ersten kostenlosen Besichtigung bis zum Abschluss der Arbeiten."
         },
         {
           "heading": "Unsere Reinigungsleistungen in Biel und im Seeland",
@@ -11605,13 +11605,7 @@
           "question": "Wie kann ich SwissCleanMove kontaktieren?",
           "answer": "Sie können uns telefonisch unter +41 78 215 80 30 erreichen, eine E-Mail an info@swisscleanmove.ch senden oder ganz einfach unser Kontaktformular auf der Website ausfüllen."
         }
-      ],
-      "badge": "",
-      "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "",
-      "serviceCardsHeading": "",
-      "serviceCards": [],
-      "testimonial": ""
+      ]
     },
     "umzugsfirmaBiel": {
       "meta": {

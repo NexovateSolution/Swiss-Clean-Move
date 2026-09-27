@@ -6,7 +6,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('title'),
     description: t('description'),
-    robots: { index: true, follow: true }
+    robots: { index: true, follow: true },
+    alternates: {
+      canonical: `https://www.swisscleanmove.ch/${locale}/reinigungsfirma-biel`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/reinigungsfirma-biel',
+        en: 'https://www.swisscleanmove.ch/en/reinigungsfirma-biel',
+        fr: 'https://www.swisscleanmove.ch/fr/reinigungsfirma-biel',
+        it: 'https://www.swisscleanmove.ch/it/reinigungsfirma-biel',
+        'x-default': 'https://www.swisscleanmove.ch/de/reinigungsfirma-biel'
+      }
+    }
   };
 }
 

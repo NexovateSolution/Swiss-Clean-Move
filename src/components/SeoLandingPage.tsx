@@ -70,8 +70,9 @@ export default function SeoLandingPage({
   areaCities,
 }: SeoLandingPageProps) {
   const t = useTranslations();
-  const p = (key: string) => t(`seoPages.${pageKey}.${key}` as any);
-  const pRaw = (key: string) => t.raw(`seoPages.${pageKey}.${key}` as any);
+  const has = (key: string) => t.has(`seoPages.${pageKey}.${key}` as any);
+  const p = (key: string) => has(key) ? t(`seoPages.${pageKey}.${key}` as any) : '';
+  const pRaw = (key: string) => has(key) ? t.raw(`seoPages.${pageKey}.${key}` as any) : undefined;
 
   const IconComponent = serviceIcons[service];
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -109,7 +110,7 @@ export default function SeoLandingPage({
           addressCountry: 'CH',
         },
         telephone: '+41 78 215 80 30',
-        url: `https://swisscleanmove.ch/${locale}/${pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}`,
+        url: `https://www.swisscleanmove.ch/${locale}/${pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}`,
         areaServed: {
           '@type': 'Place',
           name: `${city}, Seeland, Schweiz`,
@@ -136,8 +137,8 @@ export default function SeoLandingPage({
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: `https://swisscleanmove.ch/${locale}` },
-          { '@type': 'ListItem', position: 2, name: p('meta.title'), item: `https://swisscleanmove.ch/${locale}/${pageKey}` }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `https://www.swisscleanmove.ch/${locale}` },
+          { '@type': 'ListItem', position: 2, name: p('meta.title'), item: `https://www.swisscleanmove.ch/${locale}/${pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}` }
         ]
       },
       faqs.length > 0 && {
