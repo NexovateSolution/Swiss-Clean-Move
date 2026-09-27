@@ -999,6 +999,11 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           <div class="meta-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
           <div class="meta-text"><label>${locDict.receiptIssuedBy}</label><div>${locDict.receiptIssuedByValue}</div></div>
         </div>
+        <div style="border-bottom: 1px solid #ddd; margin: 8px 0;"></div>
+        <div class="meta-item">
+          <div class="meta-icon"><svg viewBox="0 0 24 24"><path d="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z"/></svg></div>
+          <div class="meta-text"><label>UID</label><div>CHE-457.949.122</div></div>
+        </div>
       </div>
     </div>
     
@@ -1054,22 +1059,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     </div>
     ` : ''}
     
-    <div class="footer-bottom">
-      <div>
-        <strong style="font-size: 14px; color: #001233; margin-bottom: 5px; display: inline-block;">SwissCleanMove</strong><br>
-        ${locDict.receiptFooterServices}<br>
-        UID: CHE-457.949.122
-      </div>
-      <div style="text-align: right;">
-        ${locDict.receiptFooterThanks}
-      </div>
-    </div>
-    
-    <div class="features">
-      <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg> ${locDict.receiptFeature1}</div>
-      <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg> ${locDict.receiptFeature2}</div>
-      <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> ${locDict.receiptFeature3}</div>
-    </div>
+    <!-- Footer removed to keep invoice on one page -->
   </body>
   </html>
     `;
