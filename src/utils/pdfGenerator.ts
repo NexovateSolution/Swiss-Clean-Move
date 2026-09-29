@@ -21,14 +21,14 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       area: 'Fläche:',
       floor: 'Etage:',
       rooms: 'Zimmer:',
-      lift: 'Lift:',
+      lift: 'Aufzug:',
       parking: 'Parkplatz:',
       cleaningType: 'Reinigungsart:',
       frequency: 'Turnus:',
       destinationAddress: 'Zieladresse:',
       destinationType: 'Ziel Objektart:',
       destinationArea: 'Ziel Fläche:',
-      destinationLift: 'Ziel Lift:',
+      destinationLift: 'Ziel Aufzug:',
       destinationParking: 'Ziel Parkplatz:',
       scope: 'LEISTUNGSUMFANG',
       scopeDesc: 'Professionelle Erledigung gemäss Ihren Angaben:',
@@ -587,6 +587,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     staffCount: { de: 'Anzahl Mitarbeitende', en: 'Number of staff', fr: 'Nombre d\'employés', it: 'Numero di addetti' },
     recurringFrequency: { de: 'Reinigungsintervall', en: 'Cleaning Frequency', fr: 'Fréquence de Nettoyage', it: 'Frequenza di pulizia' },
     floors: { de: 'Etagen', en: 'Floors', fr: 'Étages', it: 'Piani' },
+    lift: { de: 'Aufzug', en: 'Elevator', fr: 'Ascenseur', it: 'Ascensore' },
     viewingIsWelcome: { de: 'Besichtigung erwünscht', en: 'Viewing is welcome', fr: 'Visite souhaitée', it: 'La visione è gradita' }
   };
 
