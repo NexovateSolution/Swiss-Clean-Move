@@ -1,8 +1,8 @@
 {
   "thankYouPage": {
-    "title": "Grazie",
-    "subtitle": "La tua richiesta è stata inviata con successo",
-    "description": "Ti contatteremo il prima possibile.",
+    "title": "Grazie per la tua richiesta!",
+    "subtitle": "",
+    "description": "Abbiamo ricevuto la tua richiesta con successo e ti contatteremo entro 24 ore.",
     "backHome": "Torna alla Home"
   },
   "common": {

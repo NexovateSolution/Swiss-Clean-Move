@@ -6,13 +6,13 @@
  * - Injected in the root layout's <head> so it covers every locale and route.
  */
 
-import { GA_ADS_ID } from '@/lib/gtag';
+import { GA_ADS_ID, GA_MEASUREMENT_ID } from '@/lib/gtag';
 
 export default function GoogleAdsScript() {
   return (
     <>
-      {/* 1. Load gtag.js library */}
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ADS_ID}`}></script>
+      {/* 1. Load gtag.js library (can use either ID to load the script) */}
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
 
       {/* 2. Initialize dataLayer + gtag config */}
       <script
@@ -21,6 +21,7 @@ export default function GoogleAdsScript() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
             gtag('config', '${GA_ADS_ID}');
           `,
         }}

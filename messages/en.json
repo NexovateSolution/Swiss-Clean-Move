@@ -1,8 +1,8 @@
 {
   "thankYouPage": {
-    "title": "Thank You",
-    "subtitle": "Your request has been successfully submitted",
-    "description": "We will contact you as soon as possible.",
+    "title": "Thank you for your request!",
+    "subtitle": "",
+    "description": "We have successfully received your request and will contact you within 24 hours.",
     "backHome": "Back to Homepage"
   },
   "common": {

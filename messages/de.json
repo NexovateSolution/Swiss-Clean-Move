@@ -1,8 +1,8 @@
 {
   "thankYouPage": {
-    "title": "Vielen Dank",
-    "subtitle": "Ihre Anfrage wurde erfolgreich gesendet",
-    "description": "Wir werden uns in Kürze mit Ihnen in Verbindung setzen.",
+    "title": "Vielen Dank für Ihre Anfrage!",
+    "subtitle": "",
+    "description": "Wir haben Ihre Anfrage erfolgreich erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.",
     "backHome": "Zurück zur Startseite"
   },
   "navigation": {

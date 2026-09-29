@@ -13,7 +13,8 @@
  *   - Once labels are provided, fill them in and call trackConversion().
  */
 
-// ─── Google Ads Tag ID ───────────────────────────────────────────────
+// ─── Google Tags ───────────────────────────────────────────────────────
+export const GA_MEASUREMENT_ID = 'G-V1JXMFCH29';
 export const GA_ADS_ID = 'AW-18285523751';
 
 // ─── Future Conversion Labels ────────────────────────────────────────
@@ -41,6 +42,7 @@ declare global {
   interface Window {
     dataLayer: Record<string, unknown>[];
     gtag: (...args: unknown[]) => void;
+    __gtag_fired_conversions?: Set<string>;
   }
 }
 
@@ -79,14 +81,22 @@ export function trackConversion(
   return new Promise((resolve) => {
     const label = ConversionLabels[event];
     if (!label) {
-      // Label not yet configured — silently skip in production
       if (process.env.NODE_ENV === 'development') {
-        console.warn(
-          `[gtag] Conversion label for "${event}" is not configured yet.`,
-        );
+        console.warn(`[gtag] Conversion label for "${event}" is not configured yet.`);
       }
       return resolve();
     }
+
+    // Prevent duplicate firing in the same session/page-load
+    if (window.__gtag_fired_conversions && window.__gtag_fired_conversions.has(event)) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`[gtag] Conversion ${event} already fired. Skipping to prevent duplicates.`);
+      }
+      return resolve();
+    }
+    
+    window.__gtag_fired_conversions = window.__gtag_fired_conversions || new Set<string>();
+    window.__gtag_fired_conversions.add(event);
 
     if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
       if (process.env.NODE_ENV === 'development') {

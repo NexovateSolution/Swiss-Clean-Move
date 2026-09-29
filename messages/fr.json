@@ -1,8 +1,8 @@
 {
   "thankYouPage": {
-    "title": "Merci",
-    "subtitle": "Votre demande a été soumise avec succès",
-    "description": "Nous vous contacterons dans les plus brefs délais.",
+    "title": "Merci pour votre demande !",
+    "subtitle": "",
+    "description": "Nous avons bien reçu votre demande et vous contacterons dans les 24 heures.",
     "backHome": "Retour à l'accueil"
   },
   "navigation": {
