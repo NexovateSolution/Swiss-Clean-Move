@@ -80,7 +80,16 @@ const D: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = D[locale] || D.de;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/basel` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/basel`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/basel`,
+        en: `https://www.swisscleanmove.ch/en/basel`,
+        fr: `https://www.swisscleanmove.ch/fr/basel`,
+        it: `https://www.swisscleanmove.ch/it/basel`,
+        'x-default': `https://www.swisscleanmove.ch/de/basel`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

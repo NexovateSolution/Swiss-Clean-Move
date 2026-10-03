@@ -1,6 +1,8 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { trackPhoneClick } from '@/lib/gtag';
+
+// Removed useTranslations because it was outputting raw keys
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
@@ -106,7 +108,22 @@ function getInternalLinks(locale: string) {
 }
 
 export default function RegionLandingPage({ data, locale }: { data: RegionPageData; locale: string }) {
-  const t = useTranslations('dynamic');
+  const t = (key: string, vars?: any) => {
+    const texts: Record<string, Record<string, string>> = {
+      'regionLanding.requestQuote': { de: '📋 Kostenlose Offerte anfordern', en: '📋 Request Free Quote', fr: '📋 Demander un devis', it: '📋 Richiedi preventivo' },
+      'regionLanding.ourServicesIn': { de: `Unsere Leistungen in ${vars?.region}`, en: `Our Services in ${vars?.region}`, fr: `Nos services à ${vars?.region}`, it: `I nostri servizi a ${vars?.region}` },
+      'regionLanding.ourServiceAreas': { de: 'Unsere Einsatzgebiete', en: 'Our Service Areas', fr: 'Nos zones d\'intervention', it: 'Le nostre aree di servizio' },
+      'regionLanding.scmServicesIn': { de: `SwissCleanMove Dienstleistungen in ${vars?.region}`, en: `SwissCleanMove Services in ${vars?.region}`, fr: `Services SwissCleanMove à ${vars?.region}`, it: `Servizi SwissCleanMove a ${vars?.region}` },
+      'regionLanding.getStartedToday': { de: 'Jetzt starten', en: 'Get Started Today', fr: 'Commencez aujourd\'hui', it: 'Inizia oggi' },
+      'regionLanding.onTheMap': { de: `${vars?.region} auf der Karte`, en: `${vars?.region} on the Map`, fr: `${vars?.region} sur la carte`, it: `${vars?.region} sulla mappa` },
+      'regionLanding.faq': { de: 'Häufig gestellte Fragen (FAQ)', en: 'Frequently Asked Questions (FAQ)', fr: 'Foire aux questions (FAQ)', it: 'Domande frequenti (FAQ)' },
+      'regionLanding.moreFromScm': { de: 'Mehr von SwissCleanMove', en: 'More from SwissCleanMove', fr: 'Plus de SwissCleanMove', it: 'Altro da SwissCleanMove' },
+      'regionLanding.yourPartnerIn': { de: `Ihr Partner in ${vars?.region}`, en: `Your Partner in ${vars?.region}`, fr: `Votre partenaire à ${vars?.region}`, it: `Il tuo partner a ${vars?.region}` },
+      'regionLanding.contactUsNow': { de: 'Kontaktieren Sie uns jetzt für eine kostenlose und unverbindliche Offerte.', en: 'Contact us now for a free quote.', fr: 'Contactez-nous maintenant pour un devis gratuit.', it: 'Contattaci ora per un preventivo gratuito.' },
+      'regionLanding.requestQuoteBtn': { de: 'Kostenlose Offerte anfordern', en: 'Request Free Quote', fr: 'Demander un devis gratuit', it: 'Richiedi preventivo gratuito' }
+    };
+    return texts[key]?.[locale] || texts[key]?.de || key;
+  };
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const ctas = getCTAs(locale);
@@ -164,7 +181,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
             <Link href={`/${locale}/free-offer`} className="btn-primary text-lg px-8 py-4">
               {t('regionLanding.requestQuote', { fallback: '📋 Kostenlose Offerte anfordern' })}
             </Link>
-            <a href="tel:+41782158030" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
+            <a onClick={trackPhoneClick} href="tel:+41782158030" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
               <Phone className="w-5 h-5 text-swiss-red" />
               <span>+41 78 215 80 30</span>
             </a>
@@ -367,7 +384,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
                 <Link href={`/${locale}/free-offer`} className="btn-primary text-lg px-8 py-4">
                   {t('regionLanding.requestQuoteBtn', { fallback: 'Kostenlose Offerte anfordern' })}
                 </Link>
-                <a href="tel:+41782158030" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
+                <a onClick={trackPhoneClick} href="tel:+41782158030" className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-swiss-red" /><span>+41 78 215 80 30</span>
                 </a>
               </div>

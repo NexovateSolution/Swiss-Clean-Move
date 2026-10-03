@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtag';
+
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
@@ -240,7 +242,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                   </li>
                 </ul>
               </div>
-              <a href="tel:+41782158030" className="w-full bg-[#cc0000] hover:bg-[#a30000] text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-colors">
+              <a onClick={trackPhoneClick} href="tel:+41782158030" className="w-full bg-[#cc0000] hover:bg-[#a30000] text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-colors">
                 <Phone className="w-5 h-5 fill-current" />
                 {t('freeOffer.layout.consultation.callNow')}
               </a>
@@ -276,7 +278,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
 
             {/* Buttons */}
             <div className="flex w-full items-center justify-center gap-2 sm:gap-4">
-              <a href="tel:+41782158030" className="flex-1 lg:flex-none flex items-center justify-center gap-2 bg-[#001f3f] text-white py-3 px-4 sm:px-6 rounded-xl hover:bg-[#003366] transition-colors font-medium">
+              <a onClick={trackPhoneClick} href="tel:+41782158030" className="flex-1 lg:flex-none flex items-center justify-center gap-2 bg-[#001f3f] text-white py-3 px-4 sm:px-6 rounded-xl hover:bg-[#003366] transition-colors font-medium">
                 <Phone className="w-5 h-5" />
                 <div className="text-left leading-tight hidden sm:block">
                   <div className="text-[10px] uppercase tracking-wider text-gray-300">{t('freeOffer.layout.bottomBar.call')}</div>
@@ -284,7 +286,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
                 </div>
                 <span className="sm:hidden text-sm font-bold">{t('freeOffer.layout.bottomBar.call')}</span>
               </a>
-              <a href="https://wa.me/41782158030" className="flex-1 lg:flex-none flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 px-4 sm:px-6 rounded-xl hover:bg-[#1ebd5a] transition-colors font-medium">
+              <a onClick={trackWhatsAppClick} href="https://wa.me/41782158030" className="flex-1 lg:flex-none flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 px-4 sm:px-6 rounded-xl hover:bg-[#1ebd5a] transition-colors font-medium">
                 <MessageCircle className="w-5 h-5" />
                 <div className="text-left leading-tight hidden sm:block">
                   <div className="text-[10px] uppercase tracking-wider text-green-100">{t('freeOffer.layout.bottomBar.whatsapp')}</div>

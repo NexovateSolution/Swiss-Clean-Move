@@ -11,7 +11,7 @@ Disallow: /uploads/
 Disallow: /submissions/
 
 # Sitemap location
-Sitemap: https://swisscleanmove.ch/sitemap.xml
+Sitemap: https://www.swisscleanmove.ch/sitemap.xml
 
 # Crawl delay (optional - helps prevent server overload)
 Crawl-delay: 1

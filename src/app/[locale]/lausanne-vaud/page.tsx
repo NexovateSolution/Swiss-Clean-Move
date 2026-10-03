@@ -79,7 +79,16 @@ const D: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = D[locale] || D.fr;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/lausanne-vaud` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/lausanne-vaud`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/lausanne-vaud`,
+        en: `https://www.swisscleanmove.ch/en/lausanne-vaud`,
+        fr: `https://www.swisscleanmove.ch/fr/lausanne-vaud`,
+        it: `https://www.swisscleanmove.ch/it/lausanne-vaud`,
+        'x-default': `https://www.swisscleanmove.ch/de/lausanne-vaud`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

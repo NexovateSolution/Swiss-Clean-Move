@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPhoneClick, trackWhatsAppClick, trackEmailClick } from '@/lib/gtag';
+
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import toast from 'react-hot-toast';
@@ -151,7 +153,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                 <a href={`/${locale}`} className="btn-primary">
                   {t('contact.success.actions.homepage')}
                 </a>
-                <a href="tel:+41782158030" className="btn-secondary">
+                <a onClick={trackPhoneClick} href="tel:+41782158030" className="btn-secondary">
                   {t('contact.success.actions.call')}
                 </a>
               </div>
@@ -196,7 +198,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                     {info.details.map((detail, detailIndex) => (
                       <p key={detailIndex} className="text-swiss-body">
                         {info.action && detailIndex === 0 ? (
-                          <a href={info.action} className="hover:text-swiss-text transition-colors">
+                          <a onClick={info.action.startsWith('tel:') ? trackPhoneClick : info.action.startsWith('mailto:') ? trackEmailClick : undefined} href={info.action} className="hover:text-swiss-text transition-colors">
                             {detail}
                           </a>
                         ) : (
@@ -334,6 +336,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                     <a
                       key={name}
                       href={href}
+                      onClick={name === 'WhatsApp' ? trackWhatsAppClick : undefined}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={name}
@@ -399,7 +402,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                   {t('contact.emergency.subtitle')}
                 </p>
                 <a
-                  href="tel:+41782158030"
+                  onClick={trackPhoneClick} href="tel:+41782158030"
                   className="inline-flex items-center space-x-2 bg-swiss-red text-white px-6 py-3 rounded-xl hover:bg-swiss-red/90 transition-colors shadow-subtle"
                 >
                   <Phone className="w-5 h-5" />

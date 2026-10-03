@@ -1,3 +1,4 @@
+import { trackPhoneClick, trackEmailClick } from '@/lib/gtag';
 import React from 'react';
 import Link from 'next/link';
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react';
@@ -129,14 +130,14 @@ export default function HaushaltshilfePricing({ locale, formService, handleCtaCl
             <a
               href="tel:+41782158030"
               className="btn-secondary inline-flex items-center justify-center space-x-2"
-              onClick={() => handleCtaClick('pricing_phone_btn')}
+              onClick={() => { handleCtaClick('pricing_phone_btn'); trackPhoneClick(); }}
             >
               <Phone className="w-4 h-4 text-swiss-red" />
               <span>+41 78 215 80 30</span>
             </a>
           </div>
           <div className="pt-4 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-swiss-body">
-            <a href="mailto:info@swisscleanmove.ch" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
+            <a onClick={trackEmailClick} href="mailto:info@swisscleanmove.ch" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
               <Mail className="w-4 h-4" />
               <span>info@swisscleanmove.ch</span>
             </a>

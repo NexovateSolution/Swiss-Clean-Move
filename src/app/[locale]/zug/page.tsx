@@ -80,7 +80,16 @@ const D: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = D[locale] || D.de;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/zug` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/zug`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/zug`,
+        en: `https://www.swisscleanmove.ch/en/zug`,
+        fr: `https://www.swisscleanmove.ch/fr/zug`,
+        it: `https://www.swisscleanmove.ch/it/zug`,
+        'x-default': `https://www.swisscleanmove.ch/de/zug`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

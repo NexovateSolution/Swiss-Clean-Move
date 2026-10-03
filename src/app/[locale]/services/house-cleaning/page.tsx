@@ -1,4 +1,5 @@
-'use client'
+'use client';
+import { trackPhoneClick, trackEmailClick } from '@/lib/gtag';
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -51,7 +52,7 @@ export default function HouseCleaningPage({ params: { locale } }: { params: { lo
               {t('servicesPages.common.requestQuote')}
             </Link>
             <a
-              href="tel:+41782158030"
+              onClick={trackPhoneClick} href="tel:+41782158030"
               className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5 text-swiss-red" />
@@ -153,7 +154,7 @@ export default function HouseCleaningPage({ params: { locale } }: { params: { lo
                   {t('servicesPages.common.requestQuote')}
                 </Link>
                 <a
-                  href={`mailto:info@swisscleanmove.ch`}
+                  onClick={trackEmailClick} href={`mailto:info@swisscleanmove.ch`}
                   className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
                 >
                   <Mail className="w-5 h-5 text-swiss-red" />

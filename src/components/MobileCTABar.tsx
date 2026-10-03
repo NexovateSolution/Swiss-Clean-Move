@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtag';
+
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
@@ -36,6 +38,7 @@ export default function MobileCTABar() {
     const phoneNumber = '41782158030';
     const message = encodeURIComponent(t('contact.whatsapp.prefill') || 'Hello! I am interested in your services.');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    trackWhatsAppClick();
     window.open(whatsappUrl, '_blank');
   };
 
@@ -48,7 +51,7 @@ export default function MobileCTABar() {
       <div className="flex justify-around items-center p-2 pb-safe">
         {/* Call Button */}
         <a 
-          href="tel:+41782158030"
+          onClick={trackPhoneClick} href="tel:+41782158030"
           className="flex flex-col items-center justify-center p-2 w-1/3 text-swiss-text hover:text-swiss-red transition-colors"
         >
           <Phone className="w-5 h-5 mb-1 text-swiss-red" />

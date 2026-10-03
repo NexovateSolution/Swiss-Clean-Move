@@ -83,7 +83,16 @@ const DATA: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = DATA[locale] || DATA.de;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/biel-bienne-seeland` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/biel-bienne-seeland`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/biel-bienne-seeland`,
+        en: `https://www.swisscleanmove.ch/en/biel-bienne-seeland`,
+        fr: `https://www.swisscleanmove.ch/fr/biel-bienne-seeland`,
+        it: `https://www.swisscleanmove.ch/it/biel-bienne-seeland`,
+        'x-default': `https://www.swisscleanmove.ch/de/biel-bienne-seeland`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

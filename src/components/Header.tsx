@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPhoneClick } from '@/lib/gtag';
+
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
@@ -106,7 +108,7 @@ export default function Header() {
             }`}>
             {/* Phone */}
             <a
-              href="tel:+41782158030"
+              onClick={trackPhoneClick} href="tel:+41782158030"
               className={`flex items-center space-x-1 xl:space-x-2 bg-white hover:bg-swiss-gray-50 text-swiss-text rounded-lg transition-all duration-150 whitespace-nowrap group border border-swiss-border ${isCompactLocale ? 'px-2 py-1' : 'px-2 xl:px-3 py-1 xl:py-1.5'
                 }`}
             >
@@ -268,7 +270,7 @@ export default function Header() {
               {/* Mobile Actions */}
               <div className="flex flex-col space-y-3 pt-4 px-4 border-t border-swiss-gray-200">
                 <a
-                  href="tel:+41782158030"
+                  onClick={trackPhoneClick} href="tel:+41782158030"
                   className="flex items-center space-x-2 text-swiss-text hover:text-swiss-text/80 py-2"
                 >
                   <Phone className="w-4 h-4 text-swiss-red" />

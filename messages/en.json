@@ -31,7 +31,7 @@
     "login": "Login",
     "language": "Language",
     "gallery": "Gallery",
-    "householdHelping": "Household Helping"
+    "householdHelping": "Household Cleaning"
   },
   "home": {
     "services": {
@@ -100,7 +100,7 @@
         "description": "Combined moving service with final cleaning and handover guarantee"
       },
       "householdHelping": {
-        "title": "Household Helping",
+        "title": "Household Cleaning",
         "description": "Professional household assistance including cleaning, cooking, laundry, shopping, and care services"
       },
       "umzugsreinigung": {
@@ -1761,7 +1761,7 @@
         "address": "Address *",
         "serviceSelection": "Select Service",
         "services": {
-          "householdPrivate": "Household helping (Private)",
+          "householdPrivate": "Household cleaning (Private)",
           "maintenanceBoth": "Maintenance cleaning (Private / Commercial)"
         },
         "property": "Property",
@@ -1798,7 +1798,7 @@
           "furniture": "Furniture",
           "appliances": "Appliances"
         },
-        "householdHelping": "Household Helping",
+        "householdHelping": "Household Cleaning",
         "householdItems": {
           "laundry": "Wash clothing",
           "ironing": "Ironing",
@@ -4033,7 +4033,7 @@
     "admin": {
       "finalizingProjectSetup": "Finalizing Project Setup"
     },
-    "Household Helping": "Household Helping"
+    "Household Cleaning": "Household Cleaning"
   },
   "phone": {
     "label": "Telephone number"
@@ -4565,7 +4565,7 @@
         "propertyMaintenance": "Property Maintenance",
         "specialCleaning": "Special Cleaning",
         "comboService": "Combo Service",
-        "householdHelping": "Household Helping",
+        "householdHelping": "Household Cleaning",
         "facilityServices": "Facility Services"
       },
       "actions": {
@@ -4933,7 +4933,7 @@
         "propertyMaintenance": "Property Maintenance",
         "specialCleaning": "Special Cleaning",
         "comboService": "Combo Service",
-        "householdHelping": "Household Helping",
+        "householdHelping": "Household Cleaning",
         "facilityServices": "Facility Services"
       }
     },
@@ -4947,7 +4947,7 @@
       "emailCommunication": "Email Communication",
       "gallery": "Gallery",
       "calendar": "Calendar",
-      "householdHelping": "Household Helping"
+      "householdHelping": "Household Cleaning"
     },
     "topbar": {
       "searchPlaceholder": "Quick search...",
@@ -6003,7 +6003,7 @@
       "propertyMaintenance": "Property Maintenance",
       "specialCleaning": "Special Cleaning",
       "comboService": "Cleaning + Moving Combo",
-      "householdHelping": "Household Helping"
+      "householdHelping": "Household Cleaning"
     },
     "geneve": {
       "meta": {
@@ -11672,7 +11672,7 @@
         },
         {
           "label": "Move-out Cleaning Biel",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Window Cleaning Biel",
@@ -13713,11 +13713,11 @@
   "quote": {
     "items": {
       "household": {
-        "base": "Household Helping Base Price"
+        "base": "Household Cleaning Base Price"
       }
     }
   },
-  "Household Helping": "Household Helping",
+  "Household Cleaning": "Household Cleaning",
   "householdHelp": "Household help (daily support / assistance)",
   "maintenanceCleaning": "Maintenance cleaning (regular)",
   "combination": "Combination",

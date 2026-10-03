@@ -80,7 +80,16 @@ const D: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = D[locale] || D.de;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/thurgau` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/thurgau`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/thurgau`,
+        en: `https://www.swisscleanmove.ch/en/thurgau`,
+        fr: `https://www.swisscleanmove.ch/fr/thurgau`,
+        it: `https://www.swisscleanmove.ch/it/thurgau`,
+        'x-default': `https://www.swisscleanmove.ch/de/thurgau`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

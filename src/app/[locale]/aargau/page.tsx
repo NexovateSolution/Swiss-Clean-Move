@@ -80,7 +80,16 @@ const D: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = D[locale] || D.de;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/aargau` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/aargau`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/aargau`,
+        en: `https://www.swisscleanmove.ch/en/aargau`,
+        fr: `https://www.swisscleanmove.ch/fr/aargau`,
+        it: `https://www.swisscleanmove.ch/it/aargau`,
+        'x-default': `https://www.swisscleanmove.ch/de/aargau`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

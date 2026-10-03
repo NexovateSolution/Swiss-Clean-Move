@@ -16,14 +16,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       type: 'website',
       locale: `${locale}_CH`,
     },
-    alternates: {
-      languages: {
-        'en': '/en',
-        'de': '/de',
-        'fr': '/fr',
-        'it': '/it',
-      }
-    },
+    metadataBase: new URL('https://www.swisscleanmove.ch'),
     robots: { index: true, follow: true },
   };
 }

@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPhoneClick, trackEmailClick, trackWhatsAppClick } from '@/lib/gtag';
+
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle, Settings, Star } from 'lucide-react';
@@ -76,17 +78,17 @@ export default function Footer() {
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="w-4 h-4 text-swiss-blue" />
                 <div className="flex flex-col leading-relaxed">
-                  <a href="tel:+41782158030" className="hover:text-swiss-blue transition-colors">
+                  <a onClick={trackPhoneClick} href="tel:+41782158030" className="hover:text-swiss-blue transition-colors">
                     +41 78 215 80 30
                   </a>
-                  <a href="tel:+41764883689" className="hover:text-swiss-blue transition-colors">
+                  <a onClick={trackPhoneClick} href="tel:+41782158030" className="hover:text-swiss-blue transition-colors">
                     
                   </a>
                 </div>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="w-4 h-4 text-swiss-blue" />
-                <a href="mailto:info@swisscleanmove.ch" className="hover:text-swiss-blue transition-colors">
+                <a onClick={trackEmailClick} href="mailto:info@swisscleanmove.ch" className="hover:text-swiss-blue transition-colors">
                   info@swisscleanmove.ch
                 </a>
               </div>
@@ -149,7 +151,8 @@ export default function Footer() {
                 {socialLinks.map(({ name, href, Icon, className }) => (
                   <a
                     key={name}
-                    href={href}
+                      href={href}
+                      onClick={name === 'WhatsApp' ? trackWhatsAppClick : undefined}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={name}

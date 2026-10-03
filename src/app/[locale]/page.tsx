@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtag';
+
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
@@ -55,6 +57,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.reinigung'),
       icon: Droplets,
       href: `/${locale}/form?service=house-cleaning`,
+      seoLink: `/${locale}/reinigungsfirma-biel`,
+      seoText: locale === 'de' ? 'Reinigungsfirma Biel' : 'Cleaning Company Biel',
       color: 'text-blue-500'
     },
     {
@@ -63,6 +67,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.umzug'),
       icon: Truck,
       href: `/${locale}/form?service=relocation`,
+      seoLink: `/${locale}/umzugsfirma-biel`,
+      seoText: locale === 'de' ? 'Umzugsfirma Biel' : 'Moving Company Biel',
       color: 'text-red-500'
     },
     {
@@ -71,6 +77,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.entsorgung'),
       icon: Trash2,
       href: `/${locale}/form?service=disposal`,
+      seoLink: `/${locale}/umzugsreinigung-biel`,
+      seoText: locale === 'de' ? 'Umzugsreinigung Biel' : 'Move-out Cleaning Biel',
       color: 'text-green-500'
     },
     {
@@ -79,6 +87,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.facility'),
       icon: Building2,
       href: `/${locale}/form?service=facility-services`,
+      seoLink: `/${locale}/hauswartung-biel`,
+      seoText: locale === 'de' ? 'Hauswartung Biel' : 'Property Maintenance Biel',
       color: 'text-indigo-500'
     },
     {
@@ -87,6 +97,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.haushalt'),
       icon: HomeIcon,
       href: `/${locale}/form?service=household-helping`,
+      seoLink: `/${locale}/unterhaltsreinigung-biel`,
+      seoText: locale === 'de' ? 'Unterhaltsreinigung Biel' : 'Maintenance Cleaning Biel',
       color: 'text-orange-500'
     }
   ];
@@ -177,7 +189,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
             {/* Main Title */}
             <h1 className="text-3xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.1] tracking-tight text-[#001f3f]">
-              <span className="text-swiss-red">Swiss</span>CleanMove – {tNew('hero.title')}
+              {tNew('hero.title')}
             </h1>
 
             {/* Subtitle */}
@@ -246,10 +258,17 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                       {svc.desc}
                     </p>
                   </div>
-                  <Link href={svc.href} className="w-full py-3 bg-swiss-red text-white text-center font-bold rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center space-x-2 shadow-sm">
-                    <span>{tNew('services.offerteBtn')} {svc.title.split(' ')[0]}</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  <div className="flex flex-col gap-3 mt-4">
+                    <Link href={svc.href} className="w-full py-3 bg-swiss-red text-white text-center font-bold rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center space-x-2 shadow-sm">
+                      <span>{tNew('services.offerteBtn')} {svc.title.split(' ')[0]}</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                    {svc.seoLink && (
+                      <Link href={svc.seoLink} className="text-xs text-center font-bold text-gray-500 hover:text-swiss-red transition-colors flex items-center justify-center group-hover:underline">
+                        {locale === 'de' ? 'Mehr erfahren über' : 'Read more about'} {svc.seoText}
+                      </Link>
+                    )}
+                  </div>
                 </div>
               );
             })}
@@ -430,14 +449,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 <span>{tNew('services.freeObligation').split(' ')[0]} Offerte</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <a href="tel:+41782158030" className="flex items-center justify-center space-x-2 px-5 py-3 border-2 border-white/20 rounded-lg text-white font-bold hover:bg-white/10 transition-colors">
+              <a onClick={trackPhoneClick} href="tel:+41782158030" className="flex items-center justify-center space-x-2 px-5 py-3 border-2 border-white/20 rounded-lg text-white font-bold hover:bg-white/10 transition-colors">
                 <Phone className="w-5 h-5" />
                 <div className="text-left leading-tight">
                   <div className="text-xs font-medium text-gray-300">{tNew('cta.hours')}</div>
                   <div className="text-sm">+41 78 215 80 30</div>
                 </div>
               </a>
-              <a href="https://wa.me/41782158030" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 px-5 py-3 bg-[#25D366]/10 border-2 border-[#25D366] rounded-lg text-white font-bold hover:bg-[#25D366]/20 transition-colors">
+              <a onClick={trackWhatsAppClick} href="https://wa.me/41782158030" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 px-5 py-3 bg-[#25D366]/10 border-2 border-[#25D366] rounded-lg text-white font-bold hover:bg-[#25D366]/20 transition-colors">
                 <MessageCircle className="w-5 h-5 text-[#25D366]" />
                 <div className="text-left leading-tight">
                   <div className="text-xs font-medium text-[#25D366]">{tNew('cta.whatsapp')}</div>

@@ -80,7 +80,16 @@ const D: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = D[locale] || D.de;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/schwyz` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/schwyz`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/schwyz`,
+        en: `https://www.swisscleanmove.ch/en/schwyz`,
+        fr: `https://www.swisscleanmove.ch/fr/schwyz`,
+        it: `https://www.swisscleanmove.ch/it/schwyz`,
+        'x-default': `https://www.swisscleanmove.ch/de/schwyz`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

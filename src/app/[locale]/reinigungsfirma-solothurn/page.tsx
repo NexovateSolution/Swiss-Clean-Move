@@ -8,12 +8,12 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: t('description'),
     robots: { index: true, follow: true },
     alternates: {
-      canonical: `https://swisscleanmove.ch/${locale}/reinigungsfirma-solothurn`,
+      canonical: `https://www.swisscleanmove.ch/${locale}/reinigungsfirma-solothurn`,
       languages: {
-        'de': 'https://swisscleanmove.ch/de/reinigungsfirma-solothurn',
-        'en': 'https://swisscleanmove.ch/en/reinigungsfirma-solothurn',
-        'fr': 'https://swisscleanmove.ch/fr/reinigungsfirma-solothurn',
-        'it': 'https://swisscleanmove.ch/it/reinigungsfirma-solothurn',
+        'de': 'https://www.swisscleanmove.ch/de/reinigungsfirma-solothurn',
+        'en': 'https://www.swisscleanmove.ch/en/reinigungsfirma-solothurn',
+        'fr': 'https://www.swisscleanmove.ch/fr/reinigungsfirma-solothurn',
+        'it': 'https://www.swisscleanmove.ch/it/reinigungsfirma-solothurn',
       }
     }
   };

@@ -1,3 +1,4 @@
+import { trackPhoneClick, trackEmailClick } from '@/lib/gtag';
 import React from 'react';
 import Link from 'next/link';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
@@ -351,7 +352,7 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
             <a
               href="tel:+41782158030"
               className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2 bg-white"
-              onClick={() => handleCtaClick('pricing_phone_btn')}
+              onClick={() => { handleCtaClick('pricing_phone_btn'); trackPhoneClick(); }}
             >
               <Phone className="w-5 h-5 text-swiss-red" />
               <span>+41 78 215 80 30</span>
@@ -360,11 +361,11 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
           <div className="pt-6 border-t border-red-100 mt-6 space-y-4">
             <p className="font-medium text-swiss-text">{getT('footerDesc')}</p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-swiss-body">
-              <a href="tel:+41764883689" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
+              <a onClick={trackPhoneClick} href="tel:+41782158030" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
                 <Phone className="w-4 h-4" />
                 
               </a>
-              <a href="mailto:info@swisscleanmove.ch" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
+              <a onClick={trackEmailClick} href="mailto:info@swisscleanmove.ch" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
                 <Mail className="w-4 h-4" />
                 <span>info@swisscleanmove.ch</span>
               </a>

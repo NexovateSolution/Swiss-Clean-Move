@@ -6,7 +6,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('title'),
     description: t('description'),
-    robots: { index: true, follow: true }
+    robots: { index: true, follow: true },
+    alternates: {
+      canonical: `https://www.swisscleanmove.ch/${locale}/hauswartung-biel`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/hauswartung-biel',
+        en: 'https://www.swisscleanmove.ch/en/hauswartung-biel',
+        fr: 'https://www.swisscleanmove.ch/fr/hauswartung-biel',
+        it: 'https://www.swisscleanmove.ch/it/hauswartung-biel',
+        'x-default': 'https://www.swisscleanmove.ch/de/hauswartung-biel'
+      }
+    }
   };
 }
 

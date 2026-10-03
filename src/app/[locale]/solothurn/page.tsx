@@ -83,7 +83,16 @@ const D: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = D[locale] || D.de;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/solothurn` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/solothurn`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/solothurn`,
+        en: `https://www.swisscleanmove.ch/en/solothurn`,
+        fr: `https://www.swisscleanmove.ch/fr/solothurn`,
+        it: `https://www.swisscleanmove.ch/it/solothurn`,
+        'x-default': `https://www.swisscleanmove.ch/de/solothurn`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

@@ -6,7 +6,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('title'),
     description: t('description'),
-    robots: { index: true, follow: true }
+    robots: { index: true, follow: true },
+    alternates: {
+      canonical: `https://www.swisscleanmove.ch/${locale}/fensterreinigung-biel`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/fensterreinigung-biel',
+        en: 'https://www.swisscleanmove.ch/en/fensterreinigung-biel',
+        fr: 'https://www.swisscleanmove.ch/fr/fensterreinigung-biel',
+        it: 'https://www.swisscleanmove.ch/it/fensterreinigung-biel',
+        'x-default': 'https://www.swisscleanmove.ch/de/fensterreinigung-biel'
+      }
+    }
   };
 }
 

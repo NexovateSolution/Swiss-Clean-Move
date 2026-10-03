@@ -117,7 +117,7 @@
     },
     "hero": {
       "badge": "",
-      "title": "Ihre Reinigungsfirma & Umzugsfirma für die ganze Schweiz",
+      "title": "Ihre Reinigungs- und Umzugsfirma in Biel/Bienne",
       "subtitle": "Professionelle Reinigungs-, Umzugs- & Hauswartung & Gebäudeunterhalt für Privatkunden, Unternehmen und Verwaltungen.",
       "subtitle2": "Effizient organisiert. Zuverlässig ausgeführt. Nach Schweizer Qualitätsstandard.",
       "slides": {
@@ -255,7 +255,7 @@
     },
     "newDesign": {
       "hero": {
-        "title": "Ihre Reinigungs- & Umzugsfirma in der Schweiz",
+        "title": "Ihre Reinigungs- und Umzugsfirma in Biel/Bienne",
         "subtitle": "Umzugsreinigung mit Abnahmegarantie, Umzug, Transport & Hauswartung - professionell aus einer Hand.",
         "badges": {
           "guarantee": "Abnahmegarantie",
@@ -280,7 +280,7 @@
         "reinigung_title": "Reinigung",
         "umzug_title": "Umzug & Transport",
         "entsorgung_title": "Entsorgung & Räumung",
-        "facility_title": "Hauswartung & Hauswartung & Gebäudeunterhalt",
+        "facility_title": "Hauswartung & Gebäudeunterhalt",
         "haushalt_title": "Haushaltshilfe"
       },
       "reviews": {
@@ -942,7 +942,7 @@
       "functionalText": "Diese Cookies ermöglichen es der Website, erweiterte Funktionalität und Personalisierung zu bieten, wie z.B. die Speicherung Ihrer Spracheinstellungen.",
       "manageText": "Sie können Ihre Cookie-Einstellungen jederzeit in Ihrem Browser ändern. Beachten Sie jedoch, dass die Deaktivierung bestimmter Cookies die Funktionalität unserer Website beeinträchtigen kann."
     },
-    "datenschutz": "Privacy Policy"
+    "datenschutz": "Datenschutzerklärung"
   },
   "gallery": {
     "badge": "Echte Ergebnisse",
@@ -5918,8 +5918,8 @@
   },
   "seo": {
     "home": {
-      "title": "SwissCleanMove | Top Reinigungsfirma & Umzugsunternehmen Schweiz",
-      "description": "SwissCleanMove ist Ihr zuverlässiges Umzugs- und Reinigungsunternehmen in der Schweiz. Wir bedienen Biel, Bern und Zürich. Sichern Sie sich eine Endreinigung mit Abnahmegarantie, günstige Umzüge und Hauswartung. Fordern Sie noch heute eine kostenlose Offerte an!"
+      "title": "Reinigungsfirma & Umzugsfirma Biel | SwissCleanMove",
+      "description": "SwissCleanMove in Biel/Bienne: Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Umzug, Transport und Hauswartung. Jetzt kostenlose Offerte anfordern."
     },
     "about": {
       "title": "Über SwissCleanMove | Experten für Umzug & Reinigung in der Schweiz",
@@ -6036,7 +6036,7 @@
       "internalLinks": [
         {
           "label": "Endreinigung in Biel – mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Reinigungsfirma Biel – regelmässige Reinigung",
@@ -6116,13 +6116,13 @@
     },
     "endreinigungBiel": {
       "meta": {
-        "title": "Endreinigung in Biel/Bienne | Schnell & zuverlässig | SwissCleanMove",
-        "description": "Professionelle Endreinigung in Biel/Bienne mit 100% Abnahmegarantie. Kaution zurück garantiert. SwissCleanMove – Ihre Reinigungsfirma im Seeland.",
+        "title": "Umzugsreinigung Biel | Endreinigung mit Abnahmegarantie | SwissCleanMove",
+        "description": "Ihre professionelle Umzugsreinigung in Biel/Bienne und dem Seeland. Sparen Sie Zeit und Nerven dank unserer Abnahmegarantie bei der Wohnungsabgabe.",
         "titleVariant": "Biel/Bienne Endreinigung gesucht? Schnell & zuverlässig"
       },
       "badge": "Endreinigung Biel/Bienne",
-      "h1": "Endreinigungsfirma Biel/Bienne – Endreinigung, Wohnungsreinigung & Reinigung in Biel/Bienne",
-      "heroSubtitle": "Ihre Wohnung in Biel wird so sauber übergeben, dass die Kaution garantiert zurückkommt.",
+      "h1": "Umzugsreinigung Biel – mit Abnahmegarantie",
+      "heroSubtitle": "Planen Sie Ihren Umzug? Wir übernehmen die komplette Umzugsreinigung Ihrer alten Wohnung in Biel/Bienne und im Seeland. Wir garantieren eine problemlose Wohnungsübergabe.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
       "intro": "Ein Wohnungswechsel in Biel/Bienne ist mit vielen Aufgaben verbunden – die anstrengendste davon ist meistens die abschliessende Reinigung. SwissCleanMove ist Ihr verlässlicher Partner für die professionelle Endreinigung mit 100% Abnahmegarantie. Wir sorgen dafür, dass Ihre alte Wohnung in Biel oder Umgebung makellos sauber wird und die Immobilienverwaltung die Abnahme ohne zu Zögern akzeptiert. Sollte es bei der Wohnungsübergabe dennoch zu Beanstandungen kommen, sind wir persönlich vor Ort und bessern sofort kostenlos nach – so erhalten Sie Ihre Mietkaution garantiert zurück. Mit unserer Erfahrung aus zahlreichen Endreinigungen im gesamten Seeland, fairen Pauschalpreisen ab CHF 350 und kurzen Reaktionszeiten (innerhalb von 24 Stunden verfügbar), nehmen wir Ihnen diesen Stressfaktor komplett ab. Eine typische Wohnungsreinigung dauert bei uns zwischen 4 und 8 Stunden, je nach Grösse und Verschmutzungsgrad. Verlassen Sie sich auf unsere Expertise direkt am Bielersee und widmen Sie sich ganz der Einrichtung Ihres neuen Zuhauses.",
       "sections": [
@@ -6173,7 +6173,7 @@
         "Erfahrenes Reinigungsteam aus dem Seeland"
       ],
       "trustPoints": [
-        "100% Abnahmegarantie",
+        "Abnahmegarantie",
         "Kaution zurück – garantiert",
         "Faire Pauschalpreise"
       ],
@@ -6207,12 +6207,12 @@
       "testimonial": {
         "quote": "Super Endreinigung in Biel/Bienne! Sehr professionell und pünktlich.",
         "author": "Elena R.",
-        "trust": "Über 50 zufriedene Kunden im Seeland"
+        "trust": "Zufriedene Kunden im Seeland"
       },
       "faqs": [
         {
-          "question": "Was genau bedeutet die 100% Abnahmegarantie?",
-          "answer": "Unsere 100% Abnahmegarantie bedeutet für Sie absolute Sicherheit und Stressfreiheit. Wir garantieren Ihnen vertraglich, dass Ihre Immobilie nach unserer Endreinigung von der Verwaltung oder dem Eigentümer anstandslos abgenommen wird. Sollte der Prüfer bei der Wohnungsbegehung dennoch einen Mangel feststellen (z.B. einen Wasserfleck auf einer Armatur), wird dieser von unserem anwesenden Personal sofort, unbürokratisch und völlig kostenlos nachgereinigt, bis die Abnahme unterschrieben ist."
+          "question": "Was genau bedeutet die Abnahmegarantie?",
+          "answer": "Unsere Abnahmegarantie bedeutet für Sie absolute Sicherheit und Stressfreiheit. Wir garantieren Ihnen vertraglich, dass Ihre Immobilie nach unserer Endreinigung von der Verwaltung oder dem Eigentümer anstandslos abgenommen wird. Sollte der Prüfer bei der Wohnungsbegehung dennoch einen Mangel feststellen (z.B. einen Wasserfleck auf einer Armatur), wird dieser von unserem anwesenden Personal sofort, unbürokratisch und völlig kostenlos nachgereinigt, bis die Abnahme unterschrieben ist."
         },
         {
           "question": "Muss ich bei der Endreinigung selbst anwesend sein?",
@@ -6344,7 +6344,7 @@
         },
         {
           "label": "Endreinigung Biel – mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Reinigungsfirma Biel/Bienne",
@@ -7718,7 +7718,7 @@
         },
         {
           "label": "Endreinigung Biel – Hauptstandort",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Reinigungsfirma Nidau – Unterhaltsreinigung",
@@ -7912,7 +7912,7 @@
         },
         {
           "label": "Endreinigung Biel – Zentrale Seeland",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         }
       ],
       "ctaStrongHeading": "Heute anfragen – entspannt abgeben",
@@ -8106,7 +8106,7 @@
         },
         {
           "label": "Endreinigung Biel",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         }
       ],
       "ctaStrongHeading": "Jetzt Endreinigung in Brügg sichern",
@@ -8296,7 +8296,7 @@
         },
         {
           "label": "Endreinigung Biel",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         }
       ],
       "ctaStrongHeading": "Jetzt Termin für Ipsach anfragen",
@@ -8680,7 +8680,7 @@
         },
         {
           "label": "Endreinigung Biel",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         }
       ],
       "ctaStrongHeading": "Jetzt Termin für Pieterlen sichern",
@@ -10025,7 +10025,7 @@
       "internalLinks": [
         {
           "label": "Endreinigung mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Alle Regionen im Überblick",
@@ -10226,7 +10226,7 @@
       "internalLinks": [
         {
           "label": "Endreinigung mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Alle Regionen im Überblick",
@@ -10427,7 +10427,7 @@
       "internalLinks": [
         {
           "label": "Endreinigung mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Alle Regionen im Überblick",
@@ -10632,7 +10632,7 @@
       "internalLinks": [
         {
           "label": "Endreinigung mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Alle Regionen im Überblick",
@@ -10825,7 +10825,7 @@
       "internalLinks": [
         {
           "label": "Endreinigung mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Alle Regionen im Überblick",
@@ -11018,7 +11018,7 @@
       "internalLinks": [
         {
           "label": "Endreinigung mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Alle Regionen im Überblick",
@@ -11211,7 +11211,7 @@
       "internalLinks": [
         {
           "label": "Endreinigung mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Alle Regionen im Überblick",
@@ -11425,7 +11425,7 @@
       "internalLinks": [
         {
           "label": "Umzugsreinigung Biel — mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Reinigungsfirma Biel — Unterhaltsreinigung",
@@ -11543,7 +11543,7 @@
         },
         {
           "label": "Umzugsreinigung Biel",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Fensterreinigung Biel",
@@ -11609,8 +11609,8 @@
     },
     "umzugsfirmaBiel": {
       "meta": {
-        "title": "Umzugsfirma Biel | Stressfreier Umzug mit Schweizer Qualität | SwissCleanMove",
-        "description": "SwissCleanMove ist Ihre Umzugsfirma in Biel/Bienne. Professionelle Umzüge, Möbeltransport und Räumungen im Seeland. Faire Preise ab CHF 490."
+        "title": "Umzugsfirma Biel | Professioneller & zuverlässiger Umzug | SwissCleanMove",
+        "description": "SwissCleanMove ist Ihre Umzugsfirma in Biel/Bienne. Professionelle Umzüge, Möbeltransport und Räumungen im Seeland. Faire und transparente Preise."
       },
       "badge": "Umzugsfirma Biel & Seeland",
       "h1": "Umzugsfirma Biel — Ihr zuverlässiger Umzugspartner im Seeland",
@@ -11676,7 +11676,7 @@
         },
         {
           "label": "Endreinigung Biel — mit Abnahmegarantie",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Transportfirma Biel",
@@ -12101,7 +12101,7 @@
         },
         {
           "label": "Endreinigung Biel",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         }
       ],
       "ctaStrongHeading": "Ihre Transportfirma in Biel — jetzt kontaktieren",
@@ -12443,12 +12443,12 @@
     },
     "hauswartungBiel": {
       "meta": {
-        "title": "Hauswartung Biel/Bienne | Hauswartung & Gebäudeunterhalt & Gebäudeunterhalt | SwissCleanMove",
-        "description": "Professionelle Hauswartung & Hauswartung & Gebäudeunterhalt in Biel/Bienne. Objektbetreuung, Gebäudeservice, Treppenhausreinigung & Winterdienst für Immobilienverwaltungen im Seeland."
+        "title": "Hauswartung Biel | Gebäudeunterhalt & Liegenschaftsbetreuung | SwissCleanMove",
+        "description": "Zuverlässige Hauswartung in Biel und Umgebung. Wir bieten professionellen Gebäudeunterhalt, Treppenhausreinigung und Liegenschaftsbetreuung im Seeland."
       },
       "badge": "Premium Hauswartung & Objektbetreuung Biel",
-      "h1": "Hauswartung reinigung Biel/Bienne",
-      "heroSubtitle": "Als Schweizer Qualitätsanbieter für Hauswartung und Hauswartung & Gebäudeunterhalt betreuen wir Immobilienverwaltungen, Wohnüberbauungen und Gewerbeliegenschaften im gesamten Seeland.",
+      "h1": "Hauswartung Biel – Professioneller Gebäudeunterhalt",
+      "heroSubtitle": "Ihre kompetente Hauswartung in Biel/Bienne. Wir sorgen für gepflegte Liegenschaften, saubere Treppenhäuser und zuverlässigen Gebäudeunterhalt im Seeland.",
       "ctaSoft": "B2B Beratung anfordern",
       "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Zuverlässige Hauswartung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Ein guter Hauswart ist die Seele einer Liegenschaft. Er sorgt nicht nur für Sauberkeit, sondern auch für Sicherheit. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Aktuell stellen wir den Hauswartdienst für über 120 Liegenschaften im Seeland sicher. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
@@ -12579,7 +12579,7 @@
           "answer": "Bei wiederkehrenden Aufträgen (wie Haushaltshilfe, Hauswartung oder Unterhaltsreinigung) stellen wir sicher, dass Ihnen ein festes Team oder eine feste Bezugsperson zugewiesen wird. Nur bei Ferien oder Krankheit organisieren wir eine Vertretung, die dank des detaillierten Pflichtenhefts sofort weiss, was zu tun ist."
         }
       ],
-      "serviceCardsHeading": "Unsere Premium Hauswartung & Hauswartung & Gebäudeunterhalt",
+      "serviceCardsHeading": "Unsere Premium Hauswartung & Gebäudeunterhalt",
       "serviceCards": [
         {
           "title": "Technischer Hausdienst",
@@ -12688,7 +12688,7 @@
         },
         {
           "label": "Endreinigung Biel",
-          "href": "endreinigung-biel"
+          "href": "umzugsreinigung-biel"
         },
         {
           "label": "Fensterreinigung Biel",
@@ -12761,7 +12761,7 @@
     "gastronomieReinigungBiel": {
       "meta": {
         "title": "Gastronomie Reinigung Biel | Küchen- & Restaurantreinigung | SwissCleanMove",
-        "description": "Professionelle Gastronomie Reinigung in Biel/Bienne. Hygienische Küchen- und Restaurantreinigung nach HACCP-Standards im Seeland."
+        "description": "Professionelle Gastronomie Reinigung in Biel/Bienne. Hygienische Küchen- und Restaurantreinigung für höchste Hygiene-Ansprüche im Seeland."
       },
       "badge": "Gastronomie Reinigung Biel",
       "h1": "Gastronomie Reinigung Biel — Hygienische Küchen- & Restaurantreinigung",
@@ -13531,6 +13531,54 @@
           "answer": "Wir sind im gesamten Kanton Solothurn aktiv, insbesondere in Solothurn Stadt, Grenchen, Olten, Zuchwil, Derendingen, Bettlach, Luterbach, Langendorf, Bellach, Selzach, Oensingen, Balsthal, Trimbach, Dulliken und Wangen bei Olten."
         }
       ]
+    },
+    "bueroreinigungBiel": {
+      "meta": {
+        "title": "Büroreinigung Biel | Praxisreinigung & Geschäftsreinigung | SwissCleanMove",
+        "description": "Professionelle Büroreinigung in Biel/Bienne. Wir reinigen Ihre Geschäftsräume, Praxen und Büros im Seeland zuverlässig und diskret."
+      },
+      "h1": "Büroreinigung Biel – Saubere Geschäftsräume im Seeland",
+      "heroSubtitle": "Gepflegte Büros für ein produktives Arbeitsklima. Unsere Reinigungsfirma bietet massgeschneiderte Büro- und Praxisreinigung in Biel und Umgebung.",
+      "trustPoints": [
+        "Diskrete Reinigung",
+        "Flexible Einsatzzeiten",
+        "Massgeschneiderte Konzepte"
+      ],
+      "ctaPrimary": "Kostenlose Offerte anfordern",
+      "ctaSecondary": "Jetzt anrufen",
+      "ctaWhatsapp": "WhatsApp",
+      "sections": [
+        {
+          "heading": "Ihre professionelle Büroreinigung in Biel",
+          "body": "Ein sauberes Büro ist die Visitenkarte Ihres Unternehmens. Wir sorgen für makellose Sauberkeit in Ihren Geschäftsräumen."
+        }
+      ],
+      "serviceBulletsHeading": "Unsere Leistungen in der Büroreinigung",
+      "serviceBullets": [
+        "Arbeitsplatzreinigung",
+        "Boden- und Teppichreinigung",
+        "Sanitäranlagen",
+        "Küchenreinigung",
+        "Fensterreinigung"
+      ],
+      "internalLinksHeading": "Weitere Reinigungsdienste",
+      "internalLinks": [
+        {
+          "label": "Unterhaltsreinigung Biel",
+          "href": "unterhaltsreinigung-biel"
+        },
+        {
+          "label": "Reinigungsfirma Biel",
+          "href": "reinigungsfirma-biel"
+        }
+      ],
+      "ctaMidHeading": "Büroreinigung gesucht?",
+      "ctaMidBody": "Verlangen Sie jetzt eine unverbindliche Offerte.",
+      "ctaMid": "Offerte anfordern",
+      "ctaStrongHeading": "Kontaktieren Sie uns",
+      "ctaStrongBody": "Wir beraten Sie gerne zur Büroreinigung.",
+      "ctaStrong": "Jetzt kontaktieren",
+      "faqs": []
     }
   },
   "phone": {

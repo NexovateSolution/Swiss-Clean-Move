@@ -1,5 +1,7 @@
 'use client';
 
+import { trackWhatsAppClick } from '@/lib/gtag';
+
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { MessageCircle, X } from 'lucide-react';
@@ -12,6 +14,7 @@ export default function WhatsAppButton() {
     const phoneNumber = '41782158030'; // WhatsApp number without + or spaces (site-wide number)
     const message = encodeURIComponent('Hello! I am interested in your services and would like to know more about it. Could you send me more information? Thank you!');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    trackWhatsAppClick();
     window.open(whatsappUrl, '_blank');
   };
 

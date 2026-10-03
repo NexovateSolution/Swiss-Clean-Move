@@ -79,7 +79,16 @@ const D: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = D[locale] || D.fr;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/neuchatel` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/neuchatel`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/neuchatel`,
+        en: `https://www.swisscleanmove.ch/en/neuchatel`,
+        fr: `https://www.swisscleanmove.ch/fr/neuchatel`,
+        it: `https://www.swisscleanmove.ch/it/neuchatel`,
+        'x-default': `https://www.swisscleanmove.ch/de/neuchatel`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

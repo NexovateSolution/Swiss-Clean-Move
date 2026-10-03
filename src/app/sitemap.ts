@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 const locales = ['de', 'fr', 'en', 'it'];
-const baseUrl = 'https://swisscleanmove.ch';
+const baseUrl = 'https://www.swisscleanmove.ch';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Base static pages
@@ -44,12 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/bern',
     '/biel-bienne-seeland',
     '/endreinigung-aarberg',
-    '/endreinigung-biel',
     '/endreinigung-bruegg',
     '/endreinigung-ipsach',
     '/endreinigung-lyss',
     '/endreinigung-nidau',
     '/endreinigung-pieterlen',
+    '/umzugsreinigung-biel',
+    '/bueroreinigung-biel',
     '/entsorgung-biel',
     '/facility-service-biel',
     '/facility-service-schweiz',
@@ -113,7 +114,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
 
     return {
-      url: `${baseUrl}${path}`,
+      url: `${baseUrl}/de${path}`,
       lastModified: new Date(),
       changeFrequency: path === '' ? 'weekly' : 'monthly',
       priority: path === '' ? 1 : 0.8,

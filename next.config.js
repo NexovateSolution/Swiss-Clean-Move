@@ -34,6 +34,20 @@ const nextConfig = {
       { source: '/images/transportation.jpeg', destination: '/images/transportation.png' },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/:locale/endreinigung-biel',
+        destination: '/:locale/umzugsreinigung-biel',
+        permanent: true,
+      },
+      {
+        source: '/endreinigung-biel',
+        destination: '/de/umzugsreinigung-biel',
+        permanent: true,
+      }
+    ];
+  },
   // Security headers
   async headers() {
     return [

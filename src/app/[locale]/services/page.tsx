@@ -1,3 +1,4 @@
+import { trackPhoneClick } from '@/lib/gtag';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
@@ -243,7 +244,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
                 </span>
               </Link>
               <a
-                href="tel:+41782158030"
+                onClick={trackPhoneClick} href="tel:+41782158030"
                 className="flex items-center justify-center space-x-2 btn-secondary px-8 py-4"
               >
                 <span>+41 78 215 80 30</span>

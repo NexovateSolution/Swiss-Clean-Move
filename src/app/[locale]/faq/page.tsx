@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPhoneClick, trackEmailClick } from '@/lib/gtag';
+
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Layout from '@/components/Layout';
@@ -215,7 +217,7 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <a
-                href="tel:+41782158030"
+                onClick={trackPhoneClick} href="tel:+41782158030"
                 className="bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-xl p-6 transition-all duration-200 shadow-subtle hover:shadow-soft"
               >
                 <Phone className="w-8 h-8 text-swiss-red mx-auto mb-3" />
@@ -224,7 +226,7 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
               </a>
 
               <a
-                href="mailto:info@swisscleanmove.ch"
+                onClick={trackEmailClick} href="mailto:info@swisscleanmove.ch"
                 className="bg-white hover:bg-swiss-gray-50 border border-swiss-border rounded-xl p-6 transition-all duration-200 shadow-subtle hover:shadow-soft"
               >
                 <Mail className="w-8 h-8 text-swiss-red mx-auto mb-3" />

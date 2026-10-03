@@ -6,7 +6,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('title'),
     description: t('description'),
-    robots: { index: true, follow: true }
+    robots: { index: true, follow: true },
+    alternates: {
+      canonical: `https://www.swisscleanmove.ch/${locale}/unterhaltsreinigung-biel`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/unterhaltsreinigung-biel',
+        en: 'https://www.swisscleanmove.ch/en/unterhaltsreinigung-biel',
+        fr: 'https://www.swisscleanmove.ch/fr/unterhaltsreinigung-biel',
+        it: 'https://www.swisscleanmove.ch/it/unterhaltsreinigung-biel',
+        'x-default': 'https://www.swisscleanmove.ch/de/unterhaltsreinigung-biel'
+      }
+    }
   };
 }
 

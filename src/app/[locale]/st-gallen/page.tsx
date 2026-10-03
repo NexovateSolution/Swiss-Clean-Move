@@ -80,7 +80,16 @@ const D: Record<string, RegionPageData> = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const d = D[locale] || D.de;
-  return { title: d.seoTitle, description: d.metaDescription, alternates: { canonical: `https://swisscleanmove.ch/${locale}/st-gallen` } };
+  return { title: d.seoTitle, description: d.metaDescription, alternates: { 
+      canonical: `https://www.swisscleanmove.ch/${locale}/st-gallen`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/st-gallen`,
+        en: `https://www.swisscleanmove.ch/en/st-gallen`,
+        fr: `https://www.swisscleanmove.ch/fr/st-gallen`,
+        it: `https://www.swisscleanmove.ch/it/st-gallen`,
+        'x-default': `https://www.swisscleanmove.ch/de/st-gallen`
+      }
+    } };
 }
 
 export default function Page({ params: { locale } }: { params: { locale: string } }) {

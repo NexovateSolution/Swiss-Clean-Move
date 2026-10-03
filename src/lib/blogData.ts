@@ -148,7 +148,7 @@ Ricorda: una ditta di traslochi professionale ti toglierà la maggior parte del 
     date: '2026-05-03',
     content: {
       de: `
-Die Abgabereinigung ist oft der stressigste Teil des Umzugs. Insbesondere bei einer <a href="/de/endreinigung-biel" class="text-swiss-red hover:underline font-semibold">Endreinigung in Biel</a> sind die Verwaltungen sehr streng.
+Die Abgabereinigung ist oft der stressigste Teil des Umzugs. Insbesondere bei einer <a href="/de/umzugsreinigung-biel" class="text-swiss-red hover:underline font-semibold">Endreinigung in Biel</a> sind die Verwaltungen sehr streng.
 
 ### 1. Fensterrahmen nicht vergessen
 Es reicht nicht, nur die Scheiben zu putzen. Auch die Rillen und Rahmen müssen staubfrei sein.
@@ -160,7 +160,7 @@ Hier sammeln sich Fett und Schmutz über Jahre. Spezialreiniger sind unerlässli
 Die sicherste Methode ist eine Reinigungsfirma mit Abnahmegarantie. So müssen Sie sich um nichts kümmern und erhalten Ihre Kaution garantiert zurück.
       `,
       en: `
-The handover cleaning is often the most stressful part of moving. Especially for an <a href="/en/endreinigung-biel" class="text-swiss-red hover:underline font-semibold">end-of-tenancy cleaning in Biel</a>, property managements are very strict.
+The handover cleaning is often the most stressful part of moving. Especially for an <a href="/en/umzugsreinigung-biel" class="text-swiss-red hover:underline font-semibold">end-of-tenancy cleaning in Biel</a>, property managements are very strict.
 
 ### 1. Don't forget window frames
 It's not enough to just clean the glass. The grooves and frames must also be dust-free.
@@ -172,7 +172,7 @@ Grease and dirt accumulate here over years. Special cleaners are essential.
 The safest method is a cleaning company with a handover guarantee. That way, you don't have to worry about anything and are guaranteed to get your deposit back.
       `,
       fr: `
-Le nettoyage de remise est souvent la partie la plus stressante d'un déménagement. Surtout pour un <a href="/fr/endreinigung-biel" class="text-swiss-red hover:underline font-semibold">nettoyage de fin de bail à Bienne</a>, les gérances sont très strictes.
+Le nettoyage de remise est souvent la partie la plus stressante d'un déménagement. Surtout pour un <a href="/fr/umzugsreinigung-biel" class="text-swiss-red hover:underline font-semibold">nettoyage de fin de bail à Bienne</a>, les gérances sont très strictes.
 
 ### 1. Ne pas oublier les cadres de fenêtres
 Il ne suffit pas de nettoyer les vitres. Les rainures et les cadres doivent également être dépoussiérés.
@@ -182,7 +182,7 @@ La graisse et la saleté s'y accumulent au fil des ans. Des nettoyants spéciaux
 
 ### 3. Engager des professionnels
 La méthode la plus sûre est une entreprise de nettoyage avec garantie de remise. Ainsi, vous n'avez à vous soucier de rien et êtes assuré de récupérer votre caution.
-      `, it: `La pulizia della consegna è spesso la parte più stressante del trasloco. Soprattutto per una <a href="/en/endreinigung-biel" class="text-swiss-red hover:underline font-semibold">pulizia di fine locazione a Biel</a>, la gestione della proprietà è molto severa.
+      `, it: `La pulizia della consegna è spesso la parte più stressante del trasloco. Soprattutto per una <a href="/en/umzugsreinigung-biel" class="text-swiss-red hover:underline font-semibold">pulizia di fine locazione a Biel</a>, la gestione della proprietà è molto severa.
 
 ### 1. Non dimenticare gli infissi
 Non basta pulire solo il vetro. Anche le scanalature e le cornici devono essere prive di polvere.

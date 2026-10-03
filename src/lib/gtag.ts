@@ -28,11 +28,11 @@ export const ConversionLabels = {
   /** Quote Wizard completion (final step) */
   QUOTE_WIZARD_COMPLETE: 'AW-18285523751/jBUQCJ6q8gcEKfmm49E',
   /** Phone‑number click (tel: link) */
-  PHONE_CLICK: '',
+  PHONE_CLICK: 'AW-18285523751/qUgiCMODrY4dEKfmm49E',
   /** WhatsApp button click */
-  WHATSAPP_CLICK: '',
+  WHATSAPP_CLICK: 'AW-18285523751/2DBdCPTFnY8dEKfmm49E',
   /** Email link click */
-  EMAIL_CLICK: '',
+  EMAIL_CLICK: 'AW-18285523751/HOvHCPuz1o8dEKfmm49E',
 } as const;
 
 export type ConversionEvent = keyof typeof ConversionLabels;
@@ -142,4 +142,21 @@ export function trackEvent(
   params: Record<string, unknown> = {},
 ): void {
   gtag('event', action, params);
+}
+
+// ─── Action‑specific Helpers ─────────────────────────────────────────
+
+export function trackPhoneClick(): void {
+  trackEvent('click_phone');
+  trackConversion('PHONE_CLICK').catch(() => {});
+}
+
+export function trackWhatsAppClick(): void {
+  trackEvent('click_whatsapp');
+  trackConversion('WHATSAPP_CLICK').catch(() => {});
+}
+
+export function trackEmailClick(): void {
+  trackEvent('click_email');
+  trackConversion('EMAIL_CLICK').catch(() => {});
 }

@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPhoneClick } from '@/lib/gtag';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -426,7 +428,7 @@ export default function KnowledgeHubPage({ locale }: KnowledgeHubPageProps) {
                 {L(data.cta.btn)}
               </Link>
               <a
-                href="tel:+41782158030"
+                onClick={trackPhoneClick} href="tel:+41782158030"
                 className="border-2 border-white text-white font-bold py-4 px-8 rounded-xl hover:bg-white/10 transition-colors inline-flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />

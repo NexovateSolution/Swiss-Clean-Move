@@ -1,5 +1,7 @@
 'use client';
 
+import { trackPhoneClick } from '@/lib/gtag';
+
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -110,7 +112,7 @@ export default function SeoLandingPage({
           addressCountry: 'CH',
         },
         telephone: '+41 78 215 80 30',
-        url: `https://www.swisscleanmove.ch/${locale}/${pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}`,
+        url: `https://www.swisscleanmove.ch/${locale}/${pageKey === 'endreinigungBiel' ? 'umzugsreinigung-biel' : pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}`,
         areaServed: {
           '@type': 'Place',
           name: `${city}, Seeland, Schweiz`,
@@ -138,7 +140,7 @@ export default function SeoLandingPage({
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `https://www.swisscleanmove.ch/${locale}` },
-          { '@type': 'ListItem', position: 2, name: p('meta.title'), item: `https://www.swisscleanmove.ch/${locale}/${pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}` }
+          { '@type': 'ListItem', position: 2, name: p('meta.title'), item: `https://www.swisscleanmove.ch/${locale}/${pageKey === 'endreinigungBiel' ? 'umzugsreinigung-biel' : pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}` }
         ]
       },
       faqs.length > 0 && {
@@ -252,7 +254,7 @@ export default function SeoLandingPage({
             <a
               href="tel:+41782158030"
               className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
-              onClick={() => handleCtaClick('hero_phone_btn')}
+              onClick={() => { handleCtaClick('hero_phone_btn'); trackPhoneClick(); }}
             >
               <Phone className="w-5 h-5 text-swiss-red" />
               <span>+41 78 215 80 30</span>
@@ -647,7 +649,7 @@ export default function SeoLandingPage({
                 <a
                   href="tel:+41782158030"
                   className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
-                  onClick={() => handleCtaClick('footer_phone_btn')}
+                  onClick={() => { handleCtaClick('footer_phone_btn'); trackPhoneClick(); }}
                 >
                   <Phone className="w-5 h-5 text-swiss-red" />
                   <span>+41 78 215 80 30</span>
