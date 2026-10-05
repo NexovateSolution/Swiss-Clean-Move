@@ -12,7 +12,7 @@ const D: Record<string, RegionPageData> = {
     localKeywords: ['Bern','Biel/Bienne','Thun','Lyss','Burgdorf','Langenthal','Nidau','Brügg','Ipsach','Aarberg','Pieterlen'],
     introParagraphs: [
       'SwissCleanMove ist Ihr professioneller Partner für Umzug, Reinigung, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Gastronomie Reinigung, Facility Services, Hauswartung und Entsorgung im gesamten Kanton Bern.',
-      'Wir unterstützen Privatkunden, Unternehmen, Verwaltungen und Gastronomiebetriebe in Bern, Biel/Bienne, Thun, Burgdorf, Langenthal, Lyss, Nidau, Brügg, Ipsach, Aarberg und Pieterlen. Mit zuverlässigem Service, sauberer Planung und Schweizer Qualitätsstandard bietet SwissCleanMove professionelle Lösungen für Umzug, Reinigung und Gebäudeunterhalt.'
+      'Wir unterstützen Privatkunden, Unternehmen, Verwaltungen und Gastronomiebetriebe in Bern, Biel/Bienne, Thun, Burgdorf, Langenthal, Lyss, Nidau, Brügg, Ipsach, Aarberg und Pieterlen. Mit zuverlässigem Service, sauberer Planung und professionelle Reinigungsstandard bietet SwissCleanMove professionelle Lösungen für Umzug, Reinigung und Gebäudeunterhalt.'
     ],
     faqs: [
       { question: 'Was kostet ein Umzug im Kanton Bern?', answer: 'Die Kosten hängen von Wohnungsgrösse, Distanz, Stockwerk, Lift und Aufwand ab.' },

@@ -75,7 +75,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       receiptFooterServices: 'Reinigung • Umzug • Hauswartung',
       receiptFooterThanks: documentType === 'invoice' ? 'Wir danken für Ihren Auftrag!' : 'Für Ihre Unterlagen – Danke für Ihren Auftrag!',
       receiptFeature1: 'Zuverlässig. Wir sind für Sie da.',
-      receiptFeature2: 'Schweizer Qualität. Professionell & effizient.',
+      receiptFeature2: 'professionelle Reinigung. Professionell & effizient.',
       receiptFeature3: 'Schweizweit im Einsatz. Für Privat & Gewerbe.'
     },
     en: {

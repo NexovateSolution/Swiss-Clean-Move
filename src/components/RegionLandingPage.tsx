@@ -140,7 +140,6 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
         telephone: '+41 78 215 80 30',
         url: `https://swisscleanmove.ch/${locale}/${data.slug}`,
         areaServed: { '@type': 'Place', name: data.regionName },
-        aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '52', bestRating: '5', worstRating: '1' },
       },
       {
         '@type': 'Service',

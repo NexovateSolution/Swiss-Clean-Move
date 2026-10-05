@@ -146,7 +146,7 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
   ];
 
   const cleaningIncluded = [
-    { en: '100% handover guarantee', de: '100 % Abnahmegarantie', fr: 'Garantie de remise à 100 %', it: `Garanzia di consegna al 100%.` },
+    { en: 'Handover guarantee', de: 'Abnahmegarantie', fr: 'Garantie de remise', it: `Garanzia di consegna` },
     { en: 'Interior and exterior window cleaning', de: 'Fensterreinigung innen und aussen', fr: 'Nettoyage des vitres intérieur et extérieur', it: `Pulizia vetri interni ed esterni` },
     { en: 'Cleaning of all blinds/shutters', de: 'Reinigung aller Storen', fr: 'Nettoyage de tous les stores/volets', it: `Pulizia di tutte le persiane/persiane` },
     { en: 'Complete kitchen cleaning', de: 'Komplette Küchenreinigung', fr: 'Nettoyage complet de la cuisine', it: `Pulizia completa della cucina` },

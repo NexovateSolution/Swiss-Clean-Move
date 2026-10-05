@@ -445,7 +445,7 @@ export const valLabels: Record<string, Record<string, string>> = {
             pestControl: { en: 'Pest Control', de: 'Schädlingsbekämpfung', fr: 'Lutte antiparasitaire', it: `Controllo dei parassiti` },
             laundry: { en: 'Laundry', de: 'Wäsche', fr: 'Linge', it: `Lavanderia` },
             consumables: { en: 'Consumables', de: 'Verbrauchsmaterial', fr: 'Consommables', it: `Materiali di consumo` },
-            haccp: { en: 'HACCP Documentation', de: 'HACCP-Dokumentation', fr: 'Documentation HACCP', it: `Documentazione HACCP` },
+            haccp: { en: 'Thorough Documentation', de: 'Gründliche Dokumentation', fr: 'Documentation approfondie', it: `Documentazione approfondita` },
             vacuuming: { en: 'Vacuuming', de: 'Staubsaugen', fr: 'Aspiration', it: `Aspirare` },
             wetMopping: { en: 'Wet Mopping', de: 'Nassreinigung', fr: 'Nettoyage humide', it: `Lavaggio a umido` },
             dusting: { en: 'Dusting', de: 'Staubwischen', fr: 'Dépoussiérage', it: `Spolverare` },
