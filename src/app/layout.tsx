@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s',
   },
   description: 'SwissCleanMove is your professional moving and cleaning company in Biel/Bienne, Bern, Zurich and across Switzerland.',
-  keywords: 'Moving Company Switzerland, End-of-Lease Cleaning, Maintenance Cleaning, Office Cleaning, Facility Service, Gastronomy Cleaning, Construction Cleaning, Clearance, Biel, Bern, Zurich, SwissCleanMove',
+  keywords: 'Moving Company Switzerland, End-of-Lease Cleaning, Maintenance Cleaning, Office Cleaning, Facility Service, Gastronomy Cleaning, Construction Cleaning, Clearance, Biel/Bienne, Bern, Zurich, SwissCleanMove',
   openGraph: {
     title: 'SwissCleanMove – Moving & Cleaning Company Switzerland',
     description: 'Professional moving services, end-of-lease cleaning with guarantee, maintenance cleaning and facility service across Switzerland.',

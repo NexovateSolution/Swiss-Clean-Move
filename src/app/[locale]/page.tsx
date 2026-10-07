@@ -57,8 +57,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.reinigung'),
       icon: Droplets,
       href: `/${locale}/form?service=house-cleaning`,
-      seoLink: `/${locale}/reinigungsfirma-biel`,
-      seoText: locale === 'de' ? 'Reinigungsfirma Biel' : 'Cleaning Company Biel',
+      seoLink: `/${locale}/reinigungsfirma-biel-bienne`,
+      seoText: locale === 'de' ? 'Reinigungsfirma Biel/Bienne' : 'Cleaning Company Biel/Bienne',
       color: 'text-blue-500'
     },
     {
@@ -67,8 +67,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.umzug'),
       icon: Truck,
       href: `/${locale}/form?service=relocation`,
-      seoLink: `/${locale}/umzugsfirma-biel`,
-      seoText: locale === 'de' ? 'Umzugsfirma Biel' : 'Moving Company Biel',
+      seoLink: `/${locale}/umzugsfirma-biel-bienne`,
+      seoText: locale === 'de' ? 'Umzugsfirma Biel/Bienne' : 'Moving Company Biel/Bienne',
       color: 'text-red-500'
     },
     {
@@ -77,8 +77,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.entsorgung'),
       icon: Trash2,
       href: `/${locale}/form?service=disposal`,
-      seoLink: `/${locale}/umzugsreinigung-biel`,
-      seoText: locale === 'de' ? 'Umzugsreinigung Biel' : 'Move-out Cleaning Biel',
+      seoLink: `/${locale}/umzugsreinigung-biel-bienne`,
+      seoText: locale === 'de' ? 'Umzugsreinigung Biel/Bienne' : 'Move-out Cleaning Biel/Bienne',
       color: 'text-green-500'
     },
     {
@@ -87,8 +87,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.facility'),
       icon: Building2,
       href: `/${locale}/form?service=facility-services`,
-      seoLink: `/${locale}/hauswartung-biel`,
-      seoText: locale === 'de' ? 'Hauswartung Biel' : 'Property Maintenance Biel',
+      seoLink: `/${locale}/hauswartung-biel-bienne`,
+      seoText: locale === 'de' ? 'Hauswartung Biel/Bienne' : 'Property Maintenance Biel/Bienne',
       color: 'text-indigo-500'
     },
     {
@@ -97,8 +97,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.haushalt'),
       icon: HomeIcon,
       href: `/${locale}/form?service=household-helping`,
-      seoLink: `/${locale}/unterhaltsreinigung-biel`,
-      seoText: locale === 'de' ? 'Unterhaltsreinigung Biel' : 'Maintenance Cleaning Biel',
+      seoLink: `/${locale}/unterhaltsreinigung-biel-bienne`,
+      seoText: locale === 'de' ? 'Unterhaltsreinigung Biel/Bienne' : 'Maintenance Cleaning Biel/Bienne',
       color: 'text-orange-500'
     }
   ];

@@ -172,29 +172,29 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-6">{t('footer.regional')}</h4>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             
-            {/* New Authority Pages: Biel Spezial */}
+            {/* New Authority Pages: Biel/Bienne Spezial */}
             <div>
               <h5 className="font-medium text-swiss-white mb-3 flex items-center gap-2">
                 <Star className="w-4 h-4 text-swiss-red" />
-                Biel Spezial
+                Biel/Bienne Spezial
               </h5>
               <ul className="space-y-2">
-                <li><Link href={`/${locale}/reinigungsfirma-biel`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">{t("components.footer.cleaningCompany")}</Link></li>
-                <li><Link href={`/${locale}/umzugsfirma-biel`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">{t("components.footer.movingCompany")}</Link></li>
-                <li><Link href={`/${locale}/unterhaltsreinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.maintenanceCleaning")}</Link></li>
-                <li><Link href={`/${locale}/fensterreinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.windowCleaning")}</Link></li>
-                <li><Link href={`/${locale}/baureinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.constructionCleaning")}</Link></li>
-                <li><Link href={`/${locale}/gastronomie-reinigung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.gastroCleaning")}</Link></li>
-                <li><Link href={`/${locale}/transportfirma-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.transportCompany")}</Link></li>
-                <li><Link href={`/${locale}/entsorgung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.disposal")}</Link></li>
-                <li><Link href={`/${locale}/facility-service-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.facilityService")}</Link></li>
-                <li><Link href={`/${locale}/hauswartung-biel`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.propertyMaintenance")}</Link></li>
+                <li><Link href={`/${locale}/reinigungsfirma-biel-bienne`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">{t("components.footer.cleaningCompany")}</Link></li>
+                <li><Link href={`/${locale}/umzugsfirma-biel-bienne`} className="text-sm text-swiss-gray-300 font-medium hover:text-swiss-blue transition-colors">{t("components.footer.movingCompany")}</Link></li>
+                <li><Link href={`/${locale}/unterhaltsreinigung-biel-bienne`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.maintenanceCleaning")}</Link></li>
+                <li><Link href={`/${locale}/fensterreinigung-biel-bienne`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.windowCleaning")}</Link></li>
+                <li><Link href={`/${locale}/baureinigung-biel-bienne`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.constructionCleaning")}</Link></li>
+                <li><Link href={`/${locale}/gastronomie-reinigung-biel-bienne`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.gastroCleaning")}</Link></li>
+                <li><Link href={`/${locale}/transportfirma-biel-bienne`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.transportCompany")}</Link></li>
+                <li><Link href={`/${locale}/entsorgung-biel-bienne`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.disposal")}</Link></li>
+                <li><Link href={`/${locale}/facility-service-biel-bienne`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.facilityService")}</Link></li>
+                <li><Link href={`/${locale}/hauswartung-biel-bienne`} className="text-sm text-swiss-gray-400 hover:text-swiss-blue transition-colors">{t("components.footer.propertyMaintenance")}</Link></li>
               </ul>
             </div>
 
             {/* Standard Regional Clusters */}
             {[
-              { city: 'Biel/Bienne', slug: 'biel' },
+              { city: 'Biel/Bienne', slug: 'biel-bienne' },
               { city: 'Nidau', slug: 'nidau' },
               { city: 'Lyss', slug: 'lyss' },
               { city: 'Brügg', slug: 'bruegg' },

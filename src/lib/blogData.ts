@@ -14,7 +14,7 @@ export const blogArticles = [
     date: '2026-05-01',
     content: {
       de: `
-Die Kosten für einen Umzug in der Schweiz können je nach Wohnungsgrösse, Distanz und gewünschten Zusatzleistungen stark variieren. Ein professioneller <a href="/de/umzug-biel" class="text-swiss-red hover:underline font-semibold">Umzug in Biel</a> für eine 3-Zimmer-Wohnung kostet im Durchschnitt zwischen CHF 800 und CHF 1'500.
+Die Kosten für einen Umzug in der Schweiz können je nach Wohnungsgrösse, Distanz und gewünschten Zusatzleistungen stark variieren. Ein professioneller <a href="/de/umzug-biel-bienne" class="text-swiss-red hover:underline font-semibold">Umzug in Biel/Bienne</a> für eine 3-Zimmer-Wohnung kostet im Durchschnitt zwischen CHF 800 und CHF 1'500.
 
 ### 1. Wohnungsgrösse und Volumen
 Je mehr Möbel und Kartons Sie haben, desto grösser muss der Zügelwagen sein und desto mehr Zügelhelfer werden benötigt.
@@ -26,7 +26,7 @@ Benötigen Sie einen Ein- und Auspackservice? Sollen wir Ihre Möbel demontieren
 Ein stressfreier Umzug muss nicht teuer sein. Fordern Sie noch heute Ihre massgeschneiderte Offerte an!
       `,
       en: `
-The costs for moving in Switzerland can vary greatly depending on the size of the apartment, distance, and desired additional services. A professional <a href="/en/umzug-biel" class="text-swiss-red hover:underline font-semibold">move in Biel</a> for a 3-room apartment costs on average between CHF 800 and CHF 1,500.
+The costs for moving in Switzerland can vary greatly depending on the size of the apartment, distance, and desired additional services. A professional <a href="/en/umzug-biel-bienne" class="text-swiss-red hover:underline font-semibold">move in Biel/Bienne</a> for a 3-room apartment costs on average between CHF 800 and CHF 1,500.
 
 ### 1. Apartment Size and Volume
 The more furniture and boxes you have, the larger the moving van needs to be and the more movers are required.
@@ -38,7 +38,7 @@ Do you need a packing and unpacking service? Should we dismantle and reassemble 
 A stress-free move doesn't have to be expensive. Request your customized quote today!
       `,
       fr: `
-Les coûts d'un déménagement en Suisse peuvent varier considérablement en fonction de la taille de l'appartement, de la distance et des services supplémentaires souhaités. Un <a href="/fr/umzug-biel" class="text-swiss-red hover:underline font-semibold">déménagement professionnel à Bienne</a> pour un appartement de 3 pièces coûte en moyenne entre CHF 800 et CHF 1'500.
+Les coûts d'un déménagement en Suisse peuvent varier considérablement en fonction de la taille de l'appartement, de la distance et des services supplémentaires souhaités. Un <a href="/fr/umzug-biel-bienne" class="text-swiss-red hover:underline font-semibold">déménagement professionnel à Bienne</a> pour un appartement de 3 pièces coûte en moyenne entre CHF 800 et CHF 1'500.
 
 ### 1. Taille et volume de l'appartement
 Plus vous avez de meubles et de cartons, plus le camion de déménagement doit être grand et plus il faut de déménageurs.
@@ -48,7 +48,7 @@ Avez-vous besoin d'un service d'emballage et de déballage ? Devons-nous démont
 
 ### Conclusion
 Un déménagement sans stress ne doit pas nécessairement être cher. Demandez votre devis sur mesure dès aujourd'hui !
-      `, it: `I costi per un trasloco in Svizzera possono variare molto a seconda delle dimensioni dell'appartamento, della distanza e dei servizi aggiuntivi desiderati. Un <a href="/it/umzug-biel" class="text-swiss-red hover:underline font-semibold">trasloco professionale a Biel</a> per un appartamento di 3 locali costa in media tra CHF 800 e CHF 1'500.
+      `, it: `I costi per un trasloco in Svizzera possono variare molto a seconda delle dimensioni dell'appartamento, della distanza e dei servizi aggiuntivi desiderati. Un <a href="/it/umzug-biel-bienne" class="text-swiss-red hover:underline font-semibold">trasloco professionale a Biel/Bienne</a> per un appartamento di 3 locali costa in media tra CHF 800 e CHF 1'500.
 
 ### 1. Dimensioni e volume dell'appartamento
 Più mobili e scatoloni hai, più grande dovrà essere il furgone per traslochi e maggiore sarà il numero di traslocatori necessari.
@@ -148,7 +148,7 @@ Ricorda: una ditta di traslochi professionale ti toglierà la maggior parte del 
     date: '2026-05-03',
     content: {
       de: `
-Die Abgabereinigung ist oft der stressigste Teil des Umzugs. Insbesondere bei einer <a href="/de/umzugsreinigung-biel" class="text-swiss-red hover:underline font-semibold">Endreinigung in Biel</a> sind die Verwaltungen sehr streng.
+Die Abgabereinigung ist oft der stressigste Teil des Umzugs. Insbesondere bei einer <a href="/de/umzugsreinigung-biel-bienne" class="text-swiss-red hover:underline font-semibold">Endreinigung in Biel/Bienne</a> sind die Verwaltungen sehr streng.
 
 ### 1. Fensterrahmen nicht vergessen
 Es reicht nicht, nur die Scheiben zu putzen. Auch die Rillen und Rahmen müssen staubfrei sein.
@@ -160,7 +160,7 @@ Hier sammeln sich Fett und Schmutz über Jahre. Spezialreiniger sind unerlässli
 Die sicherste Methode ist eine Reinigungsfirma mit Abnahmegarantie. So müssen Sie sich um nichts kümmern und erhalten Ihre Kaution garantiert zurück.
       `,
       en: `
-The handover cleaning is often the most stressful part of moving. Especially for an <a href="/en/umzugsreinigung-biel" class="text-swiss-red hover:underline font-semibold">end-of-tenancy cleaning in Biel</a>, property managements are very strict.
+The handover cleaning is often the most stressful part of moving. Especially for an <a href="/en/umzugsreinigung-biel-bienne" class="text-swiss-red hover:underline font-semibold">end-of-tenancy cleaning in Biel/Bienne</a>, property managements are very strict.
 
 ### 1. Don't forget window frames
 It's not enough to just clean the glass. The grooves and frames must also be dust-free.
@@ -172,7 +172,7 @@ Grease and dirt accumulate here over years. Special cleaners are essential.
 The safest method is a cleaning company with a handover guarantee. That way, you don't have to worry about anything and are guaranteed to get your deposit back.
       `,
       fr: `
-Le nettoyage de remise est souvent la partie la plus stressante d'un déménagement. Surtout pour un <a href="/fr/umzugsreinigung-biel" class="text-swiss-red hover:underline font-semibold">nettoyage de fin de bail à Bienne</a>, les gérances sont très strictes.
+Le nettoyage de remise est souvent la partie la plus stressante d'un déménagement. Surtout pour un <a href="/fr/umzugsreinigung-biel-bienne" class="text-swiss-red hover:underline font-semibold">nettoyage de fin de bail à Bienne</a>, les gérances sont très strictes.
 
 ### 1. Ne pas oublier les cadres de fenêtres
 Il ne suffit pas de nettoyer les vitres. Les rainures et les cadres doivent également être dépoussiérés.
@@ -182,7 +182,7 @@ La graisse et la saleté s'y accumulent au fil des ans. Des nettoyants spéciaux
 
 ### 3. Engager des professionnels
 La méthode la plus sûre est une entreprise de nettoyage avec garantie de remise. Ainsi, vous n'avez à vous soucier de rien et êtes assuré de récupérer votre caution.
-      `, it: `La pulizia della consegna è spesso la parte più stressante del trasloco. Soprattutto per una <a href="/en/umzugsreinigung-biel" class="text-swiss-red hover:underline font-semibold">pulizia di fine locazione a Biel</a>, la gestione della proprietà è molto severa.
+      `, it: `La pulizia della consegna è spesso la parte più stressante del trasloco. Soprattutto per una <a href="/en/umzugsreinigung-biel-bienne" class="text-swiss-red hover:underline font-semibold">pulizia di fine locazione a Biel/Bienne</a>, la gestione della proprietà è molto severa.
 
 ### 1. Non dimenticare gli infissi
 Non basta pulire solo il vetro. Anche le scanalature e le cornici devono essere prive di polvere.

@@ -7,7 +7,7 @@ import SwissHero from '@/components/SwissHero';
 import { MapPin, ArrowRight, Phone } from 'lucide-react';
 
 const REGIONS = [
-  { slug: 'biel-bienne-seeland', de: 'Biel/Bienne & Seeland', en: 'Biel/Bienne & Seeland', fr: 'Bienne & Seeland', keywords: ['Biel','Bienne','Nidau','Brügg','Lyss','Aarberg','Seeland'], it: `Biel/Bienne e Seeland` },
+  { slug: 'biel-bienne-seeland', de: 'Biel/Bienne & Seeland', en: 'Biel/Bienne & Seeland', fr: 'Bienne & Seeland', keywords: ['Biel/Bienne','Bienne','Nidau','Brügg','Lyss','Aarberg','Seeland'], it: `Biel/Bienne e Seeland` },
   { slug: 'bern', de: 'Kanton Bern', en: 'Canton of Bern', fr: 'Canton de Berne', keywords: ['Bern','Thun','Burgdorf','Langenthal','Lyss'], it: `Cantone di Berna` },
   { slug: 'zuerich', de: 'Kanton Zürich', en: 'Canton of Zurich', fr: 'Canton de Zurich', keywords: ['Zürich','Winterthur','Uster','Dübendorf','Dietikon'], it: `Cantone di Zurigo` },
   { slug: 'basel', de: 'Kanton Basel', en: 'Canton of Basel', fr: 'Canton de Bâle', keywords: ['Basel','Allschwil','Binningen','Muttenz','Reinach'], it: `Cantone di Basilea` },

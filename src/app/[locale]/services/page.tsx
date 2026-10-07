@@ -44,7 +44,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
       pricing: t('services.pricingUnits.byArrangement'),
       color: 'bg-emerald-500',
       gradient: 'from-emerald-500 to-emerald-600',
-      href: `/${locale}/hauswartung-biel`
+      href: `/${locale}/hauswartung-biel-bienne`
     },
     {
       id: 'comboService',
@@ -65,7 +65,7 @@ export default function ServicesPage({ params: { locale } }: { params: { locale:
       pricing: t('services.pricing.householdHelping'),
       color: 'bg-emerald-500',
       gradient: 'from-emerald-500 to-emerald-600',
-      href: `/${locale}/haushaltshilfe-biel`
+      href: `/${locale}/haushaltshilfe-biel-bienne`
     }
   ];
 

@@ -235,7 +235,7 @@
         "selectService": "Choisir un service ménager"
       }
     },
-    "seoText": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland. We organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards. For a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines. For companies, property managers and businesses, we offer maintenance cleaning, office cleaning, stairwell cleaning and commercial cleaning – reliable, discreet and professionally managed. Additionally, we provide full facility service and property maintenance (regular inspections, minor repairs, winter service, green area maintenance), professional gastronomy cleaning for restaurants, hotels and commercial kitchens, construction cleaning (rough, detailed and final cleaning), as well as clearance and disposal services with environmentally responsible waste separation. SwissCleanMove stands for clear processes, transparent quotations, 24-hour response time and visible results – in Biel, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura, Lucerne and across Switzerland.",
+    "seoText": "SwissCleanMove is your professional moving company in Biel/Bienne (Canton of Bern) and your reliable relocation partner in Bern and Zurich – operating throughout Switzerland. We organize private moves, corporate relocations, office moves and furniture transport, including packing services, dismantling and assembly, and punctual execution according to Swiss quality standards. For a stress-free apartment handover, we provide end-of-lease cleaning with a 100% handover guarantee. We thoroughly clean kitchens, bathrooms, windows, floors, doors and all required areas following strict quality guidelines. For companies, property managers and businesses, we offer maintenance cleaning, office cleaning, stairwell cleaning and commercial cleaning – reliable, discreet and professionally managed. Additionally, we provide full facility service and property maintenance (regular inspections, minor repairs, winter service, green area maintenance), professional gastronomy cleaning for restaurants, hotels and commercial kitchens, construction cleaning (rough, detailed and final cleaning), as well as clearance and disposal services with environmentally responsible waste separation. SwissCleanMove stands for clear processes, transparent quotations, 24-hour response time and visible results – in Biel/Bienne, Bern, Zurich, Basel, Solothurn, Aargau, Neuchâtel, Fribourg, Jura, Lucerne and across Switzerland.",
     "regional": {
       "title": "Nos Sites dans le Seeland",
       "subtitle": "Nous sommes là pour vous dans toute la région de Bienne-Seeland. Rapide, local et fiable."
@@ -5436,7 +5436,7 @@
           "Meggen"
         ]
       },
-      "biel": {
+      "biel/bienne": {
         "name": "Biel/Bienne",
         "description": "Services professionnels dans la région bilingue de Bienne",
         "coverage": "Ville de Biel/Bienne et environs",
@@ -5957,8 +5957,8 @@
   },
   "galleryPage": {
     "title": "Gallery – Our Work & Quality Standards",
-    "description": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel, Bern, Zurich and throughout Switzerland.",
-    "seoText": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel, Bern, Zurich and throughout Switzerland."
+    "description": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel/Bienne, Bern, Zurich and throughout Switzerland.",
+    "seoText": "Explore examples of our professional moving services, detailed end-of-lease cleaning with guarantee, structured maintenance cleaning, hygienic gastronomy cleaning and precise construction cleaning. SwissCleanMove represents Swiss quality, reliability and visible results in Biel/Bienne, Bern, Zurich and throughout Switzerland."
   },
   "seoPages": {
     "umzugBiel": {
@@ -11539,32 +11539,32 @@
       "internalLinksHeading": "Autres services à Bienne",
       "internalLinks": [
         {
-          "label": "Nettoyage d’entretien Biel",
-          "href": "unterhaltsreinigung-biel"
+          "label": "Nettoyage d’entretien Biel/Bienne",
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
-          "label": "Nettoyage de fin de bail Biel",
-          "href": "umzugsreinigung-biel"
+          "label": "Nettoyage de fin de bail Biel/Bienne",
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
-          "label": "Nettoyage de vitres Biel",
-          "href": "fensterreinigung-biel"
+          "label": "Nettoyage de vitres Biel/Bienne",
+          "href": "fensterreinigung-biel-bienne"
         },
         {
-          "label": "Nettoyage de chantier Biel",
-          "href": "baureinigung-biel"
+          "label": "Nettoyage de chantier Biel/Bienne",
+          "href": "baureinigung-biel-bienne"
         },
         {
-          "label": "Nettoyage gastronomie Biel",
-          "href": "gastronomie-reinigung-biel"
+          "label": "Nettoyage gastronomie Biel/Bienne",
+          "href": "gastronomie-reinigung-biel-bienne"
         },
         {
-          "label": "Conciergerie Biel",
-          "href": "hauswartung-biel"
+          "label": "Conciergerie Biel/Bienne",
+          "href": "hauswartung-biel-bienne"
         },
         {
           "label": "Aide de ménage",
-          "href": "haushaltshilfe-biel"
+          "href": "haushaltshilfe-biel-bienne"
         }
       ],
       "ctaMidHeading": "Vous cherchez une entreprise de nettoyage à Bienne?",
@@ -12309,7 +12309,7 @@
         "description": "Service des installations à Bienne/Bienne. Gestion d'immeubles, entretien, nettoyage et assistance immobilière à Seeland. Tout d'une seule source."
       },
       "badge": "Facility Service Bienne",
-      "h1": "Facility Service Biel — gestion d'immeubles et nettoyage d'entretien",
+      "h1": "Facility Service Biel/Bienne — gestion d'immeubles et nettoyage d'entretien",
       "heroSubtitle": "SwissCleanMove propose un service d'installation complet à Bienne. Gestion des bâtiments, nettoyage d'entretien, entretien de la maison et assistance technique, le tout à partir d'une seule source.",
       "ctaSoft": "Demandez un devis gratuit",
       "intro": "Bienvenue chez SwissCleanMove, votre expert leader pour la gestion globale des installations à Bienne et dans toute la Zélande. Si vous recherchez la plus haute qualité, la fiabilité suisse et des prix absolument transparents, vous avez trouvé le bon partenaire. Maintenir la valeur d’une propriété nécessite un accompagnement à 360 degrés. Nous sommes votre interlocuteur unique pour toutes les questions. Nous comprenons que les services de nettoyage, de déménagement et de gestion des installations sont une question de confiance absolue. C'est pourquoi chez SwissCleanMove, nous ne faisons pas appel à des sous-traitants anonymes, mais plutôt à notre propre personnel permanent et hautement qualifié. Cela garantit non seulement des conditions de travail équitables, mais aussi une qualité constante et élevée pour vous en tant que client à Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg et Pieterlen. Que vous soyez un particulier à la recherche d'une aide ménagère discrète, une entreprise qui a besoin d'un nettoyage régulier de ses bureaux ou une société de gestion immobilière qui a besoin d'un service de gardiennage compétent, nous couvrons l'ensemble du spectre. Notre philosophie est basée sur la proximité client, la communication proactive et l'utilisation des outils les plus modernes. Grâce à notre vaste expérience et à nos innombrables commandes exécutées avec succès à Bienne et dans toute la Zélande, nous savons exactement ce qui est important. Nous gérons des actifs immobiliers d'une valeur de plusieurs millions pour des propriétaires privés et de grandes administrations à Bienne. Nous attachons une grande importance à la durabilité et utilisons autant que possible des produits de nettoyage respectueux de l'environnement et biodégradables. Sur cette page, découvrez tout ce que vous devez savoir sur nos services, comment fonctionne notre processus et pourquoi tant de clients satisfaits de la région nous choisissent. N'hésitez pas à nous contacter pour une visite ou un devis gratuit et sans engagement.",
@@ -13536,7 +13536,7 @@
     "bueroreinigungBiel": {
       "meta": {
         "title": "Nettoyage de bureau Bienne | Nettoyage de cabinet & commercial | SwissCleanMove",
-        "description": "Nettoyage de bureau professionnel à Bienne/Biel. Nous nettoyons vos locaux commerciaux, cabinets et bureaux dans le Seeland de manière fiable et discrète."
+        "description": "Nettoyage de bureau professionnel à Bienne/Biel/Bienne. Nous nettoyons vos locaux commerciaux, cabinets et bureaux dans le Seeland de manière fiable et discrète."
       }
     }
   },
