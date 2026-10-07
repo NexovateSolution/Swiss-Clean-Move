@@ -4707,7 +4707,8 @@
         "subtitle": "Scegli la lingua per la fattura",
         "german": "tedesco",
         "french": "francese",
-        "english": "Inglese"
+        "english": "Inglese",
+        "italian": "Italiano"
       },
       "toast": {
         "fetchFailed": "Impossibile recuperare i client",

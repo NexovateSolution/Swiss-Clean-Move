@@ -4495,7 +4495,8 @@
         "subtitle": "Wählen Sie die Sprache für die Rechnung",
         "german": "Deutsch",
         "french": "Französisch",
-        "english": "Englisch"
+        "english": "Englisch",
+        "italian": "Italienisch"
       },
       "toast": {
         "fetchFailed": "Kunden konnten nicht geladen werden",

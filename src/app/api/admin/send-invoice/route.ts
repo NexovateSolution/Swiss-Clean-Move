@@ -39,6 +39,7 @@ export async function POST(request: NextRequest) {
         }
 
         const customer = {
+            ...subData,
             firstName: client.firstName,
             lastName: client.lastName,
             email: client.email || '',
@@ -49,7 +50,6 @@ export async function POST(request: NextRequest) {
             cleaningApartmentType: client.buildingType,
             cleaningTypes: client.serviceType,
             locale: language,
-            ...subData
         };
 
         let quoteRes = subData.quoteResult;

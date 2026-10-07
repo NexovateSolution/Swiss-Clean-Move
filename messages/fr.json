@@ -4495,7 +4495,8 @@
         "subtitle": "Choisissez la langue pour la facture",
         "german": "Allemand",
         "french": "Français",
-        "english": "Anglais"
+        "english": "Anglais",
+        "italian": "Italien"
       },
       "toast": {
         "fetchFailed": "Impossible de récupérer les clients",

@@ -4637,7 +4637,8 @@
         "subtitle": "Choose the language for the invoice",
         "german": "German",
         "french": "French",
-        "english": "English"
+        "english": "English",
+        "italian": "Italian"
       },
       "toast": {
         "fetchFailed": "Failed to fetch clients",

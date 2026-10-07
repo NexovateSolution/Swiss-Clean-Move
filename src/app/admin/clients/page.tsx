@@ -916,7 +916,7 @@ export default function ClientsPage() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>🇩🇪</span>
-                  <span>{t('invoiceLanguage.german', { fallback: 'German' })}</span>
+                  <span>{t('invoiceLanguage.german')}</span>
                 </button>
 
                 <button
@@ -924,7 +924,7 @@ export default function ClientsPage() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>🇫🇷</span>
-                  <span>{t('invoiceLanguage.french', { fallback: 'French' })}</span>
+                  <span>{t('invoiceLanguage.french')}</span>
                 </button>
 
                 <button
@@ -932,7 +932,7 @@ export default function ClientsPage() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>🇮🇹</span>
-                  <span>{t('invoiceLanguage.italian', { fallback: 'Italian' })}</span>
+                  <span>{t('invoiceLanguage.italian')}</span>
                 </button>
 
                 <button
@@ -940,7 +940,7 @@ export default function ClientsPage() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>🇬🇧</span>
-                  <span>{t('invoiceLanguage.english', { fallback: 'English' })}</span>
+                  <span>{t('invoiceLanguage.english')}</span>
                 </button>
               </div>
             ) : (
