@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Age: 0
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+Content-Type: text/html; charset=utf-8
+Date: Wed, 07 Oct 2026 14:02:34 GMT
+Link: <https://www.swisscleanmove.ch/de/umzug-biel>; rel="alternate"; hreflang="de", <https://www.swisscleanmove.ch/fr/umzug-biel>; rel="alternate"; hreflang="fr", <https://www.swisscleanmove.ch/en/umzug-biel>; rel="alternate"; hreflang="en", <https://www.swisscleanmove.ch/it/umzug-biel>; rel="alternate"; hreflang="it"
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+Referrer-Policy: strict-origin-when-cross-origin
+Server: Vercel
+Set-Cookie: NEXT_LOCALE=en; Path=/; Expires=Thu, 07 Oct 2027 14:02:34 GMT; Max-Age=31536000; SameSite=lax
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch
+X-Content-Type-Options: nosniff
+X-Dns-Prefetch-Control: on
+X-Frame-Options: SAMEORIGIN
+X-Matched-Path: /[locale]/umzug-biel
+X-Powered-By: Next.js
+X-Vercel-Cache: MISS
+X-Vercel-Id: cdg1::iad1::x9phd-1791381753623-79a0bff3eef2
+X-Xss-Protection: 1; mode=block
+Transfer-Encoding: chunked
+

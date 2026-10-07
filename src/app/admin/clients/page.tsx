@@ -68,7 +68,7 @@ export default function ClientsPage() {
   const [paymentModal, setPaymentModal] = useState<{ open: boolean; client?: Client }>({ open: false })
   const [deleteModal, setDeleteModal] = useState<{ open: boolean; client?: Client }>({ open: false })
   const [photoModal, setPhotoModal] = useState<{ open: boolean; client?: Client }>({ open: false })
-  const [languageModal, setLanguageModal] = useState<{ open: boolean; client?: Client; selectedLanguage?: 'en' | 'de' | 'fr'; type?: 'invoice' | 'receipt' }>({ open: false })
+  const [languageModal, setLanguageModal] = useState<{ open: boolean; client?: Client; selectedLanguage?: 'en' | 'de' | 'fr' | 'it'; type?: 'invoice' | 'receipt' }>({ open: false })
   const [showExportMenu, setShowExportMenu] = useState(false)
   const [activeActionMenu, setActiveActionMenu] = useState<string | null>(null)
 
@@ -147,7 +147,7 @@ export default function ClientsPage() {
     setPhotoModal({ open: true, client })
   }
 
-  const generateDocument = async (client: Client, language: 'en' | 'de' | 'fr', action: 'print' | 'pdf' | 'pdf_only', type: 'invoice' | 'receipt') => {
+  const generateDocument = async (client: Client, language: 'en' | 'de' | 'fr' | 'it', action: 'print' | 'pdf' | 'pdf_only', type: 'invoice' | 'receipt') => {
     try {
       const generateEndpoint = type === 'invoice' ? '/api/admin/generate-invoice' : '/api/admin/generate-receipt';
       const sendEndpoint = type === 'invoice' ? '/api/admin/send-invoice' : '/api/admin/send-receipt';
@@ -916,7 +916,7 @@ export default function ClientsPage() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>🇩🇪</span>
-                  <span>{t('invoiceLanguage.german')}</span>
+                  <span>{t('invoiceLanguage.german', { fallback: 'German' })}</span>
                 </button>
 
                 <button
@@ -924,7 +924,15 @@ export default function ClientsPage() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>🇫🇷</span>
-                  <span>{t('invoiceLanguage.french')}</span>
+                  <span>{t('invoiceLanguage.french', { fallback: 'French' })}</span>
+                </button>
+
+                <button
+                  onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: 'it' })}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                >
+                  <span>🇮🇹</span>
+                  <span>{t('invoiceLanguage.italian', { fallback: 'Italian' })}</span>
                 </button>
 
                 <button
@@ -932,7 +940,7 @@ export default function ClientsPage() {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>🇬🇧</span>
-                  <span>{t('invoiceLanguage.english')}</span>
+                  <span>{t('invoiceLanguage.english', { fallback: 'English' })}</span>
                 </button>
               </div>
             ) : (

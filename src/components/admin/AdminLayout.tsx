@@ -199,10 +199,10 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                 {langOpen && (
                   <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 py-1 z-50">
                     {([
-                      { code: 'en', label: 'English' },
                       { code: 'de', label: 'Deutsch' },
                       { code: 'fr', label: 'Français' },
                       { code: 'it', label: 'Italiano' },
+                      { code: 'en', label: 'English' },
                     ] as const).map((l) => (
                       <button
                         key={l.code}

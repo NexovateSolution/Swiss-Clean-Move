@@ -13852,7 +13852,8 @@
       "review": "Prüfen & absenden"
     },
     "customer": {
-      "firstName": "Vorname / Nachname *",
+      "firstName": "Vorname *",
+      "lastName": "Nachname *",
       "company": "Firma (optional)",
       "email": "E-Mail *",
       "phone": "Telefon / Mobile *"

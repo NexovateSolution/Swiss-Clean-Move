@@ -186,7 +186,7 @@ export default function UniversalQuoteForm({ locale, preselectedService, renderH
 
         const nameParts = (data.name || '').trim().split(' ');
         const fName = data.firstName || (nameParts.length > 1 ? nameParts[0] : '') || '';
-        const lName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : (data.name || '');
+        const lName = data.firstName ? data.name : (nameParts.length > 1 ? nameParts.slice(1).join(' ') : (data.name || ''));
 
         const payload = {
             firstName: fName,

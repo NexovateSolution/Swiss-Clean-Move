@@ -13810,7 +13810,8 @@
       "review": "Vérifier & Envoyer"
     },
     "customer": {
-      "firstName": "Prénom / Nom *",
+      "firstName": "Prénom *",
+      "lastName": "Nom de famille *",
       "company": "Entreprise (optionnel)",
       "email": "E-mail *",
       "phone": "Téléphone / Mobile *"

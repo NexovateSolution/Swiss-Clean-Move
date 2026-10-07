@@ -132,16 +132,6 @@ export default function Header() {
                 <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50 transform -translate-x-4">
                   <button
                     onClick={() => {
-                      switchLocale('en');
-                      setIsLangDropdownOpen(false);
-                    }}
-                    className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${locale === 'en' ? 'text-swiss-blue font-medium' : 'text-gray-700'
-                      }`}
-                  >
-                    🇺🇸 English
-                  </button>
-                  <button
-                    onClick={() => {
                       switchLocale('de');
                       setIsLangDropdownOpen(false);
                     }}
@@ -169,6 +159,16 @@ export default function Header() {
                       }`}
                   >
                     🇮🇹 Italiano
+                  </button>
+                  <button
+                    onClick={() => {
+                      switchLocale('en');
+                      setIsLangDropdownOpen(false);
+                    }}
+                    className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 transition-colors ${locale === 'en' ? 'text-swiss-blue font-medium' : 'text-gray-700'
+                      }`}
+                  >
+                    🇺🇸 English
                   </button>
                 </div>
               )}
@@ -218,18 +218,6 @@ export default function Header() {
                 <div className="flex items-center space-x-2 bg-swiss-gray-50 rounded-lg p-1">
                   <button
                     onClick={() => {
-                      switchLocale('en');
-                      setIsMenuOpen(false);
-                    }}
-                    className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-all ${locale === 'en'
-                      ? 'bg-swiss-red text-white shadow-subtle'
-                      : 'text-swiss-body hover:text-swiss-text hover:bg-white'
-                      }`}
-                  >
-                    🇺🇸 EN
-                  </button>
-                  <button
-                    onClick={() => {
                       switchLocale('de');
                       setIsMenuOpen(false);
                     }}
@@ -263,6 +251,18 @@ export default function Header() {
                       }`}
                   >
                     🇮🇹 IT
+                  </button>
+                  <button
+                    onClick={() => {
+                      switchLocale('en');
+                      setIsMenuOpen(false);
+                    }}
+                    className={`flex-1 px-3 py-2 text-sm font-medium rounded-md transition-all ${locale === 'en'
+                      ? 'bg-swiss-red text-white shadow-subtle'
+                      : 'text-swiss-body hover:text-swiss-text hover:bg-white'
+                      }`}
+                  >
+                    🇺🇸 EN
                   </button>
                 </div>
               </div>

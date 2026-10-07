@@ -13810,7 +13810,8 @@
       "review": "Rivedi & Invia"
     },
     "customer": {
-      "firstName": "Nome / Cognome *",
+      "firstName": "Nome *",
+      "lastName": "Cognome *",
       "company": "Azienda (opzionale)",
       "email": "E-mail *",
       "phone": "Telefono / Cellulare *"

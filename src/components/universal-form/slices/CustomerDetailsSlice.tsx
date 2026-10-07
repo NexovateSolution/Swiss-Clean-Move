@@ -16,6 +16,17 @@ export default function CustomerDetailsSlice({ data, updateData, t }: FormSliceP
           </label>
           <input
             type="text"
+            value={data.firstName}
+            onChange={e => updateData({ firstName: e.target.value })}
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className={labelClass}>
+            {t('universalForm.customer.lastName')}
+          </label>
+          <input
+            type="text"
             value={data.name}
             onChange={e => updateData({ name: e.target.value })}
             className={inputClass}
