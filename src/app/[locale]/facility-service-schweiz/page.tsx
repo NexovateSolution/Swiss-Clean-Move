@@ -4,6 +4,9 @@ import { getTranslations } from 'next-intl/server';
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: `seoPages.${'facilityServiceSchweiz'}.meta` });
   return {
+    alternates: {
+      canonical: `/${locale}/facility-service-schweiz`
+    },
     title: t('title'),
     description: t('description'),
     robots: {

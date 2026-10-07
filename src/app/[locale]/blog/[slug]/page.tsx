@@ -15,6 +15,9 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
   if (!article) return {};
   
   return {
+    alternates: {
+      canonical: `/${locale}/blog/${slug}`
+    },
     title: `${(article.title as any)[locale] || article.title.de} | SwissCleanMove Blog`,
     description: (article.excerpt as any)[locale] || article.excerpt.de,
     robots: { index: true, follow: true }

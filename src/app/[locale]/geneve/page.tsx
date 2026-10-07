@@ -4,6 +4,9 @@ import RegionLandingPage, { RegionPageData } from '@/components/RegionLandingPag
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'regions.geneve.meta' });
   return {
+    alternates: {
+      canonical: `/${locale}/geneve`
+    },
     title: t('title'),
     description: t('description'),
     robots: {

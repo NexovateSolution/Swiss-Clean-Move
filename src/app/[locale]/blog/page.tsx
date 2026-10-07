@@ -10,6 +10,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const description = locale === 'en' ? 'Helpful tips for your move and cleaning in Switzerland.' : locale === 'fr' ? 'Conseils utiles pour votre déménagement et nettoyage en Suisse.' : 'Hilfreiche Tipps rund um Umzug und Reinigung in der Schweiz.';
   
   return {
+    alternates: {
+      canonical: `/${locale}/blog`
+    },
     title,
     description,
     robots: { index: true, follow: true }

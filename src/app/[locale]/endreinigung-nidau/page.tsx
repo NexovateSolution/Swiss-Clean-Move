@@ -4,6 +4,9 @@ import { getTranslations } from 'next-intl/server';
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: `seoPages.${'endreinigungNidau'}.meta` });
   return {
+    alternates: {
+      canonical: `/${locale}/endreinigung-nidau`
+    },
     title: t('title'),
     description: t('description'),
     // Phased rollout: noindex true for secondary cities temporarily
