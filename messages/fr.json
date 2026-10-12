@@ -4593,7 +4593,8 @@
         "view": "Voir",
         "downloadPdf": "Télécharger PDF",
         "downloadPdfButton": "Télécharger PDF",
-        "pdf": "PDF"
+        "pdf": "PDF",
+        "createInvoice": "Créer une facture"
       },
       "modal": {
         "title": "Détails de la soumission",

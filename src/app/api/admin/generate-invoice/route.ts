@@ -10,63 +10,119 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
         }
 
-        const { clientId, language = 'de', format = 'html' } = await request.json()
+        const { clientId, submissionId, language = 'de', format = 'html' } = await request.json()
+        const targetId = clientId || submissionId
 
-        if (!clientId) {
-            return NextResponse.json({ error: 'Client ID is required' }, { status: 400 })
+        if (!targetId) {
+            return NextResponse.json({ error: 'Client or Submission ID is required' }, { status: 400 })
         }
 
         // Fetch client data
-        const client = await prisma.client.findUnique({
-            where: { id: clientId }
+        let client = await prisma.client.findUnique({
+            where: { id: targetId }
         })
 
-        if (!client) {
-            return NextResponse.json({ error: 'Client not found' }, { status: 404 })
-        }
-        
-        // Use client.data if available, otherwise fallback to flat Client properties
+        let clientInfo: { id: string; firstName: string; lastName: string; email: string };
         let subData: any = {};
-        if (client.data && typeof client.data === 'object') {
-           subData = client.data;
-        }
+        let customer: any = {};
+        let quoteRes: any = null;
 
-        const customer = {
-            ...subData,
-            ...(subData.data || {}),
-            firstName: client.firstName,
-            lastName: client.lastName,
-            email: client.email || '',
-            phone: client.phone || '',
-            streetAndNumber: client.address || '',
-            postalCodeAndCity: `${client.postalCode || ''} ${client.location || ''}`.trim(),
-            cleaningAreaInM2: client.squareMeters,
-            cleaningApartmentType: client.buildingType,
-            cleaningTypes: client.serviceType,
-            cleaningAppointment: client.fromDate ? new Date(client.fromDate).toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '',
-            numberOfRooms: client.numberOfRooms,
-            elevator: client.elevator,
-            floor: client.floor,
-            locale: language,
-        };
+        if (client) {
+            clientInfo = {
+                id: client.id,
+                firstName: client.firstName,
+                lastName: client.lastName,
+                email: client.email || ''
+            };
 
-        let quoteRes = subData.quoteResult;
-        if (!quoteRes || !quoteRes.lineItems) {
-           let fallbackId = client.serviceType || 'Reinigung';
-           if (client.serviceType === 'Household Helping' && subData.supportType) {
-              fallbackId = subData.supportType;
-           }
-           quoteRes = {
-              totalEstimatedPrice: client.totalPrice || 0,
-              isFallback: false,
-              lineItems: [
-                 { id: fallbackId, price: client.totalPrice || 0 }
-              ]
-           };
+            // Use client.data if available, otherwise fallback to flat Client properties
+            if (client.data && typeof client.data === 'object') {
+               subData = client.data;
+            }
+
+            customer = {
+                ...subData,
+                ...(subData.data || {}),
+                firstName: client.firstName,
+                lastName: client.lastName,
+                email: client.email || '',
+                phone: client.phone || '',
+                streetAndNumber: client.address || '',
+                postalCodeAndCity: `${client.postalCode || ''} ${client.location || ''}`.trim(),
+                cleaningAreaInM2: client.squareMeters,
+                cleaningApartmentType: client.buildingType,
+                cleaningTypes: client.serviceType,
+                cleaningAppointment: client.fromDate ? new Date(client.fromDate).toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '',
+                numberOfRooms: client.numberOfRooms,
+                elevator: client.elevator,
+                floor: client.floor,
+                locale: language,
+            };
+
+            quoteRes = subData.quoteResult;
+            if (!quoteRes || !quoteRes.lineItems) {
+               let fallbackId = client.serviceType || 'Reinigung';
+               if (client.serviceType === 'Household Helping' && subData.supportType) {
+                  fallbackId = subData.supportType;
+               }
+               quoteRes = {
+                  totalEstimatedPrice: client.totalPrice || 0,
+                  isFallback: false,
+                  lineItems: [
+                     { id: fallbackId, price: client.totalPrice || 0 }
+                  ]
+               };
+            }
+        } else {
+            // Check in ServiceFormSubmission table
+            const submission = await prisma.serviceFormSubmission.findUnique({
+                where: { id: targetId }
+            });
+
+            if (!submission) {
+                return NextResponse.json({ error: 'Client or submission not found' }, { status: 404 })
+            }
+
+            clientInfo = {
+               id: submission.id,
+               firstName: submission.firstName,
+               lastName: submission.name,
+               email: submission.emailAddress || ''
+            };
+
+            if (submission.data && typeof submission.data === 'object') {
+               subData = submission.data;
+            }
+
+            customer = {
+                ...submission,
+                ...subData,
+                ...(subData.data || {}),
+                firstName: submission.firstName,
+                lastName: submission.name,
+                email: submission.emailAddress || '',
+                phone: submission.telephone || '',
+                streetAndNumber: submission.streetAndNumber || '',
+                postalCodeAndCity: submission.postalCodeAndCity || '',
+                cleaningTypes: submission.serviceName,
+                locale: language,
+            };
+
+            quoteRes = subData.quoteResult;
+            if (!quoteRes || !quoteRes.lineItems) {
+               quoteRes = {
+                  totalEstimatedPrice: submission.estimatedPrice || subData.estimatedPrice || 0,
+                  isFallback: false,
+                  quoteNumber: 'Q-000',
+                  lineItems: Array.isArray(subData.lineItems) ? subData.lineItems : [
+                     { id: submission.serviceName || 'Reinigung', price: submission.estimatedPrice || subData.estimatedPrice || 0 }
+                  ]
+               };
+            }
         }
 
         if (format === 'pdf') {
-            console.log(`Generating PDF for client ${clientId}...`);
+            console.log(`Generating PDF for client ${targetId}...`);
             const { generateQuotePdf } = await import('@/utils/pdfGenerator');
             try {
                 const pdfBuffer = await generateQuotePdf(quoteRes, customer, 'contract');
@@ -75,11 +131,11 @@ export async function POST(request: NextRequest) {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/pdf',
-                        'Content-Disposition': `attachment; filename="invoice-${client.firstName}-${client.lastName}.pdf"`
+                        'Content-Disposition': `attachment; filename="invoice-${clientInfo.firstName}-${clientInfo.lastName}.pdf"`
                     }
                 });
             } catch (err) {
-                console.error(`Error generating PDF for ${clientId}:`, err);
+                console.error(`Error generating PDF for ${targetId}:`, err);
                 return NextResponse.json({ error: 'Failed to generate PDF' }, { status: 500 });
             }
         }
@@ -89,7 +145,7 @@ export async function POST(request: NextRequest) {
         return new NextResponse(html, {
             headers: {
                 'Content-Type': 'text/html',
-                'Content-Disposition': `inline; filename="invoice-${client.firstName}-${client.lastName}.html"`
+                'Content-Disposition': `inline; filename="invoice-${clientInfo.firstName}-${clientInfo.lastName}.html"`
             }
         })
     } catch (error) {

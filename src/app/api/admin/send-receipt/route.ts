@@ -12,11 +12,16 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
         }
 
-        const { clientId, language = 'de' } = await request.json()
+        const { clientId, submissionId, language = 'de' } = await request.json()
+        const targetId = clientId || submissionId
+
+        if (!targetId) {
+            return NextResponse.json({ error: 'Client or Submission ID is required' }, { status: 400 })
+        }
 
         // Fetch client details
-        const client = await prisma.client.findUnique({
-            where: { id: clientId },
+        let client = await prisma.client.findUnique({
+            where: { id: targetId },
             include: {
                 payments: {
                     orderBy: { createdAt: 'desc' }
@@ -24,48 +29,107 @@ export async function POST(request: NextRequest) {
             }
         })
 
-        if (!client) {
-            return NextResponse.json({ error: 'Client not found' }, { status: 404 })
-        }
-
-        if (!client.email) {
-            return NextResponse.json({ error: 'Client has no email address' }, { status: 400 })
-        }
-
-        // Build customer object for PDF generator
+        let clientInfo: { id: string; firstName: string; lastName: string; email: string };
         let subData: any = {};
-        if (client.data && typeof client.data === 'object') {
-           subData = client.data;
-        }
+        let customer: any = {};
+        let quoteRes: any = null;
 
-        const customer = {
-            ...subData,
-            ...(subData.data || {}),
-            firstName: client.firstName,
-            lastName: client.lastName,
-            email: client.email || '',
-            phone: client.phone || '',
-            streetAndNumber: client.address || '',
-            postalCodeAndCity: `${client.postalCode || ''} ${client.location || ''}`.trim(),
-            cleaningAreaInM2: client.squareMeters,
-            cleaningApartmentType: client.buildingType,
-            cleaningTypes: client.serviceType,
-            cleaningAppointment: client.fromDate ? new Date(client.fromDate).toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '',
-            numberOfRooms: client.numberOfRooms,
-            elevator: client.elevator,
-            floor: client.floor,
-            locale: language,
-        };
+        if (client) {
+            if (!client.email) {
+                return NextResponse.json({ error: 'Client has no email address' }, { status: 400 })
+            }
 
-        let quoteRes = subData.quoteResult;
-        if (!quoteRes || !quoteRes.lineItems) {
-           quoteRes = {
-              totalEstimatedPrice: client.totalPrice || 0,
-              isFallback: false,
-              lineItems: [
-                 { id: client.serviceType || 'Reinigung', price: client.totalPrice || 0 }
-              ]
-           };
+            clientInfo = {
+                id: client.id,
+                firstName: client.firstName,
+                lastName: client.lastName,
+                email: client.email
+            };
+
+            // Build customer object for PDF generator
+            if (client.data && typeof client.data === 'object') {
+               subData = client.data;
+            }
+
+            customer = {
+                ...subData,
+                ...(subData.data || {}),
+                firstName: client.firstName,
+                lastName: client.lastName,
+                email: client.email || '',
+                phone: client.phone || '',
+                streetAndNumber: client.address || '',
+                postalCodeAndCity: `${client.postalCode || ''} ${client.location || ''}`.trim(),
+                cleaningAreaInM2: client.squareMeters,
+                cleaningApartmentType: client.buildingType,
+                cleaningTypes: client.serviceType,
+                cleaningAppointment: client.fromDate ? new Date(client.fromDate).toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '',
+                numberOfRooms: client.numberOfRooms,
+                elevator: client.elevator,
+                floor: client.floor,
+                locale: language,
+            };
+
+            quoteRes = subData.quoteResult;
+            if (!quoteRes || !quoteRes.lineItems) {
+               quoteRes = {
+                  totalEstimatedPrice: client.totalPrice || 0,
+                  isFallback: false,
+                  lineItems: [
+                     { id: client.serviceType || 'Reinigung', price: client.totalPrice || 0 }
+                  ]
+               };
+            }
+        } else {
+            // Check in ServiceFormSubmission table
+            const submission = await prisma.serviceFormSubmission.findUnique({
+                where: { id: targetId }
+            });
+
+            if (!submission) {
+                return NextResponse.json({ error: 'Client or submission not found' }, { status: 404 })
+            }
+
+            if (!submission.emailAddress) {
+                return NextResponse.json({ error: 'Client has no email address' }, { status: 400 })
+            }
+
+            clientInfo = {
+               id: submission.id,
+               firstName: submission.firstName,
+               lastName: submission.name,
+               email: submission.emailAddress
+            };
+
+            if (submission.data && typeof submission.data === 'object') {
+               subData = submission.data;
+            }
+
+            customer = {
+                ...submission,
+                ...subData,
+                ...(subData.data || {}),
+                firstName: submission.firstName,
+                lastName: submission.name,
+                email: submission.emailAddress || '',
+                phone: submission.telephone || '',
+                streetAndNumber: submission.streetAndNumber || '',
+                postalCodeAndCity: submission.postalCodeAndCity || '',
+                cleaningTypes: submission.serviceName,
+                locale: language,
+            };
+
+            quoteRes = subData.quoteResult;
+            if (!quoteRes || !quoteRes.lineItems) {
+               quoteRes = {
+                  totalEstimatedPrice: submission.estimatedPrice || subData.estimatedPrice || 0,
+                  isFallback: false,
+                  quoteNumber: 'Q-000',
+                  lineItems: Array.isArray(subData.lineItems) ? subData.lineItems : [
+                     { id: submission.serviceName || 'Reinigung', price: submission.estimatedPrice || subData.estimatedPrice || 0 }
+                  ]
+               };
+            }
         }
 
         // Generate invoice HTML using the shared Contract template
@@ -84,30 +148,30 @@ export async function POST(request: NextRequest) {
             console.error('PDF Generation failed or timed out:', pdfErr);
         }
 
-        const pdfFilename = `invoice-${client.firstName}-${client.lastName}.pdf`
+        const pdfFilename = `invoice-${clientInfo.firstName}-${clientInfo.lastName}.pdf`
 
 
 
         // Email subjects and messages
         const subjects: any = {
-            en: `Invoice - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            de: `Rechnung - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            fr: `Facture - SwissCleanMove - ${client.firstName} ${client.lastName}`,
-            it: `Fattura - SwissCleanMove - ${client.firstName} ${client.lastName}`
+            en: `Invoice - SwissCleanMove - ${clientInfo.firstName} ${clientInfo.lastName}`,
+            de: `Rechnung - SwissCleanMove - ${clientInfo.firstName} ${clientInfo.lastName}`,
+            fr: `Facture - SwissCleanMove - ${clientInfo.firstName} ${clientInfo.lastName}`,
+            it: `Fattura - SwissCleanMove - ${clientInfo.firstName} ${clientInfo.lastName}`
         }
 
         const messages: any = {
-            en: `Dear ${client.firstName} ${client.lastName},\n\nPlease find attached your invoice from SwissCleanMove.\n\nThank you for your business!\n\nBest regards,\nSwissCleanMove Team`,
-            de: `Sehr geehrte/r ${client.firstName} ${client.lastName},\n\nAnbei finden Sie Ihre Rechnung von SwissCleanMove.\n\nVielen Dank für Ihr Vertrauen!\n\nMit freundlichen Grüßen,\nSwissCleanMove Team`,
-            fr: `Cher/Chère ${client.firstName} ${client.lastName},\n\nVeuillez trouver ci-joint votre facture de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`,
-            it: `Gentile ${client.firstName} ${client.lastName},\n\nIn allegato trova la Sua fattura da SwissCleanMove.\n\nGrazie per la Sua fiducia!\n\nCordiali saluti,\nTeam SwissCleanMove`
+            en: `Dear ${clientInfo.firstName} ${clientInfo.lastName},\n\nPlease find attached your invoice from SwissCleanMove.\n\nThank you for your business!\n\nBest regards,\nSwissCleanMove Team`,
+            de: `Sehr geehrte/r ${clientInfo.firstName} ${clientInfo.lastName},\n\nAnbei finden Sie Ihre Rechnung von SwissCleanMove.\n\nVielen Dank für Ihr Vertrauen!\n\nMit freundlichen Grüßen,\nSwissCleanMove Team`,
+            fr: `Cher/Chère ${clientInfo.firstName} ${clientInfo.lastName},\n\nVeuillez trouver ci-joint votre facture de SwissCleanMove.\n\nMerci pour votre confiance!\n\nCordialement,\nÉquipe SwissCleanMove`,
+            it: `Gentile ${clientInfo.firstName} ${clientInfo.lastName},\n\nIn allegato trova la Sua fattura da SwissCleanMove.\n\nGrazie per la Sua fiducia!\n\nCordiali saluti,\nTeam SwissCleanMove`
         }
 
         // Send email using shared email utility
         const { sendEmailNotification } = await import('@/lib/email')
         
         const emailResult = await sendEmailNotification({
-            to: client.email,
+            to: clientInfo.email,
             subject: subjects[language] || subjects.en,
             text: messages[language] || messages.en,
             html: `

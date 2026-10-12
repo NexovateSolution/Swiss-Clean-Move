@@ -54,7 +54,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       footerSolution: 'IMMER LÖSUNGSORIENTIERT',
       footerCleanliness: 'SAUBERKEIT AUF DIE SIE SICH VERLASSEN KÖNNEN',
       onRequest: 'Auf Anfrage',
-      receiptOffer: 'QUITTUNG',
+      receiptOffer: documentType === 'invoice' ? 'RECHNUNG' : 'QUITTUNG',
       receiptThankYouDesc: documentType === 'invoice' ? 'Vielen Dank für Ihren Auftrag. Gerne stellen wir Ihnen Folgendes in Rechnung.' : 'Vielen Dank für Ihr Vertrauen und den erteilten Auftrag.',
       receiptDate: documentType === 'invoice' ? 'RECHNUNGSDATUM' : 'QUITTUNGSDATUM',
       receiptNo: documentType === 'invoice' ? 'RECHNUNGSNUMMER' : 'QUITTUNGSNUMMER',

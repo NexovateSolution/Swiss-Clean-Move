@@ -4593,7 +4593,8 @@
         "view": "Ansehen",
         "downloadPdf": "PDF herunterladen",
         "downloadPdfButton": "PDF herunterladen",
-        "pdf": "PDF"
+        "pdf": "PDF",
+        "createInvoice": "Rechnung erstellen"
       },
       "modal": {
         "title": "Details zur Einsendung",

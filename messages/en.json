@@ -4735,7 +4735,8 @@
         "view": "View",
         "downloadPdf": "Download PDF",
         "downloadPdfButton": "Download PDF",
-        "pdf": "PDF"
+        "pdf": "PDF",
+        "createInvoice": "Create Invoice"
       },
       "modal": {
         "title": "Submission Details",

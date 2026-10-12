@@ -79,6 +79,7 @@ function formatQuoteKey(key: string): string {
 
 export default function ServiceFormsPage() {
   const t = useTranslations('admin.serviceForms')
+  const tClients = useTranslations('admin.clients')
   const locale = useLocale()
   const [submissions, setSubmissions] = useState<ServiceFormSubmission[]>([])
   const [loading, setLoading] = useState(true)
@@ -86,6 +87,127 @@ export default function ServiceFormsPage() {
   const [serviceFilter, setServiceFilter] = useState('all')
   const [selectedSubmission, setSelectedSubmission] = useState<ServiceFormSubmission | null>(null)
   const [showDetails, setShowDetails] = useState(false)
+
+  // Language modal state for Invoice Generation (matching Client page)
+  const [languageModal, setLanguageModal] = useState<{
+    open: boolean;
+    submission?: ServiceFormSubmission;
+    selectedLanguage?: 'en' | 'de' | 'fr' | 'it';
+    type?: 'invoice' | 'receipt';
+  }>({ open: false })
+
+  const handleCreateInvoice = (submission: ServiceFormSubmission) => {
+    setLanguageModal({ open: true, submission, type: 'invoice' })
+  }
+
+  const generateDocument = async (
+    submission: ServiceFormSubmission,
+    language: 'en' | 'de' | 'fr' | 'it',
+    action: 'print' | 'pdf' | 'pdf_only',
+    type: 'invoice' | 'receipt' = 'invoice'
+  ) => {
+    try {
+      const generateEndpoint = '/api/admin/generate-receipt';
+      const sendEndpoint = '/api/admin/send-receipt';
+      const documentPrefix = type === 'invoice' ? 'Invoice' : 'Receipt';
+
+      // 1. Generate and display / download document
+      const response = await fetch(generateEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          submissionId: submission.id,
+          clientId: submission.id,
+          language: language,
+          format: action === 'print' ? 'html' : 'pdf',
+          type: type
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to generate document')
+      }
+
+      if (action === 'print') {
+        const html = await response.text()
+        const printWindow = window.open('', '_blank')
+        if (printWindow) {
+          printWindow.document.write(html)
+          printWindow.document.close()
+          printWindow.onload = () => {
+            setTimeout(() => {
+              printWindow.print()
+            }, 500)
+          }
+        }
+      } else if (action === 'pdf' || action === 'pdf_only') {
+        toast.loading(tClients('toast.generatingPdf') || 'Generating PDF...', { id: 'pdf-gen' });
+        const blob = await response.blob();
+        
+        if (blob.size < 100) {
+            toast.dismiss('pdf-gen');
+            toast.error('Generated PDF is empty or invalid');
+            return;
+        }
+        
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        
+        // Sanitize filename to prevent silent browser download failures
+        const safeFirst = (submission.firstName || '').replace(/[^a-zA-Z0-9\-_]/g, '_');
+        const safeLast = (submission.name || '').replace(/[^a-zA-Z0-9\-_]/g, '_');
+        a.download = `${documentPrefix}-${safeFirst}-${safeLast}.pdf`;
+        
+        document.body.appendChild(a);
+        a.click();
+        
+        setTimeout(() => {
+          a.remove();
+          window.URL.revokeObjectURL(url);
+        }, 500);
+        
+        toast.dismiss('pdf-gen');
+        toast.success(tClients('toast.pdfDownloaded') || 'PDF downloaded successfully');
+      }
+
+      // 2. Send document via email if requested
+      if (action !== 'pdf_only') {
+        if (submission.emailAddress) {
+          toast.loading(tClients('toast.sendingInvoice') || 'Sending invoice email...', { id: 'email-send' })
+          const emailResponse = await fetch(sendEndpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              submissionId: submission.id,
+              clientId: submission.id,
+              language: language
+            })
+          })
+
+          if (emailResponse.ok) {
+            toast.dismiss('email-send')
+            toast.success(tClients('toast.invoiceOpenedAndSent') || 'Invoice generated and sent to client via email!')
+          } else {
+            toast.dismiss('email-send')
+            toast.success(tClients('toast.invoiceOpened') || 'Invoice generated!')
+            toast.error(tClients('toast.sendEmailFailed') || 'Failed to send email to client', { duration: 3000 })
+          }
+        } else {
+          toast.success(tClients('toast.invoiceOpened') || 'Invoice generated!')
+          toast(tClients('toast.noEmail') || 'Client has no email address', { icon: '⚠️' })
+        }
+      }
+    } catch (error) {
+      toast.dismiss('pdf-gen')
+      toast.error(tClients('toast.generateInvoiceError') || 'Error generating invoice')
+    }
+    setLanguageModal({ open: false, selectedLanguage: undefined, type: undefined })
+  }
 
   // Quote editing state
   const [quoteLineItems, setQuoteLineItems] = useState<any[]>([])
@@ -442,6 +564,14 @@ export default function ServiceFormsPage() {
                           >
                             <Download className="w-3 h-3" />
                             <span>{t('actions.pdf')}</span>
+                          </button>
+                          <button
+                            onClick={() => handleCreateInvoice(submission)}
+                            className="bg-purple-100 text-purple-700 hover:bg-purple-200 px-3 py-1.5 rounded-md text-xs font-medium transition-colors flex items-center space-x-1"
+                            title={t('actions.createInvoice')}
+                          >
+                            <FileText className="w-3 h-3" />
+                            <span>{t('actions.createInvoice')}</span>
                           </button>
                         </div>
                       </td>
@@ -809,6 +939,13 @@ export default function ServiceFormsPage() {
 
                 <div className="flex justify-end space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                   <button
+                    onClick={() => handleCreateInvoice(selectedSubmission)}
+                    className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md font-medium transition-colors flex items-center space-x-2"
+                  >
+                    <FileText className="w-4 h-4" />
+                    <span>{t('actions.createInvoice')}</span>
+                  </button>
+                  <button
                     onClick={() => handleDownloadPDF(selectedSubmission)}
                     className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center space-x-2"
                   >
@@ -817,6 +954,98 @@ export default function ServiceFormsPage() {
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* Document Language & Format Selection Modal */}
+        {languageModal.open && languageModal.submission && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-md w-full p-6">
+              <div className="text-center mb-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  {!languageModal.selectedLanguage ? tClients('invoiceLanguage.title') : 'Select Output Format'}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {!languageModal.selectedLanguage ? tClients('invoiceLanguage.subtitle') : 'Choose whether to print or download as PDF.'}
+                </p>
+              </div>
+
+              {!languageModal.selectedLanguage ? (
+                <div className="space-y-3">
+                  <button
+                    onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: 'de' })}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <span>🇩🇪</span>
+                    <span>{tClients('invoiceLanguage.german')}</span>
+                  </button>
+
+                  <button
+                    onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: 'fr' })}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <span>🇫🇷</span>
+                    <span>{tClients('invoiceLanguage.french')}</span>
+                  </button>
+
+                  <button
+                    onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: 'it' })}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <span>🇮🇹</span>
+                    <span>{tClients('invoiceLanguage.italian')}</span>
+                  </button>
+
+                  <button
+                    onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: 'en' })}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <span>🇬🇧</span>
+                    <span>{tClients('invoiceLanguage.english')}</span>
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  <button
+                    onClick={() => generateDocument(languageModal.submission!, languageModal.selectedLanguage!, 'print', languageModal.type || 'invoice')}
+                    className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <FileText className="w-5 h-5" />
+                    <span>{tClients("printSendEmail")}</span>
+                  </button>
+
+                  <button
+                    onClick={() => generateDocument(languageModal.submission!, languageModal.selectedLanguage!, 'pdf', languageModal.type || 'invoice')}
+                    className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <Download className="w-5 h-5" />
+                    <span>{tClients("downloadSendEmail")}</span>
+                  </button>
+
+                  <button
+                    onClick={() => generateDocument(languageModal.submission!, languageModal.selectedLanguage!, 'pdf_only', languageModal.type || 'invoice')}
+                    className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 px-4 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <Download className="w-5 h-5" />
+                    <span>{tClients("downloadOnly")}</span>
+                  </button>
+
+                  <button
+                    onClick={() => setLanguageModal({ ...languageModal, selectedLanguage: undefined })}
+                    className="w-full mt-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center"
+                  >
+                    Back to Languages
+                  </button>
+                </div>
+              )}
+
+              <button
+                onClick={() => setLanguageModal({ open: false, selectedLanguage: undefined, type: undefined })}
+                className="w-full mt-4 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 py-2 px-4 rounded-lg font-medium transition-colors"
+              >
+                Cancel
+              </button>
             </div>
           </div>
         )}
