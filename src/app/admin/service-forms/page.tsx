@@ -127,7 +127,8 @@ export default function ServiceFormsPage() {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to generate document')
+        const errJson = await response.json().catch(() => null);
+        throw new Error(errJson?.details || errJson?.error || 'Failed to generate document');
       }
 
       if (action === 'print') {
@@ -193,18 +194,19 @@ export default function ServiceFormsPage() {
             toast.dismiss('email-send')
             toast.success(tClients('toast.invoiceOpenedAndSent') || 'Invoice generated and sent to client via email!')
           } else {
+            const emailData = await emailResponse.json().catch(() => null)
             toast.dismiss('email-send')
             toast.success(tClients('toast.invoiceOpened') || 'Invoice generated!')
-            toast.error(tClients('toast.sendEmailFailed') || 'Failed to send email to client', { duration: 3000 })
+            toast.error(emailData?.details || emailData?.error || tClients('toast.sendEmailFailed') || 'Failed to send email to client', { duration: 5000 })
           }
         } else {
           toast.success(tClients('toast.invoiceOpened') || 'Invoice generated!')
           toast(tClients('toast.noEmail') || 'Client has no email address', { icon: '⚠️' })
         }
       }
-    } catch (error) {
+    } catch (error: any) {
       toast.dismiss('pdf-gen')
-      toast.error(tClients('toast.generateInvoiceError') || 'Error generating invoice')
+      toast.error(error?.message || tClients('toast.generateInvoiceError') || 'Error generating invoice')
     }
     setLanguageModal({ open: false, selectedLanguage: undefined, type: undefined })
   }

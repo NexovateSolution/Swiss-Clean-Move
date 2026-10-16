@@ -4695,7 +4695,9 @@
         "save": "Salva",
         "saving": "Salvataggio...",
         "newClientTitle": "Nuovo cliente",
-        "editClientTitle": "Modifica cliente"
+        "editClientTitle": "Modifica cliente",
+        "additionalDetails": "Dettagli aggiuntivi",
+        "additionalDetailsPlaceholder": "es. istruzioni di accesso, chiavi, richieste speciali..."
       },
       "pagination": {
         "previous": "Precedente",

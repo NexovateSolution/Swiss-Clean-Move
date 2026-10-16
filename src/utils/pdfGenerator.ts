@@ -1517,50 +1517,113 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   return htmlTemplate;
 }
 
+export async function getPuppeteerBrowser() {
+  const isVercel = Boolean(process.env.VERCEL_ENV || process.env.VERCEL_URL || process.env.VERCEL);
+
+  if (isVercel) {
+    const puppeteerCore = require('puppeteer-core');
+    const chromium = require('@sparticuz/chromium');
+    let executablePath: string;
+    try {
+      executablePath = await chromium.executablePath();
+    } catch {
+      executablePath = await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v143.0.4/chromium-v143.0.4-pack.x64.tar');
+    }
+    return await puppeteerCore.launch({
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport || { width: 1920, height: 1080 },
+      executablePath: executablePath,
+      headless: chromium.headless === false ? false : true,
+    });
+  } else {
+    const fs = require('fs');
+    const puppeteer = require('puppeteer');
+
+    const candidatePaths = [
+      process.env.CHROME_BIN,
+      process.env.PUPPETEER_EXECUTABLE_PATH,
+      'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+      'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+      'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+      'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
+      '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+      '/usr/bin/google-chrome',
+      '/usr/bin/google-chrome-stable',
+      '/usr/bin/chromium',
+      '/usr/bin/chromium-browser'
+    ].filter(Boolean);
+
+    let executablePath: string | undefined;
+    for (const p of candidatePaths) {
+      try {
+        if (p && fs.existsSync(p)) {
+          executablePath = p;
+          break;
+        }
+      } catch {
+        // continue search
+      }
+    }
+
+    const launchOptions: any = {
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      headless: 'new'
+    };
+
+    if (executablePath) {
+      launchOptions.executablePath = executablePath;
+    }
+
+    try {
+      return await puppeteer.launch(launchOptions);
+    } catch (launchErr) {
+      // Fallback: try puppeteer-core + chromium if bundled
+      try {
+        const chromium = require('@sparticuz/chromium');
+        const puppeteerCore = require('puppeteer-core');
+        const fallbackExecPath = await chromium.executablePath();
+        return await puppeteerCore.launch({
+          args: chromium.args,
+          executablePath: fallbackExecPath,
+          headless: 'new'
+        });
+      } catch {
+        throw launchErr;
+      }
+    }
+  }
+}
+
 export async function generateQuotePdf(quote: QuoteResult, customer: any, documentType: 'quote' | 'contract' | 'receipt' | 'invoice' = 'quote'): Promise<Buffer> {
   const htmlTemplate = generateQuoteHtml(quote, customer, documentType);
   
-  let browser;
-  if (process.env.VERCEL_ENV || process.env.VERCEL_URL || process.env.VERCEL) {
-    const puppeteerCore = require('puppeteer-core');
-    const chromium = require('@sparticuz/chromium');
-    const executablePath = await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v143.0.4/chromium-v143.0.4-pack.x64.tar');
-    browser = await puppeteerCore.launch({
-      args: chromium.args,
-      defaultViewport: chromium.defaultViewport,
-      executablePath: executablePath,
-      headless: chromium.headless,
+  const browser = await getPuppeteerBrowser();
+  
+  try {
+    const page = await browser.newPage();
+    
+    // Set content and wait for load to ensure everything renders quickly without hanging
+    await page.setContent(htmlTemplate, { waitUntil: 'load', timeout: 30000 });
+    
+    // Print to PDF
+    const pdfBuffer = await page.pdf({
+      format: 'A4',
+      printBackground: true,
+      displayHeaderFooter: false,
+      margin: {
+        top: '15mm',
+        bottom: '20mm',
+        left: '20mm',
+        right: '20mm'
+      }
     });
-  } else {
-    const puppeteer = require('puppeteer');
-    browser = await puppeteer.launch({
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      headless: "new"
-    });
+
+    // Add page numbers reliably using pdf-lib
+    return await addPageNumbersToPdf(Buffer.from(pdfBuffer));
+  } finally {
+    await browser.close();
   }
-  
-  const page = await browser.newPage();
-  
-  // Set content and wait for load to ensure everything renders quickly without hanging
-  await page.setContent(htmlTemplate, { waitUntil: 'load' });
-  
-  // Print to PDF
-  const pdfBuffer = await page.pdf({
-    format: 'A4',
-    printBackground: true,
-    displayHeaderFooter: false,
-    margin: {
-      top: '15mm',
-      bottom: '20mm',
-      left: '20mm',
-      right: '20mm'
-    }
-  });
-
-  await browser.close();
-
-  // Add page numbers reliably using pdf-lib
-  return addPageNumbersToPdf(pdfBuffer as Buffer);
 }
 
 export async function addPageNumbersToPdf(pdfBuffer: Buffer): Promise<Buffer> {

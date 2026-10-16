@@ -3,7 +3,7 @@ import { prisma } from '../../../../../lib/db'
 import { authenticateRequest } from '../../../../../lib/auth'
 import nodemailer from 'nodemailer'
 
-import { generateQuoteHtml, addPageNumbersToPdf } from '@/utils/pdfGenerator'
+import { generateQuotePdf } from '@/utils/pdfGenerator'
 
 export async function POST(request: NextRequest) {
     try {
@@ -132,16 +132,14 @@ export async function POST(request: NextRequest) {
             }
         }
 
-        // Generate invoice HTML using the shared Contract template
-        const invoiceHtml = generateQuoteHtml(quoteRes, customer, 'invoice');
-
+        // Generate invoice PDF using the shared generator
         let invoicePdf: Buffer | undefined;
         try {
             const timeoutPromise = new Promise<never>((_, reject) => {
-                setTimeout(() => reject(new Error('PDF Generation timed out')), 8500);
+                setTimeout(() => reject(new Error('PDF Generation timed out')), 30000);
             });
             invoicePdf = await Promise.race([
-                renderPdfFromHtml(invoiceHtml),
+                generateQuotePdf(quoteRes, customer, 'invoice'),
                 timeoutPromise
             ]);
         } catch (pdfErr) {
@@ -149,8 +147,6 @@ export async function POST(request: NextRequest) {
         }
 
         const pdfFilename = `invoice-${clientInfo.firstName}-${clientInfo.lastName}.pdf`
-
-
 
         // Email subjects and messages
         const subjects: any = {
@@ -198,7 +194,14 @@ export async function POST(request: NextRequest) {
         })
 
         if (typeof emailResult === 'string' && emailResult.startsWith('Error:')) {
-            throw new Error(`Email sending failed: ${emailResult}`);
+            const isAuthError = emailResult.includes('535') || emailResult.includes('BadCredentials') || emailResult.includes('Invalid login');
+            const message = isAuthError
+                ? 'Gmail App Password is invalid or revoked. Please create a new App Password at myaccount.google.com/apppasswords and update GMAIL_APP_PASSWORD.'
+                : `Email sending failed: ${emailResult}`;
+            return NextResponse.json({
+                error: 'Failed to send invoice email',
+                details: message
+            }, { status: 500 });
         }
 
         return NextResponse.json({
@@ -211,47 +214,5 @@ export async function POST(request: NextRequest) {
             error: 'Failed to send invoice',
             details: error.message
         }, { status: 500 })
-    }
-}
-
-
-async function renderPdfFromHtml(html: string): Promise<Buffer> {
-    const isLocal = !!!process.env.VERCEL
-    let browser
-
-    if (isLocal) {
-        const puppeteerLocal = require('puppeteer')
-        browser = await puppeteerLocal.launch({
-            headless: 'new',
-            args: ['--no-sandbox', '--disable-setuid-sandbox']
-        })
-    } else {
-        const puppeteerCore = require('puppeteer-core')
-        const chromium = require('@sparticuz/chromium')
-        // Fix for Sparticuz chromium pack on Vercel
-        const executablePath = await chromium.executablePath('https://github.com/Sparticuz/chromium/releases/download/v143.0.4/chromium-v143.0.4-pack.x64.tar')
-        browser = await puppeteerCore.launch({
-            args: chromium.args,
-            // @ts-ignore
-            defaultViewport: chromium.defaultViewport || { width: 1920, height: 1080 },
-            executablePath: executablePath,
-            // @ts-ignore
-            headless: chromium.headless === false ? false : true,
-        })
-    }
-
-    try {
-        const page = await browser.newPage()
-        await page.setContent(html, { waitUntil: 'load' })
-        const pdf = await page.pdf({
-            format: 'A4',
-            printBackground: true,
-            displayHeaderFooter: false,
-            margin: { top: '20mm', right: '12mm', bottom: '20mm', left: '12mm' }
-        })
-        const finalPdf = await addPageNumbersToPdf(Buffer.from(pdf))
-        return finalPdf
-    } finally {
-        await browser.close()
     }
 }

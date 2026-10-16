@@ -50,6 +50,16 @@ interface Client {
   balance: number
   status: string
   createdAt: string
+  elevator?: string
+  floor?: string
+  numberOfRooms?: string
+  prefix?: string
+  remarks1?: string
+  remarks2?: string
+  remarks3?: string
+  additionalDetails?: string
+  deploymentFrequency?: string
+  data?: any
 }
 
 export default function ClientsPage() {
@@ -167,7 +177,8 @@ export default function ClientsPage() {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to generate document')
+        const errJson = await response.json().catch(() => null);
+        throw new Error(errJson?.details || errJson?.error || 'Failed to generate document');
       }
 
       if (action === 'print') {
@@ -232,18 +243,19 @@ export default function ClientsPage() {
             toast.dismiss('email-send')
             toast.success(t('toast.invoiceOpenedAndSent'))
           } else {
+            const emailData = await emailResponse.json().catch(() => null)
             toast.dismiss('email-send')
             toast.success(t('toast.invoiceOpened'))
-            toast.error(t('toast.sendEmailFailed'), { duration: 3000 })
+            toast.error(emailData?.details || emailData?.error || t('toast.sendEmailFailed'), { duration: 5000 })
           }
         } else {
           toast.success(t('toast.invoiceOpened'))
           toast(t('toast.noEmail'), { icon: '⚠️' })
         }
       }
-    } catch (error) {
+    } catch (error: any) {
       toast.dismiss('pdf-gen')
-      toast.error(t('toast.generateInvoiceError'))
+      toast.error(error?.message || t('toast.generateInvoiceError'))
     }
     setLanguageModal({ open: false, selectedLanguage: undefined, type: undefined })
   }

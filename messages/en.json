@@ -4625,7 +4625,9 @@
         "save": "Save",
         "saving": "Saving...",
         "newClientTitle": "New Client",
-        "editClientTitle": "Edit Client"
+        "editClientTitle": "Edit Client",
+        "additionalDetails": "Additional Details",
+        "additionalDetailsPlaceholder": "e.g. Access instructions, key location, special requests..."
       },
       "pagination": {
         "previous": "Previous",

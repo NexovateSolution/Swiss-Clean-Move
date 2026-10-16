@@ -4483,7 +4483,9 @@
         "save": "Speichern",
         "saving": "Speichern...",
         "newClientTitle": "Neuer Kunde",
-        "editClientTitle": "Kunde bearbeiten"
+        "editClientTitle": "Kunde bearbeiten",
+        "additionalDetails": "Zusätzliche Details",
+        "additionalDetailsPlaceholder": "z.B. Zugangsdaten, Schlüssel, besondere Wünsche..."
       },
       "pagination": {
         "previous": "Zurück",

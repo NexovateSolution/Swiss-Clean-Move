@@ -4483,7 +4483,9 @@
         "save": "Enregistrer",
         "saving": "Enregistrement...",
         "newClientTitle": "Nouveau client",
-        "editClientTitle": "Modifier le client"
+        "editClientTitle": "Modifier le client",
+        "additionalDetails": "Détails supplémentaires",
+        "additionalDetailsPlaceholder": "par ex. instructions d'accès, remise des clés, demandes particulières..."
       },
       "pagination": {
         "previous": "Précédent",

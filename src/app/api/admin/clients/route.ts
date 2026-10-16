@@ -106,6 +106,8 @@ export async function POST(request: NextRequest) {
       }, { status: 400 })
     }
 
+    const detailsValue = rawData.additionalDetails !== undefined ? rawData.additionalDetails : rawData.remarks1
+
     const prismaData = {
       firstName: rawData.firstName,
       lastName: rawData.lastName,
@@ -127,18 +129,16 @@ export async function POST(request: NextRequest) {
       numberOfRooms: rawData.numberOfRooms?.toString() || '',
       floor: rawData.floor,
       elevator: rawData.elevator,
-      remarks1: rawData.remarks1,
+      remarks1: detailsValue !== undefined ? detailsValue : rawData.remarks1,
       remarks2: rawData.remarks2,
       remarks3: rawData.remarks3,
       deploymentFrequency: rawData.deploymentFrequency,
-      data: rawData.data ? {
-        ...rawData.data,
+      data: {
+        ...(rawData.data || {}),
         accessHandoverDate: rawData.accessHandoverDate,
-        accessHandoverTime: rawData.accessHandoverTime
-      } : (rawData.accessHandoverDate || rawData.accessHandoverTime ? {
-        accessHandoverDate: rawData.accessHandoverDate,
-        accessHandoverTime: rawData.accessHandoverTime
-      } : undefined)
+        accessHandoverTime: rawData.accessHandoverTime,
+        ...(detailsValue !== undefined ? { additionalDetails: detailsValue, remark: detailsValue } : {})
+      }
     }
 
     // Process images if any

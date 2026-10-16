@@ -32,6 +32,7 @@ interface Client {
   remarks1?: string
   remarks2?: string
   remarks3?: string
+  additionalDetails?: string
   deploymentFrequency?: string
   data?: any
   accessHandoverDate?: string
@@ -124,6 +125,7 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
       const lastNameParts = (client.lastName || '').trim().split(' ');
       const autoFirstName = client.firstName || (lastNameParts.length > 1 ? lastNameParts[0] : '') || '';
       const autoLastName = client.firstName ? client.lastName : (lastNameParts.length > 1 ? lastNameParts.slice(1).join(' ') : client.lastName);
+      const initialRemarks = client.remarks1 || client.data?.additionalDetails || client.data?.remark || '';
 
       reset({
         ...client,
@@ -140,7 +142,9 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
         prefix: client.prefix || '',
         deploymentFrequency: client.deploymentFrequency || client.data?.recurringFrequency || '',
         accessHandoverDate: client.data?.accessHandoverDate || '',
-        accessHandoverTime: client.data?.accessHandoverTime || ''
+        accessHandoverTime: client.data?.accessHandoverTime || '',
+        remarks1: initialRemarks,
+        additionalDetails: initialRemarks
       })
     } else {
       reset({
@@ -166,7 +170,9 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
         prefix: '',
         deploymentFrequency: '',
         accessHandoverDate: '',
-        accessHandoverTime: ''
+        accessHandoverTime: '',
+        remarks1: '',
+        additionalDetails: ''
       })
     }
   }, [client, reset])
@@ -181,6 +187,22 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
     try {
       setLoading(true)
       
+      const detailsValue = data.additionalDetails !== undefined ? data.additionalDetails : (data.remarks1 || '')
+
+      const payload = {
+        ...data,
+        remarks1: detailsValue,
+        additionalDetails: detailsValue,
+        data: {
+          ...(client?.data || {}),
+          ...(data.data || {}),
+          additionalDetails: detailsValue,
+          remark: detailsValue,
+          accessHandoverDate: data.accessHandoverDate,
+          accessHandoverTime: data.accessHandoverTime
+        }
+      }
+
       const url = isEdit ? `/api/admin/clients/${client.id}` : '/api/admin/clients'
       const method = isEdit ? 'PUT' : 'POST'
       
@@ -189,7 +211,7 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(payload)
       })
 
       if (!response.ok) {
@@ -490,6 +512,18 @@ export default function ClientModal({ isOpen, onClose, client, onSuccess }: Clie
                           type="time"
                           {...register('accessHandoverTime')}
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        />
+                      </div>
+
+                      <div className="md:col-span-2">
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          {t('additionalDetails') || 'Additional Details'}
+                        </label>
+                        <textarea
+                          rows={3}
+                          {...register('additionalDetails')}
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
+                          placeholder={t('additionalDetailsPlaceholder') || 'e.g. Access instructions, key location, special requests...'}
                         />
                       </div>
                     </div>

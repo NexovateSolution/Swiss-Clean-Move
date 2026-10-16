@@ -136,9 +136,9 @@ export async function POST(request: NextRequest) {
                         'Content-Disposition': `attachment; filename="${docType}-${clientInfo.firstName}-${clientInfo.lastName}.pdf"`
                     }
                 });
-            } catch (err) {
+            } catch (err: any) {
                 console.error(`Error generating PDF ${docType} for ${targetId}:`, err);
-                return NextResponse.json({ error: 'Failed to generate PDF' }, { status: 500 });
+                return NextResponse.json({ error: 'Failed to generate PDF', details: err?.message || String(err) }, { status: 500 });
             }
         }
 
@@ -150,8 +150,8 @@ export async function POST(request: NextRequest) {
                 'Content-Disposition': `inline; filename="${docType}-${clientInfo.firstName}-${clientInfo.lastName}.html"`
             }
         })
-    } catch (error) {
+    } catch (error: any) {
         console.error('Error generating receipt:', error)
-        return NextResponse.json({ error: 'Failed to generate receipt' }, { status: 500 })
+        return NextResponse.json({ error: 'Failed to generate receipt', details: error?.message || String(error) }, { status: 500 })
     }
 }

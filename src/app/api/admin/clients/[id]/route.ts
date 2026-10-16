@@ -60,6 +60,12 @@ export async function PUT(
     const fromDate = rawData.fromDate ? new Date(rawData.fromDate) : undefined
     const untilDate = rawData.untilDate ? new Date(rawData.untilDate) : undefined
 
+    const existingClient = await prisma.client.findUnique({
+      where: { id: params.id }
+    })
+    const existingData = (existingClient?.data as Record<string, any>) || {}
+    const detailsValue = rawData.additionalDetails !== undefined ? rawData.additionalDetails : rawData.remarks1
+
     const prismaData = {
       firstName: rawData.firstName,
       lastName: rawData.lastName,
@@ -81,15 +87,17 @@ export async function PUT(
       numberOfRooms: rawData.numberOfRooms?.toString() || '',
       floor: rawData.floor,
       elevator: rawData.elevator,
-      remarks1: rawData.remarks1,
+      remarks1: detailsValue !== undefined ? detailsValue : rawData.remarks1,
       remarks2: rawData.remarks2,
       remarks3: rawData.remarks3,
       deploymentFrequency: rawData.deploymentFrequency,
-      data: rawData.data ? {
-        ...rawData.data,
+      data: {
+        ...existingData,
+        ...(rawData.data || {}),
         accessHandoverDate: rawData.accessHandoverDate,
-        accessHandoverTime: rawData.accessHandoverTime
-      } : undefined
+        accessHandoverTime: rawData.accessHandoverTime,
+        ...(detailsValue !== undefined ? { additionalDetails: detailsValue, remark: detailsValue } : {})
+      }
     }
 
     const client = await prisma.client.update({
