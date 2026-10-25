@@ -169,6 +169,7 @@ export default function UniversalQuoteForm({ locale, preselectedService, renderH
   };
 
   const submit = async () => {
+    if (busy) return;
     if (!validateAll()) return;
     setBusy(true);
     try {
@@ -240,9 +241,26 @@ export default function UniversalQuoteForm({ locale, preselectedService, renderH
           body: formData
         });
 
-        if (!res.ok) throw new Error('Submit failed');
+        const result = await res.json().catch(() => null);
 
-        // ✅ Conversion fires ONLY after successful submission
+        if (!res.ok || !result?.success) {
+          const defaultMsg = locale === 'de'
+            ? 'Fehler beim Senden. Bitte überprüfen Sie Ihre Angaben oder kontaktieren Sie uns direkt.'
+            : locale === 'fr'
+              ? 'Échec de l\'envoi. Veuillez vérifier vos coordonnées ou nous contacter directement.'
+              : locale === 'it'
+                ? 'Invio non riuscito. Si prega di verificare i dati o contattarci direttamente.'
+                : 'Submission failed. Please check your details or contact us directly.';
+
+          const errorMsg = result?.details && Array.isArray(result.details)
+            ? result.details.join('\n')
+            : (result?.error || defaultMsg);
+
+          toast.error(errorMsg, { duration: 6000 });
+          return;
+        }
+
+        // ✅ Conversion fires ONLY after verified successful submission
         await trackConversion('QUOTE_WIZARD_COMPLETE');
 
         // Redirect to localized thank-you page
@@ -255,7 +273,14 @@ export default function UniversalQuoteForm({ locale, preselectedService, renderH
         router.push(thankYouPaths[locale] || '/de/danke');
       }
     } catch {
-      toast.error('Fehler beim Senden. Bitte erneut versuchen. / Submission failed. Please try again.');
+      const fallbackMsg = locale === 'de'
+        ? 'Netzwerkfehler beim Senden. Bitte erneut versuchen.'
+        : locale === 'fr'
+          ? 'Erreur réseau lors de l\'envoi. Veuillez réessayer.'
+          : locale === 'it'
+            ? 'Errore di rete durante l\'invio. Si prega di riprovare.'
+            : 'Network error during submission. Please try again.';
+      toast.error(fallbackMsg);
     } finally {
       setBusy(false);
     }

@@ -52,10 +52,10 @@ export async function POST(req: NextRequest) {
       ]
     });
 
-    if (success === true) {
+    if (success.success) {
       return NextResponse.json({ success: true });
     } else {
-      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+      return NextResponse.json({ error: success.error || 'Failed to send email' }, { status: 500 });
     }
   } catch (error) {
     console.error('Error in send-note API:', error);

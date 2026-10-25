@@ -10,7 +10,24 @@ interface EmailOptions {
   attachments?: any[];
 }
 
-export async function sendEmailNotification(options: EmailOptions): Promise<boolean | string> {
+export interface SendEmailResult {
+  success: boolean;
+  error?: string;
+  messageId?: string;
+}
+
+let testEmailSender: ((options: EmailOptions) => Promise<SendEmailResult>) | null = null;
+
+/** Test helper to mock email sending without real SMTP traffic */
+export function __setTestEmailSender(fn: ((options: EmailOptions) => Promise<SendEmailResult>) | null) {
+  testEmailSender = fn;
+}
+
+export async function sendEmailNotification(options: EmailOptions): Promise<SendEmailResult> {
+  if (testEmailSender) {
+    return testEmailSender(options);
+  }
+
   try {
     let transporter;
     let senderEmail;
@@ -39,10 +56,10 @@ export async function sendEmailNotification(options: EmailOptions): Promise<bool
       senderEmail = process.env.GMAIL_USER.trim();
     } else {
       console.warn('⚠️ SMTP/Gmail credentials not configured. Email not sent.');
-      return true; // Return true so form submission still succeeds
+      return { success: false, error: 'SMTP/Gmail credentials not configured on server' };
     }
 
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: `"SwissCleanMove" <${senderEmail}>`,
       to: options.to,
       replyTo: options.replyTo || senderEmail,
@@ -52,12 +69,37 @@ export async function sendEmailNotification(options: EmailOptions): Promise<bool
       attachments: options.attachments,
     });
 
-    console.log(`✅ Email sent to ${options.to}: ${options.subject}`);
-    return true;
+    console.log(`✅ Email sent to ${options.to}: ${options.subject} (ID: ${info.messageId})`);
+    return { success: true, messageId: info.messageId };
   } catch (error: any) {
-    console.error('❌ Failed to send email notification:', error);
-    return 'Error: ' + error.toString();
+    const rawError = error instanceof Error ? error.message : String(error);
+    // Sanitize any password leakage from connection errors
+    const sanitizedError = rawError.replace(/pass(word)?\s*[:=]\s*[^\s,]+/gi, 'password=***');
+    console.error(`❌ Failed to send email notification to ${options.to}:`, sanitizedError);
+    return { success: false, error: sanitizedError };
   }
+}
+
+/**
+ * Safely escapes HTML special characters to prevent HTML/XSS injection in emails.
+ */
+export function escapeHtml(str: unknown): string {
+  if (str === null || str === undefined) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/**
+ * Escapes HTML characters while safely preserving line breaks as <br>.
+ */
+export function escapeHtmlWithLineBreaks(str: unknown): string {
+  if (str === null || str === undefined) return '';
+  const escaped = escapeHtml(str);
+  return escaped.replace(/(?:\r\n|\r|\n)/g, '<br>');
 }
 
 export function formatContactEmail(data: {
@@ -67,6 +109,12 @@ export function formatContactEmail(data: {
   subject: string;
   message: string;
 }): string {
+  const safeName = escapeHtml(data.name);
+  const safeEmail = escapeHtml(data.email);
+  const safePhone = data.phone ? escapeHtml(data.phone) : '';
+  const safeSubject = escapeHtml(data.subject);
+  const safeMessage = escapeHtmlWithLineBreaks(data.message);
+
   return `
     <!DOCTYPE html>
     <html>
@@ -89,23 +137,23 @@ export function formatContactEmail(data: {
         </div>
         <div class="content">
           <div class="field">
-            <span class="label">Name:</span> ${data.name}
+            <span class="label">Name:</span> ${safeName}
           </div>
           <div class="field">
-            <span class="label">Email:</span> ${data.email}
+            <span class="label">Email:</span> ${safeEmail}
           </div>
-          ${data.phone ? `
+          ${safePhone ? `
           <div class="field">
-            <span class="label">Phone:</span> ${data.phone}
+            <span class="label">Phone:</span> ${safePhone}
           </div>
           ` : ''}
           <div class="field">
-            <span class="label">Subject:</span> ${data.subject}
+            <span class="label">Subject:</span> ${safeSubject}
           </div>
           <div class="field">
             <span class="label">Message:</span><br>
             <p style="background: white; padding: 15px; border-left: 4px solid #0066CC;">
-              ${data.message.replace(/\n/g, '<br>')}
+              ${safeMessage}
             </p>
           </div>
         </div>
@@ -126,7 +174,26 @@ export function formatQuoteEmail(data: {
   service: string;
   details: any;
 }): string {
-  const parsedDetails = typeof data.details === 'string' ? JSON.parse(data.details) : data.details;
+  let parsedDetails: any = {};
+  try {
+    parsedDetails = typeof data.details === 'string' ? JSON.parse(data.details) : (data.details || {});
+  } catch {
+    parsedDetails = {};
+  }
+
+  const safeName = escapeHtml(data.name);
+  const safeEmail = escapeHtml(data.email);
+  const safePhone = escapeHtml(data.phone);
+  const safeService = escapeHtml(data.service);
+  const safeAddress = escapeHtml(parsedDetails.address);
+  const safeCity = escapeHtml(parsedDetails.city);
+  const safePostalCode = escapeHtml(parsedDetails.postalCode);
+  const safePropertyType = escapeHtml(parsedDetails.propertyType);
+  const safeRooms = escapeHtml(parsedDetails.rooms);
+  const safeArea = escapeHtml(parsedDetails.area);
+  const safePreferredDate = escapeHtml(parsedDetails.preferredDate);
+  const safeUrgency = escapeHtml(parsedDetails.urgency);
+  const safeMessage = escapeHtmlWithLineBreaks(parsedDetails.message);
 
   return `
     <!DOCTYPE html>
@@ -153,66 +220,66 @@ export function formatQuoteEmail(data: {
           <div class="section">
             <h3>Customer Information</h3>
             <div class="field">
-              <span class="label">Name:</span> ${data.name}
+              <span class="label">Name:</span> ${safeName}
             </div>
             <div class="field">
-              <span class="label">Email:</span> ${data.email}
+              <span class="label">Email:</span> ${safeEmail}
             </div>
             <div class="field">
-              <span class="label">Phone:</span> ${data.phone}
+              <span class="label">Phone:</span> ${safePhone}
             </div>
           </div>
           
           <div class="section">
             <h3>Service Details</h3>
             <div class="field">
-              <span class="label">Service Type:</span> ${data.service}
+              <span class="label">Service Type:</span> ${safeService}
             </div>
             ${parsedDetails.address ? `
             <div class="field">
-              <span class="label">Address:</span> ${parsedDetails.address}
+              <span class="label">Address:</span> ${safeAddress}
             </div>
             ` : ''}
             ${parsedDetails.city ? `
             <div class="field">
-              <span class="label">City:</span> ${parsedDetails.city}
+              <span class="label">City:</span> ${safeCity}
             </div>
             ` : ''}
             ${parsedDetails.postalCode ? `
             <div class="field">
-              <span class="label">Postal Code:</span> ${parsedDetails.postalCode}
+              <span class="label">Postal Code:</span> ${safePostalCode}
             </div>
             ` : ''}
             ${parsedDetails.propertyType ? `
             <div class="field">
-              <span class="label">Property Type:</span> ${parsedDetails.propertyType}
+              <span class="label">Property Type:</span> ${safePropertyType}
             </div>
             ` : ''}
             ${parsedDetails.rooms ? `
             <div class="field">
-              <span class="label">Rooms:</span> ${parsedDetails.rooms}
+              <span class="label">Rooms:</span> ${safeRooms}
             </div>
             ` : ''}
             ${parsedDetails.area ? `
             <div class="field">
-              <span class="label">Area:</span> ${parsedDetails.area} m²
+              <span class="label">Area:</span> ${safeArea} m²
             </div>
             ` : ''}
             ${parsedDetails.preferredDate ? `
             <div class="field">
-              <span class="label">Preferred Date:</span> ${parsedDetails.preferredDate}
+              <span class="label">Preferred Date:</span> ${safePreferredDate}
             </div>
             ` : ''}
             ${parsedDetails.urgency ? `
             <div class="field">
-              <span class="label">Urgency:</span> ${parsedDetails.urgency}
+              <span class="label">Urgency:</span> ${safeUrgency}
             </div>
             ` : ''}
             ${parsedDetails.message ? `
             <div class="field">
               <span class="label">Additional Message:</span><br>
               <p style="background: #f0f0f0; padding: 10px; margin-top: 5px;">
-                ${parsedDetails.message.replace(/\n/g, '<br>')}
+                ${safeMessage}
               </p>
             </div>
             ` : ''}
@@ -251,6 +318,29 @@ export function formatServiceFormEmail(data: any): string {
     received: 'Empfangen:'
   };
 
+  const safeServiceName = escapeHtml(data.serviceName);
+  const safeFormType = escapeHtml(data.formType);
+  const safeSalutation = escapeHtml(data.salutation);
+  const safeFirstName = escapeHtml(data.firstName);
+  const safeName = escapeHtml(data.name);
+  const safeStreetAndNumber = escapeHtml(data.streetAndNumber);
+  const safePostalCodeAndCity = escapeHtml(data.postalCodeAndCity);
+  const safePhone = escapeHtml(data.telephone || data.phone);
+  const safeEmail = escapeHtml(data.emailAddress || data.email);
+  const safeMovingDate = escapeHtml(data.movingDate);
+  const safeUnloadingAddress = escapeHtml(data.unloadingStreetAndNumber);
+  const safeUnloadingCity = escapeHtml(data.unloadingPostalCodeAndCity);
+  const safeRooms = escapeHtml(data.numberOfRooms || data.numberOfRoomsApartment);
+  const safeLivingSpace = escapeHtml(data.livingSpaceInM2 || data.areaInM2);
+  const safeFloors = escapeHtml(data.floors);
+  const safeLift = escapeHtml(data.lift || 'Nein');
+  const safeCleaningDate = escapeHtml(data.cleaningAppointment);
+  const safeApartmentType = escapeHtml(data.apartmentType || data.propertyType);
+  const safeDisposalType = escapeHtml(data.disposalType);
+  const safeEstimatedVolume = escapeHtml(data.estimatedVolume);
+  const safePreferredDate = escapeHtml(data.preferredDate);
+  const safeRemarks = escapeHtmlWithLineBreaks(data.remark || data.additionalDetails);
+
   return `
     <!DOCTYPE html>
     <html>
@@ -270,51 +360,70 @@ export function formatServiceFormEmail(data: any): string {
       <div class="container">
         <div class="header">
           <h1>🏠 SwissCleanMove</h1>
-          <p>${t.newRequest} - ${data.serviceName} (${data.formType})</p>
+          <p>${t.newRequest} - ${safeServiceName} (${safeFormType})</p>
         </div>
         <div class="content">
           <div class="section">
             <h3>${t.customerInfo}</h3>
             <div class="field">
-              <span class="label">${t.name}</span> ${data.salutation || ''} ${data.firstName || ''} ${data.name || ''}
+              <span class="label">${t.name}</span> ${safeSalutation ? `${safeSalutation} ` : ''}${safeFirstName ? `${safeFirstName} ` : ''}${safeName}
             </div>
             <div class="field">
-              <span class="label">${t.address}</span> ${data.streetAndNumber || ''}, ${data.postalCodeAndCity || ''}
+              <span class="label">${t.address}</span> ${safeStreetAndNumber}${safePostalCodeAndCity ? `, ${safePostalCodeAndCity}` : ''}
             </div>
             <div class="field">
-              <span class="label">${t.phone}</span> ${data.telephone || data.phone || ''}
+              <span class="label">${t.phone}</span> ${safePhone}
             </div>
             <div class="field">
-              <span class="label">${t.email}</span> ${data.emailAddress || data.email || ''}
+              <span class="label">${t.email}</span> ${safeEmail}
             </div>
           </div>
           
-          ${data.formType === 'relocation' || data.formType === 'unified' ? `
+          ${(data.formType === 'relocation' || data.formType === 'moving' || data.formType === 'moving-and-cleaning' || data.formType === 'unified' || data.movingDate || data.unloadingStreetAndNumber) ? `
           <div class="section">
             <h3>${t.relocationDetails}</h3>
-            ${data.movingDate ? `<div class="field"><span class="label">${t.movingDate}</span> ${data.movingDate}</div>` : ''}
-            ${data.unloadingStreetAndNumber ? `<div class="field"><span class="label">${t.unloadingAddress}</span> ${data.unloadingStreetAndNumber}</div>` : ''}
-            ${data.unloadingPostalCodeAndCity ? `<div class="field"><span class="label">${t.unloadingCity}</span> ${data.unloadingPostalCodeAndCity}</div>` : ''}
-            ${data.numberOfRooms ? `<div class="field"><span class="label">${t.rooms}</span> ${data.numberOfRooms}</div>` : ''}
-            ${data.livingSpaceInM2 ? `<div class="field"><span class="label">${t.livingSpace}</span> ${data.livingSpaceInM2} m²</div>` : ''}
+            ${data.movingDate ? `<div class="field"><span class="label">${t.movingDate}</span> ${safeMovingDate}</div>` : ''}
+            ${data.unloadingStreetAndNumber ? `<div class="field"><span class="label">${t.unloadingAddress}</span> ${safeUnloadingAddress}</div>` : ''}
+            ${data.unloadingPostalCodeAndCity ? `<div class="field"><span class="label">${t.unloadingCity}</span> ${safeUnloadingCity}</div>` : ''}
+            ${(data.numberOfRooms || data.numberOfRoomsApartment) ? `<div class="field"><span class="label">${t.rooms}</span> ${safeRooms}</div>` : ''}
+            ${(data.livingSpaceInM2 || data.areaInM2) ? `<div class="field"><span class="label">${t.livingSpace}</span> ${safeLivingSpace} m²</div>` : ''}
+            ${data.floors ? `<div class="field"><span class="label">Etage / Aufzug:</span> ${safeFloors} / ${safeLift}</div>` : ''}
           </div>
           ` : ''}
           
-          ${data.formType === 'cleaning' || data.formType === 'unified' ? `
+          ${(data.formType === 'cleaning' || data.formType === 'moving-and-cleaning' || data.formType === 'house-cleaning' || data.formType === 'unified' || data.cleaningAppointment || data.numberOfRoomsApartment) ? `
           <div class="section">
             <h3>${t.cleaningDetails}</h3>
-            ${data.numberOfRoomsApartment ? `<div class="field"><span class="label">${t.rooms}</span> ${data.numberOfRoomsApartment}</div>` : ''}
-            ${data.apartmentType ? `<div class="field"><span class="label">${t.apartmentType}</span> ${data.apartmentType}</div>` : ''}
-            ${data.areaInM2 ? `<div class="field"><span class="label">${t.area}</span> ${data.areaInM2} m²</div>` : ''}
-            ${data.cleaningAppointment ? `<div class="field"><span class="label">${t.cleaningDate}</span> ${data.cleaningAppointment}</div>` : ''}
+            ${data.cleaningAppointment ? `<div class="field"><span class="label">${t.cleaningDate}</span> ${safeCleaningDate}</div>` : ''}
+            ${(data.numberOfRoomsApartment || data.numberOfRooms) ? `<div class="field"><span class="label">${t.rooms}</span> ${safeRooms}</div>` : ''}
+            ${(data.apartmentType || data.propertyType) ? `<div class="field"><span class="label">${t.apartmentType}</span> ${safeApartmentType}</div>` : ''}
+            ${(data.areaInM2 || data.livingSpaceInM2) ? `<div class="field"><span class="label">${t.area}</span> ${safeLivingSpace} m²</div>` : ''}
+          </div>
+          ` : ''}
+
+          ${(data.formType === 'disposal' || (data.services && data.services.includes('disposalClearance'))) ? `
+          <div class="section">
+            <h3>Entsorgung & Räumung</h3>
+            ${data.disposalType ? `<div class="field"><span class="label">Art:</span> ${safeDisposalType}</div>` : ''}
+            ${data.estimatedVolume ? `<div class="field"><span class="label">Volumen:</span> ${safeEstimatedVolume}</div>` : ''}
+            ${data.preferredDate ? `<div class="field"><span class="label">Wunschtermin:</span> ${safePreferredDate}</div>` : ''}
+          </div>
+          ` : ''}
+
+          ${data.uploadedFiles && data.uploadedFiles.length > 0 ? `
+          <div class="section">
+            <h3>📎 Angehängte Dateien (${data.uploadedFiles.length})</h3>
+            <ul>
+              ${data.uploadedFiles.map((f: any) => `<li>${escapeHtml(f.name)} (${Math.round((f.size || 0) / 1024)} KB)</li>`).join('')}
+            </ul>
           </div>
           ` : ''}
           
-          ${data.remark ? `
+          ${(data.remark || data.additionalDetails) ? `
           <div class="section">
             <h3>${t.additionalRemarks}</h3>
             <p style="background: #f0f0f0; padding: 10px;">
-              ${data.remark.replace(/\n/g, '<br>')}
+              ${safeRemarks}
             </p>
           </div>
           ` : ''}

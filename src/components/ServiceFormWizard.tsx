@@ -95,6 +95,17 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
         toast.error(tl('wizard.validation.required'));
         return false;
       }
+      if (!isAdmin && !d.agreeToTerms) {
+        const consentError = locale === 'de'
+          ? 'Bitte bestätigen Sie die Datenschutzerklärung.'
+          : locale === 'fr'
+            ? 'Veuillez accepter la politique de confidentialité.'
+            : locale === 'it'
+              ? 'Si prega di accettare l\'informativa sulla privacy.'
+              : 'Please accept the privacy policy.';
+        toast.error(consentError);
+        return false;
+      }
     }
     return true;
   }
@@ -103,7 +114,19 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
   const goBack = () => setStep(i => Math.max(i - 1, 0))
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      setImages(prev => [...prev, ...Array.from(e.target.files!)])
+      const newFiles = Array.from(e.target.files);
+      const combined = [...images, ...newFiles];
+      if (combined.length > 3) {
+        toast.error(locale === 'de' ? 'Maximal 3 Dateien erlaubt' : 'Maximum 3 files allowed');
+        return;
+      }
+      for (const file of newFiles) {
+        if (file.size > 2 * 1024 * 1024) {
+          toast.error(locale === 'de' ? `Datei "${file.name}" ist grösser als 2MB` : `File "${file.name}" exceeds 2MB limit`);
+          return;
+        }
+      }
+      setImages(combined);
     }
   }
   const removeImage = (index: number) => {
@@ -212,14 +235,28 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
            }
         }
 
+        const nameParts = (d.nameFirstName || '').trim().split(/\s+/);
+        const fName = nameParts.length > 1 ? nameParts.slice(0, -1).join(' ') : (nameParts[0] || '');
+        const lName = nameParts.length > 1 ? nameParts[nameParts.length - 1] : (nameParts[0] || '');
+
         const payload = {
-          serviceName, formType: service, locale,
-          firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
-          name: d.nameFirstName?.split(' ')[0] || '',
+          serviceName,
+          formType: service,
+          service: service,
+          services: [service],
+          locale,
+          firstName: fName,
+          lastName: lName,
+          name: lName,
+          nameFirstName: d.nameFirstName || '',
           emailAddress: d.emailAddress || '',
+          email: d.emailAddress || '',
           telephone: d.telephone || '',
+          phone: d.telephone || '',
           streetAndNumber: finalAddress,
           postalCodeAndCity: finalZipCity,
+          agreeToTerms: Boolean(d.agreeToTerms),
+          privacyConsent: Boolean(d.agreeToTerms),
           ...d
         }
 
@@ -234,8 +271,26 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
           method: 'POST',
           body: formData
         })
-        if (!res.ok) throw new Error('fail')
-        
+
+        const result = await res.json().catch(() => null);
+
+        if (!res.ok || !result?.success) {
+          const defaultMsg = locale === 'de'
+            ? 'Fehler beim Senden. Bitte überprüfen Sie Ihre Angaben oder kontaktieren Sie uns direkt.'
+            : locale === 'fr'
+              ? "Échec de l'envoi. Veuillez vérifier vos coordonnées ou nous contacter directement."
+              : locale === 'it'
+                ? 'Invio non riuscito. Si prega di verificare i dati o contattarci direttamente.'
+                : 'Submission failed. Please check your details or contact us directly.';
+
+          const errorMsg = result?.details && Array.isArray(result.details)
+            ? result.details.join('\n')
+            : (result?.error || defaultMsg);
+
+          toast.error(errorMsg, { duration: 6000 });
+          return;
+        }
+
         // Form submitted successfully, safe to fire conversion tracking
         await trackConversion('QUOTE_WIZARD_COMPLETE')
 
@@ -432,6 +487,27 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
             transition={{ duration: 0.3 }}
           >
             {renderCurrentStep()}
+            {!isAdmin && isLast && (
+              <div className="mt-6 pt-4 border-t border-swiss-border">
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={Boolean(d.agreeToTerms)}
+                    onChange={e => set('agreeToTerms', e.target.checked)}
+                    className="w-4 h-4 mt-0.5 rounded border-gray-300 text-swiss-red focus:ring-swiss-red flex-shrink-0"
+                  />
+                  <span className="text-xs sm:text-sm text-swiss-text">
+                    {locale === 'de'
+                      ? 'Ich bestätige, dass meine Angaben zur Bearbeitung dieser unverbindlichen Anfrage verwendet werden dürfen.'
+                      : locale === 'fr'
+                        ? "J'accepte que mes données soient utilisées pour traiter cette demande sans engagement."
+                        : locale === 'it'
+                          ? 'Accetto che i miei dati vengano utilizzati per elaborare questa richiesta senza impegno.'
+                          : 'I agree that my information may be used to process this non-binding request.'}
+                  </span>
+                </label>
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>

@@ -193,11 +193,12 @@ export async function POST(request: NextRequest) {
             ] : []
         })
 
-        if (typeof emailResult === 'string' && emailResult.startsWith('Error:')) {
-            const isAuthError = emailResult.includes('535') || emailResult.includes('BadCredentials') || emailResult.includes('Invalid login');
+        if (!emailResult.success) {
+            const errorDetails = emailResult.error || 'Unknown email error';
+            const isAuthError = errorDetails.includes('535') || errorDetails.includes('BadCredentials') || errorDetails.includes('Invalid login');
             const message = isAuthError
                 ? 'Gmail App Password is invalid or revoked. Please create a new App Password at myaccount.google.com/apppasswords and update GMAIL_APP_PASSWORD.'
-                : `Email sending failed: ${emailResult}`;
+                : `Email sending failed: ${errorDetails}`;
             return NextResponse.json({
                 error: 'Failed to send invoice email',
                 details: message

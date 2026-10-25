@@ -43,8 +43,9 @@ next-env.d.ts
 /prisma/*.db
 /prisma/*.db-journal
 /prisma/dev.db
-/prisma/dev.db-journal
-/backups/
+/backups/*
+!backups/universal-form/
+
 
 # uploads and user-generated content
 /public/uploads/
