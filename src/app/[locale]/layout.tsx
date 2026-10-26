@@ -10,6 +10,16 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('title'),
     description: t('description'),
+    alternates: {
+      canonical: `https://www.swisscleanmove.ch/${locale}`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de',
+        en: 'https://www.swisscleanmove.ch/en',
+        fr: 'https://www.swisscleanmove.ch/fr',
+        it: 'https://www.swisscleanmove.ch/it',
+        'x-default': 'https://www.swisscleanmove.ch/de',
+      },
+    },
     openGraph: {
       title: t('title'),
       description: t('description'),
@@ -43,6 +53,11 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang = ${JSON.stringify(locale)};`,
+        }}
+      />
       <Toaster position="top-right" />
       {children}
     </NextIntlClientProvider>

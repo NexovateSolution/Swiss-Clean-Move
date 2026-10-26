@@ -35,18 +35,41 @@ const nextConfig = {
     ];
   },
   async redirects() {
-    return [
-      {
-        source: '/:locale/endreinigung-biel',
-        destination: '/:locale/umzugsreinigung-biel',
-        permanent: true,
-      },
-      {
-        source: '/endreinigung-biel',
-        destination: '/de/umzugsreinigung-biel',
-        permanent: true,
-      }
+    const legacyBielMappings = [
+      { from: 'reinigung-biel', to: 'reinigung-biel-bienne' },
+      { from: 'endreinigung-biel', to: 'umzugsreinigung-biel-bienne' },
+      { from: 'umzugsreinigung-biel', to: 'umzugsreinigung-biel-bienne' },
+      { from: 'umzug-biel', to: 'umzug-biel-bienne' },
+      { from: 'reinigungsfirma-biel', to: 'reinigungsfirma-biel-bienne' },
+      { from: 'umzugsfirma-biel', to: 'umzugsfirma-biel-bienne' },
+      { from: 'unterhaltsreinigung-biel', to: 'unterhaltsreinigung-biel-bienne' },
+      { from: 'baureinigung-biel', to: 'baureinigung-biel-bienne' },
+      { from: 'bueroreinigung-biel', to: 'bueroreinigung-biel-bienne' },
+      { from: 'entsorgung-biel', to: 'entsorgung-biel-bienne' },
+      { from: 'facility-service-biel', to: 'facility-service-biel-bienne' },
+      { from: 'fensterreinigung-biel', to: 'fensterreinigung-biel-bienne' },
+      { from: 'gastronomie-reinigung-biel', to: 'gastronomie-reinigung-biel-bienne' },
+      { from: 'haushaltshilfe-biel', to: 'haushaltshilfe-biel-bienne' },
+      { from: 'hauswartung-biel', to: 'hauswartung-biel-bienne' },
+      { from: 'transportfirma-biel', to: 'transportfirma-biel-bienne' },
     ];
+
+    const redirectsList = [];
+
+    for (const item of legacyBielMappings) {
+      redirectsList.push({
+        source: `/:locale/${item.from}`,
+        destination: `/:locale/${item.to}`,
+        permanent: true,
+      });
+      redirectsList.push({
+        source: `/${item.from}`,
+        destination: `/de/${item.to}`,
+        permanent: true,
+      });
+    }
+
+    return redirectsList;
   },
   // Security headers
   async headers() {
