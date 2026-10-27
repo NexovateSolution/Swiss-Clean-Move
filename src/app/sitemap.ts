@@ -103,22 +103,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const allPaths = [...staticPages, ...blogPages, ...seoPages];
+  const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  return allPaths.map((path) => {
-    // Generate alternate languages
+  for (const path of allPaths) {
     const alternates = {
-      languages: locales.reduce((acc, locale) => {
-        acc[locale] = `${baseUrl}/${locale}${path}`;
-        return acc;
-      }, {} as Record<string, string>),
+      languages: {
+        ...locales.reduce((acc, locale) => {
+          acc[locale] = `${baseUrl}/${locale}${path}`;
+          return acc;
+        }, {} as Record<string, string>),
+        'x-default': `${baseUrl}/de${path}`,
+      },
     };
 
-    return {
-      url: `${baseUrl}/de${path}`,
-      lastModified: new Date(),
-      changeFrequency: path === '' ? 'weekly' : 'monthly',
-      priority: path === '' ? 1 : 0.8,
-      alternates,
-    };
-  });
+    for (const locale of locales) {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}${path}`,
+        lastModified: new Date(),
+        changeFrequency: path === '' ? 'weekly' : 'monthly',
+        priority: path === '' ? (locale === 'de' ? 1.0 : 0.9) : (locale === 'de' ? 0.8 : 0.7),
+        alternates,
+      });
+    }
+  }
+
+  return sitemapEntries;
 }
