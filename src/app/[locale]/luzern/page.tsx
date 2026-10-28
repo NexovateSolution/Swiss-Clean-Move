@@ -6,22 +6,21 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'luzern', regionName: 'Luzern',
     seoTitle: 'Umzug Luzern | Reinigungsfirma Luzern | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Reinigung, Umzugsreinigung, Unterhaltsreinigung, Facility Services und Entsorgung in Luzern.',
+    metaDescription: 'Professioneller Umzug, Reinigung, Umzugsreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Luzern.',
     h1: 'Umzug & Reinigungsfirma in Luzern',
-    highSeoKeywords: ['Umzug Luzern','Umzugsfirma Luzern','Reinigungsfirma Luzern','Umzugsreinigung Luzern','Endreinigung Luzern','Unterhaltsreinigung Luzern','Büroreinigung Luzern','Gastronomie Reinigung Luzern','Facility Services Luzern','Hauswartung Luzern','Entsorgung Luzern'],
+    highSeoKeywords: ['Umzug Luzern','Umzugsfirma Luzern','Reinigungsfirma Luzern','Umzugsreinigung Luzern','Endreinigung Luzern','Unterhaltsreinigung Luzern','Büroreinigung Luzern','Gastronomie Reinigung Luzern','Hauswartung & Gebäudeunterhalt Luzern','Hauswartung Luzern','Entsorgung Luzern'],
     localKeywords: ['Luzern','Emmen','Kriens','Horw','Sursee','Ebikon','Rothenburg'],
     introParagraphs: [
-      'SwissCleanMove bietet professionelle Umzüge, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Büroreinigung, Facility Services, Hauswartung und Entsorgung in Luzern und Umgebung.',
+      'SwissCleanMove bietet professionelle Umzüge, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Büroreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Luzern und Umgebung.',
       'Wir bedienen Luzern, Emmen, Kriens, Horw, Sursee, Ebikon und Rothenburg. Mit SwissCleanMove erhalten Kunden professionelle Unterstützung für Umzug, Reinigung und Gebäudeunterhalt aus einer Hand.'
     ],
     faqs: [
       { question: 'Bietet SwissCleanMove Umzug in Luzern an?', answer: 'Ja, wir bieten Umzug, Transport und Firmenumzug in Luzern.' },
       { question: 'Gibt es Reinigungsfirma Luzern?', answer: 'Ja, SwissCleanMove bietet professionelle Reinigung in Luzern.' },
-      { question: 'Welche Dienstleistungen gibt es?', answer: 'Umzug, Umzugsreinigung, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung.' }
+      { question: 'Welche Dienstleistungen gibt es?', answer: 'Umzug, Umzugsreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung.' }
     ],
     mapQuery: 'Lucerne,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'luzern', regionName: 'Lucerne',
     seoTitle: 'Moving Lucerne | Cleaning Company Lucerne | SwissCleanMove',
     metaDescription: 'Professional moving, cleaning, move-out cleaning, maintenance cleaning, facility services and disposal in Lucerne.',

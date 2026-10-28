@@ -6,13 +6,13 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'basel', regionName: 'Basel',
     seoTitle: 'Umzug Basel | Reinigungsfirma Basel | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Reinigung, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung in Basel-Stadt und Basel-Landschaft.',
+    metaDescription: 'Professioneller Umzug, Reinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Basel-Stadt und Basel-Landschaft.',
     h1: 'Umzug & Reinigungsfirma in Basel',
-    highSeoKeywords: ['Umzug Basel','Umzugsfirma Basel','Reinigungsfirma Basel','Umzugsreinigung Basel','Endreinigung Basel','Unterhaltsreinigung Basel','Büroreinigung Basel','Gastronomie Reinigung Basel','Facility Services Basel','Hauswartung Basel','Entsorgung Basel'],
+    highSeoKeywords: ['Umzug Basel','Umzugsfirma Basel','Reinigungsfirma Basel','Umzugsreinigung Basel','Endreinigung Basel','Unterhaltsreinigung Basel','Büroreinigung Basel','Gastronomie Reinigung Basel','Hauswartung & Gebäudeunterhalt Basel','Hauswartung Basel','Entsorgung Basel'],
     localKeywords: ['Basel','Basel-Stadt','Basel-Landschaft','Allschwil','Binningen','Bottmingen','Muttenz','Münchenstein','Reinach','Pratteln'],
     introParagraphs: [
-      'SwissCleanMove bietet Umzug, Endreinigung, Reinigungsservice, Unterhaltsreinigung, Gastronomie Reinigung, Facility Services, Hauswartung und Entsorgung in Basel und Umgebung.',
-      'Wir sind für Kunden in Basel-Stadt, Basel-Landschaft, Allschwil, Binningen, Bottmingen, Muttenz, Münchenstein, Reinach und Pratteln im Einsatz. SwissCleanMove verbindet professionelle Umzugsplanung mit gründlicher Reinigung und zuverlässigem Facility Service.'
+      'SwissCleanMove bietet Umzug, Endreinigung, Reinigungsservice, Unterhaltsreinigung, Gastronomie Reinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Basel und Umgebung.',
+      'Wir sind für Kunden in Basel-Stadt, Basel-Landschaft, Allschwil, Binningen, Bottmingen, Muttenz, Münchenstein, Reinach und Pratteln im Einsatz. SwissCleanMove verbindet professionelle Umzugsplanung mit gründlicher Reinigung und zuverlässigem Gebäudeunterhalt.'
     ],
     faqs: [
       { question: 'Bietet SwissCleanMove Umzüge in Basel an?', answer: 'Ja, wir bieten Umzug, Möbeltransport und Firmenumzug in Basel.' },
@@ -20,8 +20,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove in Basel-Stadt und Basel-Landschaft?', answer: 'Ja, wir arbeiten in beiden Regionen.' }
     ],
     mapQuery: 'Basel,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'basel', regionName: 'Basel',
     seoTitle: 'Moving Basel | Cleaning Company Basel | SwissCleanMove',
     metaDescription: 'Professional moving, cleaning, maintenance cleaning, facility services, property maintenance and disposal in Basel-Stadt and Basel-Landschaft.',

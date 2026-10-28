@@ -49,7 +49,7 @@
       },
       "apartmentCleaning": {
         "title": "Pulizia dell'appartamento",
-        "description": "Servizi professionali di pulizia degli appartamenti compresa la pulizia finale con cauzione cauzionale"
+        "description": "Servizi professionali di pulizia degli appartamenti compresa la pulizia finale con garanzia di consegna"
       },
       "stairwellCleaning": {
         "title": "Pulizia del servizio della struttura",
@@ -302,7 +302,7 @@
       },
       "reviews": {
         "rating": "4.9 su 5",
-        "count": "Oltre 100+ Recensioni",
+        "count": "Recensioni Google verificate",
         "google": "Recensioni",
         "writeReview": "Scrivi una recensione"
       },
@@ -536,7 +536,7 @@
       "apartmentCleaning": "CHF 45–65 / ora / personale",
       "stairwellCleaning": "forfettario da CHF 120",
       "officeCleaning": "CHF 0,80–1,50/m²",
-      "finalCleaning": "a partire da 250 franchi",
+      "finalCleaning": "da CHF 600 (Monolocale / 1 loc.)",
       "windowCleaning": "CHF 8–15 per finestra",
       "relocation": "da CHF 160/ora",
       "disposal": "da CHF 30/m³",
@@ -861,7 +861,7 @@
       "reviews": {
         "rating": "5.0",
         "outOf": "/5",
-        "text": "Oltre 100 recensioni\\non Google"
+        "text": "Recensioni verificate\nsu Google"
       },
       "bottomBar": {
         "call": "Chiamata",
@@ -5600,10 +5600,10 @@
       },
       "standard": {
         "title": "Pulizie di fine locazione",
-        "description": "Pulizia di fine locazione con garanzia di consegna al 100% (incluso nuovo lavaggio gratuito)",
-        "price": "a partire da 250 franchi",
+        "description": "Pulizia di fine locazione con garanzia di consegna al (incluso nuovo lavaggio gratuito)",
+        "price": "da CHF 600",
         "features": [
-          "Appartamenti: da CHF 250",
+          "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale",
           "Case: da CHF 900",
           "Supplementi opzionali disponibili",
           "Garanzia di accettazione"
@@ -5774,7 +5774,7 @@
       "umzugsreinigung": [
         {
           "question": "What does 'with handover guarantee' mean?",
-          "answer": "We guarantee that the property management will accept the cleaning at the handover. If re-cleaning is needed, we do it for free."
+          "answer": "La nostra garanzia di consegna vi accompagna per una consegna accurata dell'immobile. Se durante la consegna vengono riscontrati difetti dovuti alla pulizia, eseguiamo direttamente sul posto il ritocco gratuito concordato."
         },
         {
           "question": "Do you have to be present at the handover?",
@@ -6178,7 +6178,7 @@
       "h1": "Ditta di traslochi Biel/Bienne – traslochi, pulizie di traslochi e pulizie a Biel/Bienne",
       "heroSubtitle": "Traslochi professionali nel Seeland – pianificati con cura, eseguiti in modo efficiente e calcolati in modo equo.",
       "ctaSoft": "Richiedi subito un preventivo gratuito",
-      "intro": "State progettando un trasloco a Biel/Bienne o nella regione della Zelanda? Cambiare appartamento è spesso associato a stress, sfide logistiche e molto tempo. SwissCleanMove è la vostra collaudata ditta di traslochi locale con sede direttamente a Bienne in Orpundstrasse 31. Dal 2024 supportiamo privati, famiglie e aziende nei loro traslochi, sia all'interno della città di Bienne, nei comuni circostanti o in tutta la Svizzera. Il nostro team esperto garantirà che il tuo trasloco avvenga senza stress, in tempo e ad un prezzo assolutamente trasparente. Con oltre 50 traslochi eseguiti con successo nell'area di Bienne e della Zelanda, disponiamo dell'esperienza necessaria per eseguire ogni ordine con precisione. Che vogliate trasferirvi da un angusto appartamento nel centro storico di Biel/Bienne, cambiare la vostra casa di famiglia nel Seeland o trasferirvi in ​​un nuovo ufficio come azienda, abbiamo la soluzione giusta. Vi offriamo prezzi forfettari equi a prezzi equi, all'occorrenza utilizziamo 2-4 robusti aiutanti e mettiamo a disposizione moderni veicoli di trasporto. Includiamo sempre un'assicurazione di trasporto completa in modo che i vostri preziosi mobili siano protetti in modo ottimale. Di solito completiamo il tuo trasloco entro 1-2 giorni. Poiché la nostra sede si trova direttamente sul Lago di Bienne, potrete beneficiare di viaggi estremamente brevi e di un'elevata flessibilità. Siamo a vostra disposizione anche entro 24 ore se le cose devono essere fatte in modo particolarmente rapido.",
+      "intro": "State progettando un trasloco a Biel/Bienne o nella regione della Zelanda? Cambiare appartamento è spesso associato a stress, sfide logistiche e molto tempo. SwissCleanMove è la vostra collaudata ditta di traslochi locale con sede direttamente a Bienne in Orpundstrasse 31. Dal 2024 supportiamo privati, famiglie e aziende nei loro traslochi, sia all'interno della città di Bienne, nei comuni circostanti o in tutta la Svizzera. Il nostro team esperto garantirà che il tuo trasloco avvenga senza stress, in tempo e ad un prezzo assolutamente trasparente. Con numerosi traslochi eseguiti con successo nell'area di Bienne e della Zelanda, disponiamo dell'esperienza necessaria per eseguire ogni ordine con precisione. Che vogliate trasferirvi da un angusto appartamento nel centro storico di Biel/Bienne, cambiare la vostra casa di famiglia nel Seeland o trasferirvi in ​​un nuovo ufficio come azienda, abbiamo la soluzione giusta. Vi offriamo prezzi forfettari equi a prezzi equi, all'occorrenza utilizziamo 2-4 robusti aiutanti e mettiamo a disposizione moderni veicoli di trasporto. Includiamo sempre un'assicurazione di trasporto completa in modo che i vostri preziosi mobili siano protetti in modo ottimale. Di solito completiamo il tuo trasloco entro 1-2 giorni. Poiché la nostra sede si trova direttamente sul Lago di Bienne, potrete beneficiare di viaggi estremamente brevi e di un'elevata flessibilità. Siamo a vostra disposizione anche entro 24 ore se le cose devono essere fatte in modo particolarmente rapido.",
       "sections": [
         {
           "heading": "Perché SwissCleanMove è la vostra prima scelta a Biel/Bienne",
@@ -6232,7 +6232,7 @@
       ],
       "trustPoints": [
         "Lavoro a Biel/Bienne dal 2024",
-        "Oltre 50 mosse riuscite",
+        "Numerosi traslochi riusciti",
         "Prezzi tutto compreso giusti a prezzi equi"
       ],
       "ctaMidHeading": "Hai intenzione di trasferirti a Bienne?",
@@ -6325,14 +6325,14 @@
     "endreinigungBiel": {
       "meta": {
         "title": "Pulizia finale a Biel/Bienne | Veloce e affidabile | SwissCleanMove",
-        "description": "Pulizia finale professionale a Biel/Bienne con garanzia di accettazione. Rimborso del deposito garantito. SwissCleanMove – la vostra impresa di pulizie nel Seeland.",
+        "description": "Pulizia finale professionale a Biel/Bienne con garanzia di consegna per una consegna senza problemi. SwissCleanMove – la vostra impresa di pulizie nel Seeland.",
         "titleVariant": "Biel/Bienne Cerchi la pulizia finale? Veloce e affidabile"
       },
       "badge": "Pulizia finale Biel/Bienne",
       "h1": "Impresa di pulizie finali Biel/Bienne – pulizia finale, pulizia appartamenti e pulizia a Biel/Bienne",
-      "heroSubtitle": "Il vostro appartamento a Bienne vi verrà consegnato così pulito che sarà garantita la restituzione della cauzione.",
+      "heroSubtitle": "Pulizia professionale di fine locazione con garanzia di consegna al a Biel/Bienne per una consegna senza stress.",
       "ctaSoft": "Richiedi subito un preventivo gratuito",
-      "intro": "Cambiare il vostro appartamento a Biel/Bienne comporta molti compiti, il più faticoso dei quali è solitamente la pulizia finale. SwissCleanMove è il vostro partner affidabile per la pulizia finale professionale con una garanzia di accettazione. Ci assicuriamo che il vostro vecchio appartamento a Bienne o nei dintorni sia perfettamente pulito e che la direzione dell'immobile accetti l'ispezione senza esitazione. In caso di reclami al momento della consegna dell'appartamento, saremo presenti personalmente e apporteremo miglioramenti immediatamente e gratuitamente, così avrete la garanzia di ricevere indietro la vostra caparra d'affitto. Con la nostra esperienza derivante da numerose pulizie finali in tutto il Seeland, prezzi forfettari equi a partire da CHF 350 e tempi di risposta brevi (disponibili entro 24 ore), vi elimineremo completamente questo fattore di stress. Per noi la pulizia tipica di un appartamento dura dalle 4 alle 8 ore, a seconda delle dimensioni e del grado di sporco. Affidatevi alla nostra competenza direttamente sul Lago di Bienne e dedicatevi interamente all'arredamento della vostra nuova casa.",
+      "intro": "Cambiare il vostro appartamento a Biel/Bienne comporta molti compiti, il più faticoso dei quali è solitamente la pulizia finale. SwissCleanMove è il vostro partner affidabile per la pulizia finale professionale con una garanzia di accettazione. Ci assicuriamo che il vostro vecchio appartamento a Bienne o nei dintorni sia perfettamente pulito e che la direzione dell'immobile accetti l'ispezione senza esitazione. In caso di reclami al momento della consegna dell'appartamento, saremo presenti personalmente e apporteremo miglioramenti immediatamente e gratuitamente, la nostra pulizia di fine locazione con garanzia di consegna vi supporta per una consegna dell'appartamento pulita e senza intoppi. Con la nostra esperienza derivante da numerose pulizie finali in tutto il Seeland, prezzi forfettari equi (pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale) e tempi di risposta brevi (disponibili entro 24 ore), vi elimineremo completamente questo fattore di stress. Per noi la pulizia tipica di un appartamento dura dalle 4 alle 8 ore, a seconda delle dimensioni e del grado di sporco. Affidatevi alla nostra competenza direttamente sul Lago di Bienne e dedicatevi interamente all'arredamento della vostra nuova casa.",
       "sections": [
         {
           "heading": "La scelta migliore per la pulizia del vostro trasloco a Biel/Bienne",
@@ -6382,11 +6382,11 @@
       ],
       "trustPoints": [
         "garanzia di accettazione.",
-        "Deposito indietro – garantito",
+        "Pulizia di ritocco gratuita",
         "Prezzi tutto compreso onesti"
       ],
       "ctaMidHeading": "Cambiare il tuo appartamento a Bienne?",
-      "ctaMidBody": "Fate eseguire la pulizia finale da professionisti. Garantiamo l'accettazione – o torniamo gratuitamente.",
+      "ctaMidBody": "Affidate la pulizia finale ai professionisti – con garanzia di consegna e ritocco gratuito al momento della verifica.",
       "ctaMid": "Assicurati la tua offerta in 2 minuti",
       "serviceAreaHeading": "Pulizia finale in tutto il Seeland e dintorni",
       "serviceAreaBody": "La nostra sede è a Biel/Bienne, ma il nostro raggio d'azione per la pulizia finale professionale si estende a tutta la Zelanda. Siamo presenti in modo rapido e flessibile in comuni come Nidau, Brügg, Lyss, Ipsach, Aarberg e Pieterlen. Grazie alla nostra presenza locale, non ci saranno lunghi costi di viaggio per te. Conosciamo personalmente molte amministrazioni immobiliari locali del Seeland e sappiamo esattamente quali dettagli specifici apprezzano quando consegnano l'appartamento.",
@@ -6420,7 +6420,7 @@
       "faqs": [
         {
           "question": "Cosa significa esattamente la garanzia di accettazione?",
-          "answer": "La nostra garanzia di accettazione significa per voi assoluta sicurezza e libertà dallo stress. Garantiamo contrattualmente che il vostro immobile verrà accettato dalla direzione o dal proprietario senza problemi dopo la nostra pulizia finale. Se nonostante ciò l'ispettore rileva un difetto durante l'ispezione dell'appartamento (ad esempio una macchia d'acqua su una rubinetteria), il nostro personale presente provvederà a pulire immediatamente, senza burocrazia e in modo completamente gratuito fino alla firma dell'ispezione."
+          "answer": "La nostra garanzia di consegna vi supporta per una consegna accurata dell'appartamento. Se l'amministrazione riscontra un difetto di pulizia durante la consegna, il nostro personale presente sul posto provvede immediatamente e gratuitamente al ritocco. Ciò protegge da detrazioni sulla cauzione dovute a difetti di pulizia."
         },
         {
           "question": "Devo essere presente durante la pulizia finale?",
@@ -6452,7 +6452,7 @@
         },
         {
           "question": "Quanto costa la pulizia finale a Bienne?",
-          "answer": "I nostri prezzi sono equi, trasparenti e calcolati come una tariffa forfettaria senza costi nascosti. Puliamo un appartamento di 2,5 locali a partire da CHF 350, un appartamento di 3,5 locali a prezzi equi e un appartamento di 4,5 locali a partire da CHF 690. Per le case unifamiliari o gli oggetti estremamente sporchi vi sottoponiamo dopo un sopralluogo gratuito un'offerta individuale e vincolante."
+          "answer": "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. Per gli appartamenti più grandi, il prezzo dipende dalle dimensioni, dalle condizioni e dall'entità della pulizia. Saremo lieti di fornirvi un preventivo gratuito e non vincolante."
         },
         {
           "question": "Cosa fare in caso di muffa ostinata in bagno?",
@@ -7841,14 +7841,14 @@
     "endreinigungNidau": {
       "meta": {
         "title": "Pulizia finale a Nidau ​​| Con garanzia | SwissCleanMove",
-        "description": "Pulizia finale professionale a Nidau ​​con garanzia di accettazione. Rimborso del deposito garantito. SwissCleanMove – la vostra impresa di pulizie nel Seeland.",
+        "description": "Pulizia finale professionale a Nidau con garanzia di consegna per una consegna senza problemi. SwissCleanMove – la vostra impresa di pulizie nel Seeland.",
         "titleVariant": "Cerchi le pulizie finali di Nidau? Con garanzia"
       },
       "badge": "Pulizia finale Nidau",
       "h1": "Impresa di pulizie finali Nidau – pulizia finale, pulizia appartamenti e pulizia a Nidau",
       "heroSubtitle": "Pulizia garantita: puliamo il vostro appartamento a Nidau ​​in modo così accurato che l'ispezione si svolge senza intoppi.",
       "ctaSoft": "Assicurati la tua offerta in 2 minuti",
-      "intro": "Benvenuti in SwissCleanMove. Stai per lasciare il tuo appartamento a Nidau ​​e sei preoccupato per le pulizie finali? SwissCleanMove vi solleva completamente da questo onere. Siamo il vostro specialista regionale per pulizie finali approfondite con una garanzia di accettazione a Nidau ​​​​e dintorni. Quando consegnano l'appartamento, i gestori della proprietà guardano molto attentamente: depositi di calcare o infissi sporchi possono causare rapidamente problemi. Con noi vai sul sicuro: ti garantiamo che il tuo appartamento verrà accettato dal proprietario senza problemi al primo appuntamento. Se viene contestato un dettaglio, il nostro personale lo pulirà immediatamente e gratuitamente. Ciò ti garantisce di ricevere indietro l'intero deposito senza alcuna discussione. Vi offriamo prezzi forfettari trasparenti e fissi a partire da CHF 350, a seconda delle dimensioni dell'appartamento. Per noi la pulizia tipica di un appartamento richiede dalle 4 alle 8 ore. Grazie alla nostra vicinanza a Nidau ​​beneficerete di brevi distanze, di nessun costo di viaggio nascosto e, se necessario, anche di disponibilità entro 24 ore. Affidatevi agli standard svizzeri e ad un team esperto del Seeland. Benvenuti agli esperti di SwissCleanMove. Siamo orgogliosi di offrire ai nostri clienti in questa regione servizi al più alto livello svizzero. La nostra filosofia aziendale si basa sulla reale vicinanza al cliente, prezzi chiari senza costi nascosti e affidabilità al 100% ad ogni utilizzo. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
+      "intro": "Benvenuti in SwissCleanMove. Stai per lasciare il tuo appartamento a Nidau ​​e sei preoccupato per le pulizie finali? SwissCleanMove vi solleva completamente da questo onere. Siamo il vostro specialista regionale per pulizie finali approfondite con una garanzia di accettazione a Nidau ​​​​e dintorni. Quando consegnano l'appartamento, i gestori della proprietà guardano molto attentamente: depositi di calcare o infissi sporchi possono causare rapidamente problemi. Con noi vai sul sicuro: Con la nostra garanzia di consegna siete al sicuro: il nostro team pulisce a fondo il vostro appartamento ed è pronto sul posto per eventuali ritocchi gratuiti. Se viene contestato un dettaglio, il nostro personale lo pulirà immediatamente e gratuitamente. La nostra pulizia di fine locazione con garanzia di consegna vi supporta per una consegna serena. Vi offriamo prezzi trasparenti – pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale, a seconda delle dimensioni dell'appartamento. Per noi la pulizia tipica di un appartamento richiede dalle 4 alle 8 ore. Grazie alla nostra vicinanza a Nidau ​​beneficerete di brevi distanze, di nessun costo di viaggio nascosto e, se necessario, anche di disponibilità entro 24 ore. Affidatevi agli standard svizzeri e ad un team esperto del Seeland. Benvenuti agli esperti di SwissCleanMove. Siamo orgogliosi di offrire ai nostri clienti in questa regione servizi al più alto livello svizzero. La nostra filosofia aziendale si basa sulla reale vicinanza al cliente, prezzi chiari senza costi nascosti e affidabilità al 100% ad ogni utilizzo. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
       "sections": [
         {
           "heading": "Perché scegliere SwissCleanMove a Nidau?",
@@ -7910,7 +7910,7 @@
       ],
       "trustPoints": [
         "garanzia di accettazione.",
-        "Deposito restituito in modo sicuro",
+        "Pulizia di ritocco gratuita",
         "Localmente a Nidau ​​​​e Biel/Bienne"
       ],
       "ctaMidHeading": "Consegna appartamento a Nidau?",
@@ -7944,7 +7944,7 @@
       "faqs": [
         {
           "question": "Come funziona esattamente la garanzia di accettazione a Nidau?",
-          "answer": "Molto semplice: garantiamo contrattualmente che la direzione accetterà la pulizia del vostro appartamento a Nidau. Se durante la consegna viene presentato un reclamo secondo cui, ad esempio, il telaio di una finestra non è sufficientemente pulito, il nostro personale lo pulirà immediatamente, gratuitamente. Per te questo significa sicurezza assoluta. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "La nostra garanzia di consegna vi supporta per una consegna accurata a Nidau. Se viene contestato un difetto di pulizia durante la consegna, il nostro personale presente sul posto interviene immediatamente e gratuitamente."
         },
         {
           "question": "I mobili devono già essere fuori dall'appartamento?",
@@ -7956,7 +7956,7 @@
         },
         {
           "question": "Quali costi dovrò pagare per la pulizia finale a Nidau?",
-          "answer": "Offriamo prezzi forfettari fissi a partire da CHF 350 per piccoli appartamenti. Un tipico appartamento di 3,5 locali costa a prezzi equi, un appartamento di 4,5 locali da CHF 690. Dopo una visita gratuita a Nidau ​​riceverete da noi un prezzo fisso garantito - non ci sono costi nascosti. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. Per gli appartamenti più grandi, il prezzo dipende dalle dimensioni, dalle condizioni e dall'entità della pulizia. Saremo lieti di fornirvi un preventivo gratuito e non vincolante."
         },
         {
           "question": "Con quanto anticipo devo prenotare la pulizia finale?",
@@ -8040,9 +8040,9 @@
       },
       "badge": "Pulizie in movimento Lyss",
       "h1": "Impresa di pulizie finali Lyss – pulizia finale, pulizia appartamenti e pulizia a Lyss",
-      "heroSubtitle": "Consegna dell'appartamento senza stress a Lyss: garantiamo la consegna senza intoppi del vostro appartamento.",
+      "heroSubtitle": "Consegna dell'appartamento senza stress a Lyss: Pulizia professionale di fine locazione con garanzia di consegna e ritocchi gratuiti.",
       "ctaSoft": "Risposta rapida entro 24 ore",
-      "intro": "Benvenuti in SwissCleanMove. Il trasloco è fatto, ma il vecchio appartamento di Lyss aspetta ancora la temuta pulizia finale? Risparmia tempo, sporco e nervi: affida questo compito impegnativo ai professionisti di SwissCleanMove. Siamo il tuo esperto locale per la pulizia degli appartamenti con una garanzia di accettazione a Lyss e nella Zelanda circostante. Le società svizzere di gestione immobiliare sono estremamente severe in materia di consegna. Una macchia di calcare trascurata nel bagno o i ribassi sporchi dei vetri possono comportare il rifiuto dell’accettazione e il blocco della cauzione. Con noi non corri alcun rischio: puliamo a fondo il tuo appartamento e ti garantiamo che verrà ispezionato al primo appuntamento. In caso di reclamo, il nostro team di pulizia apporterà miglioramenti sul posto immediatamente e gratuitamente. Vi offriamo prezzi forfettari trasparenti e fissi a partire da CHF 350 senza costi nascosti. La pulizia richiede solitamente dalle 4 alle 8 ore. Affidati a un team regionale consolidato della Zelanda, disponibile anche per incarichi a breve termine (entro 24 ore) a Lyss. Benvenuti in SwissCleanMove. Se stai cercando la massima pulizia professionale, assoluta affidabilità e prezzi trasparenti in questa regione, allora sei nel posto giusto. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione di fiducia. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
+      "intro": "Benvenuti in SwissCleanMove. Il trasloco è fatto, ma il vecchio appartamento di Lyss aspetta ancora la temuta pulizia finale? Risparmia tempo, sporco e nervi: affida questo compito impegnativo ai professionisti di SwissCleanMove. Siamo il tuo esperto locale per la pulizia degli appartamenti con una garanzia di accettazione a Lyss e nella Zelanda circostante. Le società svizzere di gestione immobiliare sono estremamente severe in materia di consegna. Una macchia di calcare trascurata nel bagno o i ribassi sporchi dei vetri possono comportare il rifiuto dell’accettazione e il blocco della cauzione. Con noi non corri alcun rischio: puliamo a fondo il tuo appartamento e ti siamo pronti sul posto al momento della consegna per eventuali ritocchi gratuiti. In caso di reclamo, il nostro team di pulizia apporterà miglioramenti sul posto immediatamente e gratuitamente. Vi offriamo prezzi forfettari trasparenti – pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. La pulizia richiede solitamente dalle 4 alle 8 ore. Affidati a un team regionale consolidato della Zelanda, disponibile anche per incarichi a breve termine (entro 24 ore) a Lyss. Benvenuti in SwissCleanMove. Se stai cercando la massima pulizia professionale, assoluta affidabilità e prezzi trasparenti in questa regione, allora sei nel posto giusto. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione di fiducia. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
       "sections": [
         {
           "heading": "Il vostro partner per le pulizie per una consegna senza preoccupazioni a Lyss",
@@ -8134,11 +8134,11 @@
       "faqs": [
         {
           "question": "Cosa comprende esattamente la garanzia di accettazione in Lyss?",
-          "answer": "La nostra garanzia di accettazione è il vostro scudo protettivo. Garantiamo che la direzione della proprietà a Lyss ispezionerà l'appartamento in termini di pulizia. Se una macchia viene rilevata durante l'ispezione, il nostro personale la pulirà immediatamente, senza costi aggiuntivi per te. In questo modo il tuo deposito è al sicuro. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "La nostra garanzia di consegna vi supporta per una consegna accurata a Lyss. Se durante la visita vengono riscontrati difetti di pulizia, il nostro personale presente sul posto effettua immediatamente e gratuitamente i ritocchi necessari."
         },
         {
           "question": "Quanto costa la pulizia finale a Lyss?",
-          "answer": "Calcoliamo i nostri prezzi in modo trasparente come forfettario. Un piccolo appartamento di 2,5 locali costa da CHF 350. Un appartamento standard di 3,5 locali costa a prezzi equi, un appartamento di 4,5 locali da CHF 690. Per garantirvi un prezzo fisso esatto, controlliamo in anticipo il vostro immobile a Lyss, in modo completamente gratuito. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. Per gli appartamenti più grandi, il prezzo dipende dalle dimensioni, dalle condizioni e dall'entità della pulizia. Saremo lieti di fornirvi un preventivo gratuito e non vincolante."
         },
         {
           "question": "Finestre e balconi sono compresi nel prezzo della pulizia finale?",
@@ -8230,9 +8230,9 @@
       },
       "badge": "Pulizia finale Brugg",
       "h1": "Impresa di pulizie finali Brügg – pulizia finale, pulizia appartamenti e pulizia a Brügg",
-      "heroSubtitle": "Il vostro appartamento in affitto a Brügg sarà perfettamente pulito e sarà consegnato privo di difetti.",
+      "heroSubtitle": "Il tuo appartamento in affitto a Brügg perfettamente pulito per una consegna accurata e senza stress.",
       "ctaSoft": "Richiedi informazioni senza impegno",
-      "intro": "Benvenuti in SwissCleanMove. Il trasloco è già abbastanza stressante: affida la snervante pulizia del tuo appartamento ai professionisti di SwissCleanMove. Siamo il vostro specialista regionale per la pulizia finale con una garanzia di accettazione a Brügg e in tutta la Zelanda. I requisiti dell'amministrazione immobiliare svizzera per la consegna degli appartamenti sono estremamente elevati. Una macchia trascurata nel forno o le giunture calcificate della doccia possono portare rapidamente al blocco del deposito. Con la nostra garanzia di accettazione andate sul sicuro: puliamo a fondo il vostro immobile e vi garantiamo che verrà accettato dall'amministrazione senza problemi. Se l'amministrazione riscontra un piccolo difetto, lo puliremo immediatamente sul posto gratuitamente. Vi offriamo un'assoluta sicurezza dei costi grazie a prezzi forfettari fissi a partire da CHF 350. Non vi sono salari orari nascosti o spese di viaggio. Il nostro team esperto può avere un tipico appartamento perfettamente pulito in 4-8 ore. Grazie alla nostra forte presenza locale a Brügg, in caso di emergenza possiamo intervenire anche con breve preavviso (spesso entro 24 ore). Benvenuti in SwissCleanMove – il vostro partner premium locale. Vi offriamo servizi secondo i più severi standard svizzeri. Per noi la trasparenza, la puntualità e la massima attenzione sono la nostra massima priorità. Affidati al nostro team competente e impiegato in modo permanente per una transazione senza intoppi. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
+      "intro": "Benvenuti in SwissCleanMove. Il trasloco è già abbastanza stressante: affida la snervante pulizia del tuo appartamento ai professionisti di SwissCleanMove. Siamo il vostro specialista regionale per la pulizia finale con una garanzia di accettazione a Brügg e in tutta la Zelanda. I requisiti dell'amministrazione immobiliare svizzera per la consegna degli appartamenti sono estremamente elevati. Una macchia trascurata nel forno o le giunture calcificate della doccia possono portare rapidamente al blocco del deposito. Con la nostra garanzia di accettazione andate sul sicuro: puliamo a fondo il vostro immobile e vi vi accompagniamo per una consegna dell'appartamento senza intoppi. Se l'amministrazione riscontra un piccolo difetto, lo puliremo immediatamente sul posto gratuitamente. Vi offriamo un'assoluta sicurezza dei costi grazie a assoluta trasparenza dei costi: pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. Non vi sono salari orari nascosti o spese di viaggio. Il nostro team esperto può avere un tipico appartamento perfettamente pulito in 4-8 ore. Grazie alla nostra forte presenza locale a Brügg, in caso di emergenza possiamo intervenire anche con breve preavviso (spesso entro 24 ore). Benvenuti in SwissCleanMove – il vostro partner premium locale. Vi offriamo servizi secondo i più severi standard svizzeri. Per noi la trasparenza, la puntualità e la massima attenzione sono la nostra massima priorità. Affidati al nostro team competente e impiegato in modo permanente per una transazione senza intoppi. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
       "sections": [
         {
           "heading": "Soluzioni detergenti per un trasloco tranquillo a Brügg",
@@ -8267,7 +8267,7 @@
           "body": "Spazziamo e puliamo il balcone, puliamo la ringhiera del balcone e lasciamo puliti e privi di ragnatele anche i locali adiacenti come cantine, soffitte o garage a Brügg. Questo servizio è estremamente utile perché spesso queste stanze alla fine vengono dimenticate, ma vengono controllate dall'amministrazione. Per noi è molto importante garantire che questo lavoro venga svolto secondo i più elevati standard industriali svizzeri. La nostra pluriennale esperienza in questa regione dimostra che una pianificazione preliminare dettagliata e l'impiego di personale specializzato qualificato sono la chiave del successo. Prestiamo sempre attenzione ad un modo di lavorare rispettoso dell'ambiente e alla tutela dei vostri beni immobili e mobili. Ti garantiamo assoluta trasparenza e un'esecuzione regolare su cui puoi contare al 100%."
         },
         {
-          "heading": "Perché la pulizia professionale protegge il tuo deposito (guida)",
+          "heading": "Perché una pulizia professionale di fine locazione facilita la consegna dell'appartamento (Guida)",
           "body": "Molti inquilini di Brügg sottovalutano le esigenze della gestione immobiliare svizzera al momento della consegna del loro appartamento. Spesso una giornata dedicata alla pulizia non è sufficiente per rimuovere completamente il grasso bruciato nel forno o il calcare ostinato nel bagno. In questi casi, l'amministrazione chiama un'impresa di pulizie professionale, che viene successivamente detratta dal deposito (di solito a prezzi molto alti). Con SwissCleanMove eviterete completamente questo rischio finanziario. Grazie alla nostra garanzia contrattuale di accettazione al 100%, sai che i costi forfettari di pulizia sono l'unico investimento che devi fare. Raccomandiamo ai nostri clienti di svuotare completamente l'appartamento prima del nostro arrivo e di occuparsi anticipatamente di eventuali piccole riparazioni da parte dell'inquilino (come la sostituzione di lampadine rotte). Per noi è molto importante garantire che questo lavoro venga svolto secondo i più elevati standard industriali svizzeri. La nostra pluriennale esperienza in questa regione dimostra che una pianificazione preliminare dettagliata e l'impiego di personale specializzato qualificato sono la chiave del successo. Prestiamo sempre attenzione ad un modo di lavorare rispettoso dell'ambiente e alla tutela dei vostri beni immobili e mobili. Ti garantiamo assoluta trasparenza e un'esecuzione regolare su cui puoi contare al 100%."
         },
         {
@@ -8287,7 +8287,7 @@
       "serviceBullets": [
         "Accettazione dell'appartamento garantita per iscritto",
         "Pulizia successiva gratuita in caso di difetti",
-        "Prezzi forfettari trasparenti e fissi a partire da CHF 350",
+        "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale",
         "Tutti i prodotti e le attrezzature per la pulizia inclusi",
         "Ancorato localmente e disponibile a Brügg in breve tempo",
         "Se lo si desidera, essere presenti alla consegna"
@@ -8332,7 +8332,7 @@
         },
         {
           "question": "Quanto costa la pulizia finale a Brügg?",
-          "answer": "Lavoriamo con prezzi forfettari fissi in modo da non avere spiacevoli sorprese. Puliamo un piccolo appartamento a partire da CHF 350. Un appartamento medio di 3,5 locali costa a prezzi equi, un appartamento di 4,5 locali da CHF 690. Dopo una visita gratuita a Brügg vi garantiamo un prezzo fisso esatto. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. Per gli appartamenti più grandi, il prezzo dipende dalle dimensioni, dalle condizioni e dall'entità della pulizia. Saremo lieti di fornirvi un preventivo gratuito e non vincolante."
         },
         {
           "question": "Devo fornire i miei prodotti per la pulizia?",
@@ -8426,7 +8426,7 @@
       "h1": "Impresa di pulizie finali Ipsach – pulizia finale, pulizia appartamenti e pulizia a Ipsach",
       "heroSubtitle": "Il vostro appartamento a Ipsach sul Lago di Bienne – perfettamente pulito e pronto per la consegna.",
       "ctaSoft": "Richiedi subito un preventivo gratuito",
-      "intro": "Benvenuti in SwissCleanMove. Le scatole sono piene, la nuova casa aspetta, ma il vecchio appartamento a Ipsach deve ancora essere pronto per l'uso. Lascia questo compito impegnativo e dispendioso in termini di tempo ai professionisti di SwissCleanMove. Siamo la vostra impresa di pulizie regionale per pulizie finali professionali con una garanzia di accettazione nel Seeland. Le società svizzere di gestione immobiliare controllano ogni minimo dettaglio al momento della consegna dell'appartamento, dalle rientranze delle finestre ai residui di calcare nella doccia. Con la nostra garanzia di accettazione vi garantiamo una consegna senza intoppi: se, contrariamente alle aspettative, l'amministrazione scopre un difetto, lo puliremo immediatamente sul posto e in modo completamente gratuito fino alla firma del protocollo. In questo modo puoi garantire l'intero deposito cauzionale senza alcuna discussione. Vi offriamo prezzi fissi trasparenti a partire da CHF 350, senza supplementi nascosti o elevate spese di viaggio. I nostri team esperti in genere puliscono a fondo il tuo appartamento a Ipsach entro 4-8 ore e sono disponibili per te anche entro 24 ore in caso di emergenza. Saluti da SwissCleanMove! Come tuo esperto locale, sappiamo esattamente cosa è importante. Evitiamo deliberatamente di avvalerci di subappaltatori e ci affidiamo invece al nostro personale specializzato ottimamente formato. Godetevi l'assoluta trasparenza dei costi e la qualità premium svizzera. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
+      "intro": "Benvenuti in SwissCleanMove. Le scatole sono piene, la nuova casa aspetta, ma il vecchio appartamento a Ipsach deve ancora essere pronto per l'uso. Lascia questo compito impegnativo e dispendioso in termini di tempo ai professionisti di SwissCleanMove. Siamo la vostra impresa di pulizie regionale per pulizie finali professionali con una garanzia di accettazione nel Seeland. Le società svizzere di gestione immobiliare controllano ogni minimo dettaglio al momento della consegna dell'appartamento, dalle rientranze delle finestre ai residui di calcare nella doccia. Con la nostra garanzia di accettazione vi garantiamo una consegna senza intoppi: se, contrariamente alle aspettative, l'amministrazione scopre un difetto, lo puliremo immediatamente sul posto e in modo completamente gratuito fino alla firma del protocollo. La nostra pulizia di fine locazione con garanzia di consegna vi supporta per una consegna dell'appartamento pulita e corretta. Vi offriamo prezzi fissi trasparenti – pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. I nostri team esperti in genere puliscono a fondo il tuo appartamento a Ipsach entro 4-8 ore e sono disponibili per te anche entro 24 ore in caso di emergenza. Saluti da SwissCleanMove! Come tuo esperto locale, sappiamo esattamente cosa è importante. Evitiamo deliberatamente di avvalerci di subappaltatori e ci affidiamo invece al nostro personale specializzato ottimamente formato. Godetevi l'assoluta trasparenza dei costi e la qualità premium svizzera. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
       "sections": [
         {
           "heading": "La consegna del vostro appartamento a Ipsach senza preoccupazioni",
@@ -8477,7 +8477,7 @@
       "serviceBullets": [
         "garanzia di accettazione garantita per iscritto",
         "Riparazione gratuita dei difetti al momento della consegna",
-        "Prezzi forfettari vincolanti a partire da CHF 350",
+        "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale",
         "Prodotti per la pulizia ecologici ed efficaci",
         "Tutta l'attrezzatura (aspirapolvere, ecc.) inclusa",
         "Viaggi brevi e molto flessibili"
@@ -8522,7 +8522,7 @@
         },
         {
           "question": "Quanto costa la pulizia finale a Ipsach?",
-          "answer": "Lavoriamo solo con prezzi forfettari trasparenti. Per un piccolo appartamento partiamo da CHF 350. Un normale appartamento di 3,5 locali costa a prezzi equi, un appartamento di 4,5 locali da CHF 690. Dopo una visita gratuita riceverete un prezzo fisso vincolante. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. Per gli appartamenti più grandi, il prezzo dipende dalle dimensioni, dalle condizioni e dall'entità della pulizia. Saremo lieti di fornirvi un preventivo gratuito e non vincolante."
         },
         {
           "question": "L'appartamento deve essere completamente vuoto per la pulizia finale?",
@@ -8616,7 +8616,7 @@
       "h1": "Impresa di pulizie finali Aarberg – pulizia finale, pulizia appartamenti e pulizia ad Aarberg",
       "heroSubtitle": "Pulizia finale professionale ad Aarberg: noi puliamo, tu consegni in tutta tranquillità.",
       "ctaSoft": "Assicurati la tua offerta in 2 minuti",
-      "intro": "Benvenuti in SwissCleanMove. Il trasloco è solitamente associato alla gioia di vivere la nuova casa, ma anche allo stress legato alla consegna dell'appartamento. La pulizia finale del vecchio appartamento ad Aarberg è spesso l'ultimo e più noioso passo. SwissCleanMove vi solleva completamente da questo onere. Come vostra impresa di pulizie regionale nel Seeland, siamo specializzati nella pulizia professionale dei traslochi con una garanzia di accettazione. Sappiamo esattamente con quanta severità controllano le società di gestione immobiliare di Aarberg e dintorni. Una piccola macchia di calcare sulla parete della doccia o polvere sui battiscopa possono creare problemi al momento della restituzione della cauzione. Con la nostra garanzia di accettazione andate sul sicuro: puliamo il vostro appartamento così a fondo che viene accettato al primo appuntamento. Se il responsabile scopre un difetto, il nostro team lo pulirà immediatamente e gratuitamente sul posto. Vi offriamo la massima trasparenza attraverso prezzi forfettari fissi a partire da CHF 350 – senza costi nascosti o spiacevoli sorprese. Per noi una pulizia standard richiede dalle 4 alle 8 ore. Affidati alla nostra qualità e puntualità svizzera. Il vostro partner affidabile nella regione – SwissCleanMove. Sia per uso privato che commerciale, stabiliamo nuovi standard di settore in termini di pulizia e trasporto. Con la nostra esperienza pluriennale vi garantiamo un'esperienza assolutamente senza stress dalla prima offerta fino all'accettazione finale. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
+      "intro": "Benvenuti in SwissCleanMove. Il trasloco è solitamente associato alla gioia di vivere la nuova casa, ma anche allo stress legato alla consegna dell'appartamento. La pulizia finale del vecchio appartamento ad Aarberg è spesso l'ultimo e più noioso passo. SwissCleanMove vi solleva completamente da questo onere. Come vostra impresa di pulizie regionale nel Seeland, siamo specializzati nella pulizia professionale dei traslochi con una garanzia di accettazione. Sappiamo esattamente con quanta severità controllano le società di gestione immobiliare di Aarberg e dintorni. Una piccola macchia di calcare sulla parete della doccia o polvere sui battiscopa possono creare problemi al momento della restituzione della cauzione. Con la nostra garanzia di accettazione andate sul sicuro: il nostro team pulisce a fondo il vostro appartamento ed è pronto sul posto per eventuali ritocchi gratuiti durante la consegna. Vi offriamo la massima trasparenza: pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. Per noi una pulizia standard richiede dalle 4 alle 8 ore. Affidati alla nostra qualità e puntualità svizzera. Il vostro partner affidabile nella regione – SwissCleanMove. Sia per uso privato che commerciale, stabiliamo nuovi standard di settore in termini di pulizia e trasporto. Con la nostra esperienza pluriennale vi garantiamo un'esperienza assolutamente senza stress dalla prima offerta fino all'accettazione finale. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
       "sections": [
         {
           "heading": "Perché SwissCleanMove è la scelta migliore per Aarberg",
@@ -8652,7 +8652,7 @@
         },
         {
           "heading": "Consigli per la consegna di un appartamento ad Aarberg (guida)",
-          "body": "Per poter garantire la nostra garanzia di accettazione, l'appartamento deve essere completamente svuotato il giorno della pulizia. Tutti i beni domestici e i rifiuti devono essere smaltiti. Chiarire tempestivamente se è necessario effettuare piccole riparazioni secondo il contratto di noleggio (ad esempio riempire i fori dei tasselli, sostituire i filtri nello sfiato del vapore). Il giorno dell'accettazione, ti consigliamo di fare il tour con l'amministrazione in tempo. Se ci incaricate, su richiesta saremo presenti personalmente alla consegna ad Aarberg. Questo ha il grande vantaggio che possiamo correggere eventuali piccoli reclami del gestore direttamente sul posto, senza che voi dobbiate fissare un secondo appuntamento. In questo modo puoi garantire completamente il tuo deposito. Per noi è molto importante garantire che questo lavoro venga svolto secondo i più elevati standard industriali svizzeri. La nostra pluriennale esperienza in questa regione dimostra che una pianificazione preliminare dettagliata e l'impiego di personale specializzato qualificato sono la chiave del successo. Prestiamo sempre attenzione ad un modo di lavorare rispettoso dell'ambiente e alla tutela dei vostri beni immobili e mobili. Ti garantiamo assoluta trasparenza e un'esecuzione regolare su cui puoi contare al 100%."
+          "body": "Per poter garantire la nostra garanzia di accettazione, l'appartamento deve essere completamente svuotato il giorno della pulizia. Tutti i beni domestici e i rifiuti devono essere smaltiti. Chiarire tempestivamente se è necessario effettuare piccole riparazioni secondo il contratto di noleggio (ad esempio riempire i fori dei tasselli, sostituire i filtri nello sfiato del vapore). Il giorno dell'accettazione, ti consigliamo di fare il tour con l'amministrazione in tempo. Se ci incaricate, su richiesta saremo presenti personalmente alla consegna ad Aarberg. Questo ha il grande vantaggio che possiamo correggere eventuali piccoli reclami del gestore direttamente sul posto, senza che voi dobbiate fissare un secondo appuntamento. Questo protegge efficacemente da trattenute sulla cauzione dovute a difetti di pulizia. Per noi è molto importante garantire che questo lavoro venga svolto secondo i più elevati standard industriali svizzeri. La nostra pluriennale esperienza in questa regione dimostra che una pianificazione preliminare dettagliata e l'impiego di personale specializzato qualificato sono la chiave del successo. Prestiamo sempre attenzione ad un modo di lavorare rispettoso dell'ambiente e alla tutela dei vostri beni immobili e mobili. Ti garantiamo assoluta trasparenza e un'esecuzione regolare su cui puoi contare al 100%."
         },
         {
           "heading": "Consapevolezza ambientale e sostenibilità in ogni utilizzo",
@@ -8671,7 +8671,7 @@
       "serviceBullets": [
         "Garanzia scritta di accettazione al 100%.",
         "Pulizia successiva gratuita alla consegna",
-        "Prezzi forfettari fissi a partire da CHF 350 (senza costi nascosti)",
+        "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale",
         "Tutti i materiali e le attrezzature per la pulizia inclusi",
         "Prodotti chimici detergenti delicati e rispettosi dell'ambiente",
         "Vicinanza regionale ed elevata puntualità ad Aarberg"
@@ -8712,7 +8712,7 @@
       "faqs": [
         {
           "question": "Come funziona esattamente la garanzia di accettazione ad Aarberg?",
-          "answer": "Garantiamo contrattualmente che la direzione accetterà la pulizia del vostro appartamento ad Aarberg. Se al momento della consegna si riscontra un problema (ad esempio una macchia di calcare sul rubinetto), i nostri collaboratori lo puliranno immediatamente, per voi in modo assolutamente gratuito. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "La nostra garanzia di consegna vi supporta per una consegna accurata ad Aarberg. Se durante la verifica viene rilevato un problema di pulizia, il nostro personale presente sul posto lo corregge tempestivamente e senza costi aggiuntivi."
         },
         {
           "question": "I mobili devono già essere fuori dall'appartamento?",
@@ -8724,7 +8724,7 @@
         },
         {
           "question": "Quali costi dovrò pagare per la pulizia finale ad Aarberg?",
-          "answer": "Offriamo prezzi forfettari fissi a partire da CHF 350 per piccoli appartamenti. Un tipico appartamento di 3,5 locali costa a prezzi equi, un appartamento di 4,5 locali da CHF 690. Dopo una visita gratuita ad Aarberg riceverete un prezzo fisso garantito - senza costi nascosti. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. Per gli appartamenti più grandi, il prezzo dipende dalle dimensioni, dalle condizioni e dall'entità della pulizia. Saremo lieti di fornirvi un preventivo gratuito e non vincolante."
         },
         {
           "question": "Con quanto anticipo devo prenotare la pulizia finale?",
@@ -8803,14 +8803,14 @@
     "endreinigungPieterlen": {
       "meta": {
         "title": "Pulizia finale a Pieterlen | Con garanzia | SwissCleanMove",
-        "description": "SwissCleanMove offre una pulizia finale professionale a Pieterlen. Rimborso del deposito garantito. Richiedi ora senza impegno.",
+        "description": "SwissCleanMove offre una pulizia finale professionale a Pieterlen con garanzia di consegna. Richiedi ora senza impegno.",
         "titleVariant": "Cerchi la pulizia finale di Pieterlen? Con garanzia"
       },
       "badge": "Pulizia finale Pieterlen",
       "h1": "Impresa di pulizie finali Pieterlen – pulizia finale, pulizia appartamenti e pulizia a Pieterlen",
       "heroSubtitle": "Ci occupiamo della pulizia del trasloco a Pieterlen in modo che tu possa sederti e rilassarti.",
       "ctaSoft": "Risposta rapida entro 24 ore",
-      "intro": "Benvenuti in SwissCleanMove. Il trasloco è terminato, ma il vecchio appartamento a Pieterlen attende ancora la temuta pulizia finale? Risparmia tempo, sporco e nervi: affida questo compito impegnativo ai professionisti di SwissCleanMove. Siamo il tuo esperto locale per la pulizia degli appartamenti con una garanzia di accettazione a Pieterlen e nella Zelanda circostante. Le società svizzere di gestione immobiliare sono estremamente severe in materia di consegna. Una macchia di calcare trascurata nel bagno o i ribassi sporchi dei vetri possono comportare il rifiuto dell’accettazione e il blocco della cauzione. Con noi non corri alcun rischio: puliamo a fondo il tuo appartamento e ti garantiamo che verrà ispezionato al primo appuntamento. In caso di reclamo, il nostro team di pulizia apporterà miglioramenti sul posto immediatamente e gratuitamente. Vi offriamo prezzi forfettari trasparenti e fissi a partire da CHF 350 senza costi nascosti. La pulizia richiede solitamente dalle 4 alle 8 ore. Affidati a un team regionale affermato della Zelanda, disponibile anche per incarichi a breve termine a Pieterlen. Benvenuti agli esperti di SwissCleanMove. Siamo orgogliosi di offrire ai nostri clienti in questa regione servizi al più alto livello svizzero. La nostra filosofia aziendale si basa sulla reale vicinanza al cliente, prezzi chiari senza costi nascosti e affidabilità al 100% ad ogni utilizzo. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
+      "intro": "Benvenuti in SwissCleanMove. Il trasloco è terminato, ma il vecchio appartamento a Pieterlen attende ancora la temuta pulizia finale? Risparmia tempo, sporco e nervi: affida questo compito impegnativo ai professionisti di SwissCleanMove. Siamo il tuo esperto locale per la pulizia degli appartamenti con una garanzia di accettazione a Pieterlen e nella Zelanda circostante. Le società svizzere di gestione immobiliare sono estremamente severe in materia di consegna. Una macchia di calcare trascurata nel bagno o i ribassi sporchi dei vetri possono comportare il rifiuto dell’accettazione e il blocco della cauzione. Con noi non corri alcun rischio: puliamo a fondo il tuo appartamento e ti siamo pronti sul posto per eventuali ritocchi gratuiti durante l'ispezione. In caso di reclamo, il nostro team di pulizia apporterà miglioramenti sul posto immediatamente e gratuitamente. Vi offriamo prezzi forfettari trasparenti: pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. La pulizia richiede solitamente dalle 4 alle 8 ore. Affidati a un team regionale affermato della Zelanda, disponibile anche per incarichi a breve termine a Pieterlen. Benvenuti agli esperti di SwissCleanMove. Siamo orgogliosi di offrire ai nostri clienti in questa regione servizi al più alto livello svizzero. La nostra filosofia aziendale si basa sulla reale vicinanza al cliente, prezzi chiari senza costi nascosti e affidabilità al 100% ad ogni utilizzo. Che si tratti di privati ​​o aziende, offriamo soluzioni su misura. Contattaci per un preventivo gratuito.",
       "sections": [
         {
           "heading": "Il vostro partner per le pulizie per una consegna senza preoccupazioni a Pieterlen",
@@ -8902,11 +8902,11 @@
       "faqs": [
         {
           "question": "Cosa comprende esattamente la garanzia di accettazione a Pieterlen?",
-          "answer": "La nostra garanzia di accettazione è il vostro scudo protettivo. Garantiamo che la direzione della proprietà a Pieterlen ispezionerà l'appartamento in termini di pulizia. Se una macchia viene rilevata durante l'ispezione, il nostro personale la pulirà immediatamente, senza costi aggiuntivi per te. In questo modo il tuo deposito è al sicuro. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "La nostra garanzia di consegna vi supporta per una consegna accurata a Pieterlen. Se durante l'ispezione vengono riscontrati difetti di pulizia, il nostro personale presente sul posto effettua immediatamente un ritocco gratuito."
         },
         {
           "question": "Quanto costa la pulizia finale a Pieterlen?",
-          "answer": "Calcoliamo i nostri prezzi in modo trasparente come forfettario. Un piccolo appartamento di 2,5 locali costa da CHF 350. Un appartamento standard di 3,5 locali costa a prezzi equi, un appartamento di 4,5 locali da CHF 690. Per garantirvi un prezzo fisso esatto, controlliamo in anticipo il vostro immobile a Pieterlen, in modo completamente gratuito. Vi assicuriamo inoltre che i nostri servizi in questa regione soddisfano sempre i più alti pulizia professionale. Il nostro servizio clienti sarà felice di assisterti in qualsiasi momento se hai ulteriori domande."
+          "answer": "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale. Per gli appartamenti più grandi, il prezzo dipende dalle dimensioni, dalle condizioni e dall'entità della pulizia. Saremo lieti di fornirvi un preventivo gratuito e non vincolante."
         },
         {
           "question": "Finestre e balconi sono compresi nel prezzo della pulizia finale?",
@@ -11655,7 +11655,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per l'aiuto domestico privato?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Lavori con un domestico privato con la tua attrezzatura?",
@@ -11869,7 +11869,7 @@
         "Nessun costo nascosto, nessun sovrapprezzo poco chiaro, nessuno sforzo amministrativo"
       ],
       "trustPoints": [
-        "Oltre 50 traslochi a Bienne",
+        "Numerosi traslochi a Bienne",
         "Prezzi tutto compreso giusti a prezzi equi",
         "Assicurato e affidabile"
       ],
@@ -11906,7 +11906,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per i movimenti senza stress?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Lavori con la tua attrezzatura per spostamenti senza stress?",
@@ -12045,7 +12045,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per la pulizia di manutenzione commerciale?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Lavori con la tua attrezzatura per la pulizia di manutenzione commerciale?",
@@ -12102,7 +12102,7 @@
       "h1": "Pulizia delle finestre Bienne - finestre senza striature per appartamenti e uffici",
       "heroSubtitle": "Pulizia professionale delle finestre a Biel/Bienne e Seeland. Finestre cristalline per case private, uffici e proprietà commerciali: affidabili e senza aloni.",
       "ctaSoft": "Richiedi un preventivo gratuito",
-      "intro": "Benvenuti da SwissCleanMove, il vostro esperto leader per la pulizia delle finestre senza aloni a Biel/Bienne e in tutta la Zelanda. Se cerchi la massima qualità, affidabilità svizzera e prezzi assolutamente trasparenti, allora hai trovato il partner giusto. Lucentezza radiosa per la tua casa o le vetrine dei tuoi negozi. Facciamo ritornare la luce nelle vostre stanze. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione assoluta di fiducia. Ecco perché noi di SwissCleanMove non ci affidiamo a subappaltatori anonimi, ma piuttosto al nostro personale, impiegato a tempo indeterminato e altamente qualificato. Ciò garantisce non solo condizioni di lavoro eque, ma anche una qualità costantemente elevata per voi come clienti a Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg e Pieterlen. Che tu sia un privato alla ricerca di un aiuto domestico discreto, un'azienda che necessita di una pulizia regolare degli uffici o una società di gestione immobiliare che necessita di un servizio di custodia competente, copriamo l'intero spettro. La nostra filosofia si basa sulla vicinanza al cliente, sulla comunicazione proattiva e sull'utilizzo degli strumenti più moderni. Con la nostra vasta esperienza e gli innumerevoli ordini completati con successo a Biel/Bienne e in tutta la Zelanda, sappiamo esattamente cosa è importante. Ogni anno i nostri addetti alla pulizia di vetri ed edifici puliscono migliaia di finestre, giardini d'inverno e facciate di vetro nella regione. Attribuiamo grande importanza alla sostenibilità e utilizziamo, ove possibile, prodotti per la pulizia ecologici e biodegradabili. In questa pagina scopri tutto ciò che devi sapere sui nostri servizi, su come funziona il nostro processo e perché così tanti clienti soddisfatti nella regione ci scelgono. Non esitate a contattarci per una visita o un preventivo gratuito e senza impegno.",
+      "intro": "Benvenuti da SwissCleanMove, il vostro esperto leader per la pulizia delle finestre senza aloni a Biel/Bienne e in tutta la Zelanda. Se cerchi la massima qualità, affidabilità svizzera e prezzi assolutamente trasparenti, allora hai trovato il partner giusto. Lucentezza radiosa per la tua casa o le vetrine dei tuoi negozi. Facciamo ritornare la luce nelle vostre stanze. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione assoluta di fiducia. Ecco perché noi di SwissCleanMove non ci affidiamo a subappaltatori anonimi, ma piuttosto al nostro personale, impiegato a tempo indeterminato e altamente qualificato. Ciò garantisce non solo condizioni di lavoro eque, ma anche una qualità costantemente elevata per voi come clienti a Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg e Pieterlen. Che tu sia un privato alla ricerca di un aiuto domestico discreto, un'azienda che necessita di una pulizia regolare degli uffici o una società di gestione immobiliare che necessita di un servizio di custodia competente, copriamo l'intero spettro. La nostra filosofia si basa sulla vicinanza al cliente, sulla comunicazione proattiva e sull'utilizzo degli strumenti più moderni. Con la nostra vasta esperienza e gli innumerevoli ordini completati con successo a Biel/Bienne e in tutta la Zelanda, sappiamo esattamente cosa è importante. I nostri addetti alla pulizia di vetri ed edifici puliscono regolarmente finestre, giardini d'inverno e facciate di vetro nella regione. Attribuiamo grande importanza alla sostenibilità e utilizziamo, ove possibile, prodotti per la pulizia ecologici e biodegradabili. In questa pagina scopri tutto ciò che devi sapere sui nostri servizi, su come funziona il nostro processo e perché così tanti clienti soddisfatti nella regione ci scelgono. Non esitate a contattarci per una visita o un preventivo gratuito e senza impegno.",
       "sections": [
         {
           "heading": "Perché pulire le finestre senza lasciare aloni a Biel/Bienne e in tutta la Zelanda?",
@@ -12184,7 +12184,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per la pulizia delle finestre senza aloni?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Utilizzi la tua attrezzatura per la pulizia delle finestre senza aloni?",
@@ -12323,7 +12323,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per il trasporto sicuro e i servizi di corriere?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Lavori con le tue attrezzature presso i servizi di trasporto sicuro e corriere?",
@@ -12380,7 +12380,7 @@
       "h1": "Smaltimento Bienne: smaltimento e sgombero professionale di mobili nel Seeland",
       "heroSubtitle": "SwissCleanMove offre uno smaltimento professionale a Biel/Bienne. Smaltimento mobili, sgombero appartamenti e sgombero: in modo professionale, rapido e rispettoso dell'ambiente.",
       "ctaSoft": "Richiedi un preventivo gratuito",
-      "intro": "Benvenuti in SwissCleanMove, il vostro esperto leader in materia di sgombero e smaltimento professionale a Biel/Bienne e in tutta la Zelanda. Se cerchi la massima qualità, affidabilità svizzera e prezzi assolutamente trasparenti, allora hai trovato il partner giusto. Separare i vecchi fardelli può essere liberatorio. Ci occupiamo per voi del sollevamento pesante e dello smaltimento professionale. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione assoluta di fiducia. Ecco perché noi di SwissCleanMove non ci affidiamo a subappaltatori anonimi, ma piuttosto al nostro personale, impiegato a tempo indeterminato e altamente qualificato. Ciò garantisce non solo condizioni di lavoro eque, ma anche una qualità costantemente elevata per voi come clienti a Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg e Pieterlen. Che tu sia un privato alla ricerca di un aiuto domestico discreto, un'azienda che necessita di una pulizia regolare degli uffici o una società di gestione immobiliare che necessita di un servizio di custodia competente, copriamo l'intero spettro. La nostra filosofia si basa sulla vicinanza al cliente, sulla comunicazione proattiva e sull'utilizzo degli strumenti più moderni. Con la nostra vasta esperienza e gli innumerevoli ordini completati con successo a Biel/Bienne e in tutta la Zelanda, sappiamo esattamente cosa è importante. Ogni anno ricicliamo professionalmente oltre 500 tonnellate di vecchi materiali, mobili e rottami elettronici. Attribuiamo grande importanza alla sostenibilità e utilizziamo, ove possibile, prodotti per la pulizia ecologici e biodegradabili. In questa pagina scopri tutto ciò che devi sapere sui nostri servizi, su come funziona il nostro processo e perché così tanti clienti soddisfatti nella regione ci scelgono. Non esitate a contattarci per una visita o un preventivo gratuito e senza impegno.",
+      "intro": "Benvenuti in SwissCleanMove, il vostro esperto leader in materia di sgombero e smaltimento professionale a Biel/Bienne e in tutta la Zelanda. Se cerchi la massima qualità, affidabilità svizzera e prezzi assolutamente trasparenti, allora hai trovato il partner giusto. Separare i vecchi fardelli può essere liberatorio. Ci occupiamo per voi del sollevamento pesante e dello smaltimento professionale. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione assoluta di fiducia. Ecco perché noi di SwissCleanMove non ci affidiamo a subappaltatori anonimi, ma piuttosto al nostro personale, impiegato a tempo indeterminato e altamente qualificato. Ciò garantisce non solo condizioni di lavoro eque, ma anche una qualità costantemente elevata per voi come clienti a Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg e Pieterlen. Che tu sia un privato alla ricerca di un aiuto domestico discreto, un'azienda che necessita di una pulizia regolare degli uffici o una società di gestione immobiliare che necessita di un servizio di custodia competente, copriamo l'intero spettro. La nostra filosofia si basa sulla vicinanza al cliente, sulla comunicazione proattiva e sull'utilizzo degli strumenti più moderni. Con la nostra vasta esperienza e gli innumerevoli ordini completati con successo a Biel/Bienne e in tutta la Zelanda, sappiamo esattamente cosa è importante. Ogni anno ricicliamo in modo professionale ed ecologico grandi volumi di vecchi materiali, mobili e rottami elettronici. Attribuiamo grande importanza alla sostenibilità e utilizziamo, ove possibile, prodotti per la pulizia ecologici e biodegradabili. In questa pagina scopri tutto ciò che devi sapere sui nostri servizi, su come funziona il nostro processo e perché così tanti clienti soddisfatti nella regione ci scelgono. Non esitate a contattarci per una visita o un preventivo gratuito e senza impegno.",
       "sections": [
         {
           "heading": "Perché lo sgombero e lo smaltimento professionale a Biel/Bienne e nell'intero Seeland?",
@@ -12462,7 +12462,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per lo sgombero e lo smaltimento professionale?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Lavori con le tue attrezzature per lo sgombero e lo smaltimento professionale?",
@@ -12601,7 +12601,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo del Comprehensive Facility Service?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Lavori con le tue attrezzature nel Comprehensive Facility Service?",
@@ -12658,7 +12658,7 @@
       "h1": "Pulizie Biel/Bienne",
       "heroSubtitle": "In qualità di fornitore svizzero di qualità di servizi di manutenzione e strutture domestiche, ci occupiamo della gestione immobiliare, degli sviluppi residenziali e delle proprietà commerciali in tutto il Seeland.",
       "ctaSoft": "Richiedi consulenza B2B",
-      "intro": "Benvenuti in SwissCleanMove, il vostro esperto leader per la manutenzione affidabile della casa a Biel/Bienne e in tutta la Zelanda. Se cerchi la massima qualità, affidabilità svizzera e prezzi assolutamente trasparenti, allora hai trovato il partner giusto. Un buon custode è l'anima di una proprietà. Non solo garantisce la pulizia, ma anche la sicurezza. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione assoluta di fiducia. Ecco perché noi di SwissCleanMove non ci affidiamo a subappaltatori anonimi, ma piuttosto al nostro personale, impiegato a tempo indeterminato e altamente qualificato. Ciò garantisce non solo condizioni di lavoro eque, ma anche una qualità costantemente elevata per voi come clienti a Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg e Pieterlen. Che tu sia un privato alla ricerca di un aiuto domestico discreto, un'azienda che necessita di una pulizia regolare degli uffici o una società di gestione immobiliare che necessita di un servizio di custodia competente, copriamo l'intero spettro. La nostra filosofia si basa sulla vicinanza al cliente, sulla comunicazione proattiva e sull'utilizzo degli strumenti più moderni. Con la nostra vasta esperienza e gli innumerevoli ordini completati con successo a Biel/Bienne e in tutta la Zelanda, sappiamo esattamente cosa è importante. Attualmente forniamo servizi di custodia per oltre 120 immobili nel Seeland. Attribuiamo grande importanza alla sostenibilità e utilizziamo, ove possibile, prodotti per la pulizia ecologici e biodegradabili. In questa pagina scopri tutto ciò che devi sapere sui nostri servizi, su come funziona il nostro processo e perché così tanti clienti soddisfatti nella regione ci scelgono. Non esitate a contattarci per una visita o un preventivo gratuito e senza impegno.",
+      "intro": "Benvenuti in SwissCleanMove, il vostro esperto leader per la manutenzione affidabile della casa a Biel/Bienne e in tutta la Zelanda. Se cerchi la massima qualità, affidabilità svizzera e prezzi assolutamente trasparenti, allora hai trovato il partner giusto. Un buon custode è l'anima di una proprietà. Non solo garantisce la pulizia, ma anche la sicurezza. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione assoluta di fiducia. Ecco perché noi di SwissCleanMove non ci affidiamo a subappaltatori anonimi, ma piuttosto al nostro personale, impiegato a tempo indeterminato e altamente qualificato. Ciò garantisce non solo condizioni di lavoro eque, ma anche una qualità costantemente elevata per voi come clienti a Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg e Pieterlen. Che tu sia un privato alla ricerca di un aiuto domestico discreto, un'azienda che necessita di una pulizia regolare degli uffici o una società di gestione immobiliare che necessita di un servizio di custodia competente, copriamo l'intero spettro. La nostra filosofia si basa sulla vicinanza al cliente, sulla comunicazione proattiva e sull'utilizzo degli strumenti più moderni. Con la nostra vasta esperienza e gli innumerevoli ordini completati con successo a Biel/Bienne e in tutta la Zelanda, sappiamo esattamente cosa è importante. Attualmente offriamo servizi di custodia per numerosi immobili nel Seeland. Attribuiamo grande importanza alla sostenibilità e utilizziamo, ove possibile, prodotti per la pulizia ecologici e biodegradabili. In questa pagina scopri tutto ciò che devi sapere sui nostri servizi, su come funziona il nostro processo e perché così tanti clienti soddisfatti nella regione ci scelgono. Non esitate a contattarci per una visita o un preventivo gratuito e senza impegno.",
       "sections": [
         {
           "heading": "Perché una manutenzione domestica affidabile a Biel/Bienne e nell'intero Seeland?",
@@ -12740,7 +12740,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per una manutenzione domestica affidabile?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Lavori con la tua attrezzatura presso Reliable Home Maintenance?",
@@ -12918,7 +12918,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per la pulizia edile di massima e la pulizia di precisione?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Utilizzi la tua attrezzatura per la pulizia grossolana dell'edilizia e per la pulizia di precisione?",
@@ -13057,7 +13057,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo della pulizia professionale della ristorazione?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito a Biel/Bienne e in tutto il Seeland per potervi sottoporre un'offerta esatta e vincolante nella quale sono compresi tutti i costi."
         },
         {
           "question": "Lavori con attrezzature proprie per la pulizia professionale della ristorazione?",
@@ -13185,7 +13185,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per la pulizia nazionale?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito in tutta la Svizzera per potervi sottoporre un'offerta precisa e vincolante che comprenda tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito in tutta la Svizzera per potervi sottoporre un'offerta precisa e vincolante che comprenda tutti i costi."
         },
         {
           "question": "Lavori con attrezzature proprie per la pulizia a livello nazionale?",
@@ -13241,7 +13241,7 @@
       "badge": "Trasloco pulizia Svizzera",
       "h1": "Pulizie traslochi in Svizzera – pulizia finale professionale",
       "heroSubtitle": "Il vostro partner affidabile per i traslochi di pulizia in tutta la Svizzera.",
-      "intro": "Benvenuti in SwissCleanMove, il vostro esperto leader nella pulizia dei traslochi con consegna garantita in tutta la Svizzera. Se cerchi la massima qualità, affidabilità svizzera e prezzi assolutamente trasparenti, allora hai trovato il partner giusto. Trasferirsi in Svizzera è già abbastanza stressante. Lascia la faticosa pulizia finale ai professionisti e assicurati il ​​tuo deposito. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione assoluta di fiducia. Ecco perché noi di SwissCleanMove non ci affidiamo a subappaltatori anonimi, ma piuttosto al nostro personale, impiegato a tempo indeterminato e altamente qualificato. Ciò garantisce non solo condizioni di lavoro eque, ma anche una qualità costantemente elevata per voi come clienti a Zurigo, Berna, Basilea, Ginevra, Lucerna, Soletta, Friburgo, Neuchâtel e Giura. Che tu sia un privato alla ricerca di un aiuto domestico discreto, un'azienda che necessita di una pulizia regolare degli uffici o una società di gestione immobiliare che necessita di un servizio di custodia competente, copriamo l'intero spettro. La nostra filosofia si basa sulla vicinanza al cliente, sulla comunicazione proattiva e sull'utilizzo degli strumenti più moderni. Con la nostra vasta esperienza e gli innumerevoli ordini completati con successo in tutta la Svizzera, sappiamo esattamente cosa è importante. Abbiamo effettuato migliaia di pulizie finali in tutta la Svizzera, tutte con successo al 100%. Attribuiamo grande importanza alla sostenibilità e utilizziamo, ove possibile, prodotti per la pulizia ecologici e biodegradabili. In questa pagina scopri tutto ciò che devi sapere sui nostri servizi, su come funziona il nostro processo e perché così tanti clienti soddisfatti nella regione ci scelgono. Non esitate a contattarci per una visita o un preventivo gratuito e senza impegno.",
+      "intro": "Benvenuti in SwissCleanMove, il vostro esperto leader nella pulizia dei traslochi con consegna garantita in tutta la Svizzera. Se cerchi la massima qualità, affidabilità svizzera e prezzi assolutamente trasparenti, allora hai trovato il partner giusto. Trasferirsi in Svizzera è già abbastanza stressante. Lascia la faticosa pulizia finale ai professionisti e proteggiti da detrazioni sulla cauzione dovute a difetti di pulizia. Comprendiamo che i servizi di pulizia, trasloco e gestione delle strutture sono una questione assoluta di fiducia. Ecco perché noi di SwissCleanMove non ci affidiamo a subappaltatori anonimi, ma piuttosto al nostro personale, impiegato a tempo indeterminato e altamente qualificato. Ciò garantisce non solo condizioni di lavoro eque, ma anche una qualità costantemente elevata per voi come clienti a Zurigo, Berna, Basilea, Ginevra, Lucerna, Soletta, Friburgo, Neuchâtel e Giura. Che tu sia un privato alla ricerca di un aiuto domestico discreto, un'azienda che necessita di una pulizia regolare degli uffici o una società di gestione immobiliare che necessita di un servizio di custodia competente, copriamo l'intero spettro. La nostra filosofia si basa sulla vicinanza al cliente, sulla comunicazione proattiva e sull'utilizzo degli strumenti più moderni. Con la nostra vasta esperienza e gli innumerevoli ordini completati con successo in tutta la Svizzera, sappiamo esattamente cosa è importante. Eseguiamo pulizie di fine locazione professionali con garanzia di consegna in tutta la Svizzera. Attribuiamo grande importanza alla sostenibilità e utilizziamo, ove possibile, prodotti per la pulizia ecologici e biodegradabili. In questa pagina scopri tutto ciò che devi sapere sui nostri servizi, su come funziona il nostro processo e perché così tanti clienti soddisfatti nella regione ci scelgono. Non esitate a contattarci per una visita o un preventivo gratuito e senza impegno.",
       "ctaSoft": "Richiedi subito un preventivo gratuito",
       "ctaMidHeading": "Stai pianificando un servizio?",
       "ctaMidBody": "Richiedi adesso la tua offerta gratuita e non vincolante.",
@@ -13308,7 +13308,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per la pulizia del trasloco con garanzia di accettazione?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito in tutta la Svizzera per potervi sottoporre un'offerta precisa e vincolante che comprenda tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito in tutta la Svizzera per potervi sottoporre un'offerta precisa e vincolante che comprenda tutti i costi."
         },
         {
           "question": "Utilizzi attrezzature proprie per traslochi di pulizia con garanzia di accettazione?",
@@ -13431,7 +13431,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per il facility service nazionale?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito in tutta la Svizzera per potervi sottoporre un'offerta precisa e vincolante che comprenda tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito in tutta la Svizzera per potervi sottoporre un'offerta precisa e vincolante che comprenda tutti i costi."
         },
         {
           "question": "Lavori con il facility service nazionale con le tue attrezzature?",
@@ -13554,7 +13554,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per la manutenzione professionale della casa in Svizzera?",
-          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 350 o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito in tutta la Svizzera per potervi sottoporre un'offerta precisa e vincolante che comprenda tutti i costi."
+          "answer": "Il calcolo su SwissCleanMove è sempre trasparente ed equo. A seconda del servizio specifico lavoriamo con prezzi fissi (ad es. pulizia finale da CHF 600 (monolocale / 1 locale con garanzia di consegna) o traslochi a prezzi equi), con tariffe orarie fisse (ad es. aiuto domestico da CHF 35/h) o prezzi al metro quadrato. Consigliamo sempre un sopralluogo gratuito in tutta la Svizzera per potervi sottoporre un'offerta precisa e vincolante che comprenda tutti i costi."
         },
         {
           "question": "Lavori con la tua attrezzatura per la manutenzione professionale della casa in Svizzera?",
@@ -13708,7 +13708,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato il prezzo dei servizi di pulizia professionali a Soletta?",
-          "answer": "I prezzi di SwissCleanMove sono sempre trasparenti e corretti. A seconda del servizio specifico, lavoriamo con prezzi fissi (es. pulizia di fine locazione da CHF 350 o traslochi a prezzi equi), tariffe orarie fisse (es. aiuto domestico da CHF 35/h) o prezzi al metro quadro. Raccomandiamo sempre un sopralluogo gratuito nel Canton Soletta per fornirvi un preventivo esatto e vincolante."
+          "answer": "I prezzi di SwissCleanMove sono sempre trasparenti e corretti. A seconda del servizio specifico, lavoriamo con prezzi fissi (es. pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale o traslochi a prezzi equi), tariffe orarie fisse (es. aiuto domestico da CHF 35/h) o prezzi al metro quadro. Raccomandiamo sempre un sopralluogo gratuito nel Canton Soletta per fornirvi un preventivo esatto e vincolante."
         },
         {
           "question": "Lavorate con la vostra attrezzatura?",

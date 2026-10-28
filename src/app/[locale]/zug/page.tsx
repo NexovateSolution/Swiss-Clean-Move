@@ -6,22 +6,21 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'zug', regionName: 'Zug',
     seoTitle: 'Umzug Zug | Reinigungsfirma Zug | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Reinigung, Facility Services, Hauswartung und Entsorgung in Zug.',
+    metaDescription: 'Professioneller Umzug, Reinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Zug.',
     h1: 'Umzug & Reinigungsfirma in Zug',
-    highSeoKeywords: ['Umzug Zug','Umzugsfirma Zug','Reinigungsfirma Zug','Umzugsreinigung Zug','Endreinigung Zug','Unterhaltsreinigung Zug','Büroreinigung Zug','Facility Services Zug','Hauswartung Zug','Entsorgung Zug'],
+    highSeoKeywords: ['Umzug Zug','Umzugsfirma Zug','Reinigungsfirma Zug','Umzugsreinigung Zug','Endreinigung Zug','Unterhaltsreinigung Zug','Büroreinigung Zug','Hauswartung & Gebäudeunterhalt Zug','Hauswartung Zug','Entsorgung Zug'],
     localKeywords: ['Zug','Baar','Cham','Hünenberg','Steinhausen','Rotkreuz','Risch'],
     introParagraphs: [
-      'SwissCleanMove bietet Umzug, Umzugsreinigung, Endreinigung mit Abnahmegarantie, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung in Zug und Umgebung.',
-      'Wir arbeiten in Zug, Baar, Cham, Hünenberg, Steinhausen, Rotkreuz und Risch. SwissCleanMove steht für professionelle Planung, zuverlässige Ausführung und saubere Resultate bei Umzug, Reinigung und Facility Services.'
+      'SwissCleanMove bietet Umzug, Umzugsreinigung, Endreinigung mit Abnahmegarantie, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Zug und Umgebung.',
+      'Wir arbeiten in Zug, Baar, Cham, Hünenberg, Steinhausen, Rotkreuz und Risch. SwissCleanMove steht für professionelle Planung, zuverlässige Ausführung und saubere Resultate bei Umzug, Reinigung und Hauswartung & Gebäudeunterhalt.'
     ],
     faqs: [
       { question: 'Bietet SwissCleanMove Umzug in Zug an?', answer: 'Ja, wir bieten professionelle Umzüge in Zug und Umgebung.' },
-      { question: 'Gibt es Facility Services in Zug?', answer: 'Ja, wir bieten Facility Services, Hauswartung und Gebäudeunterhalt.' },
+      { question: 'Bieten Sie Hauswartung und Gebäudeunterhalt in Zug?', answer: 'Ja, wir bieten Hauswartung & Gebäudeunterhalt und Gebäudeunterhalt.' },
       { question: 'Kann ich eine kostenlose Offerte erhalten?', answer: 'Ja, Kunden können kostenlos eine Offerte anfordern.' }
     ],
     mapQuery: 'Zug,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'zug', regionName: 'Zug',
     seoTitle: 'Moving Zug | Cleaning Company Zug | SwissCleanMove',
     metaDescription: 'Professional moving, cleaning, facility services, property maintenance and disposal in Zug.',

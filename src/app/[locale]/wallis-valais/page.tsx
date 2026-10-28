@@ -6,12 +6,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'wallis-valais', regionName: 'Wallis / Valais',
     seoTitle: 'Umzug Wallis | Reinigung Wallis | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Reinigung, Facility Services und Entsorgung im Wallis / Valais.',
+    metaDescription: 'Professioneller Umzug, Reinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Wallis / Valais.',
     h1: 'Umzug & Reinigung im Wallis / Valais',
-    highSeoKeywords: ['Umzug Wallis','Reinigungsfirma Wallis','Umzugsreinigung Wallis','Endreinigung Wallis','Unterhaltsreinigung Wallis','Facility Services Wallis','Hauswartung Wallis','Entsorgung Wallis','Déménagement Valais','Nettoyage Valais'],
+    highSeoKeywords: ['Umzug Wallis','Reinigungsfirma Wallis','Umzugsreinigung Wallis','Endreinigung Wallis','Unterhaltsreinigung Wallis','Hauswartung & Gebäudeunterhalt Wallis','Hauswartung Wallis','Entsorgung Wallis','Déménagement Valais','Nettoyage Valais'],
     localKeywords: ['Sion','Sierre','Martigny','Monthey','Brig','Visp','Naters'],
     introParagraphs: [
-      'SwissCleanMove bietet Umzug, Reinigung, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung im Wallis / Valais.',
+      'SwissCleanMove bietet Umzug, Reinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Wallis / Valais.',
       'Wir bedienen Sion, Sierre, Martigny, Monthey, Brig, Visp und Naters. SwissCleanMove unterstützt Privatkunden, Unternehmen und Verwaltungen mit professionellen Dienstleistungen für Umzug, Reinigung, Gebäudeunterhalt und Entsorgung.'
     ],
     faqs: [
@@ -20,8 +20,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove auch in Sion und Martigny?', answer: 'Ja, wir arbeiten in Sion, Martigny, Sierre, Monthey, Brig und Umgebung.' }
     ],
     mapQuery: 'Canton+of+Valais,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'wallis-valais', regionName: 'Valais',
     seoTitle: 'Moving Valais | Cleaning Valais | SwissCleanMove',
     metaDescription: 'Professional moving, cleaning, facility services and disposal in Valais.',

@@ -24,12 +24,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'neuchatel', regionName: 'Neuenburg',
     seoTitle: 'Umzug Neuenburg | Reinigungsfirma Neuenburg | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Endreinigung, Unterhaltsreinigung, Facility Services und Entsorgung im Kanton Neuenburg.',
+    metaDescription: 'Professioneller Umzug, Endreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Neuenburg.',
     h1: 'Umzug & Reinigungsfirma im Kanton Neuenburg',
-    highSeoKeywords: ['Umzug Neuenburg','Umzugsfirma Neuenburg','Reinigungsfirma Neuenburg','Endreinigung Neuenburg','Facility Services Neuenburg'],
+    highSeoKeywords: ['Umzug Neuenburg','Umzugsfirma Neuenburg','Reinigungsfirma Neuenburg','Endreinigung Neuenburg','Hauswartung & Gebäudeunterhalt Neuenburg'],
     localKeywords: ['Neuchâtel','La Chaux-de-Fonds','Le Locle','Boudry','Val-de-Ruz','Cortaillod'],
     introParagraphs: [
-      'SwissCleanMove bietet professionelle Umzüge, Endreinigung, Unterhaltsreinigung, Facility Services und Entsorgung im Kanton Neuenburg.',
+      'SwissCleanMove bietet professionelle Umzüge, Endreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Neuenburg.',
       'Wir arbeiten in Neuenburg, La Chaux-de-Fonds, Le Locle, Boudry, Val-de-Ruz und Cortaillod. Zweisprachiger Service in Französisch und Deutsch.'
     ],
     faqs: [
@@ -38,8 +38,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove in La Chaux-de-Fonds?', answer: 'Ja, wir arbeiten in La Chaux-de-Fonds, Le Locle und im ganzen Kanton.' }
     ],
     mapQuery: 'Neuchatel,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'neuchatel', regionName: 'Neuchâtel',
     seoTitle: 'Moving Neuchâtel | Cleaning Company Neuchâtel | SwissCleanMove',
     metaDescription: 'Professional moving, end-of-lease cleaning, maintenance cleaning, facility services and disposal in Neuchâtel.',

@@ -7,12 +7,12 @@ const DATA: Record<string, RegionPageData> = {
     slug: 'biel-bienne-seeland',
     regionName: 'Biel/Bienne & Seeland',
     seoTitle: 'Umzug Biel/Bienne | Reinigungsfirma Biel/Bienne | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Gastronomie Reinigung, Facility Services, Hauswartung und Entsorgung in Biel/Bienne und Seeland.',
+    metaDescription: 'Professioneller Umzug, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Gastronomie Reinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Biel/Bienne und Seeland.',
     h1: 'Umzug & Reinigungsfirma in Biel/Bienne und Seeland',
-    highSeoKeywords: ['Umzug Biel/Bienne','Umzug Biel/Bienne','Umzugsfirma Biel/Bienne','Reinigungsfirma Biel/Bienne','Umzugsreinigung Biel/Bienne','Endreinigung Biel/Bienne','Unterhaltsreinigung Biel/Bienne','Büroreinigung Biel/Bienne','Gastronomie Reinigung Biel/Bienne','Facility Services Biel/Bienne','Hauswartung Biel/Bienne','Entsorgung Biel/Bienne','Räumung Biel/Bienne'],
+    highSeoKeywords: ['Umzug Biel/Bienne','Umzug Biel/Bienne','Umzugsfirma Biel/Bienne','Reinigungsfirma Biel/Bienne','Umzugsreinigung Biel/Bienne','Endreinigung Biel/Bienne','Unterhaltsreinigung Biel/Bienne','Büroreinigung Biel/Bienne','Gastronomie Reinigung Biel/Bienne','Hauswartung & Gebäudeunterhalt Biel/Bienne','Hauswartung Biel/Bienne','Entsorgung Biel/Bienne','Räumung Biel/Bienne'],
     localKeywords: ['Biel/Bienne','Bienne','Nidau','Brügg','Ipsach','Port','Bellmund','Studen','Lyss','Pieterlen','Aarberg','Orpund','Seeland'],
     introParagraphs: [
-      'SwissCleanMove ist Ihre professionelle Umzugsfirma und Reinigungsfirma in Biel/Bienne und der gesamten Seeland Region. Wir bieten Umzug, Umzugsreinigung mit Abnahmegarantie, Endreinigung, Unterhaltsreinigung, Büroreinigung, Gastronomie Reinigung, Facility Services, Hauswartung, Entsorgung und Räumung aus einer Hand.',
+      'SwissCleanMove ist Ihre professionelle Umzugsfirma und Reinigungsfirma in Biel/Bienne und der gesamten Seeland Region. Wir bieten Umzug, Umzugsreinigung mit Abnahmegarantie, Endreinigung, Unterhaltsreinigung, Büroreinigung, Gastronomie Reinigung, Hauswartung & Gebäudeunterhalt, Entsorgung und Räumung aus einer Hand.',
       'Unser Team arbeitet zuverlässig in Biel/Bienne, Bienne, Nidau, Brügg, Ipsach, Port, Bellmund, Studen, Lyss, Pieterlen, Aarberg, Orpund und der gesamten Region Seeland. Ob Privatumzug, Firmenumzug, Wohnungsreinigung, Hauswartung oder Gebäudeunterhalt — SwissCleanMove steht für professionelle Reinigung, transparente Preise und professionelle Ausführung.'
     ],
     faqs: [
@@ -21,8 +21,7 @@ const DATA: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove auch in Nidau, Brügg und Lyss?', answer: 'Ja, wir arbeiten in Biel/Bienne, Nidau, Brügg, Ipsach, Lyss, Aarberg und Umgebung.' }
     ],
     mapQuery: 'Biel/Bienne,Seeland,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'biel-bienne-seeland',
     regionName: 'Biel/Bienne & Seeland',
     seoTitle: 'Moving Biel/Bienne | Cleaning Company Biel/Bienne | SwissCleanMove',

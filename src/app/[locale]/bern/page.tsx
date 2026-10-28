@@ -6,22 +6,21 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'bern', regionName: 'Kanton Bern',
     seoTitle: 'Umzug Bern | Reinigungsfirma Bern | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Umzugsreinigung, Endreinigung mit Abnahmegarantie, Unterhaltsreinigung, Facility Services und Entsorgung im Kanton Bern.',
+    metaDescription: 'Professioneller Umzug, Umzugsreinigung, Endreinigung mit Abnahmegarantie, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Bern.',
     h1: 'Umzug & Reinigungsfirma im Kanton Bern',
-    highSeoKeywords: ['Umzug Bern','Umzugsfirma Bern','Umzugsunternehmen Bern','Reinigungsfirma Bern','Umzugsreinigung Bern','Endreinigung Bern','Unterhaltsreinigung Bern','Büroreinigung Bern','Gastronomie Reinigung Bern','Facility Services Bern','Hauswartung Bern','Entsorgung Bern','Räumung Bern'],
+    highSeoKeywords: ['Umzug Bern','Umzugsfirma Bern','Umzugsunternehmen Bern','Reinigungsfirma Bern','Umzugsreinigung Bern','Endreinigung Bern','Unterhaltsreinigung Bern','Büroreinigung Bern','Gastronomie Reinigung Bern','Hauswartung Bern','Hauswartung Bern','Entsorgung Bern','Räumung Bern'],
     localKeywords: ['Bern','Biel/Bienne','Thun','Lyss','Burgdorf','Langenthal','Nidau','Brügg','Ipsach','Aarberg','Pieterlen'],
     introParagraphs: [
-      'SwissCleanMove ist Ihr professioneller Partner für Umzug, Reinigung, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Gastronomie Reinigung, Facility Services, Hauswartung und Entsorgung im gesamten Kanton Bern.',
+      'SwissCleanMove ist Ihr professioneller Partner für Umzug, Reinigung, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Gastronomie Reinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im gesamten Kanton Bern.',
       'Wir unterstützen Privatkunden, Unternehmen, Verwaltungen und Gastronomiebetriebe in Bern, Biel/Bienne, Thun, Burgdorf, Langenthal, Lyss, Nidau, Brügg, Ipsach, Aarberg und Pieterlen. Mit zuverlässigem Service, sauberer Planung und professionelle Reinigungsstandard bietet SwissCleanMove professionelle Lösungen für Umzug, Reinigung und Gebäudeunterhalt.'
     ],
     faqs: [
       { question: 'Was kostet ein Umzug im Kanton Bern?', answer: 'Die Kosten hängen von Wohnungsgrösse, Distanz, Stockwerk, Lift und Aufwand ab.' },
       { question: 'Bietet SwissCleanMove Reinigung in Bern an?', answer: 'Ja, wir bieten Umzugsreinigung, Endreinigung, Unterhaltsreinigung, Büroreinigung und Gastronomie Reinigung.' },
-      { question: 'Gibt es Facility Services im Kanton Bern?', answer: 'Ja, SwissCleanMove bietet Hauswartung, Gebäudeunterhalt und Facility Services im Kanton Bern.' }
+      { question: 'Bieten Sie Hauswartung und Gebäudeunterhalt im Kanton Bern?', answer: 'Ja, SwissCleanMove bietet Hauswartung und Gebäudeunterhalt im Kanton Bern.' }
     ],
     mapQuery: 'Canton+of+Bern,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'bern', regionName: 'Canton of Bern',
     seoTitle: 'Moving Bern | Cleaning Company Bern | SwissCleanMove',
     metaDescription: 'Professional moving, move-out cleaning with guarantee, maintenance cleaning, facility services and disposal in the Canton of Bern.',

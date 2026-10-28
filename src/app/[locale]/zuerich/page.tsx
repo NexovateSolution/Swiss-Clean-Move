@@ -6,12 +6,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'zuerich', regionName: 'Zürich',
     seoTitle: 'Umzug Zürich | Reinigungsfirma Zürich | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Facility Services und Entsorgung in Zürich.',
+    metaDescription: 'Professioneller Umzug, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Zürich.',
     h1: 'Umzug & Reinigungsfirma in Zürich',
-    highSeoKeywords: ['Umzug Zürich','Umzugsfirma Zürich','Umzugsunternehmen Zürich','Reinigungsfirma Zürich','Umzugsreinigung Zürich','Endreinigung Zürich','Unterhaltsreinigung Zürich','Büroreinigung Zürich','Gastronomie Reinigung Zürich','Facility Services Zürich','Hauswartung Zürich','Entsorgung Zürich'],
+    highSeoKeywords: ['Umzug Zürich','Umzugsfirma Zürich','Umzugsunternehmen Zürich','Reinigungsfirma Zürich','Umzugsreinigung Zürich','Endreinigung Zürich','Unterhaltsreinigung Zürich','Büroreinigung Zürich','Gastronomie Reinigung Zürich','Hauswartung & Gebäudeunterhalt Zürich','Hauswartung Zürich','Entsorgung Zürich'],
     localKeywords: ['Zürich','Winterthur','Uster','Dübendorf','Dietikon','Kloten','Schlieren','Horgen','Wädenswil'],
     introParagraphs: [
-      'SwissCleanMove bietet professionelle Umzüge, Reinigung, Umzugsreinigung mit Abnahmegarantie, Büroreinigung, Unterhaltsreinigung, Gastronomie Reinigung, Facility Services, Hauswartung und Entsorgung in Zürich und Umgebung.',
+      'SwissCleanMove bietet professionelle Umzüge, Reinigung, Umzugsreinigung mit Abnahmegarantie, Büroreinigung, Unterhaltsreinigung, Gastronomie Reinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Zürich und Umgebung.',
       'Wir arbeiten in Zürich, Winterthur, Uster, Dübendorf, Dietikon, Kloten, Schlieren, Horgen und Wädenswil. Ob Privatumzug, Firmenumzug, Endreinigung, Büroreinigung oder Gebäudeunterhalt — SwissCleanMove sorgt für saubere Abläufe, zuverlässige Termine und professionelle Qualität.'
     ],
     faqs: [
@@ -20,8 +20,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove auch in Winterthur und Uster?', answer: 'Ja, wir arbeiten in Zürich, Winterthur, Uster und Umgebung.' }
     ],
     mapQuery: 'Zurich,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'zuerich', regionName: 'Zurich',
     seoTitle: 'Moving Zurich | Cleaning Company Zurich | SwissCleanMove',
     metaDescription: 'Professional moving, move-out cleaning with guarantee, maintenance cleaning, facility services and disposal in Zurich.',

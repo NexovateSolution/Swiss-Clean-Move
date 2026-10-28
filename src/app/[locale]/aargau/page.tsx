@@ -6,12 +6,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'aargau', regionName: 'Kanton Aargau',
     seoTitle: 'Umzug Aargau | Reinigungsfirma Aargau | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Umzugsreinigung, Unterhaltsreinigung, Facility Services und Entsorgung im Kanton Aargau.',
+    metaDescription: 'Professioneller Umzug, Umzugsreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Aargau.',
     h1: 'Umzug & Reinigungsfirma im Kanton Aargau',
-    highSeoKeywords: ['Umzug Aargau','Umzugsfirma Aargau','Reinigungsfirma Aargau','Umzugsreinigung Aargau','Endreinigung Aargau','Unterhaltsreinigung Aargau','Büroreinigung Aargau','Facility Services Aargau','Hauswartung Aargau','Entsorgung Aargau'],
+    highSeoKeywords: ['Umzug Aargau','Umzugsfirma Aargau','Reinigungsfirma Aargau','Umzugsreinigung Aargau','Endreinigung Aargau','Unterhaltsreinigung Aargau','Büroreinigung Aargau','Hauswartung & Gebäudeunterhalt Aargau','Hauswartung Aargau','Entsorgung Aargau'],
     localKeywords: ['Aarau','Baden','Wettingen','Brugg','Lenzburg','Wohlen','Rheinfelden','Zofingen'],
     introParagraphs: [
-      'SwissCleanMove bietet professionelle Umzüge, Reinigungen, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung im Kanton Aargau.',
+      'SwissCleanMove bietet professionelle Umzüge, Reinigungen, Umzugsreinigung mit Abnahmegarantie, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Aargau.',
       'Wir bedienen Aarau, Baden, Wettingen, Brugg, Lenzburg, Wohlen, Rheinfelden und Zofingen. Für Privatkunden, Firmen und Verwaltungen bietet SwissCleanMove zuverlässige Dienstleistungen rund um Umzug, Reinigung, Gebäudeunterhalt und Entsorgung.'
     ],
     faqs: [
@@ -20,8 +20,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Welche Orte werden bedient?', answer: 'Aarau, Baden, Wettingen, Brugg, Lenzburg, Wohlen, Rheinfelden und Zofingen.' }
     ],
     mapQuery: 'Canton+of+Aargau,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'aargau', regionName: 'Canton of Aargau',
     seoTitle: 'Moving Aargau | Cleaning Company Aargau | SwissCleanMove',
     metaDescription: 'Professional moving, move-out cleaning, maintenance cleaning, facility services and disposal in the Canton of Aargau.',

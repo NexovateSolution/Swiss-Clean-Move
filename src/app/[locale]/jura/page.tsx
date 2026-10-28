@@ -6,12 +6,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'jura', regionName: 'Kanton Jura',
     seoTitle: 'Umzug Jura | Reinigungsfirma Jura | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Reinigung, Facility Services, Hauswartung und Entsorgung im Kanton Jura.',
+    metaDescription: 'Professioneller Umzug, Reinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Jura.',
     h1: 'Umzug & Reinigungsfirma im Kanton Jura',
-    highSeoKeywords: ['Umzug Jura','Umzugsfirma Jura','Reinigungsfirma Jura','Umzugsreinigung Jura','Endreinigung Jura','Unterhaltsreinigung Jura','Facility Services Jura','Hauswartung Jura','Entsorgung Jura'],
+    highSeoKeywords: ['Umzug Jura','Umzugsfirma Jura','Reinigungsfirma Jura','Umzugsreinigung Jura','Endreinigung Jura','Unterhaltsreinigung Jura','Hauswartung & Gebäudeunterhalt Jura','Hauswartung Jura','Entsorgung Jura'],
     localKeywords: ['Delémont','Porrentruy','Saignelégier','Courgenay','Bassecourt'],
     introParagraphs: [
-      'SwissCleanMove bietet Umzug, Reinigung, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung im Kanton Jura.',
+      'SwissCleanMove bietet Umzug, Reinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Jura.',
       'Wir bedienen Delémont, Porrentruy, Saignelégier, Courgenay und Bassecourt. SwissCleanMove bietet professionelle Unterstützung für Umzüge, Endreinigung, Gebäudeunterhalt, Räumung und Entsorgung.'
     ],
     faqs: [
@@ -20,8 +20,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove in Delémont und Porrentruy?', answer: 'Ja, wir arbeiten in Delémont, Porrentruy und Umgebung.' }
     ],
     mapQuery: 'Canton+of+Jura,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'jura', regionName: 'Canton of Jura',
     seoTitle: 'Moving Jura | Cleaning Company Jura | SwissCleanMove',
     metaDescription: 'Professional moving, cleaning, facility services, property maintenance and disposal in Canton Jura.',

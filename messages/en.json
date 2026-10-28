@@ -302,7 +302,7 @@
       },
       "reviews": {
         "rating": "4.9 out of 5",
-        "count": "Over 100+ Reviews",
+        "count": "Verified Google Reviews",
         "google": "Reviews",
         "writeReview": "Write a review"
       },
@@ -536,7 +536,7 @@
       "apartmentCleaning": "CHF 45–65 / hour / staff",
       "stairwellCleaning": "flat rate from CHF 120",
       "officeCleaning": "CHF 0.80–1.50 / m²",
-      "finalCleaning": "from CHF 250",
+      "finalCleaning": "from CHF 600 (Studio / 1-bed)",
       "windowCleaning": "CHF 8–15 per window",
       "relocation": "from CHF 160 / hour",
       "disposal": "from CHF 30 / m³",
@@ -861,7 +861,7 @@
       "reviews": {
         "rating": "5.0",
         "outOf": "/5",
-        "text": "100+ Reviews\\non Google"
+        "text": "Verified Reviews\non Google"
       },
       "bottomBar": {
         "call": "Call",
@@ -5530,10 +5530,10 @@
       },
       "standard": {
         "title": "End-of-Tenancy Cleaning",
-        "description": "Move-out cleaning with 100% handover guarantee (incl. free re-cleaning)",
-        "price": "from CHF 250",
+        "description": "Move-out cleaning with handover guarantee (incl. free re-cleaning)",
+        "price": "from CHF 600",
         "features": [
-          "Apartments: from CHF 250",
+          "End-of-tenancy cleaning with handover guarantee from CHF 600 for studio & 1-room apartments",
           "Houses: from CHF 900",
           "Optional surcharges available",
           "Acceptance guarantee"
@@ -5704,7 +5704,7 @@
       "umzugsreinigung": [
         {
           "question": "What does 'with handover guarantee' mean?",
-          "answer": "We guarantee that the property management will accept the cleaning at the handover. If re-cleaning is needed, we do it for free."
+          "answer": "Our acceptance guarantee supports you in a clean apartment handover. If cleaning-related defects are found during the handover, we carry out the agreed free touch-up cleaning directly on site."
         },
         {
           "question": "Do you have to be present at the handover?",
@@ -6162,7 +6162,7 @@
       ],
       "trustPoints": [
         "Working in Biel/Bienne since 2024",
-        "Over 50 successful moves",
+        "Numerous successful moves",
         "Fair all-inclusive prices at fair prices"
       ],
       "ctaMidHeading": "Planning to move to Biel/Bienne?",
@@ -6255,14 +6255,14 @@
     "endreinigungBiel": {
       "meta": {
         "title": "Final cleaning in Biel/Bienne | Fast & reliable | SwissCleanMove",
-        "description": "Professional final cleaning in Biel/Bienne with acceptance guarantee. Deposit back guaranteed. SwissCleanMove – your cleaning company in Seeland.",
+        "description": "Professional final cleaning in Biel/Bienne with handover guarantee for a smooth property handover. SwissCleanMove – your cleaning company in Seeland.",
         "titleVariant": "Biel/Bienne Looking for final cleaning? Fast & reliable"
       },
       "badge": "Final cleaning Biel/Bienne",
       "h1": "Final cleaning company Biel/Bienne – final cleaning, apartment cleaning & cleaning in Biel/Bienne",
-      "heroSubtitle": "Your apartment in Biel/Bienne will be handed over so clean that the deposit is guaranteed to be returned.",
+      "heroSubtitle": "Professional move-out cleaning with handover guarantee in Biel/Bienne for a stress-free property handover.",
       "ctaSoft": "Request a free quote now",
-      "intro": "Changing your apartment in Biel/Bienne involves many tasks - the most strenuous of which is usually the final cleaning. SwissCleanMove is your reliable partner for professional final cleaning with a acceptance guarantee. We ensure that your old apartment in Biel/Bienne or the surrounding area is spotlessly clean and that the property management accepts the inspection without hesitation. If there are any complaints when the apartment is handed over, we will be there personally and make improvements immediately free of charge - so you are guaranteed to receive your rental deposit back. With our experience from numerous final cleanings throughout Seeland, fair flat-rate prices starting from CHF 350 and short response times (available within 24 hours), we take this stress factor away from you completely. A typical apartment cleaning for us takes between 4 and 8 hours, depending on the size and degree of dirt. Rely on our expertise right on Lake Biel/Bienne and dedicate yourself entirely to furnishing your new home.",
+      "intro": "Changing your apartment in Biel/Bienne involves many tasks - the most strenuous of which is usually the final cleaning. SwissCleanMove is your reliable partner for professional final cleaning with a acceptance guarantee. We ensure that your old apartment in Biel/Bienne or the surrounding area is spotlessly clean and that the property management accepts the inspection without hesitation. If there are any complaints when the apartment is handed over, we will be there personally and make improvements immediately free of charge - our move-out cleaning with handover guarantee supports you in achieving a clean and smooth property handover. With our experience from numerous final cleanings throughout Seeland, fair flat rates (end-of-tenancy cleaning with handover guarantee from CHF 600 for studio & 1-room apartments) and short response times (available within 24 hours), we take this stress factor away from you completely. A typical apartment cleaning for us takes between 4 and 8 hours, depending on the size and degree of dirt. Rely on our expertise right on Lake Biel/Bienne and dedicate yourself entirely to furnishing your new home.",
       "sections": [
         {
           "heading": "The best choice for your move cleaning in Biel/Bienne",
@@ -6312,11 +6312,11 @@
       ],
       "trustPoints": [
         "acceptance guarantee",
-        "Deposit back – guaranteed",
+        "Free Touch-Up Cleaning",
         "Fair all-inclusive prices"
       ],
       "ctaMidHeading": "Changing your apartment in Biel/Bienne?",
-      "ctaMidBody": "Have your final cleaning done by professionals. We guarantee acceptance – or come back free of charge.",
+      "ctaMidBody": "Have your final cleaning done by professionals – with an acceptance guarantee and free touch-up cleaning upon inspection.",
       "ctaMid": "Secure your offer in 2 minutes",
       "serviceAreaHeading": "Final cleaning throughout Seeland and the surrounding area",
       "serviceAreaBody": "Our headquarters are in Biel/Bienne, but our area of ​​operation for professional final cleaning extends across the entire Zealand. We are on site quickly and flexibly in communities such as Nidau, Brügg, Lyss, Ipsach, Aarberg and Pieterlen. Thanks to our local presence, there are no long travel costs for you. We know many of the local property management companies in Seeland personally and know exactly which specific details they value when handing over the apartment.",
@@ -6350,7 +6350,7 @@
       "faqs": [
         {
           "question": "What exactly does the acceptance guarantee mean?",
-          "answer": "Our acceptance guarantee means absolute security and freedom from stress for you. We contractually guarantee that your property will be accepted by the management or owner without any problems after our final cleaning. If the inspector nevertheless discovers a defect during the inspection of the apartment (e.g. a water stain on a fitting), our staff present will clean it immediately, unbureaucratically and completely free of charge until the inspection has been signed."
+          "answer": "Our acceptance guarantee supports you in a clean apartment handover. If the management finds a cleaning-related defect during the inspection, our staff on site will rectify it immediately and free of charge. This protects you against deposit deductions due to cleaning issues."
         },
         {
           "question": "Do I have to be present during the final cleaning?",
@@ -6382,7 +6382,7 @@
         },
         {
           "question": "How much does a final cleaning cost in Biel/Bienne?",
-          "answer": "Our prices are fair, transparent and calculated as a flat rate with no hidden costs. We clean a 2.5-room apartment from CHF 350, a 3.5-room apartment at fair prices and a 4.5-room apartment from CHF 690. For single-family homes or extremely dirty properties, we will provide you with an individual, binding offer after a free inspection."
+          "answer": "End-of-tenancy cleaning with handover guarantee starts from CHF 600 for studio and 1-room apartments. Pricing for larger apartments depends on size, condition and cleaning scope. We are happy to provide you with a non-binding quote."
         },
         {
           "question": "What do you do about stubborn mold in the bathroom?",
@@ -6610,7 +6610,7 @@
       "h1": "Moving company Nidau – moving, moving cleaning & cleaning in Nidau",
       "heroSubtitle": "Your move in Nidau ​​– professionally planned and quickly completed.",
       "ctaSoft": "Secure your offer in 2 minutes",
-      "intro": "Welcome to SwissCleanMove. Welcome to SwissCleanMove - your regional moving company right in the heart of Seeland, with a strong focus on Nidau ​​and the neighboring communities. A change of residence or a company relocation is a significant event that requires a lot of organization. We have been supporting families, singles and companies in Nidau ​​since 2024 to make this step as smooth and stress-free as possible. Regardless of whether you are moving into a modern apartment directly on the Nidau-Büren Canal, changing your single-family home in the area or moving into new premises with your office - we are your competent partner. Our experienced team of strong and careful rein helpers takes care of all the logistics. We offer fair, transparent flat-rate prices starting at fair prices, provide modern transport vehicles and include full transport insurance with every order. With over 50 successful moves in the region, we know every corner of Nidau ​​and the surrounding Seeland. We work quickly, reliably and are often available at very short notice within 24 hours. Your reliable partner in the region – SwissCleanMove. Whether for private or commercial use, we set new industry standards in terms of cleanliness and transport. With our many years of experience, we guarantee you an absolutely stress-free experience from the first offer to the final acceptance. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
+      "intro": "Welcome to SwissCleanMove. Welcome to SwissCleanMove - your regional moving company right in the heart of Seeland, with a strong focus on Nidau ​​and the neighboring communities. A change of residence or a company relocation is a significant event that requires a lot of organization. We have been supporting families, singles and companies in Nidau ​​since 2024 to make this step as smooth and stress-free as possible. Regardless of whether you are moving into a modern apartment directly on the Nidau-Büren Canal, changing your single-family home in the area or moving into new premises with your office - we are your competent partner. Our experienced team of strong and careful rein helpers takes care of all the logistics. We offer fair, transparent flat-rate prices starting at fair prices, provide modern transport vehicles and include full transport insurance with every order. With numerous successful moves in the region, we know every corner of Nidau ​​and the surrounding Seeland. We work quickly, reliably and are often available at very short notice within 24 hours. Your reliable partner in the region – SwissCleanMove. Whether for private or commercial use, we set new industry standards in terms of cleanliness and transport. With our many years of experience, we guarantee you an absolutely stress-free experience from the first offer to the final acceptance. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
       "sections": [
         {
           "heading": "Local expertise for your move in Nidau",
@@ -6808,7 +6808,7 @@
       "h1": "Moving company Lyss – moving, moving cleaning & cleaning in Lyss",
       "heroSubtitle": "As a moving company in Lyss, we offer you a stress-free move - on time and fairly calculated.",
       "ctaSoft": "Fast response within 24 hours",
-      "intro": "Welcome to SwissCleanMove. A move marks a new phase in life, but is often associated with a lot of stress and physical strain. SwissCleanMove is your trustworthy moving company for Lyss and the entire Zealand. We do the hard work for you so that you can relax and look forward to your new home. Since 2024, we have been supporting private individuals and companies in Lyss in planning and carrying out moves of all sizes. No matter whether you are moving within Lyss, moving to neighboring Aarberg or planning transport across Switzerland – we are there for you. Our concept is simple: We offer absolute cost transparency through fixed flat-rate prices starting at fair prices. Our offers already include the powerful reins, modern transport vehicles and comprehensive transport insurance. Thanks to over 50 successful moves, we know exactly what is important. We work quickly (moving time usually takes 1-2 days) and even offer quick availability within 24 hours if there is an urgent need. Trust in Swiss moving quality directly from your region. Welcome to the experts at SwissCleanMove. We are proud to offer our customers in this region services at the highest Swiss level. Our company philosophy is based on real customer proximity, clear prices with no hidden costs and 100% reliability with every use. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
+      "intro": "Welcome to SwissCleanMove. A move marks a new phase in life, but is often associated with a lot of stress and physical strain. SwissCleanMove is your trustworthy moving company for Lyss and the entire Zealand. We do the hard work for you so that you can relax and look forward to your new home. Since 2024, we have been supporting private individuals and companies in Lyss in planning and carrying out moves of all sizes. No matter whether you are moving within Lyss, moving to neighboring Aarberg or planning transport across Switzerland – we are there for you. Our concept is simple: We offer absolute cost transparency through fixed flat-rate prices starting at fair prices. Our offers already include the powerful reins, modern transport vehicles and comprehensive transport insurance. Thanks to numerous successful moves, we know exactly what is important. We work quickly (moving time usually takes 1-2 days) and even offer quick availability within 24 hours if there is an urgent need. Trust in Swiss moving quality directly from your region. Welcome to the experts at SwissCleanMove. We are proud to offer our customers in this region services at the highest Swiss level. Our company philosophy is based on real customer proximity, clear prices with no hidden costs and 100% reliability with every use. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
       "sections": [
         {
           "heading": "Transport and moving solutions for Lyss",
@@ -7771,14 +7771,14 @@
     "endreinigungNidau": {
       "meta": {
         "title": "Final cleaning in Nidau ​​| With guarantee | SwissCleanMove",
-        "description": "Professional final cleaning in Nidau ​​with acceptance guarantee. Deposit back guaranteed. SwissCleanMove – your cleaning company in Seeland.",
+        "description": "Professional final cleaning in Nidau with handover guarantee for a smooth property handover. SwissCleanMove – your cleaning company in Seeland.",
         "titleVariant": "Looking for Nidau ​​final cleaning? With guarantee"
       },
       "badge": "Final cleaning Nidau",
       "h1": "Final cleaning company Nidau – final cleaning, apartment cleaning & cleaning in Nidau",
       "heroSubtitle": "Guaranteed clean: We clean your apartment in Nidau ​​so thoroughly that the inspection goes smoothly.",
       "ctaSoft": "Secure your offer in 2 minutes",
-      "intro": "Welcome to SwissCleanMove. Are you about to move out of your apartment in Nidau ​​and are you worried about the final cleaning? SwissCleanMove completely relieves you of this burden. We are your regional specialist for thorough final cleanings with a acceptance guarantee in Nidau ​​and the surrounding area. When handing over the apartment, property managers look extremely closely - limescale deposits or unclean window frames can quickly lead to problems. With us you are on the safe side: We guarantee that your apartment will be accepted by the landlord without any problems at the first appointment. If a detail is complained about, our staff will clean it immediately and free of charge. This ensures that you get your full deposit back without any discussions. We offer you transparent, fixed flat-rate prices starting from CHF 350, depending on the size of the apartment. A typical apartment cleaning takes 4 to 8 hours for us. Thanks to our proximity to Nidau, you benefit from short distances, no hidden travel costs and, if necessary, even availability within 24 hours. Trust in Swiss standards and an experienced team from Seeland. Welcome to the experts at SwissCleanMove. We are proud to offer our customers in this region services at the highest Swiss level. Our company philosophy is based on real customer proximity, clear prices with no hidden costs and 100% reliability with every use. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
+      "intro": "Welcome to SwissCleanMove. Are you about to move out of your apartment in Nidau ​​and are you worried about the final cleaning? SwissCleanMove completely relieves you of this burden. We are your regional specialist for thorough final cleanings with a acceptance guarantee in Nidau ​​and the surrounding area. When handing over the apartment, property managers look extremely closely - limescale deposits or unclean window frames can quickly lead to problems. With us you are on the safe side: With our handover guarantee, you are on the safe side: our team cleans your apartment thoroughly and is ready on site for any free touch-ups. If a detail is complained about, our staff will clean it immediately and free of charge. Our move-out cleaning with handover guarantee supports you in achieving a clean handover. We offer you transparent pricing – end-of-tenancy cleaning with handover guarantee from CHF 600 for studio and 1-room apartments. A typical apartment cleaning takes 4 to 8 hours for us. Thanks to our proximity to Nidau, you benefit from short distances, no hidden travel costs and, if necessary, even availability within 24 hours. Trust in Swiss standards and an experienced team from Seeland. Welcome to the experts at SwissCleanMove. We are proud to offer our customers in this region services at the highest Swiss level. Our company philosophy is based on real customer proximity, clear prices with no hidden costs and 100% reliability with every use. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
       "sections": [
         {
           "heading": "Why choose SwissCleanMove in Nidau?",
@@ -7840,7 +7840,7 @@
       ],
       "trustPoints": [
         "acceptance guarantee",
-        "Deposit safely returned",
+        "Free Touch-Up Cleaning",
         "Locally in Nidau ​​and Biel/Bienne"
       ],
       "ctaMidHeading": "Apartment delivery in Nidau?",
@@ -7874,7 +7874,7 @@
       "faqs": [
         {
           "question": "How exactly does the acceptance guarantee work in Nidau?",
-          "answer": "Very simple: We contractually guarantee that the management will accept the cleaning of your apartment in Nidau. If there is a complaint during handover that, for example, a window frame is not clean enough, our staff will clean it immediately - free of charge. For you this means absolute security. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "Our acceptance guarantee supports you in a clean apartment handover in Nidau. If any cleaning-related defect is complained about during the handover, our staff on site will rectify it immediately and free of charge."
         },
         {
           "question": "Does the furniture have to be out of the apartment already?",
@@ -7886,7 +7886,7 @@
         },
         {
           "question": "What costs will I have to pay for final cleaning in Nidau?",
-          "answer": "We offer fixed flat-rate prices starting from CHF 350 for small apartments. A typical 3.5-room apartment costs at fair prices, a 4.5-room apartment from CHF 690. After a free viewing in Nidau, you will receive a guaranteed fixed price from us - there are no hidden costs. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "End-of-tenancy cleaning with handover guarantee starts from CHF 600 for studio and 1-room apartments. Pricing for larger apartments depends on size, condition and cleaning scope. We are happy to provide you with a non-binding quote."
         },
         {
           "question": "How far in advance do I have to book the final cleaning?",
@@ -7970,9 +7970,9 @@
       },
       "badge": "Moving cleaning Lyss",
       "h1": "Final cleaning company Lyss – final cleaning, apartment cleaning & cleaning in Lyss",
-      "heroSubtitle": "Stress-free apartment handover in Lyss: We guarantee the smooth acceptance of your apartment.",
+      "heroSubtitle": "Stress-free apartment handover in Lyss: Professional final cleaning with acceptance guarantee and free touch-ups.",
       "ctaSoft": "Fast response within 24 hours",
-      "intro": "Welcome to SwissCleanMove. The move is done, but the old apartment in Lyss is still waiting for the dreaded final cleaning? Save yourself time, dirt and nerves – hand this demanding task over to the professionals at SwissCleanMove. We are your local expert for apartment cleaning with a acceptance guarantee in Lyss and the surrounding Zealand. Swiss property management companies are extremely strict when it comes to handover. An overlooked limescale stain in the bathroom or dirty window rebates can result in acceptance being refused and the deposit being blocked. You don't take any risks with us: We clean your apartment thoroughly and guarantee that it will be inspected at the first appointment. If something is complained about, our cleaning team will make improvements on site immediately and free of charge. We offer you transparent, fixed flat-rate prices starting from CHF 350 with no hidden costs. Cleaning usually takes 4 to 8 hours. Rely on an established, regional team from Zealand, which is also available for short-term assignments (within 24 hours) in Lyss. Welcome to SwissCleanMove. If you are looking for the highest professional cleaning, absolute reliability and transparent prices in this region, then you have come to the right place. We understand that cleaning, moving and facility service services are a matter of trust. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
+      "intro": "Welcome to SwissCleanMove. The move is done, but the old apartment in Lyss is still waiting for the dreaded final cleaning? Save yourself time, dirt and nerves – hand this demanding task over to the professionals at SwissCleanMove. We are your local expert for apartment cleaning with a acceptance guarantee in Lyss and the surrounding Zealand. Swiss property management companies are extremely strict when it comes to handover. An overlooked limescale stain in the bathroom or dirty window rebates can result in acceptance being refused and the deposit being blocked. You don't take any risks with us: We clean your apartment thoroughly and are ready on site during the handover for any free touch-ups. If something is complained about, our cleaning team will make improvements on site immediately and free of charge. We offer you transparent, transparent flat rates – end-of-tenancy cleaning with handover guarantee from CHF 600 for studio and 1-room apartments. Cleaning usually takes 4 to 8 hours. Rely on an established, regional team from Zealand, which is also available for short-term assignments (within 24 hours) in Lyss. Welcome to SwissCleanMove. If you are looking for the highest professional cleaning, absolute reliability and transparent prices in this region, then you have come to the right place. We understand that cleaning, moving and facility service services are a matter of trust. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
       "sections": [
         {
           "heading": "Your cleaning partner for a worry-free handover in Lyss",
@@ -8064,11 +8064,11 @@
       "faqs": [
         {
           "question": "What exactly does the acceptance guarantee in Lyss include?",
-          "answer": "Our acceptance guarantee is your protective shield. We guarantee that the property management in Lyss will inspect the apartment in terms of cleaning. If a stain is criticized during the inspection, our staff will clean it up immediately - at no additional cost to you. This way your deposit is safe. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "Our acceptance guarantee supports you in a clean apartment handover in Lyss. If cleaning-related defects are found during the inspection, our staff on site will rectify them immediately and free of charge."
         },
         {
           "question": "How much does final cleaning cost in Lyss?",
-          "answer": "We calculate our prices transparently as a flat rate. A small 2.5-room apartment costs from CHF 350. A standard 3.5-room apartment costs at fair prices, a 4.5-room apartment from CHF 690. In order to guarantee you an exact fixed price, we inspect your property in Lyss in advance, completely free of charge. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "End-of-tenancy cleaning with handover guarantee starts from CHF 600 for studio and 1-room apartments. Pricing for larger apartments depends on size, condition and cleaning scope. We are happy to provide you with a non-binding quote."
         },
         {
           "question": "Are windows and balconies included in the final cleaning price?",
@@ -8160,9 +8160,9 @@
       },
       "badge": "Final cleaning Brugg",
       "h1": "Final cleaning company Brügg – final cleaning, apartment cleaning & cleaning in Brügg",
-      "heroSubtitle": "Your rental apartment in Brügg will be immaculately cleaned and guaranteed to be handed over free of defects.",
+      "heroSubtitle": "Your rented apartment in Brügg cleaned sparkling clean for a smooth and stress-free handover.",
       "ctaSoft": "Inquire without obligation",
-      "intro": "Welcome to SwissCleanMove. Moving out is stressful enough - leave the nerve-wracking cleaning of your apartment to the professionals at SwissCleanMove. We are your regional specialist for final cleaning with a acceptance guarantee in Brügg and the entire Zealand. The requirements of Swiss property management when handing over apartments are extremely high. An overlooked stain in the oven or calcified shower joints can quickly lead to your deposit being blocked. With our acceptance guarantee you are on the safe side: We clean your property thoroughly and guarantee that it will be accepted by the administration without any problems. If the administration finds a small defect, we will immediately clean it on site free of charge. We offer you absolute cost security through fixed flat-rate prices starting at CHF 350. There are no hidden hourly wages or travel costs. Our experienced team can have a typical apartment sparkling clean in 4 to 8 hours. Thanks to our strong local presence in Brügg, we can also step in at short notice (often within 24 hours) in emergencies. Welcome to SwissCleanMove – your local premium partner. We offer you services according to the strictest Swiss standards. For us, transparency, punctuality and utmost care are our top priority. Trust in our permanently employed, competent team for a smooth transaction. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
+      "intro": "Welcome to SwissCleanMove. Moving out is stressful enough - leave the nerve-wracking cleaning of your apartment to the professionals at SwissCleanMove. We are your regional specialist for final cleaning with a acceptance guarantee in Brügg and the entire Zealand. The requirements of Swiss property management when handing over apartments are extremely high. An overlooked stain in the oven or calcified shower joints can quickly lead to your deposit being blocked. With our acceptance guarantee you are on the safe side: We clean your property thoroughly and support you in a smooth handover. If the administration finds a small defect, we will immediately clean it on site free of charge. We offer you absolute cost security through absolute cost certainty: end-of-tenancy cleaning with handover guarantee from CHF 600 for studio and 1-room apartments. There are no hidden hourly wages or travel costs. Our experienced team can have a typical apartment sparkling clean in 4 to 8 hours. Thanks to our strong local presence in Brügg, we can also step in at short notice (often within 24 hours) in emergencies. Welcome to SwissCleanMove – your local premium partner. We offer you services according to the strictest Swiss standards. For us, transparency, punctuality and utmost care are our top priority. Trust in our permanently employed, competent team for a smooth transaction. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
       "sections": [
         {
           "heading": "Cleaning solutions for a smooth move-out in Brügg",
@@ -8197,7 +8197,7 @@
           "body": "We sweep and mop the balcony, clean the balcony railing and also leave adjoining rooms such as cellar compartments, attic or garages in Brügg swept clean and free of cobwebs. This service is extremely helpful, as these rooms are often forgotten at the end, but are checked by the administration. We attach great importance to ensuring that this work is carried out in accordance with the highest Swiss industry standards. Our many years of experience in this region show that detailed preliminary planning and the use of trained specialist personnel are the key to success. We always pay attention to an environmentally friendly way of working and the protection of your real estate and furniture. We guarantee you absolute transparency and smooth execution that you can rely on 100%."
         },
         {
-          "heading": "Why professional cleaning secures your deposit (guide)",
+          "heading": "Why professional end-of-tenancy cleaning facilitates your property handover (Guide)",
           "body": "Many tenants in Brügg underestimate the requirements of Swiss property management when handing over their apartment. A day of cleaning yourself is often not enough to completely remove burnt-in grease in the oven or stubborn limescale in the bathroom. In such cases, the administration calls a professional cleaning company, which is subsequently deducted from your deposit (usually at very high prices). With SwissCleanMove you avoid this financial risk completely. Thanks to our contractual acceptance guarantee, you know that the flat-rate cleaning costs are the only investment you have to make. We recommend that our customers completely empty the apartment before we arrive and take care of any small tenant repairs (such as replacing broken light bulbs) in advance. We attach great importance to ensuring that this work is carried out in accordance with the highest Swiss industry standards. Our many years of experience in this region show that detailed preliminary planning and the use of trained specialist personnel are the key to success. We always pay attention to an environmentally friendly way of working and the protection of your real estate and furniture. We guarantee you absolute transparency and smooth execution that you can rely on 100%."
         },
         {
@@ -8217,7 +8217,7 @@
       "serviceBullets": [
         "Acceptance of the apartment guaranteed in writing",
         "Free follow-up cleaning in case of defects",
-        "Transparent, fixed flat-rate prices from CHF 350",
+        "End-of-tenancy cleaning with handover guarantee from CHF 600 for studio & 1-room apartments",
         "All cleaning supplies and equipment included",
         "Locally anchored and available in Brügg at short notice",
         "If desired, be present at the handover"
@@ -8262,7 +8262,7 @@
         },
         {
           "question": "How much does a final cleaning cost in Brügg?",
-          "answer": "We work with fixed flat-rate prices so that you don't experience any unpleasant surprises. We clean a small apartment from CHF 350. An average 3.5-room apartment costs at fair prices, a 4.5-room apartment from CHF 690. After a free viewing in Brügg, we guarantee you an exact fixed price. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "End-of-tenancy cleaning with handover guarantee starts from CHF 600 for studio and 1-room apartments. Pricing for larger apartments depends on size, condition and cleaning scope. We are happy to provide you with a non-binding quote."
         },
         {
           "question": "Do I have to provide my own cleaning supplies?",
@@ -8356,7 +8356,7 @@
       "h1": "Final cleaning company Ipsach – final cleaning, apartment cleaning & cleaning in Ipsach",
       "heroSubtitle": "Your apartment in Ipsach on Lake Biel/Bienne – perfectly cleaned and ready for handover.",
       "ctaSoft": "Request a free quote now",
-      "intro": "Welcome to SwissCleanMove. The boxes are packed, the new home is waiting - but the old apartment in Ipsach still needs to be brought into a ready-to-go condition. Leave this demanding and time-consuming task to the professionals at SwissCleanMove. We are your regional cleaning company for professional final cleanings with a acceptance guarantee in Seeland. Swiss property management companies check every little detail when handing over an apartment, from the window recesses to limescale residue in the shower. With our acceptance guarantee, we guarantee you a smooth handover: If, contrary to expectations, the administration discovers a defect, we will clean it immediately on site and completely free of charge until the protocol is signed. This way you can secure your full rental deposit without any discussions. We offer you transparent fixed prices starting from CHF 350, without hidden surcharges or high travel costs. Our experienced teams typically deep clean your apartment in Ipsach within 4 to 8 hours and are also available for you within 24 hours in emergencies. Greetings from SwissCleanMove! As your local expert, we know exactly what is important. We deliberately avoid using subcontractors and instead rely on our own, excellently trained specialist staff. Enjoy absolute cost transparency and Swiss premium quality. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
+      "intro": "Welcome to SwissCleanMove. The boxes are packed, the new home is waiting - but the old apartment in Ipsach still needs to be brought into a ready-to-go condition. Leave this demanding and time-consuming task to the professionals at SwissCleanMove. We are your regional cleaning company for professional final cleanings with a acceptance guarantee in Seeland. Swiss property management companies check every little detail when handing over an apartment, from the window recesses to limescale residue in the shower. With our acceptance guarantee, we guarantee you a smooth handover: If, contrary to expectations, the administration discovers a defect, we will clean it immediately on site and completely free of charge until the protocol is signed. Our move-out cleaning with handover guarantee supports you in achieving a clean and smooth handover. We offer you transparent fixed prices – end-of-tenancy cleaning with handover guarantee from CHF 600 for studio and 1-room apartments, without hidden surcharges or high travel costs. Our experienced teams typically deep clean your apartment in Ipsach within 4 to 8 hours and are also available for you within 24 hours in emergencies. Greetings from SwissCleanMove! As your local expert, we know exactly what is important. We deliberately avoid using subcontractors and instead rely on our own, excellently trained specialist staff. Enjoy absolute cost transparency and Swiss premium quality. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
       "sections": [
         {
           "heading": "Your worry-free apartment handover in Ipsach",
@@ -8407,7 +8407,7 @@
       "serviceBullets": [
         "acceptance guarantee guaranteed in writing",
         "Free repair of defects upon delivery",
-        "Binding flat rate prices from CHF 350",
+        "End-of-tenancy cleaning with handover guarantee from CHF 600 for studio & 1-room apartments",
         "Environmentally friendly, effective cleaning products",
         "All equipment (vacuum cleaner, etc.) included",
         "Short journeys and very flexible"
@@ -8452,7 +8452,7 @@
         },
         {
           "question": "How much does final cleaning cost in Ipsach?",
-          "answer": "We only work with transparent flat-rate prices. For a small apartment we start at CHF 350. A regular 3.5-room apartment costs at fair prices, a 4.5-room apartment from CHF 690. After a free viewing you will receive a binding fixed price. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "End-of-tenancy cleaning with handover guarantee starts from CHF 600 for studio and 1-room apartments. Pricing for larger apartments depends on size, condition and cleaning scope. We are happy to provide you with a non-binding quote."
         },
         {
           "question": "Does the apartment have to be completely empty for the final cleaning?",
@@ -8546,7 +8546,7 @@
       "h1": "Final cleaning company Aarberg – final cleaning, apartment cleaning & cleaning in Aarberg",
       "heroSubtitle": "Professional final cleaning in Aarberg: We clean, you hand over in a relaxed manner.",
       "ctaSoft": "Secure your offer in 2 minutes",
-      "intro": "Welcome to SwissCleanMove. Moving out is usually associated with a lot of joy in your new home, but also with the stress of handing over the apartment. The final cleaning of the old apartment in Aarberg is often the last and most tedious step. SwissCleanMove completely relieves you of this burden. As your regional cleaning company in Seeland, we specialize in professional moving cleaning with a acceptance guarantee. We know exactly how strictly the property management companies in Aarberg and the surrounding area check. A small limescale stain on the shower wall or dust on the skirting boards can lead to problems when returning the deposit. With our acceptance guarantee you are on the safe side: We clean your apartment so thoroughly that it is accepted at the first appointment. If the manager discovers a defect, our team will clean it immediately and free of charge on site. We offer you full transparency through fixed flat-rate prices starting from CHF 350 – without hidden costs or unpleasant surprises. A standard cleaning takes 4 to 8 hours for us. Rely on our professional cleaning and punctuality. Your reliable partner in the region – SwissCleanMove. Whether for private or commercial use, we set new industry standards in terms of cleanliness and transport. With our many years of experience, we guarantee you an absolutely stress-free experience from the first offer to the final acceptance. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
+      "intro": "Welcome to SwissCleanMove. Moving out is usually associated with a lot of joy in your new home, but also with the stress of handing over the apartment. The final cleaning of the old apartment in Aarberg is often the last and most tedious step. SwissCleanMove completely relieves you of this burden. As your regional cleaning company in Seeland, we specialize in professional moving cleaning with a acceptance guarantee. We know exactly how strictly the property management companies in Aarberg and the surrounding area check. A small limescale stain on the shower wall or dust on the skirting boards can lead to problems when returning the deposit. With our acceptance guarantee you are on the safe side: Our team cleans your apartment thoroughly and is ready on site for any free touch-ups during handover. If the manager discovers a defect, our team will clean it immediately and free of charge on site. We offer you full transparency through transparent fixed pricing: end-of-tenancy cleaning with handover guarantee from CHF 600 for studio and 1-room apartments. A standard cleaning takes 4 to 8 hours for us. Rely on our professional cleaning and punctuality. Your reliable partner in the region – SwissCleanMove. Whether for private or commercial use, we set new industry standards in terms of cleanliness and transport. With our many years of experience, we guarantee you an absolutely stress-free experience from the first offer to the final acceptance. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
       "sections": [
         {
           "heading": "Why SwissCleanMove is the best choice for Aarberg",
@@ -8582,7 +8582,7 @@
         },
         {
           "heading": "Tips for handing over an apartment in Aarberg (guide)",
-          "body": "In order for us to guarantee our acceptance guarantee, the apartment must be completely emptied on the day of cleaning. All household goods and garbage must be disposed of. Clarify early on whether you need to make small repairs according to the rental agreement (e.g. filling dowel holes, replacing filters in the steam vent). On the day of acceptance, we recommend that you do the tour with the administration on time. If you commission us, we will be personally present at the handover in Aarberg upon request. This has the great advantage that we can correct any small complaints the manager may have directly on the spot, without you having to make a second appointment. This way you can fully secure your deposit. We attach great importance to ensuring that this work is carried out in accordance with the highest Swiss industry standards. Our many years of experience in this region show that detailed preliminary planning and the use of trained specialist personnel are the key to success. We always pay attention to an environmentally friendly way of working and the protection of your real estate and furniture. We guarantee you absolute transparency and smooth execution that you can rely on 100%."
+          "body": "In order for us to guarantee our acceptance guarantee, the apartment must be completely emptied on the day of cleaning. All household goods and garbage must be disposed of. Clarify early on whether you need to make small repairs according to the rental agreement (e.g. filling dowel holes, replacing filters in the steam vent). On the day of acceptance, we recommend that you do the tour with the administration on time. If you commission us, we will be personally present at the handover in Aarberg upon request. This has the great advantage that we can correct any small complaints the manager may have directly on the spot, without you having to make a second appointment. This effectively protects against deposit deductions due to cleaning defects. We attach great importance to ensuring that this work is carried out in accordance with the highest Swiss industry standards. Our many years of experience in this region show that detailed preliminary planning and the use of trained specialist personnel are the key to success. We always pay attention to an environmentally friendly way of working and the protection of your real estate and furniture. We guarantee you absolute transparency and smooth execution that you can rely on 100%."
         },
         {
           "heading": "Environmental awareness and sustainability in every use",
@@ -8601,7 +8601,7 @@
       "serviceBullets": [
         "Written acceptance guarantee",
         "Free follow-up cleaning upon delivery",
-        "Fixed flat rate prices from CHF 350 (without hidden costs)",
+        "End-of-tenancy cleaning with handover guarantee from CHF 600 for studio & 1-room apartments",
         "All cleaning materials and equipment included",
         "Environmentally friendly, gentle cleaning chemicals",
         "Regional proximity and high punctuality in Aarberg"
@@ -8642,7 +8642,7 @@
       "faqs": [
         {
           "question": "How exactly does the acceptance guarantee work in Aarberg?",
-          "answer": "We contractually guarantee that the management will accept the cleaning of your apartment in Aarberg. If a detail is criticized upon delivery (e.g. a limescale stain on the tap), our staff will clean it immediately - absolutely free of charge for you. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "Our acceptance guarantee supports you in a clean apartment handover in Aarberg. If a cleaning-related defect is complained about upon inspection, our staff on site will rectify it immediately and free of charge."
         },
         {
           "question": "Does the furniture have to be out of the apartment already?",
@@ -8654,7 +8654,7 @@
         },
         {
           "question": "What costs will I have to pay for final cleaning in Aarberg?",
-          "answer": "We offer fixed flat-rate prices starting from CHF 350 for small apartments. A typical 3.5-room apartment costs at fair prices, a 4.5-room apartment from CHF 690. After a free viewing in Aarberg, you will receive a guaranteed fixed price - with no hidden costs. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "End-of-tenancy cleaning with handover guarantee starts from CHF 600 for studio and 1-room apartments. Pricing for larger apartments depends on size, condition and cleaning scope. We are happy to provide you with a non-binding quote."
         },
         {
           "question": "How far in advance do I have to book the final cleaning?",
@@ -8733,14 +8733,14 @@
     "endreinigungPieterlen": {
       "meta": {
         "title": "Final cleaning in Pieterlen | With guarantee | SwissCleanMove",
-        "description": "SwissCleanMove offers professional final cleaning in Pieterlen. Deposit back guaranteed. Inquire now without obligation.",
+        "description": "SwissCleanMove offers professional final cleaning in Pieterlen with handover guarantee. Inquire now without obligation.",
         "titleVariant": "Looking for Pieterlen final cleaning? With guarantee"
       },
       "badge": "Final cleaning Pieterlen",
       "h1": "Final cleaning company Pieterlen – final cleaning, apartment cleaning & cleaning in Pieterlen",
       "heroSubtitle": "We take care of the move-in cleaning in Pieterlen so that you can sit back and relax.",
       "ctaSoft": "Fast response within 24 hours",
-      "intro": "Welcome to SwissCleanMove. The move is done, but the old apartment in Pieterlen is still waiting for the dreaded final cleaning? Save yourself time, dirt and nerves – hand this demanding task over to the professionals at SwissCleanMove. We are your local expert for apartment cleaning with a acceptance guarantee in Pieterlen and the surrounding Zealand. Swiss property management companies are extremely strict when it comes to handover. An overlooked limescale stain in the bathroom or dirty window rebates can result in acceptance being refused and the deposit being blocked. You don't take any risks with us: We clean your apartment thoroughly and guarantee that it will be inspected at the first appointment. If something is complained about, our cleaning team will make improvements on site immediately and free of charge. We offer you transparent, fixed flat-rate prices starting from CHF 350 with no hidden costs. Cleaning usually takes 4 to 8 hours. Rely on an established, regional team from Zealand, which is also available for short-term assignments in Pieterlen. Welcome to the experts at SwissCleanMove. We are proud to offer our customers in this region services at the highest Swiss level. Our company philosophy is based on real customer proximity, clear prices with no hidden costs and 100% reliability with every use. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
+      "intro": "Welcome to SwissCleanMove. The move is done, but the old apartment in Pieterlen is still waiting for the dreaded final cleaning? Save yourself time, dirt and nerves – hand this demanding task over to the professionals at SwissCleanMove. We are your local expert for apartment cleaning with a acceptance guarantee in Pieterlen and the surrounding Zealand. Swiss property management companies are extremely strict when it comes to handover. An overlooked limescale stain in the bathroom or dirty window rebates can result in acceptance being refused and the deposit being blocked. You don't take any risks with us: We clean your apartment thoroughly and are ready on site during the inspection for any free touch-ups. If something is complained about, our cleaning team will make improvements on site immediately and free of charge. We offer you transparent, transparent flat rates: end-of-tenancy cleaning with handover guarantee from CHF 600 for studio and 1-room apartments. Cleaning usually takes 4 to 8 hours. Rely on an established, regional team from Zealand, which is also available for short-term assignments in Pieterlen. Welcome to the experts at SwissCleanMove. We are proud to offer our customers in this region services at the highest Swiss level. Our company philosophy is based on real customer proximity, clear prices with no hidden costs and 100% reliability with every use. Whether for private individuals or companies, we offer tailor-made solutions. Contact us for a free quote.",
       "sections": [
         {
           "heading": "Your cleaning partner for a worry-free handover in Pieterlen",
@@ -8832,11 +8832,11 @@
       "faqs": [
         {
           "question": "What exactly does the acceptance guarantee in Pieterlen include?",
-          "answer": "Our acceptance guarantee is your protective shield. We guarantee that the property management in Pieterlen will inspect the apartment in terms of cleaning. If a stain is criticized during the inspection, our staff will clean it up immediately - at no additional cost to you. This way your deposit is safe. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "Our acceptance guarantee supports you in a clean apartment handover in Pieterlen. If cleaning-related defects are found during the inspection, our staff on site will rectify them immediately and free of charge."
         },
         {
           "question": "How much does final cleaning cost in Pieterlen?",
-          "answer": "We calculate our prices transparently as a flat rate. A small 2.5-room apartment costs from CHF 350. A standard 3.5-room apartment costs at fair prices, a 4.5-room apartment from CHF 690. In order to guarantee you an exact fixed price, we inspect your property in Pieterlen in advance, completely free of charge. We also assure you that our services in this region always meet the highest professional cleaning standards. Our customer service will be happy to assist you at any time if you have any further questions."
+          "answer": "End-of-tenancy cleaning with handover guarantee starts from CHF 600 for studio and 1-room apartments. Pricing for larger apartments depends on size, condition and cleaning scope. We are happy to provide you with a non-binding quote."
         },
         {
           "question": "Are windows and balconies included in the final cleaning price?",
@@ -11585,7 +11585,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for private household help calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you work with private household help with your own equipment?",
@@ -11799,7 +11799,7 @@
         "No hidden fees, no unclear surcharges, no administrative effort"
       ],
       "trustPoints": [
-        "Over 50 moves in Biel/Bienne",
+        "Numerous moves in Biel/Bienne",
         "Fair all-inclusive prices at fair prices",
         "Insured and reliable"
       ],
@@ -11836,7 +11836,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for stress-free moves calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you work with your own equipment for stress-free moves?",
@@ -11975,7 +11975,7 @@
       "faqs": [
         {
           "question": "How is the price for commercial maintenance cleaning calculated exactly?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you work with your own equipment for commercial maintenance cleaning?",
@@ -12032,7 +12032,7 @@
       "h1": "Window cleaning Biel/Bienne - streak-free windows for apartments and offices",
       "heroSubtitle": "Professional window cleaning in Biel/Bienne and Seeland. Crystal clear windows for private homes, offices and commercial properties - reliable and streak-free.",
       "ctaSoft": "Request a free quote",
-      "intro": "Welcome to SwissCleanMove, your leading expert for streak-free window cleaning in Biel/Bienne and the entire Zealand. If you are looking for the highest quality, Swiss reliability and absolutely transparent prices, then you have found the right partner. Radiant shine for your home or shop windows. We let the light back into your rooms. We understand that cleaning, moving and facility service services are an absolute matter of trust. That's why at SwissCleanMove we don't rely on anonymous subcontractors, but rather on our own, permanently employed and highly trained staff. This not only guarantees fair working conditions, but also consistently high quality for you as a customer in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, and Pieterlen. Whether you are a private individual looking for discreet domestic help, a company that needs regular office cleaning, or a property management company that requires a competent caretaker service - we cover the entire spectrum. Our philosophy is based on customer proximity, proactive communication and the use of the most modern tools. With our extensive experience and countless successfully completed orders in Biel/Bienne and the entire Zealand, we know exactly what is important. Every year, our glass and building cleaners clean thousands of windows, winter gardens and glass facades in the region. We attach great importance to sustainability and use environmentally friendly, biodegradable cleaning products wherever possible. On this page, discover everything you need to know about our services, how our process works and why so many satisfied customers in the region choose us. Do not hesitate to contact us for a free, non-binding viewing or quote.",
+      "intro": "Welcome to SwissCleanMove, your leading expert for streak-free window cleaning in Biel/Bienne and the entire Zealand. If you are looking for the highest quality, Swiss reliability and absolutely transparent prices, then you have found the right partner. Radiant shine for your home or shop windows. We let the light back into your rooms. We understand that cleaning, moving and facility service services are an absolute matter of trust. That's why at SwissCleanMove we don't rely on anonymous subcontractors, but rather on our own, permanently employed and highly trained staff. This not only guarantees fair working conditions, but also consistently high quality for you as a customer in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, and Pieterlen. Whether you are a private individual looking for discreet domestic help, a company that needs regular office cleaning, or a property management company that requires a competent caretaker service - we cover the entire spectrum. Our philosophy is based on customer proximity, proactive communication and the use of the most modern tools. With our extensive experience and countless successfully completed orders in Biel/Bienne and the entire Zealand, we know exactly what is important. Our glass and building cleaners regularly clean windows, winter gardens and glass facades in the region. We attach great importance to sustainability and use environmentally friendly, biodegradable cleaning products wherever possible. On this page, discover everything you need to know about our services, how our process works and why so many satisfied customers in the region choose us. Do not hesitate to contact us for a free, non-binding viewing or quote.",
       "sections": [
         {
           "heading": "Why streak-free window cleaning in Biel/Bienne and the entire Zealand?",
@@ -12114,7 +12114,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for streak-free window cleaning calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you use your own equipment for streak-free window cleaning?",
@@ -12253,7 +12253,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for secure transport and courier services calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you work with your own equipment at Safe Transport and Courier Services?",
@@ -12310,7 +12310,7 @@
       "h1": "Disposal Biel/Bienne - Professional furniture disposal & clearance in Seeland",
       "heroSubtitle": "SwissCleanMove offers professional disposal in Biel/Bienne. Furniture disposal, apartment clearance and clearing out - professionally, quickly and environmentally conscious.",
       "ctaSoft": "Request a free quote",
-      "intro": "Welcome to SwissCleanMove, your leading expert for professional clearance and disposal in Biel/Bienne and the entire Zealand. If you are looking for the highest quality, Swiss reliability and absolutely transparent prices, then you have found the right partner. Separating old burdens can be liberating. We take care of the heavy lifting and professional disposal for you. We understand that cleaning, moving and facility service services are an absolute matter of trust. That's why at SwissCleanMove we don't rely on anonymous subcontractors, but rather on our own, permanently employed and highly trained staff. This not only guarantees fair working conditions, but also consistently high quality for you as a customer in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, and Pieterlen. Whether you are a private individual looking for discreet domestic help, a company that needs regular office cleaning, or a property management company that requires a competent caretaker service - we cover the entire spectrum. Our philosophy is based on customer proximity, proactive communication and the use of the most modern tools. With our extensive experience and countless successfully completed orders in Biel/Bienne and the entire Zealand, we know exactly what is important. Every year we professionally recycle over 500 tons of old material, furniture and electronic scrap. We attach great importance to sustainability and use environmentally friendly, biodegradable cleaning products wherever possible. On this page, discover everything you need to know about our services, how our process works and why so many satisfied customers in the region choose us. Do not hesitate to contact us for a free, non-binding viewing or quote.",
+      "intro": "Welcome to SwissCleanMove, your leading expert for professional clearance and disposal in Biel/Bienne and the entire Zealand. If you are looking for the highest quality, Swiss reliability and absolutely transparent prices, then you have found the right partner. Separating old burdens can be liberating. We take care of the heavy lifting and professional disposal for you. We understand that cleaning, moving and facility service services are an absolute matter of trust. That's why at SwissCleanMove we don't rely on anonymous subcontractors, but rather on our own, permanently employed and highly trained staff. This not only guarantees fair working conditions, but also consistently high quality for you as a customer in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, and Pieterlen. Whether you are a private individual looking for discreet domestic help, a company that needs regular office cleaning, or a property management company that requires a competent caretaker service - we cover the entire spectrum. Our philosophy is based on customer proximity, proactive communication and the use of the most modern tools. With our extensive experience and countless successfully completed orders in Biel/Bienne and the entire Zealand, we know exactly what is important. Every year we professionally recycle large volumes of old material, furniture and electronic scrap in an environmentally friendly manner. We attach great importance to sustainability and use environmentally friendly, biodegradable cleaning products wherever possible. On this page, discover everything you need to know about our services, how our process works and why so many satisfied customers in the region choose us. Do not hesitate to contact us for a free, non-binding viewing or quote.",
       "sections": [
         {
           "heading": "Why professional clearance and disposal in Biel/Bienne and the entire Seeland?",
@@ -12392,7 +12392,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for professional clearance and disposal calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you work with your own equipment for professional clearance and disposal?",
@@ -12531,7 +12531,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for Comprehensive Facility Service calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you work with your own equipment at Comprehensive Facility Service?",
@@ -12588,7 +12588,7 @@
       "h1": "Housekeeping cleaning Biel/Bienne",
       "heroSubtitle": "As a professional cleaning provider of home maintenance and facility services, we look after real estate management, residential developments and commercial properties throughout Seeland.",
       "ctaSoft": "Request B2B advice",
-      "intro": "Welcome to SwissCleanMove, your leading expert for reliable home maintenance in Biel/Bienne and the entire Zealand. If you are looking for the highest quality, Swiss reliability and absolutely transparent prices, then you have found the right partner. A good caretaker is the soul of a property. It not only ensures cleanliness, but also safety. We understand that cleaning, moving and facility service services are an absolute matter of trust. That's why at SwissCleanMove we don't rely on anonymous subcontractors, but rather on our own, permanently employed and highly trained staff. This not only guarantees fair working conditions, but also consistently high quality for you as a customer in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, and Pieterlen. Whether you are a private individual looking for discreet domestic help, a company that needs regular office cleaning, or a property management company that requires a competent caretaker service - we cover the entire spectrum. Our philosophy is based on customer proximity, proactive communication and the use of the most modern tools. With our extensive experience and countless successfully completed orders in Biel/Bienne and the entire Zealand, we know exactly what is important. We currently provide caretaker services for over 120 properties in Seeland. We attach great importance to sustainability and use environmentally friendly, biodegradable cleaning products wherever possible. On this page, discover everything you need to know about our services, how our process works and why so many satisfied customers in the region choose us. Do not hesitate to contact us for a free, non-binding viewing or quote.",
+      "intro": "Welcome to SwissCleanMove, your leading expert for reliable home maintenance in Biel/Bienne and the entire Zealand. If you are looking for the highest quality, Swiss reliability and absolutely transparent prices, then you have found the right partner. A good caretaker is the soul of a property. It not only ensures cleanliness, but also safety. We understand that cleaning, moving and facility service services are an absolute matter of trust. That's why at SwissCleanMove we don't rely on anonymous subcontractors, but rather on our own, permanently employed and highly trained staff. This not only guarantees fair working conditions, but also consistently high quality for you as a customer in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, and Pieterlen. Whether you are a private individual looking for discreet domestic help, a company that needs regular office cleaning, or a property management company that requires a competent caretaker service - we cover the entire spectrum. Our philosophy is based on customer proximity, proactive communication and the use of the most modern tools. With our extensive experience and countless successfully completed orders in Biel/Bienne and the entire Zealand, we know exactly what is important. We currently provide caretaker services for numerous properties throughout the Seeland region in Seeland. We attach great importance to sustainability and use environmentally friendly, biodegradable cleaning products wherever possible. On this page, discover everything you need to know about our services, how our process works and why so many satisfied customers in the region choose us. Do not hesitate to contact us for a free, non-binding viewing or quote.",
       "sections": [
         {
           "heading": "Why reliable home maintenance in Biel/Bienne and the entire Seeland?",
@@ -12670,7 +12670,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for reliable home maintenance calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you work with your own equipment at Reliable Home Maintenance?",
@@ -12848,7 +12848,7 @@
       "faqs": [
         {
           "question": "How is the price for rough construction cleaning and fine cleaning calculated exactly?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you use your own equipment for rough construction cleaning and fine cleaning?",
@@ -12987,7 +12987,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for professional catering cleaning calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection in Biel/Bienne and the entire Seeland in order to be able to provide you with an exact and binding offer in which all costs are included."
         },
         {
           "question": "Do you work with your own equipment for professional catering cleaning?",
@@ -13115,7 +13115,7 @@
       "faqs": [
         {
           "question": "How is the price for nationwide cleaning calculated exactly?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection throughout Switzerland in order to be able to provide you with an exact and binding offer that includes all costs."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection throughout Switzerland in order to be able to provide you with an exact and binding offer that includes all costs."
         },
         {
           "question": "Do you work with your own equipment for nationwide cleaning?",
@@ -13171,7 +13171,7 @@
       "badge": "Moving cleaning Switzerland",
       "h1": "Moving cleaning in Switzerland – professional final cleaning",
       "heroSubtitle": "Your reliable partner for moving cleaning throughout Switzerland.",
-      "intro": "Welcome to SwissCleanMove, your leading expert for moving cleaning with a guaranteed delivery throughout Switzerland. If you are looking for the highest quality, Swiss reliability and absolutely transparent prices, then you have found the right partner. Moving in Switzerland is stressful enough. Leave the strenuous final cleaning to the professionals and secure your deposit. We understand that cleaning, moving and facility service services are an absolute matter of trust. That's why at SwissCleanMove we don't rely on anonymous subcontractors, but rather on our own, permanently employed and highly trained staff. This not only guarantees fair working conditions, but also consistently high quality for you as a customer in Zurich, Bern, Basel, Geneva, Lucerne, Solothurn, Friborg, Neuchâtel and Jura. Whether you are a private individual looking for discreet domestic help, a company that needs regular office cleaning, or a property management company that requires a competent caretaker service - we cover the entire spectrum. Our philosophy is based on customer proximity, proactive communication and the use of the most modern tools. With our extensive experience and countless successfully completed orders throughout Switzerland, we know exactly what is important. We have carried out thousands of final cleanings across Switzerland - all with 100% success. We attach great importance to sustainability and use environmentally friendly, biodegradable cleaning products wherever possible. On this page, discover everything you need to know about our services, how our process works and why so many satisfied customers in the region choose us. Do not hesitate to contact us for a free, non-binding viewing or quote.",
+      "intro": "Welcome to SwissCleanMove, your leading expert for moving cleaning with a guaranteed delivery throughout Switzerland. If you are looking for the highest quality, Swiss reliability and absolutely transparent prices, then you have found the right partner. Moving in Switzerland is stressful enough. Leave the strenuous final cleaning to the professionals and protect yourself from deposit deductions due to cleaning defects. We understand that cleaning, moving and facility service services are an absolute matter of trust. That's why at SwissCleanMove we don't rely on anonymous subcontractors, but rather on our own, permanently employed and highly trained staff. This not only guarantees fair working conditions, but also consistently high quality for you as a customer in Zurich, Bern, Basel, Geneva, Lucerne, Solothurn, Friborg, Neuchâtel and Jura. Whether you are a private individual looking for discreet domestic help, a company that needs regular office cleaning, or a property management company that requires a competent caretaker service - we cover the entire spectrum. Our philosophy is based on customer proximity, proactive communication and the use of the most modern tools. With our extensive experience and countless successfully completed orders throughout Switzerland, we know exactly what is important. We carry out professional end-of-tenancy cleanings with an acceptance guarantee across Switzerland. We attach great importance to sustainability and use environmentally friendly, biodegradable cleaning products wherever possible. On this page, discover everything you need to know about our services, how our process works and why so many satisfied customers in the region choose us. Do not hesitate to contact us for a free, non-binding viewing or quote.",
       "ctaSoft": "Request a free quote now",
       "ctaMidHeading": "Are you planning a service?",
       "ctaMidBody": "Request your free, non-binding offer now.",
@@ -13238,7 +13238,7 @@
       "faqs": [
         {
           "question": "How is the price for moving cleaning with an acceptance guarantee calculated exactly?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection throughout Switzerland in order to be able to provide you with an exact and binding offer that includes all costs."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection throughout Switzerland in order to be able to provide you with an exact and binding offer that includes all costs."
         },
         {
           "question": "Do you use your own equipment for moving cleaning with an acceptance guarantee?",
@@ -13361,7 +13361,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for national facility service calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection throughout Switzerland in order to be able to provide you with an exact and binding offer that includes all costs."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection throughout Switzerland in order to be able to provide you with an exact and binding offer that includes all costs."
         },
         {
           "question": "Do you work with national facility service with your own equipment?",
@@ -13484,7 +13484,7 @@
       "faqs": [
         {
           "question": "How exactly is the price for professional home maintenance in Switzerland calculated?",
-          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning from CHF 350 or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection throughout Switzerland in order to be able to provide you with an exact and binding offer that includes all costs."
+          "answer": "The calculation at SwissCleanMove is always transparent and fair. Depending on the specific service, we either work with fixed prices (e.g. final cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or removals at fair prices), with fixed hourly rates (e.g. household help from CHF 35/h) or prices per square meter. We always recommend a free on-site inspection throughout Switzerland in order to be able to provide you with an exact and binding offer that includes all costs."
         },
         {
           "question": "Do you work with your own equipment for professional home maintenance in Switzerland?",
@@ -13638,7 +13638,7 @@
       "faqs": [
         {
           "question": "How is the price for professional cleaning services in Solothurn calculated?",
-          "answer": "Pricing at SwissCleanMove is always transparent and fair. Depending on the specific service, we work either with fixed prices (e.g. end-of-tenancy cleaning from CHF 350 or moves at fair prices), fixed hourly rates (e.g. household help from CHF 35/h) or per-square-metre rates. We always recommend a free on-site inspection in Canton Solothurn to provide you with an exact and binding quote."
+          "answer": "Pricing at SwissCleanMove is always transparent and fair. Depending on the specific service, we work either with fixed prices (e.g. end-of-tenancy cleaning with handover guarantee from CHF 600 for studio & 1-room apartments or moves at fair prices), fixed hourly rates (e.g. household help from CHF 35/h) or per-square-metre rates. We always recommend a free on-site inspection in Canton Solothurn to provide you with an exact and binding quote."
         },
         {
           "question": "Do you work with your own equipment?",

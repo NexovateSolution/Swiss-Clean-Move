@@ -6,12 +6,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'solothurn', regionName: 'Solothurn',
     seoTitle: 'Umzug Solothurn | Reinigungsfirma Solothurn | SwissCleanMove',
-    metaDescription: 'Umzug, Umzugsreinigung, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung in Solothurn.',
+    metaDescription: 'Umzug, Umzugsreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Solothurn.',
     h1: 'Umzug & Reinigungsfirma in Solothurn',
-    highSeoKeywords: ['Umzug Solothurn','Umzugsfirma Solothurn','Reinigungsfirma Solothurn','Umzugsreinigung Solothurn','Endreinigung Solothurn','Unterhaltsreinigung Solothurn','Facility Services Solothurn','Hauswartung Solothurn','Entsorgung Solothurn'],
+    highSeoKeywords: ['Umzug Solothurn','Umzugsfirma Solothurn','Reinigungsfirma Solothurn','Umzugsreinigung Solothurn','Endreinigung Solothurn','Unterhaltsreinigung Solothurn','Hauswartung & Gebäudeunterhalt Solothurn','Hauswartung Solothurn','Entsorgung Solothurn'],
     localKeywords: ['Solothurn','Grenchen','Olten','Zuchwil','Derendingen','Oensingen'],
     introParagraphs: [
-      'SwissCleanMove bietet Umzug, Reinigung, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung in Solothurn und Umgebung.',
+      'SwissCleanMove bietet Umzug, Reinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Solothurn und Umgebung.',
       'Wir arbeiten in Solothurn, Grenchen, Olten, Zuchwil, Derendingen und Oensingen. SwissCleanMove unterstützt Sie bei Privatumzügen, Firmenumzügen, Endreinigung, Büroreinigung, Gebäudeunterhalt und fachgerechter Entsorgung.',
       'Suchen Sie eine professionelle Reinigungsfirma in Solothurn? Besuchen Sie unsere Seite Reinigungsfirma Solothurn für alle Details zu Endreinigung, Unterhaltsreinigung und Spezialreinigung im Kanton Solothurn.'
     ],
@@ -21,8 +21,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove auch in Grenchen und Olten?', answer: 'Ja, wir arbeiten in Grenchen, Olten und weiteren Orten im Kanton Solothurn.' }
     ],
     mapQuery: 'Solothurn,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'solothurn', regionName: 'Solothurn',
     seoTitle: 'Moving Solothurn | Cleaning Company Solothurn | SwissCleanMove',
     metaDescription: 'Moving, move-out cleaning, maintenance cleaning, facility services, property maintenance and disposal in Solothurn.',

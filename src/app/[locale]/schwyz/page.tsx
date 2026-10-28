@@ -6,22 +6,21 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'schwyz', regionName: 'Kanton Schwyz',
     seoTitle: 'Umzug Schwyz | Reinigungsfirma Schwyz | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Umzugsreinigung, Unterhaltsreinigung, Facility Services und Entsorgung im Kanton Schwyz.',
+    metaDescription: 'Professioneller Umzug, Umzugsreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Schwyz.',
     h1: 'Umzug & Reinigungsfirma im Kanton Schwyz',
-    highSeoKeywords: ['Umzug Schwyz','Umzugsfirma Schwyz','Reinigungsfirma Schwyz','Umzugsreinigung Schwyz','Endreinigung Schwyz','Unterhaltsreinigung Schwyz','Facility Services Schwyz','Hauswartung Schwyz','Entsorgung Schwyz'],
+    highSeoKeywords: ['Umzug Schwyz','Umzugsfirma Schwyz','Reinigungsfirma Schwyz','Umzugsreinigung Schwyz','Endreinigung Schwyz','Unterhaltsreinigung Schwyz','Hauswartung & Gebäudeunterhalt Schwyz','Hauswartung Schwyz','Entsorgung Schwyz'],
     localKeywords: ['Schwyz','Freienbach','Einsiedeln','Küssnacht','Wollerau','Pfäffikon','Lachen'],
     introParagraphs: [
-      'SwissCleanMove bietet professionelle Umzüge, Endreinigung, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung im Kanton Schwyz.',
+      'SwissCleanMove bietet professionelle Umzüge, Endreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Schwyz.',
       'Wir arbeiten in Schwyz, Freienbach, Einsiedeln, Küssnacht, Wollerau, Pfäffikon und Lachen. SwissCleanMove bietet zuverlässige Leistungen für Privatkunden, Firmen und Verwaltungen.'
     ],
     faqs: [
       { question: 'Bietet SwissCleanMove Umzug in Schwyz an?', answer: 'Ja, wir bieten professionelle Umzüge im Kanton Schwyz.' },
-      { question: 'Gibt es Reinigung und Hauswartung?', answer: 'Ja, wir bieten Unterhaltsreinigung, Hauswartung und Facility Services.' },
+      { question: 'Gibt es Reinigung und Hauswartung?', answer: 'Ja, wir bieten Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt.' },
       { question: 'Arbeitet SwissCleanMove auch in Pfäffikon und Lachen?', answer: 'Ja, wir arbeiten auch in Pfäffikon, Lachen und Umgebung.' }
     ],
     mapQuery: 'Canton+of+Schwyz,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'schwyz', regionName: 'Canton of Schwyz',
     seoTitle: 'Moving Schwyz | Cleaning Company Schwyz | SwissCleanMove',
     metaDescription: 'Professional moving, move-out cleaning, maintenance cleaning, facility services and disposal in Canton Schwyz.',

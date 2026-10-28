@@ -24,12 +24,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'lausanne-vaud', regionName: 'Lausanne & Waadt',
     seoTitle: 'Umzug Lausanne | Reinigung Lausanne | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Reinigung, Facility Services und Entsorgung in Lausanne und Waadt.',
+    metaDescription: 'Professioneller Umzug, Reinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Lausanne und Waadt.',
     h1: 'Umzug & Reinigung in Lausanne und Waadt',
     highSeoKeywords: ['Umzug Lausanne','Umzug Waadt','Reinigung Lausanne'],
     localKeywords: ['Lausanne','Vaud','Vevey','Montreux','Nyon','Yverdon-les-Bains','Morges','Renens'],
     introParagraphs: [
-      'SwissCleanMove bietet Umzug, Endreinigung, Unterhaltsreinigung, Facility Services und Entsorgung in Lausanne und im Kanton Waadt.',
+      'SwissCleanMove bietet Umzug, Endreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Lausanne und im Kanton Waadt.',
       'Wir arbeiten in Lausanne, Vevey, Montreux, Nyon, Yverdon-les-Bains, Morges und Renens.'
     ],
     faqs: [
@@ -38,8 +38,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove in Vevey und Montreux?', answer: 'Ja, wir arbeiten in Vevey, Montreux, Nyon und der ganzen Region.' }
     ],
     mapQuery: 'Lausanne,Vaud,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'lausanne-vaud', regionName: 'Lausanne & Vaud',
     seoTitle: 'Moving Lausanne | Cleaning Lausanne | SwissCleanMove',
     metaDescription: 'Professional moving, end-of-lease cleaning, facility services and disposal in Lausanne and Vaud.',

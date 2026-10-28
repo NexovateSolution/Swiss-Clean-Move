@@ -216,12 +216,12 @@ export default function SeoLandingPage({
   const getOptimizedAlt = (baseService: string, locCity: string, isHero = false) => {
     if (baseService === 'hauswartung') {
       return isHero 
-        ? `Professionelle Hauswartung & Facility Service in ${locCity}`
+        ? `Professionelle Hauswartung & Gebäudeunterhalt in ${locCity}`
         : `Hauswartung und Objektbetreuung ${locCity}`;
     }
     if (baseService === 'facilityService') {
       return isHero
-        ? `Facility Service & Gebäudeservice in ${locCity}`
+        ? `Hauswartungsdienstleistungen & Liegenschaftsservice in ${locCity}`
         : `Gebäudeunterhalt und Liegenschaftsservice ${locCity}`;
     }
     return isHero ? `${baseService} in ${locCity}` : `${baseService} ${locCity}`;

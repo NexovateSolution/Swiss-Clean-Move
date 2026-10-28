@@ -6,12 +6,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'st-gallen', regionName: 'St. Gallen',
     seoTitle: 'Umzug St. Gallen | Reinigungsfirma St. Gallen | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Reinigung, Unterhaltsreinigung, Facility Services und Entsorgung in St. Gallen.',
+    metaDescription: 'Professioneller Umzug, Reinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in St. Gallen.',
     h1: 'Umzug & Reinigungsfirma in St. Gallen',
-    highSeoKeywords: ['Umzug St. Gallen','Umzugsfirma St. Gallen','Reinigungsfirma St. Gallen','Umzugsreinigung St. Gallen','Endreinigung St. Gallen','Unterhaltsreinigung St. Gallen','Büroreinigung St. Gallen','Facility Services St. Gallen','Hauswartung St. Gallen','Entsorgung St. Gallen'],
+    highSeoKeywords: ['Umzug St. Gallen','Umzugsfirma St. Gallen','Reinigungsfirma St. Gallen','Umzugsreinigung St. Gallen','Endreinigung St. Gallen','Unterhaltsreinigung St. Gallen','Büroreinigung St. Gallen','Hauswartung & Gebäudeunterhalt St. Gallen','Hauswartung St. Gallen','Entsorgung St. Gallen'],
     localKeywords: ['St. Gallen','Rapperswil-Jona','Wil','Gossau','Buchs','Uzwil','Wattwil'],
     introParagraphs: [
-      'SwissCleanMove bietet professionelle Umzüge, Reinigungen, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung im Kanton St. Gallen.',
+      'SwissCleanMove bietet professionelle Umzüge, Reinigungen, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton St. Gallen.',
       'Wir arbeiten in St. Gallen, Rapperswil-Jona, Wil, Gossau, Buchs, Uzwil und Wattwil. Unsere Dienstleistungen eignen sich für Privatpersonen, Unternehmen, Verwaltungen und Gewerbebetriebe.'
     ],
     faqs: [
@@ -20,8 +20,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove auch in Wil und Gossau?', answer: 'Ja, wir arbeiten auch in Wil, Gossau und Umgebung.' }
     ],
     mapQuery: 'St.+Gallen,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'st-gallen', regionName: 'St. Gallen',
     seoTitle: 'Moving St. Gallen | Cleaning Company St. Gallen | SwissCleanMove',
     metaDescription: 'Professional moving, cleaning, maintenance cleaning, facility services and disposal in St. Gallen.',

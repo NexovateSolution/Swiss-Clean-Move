@@ -6,12 +6,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'thurgau', regionName: 'Kanton Thurgau',
     seoTitle: 'Umzug Thurgau | Reinigungsfirma Thurgau | SwissCleanMove',
-    metaDescription: 'Umzug, Reinigung, Umzugsreinigung, Unterhaltsreinigung, Facility Services und Entsorgung im Kanton Thurgau.',
+    metaDescription: 'Umzug, Reinigung, Umzugsreinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Thurgau.',
     h1: 'Umzug & Reinigungsfirma im Kanton Thurgau',
-    highSeoKeywords: ['Umzug Thurgau','Umzugsfirma Thurgau','Reinigungsfirma Thurgau','Umzugsreinigung Thurgau','Endreinigung Thurgau','Unterhaltsreinigung Thurgau','Facility Services Thurgau','Hauswartung Thurgau','Entsorgung Thurgau'],
+    highSeoKeywords: ['Umzug Thurgau','Umzugsfirma Thurgau','Reinigungsfirma Thurgau','Umzugsreinigung Thurgau','Endreinigung Thurgau','Unterhaltsreinigung Thurgau','Hauswartung & Gebäudeunterhalt Thurgau','Hauswartung Thurgau','Entsorgung Thurgau'],
     localKeywords: ['Frauenfeld','Kreuzlingen','Weinfelden','Amriswil','Romanshorn','Arbon'],
     introParagraphs: [
-      'SwissCleanMove bietet Umzug, Reinigung, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung im Kanton Thurgau.',
+      'SwissCleanMove bietet Umzug, Reinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Thurgau.',
       'Wir bedienen Frauenfeld, Kreuzlingen, Weinfelden, Amriswil, Romanshorn und Arbon. SwissCleanMove ist Ihr Partner für professionelle Umzüge, gründliche Reinigung, Gebäudeunterhalt und zuverlässige Entsorgung.'
     ],
     faqs: [
@@ -20,8 +20,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Welche Städte werden bedient?', answer: 'Frauenfeld, Kreuzlingen, Weinfelden, Amriswil, Romanshorn und Arbon.' }
     ],
     mapQuery: 'Canton+of+Thurgau,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'thurgau', regionName: 'Canton of Thurgau',
     seoTitle: 'Moving Thurgau | Cleaning Company Thurgau | SwissCleanMove',
     metaDescription: 'Moving, cleaning, move-out cleaning, maintenance cleaning, facility services and disposal in Canton Thurgau.',

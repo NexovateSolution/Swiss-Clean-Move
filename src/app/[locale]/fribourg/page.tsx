@@ -6,12 +6,12 @@ const D: Record<string, RegionPageData> = {
   de: {
     slug: 'fribourg', regionName: 'Fribourg/Freiburg',
     seoTitle: 'Umzug Fribourg | Reinigung Fribourg | SwissCleanMove',
-    metaDescription: 'Professioneller Umzug, Reinigung, Unterhaltsreinigung, Facility Services und Entsorgung in Fribourg/Freiburg.',
+    metaDescription: 'Professioneller Umzug, Reinigung, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung in Fribourg/Freiburg.',
     h1: 'Umzug & Reinigung in Fribourg/Freiburg',
-    highSeoKeywords: ['Umzug Fribourg','Umzugsfirma Fribourg','Reinigungsfirma Fribourg','Umzugsreinigung Fribourg','Endreinigung Fribourg','Unterhaltsreinigung Fribourg','Facility Services Fribourg','Hauswartung Fribourg','Entsorgung Fribourg'],
+    highSeoKeywords: ['Umzug Fribourg','Umzugsfirma Fribourg','Reinigungsfirma Fribourg','Umzugsreinigung Fribourg','Endreinigung Fribourg','Unterhaltsreinigung Fribourg','Hauswartung & Gebäudeunterhalt Fribourg','Hauswartung Fribourg','Entsorgung Fribourg'],
     localKeywords: ['Fribourg','Freiburg','Bulle','Murten','Düdingen','Tafers','Estavayer'],
     introParagraphs: [
-      'SwissCleanMove bietet Umzug, Reinigung, Endreinigung mit Abnahmegarantie, Unterhaltsreinigung, Facility Services, Hauswartung und Entsorgung im Kanton Fribourg/Freiburg.',
+      'SwissCleanMove bietet Umzug, Reinigung, Endreinigung mit Abnahmegarantie, Unterhaltsreinigung, Hauswartung & Gebäudeunterhalt und Entsorgung im Kanton Fribourg/Freiburg.',
       'Wir bedienen Fribourg, Freiburg, Bulle, Murten, Düdingen, Tafers und Estavayer. SwissCleanMove unterstützt Kunden mit professioneller Planung, gründlicher Reinigung und zuverlässigen Services für Gebäude und Objekte.'
     ],
     faqs: [
@@ -20,8 +20,7 @@ const D: Record<string, RegionPageData> = {
       { question: 'Arbeitet SwissCleanMove auch in Bulle und Murten?', answer: 'Ja, wir arbeiten auch in Bulle, Murten und Umgebung.' }
     ],
     mapQuery: 'Fribourg,Switzerland'
-  },
-  en: {
+  },  en: {
     slug: 'fribourg', regionName: 'Fribourg',
     seoTitle: 'Moving Fribourg | Cleaning Fribourg | SwissCleanMove',
     metaDescription: 'Professional moving, cleaning, maintenance cleaning, facility services and disposal in Fribourg.',

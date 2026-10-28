@@ -18,7 +18,7 @@ const COMPANY_INFO = {
     phone: '+41 78 215 80 30',
     email: 'info@swisscleanmove.ch',
     website: 'swisscleanmove.ch',
-    uid: 'CHE-123.456.789'
+    uid: 'CHE-457.949.122'
 };
 
 // Load logo as base64 for jsPDF

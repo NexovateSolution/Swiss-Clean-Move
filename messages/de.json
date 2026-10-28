@@ -289,7 +289,7 @@
       },
       "reviews": {
         "rating": "4.9 von 5",
-        "count": "Über 100+ Bewertungen",
+        "count": "Verifizierte Google Bewertungen",
         "google": "Bewertungen",
         "writeReview": "Bewertung schreiben"
       },
@@ -523,7 +523,7 @@
       "apartmentCleaning": "CHF 45–65 / Stunde / Mitarbeiter",
       "stairwellCleaning": "Pauschale ab CHF 120",
       "officeCleaning": "CHF 0.80–1.50 / m²",
-      "finalCleaning": "ab CHF 250",
+      "finalCleaning": "ab CHF 600 (Studio / 1-Zi.)",
       "windowCleaning": "CHF 8–15 / Fenster",
       "relocation": "ab CHF 160 / Stunde",
       "disposal": "ab CHF 30 / m³",
@@ -848,7 +848,7 @@
       "reviews": {
         "rating": "5.0",
         "outOf": "/5",
-        "text": "100+ Bewertungen\\nauf Google"
+        "text": "Verifizierte Bewertungen\nauf Google"
       },
       "bottomBar": {
         "call": "Anrufen",
@@ -4320,7 +4320,7 @@
         "primaryButton": "Umzugsangebot erhalten"
       }
     },
-    "seoText": "SwissCleanMove bietet professionelle Umzugs-, Reinigungs- und Hauswartungsdienstleistungen in der gesamten Schweiz. Wir planen und realisieren private und geschäftliche Umzüge mit sicherem Möbeltransport. Bei Wohnungsabgaben garantieren wir eine 100% Abnahmegarantie mit kostenloser Nachreinigung. Unser Liegenschaftsservice umfasst Treppenhausreinigung, Unterhaltsreinigung, Büroreinigung und umfassende Hauswartung für Eigentümer und Verwaltungen. Ergänzt wird unser Angebot durch umweltgerechte Entsorgung und Räumungen – ausgeführt mit Schweizer Präzision und Zuverlässigkeit."
+    "seoText": "SwissCleanMove bietet professionelle Umzugs-, Reinigungs- und Hauswartungsdienstleistungen in der gesamten Schweiz. Wir planen und realisieren private und geschäftliche Umzüge mit sicherem Möbeltransport. Bei Wohnungsabgaben bieten wir eine zuverlässige Abnahmegarantie mit vereinbarter kostenloser Nachreinigung. Unser Liegenschaftsservice umfasst Treppenhausreinigung, Unterhaltsreinigung, Büroreinigung und umfassende Hauswartung für Eigentümer und Verwaltungen. Ergänzt wird unser Angebot durch umweltgerechte Entsorgung und Räumungen – ausgeführt mit Schweizer Präzision und Zuverlässigkeit."
   },
   "admin": {
     "calendar": {
@@ -5614,10 +5614,10 @@
       },
       "standard": {
         "title": "Endreinigung",
-        "description": "Umzugsreinigung mit 100% Abnahmegarantie (inkl. kostenloser Nachreinigung)",
-        "price": "ab CHF 250",
+        "description": "Umzugsreinigung mit Abnahmegarantie (inkl. kostenloser Nachreinigung)",
+        "price": "ab CHF 600",
         "features": [
-          "Wohnungen: ab CHF 250",
+          "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen",
           "Häuser: ab CHF 900",
           "Optionale Zuschläge möglich",
           "Abnahmegarantie"
@@ -5788,7 +5788,7 @@
       "umzugsreinigung": [
         {
           "question": "Was bedeutet 'mit Abnahmegarantie'?",
-          "answer": "Wir garantieren, dass die Verwaltung die Reinigung bei der Wohnungsübergabe akzeptiert. Falls nachgereinigt werden muss, tun wir dies kostenlos."
+          "answer": "Unsere Abnahmegarantie unterstützt Sie bei einer sauberen Wohnungsübergabe. Werden bei der Abnahme reinigungsbedingte Mängel festgestellt, führen wir die vereinbarte kostenlose Nachreinigung direkt vor Ort durch."
         },
         {
           "question": "Müssen Sie bei der Übergabe dabei sein?",
@@ -5979,7 +5979,7 @@
       "h1": "Umzugsfirma Biel/Bienne – Umzug, Umzugsreinigung & Reinigung in Biel/Bienne",
       "heroSubtitle": "Professionelle Umzüge im Seeland – sorgfältig geplant, effizient durchgeführt und fair kalkuliert.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
-      "intro": "Sie planen einen Umzug in Biel/Bienne oder in die Region Seeland? Ein Wohnungswechsel ist oft mit Stress, logistischen Herausforderungen und viel Zeitaufwand verbunden. SwissCleanMove ist Ihre bewährte und lokale Umzugsfirma mit Sitz direkt in Biel/Bienne an der Orpundstrasse 31. Seit 2024 unterstützen wir Privatpersonen, Familien und Unternehmen bei ihrem Umzug – sei es innerhalb der Stadt Biel/Bienne, in die umliegenden Gemeinden oder schweizweit. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, termingerecht und zu einem absolut transparenten Preis abläuft. Mit über 50 erfolgreich durchgeführten Umzügen im Raum Biel/Bienne und Seeland verfügen wir über die nötige Erfahrung, um jeden Auftrag präzise zu meistern. Ob Sie aus einer engen Altstadtwohnung in Biel/Bienne ziehen, Ihr Familienhaus im Seeland wechseln oder als Unternehmen neue Büroräumlichkeiten beziehen – wir haben die richtige Lösung. Wir bieten Ihnen faire Pauschalpreise bereits zu fairen Preisen, setzen je nach Bedarf 2–4 kräftige Zügelhelfer ein und stellen moderne Transportfahrzeuge zur Verfügung. Eine umfassende Transportversicherung ist bei uns stets inklusive, sodass Ihr wertvolles Mobiliar optimal geschützt ist. Ihr Umzug ist bei uns in der Regel innerhalb von 1–2 Tagen komplett abgeschlossen. Da wir direkt am Bielersee stationiert sind, profitieren Sie von extrem kurzen Anfahrtswegen und einer hohen Flexibilität. Wir sind für Sie sogar innerhalb von 24 Stunden verfügbar, falls es einmal besonders schnell gehen muss.",
+      "intro": "Sie planen einen Umzug in Biel/Bienne oder in die Region Seeland? Ein Wohnungswechsel ist oft mit Stress, logistischen Herausforderungen und viel Zeitaufwand verbunden. SwissCleanMove ist Ihre bewährte und lokale Umzugsfirma mit Sitz direkt in Biel/Bienne an der Orpundstrasse 31. Seit 2024 unterstützen wir Privatpersonen, Familien und Unternehmen bei ihrem Umzug – sei es innerhalb der Stadt Biel/Bienne, in die umliegenden Gemeinden oder schweizweit. Unser erfahrenes Team sorgt dafür, dass Ihr Umzug stressfrei, termingerecht und zu einem absolut transparenten Preis abläuft. Mit zahlreichen erfolgreich durchgeführten Umzügen im Raum Biel/Bienne und Seeland verfügen wir über die nötige Erfahrung, um jeden Auftrag präzise zu meistern. Ob Sie aus einer engen Altstadtwohnung in Biel/Bienne ziehen, Ihr Familienhaus im Seeland wechseln oder als Unternehmen neue Büroräumlichkeiten beziehen – wir haben die richtige Lösung. Wir bieten Ihnen faire Pauschalpreise bereits zu fairen Preisen, setzen je nach Bedarf 2–4 kräftige Zügelhelfer ein und stellen moderne Transportfahrzeuge zur Verfügung. Eine umfassende Transportversicherung ist bei uns stets inklusive, sodass Ihr wertvolles Mobiliar optimal geschützt ist. Ihr Umzug ist bei uns in der Regel innerhalb von 1–2 Tagen komplett abgeschlossen. Da wir direkt am Bielersee stationiert sind, profitieren Sie von extrem kurzen Anfahrtswegen und einer hohen Flexibilität. Wir sind für Sie sogar innerhalb von 24 Stunden verfügbar, falls es einmal besonders schnell gehen muss.",
       "sections": [
         {
           "heading": "Warum SwissCleanMove Ihre erste Wahl in Biel/Bienne ist",
@@ -6033,7 +6033,7 @@
       ],
       "trustPoints": [
         "Seit 2024 in Biel/Bienne tätig",
-        "Über 50 erfolgreiche Umzüge",
+        "Zahlreiche erfolgreiche Umzüge",
         "Faire Pauschalpreise zu fairen Preisen"
       ],
       "ctaMidHeading": "Umzug in Biel/Bienne geplant?",
@@ -6131,9 +6131,9 @@
       },
       "badge": "Endreinigung Biel/Bienne",
       "h1": "Umzugsreinigung Biel/Bienne – mit Abnahmegarantie",
-      "heroSubtitle": "Planen Sie Ihren Umzug? Wir übernehmen die komplette Umzugsreinigung Ihrer alten Wohnung in Biel/Bienne und im Seeland. Wir garantieren eine problemlose Wohnungsübergabe.",
+      "heroSubtitle": "Professionelle Umzugsreinigung mit Abnahmegarantie in Biel/Bienne für eine stressfreie Wohnungsübergabe.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
-      "intro": "Ein Wohnungswechsel in Biel/Bienne ist mit vielen Aufgaben verbunden – die anstrengendste davon ist meistens die abschliessende Reinigung. SwissCleanMove ist Ihr verlässlicher Partner für die professionelle Endreinigung mit Abnahmegarantie. Wir sorgen dafür, dass Ihre alte Wohnung in Biel/Bienne oder Umgebung makellos sauber wird und die Immobilienverwaltung die Abnahme ohne zu Zögern akzeptiert. Sollte es bei der Wohnungsübergabe dennoch zu Beanstandungen kommen, sind wir persönlich vor Ort und bessern sofort kostenlos nach – so erhalten Sie Ihre Mietkaution garantiert zurück. Mit unserer Erfahrung aus zahlreichen Endreinigungen im gesamten Seeland, fairen Pauschalpreisen ab CHF 350 und kurzen Reaktionszeiten (innerhalb von 24 Stunden verfügbar), nehmen wir Ihnen diesen Stressfaktor komplett ab. Eine typische Wohnungsreinigung dauert bei uns zwischen 4 und 8 Stunden, je nach Grösse und Verschmutzungsgrad. Verlassen Sie sich auf unsere Expertise direkt am Bielersee und widmen Sie sich ganz der Einrichtung Ihres neuen Zuhauses.",
+      "intro": "Ein Wohnungswechsel in Biel/Bienne ist mit vielen Aufgaben verbunden – die anstrengendste davon ist meistens die abschliessende Reinigung. SwissCleanMove ist Ihr verlässlicher Partner für die professionelle Endreinigung mit Abnahmegarantie. Wir sorgen dafür, dass Ihre alte Wohnung in Biel/Bienne oder Umgebung makellos sauber wird und die Immobilienverwaltung die Abnahme ohne zu Zögern akzeptiert. Sollte es bei der Wohnungsübergabe dennoch zu Beanstandungen kommen, sind wir persönlich vor Ort und bessern sofort kostenlos nach – unsere Umzugsreinigung mit Abnahmegarantie unterstützt Sie bei einer sauberen Wohnungsübergabe. Mit unserer Erfahrung aus zahlreichen Endreinigungen im gesamten Seeland, fairen Pauschalpreisen (Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen) und kurzen Reaktionszeiten (innerhalb von 24 Stunden verfügbar), nehmen wir Ihnen diesen Stressfaktor komplett ab. Eine typische Wohnungsreinigung dauert bei uns zwischen 4 und 8 Stunden, je nach Grösse und Verschmutzungsgrad. Verlassen Sie sich auf unsere Expertise direkt am Bielersee und widmen Sie sich ganz der Einrichtung Ihres neuen Zuhauses.",
       "sections": [
         {
           "heading": "Die beste Wahl für Ihre Umzugsreinigung in Biel/Bienne",
@@ -6183,11 +6183,11 @@
       ],
       "trustPoints": [
         "Abnahmegarantie",
-        "Kaution zurück – garantiert",
+        "Kostenlose Nachreinigung",
         "Faire Pauschalpreise"
       ],
       "ctaMidHeading": "Wohnungswechsel in Biel/Bienne?",
-      "ctaMidBody": "Lassen Sie Ihre Endreinigung von Profis erledigen. Wir garantieren die Abnahme – oder kommen kostenlos zurück.",
+      "ctaMidBody": "Lassen Sie Ihre Endreinigung von Profis erledigen – mit Abnahmegarantie und kostenloser Nachreinigung bei der Abnahme.",
       "ctaMid": "Offerte in 2 Minuten sichern",
       "serviceAreaHeading": "Endreinigung im gesamten Seeland und Umgebung",
       "serviceAreaBody": "Unser Hauptsitz befindet sich in Biel/Bienne, doch unser Einsatzgebiet für professionelle Endreinigungen erstreckt sich über das gesamte Seeland. Wir sind rasch und flexibel in Gemeinden wie Nidau, Brügg, Lyss, Ipsach, Aarberg und Pieterlen vor Ort. Dank unserer lokalen Präsenz fallen für Sie keine langen Anfahrtskosten an. Wir kennen viele der lokalen Immobilienverwaltungen im Seeland persönlich und wissen genau, auf welche spezifischen Details diese bei der Wohnungsübergabe Wert legen.",
@@ -6221,7 +6221,7 @@
       "faqs": [
         {
           "question": "Was genau bedeutet die Abnahmegarantie?",
-          "answer": "Unsere Abnahmegarantie bedeutet für Sie absolute Sicherheit und Stressfreiheit. Wir garantieren Ihnen vertraglich, dass Ihre Immobilie nach unserer Endreinigung von der Verwaltung oder dem Eigentümer anstandslos abgenommen wird. Sollte der Prüfer bei der Wohnungsbegehung dennoch einen Mangel feststellen (z.B. einen Wasserfleck auf einer Armatur), wird dieser von unserem anwesenden Personal sofort, unbürokratisch und völlig kostenlos nachgereinigt, bis die Abnahme unterschrieben ist."
+          "answer": "Unsere Abnahmegarantie unterstützt Sie bei einer sauberen Wohnungsübergabe. Sollte die Verwaltung bei der Abnahme einen reinigungsbedingten Mangel feststellen, bessert unser anwesendes Personal sofort vor Ort kostenlos nach. Dies schützt Sie wirksam vor Kautionsabzügen wegen Reinigungsmängeln."
         },
         {
           "question": "Muss ich bei der Endreinigung selbst anwesend sein?",
@@ -6253,7 +6253,7 @@
         },
         {
           "question": "Wie hoch sind die Kosten für eine Endreinigung in Biel/Bienne?",
-          "answer": "Unsere Preise sind fair, transparent und als Pauschale ohne versteckte Kosten kalkuliert. Eine 2.5-Zimmer-Wohnung reinigen wir ab CHF 350, eine 3.5-Zimmer-Wohnung zu fairen Preisen und eine 4.5-Zimmer-Wohnung ab CHF 690. Für Einfamilienhäuser oder extrem verschmutzte Objekte erstellen wir Ihnen nach einer kostenlosen Besichtigung eine individuelle, verbindliche Offerte."
+          "answer": "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Der Preis für grössere Wohnungen richtet sich nach Grösse, Zustand und Umfang der Reinigung. Gerne erstellen wir Ihnen eine unverbindliche Offerte."
         },
         {
           "question": "Was tun Sie gegen hartnäckigen Schimmel im Badezimmer?",
@@ -6481,7 +6481,7 @@
       "h1": "Umzugsfirma Nidau – Umzug, Umzugsreinigung & Reinigung in Nidau",
       "heroSubtitle": "Ihr Umzug in Nidau – professionell geplant und schnell erledigt.",
       "ctaSoft": "Offerte in 2 Minuten sichern",
-      "intro": "Willkommen bei SwissCleanMove. Willkommen bei SwissCleanMove – Ihrer regionalen Umzugsfirma direkt im Herzen des Seelands, mit starkem Fokus auf Nidau und die angrenzenden Gemeinden. Ein Wohnungswechsel oder eine Firmenverlegung ist ein bedeutendes Ereignis, das viel Organisation erfordert. Seit 2024 stehen wir Familien, Singles und Unternehmen in Nidau zur Seite, um diesen Schritt so reibungslos und stressfrei wie möglich zu gestalten. Egal, ob Sie in ein modernes Apartment direkt am Nidau-Büren-Kanal ziehen, Ihr Einfamilienhaus in der Umgebung wechseln oder mit Ihrem Büro neue Räumlichkeiten beziehen – wir sind Ihr kompetenter Partner. Unser erfahrenes Team aus kräftigen und sorgfältigen Zügelhelfern übernimmt die gesamte Logistik. Wir bieten faire, transparente Pauschalpreise zu fairen Preisen an, stellen moderne Transportfahrzeuge zur Verfügung und inkludieren bei jedem Auftrag eine vollumfängliche Transportversicherung. Mit über 50 erfolgreich durchgeführten Umzügen in der Region kennen wir jeden Winkel von Nidau und dem umliegenden Seeland. Wir arbeiten speditiv, zuverlässig und sind oft auch sehr kurzfristig innerhalb von 24 Stunden verfügbar. Ihr zuverlässiger Partner in der Region – SwissCleanMove. Ob für Privat oder Gewerbe, wir setzen branchenweit neue Standards in Sachen Sauberkeit und Transport. Mit unserer langjährigen Erfahrung garantieren wir Ihnen ein absolut stressfreies Erlebnis von der ersten Offerte bis zur finalen Abnahme. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Willkommen bei SwissCleanMove – Ihrer regionalen Umzugsfirma direkt im Herzen des Seelands, mit starkem Fokus auf Nidau und die angrenzenden Gemeinden. Ein Wohnungswechsel oder eine Firmenverlegung ist ein bedeutendes Ereignis, das viel Organisation erfordert. Seit 2024 stehen wir Familien, Singles und Unternehmen in Nidau zur Seite, um diesen Schritt so reibungslos und stressfrei wie möglich zu gestalten. Egal, ob Sie in ein modernes Apartment direkt am Nidau-Büren-Kanal ziehen, Ihr Einfamilienhaus in der Umgebung wechseln oder mit Ihrem Büro neue Räumlichkeiten beziehen – wir sind Ihr kompetenter Partner. Unser erfahrenes Team aus kräftigen und sorgfältigen Zügelhelfern übernimmt die gesamte Logistik. Wir bieten faire, transparente Pauschalpreise zu fairen Preisen an, stellen moderne Transportfahrzeuge zur Verfügung und inkludieren bei jedem Auftrag eine vollumfängliche Transportversicherung. Mit zahlreichen erfolgreich durchgeführten Umzügen in der Region kennen wir jeden Winkel von Nidau und dem umliegenden Seeland. Wir arbeiten speditiv, zuverlässig und sind oft auch sehr kurzfristig innerhalb von 24 Stunden verfügbar. Ihr zuverlässiger Partner in der Region – SwissCleanMove. Ob für Privat oder Gewerbe, wir setzen branchenweit neue Standards in Sachen Sauberkeit und Transport. Mit unserer langjährigen Erfahrung garantieren wir Ihnen ein absolut stressfreies Erlebnis von der ersten Offerte bis zur finalen Abnahme. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Lokale Expertise für Ihren Umzug in Nidau",
@@ -7642,14 +7642,14 @@
     "endreinigungNidau": {
       "meta": {
         "title": "Endreinigung in Nidau | Mit Garantie | SwissCleanMove",
-        "description": "Professionelle Endreinigung in Nidau mit Abnahmegarantie. Kaution zurück garantiert. SwissCleanMove – Ihre Reinigungsfirma im Seeland.",
+        "description": "Professionelle Endreinigung in Nidau mit Abnahmegarantie für eine reibungslose Wohnungsübergabe. SwissCleanMove – Ihre Reinigungsfirma im Seeland.",
         "titleVariant": "Nidau Endreinigung gesucht? Mit Garantie"
       },
       "badge": "Endreinigung Nidau",
       "h1": "Endreinigungsfirma Nidau – Endreinigung, Wohnungsreinigung & Reinigung in Nidau",
       "heroSubtitle": "Garantiert sauber: Wir reinigen Ihre Wohnung in Nidau so gründlich, dass die Abnahme problemlos verläuft.",
       "ctaSoft": "Offerte in 2 Minuten sichern",
-      "intro": "Willkommen bei SwissCleanMove. Ein Auszug aus Ihrer Wohnung in Nidau steht bevor und die Endreinigung bereitet Ihnen Kopfzerbrechen? SwissCleanMove nimmt Ihnen diese Last komplett ab. Wir sind Ihr regionaler Spezialist für gründliche Endreinigungen mit Abnahmegarantie in Nidau und Umgebung. Bei der Wohnungsübergabe schauen Hausverwaltungen extrem genau hin – Kalkablagerungen oder unsaubere Fensterrahmen können schnell zu Problemen führen. Mit uns sind Sie auf der sicheren Seite: Wir garantieren, dass Ihre Wohnung vom Vermieter beim ersten Termin anstandslos abgenommen wird. Falls doch ein Detail beanstandet wird, reinigt unser anwesendes Personal sofort und kostenlos nach. So ist sichergestellt, dass Sie Ihre volle Kaution ohne Diskussionen zurückerhalten. Wir bieten Ihnen transparente, fixe Pauschalpreise ab CHF 350, je nach Wohnungsgrösse. Eine typische Wohnungsreinigung dauert bei uns 4 bis 8 Stunden. Dank unserer Nähe zu Nidau profitieren Sie von kurzen Wegen, keinen versteckten Anfahrtskosten und bei Bedarf sogar von einer Verfügbarkeit innerhalb von 24 Stunden. Vertrauen Sie auf Schweizer Standards und ein erfahrenes Team aus dem Seeland. Willkommen bei den Experten von SwissCleanMove. Wir sind stolz darauf, unseren Kunden in dieser Region Dienstleistungen auf höchstem Schweizer Niveau anzubieten. Unsere Firmenphilosophie basiert auf echter Kundennähe, klaren Preisen ohne versteckte Kosten und Zuverlässigkeit bei jedem Einsatz. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Ein Auszug aus Ihrer Wohnung in Nidau steht bevor und die Endreinigung bereitet Ihnen Kopfzerbrechen? SwissCleanMove nimmt Ihnen diese Last komplett ab. Wir sind Ihr regionaler Spezialist für gründliche Endreinigungen mit Abnahmegarantie in Nidau und Umgebung. Bei der Wohnungsübergabe schauen Hausverwaltungen extrem genau hin – Kalkablagerungen oder unsaubere Fensterrahmen können schnell zu Problemen führen. Mit uns sind Sie auf der sicheren Seite: Mit unserer Abnahmegarantie sind Sie auf der sicheren Seite: Unser Team reinigt Ihre Wohnung gründlich und steht bei der Übergabe für allfällige kostenlose Nachreinigungen bereit. Unsere Umzugsreinigung mit Abnahmegarantie unterstützt Sie bei einer sauberen Wohnungsübergabe. Wir bieten Ihnen transparente Preise – Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Eine typische Wohnungsreinigung dauert bei uns 4 bis 8 Stunden. Dank unserer Nähe zu Nidau profitieren Sie von kurzen Wegen, keinen versteckten Anfahrtskosten und bei Bedarf sogar von einer Verfügbarkeit innerhalb von 24 Stunden. Vertrauen Sie auf Schweizer Standards und ein erfahrenes Team aus dem Seeland. Willkommen bei den Experten von SwissCleanMove. Wir sind stolz darauf, unseren Kunden in dieser Region Dienstleistungen auf höchstem Schweizer Niveau anzubieten. Unsere Firmenphilosophie basiert auf echter Kundennähe, klaren Preisen ohne versteckte Kosten und Zuverlässigkeit bei jedem Einsatz. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Warum SwissCleanMove in Nidau wählen?",
@@ -7711,7 +7711,7 @@
       ],
       "trustPoints": [
         "Abnahmegarantie",
-        "Kaution sicher zurück",
+        "Kostenlose Nachreinigung",
         "Lokal in Nidau und Biel/Bienne"
       ],
       "ctaMidHeading": "Wohnungsabgabe in Nidau?",
@@ -7745,7 +7745,7 @@
       "faqs": [
         {
           "question": "Wie läuft das mit der Abnahmegarantie in Nidau genau ab?",
-          "answer": "Ganz einfach: Wir garantieren vertraglich, dass die Verwaltung die Reinigung Ihrer Wohnung in Nidau akzeptiert. Wenn bei der Übergabe bemängelt wird, dass beispielsweise ein Fensterrahmen nicht sauber genug ist, reinigt unser anwesendes Personal diesen sofort nach – kostenlos. Für Sie bedeutet das absolute Sicherheit. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Unsere Abnahmegarantie unterstützt Sie bei einer sauberen Wohnungsübergabe in Nidau. Sollte bei der Übergabe ein reinigungsbedingter Mangel beanstandet werden, bessert unser anwesendes Personal diesen sofort und kostenlos nach."
         },
         {
           "question": "Müssen die Möbel bereits aus der Wohnung sein?",
@@ -7757,7 +7757,7 @@
         },
         {
           "question": "Welche Kosten kommen für eine Endreinigung in Nidau auf mich zu?",
-          "answer": "Wir bieten feste Pauschalpreise ab CHF 350 für kleine Wohnungen. Eine typische 3.5-Zimmer-Wohnung kostet zu fairen Preisen, eine 4.5-Zimmer-Wohnung ab CHF 690. Nach einer kostenlosen Besichtigung in Nidau erhalten Sie von uns einen garantierten Fixpreis – es gibt keine versteckten Kosten. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Der Preis für grössere Wohnungen richtet sich nach Grösse, Zustand und Umfang der Reinigung. Gerne erstellen wir Ihnen eine unverbindliche Offerte."
         },
         {
           "question": "Wie lange im Voraus muss ich die Endreinigung buchen?",
@@ -7841,9 +7841,9 @@
       },
       "badge": "Umzugsreinigung Lyss",
       "h1": "Endreinigungsfirma Lyss – Endreinigung, Wohnungsreinigung & Reinigung in Lyss",
-      "heroSubtitle": "Stressfreie Wohnungsübergabe in Lyss: Wir garantieren die reibungslose Abnahme Ihrer Wohnung.",
+      "heroSubtitle": "Stressfreie Wohnungsübergabe in Lyss: Professionelle Endreinigung mit Abnahmegarantie und kostenloser Nachbesserung.",
       "ctaSoft": "Schnelle Rückmeldung innerhalb 24h",
-      "intro": "Willkommen bei SwissCleanMove. Der Umzug ist geschafft, doch die alte Wohnung in Lyss wartet noch auf die gefürchtete Endreinigung? Sparen Sie sich Zeit, Schmutz und Nerven – übergeben Sie diese anspruchsvolle Aufgabe an die Profis von SwissCleanMove. Wir sind Ihr lokaler Experte für Wohnungsreinigungen mit Abnahmegarantie in Lyss und dem umliegenden Seeland. Schweizer Immobilienverwaltungen sind bei der Übergabe extrem streng. Ein übersehener Kalkfleck im Bad oder schmutzige Fensterfälze können dazu führen, dass die Abnahme verweigert und die Kaution blockiert wird. Mit uns gehen Sie kein Risiko ein: Wir reinigen Ihre Wohnung tiefgründig und garantieren, dass sie beim ersten Termin abgenommen wird. Sollte doch etwas beanstandet werden, bessert unser Reinigungsteam vor Ort sofort und kostenlos nach. Wir bieten Ihnen transparente, fixe Pauschalpreise ab CHF 350 ohne versteckte Kosten. Eine Reinigung dauert in der Regel 4 bis 8 Stunden. Verlassen Sie sich auf ein etabliertes, régionales Team aus dem Seeland, das auch für kurzfristige Einsätze (innerhalb 24h) in Lyss zur Verfügung steht. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster professionelle Reinigung, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Der Umzug ist geschafft, doch die alte Wohnung in Lyss wartet noch auf die gefürchtete Endreinigung? Sparen Sie sich Zeit, Schmutz und Nerven – übergeben Sie diese anspruchsvolle Aufgabe an die Profis von SwissCleanMove. Wir sind Ihr lokaler Experte für Wohnungsreinigungen mit Abnahmegarantie in Lyss und dem umliegenden Seeland. Schweizer Immobilienverwaltungen sind bei der Übergabe extrem streng. Ein übersehener Kalkfleck im Bad oder schmutzige Fensterfälze können dazu führen, dass die Abnahme verweigert und die Kaution blockiert wird. Mit uns gehen Sie kein Risiko ein: Wir reinigen Ihre Wohnung tiefgründig und stehen bei der Abnahme für eine kostenlose Nachreinigung bereit. Sollte doch etwas beanstandet werden, bessert unser Reinigungsteam vor Ort sofort und kostenlos nach. Wir bieten Ihnen transparente Pauschalpreise – Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Eine Reinigung dauert in der Regel 4 bis 8 Stunden. Verlassen Sie sich auf ein etabliertes, régionales Team aus dem Seeland, das auch für kurzfristige Einsätze (innerhalb 24h) in Lyss zur Verfügung steht. Willkommen bei SwissCleanMove. Wenn Sie auf der Suche nach höchster professionelle Reinigung, absoluter Zuverlässigkeit und transparenten Preisen in dieser Region sind, dann sind Sie hier genau richtig. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt Vertrauenssache sind. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Ihr Reinigungs-Partner für eine sorgenfreie Übergabe in Lyss",
@@ -7935,11 +7935,11 @@
       "faqs": [
         {
           "question": "Was genau beinhaltet die Abnahmegarantie in Lyss?",
-          "answer": "Unsere Abnahmegarantie ist Ihr Schutzschild. Wir garantieren, dass die Immobilienverwaltung in Lyss die Wohnung reinigungstechnisch abnimmt. Wenn bei der Begehung doch ein Fleck bemängelt wird, wischt unser anwesendes Personal sofort nach – ohne dass für Sie zusätzliche Kosten entstehen. So ist Ihre Kaution sicher. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Unsere Abnahmegarantie unterstützt Sie bei einer sauberen Wohnungsübergabe in Lyss. Sollten bei der Begehung reinigungsbedingte Mängel festgestellt werden, bessert unser anwesendes Personal sofort vor Ort kostenlos nach."
         },
         {
           "question": "Wie viel kostet eine Endreinigung in Lyss?",
-          "answer": "Wir kalkulieren unsere Preise transparent als Pauschale. Eine kleine 2.5-Zimmer-Wohnung kostet ab CHF 350. Eine Standard-3.5-Zimmer-Wohnung kostet zu fairen Preisen, eine 4.5-Zimmer-Wohnung ab CHF 690. Um Ihnen einen exakten Fixpreis zu garantieren, besichtigen wir Ihr Objekt in Lyss vorab völlig kostenlos. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Der Preis für grössere Wohnungen richtet sich nach Grösse, Zustand und Umfang der Reinigung. Gerne erstellen wir Ihnen eine unverbindliche Offerte."
         },
         {
           "question": "Sind Fenster und Balkon im Preis der Endreinigung inbegriffen?",
@@ -8031,9 +8031,9 @@
       },
       "badge": "Endreinigung Brügg",
       "h1": "Endreinigungsfirma Brügg – Endreinigung, Wohnungsreinigung & Reinigung in Brügg",
-      "heroSubtitle": "Ihre Mietwohnung in Brügg blitzblank geputzt und garantiert mängelfrei übergeben.",
+      "heroSubtitle": "Ihre Mietwohnung in Brügg blitzblank geputzt für eine saubere und stressfreie Wohnungsübergabe.",
       "ctaSoft": "Unverbindlich anfragen",
-      "intro": "Willkommen bei SwissCleanMove. Ein Auszug ist anstrengend genug – überlassen Sie die nervenaufreibende Wohnungsreinigung den Profis von SwissCleanMove. Wir sind Ihr regionaler Spezialist für Endreinigungen mit Abnahmegarantie in Brügg und dem gesamten Seeland. Die Anforderungen der Schweizer Immobilienverwaltungen bei der Wohnungsübergabe sind extrem hoch. Ein übersehener Fleck im Backofen oder verkalkte Duschfugen können schnell zur Blockierung Ihrer Kaution führen. Mit unserer Abnahmegarantie sind Sie auf der sicheren Seite: Wir reinigen Ihr Objekt tiefgründig und garantieren, dass es bei der Verwaltung anstandslos abgenommen wird. Findet die Verwaltung doch einen kleinen Mangel, reinigen wir sofort vor Ort kostenlos nach. Wir bieten Ihnen absolute Kostensicherheit durch feste Pauschalpreise ab CHF 350. Es gibt keine versteckten Stundenlöhne oder Anfahrtskosten. Eine typische Wohnung ist durch unser eingespieltes Team in 4 bis 8 Stunden blitzsauber. Dank unserer starken lokalen Präsenz in Brügg können wir bei Notfällen auch kurzfristig (oft innert 24h) einspringen. Herzlich willkommen bei SwissCleanMove – Ihrem Premium-Partner vor Ort. Wir bieten Ihnen Dienstleistungen nach strengsten Schweizer Massstäben. Bei uns stehen Transparenz, Pünktlichkeit und höchste Sorgfalt an erster Stelle. Vertrauen Sie auf unser fest angestelltes, kompetentes Team für eine reibungslose Abwicklung. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Ein Auszug ist anstrengend genug – überlassen Sie die nervenaufreibende Wohnungsreinigung den Profis von SwissCleanMove. Wir sind Ihr regionaler Spezialist für Endreinigungen mit Abnahmegarantie in Brügg und dem gesamten Seeland. Die Anforderungen der Schweizer Immobilienverwaltungen bei der Wohnungsübergabe sind extrem hoch. Ein übersehener Fleck im Backofen oder verkalkte Duschfugen können schnell zur Blockierung Ihrer Kaution führen. Mit unserer Abnahmegarantie sind Sie auf der sicheren Seite: Wir reinigen Ihr Objekt tiefgründig und stehen bei der Abnahme für allfällige kostenlose Nachreinigungen bereit. Sollte die Verwaltung doch einen reinigungsbedingten Mangel feststellen, bessern wir sofort vor Ort kostenlos nach. Wir bieten Ihnen absolute Kostensicherheit durch feste Pauschalpreise: Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Es gibt keine versteckten Stundenlöhne oder Anfahrtskosten. Eine typische Wohnung ist durch unser eingespieltes Team in 4 bis 8 Stunden blitzsauber. Dank unserer starken lokalen Präsenz in Brügg können wir bei Notfällen auch kurzfristig (oft innert 24h) einspringen. Herzlich willkommen bei SwissCleanMove – Ihrem Premium-Partner vor Ort. Wir bieten Ihnen Dienstleistungen nach strengsten Schweizer Massstäben. Bei uns stehen Transparenz, Pünktlichkeit und höchste Sorgfalt an erster Stelle. Vertrauen Sie auf unser fest angestelltes, kompetentes Team für eine reibungslose Abwicklung. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Reinigungslösungen für einen reibungslosen Auszug in Brügg",
@@ -8068,7 +8068,7 @@
           "body": "Wir fegen und wischen den Balkon, reinigen das Balkongeländer und übergeben auch Nebenräume wie Kellerabteile, Estriche oder Garagen in Brügg besenrein und frei von Spinnweben. Dieser Service ist enorm hilfreich, da diese Räume am Schluss oft vergessen gehen, von der Verwaltung jedoch mitgeprüft werden. Wir legen grössten Wert darauf, dass diese Arbeiten gemäss den höchsten Schweizer Branchenstandards ausgeführt werden. Unsere langjährige Erfahrung in dieser Region zeigt, dass eine detaillierte Vorplanung und der Einsatz von geschultem Fachpersonal der Schlüssel zum Erfolg sind. Dabei achten wir stets auf eine umweltschonende Arbeitsweise und den Schutz Ihrer Immobilien und Möbel. Wir garantieren Ihnen absolute Transparenz und eine reibungslose Ausführung, auf die Sie sich verlassen können."
         },
         {
-          "heading": "Warum professionelle Reinigung die Kaution sichert (Ratgeber)",
+          "heading": "Warum eine professionelle Endreinigung die Wohnungsübergabe erleichtert (Ratgeber)",
           "body": "Viele Mieter in Brügg unterschätzen die Anforderungen der Schweizer Immobilienverwaltungen bei der Wohnungsübergabe. Ein selbst durchgeführter Putztag reicht oft nicht aus, um eingebranntes Fett im Backofen oder hartnäckigen Kalk im Bad restlos zu entfernen. Die Verwaltungen rufen in solchen Fällen eine professionelle Reinigungsfirma an, was Ihnen nachträglich von der Kaution (meist zu sehr hohen Regiepreisen) abgezogen wird. Mit SwissCleanMove umgehen Sie dieses finanzielle Risiko komplett. Durch unsere vertragliche Abnahmegarantie wissen Sie genau, dass die Pauschalkosten der Reinigung die einzige Investition sind, die Sie tätigen müssen. Wir empfehlen unseren Kunden, die Wohnung vor unserem Eintreffen vollständig zu leeren und allfällige kleine Mieter-Reparaturen (wie das Auswechseln kaputter Glühbirnen) bereits vorab zu erledigen. Wir legen grössten Wert darauf, dass diese Arbeiten gemäss den höchsten Schweizer Branchenstandards ausgeführt werden. Unsere langjährige Erfahrung in dieser Region zeigt, dass eine detaillierte Vorplanung und der Einsatz von geschultem Fachpersonal der Schlüssel zum Erfolg sind. Dabei achten wir stets auf eine umweltschonende Arbeitsweise und den Schutz Ihrer Immobilien und Möbel. Wir garantieren Ihnen absolute Transparenz und eine reibungslose Ausführung, auf die Sie sich verlassen können."
         },
         {
@@ -8088,7 +8088,7 @@
       "serviceBullets": [
         "Schriftlich garantierte Wohnungsabnahme",
         "Kostenlose Nachreinigung bei Mängeln",
-        "Transparente, fixe Pauschalpreise ab CHF 350",
+        "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen",
         "Sämtliche Putzmittel und Geräte inklusive",
         "Lokale Verankerung und kurzfristig in Brügg verfügbar",
         "Auf Wunsch Anwesenheit bei der Übergabe"
@@ -8133,7 +8133,7 @@
         },
         {
           "question": "Wie hoch sind die Kosten für eine Endreinigung in Brügg?",
-          "answer": "Wir arbeiten mit fixen Pauschalpreisen, sodass Sie keine bösen Überraschungen erleben. Eine kleine Wohnung reinigen wir ab CHF 350. Eine durchschnittliche 3.5-Zimmer-Wohnung kostet zu fairen Preisen, eine 4.5-Zimmer-Wohnung ab CHF 690. Nach einer kostenlosen Besichtigung in Brügg garantieren wir Ihnen einen genauen Fixpreis. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Der Preis für grössere Wohnungen richtet sich nach Grösse, Zustand und Umfang der Reinigung. Gerne erstellen wir Ihnen eine unverbindliche Offerte."
         },
         {
           "question": "Muss ich eigene Reinigungsmittel zur Verfügung stellen?",
@@ -8227,7 +8227,7 @@
       "h1": "Endreinigungsfirma Ipsach – Endreinigung, Wohnungsreinigung & Reinigung in Ipsach",
       "heroSubtitle": "Ihre Wohnung in Ipsach am Bielersee – perfekt gereinigt und bereit für die Übergabe.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove. Die Kisten sind gepackt, das neue Zuhause wartet – doch die alte Wohnung in Ipsach muss noch in einen abnahmebereiten Zustand versetzt werden. Überlassen Sie diese anspruchsvolle und zeitintensive Aufgabe den Profis von SwissCleanMove. Wir sind Ihre regionale Reinigungsfirma für professionelle Endreinigungen mit Abnahmegarantie im Seeland. Schweizer Immobilienverwaltungen prüfen bei der Wohnungsübergabe jedes kleinste Detail, von den Fensterfälzen bis zu Kalkrückständen in der Dusche. Mit unserer Abnahmegarantie garantieren wir Ihnen eine reibungslose Übergabe: Sollte die Verwaltung wider Erwarten einen Mangel feststellen, reinigen wir sofort vor Ort und völlig kostenlos nach, bis das Protokoll unterschrieben ist. So sichern Sie sich Ihre volle Mietkaution ohne Diskussionen. Wir bieten Ihnen transparente Fixpreise ab CHF 350, ohne versteckte Zuschläge oder hohe Anfahrtskosten. Unsere erfahrenen Teams reinigen Ihre Wohnung in Ipsach typischerweise innerhalb von 4 bis 8 Stunden tiefgründig und sind bei Notfällen auch innerhalb von 24 Stunden für Sie verfügbar. Grüezi bei SwissCleanMove! Als Ihr lokaler Experte wissen wir genau, worauf es ankommt. Wir verzichten ganz bewusst auf Subunternehmer und setzen stattdessen auf unser eigenes, hervorragend geschultes Fachpersonal. Geniessen Sie absolute Kostentransparenz und Schweizer Premium-Qualität. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Die Kisten sind gepackt, das neue Zuhause wartet – doch die alte Wohnung in Ipsach muss noch in einen abnahmebereiten Zustand versetzt werden. Überlassen Sie diese anspruchsvolle und zeitintensive Aufgabe den Profis von SwissCleanMove. Wir sind Ihre regionale Reinigungsfirma für professionelle Endreinigungen mit Abnahmegarantie im Seeland. Schweizer Immobilienverwaltungen prüfen bei der Wohnungsübergabe jedes kleinste Detail, von den Fensterfälzen bis zu Kalkrückständen in der Dusche. Mit unserer Abnahmegarantie garantieren wir Ihnen eine reibungslose Übergabe: Sollte die Verwaltung wider Erwarten einen Mangel feststellen, reinigen wir sofort vor Ort und völlig kostenlos nach, bis das Protokoll unterschrieben ist. Unsere Umzugsreinigung mit Abnahmegarantie unterstützt Sie bei einer sauberen Wohnungsübergabe. Wir bieten Ihnen transparente Fixpreise – Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Unsere erfahrenen Teams reinigen Ihre Wohnung in Ipsach typischerweise innerhalb von 4 bis 8 Stunden tiefgründig und sind bei Notfällen auch innerhalb von 24 Stunden für Sie verfügbar. Grüezi bei SwissCleanMove! Als Ihr lokaler Experte wissen wir genau, worauf es ankommt. Wir verzichten ganz bewusst auf Subunternehmer und setzen stattdessen auf unser eigenes, hervorragend geschultes Fachpersonal. Geniessen Sie absolute Kostentransparenz und Schweizer Premium-Qualität. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Ihre Sorgenfreie Wohnungsübergabe in Ipsach",
@@ -8259,7 +8259,7 @@
         },
         {
           "heading": "Ratgeber für eine reibungslose Übergabe in Ipsach",
-          "body": "Damit wir unsere Abnahmegarantie in Ipsach gewährleisten können, ist es wichtig, dass Ihre Wohnung am Reinigungstag komplett geräumt ist. Jeglicher Müll und Hausrat muss entfernt sein. Kontrollieren Sie zudem Ihren Mietvertrag auf kleine Instandsetzungspflichten. Oft müssen Mieter defekte Glühbirnen auswechseln oder gebohrte Dübellöcher in den Wänden fachmännisch schliessen. Wir empfehlen unseren Kunden, am Tag der offiziellen Wohnungsabnahme gemeinsam mit uns und der Verwaltung den Rundgang zu machen. Wenn der Verwalter ein noch so kleines Staubkörnchen findet, greift unser Mitarbeiter sofort zum Tuch und korrigiert den Mangel an Ort und Stelle. So verlassen Sie Ipsach mit dem sicheren Gefühl, Ihre Kaution vollständig zurückzuerhalten. Wir legen grössten Wert darauf, dass diese Arbeiten gemäss den höchsten Schweizer Branchenstandards ausgeführt werden. Unsere langjährige Erfahrung in dieser Region zeigt, dass eine detaillierte Vorplanung und der Einsatz von geschultem Fachpersonal der Schlüssel zum Erfolg sind. Dabei achten wir stets auf eine umweltschonende Arbeitsweise und den Schutz Ihrer Immobilien und Möbel. Wir garantieren Ihnen absolute Transparenz und eine reibungslose Ausführung, auf die Sie sich verlassen können."
+          "body": "Damit wir unsere Abnahmegarantie in Ipsach gewährleisten können, ist es wichtig, dass Ihre Wohnung am Reinigungstag komplett geräumt ist. Jeglicher Müll und Hausrat muss entfernt sein. Kontrollieren Sie zudem Ihren Mietvertrag auf kleine Instandsetzungspflichten. Oft müssen Mieter defekte Glühbirnen auswechseln oder gebohrte Dübellöcher in den Wänden fachmännisch schliessen. Wir empfehlen unseren Kunden, am Tag der offiziellen Wohnungsabnahme gemeinsam mit uns und der Verwaltung den Rundgang zu machen. Wenn der Verwalter ein noch so kleines Staubkörnchen findet, greift unser Mitarbeiter sofort zum Tuch und korrigiert den Mangel an Ort und Stelle. So schützen Sie sich wirksam vor Kautionsabzügen wegen Reinigungsmängeln. Wir legen grössten Wert darauf, dass diese Arbeiten gemäss den höchsten Schweizer Branchenstandards ausgeführt werden. Unsere langjährige Erfahrung in dieser Region zeigt, dass eine detaillierte Vorplanung und der Einsatz von geschultem Fachpersonal der Schlüssel zum Erfolg sind. Dabei achten wir stets auf eine umweltschonende Arbeitsweise und den Schutz Ihrer Immobilien und Möbel. Wir garantieren Ihnen absolute Transparenz und eine reibungslose Ausführung, auf die Sie sich verlassen können."
         },
         {
           "heading": "Unser detaillierter Arbeitsprozess und Qualitätsversprechen",
@@ -8278,7 +8278,7 @@
       "serviceBullets": [
         "Schriftlich garantierte Abnahmegarantie",
         "Kostenlose Mängelbeseitigung bei der Übergabe",
-        "Verbindliche Pauschalpreise ab CHF 350",
+        "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen",
         "Umweltfreundliche, effektive Putzmittel",
         "Sämtliche Geräte (Staubsauger etc.) inklusive",
         "Kurze Anfahrtswege und sehr flexibel"
@@ -8323,7 +8323,7 @@
         },
         {
           "question": "Was kostet eine Endreinigung in Ipsach?",
-          "answer": "Wir arbeiten ausschliesslich mit transparenten Pauschalpreisen. Für eine kleine Wohnung starten wir ab CHF 350. Eine reguläre 3.5-Zimmer-Wohnung kostet zu fairen Preisen, eine 4.5-Zimmer-Wohnung ab CHF 690. Nach einer kostenlosen Besichtigung erhalten Sie einen verbindlichen Fixpreis. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Der Preis für grössere Wohnungen richtet sich nach Grösse, Zustand und Umfang der Reinigung. Gerne erstellen wir Ihnen eine unverbindliche Offerte."
         },
         {
           "question": "Muss die Wohnung für die Endreinigung komplett leer sein?",
@@ -8417,7 +8417,7 @@
       "h1": "Endreinigungsfirma Aarberg – Endreinigung, Wohnungsreinigung & Reinigung in Aarberg",
       "heroSubtitle": "Professionelle Endreinigung in Aarberg: Wir putzen, Sie übergeben entspannt.",
       "ctaSoft": "Offerte in 2 Minuten sichern",
-      "intro": "Willkommen bei SwissCleanMove. Ein Auszug ist meist mit viel Freude auf das neue Zuhause, aber auch mit dem Stress der Wohnungsabgabe verbunden. Die Endreinigung der alten Wohnung in Aarberg ist oft der letzte und mühsamste Schritt. SwissCleanMove nimmt Ihnen diese Belastung vollständig ab. Als Ihre regionale Reinigungsfirma im Seeland sind wir auf professionelle Umzugsreinigungen mit Abnahmegarantie spezialisiert. Wir wissen genau, wie streng die Immobilienverwaltungen in Aarberg und Umgebung prüfen. Ein kleiner Kalkfleck an der Duschwand oder Staub auf den Fussleisten kann bereits zu Problemen bei der Kautionsrückgabe führen. Mit unserer Abnahmegarantie sind Sie auf der sicheren Seite: Wir reinigen Ihre Wohnung so gründlich, dass sie beim ersten Termin abgenommen wird. Falls der Verwalter doch einen Mangel feststellt, reinigt unser Team sofort und kostenlos vor Ort nach. Wir bieten Ihnen volle Transparenz durch fixe Pauschalpreise ab CHF 350 – ohne versteckte Kosten oder böse Überraschungen. Eine Standardreinigung dauert bei uns 4 bis 8 Stunden. Verlassen Sie sich auf unsere professionelle Reinigung und unsere Pünktlichkeit. Ihr zuverlässiger Partner in der Region – SwissCleanMove. Ob für Privat oder Gewerbe, wir setzen branchenweit neue Standards in Sachen Sauberkeit und Transport. Mit unserer langjährigen Erfahrung garantieren wir Ihnen ein absolut stressfreies Erlebnis von der ersten Offerte bis zur finalen Abnahme. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Ein Auszug ist meist mit viel Freude auf das neue Zuhause, aber auch mit dem Stress der Wohnungsabgabe verbunden. Die Endreinigung der alten Wohnung in Aarberg ist oft der letzte und mühsamste Schritt. SwissCleanMove nimmt Ihnen diese Belastung vollständig ab. Als Ihre regionale Reinigungsfirma im Seeland sind wir auf professionelle Umzugsreinigungen mit Abnahmegarantie spezialisiert. Wir wissen genau, wie streng die Immobilienverwaltungen in Aarberg und Umgebung prüfen. Ein kleiner Kalkfleck an der Duschwand oder Staub auf den Fussleisten kann bereits zu Problemen bei der Kautionsrückgabe führen. Mit unserer Abnahmegarantie sind Sie auf der sicheren Seite: Unser Team reinigt Ihre Wohnung gründlich und steht bei der Übergabe für allfällige kostenlose Nachreinigungen bereit. Wir bieten Ihnen volle Transparenz: Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Eine Standardreinigung dauert bei uns 4 bis 8 Stunden. Verlassen Sie sich auf unsere professionelle Reinigung und unsere Pünktlichkeit. Ihr zuverlässiger Partner in der Region – SwissCleanMove. Ob für Privat oder Gewerbe, wir setzen branchenweit neue Standards in Sachen Sauberkeit und Transport. Mit unserer langjährigen Erfahrung garantieren wir Ihnen ein absolut stressfreies Erlebnis von der ersten Offerte bis zur finalen Abnahme. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Warum SwissCleanMove die beste Wahl für Aarberg ist",
@@ -8453,7 +8453,7 @@
         },
         {
           "heading": "Tipps für die Wohnungsübergabe in Aarberg (Ratgeber)",
-          "body": "Damit wir unsere Abnahmegarantie gewährleisten können, muss die Wohnung am Reinigungstag komplett leergeräumt sein. Sämtlicher Hausrat und Müll müssen entsorgt sein. Klären Sie frühzeitig, ob Sie gemäss Mietvertrag kleine Reparaturen vornehmen müssen (z.B. Dübellöcher füllen, Filter im Dampfabzug ersetzen). Am Tag der Abnahme empfehlen wir Ihnen, pünktlich mit der Verwaltung den Rundgang zu machen. Wenn Sie uns beauftragen, sind wir auf Wunsch bei der Übergabe in Aarberg persönlich anwesend. Dies hat den grossen Vorteil, dass wir allfällige kleine Beanstandungen des Verwalters direkt an Ort und Stelle nachbessern können, ohne dass Sie einen zweiten Termin vereinbaren müssen. So sichern Sie sich Ihre Kaution vollumfänglich. Wir legen grössten Wert darauf, dass diese Arbeiten gemäss den höchsten Schweizer Branchenstandards ausgeführt werden. Unsere langjährige Erfahrung in dieser Region zeigt, dass eine detaillierte Vorplanung und der Einsatz von geschultem Fachpersonal der Schlüssel zum Erfolg sind. Dabei achten wir stets auf eine umweltschonende Arbeitsweise und den Schutz Ihrer Immobilien und Möbel. Wir garantieren Ihnen absolute Transparenz und eine reibungslose Ausführung, auf die Sie sich verlassen können."
+          "body": "Damit wir unsere Abnahmegarantie gewährleisten können, muss die Wohnung am Reinigungstag komplett leergeräumt sein. Sämtlicher Hausrat und Müll müssen entsorgt sein. Klären Sie frühzeitig, ob Sie gemäss Mietvertrag kleine Reparaturen vornehmen müssen (z.B. Dübellöcher füllen, Filter im Dampfabzug ersetzen). Am Tag der Abnahme empfehlen wir Ihnen, pünktlich mit der Verwaltung den Rundgang zu machen. Wenn Sie uns beauftragen, sind wir auf Wunsch bei der Übergabe in Aarberg persönlich anwesend. Dies hat den grossen Vorteil, dass wir allfällige kleine Beanstandungen des Verwalters direkt an Ort und Stelle nachbessern können, ohne dass Sie einen zweiten Termin vereinbaren müssen. Dies schützt wirksam vor Kautionsabzügen wegen Reinigungsmängeln. Wir legen grössten Wert darauf, dass diese Arbeiten gemäss den höchsten Schweizer Branchenstandards ausgeführt werden. Unsere langjährige Erfahrung in dieser Region zeigt, dass eine detaillierte Vorplanung und der Einsatz von geschultem Fachpersonal der Schlüssel zum Erfolg sind. Dabei achten wir stets auf eine umweltschonende Arbeitsweise und den Schutz Ihrer Immobilien und Möbel. Wir garantieren Ihnen absolute Transparenz und eine reibungslose Ausführung, auf die Sie sich verlassen können."
         },
         {
           "heading": "Umweltbewusstsein und Nachhaltigkeit bei jedem Einsatz",
@@ -8472,7 +8472,7 @@
       "serviceBullets": [
         "Schriftliche Abnahmegarantie",
         "Kostenlose Nachreinigung bei der Übergabe",
-        "Fixe Pauschalpreise ab CHF 350 (ohne versteckte Kosten)",
+        "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen",
         "Sämtliches Reinigungsmaterial und Geräte inklusive",
         "Umweltfreundliche, schonende Reinigungschemikalien",
         "Regionale Nähe und hohe Pünktlichkeit in Aarberg"
@@ -8513,7 +8513,7 @@
       "faqs": [
         {
           "question": "Wie läuft das mit der Abnahmegarantie in Aarberg genau ab?",
-          "answer": "Wir garantieren vertraglich, dass die Verwaltung die Reinigung Ihrer Wohnung in Aarberg akzeptiert. Wenn bei der Übergabe ein Detail bemängelt wird (z.B. ein Kalkfleck am Wasserhahn), reinigt unser anwesendes Personal diesen sofort nach – absolut kostenlos für Sie. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Unsere Abnahmegarantie unterstützt Sie bei einer sauberen Wohnungsübergabe in Aarberg. Sollte bei der Abnahme ein reinigungsbedingter Mangel beanstandet werden, bessert unser anwesendes Personal diesen sofort und kostenlos vor Ort nach."
         },
         {
           "question": "Müssen die Möbel bereits aus der Wohnung sein?",
@@ -8525,7 +8525,7 @@
         },
         {
           "question": "Welche Kosten kommen für eine Endreinigung in Aarberg auf mich zu?",
-          "answer": "Wir bieten feste Pauschalpreise ab CHF 350 für kleine Wohnungen. Eine typische 3.5-Zimmer-Wohnung kostet zu fairen Preisen, eine 4.5-Zimmer-Wohnung ab CHF 690. Nach einer kostenlosen Besichtigung in Aarberg erhalten Sie einen garantierten Fixpreis – ohne versteckte Kosten. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Der Preis für grössere Wohnungen richtet sich nach Grösse, Zustand und Umfang der Reinigung. Gerne erstellen wir Ihnen eine unverbindliche Offerte."
         },
         {
           "question": "Wie lange im Voraus muss ich die Endreinigung buchen?",
@@ -8604,14 +8604,14 @@
     "endreinigungPieterlen": {
       "meta": {
         "title": "Endreinigung in Pieterlen | Mit Garantie | SwissCleanMove",
-        "description": "SwissCleanMove bietet professionelle Endreinigungen in Pieterlen. Kaution zurück garantiert. Jetzt unverbindlich anfragen.",
+        "description": "SwissCleanMove bietet professionelle Endreinigungen in Pieterlen mit Abnahmegarantie. Jetzt unverbindlich anfragen.",
         "titleVariant": "Pieterlen Endreinigung gesucht? Mit Garantie"
       },
       "badge": "Endreinigung Pieterlen",
       "h1": "Endreinigungsfirma Pieterlen – Endreinigung, Wohnungsreinigung & Reinigung in Pieterlen",
       "heroSubtitle": "Wir übernehmen die Umzugsreinigung in Pieterlen, damit Sie sich entspannt zurücklehnen können.",
       "ctaSoft": "Schnelle Rückmeldung innerhalb 24h",
-      "intro": "Willkommen bei SwissCleanMove. Der Umzug ist geschafft, doch die alte Wohnung in Pieterlen wartet noch auf die gefürchtete Endreinigung? Sparen Sie sich Zeit, Schmutz und Nerven – übergeben Sie diese anspruchsvolle Aufgabe an die Profis von SwissCleanMove. Wir sind Ihr lokaler Experte für Wohnungsreinigungen mit Abnahmegarantie in Pieterlen und dem umliegenden Seeland. Schweizer Immobilienverwaltungen sind bei der Übergabe extrem streng. Ein übersehener Kalkfleck im Bad oder schmutzige Fensterfälze können dazu führen, dass die Abnahme verweigert und die Kaution blockiert wird. Mit uns gehen Sie kein Risiko ein: Wir reinigen Ihre Wohnung tiefgründig und garantieren, dass sie beim ersten Termin abgenommen wird. Sollte doch etwas beanstandet werden, bessert unser Reinigungsteam vor Ort sofort und kostenlos nach. Wir bieten Ihnen transparente, fixe Pauschalpreise ab CHF 350 ohne versteckte Kosten. Eine Reinigung dauert in der Regel 4 bis 8 Stunden. Verlassen Sie sich auf ein etabliertes, régionales Team aus dem Seeland, das auch für kurzfristige Einsätze in Pieterlen zur Verfügung steht. Willkommen bei den Experten von SwissCleanMove. Wir sind stolz darauf, unseren Kunden in dieser Region Dienstleistungen auf höchstem Schweizer Niveau anzubieten. Unsere Firmenphilosophie basiert auf echter Kundennähe, klaren Preisen ohne versteckte Kosten und Zuverlässigkeit bei jedem Einsatz. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
+      "intro": "Willkommen bei SwissCleanMove. Der Umzug ist geschafft, doch die alte Wohnung in Pieterlen wartet noch auf die gefürchtete Endreinigung? Sparen Sie sich Zeit, Schmutz und Nerven – übergeben Sie diese anspruchsvolle Aufgabe an die Profis von SwissCleanMove. Wir sind Ihr lokaler Experte für Wohnungsreinigungen mit Abnahmegarantie in Pieterlen und dem umliegenden Seeland. Schweizer Immobilienverwaltungen sind bei der Übergabe extrem streng. Ein übersehener Kalkfleck im Bad oder schmutzige Fensterfälze können dazu führen, dass die Abnahme verweigert und die Kaution blockiert wird. Mit uns gehen Sie kein Risiko ein: Wir reinigen Ihre Wohnung tiefgründig und stehen bei der Abnahme für allfällige kostenlose Nachreinigungen bereit. Sollte doch etwas beanstandet werden, bessert unser Reinigungsteam vor Ort sofort und kostenlos nach. Wir bieten Ihnen transparente Pauschalpreise: Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Eine Reinigung dauert in der Regel 4 bis 8 Stunden. Verlassen Sie sich auf ein etabliertes, régionales Team aus dem Seeland, das auch für kurzfristige Einsätze in Pieterlen zur Verfügung steht. Willkommen bei den Experten von SwissCleanMove. Wir sind stolz darauf, unseren Kunden in dieser Region Dienstleistungen auf höchstem Schweizer Niveau anzubieten. Unsere Firmenphilosophie basiert auf echter Kundennähe, klaren Preisen ohne versteckte Kosten und Zuverlässigkeit bei jedem Einsatz. Ob für Privatpersonen oder Unternehmen, wir bieten massgeschneiderte Lösungen. Kontaktieren Sie uns für eine kostenlose Offerte.",
       "sections": [
         {
           "heading": "Ihr Reinigungs-Partner für eine sorgenfreie Übergabe in Pieterlen",
@@ -8703,11 +8703,11 @@
       "faqs": [
         {
           "question": "Was genau beinhaltet die Abnahmegarantie in Pieterlen?",
-          "answer": "Unsere Abnahmegarantie ist Ihr Schutzschild. Wir garantieren, dass die Immobilienverwaltung in Pieterlen die Wohnung reinigungstechnisch abnimmt. Wenn bei der Begehung doch ein Fleck bemängelt wird, wischt unser anwesendes Personal sofort nach – ohne dass für Sie zusätzliche Kosten entstehen. So ist Ihre Kaution sicher. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Unsere Abnahmegarantie unterstützt Sie bei einer sauberen Wohnungsübergabe in Pieterlen. Sollten bei der Begehung reinigungsbedingte Mängel festgestellt werden, bessert unser anwesendes Personal sofort vor Ort kostenlos nach."
         },
         {
           "question": "Wie viel kostet eine Endreinigung in Pieterlen?",
-          "answer": "Wir kalkulieren unsere Preise transparent als Pauschale. Eine kleine 2.5-Zimmer-Wohnung kostet ab CHF 350. Eine Standard-3.5-Zimmer-Wohnung kostet zu fairen Preisen, eine 4.5-Zimmer-Wohnung ab CHF 690. Um Ihnen einen exakten Fixpreis zu garantieren, besichtigen wir Ihr Objekt in Pieterlen vorab völlig kostenlos. Darüber hinaus sichern wir Ihnen zu, dass unsere Dienstleistungen in dieser Region stets den höchsten professionelle Reinigungsstandards entsprechen. Unser Kundenservice steht Ihnen bei weiteren Fragen jederzeit gerne zur Verfügung."
+          "answer": "Endreinigung mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen. Der Preis für grössere Wohnungen richtet sich nach Grösse, Zustand und Umfang der Reinigung. Gerne erstellen wir Ihnen eine unverbindliche Offerte."
         },
         {
           "question": "Sind Fenster und Balkon im Preis der Endreinigung inbegriffen?",
@@ -11339,7 +11339,7 @@
       "h1": "Haushaltshilfe & Putzfrau in Biel/Bienne und Seeland",
       "heroSubtitle": "SwissCleanMove bietet zuverlässige Haushaltshilfe, regelmässige Wohnungsreinigung und professionelle Privatreinigung für Privatkunden, Familien und Senioren.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für private Haushaltshilfe in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Führen eines Haushalts neben Beruf und Familie ist eine enorme Herausforderung. Wir nehmen Ihnen den Stress und schenken Ihnen wertvolle Freizeit zurück. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Mit über 500 regelmässig betreuten Haushalten im Raum Biel/Bienne sind wir der Marktführer für private Haushaltsdienstleistungen. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für private Haushaltshilfe in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Führen eines Haushalts neben Beruf und Familie ist eine enorme Herausforderung. Wir nehmen Ihnen den Stress und schenken Ihnen wertvolle Freizeit zurück. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Mit zahlreichen regelmässig betreuten Haushalten im Raum Biel/Bienne sind wir ein verlässlicher Partner für private Haushaltsdienstleistungen. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum private Haushaltshilfe in Biel/Bienne und das gesamte Seeland?",
@@ -11456,7 +11456,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für private Haushaltshilfe genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei private Haushaltshilfe mit eigenem Equipment?",
@@ -11670,7 +11670,7 @@
         "Keine versteckten Gebühren, keine unklaren Zuschläge, kein administrativer Aufwand"
       ],
       "trustPoints": [
-        "Über 50 Umzüge in Biel/Bienne",
+        "Zahlreiche Umzüge in Biel/Bienne",
         "Faire Pauschalpreise zu fairen Preisen",
         "Versichert und zuverlässig"
       ],
@@ -11707,7 +11707,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für stressfreie Umzüge genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei stressfreie Umzüge mit eigenem Equipment?",
@@ -11846,7 +11846,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für Gewerbliche Unterhaltsreinigung genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei Gewerbliche Unterhaltsreinigung mit eigenem Equipment?",
@@ -11903,7 +11903,7 @@
       "h1": "Fensterreinigung Biel/Bienne — Streifenfreie Fenster für Wohnungen & Büros",
       "heroSubtitle": "Professionelle Fensterreinigung in Biel/Bienne und im Seeland. Kristallklare Fenster für Privathaushalte, Büros und Gewerbeimmobilien — zuverlässig und streifenfrei.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für streifenfreie Fensterreinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Strahlender Glanz für Ihr Zuhause oder Ihre Schaufenster. Wir lassen das Licht zurück in Ihre Räume. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Jährlich reinigen unsere Glas- und Gebäudereiniger tausende von Fenstern, Wintergärten und Glasfassaden in der Region. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für streifenfreie Fensterreinigung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Strahlender Glanz für Ihr Zuhause oder Ihre Schaufenster. Wir lassen das Licht zurück in Ihre Räume. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Regelmässig reinigen unsere Glas- und Gebäudereiniger Fenster, Wintergärten und Glasfassaden in der Region. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum streifenfreie Fensterreinigung in Biel/Bienne und das gesamte Seeland?",
@@ -11985,7 +11985,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für streifenfreie Fensterreinigung genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei streifenfreie Fensterreinigung mit eigenem Equipment?",
@@ -12124,7 +12124,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für Sichere Transporte und Kurierdienste genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei Sichere Transporte und Kurierdienste mit eigenem Equipment?",
@@ -12181,7 +12181,7 @@
       "h1": "Entsorgung Biel/Bienne — Fachgerechte Möbelentsorgung & Räumung im Seeland",
       "heroSubtitle": "SwissCleanMove bietet professionelle Entsorgung in Biel/Bienne. Möbelentsorgung, Wohnungsräumung und Entrümpelung — fachgerecht, schnell und umweltbewusst.",
       "ctaSoft": "Kostenlose Offerte anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Professionelle Räumung und Entsorgung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Trennen von Altlasten kann befreiend sein. Wir übernehmen das schwere Heben und die fachgerechte Entsorgung für Sie. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Jährlich recyceln wir über 500 Tonnen Altmaterial, Möbel und Elektronikschrott fachgerecht. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Professionelle Räumung und Entsorgung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Das Trennen von Altlasten kann befreiend sein. Wir übernehmen das schwere Heben und die fachgerechte Entsorgung für Sie. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Jährlich führen wir grosse Mengen an Altmaterial, Möbeln und Elektronikschrott fachgerecht und umweltfreundlich dem Recycling zu. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum Professionelle Räumung und Entsorgung in Biel/Bienne und das gesamte Seeland?",
@@ -12263,7 +12263,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für Professionelle Räumung und Entsorgung genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei Professionelle Räumung und Entsorgung mit eigenem Equipment?",
@@ -12402,7 +12402,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für Umfassendes Hauswartung & Gebäudeunterhalt genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei Umfassendes Hauswartung & Gebäudeunterhalt mit eigenem Equipment?",
@@ -12459,7 +12459,7 @@
       "h1": "Hauswartung Biel/Bienne – Professioneller Gebäudeunterhalt",
       "heroSubtitle": "Ihre kompetente Hauswartung in Biel/Bienne. Wir sorgen für gepflegte Liegenschaften, saubere Treppenhäuser und zuverlässigen Gebäudeunterhalt im Seeland.",
       "ctaSoft": "B2B Beratung anfordern",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Zuverlässige Hauswartung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Ein guter Hauswart ist die Seele einer Liegenschaft. Er sorgt nicht nur für Sauberkeit, sondern auch für Sicherheit. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Aktuell stellen wir den Hauswartdienst für über 120 Liegenschaften im Seeland sicher. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Zuverlässige Hauswartung in Biel/Bienne und das gesamte Seeland. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Ein guter Hauswart ist die Seele einer Liegenschaft. Er sorgt nicht nur für Sauberkeit, sondern auch für Sicherheit. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Biel/Bienne, Nidau, Lyss, Brügg, Ipsach, Aarberg, und Pieterlen. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in Biel/Bienne und das gesamte Seeland wissen wir genau, worauf es ankommt. Aktuell stellen wir den Hauswartdienst für zahlreiche Liegenschaften im Seeland sicher. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "sections": [
         {
           "heading": "Warum Zuverlässige Hauswartung in Biel/Bienne und das gesamte Seeland?",
@@ -12541,7 +12541,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für Zuverlässige Hauswartung genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei Zuverlässige Hauswartung mit eigenem Equipment?",
@@ -12719,7 +12719,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für Baugrobreinigung und Feinreinigung genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei Baugrobreinigung und Feinreinigung mit eigenem Equipment?",
@@ -12858,7 +12858,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für professionelle Gastronomiereinigung genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in Biel/Bienne und das gesamte Seeland, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei professionelle Gastronomiereinigung mit eigenem Equipment?",
@@ -12986,7 +12986,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für schweizweite Reinigung genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in die gesamte Schweiz, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in die gesamte Schweiz, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei schweizweite Reinigung mit eigenem Equipment?",
@@ -13042,7 +13042,7 @@
       "badge": "Umzugsreinigung die Schweiz",
       "h1": "Umzugsreinigung die Schweiz – Professionelle Endreinigung",
       "heroSubtitle": "Ihr zuverlässiger Partner für Umzugsreinigung in der ganzen Schweiz.",
-      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Umzugsreinigung mit Abnahmegarantie in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der Umzug in der Schweiz ist stressig genug. Überlassen Sie die anstrengende Endreinigung den Profis und sichern Sie Ihre Kaution. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir haben schweizweit tausende von Endreinigungen durchgeführt – alle mit erfolgreicher Wohnungsabnahme. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
+      "intro": "Willkommen bei SwissCleanMove, Ihrem führenden Experten für Umzugsreinigung mit Abnahmegarantie in die gesamte Schweiz. Wenn Sie auf der Suche nach höchster Qualität, Schweizer Zuverlässigkeit und absolut transparenten Preisen sind, dann haben Sie den richtigen Partner gefunden. Der Umzug in der Schweiz ist stressig genug. Überlassen Sie die anstrengende Endreinigung den Profis und schützen Sie sich vor Kautionsabzügen wegen Reinigungsmängeln. Wir verstehen, dass Dienstleistungen im Bereich Reinigung, Umzug und Hauswartung & Gebäudeunterhalt absolute Vertrauenssache sind. Deshalb setzen wir bei SwissCleanMove nicht auf anonyme Subunternehmer, sondern auf unser eigenes, fest angestelltes und bestens geschultes Personal. Dies garantiert nicht nur faire Arbeitsbedingungen, sondern auch eine gleichbleibend hohe Qualität für Sie als Kunde in Zürich, Bern, Basel, Genf, Luzern, Solothurn, Fribourg, Neuchâtel und Jura. Ob Sie eine Privatperson sind, die eine diskrete Haushaltshilfe sucht, ein Unternehmen, das eine regelmässige Büroreinigung benötigt, oder eine Liegenschaftsverwaltung, die einen kompetenten Hauswartdienst erfordert – wir decken das gesamte Spektrum ab. Unsere Philosophie basiert auf Kundennähe, proaktiver Kommunikation und dem Einsatz modernster Arbeitsmittel. Mit unserer weitreichenden Erfahrung und unzähligen erfolgreich abgeschlossenen Aufträgen in die gesamte Schweiz wissen wir genau, worauf es ankommt. Wir führen schweizweit professionelle Endreinigungen mit Abnahmegarantie durch. Wir legen grossen Wert auf Nachhaltigkeit und verwenden, wo immer möglich, umweltschonende, biologisch abbaubare Reinigungsmittel. Entdecken Sie auf dieser Seite alles, was Sie über unsere Dienstleistungen wissen müssen, wie unser Prozess abläuft und warum sich so viele zufriedene Kunden in der Region für uns entscheiden. Zögern Sie nicht, uns für eine kostenlose und unverbindliche Besichtigung oder Offerte zu kontaktieren.",
       "ctaSoft": "Jetzt kostenlose Offerte anfordern",
       "ctaMidHeading": "Planen Sie einen Service?",
       "ctaMidBody": "Fordern Sie jetzt Ihre kostenlose und unverbindliche Offerte an.",
@@ -13109,7 +13109,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für Umzugsreinigung mit Abnahmegarantie genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in die gesamte Schweiz, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in die gesamte Schweiz, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei Umzugsreinigung mit Abnahmegarantie mit eigenem Equipment?",
@@ -13232,7 +13232,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für nationales Hauswartung & Gebäudeunterhalt genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in die gesamte Schweiz, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in die gesamte Schweiz, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei nationales Hauswartung & Gebäudeunterhalt mit eigenem Equipment?",
@@ -13355,7 +13355,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für professionelle Hauswartung in der Schweiz genau berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in die gesamte Schweiz, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort in die gesamte Schweiz, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können, in der alle Kosten inkludiert sind."
         },
         {
           "question": "Arbeiten Sie bei professionelle Hauswartung in der Schweiz mit eigenem Equipment?",
@@ -13509,7 +13509,7 @@
       "faqs": [
         {
           "question": "Wie wird der Preis für professionelle Reinigungsdienstleistungen in Solothurn berechnet?",
-          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen ab CHF 350 oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort im Kanton Solothurn, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können."
+          "answer": "Die Berechnung ist bei SwissCleanMove stets transparent und fair. Abhängig vom spezifischen Service arbeiten wir entweder mit Fixpreisen (z.B. bei Endreinigungen mit Abnahmegarantie ab CHF 600 für Studio- und Einzimmerwohnungen oder Umzügen zu fairen Preisen), mit fixen Stundenansätzen (z.B. Haushaltshilfe ab CHF 35/h) oder Quadratmeterpreisen. Wir empfehlen immer eine kostenlose Besichtigung vor Ort im Kanton Solothurn, um Ihnen eine exakte und verbindliche Offerte ausstellen zu können."
         },
         {
           "question": "Arbeiten Sie mit eigenem Equipment?",
