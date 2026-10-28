@@ -568,8 +568,9 @@
     "stats": {
       "satisfiedCustomers": "Clienti soddisfatti",
       "yearsExperience": "Anni di esperienza",
-      "depositGuarantee": "Garanzia dei depositi",
-      "responseTime": "Tempo di risposta"
+      "depositGuarantee": "Garanzia di consegna",
+      "responseTime": "Tempo di risposta",
+      "priceTransparency": "Prezzi fissi trasparenti"
     },
     "team": {
       "title": "La nostra squadra",
@@ -678,7 +679,7 @@
   },
   "contact": {
     "title": "Contatto",
-    "subtitle": "Contatta SwissCleanMove per servizi professionali di trasloco, pulizia e strutture a Biel/Bienne, Berna, Zurigo e in tutta la Svizzera.",
+    "subtitle": "Contatta SwissCleanMove per servizi professionali di trasloco, pulizia e manutenzione a Biel/Bienne, nel Seeland e in tutta la Svizzera.",
     "errors": {
       "submitFailed": "Impossibile inviare il modulo",
       "submitFailedRetry": "Impossibile inviare il modulo. Per favore riprova."
@@ -756,7 +757,7 @@
     "servicesTitle": "I nostri servizi e la nostra forma",
     "servicesDescription": "Seleziona il servizio specifico a cui sei interessato. Verrai reindirizzato all'apposito modulo di richiesta.",
     "title": "Richiedi un preventivo",
-    "subtitle": "Ricevete un preventivo non vincolante per traslochi, pulizie e servizi per le strutture – disponibile in tutta la Svizzera.",
+    "subtitle": "Richiedi un preventivo non vincolante per trasloco, pulizia e servizi di manutenzione – disponibili in tutta la Svizzera.",
     "errors": {
       "submitFailed": "Impossibile inviare il modulo",
       "submitFailedRetry": "Impossibile inviare il modulo. Per favore riprova."
@@ -5549,7 +5550,7 @@
   },
   "pricing": {
     "title": "Prezzi trasparenti",
-    "subtitle": "Prezzi equi e trasparenti per traslochi professionali, pulizie e servizi di struttura.",
+    "subtitle": "Prezzi equi e trasparenti per servizi professionali di trasloco, pulizia e manutenzione.",
     "choosePlan": "Scegli il tuo piano di servizio",
     "priceDisclaimer": "Tutti i prezzi sono stime e possono variare in base ai requisiti specifici, all'ubicazione e alla complessità del lavoro.",
     "mostPopular": "Il più popolare",
@@ -5599,7 +5600,7 @@
       },
       "standard": {
         "title": "Pulizie di fine locazione",
-        "description": "Con accettazione/garanzia di deposito",
+        "description": "Pulizia di fine locazione con garanzia di consegna al 100% (incluso nuovo lavaggio gratuito)",
         "price": "a partire da 250 franchi",
         "features": [
           "Appartamenti: da CHF 250",
@@ -5624,7 +5625,7 @@
   },
   "faq": {
     "title": "Domande frequenti",
-    "subtitle": "Qui troverai le risposte alle domande più comuni sui nostri servizi professionali di traslochi, pulizie e strutture in tutta la Svizzera.",
+    "subtitle": "Trova risposte alle domande frequenti sui nostri servizi professionali di trasloco, pulizia e manutenzione in tutta la Svizzera.",
     "quickFacts": "Fatti rapidi sui nostri servizi",
     "keyInfo": "Informazioni chiave che dovresti sapere su SwissCleanMove",
     "responseTime": "Tempo di risposta",

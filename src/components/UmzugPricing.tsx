@@ -363,7 +363,7 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-swiss-body">
               <a onClick={trackPhoneClick} href="tel:+41782158030" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
                 <Phone className="w-4 h-4" />
-                
+                <span>+41 78 215 80 30</span>
               </a>
               <a onClick={trackEmailClick} href="mailto:info@swisscleanmove.ch" className="flex items-center space-x-2 hover:text-swiss-red transition-colors">
                 <Mail className="w-4 h-4" />

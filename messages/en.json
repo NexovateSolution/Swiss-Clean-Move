@@ -568,8 +568,9 @@
     "stats": {
       "satisfiedCustomers": "Satisfied Customers",
       "yearsExperience": "Years Experience",
-      "depositGuarantee": "Deposit Guarantee",
-      "responseTime": "Response Time"
+      "depositGuarantee": "Handover Guarantee",
+      "responseTime": "Response Time",
+      "priceTransparency": "Transparent Fixed Pricing"
     },
     "team": {
       "title": "Our Team",
@@ -678,7 +679,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Contact SwissCleanMove for professional moving, cleaning, and facility services in Biel/Bienne, Bern, Zürich, and throughout Switzerland.",
+    "subtitle": "Contact SwissCleanMove for professional moving, cleaning and property maintenance services in Biel/Bienne, the Seeland and throughout Switzerland.",
     "errors": {
       "submitFailed": "Failed to submit form",
       "submitFailedRetry": "Failed to submit form. Please try again."
@@ -756,7 +757,7 @@
     "servicesTitle": "Our services and form",
     "servicesDescription": "Please select the specific service you are interested in. You will be redirected to the appropriate request form.",
     "title": "Request a quote",
-    "subtitle": "Receive a non-binding quote for moving, cleaning, and facility services – available throughout Switzerland.",
+    "subtitle": "Get a non-binding quote for moving, cleaning and property maintenance services – available nationwide.",
     "errors": {
       "submitFailed": "Failed to submit form",
       "submitFailedRetry": "Failed to submit form. Please try again."
@@ -5479,7 +5480,7 @@
   },
   "pricing": {
     "title": "Transparent Pricing",
-    "subtitle": "Fair and transparent pricing for professional moving, cleaning and facility services.",
+    "subtitle": "Fair and transparent pricing for professional moving, cleaning and property maintenance services.",
     "choosePlan": "Choose Your Service Plan",
     "priceDisclaimer": "All prices are estimates and may vary based on specific requirements, location, and complexity of the job.",
     "mostPopular": "Most Popular",
@@ -5529,7 +5530,7 @@
       },
       "standard": {
         "title": "End-of-Tenancy Cleaning",
-        "description": "With acceptance / deposit guarantee",
+        "description": "Move-out cleaning with 100% handover guarantee (incl. free re-cleaning)",
         "price": "from CHF 250",
         "features": [
           "Apartments: from CHF 250",
@@ -5554,7 +5555,7 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Here you will find answers to the most common questions about our professional moving, cleaning, and facility services across Switzerland.",
+    "subtitle": "Find answers to common questions about our professional moving, cleaning and property maintenance services across Switzerland.",
     "quickFacts": "Quick Facts About Our Services",
     "keyInfo": "Key information you should know about SwissCleanMove",
     "responseTime": "Response Time",

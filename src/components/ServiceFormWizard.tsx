@@ -191,9 +191,14 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
         let rawBuildingType = d.sharedPropertyType || d.objectType || d.currentLiving || 'Other';
         let mappedBuildingType = typeof rawBuildingType === 'string' ? rawBuildingType.charAt(0).toUpperCase() + rawBuildingType.slice(1) : 'Other';
 
+        const rawFullName = (d.nameFirstName || '').trim();
+        const nameParts = rawFullName.split(/\s+/);
+        const resolvedFirstName = nameParts.length > 1 ? nameParts[0] : rawFullName;
+        const resolvedLastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+
         const payload = {
-            firstName: d.nameFirstName?.split(' ').slice(1).join(' ') || d.nameFirstName || '',
-            lastName: d.nameFirstName?.split(' ')[0] || '',
+            firstName: resolvedFirstName,
+            lastName: resolvedLastName,
             email: d.emailAddress || '',
             phone: d.telephone || '',
             address: finalAddress,
@@ -206,7 +211,7 @@ export default function ServiceFormWizard({ service, serviceName, locale, isAdmi
             untilDate: d.untilDate,
             totalPrice: d.totalPrice || '0.00',
             paidAmount: d.paidAmount || 0,
-            remarks1: Object.entries(d).filter(([k]) => !['totalPrice', 'paidAmount', 'fromDate', 'untilDate', 'nameFirstName', 'emailAddress', 'telephone', 'streetNo', 'zipCity', 'address', 'moveFromStreet', 'cleanStreet', 'moveFromZipCity', 'cleanZipCity'].includes(k)).map(([k,v]) => `${k}: ${Array.isArray(v) ? v.join(', ') : v}`).join(' | '),
+            remarks1: d.furtherRequests || d.remark || '',
             data: d
         }
         

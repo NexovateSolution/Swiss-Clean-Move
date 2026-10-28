@@ -77,8 +77,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       desc: tNew('services.entsorgung'),
       icon: Trash2,
       href: `/${locale}/form?service=disposal`,
-      seoLink: `/${locale}/umzugsreinigung-biel-bienne`,
-      seoText: locale === 'de' ? 'Umzugsreinigung Biel/Bienne' : 'Move-out Cleaning Biel/Bienne',
+      seoLink: `/${locale}/entsorgung-biel-bienne`,
+      seoText: locale === 'de' ? 'Entsorgung & Räumung Biel/Bienne' : locale === 'fr' ? 'Débarras & Élimination Biel/Bienne' : locale === 'it' ? 'Smaltimento e sgombero Biel/Bienne' : 'Disposal & Clearance Biel/Bienne',
       color: 'text-green-500'
     },
     {
@@ -315,7 +315,6 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   <Star key={i} className="w-6 h-6 text-[#FBBC05] fill-current" />
                 ))}
               </div>
-              <div className="text-4xl font-bold text-black">4.9<span className="text-lg font-medium text-gray-600"> {locale === 'en' ? 'out of 5' : locale === 'fr' ? 'sur 5' : locale === 'it' ? 'su 5' : 'von 5'}</span></div>
               <p className="text-sm font-medium text-gray-600 mb-4">{tNew('reviews.count')}</p>
               <a 
                 href="https://g.page/r/CaR3s0KCpz1O/review" 

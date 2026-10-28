@@ -555,8 +555,9 @@
     "stats": {
       "satisfiedCustomers": "Clients Satisfaits",
       "yearsExperience": "Années d'Expérience",
-      "depositGuarantee": "Garantie de Dépôt",
-      "responseTime": "Temps de Réponse"
+      "depositGuarantee": "Garantie de remise",
+      "responseTime": "Temps de Réponse",
+      "priceTransparency": "Prix fixes transparents"
     },
     "team": {
       "title": "Notre Équipe",
@@ -665,7 +666,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Contactez SwissCleanMove pour des services professionnels de déménagement, nettoyage et facility services à Biel/Bienne, Berne, Zurich et dans toute la Suisse.",
+    "subtitle": "Contactez SwissCleanMove pour des services professionnels de déménagement, nettoyage et conciergerie à Biel/Bienne, dans le Seeland et dans toute la Suisse.",
     "errors": {
       "submitFailed": "Échec de l'envoi du formulaire",
       "submitFailedRetry": "Échec de l'envoi du formulaire. Veuillez réessayer."
@@ -743,7 +744,7 @@
     "servicesTitle": "Nos services et formulaire",
     "servicesDescription": "Veuillez sélectionner le service spécifique qui vous intéresse. Vous serez redirigé vers le formulaire de demande approprié.",
     "title": "Demander un devis",
-    "subtitle": "Recevez un devis sans engagement pour des services de déménagement, nettoyage et facility services – disponible dans toute la Suisse.",
+    "subtitle": "Obtenez un devis gratuit pour vos déménagements, nettoyages et services de conciergerie – partout en Suisse.",
     "errors": {
       "submitFailed": "Échec de l'envoi du formulaire",
       "submitFailedRetry": "Échec de l'envoi du formulaire. Veuillez réessayer."
@@ -5563,7 +5564,7 @@
   },
   "pricing": {
     "title": "Prix Transparents",
-    "subtitle": "Des prix justes et transparents pour des services professionnels de déménagement, nettoyage et facility services.",
+    "subtitle": "Prix équitables et transparents pour le déménagement, le nettoyage et la conciergerie professionnelle.",
     "choosePlan": "Choisissez Votre Plan de Service",
     "priceDisclaimer": "Tous les prix sont des estimations et peuvent varier selon les exigences spécifiques, l'emplacement et la complexité du travail.",
     "mostPopular": "Le Plus Populaire",
@@ -5613,7 +5614,7 @@
       },
       "standard": {
         "title": "Nettoyage de fin de bail",
-        "description": "Avec garantie d'acceptation",
+        "description": "Nettoyage de fin de bail avec garantie de remise à 100% (y compris re-nettoyage gratuit)",
         "price": "à partir de CHF 250",
         "features": [
           "Appartements: à partir de CHF 250",
@@ -5638,7 +5639,7 @@
   },
   "faq": {
     "title": "Questions Fréquemment Posées",
-    "subtitle": "Vous trouverez ici les réponses aux questions les plus fréquentes sur nos services professionnels de déménagement, nettoyage et facility services dans toute la Suisse.",
+    "subtitle": "Trouvez les réponses à vos questions sur nos services de déménagement, nettoyage et conciergerie dans toute la Suisse.",
     "quickFacts": "Faits Rapides sur Nos Services",
     "keyInfo": "Informations clés que vous devriez connaître sur SwissCleanMove",
     "responseTime": "Temps de Réponse",

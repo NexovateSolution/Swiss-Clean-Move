@@ -32,15 +32,10 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
   
   const services = [
     {
-      id: 'combo',
-      icon: (
-        <div className="flex -space-x-2">
-          <Package className="w-10 h-10 lg:w-12 lg:h-12 text-[#003366]" strokeWidth={1.5} />
-          <Sparkles className="w-7 h-7 lg:w-8 lg:h-8 text-[#003366] bg-white rounded-full p-1 relative top-5 lg:top-6" strokeWidth={1.5} />
-        </div>
-      ),
-      title: t('home.services.comboService.title'),
-      description: t('home.services.comboService.description'),
+      id: 'cleaning',
+      icon: <Sparkles className="w-12 h-12 lg:w-14 lg:h-14 text-[#003366]" strokeWidth={1.5} />,
+      title: t('home.services.houseCleaning.title'),
+      description: t('home.services.houseCleaning.description'),
       formHref: `/${locale}/form?service=house-cleaning`
     },
     {
@@ -193,17 +188,15 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
               </div>
               <div>
                 <h3 className="font-bold text-[#001f3f] text-lg">SwissCleanMove</h3>
-                <div className="flex items-center justify-center space-x-1 mt-1">
-                  <span className="text-lg font-bold text-[#e7711b]">4.4</span>
-                  <div className="flex space-x-0.5">
-                    {[...Array(4)].map((_, i) => (
-                      <StarIcon key={i} className="w-5 h-5 text-[#e7711b] fill-current" />
+                <div className="flex items-center justify-center space-x-1 mt-2">
+                  <div className="flex space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <StarIcon key={i} className="w-5 h-5 text-[#FBBC05] fill-current" />
                     ))}
-                    <StarIcon className="w-5 h-5 text-[#e7711b]" style={{ clipPath: 'inset(0 50% 0 0)' }} />
                   </div>
                 </div>
-                <p className="text-sm text-gray-500 mt-1">
-                  {locale === 'en' ? 'Based on 10 reviews' : locale === 'fr' ? 'Basé sur 10 avis' : 'Basierend auf 10 Bewertungen'}
+                <p className="text-sm font-medium text-gray-700 mt-2">
+                  {locale === 'en' ? 'Customer Reviews on Google' : locale === 'fr' ? 'Avis clients sur Google' : locale === 'it' ? 'Recensioni clienti su Google' : 'Kundenbewertungen auf Google'}
                 </p>
                 <p className="text-xs text-gray-500 mt-1">
                   powered by <span className="text-blue-600 font-semibold">Google</span>

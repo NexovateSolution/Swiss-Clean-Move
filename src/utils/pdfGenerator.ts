@@ -76,7 +76,12 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       receiptFooterThanks: documentType === 'invoice' ? 'Wir danken für Ihren Auftrag!' : 'Für Ihre Unterlagen – Danke für Ihren Auftrag!',
       receiptFeature1: 'Zuverlässig. Wir sind für Sie da.',
       receiptFeature2: 'professionelle Reinigung. Professionell & effizient.',
-      receiptFeature3: 'Schweizweit im Einsatz. Für Privat & Gewerbe.'
+      receiptFeature3: 'Schweizweit im Einsatz. Für Privat & Gewerbe.',
+      roomUnit: 'Zi.',
+      approx: 'ca.',
+      included: 'Inklusive',
+      customerNotes: 'Kundenbemerkung',
+      customerFallback: 'Kunde'
     },
     en: {
       thankYou: 'Thank You',
@@ -147,7 +152,12 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       receiptFooterThanks: documentType === 'invoice' ? 'Thank you for your order!' : 'For your records – Thank you for your order!',
       receiptFeature1: 'Reliable. We are here for you.',
       receiptFeature2: 'Swiss Quality. Professional & efficient.',
-      receiptFeature3: 'Operating nationwide. For private & business.'
+      receiptFeature3: 'Operating nationwide. For private & business.',
+      roomUnit: 'rooms',
+      approx: 'ca.',
+      included: 'Included',
+      customerNotes: 'Customer Notes',
+      customerFallback: 'Customer'
     },
     fr: {
       thankYou: 'Merci Beaucoup',
@@ -218,7 +228,12 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       receiptFooterThanks: documentType === 'invoice' ? 'Nous vous remercions pour votre commande!' : 'Pour vos archives – Merci pour votre commande !',
       receiptFeature1: 'Fiable. Nous sommes là pour vous.',
       receiptFeature2: 'Qualité suisse. Professionnel & efficace.',
-      receiptFeature3: 'En service dans toute la Suisse. Privé & entreprise.'
+      receiptFeature3: 'En service dans toute la Suisse. Privé & entreprise.',
+      roomUnit: 'pièces',
+      approx: 'env.',
+      included: 'Inclus',
+      customerNotes: 'Remarque du client',
+      customerFallback: 'Client'
     }, it: {
       thankYou: 'Grazie Mille',
       thankYouDesc: documentType === 'quote' ? 'PER LA VOSTRA RICHIESTA E LA FIDUCIA IN SWISSCLEANMOVE' : 'PER IL VOSTRO ORDINE E LA FIDUCIA IN SWISSCLEANMOVE',
@@ -288,7 +303,12 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       receiptFooterThanks: documentType === 'invoice' ? 'Grazie per il vostro ordine!' : 'Per i vostri documenti – Grazie per il vostro ordine!',
       receiptFeature1: 'Affidabile. Siamo qui per voi.',
       receiptFeature2: 'Qualità svizzera. Professionale & efficiente.',
-      receiptFeature3: 'Operativi in tutta la Svizzera. Per privati & aziende.'
+      receiptFeature3: 'Operativi in tutta la Svizzera. Per privati & aziende.',
+      roomUnit: 'locali',
+      approx: 'ca.',
+      included: 'Incluso',
+      customerNotes: 'Nota del cliente',
+      customerFallback: 'Cliente'
     }
   };
   
@@ -327,30 +347,84 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     }
 
     const fallbackDict: Record<string, any> = {
-      'Facility Services': { de: 'Hauswartung & Gebäudeunterhalt', en: 'Facility Services', fr: 'Services généraux', it: 'Servizi di facility' },
+      'Facility Services': { de: 'Hauswartungsdienstleistungen', en: 'Facility Services', fr: 'Services généraux', it: 'Servizi di facility' },
+      'Hauswartungsdienstleistungen': { de: 'Hauswartungsdienstleistungen', en: 'Facility Services', fr: 'Services généraux', it: 'Servizi di facility' },
+      'facilityServices': { de: 'Hauswartungsdienstleistungen', en: 'Facility Services', fr: 'Services généraux', it: 'Servizi di facility' },
+      'Hauswartung & Gebäudeunterhalt': { de: 'Hauswartung & Gebäudeunterhalt', en: 'Property Maintenance & Facility Services', fr: 'Conciergerie & Entretien de bâtiment', it: 'Manutenzione proprietà ed edifici' },
       'shopRetail': { de: 'Laden-/Verkaufsflächenreinigung', en: 'Shop/Retail Cleaning', fr: 'Nettoyage commerce', it: 'Pulizia di negozi/negozi al dettaglio' },
       'salesFloor': { de: 'Verkaufsfläche', en: 'Sales floor', fr: 'Surface de vente', it: 'Piano vendite' },
       'oneTime': { de: 'Einmalig', en: 'One-Time', fr: 'Unique', it: 'Una volta' },
       'retailItems': { de: 'Verkaufsbereiche', en: 'Retail Areas', fr: 'Surfaces de vente', it: 'Aree di vendita' },
-      'Move-out cleaning & end-of-tenancy cleaning with handover guarantee': {
-         de: 'Umzugsreinigung mit Abnahmegarantie',
+      'Umzugsreinigung & Endreinigung mit Abnahmegarantie': {
+         de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie',
          en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+         fr: 'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise',
+         it: 'Pulizie di trasloco e di fine locazione con garanzia di consegna'
+      },
+      'Umzugsreinigung mit Abnahmegarantie': {
+         de: 'Umzugsreinigung mit Abnahmegarantie',
+         en: 'Move-out cleaning with handover guarantee',
          fr: 'Nettoyage de fin de bail avec garantie de remise',
          it: 'Pulizie di trasloco con garanzia di consegna'
       },
+      'Move-out cleaning & end-of-tenancy cleaning with handover guarantee': {
+         de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie',
+         en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+         fr: 'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise',
+         it: 'Pulizie di trasloco e di fine locazione con garanzia di consegna'
+      },
+      'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise': {
+         de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie',
+         en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+         fr: 'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise',
+         it: 'Pulizie di trasloco e di fine locazione con garanzia di consegna'
+      },
+      'Pulizie di trasloco e di fine locazione con garanzia di consegna': {
+         de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie',
+         en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+         fr: 'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise',
+         it: 'Pulizie di trasloco e di fine locazione con garanzia di consegna'
+      },
+      'houseCleaning': {
+         de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie',
+         en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+         fr: 'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise',
+         it: 'Pulizie di trasloco e di fine locazione con garanzia di consegna'
+      },
       'Fensterreinigung': { de: 'Fensterreinigung', en: 'Window Cleaning', fr: 'Nettoyage de vitres', it: 'Pulizia vetri' },
+      'windowCleaning': { de: 'Fensterreinigung', en: 'Window Cleaning', fr: 'Nettoyage de vitres', it: 'Pulizia vetri' },
       'Umzugsreinigung': { de: 'Umzugsreinigung', en: 'Move-out Cleaning', fr: 'Nettoyage de fin de bail', it: 'Pulizia di trasloco' },
       'Endreinigung': { de: 'Endreinigung', en: 'Final Cleaning', fr: 'Nettoyage final', it: 'Pulizia finale' },
+      'finalCleaning': { de: 'Endreinigung', en: 'Final Cleaning', fr: 'Nettoyage final', it: 'Pulizia finale' },
       'Wohnungsreinigung': { de: 'Wohnungsreinigung', en: 'Apartment Cleaning', fr: 'Nettoyage d\'appartement', it: 'Pulizia appartamento' },
+      'apartmentCleaning': { de: 'Wohnungsreinigung', en: 'Apartment Cleaning', fr: 'Nettoyage d\'appartement', it: 'Pulizia appartamento' },
+      'Treppenhausreinigung': { de: 'Treppenhausreinigung', en: 'Stairwell Cleaning', fr: 'Nettoyage de cage d\'escalier', it: 'Pulizia delle scale' },
+      'stairwellCleaning': { de: 'Treppenhausreinigung', en: 'Stairwell Cleaning', fr: 'Nettoyage de cage d\'escalier', it: 'Pulizia delle scale' },
       'Hausreinigung': { de: 'Hausreinigung', en: 'House Cleaning', fr: 'Nettoyage de maison', it: 'Pulizia della casa' },
       'Büroreinigung': { de: 'Büroreinigung', en: 'Office Cleaning', fr: 'Nettoyage de bureau', it: 'Pulizia uffici' },
+      'officeCleaning': { de: 'Büroreinigung', en: 'Office Cleaning', fr: 'Nettoyage de bureau', it: 'Pulizia uffici' },
       'Baureinigung': { de: 'Baureinigung', en: 'Construction Cleaning', fr: 'Nettoyage de chantier', it: 'Pulizia di cantiere' },
+      'constructionCleaning': { de: 'Baureinigung', en: 'Construction Cleaning', fr: 'Nettoyage de chantier', it: 'Pulizia di cantiere' },
       'Unterhaltsreinigung': { de: 'Unterhaltsreinigung', en: 'Maintenance Cleaning', fr: 'Nettoyage d\'entretien', it: 'Pulizia di manutenzione' },
+      'maintenanceCleaning': { de: 'Unterhaltsreinigung', en: 'Maintenance Cleaning', fr: 'Nettoyage d\'entretien', it: 'Pulizia di manutenzione' },
       'Umzug': { de: 'Umzug', en: 'Relocation', fr: 'Déménagement', it: 'Trasloco' },
+      'relocation': { de: 'Transport', en: 'Transportation', fr: 'Transport', it: 'Trasporto' },
+      'Transport': { de: 'Transport', en: 'Transportation', fr: 'Transport', it: 'Trasporto' },
       'Räumung': { de: 'Räumung / Entsorgung', en: 'Disposal', fr: 'Débarras', it: 'Smaltimento' },
       'Entsorgung': { de: 'Entsorgung', en: 'Disposal', fr: 'Débarras', it: 'Smaltimento' },
+      'disposal': { de: 'Entsorgung', en: 'Disposal', fr: 'Élimination', it: 'Smaltimento' },
       'Haushaltshilfe': { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide ménagère', it: 'Aiuto domestico' },
-      'Hauswartung': { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: 'Manutenzione' }
+      'householdHelping': { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide ménagère', it: 'Aiuto domestico' },
+      'Hauswartung': { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: 'Manutenzione' },
+      'propertyMaintenance': { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: 'Manutenzione' },
+      'Gastronomiereinigung': { de: 'Gastronomiereinigung', en: 'Gastronomy Cleaning', fr: 'Nettoyage gastronomique', it: 'Pulizia della gastronomia' },
+      'gastronomyCleaning': { de: 'Gastronomiereinigung', en: 'Gastronomy Cleaning', fr: 'Nettoyage gastronomique', it: 'Pulizia della gastronomia' },
+      'Praxisreinigung': { de: 'Praxisreinigung', en: 'Medical Cleaning', fr: 'Nettoyage médical', it: 'Pulizia medica' },
+      'medicalCleaning': { de: 'Praxisreinigung', en: 'Medical Cleaning', fr: 'Nettoyage médical', it: 'Pulizia medica' },
+      'Spezialreinigung': { de: 'Spezialreinigung', en: 'Special Cleaning', fr: 'Nettoyage spécial', it: 'Pulizie speciali' },
+      'specialCleaning': { de: 'Spezialreinigung', en: 'Special Cleaning', fr: 'Nettoyage spécial', it: 'Pulizie speciali' },
+      'Kombi-Service': { de: 'Kombi-Service', en: 'Combo Service', fr: 'Service combiné', it: 'Servizio combinato' },
+      'comboService': { de: 'Kombi-Service', en: 'Combo Service', fr: 'Service combiné', it: 'Servizio combinato' }
     };
 
     if (fallbackDict[key]) {
@@ -401,7 +475,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
          label = attempt2;
        }
     }
-    const priceDisplay = item.price === 0 ? 'Inklusive' : `CHF ${item.price.toFixed(2)}`;
+    const priceDisplay = item.price === 0 ? locDict.included : `CHF ${item.price.toFixed(2)}`;
     return `
     <tr>
       <td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #333; font-size: 13px;">${label}</td>
@@ -454,7 +528,11 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     'accessHandoverDate', 'accessHandoverTime', 'calcHours', 'calcFrequency', 'hours', 'price',
     // Universal form keys
     'salutation', 'company', 'agreeToTerms', 'timeWindow', 'propertyHandover',
-    'photosVia', 'contactPreferredVia', 'services', 'remark'
+    'photosVia', 'contactPreferredVia', 'services', 'remark',
+    // Notes & raw dump fields
+    'additionalDetails', 'furtherRequests', 'remarks1', 'remarks2', 'remarks3', 'notes', 'specialNotes',
+    'contactMethods', 'contactMethod', 'accessOptions', 'prefix', 'deploymentFrequency', 'uploadedFiles', 'images',
+    'rawServices', 'directService', 'directSlug'
   ];
   const translatedLabels: Record<string, any> = {
     isExpress: { de: 'Express Service', en: 'Express Service', fr: 'Service Express', it: `Servizio espresso` },
@@ -711,6 +789,73 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     // Pressure washing / outdoor
     asRecommended: { de: 'Wie empfohlen', en: 'As Recommended', fr: 'Selon Recommandation', it: `Come consigliato` },
     // Missing German string keys for reverse lookup
+    'Umzugsreinigung & Endreinigung mit Abnahmegarantie': {
+      de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie',
+      en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+      fr: 'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise',
+      it: 'Pulizie di trasloco e di fine locazione con garanzia di consegna'
+    },
+    'Umzugsreinigung mit Abnahmegarantie': {
+      de: 'Umzugsreinigung mit Abnahmegarantie',
+      en: 'Move-out cleaning with handover guarantee',
+      fr: 'Nettoyage de fin de bail avec garantie de remise',
+      it: 'Pulizie di trasloco con garanzia di consegna'
+    },
+    'Move-out cleaning & end-of-tenancy cleaning with handover guarantee': {
+      de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie',
+      en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+      fr: 'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise',
+      it: 'Pulizie di trasloco e di fine locazione con garanzia di consegna'
+    },
+    'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise': {
+      de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie',
+      en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+      fr: 'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise',
+      it: 'Pulizie di trasloco e di fine locazione con garanzia di consegna'
+    },
+    'Pulizie di trasloco e di fine locazione con garanzia di consegna': {
+      de: 'Umzugsreinigung & Endreinigung mit Abnahmegarantie',
+      en: 'Move-out cleaning & end-of-tenancy cleaning with handover guarantee',
+      fr: 'Nettoyage de déménagement & nettoyage de fin de bail avec garantie de remise',
+      it: 'Pulizie di trasloco e di fine locazione con garanzia di consegna'
+    },
+    'Barzahlung direkt nach Abschluss der Reinigung': {
+      de: 'Barzahlung direkt nach Abschluss der Reinigung',
+      en: 'Cash payment directly upon completion of cleaning',
+      fr: 'Paiement en espèces directement après le nettoyage',
+      it: 'Pagamento in contanti direttamente dopo la pulizia'
+    },
+    'Barzahlung nach Abschluss der Reinigung': {
+      de: 'Barzahlung nach Abschluss der Reinigung',
+      en: 'Cash payment upon completion of cleaning',
+      fr: 'Paiement en espèces après le nettoyage',
+      it: 'Pagamento in contanti dopo la pulizia'
+    },
+    'Barzahlung': {
+      de: 'Barzahlung',
+      en: 'Cash payment',
+      fr: 'Paiement en espèces',
+      it: 'Pagamento in contanti'
+    },
+    'Zahlung per Rechnung': {
+      de: 'Zahlung per Rechnung',
+      en: 'Payment by invoice',
+      fr: 'Paiement sur facture',
+      it: 'Pagamento su fattura'
+    },
+    'EG': { de: 'Erdgeschoss (EG)', en: 'Ground Floor (GF)', fr: 'Rez-de-chaussée (RDC)', it: 'Piano terra (PT)' },
+    'Erdgeschoss': { de: 'Erdgeschoss (EG)', en: 'Ground Floor (GF)', fr: 'Rez-de-chaussée (RDC)', it: 'Piano terra (PT)' },
+    'groundFloor': { de: 'Erdgeschoss (EG)', en: 'Ground Floor (GF)', fr: 'Rez-de-chaussée (RDC)', it: 'Piano terra (PT)' },
+    '1. OG': { de: '1. OG', en: '1st Floor', fr: '1er étage', it: '1° piano' },
+    '2. OG': { de: '2. OG', en: '2nd Floor', fr: '2ème étage', it: '2° piano' },
+    '3. OG': { de: '3. OG', en: '3rd Floor', fr: '3ème étage', it: '3° piano' },
+    '4. OG': { de: '4. OG', en: '4th Floor', fr: '4ème étage', it: '4° piano' },
+    'Dachgeschoss': { de: 'Dachgeschoss', en: 'Attic / Top Floor', fr: 'Combles / Dernier étage', it: 'Mansarda / Ultimo piano' },
+    'Untergeschoss': { de: 'Untergeschoss', en: 'Basement Floor', fr: 'Sous-sol', it: 'Seminterrato' },
+    'Personenaufzug': { de: 'Personenaufzug', en: 'Passenger Elevator', fr: 'Ascenseur', it: 'Ascensore' },
+    'Warenaufzug': { de: 'Warenaufzug', en: 'Freight Elevator', fr: 'Monte-charge', it: 'Montacarichi' },
+    'Kein Aufzug': { de: 'Kein Aufzug', en: 'No Elevator', fr: 'Pas d\'ascenseur', it: 'Senza ascensore' },
+    'Kein Parkplatz': { de: 'Kein Parkplatz', en: 'No Parking', fr: 'Pas de parking', it: 'Nessun parcheggio' },
     'Bodentiefe Fenster': { de: 'Bodentiefe Fenster', en: 'Floor to Ceiling', fr: 'Du Sol au Plafond', it: `Dal pavimento al soffitto` },
     'Jalousien': { de: 'Jalousien', en: 'Venetian Blinds', fr: 'Stores Vénitiens', it: `Tende alla veneziana` },
     'Fenster': { de: 'Fenster', en: 'Windows', fr: 'Fenêtres', it: `Finestre` },
@@ -832,6 +977,70 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
        return `<div class="scope-item" style="display: flex; align-items: center; margin-bottom: 2px;"><svg style="width: 14px; height: 14px; fill: #003366; flex-shrink: 0; margin-right: 6px;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>${formattedKey}:</strong> <span style="color: #333;">${formattedVal}</span></span></div>`;
     }).join('');
 
+  let finalScopeItemsHtml = additionalAttributesHtml;
+  if (!finalScopeItemsHtml || finalScopeItemsHtml.trim() === '') {
+    const defaultScopeItems: Record<string, string[]> = {
+      de: [
+        'Fachgerechte Ausführung sämtlicher vereinbarter Arbeiten gemäss Schweizer Standard',
+        '100% Abnahmegarantie mit kostenloser Nachreinigung bei allfälligen Mängeln',
+        'Gründliche Reinigung aller Wohnräume, Küche, Backofen & Sanitäranlagen',
+        'Professionelle Reinigungsmaterialien, moderne Geräte und Fahrspesen inklusive'
+      ],
+      en: [
+        'Professional execution of all agreed work according to Swiss standards',
+        '100% handover guarantee with free re-cleaning if required',
+        'Thorough cleaning of all living areas, kitchen, oven & sanitary facilities',
+        'Professional cleaning materials, modern equipment and travel included'
+      ],
+      fr: [
+        'Exécution professionnelle de tous les travaux convenus selon les normes suisses',
+        'Garantie de remise à 100% avec re-nettoyage gratuit si nécessaire',
+        'Nettoyage approfondi de toutes les pièces, cuisine, four & sanitaires',
+        'Produits de nettoyage professionnels, matériel moderne et déplacement inclus'
+      ],
+      it: [
+        'Esecuzione professionale di tutti i lavori concordati secondo gli standard svizzeri',
+        'Garanzia di consegna al 100% con pulizia gratuita se necessario',
+        'Pulizia accurata di tutti gli ambienti, cucina, forno e servizi igienici',
+        'Materiali professionali, attrezzature moderne e trasporto inclusi'
+      ]
+    };
+    const items = defaultScopeItems[locale] || defaultScopeItems.de;
+    finalScopeItemsHtml = items.map(text => 
+      `<div class="scope-item" style="display: flex; align-items: center; margin-bottom: 2px;"><svg style="width: 14px; height: 14px; fill: #003366; flex-shrink: 0; margin-right: 6px;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><span style="color: #333;">${text}</span></span></div>`
+    ).join('');
+  }
+
+  // Extract clean customer remark/note (ignoring internal debug dumps)
+  let userRemark = '';
+  const rawRemarkCandidate = customer.furtherRequests || customer.remark || customer.remarks1 || customer.specialNotes || customer.notes;
+  if (typeof rawRemarkCandidate === 'string' && rawRemarkCandidate.trim()) {
+    if (!rawRemarkCandidate.includes('requestType:') && !rawRemarkCandidate.includes('preferredDate:') && !rawRemarkCandidate.includes('sharedPropertyType:')) {
+      userRemark = rawRemarkCandidate.replace(/^Bemerkungen:\s*/i, '').trim();
+    }
+  }
+
+  const formatUserRemark = (remark: string, loc: 'de' | 'en' | 'fr' | 'it'): string => {
+    if (!remark) return '';
+    const cleanRemark = remark.trim();
+    const match = translatedValues[cleanRemark] || (typeof cleanRemark === 'string' ? translatedValues[cleanRemark.toLowerCase()] : undefined);
+    if (match) {
+      return match[loc] || match.en || cleanRemark;
+    }
+    return cleanRemark;
+  };
+
+  const formatCustomerName = (cust: any): string => {
+    if (cust.fullName && String(cust.fullName).trim()) return String(cust.fullName).trim();
+    const first = (cust.firstName || '').trim();
+    const last = (cust.lastName || cust.name || '').trim();
+    if (first && last && first !== last) return `${first} ${last}`;
+    if (first) return first;
+    if (last) return last;
+    if (cust.nameFirstName && String(cust.nameFirstName).trim()) return String(cust.nameFirstName).trim();
+    return locDict.customerFallback || 'Kunde';
+  };
+
   const subtotal = regularItems.reduce((sum, item) => sum + item.price, 0);
   const subtotalRow = `
     <tr>
@@ -843,20 +1052,30 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   let serviceTitle = 'Service';
   const combinedType = `${customer.serviceType || ''} ${customer.serviceName || ''} ${customer.formType || ''} ${customer.cleaningTypes || ''} ${customer.cleaningType || ''} ${customer.movingType || ''}`.toLowerCase();
   
-  if (combinedType.includes('transport')) {
-    serviceTitle = locale === 'de' ? 'Transport' : locale === 'fr' ? 'Transport' : 'Transport';
+  if (combinedType.includes('moving-and-cleaning') || (combinedType.includes('relocation') && (combinedType.includes('cleaning') || combinedType.includes('reinigung')))) {
+    serviceTitle = locale === 'de' ? 'Umzug & Reinigung' : locale === 'fr' ? 'Déménagement & Nettoyage' : locale === 'it' ? 'Trasloco e Pulizia' : 'Moving & Cleaning';
+  } else if (combinedType.includes('umzugsreinigung') || combinedType.includes('endreinigung') || combinedType.includes('house-cleaning') || combinedType.includes('movingoutcleaning')) {
+    serviceTitle = locale === 'de' ? 'Umzugsreinigung' : locale === 'fr' ? 'Nettoyage de fin de bail' : locale === 'it' ? 'Pulizia di trasloco' : 'Move-out Cleaning';
+  } else if (combinedType.includes('unterhalt') || combinedType.includes('maintenance')) {
+    serviceTitle = locale === 'de' ? 'Unterhaltsreinigung' : locale === 'fr' ? 'Nettoyage d\'entretien' : locale === 'it' ? 'Pulizia di manutenzione' : 'Maintenance Cleaning';
+  } else if (combinedType.includes('büro') || combinedType.includes('bueroreinigung') || combinedType.includes('office')) {
+    serviceTitle = locale === 'de' ? 'Büroreinigung' : locale === 'fr' ? 'Nettoyage de bureau' : locale === 'it' ? 'Pulizia uffici' : 'Office Cleaning';
+  } else if (combinedType.includes('fenster') || combinedType.includes('window')) {
+    serviceTitle = locale === 'de' ? 'Fensterreinigung' : locale === 'fr' ? 'Nettoyage de vitres' : locale === 'it' ? 'Pulizia vetri' : 'Window Cleaning';
+  } else if (combinedType.includes('bau') || combinedType.includes('construction')) {
+    serviceTitle = locale === 'de' ? 'Baureinigung' : locale === 'fr' ? 'Nettoyage de chantier' : locale === 'it' ? 'Pulizia di cantiere' : 'Construction Cleaning';
+  } else if (combinedType.includes('hauswartung') || combinedType.includes('facility')) {
+    serviceTitle = locale === 'de' ? 'Hauswartungsdienstleistungen' : locale === 'fr' ? 'Conciergerie & Entretien' : locale === 'it' ? 'Manutenzione e Facility' : 'Property Maintenance';
   } else if (combinedType.includes('disposal') || combinedType.includes('entsorgung') || combinedType.includes('räumung') || combinedType.includes('clearance')) {
-    serviceTitle = locale === 'de' ? 'Räumung & Entsorgung' : locale === 'fr' ? 'Débarras' : 'Disposal & Clearance';
-  } else if (combinedType.includes('moving-and-cleaning') || (combinedType.includes('moving') && combinedType.includes('cleaning')) || (combinedType.includes('umzug') && combinedType.includes('reinigung'))) {
-    serviceTitle = locale === 'de' ? 'Umzug & Reinigung' : locale === 'fr' ? 'Déménagement & Nettoyage' : 'Moving & Cleaning';
-  } else if (combinedType.includes('moving') || combinedType.includes('umzug')) {
-    serviceTitle = locale === 'de' ? 'Umzug' : locale === 'fr' ? 'Déménagement' : 'Moving';
-  } else if (combinedType.includes('house-cleaning')) {
-    serviceTitle = locale === 'de' ? 'Hausreinigung' : locale === 'fr' ? 'Nettoyage de maison' : 'House Cleaning';
-  } else if (combinedType.includes('cleaning') || combinedType.includes('reinigung')) {
-    serviceTitle = locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : 'Cleaning';
+    serviceTitle = locale === 'de' ? 'Räumung & Entsorgung' : locale === 'fr' ? 'Débarras & Élimination' : locale === 'it' ? 'Sgombero e Smaltimento' : 'Disposal & Clearance';
   } else if (combinedType.includes('household') || combinedType.includes('haushalt')) {
-    serviceTitle = locale === 'de' ? 'Haushaltshilfe' : locale === 'fr' ? 'Aide ménagère' : 'Household Help';
+    serviceTitle = locale === 'de' ? 'Haushaltshilfe' : locale === 'fr' ? 'Aide ménagère' : locale === 'it' ? 'Aiuto domestico' : 'Household Help';
+  } else if (combinedType.includes('relocation') || (combinedType.includes('umzug') && !combinedType.includes('reinigung'))) {
+    serviceTitle = locale === 'de' ? 'Umzug' : locale === 'fr' ? 'Déménagement' : locale === 'it' ? 'Trasloco' : 'Moving';
+  } else if (combinedType.includes('transport')) {
+    serviceTitle = locale === 'de' ? 'Transport' : locale === 'fr' ? 'Transport' : locale === 'it' ? 'Trasporto' : 'Transport';
+  } else if (combinedType.includes('reinigung') || combinedType.includes('cleaning')) {
+    serviceTitle = locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : locale === 'it' ? 'Pulizia' : 'Cleaning';
   } else if (combinedType.includes('painting') || combinedType.includes('maler')) {
     serviceTitle = locale === 'de' ? 'Malerarbeiten' : locale === 'fr' ? 'Peinture' : 'Painting';
   } else if (combinedType.includes('handyman') || combinedType.includes('handwerker')) {
@@ -864,11 +1083,9 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   } else if (combinedType.includes('storage') || combinedType.includes('lager')) {
     serviceTitle = locale === 'de' ? 'Lagerung' : locale === 'fr' ? 'Stockage' : 'Storage';
   } else if (combinedType.trim().length > 0) {
-    // Fallback capitalized to the first word
     const firstWord = combinedType.trim().split(' ')[0];
     serviceTitle = firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
   } else {
-    // Absolute fallback
     serviceTitle = locale === 'de' ? 'Service' : locale === 'fr' ? 'Service' : 'Service';
   }
 
@@ -980,7 +1197,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> ${locDict.customer}
         </div>
         <div class="customer-content">
-          <strong>${customer.firstName || ''} ${customer.lastName || ''}</strong><br>
+          <strong>${formatCustomerName(customer)}</strong><br>
           ${customer.streetAndNumber ? customer.streetAndNumber + '<br>' : ''}
           ${customer.postalCodeAndCity || customer.city || ''}
         </div>
@@ -1383,7 +1600,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           ${locDict.customer}
         </div>
         <div class="info-content">
-          <strong style="font-size: 14px; display: block; margin-bottom: 5px;">${customer.firstName} ${customer.lastName || customer.name}</strong>
+          <strong style="font-size: 14px; display: block; margin-bottom: 5px;">${formatCustomerName(customer)}</strong>
           <table style="border-spacing: 0;">
             <tr>
               <td style="width: 20px;"><svg style="width:12px; height:12px; fill:#555;" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></td>
@@ -1417,9 +1634,9 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           
           <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
           ${(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType || customer.sharedPropertyType) ? `<div><strong>${locDict.propertyType}</strong> ${formatVal(customer.apartmentType || customer.propertyType || customer.typeOfProperty || customer.objectType || customer.sharedPropertyType)}</div>` : ''}
-          ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters || customer.sharedLivingArea ? `<div><strong>${locDict.area}</strong> ca. ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters || customer.sharedLivingArea} m²</div>` : ''}
-          ${customer.floor || customer.floorsLevel || customer.sharedFloor ? `<div><strong>${locDict.floor}</strong> ${customer.floor || customer.floorsLevel || customer.sharedFloor}</div>` : ''}
-          ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms || customer.sharedRooms ? `<div><strong>${locDict.rooms}</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms || customer.sharedRooms} Zi.</div>` : ''}
+          ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters || customer.sharedLivingArea ? `<div><strong>${locDict.area}</strong> ${locDict.approx} ${customer.livingSpaceInM2 || customer.areaInM2 || customer.area || customer.squareMeters || customer.sharedLivingArea} m²</div>` : ''}
+          ${customer.floor || customer.floorsLevel || customer.sharedFloor ? `<div><strong>${locDict.floor}</strong> ${formatVal(customer.floor || customer.floorsLevel || customer.sharedFloor)}</div>` : ''}
+          ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms || customer.sharedRooms ? `<div><strong>${locDict.rooms}</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms || customer.sharedRooms} ${locDict.roomUnit}</div>` : ''}
           ${customer.elevatorSizes || customer.elevator ? `<div><strong>${locDict.lift}</strong> ${formatVal(customer.elevatorSizes || customer.elevator)}</div>` : ''}
           ${customer.parkingDistance ? `<div><strong>${locDict.parking}</strong> ${formatVal(customer.parkingDistance)}</div>` : ''}
           ${customer.cleaningTypes ? `<div><strong>${locDict.cleaningType}</strong> ${formatVal(customer.cleaningTypes)}</div>` : ''}
@@ -1429,7 +1646,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
             <div style="grid-column: span 2; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #eee;"></div>
             <div style="grid-column: span 2;"><strong>${locDict.destinationAddress || 'Destination Address:'}</strong> ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || customer.moveToStreet || 'N/A'}, ${customer.unloadingPostalCodeAndCity || customer.movingZipCity || customer.destinationCity || customer.moveToZipCity || 'N/A'}</div>
             ${customer.unloadingApartmentType || customer.destinationPropertyType ? `<div><strong>${locDict.destinationType}</strong> ${formatVal(customer.unloadingApartmentType || customer.destinationPropertyType)}</div>` : ''}
-            ${customer.unloadingAreaInM2 || customer.destinationArea ? `<div><strong>${locDict.destinationArea}</strong> ca. ${customer.unloadingAreaInM2 || customer.destinationArea} m²</div>` : ''}
+            ${customer.unloadingAreaInM2 || customer.destinationArea ? `<div><strong>${locDict.destinationArea}</strong> ${locDict.approx} ${customer.unloadingAreaInM2 || customer.destinationArea} m²</div>` : ''}
             ${customer.unloadingElevatorSizes || customer.destinationElevator ? `<div><strong>${locDict.destinationLift}</strong> ${formatVal(customer.unloadingElevatorSizes || customer.destinationElevator)}</div>` : ''}
             ${customer.unloadingParkingDistance || customer.destinationParking ? `<div><strong>${locDict.destinationParking}</strong> ${formatVal(customer.unloadingParkingDistance || customer.destinationParking)}</div>` : ''}
           ` : ''}
@@ -1442,10 +1659,14 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
         ${locDict.scope}
       </div>
-      <p style="font-size: 11px; color: #777; margin-top: 0;">${locDict.scopeDesc}</p>
       <div class="scope-list">
-        ${additionalAttributesHtml}
+        ${finalScopeItemsHtml}
       </div>
+      ${userRemark ? `
+      <div style="margin-top: 12px; padding: 10px 14px; background-color: #fbfbfc; border-left: 3px solid #cc0000; border-radius: 4px; font-size: 12px; color: #333;">
+        <strong style="color: #001233;">${locDict.customerNotes}:</strong> ${formatUserRemark(userRemark, locale)}
+      </div>
+      ` : ''}
     </div>
     
     <div class="pricing-grid">
