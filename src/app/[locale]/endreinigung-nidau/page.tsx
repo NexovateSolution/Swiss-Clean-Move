@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'endreinigungNidau'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/endreinigung-nidau`
+      canonical: `https://www.swisscleanmove.ch/${locale}/endreinigung-nidau`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/endreinigung-nidau',
+        en: 'https://www.swisscleanmove.ch/en/endreinigung-nidau',
+        fr: 'https://www.swisscleanmove.ch/fr/endreinigung-nidau',
+        it: 'https://www.swisscleanmove.ch/it/endreinigung-nidau',
+        'x-default': 'https://www.swisscleanmove.ch/de/endreinigung-nidau'
+      }
     },
     title: t('title'),
     description: t('description'),

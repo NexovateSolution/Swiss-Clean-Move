@@ -281,7 +281,11 @@
         "umzug_title": "Umzug & Transport",
         "entsorgung_title": "Entsorgung & Räumung",
         "facility_title": "Hauswartung & Gebäudeunterhalt",
-        "haushalt_title": "Haushaltshilfe"
+        "haushalt_title": "Haushaltshilfe",
+        "contact_title": "Individuelle Anfrage",
+        "contact": "Direkte Nachricht, Spezialwünsche oder persönliche Fragen ohne Formular",
+        "contactBtn": "Kontaktieren",
+        "contactSeo": "Persönliche Beratung & Kontakt"
       },
       "reviews": {
         "rating": "4.9 von 5",

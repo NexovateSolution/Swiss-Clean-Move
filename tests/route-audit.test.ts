@@ -1,6 +1,6 @@
 import assert from 'node:assert';
 
-const BASE_URL = 'http://localhost:3008';
+const BASE_URL = process.env.TEST_URL || 'http://localhost:3000';
 
 const locales = ['de', 'en', 'fr', 'it'];
 const coreServices = [

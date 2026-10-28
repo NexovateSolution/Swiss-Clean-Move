@@ -11,7 +11,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   
   return {
     alternates: {
-      canonical: `/${locale}/blog`
+      canonical: `https://www.swisscleanmove.ch/${locale}/blog`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/blog',
+        en: 'https://www.swisscleanmove.ch/en/blog',
+        fr: 'https://www.swisscleanmove.ch/fr/blog',
+        it: 'https://www.swisscleanmove.ch/it/blog',
+        'x-default': 'https://www.swisscleanmove.ch/de/blog'
+      }
     },
     title,
     description,

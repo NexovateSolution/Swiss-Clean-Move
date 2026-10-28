@@ -281,7 +281,11 @@
         "umzug_title": "Déménagement & Transport",
         "entsorgung_title": "Débarras & Vidage",
         "facility_title": "Conciergerie & Facility Service",
-        "haushalt_title": "Aide ménagère"
+        "haushalt_title": "Aide ménagère",
+        "contact_title": "Demande personnalisée",
+        "contact": "Message direct, souhaits particuliers ou questions sans formulaire",
+        "contactBtn": "Nous contacter",
+        "contactSeo": "Contact direct & conseil"
       },
       "reviews": {
         "rating": "4.9 sur 5",

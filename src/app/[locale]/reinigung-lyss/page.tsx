@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'reinigungLyss'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/reinigung-lyss`
+      canonical: `https://www.swisscleanmove.ch/${locale}/reinigung-lyss`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/reinigung-lyss',
+        en: 'https://www.swisscleanmove.ch/en/reinigung-lyss',
+        fr: 'https://www.swisscleanmove.ch/fr/reinigung-lyss',
+        it: 'https://www.swisscleanmove.ch/it/reinigung-lyss',
+        'x-default': 'https://www.swisscleanmove.ch/de/reinigung-lyss'
+      }
     },
     title: t('title'),
     description: t('description'),

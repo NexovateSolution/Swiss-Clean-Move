@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'umzugNeuchatel'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/umzug-neuchatel`
+      canonical: `https://www.swisscleanmove.ch/${locale}/umzug-neuchatel`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/umzug-neuchatel',
+        en: 'https://www.swisscleanmove.ch/en/umzug-neuchatel',
+        fr: 'https://www.swisscleanmove.ch/fr/umzug-neuchatel',
+        it: 'https://www.swisscleanmove.ch/it/umzug-neuchatel',
+        'x-default': 'https://www.swisscleanmove.ch/de/umzug-neuchatel'
+      }
     },
     title: t('title'),
     description: t('description'),

@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'umzugFribourg'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/umzug-fribourg`
+      canonical: `https://www.swisscleanmove.ch/${locale}/umzug-fribourg`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/umzug-fribourg',
+        en: 'https://www.swisscleanmove.ch/en/umzug-fribourg',
+        fr: 'https://www.swisscleanmove.ch/fr/umzug-fribourg',
+        it: 'https://www.swisscleanmove.ch/it/umzug-fribourg',
+        'x-default': 'https://www.swisscleanmove.ch/de/umzug-fribourg'
+      }
     },
     title: t('title'),
     description: t('description'),

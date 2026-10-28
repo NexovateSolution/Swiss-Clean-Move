@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'umzugPieterlen'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/umzug-pieterlen`
+      canonical: `https://www.swisscleanmove.ch/${locale}/umzug-pieterlen`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/umzug-pieterlen',
+        en: 'https://www.swisscleanmove.ch/en/umzug-pieterlen',
+        fr: 'https://www.swisscleanmove.ch/fr/umzug-pieterlen',
+        it: 'https://www.swisscleanmove.ch/it/umzug-pieterlen',
+        'x-default': 'https://www.swisscleanmove.ch/de/umzug-pieterlen'
+      }
     },
     title: t('title'),
     description: t('description'),

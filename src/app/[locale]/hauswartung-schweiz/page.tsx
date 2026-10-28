@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'hauswartungSchweiz'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/hauswartung-schweiz`
+      canonical: `https://www.swisscleanmove.ch/${locale}/hauswartung-schweiz`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/hauswartung-schweiz',
+        en: 'https://www.swisscleanmove.ch/en/hauswartung-schweiz',
+        fr: 'https://www.swisscleanmove.ch/fr/hauswartung-schweiz',
+        it: 'https://www.swisscleanmove.ch/it/hauswartung-schweiz',
+        'x-default': 'https://www.swisscleanmove.ch/de/hauswartung-schweiz'
+      }
     },
     title: t('title'),
     description: t('description'),

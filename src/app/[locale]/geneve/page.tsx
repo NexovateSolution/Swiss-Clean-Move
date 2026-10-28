@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'regions.geneve.meta' });
   return {
     alternates: {
-      canonical: `/${locale}/geneve`
+      canonical: `https://www.swisscleanmove.ch/${locale}/geneve`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/geneve',
+        en: 'https://www.swisscleanmove.ch/en/geneve',
+        fr: 'https://www.swisscleanmove.ch/fr/geneve',
+        it: 'https://www.swisscleanmove.ch/it/geneve',
+        'x-default': 'https://www.swisscleanmove.ch/de/geneve'
+      }
     },
     title: t('title'),
     description: t('description'),

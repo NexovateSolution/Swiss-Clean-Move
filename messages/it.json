@@ -294,7 +294,11 @@
         "umzug_title": "Trasloco & Trasporto",
         "entsorgung_title": "Smaltimento & Sgombero",
         "facility_title": "Custodia & Facility Service",
-        "haushalt_title": "Aiuto domestico"
+        "haushalt_title": "Aiuto domestico",
+        "contact_title": "Richiesta individuale",
+        "contact": "Messaggio diretto, richieste speciali o domande senza modulo",
+        "contactBtn": "Contattaci",
+        "contactSeo": "Consulenza & contatto diretto"
       },
       "reviews": {
         "rating": "4.9 su 5",

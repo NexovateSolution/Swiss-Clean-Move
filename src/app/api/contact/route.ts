@@ -94,9 +94,10 @@ export async function POST(request: Request) {
 
         const emailResult = await sendEmailNotification({
             to: 'info@swisscleanmove.ch, swisscleanmove.ch@gmail.com',
-            subject: `New Contact Form: ${subject}`,
+            replyTo: email,
+            subject: `🚨 Neue Kontaktanfrage: ${subject} - ${name}`,
             html: emailHtml,
-            text: `New contact form submission from ${name} (${email})\n\nSubject: ${subject}\n\nMessage: ${message}`
+            text: `Neue Kontaktanfrage von ${name} (${email})\nTelefon: ${phone || 'Nicht angegeben'}\nBetreff: ${subject}\n\nNachricht:\n${message}`
         });
 
         // 4. Verification of Delivery Contract

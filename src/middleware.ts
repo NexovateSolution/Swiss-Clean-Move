@@ -7,7 +7,10 @@ const intlMiddleware = createMiddleware({
   locales: ['de', 'fr', 'en', 'it'],
 
   // Used when no locale matches
-  defaultLocale: 'de'
+  defaultLocale: 'de',
+
+  // Disable automatic browser language detection so search engines and default traffic always default to German
+  localeDetection: false
 });
 
 export default function middleware(request: NextRequest) {

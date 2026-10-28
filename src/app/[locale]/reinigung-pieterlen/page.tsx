@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'reinigungPieterlen'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/reinigung-pieterlen`
+      canonical: `https://www.swisscleanmove.ch/${locale}/reinigung-pieterlen`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/reinigung-pieterlen',
+        en: 'https://www.swisscleanmove.ch/en/reinigung-pieterlen',
+        fr: 'https://www.swisscleanmove.ch/fr/reinigung-pieterlen',
+        it: 'https://www.swisscleanmove.ch/it/reinigung-pieterlen',
+        'x-default': 'https://www.swisscleanmove.ch/de/reinigung-pieterlen'
+      }
     },
     title: t('title'),
     description: t('description'),

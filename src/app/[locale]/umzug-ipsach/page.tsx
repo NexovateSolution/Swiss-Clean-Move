@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'umzugIpsach'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/umzug-ipsach`
+      canonical: `https://www.swisscleanmove.ch/${locale}/umzug-ipsach`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/umzug-ipsach',
+        en: 'https://www.swisscleanmove.ch/en/umzug-ipsach',
+        fr: 'https://www.swisscleanmove.ch/fr/umzug-ipsach',
+        it: 'https://www.swisscleanmove.ch/it/umzug-ipsach',
+        'x-default': 'https://www.swisscleanmove.ch/de/umzug-ipsach'
+      }
     },
     title: t('title'),
     description: t('description'),

@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'umzugNidau'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/umzug-nidau`
+      canonical: `https://www.swisscleanmove.ch/${locale}/umzug-nidau`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/umzug-nidau',
+        en: 'https://www.swisscleanmove.ch/en/umzug-nidau',
+        fr: 'https://www.swisscleanmove.ch/fr/umzug-nidau',
+        it: 'https://www.swisscleanmove.ch/it/umzug-nidau',
+        'x-default': 'https://www.swisscleanmove.ch/de/umzug-nidau'
+      }
     },
     title: t('title'),
     description: t('description'),

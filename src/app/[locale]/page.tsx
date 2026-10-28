@@ -100,6 +100,18 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       seoLink: `/${locale}/unterhaltsreinigung-biel-bienne`,
       seoText: locale === 'de' ? 'Unterhaltsreinigung Biel/Bienne' : 'Maintenance Cleaning Biel/Bienne',
       color: 'text-orange-500'
+    },
+    {
+      id: 'contact',
+      title: tNew('services.contact_title'),
+      desc: tNew('services.contact'),
+      icon: MessageCircle,
+      href: `/${locale}/contact`,
+      btnText: tNew('services.contactBtn'),
+      seoLink: `/${locale}/contact`,
+      seoText: tNew('services.contactSeo'),
+      isContact: true,
+      color: 'text-teal-600'
     }
   ];
 
@@ -240,8 +252,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {services.map((svc, i) => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+            {services.map((svc: any, i) => {
               const Icon = svc.icon;
               return (
                 <div key={i} className="bg-white rounded-2xl p-6 flex flex-col justify-between border border-swiss-border hover:shadow-soft hover:border-swiss-red/30 transition-all group">
@@ -260,12 +272,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                   </div>
                   <div className="flex flex-col gap-3 mt-4">
                     <Link href={svc.href} className="w-full py-3 bg-swiss-red text-white text-center font-bold rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center space-x-2 shadow-sm">
-                      <span>{tNew('services.offerteBtn')} {svc.title.split(' ')[0]}</span>
+                      <span>{svc.btnText || `${tNew('services.offerteBtn')} ${svc.title.split(' ')[0]}`}</span>
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                     {svc.seoLink && (
                       <Link href={svc.seoLink} className="text-xs text-center font-bold text-gray-500 hover:text-swiss-red transition-colors flex items-center justify-center group-hover:underline">
-                        {locale === 'de' ? 'Mehr erfahren über' : 'Read more about'} {svc.seoText}
+                        {svc.isContact ? svc.seoText : `${locale === 'de' ? 'Mehr erfahren über' : locale === 'fr' ? 'En savoir plus sur' : locale === 'it' ? 'Scopri di più su' : 'Read more about'} ${svc.seoText}`}
                       </Link>
                     )}
                   </div>

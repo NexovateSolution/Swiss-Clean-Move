@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'umzugBasel'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/umzug-basel`
+      canonical: `https://www.swisscleanmove.ch/${locale}/umzug-basel`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/umzug-basel',
+        en: 'https://www.swisscleanmove.ch/en/umzug-basel',
+        fr: 'https://www.swisscleanmove.ch/fr/umzug-basel',
+        it: 'https://www.swisscleanmove.ch/it/umzug-basel',
+        'x-default': 'https://www.swisscleanmove.ch/de/umzug-basel'
+      }
     },
     title: t('title'),
     description: t('description'),

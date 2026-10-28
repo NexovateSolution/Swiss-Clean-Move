@@ -114,52 +114,74 @@ export function formatContactEmail(data: {
   const safePhone = data.phone ? escapeHtml(data.phone) : '';
   const safeSubject = escapeHtml(data.subject);
   const safeMessage = escapeHtmlWithLineBreaks(data.message);
+  const rawDigits = data.phone ? data.phone.replace(/\D/g, '') : '';
 
   return `
     <!DOCTYPE html>
     <html>
     <head>
+      <meta charset="utf-8">
       <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-        .header { background: #0066CC; color: white; padding: 20px; text-align: center; }
-        .content { background: #f9f9f9; padding: 20px; margin: 20px 0; }
-        .field { margin-bottom: 15px; }
-        .label { font-weight: bold; color: #0066CC; }
-        .footer { text-align: center; color: #666; font-size: 12px; margin-top: 20px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1f2937; margin: 0; padding: 20px; background-color: #f3f4f6; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .header { background: #DC2626; color: white; padding: 24px; text-align: center; }
+        .content { padding: 24px; }
+        .section { background: #f9fafb; padding: 16px 20px; margin-bottom: 20px; border-radius: 6px; border: 1px solid #f3f4f6; }
+        .section-title { font-size: 15px; font-weight: 700; color: #111827; margin: 0 0 12px 0; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #e5e7eb; padding-bottom: 6px; }
+        .field { margin-bottom: 10px; font-size: 14px; }
+        .label { font-weight: 600; color: #4b5563; min-width: 110px; display: inline-block; }
+        .value { color: #111827; }
+        .message-box { background: #ffffff; padding: 16px; border-left: 4px solid #DC2626; border-radius: 4px; font-size: 14px; color: #111827; margin-top: 8px; border: 1px solid #e5e7eb; border-left: 4px solid #DC2626; }
+        .actions { text-align: center; margin: 24px 0 12px 0; }
+        .btn { display: inline-block; padding: 10px 18px; margin: 4px; font-size: 13px; font-weight: 700; text-decoration: none; border-radius: 6px; color: #ffffff !important; }
+        .btn-reply { background: #DC2626; }
+        .btn-call { background: #0284c7; }
+        .footer { text-align: center; color: #6b7280; font-size: 12px; padding: 16px 20px; border-top: 1px solid #e5e7eb; background: #f9fafb; }
       </style>
     </head>
     <body>
       <div class="container">
         <div class="header">
-          <h1>🏠 SwissCleanMove</h1>
-          <p>New Contact Form Submission</p>
+          <h1 style="margin: 0; font-size: 22px; font-weight: 800; letter-spacing: 0.5px;">🏠 SwissCleanMove</h1>
+          <p style="margin: 6px 0 0 0; font-size: 14px; opacity: 0.95; font-weight: 600;">🚨 NEUE KONTAKTANFRAGE / NEW INQUIRY</p>
         </div>
         <div class="content">
-          <div class="field">
-            <span class="label">Name:</span> ${safeName}
+          <div class="section">
+            <h3 class="section-title">👤 Kundendaten / Customer Details</h3>
+            <div class="field">
+              <span class="label">Name:</span> <strong class="value">${safeName}</strong>
+            </div>
+            <div class="field">
+              <span class="label">E-Mail:</span> <a href="mailto:${safeEmail}" style="color: #DC2626; font-weight: 600;">${safeEmail}</a>
+            </div>
+            ${safePhone ? `
+            <div class="field">
+              <span class="label">Telefon:</span> <a href="tel:${safePhone}" style="color: #DC2626; font-weight: 600;">${safePhone}</a>
+            </div>
+            ` : ''}
           </div>
-          <div class="field">
-            <span class="label">Email:</span> ${safeEmail}
+
+          <div class="section">
+            <h3 class="section-title">📝 Anliegen / Message Details</h3>
+            <div class="field">
+              <span class="label">Betreff / Subject:</span> <strong class="value">${safeSubject}</strong>
+            </div>
+            <div class="field" style="margin-top: 14px;">
+              <span class="label" style="display: block; margin-bottom: 6px;">Nachricht / Message:</span>
+              <div class="message-box">
+                ${safeMessage}
+              </div>
+            </div>
           </div>
-          ${safePhone ? `
-          <div class="field">
-            <span class="label">Phone:</span> ${safePhone}
-          </div>
-          ` : ''}
-          <div class="field">
-            <span class="label">Subject:</span> ${safeSubject}
-          </div>
-          <div class="field">
-            <span class="label">Message:</span><br>
-            <p style="background: white; padding: 15px; border-left: 4px solid #0066CC;">
-              ${safeMessage}
-            </p>
+
+          <div class="actions">
+            <a href="mailto:${safeEmail}?subject=Re:%20${encodeURIComponent(data.subject)}" class="btn btn-reply">✉️ Direkt antworten</a>
+            ${safePhone ? `<a href="tel:${safePhone}" class="btn btn-call">📞 Kunde anrufen</a>` : ''}
           </div>
         </div>
         <div class="footer">
-          <p>This is an automated notification from SwissCleanMove website</p>
-          <p>Received: ${new Date().toLocaleString('en-CH', { timeZone: 'Europe/Zurich' })}</p>
+          <p style="margin: 0 0 4px 0;">Automatische Benachrichtigung von SwissCleanMove Website</p>
+          <p style="margin: 0;">Eingegangen: ${new Date().toLocaleString('de-CH', { timeZone: 'Europe/Zurich' })}</p>
         </div>
       </div>
     </body>

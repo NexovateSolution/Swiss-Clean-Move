@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'seoPages.baureinigungBiel.meta' });
   return {
     alternates: {
-      canonical: `/${locale}/baureinigung-biel-bienne`
+      canonical: `https://www.swisscleanmove.ch/${locale}/baureinigung-biel-bienne`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/baureinigung-biel-bienne',
+        en: 'https://www.swisscleanmove.ch/en/baureinigung-biel-bienne',
+        fr: 'https://www.swisscleanmove.ch/fr/baureinigung-biel-bienne',
+        it: 'https://www.swisscleanmove.ch/it/baureinigung-biel-bienne',
+        'x-default': 'https://www.swisscleanmove.ch/de/baureinigung-biel-bienne'
+      }
     },
     title: t('title'),
     description: t('description'),

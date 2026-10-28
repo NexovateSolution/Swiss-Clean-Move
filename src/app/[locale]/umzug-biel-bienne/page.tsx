@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'umzugBiel'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/umzug-biel-bienne`
+      canonical: `https://www.swisscleanmove.ch/${locale}/umzug-biel-bienne`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/umzug-biel-bienne',
+        en: 'https://www.swisscleanmove.ch/en/umzug-biel-bienne',
+        fr: 'https://www.swisscleanmove.ch/fr/umzug-biel-bienne',
+        it: 'https://www.swisscleanmove.ch/it/umzug-biel-bienne',
+        'x-default': 'https://www.swisscleanmove.ch/de/umzug-biel-bienne'
+      }
     },
     title: t('title'),
     description: t('description'),

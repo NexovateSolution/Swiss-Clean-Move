@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'seoPages.transportfirmaBiel.meta' });
   return {
     alternates: {
-      canonical: `/${locale}/transportfirma-biel-bienne`
+      canonical: `https://www.swisscleanmove.ch/${locale}/transportfirma-biel-bienne`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/transportfirma-biel-bienne',
+        en: 'https://www.swisscleanmove.ch/en/transportfirma-biel-bienne',
+        fr: 'https://www.swisscleanmove.ch/fr/transportfirma-biel-bienne',
+        it: 'https://www.swisscleanmove.ch/it/transportfirma-biel-bienne',
+        'x-default': 'https://www.swisscleanmove.ch/de/transportfirma-biel-bienne'
+      }
     },
     title: t('title'),
     description: t('description'),

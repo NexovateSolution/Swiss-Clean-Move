@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'reinigungsfirmaSchweiz'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/reinigungsfirma-schweiz`
+      canonical: `https://www.swisscleanmove.ch/${locale}/reinigungsfirma-schweiz`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/reinigungsfirma-schweiz',
+        en: 'https://www.swisscleanmove.ch/en/reinigungsfirma-schweiz',
+        fr: 'https://www.swisscleanmove.ch/fr/reinigungsfirma-schweiz',
+        it: 'https://www.swisscleanmove.ch/it/reinigungsfirma-schweiz',
+        'x-default': 'https://www.swisscleanmove.ch/de/reinigungsfirma-schweiz'
+      }
     },
     title: t('title'),
     description: t('description'),

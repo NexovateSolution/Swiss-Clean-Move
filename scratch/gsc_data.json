@@ -1,0 +1,400 @@
+{
+  "Queries": [
+    [
+      "Top queries",
+      "Last 28 days Clicks",
+      "Previous 28 days Clicks",
+      "Last 28 days Impressions",
+      "Previous 28 days Impressions",
+      "Last 28 days CTR",
+      "Previous 28 days CTR",
+      "Last 28 days Position",
+      "Previous 28 days Position"
+    ],
+    [
+      "swisscleanmove",
+      "0.0",
+      "63.0",
+      "0.0",
+      "104.0",
+      "0.0",
+      "0.6058",
+      "0.0",
+      "1.65"
+    ]
+  ],
+  "Pages": [
+    [
+      "Top pages",
+      "Last 28 days Clicks",
+      "Previous 28 days Clicks",
+      "Last 28 days Impressions",
+      "Previous 28 days Impressions",
+      "Last 28 days CTR",
+      "Previous 28 days CTR",
+      "Last 28 days Position",
+      "Previous 28 days Position"
+    ],
+    [
+      "https://www.swisscleanmove.ch/",
+      "0.0",
+      "59.0",
+      "0.0",
+      "104.0",
+      "0.0",
+      "0.5672999999999999",
+      "0.0",
+      "1.65"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de",
+      "0.0",
+      "4.0",
+      "0.0",
+      "40.0",
+      "0.0",
+      "0.1",
+      "0.0",
+      "3.55"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/endreinigung-biel",
+      "0.0",
+      "0.0",
+      "0.0",
+      "104.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.65"
+    ],
+    [
+      "https://www.swisscleanmove.ch/en",
+      "0.0",
+      "0.0",
+      "0.0",
+      "91.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.74"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/unterhaltsreinigung-biel",
+      "0.0",
+      "0.0",
+      "0.0",
+      "89.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.64"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/bern",
+      "0.0",
+      "0.0",
+      "0.0",
+      "81.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.84"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/umzug-bern",
+      "0.0",
+      "0.0",
+      "0.0",
+      "69.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.97"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/regions",
+      "0.0",
+      "0.0",
+      "0.0",
+      "34.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "2.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/facility-service-biel",
+      "0.0",
+      "0.0",
+      "0.0",
+      "29.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.45"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/reinigungsfirma-biel",
+      "0.0",
+      "0.0",
+      "0.0",
+      "19.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/entsorgung-biel",
+      "0.0",
+      "0.0",
+      "0.0",
+      "17.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/fribourg",
+      "0.0",
+      "0.0",
+      "0.0",
+      "14.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "2.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/reinigung-biel",
+      "0.0",
+      "0.0",
+      "0.0",
+      "9.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/haushaltshilfe-biel",
+      "0.0",
+      "0.0",
+      "0.0",
+      "9.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.11"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/contact",
+      "0.0",
+      "0.0",
+      "0.0",
+      "9.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.44"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/hauswartung-biel",
+      "0.0",
+      "0.0",
+      "0.0",
+      "8.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.12"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/reinigungsfirma-schweiz",
+      "0.0",
+      "0.0",
+      "0.0",
+      "6.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.33"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/umzug-bruegg",
+      "0.0",
+      "0.0",
+      "0.0",
+      "5.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "2.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/aargau",
+      "0.0",
+      "0.0",
+      "0.0",
+      "4.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/zuerich",
+      "0.0",
+      "0.0",
+      "0.0",
+      "4.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/transportfirma-biel",
+      "0.0",
+      "0.0",
+      "0.0",
+      "4.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.75"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/solothurn",
+      "0.0",
+      "0.0",
+      "0.0",
+      "3.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/de/umzug-schweiz",
+      "0.0",
+      "0.0",
+      "0.0",
+      "2.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0"
+    ],
+    [
+      "https://www.swisscleanmove.ch/en/contact",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0"
+    ]
+  ],
+  "Countries": [
+    [
+      "Country",
+      "Last 28 days Clicks",
+      "Previous 28 days Clicks",
+      "Last 28 days Impressions",
+      "Previous 28 days Impressions",
+      "Last 28 days CTR",
+      "Previous 28 days CTR",
+      "Last 28 days Position",
+      "Previous 28 days Position"
+    ],
+    [
+      "Switzerland",
+      "0.0",
+      "63.0",
+      "0.0",
+      "104.0",
+      "0.0",
+      "0.6058",
+      "0.0",
+      "1.65"
+    ]
+  ],
+  "Devices": [
+    [
+      "Device",
+      "Last 28 days Clicks",
+      "Previous 28 days Clicks",
+      "Last 28 days Impressions",
+      "Previous 28 days Impressions",
+      "Last 28 days CTR",
+      "Previous 28 days CTR",
+      "Last 28 days Position",
+      "Previous 28 days Position"
+    ],
+    [
+      "Mobile",
+      "0.0",
+      "59.0",
+      "0.0",
+      "93.0",
+      "0.0",
+      "0.6344",
+      "0.0",
+      "1.69"
+    ],
+    [
+      "Desktop",
+      "0.0",
+      "3.0",
+      "0.0",
+      "9.0",
+      "0.0",
+      "0.3333",
+      "0.0",
+      "1.44"
+    ],
+    [
+      "Tablet",
+      "0.0",
+      "1.0",
+      "0.0",
+      "2.0",
+      "0.0",
+      "0.5",
+      "0.0",
+      "1.0"
+    ]
+  ],
+  "Search appearance": [
+    [
+      "Search Appearance",
+      "Clicks",
+      "Impressions",
+      "CTR",
+      "Position"
+    ]
+  ],
+  "Filters": [
+    [
+      "Filter",
+      "Value"
+    ],
+    [
+      "Search type",
+      "Web (text-based)"
+    ],
+    [
+      "Date",
+      "Last 28 days"
+    ],
+    [
+      "Query",
+      "swisscleanmove"
+    ]
+  ]
+}

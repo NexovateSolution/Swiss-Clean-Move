@@ -294,7 +294,11 @@
         "umzug_title": "Moving & Transport",
         "entsorgung_title": "Disposal & Clearance",
         "facility_title": "Property Maintenance",
-        "haushalt_title": "Household Help"
+        "haushalt_title": "Household Help",
+        "contact_title": "Individual Request",
+        "contact": "Direct message, special requests, or individual questions without a form",
+        "contactBtn": "Contact Us",
+        "contactSeo": "Direct contact & consultation"
       },
       "reviews": {
         "rating": "4.9 out of 5",

@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'umzugSolothurn'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/umzug-solothurn`
+      canonical: `https://www.swisscleanmove.ch/${locale}/umzug-solothurn`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/umzug-solothurn',
+        en: 'https://www.swisscleanmove.ch/en/umzug-solothurn',
+        fr: 'https://www.swisscleanmove.ch/fr/umzug-solothurn',
+        it: 'https://www.swisscleanmove.ch/it/umzug-solothurn',
+        'x-default': 'https://www.swisscleanmove.ch/de/umzug-solothurn'
+      }
     },
     title: t('title'),
     description: t('description'),

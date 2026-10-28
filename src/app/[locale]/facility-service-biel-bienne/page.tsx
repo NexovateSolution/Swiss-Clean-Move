@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'seoPages.facilityServiceBiel.meta' });
   return {
     alternates: {
-      canonical: `/${locale}/facility-service-biel-bienne`
+      canonical: `https://www.swisscleanmove.ch/${locale}/facility-service-biel-bienne`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/facility-service-biel-bienne',
+        en: 'https://www.swisscleanmove.ch/en/facility-service-biel-bienne',
+        fr: 'https://www.swisscleanmove.ch/fr/facility-service-biel-bienne',
+        it: 'https://www.swisscleanmove.ch/it/facility-service-biel-bienne',
+        'x-default': 'https://www.swisscleanmove.ch/de/facility-service-biel-bienne'
+      }
     },
     title: t('title'),
     description: t('description'),

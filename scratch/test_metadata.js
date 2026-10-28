@@ -1,16 +1,29 @@
-// test_metadata.js
-// Read the page.tsx file directly and extract the canonical path
-const fs = require('fs');
+const http = require('http');
 
-const file = fs.readFileSync('src/app/[locale]/umzug-biel/page.tsx', 'utf8');
-const match = file.match(/alternates:\s*\{\s*canonical:\s*([^}]+)\}/);
-console.log('Umzug Biel Canonical match:', match ? match[1].trim() : 'No canonical found');
-
-// Run it for all 4 locales by replacing the locale variable in the string
-if (match) {
-  let raw = match[1].trim();
-  console.log('de:', raw.replace('${locale}', 'de').replace(/`/g, ''));
-  console.log('en:', raw.replace('${locale}', 'en').replace(/`/g, ''));
-  console.log('fr:', raw.replace('${locale}', 'fr').replace(/`/g, ''));
-  console.log('it:', raw.replace('${locale}', 'it').replace(/`/g, ''));
+function testUrl(url) {
+  return new Promise((resolve) => {
+    http.get(url, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        const canonicalMatch = data.match(/<link[^>]*rel="canonical"[^>]*>/i);
+        const hreflangMatches = [...data.matchAll(/<link[^>]*hreflang="([^"]*)"[^>]*href="([^"]*)"[^>]*>/gi)].map(m => m[1] + ' -> ' + m[2]);
+        console.log(`=== ${url} ===`);
+        console.log('Status:', res.statusCode);
+        console.log('Canonical:', canonicalMatch ? canonicalMatch[0] : 'none');
+        console.log('Hreflangs count:', hreflangMatches.length);
+        if (hreflangMatches.length > 0) console.log(hreflangMatches);
+        resolve();
+      });
+    }).on('error', e => {
+      console.error(e.message);
+      resolve();
+    });
+  });
 }
+
+async function run() {
+  await testUrl('http://localhost:3000/de/reinigungsfirma-biel-bienne');
+  await testUrl('http://localhost:3000/de/haushaltshilfe-biel-bienne');
+}
+run();

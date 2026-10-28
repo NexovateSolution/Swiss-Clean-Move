@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'facilityServiceSchweiz'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/facility-service-schweiz`
+      canonical: `https://www.swisscleanmove.ch/${locale}/facility-service-schweiz`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/facility-service-schweiz',
+        en: 'https://www.swisscleanmove.ch/en/facility-service-schweiz',
+        fr: 'https://www.swisscleanmove.ch/fr/facility-service-schweiz',
+        it: 'https://www.swisscleanmove.ch/it/facility-service-schweiz',
+        'x-default': 'https://www.swisscleanmove.ch/de/facility-service-schweiz'
+      }
     },
     title: t('title'),
     description: t('description'),

@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'seoPages.entsorgungBiel.meta' });
   return {
     alternates: {
-      canonical: `/${locale}/entsorgung-biel-bienne`
+      canonical: `https://www.swisscleanmove.ch/${locale}/entsorgung-biel-bienne`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/entsorgung-biel-bienne',
+        en: 'https://www.swisscleanmove.ch/en/entsorgung-biel-bienne',
+        fr: 'https://www.swisscleanmove.ch/fr/entsorgung-biel-bienne',
+        it: 'https://www.swisscleanmove.ch/it/entsorgung-biel-bienne',
+        'x-default': 'https://www.swisscleanmove.ch/de/entsorgung-biel-bienne'
+      }
     },
     title: t('title'),
     description: t('description'),

@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'endreinigungBruegg'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/endreinigung-bruegg`
+      canonical: `https://www.swisscleanmove.ch/${locale}/endreinigung-bruegg`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/endreinigung-bruegg',
+        en: 'https://www.swisscleanmove.ch/en/endreinigung-bruegg',
+        fr: 'https://www.swisscleanmove.ch/fr/endreinigung-bruegg',
+        it: 'https://www.swisscleanmove.ch/it/endreinigung-bruegg',
+        'x-default': 'https://www.swisscleanmove.ch/de/endreinigung-bruegg'
+      }
     },
     title: t('title'),
     description: t('description'),

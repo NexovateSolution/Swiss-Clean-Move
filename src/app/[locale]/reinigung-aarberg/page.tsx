@@ -5,7 +5,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: `seoPages.${'reinigungAarberg'}.meta` });
   return {
     alternates: {
-      canonical: `/${locale}/reinigung-aarberg`
+      canonical: `https://www.swisscleanmove.ch/${locale}/reinigung-aarberg`,
+      languages: {
+        de: 'https://www.swisscleanmove.ch/de/reinigung-aarberg',
+        en: 'https://www.swisscleanmove.ch/en/reinigung-aarberg',
+        fr: 'https://www.swisscleanmove.ch/fr/reinigung-aarberg',
+        it: 'https://www.swisscleanmove.ch/it/reinigung-aarberg',
+        'x-default': 'https://www.swisscleanmove.ch/de/reinigung-aarberg'
+      }
     },
     title: t('title'),
     description: t('description'),

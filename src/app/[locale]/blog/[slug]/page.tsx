@@ -16,7 +16,14 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
   
   return {
     alternates: {
-      canonical: `/${locale}/blog/${slug}`
+      canonical: `https://www.swisscleanmove.ch/${locale}/blog/${slug}`,
+      languages: {
+        de: `https://www.swisscleanmove.ch/de/blog/${slug}`,
+        en: `https://www.swisscleanmove.ch/en/blog/${slug}`,
+        fr: `https://www.swisscleanmove.ch/fr/blog/${slug}`,
+        it: `https://www.swisscleanmove.ch/it/blog/${slug}`,
+        'x-default': `https://www.swisscleanmove.ch/de/blog/${slug}`
+      }
     },
     title: `${(article.title as any)[locale] || article.title.de} | SwissCleanMove Blog`,
     description: (article.excerpt as any)[locale] || article.excerpt.de,
