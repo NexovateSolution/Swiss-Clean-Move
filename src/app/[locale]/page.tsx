@@ -115,11 +115,11 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     }
   ];
 
-  const testimonials = locale === 'fr' ? [
+  const initialTestimonials = locale === 'fr' ? [
     {
       name: 'Nazret Bahram',
       rating: 5,
-      text: 'Excellente expérience avec SwissCleanMove. Communication rapide, équipe ponctuelle et travail très soigné. L\'appartement a été parfaitement nettoyé avec garantie de remise des clés. Merci beaucoup à toute l\'équipe.',
+      text: "Excellente expérience avec SwissCleanMove. Communication rapide, équipe ponctuelle et travail très soigné. L'appartement a été parfaitement nettoyé avec garantie de remise des clés. Merci beaucoup à toute l'équipe.",
     },
     {
       name: 'Boran Aris',
@@ -129,7 +129,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     {
       name: 'Pedro All',
       rating: 5,
-      text: 'Service de nettoyage parfait en cas de déménagement, impeccable tout est propre, l\'équipe est très aimable et professionnel je n\'hésiterai pas à rappeler. Merci beaucoup',
+      text: "Service de nettoyage parfait en cas de déménagement, impeccable tout est propre, l'équipe est très aimable et professionnel je n'hésiterai pas à rappeler. Merci beaucoup",
     }
   ] : locale === 'en' ? [
     {
@@ -145,7 +145,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     {
       name: 'Pedro All',
       rating: 5,
-      text: 'Perfect cleaning service for moving, impeccable — everything is clean. The team is very friendly and professional. I won\'t hesitate to call again. Thank you very much!',
+      text: "Perfect cleaning service for moving, impeccable — everything is clean. The team is very friendly and professional. I won't hesitate to call again. Thank you very much!",
     }
   ] : [
     {
@@ -164,6 +164,35 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       text: 'Perfekter Reinigungsservice beim Umzug, tadellos — alles ist sauber. Das Team ist sehr freundlich und professionell. Ich werde nicht zögern, wieder anzurufen. Vielen Dank!',
     }
   ];
+
+  const [reviewsData, setReviewsData] = useState<{
+    rating: number;
+    userRatingsTotal: number;
+    reviews: { name: string; rating: number; text: string; time?: string }[];
+    isLive: boolean;
+  }>({
+    rating: 5.0,
+    userRatingsTotal: 3,
+    reviews: initialTestimonials,
+    isLive: false,
+  });
+
+  useEffect(() => {
+    let isMounted = true;
+    fetch(`/api/google-reviews?locale=${locale}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (isMounted && data && Array.isArray(data.reviews) && data.reviews.length > 0) {
+          setReviewsData(data);
+        }
+      })
+      .catch((err) => {
+        console.warn('[GoogleReviews] Could not fetch dynamic reviews, using verified fallback:', err);
+      });
+    return () => {
+      isMounted = false;
+    };
+  }, [locale]);
 
   return (
     <Layout>
@@ -310,12 +339,30 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 </div>
                 <span className="text-2xl font-bold text-black">{tNew('reviews.google')}</span>
               </a>
-              <div className="flex space-x-1 py-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-[#FBBC05] fill-current" />
-                ))}
+              
+              {/* Dynamic Score and Stars */}
+              <div className="flex items-baseline space-x-1.5 pt-1">
+                <span className="text-3xl font-extrabold text-[#001f3f]">{reviewsData.rating.toFixed(1)}</span>
+                <span className="text-sm font-semibold text-gray-500">/ 5.0</span>
               </div>
-              <p className="text-sm font-medium text-gray-600 mb-4">{tNew('reviews.count')}</p>
+              <div className="flex space-x-1 py-1">
+                {[...Array(5)].map((_, i) => {
+                  const fillPercentage = Math.max(0, Math.min(100, (reviewsData.rating - i) * 100));
+                  return (
+                    <div key={i} className="relative w-5 h-5">
+                      <Star className="w-5 h-5 text-gray-200 fill-current" />
+                      <div className="absolute top-0 left-0 overflow-hidden" style={{ width: `${fillPercentage}%` }}>
+                        <Star className="w-5 h-5 text-[#FBBC05] fill-current" />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="text-sm font-medium text-gray-600 mb-4">
+                {reviewsData.userRatingsTotal > 0
+                  ? `${reviewsData.userRatingsTotal} ${tNew('reviews.google')}`
+                  : tNew('reviews.count')}
+              </p>
               <a 
                 href="https://g.page/r/CaR3s0KCpz1O/review" 
                 target="_blank" 
@@ -334,18 +381,21 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
             {/* Right Reviews */}
             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {testimonials.map((t, index) => (
-                <div key={index} className="bg-gray-50 rounded-2xl p-6 border border-gray-200 relative shadow-sm">
+              {reviewsData.reviews.map((t, index) => (
+                <div key={index} className="bg-gray-50 rounded-2xl p-6 border border-gray-200 relative shadow-sm hover:shadow-md transition-shadow">
                   <div className="absolute top-4 left-4 opacity-10">
                     <MessageCircle className="w-12 h-12 text-[#4285F4]" />
                   </div>
                   <div className="flex space-x-1 mb-3 relative z-10">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(Math.min(5, Math.max(1, Math.round(t.rating || 5))))].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-[#FBBC05] fill-current" />
                     ))}
                   </div>
                   <p className="text-sm text-gray-800 font-medium italic mb-4 relative z-10 min-h-[80px]">"{t.text}"</p>
-                  <p className="text-sm font-bold text-black relative z-10">{t.name}</p>
+                  <div className="flex items-center justify-between relative z-10">
+                    <p className="text-sm font-bold text-black">{t.name}</p>
+                    {t.time && <span className="text-xs text-gray-500">{t.time}</span>}
+                  </div>
                 </div>
               ))}
             </div>
