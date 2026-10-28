@@ -171,8 +171,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     reviews: { name: string; rating: number; text: string; time?: string }[];
     isLive: boolean;
   }>({
-    rating: 5.0,
-    userRatingsTotal: 3,
+    rating: 4.6,
+    userRatingsTotal: 42,
     reviews: initialTestimonials,
     isLive: false,
   });
@@ -360,7 +360,15 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
               </div>
               <p className="text-sm font-medium text-gray-600 mb-4">
                 {reviewsData.userRatingsTotal > 0
-                  ? `${reviewsData.userRatingsTotal} ${tNew('reviews.google')}`
+                  ? `${reviewsData.userRatingsTotal} ${
+                      locale === 'de'
+                        ? 'Google-Rezensionen'
+                        : locale === 'fr'
+                        ? 'avis Google'
+                        : locale === 'it'
+                        ? 'recensioni Google'
+                        : 'Google reviews'
+                    }`
                   : tNew('reviews.count')}
               </p>
               <a 

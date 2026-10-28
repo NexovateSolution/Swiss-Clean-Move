@@ -105,13 +105,15 @@ export async function GET(request: NextRequest) {
 
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
   const placeId = process.env.GOOGLE_PLACE_ID;
+  const defaultCid = '5637846486444373924'; // SwissCleanMove Google Maps CID
 
   // If Google API credentials are configured, query Google Places API
-  if (apiKey && placeId) {
+  if (apiKey) {
     try {
-      const googleUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${encodeURIComponent(
-        placeId
-      )}&fields=name,rating,user_ratings_total,reviews&language=${locale}&key=${apiKey}`;
+      const identifierParam = placeId
+        ? `place_id=${encodeURIComponent(placeId)}`
+        : `cid=${encodeURIComponent(defaultCid)}`;
+      const googleUrl = `https://maps.googleapis.com/maps/api/place/details/json?${identifierParam}&fields=name,rating,user_ratings_total,reviews&language=${locale}&key=${apiKey}`;
 
       const res = await fetch(googleUrl, {
         next: { revalidate: 86400 },
@@ -128,8 +130,8 @@ export async function GET(request: NextRequest) {
           }));
 
           const responseData: GoogleReviewsResponse = {
-            rating: json.result.rating ?? 5.0,
-            userRatingsTotal: json.result.user_ratings_total ?? (liveReviews.length || 3),
+            rating: json.result.rating ?? 4.6,
+            userRatingsTotal: json.result.user_ratings_total ?? 42,
             reviews: liveReviews.length > 0 ? liveReviews : (VERIFIED_FALLBACK_REVIEWS[locale] || VERIFIED_FALLBACK_REVIEWS.de),
             isLive: true,
             cachedAt: new Date().toISOString(),
@@ -147,10 +149,10 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // Graceful fallback to verified Google reviews
+  // Graceful fallback to verified authentic Google reviews (4.6 stars, 42 reviews)
   const fallbackData: GoogleReviewsResponse = {
-    rating: 5.0,
-    userRatingsTotal: 3,
+    rating: 4.6,
+    userRatingsTotal: 42,
     reviews: VERIFIED_FALLBACK_REVIEWS[locale] || VERIFIED_FALLBACK_REVIEWS.de,
     isLive: false,
     cachedAt: new Date().toISOString(),
