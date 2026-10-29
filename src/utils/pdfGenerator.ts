@@ -3,6 +3,53 @@ import { PDFDocument, rgb } from 'pdf-lib';
 import fs from 'fs';
 import path from 'path';
 
+export function getServiceTypeHeader(serviceVal: any, locale: 'de' | 'en' | 'fr' | 'it' = 'de'): string {
+  const str = String(serviceVal || '').toLowerCase();
+  
+  const isCleaning = (str.includes('reinigung') || str.includes('clean')) && 
+                     !str.includes('umzug') && 
+                     !str.includes('transport') && 
+                     !str.includes('entsorgung') && 
+                     !str.includes('disposal') &&
+                     !str.includes('räumung');
+                     
+  const isMovingOnly = (str.includes('umzug') || str.includes('relocation') || str.includes('moving')) && 
+                       !str.includes('entsorgung') && 
+                       !str.includes('disposal') &&
+                       !str.includes('räumung') &&
+                       !str.includes('reinigung') &&
+                       !str.includes('clean');
+                       
+  const isDisposalOnly = (str.includes('entsorgung') || str.includes('disposal') || str.includes('räumung') || str.includes('clearance')) && 
+                         !str.includes('umzug') && 
+                         !str.includes('transport') &&
+                         !str.includes('moving') &&
+                         !str.includes('reinigung') &&
+                         !str.includes('clean');
+
+  const isTransportOnly = str.includes('transport') &&
+                          !str.includes('entsorgung') &&
+                          !str.includes('disposal') &&
+                          !str.includes('räumung') &&
+                          !str.includes('reinigung') &&
+                          !str.includes('clean');
+
+  if (isCleaning) {
+    return locale === 'fr' ? 'Type de Nettoyage:' : locale === 'it' ? 'Tipo di pulizia:' : locale === 'en' ? 'Cleaning Type:' : 'Reinigungsart:';
+  }
+  if (isMovingOnly) {
+    return locale === 'fr' ? 'Type de Déménagement:' : locale === 'it' ? 'Tipo di trasloco:' : locale === 'en' ? 'Moving Type:' : 'Umzugsart:';
+  }
+  if (isDisposalOnly) {
+    return locale === 'fr' ? 'Type de Débarras:' : locale === 'it' ? 'Tipo di smaltimento:' : locale === 'en' ? 'Disposal Type:' : 'Entsorgungsart:';
+  }
+  if (isTransportOnly) {
+    return locale === 'fr' ? 'Type de Transport:' : locale === 'it' ? 'Tipo di trasporto:' : locale === 'en' ? 'Transport Type:' : 'Transportart:';
+  }
+  
+  return locale === 'fr' ? 'Prestation:' : locale === 'it' ? 'Servizio:' : locale === 'en' ? 'Service Type:' : 'Auftragsart:';
+}
+
 export function generateQuoteHtml(quote: QuoteResult, customer: any, documentType: 'quote' | 'contract' | 'receipt' | 'invoice' = 'quote'): string {
   const locale = (customer.locale || 'de') as 'de' | 'en' | 'fr' | 'it';
 
@@ -972,40 +1019,185 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     .map(([key, val]) => {
        const lblObj = translatedLabels[key];
        const formattedKey = lblObj ? (lblObj[locale] || lblObj.en) : key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).replace(/([A-Z]+)/g, str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase());
-       
        const formattedVal = formatVal(val);
        return `<div class="scope-item" style="display: flex; align-items: center; margin-bottom: 2px;"><svg style="width: 14px; height: 14px; fill: #003366; flex-shrink: 0; margin-right: 6px;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>${formattedKey}:</strong> <span style="color: #333;">${formattedVal}</span></span></div>`;
     }).join('');
 
+  const combinedType = `${customer.serviceType || ''} ${customer.serviceName || ''} ${customer.formType || ''} ${customer.cleaningTypes || ''} ${customer.cleaningType || ''} ${customer.movingType || ''}`.toLowerCase();
+  
+  let serviceTitle = 'Service';
+  if (combinedType.includes('moving-and-cleaning') || (combinedType.includes('relocation') && (combinedType.includes('cleaning') || combinedType.includes('reinigung')))) {
+    serviceTitle = locale === 'de' ? 'Umzug & Reinigung' : locale === 'fr' ? 'Déménagement & Nettoyage' : locale === 'it' ? 'Trasloco e Pulizia' : 'Moving & Cleaning';
+  } else if (
+    (combinedType.includes('transport') || combinedType.includes('umzug') || combinedType.includes('moving')) &&
+    (combinedType.includes('entsorgung') || combinedType.includes('disposal') || combinedType.includes('räumung'))
+  ) {
+    serviceTitle = locale === 'de' ? 'Transport & Entsorgung' : locale === 'fr' ? 'Transport & Débarras' : locale === 'it' ? 'Trasporto e Smaltimento' : 'Transport & Disposal';
+  } else if (combinedType.includes('umzugsreinigung') || combinedType.includes('endreinigung') || combinedType.includes('house-cleaning') || combinedType.includes('movingoutcleaning')) {
+    serviceTitle = locale === 'de' ? 'Umzugsreinigung' : locale === 'fr' ? 'Nettoyage de fin de bail' : locale === 'it' ? 'Pulizia di trasloco' : 'Move-out Cleaning';
+  } else if (combinedType.includes('unterhalt') || combinedType.includes('maintenance')) {
+    serviceTitle = locale === 'de' ? 'Unterhaltsreinigung' : locale === 'fr' ? 'Nettoyage d\'entretien' : locale === 'it' ? 'Pulizia di manutenzione' : 'Maintenance Cleaning';
+  } else if (combinedType.includes('büro') || combinedType.includes('bueroreinigung') || combinedType.includes('office')) {
+    serviceTitle = locale === 'de' ? 'Büroreinigung' : locale === 'fr' ? 'Nettoyage de bureau' : locale === 'it' ? 'Pulizia uffici' : 'Office Cleaning';
+  } else if (combinedType.includes('fenster') || combinedType.includes('window')) {
+    serviceTitle = locale === 'de' ? 'Fensterreinigung' : locale === 'fr' ? 'Nettoyage de vitres' : locale === 'it' ? 'Pulizia vetri' : 'Window Cleaning';
+  } else if (combinedType.includes('bau') || combinedType.includes('construction')) {
+    serviceTitle = locale === 'de' ? 'Baureinigung' : locale === 'fr' ? 'Nettoyage de chantier' : locale === 'it' ? 'Pulizia di cantiere' : 'Construction Cleaning';
+  } else if (combinedType.includes('hauswartung') || combinedType.includes('facility')) {
+    serviceTitle = locale === 'de' ? 'Hauswartungsdienstleistungen' : locale === 'fr' ? 'Conciergerie & Entretien' : locale === 'it' ? 'Manutenzione e Facility' : 'Property Maintenance';
+  } else if (combinedType.includes('disposal') || combinedType.includes('entsorgung') || combinedType.includes('räumung') || combinedType.includes('clearance')) {
+    serviceTitle = locale === 'de' ? 'Räumung & Entsorgung' : locale === 'fr' ? 'Débarras & Élimination' : locale === 'it' ? 'Sgombero e Smaltimento' : 'Disposal & Clearance';
+  } else if (combinedType.includes('household') || combinedType.includes('haushalt')) {
+    serviceTitle = locale === 'de' ? 'Haushaltshilfe' : locale === 'fr' ? 'Aide ménagère' : locale === 'it' ? 'Aiuto domestico' : 'Household Help';
+  } else if (combinedType.includes('relocation') || (combinedType.includes('umzug') && !combinedType.includes('reinigung'))) {
+    serviceTitle = locale === 'de' ? 'Umzug' : locale === 'fr' ? 'Déménagement' : locale === 'it' ? 'Trasloco' : 'Moving';
+  } else if (combinedType.includes('transport')) {
+    serviceTitle = locale === 'de' ? 'Transport' : locale === 'fr' ? 'Transport' : locale === 'it' ? 'Trasporto' : 'Transport';
+  } else if (combinedType.includes('reinigung') || combinedType.includes('cleaning')) {
+    serviceTitle = locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : locale === 'it' ? 'Pulizia' : 'Cleaning';
+  } else if (combinedType.includes('painting') || combinedType.includes('maler')) {
+    serviceTitle = locale === 'de' ? 'Malerarbeiten' : locale === 'fr' ? 'Peinture' : 'Painting';
+  } else if (combinedType.includes('handyman') || combinedType.includes('handwerker')) {
+    serviceTitle = locale === 'de' ? 'Handwerker' : locale === 'fr' ? 'Bricoleur' : 'Handyman';
+  } else if (combinedType.includes('storage') || combinedType.includes('lager')) {
+    serviceTitle = locale === 'de' ? 'Lagerung' : locale === 'fr' ? 'Stockage' : 'Storage';
+  } else if (combinedType.trim().length > 0) {
+    const firstWord = combinedType.trim().split(' ')[0];
+    serviceTitle = firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
+  } else {
+    serviceTitle = locale === 'de' ? 'Service' : locale === 'fr' ? 'Service' : 'Service';
+  }
+
+  const isCleaningRelated = combinedType.includes('reinigung') || combinedType.includes('cleaning') || combinedType.includes('clean');
+  const isComboTransportDisposal = (combinedType.includes('transport') || combinedType.includes('umzug') || combinedType.includes('moving')) &&
+    (combinedType.includes('entsorgung') || combinedType.includes('disposal') || combinedType.includes('räumung'));
+  const isPureMoving = (combinedType.includes('umzug') || combinedType.includes('relocation') || combinedType.includes('moving') || combinedType.includes('transport')) &&
+    !isCleaningRelated && !combinedType.includes('entsorgung') && !combinedType.includes('disposal');
+  const isPureDisposal = (combinedType.includes('entsorgung') || combinedType.includes('disposal') || combinedType.includes('räumung')) &&
+    !isCleaningRelated && !combinedType.includes('umzug') && !combinedType.includes('transport');
+  const isFacility = combinedType.includes('hauswartung') || combinedType.includes('facility');
+
   let finalScopeItemsHtml = additionalAttributesHtml;
   if (!finalScopeItemsHtml || finalScopeItemsHtml.trim() === '') {
-    const defaultScopeItems: Record<string, string[]> = {
-      de: [
-        'Fachgerechte Ausführung sämtlicher vereinbarter Arbeiten gemäss Schweizer Standard',
-        '100% Abnahmegarantie mit kostenloser Nachreinigung bei allfälligen Mängeln',
-        'Gründliche Reinigung aller Wohnräume, Küche, Backofen & Sanitäranlagen',
-        'Professionelle Reinigungsmaterialien, moderne Geräte und Fahrspesen inklusive'
-      ],
-      en: [
-        'Professional execution of all agreed work according to Swiss standards',
-        '100% handover guarantee with free re-cleaning if required',
-        'Thorough cleaning of all living areas, kitchen, oven & sanitary facilities',
-        'Professional cleaning materials, modern equipment and travel included'
-      ],
-      fr: [
-        'Exécution professionnelle de tous les travaux convenus selon les normes suisses',
-        'Garantie de remise à 100% avec re-nettoyage gratuit si nécessaire',
-        'Nettoyage approfondi de toutes les pièces, cuisine, four & sanitaires',
-        'Produits de nettoyage professionnels, matériel moderne et déplacement inclus'
-      ],
-      it: [
-        'Esecuzione professionale di tutti i lavori concordati secondo gli standard svizzeri',
-        'Garanzia di consegna al 100% con pulizia gratuita se necessario',
-        'Pulizia accurata di tutti gli ambienti, cucina, forno e servizi igienici',
-        'Materiali professionali, attrezzature moderne e trasporto inclusi'
-      ]
-    };
-    const items = defaultScopeItems[locale] || defaultScopeItems.de;
+    let items: string[];
+    if (isComboTransportDisposal) {
+      items = locale === 'fr' ? [
+        'Exécution professionnelle des travaux de transport et débarras selon offre',
+        'Chargement, transport sécurisé et déchargement avec soin',
+        'Élimination écologique et recyclage y compris toutes les taxes de décharge',
+        'Véhicule de transport adapté, matériel de protection et frais de déplacement inclus'
+      ] : locale === 'it' ? [
+        'Esecuzione professionale dei lavori di trasporto e smaltimento secondo il preventivo',
+        'Carico, trasporto sicuro e scarico con cura',
+        'Smaltimento ecologico e riciclaggio comprese tutte le tasse ufficiali',
+        'Veicolo di trasporto adeguato, materiale di protezione e spese di viaggio incluse'
+      ] : locale === 'en' ? [
+        'Professional execution of all transport and disposal work according to the quote',
+        'Careful loading, secure transport, and professional unloading',
+        'Eco-friendly disposal and recycling including all official disposal fees',
+        'Suitable transport vehicle, protective equipment, and travel included'
+      ] : [
+        'Fachgerechte Ausführung sämtlicher Transport- und Entsorgungsarbeiten gemäss Offerte',
+        'Sorgfältiges Be- und Entladen sowie fachgerechte Ladungssicherung',
+        'Umweltgerechte Entsorgung und Recycling inklusive sämtlicher Entsorgungsgebühren',
+        'Passendes Transportfahrzeug, Schutzmaterialien und Fahrspesen inklusive'
+      ];
+    } else if (isPureMoving) {
+      items = locale === 'fr' ? [
+        'Exécution professionnelle du déménagement selon les normes suisses',
+        'Chargement, transport soigné et déchargement par une équipe qualifiée',
+        'Protection professionnelle du mobilier (couvertures, sangles, housses)',
+        'Véhicule de déménagement, matériel de manutention et déplacement inclus'
+      ] : locale === 'it' ? [
+        'Esecuzione professionale del trasloco secondo gli standard svizzeri',
+        'Carico, trasporto accurato e scarico da parte di personale qualificato',
+        'Protezione professionale dei mobili (coperte, cinghie, coperture)',
+        'Veicolo per traslochi, attrezzature e trasporto inclusi'
+      ] : locale === 'en' ? [
+        'Professional execution of the move according to Swiss standards',
+        'Careful loading, transport, and unloading by our qualified moving team',
+        'Professional furniture protection (blankets, straps, covers)',
+        'Moving truck, handling equipment, and travel included'
+      ] : [
+        'Fachgerechte Ausführung des Umzugs gemäss Schweizer Qualitätsstandards',
+        'Sorgfältiges Be- und Entladen sowie geschützter Transport durch unser Team',
+        'Professioneller Möbelschutz (Decken, Spanngurte, Schutzhüllen)',
+        'Umzugsfahrzeug, Trageausrüstung und Fahrspesen inklusive'
+      ];
+    } else if (isPureDisposal) {
+      items = locale === 'fr' ? [
+        'Räumung et débarras professionnels selon vos indications',
+        'Démontage, portage et chargement par notre équipe',
+        'Tri écologique, recyclage conforme et frais de décharge inclus',
+        'Restitution des locaux balayés'
+      ] : locale === 'it' ? [
+        'Sgombero e smaltimento professionale secondo le vostre indicazioni',
+        'Smontaggio, trasporto e carico da parte del nostro team',
+        'Separazione ecologica, riciclaggio conforme e tasse di discarica incluse',
+        'Consegna dei locali puliti a scopa'
+      ] : locale === 'en' ? [
+        'Professional clearance and disposal according to your requirements',
+        'Disassembly, carrying, and loading by our qualified team',
+        'Eco-friendly sorting, proper recycling, and all disposal fees included',
+        'Broom-clean handover of the cleared premises'
+      ] : [
+        'Fachgerechte Räumung und Entsorgung gemäss Ihren Vorgaben',
+        'Demontage, Tragen und Verladen durch geschultes Fachpersonal',
+        'Umweltgerechte Mülltrennung, fachgerechtes Recycling und Entsorgungsgebühren inklusive',
+        'Besenreine Übergabe der geräumten Räumlichkeiten'
+      ];
+    } else if (isFacility) {
+      items = locale === 'fr' ? [
+        'Travaux de conciergerie et d\'entretien immobilier selon entente',
+        'Contrôles réguliers, nettoyage et maintenance préventive',
+        'Matériel professionnel, machines modernes et déplacement inclus',
+        'Service fiable et suivi de qualité'
+      ] : locale === 'it' ? [
+        'Lavori di custodia e manutenzione immobiliare secondo gli accordi',
+        'Controlli regolari, pulizia e manutenzione preventiva',
+        'Attrezzature professionali, macchinari moderni e trasporto inclusi',
+        'Servizio affidabile e monitoraggio di qualità'
+      ] : locale === 'en' ? [
+        'Property maintenance and facility services according to agreement',
+        'Regular inspections, upkeep, and proactive maintenance',
+        'Professional equipment, modern machinery, and travel included',
+        'Reliable service by qualified personnel'
+      ] : [
+        'Fachgerechte Hauswartungs- und Liegenschaftsunterhaltsarbeiten gemäss Vereinbarung',
+        'Regelmässige Kontrollgänge, Reinigung und Werterhaltung der Immobilie',
+        'Professionelle Arbeitsgeräte, moderne Maschinen und Fahrspesen inklusive',
+        'Zuverlässiger Service durch qualifiziertes Personal'
+      ];
+    } else {
+      const defaultCleaningScope: Record<string, string[]> = {
+        de: [
+          'Fachgerechte Ausführung sämtlicher vereinbarter Arbeiten gemäss Schweizer Standard',
+          '100% Abnahmegarantie mit kostenloser Nachreinigung bei allfälligen Mängeln',
+          'Gründliche Reinigung aller Wohnräume, Küche, Backofen & Sanitäranlagen',
+          'Professionelle Reinigungsmaterialien, moderne Geräte und Fahrspesen inklusive'
+        ],
+        en: [
+          'Professional execution of all agreed work according to Swiss standards',
+          '100% handover guarantee with free re-cleaning if required',
+          'Thorough cleaning of all living areas, kitchen, oven & sanitary facilities',
+          'Professional cleaning materials, modern equipment and travel included'
+        ],
+        fr: [
+          'Exécution professionnelle de tous les travaux convenus selon les normes suisses',
+          'Garantie de remise à 100% avec re-nettoyage gratuit si nécessaire',
+          'Nettoyage approfondi de toutes les pièces, cuisine, four & sanitaires',
+          'Produits de nettoyage professionnels, matériel moderne et déplacement inclus'
+        ],
+        it: [
+          'Esecuzione professionale di tutti i lavori concordati secondo gli standard svizzeri',
+          'Garanzia di consegna al 100% con pulizia gratuita se necessario',
+          'Pulizia accurata di tutti gli ambienti, cucina, forno e servizi igienici',
+          'Materiali professionali, attrezzature moderne e trasporto inclusi'
+        ]
+      };
+      items = defaultCleaningScope[locale] || defaultCleaningScope.de;
+    }
+
     finalScopeItemsHtml = items.map(text => 
       `<div class="scope-item" style="display: flex; align-items: center; margin-bottom: 2px;"><svg style="width: 14px; height: 14px; fill: #003366; flex-shrink: 0; margin-right: 6px;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><span style="color: #333;">${text}</span></span></div>`
     ).join('');
@@ -1049,45 +1241,6 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     </tr>
   `;
 
-  let serviceTitle = 'Service';
-  const combinedType = `${customer.serviceType || ''} ${customer.serviceName || ''} ${customer.formType || ''} ${customer.cleaningTypes || ''} ${customer.cleaningType || ''} ${customer.movingType || ''}`.toLowerCase();
-  
-  if (combinedType.includes('moving-and-cleaning') || (combinedType.includes('relocation') && (combinedType.includes('cleaning') || combinedType.includes('reinigung')))) {
-    serviceTitle = locale === 'de' ? 'Umzug & Reinigung' : locale === 'fr' ? 'Déménagement & Nettoyage' : locale === 'it' ? 'Trasloco e Pulizia' : 'Moving & Cleaning';
-  } else if (combinedType.includes('umzugsreinigung') || combinedType.includes('endreinigung') || combinedType.includes('house-cleaning') || combinedType.includes('movingoutcleaning')) {
-    serviceTitle = locale === 'de' ? 'Umzugsreinigung' : locale === 'fr' ? 'Nettoyage de fin de bail' : locale === 'it' ? 'Pulizia di trasloco' : 'Move-out Cleaning';
-  } else if (combinedType.includes('unterhalt') || combinedType.includes('maintenance')) {
-    serviceTitle = locale === 'de' ? 'Unterhaltsreinigung' : locale === 'fr' ? 'Nettoyage d\'entretien' : locale === 'it' ? 'Pulizia di manutenzione' : 'Maintenance Cleaning';
-  } else if (combinedType.includes('büro') || combinedType.includes('bueroreinigung') || combinedType.includes('office')) {
-    serviceTitle = locale === 'de' ? 'Büroreinigung' : locale === 'fr' ? 'Nettoyage de bureau' : locale === 'it' ? 'Pulizia uffici' : 'Office Cleaning';
-  } else if (combinedType.includes('fenster') || combinedType.includes('window')) {
-    serviceTitle = locale === 'de' ? 'Fensterreinigung' : locale === 'fr' ? 'Nettoyage de vitres' : locale === 'it' ? 'Pulizia vetri' : 'Window Cleaning';
-  } else if (combinedType.includes('bau') || combinedType.includes('construction')) {
-    serviceTitle = locale === 'de' ? 'Baureinigung' : locale === 'fr' ? 'Nettoyage de chantier' : locale === 'it' ? 'Pulizia di cantiere' : 'Construction Cleaning';
-  } else if (combinedType.includes('hauswartung') || combinedType.includes('facility')) {
-    serviceTitle = locale === 'de' ? 'Hauswartungsdienstleistungen' : locale === 'fr' ? 'Conciergerie & Entretien' : locale === 'it' ? 'Manutenzione e Facility' : 'Property Maintenance';
-  } else if (combinedType.includes('disposal') || combinedType.includes('entsorgung') || combinedType.includes('räumung') || combinedType.includes('clearance')) {
-    serviceTitle = locale === 'de' ? 'Räumung & Entsorgung' : locale === 'fr' ? 'Débarras & Élimination' : locale === 'it' ? 'Sgombero e Smaltimento' : 'Disposal & Clearance';
-  } else if (combinedType.includes('household') || combinedType.includes('haushalt')) {
-    serviceTitle = locale === 'de' ? 'Haushaltshilfe' : locale === 'fr' ? 'Aide ménagère' : locale === 'it' ? 'Aiuto domestico' : 'Household Help';
-  } else if (combinedType.includes('relocation') || (combinedType.includes('umzug') && !combinedType.includes('reinigung'))) {
-    serviceTitle = locale === 'de' ? 'Umzug' : locale === 'fr' ? 'Déménagement' : locale === 'it' ? 'Trasloco' : 'Moving';
-  } else if (combinedType.includes('transport')) {
-    serviceTitle = locale === 'de' ? 'Transport' : locale === 'fr' ? 'Transport' : locale === 'it' ? 'Trasporto' : 'Transport';
-  } else if (combinedType.includes('reinigung') || combinedType.includes('cleaning')) {
-    serviceTitle = locale === 'de' ? 'Reinigung' : locale === 'fr' ? 'Nettoyage' : locale === 'it' ? 'Pulizia' : 'Cleaning';
-  } else if (combinedType.includes('painting') || combinedType.includes('maler')) {
-    serviceTitle = locale === 'de' ? 'Malerarbeiten' : locale === 'fr' ? 'Peinture' : 'Painting';
-  } else if (combinedType.includes('handyman') || combinedType.includes('handwerker')) {
-    serviceTitle = locale === 'de' ? 'Handwerker' : locale === 'fr' ? 'Bricoleur' : 'Handyman';
-  } else if (combinedType.includes('storage') || combinedType.includes('lager')) {
-    serviceTitle = locale === 'de' ? 'Lagerung' : locale === 'fr' ? 'Stockage' : 'Storage';
-  } else if (combinedType.trim().length > 0) {
-    const firstWord = combinedType.trim().split(' ')[0];
-    serviceTitle = firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
-  } else {
-    serviceTitle = locale === 'de' ? 'Service' : locale === 'fr' ? 'Service' : 'Service';
-  }
 
   if (documentType === 'receipt' || documentType === 'invoice') {
     let receiptDate = quoteDate;
@@ -1282,6 +1435,13 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   </html>
     `;
   }
+
+  const rawMainService = customer.serviceType || customer.serviceName;
+  const hasMainService = Boolean(rawMainService && String(rawMainService).trim());
+  const hasCleaningTypes = Boolean(customer.cleaningTypes && (Array.isArray(customer.cleaningTypes) ? customer.cleaningTypes.length : String(customer.cleaningTypes).trim()));
+
+  const primaryServiceVal = hasMainService ? rawMainService : (hasCleaningTypes ? customer.cleaningTypes : null);
+  const primaryHeader = primaryServiceVal ? getServiceTypeHeader(primaryServiceVal, locale) : locDict.cleaningType;
 
   // HTML Template
   const htmlTemplate = `
@@ -1639,7 +1799,8 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
           ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms || customer.sharedRooms ? `<div><strong>${locDict.rooms}</strong> ${customer.numberOfRooms || customer.numberOfRoomsApartment || customer.rooms || customer.sharedRooms} ${locDict.roomUnit}</div>` : ''}
           ${customer.elevatorSizes || customer.elevator ? `<div><strong>${locDict.lift}</strong> ${formatVal(customer.elevatorSizes || customer.elevator)}</div>` : ''}
           ${customer.parkingDistance ? `<div><strong>${locDict.parking}</strong> ${formatVal(customer.parkingDistance)}</div>` : ''}
-          ${customer.cleaningTypes ? `<div><strong>${locDict.cleaningType}</strong> ${formatVal(customer.cleaningTypes)}</div>` : ''}
+          ${primaryServiceVal ? `<div><strong>${primaryHeader}</strong> ${formatVal(primaryServiceVal)}</div>` : ''}
+          ${hasMainService && hasCleaningTypes && formatVal(customer.cleaningTypes) !== formatVal(rawMainService) ? `<div><strong>${locDict.cleaningType}</strong> ${formatVal(customer.cleaningTypes)}</div>` : ''}
           ${customer.frequency ? `<div><strong>${locDict.frequency}</strong> ${formatVal(customer.frequency)}</div>` : ''}
           
           ${customer.unloadingStreetAndNumber || customer.movingStreet || customer.destinationStreet || customer.moveToStreet ? `
@@ -1700,8 +1861,16 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
         ${discountBox}
         <div class="guarantee-box">
           <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          <div class="guarantee-title">${locDict.guaranteeTitle.replace(' ', '<br>')}</div>
-          <p style="margin: 0; color: #555;">${locDict.guaranteeDesc}</p>
+          <div class="guarantee-title">${
+            isCleaningRelated
+              ? locDict.guaranteeTitle.replace(' ', '<br>')
+              : (locale === 'fr' ? '100 % GARANTIE<br>DE SATISFACTION' : locale === 'it' ? '100 % GARANZIA<br>DI SODDISFAZIONE' : locale === 'en' ? '100 % SATISFACTION<br>GUARANTEE' : '100 % ZUFRIEDENHEITS<br>GARANTIE')
+          }</div>
+          <p style="margin: 0; color: #555;">${
+            isCleaningRelated
+              ? locDict.guaranteeDesc
+              : (locale === 'fr' ? 'Prestations fiables et soignées au prix fixe garanti.' : locale === 'it' ? 'Prestazioni affidabili e curate a prezzo fisso garantito.' : locale === 'en' ? 'Reliable execution and careful service at a guaranteed fixed price.' : 'Zuverlässige, sorgfältige Ausführung zum garantierten Festpreis.')
+          }</p>
         </div>
       </div>
     </div>

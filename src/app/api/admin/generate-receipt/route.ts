@@ -40,19 +40,36 @@ export async function POST(request: NextRequest) {
                subData = client.data;
             }
 
+            const cleanServiceType = (client.serviceType ? client.serviceType.trim() : '');
+            const isPureCleaning = Boolean(
+                cleanServiceType &&
+                (cleanServiceType.toLowerCase().includes('reinigung') || cleanServiceType.toLowerCase().includes('clean')) &&
+                !cleanServiceType.toLowerCase().includes('umzug') &&
+                !cleanServiceType.toLowerCase().includes('transport') &&
+                !cleanServiceType.toLowerCase().includes('entsorgung') &&
+                !cleanServiceType.toLowerCase().includes('disposal')
+            );
+
             customer = {
                 ...subData,
                 ...(subData.data || {}),
+                serviceType: cleanServiceType,
+                serviceName: cleanServiceType,
                 firstName: client.firstName,
                 lastName: client.lastName,
                 email: client.email || '',
                 phone: client.phone || '',
                 streetAndNumber: client.address || '',
                 postalCodeAndCity: `${client.postalCode || ''} ${client.location || ''}`.trim(),
+                propertyType: client.buildingType,
+                apartmentType: client.buildingType,
                 cleaningAreaInM2: client.squareMeters,
+                areaInM2: client.squareMeters,
+                livingSpaceInM2: client.squareMeters,
                 cleaningApartmentType: client.buildingType,
-                cleaningTypes: client.serviceType,
+                cleaningTypes: isPureCleaning ? cleanServiceType : (subData.cleaningTypes || undefined),
                 cleaningAppointment: client.fromDate ? new Date(client.fromDate).toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '',
+                movingDate: client.fromDate ? new Date(client.fromDate).toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' }) : '',
                 numberOfRooms: client.numberOfRooms,
                 elevator: client.elevator,
                 floor: client.floor,
@@ -61,8 +78,8 @@ export async function POST(request: NextRequest) {
 
             quoteRes = subData.quoteResult;
             if (!quoteRes || !quoteRes.lineItems) {
-               let fallbackId = client.serviceType || 'Reinigung';
-               if (client.serviceType === 'Household Helping' && subData.supportType) {
+               let fallbackId = cleanServiceType || 'Service';
+               if (cleanServiceType === 'Household Helping' && subData.supportType) {
                   fallbackId = subData.supportType;
                }
                quoteRes = {
@@ -94,17 +111,29 @@ export async function POST(request: NextRequest) {
                subData = submission.data;
             }
 
+            const cleanSubService = (submission.serviceName ? submission.serviceName.trim() : '');
+            const isSubCleaning = Boolean(
+                cleanSubService &&
+                (cleanSubService.toLowerCase().includes('reinigung') || cleanSubService.toLowerCase().includes('clean')) &&
+                !cleanSubService.toLowerCase().includes('umzug') &&
+                !cleanSubService.toLowerCase().includes('transport') &&
+                !cleanSubService.toLowerCase().includes('entsorgung') &&
+                !cleanSubService.toLowerCase().includes('disposal')
+            );
+
             customer = {
                 ...submission,
                 ...subData,
                 ...(subData.data || {}),
+                serviceType: cleanSubService,
+                serviceName: cleanSubService,
                 firstName: submission.firstName,
                 lastName: submission.name,
                 email: submission.emailAddress || '',
                 phone: submission.telephone || '',
                 streetAndNumber: submission.streetAndNumber || '',
                 postalCodeAndCity: submission.postalCodeAndCity || '',
-                cleaningTypes: submission.serviceName,
+                cleaningTypes: isSubCleaning ? cleanSubService : (subData.cleaningTypes || undefined),
                 locale: language,
             };
 
@@ -115,7 +144,7 @@ export async function POST(request: NextRequest) {
                   isFallback: false,
                   quoteNumber: 'Q-000',
                   lineItems: Array.isArray(subData.lineItems) ? subData.lineItems : [
-                     { id: submission.serviceName || 'Reinigung', price: submission.estimatedPrice || subData.estimatedPrice || 0 }
+                     { id: cleanSubService || 'Service', price: submission.estimatedPrice || subData.estimatedPrice || 0 }
                   ]
                };
             }
