@@ -9,6 +9,12 @@ import Layout from '@/components/Layout';
 import SwissHero from '@/components/SwissHero';
 import UmzugPricing from '@/components/UmzugPricing';
 import HaushaltshilfePricing from '@/components/HaushaltshilfePricing';
+import MovingPricingOnly from '@/components/MovingPricingOnly';
+import CleaningPricingOnly from '@/components/CleaningPricingOnly';
+import FacilityPricingOnly from '@/components/FacilityPricingOnly';
+import DisposalPricingOnly from '@/components/DisposalPricingOnly';
+import MaintenancePricingOnly from '@/components/MaintenancePricingOnly';
+import GastronomyPricingOnly from '@/components/GastronomyPricingOnly';
 import {
   CheckCircle,
   Phone,
@@ -264,7 +270,7 @@ export default function SeoLandingPage({
         right={
           <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center relative rounded-2xl overflow-hidden shadow-subtle border border-swiss-border">
             <Image 
-              src={service === 'umzug' ? '/images/transportation.jpg' : '/Gallary/2.jpeg'} 
+              src={service === 'umzug' || service === 'umzugsfirma' || service === 'transport' ? '/images/transportation.jpg' : '/Gallary/2.jpeg'} 
               alt={getOptimizedAlt(service, city, true)}
               fill
               className="object-cover opacity-90"
@@ -421,11 +427,23 @@ export default function SeoLandingPage({
         </section>
       )}
 
-      {/* Pricing Section */}
-      {service === 'haushaltshilfe' ? (
+      {/* Dedicated Service Pricing Section */}
+      {service === 'umzug' || service === 'umzugsfirma' || service === 'transport' ? (
+        <MovingPricingOnly locale={locale} formService={formService} city={city} handleCtaClick={handleCtaClick} />
+      ) : service === 'endreinigung' || service === 'reinigung' || service === 'reinigungsfirma' || service === 'baureinigung' || service === 'fensterreinigung' ? (
+        <CleaningPricingOnly locale={locale} formService={formService} isEndreinigung={service === 'endreinigung'} handleCtaClick={handleCtaClick} />
+      ) : service === 'facilityService' || service === 'hauswartung' ? (
+        <FacilityPricingOnly locale={locale} formService={formService} handleCtaClick={handleCtaClick} />
+      ) : service === 'entsorgung' ? (
+        <DisposalPricingOnly locale={locale} formService={formService} handleCtaClick={handleCtaClick} />
+      ) : service === 'unterhaltsreinigung' ? (
+        <MaintenancePricingOnly locale={locale} formService={formService} handleCtaClick={handleCtaClick} />
+      ) : service === 'gastronomieReinigung' ? (
+        <GastronomyPricingOnly locale={locale} formService={formService} handleCtaClick={handleCtaClick} />
+      ) : service === 'haushaltshilfe' ? (
         <HaushaltshilfePricing locale={locale} formService={formService} handleCtaClick={handleCtaClick} />
       ) : (
-        <UmzugPricing locale={locale} formService={formService} handleCtaClick={handleCtaClick} />
+        <MovingPricingOnly locale={locale} formService={formService} city={city} handleCtaClick={handleCtaClick} />
       )}
 
       {/* Mid-Page CTA with Trust Block */}

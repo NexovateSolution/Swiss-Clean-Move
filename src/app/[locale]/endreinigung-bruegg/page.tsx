@@ -32,7 +32,7 @@ export default function EndreinigungBrueggPage({ params: { locale } }: { params:
       service="endreinigung"
       city="Brügg"
       isPillar={false}
-      formService="facility-services"
+      formService="house-cleaning"
       noindex={false}
     />
   );

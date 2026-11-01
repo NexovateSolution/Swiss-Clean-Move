@@ -32,7 +32,7 @@ export default function EndreinigungAarbergPage({ params: { locale } }: { params
       service="endreinigung"
       city="Aarberg"
       isPillar={false}
-      formService="facility-services"
+      formService="house-cleaning"
       noindex={false}
     />
   );

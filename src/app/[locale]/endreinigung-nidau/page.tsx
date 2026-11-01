@@ -32,7 +32,7 @@ export default function EndreinigungNidauPage({ params: { locale } }: { params: 
       service="endreinigung"
       city="Nidau"
       isPillar={false}
-      formService="facility-services"
+      formService="house-cleaning"
       noindex={false}
     />
   );

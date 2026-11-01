@@ -32,7 +32,7 @@ export default function EndreinigungPieterlenPage({ params: { locale } }: { para
       service="endreinigung"
       city="Pieterlen"
       isPillar={false}
-      formService="facility-services"
+      formService="house-cleaning"
       noindex={false}
     />
   );

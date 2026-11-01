@@ -32,7 +32,7 @@ export default function EndreinigungBielPage({ params: { locale } }: { params: {
       service="endreinigung"
       city="Biel/Bienne"
       isPillar={true}
-      formService="facility-services"
+      formService="house-cleaning"
       noindex={false}
     />
   );

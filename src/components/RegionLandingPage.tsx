@@ -85,6 +85,37 @@ const SERVICE_LABELS: Record<string, Record<string, string>> = {
   raeumung: { de: 'Räumung', en: 'Clearance', fr: 'Évacuation', it: `Liquidazione` },
 };
 
+function getServiceHref(key: string, locale: string, slug?: string): string {
+  if (key === 'umzugTransport' || key === 'privatumzug' || key === 'firmenumzug' || key === 'moebeltransport') {
+    if (slug === 'bern') return `/${locale}/umzug-bern`;
+    if (slug === 'basel') return `/${locale}/umzug-basel`;
+    if (slug === 'zuerich') return `/${locale}/umzug-zurich`;
+    if (slug === 'solothurn') return `/${locale}/umzug-solothurn`;
+    if (slug === 'fribourg') return `/${locale}/umzug-fribourg`;
+    if (slug === 'neuchatel') return `/${locale}/umzug-neuchatel`;
+    return `/${locale}/umzug-schweiz`;
+  }
+  if (key === 'umzugsreinigung' || key === 'endreinigung') {
+    return slug === 'biel-bienne-seeland' ? `/${locale}/umzugsreinigung-biel-bienne` : `/${locale}/umzugsreinigung-schweiz`;
+  }
+  if (key === 'facilityServices' || key === 'hauswartung' || key === 'gebaeudeunterhalt') {
+    return slug === 'biel-bienne-seeland' ? `/${locale}/facility-service-biel-bienne` : `/${locale}/facility-service-schweiz`;
+  }
+  if (key === 'entsorgung' || key === 'raeumung') {
+    return `/${locale}/entsorgung-biel-bienne`;
+  }
+  if (key === 'unterhaltsreinigung' || key === 'bueroreinigung') {
+    return `/${locale}/unterhaltsreinigung-biel-bienne`;
+  }
+  if (key === 'fensterreinigung') {
+    return `/${locale}/fensterreinigung-biel-bienne`;
+  }
+  if (key === 'gastroReinigung') {
+    return `/${locale}/gastronomie-reinigung-biel-bienne`;
+  }
+  return `/${locale}/free-offer`;
+}
+
 function getCTAs(locale: string) {
   return [
     { label: locale === 'en' ? 'Request Free Quote' : locale === 'fr' ? 'Demander un devis gratuit' : 'Kostenlose Offerte anfordern', href: `/${locale}/free-offer`, icon: Mail, variant: 'primary' as const },
@@ -255,12 +286,18 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
             {SERVICES.map(svc => {
               const Icon = svc.icon;
               return (
-                <div key={svc.key} className="card p-4 text-center space-y-3 group hover:border-swiss-red/40 transition-all hover:shadow-medium">
+                <Link
+                  key={svc.key}
+                  href={getServiceHref(svc.key, locale, data.slug)}
+                  className="card p-4 text-center space-y-3 group hover:border-swiss-red/40 transition-all hover:shadow-medium block"
+                >
                   <div className="w-11 h-11 bg-swiss-softRed rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
                     <Icon className="w-5 h-5 text-swiss-red" />
                   </div>
-                  <p className="font-medium text-swiss-text text-sm leading-tight">{SERVICE_LABELS[svc.key][locale] || SERVICE_LABELS[svc.key].de}</p>
-                </div>
+                  <p className="font-medium text-swiss-text text-sm leading-tight group-hover:text-swiss-red transition-colors">
+                    {SERVICE_LABELS[svc.key][locale] || SERVICE_LABELS[svc.key].de}
+                  </p>
+                </Link>
               );
             })}
           </div>

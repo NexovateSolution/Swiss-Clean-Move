@@ -32,7 +32,7 @@ export default function EndreinigungIpsachPage({ params: { locale } }: { params:
       service="endreinigung"
       city="Ipsach"
       isPillar={false}
-      formService="facility-services"
+      formService="house-cleaning"
       noindex={false}
     />
   );
