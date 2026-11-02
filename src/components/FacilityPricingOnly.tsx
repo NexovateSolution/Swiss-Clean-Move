@@ -21,7 +21,7 @@ export default function FacilityPricingOnly({ locale, formService = 'facility-se
       ? 'Conciergerie & Facility Services'
       : isIt
       ? 'Facility Services & Manutenzione Immobili'
-      : 'Hauswartung & Facility Services',
+      : 'Hauswartung & Gebäudeunterhalt',
     title: isEn
       ? 'Prices for Facility Services & Caretaking'
       : isFr
@@ -42,7 +42,7 @@ export default function FacilityPricingOnly({ locale, formService = 'facility-se
       ? 'SwissCleanMove assure un entretien immobilier professionnel dans toute la Suisse. Nous garantissons la valorisation de votre patrimoine, une propreté irréprochable et le bon fonctionnement technique de vos bâtiments.'
       : isIt
       ? 'SwissCleanMove offre una gestione immobiliare professionale in tutta la Svizzera. Garantiamo il mantenimento del valore, pulizia impeccabile e perfetto funzionamento degli impianti del vostro immobile.'
-      : 'SwissCleanMove bietet professionelle Liegenschaftsbetreuung und Facility Services in der gesamten Schweiz. Wir sichern den langfristigen Werterhalt, makellose Sauberkeit und reibungslose technische Abläufe Ihrer Immobilie.',
+      : 'SwissCleanMove bietet professionelle Liegenschaftsbetreuung und Gebäudeunterhalt in der gesamten Schweiz. Wir sichern den langfristigen Werterhalt, makellose Sauberkeit und reibungslose technische Abläufe Ihrer Immobilie.',
     monthlyTitle: isEn ? 'Monthly Maintenance Retainer' : isFr ? 'Forfait mensuel d’entretien' : isIt ? 'Canone mensile di manutenzione' : 'Monatliche Liegenschaftsbetreuung',
     oneTimeTitle: isEn ? 'One-Time Deep Maintenance' : isFr ? 'Intervention ponctuelle' : isIt ? 'Intervento singolo straordinario' : 'Einzeleinsatz / Grundreinigung',
     tableHeaderArea: isEn ? 'Property Area' : isFr ? 'Surface du bien' : isIt ? 'Superficie' : 'Gebäudefläche',

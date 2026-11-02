@@ -1,6 +1,6 @@
 'use client';
 
-import { trackPhoneClick } from '@/lib/gtag';
+import { trackPhoneClick, trackWhatsAppClick } from '@/lib/gtag';
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -33,9 +33,10 @@ import {
   Trash2,
   UtensilsCrossed,
   Wrench,
-  ChevronDown
+  ChevronDown,
+  MessageCircle
 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type SeoLandingPageProps = {
   pageKey: string;
@@ -85,6 +86,30 @@ export default function SeoLandingPage({
   const IconComponent = serviceIcons[service];
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  // Dynamic Google Reviews Data with authentic fallbacks (4.6★ / 42 reviews)
+  const [googleRatingData, setGoogleRatingData] = useState<{ rating: number; count: number }>({
+    rating: 4.6,
+    count: 42
+  });
+
+  useEffect(() => {
+    fetch(`/api/google-reviews?locale=${locale}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data && typeof data.rating === 'number' && typeof data.userRatingsTotal === 'number') {
+          setGoogleRatingData({ rating: data.rating, count: data.userRatingsTotal });
+        }
+      })
+      .catch(() => {});
+  }, [locale]);
+
+  // Canonical slug resolver (ensures schema matches canonical URLs)
+  const getPageSlug = (key: string) => {
+    if (key === 'endreinigungBiel') return 'umzugsreinigung-biel-bienne';
+    if (key === 'haushaltshilfeBiel') return 'haushaltshilfe-biel-bienne';
+    return key.replace(/([A-Z])/g, '-$1').toLowerCase();
+  };
+
   // Parse FAQs
   let faqs: { question: string; answer: string }[] = [];
   try {
@@ -118,7 +143,7 @@ export default function SeoLandingPage({
           addressCountry: 'CH',
         },
         telephone: '+41 78 215 80 30',
-        url: `https://www.swisscleanmove.ch/${locale}/${pageKey === 'endreinigungBiel' ? 'umzugsreinigung-biel-bienne' : pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}`,
+        url: `https://www.swisscleanmove.ch/${locale}/${getPageSlug(pageKey)}`,
         areaServed: {
           '@type': 'Place',
           name: `${city}, Seeland, Schweiz`,
@@ -146,7 +171,7 @@ export default function SeoLandingPage({
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `https://www.swisscleanmove.ch/${locale}` },
-          { '@type': 'ListItem', position: 2, name: p('meta.title'), item: `https://www.swisscleanmove.ch/${locale}/${pageKey === 'endreinigungBiel' ? 'umzugsreinigung-biel-bienne' : pageKey.replace(/([A-Z])/g, '-$1').toLowerCase()}` }
+          { '@type': 'ListItem', position: 2, name: p('meta.title'), item: `https://www.swisscleanmove.ch/${locale}/${getPageSlug(pageKey)}` }
         ]
       },
       faqs.length > 0 && {
@@ -250,7 +275,7 @@ export default function SeoLandingPage({
           <div className="flex flex-col sm:flex-row gap-4 justify-start">
             {(has('ctaSoft') || has('ctaPrimary')) && (
               <Link
-                href={`/${locale}/free-offer`}
+                href={formService ? `/${locale}/form?service=${formService}` : `/${locale}/free-offer`}
                 className="btn-primary text-lg px-8 py-4 flex items-center justify-center"
                 onClick={() => handleCtaClick('hero_form_btn')}
               >
@@ -259,11 +284,21 @@ export default function SeoLandingPage({
             )}
             <a
               href="tel:+41782158030"
-              className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
+              className="btn-secondary text-lg px-6 py-4 inline-flex items-center justify-center space-x-2"
               onClick={() => { handleCtaClick('hero_phone_btn'); trackPhoneClick(); }}
             >
               <Phone className="w-5 h-5 text-swiss-red" />
               <span>+41 78 215 80 30</span>
+            </a>
+            <a
+              href="https://wa.me/41782158030"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary text-lg px-6 py-4 inline-flex items-center justify-center space-x-2 border-[#25D366]/40 hover:bg-[#25D366]/10 text-swiss-text"
+              onClick={() => { handleCtaClick('hero_whatsapp_btn'); trackWhatsAppClick(); }}
+            >
+              <MessageCircle className="w-5 h-5 text-[#25D366]" />
+              <span>WhatsApp</span>
             </a>
           </div>
         }
@@ -317,11 +352,26 @@ export default function SeoLandingPage({
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-[#FBBC05] fill-current" />
                     ))}
+                    <span className="font-bold text-sm text-swiss-text ml-1.5">{googleRatingData.rating.toFixed(1)} / 5.0</span>
                   </div>
                   <p className="font-semibold text-swiss-text text-sm">
-                    {locale === 'en' ? 'Customer Reviews on Google' : locale === 'fr' ? 'Avis clients sur Google' : locale === 'it' ? 'Recensioni clienti su Google' : 'Kundenbewertungen auf Google'}
+                    {locale === 'en'
+                      ? `${googleRatingData.rating.toFixed(1)} ★ (${googleRatingData.count} Google Reviews)`
+                      : locale === 'fr'
+                      ? `${googleRatingData.rating.toFixed(1)} ★ (${googleRatingData.count} avis Google)`
+                      : locale === 'it'
+                      ? `${googleRatingData.rating.toFixed(1)} ★ (${googleRatingData.count} recensioni Google)`
+                      : `${googleRatingData.rating.toFixed(1)} ★ (${googleRatingData.count} Google Bewertungen)`}
                   </p>
-                  <p className="text-xs text-swiss-body">SwissCleanMove – Biel/Bienne & Seeland</p>
+                  <p className="text-xs text-swiss-body">
+                    {locale === 'en'
+                      ? 'Overall SwissCleanMove Google Rating'
+                      : locale === 'fr'
+                      ? 'Note globale SwissCleanMove sur Google'
+                      : locale === 'it'
+                      ? 'Valutazione complessiva SwissCleanMove su Google'
+                      : 'Gesamtwertung SwissCleanMove auf Google'}
+                  </p>
                 </div>
               </div>
               <a
@@ -394,7 +444,7 @@ export default function SeoLandingPage({
             <div className="max-w-5xl mx-auto space-y-8">
               <div className="text-center">
                 <h2 className="text-3xl font-bold text-swiss-text">
-                  {p('serviceCardsHeading')}
+                  {p('serviceCardsHeading') || (locale === 'en' ? 'Our Services for Your Home' : locale === 'fr' ? 'Nos prestations pour votre domicile' : locale === 'it' ? 'I nostri servizi per la vostra casa' : 'Unsere Leistungen für Ihren Privathaushalt')}
                 </h2>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -649,7 +699,7 @@ export default function SeoLandingPage({
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href={`/${locale}/free-offer`}
+                  href={formService ? `/${locale}/form?service=${formService}` : `/${locale}/free-offer`}
                   className="btn-primary text-lg px-8 py-4"
                   onClick={() => handleCtaClick('footer_form_btn')}
                 >
@@ -657,11 +707,21 @@ export default function SeoLandingPage({
                 </Link>
                 <a
                   href="tel:+41782158030"
-                  className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center space-x-2"
+                  className="btn-secondary text-lg px-6 py-4 inline-flex items-center justify-center space-x-2"
                   onClick={() => { handleCtaClick('footer_phone_btn'); trackPhoneClick(); }}
                 >
                   <Phone className="w-5 h-5 text-swiss-red" />
                   <span>+41 78 215 80 30</span>
+                </a>
+                <a
+                  href="https://wa.me/41782158030"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary text-lg px-6 py-4 inline-flex items-center justify-center space-x-2 border-[#25D366]/40 hover:bg-[#25D366]/10 text-swiss-text"
+                  onClick={() => { handleCtaClick('footer_whatsapp_btn'); trackWhatsAppClick(); }}
+                >
+                  <MessageCircle className="w-5 h-5 text-[#25D366]" />
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>
