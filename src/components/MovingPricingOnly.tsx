@@ -31,12 +31,12 @@ export default function MovingPricingOnly({ locale, formService = 'relocation', 
       ? 'Tariffe fisse e trasparenti. Squadra professionale. Qualità svizzera garantita.'
       : 'Faire Festpreise. Professionelles Zügelteam. Schweizer Qualitätsstandards.',
     desc: isEn
-      ? 'SwissCleanMove is your reliable partner for stress-free moves for private individuals and companies. All prices include modern moving trucks, qualified staff, furniture protection, and transport insurance.'
+      ? 'SwissCleanMove is your reliable partner for stress-free moves for private individuals and companies. All prices include modern moving trucks, qualified staff, furniture protection, and professional cargo securing.'
       : isFr
-      ? 'SwissCleanMove est votre partenaire de confiance pour des déménagements sans stress pour particuliers et entreprises. Tous les prix incluent véhicule adapté, personnel qualifié, protection du mobilier et assurance transport.'
+      ? 'SwissCleanMove est votre partenaire de confiance pour des déménagements sans stress pour particuliers et entreprises. Tous les prix incluent véhicule adapté, personnel qualifié, protection du mobilier et arrimage professionnel.'
       : isIt
-      ? 'SwissCleanMove è il vostro partner di fiducia per traslochi sereni per privati e aziende. Tutti i prezzi comprendono veicolo moderno, personale qualificato, protezione dei mobili e assicurazione trasporto.'
-      : 'SwissCleanMove ist Ihr zuverlässiger Partner für stressfreie Privatumzüge und Firmenumzüge. Sämtliche Tarife verstehen sich inklusive modernen Zügelwagen, qualifizierten Zügelmännern, Möbelschutz und Transportversicherung.',
+      ? 'SwissCleanMove è il vostro partner di fiducia per traslochi sereni per privati e aziende. Tutti i prezzi comprendono veicolo moderno, personale qualificato, protezione dei mobili e fissaggio professionale del carico.'
+      : 'SwissCleanMove ist Ihr zuverlässiger Partner für stressfreie Privatumzüge und Firmenumzüge. Sämtliche Tarife verstehen sich inklusive modernen Zügelwagen, qualifizierten Zügelmännern, Möbelschutz und fachgerechter Ladungssicherung.',
     tableHeaderSize: isEn ? 'Apartment Size' : isFr ? "Taille de l'appartement" : isIt ? "Dimensione dell'appartamento" : 'Wohnungsgrösse',
     tableHeaderPrice: isEn ? 'Fixed Price from' : isFr ? 'Prix fixe dès' : isIt ? 'Prezzo fisso da' : 'Festpreis ab',
     includedTitle: isEn ? 'Included in every Move' : isFr ? 'Inclus dans chaque déménagement' : isIt ? 'Incluso in ogni trasloco' : 'Bei jedem Umzug inklusive',
@@ -67,9 +67,9 @@ export default function MovingPricingOnly({ locale, formService = 'relocation', 
   ];
 
   const inclusions = [
-    isEn ? 'Qualified and friendly moving team' : isFr ? 'Équipe de déménageurs qualifiée et expérimentée' : isIt ? 'Squadra di traslocatori qualificata ed esperta' : 'Erfahrenes, fest angestelltes Zügelteam',
+    isEn ? 'Experienced and careful moving team' : isFr ? 'Équipe de déménageurs qualifiée et expérimentée' : isIt ? 'Squadra di traslocatori qualificata ed esperta' : 'Erfahrenes und sorgfältiges Zügelteam',
     isEn ? 'Modern, fully equipped transport vehicle' : isFr ? 'Véhicule de transport moderne et capitonné' : isIt ? 'Veicolo di trasporto moderno e imbottito' : 'Moderner, voll ausgerüsteter Zügelwagen',
-    isEn ? 'Comprehensive transport & liability insurance' : isFr ? 'Assurance transport et responsabilité civile complète' : isIt ? 'Assicurazione trasporto e responsabilità civile' : 'Vollumfängliche Transport- und Betriebshaftpflichtversicherung',
+    isEn ? 'Careful handling and structured service coordination' : isFr ? 'Manipulation soignée et coordination structurée du service' : isIt ? 'Gestione accurata e coordinamento strutturato del servizio' : 'Sorgfältige Handhabung und strukturierte Ablaufkoordination',
     isEn ? 'Professional furniture protection (blankets, straps, wrap)' : isFr ? 'Protection professionnelle du mobilier (couvertures, sangles, films)' : isIt ? 'Protezione professionale dei mobili (coperte, cinghie, pellicole)' : 'Professioneller Möbelschutz (Zügeldecken, Spanngurte, Schutzfolie)',
     isEn ? 'Careful loading, secured transport, and unloading' : isFr ? 'Chargement méticuleux, arrimage sécurisé et déchargement' : isIt ? 'Carico accurato, trasporto sicuro e scarico' : 'Fachgerechtes Be- und Entladen sowie Ladungssicherung',
     isEn ? 'Furniture placement in the desired rooms' : isFr ? 'Mise en place des meubles dans les pièces souhaitées' : isIt ? 'Posizionamento dei mobili nelle stanze desiderate' : 'Platzierung der Möbel direkt in den gewünschten Räumen',

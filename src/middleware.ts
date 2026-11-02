@@ -14,6 +14,21 @@ const intlMiddleware = createMiddleware({
 });
 
 export default function middleware(request: NextRequest) {
+  const { pathname, search } = request.nextUrl;
+
+  // Direct permanent 301 redirects for consolidated duplicate Endreinigung Biel URLs
+  const localeMatch = pathname.match(/^\/(de|fr|en|it)\/endreinigung-biel-bienne\/?$/);
+  if (localeMatch) {
+    const locale = localeMatch[1];
+    const url = new URL(`/${locale}/umzugsreinigung-biel-bienne${search}`, request.url);
+    return NextResponse.redirect(url, 301);
+  }
+
+  if (pathname === '/endreinigung-biel-bienne' || pathname === '/endreinigung-biel-bienne/') {
+    const url = new URL(`/de/umzugsreinigung-biel-bienne${search}`, request.url);
+    return NextResponse.redirect(url, 301);
+  }
+
   return intlMiddleware(request);
 }
 

@@ -38,6 +38,7 @@ const nextConfig = {
     const legacyBielMappings = [
       { from: 'reinigung-biel', to: 'reinigung-biel-bienne' },
       { from: 'endreinigung-biel', to: 'umzugsreinigung-biel-bienne' },
+      { from: 'endreinigung-biel-bienne', to: 'umzugsreinigung-biel-bienne' },
       { from: 'umzugsreinigung-biel', to: 'umzugsreinigung-biel-bienne' },
       { from: 'umzug-biel', to: 'umzug-biel-bienne' },
       { from: 'reinigungsfirma-biel', to: 'reinigungsfirma-biel-bienne' },
@@ -60,12 +61,12 @@ const nextConfig = {
       redirectsList.push({
         source: `/:locale/${item.from}`,
         destination: `/:locale/${item.to}`,
-        permanent: true,
+        statusCode: 301,
       });
       redirectsList.push({
         source: `/${item.from}`,
         destination: `/de/${item.to}`,
-        permanent: true,
+        statusCode: 301,
       });
     }
 

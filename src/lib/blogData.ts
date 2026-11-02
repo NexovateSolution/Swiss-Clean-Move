@@ -213,7 +213,7 @@ Egal ob regelmässige <a href="/de/reinigung-nidau" class="text-swiss-red hover:
 
 Achten Sie auf:
 - Transparente Preise ohne versteckte Kosten
-- Geschultes und versichertes Personal
+- Geschultes und verlässliches Personal
 - Lokale Präsenz im Seeland
 - Positive Kundenbewertungen
 
@@ -224,7 +224,7 @@ Whether regular <a href="/en/reinigung-nidau" class="text-swiss-red hover:underl
 
 Look out for:
 - Transparent prices without hidden costs
-- Trained and insured staff
+- Trained and reliable staff
 - Local presence in the Seeland region
 - Positive customer reviews
 
@@ -235,7 +235,7 @@ Qu'il s'agisse d'un <a href="/fr/reinigung-nidau" class="text-swiss-red hover:un
 
 Faites attention à :
 - Des prix transparents sans frais cachés
-- Personnel formé et assuré
+- Personnel formé et fiable
 - Présence locale dans la région du Seeland
 - Avis clients positifs
 
@@ -244,7 +244,7 @@ SwissCleanMove répond à tous ces critères.
 
 Cerca:
 - Prezzi trasparenti senza costi nascosti
-- Personale formato e assicurato
+- Personale formato e affidabile
 - Presenza locale nella regione del Seeland
 - Recensioni positive dei clienti
 

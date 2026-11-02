@@ -77,14 +77,9 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="w-4 h-4 text-swiss-blue" />
-                <div className="flex flex-col leading-relaxed">
-                  <a onClick={trackPhoneClick} href="tel:+41782158030" className="hover:text-swiss-blue transition-colors">
-                    +41 78 215 80 30
-                  </a>
-                  <a onClick={trackPhoneClick} href="tel:+41782158030" className="hover:text-swiss-blue transition-colors">
-                    
-                  </a>
-                </div>
+                <a onClick={trackPhoneClick} href="tel:+41782158030" className="hover:text-swiss-blue transition-colors">
+                  +41 78 215 80 30
+                </a>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="w-4 h-4 text-swiss-blue" />
@@ -217,7 +212,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link href={`/${locale}/endreinigung-${loc.slug}`} className="text-sm text-swiss-gray-500 hover:text-swiss-blue transition-colors">
-                      {t('home.services.facilityServices.title')} {/* Fallback to facility/end cleaning */}
+                      {t('home.services.finalCleaning.title')}
                     </Link>
                   </li>
                 </ul>

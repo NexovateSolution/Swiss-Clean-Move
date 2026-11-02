@@ -95,8 +95,8 @@ export default function FacilityPricingOnly({ locale, formService = 'facility-se
       desc: isEn ? 'One single point of contact for cleaning, technical checks, and outdoor care.' : isFr ? 'Un interlocuteur unique pour le ménage, la technique et les espaces verts.' : isIt ? 'Un unico referente per pulizia, verifiche tecniche e aree verdi.' : 'Ein einziger Ansprechpartner für Reinigung, Technik, Garten und Winterdienst.'
     },
     {
-      title: isEn ? 'Permanent Staff' : isFr ? 'Personnel fixe salarié' : isIt ? 'Personale qualificato fisso' : 'Fest angestellte Fachkräfte',
-      desc: isEn ? 'No subcontracting. Dedicated, trustworthy caretakers assigned to your building.' : isFr ? 'Pas de sous-traitance. Des concierges de confiance dédiés à votre immeuble.' : isIt ? 'Nessun subappalto. Custodi dedicati e affidabili per il vostro stabile.' : 'Keine Subunternehmer. Feste Bezugspersonen mit hoher Verantwortlichkeit.'
+      title: isEn ? 'Reliable Coordination' : isFr ? 'Coordination fiable' : isIt ? 'Coordinamento affidabile' : 'Verlässliche Koordination',
+      desc: isEn ? 'Dedicated, trustworthy caretakers and clear point of contact assigned to your building.' : isFr ? 'Des interlocuteurs dédiés et attentifs veillant à l’entretien rigoureux de votre immeuble.' : isIt ? 'Referenti affidabili dedicati alla cura e manutenzione del vostro stabile.' : 'Feste Bezugspersonen mit hoher Verantwortlichkeit für die laufende Liegenschaftsbetreuung.'
     },
     {
       title: isEn ? 'Value Retention' : isFr ? 'Pérennité du patrimoine' : isIt ? 'Valore dell’immobile' : 'Werterhalt Ihrer Immobilie',

@@ -169,7 +169,7 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
         name: 'SwissCleanMove',
         address: { '@type': 'PostalAddress', streetAddress: 'Orpundstrasse 31', addressLocality: 'Biel/Bienne', postalCode: '2504', addressCountry: 'CH' },
         telephone: '+41 78 215 80 30',
-        url: `https://swisscleanmove.ch/${locale}/${data.slug}`,
+        url: `https://www.swisscleanmove.ch/${locale}/${data.slug}`,
         areaServed: { '@type': 'Place', name: data.regionName },
       },
       {
@@ -181,9 +181,9 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: `https://swisscleanmove.ch/${locale}` },
-          { '@type': 'ListItem', position: 2, name: locale === 'en' ? 'Regions' : locale === 'fr' ? 'Régions' : 'Regionen', item: `https://swisscleanmove.ch/${locale}/regions` },
-          { '@type': 'ListItem', position: 3, name: data.regionName, item: `https://swisscleanmove.ch/${locale}/${data.slug}` },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `https://www.swisscleanmove.ch/${locale}` },
+          { '@type': 'ListItem', position: 2, name: locale === 'en' ? 'Regions' : locale === 'fr' ? 'Régions' : 'Regionen', item: `https://www.swisscleanmove.ch/${locale}/regions` },
+          { '@type': 'ListItem', position: 3, name: data.regionName, item: `https://www.swisscleanmove.ch/${locale}/${data.slug}` },
         ],
       },
       data.faqs.length > 0 ? {
@@ -239,29 +239,14 @@ export default function RegionLandingPage({ data, locale }: { data: RegionPageDa
         </div>
       </section>
 
-      {/* SEO Keywords Section */}
+      {/* Local Einsatzgebiete Section */}
       <section className="section-padding bg-swiss-section">
         <div className="container-max">
-          <div className="max-w-4xl mx-auto space-y-8">
-            {/* High SEO Keywords */}
+          <div className="max-w-4xl mx-auto space-y-6">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-swiss-text mb-4 text-center">
-                {t('regionLanding.ourServicesIn', { region: data.regionName, fallback: `Unsere Leistungen in ${data.regionName}` })}
-              </h2>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {data.highSeoKeywords.map(kw => (
-                  <span key={kw} className="px-3 py-1.5 rounded-lg text-sm font-semibold bg-swiss-softRed text-swiss-red border border-swiss-red/20">
-                    {kw}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Local Keywords / Einsatzgebiete */}
-            <div>
-              <h3 className="text-xl font-bold text-swiss-text mb-4 text-center">
                 {t('regionLanding.ourServiceAreas', { fallback: 'Unsere Einsatzgebiete' })}
-              </h3>
+              </h2>
               <div className="flex flex-wrap gap-2 justify-center">
                 {data.localKeywords.map(kw => (
                   <span key={kw} className="px-4 py-2 rounded-full text-sm font-medium border bg-white text-swiss-body border-swiss-border hover:border-swiss-red/30 hover:bg-swiss-softRed transition-colors">

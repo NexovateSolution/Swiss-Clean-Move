@@ -128,7 +128,7 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
   const movingIncluded = [
     { en: 'Professional moving team', de: 'Professionelles Umzugsteam', fr: 'Équipe de déménagement professionnelle', it: `Squadra di traslochi professionale` },
     { en: 'Modern transport vehicle', de: 'Modernes Transportfahrzeug', fr: 'Véhicule de transport moderne', it: `Veicolo da trasporto moderno` },
-    { en: 'Transport insurance', de: 'Transportversicherung', fr: 'Assurance transport', it: `Assicurazione sul trasporto` },
+    { en: 'Professional cargo securing', de: 'Fachgerechte Ladungssicherung', fr: 'Arrimage professionnel du chargement', it: `Fissaggio professionale del carico` },
     { en: 'Furniture protection and packing materials', de: 'Möbelschutz und Verpackungsmaterial', fr: 'Protection des meubles et matériel d\'emballage', it: `Protezione dei mobili e materiali di imballaggio` },
     { en: 'Loading and unloading', de: 'Be- und Entladen', fr: 'Chargement et déchargement', it: `Carico e scarico` },
     { en: 'Careful furniture transportation', de: 'Sorgfältiger Möbeltransport', fr: 'Transport soigneux des meubles', it: `Trasporto accurato dei mobili` },

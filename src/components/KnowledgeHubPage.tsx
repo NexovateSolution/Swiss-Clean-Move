@@ -85,7 +85,7 @@ export default function KnowledgeHubPage({ locale }: KnowledgeHubPageProps) {
           "@type": "ListItem",
           "position": 2,
           "name": L(data.hero.badge),
-          "item": `https://www.swisscleanmove.ch/${locale}/preise-und-ratgeber`
+          "item": `https://www.swisscleanmove.ch/${locale}/${locale === 'en' ? 'pricing-and-guides' : locale === 'fr' ? 'prix-et-conseils' : 'preise-und-ratgeber'}`
         }
       ]
     },

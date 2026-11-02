@@ -37,12 +37,12 @@ export default function MaintenancePricingOnly({ locale, formService = 'facility
       ? 'Tariffe orarie flessibili e programmi personalizzati per uffici, studi medici e spazi commerciali.'
       : 'Transparente Stundensätze und massgeschneiderte Reinigungspläne für Büros, Praxen und Gewerbe.',
     desc: isEn
-      ? 'SwissCleanMove ensures a clean, representative, and hygienic work environment. Whether daily, weekly, or bi-weekly – our discreet, permanently employed cleaning staff adapts to your operating schedule.'
+      ? 'SwissCleanMove ensures a clean, representative, and hygienic work environment. Whether daily, weekly, or bi-weekly – our discreet and reliable cleaning staff adapts flexibly to your operating schedule.'
       : isFr
-      ? 'SwissCleanMove garantit un cadre de travail propre, accueillant et sain. Quotidien, hebdomadaire ou bimensuel – nos agents salariés et discrets s’adaptent à vos horaires sans perturber votre activité.'
+      ? 'SwissCleanMove garantit un cadre de travail propre, accueillant et sain. Quotidien, hebdomadaire ou bimensuel – notre personnel de nettoyage discret et rigoureux s’adapte avec souplesse à vos horaires d’ouverture.'
       : isIt
-      ? 'SwissCleanMove garantisce un ambiente di lavoro pulito, rappresentativo e igienico. Quotidiano, settimanale o quindicinale – il nostro personale fisso e discreto rispetta i vostri orari aziendali.'
-      : 'SwissCleanMove sorgt für ein sauberes, repräsentatives und hygienisches Arbeitsumfeld. Ob täglich, wöchentlich oder 14-täglich – unsere diskreten, fest angestellten Reinigungskräfte passen sich nahtlos Ihren Geschäftszeiten an.',
+      ? 'SwissCleanMove garantisce un ambiente di lavoro pulito, rappresentativo e igienico. Quotidiano, settimanale o quindicinale – il nostro personale affidabile e discreto si adatta con flessibilità ai vostri orari aziendali.'
+      : 'SwissCleanMove sorgt für ein sauberes, repräsentatives und hygienisches Arbeitsumfeld. Ob täglich, wöchentlich oder 14-täglich – unsere diskreten und zuverlässigen Reinigungskräfte passen sich flexibel Ihren Geschäftszeiten an.',
     tableHeaderSector: isEn ? 'Premises Category' : isFr ? 'Catégorie de locaux' : isIt ? 'Categoria locali' : 'Einsatzbereich / Objektart',
     tableHeaderRate: isEn ? 'Rate from' : isFr ? 'Tarif dès' : isIt ? 'Tariffa da' : 'Stundensatz ab',
     includedTitle: isEn ? 'Included in Office Cleaning' : isFr ? 'Prestations d’entretien incluses' : isIt ? 'Prestazioni incluse' : 'Inbegriffene Leistungen',
@@ -76,19 +76,19 @@ export default function MaintenancePricingOnly({ locale, formService = 'facility
     isEn ? 'Kitchen and coffee lounge care (dishwashers, sinks, counter tops)' : isFr ? 'Entretien de la kitchenette et coin pause (lave-vaisselle, évier)' : isIt ? 'Cura dell’area caffè e cucina (lavastoviglie, lavello, superfici)' : 'Kaffeeküchen-Pflege: Geschirrspüler einräumen, Spüle und Tische reinigen',
     isEn ? 'Thorough vacuuming of carpets and damp mopping of hard floors' : isFr ? 'Aspiration minutieuse des moquettes et lavage des sols durs' : isIt ? 'Aspirazione accurata moquette e lavaggio pavimenti duri' : 'Gründliches Saugen von Teppichen und feuchtes Wischen aller Hartbeläge',
     isEn ? 'Waste bin emptying and correct waste segregation' : isFr ? 'Vidage de toutes les poubelles et tri sélectif rigoureux' : isIt ? 'Svuotamento cestini e rigorosa raccolta differenziata' : 'Entleerung aller Papierkörbe, Mülleimer und fachgerechte Abfalltrennung',
-    isEn ? 'Assigned cleaning staff with strict non-disclosure agreement' : isFr ? 'Personnel fixe et assermenté avec accord strict de confidentialité' : isIt ? 'Personale fisso vincolato da rigoroso accordo di riservatezza' : 'Feste Reinigungskräfte mit unterschriebener Diskretions- und Schweigepflicht',
+    isEn ? 'Trained cleaning staff with high reliability and discretion' : isFr ? 'Personnel qualifié et discret respectant la confidentialité de vos locaux' : isIt ? 'Personale qualificato e discreto nel rispetto della riservatezza' : 'Geschulte Reinigungskräfte mit hoher Zuverlässigkeit und Diskretion',
     isEn ? 'Eco-certified Swiss professional detergents and equipment included' : isFr ? 'Produits d’entretien écologiques professionnels suisses inclus' : isIt ? 'Detergenti professionali svizzeri ecologici e attrezzature inclusi' : 'Ökologische Schweizer Profi-Reinigungsmittel und Geräte inklusive',
     isEn ? 'Flexible operating hours (early mornings, evenings, or weekends)' : isFr ? 'Horaires flexibles (tôt le matin, en soirée ou le week-end)' : isIt ? 'Orari flessibili (mattina presto, sera o fine settimana)' : 'Einsatzzeiten flexibel vor oder nach Ihren Bürozeiten oder am Wochenende'
   ];
 
   const advantages = [
     {
-      title: isEn ? 'Absolute Discretion' : isFr ? 'Discrétion absolue' : isIt ? 'Massima riservatezza' : 'Höchste Diskretion',
-      desc: isEn ? 'Our staff is vetted, background-checked, and bound by strict confidentiality.' : isFr ? 'Personnel de confiance rigoureusement sélectionné et vérifié.' : isIt ? 'Personale accuratamente verificato e con fedina penale pulita.' : 'Geprüftes Personal mit einwandfreiem Leumund und strikter Verschwiegenheit.'
+      title: isEn ? 'Meticulous Execution' : isFr ? 'Exécution soignée' : isIt ? 'Esecuzione accurata' : 'Sorgfältige Ausführung',
+      desc: isEn ? 'Reliable cleaners with a sharp eye for cleanliness, order, and discretion in your premises.' : isFr ? 'Des agents attentifs à la propreté, à l’ordre et à la discrétion dans vos locaux.' : isIt ? 'Addetti attenti alla pulizia, all’ordine e alla riservatezza nei vostri spazi.' : 'Verlässliche Reinigungskräfte mit Sinn für Sauberkeit, Ordnung und Diskretion in Ihren Räumen.'
     },
     {
-      title: isEn ? 'Consistent Staff' : isFr ? 'Équipe dédiée' : isIt ? 'Referente fisso' : 'Feste Reinigungskräfte',
-      desc: isEn ? 'You always welcome the same familiar team who knows your building routines.' : isFr ? 'Vous avez toujours les mêmes personnes qui connaissent vos habitudes.' : isIt ? 'Lavorate sempre con gli stessi volti che conoscono i vostri spazi.' : 'Immer dieselben vertrauten Gesichter, die Ihre internen Abläufe bestens kennen.'
+      title: isEn ? 'Clear Arrangements' : isFr ? 'Accords clairs' : isIt ? 'Accordi chiari' : 'Klare Absprachen',
+      desc: isEn ? 'Fixed cleaning schedules and an individually tailored service specification for your premises.' : isFr ? 'Créneaux fixes et cahier des charges personnalisé adapté exactement à votre bâtiment.' : isIt ? 'Orari concordati e capitolato d’oneri su misura per la vostra struttura.' : 'Feste Einsatzzeiten und ein individuell abgestimmtes Pflichtenheft für Ihr Objekt.'
     },
     {
       title: isEn ? 'Quality Guarantee' : isFr ? 'Contrôle qualité' : isIt ? 'Controllo qualità' : 'Garantierte Qualität',
@@ -122,7 +122,7 @@ export default function MaintenancePricingOnly({ locale, formService = 'facility
                   {isEn ? 'Hourly Rates & Frequency Discounts' : isFr ? 'Tarifs horaires et remises de fréquence' : isIt ? 'Tariffe orarie e sconti frequenza' : 'Stundensätze & Frequenzrabatte'}
                 </h3>
                 <p className="text-sm text-swiss-body mt-1">
-                  {isEn ? 'Transparent rates per operating hour, cleaning supplies included' : isFr ? 'Tarifs clairs à l’heure, matériel et produits inclus' : isIt ? 'Tariffe orarie chiare, materiali e detergenti inclusi' : 'Inklusive professioneller Reinigungsmittel, moderner Geräte und Versicherung'}
+                  {isEn ? 'Transparent rates per operating hour, cleaning supplies included' : isFr ? 'Tarifs clairs à l’heure, matériel et produits inclus' : isIt ? 'Tariffe orarie chiare, materiali e detergenti inclusi' : 'Inklusive professioneller Reinigungsmittel, moderner Geräte und Qualitätskontrolle'}
                 </p>
               </div>
               <Building2 className="w-8 h-8 text-swiss-red opacity-80 hidden sm:block" />

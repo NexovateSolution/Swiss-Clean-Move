@@ -94,8 +94,8 @@ export default function CleaningPricingOnly({ locale, formService = 'house-clean
       desc: isEn ? 'All-inclusive package prices. No extra charge for cleaning products or travel.' : isFr ? 'Forfait tout compris. Aucun supplément pour produits ou déplacements.' : isIt ? 'Pacchetto tutto incluso. Nessun costo extra per detergenti o trasferte.' : 'Verbindlicher Pauschalpreis ohne versteckte Kosten oder böse Überraschungen.'
     },
     {
-      title: isEn ? 'Experienced Professionals' : isFr ? 'Professionnels expérimentés' : isIt ? 'Professionisti esperti' : 'Erfahrene Reinigungsprofis',
-      desc: isEn ? 'Permanently employed staff who know exactly what property managers look for.' : isFr ? 'Équipes salariées qui connaissent parfaitement les exigences des gérances.' : isIt ? 'Personale qualificato che conosce le esigenze delle amministrazioni immobiliari.' : 'Fest angestellte Fachkräfte mit genauem Blick für die Prüfpunkte der Verwaltungen.'
+      title: isEn ? 'Experienced Cleaning Team' : isFr ? 'Équipe expérimentée' : isIt ? 'Squadra esperta' : 'Erfahrenes Reinigungsteam',
+      desc: isEn ? 'Experienced cleaning professionals with an eye for the exact handover details required by property managers.' : isFr ? 'Des professionnels du nettoyage attentifs aux critères précis des gérances immobilières.' : isIt ? 'Professionisti della pulizia attenti ai dettagli richiesti dalle amministrazioni.' : 'Erfahrene Reinigungskräfte mit genauem Blick für die Abnahmekriterien der Verwaltungen.'
     }
   ];
 
