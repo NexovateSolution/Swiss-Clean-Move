@@ -673,7 +673,8 @@
       "submitFailedRetry": "Formular konnte nicht gesendet werden. Bitte versuche es erneut."
     },
     "whatsapp": {
-      "prefill": "Hallo! Ich interessiere mich für Ihre Dienstleistungen und möchte gerne mehr darüber erfahren. Können Sie mir bitte weitere Informationen senden? Vielen Dank!"
+      "prefill": "Hallo! Ich interessiere mich für Ihre Dienstleistungen und möchte gerne mehr darüber erfahren. Können Sie mir bitte weitere Informationen senden? Vielen Dank!",
+      "message": "Schreiben Sie uns direkt per WhatsApp oder folgen Sie uns auf unseren Social-Media-Kanälen für aktuelle Neuigkeiten."
     },
     "success": {
       "title": "Nachricht erfolgreich gesendet!",
@@ -14058,5 +14059,18 @@
       "google": "Google Rezensionen",
       "writeReview": "Rezension schreiben"
     }
+  },
+  "regionLanding": {
+    "requestQuote": "Kostenlose Offerte anfordern",
+    "ourServicesIn": "Unsere Dienstleistungen in {region}",
+    "ourServiceAreas": "Unsere Einsatzgebiete",
+    "scmServicesIn": "Unsere Dienstleistungen in {region}",
+    "getStartedToday": "Jetzt starten",
+    "onTheMap": "{region} auf der Karte",
+    "faq": "Häufige Fragen",
+    "moreFromScm": "Mehr von SwissCleanMove",
+    "yourPartnerIn": "Ihr Partner in {region}",
+    "contactUsNow": "Kontaktieren Sie uns jetzt für eine kostenlose und unverbindliche Offerte.",
+    "requestQuoteBtn": "Kostenlose Offerte anfordern"
   }
 }

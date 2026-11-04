@@ -673,7 +673,8 @@
       "submitFailedRetry": "Échec de l'envoi du formulaire. Veuillez réessayer."
     },
     "whatsapp": {
-      "prefill": "Bonjour! Je suis intéressé par vos services et j’aimerais en savoir plus. Pouvez-vous me envoyer plus d’informations? Merci!"
+      "prefill": "Bonjour! Je suis intéressé par vos services et j’aimerais en savoir plus. Pouvez-vous me envoyer plus d’informations? Merci!",
+      "message": "Écrivez-nous directement sur WhatsApp ou suivez-nous sur nos réseaux sociaux pour nos actualités."
     },
     "success": {
       "title": "Message envoyé avec succès!",
@@ -14004,5 +14005,18 @@
     "faqShort": "FAQ",
     "allRegions": "Toutes les régions",
     "serviceThroughoutCh": "Service dans toute la Suisse"
+  },
+  "regionLanding": {
+    "requestQuote": "Demander un devis gratuit",
+    "ourServicesIn": "Nos services à {region}",
+    "ourServiceAreas": "Nos zones d'intervention",
+    "scmServicesIn": "Nos services à {region}",
+    "getStartedToday": "Commencez aujourd'hui",
+    "onTheMap": "{region} sur la carte",
+    "faq": "Foire aux questions",
+    "moreFromScm": "Plus de SwissCleanMove",
+    "yourPartnerIn": "Votre partenaire à {region}",
+    "contactUsNow": "Contactez-nous maintenant pour un devis gratuit et sans engagement.",
+    "requestQuoteBtn": "Demander un devis gratuit"
   }
 }

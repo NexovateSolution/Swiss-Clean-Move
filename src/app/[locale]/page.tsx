@@ -340,36 +340,14 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
                 <span className="text-2xl font-bold text-black">{tNew('reviews.google')}</span>
               </a>
               
-              {/* Dynamic Score and Stars */}
-              <div className="flex items-baseline space-x-1.5 pt-1">
-                <span className="text-3xl font-extrabold text-[#001f3f]">{reviewsData.rating.toFixed(1)}</span>
-                <span className="text-sm font-semibold text-gray-500">/ 5.0</span>
-              </div>
-              <div className="flex space-x-1 py-1">
-                {[...Array(5)].map((_, i) => {
-                  const fillPercentage = Math.max(0, Math.min(100, (reviewsData.rating - i) * 100));
-                  return (
-                    <div key={i} className="relative w-5 h-5">
-                      <Star className="w-5 h-5 text-gray-200 fill-current" />
-                      <div className="absolute top-0 left-0 overflow-hidden" style={{ width: `${fillPercentage}%` }}>
-                        <Star className="w-5 h-5 text-[#FBBC05] fill-current" />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <p className="text-sm font-medium text-gray-600 mb-4">
-                {reviewsData.userRatingsTotal > 0
-                  ? `${reviewsData.userRatingsTotal} ${
-                      locale === 'de'
-                        ? 'Google-Rezensionen'
-                        : locale === 'fr'
-                        ? 'avis Google'
-                        : locale === 'it'
-                        ? 'recensioni Google'
-                        : 'Google reviews'
-                    }`
-                  : tNew('reviews.count')}
+              <p className="text-sm font-medium text-gray-600 mb-4 pt-1">
+                {locale === 'de'
+                  ? 'Verifizierte Kundenbewertungen auf Google'
+                  : locale === 'fr'
+                  ? 'Avis clients vérifiés sur Google'
+                  : locale === 'it'
+                  ? 'Recensioni clienti verificate su Google'
+                  : 'Verified customer reviews on Google'}
               </p>
               <a 
                 href="https://g.page/r/CaR3s0KCpz1O/review" 

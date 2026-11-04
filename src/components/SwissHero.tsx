@@ -27,9 +27,13 @@ export default function SwissHero({ badge, title, subtitle, cta, right, classNam
                 {badge}
               </div>
 
-              <h1 className="text-[32px] leading-[1.15] md:text-[46px] md:leading-[1.12] font-bold text-swiss-text">
-                {title}
-              </h1>
+              {React.isValidElement(title) && (title.type === 'h1' || (typeof title.type === 'string' && title.type.toLowerCase() === 'h1')) ? (
+                title
+              ) : (
+                <h1 className="text-[32px] leading-[1.15] md:text-[46px] md:leading-[1.12] font-bold text-swiss-text">
+                  {title}
+                </h1>
+              )}
 
               {subtitle ? (
                 <p className="text-[16px] leading-relaxed md:text-[18px] text-swiss-body max-w-[600px]">

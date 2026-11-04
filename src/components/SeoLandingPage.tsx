@@ -348,29 +348,23 @@ export default function SeoLandingPage({
                   </svg>
                 </div>
                 <div>
-                  <div className="flex items-center space-x-1 mb-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-[#FBBC05] fill-current" />
-                    ))}
-                    <span className="font-bold text-sm text-swiss-text ml-1.5">{googleRatingData.rating.toFixed(1)} / 5.0</span>
-                  </div>
-                  <p className="font-semibold text-swiss-text text-sm">
+                  <p className="font-semibold text-swiss-text text-base">
                     {locale === 'en'
-                      ? `${googleRatingData.rating.toFixed(1)} ★ (${googleRatingData.count} Google Reviews)`
+                      ? 'Google Reviews'
                       : locale === 'fr'
-                      ? `${googleRatingData.rating.toFixed(1)} ★ (${googleRatingData.count} avis Google)`
+                      ? 'Avis clients sur Google'
                       : locale === 'it'
-                      ? `${googleRatingData.rating.toFixed(1)} ★ (${googleRatingData.count} recensioni Google)`
-                      : `${googleRatingData.rating.toFixed(1)} ★ (${googleRatingData.count} Google Bewertungen)`}
+                      ? 'Recensioni clienti su Google'
+                      : 'Google Kundenbewertungen'}
                   </p>
-                  <p className="text-xs text-swiss-body">
+                  <p className="text-xs text-swiss-body mt-0.5">
                     {locale === 'en'
-                      ? 'Overall SwissCleanMove Google Rating'
+                      ? 'Official SwissCleanMove Google Profile'
                       : locale === 'fr'
-                      ? 'Note globale SwissCleanMove sur Google'
+                      ? 'Profil officiel SwissCleanMove sur Google'
                       : locale === 'it'
-                      ? 'Valutazione complessiva SwissCleanMove su Google'
-                      : 'Gesamtwertung SwissCleanMove auf Google'}
+                      ? 'Profilo ufficiale SwissCleanMove su Google'
+                      : 'Offizielles SwissCleanMove Profil auf Google'}
                   </p>
                 </div>
               </div>

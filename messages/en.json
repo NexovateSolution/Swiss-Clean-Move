@@ -686,7 +686,8 @@
       "submitFailedRetry": "Failed to submit form. Please try again."
     },
     "whatsapp": {
-      "prefill": "Hello! I am interested in your services and would like to know more about it. Could you send me more information? Thank you!"
+      "prefill": "Hello! I am interested in your services and would like to know more about it. Could you send me more information? Thank you!",
+      "message": "Message us directly on WhatsApp or follow us on our social media channels for the latest updates."
     },
     "success": {
       "title": "Message sent successfully!",
@@ -13934,5 +13935,18 @@
     "faqShort": "FAQ",
     "allRegions": "All Regions",
     "serviceThroughoutCh": "Service throughout Switzerland"
+  },
+  "regionLanding": {
+    "requestQuote": "Request Free Quote",
+    "ourServicesIn": "Our Services in {region}",
+    "ourServiceAreas": "Our Service Areas",
+    "scmServicesIn": "Our Services in {region}",
+    "getStartedToday": "Get Started Today",
+    "onTheMap": "{region} on the Map",
+    "faq": "Frequently Asked Questions",
+    "moreFromScm": "More from SwissCleanMove",
+    "yourPartnerIn": "Your Partner in {region}",
+    "contactUsNow": "Contact us now for a free and non-binding quote.",
+    "requestQuoteBtn": "Request Free Quote"
   }
 }

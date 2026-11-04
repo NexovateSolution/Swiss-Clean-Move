@@ -188,13 +188,6 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
               </div>
               <div>
                 <h3 className="font-bold text-[#001f3f] text-lg">SwissCleanMove</h3>
-                <div className="flex items-center justify-center space-x-1 mt-2">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <StarIcon key={i} className="w-5 h-5 text-[#FBBC05] fill-current" />
-                    ))}
-                  </div>
-                </div>
                 <p className="text-sm font-medium text-gray-700 mt-2">
                   {locale === 'en' ? 'Customer Reviews on Google' : locale === 'fr' ? 'Avis clients sur Google' : locale === 'it' ? 'Recensioni clienti su Google' : 'Kundenbewertungen auf Google'}
                 </p>

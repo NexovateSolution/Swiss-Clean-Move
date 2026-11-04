@@ -686,7 +686,8 @@
       "submitFailedRetry": "Impossibile inviare il modulo. Per favore riprova."
     },
     "whatsapp": {
-      "prefill": "Ciao! Sono interessato ai vostri servizi e vorrei saperne di più. Potresti inviarmi maggiori informazioni? Grazie!"
+      "prefill": "Ciao! Sono interessato ai vostri servizi e vorrei saperne di più. Potresti inviarmi maggiori informazioni? Grazie!",
+      "message": "Scriveteci direttamente su WhatsApp o seguiteci sui nostri canali social per tutti gli aggiornamenti."
     },
     "success": {
       "title": "Messaggio inviato con successo!",
@@ -4378,22 +4379,22 @@
       "balconyTerrace": "Balcone/terrazzo",
       "disposalPerM3": "Smaltimento al mc"
     },
-    "addonPriceFrom": "da CHF {importo}",
+    "addonPriceFrom": "da CHF {amount}",
     "disclaimer": "Tutti i prezzi sono indicativi. Il prezzo finale dipende dalla portata, dall'accesso e dalle condizioni della proprietà.",
     "display": {
-      "fromChf": "Da CHF {importo}",
+      "fromChf": "Da CHF {amount}",
       "priceOnRequest": "Prezzo su richiesta",
       "hourlyRangePerStaff": "CHF {min}–{max}/h per personale (da CHF {base})",
       "sqmRangeFrom": "CHF {min}–{max}/m² (da CHF {base})",
       "chfRange": "CHF {min}–{max}",
-      "fromChfPerService": "Da CHF {importo} per servizio",
+      "fromChfPerService": "Da CHF {amount} per servizio",
       "perWindow": "CHF {min}–{max} per finestra ({framesMin}–{framesMax} frame)",
       "hourlyRangePerPerson": "CHF {min}–{max}/h per persona (da CHF {base})",
       "fromChfPerHourMin": "Da CHF {amount}/h (da CHF {base})",
       "hourlyRange": "CHF {min}–{max}/ora (da CHF {base})",
       "sqmRange": "CHF {min}–{max}/m² (da CHF {base})",
-      "flatRateFrom": "Tariffa forfettaria da CHF {importo}",
-      "fromChfPerM3": "Da CHF {importo} al m³"
+      "flatRateFrom": "Tariffa forfettaria da CHF {amount}",
+      "fromChfPerM3": "Da CHF {amount} al m³"
     }
   },
   "servicesCta": {
@@ -14004,5 +14005,18 @@
     "faqShort": "FAQ",
     "allRegions": "Tutte le regioni",
     "serviceThroughoutCh": "Servizio in tutta la Svizzera"
+  },
+  "regionLanding": {
+    "requestQuote": "Richiedi preventivo gratuito",
+    "ourServicesIn": "I nostri servizi a {region}",
+    "ourServiceAreas": "Le nostre aree di servizio",
+    "scmServicesIn": "I nostri servizi a {region}",
+    "getStartedToday": "Inizia oggi",
+    "onTheMap": "{region} sulla mappa",
+    "faq": "Domande frequenti",
+    "moreFromScm": "Altro da SwissCleanMove",
+    "yourPartnerIn": "Il tuo partner a {region}",
+    "contactUsNow": "Contattaci ora per un preventivo gratuito e senza impegno.",
+    "requestQuoteBtn": "Richiedi preventivo gratuito"
   }
 }
