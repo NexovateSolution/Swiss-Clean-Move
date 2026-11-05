@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services/disposal',
     '/services/relocation',
     '/contact',
+    '/gallery',
+    '/property-maintenance',
     '/free-offer',
     '/pricing',
     '/faq',
