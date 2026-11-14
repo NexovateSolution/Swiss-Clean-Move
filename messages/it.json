@@ -13695,9 +13695,60 @@
     },
     "bueroreinigungBiel": {
       "meta": {
-        "title": "Pulizia uffici Bienne | Pulizia studi & commerciale | SwissCleanMove",
+        "title": "Pulizia uffici Biel/Bienne | Studi medici e commerciali | SwissCleanMove",
         "description": "Pulizia professionale di uffici a Biel/Bienne. Puliamo i vostri locali commerciali, studi e uffici nel Seeland in modo affidabile e discreto."
-      }
+      },
+      "h1": "Pulizia uffici Biel/Bienne – Spazi commerciali impeccabili nel Seeland",
+      "heroSubtitle": "Uffici curati per un ambiente di lavoro produttivo. La nostra ditta offre pulizie su misura per uffici e studi medici a Biel/Bienne e dintorni.",
+      "trustPoints": [
+        "Pulizia discreta",
+        "Orari flessibili",
+        "Soluzioni su misura"
+      ],
+      "ctaPrimary": "Richiedi preventivo gratuito",
+      "ctaSecondary": "Chiama ora",
+      "ctaWhatsapp": "WhatsApp",
+      "sections": [
+        {
+          "heading": "La vostra pulizia professionale di uffici a Biel/Bienne",
+          "body": "Un ufficio pulito è il biglietto da visita della vostra azienda. Garantiamo una pulizia impeccabile in tutti i vostri spazi commerciali."
+        }
+      ],
+      "serviceBulletsHeading": "I nostri servizi di pulizia uffici",
+      "serviceBullets": [
+        "Pulizia postazioni di lavoro",
+        "Trattamento pavimenti e moquette",
+        "Servizi igienici",
+        "Aree ristoro e cucine",
+        "Pulizia vetri e finestre"
+      ],
+      "internalLinksHeading": "Altri servizi di pulizia",
+      "internalLinks": [
+        {
+          "label": "Pulizia di manutenzione Biel/Bienne",
+          "href": "unterhaltsreinigung-biel-bienne"
+        },
+        {
+          "label": "Impresa di pulizie Biel/Bienne",
+          "href": "reinigungsfirma-biel-bienne"
+        }
+      ],
+      "ctaMidHeading": "Cercate una pulizia uffici professionale?",
+      "ctaMidBody": "Richiedete subito un preventivo gratuito e senza impegno.",
+      "ctaMid": "Richiedi preventivo",
+      "ctaStrongHeading": "Contattate i nostri specialisti",
+      "ctaStrongBody": "Saremo lieti di consigliarvi per definire un piano di pulizia su misura.",
+      "ctaStrong": "Contattaci ora",
+      "faqs": [
+        {
+          "question": "Con quale frequenza è possibile programmare la pulizia degli uffici?",
+          "answer": "Offriamo intervalli giornalieri, settimanali o personalizzati, anche la mattina presto o la sera per non disturbare la vostra attività."
+        },
+        {
+          "question": "Fornite voi i prodotti e i macchinari per la pulizia?",
+          "answer": "Sì, il nostro personale porta tutti i macchinari professionali e i detergenti ecologici necessari."
+        }
+      ]
     }
   },
   "components": {

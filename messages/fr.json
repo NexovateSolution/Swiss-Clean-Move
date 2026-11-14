@@ -13496,9 +13496,60 @@
     },
     "bueroreinigungBiel": {
       "meta": {
-        "title": "Nettoyage de bureau Bienne | Nettoyage de cabinet & commercial | SwissCleanMove",
-        "description": "Nettoyage de bureau professionnel à Bienne/Biel/Bienne. Nous nettoyons vos locaux commerciaux, cabinets et bureaux dans le Seeland de manière fiable et discrète."
-      }
+        "title": "Nettoyage de bureaux Biel/Bienne | Cabinets & Locaux commerciaux | SwissCleanMove",
+        "description": "Nettoyage professionnel de bureaux à Bienne. Nous nettoyons vos locaux commerciaux, cabinets et bureaux dans le Seeland avec fiabilité et discrétion."
+      },
+      "h1": "Nettoyage de bureaux Biel/Bienne – Locaux professionnels impeccables dans le Seeland",
+      "heroSubtitle": "Des bureaux soignés pour un environnement de travail productif. Notre entreprise de nettoyage propose des prestations sur mesure à Bienne et environs.",
+      "trustPoints": [
+        "Nettoyage discret",
+        "Horaires flexibles",
+        "Concepts sur mesure"
+      ],
+      "ctaPrimary": "Demander un devis gratuit",
+      "ctaSecondary": "Appeler maintenant",
+      "ctaWhatsapp": "WhatsApp",
+      "sections": [
+        {
+          "heading": "Votre spécialiste du nettoyage de bureaux à Biel/Bienne",
+          "body": "Un bureau propre est la carte de visite de votre entreprise. Nous assurons une propreté irréprochable dans tous vos espaces professionnels."
+        }
+      ],
+      "serviceBulletsHeading": "Nos prestations de nettoyage de bureaux",
+      "serviceBullets": [
+        "Nettoyage des postes de travail",
+        "Entretien des sols et moquettes",
+        "Sanitaires et vestiaires",
+        "Cuisines et espaces de pause",
+        "Nettoyage des vitres"
+      ],
+      "internalLinksHeading": "Autres services de nettoyage",
+      "internalLinks": [
+        {
+          "label": "Nettoyage d'entretien Biel/Bienne",
+          "href": "unterhaltsreinigung-biel-bienne"
+        },
+        {
+          "label": "Entreprise de nettoyage Biel/Bienne",
+          "href": "reinigungsfirma-biel-bienne"
+        }
+      ],
+      "ctaMidHeading": "Besoin d'un nettoyage de bureau ?",
+      "ctaMidBody": "Demandez dès maintenant votre devis gratuit et sans engagement.",
+      "ctaMid": "Demander un devis",
+      "ctaStrongHeading": "Contactez nos spécialistes",
+      "ctaStrongBody": "Nous vous conseillons avec plaisir pour définir un plan de nettoyage adapté.",
+      "ctaStrong": "Contactez-nous",
+      "faqs": [
+        {
+          "question": "À quelle fréquence pouvons-nous planifier le nettoyage de nos bureaux ?",
+          "answer": "Nous intervenons au rythme de votre choix : quotidien, hebdomadaire ou bimensuel, en dehors de vos heures de travail pour ne pas perturber votre activité."
+        },
+        {
+          "question": "Fournissez-vous le matériel et les produits d'entretien ?",
+          "answer": "Oui, notre équipe apporte l'ensemble du matériel professionnel et des produits écologiques certifiés pour un résultat optimal."
+        }
+      ]
     }
   },
   "phone": {

@@ -514,14 +514,18 @@ export default function SeoLandingPage({
 
             {/* Mid CTA */}
             <div className="card p-8 bg-white border border-swiss-border text-center space-y-4">
-              <h3 className="text-xl font-bold text-swiss-text">{p('ctaMidHeading')}</h3>
-              <p className="text-swiss-body">{p('ctaMidBody')}</p>
+              <h3 className="text-xl font-bold text-swiss-text">
+                {p('ctaMidHeading') || (locale === 'en' ? 'Looking for Professional Service?' : locale === 'fr' ? 'Besoin d\'un service professionnel ?' : locale === 'it' ? 'Cercate un servizio professionale?' : 'Offerte anfordern')}
+              </h3>
+              <p className="text-swiss-body">
+                {p('ctaMidBody') || (locale === 'en' ? 'Request your free, non-binding quote in just 2 minutes.' : locale === 'fr' ? 'Demandez dès maintenant votre devis gratuit et sans engagement.' : locale === 'it' ? 'Richiedete subito un preventivo gratuito in 2 minuti.' : 'Verlangen Sie jetzt eine unverbindliche Offerte.')}
+              </p>
               <Link
-                href={`/${locale}/free-offer`}
+                href={formService ? `/${locale}/form?service=${formService}` : `/${locale}/free-offer`}
                 className="btn-primary text-lg px-8 py-4 inline-block"
                 onClick={() => handleCtaClick('mid_form_btn')}
               >
-                {p('ctaMid')}
+                {p('ctaMid') || (locale === 'en' ? 'Request Free Quote' : locale === 'fr' ? 'Demander un devis' : locale === 'it' ? 'Richiedi preventivo' : 'Offerte anfordern')}
               </Link>
             </div>
           </div>
@@ -686,10 +690,10 @@ export default function SeoLandingPage({
           <div className="max-w-3xl mx-auto">
             <div className="card p-8 md:p-10 bg-swiss-softRed border border-swiss-border text-center space-y-6">
               <h2 className="text-2xl md:text-3xl font-bold text-swiss-text">
-                {p('ctaStrongHeading')}
+                {p('ctaStrongHeading') || (locale === 'en' ? 'Get Your Free Quote Now' : locale === 'fr' ? 'Obtenez votre devis gratuit dès maintenant' : locale === 'it' ? 'Richiedete ora il vostro preventivo gratuito' : 'Jetzt unverbindliche Offerte anfordern')}
               </h2>
               <p className="text-lg text-swiss-body">
-                {p('ctaStrongBody')}
+                {p('ctaStrongBody') || (locale === 'en' ? 'Contact us today for a transparent, no-obligation quote.' : locale === 'fr' ? 'Contactez-nous pour une offre transparente et sans engagement.' : locale === 'it' ? 'Contattateci oggi stesso per un preventivo trasparente e senza impegno.' : 'Kontaktieren Sie uns für eine transparente und unverbindliche Offerte.')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -697,7 +701,7 @@ export default function SeoLandingPage({
                   className="btn-primary text-lg px-8 py-4"
                   onClick={() => handleCtaClick('footer_form_btn')}
                 >
-                  {p('ctaStrong')}
+                  {p('ctaStrong') || (locale === 'en' ? 'Request Free Quote' : locale === 'fr' ? 'Demander un devis' : locale === 'it' ? 'Offerta gratuita' : 'Offerte anfordern')}
                 </Link>
                 <a
                   href="tel:+41782158030"

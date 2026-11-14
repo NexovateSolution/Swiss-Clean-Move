@@ -1,8 +1,9 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
+import Image from 'next/image'
 import Layout from '@/components/Layout'
 import SwissHero from '@/components/SwissHero'
-import { Sparkles, CheckCircle, ArrowRight, Home as HomeIcon, Building2, Briefcase } from 'lucide-react'
+import { Sparkles, CheckCircle, ArrowRight, Home as HomeIcon, Building2, Briefcase, Phone } from 'lucide-react'
 
 export default function CleaningPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations()
@@ -19,9 +20,36 @@ export default function CleaningPage({ params: { locale } }: { params: { locale:
         badge={t('services.title')}
         title={t('services.title')}
         subtitle={t('services.subtitle')}
+        cta={
+          <div className="flex flex-col sm:flex-row gap-4 justify-start">
+            <Link
+              href={`/${locale}/free-offer`}
+              className="btn-primary text-lg px-8 py-4 flex items-center justify-center space-x-2"
+            >
+              <span>{t('common.getFreeQuote')}</span>
+              <ArrowRight className="w-5 h-5 ml-1" />
+            </Link>
+            <a
+              href="tel:+41782158030"
+              className="btn-secondary text-lg px-6 py-4 inline-flex items-center justify-center space-x-2"
+            >
+              <Phone className="w-5 h-5 text-swiss-red" />
+              <span>+41 78 215 80 30</span>
+            </a>
+          </div>
+        }
         right={
-          <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center">
-            <div className="w-20 h-20 bg-swiss-softRed rounded-3xl flex items-center justify-center mx-auto border border-swiss-border shadow-subtle">
+          <div className="w-full h-[340px] md:h-[420px] bg-swiss-section flex items-center justify-center relative rounded-2xl overflow-hidden shadow-subtle border border-swiss-border">
+            <Image
+              src="/Gallary/2.jpeg"
+              alt={t('services.title')}
+              fill
+              className="object-cover opacity-90"
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="w-20 h-20 bg-white/95 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto border border-white/60 shadow-soft relative z-10">
               <Sparkles className="w-10 h-10 text-swiss-red" />
             </div>
           </div>

@@ -13626,8 +13626,59 @@
     "bueroreinigungBiel": {
       "meta": {
         "title": "Office Cleaning Biel/Bienne | Practice & Commercial Cleaning | SwissCleanMove",
-        "description": "Professional office cleaning in Biel/Bienne. We clean your commercial premises, practices and offices in the Seeland region reliably and discreetly."
-      }
+        "description": "Professional office cleaning in Biel/Bienne. We clean your commercial premises, medical practices and offices in Seeland reliably and discreetly."
+      },
+      "h1": "Office Cleaning Biel/Bienne – Spotless Commercial Spaces in Seeland",
+      "heroSubtitle": "Well-maintained offices for a productive working atmosphere. Our cleaning company offers tailored office and medical practice cleaning in Biel/Bienne and surrounding areas.",
+      "trustPoints": [
+        "Discreet cleaning",
+        "Flexible working hours",
+        "Tailor-made concepts"
+      ],
+      "ctaPrimary": "Request Free Quote",
+      "ctaSecondary": "Call Now",
+      "ctaWhatsapp": "WhatsApp",
+      "sections": [
+        {
+          "heading": "Your Professional Office Cleaning in Biel/Bienne",
+          "body": "A clean office is the business card of your company. We ensure immaculate cleanliness across your commercial premises."
+        }
+      ],
+      "serviceBulletsHeading": "Our Office Cleaning Services",
+      "serviceBullets": [
+        "Workstation & desk cleaning",
+        "Floor & carpet maintenance",
+        "Sanitary facilities & restrooms",
+        "Kitchenette & breakroom cleaning",
+        "Window & glass cleaning"
+      ],
+      "internalLinksHeading": "More Cleaning Services",
+      "internalLinks": [
+        {
+          "label": "Maintenance Cleaning Biel/Bienne",
+          "href": "unterhaltsreinigung-biel-bienne"
+        },
+        {
+          "label": "Cleaning Company Biel/Bienne",
+          "href": "reinigungsfirma-biel-bienne"
+        }
+      ],
+      "ctaMidHeading": "Looking for Office Cleaning?",
+      "ctaMidBody": "Request your free, non-binding quote in just 2 minutes.",
+      "ctaMid": "Request Free Quote",
+      "ctaStrongHeading": "Contact Our Cleaning Specialists",
+      "ctaStrongBody": "We are happy to advise you and create a customized cleaning plan.",
+      "ctaStrong": "Contact Us Now",
+      "faqs": [
+        {
+          "question": "How often can office cleaning be scheduled in Biel/Bienne?",
+          "answer": "We offer daily, weekly, or bi-weekly cleaning intervals tailored to your operational schedule, including early mornings or after business hours."
+        },
+        {
+          "question": "Do you bring your own cleaning equipment and eco-friendly products?",
+          "answer": "Yes, our team brings all professional cleaning machines, microfibers, and eco-friendly Swiss cleaning agents needed for spotless results."
+        }
+      ]
     }
   },
   "components": {

@@ -57,10 +57,25 @@ export async function POST(request: NextRequest) {
     })
 
     return response
-  } catch (error) {
+  } catch (error: any) {
     console.error('Login error:', error)
+
+    const isDbError =
+      error?.code === 'P1001' ||
+      error?.code === 'P2024' ||
+      error?.message?.includes('Can\'t reach database server') ||
+      error?.message?.includes('database') ||
+      error?.name === 'PrismaClientInitializationError';
+
+    if (isDbError) {
+      return NextResponse.json(
+        { error: 'Database server is temporarily unreachable. If using Supabase free tier, the database may be paused or waking up. Please retry in a few moments.' },
+        { status: 503 }
+      )
+    }
+
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: error?.message && process.env.NODE_ENV !== 'production' ? error.message : 'Internal server error' },
       { status: 500 }
     )
   }
