@@ -462,6 +462,13 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       'disposal': { de: 'Entsorgung', en: 'Disposal', fr: 'Élimination', it: 'Smaltimento' },
       'Haushaltshilfe': { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide ménagère', it: 'Aiuto domestico' },
       'householdHelping': { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide ménagère', it: 'Aiuto domestico' },
+      'household-helping': { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide ménagère', it: 'Aiuto domestico' },
+      'householdHelp': { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide ménagère', it: 'Aiuto domestico' },
+      'house-cleaning': { de: 'Umzugsreinigung', en: 'Move-out Cleaning', fr: 'Nettoyage de fin de bail', it: 'Pulizia di trasloco' },
+      'window-cleaning': { de: 'Fensterreinigung', en: 'Window Cleaning', fr: 'Nettoyage de vitres', it: 'Pulizia vetri' },
+      'facility-services': { de: 'Hauswartungsdienstleistungen', en: 'Facility Services', fr: 'Services généraux', it: 'Servizi di facility' },
+      'moving-and-cleaning': { de: 'Umzug & Reinigung', en: 'Moving & Cleaning', fr: 'Déménagement & Nettoyage', it: 'Trasloco & Pulizia' },
+      'disposal-clearance': { de: 'Entsorgung & Räumung', en: 'Disposal & Clearance', fr: 'Débarras & Évacuation', it: 'Smaltimento & Sgombero' },
       'Hauswartung': { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: 'Manutenzione' },
       'propertyMaintenance': { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: 'Manutenzione' },
       'Gastronomiereinigung': { de: 'Gastronomiereinigung', en: 'Gastronomy Cleaning', fr: 'Nettoyage gastronomique', it: 'Pulizia della gastronomia' },
@@ -549,7 +556,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
 
   const skipKeys = [
     // Personal info
-    'firstName', 'lastName', 'name', 'email', 'emailAddress', 'phone', 'telephone', 'nameFirstName', 'acceptPrivacy',
+    'firstName', 'lastName', 'name', 'fullName', 'email', 'emailAddress', 'phone', 'telephone', 'nameFirstName', 'acceptPrivacy',
     // Address fields (all variants)
     'street', 'streetAndNumber', 'city', 'postalCodeAndCity', 'address',
     'cleanStreet', 'cleanZipCity', 'cleanAddress',
@@ -713,7 +720,62 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     recurringFrequency: { de: 'Reinigungsintervall', en: 'Cleaning Frequency', fr: 'Fréquence de Nettoyage', it: 'Frequenza di pulizia' },
     floors: { de: 'Etagen', en: 'Floors', fr: 'Étages', it: 'Piani' },
     lift: { de: 'Aufzug', en: 'Elevator', fr: 'Ascenseur', it: 'Ascensore' },
-    viewingIsWelcome: { de: 'Besichtigung erwünscht', en: 'Viewing is welcome', fr: 'Visite souhaitée', it: 'La visione è gradita' }
+    viewingIsWelcome: { de: 'Besichtigung erwünscht', en: 'Viewing is welcome', fr: 'Visite souhaitée', it: 'La visione è gradita' },
+
+    // Service & Legal
+    service: { de: 'Dienstleistung', en: 'Service', fr: 'Service', it: 'Servizio' },
+    Service: { de: 'Dienstleistung', en: 'Service', fr: 'Service', it: 'Servizio' },
+    privacyConsent: { de: 'Datenschutz', en: 'Privacy Consent', fr: 'Protection des données', it: 'Consenso privacy' },
+    'Privacy Consent': { de: 'Datenschutz', en: 'Privacy Consent', fr: 'Protection des données', it: 'Consenso privacy' },
+    privacy: { de: 'Datenschutz', en: 'Privacy', fr: 'Protection des données', it: 'Consenso privacy' },
+    Privacy: { de: 'Datenschutz', en: 'Privacy', fr: 'Protection des données', it: 'Consenso privacy' },
+    agreeToTerms: { de: 'AGB akzeptiert', en: 'Terms Accepted', fr: 'Conditions acceptées', it: 'Termini accettati' },
+
+    // Dates, Scope & Details
+    desiredDate: { de: 'Wunschdatum', en: 'Desired Date', fr: 'Date souhaitée', it: 'Data desiderata' },
+    desiredCleaningDate: { de: 'Wunschtermin Reinigung', en: 'Desired Cleaning Date', fr: 'Date de nettoyage souhaitée', it: 'Data di pulizia desiderata' },
+    desiredMoveDate: { de: 'Wunschtermin Umzug', en: 'Desired Move Date', fr: 'Date de déménagement souhaitée', it: 'Data di trasloco desiderata' },
+    preferredMoveDate: { de: 'Wunschtermin Umzug', en: 'Preferred Move Date', fr: 'Date de déménagement préférée', it: 'Data di trasloco preferita' },
+    cleaningDuration: { de: 'Reinigungsdauer', en: 'Cleaning Duration', fr: 'Durée de nettoyage', it: 'Durata pulizia' },
+    cleaningScope: { de: 'Reinigungsumfang', en: 'Cleaning Scope', fr: 'Étendue du nettoyage', it: 'Ambito di pulizia' },
+    disposalType: { de: 'Entsorgungsart', en: 'Disposal Type', fr: 'Type de débarras', it: 'Tipo di smaltimento' },
+    estimatedVolume: { de: 'Geschätztes Volumen', en: 'Estimated Volume', fr: 'Volume estimé', it: 'Volume stimato' },
+    volume: { de: 'Volumen', en: 'Volume', fr: 'Volume', it: 'Volume' },
+    disassemblyNeeded: { de: 'Demontage erwünscht', en: 'Disassembly Needed', fr: 'Démontage souhaité', it: 'Smontaggio necessario' },
+    peopleMoving: { de: 'Personen im Haushalt', en: 'People Moving', fr: 'Personnes qui déménagent', it: 'Persone che traslocano' },
+    urgency: { de: 'Dringlichkeit', en: 'Urgency', fr: 'Urgence', it: 'Urgenza' },
+    materialAmount: { de: 'Materialmenge', en: 'Material Amount', fr: 'Quantité de matériel', it: 'Quantità di materiale' },
+    movingBoxes: { de: 'Umzugskartons', en: 'Moving Boxes', fr: 'Cartons de déménagement', it: 'Scatole per trasloco' },
+    otherDisposalItems: { de: 'Weitere Entsorgungsgüter', en: 'Other Disposal Items', fr: 'Autres objets à évacuer', it: 'Altri oggetti da smaltire' },
+    normalWindows: { de: 'Standardfenster', en: 'Standard Windows', fr: 'Fenêtres standard', it: 'Finestre standard' },
+    frenchDoors: { de: 'Balkontüren', en: 'French Doors', fr: 'Portes-fenêtres', it: 'Portefinestre' },
+    panoramicWindows: { de: 'Panoramafenster', en: 'Panoramic Windows', fr: 'Fenêtres panoramiques', it: 'Finestre panoramiche' },
+    otherGlassSurfaces: { de: 'Weitere Glasflächen', en: 'Other Glass Surfaces', fr: 'Autres surfaces vitrées', it: 'Altre superfici in vetro' },
+    outdoorArea: { de: 'Aussenbereich', en: 'Outdoor Area', fr: 'Espace extérieur', it: 'Area esterna' },
+    cleanTerraceCount: { de: 'Anzahl Terrassen', en: 'Terrace Count', fr: 'Nombre de terrasses', it: 'Numero di terrazze' },
+    addressFrom: { de: 'Auszugsadresse', en: 'Moving-out Address', fr: 'Adresse de départ', it: 'Indirizzo di partenza' },
+    addressTo: { de: 'Einzugsadresse', en: 'Moving-in Address', fr: 'Adresse d\'arrivée', it: 'Indirizzo di arrivo' },
+    movingFromAddress: { de: 'Auszugsadresse', en: 'Moving-out Address', fr: 'Adresse de départ', it: 'Indirizzo di partenza' },
+    movingToAddress: { de: 'Einzugsadresse', en: 'Moving-in Address', fr: 'Adresse d\'arrivée', it: 'Indirizzo di arrivo' },
+    floorFrom: { de: 'Etage Auszug', en: 'Floor Moving-out', fr: 'Étage de départ', it: 'Piano di partenza' },
+    floorTo: { de: 'Etage Einzug', en: 'Floor Moving-in', fr: 'Étage d\'arrivée', it: 'Piano di arrivo' },
+    toFloor: { de: 'Etage Einzug', en: 'Floor Moving-in', fr: 'Étage d\'arrivée', it: 'Piano di arrivo' },
+    currentFloor: { de: 'Aktuelle Etage', en: 'Current Floor', fr: 'Étage actuel', it: 'Piano attuale' },
+    currentElevator: { de: 'Aufzug Auszug', en: 'Elevator Moving-out', fr: 'Ascenseur de départ', it: 'Ascensore di partenza' },
+    newElevator: { de: 'Aufzug Einzug', en: 'Elevator Moving-in', fr: 'Ascenseur d\'arrivée', it: 'Ascensore di arrivo' },
+    currentRooms: { de: 'Zimmer Auszug', en: 'Rooms Moving-out', fr: 'Pièces de départ', it: 'Locali di partenza' },
+    newRooms: { de: 'Zimmer Einzug', en: 'Rooms Moving-in', fr: 'Pièces d\'arrivée', it: 'Locali di arrivo' },
+    roomsFrom: { de: 'Zimmer Auszug', en: 'Rooms Moving-out', fr: 'Pièces de départ', it: 'Locali di partenza' },
+    currentLivingSpace: { de: 'Wohnfläche Auszug', en: 'Living Space Moving-out', fr: 'Surface de départ', it: 'Superficie di partenza' },
+    currentLiving: { de: 'Wohnfläche Auszug', en: 'Living Space Moving-out', fr: 'Surface de départ', it: 'Superficie di partenza' },
+    newLivingSpace: { de: 'Wohnfläche Einzug', en: 'Living Space Moving-in', fr: 'Surface d\'arrivée', it: 'Superficie di arrivo' },
+    movingToType: { de: 'Objektart Einzug', en: 'Property Type Moving-in', fr: 'Type de bien d\'arrivée', it: 'Tipo di immobile di arrivo' },
+    floorsCount: { de: 'Anzahl Etagen', en: 'Number of Floors', fr: 'Nombre d\'étages', it: 'Numero di piani' },
+    totalArea: { de: 'Gesamtfläche', en: 'Total Area', fr: 'Surface totale', it: 'Superficie totale' },
+    inventory: { de: 'Inventarliste', en: 'Inventory List', fr: 'Liste d\'inventaire', it: 'Lista di inventario' },
+    accessTypeOther: { de: 'Andere Zugangsart', en: 'Other Access Type', fr: 'Autre type d\'accès', it: 'Altro tipo di accesso' },
+    propertyTypeOther: { de: 'Andere Objektart', en: 'Other Property Type', fr: 'Autre type de bien', it: 'Altro tipo di immobile' },
+    specialCleaningOther: { de: 'Andere Spezialreinigung', en: 'Other Special Cleaning', fr: 'Autre nettoyage spécial', it: 'Altra pulizia speciale' }
   };
 
   const translatedValues: Record<string, any> = {
@@ -739,6 +801,13 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     twoWeekly: { de: 'Alle 2 Wochen', en: 'Every 2 Weeks', fr: 'Toutes les 2 semaines', it: 'Ogni 2 settimane' },
     threeWeekly: { de: 'Alle 3 Wochen', en: 'Every 3 Weeks', fr: 'Toutes les 3 semaines', it: 'Ogni 3 settimane' },
     fourWeekly: { de: 'Alle 4 Wochen', en: 'Every 4 Weeks', fr: 'Toutes les 4 semaines', it: 'Ogni 4 settimane' },
+    monthly: { de: 'Monatlich', en: 'Monthly', fr: 'Mensuel', it: 'Mensile' },
+    Monthly: { de: 'Monatlich', en: 'Monthly', fr: 'Mensuel', it: 'Mensile' },
+    biweekly: { de: 'Alle 2 Wochen', en: 'Every 2 Weeks', fr: 'Toutes les 2 semaines', it: 'Ogni 2 settimane' },
+    everyTwoWeeks: { de: 'Alle 2 Wochen', en: 'Every 2 Weeks', fr: 'Toutes les 2 semaines', it: 'Ogni 2 settimane' },
+    twoThreePerWeek: { de: '2-3x pro Woche', en: '2-3x per Week', fr: '2-3x par semaine', it: '2-3 volte a settimana' },
+    twoThreeTimes: { de: '2-3 Mal', en: '2-3 Times', fr: '2-3 Fois', it: '2-3 Volte' },
+    halfDay: { de: 'Halber Tag', en: 'Half Day', fr: 'Demi-journée', it: 'Mezza giornata' },
     oneTime: { de: 'Einmalig', en: 'One-Time', fr: 'Unique', it: 'Una volta' },
     staircaseCleaning: { de: 'Treppenhausreinigung', en: 'Staircase Cleaning', fr: 'Nettoyage des Escaliers', it: `Pulizia delle scale` },
     narrowStairs: { de: 'Enge Treppen', en: 'Narrow Stairs', fr: 'Escaliers Étroits', it: `Scale strette` },
@@ -932,6 +1001,60 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
     combination: { de: 'Kombination', en: 'Combination', fr: 'Combinaison', it: 'Combinazione' },
     custom: { de: 'Individuell', en: 'Custom', fr: 'Personnalisé', it: 'Personalizzato' },
     'Household Helping': { de: 'Haushaltshilfe', en: 'Household Helping', fr: 'Aide Ménagère', it: 'Aiuto Domestico' },
+    'household-helping': { de: 'Haushaltshilfe', en: 'Household Help', fr: 'Aide ménagère', it: 'Aiuto domestico' },
+    'house-cleaning': { de: 'Umzugsreinigung', en: 'Move-out Cleaning', fr: 'Nettoyage de fin de bail', it: 'Pulizia di trasloco' },
+    'relocation': { de: 'Umzug & Transport', en: 'Moving & Transport', fr: 'Déménagement & Transport', it: 'Trasloco & Trasporto' },
+    'disposal-clearance': { de: 'Entsorgung & Räumung', en: 'Disposal & Clearance', fr: 'Débarras & Évacuation', it: 'Smaltimento & Sgombero' },
+    'facility-services': { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: 'Manutenzione' },
+    'facilityServices': { de: 'Hauswartung', en: 'Property Maintenance', fr: 'Conciergerie', it: 'Manutenzione' },
+    'window-cleaning': { de: 'Fensterreinigung', en: 'Window Cleaning', fr: 'Nettoyage de vitres', it: 'Pulizia finestre' },
+    'stairwell-cleaning': { de: 'Treppenhausreinigung', en: 'Stairwell Cleaning', fr: 'Nettoyage des escaliers', it: 'Pulizia delle scale' },
+    'final-cleaning': { de: 'Endreinigung', en: 'Final Cleaning', fr: 'Nettoyage de fin de bail', it: 'Pulizia finale' },
+    'gastronomy-cleaning': { de: 'Gastronomiereinigung', en: 'Gastronomy Cleaning', fr: 'Nettoyage de restaurant', it: 'Pulizia ristoranti' },
+    'gastronomyCleaning': { de: 'Gastronomiereinigung', en: 'Gastronomy Cleaning', fr: 'Nettoyage de restaurant', it: 'Pulizia ristoranti' },
+    'medical-cleaning': { de: 'Praxisreinigung', en: 'Medical Cleaning', fr: 'Nettoyage médical', it: 'Pulizia medica' },
+    'construction-cleaning': { de: 'Baureinigung', en: 'Construction Cleaning', fr: 'Nettoyage de chantier', it: 'Pulizia di cantiere' },
+    'special-cleaning': { de: 'Spezialreinigung', en: 'Specialist Cleaning', fr: 'Nettoyage spécialisé', it: 'Pulizia specializzata' },
+    'specialCleaning': { de: 'Spezialreinigung', en: 'Specialist Cleaning', fr: 'Nettoyage spécialisé', it: 'Pulizia specializzata' },
+    'combo': { de: 'Umzug & Reinigung', en: 'Moving & Cleaning', fr: 'Déménagement & Nettoyage', it: 'Trasloco & Pulizia' },
+    'moving': { de: 'Umzug', en: 'Moving', fr: 'Déménagement', it: 'Trasloco' },
+    'transport': { de: 'Transport', en: 'Transport', fr: 'Transport', it: 'Trasporto' },
+    'propertyMaintenance': { de: 'Liegenschaftsunterhalt', en: 'Property Maintenance', fr: 'Entretien de propriété', it: 'Manutenzione proprietà' },
+    keyInPerson: { de: 'Persönlich', en: 'In Person', fr: 'En personne', it: 'Di persona' },
+    keySafe: { de: 'Schlüsselsafe', en: 'Key Safe', fr: 'Boîte à clés sécurisée', it: 'Cassaforte per chiavi' },
+    mailbox: { de: 'Briefkasten', en: 'Mailbox', fr: 'Boîte aux lettres', it: 'Cassetta delle lettere' },
+    exact: { de: 'Genau', en: 'Exact', fr: 'Exact', it: 'Esatto' },
+    immediate: { de: 'Sofort', en: 'Immediate', fr: 'Immédiat', it: 'Immediato' },
+    thisWeek: { de: 'Diese Woche', en: 'This Week', fr: 'Cette semaine', it: 'Questa settimana' },
+    thisMonth: { de: 'Diesen Monat', en: 'This Month', fr: 'Ce mois-ci', it: 'Questo mese' },
+    plusMinus1Day: { de: '+/- 1 Tag', en: '+/- 1 Day', fr: '+/- 1 Jour', it: '+/- 1 Giorno' },
+    plusMinus3Days: { de: '+/- 3 Tage', en: '+/- 3 Days', fr: '+/- 3 Jours', it: '+/- 3 Giorni' },
+    plusMinus1Week: { de: '+/- 1 Woche', en: '+/- 1 Week', fr: '+/- 1 Semaine', it: '+/- 1 Settimana' },
+    hours12: { de: '1-2 Stunden', en: '1-2 Hours', fr: '1-2 Heures', it: '1-2 Ore' },
+    hours23: { de: '2-3 Stunden', en: '2-3 Hours', fr: '2-3 Heures', it: '2-3 Ore' },
+    hours35: { de: '3-5 Stunden', en: '3-5 Hours', fr: '3-5 Heures', it: '3-5 Ore' },
+    little: { de: 'Wenig', en: 'Little', fr: 'Peu', it: 'Poco' },
+    lots: { de: 'Viel', en: 'A Lot', fr: 'Beaucoup', it: 'Molto' },
+    dontKnow: { de: 'Weiss nicht', en: "Don't know", fr: 'Ne sais pas', it: 'Non so' },
+    eviction: { de: 'Zwangsräumung', en: 'Eviction', fr: 'Expulsion', it: 'Sfratto' },
+    caretaker: { de: 'Hauswart', en: 'Caretaker', fr: 'Concierge', it: 'Custode' },
+    propertyManagement: { de: 'Liegenschaftsverwaltung', en: 'Property Management', fr: 'Gestion immobilière', it: 'Gestione immobiliare' },
+    residentialComplex: { de: 'Wohnanlage', en: 'Residential Complex', fr: 'Complexe résidentiel', it: 'Complesso residenziale' },
+    commercialProperty: { de: 'Gewerbeimmobilie', en: 'Commercial Property', fr: 'Immeuble commercial', it: 'Immobile commerciale' },
+    multiFamily: { de: 'Mehrfamilienhaus', en: 'Multi-family House', fr: 'Immeuble collectif', it: 'Casa plurifamiliare' },
+    industrialProperty: { de: 'Industrieobjekt', en: 'Industrial Property', fr: 'Propriété industrielle', it: 'Immobile industriale' },
+    specialProperty: { de: 'Spezialobjekt', en: 'Special Property', fr: 'Propriété spéciale', it: 'Immobile speciale' },
+    sharedRoom: { de: 'WG-Zimmer', en: 'Shared Room', fr: 'Chambre partagée', it: 'Stanza condivisa' },
+    newApartmentOnly: { de: 'Nur neue Wohnung', en: 'New Apartment Only', fr: 'Nouvel appartement uniquement', it: 'Solo nuovo appartamento' },
+    oldApartmentOnly: { de: 'Nur alte Wohnung', en: 'Old Apartment Only', fr: 'Ancien appartement uniquement', it: 'Solo vecchio appartamento' },
+    constructionSite: { de: 'Baustelle', en: 'Construction Site', fr: 'Chantier', it: 'Cantiere' },
+    medicalPractice: { de: 'Arztpraxis', en: 'Medical Practice', fr: 'Cabinet médical', it: 'Studio medico' },
+    practiceClinic: { de: 'Praxis / Klinik', en: 'Practice / Clinic', fr: 'Cabinet / Clinique', it: 'Studio / Clinica' },
+    pharmacy: { de: 'Apotheke', en: 'Pharmacy', fr: 'Pharmacie', it: 'Farmacia' },
+    pharmacyMedical: { de: 'Apotheke / Medizinalbereich', en: 'Pharmacy / Medical', fr: 'Pharmacie / Médical', it: 'Farmacia / Medico' },
+    shopRetail: { de: 'Laden / Detailhandel', en: 'Shop / Retail', fr: 'Magasin / Vente au détail', it: 'Negozio / Dettaglio' },
+    restaurant: { de: 'Restaurant / Gastro', en: 'Restaurant / Catering', fr: 'Restaurant / Gastronomie', it: 'Ristorante / Ristorazione' },
+    terrace: { de: 'Terrasse', en: 'Terrace', fr: 'Terrasse', it: 'Terrazza' },
     fixed: { de: 'Fix', en: 'Fixed', fr: 'Fixe', it: 'Fisso' },
     other: { de: 'Andere', en: 'Other', fr: 'Autre', it: 'Altro' },
     inPerson: { de: 'Persönlich', en: 'In Person', fr: 'En Personne', it: 'Di Persona' },
@@ -975,8 +1098,8 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
   };
   
   const formatVal = (rawVal: any): string => {
-    if (rawVal === true) return locale === 'de' ? 'Ja' : (locale === 'fr' ? 'Oui' : 'Yes');
-    if (rawVal === false) return locale === 'de' ? 'Nein' : (locale === 'fr' ? 'Non' : 'No');
+    if (rawVal === true) return locale === 'de' ? 'Ja' : (locale === 'fr' ? 'Oui' : (locale === 'it' ? 'Sì' : 'Yes'));
+    if (rawVal === false) return locale === 'de' ? 'Nein' : (locale === 'fr' ? 'Non' : (locale === 'it' ? 'No' : 'No'));
     if (rawVal === '' || rawVal === null || rawVal === undefined) return '';
     
     let parsedVal = rawVal;
@@ -1017,7 +1140,7 @@ export function generateQuoteHtml(quote: QuoteResult, customer: any, documentTyp
       return true;
     })
     .map(([key, val]) => {
-       const lblObj = translatedLabels[key];
+       const lblObj = translatedLabels[key] || (typeof key === 'string' ? (translatedLabels[key.toLowerCase()] || translatedLabels[key.trim()]) : undefined);
        const formattedKey = lblObj ? (lblObj[locale] || lblObj.en) : key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()).replace(/([A-Z]+)/g, str => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase());
        const formattedVal = formatVal(val);
        return `<div class="scope-item" style="display: flex; align-items: center; margin-bottom: 2px;"><svg style="width: 14px; height: 14px; fill: #003366; flex-shrink: 0; margin-right: 6px;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> <span><strong>${formattedKey}:</strong> <span style="color: #333;">${formattedVal}</span></span></div>`;
