@@ -64,11 +64,9 @@ export default function FacilityPricingOnly({ locale, formService = 'facility-se
   const r = PRICING_RULES.facilityService;
 
   const monthlyRows = [
-    { label: isEn ? 'Up to 200 m²' : isFr ? 'Jusqu’à 200 m²' : isIt ? 'Fino a 200 m²' : 'Bis 200 m²', price: `CHF ${r.monthly['200']}.– ${t.perMonth}` },
-    { label: isEn ? '201 to 500 m²' : isFr ? 'De 201 à 500 m²' : isIt ? 'Da 201 a 500 m²' : '201 – 500 m²', price: `CHF ${r.monthly['500']}.– ${t.perMonth}` },
-    { label: isEn ? '501 to 1’000 m²' : isFr ? 'De 501 à 1’000 m²' : isIt ? 'Da 501 a 1’000 m²' : '501 – 1’000 m²', price: `CHF ${r.monthly['1000']}.– ${t.perMonth}` },
-    { label: isEn ? '1’001 to 2’000 m²' : isFr ? 'De 1’001 à 2’000 m²' : isIt ? 'Da 1’001 a 2’000 m²' : '1’001 – 2’000 m²', price: `CHF ${r.monthly['2000']}.– ${t.perMonth}` },
-    { label: isEn ? 'Over 2’000 m² / Commercial Parks' : isFr ? 'Plus de 2’000 m² / Parcs d’activités' : isIt ? 'Oltre 2’000 m² / Complessi' : 'Über 2’000 m² / Gewerbeparks', price: t.uponRequest }
+    { label: isEn ? 'Small property (up to 200 m²)' : isFr ? 'Petite résidence (jusqu’à 200 m²)' : isIt ? 'Piccolo immobile (fino a 200 m²)' : 'Kleine Liegenschaft (bis 200 m²)', price: `CHF ${r.monthly['200']}.– ${t.perMonth}` },
+    { label: isEn ? 'Medium property (201 to 500 m²)' : isFr ? 'Moyenne résidence (201 à 500 m²)' : isIt ? 'Medio immobile (201 a 500 m²)' : 'Mittlere Liegenschaft (201 – 500 m²)', price: `CHF ${r.monthly['500']}.– ${t.perMonth}` },
+    { label: isEn ? 'Larger property / Commercial Portfolios' : isFr ? 'Grande résidence / Parcs immobiliers' : isIt ? 'Grandi stabili / Complessi' : 'Grössere Liegenschaft / Portfolios', price: t.uponRequest }
   ];
 
   const oneTimeRows = [

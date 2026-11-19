@@ -524,7 +524,7 @@
       "apartmentCleaning": "CHF 45–65 / heure / personne",
       "stairwellCleaning": "forfait dès CHF 120",
       "officeCleaning": "CHF 0.80–1.50 / m²",
-      "finalCleaning": "dès CHF 600 (Studio / 1 pièce)",
+      "finalCleaning": "dès CHF 450 (Studio / 1 pièce)",
       "windowCleaning": "CHF 8–15 / fenêtre",
       "relocation": "dès CHF 160 / heure",
       "disposal": "dès CHF 30 / m³",
@@ -5617,9 +5617,9 @@
       "standard": {
         "title": "Nettoyage de fin de bail",
         "description": "Nettoyage de fin de bail avec garantie de remise à (y compris re-nettoyage gratuit)",
-        "price": "dès CHF 600",
+        "price": "dès CHF 450",
         "features": [
-          "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce",
+          "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce",
           "Maisons: à partir de CHF 900",
           "Suppléments disponibles",
           "Garantie d'acceptation"
@@ -6047,23 +6047,23 @@
       "internalLinks": [
         {
           "label": "Nettoyage final à Bienne – avec garantie de réception",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Entreprise de nettoyage Bienne – nettoyage régulier",
-          "href": "nettoyage-bienne"
+          "href": "reinigung-biel-bienne"
         },
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "entreprise de déménagement-bienne"
+          "href": "umzugsfirma-biel-bienne"
         },
         {
           "label": "Entreprise de transport Bienne",
-          "href": "entreprise de transport-bienne"
+          "href": "transportfirma-biel-bienne"
         },
         {
           "label": "Élimination et dédouanement",
-          "href": "élimination-bienne"
+          "href": "entsorgung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Demandez dès maintenant un devis de déménagement – gratuitement et sans engagement",
@@ -6135,7 +6135,7 @@
       "h1": "Entreprise de nettoyage final Bienne/Bienne – nettoyage final, nettoyage d'appartements & nettoyage à Bienne/Bienne",
       "heroSubtitle": "Nettoyage professionnel de fin de bail avec garantie de remise à Bienne pour un état des lieux serein.",
       "ctaSoft": "Demandez un devis gratuit maintenant",
-      "intro": "Changer d'appartement à Bienne implique de nombreuses tâches, la plus ardue étant généralement le nettoyage final. SwissCleanMove est votre partenaire fiable pour un nettoyage final professionnel avec une garantie d'acceptation. Nous veillons à ce que votre ancien appartement à Bienne ou dans ses environs soit impeccablement propre et que la direction immobilière accepte l'inspection sans hésitation. En cas de réclamation lors de la remise de l'appartement, nous serons là personnellement et apporterons des améliorations immédiatement et gratuitement - notre nettoyage de fin de bail avec garantie de remise vous assure une remise de logement propre et sereine. Grâce à notre expérience acquise lors de nombreux nettoyages finaux dans tout le Seeland, à des prix forfaitaires équitables (nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce) et à des délais de réponse courts (disponibles dans les 24 heures), nous vous éliminons complètement de ce facteur de stress. Pour nous, un nettoyage d'appartement typique prend entre 4 et 8 heures, selon la taille et le degré de saleté. Faites confiance à notre savoir-faire au bord du lac de Bienne et consacrez-vous entièrement à l'aménagement de votre nouveau logement.",
+      "intro": "Changer d'appartement à Bienne implique de nombreuses tâches, la plus ardue étant généralement le nettoyage final. SwissCleanMove est votre partenaire fiable pour un nettoyage final professionnel avec une garantie d'acceptation. Nous veillons à ce que votre ancien appartement à Bienne ou dans ses environs soit impeccablement propre et que la direction immobilière accepte l'inspection sans hésitation. En cas de réclamation lors de la remise de l'appartement, nous serons là personnellement et apporterons des améliorations immédiatement et gratuitement - notre nettoyage de fin de bail avec garantie de remise vous assure une remise de logement propre et sereine. Grâce à notre expérience acquise lors de nombreux nettoyages finaux dans tout le Seeland, à des prix forfaitaires équitables (nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce) et à des délais de réponse courts (disponibles dans les 24 heures), nous vous éliminons complètement de ce facteur de stress. Pour nous, un nettoyage d'appartement typique prend entre 4 et 8 heures, selon la taille et le degré de saleté. Faites confiance à notre savoir-faire au bord du lac de Bienne et consacrez-vous entièrement à l'aménagement de votre nouveau logement.",
       "sections": [
         {
           "heading": "Le meilleur choix pour votre nettoyage de déménagement à Bienne",
@@ -6197,19 +6197,19 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne – déménagement professionnel",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Entreprise de nettoyage Bienne – nettoyage continu",
-          "href": "nettoyage-bienne"
+          "href": "reinigung-biel-bienne"
         },
         {
           "label": "Nettoyage final Nidau",
-          "href": "nettoyage final-nidau"
+          "href": "endreinigung-nidau"
         },
         {
           "label": "Nettoyage déménagement Lyss",
-          "href": "nettoyage final"
+          "href": "endreinigung-lyss"
         }
       ],
       "ctaStrongHeading": "Nettoyage final avec garantie de réception – demandez un devis maintenant",
@@ -6255,7 +6255,7 @@
         },
         {
           "question": "Combien coûte un nettoyage final à Bienne?",
-          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
+          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
         },
         {
           "question": "Que faire contre les moisissures tenaces dans la salle de bain ?",
@@ -6351,27 +6351,27 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne – déménagement professionnel",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Nettoyage final Bienne – avec garantie de réception",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Nettoyage d'entretien",
-          "href": "nettoyage d'entretien-Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Nettoyage des vitres",
-          "href": "lavage de vitres-bienne"
+          "href": "fensterreinigung-biel-bienne"
         },
         {
           "label": "Nettoyage de chantier",
-          "href": "nettoyage de chantier-bienne"
+          "href": "baureinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Salles blanches – sans effort pour vous",
@@ -6561,15 +6561,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne – votre partenaire dans le Seeland",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Nettoyage final Nidau – avec garantie de réception",
-          "href": "nettoyage final-nidau"
+          "href": "endreinigung-nidau"
         },
         {
           "label": "Entreprise de déménagement Brugg",
-          "href": "déménagement-bruegg"
+          "href": "umzug-bruegg"
         }
       ],
       "ctaStrongHeading": "Demandez maintenant un devis de déménagement pour Nidau",
@@ -6755,15 +6755,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne – siège social à Seeland",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Nettoyage final Lyss – nettoyage de déménagement avec garantie",
-          "href": "nettoyage final"
+          "href": "endreinigung-lyss"
         },
         {
           "label": "Entreprise de déménagement Aarberg",
-          "href": "déménagement-aarberg"
+          "href": "umzug-aarberg"
         }
       ],
       "ctaStrongHeading": "Renseignez-vous aujourd'hui – terminé demain",
@@ -6949,15 +6949,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne – site principal",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Nettoyage final Brügg – rendu propre",
-          "href": "nettoyage final-bruegg"
+          "href": "endreinigung-bruegg"
         },
         {
           "label": "Service de déménagement Nidau",
-          "href": "déplacer-nidau"
+          "href": "umzug-nidau"
         }
       ],
       "ctaStrongHeading": "Appelez-nous ou écrivez-nous",
@@ -7143,15 +7143,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne – votre partenaire dans le Seeland",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Nettoyage final Ipsach",
-          "href": "nettoyage final-ipsach"
+          "href": "endreinigung-ipsach"
         },
         {
           "label": "Aide au déménagement Pieterlen",
-          "href": "déménager Pieterlen"
+          "href": "umzug-pieterlen"
         }
       ],
       "ctaStrongHeading": "Nous sommes là pour vous – renseignez-vous maintenant",
@@ -7337,15 +7337,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne – Seeland centrale",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Nettoyage final Aarberg",
-          "href": "nettoyage final-aarberg"
+          "href": "endreinigung-aarberg"
         },
         {
           "label": "Lyss aux commandes",
-          "href": "déplacer-lyss"
+          "href": "umzug-lyss"
         }
       ],
       "ctaStrongHeading": "Commencez maintenant – gratuitement et sans engagement",
@@ -7531,15 +7531,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne – site principal",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Nettoyage final Pieterlen",
-          "href": "nettoyage final pieterlen"
+          "href": "endreinigung-pieterlen"
         },
         {
           "label": "Entreprise de déménagement Ipsach",
-          "href": "déménagement-ipsach"
+          "href": "umzug-ipsach"
         }
       ],
       "ctaStrongHeading": "Faites confiance à notre expérience – renseignez-vous maintenant",
@@ -7651,7 +7651,7 @@
       "h1": "Entreprise de nettoyage final Nidau – nettoyage final, nettoyage d'appartements & nettoyage à Nidau",
       "heroSubtitle": "Nettoyage garanti : nous nettoyons votre appartement à Nidau ​​​​de manière si minutieuse que l'inspection se déroule sans problème.",
       "ctaSoft": "Sécurisez votre offre en 2 minutes",
-      "intro": "Bienvenue chez SwissCleanMove. Vous êtes sur le point de quitter votre appartement à Nidau ​​​​et vous vous inquiétez du nettoyage final ? SwissCleanMove vous libère complètement de ce fardeau. Nous sommes votre spécialiste régional pour des nettoyages finaux approfondis avec une garantie de réception à 100 % à Nidau ​​​​et ses environs. Lors de la remise de l'appartement, les gestionnaires immobiliers examinent de très près : les dépôts de calcaire ou les cadres de fenêtres sales peuvent rapidement entraîner des problèmes. Avec nous, vous êtes en sécurité : Avec notre garantie de remise, vous êtes en sécurité : notre équipe nettoie soigneusement votre appartement et se tient prête sur place pour toute retouche gratuite. Si un détail est problématique, notre personnel le nettoiera immédiatement et gratuitement. Notre nettoyage de fin de bail avec garantie de remise vous assure une remise sereine. Nous vous proposons des prix transparents – nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce, en fonction de la taille de l'appartement. Un nettoyage typique d’un appartement nous prend entre 4 et 8 heures. Grâce à notre proximité avec Nidau, vous bénéficiez de courtes distances, d'aucun frais de déplacement caché et, si besoin, même d'une disponibilité sous 24h. Faites confiance aux normes suisses et à une équipe expérimentée de Seeland. Bienvenue aux experts de SwissCleanMove. Nous sommes fiers d'offrir à nos clients de cette région des services au plus haut niveau suisse. Notre philosophie d'entreprise repose sur une réelle proximité avec le client, des prix clairs sans frais cachés et une fiabilité à 100 % à chaque utilisation. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
+      "intro": "Bienvenue chez SwissCleanMove. Vous êtes sur le point de quitter votre appartement à Nidau ​​​​et vous vous inquiétez du nettoyage final ? SwissCleanMove vous libère complètement de ce fardeau. Nous sommes votre spécialiste régional pour des nettoyages finaux approfondis avec une garantie de réception à 100 % à Nidau ​​​​et ses environs. Lors de la remise de l'appartement, les gestionnaires immobiliers examinent de très près : les dépôts de calcaire ou les cadres de fenêtres sales peuvent rapidement entraîner des problèmes. Avec nous, vous êtes en sécurité : Avec notre garantie de remise, vous êtes en sécurité : notre équipe nettoie soigneusement votre appartement et se tient prête sur place pour toute retouche gratuite. Si un détail est problématique, notre personnel le nettoiera immédiatement et gratuitement. Notre nettoyage de fin de bail avec garantie de remise vous assure une remise sereine. Nous vous proposons des prix transparents – nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce, en fonction de la taille de l'appartement. Un nettoyage typique d’un appartement nous prend entre 4 et 8 heures. Grâce à notre proximité avec Nidau, vous bénéficiez de courtes distances, d'aucun frais de déplacement caché et, si besoin, même d'une disponibilité sous 24h. Faites confiance aux normes suisses et à une équipe expérimentée de Seeland. Bienvenue aux experts de SwissCleanMove. Nous sommes fiers d'offrir à nos clients de cette région des services au plus haut niveau suisse. Notre philosophie d'entreprise repose sur une réelle proximité avec le client, des prix clairs sans frais cachés et une fiabilité à 100 % à chaque utilisation. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
       "sections": [
         {
           "heading": "Pourquoi choisir SwissCleanMove à Nidau ​​?",
@@ -7725,15 +7725,15 @@
       "internalLinks": [
         {
           "label": "Service de déménagement Nidau – déménagez professionnellement",
-          "href": "déplacer-nidau"
+          "href": "umzug-nidau"
         },
         {
           "label": "Nettoyage final Bienne – site principal",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Entreprise de nettoyage Nidau – nettoyage d’entretien",
-          "href": "nettoyage-nidau"
+          "href": "reinigung-nidau"
         }
       ],
       "ctaStrongHeading": "Demandez maintenant le nettoyage final pour Nidau",
@@ -7759,7 +7759,7 @@
         },
         {
           "question": "Quels frais devrai-je payer pour le nettoyage final à Nidau?",
-          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
+          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
         },
         {
           "question": "Combien de temps à l’avance dois-je réserver le ménage final ?",
@@ -7845,7 +7845,7 @@
       "h1": "Entreprise de nettoyage final Lyss – nettoyage final, nettoyage d'appartement & nettoyage à Lyss",
       "heroSubtitle": "Remise d'appartement sans stress à Lyss : Nettoyage de fin de bail professionnel avec garantie de remise et retouche gratuite.",
       "ctaSoft": "Réponse rapide dans les 24 heures",
-      "intro": "Bienvenue chez SwissCleanMove. Le déménagement est fait, mais l'ancien appartement de Lyss attend toujours le redoutable nettoyage final ? Économisez du temps, de la saleté et des nerfs – confiez cette tâche exigeante aux professionnels de SwissCleanMove. Nous sommes votre expert local pour le nettoyage d'appartements avec une garantie d'acceptation à Lyss et dans la Seeland environnante. Les sociétés de gestion immobilière suisses sont extrêmement strictes en matière de remise. Une tache de calcaire négligée dans la salle de bains ou des feuillures de fenêtres sales peuvent entraîner un refus d'acceptation et un blocage de la caution. Avec nous, vous ne prenez aucun risque : nous nettoyons soigneusement votre appartement et nous tenons prêts sur place lors de l'état des lieux pour toute retouche gratuite. En cas de réclamation, notre équipe de nettoyage apportera immédiatement et gratuitement des améliorations sur place. Nous vous proposons des prix forfaitaires transparents – nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce. Le nettoyage prend généralement 4 à 8 heures. Faites confiance à une équipe régionale établie en Seeland, également disponible pour des missions de courte durée (dans les 24 heures) à Lyss. Bienvenue chez SwissCleanMove. Si vous recherchez la plus haute nettoyage professionnel, une fiabilité absolue et des prix transparents dans cette région, alors vous êtes au bon endroit. Nous comprenons que les services de nettoyage, de déménagement et de gestion des installations sont une question de confiance. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
+      "intro": "Bienvenue chez SwissCleanMove. Le déménagement est fait, mais l'ancien appartement de Lyss attend toujours le redoutable nettoyage final ? Économisez du temps, de la saleté et des nerfs – confiez cette tâche exigeante aux professionnels de SwissCleanMove. Nous sommes votre expert local pour le nettoyage d'appartements avec une garantie d'acceptation à Lyss et dans la Seeland environnante. Les sociétés de gestion immobilière suisses sont extrêmement strictes en matière de remise. Une tache de calcaire négligée dans la salle de bains ou des feuillures de fenêtres sales peuvent entraîner un refus d'acceptation et un blocage de la caution. Avec nous, vous ne prenez aucun risque : nous nettoyons soigneusement votre appartement et nous tenons prêts sur place lors de l'état des lieux pour toute retouche gratuite. En cas de réclamation, notre équipe de nettoyage apportera immédiatement et gratuitement des améliorations sur place. Nous vous proposons des prix forfaitaires transparents – nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce. Le nettoyage prend généralement 4 à 8 heures. Faites confiance à une équipe régionale établie en Seeland, également disponible pour des missions de courte durée (dans les 24 heures) à Lyss. Bienvenue chez SwissCleanMove. Si vous recherchez la plus haute nettoyage professionnel, une fiabilité absolue et des prix transparents dans cette région, alors vous êtes au bon endroit. Nous comprenons que les services de nettoyage, de déménagement et de gestion des installations sont une question de confiance. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
       "sections": [
         {
           "heading": "Votre partenaire de nettoyage pour une remise sans souci à Lyss",
@@ -7915,15 +7915,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Lyss – votre partenaire de déménagement",
-          "href": "déplacer-lyss"
+          "href": "umzug-lyss"
         },
         {
           "label": "Entreprise de nettoyage Lyss – nettoyage régulier",
-          "href": "nettoyage-lyss"
+          "href": "reinigung-lyss"
         },
         {
           "label": "Nettoyage final Bienne – Seeland centrale",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Renseignez-vous aujourd’hui – soumettez de manière détendue",
@@ -7941,7 +7941,7 @@
         },
         {
           "question": "Combien coûte le nettoyage final à Lyss?",
-          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
+          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
         },
         {
           "question": "Les fenêtres et les balcons sont-ils inclus dans le prix du nettoyage final ?",
@@ -8035,7 +8035,7 @@
       "h1": "Entreprise de nettoyage final Brügg – nettoyage final, nettoyage d'appartements & nettoyage à Brügg",
       "heroSubtitle": "Votre appartement en location à Brügg nettoyé de fond en comble pour une remise de bail soignée et sereine.",
       "ctaSoft": "Renseignez-vous sans engagement",
-      "intro": "Bienvenue chez SwissCleanMove. Déménager est déjà assez stressant - confiez le nettoyage angoissant de votre appartement aux professionnels de SwissCleanMove. Nous sommes votre spécialiste régional du nettoyage final avec une garantie d'acceptation à Brügg et dans toute la Seeland. Les exigences de la gestion immobilière suisse lors de la remise d'appartements sont extrêmement élevées. Une tache négligée dans le four ou des joints de douche calcifiés peuvent rapidement entraîner le blocage de votre dépôt. Avec notre garantie d'acceptation, vous êtes du bon côté : nous nettoyons soigneusement votre propriété et vous accompagnons pour une remise de bail en toute sérénité. Si l'administration constate un petit défaut, nous le nettoierons immédiatement et gratuitement sur place. Nous vous offrons une sécurité absolue des coûts grâce à une transparence totale des coûts : nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce. Il n'y a pas de salaire horaire ni de frais de déplacement cachés. Notre équipe expérimentée peut rendre un appartement typique d’une propreté éclatante en 4 à 8 heures. Grâce à notre forte présence locale à Brügg, nous pouvons également intervenir à bref délai (souvent dans les 24 heures) en cas d'urgence. Bienvenue chez SwissCleanMove – votre partenaire premium local. Nous vous proposons des services selon les normes suisses les plus strictes. Pour nous, la transparence, la ponctualité et le plus grand soin sont notre priorité absolue. Faites confiance à notre équipe compétente et employée en permanence pour une transaction fluide. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
+      "intro": "Bienvenue chez SwissCleanMove. Déménager est déjà assez stressant - confiez le nettoyage angoissant de votre appartement aux professionnels de SwissCleanMove. Nous sommes votre spécialiste régional du nettoyage final avec une garantie d'acceptation à Brügg et dans toute la Seeland. Les exigences de la gestion immobilière suisse lors de la remise d'appartements sont extrêmement élevées. Une tache négligée dans le four ou des joints de douche calcifiés peuvent rapidement entraîner le blocage de votre dépôt. Avec notre garantie d'acceptation, vous êtes du bon côté : nous nettoyons soigneusement votre propriété et vous accompagnons pour une remise de bail en toute sérénité. Si l'administration constate un petit défaut, nous le nettoierons immédiatement et gratuitement sur place. Nous vous offrons une sécurité absolue des coûts grâce à une transparence totale des coûts : nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce. Il n'y a pas de salaire horaire ni de frais de déplacement cachés. Notre équipe expérimentée peut rendre un appartement typique d’une propreté éclatante en 4 à 8 heures. Grâce à notre forte présence locale à Brügg, nous pouvons également intervenir à bref délai (souvent dans les 24 heures) en cas d'urgence. Bienvenue chez SwissCleanMove – votre partenaire premium local. Nous vous proposons des services selon les normes suisses les plus strictes. Pour nous, la transparence, la ponctualité et le plus grand soin sont notre priorité absolue. Faites confiance à notre équipe compétente et employée en permanence pour une transaction fluide. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
       "sections": [
         {
           "heading": "Des solutions de nettoyage pour un déménagement en douceur à Brügg",
@@ -8090,7 +8090,7 @@
       "serviceBullets": [
         "Acceptation de l'appartement garantie par écrit",
         "Nettoyage de suivi gratuit en cas de défauts",
-        "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce",
+        "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce",
         "Tous les produits et équipements de nettoyage inclus",
         "Ancré localement et disponible à Brügg dans de brefs délais",
         "Si vous le souhaitez, soyez présent à la remise"
@@ -8109,15 +8109,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Brügg – déménager professionnellement",
-          "href": "déménagement-bruegg"
+          "href": "umzug-bruegg"
         },
         {
           "label": "Service de nettoyage Brügg – nettoyage continu",
-          "href": "nettoyage-bruegg"
+          "href": "reinigung-bruegg"
         },
         {
           "label": "Nettoyage final Bienne",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Réservez maintenant votre nettoyage final à Brügg",
@@ -8135,7 +8135,7 @@
         },
         {
           "question": "Combien coûte un nettoyage final à Brügg?",
-          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
+          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
         },
         {
           "question": "Dois-je fournir mes propres produits de nettoyage ?",
@@ -8229,7 +8229,7 @@
       "h1": "Entreprise de nettoyage final Ipsach – nettoyage final, nettoyage d'appartement & nettoyage à Ipsach",
       "heroSubtitle": "Votre appartement à Ipsach au bord du lac de Bienne – parfaitement nettoyé et prêt à être remis.",
       "ctaSoft": "Demandez un devis gratuit maintenant",
-      "intro": "Bienvenue chez SwissCleanMove. Les cartons sont emballés, la nouvelle maison attend - mais l'ancien appartement d'Ipsach doit encore être remis en état. Confiez cette tâche exigeante et chronophage aux professionnels de SwissCleanMove. Nous sommes votre entreprise de nettoyage régionale pour des nettoyages finaux professionnels avec une garantie d'acceptation à Seeland. Les sociétés de gestion immobilière suisses vérifient chaque détail lors de la remise d'un appartement, depuis les embrasures des fenêtres jusqu'aux résidus de calcaire dans la douche. Avec notre garantie de réception, nous vous garantissons une remise en douceur : Si, contrairement aux attentes, l'administration découvre un défaut, nous le nettoierons immédiatement sur place et entièrement gratuitement jusqu'à la signature du protocole. Notre nettoyage de fin de bail avec garantie de remise vous assure une remise de logement propre et sereine. Nous vous proposons des prix fixes transparents – nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce, sans suppléments cachés ni frais de déplacement élevés. Nos équipes expérimentées nettoient généralement en profondeur votre appartement à Ipsach dans un délai de 4 à 8 heures et sont également disponibles pour vous dans les 24 heures en cas d'urgence. Salutations de SwissCleanMove ! En tant qu'expert local, nous savons exactement ce qui est important. Nous évitons délibérément de faire appel à des sous-traitants et comptons plutôt sur notre propre personnel spécialisé, parfaitement formé. Profitez d’une transparence absolue des coûts et d’une qualité premium suisse. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
+      "intro": "Bienvenue chez SwissCleanMove. Les cartons sont emballés, la nouvelle maison attend - mais l'ancien appartement d'Ipsach doit encore être remis en état. Confiez cette tâche exigeante et chronophage aux professionnels de SwissCleanMove. Nous sommes votre entreprise de nettoyage régionale pour des nettoyages finaux professionnels avec une garantie d'acceptation à Seeland. Les sociétés de gestion immobilière suisses vérifient chaque détail lors de la remise d'un appartement, depuis les embrasures des fenêtres jusqu'aux résidus de calcaire dans la douche. Avec notre garantie de réception, nous vous garantissons une remise en douceur : Si, contrairement aux attentes, l'administration découvre un défaut, nous le nettoierons immédiatement sur place et entièrement gratuitement jusqu'à la signature du protocole. Notre nettoyage de fin de bail avec garantie de remise vous assure une remise de logement propre et sereine. Nous vous proposons des prix fixes transparents – nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce, sans suppléments cachés ni frais de déplacement élevés. Nos équipes expérimentées nettoient généralement en profondeur votre appartement à Ipsach dans un délai de 4 à 8 heures et sont également disponibles pour vous dans les 24 heures en cas d'urgence. Salutations de SwissCleanMove ! En tant qu'expert local, nous savons exactement ce qui est important. Nous évitons délibérément de faire appel à des sous-traitants et comptons plutôt sur notre propre personnel spécialisé, parfaitement formé. Profitez d’une transparence absolue des coûts et d’une qualité premium suisse. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
       "sections": [
         {
           "heading": "La remise de votre appartement sans souci à Ipsach",
@@ -8280,7 +8280,7 @@
       "serviceBullets": [
         "garantie d'acceptation garantie par écrit",
         "Réparation gratuite des défauts à la livraison",
-        "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce",
+        "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce",
         "Des produits de nettoyage efficaces et respectueux de l’environnement",
         "Tout l'équipement (aspirateur, etc.) inclus",
         "Trajets courts et très flexibles"
@@ -8299,15 +8299,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Ipsach – nous déménageons pour vous",
-          "href": "déménagement-ipsach"
+          "href": "umzug-ipsach"
         },
         {
           "label": "Nettoyage Ipsach – nettoyage d’entretien",
-          "href": "nettoyage-ipsach"
+          "href": "reinigung-ipsach"
         },
         {
           "label": "Nettoyage final Bienne",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Demander un rendez-vous pour Ipsach maintenant",
@@ -8325,7 +8325,7 @@
         },
         {
           "question": "Combien coûte le nettoyage final à Ipsach?",
-          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
+          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
         },
         {
           "question": "L'appartement doit-il être complètement vide pour le nettoyage final ?",
@@ -8419,7 +8419,7 @@
       "h1": "Entreprise de nettoyage final Aarberg – nettoyage final, nettoyage d'appartements & nettoyage à Aarberg",
       "heroSubtitle": "Nettoyage final professionnel à Aarberg : Nous nettoyons, vous remettez en toute tranquillité.",
       "ctaSoft": "Sécurisez votre offre en 2 minutes",
-      "intro": "Bienvenue chez SwissCleanMove. Déménager est généralement associé à beaucoup de joie dans votre nouveau logement, mais aussi au stress de la remise de l'appartement. Le nettoyage final de l'ancien appartement à Aarberg est souvent la dernière et la plus fastidieuse étape. SwissCleanMove vous libère complètement de ce fardeau. En tant qu'entreprise de nettoyage régionale au Seeland, nous sommes spécialisés dans le nettoyage professionnel de déménagement avec une garantie d'acceptation. Nous savons exactement à quel point les sociétés de gestion immobilière d'Aarberg et de ses environs contrôlent strictement. Une petite tache de calcaire sur la paroi de la douche ou de la poussière sur les plinthes peuvent entraîner des problèmes lors de la restitution de la caution. Avec notre garantie d'acceptation, vous êtes du bon côté : notre équipe nettoie soigneusement votre appartement et se tient disponible sur place pour toute retouche gratuite lors de la remise. Si le gestionnaire découvre un défaut, notre équipe le nettoiera immédiatement et gratuitement sur place. Nous vous offrons une transparence totale grâce à une transparence totale : nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce – sans frais cachés ni mauvaises surprises. Un nettoyage standard nous prend de 4 à 8 heures. Faites confiance à notre qualité et à notre ponctualité suisses. Votre partenaire fiable dans la région – SwissCleanMove. Que ce soit pour un usage privé ou commercial, nous établissons de nouvelles normes industrielles en termes de propreté et de transport. Grâce à nos nombreuses années d'expérience, nous vous garantissons une expérience absolument sans stress, de la première offre à l'acceptation finale. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
+      "intro": "Bienvenue chez SwissCleanMove. Déménager est généralement associé à beaucoup de joie dans votre nouveau logement, mais aussi au stress de la remise de l'appartement. Le nettoyage final de l'ancien appartement à Aarberg est souvent la dernière et la plus fastidieuse étape. SwissCleanMove vous libère complètement de ce fardeau. En tant qu'entreprise de nettoyage régionale au Seeland, nous sommes spécialisés dans le nettoyage professionnel de déménagement avec une garantie d'acceptation. Nous savons exactement à quel point les sociétés de gestion immobilière d'Aarberg et de ses environs contrôlent strictement. Une petite tache de calcaire sur la paroi de la douche ou de la poussière sur les plinthes peuvent entraîner des problèmes lors de la restitution de la caution. Avec notre garantie d'acceptation, vous êtes du bon côté : notre équipe nettoie soigneusement votre appartement et se tient disponible sur place pour toute retouche gratuite lors de la remise. Si le gestionnaire découvre un défaut, notre équipe le nettoiera immédiatement et gratuitement sur place. Nous vous offrons une transparence totale grâce à une transparence totale : nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce – sans frais cachés ni mauvaises surprises. Un nettoyage standard nous prend de 4 à 8 heures. Faites confiance à notre qualité et à notre ponctualité suisses. Votre partenaire fiable dans la région – SwissCleanMove. Que ce soit pour un usage privé ou commercial, nous établissons de nouvelles normes industrielles en termes de propreté et de transport. Grâce à nos nombreuses années d'expérience, nous vous garantissons une expérience absolument sans stress, de la première offre à l'acceptation finale. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
       "sections": [
         {
           "heading": "Pourquoi SwissCleanMove est le meilleur choix pour Aarberg",
@@ -8474,7 +8474,7 @@
       "serviceBullets": [
         "Garantie écrite d'acceptation à 100 %",
         "Nettoyage de suivi gratuit à la livraison",
-        "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce",
+        "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce",
         "Tous les matériaux et équipements de nettoyage inclus",
         "Produits chimiques de nettoyage doux et respectueux de l’environnement",
         "Proximité régionale et ponctualité élevée à Aarberg"
@@ -8493,15 +8493,15 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Aarberg",
-          "href": "déménagement-aarberg"
+          "href": "umzug-aarberg"
         },
         {
           "label": "Entreprise de nettoyage Aarberg – nettoyage continu",
-          "href": "nettoyage-aarberg"
+          "href": "reinigung-aarberg"
         },
         {
           "label": "Nettoyage déménagement Lyss",
-          "href": "nettoyage final"
+          "href": "endreinigung-lyss"
         }
       ],
       "ctaStrongHeading": "Nettoyage final sécurisé pour Aarberg maintenant",
@@ -8527,7 +8527,7 @@
         },
         {
           "question": "Quels frais devrai-je payer pour le nettoyage final à Aarberg?",
-          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
+          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
         },
         {
           "question": "Combien de temps à l’avance dois-je réserver le ménage final ?",
@@ -8613,7 +8613,7 @@
       "h1": "Entreprise de nettoyage final Pieterlen – nettoyage final, nettoyage d'appartements & nettoyage à Pieterlen",
       "heroSubtitle": "Nous nous chargeons du ménage d'emménagement à Pieterlen afin que vous puissiez vous asseoir et vous détendre.",
       "ctaSoft": "Réponse rapide dans les 24 heures",
-      "intro": "Bienvenue chez SwissCleanMove. Le déménagement est fait, mais l'ancien appartement de Pieterlen attend toujours le redoutable nettoyage final ? Économisez du temps, de la saleté et des nerfs – confiez cette tâche exigeante aux professionnels de SwissCleanMove. Nous sommes votre expert local pour le nettoyage d'appartements avec une garantie d'acceptation à Pieterlen et dans la Seeland environnante. Les sociétés de gestion immobilière suisses sont extrêmement strictes en matière de remise. Une tache de calcaire négligée dans la salle de bains ou des feuillures de fenêtres sales peuvent entraîner un refus d'acceptation et un blocage de la caution. Avec nous, vous ne prenez aucun risque : nous nettoyons soigneusement votre appartement et nous tenons prêts sur place lors de l'inspection pour toute retouche gratuite. En cas de réclamation, notre équipe de nettoyage apportera immédiatement et gratuitement des améliorations sur place. Nous vous proposons des prix forfaitaires transparents : nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce, sans frais cachés. Le nettoyage prend généralement 4 à 8 heures. Faites confiance à une équipe régionale établie en Seeland, également disponible pour des missions de courte durée à Pieterlen. Bienvenue aux experts de SwissCleanMove. Nous sommes fiers d'offrir à nos clients de cette région des services au plus haut niveau suisse. Notre philosophie d'entreprise repose sur une réelle proximité avec le client, des prix clairs sans frais cachés et une fiabilité à 100 % à chaque utilisation. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
+      "intro": "Bienvenue chez SwissCleanMove. Le déménagement est fait, mais l'ancien appartement de Pieterlen attend toujours le redoutable nettoyage final ? Économisez du temps, de la saleté et des nerfs – confiez cette tâche exigeante aux professionnels de SwissCleanMove. Nous sommes votre expert local pour le nettoyage d'appartements avec une garantie d'acceptation à Pieterlen et dans la Seeland environnante. Les sociétés de gestion immobilière suisses sont extrêmement strictes en matière de remise. Une tache de calcaire négligée dans la salle de bains ou des feuillures de fenêtres sales peuvent entraîner un refus d'acceptation et un blocage de la caution. Avec nous, vous ne prenez aucun risque : nous nettoyons soigneusement votre appartement et nous tenons prêts sur place lors de l'inspection pour toute retouche gratuite. En cas de réclamation, notre équipe de nettoyage apportera immédiatement et gratuitement des améliorations sur place. Nous vous proposons des prix forfaitaires transparents : nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce, sans frais cachés. Le nettoyage prend généralement 4 à 8 heures. Faites confiance à une équipe régionale établie en Seeland, également disponible pour des missions de courte durée à Pieterlen. Bienvenue aux experts de SwissCleanMove. Nous sommes fiers d'offrir à nos clients de cette région des services au plus haut niveau suisse. Notre philosophie d'entreprise repose sur une réelle proximité avec le client, des prix clairs sans frais cachés et une fiabilité à 100 % à chaque utilisation. Que ce soit pour des particuliers ou des entreprises, nous proposons des solutions sur mesure. Contactez-nous pour un devis gratuit.",
       "sections": [
         {
           "heading": "Votre partenaire de nettoyage pour une remise sans souci à Pieterlen",
@@ -8683,15 +8683,15 @@
       "internalLinks": [
         {
           "label": "Assistance déménagement Pieterlen – nous déménageons pour vous",
-          "href": "déménager Pieterlen"
+          "href": "umzug-pieterlen"
         },
         {
           "label": "Nettoyage de bâtiments Pieterlen – nettoyage d’entretien",
-          "href": "nettoyage pieterlène"
+          "href": "reinigung-pieterlen"
         },
         {
           "label": "Nettoyage final Bienne",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Prenez rendez-vous pour Pieterlen maintenant",
@@ -8709,7 +8709,7 @@
         },
         {
           "question": "Combien coûte le nettoyage final à Pieterlen?",
-          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 600 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
+          "answer": "Nettoyage de fin de bail avec garantie de remise dès CHF 450 pour studios et 1 pièce. Pour les logements plus grands, le tarif dépend de la surface, de l'état et des prestations souhaitées. Nous vous établissons volontiers un devis gratuit et sans engagement."
         },
         {
           "question": "Les fenêtres et les balcons sont-ils inclus dans le prix du nettoyage final ?",
@@ -8877,15 +8877,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final Nidau – avec garantie de réception",
-          "href": "nettoyage final-nidau"
+          "href": "endreinigung-nidau"
         },
         {
           "label": "Service de déménagement Nidau",
-          "href": "déplacer-nidau"
+          "href": "umzug-nidau"
         },
         {
           "label": "Entreprise de nettoyage Bienne – siège social",
-          "href": "nettoyage-bienne"
+          "href": "reinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Votre entreprise de nettoyage à Nidau – contactez-nous maintenant",
@@ -9071,15 +9071,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage déménagement Lyss",
-          "href": "nettoyage final"
+          "href": "endreinigung-lyss"
         },
         {
           "label": "Lyss aux commandes",
-          "href": "déplacer-lyss"
+          "href": "umzug-lyss"
         },
         {
           "label": "Entreprise de nettoyage Aarberg",
-          "href": "nettoyage-aarberg"
+          "href": "reinigung-aarberg"
         }
       ],
       "ctaStrongHeading": "Obtenez maintenant un devis de nettoyage pour Lyss",
@@ -9265,15 +9265,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final Brügg – avec garantie de réception",
-          "href": "nettoyage final-bruegg"
+          "href": "endreinigung-bruegg"
         },
         {
           "label": "Entreprise de déménagement Brugg",
-          "href": "déménagement-bruegg"
+          "href": "umzug-bruegg"
         },
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "nettoyage-bienne"
+          "href": "reinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Sécurisez votre service de ménage à Brügg",
@@ -9455,15 +9455,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final Ipsach – nettoyage de déménagement",
-          "href": "nettoyage final-ipsach"
+          "href": "endreinigung-ipsach"
         },
         {
           "label": "Entreprise de déménagement Ipsach",
-          "href": "déménagement-ipsach"
+          "href": "umzug-ipsach"
         },
         {
           "label": "Entreprise de nettoyage Lyss",
-          "href": "nettoyage-lyss"
+          "href": "reinigung-lyss"
         }
       ],
       "ctaStrongHeading": "Réservez dès maintenant un service de ménage à Ipsach",
@@ -9649,15 +9649,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage d'acceptation Aarberg",
-          "href": "nettoyage final-aarberg"
+          "href": "endreinigung-aarberg"
         },
         {
           "label": "Entreprise de déménagement Aarberg",
-          "href": "déménagement-aarberg"
+          "href": "umzug-aarberg"
         },
         {
           "label": "Service de nettoyage Brugg",
-          "href": "nettoyage-bruegg"
+          "href": "reinigung-bruegg"
         }
       ],
       "ctaStrongHeading": "Commencez maintenant – propre et équitable",
@@ -9843,15 +9843,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final Pieterlen – avec garantie",
-          "href": "nettoyage final pieterlen"
+          "href": "endreinigung-pieterlen"
         },
         {
           "label": "Aide au déménagement Pieterlen",
-          "href": "déménager Pieterlen"
+          "href": "umzug-pieterlen"
         },
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "nettoyage-bienne"
+          "href": "reinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Sécurisez notre service pour Pieterlen",
@@ -10036,15 +10036,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final avec garantie d'acceptation",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Toutes les régions en un coup d'œil",
-          "href": "régions"
+          "href": "regions"
         },
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Demandez un devis de déménagement – gratuitement",
@@ -10237,15 +10237,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final avec garantie d'acceptation",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Toutes les régions en un coup d'œil",
-          "href": "régions"
+          "href": "regions"
         },
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Demandez un devis de déménagement – gratuitement",
@@ -10438,15 +10438,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final avec garantie d'acceptation",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Toutes les régions en un coup d'œil",
-          "href": "régions"
+          "href": "regions"
         },
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Entreprise de nettoyage Soleure",
@@ -10643,15 +10643,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final avec garantie d'acceptation",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Toutes les régions en un coup d'œil",
-          "href": "régions"
+          "href": "regions"
         },
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Demandez un devis de déménagement – gratuitement",
@@ -10836,15 +10836,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final avec garantie d'acceptation",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Toutes les régions en un coup d'œil",
-          "href": "régions"
+          "href": "regions"
         },
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Demandez un devis de déménagement – gratuitement",
@@ -11029,15 +11029,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final avec garantie d'acceptation",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Toutes les régions en un coup d'œil",
-          "href": "régions"
+          "href": "regions"
         },
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Demandez un devis de déménagement – gratuitement",
@@ -11222,15 +11222,15 @@
       "internalLinks": [
         {
           "label": "Nettoyage final avec garantie d'acceptation",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Toutes les régions en un coup d'œil",
-          "href": "régions"
+          "href": "regions"
         },
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "déménager à Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Demandez un devis de déménagement – gratuitement",
@@ -11634,19 +11634,19 @@
       "internalLinks": [
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Nettoyage final Bienne – avec garantie de réception",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Entreprise de transport Bienne",
-          "href": "entreprise de transport-bienne"
+          "href": "transportfirma-biel-bienne"
         },
         {
           "label": "Elimination Bienne",
-          "href": "élimination-bienne"
+          "href": "entsorgung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Votre entreprise de déménagement à Bienne – demandez un devis maintenant",
@@ -11660,7 +11660,7 @@
       "faqs": [
         {
           "question": "Comment est calculé exactement le prix des déménagements sereins ?",
-          "answer": "Les tarifs de déménagement à Bienne sont calculés selon le nombre de pièces, le volume et la distance. Les forfaits débutent dès CHF 600.– pour un appartement 1 pièce, CHF 700.– pour 2 pièces et CHF 1'000.– pour 3 pièces. Vous recevez un devis clair et sans engagement."
+          "answer": "Les tarifs de déménagement à Bienne sont calculés selon le nombre de pièces, le volume et la distance. Les forfaits débutent dès CHF 450.– pour un appartement 1 pièce, CHF 700.– pour 2 pièces et CHF 1'000.– pour 3 pièces. Vous recevez un devis clair et sans engagement."
         },
         {
           "question": "Travaillez-vous avec votre propre matériel pour des déménagements sans stress ?",
@@ -11773,19 +11773,19 @@
       "internalLinks": [
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Lavage de vitres Bienne",
-          "href": "lavage de vitres-bienne"
+          "href": "fensterreinigung-biel-bienne"
         },
         {
           "label": "Facility Service Bienne",
-          "href": "installation-service-biene"
+          "href": "facility-service-biel-bienne"
         },
         {
           "label": "Entretien de la maison Bienne",
-          "href": "entretien de la maison-bienne"
+          "href": "hauswartung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Réservez le nettoyage d'entretien maintenant",
@@ -11912,19 +11912,19 @@
       "internalLinks": [
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Nettoyage d'entretien Bienne",
-          "href": "nettoyage d'entretien-Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Entretien de la maison Bienne",
-          "href": "entretien de la maison-bienne"
+          "href": "hauswartung-biel-bienne"
         },
         {
           "label": "Facility Service Bienne",
-          "href": "installation-service-biene"
+          "href": "facility-service-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Réservez dès maintenant le nettoyage des vitres – garanti sans traces",
@@ -12051,19 +12051,19 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "entreprise de déménagement-bienne"
+          "href": "umzugsfirma-biel-bienne"
         },
         {
           "label": "Elimination Bienne",
-          "href": "élimination-bienne"
+          "href": "entsorgung-biel-bienne"
         },
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Nettoyage final Bienne",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Votre entreprise de transport à Bienne – contactez-nous maintenant",
@@ -12077,7 +12077,7 @@
       "faqs": [
         {
           "question": "Comment est calculé le prix des services de transport et déménagement ?",
-          "answer": "Les tarifs de transport et déménagement à Bienne sont calculés selon le volume, la distance et l'équipe requise. Les forfaits débutent dès CHF 600.– pour un appartement 1 pièce ou selon des tarifs horaires clairs (aide supplémentaire dès CHF 60.–/h). Demandez une offre sans engagement."
+          "answer": "Les tarifs de transport et déménagement à Bienne sont calculés selon le volume, la distance et l'équipe requise. Les forfaits débutent dès CHF 450.– pour un appartement 1 pièce ou selon des tarifs horaires clairs (aide supplémentaire dès CHF 60.–/h). Demandez une offre sans engagement."
         },
         {
           "question": "Travaillez-vous avec votre propre équipement chez Safe Transport and Courier Services ?",
@@ -12190,19 +12190,19 @@
       "internalLinks": [
         {
           "label": "Entreprise de déménagement Bienne",
-          "href": "entreprise de déménagement-bienne"
+          "href": "umzugsfirma-biel-bienne"
         },
         {
           "label": "Entreprise de transport Bienne",
-          "href": "entreprise de transport-bienne"
+          "href": "transportfirma-biel-bienne"
         },
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Nettoyage de chantier Bienne",
-          "href": "nettoyage de chantier-bienne"
+          "href": "baureinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Réservez l'élimination maintenant - rapidement et professionnellement",
@@ -12216,7 +12216,7 @@
       "faqs": [
         {
           "question": "Comment est calculé exactement le prix du débarras et de l’élimination professionnelle ?",
-          "answer": "Les coûts pour le débarras et l’élimination à Bienne dépendent principalement du volume en mètres cubes (m³) et d’un éventuel démontage. Les petits débarras débutent dès CHF 150.– (1 m³), tandis que les volumes plus importants sont échelonnés (par ex. jusqu'à 5 m³ dès CHF 490.–). Vous recevez un devis clair et sans engagement."
+          "answer": "Les coûts pour le débarras et l’élimination à Bienne dépendent principalement du volume en mètres cubes (m³) et d’un éventuel démontage. Les petits débarras débutent dès CHF 180.– (1–2 m³), tandis que les volumes plus importants sont échelonnés (par ex. jusqu'à 5 m³ dès CHF 490.–). Vous recevez un devis clair et sans engagement."
         },
         {
           "question": "Travaillez-vous avec votre propre équipement pour le déblaiement et l'élimination professionnels ?",
@@ -12329,19 +12329,19 @@
       "internalLinks": [
         {
           "label": "Nettoyage d'entretien Bienne",
-          "href": "nettoyage d'entretien-Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Entretien de la maison Bienne",
-          "href": "entretien de la maison-bienne"
+          "href": "hauswartung-biel-bienne"
         },
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Lavage de vitres Bienne",
-          "href": "lavage de vitres-bienne"
+          "href": "fensterreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Réservez le service d'installation maintenant",
@@ -12355,7 +12355,7 @@
       "faqs": [
         {
           "question": "Comment est calculé le prix des services de conciergerie et facility services ?",
-          "answer": "Les tarifs des facility services et de la conciergerie à Bienne dépendent de la surface du bâtiment, des prestations choisies et de la fréquence. Les interventions ponctuelles débutent dès CHF 350.– (jusqu'à 200 m²), et les contrats mensuels dès CHF 290.–/mois. Nous établissons volontiers une offre sur mesure après visite."
+          "answer": "Les tarifs des facility services et de la conciergerie à Bienne dépendent de la surface du bâtiment, des prestations choisies et de la fréquence. Les interventions ponctuelles débutent dès CHF 350.– (jusqu'à 200 m²), et les contrats mensuels dès CHF 450.–/mois. Nous établissons volontiers une offre sur mesure après visite."
         },
         {
           "question": "Travaillez-vous avec votre propre équipement chez Comprehensive Facility Service ?",
@@ -12468,19 +12468,19 @@
       "internalLinks": [
         {
           "label": "Facility Service Bienne — service de construction",
-          "href": "installation-service-biene"
+          "href": "facility-service-biel-bienne"
         },
         {
           "label": "Nettoyage d'entretien Bienne — Nettoyage régulier",
-          "href": "nettoyage d'entretien-Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Lavage de vitres Bienne - professionnel et sans traces",
-          "href": "lavage de vitres-bienne"
+          "href": "fensterreinigung-biel-bienne"
         },
         {
           "label": "Entreprise de nettoyage Bienne — votre partenaire local",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Votre partenaire premium pour l'entretien de la maison et les services immobiliers",
@@ -12494,7 +12494,7 @@
       "faqs": [
         {
           "question": "Comment est calculé le prix d’un entretien fiable de la maison et conciergerie ?",
-          "answer": "Les coûts de conciergerie à Bienne dépendent de la taille du bien, des extérieurs et des tâches demandées (par ex. nettoyage des escaliers, entretien technique, espaces verts). Les forfaits mensuels débutent dès CHF 290.–/mois pour les biens jusqu'à 200 m²."
+          "answer": "Les coûts de conciergerie à Bienne dépendent de la taille du bien, des extérieurs et des tâches demandées (par ex. nettoyage des escaliers, entretien technique, espaces verts). Les forfaits mensuels débutent dès CHF 450.–/mois pour les biens jusqu'à 200 m²."
         },
         {
           "question": "Travaillez-vous avec votre propre équipement chez Reliable Home Maintenance?",
@@ -12646,19 +12646,19 @@
       "internalLinks": [
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Nettoyage final Bienne",
-          "href": "nettoyage final-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Lavage de vitres Bienne",
-          "href": "lavage de vitres-bienne"
+          "href": "fensterreinigung-biel-bienne"
         },
         {
           "label": "Elimination Bienne",
-          "href": "élimination-bienne"
+          "href": "entsorgung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Réservez dès maintenant un nettoyage de chantier – sans poussière et prêt à emménager",
@@ -12785,19 +12785,19 @@
       "internalLinks": [
         {
           "label": "Entreprise de nettoyage Bienne",
-          "href": "entreprise de nettoyage-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Nettoyage d'entretien Bienne",
-          "href": "nettoyage d'entretien-Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Facility Service Bienne",
-          "href": "installation-service-biene"
+          "href": "facility-service-biel-bienne"
         },
         {
           "label": "Lavage de vitres Bienne",
-          "href": "lavage de vitres-bienne"
+          "href": "fensterreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Réservez maintenant le nettoyage de la restauration",
@@ -12939,7 +12939,7 @@
       "faqs": [
         {
           "question": "Comment est calculé exactement le prix d’un nettoyage national ?",
-          "answer": "Les tarifs de nettoyage en Suisse sont adaptés au service demandé : nettoyage de remise de bail dès CHF 600.– avec garantie, entretien dès CHF 45.–/h et conciergerie dès CHF 290.–/mois. Nous établissons volontiers un devis gratuit et transparent."
+          "answer": "Les tarifs de nettoyage en Suisse sont adaptés au service demandé : nettoyage de remise de bail dès CHF 450.– avec garantie, entretien dès CHF 45.–/h et conciergerie dès CHF 450.–/mois. Nous établissons volontiers un devis gratuit et transparent."
         },
         {
           "question": "Travaillez-vous avec votre propre équipement pour un nettoyage à l’échelle nationale ?",
@@ -13062,7 +13062,7 @@
       "faqs": [
         {
           "question": "Comment est calculé exactement le prix d’un nettoyage de déménagement avec garantie de réception ?",
-          "answer": "Le nettoyage de déménagement avec garantie de remise repose sur un forfait fixe selon le nombre de pièces : 1 pièce dès CHF 600.–, 2 pièces dès CHF 800.–, 3 pièces dès CHF 1'000.– et 4 pièces dès CHF 1'200.–. Tous les produits, équipements et la garantie de remise sont inclus."
+          "answer": "Le nettoyage de déménagement avec garantie de remise repose sur un forfait fixe selon le nombre de pièces : 1 pièce dès CHF 450.–, 2 pièces dès CHF 800.–, 3 pièces dès CHF 1'000.– et 4 pièces dès CHF 1'200.–. Tous les produits, équipements et la garantie de remise sont inclus."
         },
         {
           "question": "Vous utilisez votre propre matériel pour le nettoyage de déménagement avec une garantie de réception ?",
@@ -13185,7 +13185,7 @@
       "faqs": [
         {
           "question": "Comment est calculé exactement le prix de la gestion nationale des installations ?",
-          "answer": "Les tarifs des prestations de facility services en Suisse dépendent de la surface du bien et des prestations : interventions ponctuelles dès CHF 350.– (jusqu'à 200 m²), mandats mensuels dès CHF 290.–/mois. Un cahier des charges clair est établi à l'avance."
+          "answer": "Les tarifs des prestations de facility services en Suisse dépendent de la surface du bien et des prestations : interventions ponctuelles dès CHF 350.– (jusqu'à 200 m²), mandats mensuels dès CHF 450.–/mois. Un cahier des charges clair est établi à l'avance."
         },
         {
           "question": "Travaillez-vous avec la direction nationale des installations avec votre propre équipement ?",
@@ -13308,7 +13308,7 @@
       "faqs": [
         {
           "question": "Comment est calculé exactement le prix d’un entretien professionnel de la maison en Suisse ?",
-          "answer": "Les coûts pour la conciergerie et l'entretien d'immeubles en Suisse dépendent de la taille du bien et des fréquences choisies. Les mandats mensuels pour les biens jusqu'à 200 m² débutent dès CHF 290.–/mois avec un cahier des charges clair."
+          "answer": "Les coûts pour la conciergerie et l'entretien d'immeubles en Suisse dépendent de la taille du bien et des fréquences choisies. Les mandats mensuels pour les biens jusqu'à 200 m² débutent dès CHF 450.–/mois avec un cahier des charges clair."
         },
         {
           "question": "Vous travaillez avec votre propre matériel pour l'entretien professionnel de votre maison en Suisse ?",
@@ -13462,7 +13462,7 @@
       "faqs": [
         {
           "question": "Comment le prix des services de nettoyage professionnels à Soleure est-il calculé ?",
-          "answer": "Les prix des services de nettoyage à Soleure sont transparents et personnalisés : forfaits fixes pour les nettoyages de fin de bail avec garantie (dès CHF 600.–) et taux horaires clairs dès CHF 45.–/h pour l'entretien. Demandez une offre gratuite."
+          "answer": "Les prix des services de nettoyage à Soleure sont transparents et personnalisés : forfaits fixes pour les nettoyages de fin de bail avec garantie (dès CHF 450.–) et taux horaires clairs dès CHF 45.–/h pour l'entretien. Demandez une offre gratuite."
         },
         {
           "question": "Travaillez-vous avec votre propre équipement ?",

@@ -62,14 +62,10 @@ export default function DisposalPricingOnly({ locale, formService = 'disposal', 
   const v = PRICING_RULES.disposal.volumePricing;
 
   const disposalRows = [
-    { label: isEn ? 'Up to 1 m³ (Small items, single furniture)' : isFr ? 'Jusqu’à 1 m³ (Petits objets, meuble isolé)' : isIt ? 'Fino a 1 m³ (Piccoli oggetti, singolo mobile)' : 'Bis 1 m³ (Einzelne Möbelstücke / Kleinsperrgut)', price: `CHF ${v['1']}.–` },
-    { label: isEn ? 'Up to 2 m³' : isFr ? 'Jusqu’à 2 m³' : isIt ? 'Fino a 2 m³' : 'Bis 2 m³', price: `CHF ${v['2']}.–` },
-    { label: isEn ? 'Up to 3 m³' : isFr ? 'Jusqu’à 3 m³' : isIt ? 'Fino a 3 m³' : 'Bis 3 m³', price: `CHF ${v['3']}.–` },
-    { label: isEn ? 'Up to 5 m³ (Small room / Basement compartment)' : isFr ? 'Jusqu’à 5 m³ (Petite pièce / Cave)' : isIt ? 'Fino a 5 m³ (Piccola stanza / Cantina)' : 'Bis 5 m³ (Kleines Zimmer / Kellerabteil)', price: `CHF ${v['5']}.–` },
-    { label: isEn ? 'Up to 8 m³' : isFr ? 'Jusqu’à 8 m³' : isIt ? 'Fino a 8 m³' : 'Bis 8 m³', price: `CHF ${v['8']}.–` },
-    { label: isEn ? 'Up to 10 m³ (Half apartment clearance)' : isFr ? 'Jusqu’à 10 m³ (Demi-appartement)' : isIt ? 'Fino a 10 m³ (Mezzo appartamento)' : 'Bis 10 m³ (Teilräumung / Halbe Wohnung)', price: `CHF ${v['10']}.–` },
-    { label: isEn ? 'Up to 15 m³' : isFr ? 'Jusqu’à 15 m³' : isIt ? 'Fino a 15 m³' : 'Bis 15 m³', price: `CHF ${v['15']}.–` },
-    { label: isEn ? 'Up to 20 m³ (Full apartment clearance)' : isFr ? 'Jusqu’à 20 m³ (Appartement complet)' : isIt ? 'Fino a 20 m³ (Sgombero appartamento completo)' : 'Bis 20 m³ (Komplette Wohnungsräumung)', price: `CHF ${v['20']}.–` },
+    { label: isEn ? '1 – 2 m³ (Single furniture / Small items)' : isFr ? '1 – 2 m³ (Meubles isolés / Petits objets)' : isIt ? '1 – 2 m³ (Singolo mobile / Piccoli oggetti)' : '1 – 2 m³ (Einzelne Möbelstücke / Kleinsperrgut)', price: `CHF ${v['1']}.–` },
+    { label: isEn ? '3 – 5 m³ (Small room / Basement compartment)' : isFr ? '3 – 5 m³ (Petite pièce / Cave)' : isIt ? '3 – 5 m³ (Piccola stanza / Cantina)' : '3 – 5 m³ (Kleines Zimmer / Kellerabteil)', price: `CHF ${v['3']}.–` },
+    { label: isEn ? '6 – 10 m³ (Half apartment clearance)' : isFr ? '6 – 10 m³ (Demi-appartement)' : isIt ? '6 – 10 m³ (Mezzo appartamento)' : '6 – 10 m³ (Teilräumung / Halbe Wohnung)', price: `CHF ${v['8']}.–` },
+    { label: isEn ? '11 – 20 m³ (Full apartment clearance)' : isFr ? '11 – 20 m³ (Appartement complet)' : isIt ? '11 – 20 m³ (Sgombero appartamento completo)' : '11 – 20 m³ (Komplette Wohnungsräumung)', price: `CHF ${v['15']}.–` },
     { label: isEn ? 'Over 20 m³ / Complete liquidation' : isFr ? 'Plus de 20 m³ / Liquidation totale' : isIt ? 'Oltre 20 m³ / Liquidazione totale' : 'Über 20 m³ / Geschäfts- & Hausauflösung', price: t.uponRequest }
   ];
 

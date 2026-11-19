@@ -537,7 +537,7 @@
       "apartmentCleaning": "CHF 45–65 / ora / personale",
       "stairwellCleaning": "forfettario da CHF 120",
       "officeCleaning": "CHF 0,80–1,50/m²",
-      "finalCleaning": "da CHF 600 (Monolocale / 1 loc.)",
+      "finalCleaning": "da CHF 450 (Monolocale / 1 loc.)",
       "windowCleaning": "CHF 8–15 per finestra",
       "relocation": "da CHF 160/ora",
       "disposal": "da CHF 30/m³",
@@ -5603,10 +5603,10 @@
       "standard": {
         "title": "Pulizie di fine locazione",
         "description": "Pulizia di fine locazione con garanzia di consegna al (incluso nuovo lavaggio gratuito)",
-        "price": "da CHF 600",
+        "price": "da CHF 450",
         "features": [
           "Pulizia di fine locazione con garanzia di consegna da CHF 600 per monolocali e 1 locale",
-          "Case: da CHF 900",
+          "Case: da CHF 1'490",
           "Supplementi opzionali disponibili",
           "Garanzia di accettazione"
         ]
@@ -6246,23 +6246,23 @@
       "internalLinks": [
         {
           "label": "Pulizia finale a Bienne – con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Impresa di pulizie Bienne – pulizia regolare",
-          "href": "pulizia-biel-bienne"
+          "href": "reinigung-biel-bienne"
         },
         {
           "label": "Ditta di traslochi Biel/Bienne",
-          "href": "azienda di traslochi-biel-bienne"
+          "href": "umzugsfirma-biel-bienne"
         },
         {
           "label": "Azienda di trasporti Bienne",
-          "href": "azienda di trasporti-biel-bienne"
+          "href": "transportfirma-biel-bienne"
         },
         {
           "label": "Smaltimento e sgombero",
-          "href": "smaltimento-biel-bienne"
+          "href": "entsorgung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Richiedi adesso un preventivo per un trasloco, gratuito e senza impegno",
@@ -6396,19 +6396,19 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi di Bienne – traslochi professionali",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Impresa di pulizie Bienne – pulizia continua",
-          "href": "pulizia-biel-bienne"
+          "href": "reinigung-biel-bienne"
         },
         {
           "label": "Pulizia finale Nidau",
-          "href": "pulizia finale-nidau"
+          "href": "endreinigung-nidau"
         },
         {
           "label": "Pulizie in movimento Lyss",
-          "href": "pulizia finale"
+          "href": "endreinigung-lyss"
         }
       ],
       "ctaStrongHeading": "Pulizie finali con garanzia di accettazione – richiedi subito un preventivo",
@@ -6550,27 +6550,27 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi di Bienne – traslochi professionali",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Pulizia finale Bienne – con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Impresa di pulizie Biel/Bienne",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Pulizia di manutenzione",
-          "href": "manutenzione pulizia-Biel/Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Pulizia delle finestre",
-          "href": "pulizia finestre-biel-bienne"
+          "href": "fensterreinigung-biel-bienne"
         },
         {
           "label": "Pulizie edili",
-          "href": "pulizia della costruzione-biel-bienne"
+          "href": "baureinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Camere pulite – senza alcuno sforzo per te",
@@ -6760,15 +6760,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi di Bienne – il vostro partner nel Seeland",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Pulizia finale Nidau – con garanzia di accettazione",
-          "href": "pulizia finale-nidau"
+          "href": "endreinigung-nidau"
         },
         {
           "label": "Ditta di traslochi Brugg",
-          "href": "trasloco-bruegg"
+          "href": "umzug-bruegg"
         }
       ],
       "ctaStrongHeading": "Richiedi adesso un preventivo per il trasloco per Nidau",
@@ -6954,15 +6954,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi Bienne – sede nel Seeland",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Pulizie finali Lyss – pulizie traslochi garantite",
-          "href": "pulizia finale"
+          "href": "endreinigung-lyss"
         },
         {
           "label": "Ditta di traslochi ad Aarberg",
-          "href": "trasloco-aarberg"
+          "href": "umzug-aarberg"
         }
       ],
       "ctaStrongHeading": "Richiedi oggi – fatto domani",
@@ -7148,15 +7148,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi Bienne – sede principale",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Pulizia finale Brügg – consegnato pulito",
-          "href": "pulizia finale-bruegg"
+          "href": "endreinigung-bruegg"
         },
         {
           "label": "Servizio di trasloco Nidau",
-          "href": "move-nidau"
+          "href": "umzug-nidau"
         }
       ],
       "ctaStrongHeading": "Chiamaci o scrivici",
@@ -7342,15 +7342,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi di Bienne – il vostro partner nel Seeland",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Pulizia finale Ipsach",
-          "href": "pulizia finale-ipsach"
+          "href": "endreinigung-ipsach"
         },
         {
           "label": "Assistenza in movimento Pieterlen",
-          "href": "pieterlen in movimento"
+          "href": "umzug-pieterlen"
         }
       ],
       "ctaStrongHeading": "Siamo qui per te: chiedi informazioni adesso",
@@ -7536,15 +7536,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi Bienne – Seeland centrale",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Pulizia finale Aarberg",
-          "href": "pulizia finale-aarberg"
+          "href": "endreinigung-aarberg"
         },
         {
           "label": "Lyss guida la compagnia",
-          "href": "move-lyss"
+          "href": "umzug-lyss"
         }
       ],
       "ctaStrongHeading": "Inizia ora – gratuitamente e senza impegno",
@@ -7730,15 +7730,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi Bienne – sede principale",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Pulizia finale Pieterlen",
-          "href": "pulizia finale pieterlen"
+          "href": "endreinigung-pieterlen"
         },
         {
           "label": "Ditta di traslochi Ipsach",
-          "href": "Moving-ipsach"
+          "href": "umzug-ipsach"
         }
       ],
       "ctaStrongHeading": "Affidati alla nostra esperienza: chiedi informazioni adesso",
@@ -7924,15 +7924,15 @@
       "internalLinks": [
         {
           "label": "Servizio di trasloco Nidau – traslochi professionali",
-          "href": "move-nidau"
+          "href": "umzug-nidau"
         },
         {
           "label": "Pulizia finale Bienne – sede principale",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Impresa di pulizie Nidau – pulizia di manutenzione",
-          "href": "pulizia-nidau"
+          "href": "reinigung-nidau"
         }
       ],
       "ctaStrongHeading": "Richiedi adesso la pulizia finale per Nidau",
@@ -8114,15 +8114,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi Lyss: il tuo partner di traslochi",
-          "href": "move-lyss"
+          "href": "umzug-lyss"
         },
         {
           "label": "Impresa di pulizie Lyss – pulizia regolare",
-          "href": "pulizia-lyss"
+          "href": "reinigung-lyss"
         },
         {
           "label": "Pulizie finali Bienne – Seeland centrale",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Informati oggi: invia in modo rilassato",
@@ -8308,15 +8308,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi Brügg – traslocare professionalmente",
-          "href": "trasloco-bruegg"
+          "href": "umzug-bruegg"
         },
         {
           "label": "Servizio di pulizia Brügg – pulizia continua",
-          "href": "pulizia-bruegg"
+          "href": "reinigung-bruegg"
         },
         {
           "label": "Pulizia finale Bienne",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Prenotate adesso la vostra pulizia finale a Brügg",
@@ -8498,15 +8498,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi Ipsach – ci muoviamo per voi",
-          "href": "Moving-ipsach"
+          "href": "umzug-ipsach"
         },
         {
           "label": "Pulizia Ipsach – pulizia di manutenzione",
-          "href": "pulizia-ipsach"
+          "href": "reinigung-ipsach"
         },
         {
           "label": "Pulizia finale Bienne",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Richiedi adesso un appuntamento per Ipsach",
@@ -8692,15 +8692,15 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi ad Aarberg",
-          "href": "trasloco-aarberg"
+          "href": "umzug-aarberg"
         },
         {
           "label": "Impresa di pulizie Aarberg – pulizia continua",
-          "href": "pulizia-aarberg"
+          "href": "reinigung-aarberg"
         },
         {
           "label": "Pulizie in movimento Lyss",
-          "href": "pulizia finale"
+          "href": "endreinigung-lyss"
         }
       ],
       "ctaStrongHeading": "Assicuratevi subito la pulizia finale per Aarberg",
@@ -8882,15 +8882,15 @@
       "internalLinks": [
         {
           "label": "Assistenza trasloco Pieterlen – ci muoviamo per voi",
-          "href": "pieterlen in movimento"
+          "href": "umzug-pieterlen"
         },
         {
           "label": "Pulizia edifici Pieterlen – pulizia di manutenzione",
-          "href": "pulizia pieterlene"
+          "href": "reinigung-pieterlen"
         },
         {
           "label": "Pulizia finale Bienne",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Prendi un appuntamento per Pieterlen adesso",
@@ -9076,15 +9076,15 @@
       "internalLinks": [
         {
           "label": "Pulizia finale Nidau – con garanzia di accettazione",
-          "href": "pulizia finale-nidau"
+          "href": "endreinigung-nidau"
         },
         {
           "label": "Servizio di trasloco Nidau",
-          "href": "move-nidau"
+          "href": "umzug-nidau"
         },
         {
           "label": "Impresa di pulizie Bienne – sede centrale",
-          "href": "pulizia-biel-bienne"
+          "href": "reinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "La tua impresa di pulizie a Nidau: contattaci ora",
@@ -9270,15 +9270,15 @@
       "internalLinks": [
         {
           "label": "Pulizie in movimento Lyss",
-          "href": "pulizia finale"
+          "href": "endreinigung-lyss"
         },
         {
           "label": "Lyss guida la compagnia",
-          "href": "move-lyss"
+          "href": "umzug-lyss"
         },
         {
           "label": "Impresa di pulizie Aarberg",
-          "href": "pulizia-aarberg"
+          "href": "reinigung-aarberg"
         }
       ],
       "ctaStrongHeading": "Richiedi subito un preventivo per le pulizie di Lyss",
@@ -9464,15 +9464,15 @@
       "internalLinks": [
         {
           "label": "Pulizia finale Brügg – con garanzia di accettazione",
-          "href": "pulizia finale-bruegg"
+          "href": "endreinigung-bruegg"
         },
         {
           "label": "Ditta di traslochi Brugg",
-          "href": "trasloco-bruegg"
+          "href": "umzug-bruegg"
         },
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "pulizia-biel-bienne"
+          "href": "reinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Assicuratevi il vostro servizio di pulizia a Brügg",
@@ -9654,15 +9654,15 @@
       "internalLinks": [
         {
           "label": "Pulizia finale Ipsach – pulizia in movimento",
-          "href": "pulizia finale-ipsach"
+          "href": "endreinigung-ipsach"
         },
         {
           "label": "Ditta di traslochi Ipsach",
-          "href": "Moving-ipsach"
+          "href": "umzug-ipsach"
         },
         {
           "label": "Impresa di pulizie Lyss",
-          "href": "pulizia-lyss"
+          "href": "reinigung-lyss"
         }
       ],
       "ctaStrongHeading": "Prenotate adesso un servizio di pulizia a Ipsach",
@@ -9848,15 +9848,15 @@
       "internalLinks": [
         {
           "label": "Accettazione pulizia Aarberg",
-          "href": "pulizia finale-aarberg"
+          "href": "endreinigung-aarberg"
         },
         {
           "label": "Ditta di traslochi ad Aarberg",
-          "href": "trasloco-aarberg"
+          "href": "umzug-aarberg"
         },
         {
           "label": "Servizio di pulizia Brugg",
-          "href": "pulizia-bruegg"
+          "href": "reinigung-bruegg"
         }
       ],
       "ctaStrongHeading": "Inizia ora: in modo pulito e giusto",
@@ -10042,15 +10042,15 @@
       "internalLinks": [
         {
           "label": "Pulizia finale Pieterlen – con garanzia",
-          "href": "pulizia finale pieterlen"
+          "href": "endreinigung-pieterlen"
         },
         {
           "label": "Assistenza in movimento Pieterlen",
-          "href": "pieterlen in movimento"
+          "href": "umzug-pieterlen"
         },
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "pulizia-biel-bienne"
+          "href": "reinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Assicurati il nostro servizio per Pieterlen",
@@ -10235,15 +10235,15 @@
       "internalLinks": [
         {
           "label": "Pulizie finali con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Tutte le regioni a colpo d'occhio",
-          "href": "regioni"
+          "href": "regions"
         },
         {
           "label": "Ditta di traslochi Biel/Bienne",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Richiedi un preventivo per un trasloco – gratuitamente",
@@ -10436,15 +10436,15 @@
       "internalLinks": [
         {
           "label": "Pulizie finali con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Tutte le regioni a colpo d'occhio",
-          "href": "regioni"
+          "href": "regions"
         },
         {
           "label": "Ditta di traslochi Biel/Bienne",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Richiedi un preventivo per un trasloco – gratuitamente",
@@ -10637,15 +10637,15 @@
       "internalLinks": [
         {
           "label": "Pulizie finali con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Tutte le regioni a colpo d'occhio",
-          "href": "regioni"
+          "href": "regions"
         },
         {
           "label": "Ditta di traslochi Biel/Bienne",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         },
         {
           "label": "Impresa di pulizie Soletta",
@@ -10842,15 +10842,15 @@
       "internalLinks": [
         {
           "label": "Pulizie finali con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Tutte le regioni a colpo d'occhio",
-          "href": "regioni"
+          "href": "regions"
         },
         {
           "label": "Ditta di traslochi Biel/Bienne",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Richiedi un preventivo per un trasloco – gratuitamente",
@@ -11035,15 +11035,15 @@
       "internalLinks": [
         {
           "label": "Pulizie finali con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Tutte le regioni a colpo d'occhio",
-          "href": "regioni"
+          "href": "regions"
         },
         {
           "label": "Ditta di traslochi Biel/Bienne",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Richiedi un preventivo per un trasloco – gratuitamente",
@@ -11228,15 +11228,15 @@
       "internalLinks": [
         {
           "label": "Pulizie finali con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Tutte le regioni a colpo d'occhio",
-          "href": "regioni"
+          "href": "regions"
         },
         {
           "label": "Ditta di traslochi Biel/Bienne",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Richiedi un preventivo per un trasloco – gratuitamente",
@@ -11421,15 +11421,15 @@
       "internalLinks": [
         {
           "label": "Pulizie finali con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Tutte le regioni a colpo d'occhio",
-          "href": "regioni"
+          "href": "regions"
         },
         {
           "label": "Ditta di traslochi Biel/Bienne",
-          "href": "trasferirsi a Bienne"
+          "href": "umzug-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Richiedi un preventivo per un trasloco – gratuitamente",
@@ -11833,19 +11833,19 @@
       "internalLinks": [
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Pulizia finale Bienne – con garanzia di accettazione",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Azienda di trasporti Bienne",
-          "href": "azienda di trasporti-biel-bienne"
+          "href": "transportfirma-biel-bienne"
         },
         {
           "label": "Smaltimento Bienne",
-          "href": "smaltimento-biel-bienne"
+          "href": "entsorgung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "La vostra ditta di traslochi a Bienne – richiedete subito un preventivo",
@@ -11859,7 +11859,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per i traslochi senza stress?",
-          "answer": "I prezzi dei traslochi a Bienne si basano sulle dimensioni dell'appartamento (numero di locali), volume e distanza. I forfait partono da CHF 600.– per 1 locale, CHF 700.– per 2 locali e CHF 1'000.– per 3 locali. Riceverete in anticipo un preventivo chiaro e trasparente."
+          "answer": "I prezzi dei traslochi a Bienne si basano sulle dimensioni dell'appartamento (numero di locali), volume e distanza. I forfait partono da CHF 450.– per 1 locale, CHF 700.– per 2 locali e CHF 1'000.– per 3 locali. Riceverete in anticipo un preventivo chiaro e trasparente."
         },
         {
           "question": "Lavori con la tua attrezzatura per spostamenti senza stress?",
@@ -11972,11 +11972,11 @@
       "internalLinks": [
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Pulizia delle finestre Bienne",
-          "href": "pulizia finestre-biel-bienne"
+          "href": "fensterreinigung-biel-bienne"
         },
         {
           "label": "Facility Service Bienne",
@@ -11984,7 +11984,7 @@
         },
         {
           "label": "Manutenzione della casa Bienne",
-          "href": "manutenzione della casa-biel-bienne"
+          "href": "hauswartung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Prenota subito la pulizia di manutenzione",
@@ -12111,15 +12111,15 @@
       "internalLinks": [
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Pulizia di manutenzione Bienne",
-          "href": "manutenzione pulizia-Biel/Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Manutenzione della casa Bienne",
-          "href": "manutenzione della casa-biel-bienne"
+          "href": "hauswartung-biel-bienne"
         },
         {
           "label": "Facility Service Bienne",
@@ -12250,19 +12250,19 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi di Bienne",
-          "href": "azienda di traslochi-biel-bienne"
+          "href": "umzugsfirma-biel-bienne"
         },
         {
           "label": "Smaltimento Bienne",
-          "href": "smaltimento-biel-bienne"
+          "href": "entsorgung-biel-bienne"
         },
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Pulizia finale Bienne",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "La vostra azienda di trasporti a Bienne – contattateci adesso",
@@ -12276,7 +12276,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato il prezzo per i servizi di trasporto e trasloco?",
-          "answer": "I prezzi di trasporto e trasloco a Bienne dipendono dal volume, dalla distanza e dal personale richiesto. I forfait partono da CHF 600.– per appartamenti da 1 locale o con tariffe orarie trasparenti (aiutante aggiuntivo da CHF 60.–/h). Richiedete un preventivo gratuito."
+          "answer": "I prezzi di trasporto e trasloco a Bienne dipendono dal volume, dalla distanza e dal personale richiesto. I forfait partono da CHF 450.– per appartamenti da 1 locale o con tariffe orarie trasparenti (aiutante aggiuntivo da CHF 60.–/h). Richiedete un preventivo gratuito."
         },
         {
           "question": "Lavori con le tue attrezzature presso i servizi di trasporto sicuro e corriere?",
@@ -12389,19 +12389,19 @@
       "internalLinks": [
         {
           "label": "Ditta di traslochi di Bienne",
-          "href": "azienda di traslochi-biel-bienne"
+          "href": "umzugsfirma-biel-bienne"
         },
         {
           "label": "Azienda di trasporti Bienne",
-          "href": "azienda di trasporti-biel-bienne"
+          "href": "transportfirma-biel-bienne"
         },
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Pulizie edili Bienne",
-          "href": "pulizia della costruzione-biel-bienne"
+          "href": "baureinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Prenota subito lo smaltimento: in modo rapido e professionale",
@@ -12528,19 +12528,19 @@
       "internalLinks": [
         {
           "label": "Pulizia di manutenzione Bienne",
-          "href": "manutenzione pulizia-Biel/Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Manutenzione della casa Bienne",
-          "href": "manutenzione della casa-biel-bienne"
+          "href": "hauswartung-biel-bienne"
         },
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Pulizia delle finestre Bienne",
-          "href": "pulizia finestre-biel-bienne"
+          "href": "fensterreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Prenota ora il servizio della struttura",
@@ -12554,7 +12554,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato il prezzo per il facility service e la manutenzione dell'edificio?",
-          "answer": "I costi per i facility services e la manutenzione a Bienne dipendono dalle dimensioni dell'immobile, dai servizi richiesti e dalla frequenza. Gli interventi singoli partono da CHF 350.– (fino a 200 m²), la manutenzione mensile regolare da CHF 290.–/mese. Prepariamo volentieri un preventivo personalizzato dopo un sopralluogo."
+          "answer": "I costi per i facility services e la manutenzione a Bienne dipendono dalle dimensioni dell'immobile, dai servizi richiesti e dalla frequenza. Gli interventi singoli partono da CHF 350.– (fino a 200 m²), la manutenzione mensile regolare da CHF 450.–/mese. Prepariamo volentieri un preventivo personalizzato dopo un sopralluogo."
         },
         {
           "question": "Lavori con le tue attrezzature nel Comprehensive Facility Service?",
@@ -12671,15 +12671,15 @@
         },
         {
           "label": "Pulizia di manutenzione Bienne — Pulizia regolare",
-          "href": "manutenzione pulizia-Biel/Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Pulizia delle finestre Bienne: professionale e senza aloni",
-          "href": "pulizia finestre-biel-bienne"
+          "href": "fensterreinigung-biel-bienne"
         },
         {
           "label": "Impresa di pulizie Bienne: il vostro partner locale",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Il tuo partner premium per la manutenzione della casa e i servizi immobiliari",
@@ -12693,7 +12693,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato il prezzo per la manutenzione affidabile dell'immobile?",
-          "answer": "I costi per la manutenzione stabili a Bienne dipendono dall'estensione della proprietà e dalle mansioni richieste (ad es. vano scale, controlli tecnici, aree verdi). I contratti mensili partono da CHF 290.–/mese per immobili fino a 200 m²."
+          "answer": "I costi per la manutenzione stabili a Bienne dipendono dall'estensione della proprietà e dalle mansioni richieste (ad es. vano scale, controlli tecnici, aree verdi). I contratti mensili partono da CHF 450.–/mese per immobili fino a 200 m²."
         },
         {
           "question": "Lavori con la tua attrezzatura presso Reliable Home Maintenance?",
@@ -12845,19 +12845,19 @@
       "internalLinks": [
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Pulizia finale Bienne",
-          "href": "pulizia finale-biel-bienne"
+          "href": "umzugsreinigung-biel-bienne"
         },
         {
           "label": "Pulizia delle finestre Bienne",
-          "href": "pulizia finestre-biel-bienne"
+          "href": "fensterreinigung-biel-bienne"
         },
         {
           "label": "Smaltimento Bienne",
-          "href": "smaltimento-biel-bienne"
+          "href": "entsorgung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Prenota subito la pulizia della costruzione: senza polvere e pronto per essere trasferito",
@@ -12984,11 +12984,11 @@
       "internalLinks": [
         {
           "label": "Impresa di pulizie Bienne",
-          "href": "impresa di pulizie-biel-bienne"
+          "href": "reinigungsfirma-biel-bienne"
         },
         {
           "label": "Pulizia di manutenzione Bienne",
-          "href": "manutenzione pulizia-Biel/Bienne"
+          "href": "unterhaltsreinigung-biel-bienne"
         },
         {
           "label": "Facility Service Bienne",
@@ -12996,7 +12996,7 @@
         },
         {
           "label": "Pulizia delle finestre Bienne",
-          "href": "pulizia finestre-biel-bienne"
+          "href": "fensterreinigung-biel-bienne"
         }
       ],
       "ctaStrongHeading": "Prenota adesso la pulizia del catering",
@@ -13138,7 +13138,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato il prezzo per la pulizia su scala nazionale?",
-          "answer": "I prezzi dei servizi di pulizia in Svizzera sono modulati in base alla prestazione: pulizie di trasloco con garanzia da CHF 600.–, pulizie di manutenzione da CHF 45.–/h e gestione stabili da CHF 290.–/mese. Richiedete un preventivo gratuito e trasparente."
+          "answer": "I prezzi dei servizi di pulizia in Svizzera sono modulati in base alla prestazione: pulizie di trasloco con garanzia da CHF 450.–, pulizie di manutenzione da CHF 45.–/h e gestione stabili da CHF 450.–/mese. Richiedete un preventivo gratuito e trasparente."
         },
         {
           "question": "Lavori con attrezzature proprie per la pulizia a livello nazionale?",
@@ -13261,7 +13261,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per la pulizia del trasloco con garanzia di accettazione?",
-          "answer": "La pulizia di fine locazione con garanzia si basa su tariffe fisse chiare in base ai locali: 1 locale da CHF 600.–, 2 locali da CHF 800.–, 3 locali da CHF 1'000.– e 4 locali da CHF 1'200.–. Tutti i detergenti, macchinari e la garanzia di consegna sono inclusi nel prezzo."
+          "answer": "La pulizia di fine locazione con garanzia si basa su tariffe fisse chiare in base ai locali: 1 locale da CHF 450.–, 2 locali da CHF 800.–, 3 locali da CHF 1'000.– e 4 locali da CHF 1'200.–. Tutti i detergenti, macchinari e la garanzia di consegna sono inclusi nel prezzo."
         },
         {
           "question": "Utilizzi attrezzature proprie per traslochi di pulizia con garanzia di accettazione?",
@@ -13384,7 +13384,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per il facility service nazionale?",
-          "answer": "I costi per i facility services in Svizzera si basano sulle dimensioni dell'immobile e sui moduli concordati: interventi una tantum da CHF 350.– (fino a 200 m²), gestioni mensili da CHF 290.–/mese con preventivo trasparente."
+          "answer": "I costi per i facility services in Svizzera si basano sulle dimensioni dell'immobile e sui moduli concordati: interventi una tantum da CHF 350.– (fino a 200 m²), gestioni mensili da CHF 450.–/mese con preventivo trasparente."
         },
         {
           "question": "Lavori con il facility service nazionale con le tue attrezzature?",
@@ -13507,7 +13507,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato esattamente il prezzo per la manutenzione professionale della casa in Svizzera?",
-          "answer": "I costi per la manutenzione stabili in Svizzera dipendono dall'estensione della proprietà e dagli intervalli scelti. Le gestioni mensili per immobili fino a 200 m² partono da CHF 290.–/mese con un capitolato chiaro e trasparente."
+          "answer": "I costi per la manutenzione stabili in Svizzera dipendono dall'estensione della proprietà e dagli intervalli scelti. Le gestioni mensili per immobili fino a 200 m² partono da CHF 450.–/mese con un capitolato chiaro e trasparente."
         },
         {
           "question": "Lavori con la tua attrezzatura per la manutenzione professionale della casa in Svizzera?",
@@ -13661,7 +13661,7 @@
       "faqs": [
         {
           "question": "Come viene calcolato il prezzo dei servizi di pulizia professionali a Soletta?",
-          "answer": "I prezzi per i servizi di pulizia a Soletta sono trasparenti e personalizzati: forfait per pulizie di fine locazione con garanzia (da CHF 600.–) e tariffe orarie da CHF 45.–/h per manutenzione. Richiedete un preventivo gratuito."
+          "answer": "I prezzi per i servizi di pulizia a Soletta sono trasparenti e personalizzati: forfait per pulizie di fine locazione con garanzia (da CHF 450.–) e tariffe orarie da CHF 45.–/h per manutenzione. Richiedete un preventivo gratuito."
         },
         {
           "question": "Lavorate con la vostra attrezzatura?",

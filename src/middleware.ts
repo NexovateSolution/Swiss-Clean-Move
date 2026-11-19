@@ -33,5 +33,10 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(de|fr|en|it)/:path*', '/admin/:path*', '/admin']
+  // Match all request paths except for:
+  // - api routes (/api/...)
+  // - Next.js internal files (_next/...)
+  // - Vercel files (_vercel/...)
+  // - Static files with extensions (e.g. .html, .ico, .png, .jpg, .svg, .pdf, .txt, .xml)
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
 };

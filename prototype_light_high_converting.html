@@ -221,220 +221,268 @@
     <main class="flex-grow">
 
         <!-- 3. LIGHT HERO SECTION WITH ACTUAL SERVICE-WIZARD LEAD FUNNEL -->
-        <section id="quote-funnel" class="hero-pattern border-b border-[#465650] py-10 lg:py-16 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <section id="quote-funnel" class="relative w-full py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden bg-[#F5F4EF] border-b border-[#E2E8E4] z-20" aria-label="Offerten anfordern - SwissCleanMove">
+            
+            <!-- Right-Side Hero Visual (Desktop Only, Online-Offerten Style with Smooth Fade Mask) -->
+            <div class="hidden lg:block absolute right-0 top-0 bottom-0 w-full md:w-1/2 lg:w-[48%] h-full overflow-hidden pointer-events-none">
+                <img src="public/images/transportation.png" 
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80';" 
+                     alt="SwissCleanMove Umzug und Reinigung" 
+                     class="h-full w-full object-cover object-center scale-105" 
+                     style="mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%); opacity: 0.92;" 
+                     loading="eager">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#F5F4EF] via-transparent to-transparent opacity-80"></div>
+            </div>
+            <!-- Left Gradient Overlays for optimal text contrast -->
+            <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#F5F4EF] via-[#F5F4EF]/90 to-transparent pointer-events-none" style="width: 58%;"></div>
+
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
+                <div class="max-w-2xl text-left">
                     
-                    <!-- Left Hero Content -->
-                    <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
-                        
-                        <!-- Trust Badge Pill -->
-                        <div class="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm border border-white/30 text-[#34484A] text-xs font-bold px-3.5 py-1.5 rounded-full shadow-soft">
-                            <span class="w-2 h-2 rounded-full bg-[#E5A34C]"></span>
-                            <i class="fa-solid fa-shield-check text-[#596963]"></i>
-                            100% Abnahmegarantie & Übergabebegleitung inklusive
+                    <!-- Header Info & Headline -->
+                    <div class="mb-5">
+                        <div class="inline-flex items-center gap-2 rounded-full border border-[#596963]/25 bg-white px-3.5 py-1 text-xs font-bold text-[#34484A] shadow-soft mb-3">
+                            <span class="w-2 h-2 rounded-full bg-[#E5A34C] animate-pulse"></span>
+                            <span>Offizieller Schweizer Fachbetrieb • 100% Kostenlos &amp; Unverbindlich</span>
                         </div>
 
-                        <!-- Main H1 Title -->
-                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-heading tracking-tight leading-[1.15]">
-                            Ihre Reinigungs- & Umzugsfirma in der Schweiz – <span class="text-[#F0B563]">alles aus einer Hand.</span>
-                        </h1>
+                        <!-- Relative H1 Container with Starburst Seal (Online-Offerten Style) -->
+                        <div class="relative">
+                            <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#34484A] font-heading tracking-tight leading-[1.18] break-words pr-28 sm:pr-36">
+                                Professionelle Reinigung, Umzüge, Transporte &amp; Hauswartung
+                            </h1>
+                            
+                            <!-- Starburst Seal / Rotating Badge -->
+                            <div class="absolute right-0 -top-2 sm:-top-5 w-24 h-24 sm:w-28 sm:h-28 text-white rotate-[-10deg] flex items-center justify-center shrink-0 drop-shadow-md hover:rotate-0 transition-transform duration-300 cursor-default select-none">
+                                <svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full" aria-hidden="true">
+                                    <polygon points="50,2 59,12 73,8 79,21 92,23 88,37 98,50 88,63 92,77 79,79 73,92 59,88 50,98 41,88 27,92 21,79 8,77 12,63 2,50 12,37 8,23 21,21 27,8 41,12" fill="#E5A34C" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"></polygon>
+                                </svg>
+                                <span class="relative z-10 px-1 text-[0.62rem] sm:text-[0.72rem] font-black leading-tight text-center tracking-tight text-white uppercase">
+                                    100%<br />ABNAHME<br />GARANTIE
+                                </span>
+                            </div>
+                        </div>
 
-                        <!-- Subtitle (From actual website content) -->
-                        <p class="text-[#F5F4EF]/90 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                            Professionelle Reinigung, Umzüge, Transporte und Hauswartung – zuverlässig aus einer Hand. Umzugsreinigung mit Abnahmegarantie.
+                        <!-- Subtitle -->
+                        <p class="text-[#465D5D] text-sm sm:text-base lg:text-lg mt-3 leading-relaxed font-normal">
+                            Zuverlässig aus einer Hand mit Schweizer Abnahmegarantie. Wählen Sie Ihre gewünschte Leistung und fordern Sie Ihre unverbindliche Offerte an.
                         </p>
+                    </div>
 
-                        <!-- Key Benefits 4-Grid -->
-                        <div class="grid grid-cols-2 gap-3.5 pt-2 max-w-lg mx-auto lg:mx-0 text-left text-xs font-semibold text-[#34484A]">
-                            <div class="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm border border-white/30 p-2.5 rounded-xl shadow-soft">
-                                <i class="fa-solid fa-circle-check text-[#596963] text-base flex-shrink-0"></i>
-                                <span>100% Kostenlos & Unverbindlich</span>
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm border border-white/30 p-2.5 rounded-xl shadow-soft">
-                                <i class="fa-solid fa-circle-check text-[#596963] text-base flex-shrink-0"></i>
-                                <span>100% Abnahmegarantie</span>
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm border border-white/30 p-2.5 rounded-xl shadow-soft">
-                                <i class="fa-solid fa-circle-check text-[#596963] text-base flex-shrink-0"></i>
-                                <span>Kombi-Vorteil bis 25%</span>
-                            </div>
-                            <div class="flex items-center gap-2.5 bg-white/95 backdrop-blur-sm border border-white/30 p-2.5 rounded-xl shadow-soft">
-                                <i class="fa-solid fa-circle-check text-[#596963] text-base flex-shrink-0"></i>
-                                <span>Voll versichert & geprüft</span>
-                            </div>
+                    <!-- "SERVICE WÄHLEN" Card Container (Exact Online-Offerten Grid & Alignment) -->
+                    <div class="rounded-2xl border border-[#E2E8E4] bg-white p-3.5 sm:p-5 mb-5 shadow-card transition-all">
+                        <div class="flex items-center justify-between mb-3.5 pb-2.5 border-b border-slate-100">
+                            <h2 class="text-xs sm:text-sm font-black text-[#34484A] tracking-wider uppercase font-heading flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#E5A34C]"></span> SERVICE WÄHLEN
+                            </h2>
+                            <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#596963] bg-[#EFF3F1] px-2.5 py-1 rounded-full border border-[#596963]/20">
+                                <i class="fa-solid fa-bolt text-[#E5A34C]"></i> In 60 Sek. zum Festpreis
+                            </span>
                         </div>
 
-                        <!-- Google Rating Pill on Hero -->
-                        <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-600">
-                            <a href="#google-reviews" class="flex items-center gap-2 bg-white/95 backdrop-blur-sm border border-white/30 px-3.5 py-2 rounded-xl shadow-soft hover:bg-white transition">
-                                <div class="flex items-center text-[#E5A34C] text-xs">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <!-- 2-Column Grid (Online-Offerten Style) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 auto-rows-fr gap-3">
+                            
+                            <!-- 1. Kombi-Angebot -->
+                            <div onclick="redirectToForm('combo')" 
+                                 class="w-full h-full min-h-[96px] sm:min-h-[104px] flex items-center justify-between gap-3.5 p-3 sm:p-4 border border-[#E2E8E4] rounded-xl transition-all duration-300 bg-white hover:bg-[#FDF8F0] hover:border-[#E5A34C] hover:shadow-md group cursor-pointer">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-[#FDF8F0] border border-[#E5A34C]/30 text-[#E5A34C] group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                                    <i class="fa-solid fa-truck-ramp-box text-2xl"></i>
                                 </div>
-                                <span class="font-bold text-[#34484A]">4.6 / 5.0</span>
-                                <span class="text-[#CBD7D1]">·</span>
-                                <span class="text-[#64747A] font-medium">42 Google Bewertungen</span>
-                            </a>
-                        </div>
+                                <div class="flex-1 text-left min-w-0">
+                                    <div class="flex items-center gap-1.5 flex-wrap">
+                                        <p class="font-bold text-sm sm:text-base text-[#34484A] leading-tight break-words group-hover:text-[#C9842E] transition-colors">
+                                            Kombi-Angebot
+                                        </p>
+                                        <span class="bg-[#E5A34C] text-white text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-wider">
+                                            -25% Bestseller
+                                        </span>
+                                    </div>
+                                    <p class="text-xs text-[#64747A] leading-snug mt-1">
+                                        Umzug &amp; Reinigung perfekt koordiniert
+                                    </p>
+                                </div>
+                                <span class="inline-flex shrink-0 text-[#CBD7D1] group-hover:text-[#E5A34C] group-hover:translate-x-1 transition-all duration-300">
+                                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                                </span>
+                            </div>
 
-                        <!-- Direct Assistance Contact -->
-                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-[#F5F4EF]/90">
-                            <span class="flex items-center gap-1.5">
-                                <i class="fa-solid fa-headset text-[#F0B563]"></i> Telefonberatung:
-                                <a href="tel:+41782158030" class="font-bold text-white hover:text-[#F0B563] hover:underline">+41 78 215 80 30</a>
-                            </span>
-                            <span>•</span>
-                            <span class="flex items-center gap-1.5">
-                                <i class="fa-solid fa-location-dot text-[#CBD7D1]"></i> Orpundstrasse 31, 2504 Biel/Bienne
-                            </span>
+                            <!-- 2. Umzugsreinigung -->
+                            <div onclick="redirectToForm('cleaning')" 
+                                 class="w-full h-full min-h-[96px] sm:min-h-[104px] flex items-center justify-between gap-3.5 p-3 sm:p-4 border border-[#E2E8E4] rounded-xl transition-all duration-300 bg-white hover:bg-[#EFF3F1] hover:border-[#596963] hover:shadow-md group cursor-pointer">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-[#EFF3F1] border border-[#596963]/30 text-[#596963] group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                                    <i class="fa-solid fa-sparkles text-2xl"></i>
+                                </div>
+                                <div class="flex-1 text-left min-w-0">
+                                    <div class="flex items-center gap-1.5 flex-wrap">
+                                        <p class="font-bold text-sm sm:text-base text-[#34484A] leading-tight break-words group-hover:text-[#596963] transition-colors">
+                                            Umzugsreinigung
+                                        </p>
+                                        <span class="bg-emerald-50 text-emerald-800 border border-emerald-200 text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider">
+                                            Garantie
+                                        </span>
+                                    </div>
+                                    <p class="text-xs text-[#64747A] leading-snug mt-1">
+                                        Mit 100% Abnahmegarantie &amp; Übergabe
+                                    </p>
+                                </div>
+                                <span class="inline-flex shrink-0 text-[#CBD7D1] group-hover:text-[#596963] group-hover:translate-x-1 transition-all duration-300">
+                                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                                </span>
+                            </div>
+
+                            <!-- 3. Umzug & Transport -->
+                            <div onclick="redirectToForm('moving')" 
+                                 class="w-full h-full min-h-[96px] sm:min-h-[104px] flex items-center justify-between gap-3.5 p-3 sm:p-4 border border-[#E2E8E4] rounded-xl transition-all duration-300 bg-white hover:bg-sky-50/70 hover:border-sky-500 hover:shadow-md group cursor-pointer">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-sky-50 border border-sky-200/60 text-sky-700 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                                    <i class="fa-solid fa-truck text-2xl"></i>
+                                </div>
+                                <div class="flex-1 text-left min-w-0">
+                                    <div class="flex items-center gap-1.5 flex-wrap">
+                                        <p class="font-bold text-sm sm:text-base text-[#34484A] leading-tight break-words group-hover:text-sky-700 transition-colors">
+                                            Umzug &amp; Transport
+                                        </p>
+                                        <span class="bg-sky-50 text-sky-800 border border-sky-200 text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider">
+                                            Versichert
+                                        </span>
+                                    </div>
+                                    <p class="text-xs text-[#64747A] leading-snug mt-1">
+                                        Privat-, Firmen- &amp; Spezialtransporte
+                                    </p>
+                                </div>
+                                <span class="inline-flex shrink-0 text-[#CBD7D1] group-hover:text-sky-600 group-hover:translate-x-1 transition-all duration-300">
+                                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                                </span>
+                            </div>
+
+                            <!-- 4. Räumung & Entsorgung -->
+                            <div onclick="redirectToForm('disposal')" 
+                                 class="w-full h-full min-h-[96px] sm:min-h-[104px] flex items-center justify-between gap-3.5 p-3 sm:p-4 border border-[#E2E8E4] rounded-xl transition-all duration-300 bg-white hover:bg-amber-50/70 hover:border-[#E5A34C] hover:shadow-md group cursor-pointer">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-amber-50 border border-amber-200/60 text-[#E5A34C] group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                                    <i class="fa-solid fa-couch text-2xl"></i>
+                                </div>
+                                <div class="flex-1 text-left min-w-0">
+                                    <div class="flex items-center gap-1.5 flex-wrap">
+                                        <p class="font-bold text-sm sm:text-base text-[#34484A] leading-tight break-words group-hover:text-[#C9842E] transition-colors">
+                                            Räumung &amp; Entsorgung
+                                        </p>
+                                        <span class="bg-amber-50 text-amber-800 border border-amber-200 text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider">
+                                            Umweltgerecht
+                                        </span>
+                                    </div>
+                                    <p class="text-xs text-[#64747A] leading-snug mt-1">
+                                        Wohnungsräumung, Keller &amp; Sperrgut
+                                    </p>
+                                </div>
+                                <span class="inline-flex shrink-0 text-[#CBD7D1] group-hover:text-[#E5A34C] group-hover:translate-x-1 transition-all duration-300">
+                                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                                </span>
+                            </div>
+
+                            <!-- 5. Hauswartung -->
+                            <div onclick="redirectToForm('facility')" 
+                                 class="w-full h-full min-h-[96px] sm:min-h-[104px] flex items-center justify-between gap-3.5 p-3 sm:p-4 border border-[#E2E8E4] rounded-xl transition-all duration-300 bg-white hover:bg-slate-50 hover:border-[#465650] hover:shadow-md group cursor-pointer">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-slate-100 border border-slate-200 text-[#465650] group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                                    <i class="fa-solid fa-building text-2xl"></i>
+                                </div>
+                                <div class="flex-1 text-left min-w-0">
+                                    <div class="flex items-center gap-1.5 flex-wrap">
+                                        <p class="font-bold text-sm sm:text-base text-[#34484A] leading-tight break-words group-hover:text-[#465650] transition-colors">
+                                            Hauswartung
+                                        </p>
+                                        <span class="bg-slate-100 text-slate-700 border border-slate-300 text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider">
+                                            Liegenschaften
+                                        </span>
+                                    </div>
+                                    <p class="text-xs text-[#64747A] leading-snug mt-1">
+                                        Liegenschaftsunterhalt &amp; Betreuung
+                                    </p>
+                                </div>
+                                <span class="inline-flex shrink-0 text-[#CBD7D1] group-hover:text-[#465650] group-hover:translate-x-1 transition-all duration-300">
+                                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                                </span>
+                            </div>
+
+                            <!-- 6. Haushaltshilfe -->
+                            <div onclick="redirectToForm('household')" 
+                                 class="w-full h-full min-h-[96px] sm:min-h-[104px] flex items-center justify-between gap-3.5 p-3 sm:p-4 border border-[#E2E8E4] rounded-xl transition-all duration-300 bg-white hover:bg-teal-50/70 hover:border-teal-600 hover:shadow-md group cursor-pointer">
+                                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center flex-shrink-0 bg-teal-50 border border-teal-200/60 text-teal-700 group-hover:scale-105 transition-transform duration-300 shadow-sm">
+                                    <i class="fa-solid fa-hands-holding text-2xl"></i>
+                                </div>
+                                <div class="flex-1 text-left min-w-0">
+                                    <div class="flex items-center gap-1.5 flex-wrap">
+                                        <p class="font-bold text-sm sm:text-base text-[#34484A] leading-tight break-words group-hover:text-teal-700 transition-colors">
+                                            Haushaltshilfe
+                                        </p>
+                                        <span class="bg-teal-50 text-teal-800 border border-teal-200 text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider">
+                                            Diskret
+                                        </span>
+                                    </div>
+                                    <p class="text-xs text-[#64747A] leading-snug mt-1">
+                                        Regelmässige private Reinigung &amp; Hilfe
+                                    </p>
+                                </div>
+                                <span class="inline-flex shrink-0 text-[#CBD7D1] group-hover:text-teal-600 group-hover:translate-x-1 transition-all duration-300">
+                                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                                </span>
+                            </div>
+
                         </div>
                     </div>
 
-                    <!-- Right Column: Interactive Services Hub & Direct Form Launcher -->
-                    <div class="lg:col-span-7">
-                        <div class="bg-white/95 backdrop-blur-md border border-[#E2E8E4] rounded-3xl p-6 sm:p-8 shadow-card relative overflow-hidden transition-all duration-300 hover:shadow-xl">
-                            
-                            <!-- Card Header Strip -->
-                            <div class="border-b border-[#E2E8E4] pb-5 mb-5">
-                                <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                                    <span class="text-xs font-black uppercase text-[#34484A] tracking-wider font-heading flex items-center gap-1.5">
-                                        <span class="w-2 h-2 rounded-full bg-[#E5A34C] animate-pulse"></span>
-                                        <i class="fa-solid fa-bolt text-[#E5A34C]"></i>
-                                        <span>Dienstleistung wählen & Offerte anfordern</span>
-                                    </span>
-                                    <span class="text-[11px] text-[#465D5D] bg-[#F5F4EF] border border-[#E2E8E4] px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1 shadow-xs">
-                                        <i class="fa-solid fa-clock text-[10px]"></i> In ca. 60 Sek. zum Festpreis
-                                    </span>
-                                </div>
-                                <h2 class="text-xl sm:text-2xl font-black text-[#34484A] font-heading tracking-tight">
-                                    Wofür benötigen Sie eine Offerte?
-                                </h2>
-                                <p class="text-xs text-[#64747A] mt-1">
-                                    Klicken Sie auf Ihren Service und gelangen Sie direkt zum massgeschneiderten Online-Formular:
-                                </p>
+                    <!-- Trust Reassurance Box (Directly from online-offerten.ch) -->
+                    <div class="bg-white rounded-xl p-4 sm:p-5 flex flex-col gap-3 border border-[#E2E8E4] shadow-soft">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-full bg-[#EFF3F1] text-[#596963] flex items-center justify-center flex-shrink-0 shadow-sm">
+                                <i class="fa-solid fa-shield-check text-base"></i>
                             </div>
-
-                            <!-- Interactive Service Cards (2-Column Grid) -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" id="heroServiceGrid">
-                                
-                                <!-- 1. Kombi-Angebot -->
-                                <div onclick="redirectToForm('combo')" class="service-launcher-btn cursor-pointer group text-left bg-gradient-to-br from-[#FDF8F0] via-white to-[#FDF8F0] border-2 border-[#E5A34C] hover:border-[#C9842E] rounded-2xl p-4 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 relative overflow-hidden flex items-center justify-between gap-3">
-                                    <div class="flex items-center gap-3 min-w-0">
-                                        <div class="w-10 h-10 rounded-xl bg-[#E5A34C] text-white flex items-center justify-center text-sm shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
-                                            <i class="fa-solid fa-truck-ramp-box"></i>
-                                        </div>
-                                        <div class="min-w-0">
-                                            <div class="text-xs sm:text-sm font-extrabold text-[#34484A] font-heading leading-tight truncate">Kombi-Angebot</div>
-                                            <div class="text-[11px] text-[#E5A34C] font-bold truncate">Umzug & Reinigung</div>
-                                        </div>
-                                    </div>
-                                    <span class="text-[10px] font-black uppercase px-2.5 py-1 rounded-full bg-[#E5A34C] text-white tracking-wide shadow-xs flex-shrink-0">
-                                        -25% Bestseller
-                                    </span>
-                                </div>
-
-                                <!-- 2. Umzugsreinigung -->
-                                <div onclick="redirectToForm('cleaning')" class="service-launcher-btn cursor-pointer group text-left bg-[#F5F4EF]/60 hover:bg-[#FDF8F0]/50 border-2 border-[#E2E8E4] hover:border-[#E5A34C] rounded-2xl p-4 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 relative overflow-hidden flex items-center justify-between gap-3">
-                                    <div class="flex items-center gap-3 min-w-0">
-                                        <div class="w-10 h-10 rounded-xl bg-[#596963]/15 text-[#596963] flex items-center justify-center text-sm shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
-                                            <i class="fa-solid fa-broom"></i>
-                                        </div>
-                                        <div class="min-w-0">
-                                            <div class="text-xs sm:text-sm font-extrabold text-[#34484A] font-heading leading-tight truncate">Umzugsreinigung</div>
-                                            <div class="text-[11px] text-[#465D5D] font-bold truncate">Mit Abnahmegarantie</div>
-                                        </div>
-                                    </div>
-                                    <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded-full bg-[#F5F4EF] text-[#465D5D] border border-[#E2E8E4] tracking-wide flex-shrink-0">
-                                        Garantie
-                                    </span>
-                                </div>
-
-                                <!-- 3. Umzug & Transport -->
-                                <div onclick="redirectToForm('moving')" class="service-launcher-btn cursor-pointer group text-left bg-[#F5F4EF]/60 hover:bg-[#FDF8F0]/50 border-2 border-[#E2E8E4] hover:border-[#E5A34C] rounded-2xl p-4 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 relative overflow-hidden flex items-center justify-between gap-3">
-                                    <div class="flex items-center gap-3 min-w-0">
-                                        <div class="w-10 h-10 rounded-xl bg-[#596963]/15 text-[#596963] flex items-center justify-center text-sm shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
-                                            <i class="fa-solid fa-truck-moving"></i>
-                                        </div>
-                                        <div class="min-w-0">
-                                            <div class="text-xs sm:text-sm font-extrabold text-[#34484A] font-heading leading-tight truncate">Umzug & Transport</div>
-                                            <div class="text-[11px] text-[#465D5D] font-bold truncate">Privat & Gewerbe</div>
-                                        </div>
-                                    </div>
-                                    <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded-full bg-[#F5F4EF] text-[#465D5D] border border-[#E2E8E4] tracking-wide flex-shrink-0">
-                                        Versichert
-                                    </span>
-                                </div>
-
-                                <!-- 4. Entsorgung & Räumung -->
-                                <div onclick="redirectToForm('disposal')" class="service-launcher-btn cursor-pointer group text-left bg-[#F5F4EF]/60 hover:bg-[#FDF8F0]/50 border-2 border-[#E2E8E4] hover:border-[#E5A34C] rounded-2xl p-4 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 relative overflow-hidden flex items-center justify-between gap-3">
-                                    <div class="flex items-center gap-3 min-w-0">
-                                        <div class="w-10 h-10 rounded-xl bg-[#596963]/15 text-[#596963] flex items-center justify-center text-sm shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
-                                            <i class="fa-solid fa-dumpster"></i>
-                                        </div>
-                                        <div class="min-w-0">
-                                            <div class="text-xs sm:text-sm font-extrabold text-[#34484A] font-heading leading-tight truncate">Entsorgung & Räumung</div>
-                                            <div class="text-[11px] text-[#465D5D] font-bold truncate">Möbel & Sperrgut</div>
-                                        </div>
-                                    </div>
-                                    <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded-full bg-[#F5F4EF] text-[#465D5D] border border-[#E2E8E4] tracking-wide flex-shrink-0">
-                                        Umweltgerecht
-                                    </span>
-                                </div>
-
-                                <!-- 5. Hauswartung & Liegenschaften -->
-                                <div onclick="redirectToForm('facility')" class="service-launcher-btn cursor-pointer group text-left bg-[#F5F4EF]/60 hover:bg-[#FDF8F0]/50 border-2 border-[#E2E8E4] hover:border-[#E5A34C] rounded-2xl p-4 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 relative overflow-hidden flex items-center justify-between gap-3">
-                                    <div class="flex items-center gap-3 min-w-0">
-                                        <div class="w-10 h-10 rounded-xl bg-[#596963]/15 text-[#596963] flex items-center justify-center text-sm shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
-                                            <i class="fa-solid fa-building"></i>
-                                        </div>
-                                        <div class="min-w-0">
-                                            <div class="text-xs sm:text-sm font-extrabold text-[#34484A] font-heading leading-tight truncate">Hauswartung</div>
-                                            <div class="text-[11px] text-[#465D5D] font-bold truncate">Gebäudeunterhalt</div>
-                                        </div>
-                                    </div>
-                                    <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded-full bg-[#F5F4EF] text-[#465D5D] border border-[#E2E8E4] tracking-wide flex-shrink-0">
-                                        Liegenschaften
-                                    </span>
-                                </div>
-
-                                <!-- 6. Haushaltshilfe -->
-                                <div onclick="redirectToForm('household')" class="service-launcher-btn cursor-pointer group text-left bg-[#F5F4EF]/60 hover:bg-[#FDF8F0]/50 border-2 border-[#E2E8E4] hover:border-[#E5A34C] rounded-2xl p-4 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 relative overflow-hidden flex items-center justify-between gap-3">
-                                    <div class="flex items-center gap-3 min-w-0">
-                                        <div class="w-10 h-10 rounded-xl bg-[#596963]/15 text-[#596963] flex items-center justify-center text-sm shadow-sm flex-shrink-0 group-hover:scale-105 transition-transform">
-                                            <i class="fa-solid fa-hands-holding"></i>
-                                        </div>
-                                        <div class="min-w-0">
-                                            <div class="text-xs sm:text-sm font-extrabold text-[#34484A] font-heading leading-tight truncate">Haushaltshilfe</div>
-                                            <div class="text-[11px] text-[#465D5D] font-bold truncate">Privathaushalte</div>
-                                        </div>
-                                    </div>
-                                    <span class="text-[10px] font-bold uppercase px-2.5 py-1 rounded-full bg-[#F5F4EF] text-[#465D5D] border border-[#E2E8E4] tracking-wide flex-shrink-0">
-                                        Diskret & Fest
-                                    </span>
-                                </div>
-
+                            <p class="text-xs sm:text-sm font-semibold text-[#34484A] leading-snug">
+                                Erhalten Sie kostenlos &amp; unverbindlich massgeschneiderte Offerten von geprüften Schweizer Fachkräften aus Ihrer Region.
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-100 pt-3 flex flex-wrap items-center justify-between gap-3 text-xs text-[#465D5D]">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i>
+                                <span class="font-medium">100% Kostenlos &amp; unverbindlich</span>
                             </div>
-
-                            <!-- Trust Reassurance & WhatsApp Shortcut -->
-                            <div class="mt-5 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#64747A]">
-                                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 text-[11px]">
-                                    <span class="flex items-center gap-1 font-semibold text-[#465D5D]"><i class="fa-solid fa-shield-check text-[#596963]"></i> Keine versteckten Kosten</span>
-                                    <span class="text-[#CBD7D1]">•</span>
-                                    <span class="flex items-center gap-1 font-semibold text-[#465D5D]"><i class="fa-solid fa-bolt text-[#E5A34C]"></i> Antwort in 24h</span>
-                                    <span class="text-[#CBD7D1]">•</span>
-                                    <span class="flex items-center gap-1 font-semibold text-[#465D5D]"><i class="fa-solid fa-lock text-slate-400"></i> SSL geschützt</span>
-                                </div>
-                                <a href="https://wa.me/41782158030" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-[#465D5D] hover:text-[#C9842E] font-bold text-xs hover:underline flex-shrink-0">
-                                    <i class="fa-brands fa-whatsapp text-[#596963] text-sm"></i> Schnellanfrage via WhatsApp
-                                </a>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i>
+                                <span class="font-medium">100% Schweizer Abnahmegarantie</span>
                             </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i>
+                                <span class="font-medium">Geprüfte Fachfirmen</span>
+                            </div>
+                            <a href="https://wa.me/41782158030" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-[#465D5D] hover:text-[#C9842E] font-bold text-xs hover:underline ml-auto">
+                                <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i> Schnellanfrage via WhatsApp
+                            </a>
+                        </div>
+                    </div>
 
+                    <!-- Additional Google Rating & Phone Micro-bar -->
+                    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 px-1 text-xs text-[#64747A]">
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center text-[#E5A34C] text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <span class="font-bold text-[#34484A]">4.6 / 5.0</span>
+                            <span class="text-[#CBD7D1]">·</span>
+                            <span class="text-[#64747A]">42 Google Bewertungen</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <a href="tel:+41782158030" class="hover:text-[#34484A] font-semibold transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-phone text-[#E5A34C]"></i> +41 78 215 80 30
+                            </a>
+                            <span class="text-[#CBD7D1]">•</span>
+                            <span class="flex items-center gap-1 text-[#465D5D]">
+                                <i class="fa-solid fa-location-dot text-[#596963]"></i> Biel/Bienne &amp; ganze Schweiz
+                            </span>
                         </div>
                     </div>
 
                 </div>
             </div>
-</section>
+        </section>
 
         <!-- 4. TRUST STRIP: 4 PILLARS OF SWISSCLEANMOVE -->
         <section class="bg-white border-b border-[#E2E8E4] py-8">
@@ -901,7 +949,7 @@
 
                         <div class="space-y-1">
                             <div class="text-xs uppercase font-bold text-slate-300">Geschätzter Richtpreis ab</div>
-                            <div class="text-4xl sm:text-5xl font-black text-white font-heading" id="calcPriceDisplay">CHF 890.–</div>
+                            <div class="text-4xl sm:text-5xl font-black text-white font-heading" id="calcPriceDisplay">CHF 850.–</div>
                             <div class="text-[11px] text-[#F0B563] font-semibold" id="calcSavingText">Inkl. 100% Abnahmegarantie & MwSt.</div>
                         </div>
 
@@ -1561,17 +1609,17 @@
             let savingNote = 'Inkl. 100% Abnahmegarantie & MwSt.';
 
             if (calcCategory === 'reinigung') {
-                basePrice = Math.round(450 + (rooms * 110) + (area * 3.8));
+                basePrice = Math.round(350 + (rooms * 100) + (area * 1.8));
                 if (hasBalcony) basePrice += 60;
                 if (!hasLift) basePrice += 40;
                 savingNote = 'Inkl. 100% Abnahmegarantie & Übergabepräsenz';
             } else if (calcCategory === 'umzug') {
-                basePrice = Math.round(550 + (rooms * 140) + (area * 4.2));
+                basePrice = Math.round(390 + (rooms * 140) + (area * 2.5));
                 if (!hasLift) basePrice += 110;
                 savingNote = 'Inkl. 2-3 Mann Team, LKW & Transportversicherung';
             } else if (calcCategory === 'kombi') {
-                const fullClean = Math.round(450 + (rooms * 110) + (area * 3.8));
-                const fullMove = Math.round(550 + (rooms * 140) + (area * 4.2));
+                const fullClean = Math.round(350 + (rooms * 100) + (area * 1.8));
+                const fullMove = Math.round(390 + (rooms * 140) + (area * 2.5));
                 const combined = fullClean + fullMove;
                 basePrice = Math.round(combined * 0.80);
                 const saved = Math.round(combined * 0.20);

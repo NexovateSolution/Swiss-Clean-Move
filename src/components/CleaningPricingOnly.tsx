@@ -70,7 +70,7 @@ export default function CleaningPricingOnly({ locale, formService = 'house-clean
     { label: isEn ? '4 room apartment' : isFr ? 'Appartement 4 pièces' : isIt ? 'Appartamento 4 locali' : '4 Zimmer Wohnung', price: `CHF ${PRICING_RULES.cleaning.apartment['4']}.–` },
     { label: isEn ? '4.5 room apartment' : isFr ? 'Appartement 4.5 pièces' : isIt ? 'Appartamento 4.5 locali' : '4.5 Zimmer Wohnung', price: `CHF ${PRICING_RULES.cleaning.apartment['4.5']}.–` },
     { label: isEn ? '5.5 room apartment' : isFr ? 'Appartement 5.5 pièces' : isIt ? 'Appartamento 5.5 locali' : '5.5 Zimmer Wohnung', price: `CHF ${PRICING_RULES.cleaning.apartment['5.5']}.–` },
-    { label: isEn ? 'House / Villa' : isFr ? 'Maison / Villa' : isIt ? 'Casa unifamiliare / Villa' : 'Haus / Villa', price: t.uponRequest }
+    { label: isEn ? 'Single-family house' : isFr ? 'Maison individuelle' : isIt ? 'Casa unifamiliare' : 'Einfamilienhaus', price: `CHF ${PRICING_RULES.cleaning.apartment['house']}.–` }
   ];
 
   const inclusions = [
@@ -152,12 +152,12 @@ export default function CleaningPricingOnly({ locale, formService = 'house-clean
 
             <div className="p-4 bg-swiss-gray-50 border-t border-swiss-border text-xs text-swiss-body">
               {isEn
-                ? '* Baseline price for studio/1-room starts at CHF 600.–. Balconies, basements, heavily soiled kitchens/blinds may carry minor standard surcharges.'
+                ? '* Baseline price for studio/1-room starts at CHF 450.–. Balconies, basements, heavily soiled kitchens/blinds may carry minor standard surcharges.'
                 : isFr
-                ? '* Prix de base pour studio/1 pièce à partir de CHF 600.–. Balcons, caves ou encrassement important font l’objet de suppléments standards.'
+                ? '* Prix de base pour studio/1 pièce à partir de CHF 450.–. Balcons, caves ou encrassement important font l’objet de suppléments standards.'
                 : isIt
-                ? '* Prezzo base per monolocale/1 locale a partire da CHF 600.–. Balconi, cantine o forte sporcizia prevedono supplementi standard.'
-                : '* Basis-Festpreis für Studio/Einzimmerwohnung ab CHF 600.–. Zusätzliche Nebenräume (z.B. Balkon, Keller) oder extremer Verschmutzungsgrad gemäss Festpreisofferte.'}
+                ? '* Prezzo base per monolocale/1 locale a partire da CHF 450.–. Balconi, cantine o forte sporcizia prevedono supplementi standard.'
+                : '* Basis-Festpreis für Studio/Einzimmerwohnung ab CHF 450.–. Zusätzliche Nebenräume (z.B. Balkon, Keller) oder extremer Verschmutzungsgrad gemäss Festpreisofferte.'}
             </div>
           </div>
 

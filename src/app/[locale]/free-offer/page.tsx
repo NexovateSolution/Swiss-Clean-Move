@@ -98,7 +98,7 @@ export default function FreeOfferPage({ params: { locale } }: { params: { locale
 
   return (
     <Layout>
-      <div className="bg-gray-50 min-h-screen pb-16 pt-10">
+      <div id="top" className="bg-gray-50 min-h-screen pb-16 pt-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header Section */}

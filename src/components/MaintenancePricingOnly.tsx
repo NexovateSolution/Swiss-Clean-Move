@@ -64,6 +64,8 @@ export default function MaintenancePricingOnly({ locale, formService = 'facility
   const rateRows = [
     { label: isEn ? 'Offices, Medical Practices & Consultancies' : isFr ? 'Bureaux, Cabinets médicaux & Études' : isIt ? 'Uffici, Studi medici & Consulenze' : 'Büros, Praxen & Kanzleien', price: `CHF ${m.hourlyRates.office}.– ${t.perHour}` },
     { label: isEn ? 'Commercial premises, Boutiques & Showrooms' : isFr ? 'Locaux commerciaux, Boutiques & Showrooms' : isIt ? 'Locali commerciali, Negozi & Showroom' : 'Gewerbeflächen, Boutiquen & Showrooms', price: `CHF ${m.hourlyRates.commercial}.– ${t.perHour}` },
+    { label: isEn ? 'Stairwell Cleaning' : isFr ? 'Nettoyage de cages d’escaliers' : isIt ? 'Pulizia vano scale' : 'Treppenhausreinigung', price: `CHF ${m.hourlyRates.stairwell}.– ${t.perHour}` },
+    { label: isEn ? 'Intensive Deep Cleaning' : isFr ? 'Nettoyage approfondi intensif' : isIt ? 'Pulizia profonda intensiva' : 'Intensive Grundreinigung', price: `CHF ${m.hourlyRates.intensiveDeepCleaning}.– ${t.perHour}` },
     { label: isEn ? 'Private Residences & Luxury Apartments' : isFr ? 'Résidences privées & Appartements de standing' : isIt ? 'Residenze private & Appartamenti' : 'Privatwohnungen & Residenzen', price: `CHF ${m.hourlyRates.residential}.– ${t.perHour}` },
     { label: isEn ? 'Weekly cleaning frequency discount' : isFr ? 'Remise fréquence hebdomadaire' : isIt ? 'Sconto frequenza settimanale' : 'Rabatt bei wöchentlicher Reinigung', price: '-5%' },
     { label: isEn ? '2–3 times per week frequency discount' : isFr ? 'Remise 2 à 3 fois par semaine' : isIt ? 'Sconto 2–3 volte a settimana' : 'Rabatt bei 2–3 Einsätzen pro Woche', price: '-8% bis -10%' },

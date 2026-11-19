@@ -116,7 +116,7 @@ export default function ContactClient({ locale }: { locale: string }) {
   const socialLinks = [
     {
       name: 'WhatsApp',
-      href: 'https://wa.me/c/41782158030',
+      href: 'https://wa.me/41782158030',
       Icon: MessageCircle,
       className: 'bg-[#25D366] hover:bg-[#25D366]/80'
     },

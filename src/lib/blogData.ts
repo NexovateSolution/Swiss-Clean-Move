@@ -118,7 +118,7 @@ Un déménagement demande beaucoup d'organisation. Si vous prévoyez un déména
 - Fixer le rendez-vous de remise avec la gérance
 
 N'oubliez pas : Une entreprise de déménagement professionnelle vous déchargera de la majeure partie du travail !
-      `, it: `Un trasloco richiede molta pianificazione. Se state pianificando un trasloco nella regione del Seeland, ad esempio un <a href="/en/umzug-lyss" class="text-swiss-red hover:underline font-semibold">trasloco a Lyss</a>, questa lista di controllo vi aiuterà.
+      `, it: `Un trasloco richiede molta pianificazione. Se state pianificando un trasloco nella regione del Seeland, ad esempio un <a href="/it/umzug-lyss" class="text-swiss-red hover:underline font-semibold">trasloco a Lyss</a>, questa lista di controllo vi aiuterà.
 
 ### 3 mesi prima
 - Risoluzione del contratto di locazione
@@ -182,7 +182,7 @@ La graisse et la saleté s'y accumulent au fil des ans. Des nettoyants spéciaux
 
 ### 3. Engager des professionnels
 La méthode la plus sûre est une entreprise de nettoyage avec garantie de remise. Ainsi, vous n'avez à vous soucier de rien et êtes assuré de récupérer votre caution.
-      `, it: `La pulizia della consegna è spesso la parte più stressante del trasloco. Soprattutto per una <a href="/en/umzugsreinigung-biel-bienne" class="text-swiss-red hover:underline font-semibold">pulizia di fine locazione a Biel/Bienne</a>, la gestione della proprietà è molto severa.
+      `, it: `La pulizia della consegna è spesso la parte più stressante del trasloco. Soprattutto per una <a href="/it/umzugsreinigung-biel-bienne" class="text-swiss-red hover:underline font-semibold">pulizia di fine locazione a Biel/Bienne</a>, la gestione della proprietà è molto severa.
 
 ### 1. Non dimenticare gli infissi
 Non basta pulire solo il vetro. Anche le scanalature e le cornici devono essere prive di polvere.
@@ -294,7 +294,7 @@ Ne jetez pas tout pêle-mêle. Si vous nous engagez pour votre <a href="/fr/umzu
 - Étiqueter tous les cartons !
 
 Ou réservez tout simplement notre service d'emballage pratique.
-      `, it: `Non mettere semplicemente tutto insieme. Se ci prenoti per il tuo <a href="/en/umzug-aarberg" class="text-swiss-red hover:underline font-semibold">trasloco ad Aarberg</a>, ti consigliamo:
+      `, it: `Non mettere semplicemente tutto insieme. Se ci prenoti per il tuo <a href="/it/umzug-aarberg" class="text-swiss-red hover:underline font-semibold">trasloco ad Aarberg</a>, ti consigliamo:
 
 - Oggetti pesanti (libri) in basso, oggetti leggeri in alto
 - Non riempire eccessivamente le scatole (max. 20 kg)

@@ -12,7 +12,7 @@ export default function AdminPricingSlice({ data, updateData, t }: FormSliceProp
     household: {
       regular: 42,
       fourteenDays: 45,
-      oneTime: 50
+      oneTime: 48
     }
   }
 

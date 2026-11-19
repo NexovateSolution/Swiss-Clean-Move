@@ -142,7 +142,7 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
     { label: { en: '3.5 room apartment', de: '3.5 Zimmer Wohnung', fr: 'Appartement 3.5 pièces', it: `Appartamento di 3,5 locali` }, price: `CHF ${PRICING_RULES.cleaning.apartment['3.5']}.–` },
     { label: { en: '4.5 room apartment', de: '4.5 Zimmer Wohnung', fr: 'Appartement 4.5 pièces', it: `Appartamento di 4,5 locali` }, price: `CHF ${PRICING_RULES.cleaning.apartment['4.5']}.–` },
     { label: { en: '5.5 room apartment', de: '5.5 Zimmer Wohnung', fr: 'Appartement 5.5 pièces', it: `Appartamento di 5,5 locali` }, price: `CHF ${PRICING_RULES.cleaning.apartment['5.5']}.–` },
-    { label: { en: 'House / Villa', de: 'Haus / Villa', fr: 'Maison / Villa', it: `Casa/Villa` }, price: getT('uponRequest') },
+    { label: { en: 'Single-family house', de: 'Einfamilienhaus', fr: 'Maison individuelle', it: `Casa unifamiliare` }, price: `CHF ${PRICING_RULES.cleaning.apartment['house']}.–` },
   ];
 
   const cleaningIncluded = [
@@ -156,10 +156,10 @@ export default function UmzugPricing({ locale, formService, handleCtaClick }: Um
   ];
 
   const disposalPrices = [
-    { label: { en: 'Up to 1 m3', de: 'Bis 1 m3', fr: 'Jusqu\'à 1 m3', it: `Fino a 1 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['1']}.–` },
-    { label: { en: 'Up to 5 m3', de: 'Bis 5 m3', fr: 'Jusqu\'à 5 m3', it: `Fino a 5 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['5']}.–` },
-    { label: { en: 'Up to 10 m3', de: 'Bis 10 m3', fr: 'Jusqu\'à 10 m3', it: `Fino a 10 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['10']}.–` },
-    { label: { en: 'Up to 20 m3', de: 'Bis 20 m3', fr: 'Jusqu\'à 20 m3', it: `Fino a 20 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['20']}.–` },
+    { label: { en: '1 – 2 m3', de: '1 – 2 m3', fr: '1 – 2 m3', it: `1 – 2 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['1']}.–` },
+    { label: { en: '3 – 5 m3', de: '3 – 5 m3', fr: '3 – 5 m3', it: `3 – 5 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['3']}.–` },
+    { label: { en: '6 – 10 m3', de: '6 – 10 m3', fr: '6 – 10 m3', it: `6 – 10 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['8']}.–` },
+    { label: { en: '11 – 20 m3', de: '11 – 20 m3', fr: '11 – 20 m3', it: `11 – 20 m3` }, price: `CHF ${PRICING_RULES.disposal.volumePricing['15']}.–` },
     { label: { en: 'Business liquidation', de: 'Geschäftsauflösung', fr: 'Liquidation d\'entreprise', it: `Liquidazione aziendale` }, price: getT('uponRequest') },
   ];
 
